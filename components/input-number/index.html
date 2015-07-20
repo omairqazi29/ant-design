@@ -14,7 +14,7 @@ InputNumber 数字输入框 - Ant Design
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.0-beta2.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.0-beta3.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -123,11 +123,11 @@ InputNumber 数字输入框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.0-beta2',
+        latest: '0.7.0-beta3',
         stable: ''
       };
     </script>
-    <script src="/dist/antd-0.7.0-beta2.js"></script>
+    <script src="/dist/antd-0.7.0-beta3.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -430,14 +430,14 @@ function onChange(value) {
   console.log('changed', value);
 }
 
-React.render(React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange, style: { width: 100 } }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+React.render(React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
   console.log(<span class="string">'changed'</span>, value);
 }
 
 React.render(
-<span class="xml"><span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span> /&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
 , document.getElementById('components-input-number-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -471,13 +471,15 @@ var Test = React.createClass({
     return React.createElement(
       "div",
       null,
-      React.createElement(InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3, style: { width: 100 } }),
-      React.createElement("br", null),
-      React.createElement("br", null),
+      React.createElement(InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3 }),
       React.createElement(
-        "button",
-        { onClick: this.toggle, className: "ant-btn ant-btn-primary" },
-        "Toggle disabled"
+        "div",
+        { style: { marginTop: 20 } },
+        React.createElement(
+          "button",
+          { onClick: this.toggle, className: "ant-btn ant-btn-primary" },
+          "Toggle disabled"
+        )
       )
     );
   }
@@ -498,10 +500,10 @@ React.render(React.createElement(Test, null), document.getElementById("component
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });

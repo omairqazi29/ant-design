@@ -1,179 +1,287 @@
 <div class="code-box">
   <div class="code-box-demo">
     <div id="components-form-demo-form-controls"></div>
-    <div class="nico-insert-code"><form class="ant-form-horizontal">
-  <div class="ant-form-item">
-    <label class="col-6">输入框：</label>
-    <div class="col-18">
-      <input type="text" class="ant-input" placeholder="Please enter...">
-    </div>
-  </div>
-  <div class="ant-form-item">
-    <label class="col-6">文本域：</label>
-    <div class="col-18">
-      <textarea class="ant-input"></textarea>
-    </div>
-  </div>
-  <div class="ant-form-item">
-    <label class="col-6">下拉列表：</label>
-    <div class="col-18">
-      <select class="ant-input">
-        <option>选项一</option>
-        <option>选项二</option>
-        <option>选项三</option>
-        <option>选项四</option>
-        <option>选线五</option>
-      </select>
-    </div>
-  </div>
-  <div class="ant-form-item ant-form-item-compact">
-    <label class="col-6">checkbox 复选框：</label>
-    <div class="col-18">
-      <label class="ant-checkbox-vertical">
-        <input type="checkbox" value="apple"> Apple
-      </label>
-      <!-- disabled checkbox -->
-      <label class="ant-checkbox-vertical">
-        <input type="checkbox" value="banana" disabled> Banana(disabled)
-      </label>
-    </div>
-  </div>
-  <div class="ant-form-item ant-form-item-compact">
-    <label class="col-6">内联的 checkbox：</label>
-    <div class="col-18">
-      <!-- 内联的checkbox -->
-      <label class="ant-checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="Kevin"> Kevin
-      </label>
-      <label class="ant-checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox2" value="Bob"> Bob
-      </label>
-      <label class="ant-checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox3" value="Stuart"> Stuart
-      </label>
-    </div>
-  </div>
-  <div class="ant-form-item ant-form-item-compact">
-    <label class="col-6">radio 单选框：</label>
-    <div class="col-18">
-      <label class="ant-radio-vertical">
-        <input type="radio" name="radios" id="optionsRadios1" value="option1" checked> Apple
-      </label>
-      <!-- disabled radio -->
-      <label class="ant-radio-vertical">
-        <input type="radio" name="radios" id="optionsRadios3" value="option3" disabled> Banana(disabled)
-      </label>
-    </div>
-  </div>
-  <div class="ant-form-item ant-form-item-compact">
-    <label class="col-6">内联的 radio：</label>
-    <div class="col-18">
-      <!-- 内联的radio -->
-      <label class="ant-radio-inline">
-        <input type="radio" name="inlineRadios" id="inlineRadio1" value="Kevin"> Kevin
-      </label>
-      <label class="ant-radio-inline">
-        <input type="radio" name="inlineRadios" id="inlineRadio2" value="Stuart"> Stuart
-      </label>
-      <label class="ant-radio-inline">
-        <input type="radio" name="inlineRadios" id="inlineRadio3" value="Bob"> Bob
-      </label>
-    </div>
-  </div>
-  <div class="ant-form-item ant-form-item-compact">
-    <label class="col-6" for="InputFile">头像：</label>
-    <div class="col-18">
-      <input type="file" id="InputFile" class="ant-upload">
-      <p class="ant-form-explain">请选择一个文件</p>
-    </div>
-  </div>
-</form></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">placeholder</span>=<span class="value">"Please enter..."</span>&gt;</span>
+    <script>(function(){"use strict";
+
+var Select = antd.Select;
+var Option = Select.Option;
+var Checkbox = antd.Checkbox;
+var Radio = antd.Radio;
+var RadioGroup = antd.RadioGroup;
+
+function handleSelectChange(value) {
+  console.log("selected " + value);
+}
+
+React.render(React.createElement(
+  "form",
+  { className: "ant-form-horizontal" },
+  React.createElement(
+    "div",
+    { className: "ant-form-item" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "输入框："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-14" },
+      React.createElement("input", { type: "text", className: "ant-input", placeholder: "Please enter..." })
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "文本域："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-14" },
+      React.createElement("textarea", { className: "ant-input" })
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "ant-select："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-14" },
+      React.createElement(
+        Select,
+        { value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
+        React.createElement(
+          Option,
+          { value: "jack" },
+          "jack"
+        ),
+        React.createElement(
+          Option,
+          { value: "lucy" },
+          "lucy"
+        ),
+        React.createElement(
+          Option,
+          { value: "disabled", disabled: true },
+          "disabled"
+        ),
+        React.createElement(
+          Option,
+          { value: "yiminghe" },
+          "yiminghe"
+        )
+      )
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item ant-form-item-compact" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "ant-checkbox："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-18" },
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-vertical" },
+        React.createElement(Checkbox, null),
+        " 选项一"
+      ),
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-vertical" },
+        React.createElement(Checkbox, null),
+        " 选项二"
+      ),
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-vertical" },
+        React.createElement(Checkbox, { disabled: true }),
+        " 选项三（不可选）"
+      )
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item ant-form-item-compact" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "ant-checkbox："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-18" },
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-inline" },
+        React.createElement(Checkbox, null),
+        "选项一"
+      ),
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-inline" },
+        React.createElement(Checkbox, null),
+        "选项二"
+      ),
+      React.createElement(
+        "label",
+        { className: "ant-checkbox-inline" },
+        React.createElement(Checkbox, null),
+        "选项三"
+      )
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item ant-form-item-compact" },
+    React.createElement(
+      "label",
+      { className: "col-6" },
+      "ant-radio："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-18" },
+      React.createElement(
+        RadioGroup,
+        null,
+        React.createElement(
+          Radio,
+          { value: "a", checked: true },
+          "A"
+        ),
+        React.createElement(
+          Radio,
+          { value: "b" },
+          "B"
+        ),
+        React.createElement(
+          Radio,
+          { value: "c" },
+          "C"
+        ),
+        React.createElement(
+          Radio,
+          { value: "d", disabled: true },
+          "D"
+        )
+      )
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "ant-form-item ant-form-item-compact" },
+    React.createElement(
+      "label",
+      { className: "col-6", "for": "InputFile" },
+      "头像："
+    ),
+    React.createElement(
+      "div",
+      { className: "col-18" },
+      React.createElement("input", { type: "file", id: "InputFile", className: "ant-upload" }),
+      React.createElement(
+        "p",
+        { className: "ant-form-explain" },
+        "请选择一个文件"
+      )
+    )
+  )
+), document.getElementById("components-form-demo-form-controls"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
+<span class="keyword">var</span> Option = Select.Option;
+<span class="keyword">var</span> Checkbox = antd.Checkbox;
+<span class="keyword">var</span> Radio = antd.Radio;
+<span class="keyword">var</span> RadioGroup = antd.RadioGroup;
+
+<span class="function"><span class="keyword">function</span> <span class="title">handleSelectChange</span><span class="params">(value)</span> {</span>
+  console.log(<span class="string">'selected '</span> + value);
+}
+
+React.render(
+<span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">placeholder</span>=<span class="value">"Please enter..."</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>文本域：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>文本域：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>下拉列表：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">select</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">option</span>&gt;</span>选项一<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">option</span>&gt;</span>选项二<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">option</span>&gt;</span>选项三<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">option</span>&gt;</span>选项四<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">option</span>&gt;</span>选线五<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>ant-select：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"yiminghe"</span>&gt;</span>yiminghe<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>checkbox 复选框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">value</span>=<span class="value">"apple"</span>&gt;</span> Apple
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>ant-checkbox：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-18"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 选项一
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="comment">&lt;!-- disabled checkbox --&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">value</span>=<span class="value">"banana"</span> <span class="attribute">disabled</span>&gt;</span> Banana(disabled)
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 选项二
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>内联的 checkbox：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="comment">&lt;!-- 内联的checkbox --&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"inlineCheckbox1"</span> <span class="attribute">value</span>=<span class="value">"Kevin"</span>&gt;</span> Kevin
-      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"inlineCheckbox2"</span> <span class="attribute">value</span>=<span class="value">"Bob"</span>&gt;</span> Bob
-      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"inlineCheckbox3"</span> <span class="attribute">value</span>=<span class="value">"Stuart"</span>&gt;</span> Stuart
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span> 选项三（不可选）
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>radio 单选框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-radio-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"radios"</span> <span class="attribute">id</span>=<span class="value">"optionsRadios1"</span> <span class="attribute">value</span>=<span class="value">"option1"</span> <span class="attribute">checked</span>&gt;</span> Apple
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>ant-checkbox：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-18"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>选项一
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="comment">&lt;!-- disabled radio --&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-radio-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"radios"</span> <span class="attribute">id</span>=<span class="value">"optionsRadios3"</span> <span class="attribute">value</span>=<span class="value">"option3"</span> <span class="attribute">disabled</span>&gt;</span> Banana(disabled)
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>选项二
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>内联的 radio：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="comment">&lt;!-- 内联的radio --&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-radio-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"inlineRadios"</span> <span class="attribute">id</span>=<span class="value">"inlineRadio1"</span> <span class="attribute">value</span>=<span class="value">"Kevin"</span>&gt;</span> Kevin
-      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-radio-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"inlineRadios"</span> <span class="attribute">id</span>=<span class="value">"inlineRadio2"</span> <span class="attribute">value</span>=<span class="value">"Stuart"</span>&gt;</span> Stuart
-      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-radio-inline"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"inlineRadios"</span> <span class="attribute">id</span>=<span class="value">"inlineRadio3"</span> <span class="attribute">value</span>=<span class="value">"Bob"</span>&gt;</span> Bob
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>选项三
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-6"</span> <span class="attribute">for</span>=<span class="value">"InputFile"</span>&gt;</span>头像：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"file"</span> <span class="attribute">id</span>=<span class="value">"InputFile"</span> <span class="attribute">class</span>=<span class="value">"ant-upload"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ant-form-explain"</span>&gt;</span>请选择一个文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>ant-radio：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-18"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">RadioGroup</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"a"</span> <span class="attribute">checked</span>=<span class="value">{true}</span>&gt;</span>A<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"b"</span> &gt;</span>B<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"c"</span> &gt;</span>C<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"d"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>&gt;</span>D<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">for</span>=<span class="value">"InputFile"</span>&gt;</span>头像：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-18"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"file"</span> <span class="attribute">id</span>=<span class="value">"InputFile"</span> <span class="attribute">className</span>=<span class="value">"ant-upload"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>请选择一个文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+, document.getElementById('components-form-demo-form-controls'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">表单控件</div>

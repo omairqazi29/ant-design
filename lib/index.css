@@ -3722,6 +3722,29 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
   content: "\e61e";
 }
+.ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected {
+  position: relative;
+}
+.ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
+  font-size: 0.75;
+  font-size: 9px \9;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  display: inline-block;
+  content: '\e613';
+  font-family: 'anticon';
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  background: #eaf8fe;
+  padding-right: 16px;
+  color: #2db7f5;
+}
+:root .ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
+  font-size: 12px;
+}
 .ant-select-dropdown {
   display: none;
   background-color: white;
@@ -3761,29 +3784,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-select-dropdown-menu > .ant-select-dropdown-menu-item-active,
 .ant-select-dropdown-menu > .ant-select-dropdown-menu-item-selected {
   background-color: #eaf8fe !important;
-}
-.ant-select-dropdown-menu > .ant-select-dropdown-menu-item-selected {
-  position: relative;
-}
-.ant-select-dropdown-menu > .ant-select-dropdown-menu-item-selected:after {
-  font-size: 0.75;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
-  display: inline-block;
-  content: '\e613';
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 6px;
-  right: 0;
-  background: #eaf8fe;
-  padding-right: 16px;
-  color: #2db7f5;
-}
-:root .ant-select-dropdown-menu > .ant-select-dropdown-menu-item-selected:after {
-  font-size: 12px;
 }
 .ant-select-dropdown-menu > .ant-select-dropdown-menu-item-disabled {
   color: #ccc;
@@ -6269,6 +6269,7 @@ fieldset[disabled] .ant-checkbox label {
 }
 .ant-form-text {
   display: inline-block;
+  padding-right: 8px;
 }
 .ant-form-split {
   display: block;
@@ -6856,9 +6857,6 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-down {
   cursor: pointer;
-}
-.ant-input-number-handler-down-inner {
-  bottom: 1px;
 }
 .ant-input-number-handler-down-inner:before {
   content: "\e600";
