@@ -14,7 +14,7 @@ Radio 单选框 - Ant Design
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.0-beta3.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.0-beta2.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -123,11 +123,11 @@ Radio 单选框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.0-beta3',
+        latest: '0.7.0-beta2',
         stable: ''
       };
     </script>
-    <script src="/dist/antd-0.7.0-beta3.js"></script>
+    <script src="/dist/antd-0.7.0-beta2.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -414,6 +414,20 @@ Radio 单选框 - Ant Design
 <td>false</td>
 <td>null</td>
 </tr>
+<tr>
+<td>value</td>
+<td>当前值</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>defaultValue</td>
+<td>初始值</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -455,13 +469,13 @@ var App = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      selectedValue: "a"
+      value: "a"
     };
   },
   onChange: function onChange(ev) {
     console.log("radio checked:" + ev.target.value);
     this.setState({
-      selectedValue: ev.target.value
+      value: ev.target.value
     });
   },
   render: function render() {
@@ -470,10 +484,10 @@ var App = React.createClass({
       null,
       React.createElement(
         RadioGroup,
-        { onChange: this.onChange },
+        { onChange: this.onChange, value: this.state.value },
         React.createElement(
           Radio,
-          { value: "a", checked: true },
+          { value: "a" },
           "A"
         ),
         React.createElement(
@@ -493,7 +507,7 @@ var App = React.createClass({
         )
       ),
       "你选中的:  ",
-      this.state.selectedValue
+      this.state.value
     );
   }
 });
@@ -503,24 +517,24 @@ React.render(React.createElement(App, null), document.getElementById("components
 <span class="keyword">var</span> App = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
     <span class="keyword">return</span> {
-      selectedValue:<span class="string">"a"</span>
+      value:<span class="string">"a"</span>
     };
   },
   onChange(ev) {
     console.log(<span class="string">'radio checked:'</span> + ev.target.value);
     <span class="keyword">this</span>.setState({
-      selectedValue:ev.target.value
+      value:ev.target.value
     })
   },
   render() {
     <span class="keyword">return</span><span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"a"</span> <span class="attribute">checked</span>=<span class="value">{true}</span>&gt;</span>A<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span> <span class="attribute">value</span>=<span class="value">{this.state.value}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span>A<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"b"</span> &gt;</span>B<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"c"</span> &gt;</span>C<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"d"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>&gt;</span>D<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
-      你选中的:&amp;nbsp;&amp;nbsp;{this.state.selectedValue}
+      你选中的:&amp;nbsp;&amp;nbsp;{this.state.value}
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   }
 });
