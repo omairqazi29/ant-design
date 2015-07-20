@@ -14,7 +14,7 @@ Slider 滑动输入条 - Ant Design
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.0-beta3.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.0-beta4.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -123,11 +123,11 @@ Slider 滑动输入条 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.0-beta3',
+        latest: '0.7.0-beta4',
         stable: ''
       };
     </script>
-    <script src="/dist/antd-0.7.0-beta3.js"></script>
+    <script src="/dist/antd-0.7.0-beta4.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -389,8 +389,14 @@ Slider 滑动输入条 - Ant Design
 <tr>
 <td>value</td>
 <td>Number</td>
-<td>0</td>
+<td></td>
 <td>当前取值</td>
+</tr>
+<tr>
+<td>defaultValue</td>
+<td>Number</td>
+<td>0</td>
+<td>初始取值</td>
 </tr>
 <tr>
 <td>marks</td>
@@ -407,8 +413,14 @@ Slider 滑动输入条 - Ant Design
 <tr>
 <td>index</td>
 <td>Number</td>
+<td></td>
+<td>为具备 <code>step</code> 或者 <code>marks</code> 的 slider 提供滑块操作的当前位置</td>
+</tr>
+<tr>
+<td>defaultIndex</td>
+<td>Number</td>
 <td>0</td>
-<td>为具备 <code>step</code> 或者 <code>marks</code> 的 slider 提供滑块操作按钮最初的位置</td>
+<td>为具备 <code>step</code> 或者 <code>marks</code> 的 slider 提供滑块操作的初始位置</td>
 </tr>
 <tr>
 <td>disabled</td>
@@ -435,12 +447,12 @@ React.render(React.createElement(
   'div',
   null,
   React.createElement(Slider, null),
-  React.createElement(Slider, { value: 65, disabled: true })
+  React.createElement(Slider, { defaultValue: 65, disabled: true })
 ), document.getElementById('components-slider-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Slider</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">value</span>=<span class="value">{65}</span> <span class="attribute">disabled</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">defaultValue</span>=<span class="value">{65}</span> <span class="attribute">disabled</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-basic'));</span></code></pre></div><style>
 .code-box-demo .ant-slider {
@@ -701,21 +713,21 @@ React.render(React.createElement(
     null,
     "包含关系"
   ),
-  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], index: 1 }),
+  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], defaultIndex: 1 }),
   React.createElement(
     "p",
     null,
     "并列关系"
   ),
-  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], isIncluded: false, index: 1 })
+  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], isIncluded: false, defaultIndex: 1 })
 ), document.getElementById("components-slider-demo-mark"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
 
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"sliderContainer"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>包含关系<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">marks</span>=<span class="value">{["状态1","状态2","状态3","状态4"]}</span> <span class="attribute">index</span>=<span class="value">{1}</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">marks</span>=<span class="value">{["状态1","状态2","状态3","状态4"]}</span> <span class="attribute">defaultIndex</span>=<span class="value">{1}</span> /&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>并列关系<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">marks</span>=<span class="value">{["状态1","状态2","状态3","状态4"]}</span> <span class="attribute">isIncluded</span>=<span class="value">{false}</span> <span class="attribute">index</span>=<span class="value">{1}</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">marks</span>=<span class="value">{["状态1","状态2","状态3","状态4"]}</span> <span class="attribute">isIncluded</span>=<span class="value">{false}</span> <span class="attribute">defaultIndex</span>=<span class="value">{1}</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-mark'));</span></code></pre></div>
   </div>
