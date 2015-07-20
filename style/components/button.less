@@ -1,0 +1,56 @@
+@import "../mixins/index";
+@btnPrefixClass: ~"@{css-prefix}btn";
+
+// Button styles
+// -----------------------------
+.@{btnPrefixClass} {
+  .btn;
+  .btn-default;
+
+  &-primary {
+    .btn-primary;
+
+    .@{btnPrefixClass}-group &:not(:first-child):not(:last-child) {
+      border-right-color: @btn-group-border;
+      border-left-color: @btn-group-border;
+    }
+
+    .@{btnPrefixClass}-group &:first-child {
+      &:not(:last-child) {
+        border-right-color: @btn-group-border;
+      }
+    }
+
+    .@{btnPrefixClass}-group &:last-child:not(:first-child) {
+      border-left-color: @btn-group-border;
+    }
+
+    .@{btnPrefixClass}-group & + .@{btnPrefixClass} {
+      border-left-color: @btn-group-border;
+    }
+  }
+
+  &-ghost {
+    .btn-ghost;
+  }
+
+  &-circle, &-circle-outline {
+    .btn-circle(@btnPrefixClass);
+  }
+
+  &-circle-outline {
+    .btn-circle-outline;
+  }
+
+  &-menu {
+    > .@{iconfont-css-prefix} {
+      .iconfont-size-under-12px(10px);
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &-group {
+    .btn-group(@btnPrefixClass);
+  }
+}

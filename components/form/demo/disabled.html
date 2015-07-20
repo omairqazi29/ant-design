@@ -1,0 +1,86 @@
+<div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-form-demo-disabled"></div>
+    <h4 id="禁用的表单控件">禁用的表单控件</h4><p><br></p>
+<div class="nico-insert-code"><form class="ant-form-horizontal">
+  <div class="ant-form-item">
+    <label class="col-5">禁用的输入框：</label>
+    <div class="col-12">
+      <input class="ant-input" type="text" value="我是禁用的" disabled>
+    </div>
+  </div>
+</form></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span>&gt;</span>禁用的输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"我是禁用的"</span> <span class="attribute">disabled</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div><h4 id="禁用的-fieldset">禁用的 fieldset</h4><p><br></p>
+<div class="nico-insert-code"><form class="ant-form-horizontal">
+  <fieldset disabled>
+    <div class="ant-form-item">
+      <label for="disabledTextInput" class="col-5">Input:</label>
+      <div class="col-12">
+        <input type="text" id="disabledTextInput" class="ant-input" placeholder="Disabled input">
+      </div>
+    </div>
+    <div class="ant-form-item">
+      <label for="disabledSelect" class="col-5">Select:</label>
+      <div class="col-12">
+        <select id="disabledSelect" class="ant-input">
+          <option>Disabled select</option>
+        </select>
+      </div>
+    </div>
+    <div class="ant-form-item ant-form-item-compact">
+      <div class="col-14 col-offset-5">
+        <label class="ant-checkbo-inline">
+          <input type="checkbox"> checkbox
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-14 col-offset-5">
+        <input type="submit" class="ant-btn ant-btn-primary" value="确 定">
+      </div>
+    </div>
+  </fieldset>
+</form></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">disabled</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"disabledTextInput"</span> <span class="attribute">class</span>=<span class="value">"col-5"</span>&gt;</span>Input:<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"disabledTextInput"</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">placeholder</span>=<span class="value">"Disabled input"</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"disabledSelect"</span> <span class="attribute">class</span>=<span class="value">"col-5"</span>&gt;</span>Select:<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">select</span> <span class="attribute">id</span>=<span class="value">"disabledSelect"</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">option</span>&gt;</span>Disabled select<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-14 col-offset-5"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ant-checkbo-inline"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span> checkbox
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-14 col-offset-5"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">禁用状态</div>
+    <p>1) 单独为输入框设置 <code>disabled</code> 属性；</p>
+<p>2) 为 <code>&lt;fieldset&gt;</code> 设置 <code>disabled</code> 属性，可以禁用 <code>&lt;fieldset&gt;</code> 中包含的所有控件。</p>
+    <span class="collapse anticon anticon-circle-o-right"></span>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-radio-demo-radiogroup"></div>
+    <script>(function(){"use strict";
+
+var Radio = antd.Radio;
+var RadioGroup = antd.RadioGroup;
+
+var App = React.createClass({
+  displayName: "App",
+
+  getInitialState: function getInitialState() {
+    return {
+      selectedValue: "a"
+    };
+  },
+  onChange: function onChange(ev) {
+    console.log("radio checked:" + ev.target.value);
+    this.setState({
+      selectedValue: ev.target.value
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        RadioGroup,
+        { onChange: this.onChange },
+        React.createElement(
+          Radio,
+          { value: "a", checked: true },
+          "A"
+        ),
+        React.createElement(
+          Radio,
+          { value: "b" },
+          "B"
+        ),
+        React.createElement(
+          Radio,
+          { value: "c" },
+          "C"
+        ),
+        React.createElement(
+          Radio,
+          { value: "d", disabled: true },
+          "D"
+        )
+      ),
+      "你选中的:  ",
+      this.state.selectedValue
+    );
+  }
+});
+React.render(React.createElement(App, null), document.getElementById("components-radio-demo-radiogroup"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
+<span class="keyword">var</span> RadioGroup = antd.RadioGroup;
+
+<span class="keyword">var</span> App = React.createClass({
+  getInitialState: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="keyword">return</span> {
+      selectedValue:<span class="string">"a"</span>
+    };
+  },
+  onChange(ev) {
+    console.log(<span class="string">'radio checked:'</span> + ev.target.value);
+    <span class="keyword">this</span>.setState({
+      selectedValue:ev.target.value
+    })
+  },
+  render() {
+    <span class="keyword">return</span><span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"a"</span> <span class="attribute">checked</span>=<span class="value">{true}</span>&gt;</span>A<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"b"</span> &gt;</span>B<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"c"</span> &gt;</span>C<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"d"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>&gt;</span>D<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
+      你选中的:&amp;nbsp;&amp;nbsp;{this.state.selectedValue}
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  }
+});
+React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-radio-demo-radiogroup'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">RadioGroup组合</div>
+    <p>RadioGroup 组合。</p>
+    <span class="collapse anticon anticon-circle-o-right"></span>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-table-demo-ajax"></div>
+    <script>(function(){'use strict';
+
+var Table = antd.Table;
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  filters: [{
+    text: '姓李的',
+    value: '李'
+  }, {
+    text: '姓胡的',
+    value: '胡'
+  }]
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  sorter: true
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+
+function resolve(result) {
+  return result.data;
+}
+
+var dataSource = {
+  url: '/components/table/demo/data.json',
+  resolve: function resolve(result) {
+    return result.data;
+  },
+  // 和后台接口返回的分页数据进行适配
+  getPagination: function getPagination(result) {
+    return {
+      total: result.totalCount,
+      pageSize: result.pageSize
+    };
+  },
+  // 和后台接口接收的参数进行适配
+  // 参数里提供了分页、筛选、排序的信息
+  getParams: function getParams(pagination, filters, sorter) {
+    console.log(pagination, filters, sorter);
+    var params = {
+      pageSize: pagination.pageSize,
+      currentPage: pagination.current,
+      sortField: sorter.field,
+      sortOrder: sorter.order
+    };
+    for (var key in filters) {
+      params[key] = filters[key];
+    }
+    console.log('请求参数：', params);
+    return params;
+  }
+};
+
+React.render(React.createElement(Table, { columns: columns, dataSource: dataSource }), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> columns = [{
+  title: <span class="string">'姓名'</span>,
+  dataIndex: <span class="string">'name'</span>,
+  filters: [{
+    text: <span class="string">'姓李的'</span>,
+    value: <span class="string">'李'</span>
+  }, {
+    text: <span class="string">'姓胡的'</span>,
+    value: <span class="string">'胡'</span>
+  }]
+}, {
+  title: <span class="string">'年龄'</span>,
+  dataIndex: <span class="string">'age'</span>,
+  sorter: <span class="literal">true</span>
+}, {
+  title: <span class="string">'住址'</span>,
+  dataIndex: <span class="string">'address'</span>
+}];
+
+<span class="function"><span class="keyword">function</span> <span class="title">resolve</span><span class="params">(result)</span> {</span>
+  <span class="keyword">return</span> result.data;
+}
+
+<span class="keyword">var</span> dataSource = {
+  url: <span class="string">"/components/table/demo/data.json"</span>,
+  resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
+    <span class="keyword">return</span> result.data;
+  },
+  <span class="comment">// 和后台接口返回的分页数据进行适配</span>
+  getPagination: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
+    <span class="keyword">return</span> {
+      total: result.totalCount,
+      pageSize: result.pageSize
+    }
+  },
+  <span class="comment">// 和后台接口接收的参数进行适配</span>
+  <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
+  getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
+    console.log(pagination, filters, sorter);
+    <span class="keyword">var</span> params = {
+      pageSize: pagination.pageSize,
+      currentPage: pagination.current,
+      sortField: sorter.field,
+      sortOrder: sorter.order
+    };
+    <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> filters) {
+      params[key] = filters[key];
+    }
+    console.log(<span class="string">'请求参数：'</span>, params);
+    <span class="keyword">return</span> params;
+  }
+};
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{dataSource}</span> /&gt;</span>
+, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">动态加载数据</div>
+    <p>远程读取的表格是<strong>更为常见的模式</strong>，下面的表格使用了 <code>dataSource</code> 对象和远程数据源绑定和适配，并具有筛选、排序等功能以及页面 loading 效果。</p>
+<p><strong>注意，此示例是静态数据模拟，数据并不准确，请打开网络面板查看请求。</strong></p>
+    <span class="collapse anticon anticon-circle-o-right"></span>
+  </div>
+</div>
