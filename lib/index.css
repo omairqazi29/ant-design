@@ -3829,7 +3829,8 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-select-open .ant-select-selection {
   border-color: #2db7f5;
-  box-shadow: 0 0 3px #57c5f7;
+  outline: 0;
+  box-shadow: 0 0 0 2px #d5f1fd;
 }
 .ant-select-combobox .ant-select-arrow {
   display: none;
