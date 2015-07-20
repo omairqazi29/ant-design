@@ -3861,7 +3861,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar-picker {
   position: relative;
   display: inline-block;
-  width: 100%;
 }
 .ant-calendar-picker-icon {
   position: absolute;
@@ -6264,12 +6263,15 @@ fieldset[disabled] .ant-checkbox label {
 }
 .ant-form-text,
 .ant-form-split {
-  display: inline-block;
   margin: 0!important;
   padding-top: 7px;
   padding-bottom: 7px;
 }
+.ant-form-text {
+  display: inline-block;
+}
 .ant-form-split {
+  display: block;
   text-align: center;
 }
 .ant-form-explain {
@@ -6323,6 +6325,9 @@ form .ant-radio-vertical:first-child {
 form .ant-input-number {
   margin-top: -1px;
   margin-right: 8px;
+}
+form .ant-calendar-picker {
+  width: 100%;
 }
 .ant-form-horizontal .ant-form-item {
   position: relative;
@@ -6748,7 +6753,8 @@ textarea.ant-input-number {
   overflow: hidden;
   color: #999;
 }
-.ant-input-number-handler:hover {
+.ant-input-number-handler:hover .ant-input-number-handler-up-inner,
+.ant-input-number-handler:hover .ant-input-number-handler-down-inner {
   color: #57c5f7;
 }
 .ant-input-number-handler-up-inner,
@@ -6774,6 +6780,7 @@ textarea.ant-input-number {
   -ms-transform: scale(0.66666667);
   transform: scale(0.66666667);
   right: 4px;
+  color: #999;
 }
 .ant-input-number-handler-up-inner:before,
 .ant-input-number-handler-down-inner:before {
