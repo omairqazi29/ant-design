@@ -6264,6 +6264,7 @@ fieldset[disabled] .ant-checkbox label {
 }
 .ant-form-text,
 .ant-form-split {
+  display: inline-block;
   margin: 0!important;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -6318,6 +6319,10 @@ form .ant-radio-vertical {
 form .ant-checkbox-vertical:first-child,
 form .ant-radio-vertical:first-child {
   margin-top: 0;
+}
+form .ant-input-number {
+  margin-top: -1px;
+  margin-right: 8px;
 }
 .ant-form-horizontal .ant-form-item {
   position: relative;
@@ -6674,26 +6679,24 @@ form .ant-radio-vertical:first-child {
   position: relative;
   padding: 4px 7px;
   width: 100%;
-  height: 28px;
   cursor: text;
   line-height: 1.5;
   color: #666666;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9d9d9;
-  border-radius: 6px;
   transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0;
   padding: 0;
-  line-height: 29px;
+  line-height: 28px;
   font-size: 12px;
-  height: 29px;
+  height: 28px;
   display: inline-block;
   vertical-align: middle;
   border: 1px solid #D9D9D9;
-  border-radius: 5px;
+  border-radius: 6px;
   overflow: hidden;
 }
 .ant-input-number::-moz-placeholder {
@@ -6741,15 +6744,12 @@ textarea.ant-input-number {
 .ant-input-number-handler {
   text-align: center;
   line-height: 0;
-  height: 15px;
+  height: 14px;
   overflow: hidden;
   color: #999;
 }
 .ant-input-number-handler:hover {
-  color: #666;
-}
-.ant-input-number-handler-down {
-  height: 14px;
+  color: #57c5f7;
 }
 .ant-input-number-handler-up-inner,
 .ant-input-number-handler-down-inner {
@@ -6802,21 +6802,21 @@ textarea.ant-input-number {
 }
 .ant-input-number-input-wrap {
   overflow: hidden;
-  height: 29px;
+  height: 28px;
 }
 .ant-input-number-input {
   width: 100%;
-  text-align: center;
+  text-align: left;
   outline: 0;
   -moz-appearance: textfield;
-  line-height: 29px;
-  height: 22px;
+  line-height: 28px;
+  height: 28px;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
   color: #666666;
   border: 0;
-  border-radius: 5px;
-  padding: 0 8px;
+  border-radius: 6px;
+  padding: 0 7px;
 }
 .ant-input-number-input[disabled] {
   background-color: #f3f5f7;
@@ -6830,8 +6830,7 @@ textarea.ant-input-number {
   float: right;
   border-left: 1px solid #D9D9D9;
   width: 22px;
-  height: 29px;
-  margin-top: -1px;
+  height: 28px;
   position: relative;
 }
 .ant-input-number-handler-up {
@@ -6839,7 +6838,7 @@ textarea.ant-input-number {
   cursor: pointer;
 }
 .ant-input-number-handler-up-inner {
-  top: 2px;
+  top: 1px;
 }
 .ant-input-number-handler-up-inner:before {
   content: "\e600";
@@ -6852,7 +6851,7 @@ textarea.ant-input-number {
   cursor: pointer;
 }
 .ant-input-number-handler-down-inner {
-  bottom: 2px;
+  bottom: 1px;
 }
 .ant-input-number-handler-down-inner:before {
   content: "\e600";
