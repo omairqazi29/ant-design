@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.0.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.1.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -123,11 +123,11 @@
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.0',
-        stable: ''
+        latest: '0.7.1',
+        stable: '0.7.0'
       };
     </script>
-    <script src="/dist/antd-0.7.0.js"></script>
+    <script src="/dist/antd-0.7.1.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -219,7 +219,7 @@
     <h1>下载 </h1>
     <p>可以直接下载文件或使用 npm 进行安装。</p>
 <h2 id="直接下载">直接下载</h2><ul>
-<li><p><strong>开发版</strong> <span class="versions" id="latest-version">1.0.2</span></p>
+<li><p><strong>开发版</strong> <span class="versions" id="latest-version"></span></p>
 <ul id="latest-links">
 <li>
   <a href="http://ant.design/dist/antd.js">antd.js</a>
@@ -229,15 +229,8 @@
 </li>
 </ul>
 </li>
-<li><p><strong>稳定版</strong> <span class="versions" id="stable-version">1.0.0</span></p>
-<ul id="stable-links">
-<li>
-  <a href="http://ant.design/dist/antd.js">antd.js</a>
-</li>
-<li>
-  <a href="http://ant.design/dist/antd.js">antd.css</a>
-</li>
-</ul>
+<li><p><strong>稳定版</strong> <span class="versions" id="stable-version"></span></p>
+<p><a id="stable-link" href="" target="_blank">下载</a></p>
 </li>
 <li><p><strong>历史版本</strong>：<a href="https://github.com/ant-design/ant-design/releases">https://github.com/ant-design/ant-design/releases</a></p>
 </li>
@@ -270,12 +263,10 @@ $('#latest-links a').each(function(i, item) {
 
 if (antdVersion.stable) {
   $('#stable-version').html(antdVersion.stable);
-  $('#stable-links a').each(function(i, item) {
-    $(item).attr('href', $(item).attr('href').replace('dist/antd', 'dist/antd-' + antdVersion.stable));
-  });
+  $('#stable-link').attr('href', 'https://github.com/ant-design/ant-design/releases/tag/' + antdVersion.stable);
 } else {
   $('#stable-version').html('暂无');
-  $('#stable-links').hide();
+  $('#stable-link').hide();
 }
 </script>
 
