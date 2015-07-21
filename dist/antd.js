@@ -19553,6 +19553,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(66);
 	var Pager = __webpack_require__(231);
 	var Options = __webpack_require__(232);
+	var KEYCODE = __webpack_require__(233);
 	
 	function noop() {}
 	
@@ -19568,10 +19569,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    this.state = {
 	      current: props.current,
+	      _current: props.current,
 	      pageSize: props.pageSize
 	    };
 	
-	    ['render', '_handleChange', '_simpleChange', '_changePageSize', '_isValid', '_prev', '_next', '_hasPrev', '_hasNext', '_jumpPrev', '_jumpNext', '_canJumpPrev', '_canJumpNext'].map(function (method) {
+	    ['render', '_handleChange', '_handleKeyUp', '_handleKeyDown', '_changePageSize', '_isValid', '_prev', '_next', '_hasPrev', '_hasNext', '_jumpPrev', '_jumpNext', '_canJumpPrev', '_canJumpNext'].map(function (method) {
 	      return _this[method] = _this[method].bind(_this);
 	    });
 	  }
@@ -19614,7 +19616,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          React.createElement(
 	            'div',
 	            { className: prefixCls + '-simple-pager' },
-	            React.createElement('input', { type: 'text', value: this.state.current, onChange: this._simpleChange }),
+	            React.createElement('input', { type: 'text', value: this.state._current, onKeyDown: this._handleKeyDown, onKeyUp: this._handleKeyUp, onChange: this._handleKeyUp }),
 	            React.createElement(
 	              'span',
 	              { className: prefixCls + '-slash' },
@@ -19716,6 +19718,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return typeof page === 'number' && page >= 1 && page <= this._calcPage() && page !== this.state.current;
 	    }
 	  }, {
+	    key: '_handleKeyDown',
+	    value: function _handleKeyDown(evt) {
+	      if (evt.keyCode === KEYCODE.ARROW_UP || evt.keyCode === KEYCODE.ARROW_DOWN) {
+	        evt.preventDefault();
+	      }
+	    }
+	  }, {
+	    key: '_handleKeyUp',
+	    value: function _handleKeyUp(evt) {
+	      var _val = evt.target.value;
+	      var val = undefined;
+	
+	      if (_val === '') {
+	        val = _val;
+	      } else if (isNaN(Number(_val))) {
+	        val = this.state._current;
+	      } else {
+	        val = Number(_val);
+	      }
+	
+	      this.setState({
+	        _current: val
+	      });
+	
+	      if (evt.keyCode === KEYCODE.ENTER) {
+	        this._handleChange(val);
+	      } else if (evt.keyCode === KEYCODE.ARROW_UP) {
+	        this._handleChange(val - 1);
+	      } else if (evt.keyCode === KEYCODE.ARROW_DOWN) {
+	        this._handleChange(val + 1);
+	      }
+	    }
+	  }, {
 	    key: '_changePageSize',
 	    value: function _changePageSize(size) {
 	      if (typeof size === 'number') {
@@ -19725,15 +19760,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: '_simpleChange',
-	    value: function _simpleChange(evt) {
-	      this._handleChange(Number(evt.target.value));
-	    }
-	  }, {
 	    key: '_handleChange',
 	    value: function _handleChange(page) {
 	      if (this._isValid(page)) {
-	        this.setState({ current: page });
+	        this.setState({
+	          current: page,
+	          _current: page
+	        });
 	        this.props.onChange(page);
 	      }
 	    }
@@ -19988,8 +20021,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var ENTER_KEY = 13;
 	      var val = Number(evt.target.value);
 	
-	      this.setState({ value: val });
-	
 	      if (evt.keyCode === ENTER_KEY) {
 	        this.props.quickGo(val);
 	      }
@@ -20024,7 +20055,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  BACKSPACE: 8,
 	  DELETE: 46,
-	  ENTER: 13
+	  ENTER: 13,
+	
+	  ARROW_UP: 38,
+	  ARROW_DOWN: 40
 	};
 
 /***/ },
