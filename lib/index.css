@@ -5542,12 +5542,12 @@ textarea.ant-calendar-time-input {
 }
 .ant-popover-content {
   padding: 8px 16px;
-  color: #999;
+  color: #666666;
 }
 .ant-popover-message {
   padding: 8px 0 16px;
   font-size: 12px;
-  color: #666;
+  color: text-color;
 }
 .ant-popover-message .anticon {
   margin-right: 8px;
@@ -6109,17 +6109,17 @@ textarea.ant-input {
   padding-right: 8px;
 }
 .ant-input-group-addon,
-.ant-input-group-btn,
+.ant-input-group-wrap,
 .ant-input-group > .ant-input {
   display: table-cell;
 }
 .ant-input-group-addon:not(:first-child):not(:last-child),
-.ant-input-group-btn:not(:first-child):not(:last-child),
+.ant-input-group-wrap:not(:first-child):not(:last-child),
 .ant-input-group > .ant-input:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .ant-input-group-addon,
-.ant-input-group-btn {
+.ant-input-group-wrap {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
@@ -6142,59 +6142,6 @@ textarea.ant-input {
   border: 1px solid #d9d9d9;
   border-radius: 6px;
 }
-.ant-input-group .ant-btn {
-  border-radius: 6px;
-  color: #666666;
-  background-color: #eeeeee;
-  border-color: #d9d9d9;
-  margin-left: -1px;
-}
-.ant-input-group .ant-btn:hover {
-  color: #858585;
-  background-color: #f1f1f1;
-  border-color: #e1e1e1;
-}
-.ant-input-group .ant-btn:active,
-.ant-input-group .ant-btn.active {
-  color: #616161;
-  background-color: #e2e2e2;
-  border-color: #e2e2e2;
-}
-.ant-input-group .ant-btn:active,
-.ant-input-group .ant-btn.active {
-  background-image: none;
-}
-.ant-input-group .ant-btn.disabled,
-.ant-input-group .ant-btn[disabled],
-fieldset[disabled] .ant-input-group .ant-btn,
-.ant-input-group .ant-btn.disabled:hover,
-.ant-input-group .ant-btn[disabled]:hover,
-fieldset[disabled] .ant-input-group .ant-btn:hover,
-.ant-input-group .ant-btn.disabled:active,
-.ant-input-group .ant-btn[disabled]:active,
-fieldset[disabled] .ant-input-group .ant-btn:active,
-.ant-input-group .ant-btn.disabled.active,
-.ant-input-group .ant-btn[disabled].active,
-fieldset[disabled] .ant-input-group .ant-btn.active {
-  color: #cccccc;
-  background-color: #f3f5f7;
-  border-color: #d9d9d9;
-}
-.ant-input-group .ant-btn:hover {
-  color: #666666;
-  background-color: #f1f1f1;
-  border-color: #d9d9d9;
-}
-.ant-input-group .ant-btn:active,
-.ant-input-group .ant-btn.active {
-  color: #666666;
-  background-color: #e2e2e2;
-  border-color: #d9d9d9;
-}
-.ant-input-group .ant-btn .anticon {
-  line-height: 1;
-  margin-left: 8px;
-}
 .ant-input-group > .ant-input:first-child,
 .ant-input-group-addon:first-child {
   border-bottom-right-radius: 0;
@@ -6207,27 +6154,21 @@ fieldset[disabled] .ant-input-group .ant-btn.active {
   border-left: 0;
 }
 .ant-input-group > .ant-input:last-child,
-.ant-input-group-addon:last-child,
-.ant-input-group-btn .ant-btn {
+.ant-input-group-addon:last-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 .ant-input-group-lg .ant-input,
-.ant-input-group-lg > .ant-input-group-addon,
-.ant-input-group-lg > .ant-input-group-btn .ant-btn {
+.ant-input-group-lg > .ant-input-group-addon {
   padding: 4px 7px 5px;
   height: 32px;
   font-size: 14px;
 }
 .ant-input-group-sm .ant-input,
-.ant-input-group-sm > .ant-input-group-addon,
-.ant-input-group-sm > .ant-input-group-btn .ant-btn {
+.ant-input-group-sm > .ant-input-group-addon {
   padding: 1px 7px;
   height: 22px;
   font-size: 12px;
-}
-.ant-input-group-sm > .ant-input-group-btn .ant-btn {
-  margin-top: -2px \9;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
@@ -6296,11 +6237,37 @@ form .has-feedback .anticon {
 }
 form .ant-input,
 form .ant-input-group .ant-input,
-form .ant-input-group .ant-input-group-addon,
-form .ant-input-group .ant-input-group-btn .ant-btn {
+form .ant-input-group .ant-input-group-addon {
   height: 32px;
   font-size: 12px;
-  padding: 7px;
+  padding: 6px 7px;
+}
+form .ant-input-group .ant-select-selection {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+form .ant-input-group .ant-select-selection:hover {
+  border-color: #d9d9d9;
+}
+form .ant-input-group .ant-select-selection--single {
+  margin-left: -1px;
+  height: 32px;
+  background-color: #eee;
+}
+form .ant-input-group .ant-select-selection--single .ant-select-selection__rendered {
+  padding-left: 8px;
+  padding-right: 25px;
+  line-height: 32px;
+}
+form .ant-input-group .ant-select-arrow {
+  right: 8px;
+  height: 32px;
+  line-height: 32px;
+  width: auto;
+}
+form .ant-input-group .ant-select-open .ant-select-selection {
+  border-color: #d9d9d9;
+  box-shadow: none;
 }
 form .ant-upload {
   background: transparent;
@@ -6875,7 +6842,7 @@ textarea.ant-input-number {
 .ant-input-number-handler-up-disabled .ant-input-number-handler-up-inner,
 .ant-input-number-disabled .ant-input-number-handler-up-inner {
   opacity: 0.72;
-  color: #ccc;
+  color: #ccc!important;
   cursor: default;
 }
 .ant-input-number-handler-down-disabled .ant-input-number-handler-down-inner:hover,
@@ -6894,7 +6861,7 @@ textarea.ant-input-number {
 }
 .ant-input-number-disabled .ant-input-number-handler {
   opacity: 0.72;
-  color: #ccc;
+  color: #ccc!important;
   cursor: default;
 }
 .ant-input-number-disabled .ant-input-number-handler:hover {
@@ -7045,7 +7012,7 @@ textarea.ant-input-number {
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   overflow: hidden;
-  color: #999;
+  color: #666666;
   padding: 0 16px;
   background-color: #fff;
 }
