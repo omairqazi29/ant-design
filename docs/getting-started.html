@@ -266,9 +266,7 @@ Ant Design 提供了一套 <code>npm</code> + <code>webpack</code> 的开发工�
 <div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="built_in">cd</span> antd-demo
 $ antd init
 $ npm install</code></pre></div><h3 id="3-使用组件">3. 使用组件</h3><p>编辑 <code>index.js</code>，使用 Ant Design 的组件：</p>
-<div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> antd = require(<span class="string">'antd'</span>);
-<span class="keyword">var</span> Datepicker = antd.Datepicker;
-<span class="keyword">var</span> message = antd.message;
+<div class="highlight"><pre><code class="javascript">import {Datepicker, message} from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
