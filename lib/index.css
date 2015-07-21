@@ -6859,6 +6859,8 @@ textarea.ant-input-number {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transform-origin: 47.5% 51%;
+  /* fix chrome position */
 }
 .ant-input-number-handler-down {
   cursor: pointer;
