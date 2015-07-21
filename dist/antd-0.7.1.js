@@ -23595,13 +23595,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this = this;
 	
 	    return function () {
+	      var activeKey = _this._getActivityKey();
 	      if (_this.props.accordion) {
 	        _this.setState({
-	          activeKey: key
+	          activeKey: key === activeKey ? null : key
 	        });
 	      } else {
 	
-	        var activeKey = _this._getActivityKey();
 	        var index = activeKey.indexOf(key);
 	        var isActive = index > -1;
 	        if (isActive) {
@@ -23645,7 +23645,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var header = child.props.header;
 	      var isActive = false;
 	      if (accordion) {
-	        isActive = !activeKey ? !i : activeKey === key;
+	        isActive = activeKey === key;
 	      } else {
 	        isActive = activeKey.indexOf(key) > -1;
 	      }
@@ -26244,7 +26244,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"object-assign": "~3.0.0",
 			"rc-calendar": "~3.11.0",
 			"rc-checkbox": "~1.0.6",
-			"rc-collapse": "~1.2.2",
+			"rc-collapse": "~1.2.3",
 			"rc-dialog": "~4.4.0",
 			"rc-dropdown": "~1.1.1",
 			"rc-input-number": "~2.0.1",

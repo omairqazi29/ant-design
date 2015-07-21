@@ -6984,16 +6984,19 @@ textarea.ant-input-number {
 .ant-collapse {
   background-color: #f4f4f4;
   border-radius: 3px;
-  border-top: 1px solid #e9e9e9;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+  border: 1px solid #d9d9d9;
+}
+.ant-collapse > .ant-collapse-item {
+  border-top: 1px solid #d9d9d9;
+}
+.ant-collapse > .ant-collapse-item:first-child {
+  border-top: none;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   height: 38px;
   line-height: 38px;
   text-indent: 16px;
   color: #666;
-  border-bottom: 1px solid #e9e9e9;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header:before {
   display: inline-block;
@@ -7025,12 +7028,6 @@ textarea.ant-input-number {
 }
 .ant-collapse-item:last-child > .ant-collapse-content {
   border-radius: 0 0 3px 3px;
-}
-.ant-collapse-content-active {
-  border-bottom: 1px solid #e9e9e9;
-}
-.ant-collapse > .ant-collapse-item-active > .ant-collapse-header {
-  border-bottom: none;
 }
 .ant-collapse > .ant-collapse-item-active > .ant-collapse-header:before {
   border-left: 3px solid transparent;
