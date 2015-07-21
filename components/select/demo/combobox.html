@@ -35,7 +35,10 @@ var Test = React.createClass({
   render: function render() {
     return React.createElement(
       Select,
-      { combobox: true, style: { width: 200 }, onChange: this.handleChange },
+      { combobox: true,
+        style: { width: 200 },
+        onChange: this.handleChange,
+        searchPlaceholder: '请输入账户名' },
       this.state.options
     );
   }
@@ -65,7 +68,10 @@ React.render(React.createElement(Test, null), document.getElementById('component
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">combobox</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span>&gt;</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">combobox</span>
+      <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
+      <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span>
+      <span class="attribute">searchPlaceholder</span>=<span class="value">"请输入账户名"</span>&gt;</span>
       {this.state.options}
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>;</span>
   }

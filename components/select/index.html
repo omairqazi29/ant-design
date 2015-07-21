@@ -14,7 +14,7 @@ Select 选择器 - Ant Design
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.0-beta4.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.0.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -123,11 +123,11 @@ Select 选择器 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.0-beta4',
+        latest: '0.7.0',
         stable: ''
       };
     </script>
-    <script src="/dist/antd-0.7.0-beta4.js"></script>
+    <script src="/dist/antd-0.7.0.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -419,6 +419,18 @@ Select 选择器 - Ant Design
 <td>false</td>
 </tr>
 <tr>
+<td>placeholder</td>
+<td>选择框默认文字</td>
+<td>string</td>
+<td>无</td>
+</tr>
+<tr>
+<td>searchPlaceholder</td>
+<td>搜索框默认文字</td>
+<td>string</td>
+<td>无</td>
+</tr>
+<tr>
 <td>combobox</td>
 <td>输入框自动提示模式</td>
 <td></td>
@@ -577,7 +589,10 @@ var Test = React.createClass({
   render: function render() {
     return React.createElement(
       Select,
-      { combobox: true, style: { width: 200 }, onChange: this.handleChange },
+      { combobox: true,
+        style: { width: 200 },
+        onChange: this.handleChange,
+        searchPlaceholder: '请输入账户名' },
       this.state.options
     );
   }
@@ -607,7 +622,10 @@ React.render(React.createElement(Test, null), document.getElementById('component
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">combobox</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span>&gt;</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">combobox</span>
+      <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
+      <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span>
+      <span class="attribute">searchPlaceholder</span>=<span class="value">"请输入账户名"</span>&gt;</span>
       {this.state.options}
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>;</span>
   }

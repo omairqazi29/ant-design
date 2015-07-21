@@ -3722,6 +3722,9 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
   content: "\e61e";
 }
+.ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item {
+  padding: 7px 33px 7px 16px;
+}
 .ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected {
   position: relative;
 }
