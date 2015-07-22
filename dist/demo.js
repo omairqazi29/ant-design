@@ -78,7 +78,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return searchData.map(function (s) {
 	        return React.createElement(
 	          Option,
-	          { sData: s, key: s.title },
+	          { sData: s, key: s.title, text: '跳转到 ' + s.title },
 	          React.createElement(
 	            'strong',
 	            null,
@@ -109,6 +109,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        Select,
 	        { combobox: true, style: { width: 200 },
 	          onSelect: this.handleSelect,
+	          optionLabelProp: 'text',
 	          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
 	          searchPlaceholder: '搜索组件...',
 	          renderDropdownToBody: true,
