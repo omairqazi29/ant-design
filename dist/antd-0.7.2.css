@@ -5198,7 +5198,6 @@ textarea.ant-calendar-time-input {
   border-radius: 6px;
   -webkit-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease;
-  min-height: 200px;
 }
 .ant-table table {
   width: 100%;
@@ -6199,12 +6198,15 @@ fieldset[disabled] .ant-checkbox label {
 }
 .ant-form-item {
   margin-bottom: 24px;
+  color: #666;
 }
 .ant-form-item > label {
   color: #666666;
   text-align: right;
-  padding-right: 8px;
   vertical-align: middle;
+}
+.ant-form-item > label:lang(en) {
+  padding-right: 8px;
 }
 .ant-form-item .ant-switch {
   margin: 4px 0;
@@ -6324,12 +6326,7 @@ form .ant-calendar-picker {
 @media (min-width: 768px) {
   .ant-form-inline .ant-form-item {
     display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
     margin-right: 10px;
-  }
-  .ant-form-inline .ant-form-item label {
-    padding-right: 0;
   }
   .ant-form-inline .ant-input {
     display: inline-block;
@@ -7304,4 +7301,4 @@ textarea.ant-input-number {
   margin-left: 8px;
 }
 
-/*# sourceMappingURL=antd-0.8.0-beta.css.map*/
+/*# sourceMappingURL=antd-0.7.2.css.map*/

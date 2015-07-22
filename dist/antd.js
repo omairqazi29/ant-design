@@ -10730,7 +10730,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getInitialState: function getInitialState() {
 	    return {
-	      visible: false
+	      visible: false,
+	      confirmLoading: false
 	    };
 	  },
 	
@@ -10747,32 +10748,38 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
-	  show: function show() {
-	    this.setState({
-	      visible: true
-	    });
-	  },
-	
-	  hide: function hide() {
-	    this.setState({
-	      visible: false
-	    });
-	  },
-	
 	  handleOk: function handleOk() {
-	    this.props.onOk();
+	    this.setState({
+	      confirmLoading: true
+	    });
+	    if (typeof this.props.onOk) {
+	      this.props.onOk();
+	    }
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if ('visible' in nextProps) {
+	      // 隐藏后去除按钮 loading 效果
+	      if (!nextProps.visible) {
+	        this.setState({
+	          confirmLoading: false
+	        });
+	      }
+	    }
 	  },
 	
 	  render: function render() {
+	    var loadingIcon = this.state.confirmLoading ? React.createElement('i', { className: 'anticon anticon-loading' }) : '';
 	    var props = this.props;
 	    var footer = props.footer || [React.createElement(
 	      'button',
-	      { key: 'cancel', type: 'button', className: 'ant-btn-default ant-btn', onClick: this.handleCancel },
+	      { key: 'cancel', type: 'button', className: 'ant-btn ant-btn-lg', onClick: this.handleCancel },
 	      '取 消'
 	    ), React.createElement(
 	      'button',
-	      { key: 'confirm', type: 'button', className: 'ant-btn-primary ant-btn', onClick: this.handleOk },
-	      '确 定'
+	      { key: 'confirm', type: 'button', className: 'ant-btn ant-btn-primary ant-btn-lg', onClick: this.handleOk },
+	      '确 定 ',
+	      loadingIcon
 	    )];
 	    return React.createElement(Dialog, _extends({ transitionName: 'zoom', onBeforeClose: props.onCancel, visible: this.state.visible, maskAnimation: 'fade', width: '500', footer: footer }, props, { ref: 'd' }));
 	  }
@@ -26208,7 +26215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.8.0-beta",
+		"version": "0.7.2",
 		"stableVersion": "0.7.1",
 		"title": "Ant Design",
 		"description": "一个设计&前端框架",
