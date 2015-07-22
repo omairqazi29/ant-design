@@ -15,13 +15,13 @@ var Apps = React.createClass({
   render: function render() {
     return React.createElement(
       'ul',
-      { className: 'app-list' },
+      { className: "app-list" },
       React.createElement(
         'li',
         null,
         React.createElement(
           Link,
-          { to: '/apps/1' },
+          { to: "/apps/1" },
           '应用1'
         )
       ),
@@ -30,7 +30,7 @@ var Apps = React.createClass({
         null,
         React.createElement(
           Link,
-          { to: '/apps/2' },
+          { to: "/apps/2" },
           '应用2'
         )
       )
@@ -47,15 +47,15 @@ var App = React.createClass({
       null,
       React.createElement(
         'div',
-        { className: 'demo-nav' },
+        { className: "demo-nav" },
         React.createElement(
           Link,
-          { to: '/' },
+          { to: "/" },
           '首页'
         ),
         React.createElement(
           Link,
-          { to: '/apps' },
+          { to: "/apps" },
           '应用列表'
         )
       ),
@@ -77,11 +77,11 @@ var App = React.createClass({
 
 var routes = React.createElement(
   Route,
-  { name: '首页', path: '/', handler: App, ignoreScrollBehavior: true },
+  { name: "首页", path: "/", handler: App, ignoreScrollBehavior: true },
   React.createElement(
     Route,
-    { name: '应用列表', path: '/apps', handler: Apps },
-    React.createElement(Route, { name: '应用:id', path: '/apps/:id', handler: App })
+    { name: "应用列表", path: "/apps", handler: Apps },
+    React.createElement(Route, { name: "应用:id", path: "/apps/:id", handler: App })
   )
 );
 

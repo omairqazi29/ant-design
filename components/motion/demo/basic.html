@@ -180,14 +180,14 @@ var Test = React.createClass({
   render: function render() {
     var options = [React.createElement(
       'option',
-      { value: '' },
+      { value: "" },
       '请选择预设动画'
     )].concat(motions.map(function (m) {
       var opts = m.map(function (m2) {
         return React.createElement(
           'option',
-          { value: m2.value + '-' + m2.direction },
-          m2.name + ' ' + m2.value
+          { value: m2.value + "-" + m2.direction },
+          m2.name + " " + m2.value
         );
       });
       return React.createElement(
@@ -201,16 +201,16 @@ var Test = React.createClass({
       null,
       React.createElement(
         'div',
-        { className: 'motion-container' },
+        { className: "motion-container" },
         React.createElement(
           'div',
-          { ref: 'demo', className: 'motion-example' },
+          { ref: "demo", className: "motion-example" },
           '栗子'
         )
       ),
       React.createElement(
         'div',
-        { className: 'motion-select' },
+        { className: "motion-select" },
         React.createElement(
           'select',
           { onChange: this.handleChange },

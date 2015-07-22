@@ -52,7 +52,7 @@ var IconSlider = React.createClass({
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'iconWrapper' },
+      { className: "iconWrapper" },
       React.createElement('i', { className: this.state.preIcon }),
       React.createElement('i', { className: this.state.nextIcon }),
       React.createElement(Slider, _extends({}, this.props, { onChange: this.handleChange, value: this.state.sliderValue }))

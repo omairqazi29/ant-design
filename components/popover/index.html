@@ -43,40 +43,40 @@ Popover 气泡卡片 - Ant Design
         desc: '布局'
       });
       ANT_COMPONENTS.push({
-        title: 'Iconfont',
-        desc: '字体图标'
-      });
-      ANT_COMPONENTS.push({
         title: 'Checkbox',
         desc: '多选框'
       });
       ANT_COMPONENTS.push({
-        title: 'Radio',
-        desc: '单选框'
+        title: 'Iconfont',
+        desc: '字体图标'
       });
       ANT_COMPONENTS.push({
         title: 'Button',
         desc: '按钮'
       });
       ANT_COMPONENTS.push({
-        title: 'Switch',
-        desc: '开关'
+        title: 'Radio',
+        desc: '单选框'
       });
       ANT_COMPONENTS.push({
         title: 'Form',
         desc: '表单'
       });
       ANT_COMPONENTS.push({
-        title: 'Slider',
-        desc: '滑动输入条'
+        title: 'Switch',
+        desc: '开关'
+      });
+      ANT_COMPONENTS.push({
+        title: 'InputNumber',
+        desc: '数字输入框'
       });
       ANT_COMPONENTS.push({
         title: 'Motion',
         desc: '组件动画'
       });
       ANT_COMPONENTS.push({
-        title: 'InputNumber',
-        desc: '数字输入框'
+        title: 'Slider',
+        desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
         title: 'Datepicker',
@@ -103,8 +103,40 @@ Popover 气泡卡片 - Ant Design
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
+        title: 'Alert',
+        desc: '通知栏'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Notification',
+        desc: '系统通知框'
+      });
+      ANT_COMPONENTS.push({
         title: 'Pagination',
         desc: '分页'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tree',
+        desc: '树形控件'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Carousel',
+        desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Menu',
+        desc: '导航菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tag',
+        desc: '标签'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Affix',
+        desc: '固定'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Upload',
+        desc: '文件上传'
       });
       ANT_COMPONENTS.push({
         title: 'Modal',
@@ -240,6 +272,12 @@ Popover 气泡卡片 - Ant Design
             <span class="chinese">组件动画</span>
           </a>
         </li>
+        <li class="">
+          <a href="../alert/">
+            Alert
+            <span class="chinese">通知栏</span>
+          </a>
+        </li>
       </ul>
     </li>
     <li>
@@ -276,15 +314,15 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../datepicker/">
-            Datepicker
-            <span class="chinese">日期选择框</span>
-          </a>
-        </li>
-        <li class="">
           <a href="../select/">
             Select
             <span class="chinese">选择器</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../datepicker/">
+            Datepicker
+            <span class="chinese">日期选择框</span>
           </a>
         </li>
         <li class="">
@@ -312,9 +350,51 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
+          <a href="../affix/">
+            Affix
+            <span class="chinese">固定</span>
+          </a>
+        </li>
+        <li class="">
           <a href="../pagination/">
             Pagination
             <span class="chinese">分页</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tree/">
+            Tree
+            <span class="chinese">树形控件</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../carousel/">
+            Carousel
+            <span class="chinese">走马灯</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../menu/">
+            Menu
+            <span class="chinese">导航菜单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tag/">
+            Tag
+            <span class="chinese">标签</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../upload/">
+            Upload
+            <span class="chinese">文件上传</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../notification/">
+            Notification
+            <span class="chinese">系统通知框</span>
           </a>
         </li>
         <li class="">
@@ -449,7 +529,7 @@ React.render(React.createElement(
     { className: "ant-btn ant-btn-primary" },
     "弹出卡片"
   )
-), document.getElementById("components-popover-demo-basic"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -517,7 +597,7 @@ React.render(React.createElement(
       "点击"
     )
   )
-), document.getElementById("components-popover-demo-triggertype"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -607,7 +687,7 @@ React.render(React.createElement(
       "下"
     )
   )
-), document.getElementById("components-popover-demo-placement"));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
 <span class="keyword">var</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>

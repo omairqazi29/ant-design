@@ -16587,6 +16587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      prefixCls: 'ant-select',
 	      transitionName: 'slide-up',
+	      optionLabelProp: 'children',
 	      showSearch: false
 	    };
 	  },
