@@ -3404,9 +3404,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: left;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0 1px 5px #ccc;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid #d9d9d9;
 }
 .ant-dropdown-menu > li {
   margin: 0;
@@ -3555,18 +3555,17 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: center;
   text-transform: none;
   text-rendering: auto;
-  height: 26px;
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 50%;
+  right: 8px;
+  line-height: 1;
+  margin-top: -5px;
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667);
   -ms-transform: scale(0.66666667);
   transform: scale(0.66666667);
-  width: 26px;
-  line-height: 26px;
 }
 .ant-select-arrow:before {
   display: block;
@@ -3756,7 +3755,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: none;
   background-color: white;
   border: 1px solid #d9d9d9;
-  box-shadow: 0 0px 4px #d9d9d9;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
   border-radius: 4px;
   box-sizing: border-box;
   z-index: 100;
@@ -3914,7 +3913,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: left;
   background-color: #fff;
   border-radius: 6px;
-  box-shadow: 0 0 4px #d9d9d9;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   line-height: 1.5;
 }
@@ -4826,8 +4825,8 @@ textarea.ant-calendar-time-input {
           animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -4836,8 +4835,8 @@ textarea.ant-calendar-time-input {
           animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -4953,12 +4952,12 @@ textarea.ant-calendar-time-input {
           transform-origin: 0 0;
 }
 .ant-tabs-ink-bar-transition-forward {
-  -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
-          transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+  -webkit-transition: right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.09s;
+          transition: right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.09s;
 }
 .ant-tabs-ink-bar-transition-backward {
-  -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.09s, left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.09s, left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-nav-container {
   font-size: 14px;
@@ -5064,8 +5063,8 @@ textarea.ant-calendar-time-input {
 .ant-tabs-nav {
   box-sizing: border-box;
   padding-left: 0;
-  -webkit-transition: left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
   margin: 0;
   list-style: none;
@@ -5102,8 +5101,8 @@ textarea.ant-calendar-time-input {
 }
 .ant-tabs-nav .ant-tabs-tab > a {
   padding: 8px 20px;
-  -webkit-transition: color 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: color 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: block;
   color: #666;
 }
@@ -5146,8 +5145,8 @@ textarea.ant-calendar-time-input {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-backward-leave {
   position: absolute;
@@ -5163,8 +5162,8 @@ textarea.ant-calendar-time-input {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-forward-enter {
   -webkit-transform: translateX(100%);
@@ -5175,8 +5174,8 @@ textarea.ant-calendar-time-input {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-forward-leave {
   position: absolute;
@@ -5192,8 +5191,8 @@ textarea.ant-calendar-time-input {
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-          transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-table {
   font-size: 12px;
@@ -5427,7 +5426,7 @@ textarea.ant-calendar-time-input {
   text-decoration: none;
   background-color: #373737;
   border-radius: 6px;
-  box-shadow: 0 0 4px #d9d9d9;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
 }
 .ant-tooltip-arrow {
   position: absolute;
@@ -5535,7 +5534,7 @@ textarea.ant-calendar-time-input {
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  box-shadow: 0 0 4px #d9d9d9;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
 }
 .ant-popover-title {
   margin: 0;
@@ -7054,7 +7053,7 @@ textarea.ant-input-number {
   padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid #d9d9d9;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
   background: #fff;
   display: block;
 }
