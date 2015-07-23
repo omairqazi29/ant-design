@@ -1,4 +1,4 @@
-<div class="code-box">
+<div class="code-box" id="code-box-components-select-demo-combobox">
   <div class="code-box-demo">
     <div id="components-select-demo-combobox"></div>
     <script>(function(){'use strict';
@@ -16,7 +16,7 @@ var Test = React.createClass({
   },
   handleChange: function handleChange(value) {
     var options;
-    if (!value) {
+    if (!value || value.indexOf('@') >= 0) {
       options = [];
     } else {
       options = ['gmail.com', '163.com', 'qq.com'].map(function (domain) {
@@ -55,7 +55,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   handleChange(value) {
     <span class="keyword">var</span> options;
-    <span class="keyword">if</span> (!value) {
+    <span class="keyword">if</span> (!value || value.indexOf(<span class="string">'@'</span>) &gt;= <span class="number">0</span>) {
       options = [];
     } <span class="keyword">else</span> {
       options = [<span class="string">'gmail.com'</span>, <span class="string">'163.com'</span>, <span class="string">'qq.com'</span>].map(<span class="function"><span class="keyword">function</span><span class="params">(domain)</span> {</span>
@@ -80,8 +80,10 @@ React.render(React.createElement(Test, null), document.getElementById('component
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-select-demo-combobox'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
-    <div class="code-box-title">智能提示</div>
-    <p>类似账号注册表单输入框的自动完成功能。</p>
+    <div class="code-box-title">
+      <a href="#code-box-components-select-demo-combobox">智能提示</a>
+    </div>
+    <p>输入框自动完成功能，下面是一个账号注册表单的例子。</p>
     <span class="collapse anticon anticon-circle-o-right"></span>
   </div>
 </div>
