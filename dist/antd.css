@@ -6266,12 +6266,6 @@ form .ant-input-group .ant-select-selection--single .ant-select-selection__rende
   padding-right: 25px;
   line-height: 32px;
 }
-form .ant-input-group .ant-select-arrow {
-  right: 8px;
-  height: 32px;
-  line-height: 32px;
-  width: auto;
-}
 form .ant-input-group .ant-select-open .ant-select-selection {
   border-color: #d9d9d9;
   box-shadow: none;

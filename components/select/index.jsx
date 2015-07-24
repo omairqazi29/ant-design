@@ -1,8 +1,8 @@
-var React = require('react');
-var Select = require('rc-select');
+import React from 'react';
+import Select from 'rc-select';
 
-module.exports = React.createClass({
-  getDefaultProps: function () {
+export default React.createClass({
+  getDefaultProps() {
     return {
       prefixCls: 'ant-select',
       transitionName: 'slide-up',
@@ -10,11 +10,9 @@ module.exports = React.createClass({
       showSearch: false
     };
   },
-  render: function () {
+  render() {
     return (
       <Select {...this.props} />
     );
   }
 });
-
-module.exports.Option = Select.Option;
