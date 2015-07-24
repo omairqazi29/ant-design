@@ -6264,7 +6264,7 @@ form .ant-input-group .ant-select-selection--single {
 form .ant-input-group .ant-select-selection--single .ant-select-selection__rendered {
   padding-left: 8px;
   padding-right: 25px;
-  line-height: 32px;
+  line-height: 30px;
 }
 form .ant-input-group .ant-select-open .ant-select-selection {
   border-color: #d9d9d9;
