@@ -6895,8 +6895,8 @@ textarea.ant-input-number {
   border-radius: 3px;
   border-color: #d9d9d9;
   background-color: #ffffff;
-  -webkit-transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .ant-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
@@ -6912,8 +6912,8 @@ textarea.ant-input-number {
   border-top: 0;
   border-left: 0;
   content: ' ';
-  -webkit-transition: all 0.3s cubic-bezier(0.6, -0.3, 0.74, 0.05);
-          transition: all 0.3s cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  -webkit-transition: all 0.1s cubic-bezier(0.6, -0.3, 0.74, 0.05);
+          transition: all 0.1s cubic-bezier(0.6, -0.3, 0.74, 0.05);
 }
 .ant-checkbox-input {
   position: absolute;
@@ -6947,8 +6947,8 @@ textarea.ant-input-number {
   border-top: 0;
   border-left: 0;
   content: ' ';
-  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.2s;
-          transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.2s;
+  -webkit-transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.1s;
+          transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.1s;
 }
 .ant-checkbox-disabled.ant-checkbox-checked:hover .ant-checkbox-inner {
   border-color: #d9d9d9;
