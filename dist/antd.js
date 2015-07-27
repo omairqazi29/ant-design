@@ -22947,7 +22947,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  handlePageChange: function handlePageChange(current) {
-	    var pagination = this.state.pagination;
+	    var pagination = this.state.pagination || {};
 	    pagination.current = current || 1;
 	    this.setState({
 	      pagination: pagination
@@ -26371,7 +26371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.8.0-beta",
+		"version": "0.7.3-beta2",
 		"stableVersion": "0.7.2",
 		"title": "Ant Design",
 		"description": "一个设计语言&前端框架",
