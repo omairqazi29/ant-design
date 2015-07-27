@@ -22827,19 +22827,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        getPagination: function getPagination() {}
 	      }, this.props.dataSource);
 	    }
-	    var pagination = undefined;
-	    if (this.props.pagination === false) {
-	      pagination = false;
-	    } else {
-	      pagination = (0, _objectAssign2['default'])({
-	        pageSize: 10,
-	        total: this.props.dataSource.length
-	      }, this.props.pagination);
-	    }
+	
+	    var noPagination = this.props.pagination === false;
+	    var pagination = (0, _objectAssign2['default'])({
+	      pageSize: 10,
+	      total: this.props.dataSource.length
+	    }, this.props.pagination);
+	
 	    return {
 	      selectedRowKeys: [],
 	      loading: false,
 	      pagination: pagination,
+	      noPagination: noPagination,
 	      data: []
 	    };
 	  },
@@ -22946,9 +22945,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.props.rowSelection.onSelectAll(checked, selectedRows);
 	    }
 	  },
-	  handlePageChange: function handlePageChange(current) {
+	  handlePageChange: function handlePageChange() {
+	    var current = arguments[0] === undefined ? 1 : arguments[0];
+	
 	    var pagination = this.state.pagination || {};
-	    pagination.current = current || 1;
+	    pagination.current = current;
 	    this.setState({
 	      pagination: pagination
 	    }, this.fetch);
@@ -23032,7 +23033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  renderPagination: function renderPagination() {
 	    // 强制不需要分页
-	    if (this.props.pagination === false) {
+	    if (this.state.noPagination) {
 	      return '';
 	    }
 	    var classString = 'ant-table-pagination';
@@ -23098,7 +23099,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var current = undefined,
 	            pageSize = undefined;
 	        // 如果没有分页的话，默认全部展示
-	        if (_this3.props.pagination === false) {
+	        if (_this3.state.noPagination) {
 	          pageSize = Number.MAX_VALUE;
 	          current = 1;
 	        } else {
