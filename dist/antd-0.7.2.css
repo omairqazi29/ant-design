@@ -2988,8 +2988,9 @@ a[disabled] {
   border-color: #d9d9d9;
 }
 .ant-btn > .anticon {
-  z-index: 2;
   line-height: 1;
+  position: relative;
+  top: -1px;
 }
 .ant-btn,
 .ant-btn:active,
@@ -3238,8 +3239,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   -webkit-transform: scale(0.83333333);
   -ms-transform: scale(0.83333333);
   transform: scale(0.83333333);
-  position: relative;
-  top: -1px;
 }
 :root .ant-btn-menu > .anticon {
   font-size: 12px;
@@ -4137,8 +4136,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   right: 9px;
 }
 .ant-calendar .ant-calendar-ok-btn > .anticon {
-  z-index: 2;
   line-height: 1;
+  position: relative;
+  top: -1px;
 }
 .ant-calendar .ant-calendar-ok-btn,
 .ant-calendar .ant-calendar-ok-btn:active,
@@ -4263,6 +4263,7 @@ fieldset[disabled] .ant-calendar-time-input:hover {
   border-color: #e1e1e1;
 }
 textarea.ant-calendar-time-input {
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
@@ -5878,6 +5879,7 @@ fieldset[disabled] .ant-pagination-options-quick-jumper input:hover {
   border-color: #e1e1e1;
 }
 textarea.ant-pagination-options-quick-jumper input {
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
@@ -6071,6 +6073,7 @@ fieldset[disabled] .ant-input:hover {
   border-color: #e1e1e1;
 }
 textarea.ant-input {
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
@@ -6702,6 +6705,7 @@ fieldset[disabled] .ant-input-number:hover {
   border-color: #e1e1e1;
 }
 textarea.ant-input-number {
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
@@ -6990,6 +6994,7 @@ textarea.ant-input-number {
   line-height: 38px;
   text-indent: 16px;
   color: #666;
+  cursor: pointer;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header:before {
   display: inline-block;

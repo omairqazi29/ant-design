@@ -23032,7 +23032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  renderPagination: function renderPagination() {
 	    // 强制不需要分页
-	    if (this.state.pagination === false) {
+	    if (this.props.pagination === false) {
 	      return '';
 	    }
 	    var classString = 'ant-table-pagination';
@@ -23098,8 +23098,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var current = undefined,
 	            pageSize = undefined;
 	        // 如果没有分页的话，默认全部展示
-	        if (_this3.state.pagination === false) {
-	          pageSize = Number.POSITIVE_INFINITY;
+	        if (_this3.props.pagination === false) {
+	          pageSize = Number.MAX_VALUE;
 	          current = 1;
 	        } else {
 	          pageSize = _this3.state.pagination.pageSize;
