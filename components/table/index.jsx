@@ -9,27 +9,10 @@ import objectAssign from 'object-assign';
 
 export default React.createClass({
   getInitialState() {
-    // 支持两种模式
-    if (Array.isArray(this.props.dataSource)) {
-      this.mode = 'local';
-      // 保留原来的数据
-      this.originDataSource = this.props.dataSource.slice(0);
-    } else {
-      this.mode = 'remote';
-      this.dataSource = objectAssign({
-        resolve: function(data) {
-          return data || [];
-        },
-        getParams: function() {},
-        getPagination: function() {}
-      }, this.props.dataSource);
-    }
+    this.initDataSource(this.props.dataSource);
 
     let noPagination = (this.props.pagination === false);
-    let pagination = objectAssign({
-      pageSize: 10,
-      total: this.props.dataSource.length
-    }, this.props.pagination);
+    let pagination = this.initPagination(this.props.pagination);
 
     return {
       selectedRowKeys: [],
@@ -46,6 +29,44 @@ export default React.createClass({
       rowSelection: null,
       size: 'normal'
     };
+  },
+  componentWillReceiveProps(nextProps) {
+    if ('pagination' in nextProps) {
+      let noPagination = (nextProps.pagination === false);
+      this.setState({
+        pagination: this.initPagination(nextProps.pagination),
+        noPagination: noPagination
+      });
+    }
+    if ('dataSource' in nextProps) {
+      this.initDataSource(nextProps.dataSource);
+      this.setState({
+        data: nextProps.dataSource
+      });
+    }
+  },
+  initDataSource(dataSource) {
+    // 支持两种模式
+    if (Array.isArray(dataSource)) {
+      this.mode = 'local';
+      // 保留原来的数据
+      this.originDataSource = dataSource.slice(0);
+    } else {
+      this.mode = 'remote';
+      this.dataSource = objectAssign({
+        resolve: function(data) {
+          return data || [];
+        },
+        getParams: function() {},
+        getPagination: function() {}
+      }, dataSource);
+    }
+  },
+  initPagination(pagination) {
+    return objectAssign({
+      pageSize: 10,
+      total: this.props.dataSource.length
+    }, pagination);
   },
   toggleSortOrder(order, column) {
     let sortColumn = this.state.sortColumn;
@@ -136,9 +157,13 @@ export default React.createClass({
       this.props.rowSelection.onSelectAll(checked, selectedRows);
     }
   },
-  handlePageChange(current = 1) {
+  handlePageChange(current) {
     let pagination = this.state.pagination || {};
-    pagination.current = current;
+    if (current) {
+      pagination.current = current;
+    } else {
+      pagination.current = pagination.current || 1;
+    }
     this.setState({
       pagination: pagination
     }, this.fetch);
@@ -304,12 +329,17 @@ export default React.createClass({
         });
       }
       // 分页
-      data = data.filter(function(item, i) {
-        if (i >= (current - 1) * pageSize &&
-            i < current * pageSize) {
-          return item;
-        }
-      });
+      // ---
+      // 当数据量少于每页数量时，直接设置数据
+      // 否则进行读取分页数据
+      if (data.length > pageSize || pageSize === Number.MAX_VALUE) {
+        data = data.filter(function(item, i) {
+          if (i >= (current - 1) * pageSize &&
+              i < current * pageSize) {
+            return item;
+          }
+        });
+      }
       // 完成数据
       this.setState({
         data: data

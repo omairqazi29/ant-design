@@ -191,9 +191,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _gregorianCalendarFormat = __webpack_require__(69);
 	
-	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
-	
 	// 和顶部文案保持一致
+	
+	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
 	
 	var _gregorianCalendarFormatLibLocaleZhCn = __webpack_require__(110);
 	
@@ -251,7 +251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      orient: ['top', 'left'],
 	      defaultValue: defaultCalendarValue,
 	      showTime: this.props.showTime,
-	      prefixCls: 'ant-calendar',
+	      prefixCls: "ant-calendar",
 	      showOk: this.props.showTime,
 	      showClear: false });
 	    return _react2['default'].createElement(
@@ -259,14 +259,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      {
 	        transitionName: this.props.transitionName,
 	        disabled: this.props.disabled,
-	        trigger: _react2['default'].createElement('span', { className: 'ant-calendar-picker-icon' }),
+	        trigger: _react2['default'].createElement('span', { className: "ant-calendar-picker-icon" }),
 	        calendar: calendar,
 	        adjustOrientOnCalendarOverflow: false,
 	        formatter: new _gregorianCalendarFormat2['default'](this.props.format),
 	        value: this.state.value,
-	        prefixCls: 'ant-calendar-picker',
+	        prefixCls: "ant-calendar-picker",
 	        onChange: this.handleChange },
-	      _react2['default'].createElement('input', { placeholder: this.props.placeholder, className: 'ant-calendar-picker-input ant-input' })
+	      _react2['default'].createElement('input', { placeholder: this.props.placeholder, className: "ant-calendar-picker-input ant-input" })
 	    );
 	  }
 	});
@@ -7325,7 +7325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2['default'].createElement(
 	      _rcTooltip2['default'],
 	      { placement: this.props.placement,
-	        prefixCls: 'ant-tooltip',
+	        prefixCls: "ant-tooltip",
 	        delay: 0.1,
 	        trigger: this.props.trigger,
 	        transitionName: transitionName,
@@ -9469,11 +9469,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _rcTabs = __webpack_require__(131);
 	
@@ -9486,15 +9488,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var prefixCls = 'ant-tabs';
 	
 	var AntTabs = (function (_React$Component) {
+	  _inherits(AntTabs, _React$Component);
+	
 	  function AntTabs() {
 	    _classCallCheck(this, AntTabs);
 	
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
+	    _get(Object.getPrototypeOf(AntTabs.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
-	  _inherits(AntTabs, _React$Component);
 	
 	  _createClass(AntTabs, [{
 	    key: 'render',
@@ -10806,19 +10806,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  render: function render() {
-	    var loadingIcon = this.state.confirmLoading ? _react2['default'].createElement('i', { className: 'anticon anticon-loading' }) : '';
+	    var loadingIcon = this.state.confirmLoading ? _react2['default'].createElement('i', { className: "anticon anticon-loading" }) : '';
 	    var props = this.props;
 	    var footer = props.footer || [_react2['default'].createElement(
 	      'button',
-	      { key: 'cancel', type: 'button', className: 'ant-btn ant-btn-lg', onClick: this.handleCancel },
+	      { key: "cancel", type: "button", className: "ant-btn ant-btn-lg", onClick: this.handleCancel },
 	      '取 消'
 	    ), _react2['default'].createElement(
 	      'button',
-	      { key: 'confirm', type: 'button', className: 'ant-btn ant-btn-primary ant-btn-lg', onClick: this.handleOk },
+	      { key: "confirm", type: "button", className: "ant-btn ant-btn-primary ant-btn-lg", onClick: this.handleOk },
 	      '确 定 ',
 	      loadingIcon
 	    )];
-	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: 'zoom', onBeforeClose: props.onCancel, visible: this.state.visible, maskAnimation: 'fade', width: '500', footer: footer }, props, { ref: 'd' }));
+	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: "zoom", onBeforeClose: props.onCancel, visible: this.state.visible, maskAnimation: "fade", width: "500", footer: footer }, props, { ref: "d" }));
 	  }
 	});
 	module.exports = exports['default'];
@@ -16354,13 +16354,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      progressInfo = _react2['default'].createElement(
 	        'span',
 	        { style: textStyle, className: 'ant-progress-line-text' },
-	        _react2['default'].createElement('i', { style: iconStyle, className: 'anticon anticon-exclamation-circle' })
+	        _react2['default'].createElement('i', { style: iconStyle, className: "anticon anticon-exclamation-circle" })
 	      );
 	    } else if (props.status === 'success') {
 	      progressInfo = _react2['default'].createElement(
 	        'span',
 	        { style: textStyle, className: 'ant-progress-line-text' },
-	        _react2['default'].createElement('i', { style: iconStyle, className: 'anticon anticon-check-circle' })
+	        _react2['default'].createElement('i', { style: iconStyle, className: "anticon anticon-check-circle" })
 	      );
 	    } else {
 	      progressInfo = _react2['default'].createElement(
@@ -16378,7 +16378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'div',
 	        { className: 'ant-progress-line-inner', style: style },
 	        _react2['default'].createElement(_rcProgress.Line, { percent: props.percent, strokeWidth: props.strokeWidth,
-	          strokeColor: statusColorMap[props.status], trailColor: '#e9e9e9' })
+	          strokeColor: statusColorMap[props.status], trailColor: "#e9e9e9" })
 	      ),
 	      progressInfo
 	    );
@@ -16430,12 +16430,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      progressInfo = _react2['default'].createElement(
 	        'span',
 	        { style: textStyle, className: 'ant-progress-circle-text' },
-	        _react2['default'].createElement('i', { className: 'anticon anticon-check' })
+	        _react2['default'].createElement('i', { className: "anticon anticon-check" })
 	      );
 	    } else {
 	      progressInfo = _react2['default'].createElement(
 	        'span',
-	        { className: 'ant-progress-circle-text' },
+	        { className: "ant-progress-circle-text" },
 	        props.percent,
 	        '%'
 	      );
@@ -16443,12 +16443,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return _react2['default'].createElement(
 	      'div',
-	      { className: 'ant-progress-circle-wrap', style: wrapStyle },
+	      { className: "ant-progress-circle-wrap", style: wrapStyle },
 	      _react2['default'].createElement(
 	        'div',
-	        { className: 'ant-progress-circle-inner', style: style },
+	        { className: "ant-progress-circle-inner", style: style },
 	        _react2['default'].createElement(_rcProgress.Circle, { percent: props.percent, strokeWidth: props.strokeWidth,
-	          strokeColor: statusColorMap[props.status], trailColor: '#e9e9e9' }),
+	          strokeColor: statusColorMap[props.status], trailColor: "#e9e9e9" }),
 	        progressInfo
 	      )
 	    );
@@ -16656,8 +16656,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcSelect2 = _interopRequireDefault(_rcSelect);
 	
-	exports['default'] = _react2['default'].createClass({
-	  displayName: 'index',
+	var AntSelect = _react2['default'].createClass({
+	  displayName: 'AntSelect',
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
@@ -16671,6 +16671,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2['default'].createElement(_rcSelect2['default'], this.props);
 	  }
 	});
+	
+	AntSelect.Option = _rcSelect2['default'].Option;
+	
+	exports['default'] = AntSelect;
 	module.exports = exports['default'];
 
 /***/ },
@@ -19515,7 +19519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2['default'].createElement(
 	          'p',
 	          { className: prefixCls + '-message' },
-	          _react2['default'].createElement('i', { className: 'anticon anticon-exclamation-circle' }),
+	          _react2['default'].createElement('i', { className: "anticon anticon-exclamation-circle" }),
 	          this.props.title
 	        ),
 	        _react2['default'].createElement(
@@ -19523,12 +19527,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { className: prefixCls + '-buttons' },
 	          _react2['default'].createElement(
 	            'button',
-	            { onClick: this.cancel, className: 'ant-btn ant-btn-sm' },
+	            { onClick: this.cancel, className: "ant-btn ant-btn-sm" },
 	            '取 消'
 	          ),
 	          _react2['default'].createElement(
 	            'button',
-	            { onClick: this.confirm, className: 'ant-btn ant-btn-primary ant-btn-sm' },
+	            { onClick: this.confirm, className: "ant-btn ant-btn-primary ant-btn-sm" },
 	            '确 定'
 	          )
 	        )
@@ -19571,11 +19575,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(66);
 	
@@ -19592,21 +19598,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	var prefixCls = 'ant-pagination';
 	
 	var AntPagination = (function (_React$Component) {
+	  _inherits(AntPagination, _React$Component);
+	
 	  function AntPagination() {
 	    _classCallCheck(this, AntPagination);
 	
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
+	    _get(Object.getPrototypeOf(AntPagination.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
-	  _inherits(AntPagination, _React$Component);
 	
 	  _createClass(AntPagination, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2['default'].createElement(_rcPagination2['default'], _extends({ selectComponentClass: _rcSelect2['default'],
-	        selectPrefixCls: 'ant-select',
+	        selectPrefixCls: "ant-select",
 	        prefixCls: prefixCls
 	      }, this.props));
 	    }
@@ -20228,30 +20232,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  var body = _react2['default'].createElement(
 	    'div',
-	    { className: 'ant-confirm-body' },
+	    { className: "ant-confirm-body" },
 	    _react2['default'].createElement('i', { className: 'anticon ' + props.iconClassName }),
 	    _react2['default'].createElement(
 	      'span',
-	      { className: 'ant-confirm-title' },
+	      { className: "ant-confirm-title" },
 	      props.title
 	    ),
 	    _react2['default'].createElement(
 	      'div',
-	      { className: 'ant-confirm-content' },
+	      { className: "ant-confirm-content" },
 	      props.content
 	    )
 	  );
 	  var footer = _react2['default'].createElement(
 	    'div',
-	    { className: 'ant-confirm-btns' },
+	    { className: "ant-confirm-btns" },
 	    _react2['default'].createElement(
 	      'button',
-	      { type: 'button', className: 'ant-btn-default ant-btn ant-btn-lg', onClick: onCancel },
+	      { type: "button", className: "ant-btn-default ant-btn ant-btn-lg", onClick: onCancel },
 	      '取 消'
 	    ),
 	    _react2['default'].createElement(
 	      'button',
-	      { type: 'button', className: 'ant-btn-primary ant-btn ant-btn-lg', onClick: onOk },
+	      { type: "button", className: "ant-btn-primary ant-btn ant-btn-lg", onClick: onOk },
 	      '确 定'
 	    )
 	  );
@@ -20264,14 +20268,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _react2['default'].render(_react2['default'].createElement(
 	    _rcDialog2['default'],
 	    {
-	      prefixCls: 'ant-modal',
-	      className: 'ant-confirm',
+	      prefixCls: "ant-modal",
+	      className: "ant-confirm",
 	      renderToBody: false,
 	      visible: true,
 	      closable: false,
-	      title: '',
-	      transitionName: 'zoom',
-	      maskTransitionName: 'fade', width: width },
+	      title: "",
+	      transitionName: "zoom",
+	      maskTransitionName: "fade", width: width },
 	    _react2['default'].createElement(
 	      'div',
 	      { style: { zoom: 1, overflow: 'hidden' } },
@@ -22812,27 +22816,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  displayName: 'index',
 	
 	  getInitialState: function getInitialState() {
-	    // 支持两种模式
-	    if (Array.isArray(this.props.dataSource)) {
-	      this.mode = 'local';
-	      // 保留原来的数据
-	      this.originDataSource = this.props.dataSource.slice(0);
-	    } else {
-	      this.mode = 'remote';
-	      this.dataSource = (0, _objectAssign2['default'])({
-	        resolve: function resolve(data) {
-	          return data || [];
-	        },
-	        getParams: function getParams() {},
-	        getPagination: function getPagination() {}
-	      }, this.props.dataSource);
-	    }
+	    this.initDataSource(this.props.dataSource);
 	
 	    var noPagination = this.props.pagination === false;
-	    var pagination = (0, _objectAssign2['default'])({
-	      pageSize: 10,
-	      total: this.props.dataSource.length
-	    }, this.props.pagination);
+	    var pagination = this.initPagination(this.props.pagination);
 	
 	    return {
 	      selectedRowKeys: [],
@@ -22849,6 +22836,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	      rowSelection: null,
 	      size: 'normal'
 	    };
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if ('pagination' in nextProps) {
+	      var noPagination = nextProps.pagination === false;
+	      this.setState({
+	        pagination: this.initPagination(nextProps.pagination),
+	        noPagination: noPagination
+	      });
+	    }
+	    if ('dataSource' in nextProps) {
+	      this.initDataSource(nextProps.dataSource);
+	      this.setState({
+	        data: nextProps.dataSource
+	      });
+	    }
+	  },
+	  initDataSource: function initDataSource(dataSource) {
+	    // 支持两种模式
+	    if (Array.isArray(dataSource)) {
+	      this.mode = 'local';
+	      // 保留原来的数据
+	      this.originDataSource = dataSource.slice(0);
+	    } else {
+	      this.mode = 'remote';
+	      this.dataSource = (0, _objectAssign2['default'])({
+	        resolve: function resolve(data) {
+	          return data || [];
+	        },
+	        getParams: function getParams() {},
+	        getPagination: function getPagination() {}
+	      }, dataSource);
+	    }
+	  },
+	  initPagination: function initPagination(pagination) {
+	    return (0, _objectAssign2['default'])({
+	      pageSize: 10,
+	      total: this.props.dataSource.length
+	    }, pagination);
 	  },
 	  toggleSortOrder: function toggleSortOrder(order, column) {
 	    var sortColumn = this.state.sortColumn;
@@ -22945,11 +22970,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.props.rowSelection.onSelectAll(checked, selectedRows);
 	    }
 	  },
-	  handlePageChange: function handlePageChange() {
-	    var current = arguments[0] === undefined ? 1 : arguments[0];
-	
+	  handlePageChange: function handlePageChange(current) {
 	    var pagination = this.state.pagination || {};
-	    pagination.current = current;
+	    if (current) {
+	      pagination.current = current;
+	    } else {
+	      pagination.current = pagination.current || 1;
+	    }
 	    this.setState({
 	      pagination: pagination
 	    }, this.fetch);
@@ -23000,30 +23027,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	        filterDropdown = _react2['default'].createElement(
 	          _dropdown2['default'],
-	          { trigger: 'click',
+	          { trigger: "click",
 	            closeOnSelect: false,
 	            overlay: menus },
-	          _react2['default'].createElement('i', { title: '筛选', className: 'anticon anticon-bars ' + dropdownSelectedClass })
+	          _react2['default'].createElement('i', { title: "筛选", className: 'anticon anticon-bars ' + dropdownSelectedClass })
 	        );
 	      }
 	      if (column.sorter) {
 	        var isSortColumn = _this2.state.sortColumn === column;
 	        sortButton = _react2['default'].createElement(
 	          'div',
-	          { className: 'ant-table-column-sorter' },
+	          { className: "ant-table-column-sorter" },
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this2.state.sortOrder === 'ascend' ? 'on' : 'off'),
-	              title: '升序排序',
+	              title: "升序排序",
 	              onClick: _this2.toggleSortOrder.bind(_this2, 'ascend', column) },
-	            _react2['default'].createElement('i', { className: 'anticon anticon-caret-up' })
+	            _react2['default'].createElement('i', { className: "anticon anticon-caret-up" })
 	          ),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this2.state.sortOrder === 'descend' ? 'on' : 'off'),
-	              title: '降序排序',
+	              title: "降序排序",
 	              onClick: _this2.toggleSortOrder.bind(_this2, 'descend', column) },
-	            _react2['default'].createElement('i', { className: 'anticon anticon-caret-down' })
+	            _react2['default'].createElement('i', { className: "anticon anticon-caret-down" })
 	          )
 	        );
 	      }
@@ -23121,11 +23148,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	          });
 	        }
 	        // 分页
-	        data = data.filter(function (item, i) {
-	          if (i >= (current - 1) * pageSize && i < current * pageSize) {
-	            return item;
-	          }
-	        });
+	        // ---
+	        // 当数据量少于每页数量时，直接设置数据
+	        // 否则进行读取分页数据
+	        if (data.length > pageSize || pageSize === Number.MAX_VALUE) {
+	          data = data.filter(function (item, i) {
+	            if (i >= (current - 1) * pageSize && i < current * pageSize) {
+	              return item;
+	            }
+	          });
+	        }
 	        // 完成数据
 	        _this3.setState({
 	          data: data
@@ -23149,7 +23181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return _react2['default'].createElement(
 	      'div',
-	      { className: 'clearfix' },
+	      { className: "clearfix" },
 	      _react2['default'].createElement(_rcTable2['default'], _extends({ data: this.state.data,
 	        columns: this.renderColumnsDropdown(),
 	        className: classString
@@ -23583,8 +23615,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2['default'].createElement(
 	      _rcMenu2['default'],
 	      { multiple: true,
-	        prefixCls: 'ant-dropdown-menu',
-	        className: 'ant-table-filter-dropdown',
+	        prefixCls: "ant-dropdown-menu",
+	        className: "ant-table-filter-dropdown",
 	        onSelect: this.handleSelectFilter,
 	        onDeselect: this.handleDeselectFilter,
 	        selectedKeys: column.selectedFilters },
@@ -23595,7 +23627,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        { disabled: true },
 	        _react2['default'].createElement(
 	          'a',
-	          { className: 'ant-table-filter-dropdown-link confirm',
+	          { className: "ant-table-filter-dropdown-link confirm",
 	            style: {
 	              cursor: 'pointer',
 	              pointerEvents: 'visible'
@@ -23605,7 +23637,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        ),
 	        _react2['default'].createElement(
 	          'a',
-	          { className: 'ant-table-filter-dropdown-link clear',
+	          { className: "ant-table-filter-dropdown-link clear",
 	            style: {
 	              cursor: 'pointer',
 	              pointerEvents: 'visible'
@@ -23631,11 +23663,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _rcCollapse = __webpack_require__(280);
 	
@@ -23648,15 +23682,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var prefixCls = 'ant-collapse';
 	
 	var AntCollapse = (function (_React$Component) {
+	  _inherits(AntCollapse, _React$Component);
+	
 	  function AntCollapse() {
 	    _classCallCheck(this, AntCollapse);
 	
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
+	    _get(Object.getPrototypeOf(AntCollapse.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
-	  _inherits(AntCollapse, _React$Component);
 	
 	  _createClass(AntCollapse, [{
 	    key: 'render',
@@ -24032,8 +24064,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	}
 	
-	function notice(content, _x, type) {
-	  var duration = arguments[1] === undefined ? defaultDuration : arguments[1];
+	function notice(content, duration, type) {
+	  if (duration === undefined) duration = defaultDuration;
 	
 	  var iconClass = ({
 	    'info': 'anticon-info-circle ant-message-info',
@@ -24046,7 +24078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    style: {},
 	    content: _react2['default'].createElement(
 	      'div',
-	      { className: 'ant-message-custom-content' },
+	      { className: "ant-message-custom-content" },
 	      _react2['default'].createElement('i', { className: 'anticon ' + iconClass }),
 	      _react2['default'].createElement(
 	        'span',
@@ -26372,7 +26404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.7.3-beta2",
+		"version": "0.7.3-beta6",
 		"stableVersion": "0.7.2",
 		"title": "Ant Design",
 		"description": "一个设计语言&前端框架",
@@ -26428,12 +26460,12 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		"devDependencies": {
 			"autoprefixer-loader": "~2.0.0",
-			"babel": "~5.6.14",
-			"babel-core": "~5.4.7",
-			"babel-loader": "~5.1.3",
+			"babel": "^5.8.12",
+			"babel-core": "^5.8.12",
+			"babel-loader": "^5.3.2",
 			"css-animation": "~1.0.3",
 			"css-loader": "^0.14.1",
-			"eslint": "~0.22.1",
+			"eslint": "^0.24.1",
 			"eslint-plugin-react": "~2.5.0",
 			"extract-text-webpack-plugin": "^0.8.1",
 			"gh-pages": "~0.3.1",
@@ -26465,4 +26497,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.7.3-beta2.js.map
+//# sourceMappingURL=antd-0.7.3-beta6.js.map

@@ -13,7 +13,7 @@ Table 表格 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.3-beta2.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.3-beta6.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -174,11 +174,11 @@ Table 表格 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.3-beta2',
+        latest: '0.7.3-beta6',
         stable: '0.7.2'
       };
     </script>
-    <script src="/dist/antd-0.7.3-beta2.js"></script>
+    <script src="/dist/antd-0.7.3-beta6.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -879,7 +879,7 @@ var columns = [{
 }];
 var data = [];
 
-for (var i = 0; i < 18; i++) {
+for (var i = 0; i < 46; i++) {
   data.push({
     name: '李大嘴' + i,
     age: 32,
@@ -888,7 +888,8 @@ for (var i = 0; i < 18; i++) {
 }
 
 var pagination = {
-  total: data.length
+  total: data.length,
+  current: 2
 };
 
 React.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
@@ -908,7 +909,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 }];
 <span class="keyword">var</span> data = [];
 
-<span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">18</span>; i++) {
+<span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">46</span>; i++) {
   data.push({
     name: <span class="string">'李大嘴'</span> + i,
     age: <span class="number">32</span>,
@@ -917,7 +918,8 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 }
 
 <span class="keyword">var</span> pagination = {
-  total: data.length
+  total: data.length,
+  current: <span class="number">2</span>
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{pagination}</span> /&gt;</span>
@@ -1092,7 +1094,7 @@ var dataSource = {
   // 和后台接口接收的参数进行适配
   // 参数里提供了分页、筛选、排序的信息
   getParams: function getParams(pagination, filters, sorter) {
-    console.log(pagination, filters, sorter);
+    console.log('getParams 的参数是：', pagination, filters, sorter);
     var params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
@@ -1146,7 +1148,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: dataSour
   <span class="comment">// 和后台接口接收的参数进行适配</span>
   <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
   getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
-    console.log(pagination, filters, sorter);
+    console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
     <span class="keyword">var</span> params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,

@@ -42,7 +42,7 @@ var dataSource = {
   // 和后台接口接收的参数进行适配
   // 参数里提供了分页、筛选、排序的信息
   getParams: function getParams(pagination, filters, sorter) {
-    console.log(pagination, filters, sorter);
+    console.log('getParams 的参数是：', pagination, filters, sorter);
     var params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
@@ -96,7 +96,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: dataSour
   <span class="comment">// 和后台接口接收的参数进行适配</span>
   <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
   getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
-    console.log(pagination, filters, sorter);
+    console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
     <span class="keyword">var</span> params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,

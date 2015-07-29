@@ -13,7 +13,7 @@ Radio 单选框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.3-beta2.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.3-beta6.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -174,11 +174,11 @@ Radio 单选框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.3-beta2',
+        latest: '0.7.3-beta6',
         stable: '0.7.2'
       };
     </script>
-    <script src="/dist/antd-0.7.3-beta2.js"></script>
+    <script src="/dist/antd-0.7.3-beta6.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -455,18 +455,18 @@ Radio 单选框 - Ant Design
     <h1>
       Radio 单选框
     </h1>
-    <h2 id="何时使用">何时使用</h2><ul>
+    <p>单选框。</p>
+<h2 id="何时使用">何时使用</h2><ul>
 <li>用于在多个备选项中选中单个状态。</li>
 <li>和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。</li>
 </ul>
-<h2 id="api">API</h2><h3 id="radio">Radio</h3><p>单选框。</p>
-<table>
+<h2 id="api">API</h2><h3 id="radio">Radio</h3><table>
 <thead>
 <tr>
 <th>参数</th>
 <th>说明</th>
 <th>类型</th>
-<th>必选值</th>
+<th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
@@ -474,58 +474,51 @@ Radio 单选框 - Ant Design
 <tr>
 <td>checked</td>
 <td>指定当前是否选中</td>
-<td>boolean</td>
-<td>false</td>
+<td>Boolean</td>
+<td></td>
 <td>false</td>
 </tr>
 <tr>
 <td>defaultChecked</td>
 <td>初始是否选中</td>
-<td>boolean</td>
-<td>false</td>
+<td>Boolean</td>
+<td></td>
 <td>false</td>
 </tr>
 <tr>
 <td>value</td>
-<td>组合时根据此项判定checked</td>
-<td>--</td>
-<td>true</td>
-<td>null</td>
+<td>根据 value 进行比较，判断是否选中</td>
+<td>String</td>
+<td></td>
+<td>无</td>
 </tr>
 </tbody>
 </table>
-<h3 id="radiogroup">RadioGroup</h3><p>单选框组合；</p>
+<h3 id="radiogroup">RadioGroup</h3><p>单选框组合，用于包裹一组 <code>Radio</code>。</p>
 <table>
 <thead>
 <tr>
 <th>参数</th>
 <th>说明</th>
 <th>类型</th>
-<th>必选值</th>
+<th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onChange</td>
-<td>变化时回调函数，组合时必须</td>
+<td>选项变化时的回调函数</td>
 <td>Function(e:Event)</td>
-<td>false</td>
-<td>null</td>
+<td>无</td>
+<td>无</td>
 </tr>
 <tr>
 <td>value</td>
-<td>当前值</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>defaultValue</td>
-<td>初始值</td>
-<td></td>
-<td></td>
-<td></td>
+<td>用于设置当前选中的值</td>
+<td>String</td>
+<td>无</td>
+<td>无</td>
 </tr>
 </tbody>
 </table>

@@ -24,7 +24,7 @@ var columns = [{
 }];
 var data = [];
 
-for (var i = 0; i < 18; i++) {
+for (var i = 0; i < 46; i++) {
   data.push({
     name: '李大嘴' + i,
     age: 32,
@@ -33,7 +33,8 @@ for (var i = 0; i < 18; i++) {
 }
 
 var pagination = {
-  total: data.length
+  total: data.length,
+  current: 2
 };
 
 React.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
@@ -53,7 +54,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 }];
 <span class="keyword">var</span> data = [];
 
-<span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">18</span>; i++) {
+<span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">46</span>; i++) {
   data.push({
     name: <span class="string">'李大嘴'</span> + i,
     age: <span class="number">32</span>,
@@ -62,7 +63,8 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 }
 
 <span class="keyword">var</span> pagination = {
-  total: data.length
+  total: data.length,
+  current: <span class="number">2</span>
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{pagination}</span> /&gt;</span>
