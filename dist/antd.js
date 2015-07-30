@@ -27295,7 +27295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.7.3",
+		"version": "0.8.0-beta1",
 		"stableVersion": "0.7.3",
 		"title": "Ant Design",
 		"description": "一个设计语言&前端框架",
