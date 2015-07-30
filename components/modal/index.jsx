@@ -28,7 +28,7 @@ export default React.createClass({
     this.setState({
       confirmLoading: true
     });
-    if (typeof this.props.onOk === 'function') {
+    if (typeof this.props.onOk) {
       this.props.onOk();
     }
   },

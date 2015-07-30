@@ -8,12 +8,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="一个设计语言&前端框架"/>
     <title>
-排版  - Ant Design
+响应交互  - Ant Design
 </title>
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta1.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.3.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -39,20 +39,20 @@
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Button',
-        desc: '按钮'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Iconfont',
-        desc: '字体图标'
-      });
-      ANT_COMPONENTS.push({
         title: 'Layout',
         desc: '布局'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
         desc: '多选框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Iconfont',
+        desc: '字体图标'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Button',
+        desc: '按钮'
       });
       ANT_COMPONENTS.push({
         title: 'Radio',
@@ -69,6 +69,10 @@
       ANT_COMPONENTS.push({
         title: 'InputNumber',
         desc: '数字输入框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Motion',
+        desc: '组件动画'
       });
       ANT_COMPONENTS.push({
         title: 'Slider',
@@ -99,12 +103,8 @@
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
-        title: 'Affix',
-        desc: '固定'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
-        desc: '警告提示'
+        desc: '通知栏'
       });
       ANT_COMPONENTS.push({
         title: 'Notification',
@@ -115,28 +115,28 @@
         desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
-      });
-      ANT_COMPONENTS.push({
         title: 'Tree',
         desc: '树形控件'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Tag',
-        desc: '标签'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Menu',
-        desc: '导航菜单'
       });
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
       });
       ANT_COMPONENTS.push({
-        title: 'EnterAnimation',
-        desc: '进场动画'
+        title: 'Menu',
+        desc: '导航菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tag',
+        desc: '标签'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Affix',
+        desc: '固定'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Upload',
+        desc: '文件上传'
       });
       ANT_COMPONENTS.push({
         title: 'Modal',
@@ -174,11 +174,11 @@
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta1',
+        latest: '0.7.3',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta1.js"></script>
+    <script src="/dist/antd-0.7.3.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -206,7 +206,7 @@
     
   </head>
   <body >
-    <header id="header" class="clearfix">
+    <header id="header">
       <a class="logo" href="/">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         Ant Design
@@ -224,7 +224,7 @@
             <a href="/docs/introduce">使用</a>
           </li>
           <li class="current">
-            <a href="/spec/font">设计</a>
+            <a class="disabled" href="/design/">设计</a>
           </li>
           <li class="">
             <a href="/components">组件</a>
@@ -240,52 +240,24 @@
 <aside class="aside-container">
   <ul>
     <li>
-      <h4>文字</h4>
+      <h4>动画</h4>
       <ul class="aside-list-show">
         <li class="">
-          <a href="font">
-            字体
+          <a href="natural-motion">
+            自然运动
             <span class="chinese"></span>
           </a>
         </li>
         <li class="current">
-          <a href="typography">
-            排版
-            <span class="chinese"></span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h4>色彩</h4>
-      <ul class="">
-        <li class="">
-          <a href="color">
-            色系和交互
-            <span class="chinese"></span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h4>动画</h4>
-      <ul class="">
-        <li class="">
-          <a href="motion">
-            组件动画
-            <span class="chinese"></span>
-          </a>
-        </li>
-        <li class="">
-          <a href="easing">
-            缓动函数
+          <a href="responsive">
+            响应交互
             <span class="chinese"></span>
           </a>
         </li>
         <li class="">
           <a href="page-transition">
-            转场动画
-            <span class="chinese"></span>
+            页面转换
+            <span class="chinese">页面转换</span>
           </a>
         </li>
       </ul>
@@ -295,8 +267,94 @@
  
 <section class="main-container">
   <article class="markdown">
-    <h1>排版 </h1>
-    
+    <h1>响应交互 </h1>
+    <p>响应交互一般是指我们在浏览页面时，点击元素时动画给我们视觉上的反馈，每个交互动效都能给我们带来不同视觉效果。</p>
+<p>如搜索框，当你点击准备输入时，icon将会跑到右边方便点击，当然你按回车也是可以提交表单的；在你没有输入文字时，icon又会恢愎到原来的地置，但当你输入了文字后，icon将会停留在右边；</p>
+<h3 id="按钮类表面效果">按钮类表面效果</h3><p>按钮上的hover或click效果，随着你的鼠标事件而改变自身或增加元素在按钮上；</p>
+<p>以下按钮对组件按钮的修改，只做示例，具体还需看组件；</p>
+<p><link rel="stylesheet" href="/static/motionDemo.css"></p>
+<p><script src="/static/motionDemo.js"></script></p>
+<div style="overflow: hidden;">
+<div style="width:200px;float:left;margin-right:60px">
+<p style="text-align: center;"> 1.按钮表面效果；</p>
+<div class="ant-btn-domebox">
+<a class="ant-btn ant-btn-primary">我是按钮</a>
+<a class="ant-btn ant-btn-primary ant-btn-ripple">
+点击涟漪按钮
+</a>
+<a class="ant-btn ant-btn-ripple">
+点击涟漪按钮
+</a>
+<button class="ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg" style="display: block;">
+  <span class="anticon anticon-search"></span>
+</button>
+</div>
+</div>
+<div style="width:200px;float:left;">
+<p style="text-align: center;"> 2.无素结合切换;</p>
+<div class="ant-btn-domebox">
+<button class="ant-btn ant-btn-primary ant-btn-ripple ant-btn-load ">
+  <text>加载按钮</text>
+  <span class='anticon anticon-loading'></span>
+</button>
+<button class="ant-btn ant-btn-primary ant-btn-reload ant-btn-ripple">
+<span class="anticon anticon-reload"></span>
+<text>刷新</text>
+</button>
+</div>
+</div>
+</div>
+
+<h3 id="元素类呈现效果">元素类呈现效果</h3><p>元素呈现指点击或滑过展现相关的内容或提示，如下拉菜单或弹出框等；</p>
+<p>注：物体弹出点要从点击点出现，不要做凭空出现；</p>
+<div style="overflow: hidden;">
+
+<div style="width:200px;float:left;margin-right:60px">
+<p style="text-align: center;"> 1.icon菜单(点放大模式)</p>
+<div class="ant-btn-domebox" >
+
+
+<button class="ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg ant-btn-ripple ant-btn-listtip" style="float:right;margin:0" data-id="J-Tip">
+  <span class="anticon anticon-bars"></span>
+</button>
+<div class="ant-anim-dometip ant-anim-topArrow scale-origin-iconTopRight" style="display:none;" id="J-Tip">
+<ul>
+<li>第一排文字元素</li>
+<li>第二排文字元素</li>
+<li>第三排文字元素</li>
+<li>第四排文字元素</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div style="width:200px;float:left;">
+<p style="text-align: center;">2.下拉菜单(下滑模式)</p>
+<div class="ant-btn-domebox">
+
+
+<div class="ant-dropdown-wrap">
+<button class="ant-btn ant-btn-primary ant-btn-menu ant-btn-dropdown ant-btn-ripple">
+  <span>菜单按钮</span>
+  <span class="anticon anticon-down"></span>
+</button>
+<div class="ant-dropdown ant-anim-dometip scale-origin-top">
+<div class="ant-dropdown-con">
+<ul>
+<li>第一排文字元素</li>
+<li>第二排文字元素</li>
+<li>第三排文字元素</li>
+<li>第四排文字元素</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<p></div>
+</div></p>
+<p></div></p>
+
   </article>
 </section>
 

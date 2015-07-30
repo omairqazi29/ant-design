@@ -13,7 +13,7 @@ Popover 气泡卡片 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta1.css">
+    <link rel="stylesheet" href="/dist/antd-0.7.3.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -39,20 +39,20 @@ Popover 气泡卡片 - Ant Design
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Button',
-        desc: '按钮'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Iconfont',
-        desc: '字体图标'
-      });
-      ANT_COMPONENTS.push({
         title: 'Layout',
         desc: '布局'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
         desc: '多选框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Iconfont',
+        desc: '字体图标'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Button',
+        desc: '按钮'
       });
       ANT_COMPONENTS.push({
         title: 'Radio',
@@ -69,6 +69,10 @@ Popover 气泡卡片 - Ant Design
       ANT_COMPONENTS.push({
         title: 'InputNumber',
         desc: '数字输入框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Motion',
+        desc: '组件动画'
       });
       ANT_COMPONENTS.push({
         title: 'Slider',
@@ -99,12 +103,8 @@ Popover 气泡卡片 - Ant Design
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
-        title: 'Affix',
-        desc: '固定'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
-        desc: '警告提示'
+        desc: '通知栏'
       });
       ANT_COMPONENTS.push({
         title: 'Notification',
@@ -115,28 +115,28 @@ Popover 气泡卡片 - Ant Design
         desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
-      });
-      ANT_COMPONENTS.push({
         title: 'Tree',
         desc: '树形控件'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Tag',
-        desc: '标签'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Menu',
-        desc: '导航菜单'
       });
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
       });
       ANT_COMPONENTS.push({
-        title: 'EnterAnimation',
-        desc: '进场动画'
+        title: 'Menu',
+        desc: '导航菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tag',
+        desc: '标签'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Affix',
+        desc: '固定'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Upload',
+        desc: '文件上传'
       });
       ANT_COMPONENTS.push({
         title: 'Modal',
@@ -174,11 +174,11 @@ Popover 气泡卡片 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta1',
+        latest: '0.7.3',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta1.js"></script>
+    <script src="/dist/antd-0.7.3.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -206,7 +206,7 @@ Popover 气泡卡片 - Ant Design
     
   </head>
   <body >
-    <header id="header" class="clearfix">
+    <header id="header">
       <a class="logo" href="/">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         Ant Design
@@ -224,7 +224,7 @@ Popover 气泡卡片 - Ant Design
             <a href="/docs/introduce">使用</a>
           </li>
           <li class="">
-            <a href="/spec/font">设计</a>
+            <a class="disabled" href="/design/">设计</a>
           </li>
           <li class="current">
             <a href="/components">组件</a>
@@ -240,12 +240,12 @@ Popover 气泡卡片 - Ant Design
 <aside class="aside-container">
   <ul>
     <li>
-      <h4>Components</h4>
-      <ul class="aside-list-show">
+      <h4>CSS</h4>
+      <ul class="">
         <li class="">
-          <a href="../button/">
-            Button
-            <span class="chinese">按钮</span>
+          <a href="../layout/">
+            Layout
+            <span class="chinese">布局</span>
           </a>
         </li>
         <li class="">
@@ -255,11 +255,34 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../layout/">
-            Layout
-            <span class="chinese">布局</span>
+          <a href="../button/">
+            Button
+            <span class="chinese">按钮</span>
           </a>
         </li>
+        <li class="">
+          <a href="../form/">
+            Form
+            <span class="chinese">表单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../motion/">
+            Motion
+            <span class="chinese">组件动画</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../alert/">
+            Alert
+            <span class="chinese">通知栏</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h4>Components</h4>
+      <ul class="aside-list-show">
         <li class="">
           <a href="../checkbox/">
             Checkbox
@@ -273,21 +296,9 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../form/">
-            Form
-            <span class="chinese">表单</span>
-          </a>
-        </li>
-        <li class="">
           <a href="../switch/">
             Switch
             <span class="chinese">开关</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="../input-number/">
-            InputNumber
-            <span class="chinese">数字输入框</span>
           </a>
         </li>
         <li class="">
@@ -297,15 +308,21 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../datepicker/">
-            Datepicker
-            <span class="chinese">日期选择框</span>
+          <a href="../input-number/">
+            InputNumber
+            <span class="chinese">数字输入框</span>
           </a>
         </li>
         <li class="">
           <a href="../select/">
             Select
             <span class="chinese">选择器</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../datepicker/">
+            Datepicker
+            <span class="chinese">日期选择框</span>
           </a>
         </li>
         <li class="">
@@ -339,27 +356,9 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../alert/">
-            Alert
-            <span class="chinese">警告提示</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="../notification/">
-            Notification
-            <span class="chinese">系统通知框</span>
-          </a>
-        </li>
-        <li class="">
           <a href="../pagination/">
             Pagination
             <span class="chinese">分页</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="../upload/">
-            Upload
-            <span class="chinese">文件上传</span>
           </a>
         </li>
         <li class="">
@@ -369,9 +368,9 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../tag/">
-            Tag
-            <span class="chinese">标签</span>
+          <a href="../carousel/">
+            Carousel
+            <span class="chinese">走马灯</span>
           </a>
         </li>
         <li class="">
@@ -381,15 +380,21 @@ Popover 气泡卡片 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../carousel/">
-            Carousel
-            <span class="chinese">走马灯</span>
+          <a href="../tag/">
+            Tag
+            <span class="chinese">标签</span>
           </a>
         </li>
         <li class="">
-          <a href="../enter-animation/">
-            EnterAnimation
-            <span class="chinese">进场动画</span>
+          <a href="../upload/">
+            Upload
+            <span class="chinese">文件上传</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../notification/">
+            Notification
+            <span class="chinese">系统通知框</span>
           </a>
         </li>
         <li class="">
