@@ -458,23 +458,22 @@ EnterAnimation 进场动画 - Ant Design
 </li>
 </ul>
 <h2 id="如何使用">如何使用</h2><p>一级子元素依次进场。</p>
-<div class="highlight"><pre><code class="javascript">&lt;EnterAnimation&gt;
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></span></code></pre></div><p>如子节点有 <code>enter-data</code> 值，则只执行有 <code>enter-data</code> 的节点的动画，相反所有子节点上都没有 <code>enter-data</code> 值，则执行遍历dom下一级节点来执行动画。</p>
-<div class="highlight"><pre><code class="javascript">&lt;EnterAnimation type=<span class="string">"left"</span> delay={<span class="number">2</span>}&gt;
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></code></pre></div><p>如子节点有 <code>enter-data</code> 值，则只执行有 <code>enter-data</code> 的节点的动画，相反所有子节点上都没有 <code>enter-data</code> 值，则执行遍历dom下一级节点来执行动画。</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">type</span>=<span class="value">"left"</span> <span class="attribute">delay</span>=<span class="value">{2}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>
       依次进场
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>'}}&gt;</span>依次进场，并修改动画效果<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>=<span class="value">{{style:</span> '<span class="attribute">margin-top:100px</span>'}}&gt;</span>依次进场，并使用样式修改动画效果<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span>&gt;</span>没有动画<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></span></code></pre></div><h2 id="api">API</h2><h3 id=""><EnterAnimation /></h3><table>
+<span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></code></pre></div><h2 id="api">API</h2><h3 id=""><EnterAnimation /></h3><table>
 <thead>
 <tr>
 <th>参数</th>
