@@ -3232,6 +3232,29 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-btn-circle-outline:not([disabled]).active:before {
   background-color: #57c5f7;
 }
+.ant-btn-loading {
+  padding-right: 31px;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.ant-btn-loading:after {
+  font-family: anticon;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+  content: "\e610";
+  position: absolute;
+  height: 12px;
+  line-height: 12px;
+  right: 13px;
+  top: 50%;
+  margin-top: -6px;
+}
+.ant-btn-sm.ant-btn-loading {
+  padding-right: 24px;
+}
+.ant-btn-sm.ant-btn-loading:after {
+  right: 8px;
+}
 .ant-btn-menu > .anticon {
   display: inline-block;
   font-size: 0.83333333;
@@ -3492,22 +3515,64 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
 }
 .ant-progress-line-wrap {
+  width: 100%;
   font-size: 12px;
+  position: relative;
+}
+.ant-progress-line-outer {
+  margin-right: 45px;
+}
+.ant-progress-line-wrap-full .ant-progress-line-outer {
+  margin-right: 0;
 }
 .ant-progress-line-inner {
   display: inline-block;
+  width: 100%;
+  background-color: #E9E9E9;
+  border-radius: 100px;
 }
-.ant-progress-line-inner svg {
-  vertical-align: middle;
+.ant-progress-line-bg {
+  border-radius: 100px;
+  background-color: #2db7f5;
+  -webkit-transition: all 0.6s linear 0s;
+          transition: all 0.6s linear 0s;
 }
 .ant-progress-line-text {
-  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  text-align: left;
   font-size: 1em;
   margin-left: 10px;
-  line-height: 1;
 }
 .ant-progress-line-text .anticon {
   font-size: 12px;
+}
+.ant-progress-line-wrap.status-active .ant-progress-line-bg:before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-animation: progress-active 2s ease infinite;
+          animation: progress-active 2s ease infinite;
+}
+.ant-progress-line-wrap.status-exception .ant-progress-line-bg {
+  background-color: #ff6600;
+}
+.ant-progress-line-wrap.status-exception .ant-progress-line-text {
+  color: #ff6600;
+}
+.ant-progress-line-wrap.status-success .ant-progress-line-bg {
+  background-color: #87d068;
+}
+.ant-progress-line-wrap.status-success .ant-progress-line-text {
+  color: #87d068;
 }
 .ant-progress-circle-inner {
   position: relative;
@@ -3527,6 +3592,32 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-progress-circle-text .anticon {
   font-size: 1.16666667em;
+}
+.ant-progress-circle-wrap.status-exception .ant-progress-circle-text {
+  color: #ff6600;
+}
+.ant-progress-circle-wrap.status-success .ant-progress-circle-text {
+  color: #87d068;
+}
+@-webkit-keyframes progress-active {
+  0% {
+    opacity: .3;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+@keyframes progress-active {
+  0% {
+    opacity: .3;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
 }
 .ant-select {
   box-sizing: border-box;
@@ -4739,11 +4830,10 @@ textarea.ant-calendar-time-input {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2;
   text-decoration: none;
-  -webkit-transition: opacity .3s ease;
-          transition: opacity .3s ease;
+  -webkit-transition: color .3s ease;
+          transition: color .3s ease;
+  color: #999;
 }
 .ant-modal-close-x {
   position: absolute;
@@ -4761,7 +4851,6 @@ textarea.ant-calendar-time-input {
   -ms-transform: scale(0.83333333);
   transform: scale(0.83333333);
   line-height: 12px;
-  color: #000;
   top: 18px;
   right: 18px;
 }
@@ -4774,9 +4863,7 @@ textarea.ant-calendar-time-input {
   font-family: "anticon" !important;
 }
 .ant-modal-close:hover {
-  color: #000;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  color: #444;
   text-decoration: none;
 }
 .ant-modal-header {
@@ -4906,11 +4993,13 @@ textarea.ant-calendar-time-input {
 }
 .ant-confirm .ant-confirm-body .ant-confirm-title {
   color: #666666;
+  font-weight: bold;
+  font-size: 14px;
 }
 .ant-confirm .ant-confirm-body .ant-confirm-content {
   margin-left: 37px;
   font-size: 12px;
-  color: #999;
+  color: #666666;
 }
 .ant-confirm .ant-confirm-body .anticon {
   font-size: 24px;
@@ -5138,6 +5227,7 @@ textarea.ant-calendar-time-input {
   width: 100%;
 }
 .ant-tabs-slide-horizontal-backward-enter {
+  display: block !important;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -5150,6 +5240,7 @@ textarea.ant-calendar-time-input {
           transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-backward-leave {
+  display: block !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -5167,6 +5258,7 @@ textarea.ant-calendar-time-input {
           transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-forward-enter {
+  display: block !important;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
@@ -5179,6 +5271,7 @@ textarea.ant-calendar-time-input {
           transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-slide-horizontal-forward-leave {
+  display: block !important;
   position: absolute;
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -7300,6 +7393,239 @@ textarea.ant-input-number {
 }
 .ant-radio + span {
   margin-left: 8px;
+}
+.ant-tag {
+  display: inline-block;
+  line-height: 22px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 20px;
+  background: #f3f3f3;
+  font-size: 12px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+.ant-tag:hover {
+  opacity: 1;
+}
+.ant-tag,
+.ant-tag a,
+.ant-tag a:hover {
+  color: #666666;
+}
+.ant-tag .anticon-cross {
+  display: inline-block;
+  font-size: 0.58333333;
+  font-size: 7px \9;
+  -webkit-transform: scale(0.58333333);
+  -ms-transform: scale(0.58333333);
+  transform: scale(0.58333333);
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 3px;
+  position: relative;
+  top: -1px;
+  color: #6666;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  opacity: 0.66;
+}
+:root .ant-tag .anticon-cross {
+  font-size: 12px;
+}
+.ant-tag .anticon-cross:hover {
+  opacity: 1;
+}
+.ant-tag-blue,
+.ant-tag-green,
+.ant-tag-yellow,
+.ant-tag-red,
+.ant-tag-blue a,
+.ant-tag-green a,
+.ant-tag-yellow a,
+.ant-tag-red a,
+.ant-tag-blue a:hover,
+.ant-tag-green a:hover,
+.ant-tag-yellow a:hover,
+.ant-tag-red a:hover,
+.ant-tag-blue .anticon-cross,
+.ant-tag-green .anticon-cross,
+.ant-tag-yellow .anticon-cross,
+.ant-tag-red .anticon-cross,
+.ant-tag-blue .anticon-cross:hover,
+.ant-tag-green .anticon-cross:hover,
+.ant-tag-yellow .anticon-cross:hover,
+.ant-tag-red .anticon-cross:hover {
+  color: #fff;
+}
+.ant-tag-blue {
+  background: #2db7f5;
+}
+.ant-tag-green {
+  background: #87d068;
+}
+.ant-tag-yellow {
+  background: #fac450;
+}
+.ant-tag-red {
+  background: #ff6600;
+}
+.ant-alert {
+  position: relative;
+  padding: 8px 8px 8px 16px;
+  border-radius: 6px;
+  color: #666666;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+.ant-alert-icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.ant-alert-description {
+  font-size: 12px;
+  line-height: 16px;
+}
+.ant-alert-success {
+  border: 1px solid #e7f6e1;
+  background-color: #f3faf0;
+}
+.ant-alert-success .anticon {
+  color: #87d068;
+}
+.ant-alert-info {
+  border: 1px solid #d5f1fd;
+  background-color: #eaf8fe;
+}
+.ant-alert-info .anticon {
+  color: #2db7f5;
+}
+.ant-alert-warn {
+  border: 1px solid #fef3dc;
+  background-color: #fff9ee;
+}
+.ant-alert-warn .anticon {
+  color: #fac450;
+}
+.ant-alert-error {
+  border: 1px solid #ffe0cc;
+  background-color: #fff0e6;
+}
+.ant-alert-error .anticon {
+  color: #ff6600;
+}
+.ant-alert-close-icon,
+.ant-alert-with-description-close-icon {
+  display: inline-block;
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333);
+  -ms-transform: scale(0.83333333);
+  transform: scale(0.83333333);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -6px;
+  -webkit-transition: color .3s ease;
+          transition: color .3s ease;
+  color: #999;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+}
+:root .ant-alert-close-icon,
+:root .ant-alert-with-description-close-icon {
+  font-size: 12px;
+}
+.ant-alert-close-icon-x,
+.ant-alert-with-description-close-icon-x {
+  position: absolute;
+  top: -3px;
+}
+.ant-alert-close-icon-x:before,
+.ant-alert-with-description-close-icon-x:before {
+  font-weight: 700;
+  text-shadow: 0 1px 0 #fff;
+  content: "\e61e";
+  font-family: "anticon";
+}
+.ant-alert-close-icon:hover,
+.ant-alert-with-description-close-icon:hover {
+  color: #444;
+}
+.ant-alert-close-text {
+  position: absolute;
+  right: 16px;
+}
+.ant-alert-with-description {
+  padding: 16px 16px 16px 69px;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: #666666;
+}
+.ant-alert-with-description-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  margin-top: -22px;
+  font-size: 29px;
+}
+.ant-alert-with-description-close-icon {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333);
+  -ms-transform: scale(0.83333333);
+  transform: scale(0.83333333);
+}
+:root .ant-alert-with-description-close-icon {
+  font-size: 12px;
+}
+.ant-alert-with-description-message {
+  font-size: 14px;
+  color: #666666;
+}
+.ant-alert-with-description-description {
+  font-size: 12px;
+  color: #999999;
+}
+.ant-alert-with-description-success {
+  border: 1px solid #e7f6e1;
+  background-color: #f3faf0;
+}
+.ant-alert-with-description-success .anticon {
+  color: #87d068;
+}
+.ant-alert-with-description-info {
+  border: 1px solid #d5f1fd;
+  background-color: #eaf8fe;
+}
+.ant-alert-with-description-info .anticon {
+  color: #2db7f5;
+}
+.ant-alert-with-description-warn {
+  border: 1px solid #fef3dc;
+  background-color: #fff9ee;
+}
+.ant-alert-with-description-warn .anticon {
+  color: #fac450;
+}
+.ant-alert-with-description-error {
+  border: 1px solid #ffe0cc;
+  background-color: #fff0e6;
+}
+.ant-alert-with-description-error .anticon {
+  color: #ff6600;
 }
 
 /*# sourceMappingURL=antd.css.map*/

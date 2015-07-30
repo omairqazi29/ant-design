@@ -7,7 +7,7 @@
 		exports["antd"] = factory(require("react"), require("jquery"), require("antd"));
 	else
 		root["antd"] = factory(root["React"], root["jQuery"], root["antd"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_66__, __WEBPACK_EXTERNAL_MODULE_274__, __WEBPACK_EXTERNAL_MODULE_313__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_65__, __WEBPACK_EXTERNAL_MODULE_275__, __WEBPACK_EXTERNAL_MODULE_322__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -57,12 +57,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	window['css-animation'] = __webpack_require__(105);
+	window['css-animation'] = __webpack_require__(110);
 	window['react-router'] = window.ReactRouter;
-	var antd = __webpack_require__(313);
+	var antd = __webpack_require__(322);
 	
-	var $ = __webpack_require__(274);
-	var React = __webpack_require__(66);
+	var $ = __webpack_require__(275);
+	var React = __webpack_require__(65);
 	
 	$(function () {
 	  // auto complete for components
@@ -87,7 +87,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          ' ',
 	          React.createElement(
 	            'span',
-	            null,
+	            { className: "ant-component-decs" },
 	            s.desc
 	          )
 	        );
@@ -107,12 +107,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    render: function render() {
 	      return React.createElement(
 	        Select,
-	        { combobox: true, style: { width: 200 },
+	        { combobox: true, style: { width: 260 },
 	          onSelect: this.handleSelect,
 	          optionLabelProp: "text",
 	          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
 	          searchPlaceholder: "搜索组件...",
-	          renderDropdownToBody: true,
 	          filterOption: this.filterOption },
 	        this.getOptions()
 	      );
@@ -126,20 +125,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 66:
+/***/ 65:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_66__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_65__;
 
 /***/ },
 
-/***/ 105:
+/***/ 110:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var Event = __webpack_require__(106);
-	var Css = __webpack_require__(107);
+	var Event = __webpack_require__(111);
+	var Css = __webpack_require__(112);
 	
 	var cssAnimation = function cssAnimation(node, transitionName, callback) {
 	  var className = transitionName;
@@ -233,7 +232,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 106:
+/***/ 111:
 /***/ function(module, exports) {
 
 	
@@ -321,7 +320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 107:
+/***/ 112:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -353,17 +352,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 274:
+/***/ 275:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_274__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_275__;
 
 /***/ },
 
-/***/ 313:
+/***/ 322:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_313__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_322__;
 
 /***/ }
 
