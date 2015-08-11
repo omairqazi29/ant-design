@@ -3370,8 +3370,8 @@ fieldset[disabled] .ant-btn-ghost.active {
           transition: left 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-switch-checked {
-  border: 1px solid #87d068;
-  background-color: #87d068;
+  border: 1px solid #2db7f5;
+  background-color: #2db7f5;
 }
 .ant-switch-checked .ant-switch-inner {
   left: 6px;
@@ -8428,7 +8428,7 @@ textarea.ant-input-number {
 .ant-menu-horizontal > .ant-menu-item-active {
   border-bottom: 2px solid #2db7f5;
   background-color: #F3F5F7;
-  color: #2baee9;
+  color: #2db7f5;
 }
 .ant-menu-horizontal:after {
   content: "\20";
