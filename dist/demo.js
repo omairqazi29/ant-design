@@ -7,7 +7,7 @@
 		exports["antd"] = factory(require("react"), require("jquery"), require("antd"));
 	else
 		root["antd"] = factory(root["React"], root["jQuery"], root["antd"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_66__, __WEBPACK_EXTERNAL_MODULE_274__, __WEBPACK_EXTERNAL_MODULE_313__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_74__, __WEBPACK_EXTERNAL_MODULE_253__, __WEBPACK_EXTERNAL_MODULE_335__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -57,12 +57,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	window['css-animation'] = __webpack_require__(105);
+	window['css-animation'] = __webpack_require__(120);
 	window['react-router'] = window.ReactRouter;
-	var antd = __webpack_require__(313);
+	var antd = __webpack_require__(335);
 	
-	var $ = __webpack_require__(274);
-	var React = __webpack_require__(66);
+	var $ = __webpack_require__(253);
+	var React = __webpack_require__(74);
 	
 	$(function () {
 	  // auto complete for components
@@ -87,7 +87,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          ' ',
 	          React.createElement(
 	            'span',
-	            null,
+	            { className: 'ant-component-decs' },
 	            s.desc
 	          )
 	        );
@@ -107,12 +107,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    render: function render() {
 	      return React.createElement(
 	        Select,
-	        { combobox: true, style: { width: 200 },
+	        { combobox: true, style: { width: 260 },
 	          onSelect: this.handleSelect,
-	          optionLabelProp: "text",
+	          optionLabelProp: 'text',
 	          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
-	          searchPlaceholder: "搜索组件...",
-	          renderDropdownToBody: true,
+	          searchPlaceholder: '搜索组件...',
 	          filterOption: this.filterOption },
 	        this.getOptions()
 	      );
@@ -126,20 +125,56 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 66:
+/***/ 74:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_66__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_74__;
 
 /***/ },
 
-/***/ 105:
+/***/ 120:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var Event = __webpack_require__(106);
-	var Css = __webpack_require__(107);
+	var Event = __webpack_require__(121);
+	var Css = __webpack_require__(122);
+	var isCssAnimationSupported = Event.endEvents.length !== 0;
+	
+	function getDuration(node, name) {
+	  var style = window.getComputedStyle(node);
+	  var prefixes = ['-webkit-', '-moz-', '-o-', 'ms-', ''];
+	  var ret = '';
+	  for (var i = 0; i < prefixes.length; i++) {
+	    ret = style.getPropertyValue(prefixes[i] + name);
+	    if (ret) {
+	      break;
+	    }
+	  }
+	  return ret;
+	}
+	
+	function fixBrowserByTimeout(node) {
+	  if (isCssAnimationSupported) {
+	    var transitionDuration = parseFloat(getDuration(node, 'transition-duration')) || 0;
+	    var animationDuration = parseFloat(getDuration(node, 'animation-duration')) || 0;
+	    var time = Math.max(transitionDuration, animationDuration);
+	    // sometimes, browser bug
+	    node.rcEndAnimTimeout = setTimeout(function () {
+	      node.rcEndAnimTimeout = null;
+	      if (node.rcEndListener) {
+	        node.rcEndListener();
+	      }
+	    }, time * 1000 + 200);
+	  }
+	}
+	
+	function clearBrowserBugTimeout(node) {
+	  if (node.rcEndAnimTimeout) {
+	    clearTimeout(node.rcEndAnimTimeout);
+	    node.rcEndAnimTimeout = null;
+	  }
+	}
 	
 	var cssAnimation = function cssAnimation(node, transitionName, callback) {
 	  var className = transitionName;
@@ -159,6 +194,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      node.rcAnimTimeout = null;
 	    }
 	
+	    clearBrowserBugTimeout(node);
+	
 	    Css.removeClass(node, className);
 	    Css.removeClass(node, activeClassName);
 	
@@ -177,9 +214,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Css.addClass(node, className);
 	
 	  node.rcAnimTimeout = setTimeout(function () {
-	    Css.addClass(node, activeClassName);
 	    node.rcAnimTimeout = null;
+	    Css.addClass(node, activeClassName);
+	    fixBrowserByTimeout(node);
 	  }, 0);
+	
+	  return {
+	    stop: function stop() {
+	      if (node.rcEndListener) {
+	        node.rcEndListener();
+	      }
+	    }
+	  };
 	};
 	
 	cssAnimation.style = function (node, style, callback) {
@@ -197,6 +243,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      node.rcAnimTimeout = null;
 	    }
 	
+	    clearBrowserBugTimeout(node);
+	
 	    Event.removeEndEventListener(node, node.rcEndListener);
 	    node.rcEndListener = null;
 	
@@ -211,13 +259,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  node.rcAnimTimeout = setTimeout(function () {
 	    for (var s in style) {
-	      node.style[s] = style[s];
+	      if (style.hasOwnProperty(s)) {
+	        node.style[s] = style[s];
+	      }
 	    }
 	    node.rcAnimTimeout = null;
+	    fixBrowserByTimeout(node);
 	  }, 0);
 	};
 	
-	cssAnimation.setTransition = function (node, property, v) {
+	cssAnimation.setTransition = function (node, p, value) {
+	  var property = p;
+	  var v = value;
+	  if (value === undefined) {
+	    v = property;
+	    property = '';
+	  }
 	  property = property || '';
 	  ['Webkit', 'Moz', 'O',
 	  // ms is special .... !
@@ -228,15 +285,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	cssAnimation.addClass = Css.addClass;
 	cssAnimation.removeClass = Css.removeClass;
+	cssAnimation.isCssAnimationSupported = isCssAnimationSupported;
 	
 	module.exports = cssAnimation;
 
 /***/ },
 
-/***/ 106:
+/***/ 121:
 /***/ function(module, exports) {
 
-	
 	'use strict';
 	
 	var EVENT_NAME_MAP = {
@@ -272,11 +329,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  for (var baseEventName in EVENT_NAME_MAP) {
-	    var baseEvents = EVENT_NAME_MAP[baseEventName];
-	    for (var styleName in baseEvents) {
-	      if (styleName in style) {
-	        endEvents.push(baseEvents[styleName]);
-	        break;
+	    if (EVENT_NAME_MAP.hasOwnProperty(baseEventName)) {
+	      var baseEvents = EVENT_NAME_MAP[baseEventName];
+	      for (var styleName in baseEvents) {
+	        if (styleName in style) {
+	          endEvents.push(baseEvents[styleName]);
+	          break;
+	        }
 	      }
 	    }
 	  }
@@ -321,7 +380,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 107:
+/***/ 122:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -329,19 +388,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	var SPACE = ' ';
 	var RE_CLASS = /[\n\t\r]/g;
 	
-	var norm = function norm(elemClass) {
+	function norm(elemClass) {
 	  return (SPACE + elemClass + SPACE).replace(RE_CLASS, SPACE);
-	};
+	}
 	
 	module.exports = {
 	  addClass: function addClass(elem, className) {
 	    elem.className += ' ' + className;
 	  },
 	
-	  removeClass: function removeClass(elem, needle) {
+	  removeClass: function removeClass(elem, n) {
 	    var elemClass = elem.className.trim();
 	    var className = norm(elemClass);
-	    needle = needle.trim();
+	    var needle = n.trim();
 	    needle = SPACE + needle + SPACE;
 	    // 一个 cls 有可能多次出现：'link link2 link link3 link'
 	    while (className.indexOf(needle) >= 0) {
@@ -353,17 +412,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 274:
+/***/ 253:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_274__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_253__;
 
 /***/ },
 
-/***/ 313:
+/***/ 335:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_313__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_335__;
 
 /***/ }
 

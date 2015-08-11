@@ -1,0 +1,41 @@
+<div class="code-box" id="demo-duration">
+  <div class="code-box-demo">
+    <div id="components-notification-demo-duration"></div>
+    <script>(function(){"use strict";
+
+var notification = require('antd/lib/notification');
+
+var openNotification = function openNotification() {
+  notification.open({
+    message: "这是标题",
+    description: "这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案",
+    duration: null
+  });
+};
+
+React.render(React.createElement(
+  "button",
+  { className: "ant-btn ant-btn-primary", onClick: openNotification },
+  "显示通知，不自动消失"
+), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+
+<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  notification.open({
+    message: <span class="string">"这是标题"</span>,
+    description: <span class="string">"这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"</span>,
+    duration: <span class="literal">null</span>
+  });
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>显示通知，不自动消失<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+, document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-duration">不自动消失</a>
+    </div>
+    <p>将 duration 配置为 null 即可。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

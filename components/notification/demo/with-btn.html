@@ -1,0 +1,69 @@
+<div class="code-box" id="demo-with-btn">
+  <div class="code-box-demo">
+    <div id="components-notification-demo-with-btn"></div>
+    <script>(function(){'use strict';
+
+var notification = require('antd/lib/notification');
+
+var key = 'someKeyStringString';
+
+var close = function close() {
+  notification.close(key);
+};
+
+var btn = React.createElement(
+  'button',
+  { onClick: close, className: 'ant-btn ant-btn-primary ant-btn-sm' },
+  '自定义关闭按钮'
+);
+
+var openNotification = function openNotification() {
+  notification.open({
+    message: "这是标题",
+    description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
+    btn: btn,
+    key: key
+  });
+};
+
+React.render(React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'button',
+    { className: 'ant-btn ant-btn-primary', onClick: openNotification },
+    '打开通知提醒框'
+  )
+), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+
+<span class="keyword">var</span> key = <span class="string">'someKeyStringString'</span>;
+
+<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  notification.close(key);
+};
+
+<span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{close}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>自定义关闭按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
+
+<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  notification.open({
+    message: <span class="string">"这是标题"</span>,
+    description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
+    btn: btn,
+    key: key
+  });
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+document.getElementById('components-notification-demo-with-btn'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-with-btn">自定义关闭按钮</a>
+    </div>
+    <p>自定义关闭按钮的样式和文字。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

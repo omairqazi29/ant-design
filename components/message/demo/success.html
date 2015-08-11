@@ -1,18 +1,20 @@
-<div class="code-box" id="code-box-components-message-demo-success">
+<div class="code-box" id="demo-success">
   <div class="code-box-demo">
     <div id="components-message-demo-success"></div>
     <script>(function(){'use strict';
 
 var message = antd.message;
+
 var success = function success() {
   message.success('这是一条成功的提示');
 };
 
 React.render(React.createElement(
   'button',
-  { className: "ant-btn ant-btn-primary", onClick: success },
+  { className: 'ant-btn ant-btn-primary', onClick: success },
   '显示成功提示'
 ), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> message = antd.message;
+
 <span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示'</span>);
 };
@@ -22,9 +24,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">button<
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-message-demo-success">基本</a>
+      <a href="#demo-success">基本</a>
     </div>
     <p>全局提示 - 操作成功提示。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

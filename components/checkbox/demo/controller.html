@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-checkbox-demo-controller">
+<div class="code-box" id="demo-controller">
   <div class="code-box-demo">
     <div id="components-checkbox-demo-controller"></div>
     <script>(function(){'use strict';
@@ -37,14 +37,14 @@ var App = React.createClass({
         null,
         React.createElement(
           'button',
-          { className: "ant-btn ant-btn-primary ant-btn-sm",
+          { className: 'ant-btn ant-btn-primary ant-btn-sm',
             onClick: this.toggleChecked },
           !this.state.checked ? "选中" : "取消"
         ),
         React.createElement(
           'button',
           { style: { 'marginLeft': '10px' },
-            className: "ant-btn ant-btn-primary ant-btn-sm",
+            className: 'ant-btn ant-btn-primary ant-btn-sm',
             onClick: this.toggleDisable },
           !this.state.disabled ? "不可用" : "可用"
         )
@@ -118,9 +118,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-checkbox-demo-controller">和外部组件通信</a>
+      <a href="#demo-controller">和外部组件通信</a>
     </div>
     <p>联动 checkbox。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

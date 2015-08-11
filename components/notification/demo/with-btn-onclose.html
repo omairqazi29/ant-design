@@ -1,0 +1,81 @@
+<div class="code-box" id="demo-with-btn-onclose">
+  <div class="code-box-demo">
+    <div id="components-notification-demo-with-btn-onclose"></div>
+    <script>(function(){'use strict';
+
+var notification = require('antd/lib/notification');
+
+var key = 'someKeyString';
+
+var close = function close() {
+  // 自定义按钮关闭时的业务处理
+  console.log("我被自定义的关闭按钮关闭了！");
+  // 隐藏提醒框
+  notification.close(key);
+};
+
+var onClose = function onClose() {
+  // 默认按钮关闭时的业务处理
+  console.log("我被默认的关闭按钮关闭了！");
+};
+
+var btn = React.createElement(
+  'button',
+  { onClick: close, className: 'ant-btn ant-btn-primary ant-btn-sm' },
+  '自定义关闭按钮并触发回调函数'
+);
+
+var openNotification = function openNotification() {
+  notification.open({
+    message: "这是标题",
+    description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
+    btn: btn,
+    key: key,
+    onClose: onClose
+  });
+};
+
+React.render(React.createElement(
+  'button',
+  { className: 'ant-btn ant-btn-primary', onClick: openNotification },
+  '打开通知提醒框'
+), document.getElementById('components-notification-demo-with-btn-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+
+<span class="keyword">var</span> key = <span class="string">'someKeyString'</span>;
+
+<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="comment">// 自定义按钮关闭时的业务处理</span>
+  console.log(<span class="string">"我被自定义的关闭按钮关闭了！"</span>);
+  <span class="comment">// 隐藏提醒框</span>
+  notification.close(key);
+};
+
+<span class="keyword">var</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="comment">// 默认按钮关闭时的业务处理</span>
+  console.log(<span class="string">"我被默认的关闭按钮关闭了！"</span>);
+};
+
+<span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{close}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>自定义关闭按钮并触发回调函数<span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
+
+<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  notification.open({
+    message: <span class="string">"这是标题"</span>,
+    description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
+    btn: btn,
+    key: key,
+    onClose: onClose
+  });
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+, document.getElementById('components-notification-demo-with-btn-onclose'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-with-btn-onclose">自定义关闭按钮同时触发回调函数</a>
+    </div>
+    <p>关闭自定义的关闭按钮时触发回调函数，同时还可以在默认关闭按钮上添加另一个回调函数。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

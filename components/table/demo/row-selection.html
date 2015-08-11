@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-table-demo-row-selection">
+<div class="code-box" id="demo-row-selection">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection"></div>
     <script>(function(){'use strict';
@@ -10,7 +10,7 @@ var columns = [{
   render: function render(text) {
     return React.createElement(
       'a',
-      { href: "javascript:;" },
+      { href: 'javascript:;' },
       text
     );
   }
@@ -88,9 +88,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-table-demo-row-selection">选择</a>
+      <a href="#demo-row-selection">选择</a>
     </div>
     <p>第一列是联动的选择框。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

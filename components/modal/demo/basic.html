@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-modal-demo-basic">
+<div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-modal-demo-basic"></div>
     <script>(function(){'use strict';
@@ -36,12 +36,12 @@ var Test = React.createClass({
       null,
       React.createElement(
         'button',
-        { className: "ant-btn ant-btn-primary", onClick: this.showModal },
+        { className: 'ant-btn ant-btn-primary', onClick: this.showModal },
         '显示对话框'
       ),
       React.createElement(
         Modal,
-        { title: "第一个 Modal",
+        { title: '第一个 Modal',
           visible: this.state.visible,
           onOk: this.handleOk,
           onCancel: this.handleCancel },
@@ -109,9 +109,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-modal-demo-basic">基本</a>
+      <a href="#demo-basic">基本</a>
     </div>
     <p>第一个对话框。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

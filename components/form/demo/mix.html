@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-form-demo-mix">
+<div class="code-box" id="demo-mix">
   <div class="code-box-demo">
     <div id="components-form-demo-mix"></div>
     <script>(function(){"use strict";
@@ -66,7 +66,7 @@ React.render(React.createElement(
     React.createElement(
       "div",
       { className: "col-10" },
-      React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onInputNumberChange, style: { width: 100 } }),
+      React.createElement(InputNumber, { size: "large", min: 1, max: 10, defaultValue: 3, onChange: onInputNumberChange, style: { width: 100 } }),
       React.createElement(
         "span",
         { className: "ant-form-text" },
@@ -143,7 +143,7 @@ React.render(React.createElement(
       { className: "col-16" },
       React.createElement(
         Select,
-        { value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
+        { size: "large", value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
         React.createElement(
           Option,
           { value: "jack" },
@@ -266,7 +266,7 @@ React.render(
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>InputNumber 数字输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onInputNumberChange}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span>/&gt;</span>
+      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onInputNumberChange}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span>/&gt;</span>
       <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span> 台机器<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -296,7 +296,7 @@ React.render(
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Select 选择器：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -336,9 +336,9 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-mix">表单组合</a>
+      <a href="#demo-mix">表单组合</a>
     </div>
     <p>集中营，展示和表单相关的其他 ant-design 组件。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

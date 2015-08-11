@@ -13,7 +13,7 @@ Form 表单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.7.3.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta1.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -35,16 +35,20 @@ Form 表单 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.0.5/es5-shim-debug.js,es5-shim/4.0.5/es5-sham-debug.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Layout',
-        desc: '布局'
+        title: 'Button',
+        desc: '按钮'
       });
       ANT_COMPONENTS.push({
         title: 'Iconfont',
         desc: '字体图标'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Layout',
+        desc: '布局'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -55,28 +59,20 @@ Form 表单 - Ant Design
         desc: '单选框'
       });
       ANT_COMPONENTS.push({
-        title: 'Button',
-        desc: '按钮'
+        title: 'Form',
+        desc: '表单'
       });
       ANT_COMPONENTS.push({
         title: 'Switch',
         desc: '开关'
       });
       ANT_COMPONENTS.push({
-        title: 'Form',
-        desc: '表单'
+        title: 'InputNumber',
+        desc: '数字输入框'
       });
       ANT_COMPONENTS.push({
         title: 'Slider',
         desc: '滑动输入条'
-      });
-      ANT_COMPONENTS.push({
-        title: 'Motion',
-        desc: '组件动画'
-      });
-      ANT_COMPONENTS.push({
-        title: 'InputNumber',
-        desc: '数字输入框'
       });
       ANT_COMPONENTS.push({
         title: 'Datepicker',
@@ -103,12 +99,48 @@ Form 表单 - Ant Design
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
+        title: 'Notification',
+        desc: '通知提醒框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Carousel',
+        desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Alert',
+        desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
         title: 'Pagination',
         desc: '分页'
       });
       ANT_COMPONENTS.push({
+        title: 'Affix',
+        desc: '固钉'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Upload',
+        desc: '文件上传'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tree',
+        desc: '树'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Menu',
+        desc: '导航菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tag',
+        desc: '标签'
+      });
+      ANT_COMPONENTS.push({
         title: 'Modal',
         desc: '对话框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'EnterAnimation',
+        desc: '进场动画'
       });
       ANT_COMPONENTS.push({
         title: 'Message',
@@ -138,15 +170,19 @@ Form 表单 - Ant Design
         title: 'Table',
         desc: '表格'
       });
+      ANT_COMPONENTS.push({
+        title: 'Validation',
+        desc: '表单校验'
+      });
     </script>
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.7.3',
+        latest: '0.8.0-beta1',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.7.3.js"></script>
+    <script src="/dist/antd-0.8.0-beta1.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -174,7 +210,7 @@ Form 表单 - Ant Design
     
   </head>
   <body >
-    <header id="header">
+    <header id="header" class="clearfix">
       <a class="logo" href="/">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         Ant Design
@@ -192,7 +228,7 @@ Form 表单 - Ant Design
             <a href="/docs/introduce">使用</a>
           </li>
           <li class="">
-            <a class="disabled" href="/design/">设计</a>
+            <a href="/spec/font">设计</a>
           </li>
           <li class="current">
             <a href="/components">组件</a>
@@ -208,161 +244,210 @@ Form 表单 - Ant Design
 <aside class="aside-container">
   <ul>
     <li>
-      <h4>CSS</h4>
+      <h4>Components</h4>
       <ul class="aside-list-show">
         <li class="">
-          <a href="../layout/">
-            Layout
-            <span class="chinese">布局</span>
+          <a href="../button/" class="">
+            Button
+            <span class="chinese">按钮</span>
           </a>
         </li>
         <li class="">
-          <a href="../iconfont/">
+          <a href="../iconfont/" class="">
             Iconfont
             <span class="chinese">字体图标</span>
           </a>
         </li>
         <li class="">
-          <a href="../button/">
-            Button
-            <span class="chinese">按钮</span>
-          </a>
-        </li>
-        <li class="current">
-          <a href="./">
-            Form
-            <span class="chinese">表单</span>
+          <a href="../layout/" class="">
+            Layout
+            <span class="chinese">布局</span>
           </a>
         </li>
         <li class="">
-          <a href="../motion/">
-            Motion
-            <span class="chinese">组件动画</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h4>Components</h4>
-      <ul class="">
-        <li class="">
-          <a href="../checkbox/">
+          <a href="../checkbox/" class="">
             Checkbox
             <span class="chinese">多选框</span>
           </a>
         </li>
         <li class="">
-          <a href="../radio/">
+          <a href="../radio/" class="">
             Radio
             <span class="chinese">单选框</span>
           </a>
         </li>
+        <li class="current">
+          <a href="./" class="">
+            Form
+            <span class="chinese">表单</span>
+          </a>
+        </li>
         <li class="">
-          <a href="../switch/">
+          <a href="../switch/" class="">
             Switch
             <span class="chinese">开关</span>
           </a>
         </li>
         <li class="">
-          <a href="../slider/">
-            Slider
-            <span class="chinese">滑动输入条</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="../input-number/">
+          <a href="../input-number/" class="">
             InputNumber
             <span class="chinese">数字输入框</span>
           </a>
         </li>
         <li class="">
-          <a href="../datepicker/">
+          <a href="../slider/" class="">
+            Slider
+            <span class="chinese">滑动输入条</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../datepicker/" class="">
             Datepicker
             <span class="chinese">日期选择框</span>
           </a>
         </li>
         <li class="">
-          <a href="../select/">
+          <a href="../select/" class="">
             Select
             <span class="chinese">选择器</span>
           </a>
         </li>
         <li class="">
-          <a href="../tabs/">
+          <a href="../tabs/" class="">
             Tabs
             <span class="chinese">标签页</span>
           </a>
         </li>
         <li class="">
-          <a href="../steps/">
+          <a href="../steps/" class="">
             Steps
             <span class="chinese">步骤条</span>
           </a>
         </li>
         <li class="">
-          <a href="../breadcrumb/">
+          <a href="../breadcrumb/" class="">
             Breadcrumb
             <span class="chinese">面包屑</span>
           </a>
         </li>
         <li class="">
-          <a href="../collapse/">
+          <a href="../collapse/" class="">
             Collapse
             <span class="chinese">折叠面板</span>
           </a>
         </li>
         <li class="">
-          <a href="../pagination/">
+          <a href="../notification/" class="">
+            Notification
+            <span class="chinese">通知提醒框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../carousel/" class="">
+            Carousel
+            <span class="chinese">走马灯</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../alert/" class="">
+            Alert
+            <span class="chinese">警告提示</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../pagination/" class="">
             Pagination
             <span class="chinese">分页</span>
           </a>
         </li>
         <li class="">
-          <a href="../modal/">
+          <a href="../affix/" class="">
+            Affix
+            <span class="chinese">固钉</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../upload/" class="">
+            Upload
+            <span class="chinese">文件上传</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tree/" class="nav-link-disabled">
+            Tree
+            <span class="chinese">树</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../menu/" class="">
+            Menu
+            <span class="chinese">导航菜单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tag/" class="">
+            Tag
+            <span class="chinese">标签</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../modal/" class="">
             Modal
             <span class="chinese">对话框</span>
           </a>
         </li>
         <li class="">
-          <a href="../message/">
+          <a href="../enter-animation/" class="">
+            EnterAnimation
+            <span class="chinese">进场动画</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../message/" class="">
             Message
             <span class="chinese">全局提示</span>
           </a>
         </li>
         <li class="">
-          <a href="../dropdown/">
+          <a href="../dropdown/" class="">
             Dropdown
             <span class="chinese">下拉菜单</span>
           </a>
         </li>
         <li class="">
-          <a href="../popover/">
+          <a href="../popover/" class="">
             Popover
             <span class="chinese">气泡卡片</span>
           </a>
         </li>
         <li class="">
-          <a href="../popconfirm/">
+          <a href="../popconfirm/" class="">
             Popconfirm
             <span class="chinese">气泡确认框</span>
           </a>
         </li>
         <li class="">
-          <a href="../tooltip/">
+          <a href="../tooltip/" class="">
             Tooltip
             <span class="chinese">文字提示</span>
           </a>
         </li>
         <li class="">
-          <a href="../progress/">
+          <a href="../progress/" class="">
             Progress
             <span class="chinese">进度条</span>
           </a>
         </li>
         <li class="">
-          <a href="../table/">
+          <a href="../table/" class="">
             Table
             <span class="chinese">表格</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../validation/" class="">
+            Validation
+            <span class="chinese">表单校验</span>
           </a>
         </li>
       </ul>
@@ -391,7 +476,7 @@ Form 表单 - Ant Design
   <i class="iconfont-home icon-all" title="展开全部代码"></i>
 </h2>
 <div class="code-boxes clearfix">
-  <div class="code-boxes-col-2-1"><div class="code-box" id="code-box-components-form-demo-horizontal-form">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-horizontal-form">
   <div class="code-box-demo">
     <div id="components-form-demo-horizontal-form"></div>
     <script>(function(){"use strict";
@@ -555,15 +640,15 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-horizontal-form">水平排列的表单</a>
+      <a href="#demo-horizontal-form">水平排列的表单</a>
     </div>
     <p>为 <code>&lt;form&gt;</code> 标签添加 <code>.ant-form-horizontal</code> 类(这让 <code>.ant-form-item</code> 表现为栅格系统中的 <code>row</code>)，并结合使用我们提供的 <a href="http://ant.design/components/layout/">栅格系统</a>，可以实现 label 标签和表单控件的水平排列。</p>
-<p>如需将一行静态文本和 <code>&lt;label&gt;</code> 标签置于同一行，则只需为 <code>&lt;p&gt;</code> 标签添加 <code>.ant-form-text</code> 类即可。</p>
+<p>如需将一行静态文本和 <code>&lt;label&gt;</code> 标签置于同一行，则只需为标签添加 <code>.ant-form-text</code> 类即可。</p>
 <p>为 <code>label</code> 标签添加 <code>required</code> 属性，表示该项必选。</p>
-<p><strong>注意</strong>：对于表单域(<code>.ant-form-item</code>) 为静态文本、<code>checkbox</code>、<code>radio</code>以及<code>input[type=&quot;file&quot;]</code>的，其高度不同于一般的表单域，需要在 <code>.ant-form-item</code> 类后再加上 <code>.ant-form-item-compact</code>。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+<p><strong>注意</strong>：在我们的设计里，表单域(<code>.ant-form-item</code>) 为静态文本、<code>checkbox</code>、<code>radio</code>以及<code>input[type=&quot;file&quot;]</code>的，其高度不同于一般的表单域，需要在 <code>.ant-form-item</code> 类后再加上 <strong><code>.ant-form-item-compact</code></strong>。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-disabled">
+</div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-form-demo-disabled"></div>
     <h4 id="禁用的表单控件">禁用的表单控件</h4><p><br></p>
@@ -626,13 +711,13 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-disabled">禁用状态</a>
+      <a href="#demo-disabled">禁用状态</a>
     </div>
     <p>1) 单独为输入框设置 <code>disabled</code> 属性；</p>
 <p>2) 为 <code>&lt;fieldset&gt;</code> 设置 <code>disabled</code> 属性，可以禁用 <code>&lt;fieldset&gt;</code> 中包含的所有控件。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-validate">
+</div><div class="code-box" id="demo-validate">
   <div class="code-box-demo">
     <div id="components-form-demo-validate"></div>
     <div class="nico-insert-code"><h4>不带反馈图标的校验提示</h4>
@@ -659,41 +744,37 @@ React.render(
     <div class="ant-form-item">
       <label class="col-5" for="validating">校验中：</label>
       <div class="col-12">
-          <div class="has-feedback">
+          <div class="has-feedback is-validating">
             <input class="ant-input" type="text" id="validating" value="我是被校验的内容"/>
-            <i class="anticon anticon-loading"></i>
+        <div class="ant-form-explain">信息审核中...</div>
           </div>
-          <div class="ant-form-explain">信息审核中...</div>
       </div>
     </div>
 
-    <div class="ant-form-item has-success">
+    <div class="ant-form-item">
       <label class="col-5" for="input1">成功校验：</label>
       <div class="col-12">
-          <div class="has-feedback">
+          <div class="has-feedback has-success">
             <input class="ant-input" type="text" id="input1" value="我是正文"/>
-            <i class="anticon anticon-check-circle"></i>
           </div>
       </div>
     </div>
 
-    <div class="ant-form-item has-error">
+    <div class="ant-form-item">
       <label class="col-5" for="input2">失败校验：</label>
       <div class="col-12">
-          <div class="has-feedback">
+          <div class="has-feedback has-error">
             <input class="ant-input" type="text" id="input2" value="无效选择"/>
-            <i class="anticon anticon-cross-circle"></i>
+        <div class="ant-form-explain">请输入数字和字母组合</div>
           </div>
-          <div class="ant-form-explain">请输入数字和字母组合</div>
       </div>
     </div>
 
-    <div class="ant-form-item has-warning">
+    <div class="ant-form-item">
       <label class="col-5" for="input3">警告校验：</label>
       <div class="col-12">
-          <div class="has-feedback">
+          <div class="has-feedback has-warning">
             <input class="ant-input" type="text" id="input3" value="前方高能预警"/>
-            <i class="anticon anticon-exclamation-circle"></i>
           </div>
       </div>
     </div>
@@ -721,41 +802,37 @@ React.render(
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">for</span>=<span class="value">"validating"</span>&gt;</span>校验中：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback is-validating"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"validating"</span> <span class="attribute">value</span>=<span class="value">"我是被校验的内容"</span>/&gt;</span>
-            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-loading"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-explain"</span>&gt;</span>信息审核中...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-explain"</span>&gt;</span>信息审核中...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item has-success"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">for</span>=<span class="value">"input1"</span>&gt;</span>成功校验：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback has-success"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"input1"</span> <span class="attribute">value</span>=<span class="value">"我是正文"</span>/&gt;</span>
-            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item has-error"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">for</span>=<span class="value">"input2"</span>&gt;</span>失败校验：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback has-error"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"input2"</span> <span class="attribute">value</span>=<span class="value">"无效选择"</span>/&gt;</span>
-            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-cross-circle"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-explain"</span>&gt;</span>请输入数字和字母组合<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-explain"</span>&gt;</span>请输入数字和字母组合<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item has-warning"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">for</span>=<span class="value">"input3"</span>&gt;</span>警告校验：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"has-feedback has-warning"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"input3"</span> <span class="attribute">value</span>=<span class="value">"前方高能预警"</span>/&gt;</span>
-            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-exclamation-circle"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -763,16 +840,16 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-validate">校验提示</a>
+      <a href="#demo-validate">校验提示</a>
     </div>
     <p>我们为表单控件的校验状态定义了样式，共有三种校验状态类：</p>
 <p><code>.has-success</code> <code>.has-error</code> <code>.has-warning</code>, 分别代表校验成功、校验失败、有警告。</p>
 <p>将以上三种校验状态类添加到这些控件的父级元素即可。</p>
-<p>另外为输入框添加反馈图标，可以更好地反馈当前的校验状态，使用 <code>.has-feedback</code> 类包裹 input 输入框即可。</p>
+<p>另外为输入框添加反馈图标，可以更好地反馈当前的校验状态，使用 <code>.has-feedback</code> 类包裹 input 输入框即可，在这里校验状态类就要和 <code>.has-feedback</code> 类同级。</p>
 <p><strong>注意</strong>: 反馈图标只能使用在文本输入框 <code>&lt;input class=&quot;ant-input&quot;&gt;</code> 元素上。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-input-size">
+</div><div class="code-box" id="demo-input-size">
   <div class="code-box-demo">
     <div id="components-form-demo-input-size"></div>
     <div class="nico-insert-code"><div class="row">
@@ -803,15 +880,15 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-input-size">Input 尺寸</a>
+      <a href="#demo-input-size">Input 尺寸</a>
     </div>
     <p>我们为定义了 <code>.ant-input</code> 类的输入框提供了三种尺寸：大（-lg）、中(默认)、小（-sm），往类名添加以上后缀即可。</p>
 <p>但是在 <code>&lt;form&gt;</code> 表单里面，我们只使用<strong>大尺寸</strong>， 即高度为 <strong>32px</strong>，作为唯一的尺寸。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
   </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="code-box-components-form-demo-inline-form">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-inline-form">
   <div class="code-box-demo">
     <div id="components-form-demo-inline-form"></div>
     <script>(function(){"use strict";
@@ -875,12 +952,12 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-inline-form">行内排列的表单</a>
+      <a href="#demo-inline-form">行内排列的表单</a>
     </div>
     <p>在<strong>视口宽度大于等于 768px </strong>时，你可以为 <code>&lt;form&gt;</code> 标签添加 <code>.ant-form-inline</code> 类可使其表现为 inline-block 级别的控件。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-form-controls">
+</div><div class="code-box" id="demo-form-controls">
   <div class="code-box-demo">
     <div id="components-form-demo-form-controls"></div>
     <script>(function(){"use strict";
@@ -939,7 +1016,7 @@ React.render(React.createElement(
       { className: "col-14" },
       React.createElement(
         Select,
-        { value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
+        { size: "large", value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
         React.createElement(
           Option,
           { value: "jack" },
@@ -978,19 +1055,19 @@ React.render(React.createElement(
         "label",
         { className: "ant-checkbox-vertical" },
         React.createElement(Checkbox, null),
-        " 选项一"
+        "选项一"
       ),
       React.createElement(
         "label",
         { className: "ant-checkbox-vertical" },
         React.createElement(Checkbox, null),
-        " 选项二"
+        "选项二"
       ),
       React.createElement(
         "label",
         { className: "ant-checkbox-vertical" },
         React.createElement(Checkbox, { disabled: true }),
-        " 选项三（不可选）"
+        "选项三（不可选）"
       )
     )
   ),
@@ -1089,7 +1166,7 @@ React.render(
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>Select 选择器：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -1101,13 +1178,13 @@ React.render(
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>Checkbox 多选框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-18"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 选项一
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>选项一
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 选项二
+        <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>选项二
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-vertical"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span> 选项三（不可选）
+        <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span>选项三（不可选）
       <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -1141,13 +1218,13 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-form-controls">表单控件</a>
+      <a href="#demo-form-controls">表单控件</a>
     </div>
     <p>展示所有支持的表单控件。</p>
 <p><code>注</code>： 输入框：只有正确设置了 type 属性的输入控件才能被赋予正确的样式。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-inputs">
+</div><div class="code-box" id="demo-inputs">
   <div class="code-box-demo">
     <div id="components-form-demo-inputs"></div>
     <script>(function(){"use strict";
@@ -1294,7 +1371,7 @@ React.render(React.createElement(
   ),
   React.createElement(
     "div",
-    { className: "ant-form-item has-error" },
+    { className: "ant-form-item" },
     React.createElement(
       "label",
       { className: "col-6" },
@@ -1343,11 +1420,6 @@ React.render(React.createElement(
             )
           )
         )
-      ),
-      React.createElement(
-        "p",
-        { className: "ant-form-explain" },
-        "请输入正确的电话号码"
       )
     )
   )
@@ -1410,7 +1482,7 @@ React.render(
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item has-error"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>电话号码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
@@ -1434,7 +1506,6 @@ React.render(
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>请输入正确的电话号码<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
@@ -1442,13 +1513,12 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-inputs">Input 输入框集合</a>
+      <a href="#demo-inputs">Input 输入框集合</a>
     </div>
     <p>带标签的输入框：使用 <code>.ant-input-group</code> 类并结合 <code>.ant-input-group-addon</code> 类可以创建带标签的输入框。</p>
-<p>输入框组合：<code>.ant-inputs</code> 类由多个 <code>.ant-inputs-item</code> 组成，使多个 Input 可以在一行显示出来。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="code-box-components-form-demo-mix">
+</div><div class="code-box" id="demo-mix">
   <div class="code-box-demo">
     <div id="components-form-demo-mix"></div>
     <script>(function(){"use strict";
@@ -1516,7 +1586,7 @@ React.render(React.createElement(
     React.createElement(
       "div",
       { className: "col-10" },
-      React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onInputNumberChange, style: { width: 100 } }),
+      React.createElement(InputNumber, { size: "large", min: 1, max: 10, defaultValue: 3, onChange: onInputNumberChange, style: { width: 100 } }),
       React.createElement(
         "span",
         { className: "ant-form-text" },
@@ -1593,7 +1663,7 @@ React.render(React.createElement(
       { className: "col-16" },
       React.createElement(
         Select,
-        { value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
+        { size: "large", value: "lucy", style: { width: 200 }, onChange: handleSelectChange },
         React.createElement(
           Option,
           { value: "jack" },
@@ -1716,7 +1786,7 @@ React.render(
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>InputNumber 数字输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onInputNumberChange}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span>/&gt;</span>
+      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onInputNumberChange}</span> <span class="attribute">style</span>=<span class="value">{{width:100}}</span>/&gt;</span>
       <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span> 台机器<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -1746,7 +1816,7 @@ React.render(
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Select 选择器：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -1786,10 +1856,10 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-form-demo-mix">表单组合</a>
+      <a href="#demo-mix">表单组合</a>
     </div>
     <p>集中营，展示和表单相关的其他 ant-design 组件。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
   </div>

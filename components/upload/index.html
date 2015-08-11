@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="一个设计语言&前端框架"/>
+    <title>
+Upload 文件上传 - Ant Design
+</title>
+    <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta1.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/tomorrow.css">
+    <script>
+      (function (con) {
+        'use strict';
+        var prop, method;
+        var empty = {};
+        var dummy = function () {
+        };
+        var properties = 'memory'.split(',');
+        var methods = ('assert,clear,count,debug,dir,dirxml,error,exception,group,' +
+                       'groupCollapsed,groupEnd,info,log,markTimeline,profile,profiles,profileEnd,' +
+                       'show,table,time,timeEnd,timeline,timelineEnd,timeStamp,trace,warn').split(',');
+        while (prop = properties.pop()) {
+          con[prop] = con[prop] || empty;
+        }
+        while (method = methods.pop()) {
+          con[method] = con[method] || dummy;
+        }
+      })(this.console = this.console || {});
+    </script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script>
+      var ANT_COMPONENTS = [];
+      ANT_COMPONENTS.push({
+        title: 'Button',
+        desc: '按钮'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Iconfont',
+        desc: '字体图标'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Layout',
+        desc: '布局'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Checkbox',
+        desc: '多选框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Radio',
+        desc: '单选框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Form',
+        desc: '表单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Switch',
+        desc: '开关'
+      });
+      ANT_COMPONENTS.push({
+        title: 'InputNumber',
+        desc: '数字输入框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Slider',
+        desc: '滑动输入条'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Datepicker',
+        desc: '日期选择框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Select',
+        desc: '选择器'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tabs',
+        desc: '标签页'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Steps',
+        desc: '步骤条'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Breadcrumb',
+        desc: '面包屑'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Collapse',
+        desc: '折叠面板'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Notification',
+        desc: '通知提醒框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Carousel',
+        desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Alert',
+        desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Pagination',
+        desc: '分页'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Affix',
+        desc: '固钉'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Upload',
+        desc: '文件上传'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tree',
+        desc: '树'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Menu',
+        desc: '导航菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tag',
+        desc: '标签'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Modal',
+        desc: '对话框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'EnterAnimation',
+        desc: '进场动画'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Message',
+        desc: '全局提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Dropdown',
+        desc: '下拉菜单'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popover',
+        desc: '气泡卡片'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Tooltip',
+        desc: '文字提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Progress',
+        desc: '进度条'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Table',
+        desc: '表格'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Validation',
+        desc: '表单校验'
+      });
+    </script>
+    <script src="/static/script.js"></script>
+    <script>
+      window.antdVersion = {
+        latest: '0.8.0-beta1',
+        stable: '0.7.3'
+      };
+    </script>
+    <script src="/dist/antd-0.8.0-beta1.js"></script>
+    <script src="/dist/demo.js"></script>
+    <script>
+      window.require = function (path) {
+        var result = window;
+        var namespaces = path.split('/');
+        namespaces.forEach(function (key, i) {
+          if (i !== 0 && i === namespaces.length - 1) {
+            key = capitalizeFirstLetter(key);
+          }
+          if (key !== 'lib') {
+            if (result[key]) {
+              result = result[key];
+            } else {
+              throw 'There should not have modules here 2.';
+            }
+          }
+        });
+        function capitalizeFirstLetter(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        return result;
+      };
+    </script>
+    
+  </head>
+  <body >
+    <header id="header" class="clearfix">
+      <a class="logo" href="/">
+        <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
+        Ant Design
+      </a>
+      <div class="search">
+        <div id="autoComplete"></div>
+      </div>
+      <nav class="nav">
+        <span class="bar"></span>
+        <ul>
+          <li class="">
+            <a href="/">首页</a>
+          </li>
+          <li class="">
+            <a href="/docs/introduce">使用</a>
+          </li>
+          <li class="">
+            <a href="/spec/font">设计</a>
+          </li>
+          <li class="current">
+            <a href="/components">组件</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/ant-design/ant-design">Github</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-wrapper">
+      
+<aside class="aside-container">
+  <ul>
+    <li>
+      <h4>Components</h4>
+      <ul class="aside-list-show">
+        <li class="">
+          <a href="../button/" class="">
+            Button
+            <span class="chinese">按钮</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../iconfont/" class="">
+            Iconfont
+            <span class="chinese">字体图标</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../layout/" class="">
+            Layout
+            <span class="chinese">布局</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../checkbox/" class="">
+            Checkbox
+            <span class="chinese">多选框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../radio/" class="">
+            Radio
+            <span class="chinese">单选框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../form/" class="">
+            Form
+            <span class="chinese">表单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../switch/" class="">
+            Switch
+            <span class="chinese">开关</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../input-number/" class="">
+            InputNumber
+            <span class="chinese">数字输入框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../slider/" class="">
+            Slider
+            <span class="chinese">滑动输入条</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../datepicker/" class="">
+            Datepicker
+            <span class="chinese">日期选择框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../select/" class="">
+            Select
+            <span class="chinese">选择器</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tabs/" class="">
+            Tabs
+            <span class="chinese">标签页</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../steps/" class="">
+            Steps
+            <span class="chinese">步骤条</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../breadcrumb/" class="">
+            Breadcrumb
+            <span class="chinese">面包屑</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../collapse/" class="">
+            Collapse
+            <span class="chinese">折叠面板</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../notification/" class="">
+            Notification
+            <span class="chinese">通知提醒框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../carousel/" class="">
+            Carousel
+            <span class="chinese">走马灯</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../alert/" class="">
+            Alert
+            <span class="chinese">警告提示</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../pagination/" class="">
+            Pagination
+            <span class="chinese">分页</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../affix/" class="">
+            Affix
+            <span class="chinese">固钉</span>
+          </a>
+        </li>
+        <li class="current">
+          <a href="./" class="">
+            Upload
+            <span class="chinese">文件上传</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tree/" class="nav-link-disabled">
+            Tree
+            <span class="chinese">树</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../menu/" class="">
+            Menu
+            <span class="chinese">导航菜单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tag/" class="">
+            Tag
+            <span class="chinese">标签</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../modal/" class="">
+            Modal
+            <span class="chinese">对话框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../enter-animation/" class="">
+            EnterAnimation
+            <span class="chinese">进场动画</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../message/" class="">
+            Message
+            <span class="chinese">全局提示</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../dropdown/" class="">
+            Dropdown
+            <span class="chinese">下拉菜单</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../popover/" class="">
+            Popover
+            <span class="chinese">气泡卡片</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../popconfirm/" class="">
+            Popconfirm
+            <span class="chinese">气泡确认框</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../tooltip/" class="">
+            Tooltip
+            <span class="chinese">文字提示</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../progress/" class="">
+            Progress
+            <span class="chinese">进度条</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../table/" class="">
+            Table
+            <span class="chinese">表格</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="../validation/" class="">
+            Validation
+            <span class="chinese">表单校验</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>
+ 
+<section class="main-container">
+  <article class="markdown">
+    <h1>
+      Upload 文件上传
+    </h1>
+    <p>文件选择上传和拖拽上传控件。</p>
+<h2 id="何时使用">何时使用</h2><p>上传是将信息从个人计算机（本地计算机）传递到中央计算机（远程计算机）系统上,让网络上的人都能看到.将制作好的网页、文字、图片、视频通过网页或者上传工具软件发布到互联网上的服务器系统上去,以便让其他人浏览、欣赏。这一过程称为上传。</p>
+<ul>
+<li>当需要上传一个或一些文件时。</li>
+<li>当需要展现上传的进度时。</li>
+<li>当需要使用拖拽交互时。</li>
+</ul>
+<h2 id="api">API</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>可选参数, 上传的文件</td>
+<td>String</td>
+<td>file</td>
+</tr>
+<tr>
+<td>action</td>
+<td>必选参数, 上传的地址</td>
+<td>String</td>
+<td>无</td>
+</tr>
+<tr>
+<td>data</td>
+<td>可选参数, 上传所需参数</td>
+<td>Object</td>
+<td>无</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>可选参数, 接受上传的文件类型, 详见input accept Attribute</td>
+<td>String</td>
+<td>无</td>
+</tr>
+<tr>
+<td>onError</td>
+<td>可选参数, error callback</td>
+<td>Function</td>
+<td>无</td>
+</tr>
+<tr>
+<td>onSuccess</td>
+<td>可选参数, success callback</td>
+<td>Function</td>
+<td>无</td>
+</tr>
+<tr>
+<td>onProgress</td>
+<td>可选参数, progress callback, 现代浏览器有效</td>
+<td>Function</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+
+  </article><h2 class="component-demos">
+  组件演示
+  <i class="iconfont-home icon-all" title="展开全部代码"></i>
+</h2>
+<div class="code-boxes clearfix">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-basic"></div>
+    <script>(function(){'use strict';
+
+var Upload = antd.Upload;
+
+var props = {
+  description: '支持扩展名为: .rar .zip ...',
+  action: '/upload.do',
+  data: {},
+  accept: '',
+  uploadTip: '',
+  start: function start(file) {
+    console.log(file.name);
+  },
+  error: function error() {},
+  success: function success() {},
+  progress: function progress() {}
+};
+
+React.render(React.createElement(Upload, props), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+
+<span class="keyword">var</span> props = {
+  description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
+  action: <span class="string">'/upload.do'</span>,
+  data: {},
+  accept: <span class="string">''</span>,
+  uploadTip: <span class="string">''</span>,
+  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
+    console.log(file.name)
+  },
+  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} /&gt;</span>,
+  document.getElementById('components-upload-demo-basic')
+);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-basic">点击上传</a>
+    </div>
+    <p>经典款式，用户点击按钮弹出文件选择框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-drag-simple">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-drag-simple"></div>
+    <script>(function(){'use strict';
+
+var Dragger = antd.Upload.Dragger;
+
+var props = {
+  name: 'file',
+  action: '/upload.do',
+  data: {},
+  accept: '',
+  uploadTip: '',
+  error: function error() {},
+  success: function success() {},
+  progress: function progress() {},
+  start: function start() {}
+};
+
+React.render(React.createElement(
+  Dragger,
+  props,
+  React.createElement('i', { className: 'anticon anticon-plus' })
+), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+
+<span class="keyword">var</span> props = {
+  name: <span class="string">'file'</span>,
+  action: <span class="string">'/upload.do'</span>,
+  data: {},
+  accept: <span class="string">''</span>,
+  uploadTip: <span class="string">''</span>,
+  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  start: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-plus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
+  document.getElementById('components-upload-demo-drag-simple')
+);</span></code></pre></div><style>
+#components-upload-demo-drag-simple {
+  width: 246px;
+  height: 146px;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-drag-simple">拖拽上传</a>
+    </div>
+    <p>样式简单一些。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-drag">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-drag"></div>
+    <script>(function(){'use strict';
+
+var Dragger = antd.Upload.Dragger;
+
+var props = {
+  name: 'file',
+  action: '/upload.do',
+  data: {},
+  accept: 'i',
+  uploadTip: '',
+  error: function error(err) {
+    console.log(err);
+  },
+  success: function success() {},
+  progress: function progress() {},
+  start: function start(file) {
+    console.log(file);
+  }
+};
+
+React.render(React.createElement(
+  Dragger,
+  props,
+  React.createElement(
+    'p',
+    { className: 'ant-upload-drag-icon' },
+    React.createElement('i', { className: 'anticon anticon-inbox' })
+  ),
+  React.createElement(
+    'p',
+    { className: 'ant-upload-text' },
+    '点击或将文件拖拽到此区域上传'
+  ),
+  React.createElement(
+    'p',
+    { className: 'ant-upload-hint' },
+    '支持单个或批量上传，严谨上传公司内部资料及其他违禁文件'
+  )
+), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+
+<span class="keyword">var</span> props = {
+  name: <span class="string">'file'</span>,
+  action: <span class="string">'/upload.do'</span>,
+  data: {},
+  accept: <span class="string">'i'</span>,
+  uploadTip: <span class="string">''</span>,
+  error: <span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
+    console.log(err)
+  },
+  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
+    console.log(file)
+  }
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-drag-icon"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-inbox"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严谨上传公司内部资料及其他违禁文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
+  document.getElementById('components-upload-demo-drag')
+);</span></code></pre></div><style>
+#components-upload-demo-drag {
+  height: 300px;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-drag">拖拽上传</a>
+    </div>
+    <p>可以把文件拖入指定区域，完成上传，同样支持点击上传。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+</div>
+</section>
+
+    </div><footer id="footer">
+  <ul>
+    <li>
+      <h2>GitHub</h2>
+      <a target="_blank "href="https://github.com/ant-design/ant-design">仓库</a>
+      <a target="_blank" href="https://github.com/ant-design/ant-design/tree/master/style">样式</a>
+      <a target="_blank" href="https://github.com/ant-design/antd-bin">开发工具</a>
+    </li>
+    <li>
+      <h2>关于我们</h2>
+      <a href="http://www.atatech.org/teams/79">博客 - Ant UED</a>
+    </li>
+    <li>
+      <h2>联系我们</h2>
+      <a target="_blank" href="https://github.com/ant-design/ant-design/issues">问题与建议 - Issues</a>
+    </li>
+    <li>
+      <h3>©2015 蚂蚁金服体验技术部出品</h3>
+    </li>
+  </ul>
+</footer>
+  </body>
+</html>

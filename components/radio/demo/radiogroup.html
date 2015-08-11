@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-radio-demo-radiogroup">
+<div class="code-box" id="demo-radiogroup">
   <div class="code-box-demo">
     <div id="components-radio-demo-radiogroup"></div>
     <script>(function(){'use strict';
@@ -29,22 +29,22 @@ var App = React.createClass({
         { onChange: this.onChange, value: this.state.value },
         React.createElement(
           Radio,
-          { value: "a" },
+          { value: 'a' },
           'A'
         ),
         React.createElement(
           Radio,
-          { value: "b" },
+          { value: 'b' },
           'B'
         ),
         React.createElement(
           Radio,
-          { value: "c" },
+          { value: 'c' },
           'C'
         ),
         React.createElement(
           Radio,
-          { value: "d" },
+          { value: 'd' },
           'D'
         )
       ),
@@ -88,9 +88,9 @@ React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, 
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-radio-demo-radiogroup">RadioGroup组合</a>
+      <a href="#demo-radiogroup">RadioGroup组合</a>
     </div>
     <p>RadioGroup 组合。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

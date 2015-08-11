@@ -1,0 +1,50 @@
+<div class="code-box" id="demo-basic">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-basic"></div>
+    <script>(function(){'use strict';
+
+var Upload = antd.Upload;
+
+var props = {
+  description: '支持扩展名为: .rar .zip ...',
+  action: '/upload.do',
+  data: {},
+  accept: '',
+  uploadTip: '',
+  start: function start(file) {
+    console.log(file.name);
+  },
+  error: function error() {},
+  success: function success() {},
+  progress: function progress() {}
+};
+
+React.render(React.createElement(Upload, props), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+
+<span class="keyword">var</span> props = {
+  description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
+  action: <span class="string">'/upload.do'</span>,
+  data: {},
+  accept: <span class="string">''</span>,
+  uploadTip: <span class="string">''</span>,
+  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
+    console.log(file.name)
+  },
+  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
+  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} /&gt;</span>,
+  document.getElementById('components-upload-demo-basic')
+);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-basic">点击上传</a>
+    </div>
+    <p>经典款式，用户点击按钮弹出文件选择框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

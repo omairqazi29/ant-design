@@ -1,4 +1,4 @@
-<div class="code-box" id="code-box-components-select-demo-combobox">
+<div class="code-box" id="demo-combobox">
   <div class="code-box-demo">
     <div id="components-select-demo-combobox"></div>
     <script>(function(){'use strict';
@@ -38,7 +38,7 @@ var Test = React.createClass({
       { combobox: true,
         style: { width: 200 },
         onChange: this.handleChange,
-        searchPlaceholder: "请输入账户名" },
+        searchPlaceholder: '请输入账户名' },
       this.state.options
     );
   }
@@ -81,9 +81,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#code-box-components-select-demo-combobox">智能提示</a>
+      <a href="#demo-combobox">智能提示</a>
     </div>
     <p>输入框自动完成功能，下面是一个账号注册表单的例子。</p>
-    <span class="collapse anticon anticon-circle-o-right"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
