@@ -13,7 +13,7 @@ Modal 对话框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta1.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta2.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Modal 对话框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta1',
+        latest: '0.8.0-beta2',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta1.js"></script>
+    <script src="/dist/antd-0.8.0-beta2.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -716,11 +716,11 @@ var Test = React.createClass({
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
             "button",
-            { key: "back", className: "ant-btn", onClick: this.handleCancel },
+            { key: "back", className: "ant-btn ant-btn-lg", onClick: this.handleCancel },
             "返 回"
           ), React.createElement(
             "button",
-            { key: "submit", className: "ant-btn ant-btn-primary", onClick: this.handleOk },
+            { key: "submit", className: "ant-btn ant-btn-primary ant-btn-lg", onClick: this.handleOk },
             "提 交",
             React.createElement("i", { className: 'anticon anticon-loading' + (this.state.loading ? '' : 'hide') })
           )] },
@@ -784,8 +784,8 @@ React.render(React.createElement(Test, null), document.getElementById('component
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
-          &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+          &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
             提 交
             <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">{'anticon</span> <span class="attribute">anticon-loading</span>'+(<span class="attribute">this.state.loading</span>?''<span class="attribute">:</span>'<span class="attribute">hide</span>')}&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">button</span>&gt;</span>

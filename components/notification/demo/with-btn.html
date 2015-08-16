@@ -5,15 +5,17 @@
 
 var notification = require('antd/lib/notification');
 
-var key = 'someKeyStringString';
+var btnClick = function btnClick() {
+  console.log('我被自定义的按钮点击了！');
+};
 
 var close = function close() {
-  notification.close(key);
+  console.log('我被默认的关闭按钮关闭了！');
 };
 
 var btn = React.createElement(
   'button',
-  { onClick: close, className: 'ant-btn ant-btn-primary ant-btn-sm' },
+  { onClick: btnClick, className: 'ant-btn ant-btn-primary ant-btn-sm' },
   '自定义关闭按钮'
 );
 
@@ -22,7 +24,8 @@ var openNotification = function openNotification() {
     message: "这是标题",
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
     btn: btn,
-    key: key
+    btnClose: true,
+    onClose: close
   });
 };
 
@@ -36,20 +39,23 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
 
-<span class="keyword">var</span> key = <span class="string">'someKeyStringString'</span>;
-
-<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  notification.close(key);
+<span class="keyword">var</span> btnClick = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  console.log(<span class="string">'我被自定义的按钮点击了！'</span>);
 };
 
-<span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{close}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>自定义关闭按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
+<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+  console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);
+}
+
+<span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>自定义关闭按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   notification.open({
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
     btn: btn,
-    key: key
+    btnClose: <span class="literal">true</span>,
+    onClose: close
   });
 };
 
