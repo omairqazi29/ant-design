@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="一个设计语言&前端框架"/>
     <title>
-Tree 树 - Ant Design
+Tree 树形控件 - Ant Design
 </title>
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
@@ -124,7 +124,7 @@ Tree 树 - Ant Design
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
-        desc: '树'
+        desc: '树形控件'
       });
       ANT_COMPONENTS.push({
         title: 'Menu',
@@ -373,9 +373,9 @@ Tree 树 - Ant Design
           </a>
         </li>
         <li class="current">
-          <a href="./" class="nav-link-disabled">
+          <a href="./" class="">
             Tree
-            <span class="chinese">树</span>
+            <span class="chinese">树形控件</span>
           </a>
         </li>
         <li class="">
@@ -458,10 +458,87 @@ Tree 树 - Ant Design
 <section class="main-container">
   <article class="markdown">
     <h1>
-      Tree 树
+      Tree 树形控件
     </h1>
-    <p>树形控件。</p>
-<h2 id="何时使用">何时使用</h2><p>文件夹、组织架构、生物分类、国家地区等等，世间万物的大多数结构都是树形结构。使用<code>树控件</code>可以完整展现其中的层级关系，并具有展开收起选择等交互功能。</p>
+    <h2 id="何时使用">何时使用</h2><p>文件夹、组织架构、生物分类、国家地区等等，世间万物的大多数结构都是树形结构。使用<code>树控件</code>可以完整展现其中的层级关系，并具有展开收起选择等交互功能。</p>
+<h2 id="api">API</h2><h3 id="tree-props">Tree props</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkable</td>
+<td>是否支持选中</td>
+<td>bool/React Node</td>
+<td>false</td>
+</tr>
+<tr>
+<td>defaultExpandAll</td>
+<td>设置展开所有树节点</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>defaultExpandedKeys</td>
+<td>展开指定的树节点</td>
+<td>String[]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>defaultCheckedKeys</td>
+<td>默认选中的树节点</td>
+<td>String[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>onCheck</td>
+<td>点击树节点触发</td>
+<td>function(e:{checked:bool,node,checkedKeys})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>showIcon</td>
+<td>是否设置节点图标</td>
+<td>bool</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="treenode-props">TreeNode props</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disabled</td>
+<td>禁掉响应</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>String</td>
+<td>&#39;---&#39;</td>
+</tr>
+<tr>
+<td>key</td>
+<td>被树的selectedKeys或defaultSelectedKeys所用</td>
+<td>String</td>
+<td>内部计算出的节点位置</td>
+</tr>
+</tbody>
+</table>
 
   </article><h2 class="component-demos">
   组件演示
@@ -477,10 +554,81 @@ var Tree = antd.Tree;
 var TreeNode = Tree.TreeNode;
 React.render(React.createElement(
   Tree,
-  { className: "myCls", checkable: true },
+  { className: "myCls", defaultExpandAll: true },
   React.createElement(
     TreeNode,
-    { title: "parent 1", expanded: false },
+    { title: "parent 1" },
+    React.createElement(
+      TreeNode,
+      null,
+      "leaf "
+    ),
+    React.createElement(
+      TreeNode,
+      { title: "parent 1-1" },
+      React.createElement(
+        TreeNode,
+        { title: "parent 2-1" },
+        React.createElement(
+          TreeNode,
+          null,
+          "leaf "
+        )
+      ),
+      React.createElement(
+        TreeNode,
+        null,
+        "leaf "
+      )
+    )
+  ),
+  React.createElement(
+    TreeNode,
+    null,
+    "leaf "
+  )
+), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
+<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">className</span>=<span class="value">"myCls"</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
+, document.getElementById('components-tree-demo-basic'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-basic">基本</a>
+    </div>
+    <p>最简单的用法。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-checkbox">
+  <div class="code-box-demo">
+    <div id="components-tree-demo-checkbox"></div>
+    <script>(function(){"use strict";
+
+var Tree = antd.Tree;
+var TreeNode = Tree.TreeNode;
+function handleCheck(checked, c, checkedKeys) {
+  console.log('checked: ', checked, c);
+}
+React.render(React.createElement(
+  Tree,
+  { defaultExpandAll: true, checkable: React.createElement("span", { className: "ant-tree-checkbox-inner" }), onCheck: handleCheck },
+  React.createElement(
+    TreeNode,
+    { title: "parent 1" },
     React.createElement(
       TreeNode,
       null,
@@ -523,44 +671,39 @@ React.render(React.createElement(
   React.createElement(
     TreeNode,
     null,
-    React.createElement(
-      TreeNode,
-      null,
-      "leaf "
-    )
+    "leaf "
   )
-), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
+), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
+<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(checked, c, checkedKeys)</span> {</span>
+  console.log(<span class="string">'checked: '</span>, checked, c );
+}
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">className</span>=<span class="value">"myCls"</span> <span class="attribute">checkable</span>=<span class="value">{true}</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span> <span class="attribute">expanded</span>=<span class="value">{false}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{&lt;span</span> <span class="attribute">className</span>=<span class="value">"ant-tree-checkbox-inner"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>} onCheck={handleCheck}&gt;
+    <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
           <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
         <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
-, document.getElementById('components-tree-demo-basic'));</span></code></pre></div>
+        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
+, document.getElementById('components-tree-demo-checkbox'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-basic">基本</a>
+      <a href="#demo-checkbox">基本</a>
     </div>
-    <p>最简单的用法。</p>
+    <p>提供复选框操作功能。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
-  </div>
-  <div class="code-boxes-col-2-1">
   </div>
 </div>
 </section>

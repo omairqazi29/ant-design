@@ -124,7 +124,7 @@ Notification 通知提醒框 - Ant Design
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
-        desc: '树'
+        desc: '树形控件'
       });
       ANT_COMPONENTS.push({
         title: 'Menu',
@@ -373,9 +373,9 @@ Notification 通知提醒框 - Ant Design
           </a>
         </li>
         <li class="">
-          <a href="../tree/" class="nav-link-disabled">
+          <a href="../tree/" class="">
             Tree
-            <span class="chinese">树</span>
+            <span class="chinese">树形控件</span>
           </a>
         </li>
         <li class="">
@@ -681,8 +681,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
 
 var notification = require('antd/lib/notification');
 
-var btnClick = function btnClick() {
-  console.log('我被自定义的按钮点击了！');
+var btnClick = function btnClick(key) {
+  // 隐藏提醒框
+  notification.close(key);
 };
 
 var close = function close() {
@@ -700,7 +701,7 @@ var openNotification = function openNotification() {
     message: "这是标题",
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
     btn: btn,
-    btnClose: true,
+    btnClose: btnClick,
     onClose: close
   });
 };
@@ -715,8 +716,9 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
 
-<span class="keyword">var</span> btnClick = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  console.log(<span class="string">'我被自定义的按钮点击了！'</span>);
+<span class="keyword">var</span> btnClick = <span class="function"><span class="keyword">function</span><span class="params">(key)</span> {</span>
+  <span class="comment">// 隐藏提醒框</span>
+  notification.close(key);
 };
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
@@ -730,7 +732,7 @@ React.render(React.createElement(
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
     btn: btn,
-    btnClose: <span class="literal">true</span>,
+    btnClose: btnClick,
     onClose: close
   });
 };
@@ -855,7 +857,7 @@ document.getElementById('components-notification-demo-onclose'));</span></code><
 
 var notification = require('antd/lib/notification');
 
-var close = function close() {
+var close = function close(key) {
   // 自定义按钮关闭时的业务处理
   console.log("我被自定义的关闭按钮关闭了！");
   // 隐藏提醒框
@@ -877,7 +879,9 @@ var openNotification = function openNotification() {
   notification.open({
     message: "这是标题",
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
-    btn: btn
+    btn: btn,
+    btnClose: close,
+    onClose: onClose
   });
 };
 
@@ -887,7 +891,7 @@ React.render(React.createElement(
   "打开通知提醒框"
 ), document.getElementById('components-notification-demo-with-btn-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
 
-<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">(key)</span> {</span>
   <span class="comment">// 自定义按钮关闭时的业务处理</span>
   console.log(<span class="string">"我被自定义的关闭按钮关闭了！"</span>);
   <span class="comment">// 隐藏提醒框</span>
@@ -905,7 +909,9 @@ React.render(React.createElement(
   notification.open({
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
-    btn: btn
+    btn: btn,
+    btnClose: close,
+    onClose: onClose
   });
 };
 

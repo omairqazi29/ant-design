@@ -23363,17 +23363,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcTable2 = _interopRequireDefault(_rcTable);
 	
-	var _dropdown = __webpack_require__(197);
-	
-	var _dropdown2 = _interopRequireDefault(_dropdown);
-	
 	var _checkbox = __webpack_require__(252);
 	
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 	
-	var _filterMenu = __webpack_require__(261);
+	var _filterDropdown = __webpack_require__(261);
 	
-	var _filterMenu2 = _interopRequireDefault(_filterMenu);
+	var _filterDropdown2 = _interopRequireDefault(_filterDropdown);
 	
 	var _pagination = __webpack_require__(235);
 	
@@ -23673,19 +23669,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          sortButton = undefined;
 	      if (column.filters && column.filters.length > 0) {
 	        var colFilters = _this4.state.filters[key] || [];
-	        menus = _react2['default'].createElement(_filterMenu2['default'], { column: column,
+	        filterDropdown = _react2['default'].createElement(_filterDropdown2['default'], { column: column,
 	          selectedKeys: colFilters,
 	          confirmFilter: _this4.handleFilter });
-	        var dropdownSelectedClass = '';
-	        if (colFilters.length > 0) {
-	          dropdownSelectedClass = 'ant-table-filter-selected';
-	        }
-	        filterDropdown = _react2['default'].createElement(
-	          _dropdown2['default'],
-	          { trigger: 'click',
-	            overlay: menus },
-	          _react2['default'].createElement('i', { title: '筛选', className: 'anticon anticon-bars ' + dropdownSelectedClass })
-	        );
 	      }
 	      if (column.sorter) {
 	        var isSortColumn = _this4.isSortColumn(column);
@@ -24281,6 +24267,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcMenu2 = _interopRequireDefault(_rcMenu);
 	
+	var _dropdown = __webpack_require__(197);
+	
+	var _dropdown2 = _interopRequireDefault(_dropdown);
+	
 	var FilterMenu = _react2['default'].createClass({
 	  displayName: 'FilterMenu',
 	
@@ -24313,7 +24303,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, this.handleConfirm);
 	  },
 	  handleConfirm: function handleConfirm() {
+	    this.setState({
+	      visible: false
+	    });
 	    this.props.confirmFilter(this.props.column, this.state.selectedKeys);
+	  },
+	  onVisibleChange: function onVisibleChange(visible) {
+	    this.setState({
+	      visible: visible
+	    });
 	  },
 	  renderMenus: function renderMenus(items) {
 	    var menuItems = items.map(function (item) {
@@ -24327,7 +24325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  render: function render() {
 	    var column = this.props.column;
-	    return _react2['default'].createElement(
+	    var menus = _react2['default'].createElement(
 	      _rcMenu2['default'],
 	      { multiple: true,
 	        prefixCls: 'ant-dropdown-menu',
@@ -24361,6 +24359,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	          '清空'
 	        )
 	      )
+	    );
+	
+	    var dropdownSelectedClass = '';
+	    if (this.props.selectedKeys.length > 0) {
+	      dropdownSelectedClass = 'ant-table-filter-selected';
+	    }
+	
+	    return _react2['default'].createElement(
+	      _dropdown2['default'],
+	      { trigger: 'click', overlay: menus, visible: this.state.visible, onVisibleChange: this.onVisibleChange },
+	      _react2['default'].createElement('i', { title: '筛选', className: 'anticon anticon-bars ' + dropdownSelectedClass })
 	    );
 	  }
 	});
@@ -27361,7 +27370,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function callback(key, btnCose) {
 	  if (btnCose) {
-	    api.close(key);
+	    btnCose(key);
 	  }
 	}
 	
@@ -29228,9 +29237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -29242,21 +29249,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var AntTree = _react2['default'].createClass({
-	  displayName: 'AntTree',
+	var TreeNode = _rcTree2['default'].TreeNode;
+	var antDTree = _react2['default'].createClass({
+	  displayName: 'antDTree',
 	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      prefixCls: 'ant-tree'
+	    };
+	  },
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      _rcTree2['default'],
-	      this.props,
+	      _extends({}, this.props, { showIcon: false }),
 	      this.props.children
 	    );
 	  }
 	});
-	
-	AntTree.TreeNode = _rcTree2['default'].TreeNode;
-	exports['default'] = AntTree;
-	module.exports = exports['default'];
+	antDTree.TreeNode = TreeNode;
+	module.exports = antDTree;
 
 /***/ },
 /* 325 */
@@ -29297,7 +29308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -29311,6 +29322,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcUtil = __webpack_require__(76);
 	
+	// sorted array ['0-0','0-1', '0-0-1', '0-1-1'] => ['0-0', '0-1']
+	var filterMin = function filterMin(arr) {
+	  var a = [];
+	  arr.forEach(function (item) {
+	    var b = a.filter(function (i) {
+	      return item.indexOf(i) === 0;
+	    });
+	    if (!b.length) {
+	      a.push(item);
+	    }
+	  });
+	  return a;
+	};
+	
 	var Tree = (function (_React$Component) {
 	  _inherits(Tree, _React$Component);
 	
@@ -29320,58 +29345,95 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _classCallCheck(this, Tree);
 	
 	    _get(Object.getPrototypeOf(Tree.prototype), 'constructor', this).call(this, props);
-	    ['handleKeyDown', 'handleChecked', 'handleSelect'].forEach(function (m) {
+	    ['handleKeyDown', 'handleChecked'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
+	    var expandedKeys = props.defaultExpandedKeys;
+	    var checkedKeys = props.defaultCheckedKeys;
+	    this.defaultExpandAll = props.defaultExpandAll;
+	    this.state = {
+	      expandedKeys: expandedKeys,
+	      checkedKeys: checkedKeys
+	    };
 	  }
 	
 	  _createClass(Tree, [{
-	    key: 'handleChecked',
-	    value: function handleChecked(isChk, c, e) {
-	      if (this.props.onChecked) {
-	        this.props.onChecked(isChk, c, e);
-	      }
-	    }
-	  }, {
-	    key: 'handleSelect',
-	    value: function handleSelect(isSel, c, e) {
-	      if (this.props.onSelect) {
-	        this.props.onSelect(isSel, c, e);
-	      }
-	    }
+	    key: 'getCheckKeys',
+	    value: function getCheckKeys() {
+	      var _this2 = this;
 	
-	    // all keyboard events callbacks run from here at first
+	      var checkPartKeys = [];
+	      var checkedKeys = [];
+	      Object.keys(this.treeNodesChkStates).forEach(function (item) {
+	        var itemObj = _this2.treeNodesChkStates[item];
+	        if (itemObj.checked) {
+	          checkedKeys.push(itemObj.key);
+	        } else if (itemObj.checkPart) {
+	          checkPartKeys.push(itemObj.key);
+	        }
+	      });
+	      return {
+	        checkPartKeys: checkPartKeys, checkedKeys: checkedKeys
+	      };
+	    }
 	  }, {
-	    key: 'handleKeyDown',
-	    value: function handleKeyDown(e) {
-	      console.log(_rcUtil.KeyCode);
-	      e.preventDefault();
+	    key: 'renderTreeNode',
+	    value: function renderTreeNode(child, index) {
+	      var level = arguments.length <= 2 || arguments[2] === undefined ? 0 : arguments[2];
+	
+	      var key = child.key || level + '-' + index;
+	      var state = this.state;
+	      var props = this.props;
+	      var cloneProps = {
+	        ref: 'treeNode',
+	        root: this,
+	        eventKey: key,
+	        pos: level + '-' + index,
+	        prefixCls: props.prefixCls,
+	        showLine: props.showLine,
+	        showIcon: props.showIcon,
+	        checkable: props.checkable,
+	        expanded: this.defaultExpandAll || state.expandedKeys.indexOf(key) !== -1,
+	        checked: this.checkedKeys.indexOf(key) !== -1,
+	        checkPart: this.checkPartKeys.indexOf(key) !== -1
+	      };
+	      return _react2['default'].cloneElement(child, cloneProps);
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var props = this.props;
+	      var _this3 = this;
 	
+	      var props = this.props;
 	      var domProps = {
 	        className: (0, _rcUtil.classSet)(props.className, props.prefixCls),
-	        style: props.expanded ? { display: 'block' } : { display: 'none' },
-	        role: 'tree-node',
-	        'aria-activedescendant': '',
-	        'aria-labelledby': '',
-	        'aria-expanded': props.expanded ? 'true' : 'false',
-	        'aria-selected': props.selected ? 'true' : 'false',
-	        'aria-level': ''
+	        role: 'tree-node'
 	      };
-	      if (props.id) {
-	        domProps.id = props.id;
-	      }
 	      if (props.focusable) {
 	        domProps.tabIndex = '0';
 	        domProps.onKeyDown = this.handleKeyDown;
 	      }
-	      this.childrenLength = _react2['default'].Children.count(props.children);
+	      var checkedKeys = this.state.checkedKeys;
+	      var checkedPos = [];
+	      this.treeNodesChkStates = {};
+	      this.loopAllChildren(props.children, function (item, index, pos) {
+	        var key = item.key || pos;
+	        var checked = false;
+	        if (checkedKeys.indexOf(key) !== -1) {
+	          checked = true;
+	          checkedPos.push(pos);
+	        }
+	        _this3.treeNodesChkStates[pos] = {
+	          key: key,
+	          checked: checked,
+	          checkPart: false
+	        };
+	      });
+	      this.handleCheckState(this.treeNodesChkStates, filterMin(checkedPos.sort()));
+	      var checkKeys = this.getCheckKeys();
+	      this.checkPartKeys = checkKeys.checkPartKeys;
+	      this.checkedKeys = checkKeys.checkedKeys;
 	      this.newChildren = _react2['default'].Children.map(props.children, this.renderTreeNode, this);
-	
 	      return _react2['default'].createElement(
 	        'ul',
 	        _extends({}, domProps, { ref: 'tree' }),
@@ -29379,34 +29441,141 @@ return /******/ (function(modules) { // webpackBootstrap
 	      );
 	    }
 	  }, {
-	    key: 'renderTreeNode',
-	    value: function renderTreeNode(child, index) {
-	      var props = this.props;
-	      var pos = (props._pos || 0) + '-' + index;
-	      var cloneProps = {
-	        ref: 'treeNode',
-	        _level: props._level || 0,
-	        _pos: pos,
-	        _isChildTree: props._isChildTree || false,
-	        _index: index,
-	        _len: this.childrenLength,
-	        prefixCls: props.prefixCls,
-	        showLine: props.showLine,
-	        checkable: props.checkable,
-	        _checked: props._checked,
-	        _checkPart: props._checkPart,
-	        onChecked: this.handleChecked,
-	        onSelect: this.handleSelect
+	    key: 'loopAllChildren',
+	    value: function loopAllChildren(childs, callback) {
+	      var loop = function loop(children, level) {
+	        _react2['default'].Children.forEach(children, function (item, index) {
+	          var pos = level + '-' + index;
+	          var newChildren = item.props.children;
+	          if (Array.isArray(newChildren)) {
+	            loop(newChildren, pos);
+	          }
+	          callback(item, index, pos);
+	        });
 	      };
-	      return _react2['default'].cloneElement(child, cloneProps);
+	      loop(childs, 0);
 	    }
-	  }], [{
-	    key: 'statics',
-	    value: function statics() {
-	      return {
-	        treeNodesState: {},
-	        trees: []
-	      };
+	  }, {
+	    key: 'handleCheckState',
+	    value: function handleCheckState(obj, checkedArr, unCheckEvent) {
+	      var evt = false;
+	      if (typeof unCheckEvent === 'boolean') {
+	        evt = true;
+	      }
+	      checkedArr.forEach(function (_pos) {
+	        Object.keys(obj).forEach(function (i) {
+	          if (i.length > _pos.length && i.indexOf(_pos) === 0) {
+	            obj[i].checkPart = false;
+	            if (evt) {
+	              if (unCheckEvent) {
+	                obj[i].checked = false;
+	              } else {
+	                obj[i].checked = true;
+	              }
+	            } else {
+	              obj[i].checked = true;
+	            }
+	          }
+	        });
+	        var loop = function loop(__pos) {
+	          var _posLen = __pos.length;
+	          if (_posLen <= 3) {
+	            return;
+	          }
+	          var sibling = 0;
+	          var siblingChecked = 0;
+	          var parentPos = __pos.substring(0, _posLen - 2);
+	          Object.keys(obj).forEach(function (i) {
+	            if (i.length === _posLen && i.substring(0, _posLen - 2) === parentPos) {
+	              sibling++;
+	              if (obj[i].checked) {
+	                siblingChecked++;
+	              } else if (obj[i].checkPart) {
+	                siblingChecked += 0.5;
+	              }
+	            }
+	          });
+	          var parent = obj[parentPos];
+	          // sibling 不会等于0
+	          // 全不选 - 全选 - 半选
+	          if (siblingChecked === 0) {
+	            parent.checked = false;
+	            parent.checkPart = false;
+	          } else if (siblingChecked === sibling) {
+	            parent.checked = true;
+	            parent.checkPart = false;
+	          } else {
+	            parent.checkPart = true;
+	            parent.checked = false;
+	          }
+	          loop(parentPos);
+	        };
+	        loop(_pos);
+	      });
+	    }
+	  }, {
+	    key: 'handleChecked',
+	    value: function handleChecked(treeNode) {
+	      var _this4 = this;
+	
+	      var tnProps = treeNode.props;
+	      var checked = !tnProps.checked;
+	      if (tnProps.checkPart) {
+	        checked = true;
+	      }
+	      var pos = undefined;
+	      Object.keys(this.treeNodesChkStates).forEach(function (item) {
+	        var itemObj = _this4.treeNodesChkStates[item];
+	        if (itemObj.key === (treeNode.key || tnProps.eventKey)) {
+	          pos = item;
+	          itemObj.checked = checked;
+	          itemObj.checkPart = false;
+	        }
+	      });
+	      this.handleCheckState(this.treeNodesChkStates, [pos], !checked);
+	      var checkKeys = this.getCheckKeys();
+	      this.checkPartKeys = checkKeys.checkPartKeys;
+	      this.setState({
+	        checkedKeys: checkKeys.checkedKeys
+	      });
+	      if (this.props.onCheck) {
+	        this.props.onCheck(checked, treeNode, checkKeys.checkedKeys);
+	      }
+	    }
+	  }, {
+	    key: 'handleExpanded',
+	    value: function handleExpanded(treeNode) {
+	      var thisProps = this.props;
+	      var tnProps = treeNode.props;
+	      var expandedKeys = this.state.expandedKeys.concat([]);
+	      var expanded = !tnProps.expanded;
+	      if (this.defaultExpandAll) {
+	        this.loopAllChildren(thisProps.children, function (item, index, pos) {
+	          var key = item.key || pos;
+	          if (expandedKeys.indexOf(key) === -1) {
+	            expandedKeys.push(key);
+	          }
+	        });
+	        this.defaultExpandAll = false;
+	      }
+	      var index = expandedKeys.indexOf(tnProps.eventKey);
+	      if (expanded) {
+	        if (index === -1) {
+	          expandedKeys.push(tnProps.eventKey);
+	        }
+	      } else {
+	        expandedKeys.splice(index, 1);
+	      }
+	      this.setState({
+	        expandedKeys: expandedKeys
+	      });
+	    }
+	
+	    // all keyboard events callbacks run from here at first
+	  }, {
+	    key: 'handleKeyDown',
+	    value: function handleKeyDown(e) {
+	      e.preventDefault();
 	    }
 	  }]);
 	
@@ -29414,17 +29583,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	})(_react2['default'].Component);
 	
 	Tree.propTypes = {
-	  focusable: _react2['default'].PropTypes.bool,
-	  expanded: _react2['default'].PropTypes.bool,
+	  prefixCls: _react2['default'].PropTypes.string,
+	  checkable: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
 	  showLine: _react2['default'].PropTypes.bool,
-	  checkable: _react2['default'].PropTypes.bool,
-	  onSelect: _react2['default'].PropTypes.func
+	  showIcon: _react2['default'].PropTypes.bool,
+	  defaultExpandAll: _react2['default'].PropTypes.bool,
+	  defaultExpandedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
+	  defaultCheckedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
+	  onCheck: _react2['default'].PropTypes.func
 	};
 	
 	Tree.defaultProps = {
 	  prefixCls: 'rc-tree',
-	  expanded: true,
-	  showLine: true
+	  checkable: false,
+	  showLine: false,
+	  showIcon: true,
+	  defaultExpandAll: false,
+	  defaultExpandedKeys: [],
+	  defaultCheckedKeys: []
 	};
 	
 	exports['default'] = Tree;
@@ -29440,11 +29616,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
@@ -29456,14 +29636,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcUtil = __webpack_require__(76);
 	
-	var _rcUtil2 = _interopRequireDefault(_rcUtil);
-	
-	var _Tree = __webpack_require__(326);
-	
-	var _Tree2 = _interopRequireDefault(_Tree);
-	
-	_Tree2['default'].statics = _Tree2['default'].statics();
-	
 	var TreeNode = (function (_React$Component) {
 	  _inherits(TreeNode, _React$Component);
 	
@@ -29473,32 +29645,162 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _classCallCheck(this, TreeNode);
 	
 	    _get(Object.getPrototypeOf(TreeNode.prototype), 'constructor', this).call(this, props);
-	    this.state = {
-	      expanded: props.expanded,
-	      selected: props.selected || false,
-	      checkPart: props._checkPart || false,
-	      checked: props._checked || false
-	    };
-	    ['handleExpandedState', 'handleSelect', 'handleChecked'].forEach(function (m) {
+	    ['handleExpanded', 'handleChecked'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
 	  }
 	
 	  _createClass(TreeNode, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      this.setState({
-	        //selected: nextProps.selected,
-	        checkPart: nextProps._checkPart,
-	        checked: nextProps._checked
+	    key: 'getPosition',
+	    value: function getPosition(pos) {
+	      var obj = {
+	        last: false,
+	        center: false
+	      };
+	      var siblings = Object.keys(this.props.root.treeNodesChkStates).filter(function (item) {
+	        var len = pos.length;
+	        return len === item.length && pos.substring(0, len - 2) === item.substring(0, len - 2);
 	      });
+	      var sLen = siblings.length;
+	      var posIndex = Number(pos.substr(-1, 1));
+	      if (sLen === 1 || posIndex === sLen - 1) {
+	        obj.last = true;
+	      } else {
+	        obj.center = true;
+	      }
+	      return obj;
 	    }
 	  }, {
-	    key: 'switchExpandedState',
-	    value: function switchExpandedState(newState, onStateChangeComplete) {
-	      this.setState({
-	        expanded: newState
-	      }, onStateChangeComplete);
+	    key: 'renderSwitcher',
+	    value: function renderSwitcher(props, expandedState) {
+	      var prefixCls = props.prefixCls;
+	      var switcherCls = _defineProperty({}, prefixCls + '-switcher', true);
+	      if (props.disabled) {
+	        switcherCls[prefixCls + '-switcher-disabled'] = true;
+	        return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls) });
+	      }
+	
+	      var posObj = this.getPosition(props.pos);
+	
+	      if (!props.showLine) {
+	        switcherCls[prefixCls + '-noline_' + expandedState] = true;
+	      } else if (props.pos === '0-0') {
+	        switcherCls[prefixCls + '-roots_' + expandedState] = true;
+	      } else {
+	        switcherCls[prefixCls + '-center_' + expandedState] = posObj.center;
+	        switcherCls[prefixCls + '-bottom_' + expandedState] = posObj.last;
+	      }
+	      return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls), onClick: this.handleExpanded });
+	    }
+	  }, {
+	    key: 'renderCheckbox',
+	    value: function renderCheckbox(props) {
+	      var prefixCls = props.prefixCls;
+	      var checkboxCls = _defineProperty({}, prefixCls + '-checkbox', true);
+	      if (!props.checkable) {
+	        return null;
+	      }
+	      if (props.disabled) {
+	        checkboxCls[prefixCls + '-checkbox-disabled'] = true;
+	      }
+	      if (props.checkPart) {
+	        checkboxCls[prefixCls + '-checkbox-indeterminate'] = true;
+	      } else if (props.checked) {
+	        checkboxCls[prefixCls + '-checkbox-checked'] = true;
+	      }
+	      var customEle = null;
+	      if (props.checkable && typeof props.checkable !== 'boolean') {
+	        customEle = props.checkable;
+	      }
+	      return _react2['default'].createElement(
+	        'span',
+	        { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls) },
+	        customEle
+	      );
+	    }
+	  }, {
+	    key: 'renderChildren',
+	    value: function renderChildren(props) {
+	      var newChildren = null;
+	      var children = props.children;
+	      if (children.type === TreeNode || Array.isArray(children) && children.every(function (item) {
+	        return item.type === TreeNode;
+	      })) {
+	        var style = props.expanded ? { display: 'block' } : { display: 'none' };
+	        var cls = {};
+	        cls[props.prefixCls + '-child-tree'] = true;
+	        if (props.showLine) {
+	          cls[props.prefixCls + '-line'] = this.getPosition(props.pos).center;
+	        }
+	        newChildren = this.newChildren = _react2['default'].createElement(
+	          'ul',
+	          { className: (0, _rcUtil.classSet)(cls), style: style },
+	          _react2['default'].Children.map(children, function (item, index) {
+	            return props.root.renderTreeNode(item, index, props.pos);
+	          }, props.root)
+	        );
+	      } else {
+	        newChildren = children;
+	      }
+	      return newChildren;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _iconEleCls,
+	          _this2 = this;
+	
+	      var props = this.props;
+	      var prefixCls = props.prefixCls;
+	      // const expandedState = (props.defaultExpandAll || props.expanded) ? 'open' : 'close';
+	      var expandedState = props.expanded ? 'open' : 'close';
+	
+	      var iconEleCls = (_iconEleCls = {}, _defineProperty(_iconEleCls, prefixCls + '-iconEle', true), _defineProperty(_iconEleCls, prefixCls + '-icon__' + expandedState, true), _iconEleCls);
+	
+	      var content = props.title;
+	      var newChildren = this.renderChildren(props);
+	      if (newChildren === props.children) {
+	        content = newChildren;
+	        newChildren = null;
+	      }
+	
+	      var selectHandle = function selectHandle() {
+	        var icon = props.showIcon ? _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(iconEleCls) }) : null;
+	        var title = _react2['default'].createElement(
+	          'span',
+	          { className: prefixCls + '-title' },
+	          content
+	        );
+	        var domProps = {};
+	        if (!props.disabled && props.checkable) {
+	          domProps.onClick = _this2.handleChecked;
+	        }
+	        return _react2['default'].createElement(
+	          'a',
+	          _extends({ ref: 'selectHandle', title: content }, domProps),
+	          _this2.renderCheckbox(props),
+	          icon,
+	          title
+	        );
+	      };
+	
+	      return _react2['default'].createElement(
+	        'li',
+	        { className: (0, _rcUtil.joinClasses)(props.className, props.disabled ? prefixCls + '-treenode-disabled' : '') },
+	        this.renderSwitcher(props, expandedState),
+	        selectHandle(),
+	        newChildren
+	      );
+	    }
+	  }, {
+	    key: 'handleExpanded',
+	    value: function handleExpanded() {
+	      this.props.root.handleExpanded(this);
+	    }
+	  }, {
+	    key: 'handleChecked',
+	    value: function handleChecked() {
+	      this.props.root.handleChecked(this);
 	    }
 	
 	    // keyboard event support
@@ -29507,290 +29809,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function handleKeyDown(e) {
 	      e.preventDefault();
 	    }
-	  }, {
-	    key: 'handleExpandedState',
-	    value: function handleExpandedState() {
-	      this.switchExpandedState(!this.state.expanded);
-	    }
-	  }, {
-	    key: 'handleSelect',
-	    value: function handleSelect() {
-	      this.setState({
-	        selected: !this.state.selected
-	      });
-	      if (this.props.onSelect) {
-	        this.props.onSelect(!this.state.selected, this);
-	      }
-	    }
-	  }, {
-	    key: 'handleChecked',
-	    value: function handleChecked() {
-	      var _pos = this.props._pos;
-	      var checked = !this.state.checked;
-	
-	      if (this.state.checkPart) {
-	        // return;
-	        checked = false;
-	      }
-	
-	      var nSt = {
-	        checkPart: false,
-	        checked: checked
-	      };
-	
-	      this.setState(nSt);
-	
-	      var sortedTree = _Tree2['default'].statics.trees.sort(function (a, b) {
-	        return b.props._pos.length - a.props._pos.length;
-	      });
-	
-	      sortedTree.forEach(function (c) {
-	        var cPos = c.props._pos;
-	        if (_pos.indexOf(cPos) === 0 && _pos !== cPos) {
-	          var childArr = _rcUtil2['default'].Children.toArray(c.props.children),
-	              len = childArr.length;
-	
-	          var checkedNumbers = 0;
-	
-	          //先计算已经选中的节点数
-	          for (var i = 0; i < len; i++) {
-	            var checkSt = _Tree2['default'].statics.treeNodesState[cPos + '-' + i];
-	            if (checkSt.checked) {
-	              checkedNumbers++;
-	            } else if (checkSt.checkPart) {
-	              checkedNumbers += 0.5;
-	            }
-	          }
-	
-	          //点击节点的 直接父级
-	          if (_pos.length - cPos.length <= 2) {
-	            //如果原来是半选
-	            if (_Tree2['default'].statics.treeNodesState[_pos].checkPart) {
-	              // checked ? checkedNumbers += 0.5 : checkedNumbers -= 0.5;
-	              if (checked) {
-	                checkedNumbers += 0.5;
-	              } else {
-	                checkedNumbers -= 0.5;
-	              }
-	            } else if (checked) {
-	              checkedNumbers++;
-	            } else {
-	              checkedNumbers--;
-	            }
-	          }
-	
-	          var newSt;
-	          if (checkedNumbers <= 0) {
-	            //都不选
-	            newSt = {
-	              checkPart: false,
-	              checked: false
-	            };
-	          } else if (checkedNumbers === len) {
-	            //全选
-	            newSt = {
-	              checkPart: false,
-	              checked: true
-	            };
-	          } else {
-	            //部分选择
-	            newSt = {
-	              checkPart: true,
-	              checked: false
-	            };
-	          }
-	          c.setState(newSt);
-	          _Tree2['default'].statics.treeNodesState[cPos] = newSt;
-	        }
-	      });
-	
-	      _Tree2['default'].statics.treeNodesState[_pos] = nSt;
-	
-	      if (this.props.onChecked) {
-	        this.props.onChecked(checked, this);
-	      }
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      if (this.newChildren) {
-	        for (var i = 0; i < _Tree2['default'].statics.trees.length; i++) {
-	          var obj = _Tree2['default'].statics.trees[i];
-	          if (obj.props._pos === this.props._pos) {
-	            _Tree2['default'].statics.trees.splice(i--, 1);
-	          }
-	        }
-	        _Tree2['default'].statics.trees.push(this);
-	      }
-	      //add treeNodes checked state
-	      _Tree2['default'].statics.treeNodesState[this.props._pos] = {
-	        checked: this.state.checked,
-	        checkPart: this.state.checkPart
-	      };
-	    }
-	  }, {
-	    key: 'shouldComponentUpdate',
-	    value: function shouldComponentUpdate(nextProps, nextState) {
-	      var checkbox = this.refs.checkbox;
-	      if (checkbox) {
-	        var cls = checkbox.getDOMNode().className;
-	        var checkSt = _Tree2['default'].statics.treeNodesState[this.props._pos] || {};
-	        checkSt.checkPart = nextState.checkPart;
-	        checkSt.checked = nextState.checked;
-	        if (nextState.checkPart) {
-	          checkbox.getDOMNode().className = cls.indexOf('checkbox_true_part') > -1 ? cls : cls + ' checkbox_true_part';
-	          return false;
-	        } else {
-	          checkbox.getDOMNode().className = cls.replace(/checkbox_true_part/g, '');
-	        }
-	      }
-	      return true;
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var props = this.props;
-	      var state = this.state;
-	
-	      var prefixCls = props.prefixCls;
-	      var switchState = state.expanded ? 'open' : 'close';
-	
-	      var switcherCls = {};
-	      switcherCls.button = true;
-	      switcherCls[prefixCls + '-treenode-switcher'] = true;
-	      switcherCls[prefixCls + '-switcher__' + switchState] = true;
-	      if (props._isChildTree && props._index === 0) {
-	        if (props._len !== 1) {
-	          switcherCls['center_' + switchState] = true;
-	        } else {
-	          switcherCls['bottom_' + switchState] = true;
-	        }
-	      } else if (props._index === 0) {
-	        switcherCls['roots_' + switchState] = true;
-	      } else if (props._index === props._len - 1) {
-	        switcherCls['bottom_' + switchState] = true;
-	      } else {
-	        switcherCls['center_' + switchState] = true;
-	      }
-	
-	      var checkbox = null;
-	      var checkboxCls = {};
-	      if (props.checkable) {
-	        checkboxCls.button = true;
-	        checkboxCls.chk = true;
-	        /* jshint ignore:start */
-	        if (state.checkPart) {
-	          checkboxCls.checkbox_true_part = true;
-	        } else if (state.checked) {
-	          checkboxCls.checkbox_true_full = true;
-	        } else {
-	          checkboxCls.checkbox_false_full = true;
-	        }
-	        /* jshint ignore:end */
-	        checkbox = _react2['default'].createElement('span', { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls), onClick: this.handleChecked });
-	      }
-	
-	      var iconEleCls = {};
-	      iconEleCls.button = true;
-	      iconEleCls[prefixCls + '-iconEle'] = true;
-	      iconEleCls[prefixCls + '-icon__' + switchState] = true;
-	
-	      var userIconEle = null;
-	      if (props.iconEle && _react2['default'].isValidElement(props.iconEle)) {
-	        userIconEle = props.iconEle;
-	      }
-	
-	      var content = props.title;
-	      var newChildren = this.renderChildren(props.children);
-	      if (newChildren === props.children) {
-	        content = newChildren;
-	        newChildren = null;
-	      }
-	
-	      return _react2['default'].createElement(
-	        'li',
-	        { className: (0, _rcUtil.joinClasses)('level' + props._level, 'pos-' + props._pos) },
-	        _react2['default'].createElement('span', { className: (0, _rcUtil.joinClasses)(props.className, (0, _rcUtil.classSet)(switcherCls)),
-	          onClick: this.handleExpandedState }),
-	        checkbox,
-	        _react2['default'].createElement(
-	          'a',
-	          { ref: 'selectHandle', title: content,
-	            className: state.selected ? prefixCls + '-selected' : '',
-	            onClick: this.handleSelect },
-	          _react2['default'].createElement(
-	            'span',
-	            { className: (0, _rcUtil.classSet)(iconEleCls) },
-	            userIconEle
-	          ),
-	          _react2['default'].createElement(
-	            'span',
-	            null,
-	            content
-	          )
-	        ),
-	        newChildren
-	      );
-	    }
-	  }, {
-	    key: 'renderChildren',
-	    value: function renderChildren(children) {
-	      var newChildren = null;
-	      if (children.type === TreeNode || Array.isArray(children) && children.every(function (item) {
-	        return item.type === TreeNode;
-	      })) {
-	
-	        var cls = {};
-	        cls[this.props.prefixCls + '-child-tree'] = true;
-	        if (this.props.showLine && this.props._index !== this.props._len - 1) {
-	          cls.line = true;
-	        }
-	
-	        var treeProps = {
-	          _level: this.props._level + 1,
-	          _pos: this.props._pos,
-	          _isChildTree: true,
-	          className: (0, _rcUtil.classSet)(cls),
-	          expanded: this.state.expanded,
-	          //selected: this.state.checked,
-	          _checked: this.state.checked,
-	          _checkPart: this.state.checkPart,
-	          checkable: this.props.checkable, //只是为了传递根节点上的checkable设置,是否有更好做法?
-	          onChecked: this.props.onChecked,
-	          onSelect: this.props.onSelect
-	        };
-	        newChildren = this.newChildren = _react2['default'].createElement(
-	          _Tree2['default'],
-	          treeProps,
-	          children
-	        );
-	      } else {
-	        newChildren = children;
-	      }
-	
-	      return newChildren;
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      //console.log( this.newChildren );
-	      //if (this.newChildren) {
-	      //  Tree.statics.trees.push(this);
-	      //}
-	    }
 	  }]);
 	
 	  return TreeNode;
 	})(_react2['default'].Component);
 	
 	TreeNode.propTypes = {
-	  selected: _react2['default'].PropTypes.bool,
-	  iconEle: _react2['default'].PropTypes.node,
+	  prefixCls: _react2['default'].PropTypes.string,
+	  expanded: _react2['default'].PropTypes.bool,
+	  root: _react2['default'].PropTypes.object,
 	  onSelect: _react2['default'].PropTypes.func
 	};
 	TreeNode.defaultProps = {
-	  title: '---',
-	  expanded: true
+	  title: '---'
 	};
 	
 	exports['default'] = TreeNode;
@@ -31750,7 +31781,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-table": "~3.1.0",
 			"rc-tabs": "~5.3.2",
 			"rc-tooltip": "~2.5.0",
-			"rc-tree": "~0.10.0",
+			"rc-tree": "~0.14.x",
 			"rc-upload": "~1.3.0",
 			"rc-util": "~2.0.3",
 			"react-slick": "~0.6.4"

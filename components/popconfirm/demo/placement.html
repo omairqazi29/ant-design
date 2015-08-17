@@ -25,15 +25,6 @@ React.render(React.createElement(
   ),
   React.createElement(
     Popconfirm,
-    { placement: 'right', title: text, onConfirm: confirm },
-    React.createElement(
-      'a',
-      { href: 'javascript:;' },
-      '右边'
-    )
-  ),
-  React.createElement(
-    Popconfirm,
     { placement: 'top', title: text, onConfirm: confirm },
     React.createElement(
       'a',
@@ -49,6 +40,15 @@ React.render(React.createElement(
       { href: 'javascript:;' },
       '下边'
     )
+  ),
+  React.createElement(
+    Popconfirm,
+    { placement: 'right', title: text, onConfirm: confirm },
+    React.createElement(
+      'a',
+      { href: 'javascript:;' },
+      '右边'
+    )
   )
 ), document.getElementById('components-popconfirm-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popconfirm = antd.Popconfirm;
 <span class="keyword">var</span> message = antd.message;
@@ -62,14 +62,14 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
   <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"left"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>左边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"right"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>右边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"top"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>上边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"bottom"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>下边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"right"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>右边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-popconfirm-demo-placement'));</span></code></pre></div><style>
 .code-box-demo .ant-popover-wrap > a {
