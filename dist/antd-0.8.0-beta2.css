@@ -3260,9 +3260,12 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-btn-menu > .anticon {
   font-size: 12px;
@@ -3488,9 +3491,12 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
   font-size: 0.58333333;
   font-size: 7px \9;
-  -webkit-transform: scale(0.58333333);
-  -ms-transform: scale(0.58333333);
-  transform: scale(0.58333333);
+  -webkit-transform: scale(0.58333333) rotate(0deg);
+      -ms-transform: scale(0.58333333) rotate(0deg);
+          transform: scale(0.58333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   font-weight: bold;
   vertical-align: top;
 }
@@ -3640,9 +3646,12 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 .ant-select-arrow:before {
   display: block;
@@ -3820,9 +3829,12 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   padding: 0 0 0 4px;
   position: relative;
   top: -1px;
@@ -3851,9 +3863,12 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   font-weight: bold;
   position: absolute;
   top: 6px;
@@ -3873,9 +3888,12 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
   font-size: 0.75;
   font-size: 9px \9;
-  -webkit-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
+  -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
+          transform: scale(0.75) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   display: inline-block;
   content: '\e613';
   font-family: 'anticon';
@@ -4909,9 +4927,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   line-height: 12px;
   top: 18px;
   right: 18px;
@@ -5383,9 +5404,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   cursor: pointer;
   color: #aaa;
   -webkit-transition: all 0.3s ease;
@@ -5411,9 +5435,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
   font-size: 12px;
@@ -5535,9 +5562,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.5;
   font-size: 6px \9;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
+          transform: scale(0.5) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   line-height: 6px;
   height: 6px;
   color: #aaa;
@@ -5881,9 +5911,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   letter-spacing: -1px;
   font-family: "anticon";
 }
@@ -5941,9 +5974,12 @@ textarea.ant-calendar-time-input {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   display: block;
   height: 26px;
   line-height: 26px;
@@ -6799,9 +6835,12 @@ form .ant-calendar-picker {
   display: inline-block;
   font-size: 0.75;
   font-size: 9px \9;
-  -webkit-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
+  -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
+          transform: scale(0.75) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   top: -1px;
 }
 :root .ant-steps.ant-steps-small .ant-steps-head-inner > .ant-steps-icon.anticon {
@@ -6958,9 +6997,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   right: 4px;
   color: #999;
 }
@@ -7250,29 +7292,39 @@ textarea.ant-input-number {
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   height: 38px;
   line-height: 38px;
-  text-indent: 16px;
+  padding-left: 16px;
   color: #666;
   cursor: pointer;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header:before {
-  display: inline-block;
-  content: '\20';
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-left: 4px solid #666666;
-  vertical-align: middle;
+  font-family: "anticon" !important;
+  color: #666;
   margin-right: 8px;
+  content: "\e60f";
+  display: inline-block;
+  font-size: 0.58333333;
+  font-size: 7px \9;
+  -webkit-transform: scale(0.58333333) rotate(270deg);
+      -ms-transform: scale(0.58333333) rotate(270deg);
+          transform: scale(0.58333333) rotate(270deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=-0.0000000000000001837, M12=1, M21=-1, M22=-0.0000000000000001837);
+  zoom: 1;
+  vertical-align: middle;
+  -webkit-transition: -webkit-transform 0.24s ease;
+          transition: transform 0.24s ease;
+  position: relative;
+  top: -1px;
+}
+:root .ant-collapse > .ant-collapse-item > .ant-collapse-header:before {
+  font-size: 12px;
 }
 .ant-collapse-content {
   height: 0;
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-duration: .24s;
+          transition-duration: .24s;
+  -webkit-transition-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          transition-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
   overflow: hidden;
   color: #666666;
   padding: 0 16px;
@@ -7286,10 +7338,18 @@ textarea.ant-input-number {
   border-radius: 0 0 3px 3px;
 }
 .ant-collapse > .ant-collapse-item-active > .ant-collapse-header:before {
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 4px solid #666666;
-  margin-right: 6px;
+  display: inline-block;
+  font-size: 0.58333333;
+  font-size: 7px \9;
+  -webkit-transform: scale(0.58333333) rotate(360deg);
+      -ms-transform: scale(0.58333333) rotate(360deg);
+          transform: scale(0.58333333) rotate(360deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0.00000000000000024493, M21=-0.00000000000000024493, M22=1);
+  zoom: 1;
+}
+:root .ant-collapse > .ant-collapse-item-active > .ant-collapse-header:before {
+  font-size: 12px;
 }
 .ant-message {
   font-size: 12px;
@@ -7624,9 +7684,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-notification-notice-close-x:after {
   font-size: 12px;
@@ -7754,9 +7817,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.58333333;
   font-size: 7px \9;
-  -webkit-transform: scale(0.58333333);
-  -ms-transform: scale(0.58333333);
-  transform: scale(0.58333333);
+  -webkit-transform: scale(0.58333333) rotate(0deg);
+      -ms-transform: scale(0.58333333) rotate(0deg);
+          transform: scale(0.58333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   cursor: pointer;
   font-weight: bold;
   margin-left: 3px;
@@ -7857,9 +7923,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -7917,9 +7986,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-alert-with-description-close-icon {
   font-size: 12px;
@@ -8357,9 +8429,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
-  -webkit-transform: scale(0.83333333);
-  -ms-transform: scale(0.83333333);
-  transform: scale(0.83333333);
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-upload-list .ant-upload-list-item .anticon {
   font-size: 12px;
@@ -8501,9 +8576,12 @@ textarea.ant-input-number {
   display: inline-block;
   font-size: 0.66666667;
   font-size: 8px \9;
-  -webkit-transform: scale(0.66666667);
-  -ms-transform: scale(0.66666667);
-  transform: scale(0.66666667);
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
 }
 :root .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
   font-size: 12px;
@@ -8536,9 +8614,28 @@ textarea.ant-input-number {
 }
 .ant-menu-horizontal > .ant-menu-item,
 .ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title {
-  padding: 15px 20px;
+  padding: 0 20px;
+  line-height: 50px;
   position: relative;
   top: 1px;
+}
+.ant-menu-horizontal > .ant-menu-item > a,
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a {
+  display: block;
+}
+.ant-menu-horizontal > .ant-menu-item > a:before,
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a:before,
+.ant-menu-horizontal > .ant-menu-item > a:after,
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a:after {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.001);
+  width: 20px;
+  height: 50px;
+  content: '';
+}
+.ant-menu-horizontal > .ant-menu-item > a:before,
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a:before {
+  left: 0;
 }
 .ant-menu-horizontal > .ant-menu-submenu,
 .ant-menu-horizontal > .ant-menu-item {

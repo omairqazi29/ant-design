@@ -32,9 +32,6 @@ var Test = React.createClass({
   },
   handleCancel: function handleCancel() {
     console.log('点击了取消');
-    this.setState({
-      visible: false
-    });
   },
   render: function render() {
     return React.createElement(
@@ -88,9 +85,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   handleCancel() {
     console.log(<span class="string">'点击了取消'</span>);
-    <span class="keyword">this</span>.setState({
-      visible: <span class="literal">false</span>
-    });
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

@@ -493,7 +493,7 @@ React.render(React.createElement(
     { className: "ant-form-item ant-form-item-compact" },
     React.createElement(
       "label",
-      { "for": "userName", className: "col-6", required: true },
+      { htmlFor: "userName", className: "col-6", required: true },
       "用户名："
     ),
     React.createElement(
@@ -511,7 +511,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "password", className: "col-6", required: true },
+      { htmlFor: "password", className: "col-6", required: true },
       "密码："
     ),
     React.createElement(
@@ -552,13 +552,13 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "password", className: "col-6", required: true },
+      { htmlFor: "remark", className: "col-6", required: true },
       "备注："
     ),
     React.createElement(
       "div",
       { className: "col-14" },
-      React.createElement("textarea", { className: "ant-input", placeholder: "随便写" }),
+      React.createElement("textarea", { className: "ant-input", id: "remark", placeholder: "随便写" }),
       React.createElement(
         "p",
         { className: "ant-form-explain" },
@@ -596,13 +596,13 @@ React.render(React.createElement(
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span>/&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -617,9 +617,9 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"remark"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"remark"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>随便写点什么<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -903,7 +903,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "userName" },
+      { htmlFor: "userName" },
       "账户："
     ),
     React.createElement("input", { className: "ant-input", type: "text", id: "userName", placeholder: "请输入账户名" })
@@ -913,10 +913,10 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "password" },
+      { htmlFor: "password2" },
       "密码："
     ),
-    React.createElement("input", { className: "ant-input", type: "password", id: "password", placeholder: "请输入密码" })
+    React.createElement("input", { className: "ant-input", type: "password", id: "password2", placeholder: "请输入密码" })
   ),
   React.createElement(
     "div",
@@ -934,12 +934,12 @@ React.render(React.createElement(
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-inline"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"userName"</span>&gt;</span>账户：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span>&gt;</span>账户：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"userName"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入账户名"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"password"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password2"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password2"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
@@ -980,13 +980,13 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6" },
+      { htmlFor: "control-input", className: "col-6" },
       "输入框："
     ),
     React.createElement(
       "div",
       { className: "col-14" },
-      React.createElement("input", { type: "text", className: "ant-input", placeholder: "Please enter..." })
+      React.createElement("input", { type: "text", className: "ant-input", id: "control-input", placeholder: "Please enter..." })
     )
   ),
   React.createElement(
@@ -994,13 +994,13 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6" },
+      { htmlFor: "control-textarea", className: "col-6" },
       "文本域："
     ),
     React.createElement(
       "div",
       { className: "col-14" },
-      React.createElement("textarea", { className: "ant-input" })
+      React.createElement("textarea", { className: "ant-input", id: "control-textarea" })
     )
   ),
   React.createElement(
@@ -1152,15 +1152,15 @@ React.render(React.createElement(
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"control-input"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">placeholder</span>=<span class="value">"Please enter..."</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"control-input"</span> <span class="attribute">placeholder</span>=<span class="value">"Please enter..."</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>文本域：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"control-textarea"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>文本域：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"control-textarea"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
@@ -1240,7 +1240,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6", "for": "site1" },
+      { className: "col-6", htmlFor: "site1" },
       "标签输入框："
     ),
     React.createElement(
@@ -1263,7 +1263,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6", "for": "site3" },
+      { className: "col-6", htmlFor: "site3" },
       "标签输入框："
     ),
     React.createElement(
@@ -1291,7 +1291,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6", "for": "site4" },
+      { className: "col-6", htmlFor: "site4" },
       "select 标签输入框："
     ),
     React.createElement(
@@ -1337,7 +1337,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6" },
+      { className: "col-6", htmlFor: "certNo1" },
       "输入身份证："
     ),
     React.createElement(
@@ -1374,7 +1374,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { className: "col-6" },
+      { className: "col-6", htmlFor: "tel1" },
       "电话号码："
     ),
     React.createElement(
@@ -1429,7 +1429,7 @@ React.render(React.createElement(
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">for</span>=<span class="value">"site1"</span>&gt;</span>标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"site1"</span>&gt;</span>标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-input-group"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-input-group-addon"</span> <span class="attribute">id</span>=<span class="value">"basic-addon1"</span>&gt;</span>Http://<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
@@ -1438,7 +1438,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">for</span>=<span class="value">"site3"</span>&gt;</span>标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"site3"</span>&gt;</span>标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-input-group"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-input-group-addon"</span> <span class="attribute">id</span>=<span class="value">"basic-addon3"</span>&gt;</span>Http://<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
@@ -1448,7 +1448,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">for</span>=<span class="value">"site4"</span>&gt;</span>select 标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"site4"</span>&gt;</span>select 标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-input-group"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"site4"</span> <span class="attribute">placeholder</span>=<span class="value">"www.mysite"</span> /&gt;</span>
@@ -1464,7 +1464,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入身份证：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"certNo1"</span>&gt;</span>输入身份证：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-input-group"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
@@ -1483,7 +1483,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>电话号码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"tel1"</span>&gt;</span>电话号码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-4"</span>&gt;</span>
@@ -1627,7 +1627,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "", className: "col-8", required: true },
+      { htmlFor: "", className: "col-8", required: true },
       "Switch 开关："
     ),
     React.createElement(
@@ -1641,7 +1641,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "", className: "col-8", required: true },
+      { htmlFor: "", className: "col-8", required: true },
       "Slider 滑动输入条："
     ),
     React.createElement(
@@ -1655,7 +1655,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "", className: "col-8", required: true },
+      { htmlFor: "", className: "col-8", required: true },
       "Select 选择器："
     ),
     React.createElement(
@@ -1692,7 +1692,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "", className: "col-8", required: true },
+      { htmlFor: "", className: "col-8", required: true },
       "Datepicker 日期选择框："
     ),
     React.createElement(
@@ -1720,7 +1720,7 @@ React.render(React.createElement(
     { className: "ant-form-item has-error" },
     React.createElement(
       "label",
-      { "for": "", className: "col-8", required: true },
+      { htmlFor: "", className: "col-8", required: true },
       "Datepicker 校验："
     ),
     React.createElement(
@@ -1802,19 +1802,19 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Switch 开关：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Switch 开关：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Switch</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Slider 滑动输入条：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Slider 滑动输入条：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">marks</span>=<span class="value">{["A","B","C","D","E","F","G"]}</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Select 选择器：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Select 选择器：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleSelectChange}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -1825,7 +1825,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Datepicker 日期选择框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Datepicker 日期选择框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -1837,7 +1837,7 @@ React.render(
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item has-error"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Datepicker 校验：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">""</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>Datepicker 校验：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>

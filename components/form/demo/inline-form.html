@@ -13,7 +13,7 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "userName" },
+      { htmlFor: "userName" },
       "账户："
     ),
     React.createElement("input", { className: "ant-input", type: "text", id: "userName", placeholder: "请输入账户名" })
@@ -23,10 +23,10 @@ React.render(React.createElement(
     { className: "ant-form-item" },
     React.createElement(
       "label",
-      { "for": "password" },
+      { htmlFor: "password2" },
       "密码："
     ),
-    React.createElement("input", { className: "ant-input", type: "password", id: "password", placeholder: "请输入密码" })
+    React.createElement("input", { className: "ant-input", type: "password", id: "password2", placeholder: "请输入密码" })
   ),
   React.createElement(
     "div",
@@ -44,12 +44,12 @@ React.render(React.createElement(
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-inline"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"userName"</span>&gt;</span>账户：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span>&gt;</span>账户：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"userName"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入账户名"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"password"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password2"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password2"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"ant-checkbox-inline"</span>&gt;</span>
