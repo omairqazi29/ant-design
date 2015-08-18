@@ -160,7 +160,7 @@ var Form = React.createClass({
           { className: 'ant-form-item' },
           React.createElement(
             'label',
-            { className: 'col-6', required: true },
+            { className: 'col-6', htmlFor: 'confirmPass', required: true },
             '密码：'
           ),
           React.createElement(
@@ -172,7 +172,7 @@ var Form = React.createClass({
               React.createElement(
                 Validator,
                 { rules: [{ required: true, whitespace: true, message: '请填写密码' }, { validator: this.checkPass }], trigger: 'onChange' },
-                React.createElement('input', { name: 'pass', className: 'ant-input', type: 'password', value: formData.pass })
+                React.createElement('input', { name: 'pass', id: 'confirmPass', className: 'ant-input', type: 'password', value: formData.pass })
               ),
               status.pass.errors ? React.createElement(
                 'div',
@@ -192,7 +192,7 @@ var Form = React.createClass({
           { className: 'ant-form-item' },
           React.createElement(
             'label',
-            { className: 'col-6', required: true },
+            { className: 'col-6', htmlFor: 'confirmPass2', required: true },
             '确认密码：'
           ),
           React.createElement(
@@ -208,7 +208,7 @@ var Form = React.createClass({
                     whitespace: true,
                     message: '请再次输入密码'
                   }, { validator: this.checkPass2 }] },
-                React.createElement('input', { name: 'rePass', className: 'ant-input', type: 'password', value: formData.rePass })
+                React.createElement('input', { name: 'rePass', id: 'confirmPass2', className: 'ant-input', type: 'password', value: formData.rePass })
               ),
               status.rePass.errors ? React.createElement(
                 'div',
@@ -389,11 +389,11 @@ React.render(React.createElement(Form, null), document.getElementById('component
         <span class="tag">&lt;<span class="title">Validation</span> <span class="attribute">ref</span>=<span class="value">"validation"</span> <span class="attribute">onValidate</span>=<span class="value">{this.handleValidate}</span>&gt;</span>
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"confirmPass"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">{this.renderValidateStyle('pass',</span> <span class="attribute">false</span>)}&gt;</span>
                 <span class="tag">&lt;<span class="title">Validator</span> <span class="attribute">rules</span>=<span class="value">{[{required:</span> <span class="attribute">true</span>, <span class="attribute">whitespace:</span> <span class="attribute">true</span>, <span class="attribute">message:</span> '请填写密码'}, {<span class="attribute">validator:</span> <span class="attribute">this.checkPass</span>}]} <span class="attribute">trigger</span>=<span class="value">"onChange"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"pass"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.pass}</span>/&gt;</span>
+                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"pass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.pass}</span>/&gt;</span>
                 <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
                 {status.pass.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>{status.pass.errors.join(',')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -404,7 +404,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>确认密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"confirmPass2"</span> <span class="attribute">required</span>&gt;</span>确认密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">{this.renderValidateStyle('rePass',</span> <span class="attribute">false</span>)}&gt;</span>
                 <span class="tag">&lt;<span class="title">Validator</span> <span class="attribute">rules</span>=<span class="value">{[{</span>
@@ -412,7 +412,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
                   <span class="attribute">whitespace:</span> <span class="attribute">true</span>,
                   <span class="attribute">message:</span> '请再次输入密码'
                 }, {<span class="attribute">validator:</span> <span class="attribute">this.checkPass2</span>}]}&gt;</span>
-                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"rePass"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.rePass}</span>/&gt;</span>
+                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"rePass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass2"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.rePass}</span>/&gt;</span>
                 <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
                 {status.rePass.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span> {status.rePass.errors.join(', ')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -479,6 +479,7 @@ React.render(<span class="tag">&lt;<span class="title">Form</span> /&gt;</span>,
 
   .ant-pwd-strength-medium .ant-pwd-strength-item-2, .ant-pwd-strength-high .ant-pwd-strength-item-2 {
     background-color: rgba(135, 208, 104, .6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9987D068,endColorstr=#9987D068);
   }
 
   .ant-pwd-strength-high .ant-pwd-strength-item-3 {

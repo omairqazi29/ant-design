@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("jquery"), require("antd"));
+		module.exports = factory(require("react"), require("antd"), require("jquery"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "jquery", "antd"], factory);
+		define(["react", "antd", "jquery"], factory);
 	else if(typeof exports === 'object')
-		exports["antd"] = factory(require("react"), require("jquery"), require("antd"));
+		exports["antd"] = factory(require("react"), require("antd"), require("jquery"));
 	else
-		root["antd"] = factory(root["React"], root["jQuery"], root["antd"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_74__, __WEBPACK_EXTERNAL_MODULE_257__, __WEBPACK_EXTERNAL_MODULE_339__) {
+		root["antd"] = factory(root["React"], root["antd"], root["jQuery"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_74__, __WEBPACK_EXTERNAL_MODULE_339__, __WEBPACK_EXTERNAL_MODULE_340__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,7 +61,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	window['react-router'] = window.ReactRouter;
 	var antd = __webpack_require__(339);
 	
-	var $ = __webpack_require__(257);
+	var $ = __webpack_require__(340);
 	var React = __webpack_require__(74);
 	
 	$(function () {
@@ -412,17 +412,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 257:
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_257__;
-
-/***/ },
-
 /***/ 339:
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_339__;
+
+/***/ },
+
+/***/ 340:
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_340__;
 
 /***/ }
 

@@ -5,6 +5,7 @@
 
 var Tree = antd.Tree;
 var TreeNode = Tree.TreeNode;
+
 React.render(React.createElement(
   Tree,
   { className: "myCls", defaultExpandAll: true },
@@ -14,7 +15,7 @@ React.render(React.createElement(
     React.createElement(
       TreeNode,
       null,
-      "leaf "
+      "leaf"
     ),
     React.createElement(
       TreeNode,
@@ -25,35 +26,36 @@ React.render(React.createElement(
         React.createElement(
           TreeNode,
           null,
-          "leaf "
+          "leaf"
         )
       ),
       React.createElement(
         TreeNode,
         null,
-        "leaf "
+        "leaf"
       )
     )
   ),
   React.createElement(
     TreeNode,
     null,
-    "leaf "
+    "leaf"
   )
 ), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
+
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">className</span>=<span class="value">"myCls"</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
 , document.getElementById('components-tree-demo-basic'));</span></code></pre></div>
   </div>

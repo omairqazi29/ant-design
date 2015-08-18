@@ -96,9 +96,7 @@ let AntUpload = React.createClass({
       return (
         <div className={prefixCls + ' ' + prefixCls + '-select'}>
           <Upload {...props}>
-            <button className='ant-btn ant-btn-ghost'>
-              <i className='anticon anticon-upload'></i> 点击上传
-            </button>
+            {this.props.children}
           </Upload>
           <UploadList items={this.state.downloadList} />
         </div>

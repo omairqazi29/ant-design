@@ -14,8 +14,11 @@ var Test = React.createClass({
       visible: false
     };
   },
-  showModal: function showModal() {
-    this.setState({ visible: true });
+  showModal: function showModal(e) {
+    this.setState({
+      visible: true,
+      mousePosition: { x: e.pageX, y: e.pageY }
+    });
   },
   handleOk: function handleOk() {
     var _this = this;
@@ -41,6 +44,7 @@ var Test = React.createClass({
         Modal,
         { ref: "modal",
           visible: this.state.visible,
+          mousePosition: this.state.mousePosition,
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
             "button",
@@ -48,9 +52,8 @@ var Test = React.createClass({
             "返 回"
           ), React.createElement(
             "button",
-            { key: "submit", className: "ant-btn ant-btn-primary ant-btn-lg", onClick: this.handleOk },
-            "提 交",
-            React.createElement("i", { className: 'anticon anticon-loading' + (this.state.loading ? '' : 'hide') })
+            { key: "submit", className: 'ant-btn ant-btn-primary ant-btn-lg ' + (this.state.loading ? 'ant-btn-loading' : ''), onClick: this.handleOk },
+            "提 交"
           )] },
         React.createElement(
           "p",
@@ -91,12 +94,15 @@ React.render(React.createElement(Test, null), document.getElementById('component
       visible: <span class="literal">false</span>
     };
   },
-  showModal() {
-    <span class="keyword">this</span>.setState({ visible: <span class="literal">true</span> });
+  showModal(e) {
+    <span class="keyword">this</span>.setState({
+      visible: <span class="literal">true</span>,
+      mousePosition:{x:e.pageX,y:e.pageY}
+    });
   },
   handleOk() {
     <span class="keyword">this</span>.setState({ loading: <span class="literal">true</span> });
-    setTimeout(()=&gt; {
+    setTimeout(() =&gt; {
       <span class="keyword">this</span>.setState({ loading: <span class="literal">false</span>, visible: <span class="literal">false</span> });
     }, <span class="number">3000</span>);
   },
@@ -110,12 +116,12 @@ React.render(React.createElement(Test, null), document.getElementById('component
       <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">ref</span>=<span class="value">"modal"</span>
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
+       <span class="attribute">mousePosition</span>=<span class="value">{this.state.mousePosition}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
           &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">{'ant-btn</span> <span class="attribute">ant-btn-primary</span> <span class="attribute">ant-btn-lg</span> ' + (<span class="attribute">this.state.loading</span>?'<span class="attribute">ant-btn-loading</span>'<span class="attribute">:</span>'')} <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
             提 交
-            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">{'anticon</span> <span class="attribute">anticon-loading</span>'+(<span class="attribute">this.state.loading</span>?''<span class="attribute">:</span>'<span class="attribute">hide</span>')}&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         ]}&gt;
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>

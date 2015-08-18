@@ -13,7 +13,7 @@ Slider 滑动输入条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta2.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta3.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Slider 滑动输入条 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta2',
+        latest: '0.8.0-beta3',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta2.js"></script>
+    <script src="/dist/antd-0.8.0-beta3.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -708,10 +708,10 @@ React.render(
   color: #ccc;
 }
 
-.iconWrapper .anticon:nth-child(1) {
+.iconWrapper .anticon-lock {
   left: 0;
 }
-.iconWrapper .anticon:nth-child(2){
+.iconWrapper .anticon-unlock{
   right: 0;
 }
 
@@ -743,7 +743,7 @@ var Test = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      inputValue: 0
+      inputValue: 1
     };
   },
   onChange: function onChange(value) {
@@ -776,7 +776,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
-      inputValue: <span class="number">0</span>
+      inputValue: <span class="number">1</span>
     };
   },
   onChange(value) {

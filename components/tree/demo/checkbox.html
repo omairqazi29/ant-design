@@ -8,6 +8,7 @@ var TreeNode = Tree.TreeNode;
 function handleCheck(checked, c, checkedKeys) {
   console.log('checked: ', checked, c);
 }
+
 React.render(React.createElement(
   Tree,
   { defaultExpandAll: true, checkable: React.createElement("span", { className: "ant-tree-checkbox-inner" }), onCheck: handleCheck },
@@ -17,7 +18,7 @@ React.render(React.createElement(
     React.createElement(
       TreeNode,
       null,
-      "leaf "
+      "leaf"
     ),
     React.createElement(
       TreeNode,
@@ -28,56 +29,57 @@ React.render(React.createElement(
         React.createElement(
           TreeNode,
           null,
-          "leaf "
+          "leaf"
         ),
         React.createElement(
           TreeNode,
           null,
-          "leaf "
+          "leaf"
         )
       ),
       React.createElement(
         TreeNode,
         null,
-        "leaf "
+        "leaf"
       ),
       React.createElement(
         TreeNode,
         null,
-        "leaf "
+        "leaf"
       )
     )
   ),
   React.createElement(
     TreeNode,
     null,
-    "leaf "
+    "leaf"
   ),
   React.createElement(
     TreeNode,
     null,
-    "leaf "
+    "leaf"
   )
 ), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
 <span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(checked, c, checkedKeys)</span> {</span>
   console.log(<span class="string">'checked: '</span>, checked, c );
 }
+
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{&lt;span</span> <span class="attribute">className</span>=<span class="value">"ant-tree-checkbox-inner"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>} onCheck={handleCheck}&gt;
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
 , document.getElementById('components-tree-demo-checkbox'));</span></code></pre></div>
   </div>

@@ -13,7 +13,7 @@ Upload 文件上传 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta2.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta3.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Upload 文件上传 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta2',
+        latest: '0.8.0-beta3',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta2.js"></script>
+    <script src="/dist/antd-0.8.0-beta3.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -496,6 +496,12 @@ Upload 文件上传 - Ant Design
 <td>无</td>
 </tr>
 <tr>
+<td>multiple</td>
+<td>可选参数, 是否支持多选文件，支持ie10+</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
 <td>accept</td>
 <td>可选参数, 接受上传的文件类型, 详见input accept Attribute</td>
 <td>String</td>
@@ -521,6 +527,17 @@ Upload 文件上传 - Ant Design
 </tr>
 </tbody>
 </table>
+<h3 id="onerror">onError</h3><p>错误回调，有三个参数返回：</p>
+<ol>
+<li><code>err</code> 请求返回错误信息</li>
+<li><code>responce</code> 请求响应，包括错误状态码等信息</li>
+<li><code>file</code> 错误的文件对象</li>
+</ol>
+<h3 id="onsuccess">onSuccess</h3><p>成功回调，返回两个参数</p>
+<ol>
+<li><code>result</code> 上传图片返回结果</li>
+<li><code>file</code> 文件对象</li>
+</ol>
 
   </article><h2 class="component-demos">
   组件演示
@@ -548,7 +565,16 @@ var props = {
   progress: function progress() {}
 };
 
-React.render(React.createElement(Upload, props), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+React.render(React.createElement(
+  Upload,
+  props,
+  React.createElement(
+    'button',
+    { className: 'ant-btn ant-btn-ghost' },
+    React.createElement('i', { className: 'anticon anticon-upload' }),
+    ' 点击上传'
+  )
+), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 
 <span class="keyword">var</span> props = {
   description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
@@ -565,7 +591,11 @@ React.render(React.createElement(Upload, props), document.getElementById('compon
 };
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} /&gt;</span>,
+  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>,
   document.getElementById('components-upload-demo-basic')
 );</span></code></pre></div>
   </div>

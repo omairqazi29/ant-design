@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("jquery"));
+		module.exports = factory(require("react"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "jquery"], factory);
+		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["antd"] = factory(require("react"), require("jquery"));
+		exports["antd"] = factory(require("react"));
 	else
-		root["antd"] = factory(root["React"], root["jQuery"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_74__, __WEBPACK_EXTERNAL_MODULE_257__) {
+		root["antd"] = factory(root["React"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_74__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -14455,16 +14455,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = _react2['default'].createClass({
 	  displayName: 'index',
 	
-	  getInitialState: function getInitialState() {
-	    return {
-	      confirmLoading: false
-	    };
-	  },
-	
-	  handleCancel: function handleCancel() {
-	    this.refs.d.requestClose();
-	  },
-	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      prefixCls: 'ant-modal',
@@ -14473,40 +14463,59 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
+	  getInitialState: function getInitialState() {
+	    return {
+	      confirmLoading: false,
+	      visible: this.props.visible
+	    };
+	  },
+	
+	  handleCancel: function handleCancel() {
+	    this.props.onCancel();
+	    this.setState({
+	      visible: false
+	    });
+	  },
+	
 	  handleOk: function handleOk() {
 	    this.setState({
 	      confirmLoading: true
 	    });
-	    if (typeof this.props.onOk === 'function') {
-	      this.props.onOk();
-	    }
+	    this.props.onOk();
 	  },
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    if ('visible' in nextProps) {
+	      var newState = {
+	        visible: nextProps.visible
+	      };
 	      // 隐藏后去除按钮 loading 效果
 	      if (!nextProps.visible) {
-	        this.setState({
-	          confirmLoading: false
-	        });
+	        newState.confirmLoading = false;
 	      }
+	      this.setState(newState);
 	    }
 	  },
 	
 	  render: function render() {
-	    var loadingIcon = this.state.confirmLoading ? _react2['default'].createElement('i', { className: 'anticon anticon-loading' }) : '';
+	    var loadingClass = this.state.confirmLoading ? ' ant-btn-loading' : '';
 	    var props = this.props;
-	    var footer = props.footer || [_react2['default'].createElement(
+	    var defaultFooter = [_react2['default'].createElement(
 	      'button',
 	      { key: 'cancel', type: 'button', className: 'ant-btn ant-btn-lg', onClick: this.handleCancel },
 	      '取 消'
 	    ), _react2['default'].createElement(
 	      'button',
-	      { key: 'confirm', type: 'button', className: 'ant-btn ant-btn-primary ant-btn-lg', onClick: this.handleOk },
-	      '确 定 ',
-	      loadingIcon
+	      { key: 'confirm',
+	        type: 'button',
+	        className: 'ant-btn ant-btn-primary ant-btn-lg' + loadingClass,
+	        onClick: this.handleOk },
+	      '确 定'
 	    )];
-	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: 'zoom', onBeforeClose: props.onCancel, maskAnimation: 'fade', width: '500', footer: footer }, props, { ref: 'd' }));
+	    var footer = props.footer || defaultFooter;
+	    var visible = this.state.visible;
+	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: 'zoom', onClose: this.handleCancel, maskAnimation: 'fade',
+	      width: '500', footer: footer }, props, { visible: visible }));
 	  }
 	});
 	module.exports = exports['default'];
@@ -14575,71 +14584,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    _get(Object.getPrototypeOf(DialogWrap.prototype), 'constructor', this).call(this, props);
 	    this.state = {
-	      visible: this.props.visible
+	      visible: props.visible
 	    };
-	    ['cleanDialogContainer', 'requestClose', 'close', 'handleClose', 'handleShow'].forEach(function (m) {
+	    ['onClose', 'cleanDialogContainer'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
 	  }
 	
 	  _createClass(DialogWrap, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.componentDidUpdate();
+	    }
+	  }, {
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(props) {
-	      if (this.state.visible !== props.visible) {
-	        if (props.visible) {
-	          this.show();
-	        } else {
-	          this.close();
-	        }
+	      if ('visible' in props) {
+	        this.setState({
+	          visible: props.visible
+	        });
 	      }
 	    }
 	  }, {
 	    key: 'shouldComponentUpdate',
 	    value: function shouldComponentUpdate(nextProps, nextState) {
-	      if (!this.state.visible && !nextState.visible) {
-	        return false;
-	      }
-	      return true;
+	      return this.state.visible || nextState.visible;
 	    }
 	  }, {
-	    key: 'show',
-	    value: function show() {
-	      if (!this.state.visible) {
-	        this.setState({
-	          visible: true
-	        });
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      if (this.dialogRendered) {
+	        _react2['default'].render(this.getDialogElement(), this.getDialogContainer());
 	      }
 	    }
 	  }, {
-	    key: 'close',
-	    value: function close() {
-	      if (this.state.visible) {
-	        this.setState({
-	          visible: false
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'requestClose',
-	    value: function requestClose() {
-	      var onBeforeClose = this.props.onBeforeClose;
-	      var close = this.close;
-	      if (onBeforeClose) {
-	        var ret;
-	        if (onBeforeClose.length) {
-	          ret = onBeforeClose(close);
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      if (this.dialogContainer) {
+	        if (this.state.visible) {
+	          _react2['default'].render(this.getDialogElement({
+	            onAfterClose: this.cleanDialogContainer,
+	            onClose: noop,
+	            visible: false
+	          }), this.dialogContainer);
 	        } else {
-	          ret = onBeforeClose();
-	          if (!ret) {
-	            close();
-	          }
+	          this.cleanDialogContainer();
 	        }
-	        if (ret && ret.then) {
-	          ret.then(close);
-	        }
-	      } else {
-	        close();
 	      }
+	    }
+	  }, {
+	    key: 'onClose',
+	    value: function onClose() {
+	      this.props.onClose();
 	    }
 	  }, {
 	    key: 'getDialogContainer',
@@ -14652,53 +14648,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this.dialogContainer;
 	    }
 	  }, {
-	    key: 'handleClose',
-	    value: function handleClose() {
-	      this.props.onClose();
-	    }
-	  }, {
-	    key: 'handleShow',
-	    value: function handleShow() {
-	      this.props.onShow();
-	    }
-	  }, {
 	    key: 'getDialogElement',
 	    value: function getDialogElement(extra) {
 	      var props = this.props;
-	      var dialogProps = copy(props, ['className', 'closable', 'align', 'title', 'footer', 'mask', 'animation', 'transitionName', 'maskAnimation', 'maskTransitionName', 'prefixCls', 'style', 'width', 'height', 'zIndex']);
+	      var dialogProps = copy(props, ['className', 'closable', 'align', 'title', 'footer', 'mask', 'animation', 'transitionName', 'maskAnimation', 'maskTransitionName', 'mousePosition', 'prefixCls', 'style', 'width', 'height', 'zIndex']);
 	
 	      (0, _objectAssign2['default'])(dialogProps, {
-	        onClose: this.handleClose,
-	        onShow: this.handleShow,
-	        visible: this.state.visible,
-	        onRequestClose: this.requestClose
+	        onClose: this.onClose,
+	        visible: this.state.visible
 	      }, extra);
-	
 	      return _react2['default'].createElement(
 	        _Dialog2['default'],
-	        _extends({}, dialogProps, { key: "dialog" }),
+	        _extends({}, dialogProps, { key: 'dialog' }),
 	        props.children
 	      );
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      if (this.state.visible) {
-	        this.dialogRendered = true;
-	      }
-	      return this.props.renderToBody ? null : this.dialogRendered ? this.getDialogElement() : null;
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.componentDidUpdate();
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      if (this.props.renderToBody && this.dialogRendered) {
-	        _react2['default'].render(this.getDialogElement(), this.getDialogContainer());
-	      }
+	      this.dialogRendered = this.dialogRendered || this.state.visible;
+	      return null;
 	    }
 	  }, {
 	    key: 'cleanDialogContainer',
@@ -14706,20 +14675,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react2['default'].unmountComponentAtNode(this.getDialogContainer());
 	      document.body.removeChild(this.dialogContainer);
 	      this.dialogContainer = null;
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      if (this.dialogContainer) {
-	        if (this.state.visible) {
-	          _react2['default'].render(this.getDialogElement({
-	            onClose: this.cleanDialogContainer,
-	            visible: false
-	          }), this.dialogContainer);
-	        } else {
-	          this.cleanDialogContainer();
-	        }
-	      }
 	    }
 	  }]);
 	
@@ -14732,27 +14687,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    points: ['tc', 'tc'],
 	    offset: [0, 100]
 	  },
-	  renderToBody: true,
 	  mask: true,
 	  closable: true,
 	  prefixCls: 'rc-dialog',
-	  visible: false,
-	  onShow: noop,
 	  onClose: noop
 	};
 	
-	DialogWrap.PropTypes = {
+	DialogWrap.propTypes = {
 	  className: _react2['default'].PropTypes.string,
 	  align: _react2['default'].PropTypes.shape({
 	    align: _react2['default'].PropTypes.array,
 	    offset: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.number)
 	  }),
-	  renderToBody: _react2['default'].PropTypes.bool,
 	  mask: _react2['default'].PropTypes.bool,
 	  closable: _react2['default'].PropTypes.bool,
 	  prefixCls: _react2['default'].PropTypes.string,
 	  visible: _react2['default'].PropTypes.bool,
-	  onShow: _react2['default'].PropTypes.func,
 	  onClose: _react2['default'].PropTypes.func
 	};
 	
@@ -14793,8 +14743,132 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
+	function noop() {}
+	
+	function getScroll(w, top) {
+	  var ret = w['page' + (top ? 'Y' : 'X') + 'Offset'];
+	  var method = 'scroll' + (top ? 'Top' : 'Left');
+	  if (typeof ret !== 'number') {
+	    var d = w.document;
+	    ret = d.documentElement[method];
+	    if (typeof ret !== 'number') {
+	      ret = d.body[method];
+	    }
+	  }
+	  return ret;
+	}
+	
+	function setTransformOrigin(node, value) {
+	  var style = node.style;
+	  ['Webkit', 'Moz', 'Ms', 'ms'].forEach(function (prefix) {
+	    style[prefix + 'TransformOrigin'] = value;
+	  });
+	  style['transformOrigin'] = value;
+	}
+	
+	function offset(el) {
+	  var rect = el.getBoundingClientRect();
+	  var pos = {
+	    left: rect.left,
+	    top: rect.top
+	  };
+	  var doc = el.ownerDocument;
+	  var w = doc.defaultView || doc.parentWindow;
+	  pos.left += getScroll(w);
+	  pos.top += getScroll(w, 1);
+	  return pos;
+	}
+	
 	var Dialog = _react2['default'].createClass({
 	  displayName: 'Dialog',
+	
+	  propTypes: {
+	    onAfterClose: _react2['default'].PropTypes.func,
+	    onClose: _react2['default'].PropTypes.func,
+	    closable: _react2['default'].PropTypes.bool,
+	    visible: _react2['default'].PropTypes.bool,
+	    mousePosition: _react2['default'].PropTypes.object
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      onAfterClose: noop,
+	      onClose: noop
+	    };
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this.componentDidUpdate({});
+	  },
+	
+	  componentDidUpdate: function componentDidUpdate(prevProps) {
+	    var props = this.props;
+	    if (props.visible) {
+	      // first show
+	      if (!prevProps.visible) {
+	        this.lastOutSideFocusNode = document.activeElement;
+	        (0, _react.findDOMNode)(this.refs.dialog).focus();
+	      }
+	    } else if (prevProps.visible) {
+	      if (props.mask && this.lastOutSideFocusNode) {
+	        try {
+	          this.lastOutSideFocusNode.focus();
+	        } catch (e) {
+	          this.lastOutSideFocusNode = null;
+	        }
+	        this.lastOutSideFocusNode = null;
+	      }
+	    }
+	  },
+	
+	  onAnimateEnd: function onAnimateEnd(key, visible) {
+	    if (!visible) {
+	      this.props.onAfterClose();
+	    }
+	  },
+	
+	  onMaskClick: function onMaskClick() {
+	    if (this.props.closable) {
+	      this.close();
+	    }
+	    (0, _react.findDOMNode)(this.refs.dialog).focus();
+	  },
+	
+	  onKeyDown: function onKeyDown(e) {
+	    var props = this.props;
+	    if (props.closable) {
+	      if (e.keyCode === _rcUtil.KeyCode.ESC) {
+	        this.close();
+	      }
+	    }
+	    // keep focus inside dialog
+	    if (props.visible) {
+	      if (e.keyCode === _rcUtil.KeyCode.TAB) {
+	        var activeElement = document.activeElement;
+	        var dialogRoot = (0, _react.findDOMNode)(this.refs.dialog);
+	        var sentinel = (0, _react.findDOMNode)(this.refs.sentinel);
+	        if (e.shiftKey) {
+	          if (activeElement === dialogRoot) {
+	            sentinel.focus();
+	          }
+	        } else if (activeElement === (0, _react.findDOMNode)(this.refs.sentinel)) {
+	          dialogRoot.focus();
+	        }
+	      }
+	    }
+	  },
+	
+	  onAlign: function onAlign(dialogNode) {
+	    var mousePosition = this.props.mousePosition;
+	    if (this.props.visible) {
+	      if (mousePosition) {
+	        var elOffset = offset(dialogNode);
+	        setTransformOrigin(dialogNode, mousePosition.x - elOffset.left + 'px ' + (mousePosition.y - elOffset.top) + 'px');
+	      } else {
+	        setTransformOrigin(dialogNode, '');
+	      }
+	    }
+	  },
 	
 	  getDialogElement: function getDialogElement() {
 	    var props = this.props;
@@ -14811,7 +14885,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      dest.zIndex = props.zIndex;
 	    }
 	
-	    var footer;
+	    var footer = undefined;
 	    if (props.footer) {
 	      footer = _react2['default'].createElement(
 	        'div',
@@ -14820,14 +14894,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      );
 	    }
 	
-	    var header;
+	    var header = undefined;
 	    if (props.title || props.closable) {
 	      header = _react2['default'].createElement(
 	        'div',
 	        { className: prefixCls + '-header' },
 	        closable ? _react2['default'].createElement(
 	          'a',
-	          { tabIndex: "0", onClick: props.onRequestClose, className: prefixCls + '-close' },
+	          { tabIndex: '0', onClick: this.close, className: prefixCls + '-close' },
 	          _react2['default'].createElement('span', { className: prefixCls + '-close-x' })
 	        ) : null,
 	        _react2['default'].createElement(
@@ -14845,7 +14919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      role: 'dialog',
 	      ref: 'dialog',
 	      style: style,
-	      onKeyDown: this.handleKeyDown
+	      onKeyDown: this.onKeyDown
 	    };
 	    var transitionName = this.getTransitionName();
 	    var dialogElement = _react2['default'].createElement(
@@ -14864,23 +14938,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	      ),
 	      _react2['default'].createElement(
 	        'div',
-	        { tabIndex: "0", ref: 'sentinel', style: { width: 0, height: 0, overflow: 'hidden' } },
+	        { tabIndex: '0', ref: 'sentinel', style: { width: 0, height: 0, overflow: 'hidden' } },
 	        'sentinel'
 	      )
 	    );
 	    // add key for align to keep animate children stable
 	    return _react2['default'].createElement(
 	      _rcAnimate2['default'],
-	      { key: "dialog",
-	        showProp: "dialogVisible",
-	        onEnd: this.handleAnimateEnd,
+	      { key: 'dialog',
+	        showProp: 'dialogVisible',
+	        onEnd: this.onAnimateEnd,
 	        transitionName: transitionName,
-	        component: "",
+	        component: '',
 	        animateMount: true },
 	      _react2['default'].createElement(
 	        _rcAlign2['default'],
 	        { align: props.align,
-	          key: "dialog",
+	          key: 'dialog',
+	          onAlign: this.onAlign,
 	          dialogVisible: props.visible,
 	          monitorBufferTime: 80,
 	          monitorWindowResize: true,
@@ -14893,21 +14968,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  getMaskElement: function getMaskElement() {
 	    var props = this.props;
 	    var maskProps = {
-	      onClick: this.handleMaskClick,
+	      onClick: this.onMaskClick,
 	      'data-visible': props.visible
 	    };
 	
 	    if (props.zIndex) {
 	      maskProps.style = { zIndex: props.zIndex };
 	    }
-	    var maskElement;
+	    var maskElement = undefined;
 	    if (props.mask) {
 	      var maskTransition = this.getMaskTransitionName();
-	      maskElement = _react2['default'].createElement('div', _extends({}, maskProps, { className: props.prefixCls + '-mask', key: "mask" }));
+	      maskElement = _react2['default'].createElement('div', _extends({}, maskProps, { className: props.prefixCls + '-mask', key: 'mask' }));
 	      if (maskTransition) {
 	        maskElement = _react2['default'].createElement(
 	          _rcAnimate2['default'],
-	          { key: "mask", showProp: "data-visible", animateMount: true, component: "",
+	          { key: 'mask', showProp: 'data-visible', animateMount: true, component: '',
 	            transitionName: maskTransition },
 	          maskElement
 	        );
@@ -14926,54 +15001,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return transitionName;
 	  },
 	
-	  componentDidMount: function componentDidMount() {
-	    this.componentDidUpdate({});
-	  },
-	
-	  componentDidUpdate: function componentDidUpdate(prevProps) {
-	    var props = this.props;
-	    if (props.visible) {
-	      // first show
-	      if (!prevProps.visible) {
-	        this.lastOutSideFocusNode = document.activeElement;
-	        _react2['default'].findDOMNode(this.refs.dialog).focus();
-	      }
-	    } else if (prevProps.visible) {
-	      if (props.mask && this.lastOutSideFocusNode) {
-	        try {
-	          this.lastOutSideFocusNode.focus();
-	        } catch (e) {
-	          // empty
-	        }
-	        this.lastOutSideFocusNode = null;
-	      }
-	    }
-	  },
-	
-	  handleKeyDown: function handleKeyDown(e) {
-	    var props = this.props;
-	    if (props.closable) {
-	      if (e.keyCode === _rcUtil.KeyCode.ESC) {
-	        this.props.onRequestClose();
-	      }
-	    }
-	    // keep focus inside dialog
-	    if (props.visible) {
-	      if (e.keyCode === _rcUtil.KeyCode.TAB) {
-	        var activeElement = document.activeElement;
-	        var dialogRoot = _react2['default'].findDOMNode(this.refs.dialog);
-	        var sentinel = _react2['default'].findDOMNode(this.refs.sentinel);
-	        if (e.shiftKey) {
-	          if (activeElement === dialogRoot) {
-	            sentinel.focus();
-	          }
-	        } else if (activeElement === _react2['default'].findDOMNode(this.refs.sentinel)) {
-	          dialogRoot.focus();
-	        }
-	      }
-	    }
-	  },
-	
 	  getTransitionName: function getTransitionName() {
 	    var props = this.props;
 	    var transitionName = props.transitionName;
@@ -14982,29 +15009,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      transitionName = props.prefixCls + '-' + animation;
 	    }
 	    return transitionName;
-	  },
-	
-	  handleShow: function handleShow() {
-	    this.props.onShow();
-	  },
-	
-	  handleClose: function handleClose() {
-	    this.props.onClose();
-	  },
-	
-	  handleAnimateEnd: function handleAnimateEnd(key, visible) {
-	    if (visible) {
-	      this.handleShow();
-	    } else {
-	      this.handleClose();
-	    }
-	  },
-	
-	  handleMaskClick: function handleMaskClick() {
-	    if (this.props.closable) {
-	      this.props.onRequestClose();
-	    }
-	    _react2['default'].findDOMNode(this.refs.dialog).focus();
 	  },
 	
 	  render: function render() {
@@ -15019,6 +15023,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      { className: (0, _rcUtil.classSet)(className) },
 	      [this.getMaskElement(), this.getDialogElement()]
 	    );
+	  },
+	
+	  close: function close() {
+	    this.props.onClose();
 	  }
 	});
 	
@@ -17419,14 +17427,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'getInputElement',
 	    value: function getInputElement() {
 	      var props = this.props;
-	      return _react2['default'].createElement('input', { ref: this.saveInputRef,
-	        onChange: this.onInputChange,
-	        onKeyDown: this.onInputKeyDown,
-	        value: this.state.inputValue,
-	        disabled: props.disabled,
-	        placeholder: props.searchPlaceholder,
-	        className: props.prefixCls + '-search__field',
-	        role: 'textbox' });
+	      return _react2['default'].createElement(
+	        'span',
+	        { className: props.prefixCls + '-search__field__wrap' },
+	        _react2['default'].createElement('input', { ref: this.saveInputRef,
+	          onChange: this.onInputChange,
+	          onKeyDown: this.onInputKeyDown,
+	          value: this.state.inputValue,
+	          disabled: props.disabled,
+	          className: props.prefixCls + '-search__field',
+	          role: 'textbox' }),
+	        props.searchPlaceholder ? _react2['default'].createElement(
+	          'span',
+	          {
+	            style: { display: this.state.inputValue ? 'none' : 'block' },
+	            className: props.prefixCls + '-search__field__placeholder' },
+	          props.searchPlaceholder
+	        ) : null
+	      );
 	    }
 	  }, {
 	    key: 'getDropdownElement',
@@ -19581,13 +19599,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onOpenChange: _react2['default'].PropTypes.func,
 	    onSelect: _react2['default'].PropTypes.func,
 	    onDeselect: _react2['default'].PropTypes.func,
-	    onDestroy: _react2['default'].PropTypes.func
+	    onDestroy: _react2['default'].PropTypes.func,
+	    level: _react2['default'].PropTypes.number,
+	    eventKey: _react2['default'].PropTypes.string,
+	    selectable: _react2['default'].PropTypes.bool
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      openSubMenuOnMouseEnter: true,
 	      closeSubMenuOnMouseLeave: true,
+	      selectable: true,
 	      onOpenChange: _util.noop,
 	      onClick: _util.noop,
 	      onSelect: _util.noop,
@@ -19669,22 +19691,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  onSelect: function onSelect(selectInfo) {
 	    var props = this.props;
-	    // root menu
-	    var selectedKeys = this.state.selectedKeys;
-	    var selectedKey = selectInfo.key;
-	    if (props.multiple) {
-	      selectedKeys = selectedKeys.concat([selectedKey]);
-	    } else {
-	      selectedKeys = [selectedKey];
-	    }
-	    if (!('selectedKeys' in props)) {
-	      this.setState({
+	    if (props.selectable) {
+	      // root menu
+	      var selectedKeys = this.state.selectedKeys;
+	      var selectedKey = selectInfo.key;
+	      if (props.multiple) {
+	        selectedKeys = selectedKeys.concat([selectedKey]);
+	      } else {
+	        selectedKeys = [selectedKey];
+	      }
+	      if (!('selectedKeys' in props)) {
+	        this.setState({
+	          selectedKeys: selectedKeys
+	        });
+	      }
+	      props.onSelect((0, _objectAssign2['default'])({}, selectInfo, {
 	        selectedKeys: selectedKeys
-	      });
+	      }));
 	    }
-	    props.onSelect((0, _objectAssign2['default'])({}, selectInfo, {
-	      selectedKeys: selectedKeys
-	    }));
 	  },
 	
 	  onClick: function onClick(e) {
@@ -19740,24 +19764,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  onDeselect: function onDeselect(selectInfo) {
 	    var props = this.props;
-	    var selectedKeys = this.state.selectedKeys.concat();
-	    var selectedKey = selectInfo.key;
-	    var index = selectedKeys.indexOf(selectedKey);
-	    if (index !== -1) {
-	      selectedKeys.splice(index, 1);
-	    }
-	    if (!('selectedKeys' in props)) {
-	      this.setState({
+	    if (props.selectable) {
+	      var selectedKeys = this.state.selectedKeys.concat();
+	      var selectedKey = selectInfo.key;
+	      var index = selectedKeys.indexOf(selectedKey);
+	      if (index !== -1) {
+	        selectedKeys.splice(index, 1);
+	      }
+	      if (!('selectedKeys' in props)) {
+	        this.setState({
+	          selectedKeys: selectedKeys
+	        });
+	      }
+	      props.onDeselect((0, _objectAssign2['default'])({}, selectInfo, {
 	        selectedKeys: selectedKeys
-	      });
+	      }));
 	    }
-	    props.onDeselect((0, _objectAssign2['default'])({}, selectInfo, {
-	      selectedKeys: selectedKeys
-	    }));
 	  },
 	
 	  renderMenuItem: function renderMenuItem(c, i) {
-	    var key = (0, _util.getKeyFromChildrenIndex)(c, i);
+	    var key = (0, _util.getKeyFromChildrenIndex)(c, this.props.eventKey, i);
 	    var state = this.state;
 	    var extraProps = {
 	      openKeys: state.openKeys,
@@ -19830,10 +19856,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	function getActiveKey(props) {
 	  var activeKey = props.activeKey;
 	  var children = props.children;
+	  var eventKey = props.eventKey;
 	  if (activeKey) {
 	    var found = undefined;
 	    _react2['default'].Children.forEach(children, function (c, i) {
-	      if (!c.props.disabled && activeKey === (0, _util.getKeyFromChildrenIndex)(c, i)) {
+	      if (!c.props.disabled && activeKey === (0, _util.getKeyFromChildrenIndex)(c, eventKey, i)) {
 	        found = true;
 	      }
 	    });
@@ -19845,7 +19872,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (props.defaultActiveFirst) {
 	    _react2['default'].Children.forEach(children, function (c, i) {
 	      if (!activeKey && !c.props.disabled) {
-	        activeKey = (0, _util.getKeyFromChildrenIndex)(c, i);
+	        activeKey = (0, _util.getKeyFromChildrenIndex)(c, eventKey, i);
 	      }
 	    });
 	    return activeKey;
@@ -19979,7 +20006,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  renderCommonMenuItem: function renderCommonMenuItem(child, i, extraProps) {
 	    var state = this.state;
 	    var props = this.props;
-	    var key = (0, _util.getKeyFromChildrenIndex)(child, i);
+	    var key = (0, _util.getKeyFromChildrenIndex)(child, props.eventKey, i);
 	    var childProps = child.props;
 	    var newChildProps = (0, _objectAssign2['default'])({
 	      mode: props.mode,
@@ -20651,8 +20678,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = {
 	  noop: function noop() {},
 	
-	  getKeyFromChildrenIndex: function getKeyFromChildrenIndex(child, index) {
-	    return child.key || 'rcMenuItem_' + now + '_' + index;
+	  getKeyFromChildrenIndex: function getKeyFromChildrenIndex(child, menuEventKey, index) {
+	    var prefix = menuEventKey || '';
+	    return child.key || prefix + 'item_' + now + '_' + index;
 	  }
 	};
 	module.exports = exports['default'];
@@ -20873,6 +20901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onDeselect: this.onDeselect,
 	      onDestroy: this.onDestroy,
 	      selectedKeys: props.selectedKeys,
+	      eventKey: props.eventKey + '-menu-',
 	      openKeys: props.openKeys,
 	      onOpenChange: this.onOpenChange,
 	      closeSubMenuOnMouseLeave: props.closeSubMenuOnMouseLeave,
@@ -21025,8 +21054,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  renderMenuItem: function renderMenuItem(c, i) {
-	    var key = (0, _util.getKeyFromChildrenIndex)(c, i);
 	    var props = this.props;
+	    var key = (0, _util.getKeyFromChildrenIndex)(c, props.eventKey, i);
 	    var extraProps = {
 	      openKeys: props.openKeys,
 	      selectedKeys: props.selectedKeys,
@@ -22484,7 +22513,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    {
 	      prefixCls: 'ant-modal',
 	      className: 'ant-confirm',
-	      renderToBody: false,
 	      visible: true,
 	      closable: false,
 	      title: '',
@@ -23140,8 +23168,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  displayName: 'index',
 	
 	  getDefaultProps: function getDefaultProps() {
-	    return { prefixCls: 'ant-checkbox' };
-	  }, render: function render() {
+	    return {
+	      prefixCls: 'ant-checkbox'
+	    };
+	  },
+	  render: function render() {
 	    return _react2['default'].createElement(_rcCheckbox2['default'], this.props);
 	  }
 	});
@@ -23355,9 +23386,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _jquery = __webpack_require__(257);
+	var _reqwest = __webpack_require__(257);
 	
-	var _jquery2 = _interopRequireDefault(_jquery);
+	var _reqwest2 = _interopRequireDefault(_reqwest);
 	
 	var _rcTable = __webpack_require__(258);
 	
@@ -23765,11 +23796,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var dataSource = _this6.getRemoteDataSource();
 	        var buildInParams = dataSource.getParams.apply(_this6, _this6.prepareParamsArguments(state)) || {};
 	        return {
-	          v: _jquery2['default'].ajax({
+	          v: (0, _reqwest2['default'])({
 	            url: dataSource.url,
+	            method: 'get',
 	            data: (0, _objectAssign3['default'])(buildInParams, dataSource.data),
 	            headers: dataSource.headers,
-	            dataType: 'json',
+	            type: 'json',
 	            success: function success(result) {
 	              if (_this6.isMounted()) {
 	                var pagination = (0, _objectAssign3['default'])(state.pagination, dataSource.getPagination.call(_this6, result));
@@ -23896,9 +23928,638 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 257 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_257__;
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  * Reqwest! A general purpose XHR connection manager
+	  * license MIT (c) Dustin Diaz 2015
+	  * https://github.com/ded/reqwest
+	  */
+	
+	!function (name, context, definition) {
+	  if (typeof module != 'undefined' && module.exports) module.exports = definition()
+	  else if (true) !(__WEBPACK_AMD_DEFINE_FACTORY__ = (definition), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+	  else context[name] = definition()
+	}('reqwest', this, function () {
+	
+	  var context = this
+	
+	  if ('window' in context) {
+	    var doc = document
+	      , byTag = 'getElementsByTagName'
+	      , head = doc[byTag]('head')[0]
+	  } else {
+	    var XHR2
+	    try {
+	      XHR2 = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"xhr2\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+	    } catch (ex) {
+	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
+	    }
+	  }
+	
+	
+	  var httpsRe = /^http/
+	    , protocolRe = /(^\w+):\/\//
+	    , twoHundo = /^(20\d|1223)$/ //http://stackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
+	    , readyState = 'readyState'
+	    , contentType = 'Content-Type'
+	    , requestedWith = 'X-Requested-With'
+	    , uniqid = 0
+	    , callbackPrefix = 'reqwest_' + (+new Date())
+	    , lastValue // data stored by the most recent JSONP callback
+	    , xmlHttpRequest = 'XMLHttpRequest'
+	    , xDomainRequest = 'XDomainRequest'
+	    , noop = function () {}
+	
+	    , isArray = typeof Array.isArray == 'function'
+	        ? Array.isArray
+	        : function (a) {
+	            return a instanceof Array
+	          }
+	
+	    , defaultHeaders = {
+	          'contentType': 'application/x-www-form-urlencoded'
+	        , 'requestedWith': xmlHttpRequest
+	        , 'accept': {
+	              '*':  'text/javascript, text/html, application/xml, text/xml, */*'
+	            , 'xml':  'application/xml, text/xml'
+	            , 'html': 'text/html'
+	            , 'text': 'text/plain'
+	            , 'json': 'application/json, text/javascript'
+	            , 'js':   'application/javascript, text/javascript'
+	          }
+	      }
+	
+	    , xhr = function(o) {
+	        // is it x-domain
+	        if (o['crossOrigin'] === true) {
+	          var xhr = context[xmlHttpRequest] ? new XMLHttpRequest() : null
+	          if (xhr && 'withCredentials' in xhr) {
+	            return xhr
+	          } else if (context[xDomainRequest]) {
+	            return new XDomainRequest()
+	          } else {
+	            throw new Error('Browser does not support cross-origin requests')
+	          }
+	        } else if (context[xmlHttpRequest]) {
+	          return new XMLHttpRequest()
+	        } else if (XHR2) {
+	          return new XHR2()
+	        } else {
+	          return new ActiveXObject('Microsoft.XMLHTTP')
+	        }
+	      }
+	    , globalSetupOptions = {
+	        dataFilter: function (data) {
+	          return data
+	        }
+	      }
+	
+	  function succeed(r) {
+	    var protocol = protocolRe.exec(r.url)
+	    protocol = (protocol && protocol[1]) || context.location.protocol
+	    return httpsRe.test(protocol) ? twoHundo.test(r.request.status) : !!r.request.response
+	  }
+	
+	  function handleReadyState(r, success, error) {
+	    return function () {
+	      // use _aborted to mitigate against IE err c00c023f
+	      // (can't read props on aborted request objects)
+	      if (r._aborted) return error(r.request)
+	      if (r._timedOut) return error(r.request, 'Request is aborted: timeout')
+	      if (r.request && r.request[readyState] == 4) {
+	        r.request.onreadystatechange = noop
+	        if (succeed(r)) success(r.request)
+	        else
+	          error(r.request)
+	      }
+	    }
+	  }
+	
+	  function setHeaders(http, o) {
+	    var headers = o['headers'] || {}
+	      , h
+	
+	    headers['Accept'] = headers['Accept']
+	      || defaultHeaders['accept'][o['type']]
+	      || defaultHeaders['accept']['*']
+	
+	    var isAFormData = typeof FormData === 'function' && (o['data'] instanceof FormData);
+	    // breaks cross-origin requests with legacy browsers
+	    if (!o['crossOrigin'] && !headers[requestedWith]) headers[requestedWith] = defaultHeaders['requestedWith']
+	    if (!headers[contentType] && !isAFormData) headers[contentType] = o['contentType'] || defaultHeaders['contentType']
+	    for (h in headers)
+	      headers.hasOwnProperty(h) && 'setRequestHeader' in http && http.setRequestHeader(h, headers[h])
+	  }
+	
+	  function setCredentials(http, o) {
+	    if (typeof o['withCredentials'] !== 'undefined' && typeof http.withCredentials !== 'undefined') {
+	      http.withCredentials = !!o['withCredentials']
+	    }
+	  }
+	
+	  function generalCallback(data) {
+	    lastValue = data
+	  }
+	
+	  function urlappend (url, s) {
+	    return url + (/\?/.test(url) ? '&' : '?') + s
+	  }
+	
+	  function handleJsonp(o, fn, err, url) {
+	    var reqId = uniqid++
+	      , cbkey = o['jsonpCallback'] || 'callback' // the 'callback' key
+	      , cbval = o['jsonpCallbackName'] || reqwest.getcallbackPrefix(reqId)
+	      , cbreg = new RegExp('((^|\\?|&)' + cbkey + ')=([^&]+)')
+	      , match = url.match(cbreg)
+	      , script = doc.createElement('script')
+	      , loaded = 0
+	      , isIE10 = navigator.userAgent.indexOf('MSIE 10.0') !== -1
+	
+	    if (match) {
+	      if (match[3] === '?') {
+	        url = url.replace(cbreg, '$1=' + cbval) // wildcard callback func name
+	      } else {
+	        cbval = match[3] // provided callback func name
+	      }
+	    } else {
+	      url = urlappend(url, cbkey + '=' + cbval) // no callback details, add 'em
+	    }
+	
+	    context[cbval] = generalCallback
+	
+	    script.type = 'text/javascript'
+	    script.src = url
+	    script.async = true
+	    if (typeof script.onreadystatechange !== 'undefined' && !isIE10) {
+	      // need this for IE due to out-of-order onreadystatechange(), binding script
+	      // execution to an event listener gives us control over when the script
+	      // is executed. See http://jaubourg.net/2010/07/loading-script-as-onclick-handler-of.html
+	      script.htmlFor = script.id = '_reqwest_' + reqId
+	    }
+	
+	    script.onload = script.onreadystatechange = function () {
+	      if ((script[readyState] && script[readyState] !== 'complete' && script[readyState] !== 'loaded') || loaded) {
+	        return false
+	      }
+	      script.onload = script.onreadystatechange = null
+	      script.onclick && script.onclick()
+	      // Call the user callback with the last value stored and clean up values and scripts.
+	      fn(lastValue)
+	      lastValue = undefined
+	      head.removeChild(script)
+	      loaded = 1
+	    }
+	
+	    // Add the script to the DOM head
+	    head.appendChild(script)
+	
+	    // Enable JSONP timeout
+	    return {
+	      abort: function () {
+	        script.onload = script.onreadystatechange = null
+	        err({}, 'Request is aborted: timeout', {})
+	        lastValue = undefined
+	        head.removeChild(script)
+	        loaded = 1
+	      }
+	    }
+	  }
+	
+	  function getRequest(fn, err) {
+	    var o = this.o
+	      , method = (o['method'] || 'GET').toUpperCase()
+	      , url = typeof o === 'string' ? o : o['url']
+	      // convert non-string objects to query-string form unless o['processData'] is false
+	      , data = (o['processData'] !== false && o['data'] && typeof o['data'] !== 'string')
+	        ? reqwest.toQueryString(o['data'])
+	        : (o['data'] || null)
+	      , http
+	      , sendWait = false
+	
+	    // if we're working on a GET request and we have data then we should append
+	    // query string to end of URL and not post data
+	    if ((o['type'] == 'jsonp' || method == 'GET') && data) {
+	      url = urlappend(url, data)
+	      data = null
+	    }
+	
+	    if (o['type'] == 'jsonp') return handleJsonp(o, fn, err, url)
+	
+	    // get the xhr from the factory if passed
+	    // if the factory returns null, fall-back to ours
+	    http = (o.xhr && o.xhr(o)) || xhr(o)
+	
+	    http.open(method, url, o['async'] === false ? false : true)
+	    setHeaders(http, o)
+	    setCredentials(http, o)
+	    if (context[xDomainRequest] && http instanceof context[xDomainRequest]) {
+	        http.onload = fn
+	        http.onerror = err
+	        // NOTE: see
+	        // http://social.msdn.microsoft.com/Forums/en-US/iewebdevelopment/thread/30ef3add-767c-4436-b8a9-f1ca19b4812e
+	        http.onprogress = function() {}
+	        sendWait = true
+	    } else {
+	      http.onreadystatechange = handleReadyState(this, fn, err)
+	    }
+	    o['before'] && o['before'](http)
+	    if (sendWait) {
+	      setTimeout(function () {
+	        http.send(data)
+	      }, 200)
+	    } else {
+	      http.send(data)
+	    }
+	    return http
+	  }
+	
+	  function Reqwest(o, fn) {
+	    this.o = o
+	    this.fn = fn
+	
+	    init.apply(this, arguments)
+	  }
+	
+	  function setType(header) {
+	    // json, javascript, text/plain, text/html, xml
+	    if (header.match('json')) return 'json'
+	    if (header.match('javascript')) return 'js'
+	    if (header.match('text')) return 'html'
+	    if (header.match('xml')) return 'xml'
+	  }
+	
+	  function init(o, fn) {
+	
+	    this.url = typeof o == 'string' ? o : o['url']
+	    this.timeout = null
+	
+	    // whether request has been fulfilled for purpose
+	    // of tracking the Promises
+	    this._fulfilled = false
+	    // success handlers
+	    this._successHandler = function(){}
+	    this._fulfillmentHandlers = []
+	    // error handlers
+	    this._errorHandlers = []
+	    // complete (both success and fail) handlers
+	    this._completeHandlers = []
+	    this._erred = false
+	    this._responseArgs = {}
+	
+	    var self = this
+	
+	    fn = fn || function () {}
+	
+	    if (o['timeout']) {
+	      this.timeout = setTimeout(function () {
+	        timedOut()
+	      }, o['timeout'])
+	    }
+	
+	    if (o['success']) {
+	      this._successHandler = function () {
+	        o['success'].apply(o, arguments)
+	      }
+	    }
+	
+	    if (o['error']) {
+	      this._errorHandlers.push(function () {
+	        o['error'].apply(o, arguments)
+	      })
+	    }
+	
+	    if (o['complete']) {
+	      this._completeHandlers.push(function () {
+	        o['complete'].apply(o, arguments)
+	      })
+	    }
+	
+	    function complete (resp) {
+	      o['timeout'] && clearTimeout(self.timeout)
+	      self.timeout = null
+	      while (self._completeHandlers.length > 0) {
+	        self._completeHandlers.shift()(resp)
+	      }
+	    }
+	
+	    function success (resp) {
+	      var type = o['type'] || resp && setType(resp.getResponseHeader('Content-Type')) // resp can be undefined in IE
+	      resp = (type !== 'jsonp') ? self.request : resp
+	      // use global data filter on response text
+	      var filteredResponse = globalSetupOptions.dataFilter(resp.responseText, type)
+	        , r = filteredResponse
+	      try {
+	        resp.responseText = r
+	      } catch (e) {
+	        // can't assign this in IE<=8, just ignore
+	      }
+	      if (r) {
+	        switch (type) {
+	        case 'json':
+	          try {
+	            resp = context.JSON ? context.JSON.parse(r) : eval('(' + r + ')')
+	          } catch (err) {
+	            return error(resp, 'Could not parse JSON in response', err)
+	          }
+	          break
+	        case 'js':
+	          resp = eval(r)
+	          break
+	        case 'html':
+	          resp = r
+	          break
+	        case 'xml':
+	          resp = resp.responseXML
+	              && resp.responseXML.parseError // IE trololo
+	              && resp.responseXML.parseError.errorCode
+	              && resp.responseXML.parseError.reason
+	            ? null
+	            : resp.responseXML
+	          break
+	        }
+	      }
+	
+	      self._responseArgs.resp = resp
+	      self._fulfilled = true
+	      fn(resp)
+	      self._successHandler(resp)
+	      while (self._fulfillmentHandlers.length > 0) {
+	        resp = self._fulfillmentHandlers.shift()(resp)
+	      }
+	
+	      complete(resp)
+	    }
+	
+	    function timedOut() {
+	      self._timedOut = true
+	      self.request.abort()
+	    }
+	
+	    function error(resp, msg, t) {
+	      resp = self.request
+	      self._responseArgs.resp = resp
+	      self._responseArgs.msg = msg
+	      self._responseArgs.t = t
+	      self._erred = true
+	      while (self._errorHandlers.length > 0) {
+	        self._errorHandlers.shift()(resp, msg, t)
+	      }
+	      complete(resp)
+	    }
+	
+	    this.request = getRequest.call(this, success, error)
+	  }
+	
+	  Reqwest.prototype = {
+	    abort: function () {
+	      this._aborted = true
+	      this.request.abort()
+	    }
+	
+	  , retry: function () {
+	      init.call(this, this.o, this.fn)
+	    }
+	
+	    /**
+	     * Small deviation from the Promises A CommonJs specification
+	     * http://wiki.commonjs.org/wiki/Promises/A
+	     */
+	
+	    /**
+	     * `then` will execute upon successful requests
+	     */
+	  , then: function (success, fail) {
+	      success = success || function () {}
+	      fail = fail || function () {}
+	      if (this._fulfilled) {
+	        this._responseArgs.resp = success(this._responseArgs.resp)
+	      } else if (this._erred) {
+	        fail(this._responseArgs.resp, this._responseArgs.msg, this._responseArgs.t)
+	      } else {
+	        this._fulfillmentHandlers.push(success)
+	        this._errorHandlers.push(fail)
+	      }
+	      return this
+	    }
+	
+	    /**
+	     * `always` will execute whether the request succeeds or fails
+	     */
+	  , always: function (fn) {
+	      if (this._fulfilled || this._erred) {
+	        fn(this._responseArgs.resp)
+	      } else {
+	        this._completeHandlers.push(fn)
+	      }
+	      return this
+	    }
+	
+	    /**
+	     * `fail` will execute when the request fails
+	     */
+	  , fail: function (fn) {
+	      if (this._erred) {
+	        fn(this._responseArgs.resp, this._responseArgs.msg, this._responseArgs.t)
+	      } else {
+	        this._errorHandlers.push(fn)
+	      }
+	      return this
+	    }
+	  , 'catch': function (fn) {
+	      return this.fail(fn)
+	    }
+	  }
+	
+	  function reqwest(o, fn) {
+	    return new Reqwest(o, fn)
+	  }
+	
+	  // normalize newline variants according to spec -> CRLF
+	  function normalize(s) {
+	    return s ? s.replace(/\r?\n/g, '\r\n') : ''
+	  }
+	
+	  function serial(el, cb) {
+	    var n = el.name
+	      , t = el.tagName.toLowerCase()
+	      , optCb = function (o) {
+	          // IE gives value="" even where there is no value attribute
+	          // 'specified' ref: http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-862529273
+	          if (o && !o['disabled'])
+	            cb(n, normalize(o['attributes']['value'] && o['attributes']['value']['specified'] ? o['value'] : o['text']))
+	        }
+	      , ch, ra, val, i
+	
+	    // don't serialize elements that are disabled or without a name
+	    if (el.disabled || !n) return
+	
+	    switch (t) {
+	    case 'input':
+	      if (!/reset|button|image|file/i.test(el.type)) {
+	        ch = /checkbox/i.test(el.type)
+	        ra = /radio/i.test(el.type)
+	        val = el.value
+	        // WebKit gives us "" instead of "on" if a checkbox has no value, so correct it here
+	        ;(!(ch || ra) || el.checked) && cb(n, normalize(ch && val === '' ? 'on' : val))
+	      }
+	      break
+	    case 'textarea':
+	      cb(n, normalize(el.value))
+	      break
+	    case 'select':
+	      if (el.type.toLowerCase() === 'select-one') {
+	        optCb(el.selectedIndex >= 0 ? el.options[el.selectedIndex] : null)
+	      } else {
+	        for (i = 0; el.length && i < el.length; i++) {
+	          el.options[i].selected && optCb(el.options[i])
+	        }
+	      }
+	      break
+	    }
+	  }
+	
+	  // collect up all form elements found from the passed argument elements all
+	  // the way down to child elements; pass a '<form>' or form fields.
+	  // called with 'this'=callback to use for serial() on each element
+	  function eachFormElement() {
+	    var cb = this
+	      , e, i
+	      , serializeSubtags = function (e, tags) {
+	          var i, j, fa
+	          for (i = 0; i < tags.length; i++) {
+	            fa = e[byTag](tags[i])
+	            for (j = 0; j < fa.length; j++) serial(fa[j], cb)
+	          }
+	        }
+	
+	    for (i = 0; i < arguments.length; i++) {
+	      e = arguments[i]
+	      if (/input|select|textarea/i.test(e.tagName)) serial(e, cb)
+	      serializeSubtags(e, [ 'input', 'select', 'textarea' ])
+	    }
+	  }
+	
+	  // standard query string style serialization
+	  function serializeQueryString() {
+	    return reqwest.toQueryString(reqwest.serializeArray.apply(null, arguments))
+	  }
+	
+	  // { 'name': 'value', ... } style serialization
+	  function serializeHash() {
+	    var hash = {}
+	    eachFormElement.apply(function (name, value) {
+	      if (name in hash) {
+	        hash[name] && !isArray(hash[name]) && (hash[name] = [hash[name]])
+	        hash[name].push(value)
+	      } else hash[name] = value
+	    }, arguments)
+	    return hash
+	  }
+	
+	  // [ { name: 'name', value: 'value' }, ... ] style serialization
+	  reqwest.serializeArray = function () {
+	    var arr = []
+	    eachFormElement.apply(function (name, value) {
+	      arr.push({name: name, value: value})
+	    }, arguments)
+	    return arr
+	  }
+	
+	  reqwest.serialize = function () {
+	    if (arguments.length === 0) return ''
+	    var opt, fn
+	      , args = Array.prototype.slice.call(arguments, 0)
+	
+	    opt = args.pop()
+	    opt && opt.nodeType && args.push(opt) && (opt = null)
+	    opt && (opt = opt.type)
+	
+	    if (opt == 'map') fn = serializeHash
+	    else if (opt == 'array') fn = reqwest.serializeArray
+	    else fn = serializeQueryString
+	
+	    return fn.apply(null, args)
+	  }
+	
+	  reqwest.toQueryString = function (o, trad) {
+	    var prefix, i
+	      , traditional = trad || false
+	      , s = []
+	      , enc = encodeURIComponent
+	      , add = function (key, value) {
+	          // If value is a function, invoke it and return its value
+	          value = ('function' === typeof value) ? value() : (value == null ? '' : value)
+	          s[s.length] = enc(key) + '=' + enc(value)
+	        }
+	    // If an array was passed in, assume that it is an array of form elements.
+	    if (isArray(o)) {
+	      for (i = 0; o && i < o.length; i++) add(o[i]['name'], o[i]['value'])
+	    } else {
+	      // If traditional, encode the "old" way (the way 1.3.2 or older
+	      // did it), otherwise encode params recursively.
+	      for (prefix in o) {
+	        if (o.hasOwnProperty(prefix)) buildParams(prefix, o[prefix], traditional, add)
+	      }
+	    }
+	
+	    // spaces should be + according to spec
+	    return s.join('&').replace(/%20/g, '+')
+	  }
+	
+	  function buildParams(prefix, obj, traditional, add) {
+	    var name, i, v
+	      , rbracket = /\[\]$/
+	
+	    if (isArray(obj)) {
+	      // Serialize array item.
+	      for (i = 0; obj && i < obj.length; i++) {
+	        v = obj[i]
+	        if (traditional || rbracket.test(prefix)) {
+	          // Treat each array item as a scalar.
+	          add(prefix, v)
+	        } else {
+	          buildParams(prefix + '[' + (typeof v === 'object' ? i : '') + ']', v, traditional, add)
+	        }
+	      }
+	    } else if (obj && obj.toString() === '[object Object]') {
+	      // Serialize object item.
+	      for (name in obj) {
+	        buildParams(prefix + '[' + name + ']', obj[name], traditional, add)
+	      }
+	
+	    } else {
+	      // Serialize scalar item.
+	      add(prefix, obj)
+	    }
+	  }
+	
+	  reqwest.getcallbackPrefix = function () {
+	    return callbackPrefix
+	  }
+	
+	  // jQuery and Zepto compatibility, differences can be remapped here so you can call
+	  // .ajax.compat(options, callback)
+	  reqwest.compat = function (o, fn) {
+	    if (o) {
+	      o['type'] && (o['method'] = o['type']) && delete o['type']
+	      o['dataType'] && (o['type'] = o['dataType'])
+	      o['jsonpCallback'] && (o['jsonpCallbackName'] = o['jsonpCallback']) && delete o['jsonpCallback']
+	      o['jsonp'] && (o['jsonpCallback'] = o['jsonp'])
+	    }
+	    return new Reqwest(o, fn)
+	  }
+	
+	  reqwest.ajaxSetup = function (options) {
+	    options = options || {}
+	    for (var k in options) {
+	      globalSetupOptions[k] = options[k]
+	    }
+	  }
+	
+	  return reqwest
+	});
+
 
 /***/ },
 /* 258 */
@@ -26458,9 +27119,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return AntEnterAnimation;
 	})(_react2['default'].Component);
 	
-	exports['default'] = AntEnterAnimation;
-	
 	AntEnterAnimation.to = _enterAnimation2['default'].to;
+	exports['default'] = AntEnterAnimation;
 	module.exports = exports['default'];
 
 /***/ },
@@ -27368,14 +28028,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var top = 24;
 	var notificationInstance = undefined;
 	
-	function callback(key, btnCose) {
-	  if (btnCose) {
-	    btnCose(key);
-	  }
-	}
-	
 	function getNotificationInstance() {
-	  notificationInstance = notificationInstance || _rcNotification2['default'].newInstance({
+	  if (notificationInstance) {
+	    return notificationInstance;
+	  }
+	  notificationInstance = _rcNotification2['default'].newInstance({
 	    prefixCls: 'ant-notification',
 	    style: {
 	      top: top,
@@ -27458,7 +28115,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        style: {}
 	      });
 	    } else {
-	      var key = 'manual' + new Date().getTime();
 	      getNotificationInstance().notice({
 	        content: _react2['default'].createElement(
 	          'div',
@@ -27475,14 +28131,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	          ),
 	          _react2['default'].createElement(
 	            'span',
-	            { onClick: callback.bind(null, key, args.btnClose), className: prefixCls + 'btn' },
+	            { className: prefixCls + 'btn' },
 	            args.btn
 	          )
 	        ),
 	        duration: duration,
 	        closable: true,
 	        onClose: args.onClose,
-	        key: key,
+	        key: args.key,
 	        style: {}
 	      });
 	    }
@@ -29237,6 +29893,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -29249,9 +29909,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var TreeNode = _rcTree2['default'].TreeNode;
-	var antDTree = _react2['default'].createClass({
-	  displayName: 'antDTree',
+	var AntTree = _react2['default'].createClass({
+	  displayName: 'AntTree',
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
@@ -29266,8 +29925,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    );
 	  }
 	});
-	antDTree.TreeNode = TreeNode;
-	module.exports = antDTree;
+	
+	AntTree.TreeNode = _rcTree2['default'].TreeNode;
+	exports['default'] = AntTree;
+	module.exports = exports['default'];
 
 /***/ },
 /* 325 */
@@ -29964,12 +30625,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2['default'].createElement(
 	          _rcUpload2['default'],
 	          props,
-	          _react2['default'].createElement(
-	            'button',
-	            { className: 'ant-btn ant-btn-ghost' },
-	            _react2['default'].createElement('i', { className: 'anticon anticon-upload' }),
-	            ' 点击上传'
-	          )
+	          this.props.children
 	        ),
 	        _react2['default'].createElement(_uploadList2['default'], { items: this.state.downloadList })
 	      );
@@ -30020,7 +30676,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onProgress: PropTypes.func,
 	    onStart: PropTypes.func,
 	    data: PropTypes.object,
-	    accept: PropTypes.string
+	    accept: PropTypes.string,
+	    multiple: PropTypes.bool
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
@@ -30031,7 +30688,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onProgress: empty,
 	      onStart: empty,
 	      onError: empty,
-	      onSuccess: empty
+	      onSuccess: empty,
+	      multiple: false
 	    };
 	  },
 	
@@ -30134,8 +30792,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'span',
 	      { onClick: this._onClick, onDrop: this._onFileDrop, onDragOver: this._onFileDrop },
 	      React.createElement('input', { type: 'file',
-	        ref: 'file', style: hidden,
-	        accept: props.accept, onChange: this._onChange }),
+	        ref: 'file',
+	        style: hidden,
+	        accept: props.accept,
+	        multiple: this.props.multiple,
+	        onChange: this._onChange }),
 	      props.children
 	    );
 	  }
@@ -31655,7 +32316,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var items = this.state.items;
 	    var downloadItem = function downloadItem(file) {
 	      var statusIcon = file.status === 'done' ? _react2['default'].createElement('i', { className: 'anticon anticon-check ' + prefixCls + '-success-icon' }) : _react2['default'].createElement('i', { className: 'anticon anticon-loading' });
-	      var closeIcon = file.status === 'done' ? _react2['default'].createElement('i', { className: 'anticon anticon-cross', ref: 'theCloseBtn', onClick: _this.handleClose.bind(_this, file) }) : '';
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: prefixCls + '-list-item', key: file.id },
@@ -31665,7 +32325,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { className: prefixCls + '-item-name' },
 	          file.filename
 	        ),
-	        closeIcon
+	        _react2['default'].createElement('i', { className: 'anticon anticon-cross', ref: 'theCloseBtn',
+	          onClick: _this.handleClose.bind(_this, file) })
 	      );
 	    };
 	    return _react2['default'].createElement(
@@ -31724,7 +32385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.8.0-beta2",
+		"version": "0.8.0-beta3",
 		"stableVersion": "0.7.3",
 		"title": "Ant Design",
 		"description": "一个设计语言&前端框架",
@@ -31765,7 +32426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-calendar": "~3.13.0",
 			"rc-checkbox": "~1.1.1",
 			"rc-collapse": "~1.2.3",
-			"rc-dialog": "~4.5.0",
+			"rc-dialog": "~5.0.1",
 			"rc-dropdown": "~1.2.0",
 			"rc-form-validation": "~2.4.7",
 			"rc-input-number": "~2.0.1",
@@ -31774,7 +32435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-pagination": "~1.1.0",
 			"rc-progress": "~1.0.0",
 			"rc-radio": "~2.0.0",
-			"rc-select": "~4.6.3",
+			"rc-select": "~4.7.1",
 			"rc-slider": "~1.4.0",
 			"rc-steps": "~1.1.4",
 			"rc-switch": "~1.2.0",
@@ -31782,9 +32443,10 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-tabs": "~5.3.2",
 			"rc-tooltip": "~2.5.0",
 			"rc-tree": "~0.14.x",
-			"rc-upload": "~1.3.0",
+			"rc-upload": "~1.3.1",
 			"rc-util": "~2.0.3",
-			"react-slick": "~0.6.4"
+			"react-slick": "~0.6.4",
+			"reqwest": "~2.0.1"
 		},
 		"devDependencies": {
 			"autoprefixer-loader": "~2.0.0",

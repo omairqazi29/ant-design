@@ -19,7 +19,16 @@ var props = {
   progress: function progress() {}
 };
 
-React.render(React.createElement(Upload, props), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+React.render(React.createElement(
+  Upload,
+  props,
+  React.createElement(
+    'button',
+    { className: 'ant-btn ant-btn-ghost' },
+    React.createElement('i', { className: 'anticon anticon-upload' }),
+    ' 点击上传'
+  )
+), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 
 <span class="keyword">var</span> props = {
   description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
@@ -36,7 +45,11 @@ React.render(React.createElement(Upload, props), document.getElementById('compon
 };
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} /&gt;</span>,
+  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>,
   document.getElementById('components-upload-demo-basic')
 );</span></code></pre></div>
   </div>
