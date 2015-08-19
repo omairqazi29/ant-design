@@ -140,7 +140,6 @@
   .@{menuPrefixCls}-submenu-title, .@{menuPrefixCls}-item {
     .anticon {
       width: 14px;
-      height: 14px;
       margin-right: 8px;
       top: -1px;
       color: #999;
@@ -215,6 +214,23 @@
     }
   }
 
+  &-vertical, &-horizontal {
+    .@{menuPrefixCls}-submenu {
+      .@{menuPrefixCls}-item:first-child {
+        border-radius: @border-radius-base @border-radius-base 0 0;
+      }
+      .@{menuPrefixCls}-item:last-child {
+        border-radius: 0 0 @border-radius-base @border-radius-base;
+      }
+      &:first-child {
+        border-radius: @border-radius-base @border-radius-base 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 @border-radius-base @border-radius-base;
+      }
+    }
+  }
+
   &-vertical&-sub {
     padding: 0;
   }
@@ -243,7 +259,6 @@
 .@{menuPrefixCls}-submenu-title, .@{menuPrefixCls}-item {
   .anticon {
     width: 14px;
-    height: 14px;
     margin-right: 8px;
     top: -1px;
   }

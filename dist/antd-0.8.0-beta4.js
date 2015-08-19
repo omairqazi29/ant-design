@@ -25166,6 +25166,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(AntTag, [{
 	    key: 'close',
 	    value: function close(e) {
+	      var dom = _react2['default'].findDOMNode(this);
+	      dom.style.width = dom.offsetWidth + 'px';
+	      // Magic code
+	      // 重复是去除浏览器渲染bug；
+	      dom.style.width = dom.offsetWidth + 'px';
 	      this.setState({
 	        closed: true
 	      });
@@ -25177,9 +25182,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var close = this.props.closable ? _react2['default'].createElement('i', { className: 'anticon anticon-cross', onClick: this.close.bind(this) }) : '';
 	      var colorClass = this.props.prefixCls + '-' + this.props.color;
 	
-	      return this.state.closed ? null : _react2['default'].createElement(
+	      var className = this.props.prefixCls + ' ' + colorClass;
+	      className = this.state.closed ? className + ' ' + this.props.prefixCls + '-close' : className;
+	
+	      return _react2['default'].createElement(
 	        'div',
-	        { className: this.props.prefixCls + ' ' + colorClass },
+	        { className: className },
 	        _react2['default'].createElement('a', _extends({ className: this.props.prefixCls + '-text' }, this.props)),
 	        close
 	      );
@@ -26655,7 +26663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	  if (marksLen > 0) {
 	    value = (props.max - props.min) / (marksLen - 1) * index;
-	    value = value.toFixed(5);
+	    value = value.toFixed(5) / 1;
 	  }
 	  return value;
 	}
@@ -26736,7 +26744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onMouseMove: function onMouseMove(e) {
-	    var position = e.pageX;
+	    var position = e.pageX || e.clientX + document.documentElement.scrollLeft; // to compat ie8
 	    this.onMove(e, position);
 	  },
 	
@@ -26786,7 +26794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onSliderMouseDown: function onSliderMouseDown(e) {
-	    var position = e.pageX;
+	    var position = e.pageX || e.clientX + document.documentElement.scrollLeft; // to compat ie8
 	    var value = this._calValueByPos(position);
 	    this._triggerEvents('onChange', value);
 	    this._start(position);
@@ -26923,6 +26931,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      tooltipVisible = true;
 	    } else {
 	      events = {
+	        onClick: this.showTooltip.bind(this, true),
 	        onMouseEnter: this.showTooltip.bind(this, true),
 	        onMouseLeave: this.showTooltip.bind(this, false)
 	      };
