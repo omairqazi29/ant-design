@@ -8415,6 +8415,7 @@ textarea.ant-input-number {
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_close {
   position: relative;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
@@ -8456,7 +8457,6 @@ textarea.ant-input-number {
 .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg) scale(0.5);
       -ms-transform: rotate(270deg) scale(0.5);
           transform: rotate(270deg) scale(0.5);
