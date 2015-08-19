@@ -13,7 +13,7 @@ Tree 树形控件 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta3.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta4.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Tree 树形控件 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta3',
+        latest: '0.8.0-beta4',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta3.js"></script>
+    <script src="/dist/antd-0.8.0-beta4.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -472,9 +472,15 @@ Tree 树形控件 - Ant Design
 </thead>
 <tbody>
 <tr>
+<td>multiple</td>
+<td>是否支持多选</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
 <td>checkable</td>
 <td>是否支持选中</td>
-<td>bool/React Node</td>
+<td>bool</td>
 <td>false</td>
 </tr>
 <tr>
@@ -491,14 +497,20 @@ Tree 树形控件 - Ant Design
 </tr>
 <tr>
 <td>defaultCheckedKeys</td>
+<td>默认选中复选框的树节点</td>
+<td>String[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>defaultSelectedKeys</td>
 <td>默认选中的树节点</td>
 <td>String[]</td>
 <td>[]</td>
 </tr>
 <tr>
 <td>onCheck</td>
-<td>点击树节点触发</td>
-<td>function(e:{checked:bool,node,checkedKeys})</td>
+<td>点击树节点或复选框触发</td>
+<td>function(e:{checked:bool,node,checkedKeys,event})</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -527,7 +539,7 @@ Tree 树形控件 - Ant Design
 </tr>
 <tr>
 <td>key</td>
-<td>被树的selectedKeys或defaultSelectedKeys所用</td>
+<td>被树的defaultCheckedKeys/defaultSelectedKeys/defaultExpandedKeys所用</td>
 <td>String</td>
 <td>内部计算出的节点位置</td>
 </tr>
@@ -616,13 +628,14 @@ React.render(
 
 var Tree = antd.Tree;
 var TreeNode = Tree.TreeNode;
-function handleCheck(checked, node, checkedKeys) {
-  console.log('checked:', checked, node, checkedKeys);
+
+function handleCheck(info) {
+  console.log('check: ', info);
 }
 
 React.render(React.createElement(
   Tree,
-  { defaultExpandAll: true, checkable: React.createElement("span", { className: "ant-tree-checkbox-inner" }), onCheck: handleCheck },
+  { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
   React.createElement(
     TreeNode,
     { title: "parent 1" },
@@ -672,12 +685,13 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
-<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(checked, node, checkedKeys)</span> {</span>
-  console.log(<span class="string">'checked:'</span>, checked, node, checkedKeys);
+
+<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(info)</span> {</span>
+  console.log(<span class="string">'check: '</span>, info);
 }
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{&lt;span</span> <span class="attribute">className</span>=<span class="value">"ant-tree-checkbox-inner"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>} onCheck={handleCheck}&gt;
+  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{true}</span> <span class="attribute">onCheck</span>=<span class="value">{handleCheck}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>

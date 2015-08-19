@@ -29946,13 +29946,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      prefixCls: 'ant-tree'
+	      prefixCls: 'ant-tree',
+	      checkable: false,
+	      showIcon: false
 	    };
 	  },
 	  render: function render() {
+	    var props = this.props;
+	    var checkable = props.checkable;
+	    if (checkable) {
+	      checkable = _react2['default'].createElement('span', { className: props.prefixCls + '-checkbox-inner' });
+	    }
 	    return _react2['default'].createElement(
 	      _rcTree2['default'],
-	      _extends({}, this.props, { showIcon: false }),
+	      _extends({}, props, { checkable: checkable }),
 	      this.props.children
 	    );
 	  }
@@ -30005,6 +30012,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
+	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
@@ -30038,15 +30047,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _classCallCheck(this, Tree);
 	
 	    _get(Object.getPrototypeOf(Tree.prototype), 'constructor', this).call(this, props);
-	    ['handleKeyDown', 'handleChecked'].forEach(function (m) {
+	    ['handleKeyDown', 'handleCheck'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
 	    var expandedKeys = props.defaultExpandedKeys;
 	    var checkedKeys = props.defaultCheckedKeys;
 	    this.defaultExpandAll = props.defaultExpandAll;
+	    var selectedKeys = props.multiple ? [].concat(_toConsumableArray(props.defaultSelectedKeys)) : [props.defaultSelectedKeys[0]];
 	    this.state = {
 	      expandedKeys: expandedKeys,
-	      checkedKeys: checkedKeys
+	      checkedKeys: checkedKeys,
+	      selectedKeys: selectedKeys
 	    };
 	  }
 	
@@ -30087,6 +30098,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        showIcon: props.showIcon,
 	        checkable: props.checkable,
 	        expanded: this.defaultExpandAll || state.expandedKeys.indexOf(key) !== -1,
+	        selected: state.selectedKeys.indexOf(key) !== -1,
 	        checked: this.checkedKeys.indexOf(key) !== -1,
 	        checkPart: this.checkPartKeys.indexOf(key) !== -1
 	      };
@@ -30207,8 +30219,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    }
 	  }, {
-	    key: 'handleChecked',
-	    value: function handleChecked(treeNode) {
+	    key: 'handleCheck',
+	    value: function handleCheck(treeNode) {
 	      var _this4 = this;
 	
 	      var tnProps = treeNode.props;
@@ -30232,12 +30244,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	        checkedKeys: checkKeys.checkedKeys
 	      });
 	      if (this.props.onCheck) {
-	        this.props.onCheck(checked, treeNode, checkKeys.checkedKeys);
+	        this.props.onCheck({
+	          event: 'check',
+	          checked: checked,
+	          node: treeNode,
+	          checkedKeys: checkKeys.checkedKeys
+	        });
 	      }
 	    }
 	  }, {
-	    key: 'handleExpanded',
-	    value: function handleExpanded(treeNode) {
+	    key: 'handleSelect',
+	    value: function handleSelect(treeNode) {
+	      var props = this.props;
+	      var selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
+	      var eventKey = treeNode.props.eventKey;
+	      var index = selectedKeys.indexOf(eventKey);
+	      var selected = undefined;
+	      if (index !== -1) {
+	        selected = false;
+	        selectedKeys.splice(index, 1);
+	      } else {
+	        selected = true;
+	        if (!props.multiple) {
+	          selectedKeys.length = 0;
+	        }
+	        selectedKeys.push(eventKey);
+	      }
+	      this.setState({
+	        selectedKeys: selectedKeys
+	      });
+	      if (props.onSelect) {
+	        props.onSelect({
+	          event: 'select',
+	          selected: selected,
+	          node: treeNode,
+	          selectedKeys: selectedKeys
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'handleExpand',
+	    value: function handleExpand(treeNode) {
 	      var thisProps = this.props;
 	      var tnProps = treeNode.props;
 	      var expandedKeys = this.state.expandedKeys.concat([]);
@@ -30283,17 +30330,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  defaultExpandAll: _react2['default'].PropTypes.bool,
 	  defaultExpandedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
 	  defaultCheckedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  onCheck: _react2['default'].PropTypes.func
+	  defaultSelectedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
+	  onCheck: _react2['default'].PropTypes.func,
+	  onSelect: _react2['default'].PropTypes.func
 	};
 	
 	Tree.defaultProps = {
 	  prefixCls: 'rc-tree',
+	  multiple: false,
 	  checkable: false,
 	  showLine: false,
 	  showIcon: true,
 	  defaultExpandAll: false,
 	  defaultExpandedKeys: [],
-	  defaultCheckedKeys: []
+	  defaultCheckedKeys: [],
+	  defaultSelectedKeys: []
 	};
 	
 	exports['default'] = Tree;
@@ -30338,7 +30389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _classCallCheck(this, TreeNode);
 	
 	    _get(Object.getPrototypeOf(TreeNode.prototype), 'constructor', this).call(this, props);
-	    ['handleExpanded', 'handleChecked'].forEach(function (m) {
+	    ['handleExpand', 'handleCheck'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
 	  }
@@ -30383,31 +30434,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	        switcherCls[prefixCls + '-center_' + expandedState] = posObj.center;
 	        switcherCls[prefixCls + '-bottom_' + expandedState] = posObj.last;
 	      }
-	      return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls), onClick: this.handleExpanded });
+	      return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls), onClick: this.handleExpand });
 	    }
 	  }, {
 	    key: 'renderCheckbox',
 	    value: function renderCheckbox(props) {
 	      var prefixCls = props.prefixCls;
 	      var checkboxCls = _defineProperty({}, prefixCls + '-checkbox', true);
-	      if (!props.checkable) {
-	        return null;
-	      }
-	      if (props.disabled) {
-	        checkboxCls[prefixCls + '-checkbox-disabled'] = true;
-	      }
 	      if (props.checkPart) {
 	        checkboxCls[prefixCls + '-checkbox-indeterminate'] = true;
 	      } else if (props.checked) {
 	        checkboxCls[prefixCls + '-checkbox-checked'] = true;
 	      }
 	      var customEle = null;
-	      if (props.checkable && typeof props.checkable !== 'boolean') {
+	      if (typeof props.checkable !== 'boolean') {
 	        customEle = props.checkable;
+	      }
+	      if (props.disabled) {
+	        checkboxCls[prefixCls + '-checkbox-disabled'] = true;
+	        return _react2['default'].createElement(
+	          'span',
+	          { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls) },
+	          customEle
+	        );
 	      }
 	      return _react2['default'].createElement(
 	        'span',
-	        { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls) },
+	        { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls), onClick: this.handleCheck },
 	        customEle
 	      );
 	    }
@@ -30465,13 +30518,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	          content
 	        );
 	        var domProps = {};
-	        if (!props.disabled && props.checkable) {
-	          domProps.onClick = _this2.handleChecked;
+	        if (!props.disabled) {
+	          if (props.selected) {
+	            domProps.className = prefixCls + '-selected';
+	          }
+	          domProps.onClick = function () {
+	            _this2.handleSelect();
+	            if (props.checkable) {
+	              _this2.handleCheck();
+	            }
+	          };
 	        }
 	        return _react2['default'].createElement(
 	          'a',
 	          _extends({ ref: 'selectHandle', title: content }, domProps),
-	          _this2.renderCheckbox(props),
 	          icon,
 	          title
 	        );
@@ -30481,19 +30541,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'li',
 	        { className: (0, _rcUtil.joinClasses)(props.className, props.disabled ? prefixCls + '-treenode-disabled' : '') },
 	        this.renderSwitcher(props, expandedState),
+	        props.checkable ? this.renderCheckbox(props) : null,
 	        selectHandle(),
 	        newChildren
 	      );
 	    }
 	  }, {
-	    key: 'handleExpanded',
-	    value: function handleExpanded() {
-	      this.props.root.handleExpanded(this);
+	    key: 'handleCheck',
+	    value: function handleCheck() {
+	      this.props.root.handleCheck(this);
 	    }
 	  }, {
-	    key: 'handleChecked',
-	    value: function handleChecked() {
-	      this.props.root.handleChecked(this);
+	    key: 'handleSelect',
+	    value: function handleSelect() {
+	      this.props.root.handleSelect(this);
+	    }
+	  }, {
+	    key: 'handleExpand',
+	    value: function handleExpand() {
+	      this.props.root.handleExpand(this);
 	    }
 	
 	    // keyboard event support
@@ -32417,7 +32483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.8.0-beta3",
+		"version": "0.8.0-beta4",
 		"stableVersion": "0.7.3",
 		"title": "Ant Design",
 		"description": "一个设计语言&前端框架",
@@ -32485,6 +32551,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			"babel": "^5.8.12",
 			"babel-core": "^5.8.12",
 			"babel-loader": "^5.3.2",
+			"busboy": "~0.2.9",
+			"chalk": "~1.1.0",
 			"css-animation": "~1.0.3",
 			"css-loader": "^0.14.1",
 			"eslint": "^1.1.0",
@@ -32498,8 +32566,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"nico-jsx": "~0.5.8",
 			"precommit-hook": "^1.0.7",
 			"webpack": "^1.10.1",
-			"webpack-dev-middleware": "^1.2.0",
-			"busboy": "~0.2.9"
+			"webpack-dev-middleware": "^1.2.0"
 		},
 		"scripts": {
 			"babel": "babel components --out-dir lib",
