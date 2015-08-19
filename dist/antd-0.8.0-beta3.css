@@ -688,7 +688,7 @@ a[disabled] {
 .anticon-laptop:before {
   content: "\e63d";
 }
-.anticon-large:before {
+.anticon-appstore:before {
   content: "\e63e";
 }
 .anticon-line-chart:before {
@@ -4028,6 +4028,7 @@ li.ant-select-dropdown-menu-item-divider {
 }
 .ant-select-combobox .ant-select-search__field__placeholder {
   left: 10px;
+  cursor: text;
 }
 .ant-select-combobox .ant-select-search__field__wrap {
   width: 100%;
@@ -8783,6 +8784,8 @@ textarea.ant-input-number {
 .ant-menu > li.ant-menu-submenu {
   padding: 0;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .ant-menu-submenu-horizontal > .ant-menu {
   top: 100%;
@@ -8909,6 +8912,11 @@ textarea.ant-input-number {
 .ant-menu-horizontal > .ant-menu-item > a,
 .ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a {
   display: block;
+  color: #666666;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover,
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a:hover {
+  color: #2db7f5;
 }
 .ant-menu-horizontal > .ant-menu-item > a:before,
 .ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title > a:before,

@@ -5,8 +5,8 @@
 
 var Tree = antd.Tree;
 var TreeNode = Tree.TreeNode;
-function handleCheck(checked, c, checkedKeys) {
-  console.log('checked: ', checked, c);
+function handleCheck(checked, node, checkedKeys) {
+  console.log('checked:', checked, node, checkedKeys);
 }
 
 React.render(React.createElement(
@@ -61,8 +61,8 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
-<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(checked, c, checkedKeys)</span> {</span>
-  console.log(<span class="string">'checked: '</span>, checked, c );
+<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(checked, node, checkedKeys)</span> {</span>
+  console.log(<span class="string">'checked:'</span>, checked, node, checkedKeys);
 }
 
 React.render(
@@ -85,7 +85,7 @@ React.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-checkbox">基本</a>
+      <a href="#demo-checkbox">可选择</a>
     </div>
     <p>提供复选框操作功能。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>

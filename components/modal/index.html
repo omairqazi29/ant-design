@@ -559,7 +559,7 @@ Modal 对话框 - Ant Design
   组件演示
   <i class="iconfont-home icon-all" title="展开全部代码"></i>
 </h2>
-<div class="code-boxes clearfix">
+<div class="code-boxes">
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-modal-demo-basic"></div>
@@ -575,10 +575,9 @@ var Test = React.createClass({
       visible: false
     };
   },
-  showModal: function showModal(e) {
+  showModal: function showModal() {
     this.setState({
-      visible: true,
-      mousePosition: { x: e.pageX, y: e.pageY }
+      visible: true
     });
   },
   handleOk: function handleOk() {
@@ -600,7 +599,6 @@ var Test = React.createClass({
         Modal,
         { title: "第一个 Modal",
           visible: this.state.visible,
-          mousePosition: this.state.mousePosition,
           onOk: this.handleOk,
           onCancel: this.handleCancel },
         React.createElement(
@@ -629,12 +627,11 @@ React.render(React.createElement(Test, null), document.getElementById('component
   getInitialState(){
     <span class="keyword">return</span>{
       visible: <span class="literal">false</span>
-    }
+    };
   },
-  showModal(e) {
+  showModal() {
     <span class="keyword">this</span>.setState({
-      visible: <span class="literal">true</span>,
-      mousePosition: {x:e.pageX,y:e.pageY}
+      visible: <span class="literal">true</span>
     });
   },
   handleOk() {
@@ -648,7 +645,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
       <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-        <span class="attribute">mousePosition</span>=<span class="value">{this.state.mousePosition}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
         <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -684,10 +680,9 @@ var Test = React.createClass({
       visible: false
     };
   },
-  showModal: function showModal(e) {
+  showModal: function showModal() {
     this.setState({
-      visible: true,
-      mousePosition: { x: e.pageX, y: e.pageY }
+      visible: true
     });
   },
   handleOk: function handleOk() {
@@ -714,7 +709,6 @@ var Test = React.createClass({
         Modal,
         { ref: "modal",
           visible: this.state.visible,
-          mousePosition: this.state.mousePosition,
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
             "button",
@@ -764,10 +758,9 @@ React.render(React.createElement(Test, null), document.getElementById('component
       visible: <span class="literal">false</span>
     };
   },
-  showModal(e) {
+  showModal() {
     <span class="keyword">this</span>.setState({
-      visible: <span class="literal">true</span>,
-      mousePosition:{x:e.pageX,y:e.pageY}
+      visible: <span class="literal">true</span>
     });
   },
   handleOk() {
@@ -786,7 +779,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
       <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">ref</span>=<span class="value">"modal"</span>
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-       <span class="attribute">mousePosition</span>=<span class="value">{this.state.mousePosition}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
           &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
@@ -885,10 +877,9 @@ var Test = React.createClass({
       visible: false
     };
   },
-  showModal: function showModal(e) {
+  showModal: function showModal() {
     this.setState({
-      visible: true,
-      mousePosition: { x: e.pageX, y: e.pageY }
+      visible: true
     });
   },
   handleOk: function handleOk() {
@@ -916,7 +907,6 @@ var Test = React.createClass({
       React.createElement(
         Modal,
         { title: '对话框标题',
-          mousePosition: this.state.mousePosition,
           visible: this.state.visible,
           onOk: this.handleOk,
           onCancel: this.handleCancel },
@@ -940,10 +930,9 @@ React.render(React.createElement(Test, null), document.getElementById('component
       visible: <span class="literal">false</span>
     };
   },
-  showModal(e) {
+  showModal() {
     <span class="keyword">this</span>.setState({
-      visible: <span class="literal">true</span>,
-      mousePosition:{x:e.pageX,y:e.pageY}
+      visible: <span class="literal">true</span>
     });
   },
   handleOk() {
@@ -963,7 +952,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"对话框标题"</span>
-      <span class="attribute">mousePosition</span>=<span class="value">{this.state.mousePosition}</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
         <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
@@ -1032,6 +1020,7 @@ React.render(
 </div>
   </div>
 </div>
+  <div class="api-container markdown"></div>
 </section>
 
     </div><footer id="footer">

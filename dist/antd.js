@@ -14450,7 +14450,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcDialog2 = _interopRequireDefault(_rcDialog);
 	
+	var _rcUtil = __webpack_require__(76);
+	
 	function noop() {}
+	
+	var mousePosition = undefined;
+	var mousePositionEventBinded = undefined;
 	
 	exports['default'] = _react2['default'].createClass({
 	  displayName: 'index',
@@ -14497,6 +14502,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	
+	  componentDidMount: function componentDidMount() {
+	    if (mousePositionEventBinded) {
+	      return;
+	    }
+	    // 只有点击事件支持从鼠标位置动画展开
+	    _rcUtil.Dom.addEventListener(document.body, 'click', function onDocumentMousemove(e) {
+	      mousePosition = {
+	        x: e.pageX,
+	        y: e.pageY
+	      };
+	      // 20ms 内发生过点击事件，则从点击位置动画展示
+	      // 否则直接 zoom 展示
+	      // 这样可以兼容非点击方式展开
+	      setTimeout(function () {
+	        return mousePosition = null;
+	      }, 20);
+	    });
+	    mousePositionEventBinded = true;
+	  },
+	
 	  render: function render() {
 	    var loadingClass = this.state.confirmLoading ? ' ant-btn-loading' : '';
 	    var props = this.props;
@@ -14514,8 +14539,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    )];
 	    var footer = props.footer || defaultFooter;
 	    var visible = this.state.visible;
-	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: 'zoom', onClose: this.handleCancel, maskAnimation: 'fade',
-	      width: '500', footer: footer }, props, { visible: visible }));
+	    return _react2['default'].createElement(_rcDialog2['default'], _extends({ transitionName: 'zoom', onClose: this.handleCancel,
+	      maskAnimation: 'fade', width: '500', footer: footer }, props, {
+	      visible: visible, mousePosition: mousePosition }));
 	  }
 	});
 	module.exports = exports['default'];
@@ -17163,7 +17189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      value: value,
 	      inputValue: ''
 	    };
-	    var events = ['onClick', 'getDOMNode', 'onKeyDown', 'onInputKeyDown', 'onInputChange', 'onFocus', 'onBlur', 'onClearSelection', 'onMenuSelect', 'onMenuDeselect'];
+	    var events = ['onClick', 'getDOMNode', 'onKeyDown', 'onInputKeyDown', 'onInputChange', 'onFocus', 'onBlur', 'onClearSelection', 'onMenuSelect', 'onMenuDeselect', 'onPlaceholderClick'];
 	    events.forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
@@ -17372,6 +17398,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
+	    key: 'onPlaceholderClick',
+	    value: function onPlaceholderClick() {
+	      this.getInputDOMNode().focus();
+	    }
+	  }, {
 	    key: 'onClearSelection',
 	    value: function onClearSelection(e) {
 	      var props = this.props;
@@ -17441,6 +17472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          'span',
 	          {
 	            style: { display: this.state.inputValue ? 'none' : 'block' },
+	            onClick: this.onPlaceholderClick,
 	            className: props.prefixCls + '-search__field__placeholder' },
 	          props.searchPlaceholder
 	        ) : null
@@ -22415,9 +22447,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcDialog = __webpack_require__(185);
+	var _index = __webpack_require__(184);
 	
-	var _rcDialog2 = _interopRequireDefault(_rcDialog);
+	var _index2 = _interopRequireDefault(_index);
 	
 	var div;
 	
@@ -22509,7 +22541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  _react2['default'].render(_react2['default'].createElement(
-	    _rcDialog2['default'],
+	    _index2['default'],
 	    {
 	      prefixCls: 'ant-modal',
 	      className: 'ant-confirm',
@@ -22517,6 +22549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      closable: false,
 	      title: '',
 	      transitionName: 'zoom',
+	      footer: '',
 	      maskTransitionName: 'fade', width: width },
 	    _react2['default'].createElement(
 	      'div',
@@ -23696,7 +23729,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      column = (0, _objectAssign3['default'])({}, column);
 	      var key = _this4.getColumnKey(column, i);
 	      var filterDropdown = undefined,
-	          menus = undefined,
 	          sortButton = undefined;
 	      if (column.filters && column.filters.length > 0) {
 	        var colFilters = _this4.state.filters[key] || [];
@@ -32442,7 +32474,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-table": "~3.1.0",
 			"rc-tabs": "~5.3.2",
 			"rc-tooltip": "~2.5.0",
-			"rc-tree": "~0.14.x",
+			"rc-tree": "~0.14.3",
 			"rc-upload": "~1.3.1",
 			"rc-util": "~2.0.3",
 			"react-slick": "~0.6.4",
