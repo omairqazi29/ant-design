@@ -13,7 +13,7 @@ Breadcrumb 面包屑 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta5.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -35,7 +35,7 @@ Breadcrumb 面包屑 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
@@ -178,11 +178,11 @@ Breadcrumb 面包屑 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta4',
+        latest: '0.8.0-beta5',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta4.min.js"></script>
+    <script src="/dist/antd-0.8.0-beta5.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -525,11 +525,12 @@ React.render(
     <div id="components-breadcrumb-demo-router"></div>
     <script>(function(){'use strict';
 
-var Router = require('react-router');
-var Route = Router.Route;
-var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
-var Breadcrumb = require('antd/lib/breadcrumb');
+var ReactRouter = require('react-router');
+var history = require('react-router/lib/HashHistory').history;
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
+var Breadcrumb = require('antd').Breadcrumb;
 
 var Apps = React.createClass({
   displayName: 'Apps',
@@ -560,8 +561,8 @@ var Apps = React.createClass({
   }
 });
 
-var App = React.createClass({
-  displayName: 'App',
+var Home = React.createClass({
+  displayName: 'Home',
 
   render: function render() {
     return React.createElement(
@@ -581,7 +582,7 @@ var App = React.createClass({
           '应用列表'
         )
       ),
-      React.createElement(RouteHandler, null),
+      this.props.children || 'Home',
       React.createElement(
         'div',
         { style: {
@@ -592,28 +593,29 @@ var App = React.createClass({
           } },
         '点击上面的导航切换页面，面包屑在下面：'
       ),
-      React.createElement(Breadcrumb, { Router: Router })
+      React.createElement(Breadcrumb, { router: ReactRouter })
     );
   }
 });
 
-var routes = React.createElement(
-  Route,
-  { name: '首页', path: '/', handler: App, ignoreScrollBehavior: true },
+React.render(React.createElement(
+  Router,
+  { history: history },
   React.createElement(
     Route,
-    { name: '应用列表', path: '/apps', handler: Apps },
-    React.createElement(Route, { name: '应用:id', path: '/apps/:id', handler: App })
+    { name: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
+    React.createElement(
+      Route,
+      { name: '应用列表', path: 'apps', component: Apps },
+      React.createElement(Route, { name: '应用:id', path: ':id' })
+    )
   )
-);
-
-Router.run(routes, Router.HashLocation, function (Root) {
-  React.render(React.createElement(Root, null), document.getElementById('components-breadcrumb-demo-router'));
-});})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Router = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> Route = Router.Route;
-<span class="keyword">var</span> Link = Router.Link;
-<span class="keyword">var</span> RouteHandler = Router.RouteHandler;
-<span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
+), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
+<span class="keyword">var</span> history = require(<span class="string">'react-router/lib/HashHistory'</span>).history;
+<span class="keyword">var</span> Router = ReactRouter.Router;
+<span class="keyword">var</span> Route = ReactRouter.Route;
+<span class="keyword">var</span> Link = ReactRouter.Link;
+<span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd'</span>).Breadcrumb;
 
 <span class="keyword">var</span> Apps = React.createClass({
   render() {
@@ -624,36 +626,34 @@ Router.run(routes, Router.HashLocation, function (Root) {
   }
 });
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">var</span> Home = React.createClass({
   render() {
     <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-nav"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/"</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/apps"</span>&gt;</span>应用列表<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">RouteHandler</span> /&gt;</span>
+      {this.props.children || 'Home'}
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{</span>
         <span class="attribute">marginBottom:</span> <span class="attribute">15</span>,
         <span class="attribute">marginTop:</span> <span class="attribute">15</span>,
         <span class="attribute">paddingBottom:</span> <span class="attribute">15</span>,
         <span class="attribute">borderBottom:</span> '<span class="attribute">1px</span> <span class="attribute">dashed</span> #<span class="attribute">ccc</span>'
       }}&gt;</span>点击上面的导航切换页面，面包屑在下面：<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Breadcrumb</span> <span class="attribute">Router</span>=<span class="value">{Router}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Breadcrumb</span> <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>);
   }
 });
 
-var routes = (
-  <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">handler</span>=<span class="value">{App}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"/apps"</span> <span class="attribute">handler</span>=<span class="value">{Apps}</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">"/apps/:id"</span> <span class="attribute">handler</span>=<span class="value">{App}</span> /&gt;</span>
+React.render((
+  <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
+      <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-);
-
-Router.run(routes, Router.HashLocation, (Root) =&gt; {
-  React.render(<span class="tag">&lt;<span class="title">Root</span> /&gt;</span>, document.getElementById('components-breadcrumb-demo-router'));
-});</span></code></pre></div><style>
+  <span class="tag">&lt;/<span class="title">Router</span>&gt;</span>
+), document.getElementById('components-breadcrumb-demo-router'));</span></code></pre></div><style>
 .demo-nav {
   height: 30px;
   line-height: 30px;
@@ -674,7 +674,7 @@ Router.run(routes, Router.HashLocation, (Root) =&gt; {
     <div class="code-box-title">
       <a href="#demo-router">路由</a>
     </div>
-    <p>和 <code>react-router@0.13.x</code> 进行结合使用。</p>
+    <p>和 <code>react-router@1.0.0-beta3</code> 进行结合使用。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

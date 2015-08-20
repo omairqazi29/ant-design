@@ -7,6 +7,5 @@ var config = require("./webpack.config.js");
 
 delete config.entry.demo;
 delete config.entry[pkg.name];
-delete.config.devtool;
 
 module.exports = config;

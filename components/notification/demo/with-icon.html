@@ -3,7 +3,7 @@
     <div id="components-notification-demo-with-icon"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
@@ -37,7 +37,7 @@ React.render(React.createElement(
     { className: "ant-btn", onClick: openNotificationWithIcon('error') },
     "错误"
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>

@@ -16,6 +16,10 @@ function cx(classNames) {
   }
 }
 
+function noop() {
+  return false;
+}
+
 var Form = React.createClass({
   displayName: 'Form',
 
@@ -172,7 +176,7 @@ var Form = React.createClass({
               React.createElement(
                 Validator,
                 { rules: [{ required: true, whitespace: true, message: '请填写密码' }, { validator: this.checkPass }], trigger: 'onChange' },
-                React.createElement('input', { name: 'pass', id: 'confirmPass', className: 'ant-input', type: 'password', value: formData.pass })
+                React.createElement('input', { name: 'pass', id: 'confirmPass', className: 'ant-input', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.pass })
               ),
               status.pass.errors ? React.createElement(
                 'div',
@@ -208,7 +212,7 @@ var Form = React.createClass({
                     whitespace: true,
                     message: '请再次输入密码'
                   }, { validator: this.checkPass2 }] },
-                React.createElement('input', { name: 'rePass', id: 'confirmPass2', className: 'ant-input', type: 'password', value: formData.rePass })
+                React.createElement('input', { name: 'rePass', id: 'confirmPass2', className: 'ant-input', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.rePass })
               ),
               status.rePass.errors ? React.createElement(
                 'div',
@@ -259,6 +263,10 @@ React.render(React.createElement(Form, null), document.getElementById('component
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> Array.prototype.join.call(arguments, <span class="string">' '</span>);
   }
+}
+
+<span class="function"><span class="keyword">function</span> <span class="title">noop</span><span class="params">()</span> {</span>
+  <span class="keyword">return</span> <span class="literal">false</span>;
 }
 
 <span class="keyword">var</span> Form = React.createClass({
@@ -393,7 +401,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">{this.renderValidateStyle('pass',</span> <span class="attribute">false</span>)}&gt;</span>
                 <span class="tag">&lt;<span class="title">Validator</span> <span class="attribute">rules</span>=<span class="value">{[{required:</span> <span class="attribute">true</span>, <span class="attribute">whitespace:</span> <span class="attribute">true</span>, <span class="attribute">message:</span> '请填写密码'}, {<span class="attribute">validator:</span> <span class="attribute">this.checkPass</span>}]} <span class="attribute">trigger</span>=<span class="value">"onChange"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"pass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.pass}</span>/&gt;</span>
+                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"pass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">onContextMenu</span>=<span class="value">{noop}</span> <span class="attribute">onPaste</span>=<span class="value">{noop}</span> <span class="attribute">onCopy</span>=<span class="value">{noop}</span> <span class="attribute">onCut</span>=<span class="value">{noop}</span> <span class="attribute">autocomplete</span>=<span class="value">"off"</span> <span class="attribute">value</span>=<span class="value">{formData.pass}</span>/&gt;</span>
                 <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
                 {status.pass.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>{status.pass.errors.join(',')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -412,7 +420,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
                   <span class="attribute">whitespace:</span> <span class="attribute">true</span>,
                   <span class="attribute">message:</span> '请再次输入密码'
                 }, {<span class="attribute">validator:</span> <span class="attribute">this.checkPass2</span>}]}&gt;</span>
-                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"rePass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass2"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">{formData.rePass}</span>/&gt;</span>
+                  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"rePass"</span> <span class="attribute">id</span>=<span class="value">"confirmPass2"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">onContextMenu</span>=<span class="value">{noop}</span> <span class="attribute">onPaste</span>=<span class="value">{noop}</span> <span class="attribute">onCopy</span>=<span class="value">{noop}</span> <span class="attribute">onCut</span>=<span class="value">{noop}</span> <span class="attribute">autocomplete</span>=<span class="value">"off"</span> <span class="attribute">value</span>=<span class="value">{formData.rePass}</span>/&gt;</span>
                 <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
                 {status.rePass.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span> {status.rePass.errors.join(', ')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>

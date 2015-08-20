@@ -23,7 +23,7 @@ React.render(React.createElement(
   Select,
   { multiple: true,
     style: { width: 400 },
-    value: ['a10', 'c12'], onChange: handleChange },
+    defaultValue: ['a10', 'c12'], onChange: handleChange },
   children
 ), document.getElementById('components-select-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
@@ -40,7 +40,7 @@ function handleChange(value) {
 React.render(
   <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">multiple</span>
   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
-  <span class="attribute">value</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="attribute">defaultValue</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     {children}
   <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
 , document.getElementById('components-select-demo-multiple'));</span></code></pre></div>

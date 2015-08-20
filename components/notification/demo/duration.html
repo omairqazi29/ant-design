@@ -3,7 +3,7 @@
     <div id="components-notification-demo-duration"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var openNotification = function openNotification() {
   var args = {
@@ -18,7 +18,7 @@ React.render(React.createElement(
   "button",
   { className: "ant-btn ant-btn-primary", onClick: openNotification },
   "打开通知提醒框"
-), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   <span class="keyword">var</span> args = {

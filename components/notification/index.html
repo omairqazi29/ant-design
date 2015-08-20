@@ -13,7 +13,7 @@ Notification 通知提醒框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta5.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -35,7 +35,7 @@ Notification 通知提醒框 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
@@ -178,11 +178,11 @@ Notification 通知提醒框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta4',
+        latest: '0.8.0-beta5',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta4.min.js"></script>
+    <script src="/dist/antd-0.8.0-beta5.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -565,7 +565,7 @@ Notification 通知提醒框 - Ant Design
     <div id="components-notification-demo-basic"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var openNotification = function openNotification() {
   notification.open({
@@ -582,7 +582,7 @@ React.render(React.createElement(
     { className: "ant-btn ant-btn-primary", onClick: openNotification },
     "打开通知提醒框"
   )
-), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   notification.open({
@@ -609,7 +609,7 @@ document.getElementById('components-notification-demo-basic'));</span></code></p
     <div id="components-notification-demo-with-icon"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
@@ -643,7 +643,7 @@ React.render(React.createElement(
     { className: "ant-btn", onClick: openNotificationWithIcon('error') },
     "错误"
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
@@ -679,7 +679,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <div id="components-notification-demo-with-btn"></div>
     <script>(function(){'use strict';
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var close = function close() {
   console.log('我被默认的关闭按钮关闭了！');
@@ -713,7 +713,7 @@ React.render(React.createElement(
     { className: 'ant-btn ant-btn-primary', onClick: openNotification },
     '打开通知提醒框'
   )
-), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);
@@ -757,7 +757,7 @@ document.getElementById('components-notification-demo-with-btn'));</span></code>
     <div id="components-notification-demo-duration"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var openNotification = function openNotification() {
   var args = {
@@ -772,7 +772,7 @@ React.render(React.createElement(
   "button",
   { className: "ant-btn ant-btn-primary", onClick: openNotification },
   "打开通知提醒框"
-), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   <span class="keyword">var</span> args = {
@@ -799,7 +799,7 @@ React.render(
     <div id="components-notification-demo-onclose"></div>
     <script>(function(){"use strict";
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var close = function close() {
   console.log("我被默认的关闭按钮关闭了！");
@@ -822,7 +822,7 @@ React.render(React.createElement(
     { className: "ant-btn ant-btn-primary", onClick: openNotification },
     "打开通知提醒框"
   )
-), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   console.log(<span class="string">"我被默认的关闭按钮关闭了！"</span>);

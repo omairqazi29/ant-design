@@ -13,7 +13,7 @@ Select 选择器 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta5.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -35,7 +35,7 @@ Select 选择器 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
@@ -178,11 +178,11 @@ Select 选择器 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta4',
+        latest: '0.8.0-beta5',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta4.min.js"></script>
+    <script src="/dist/antd-0.8.0-beta5.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -476,7 +476,7 @@ Select 选择器 - Ant Design
 <tbody>
 <tr>
 <td>value</td>
-<td>指定选中的条目</td>
+<td>指定当前选中的条目</td>
 <td>string/Array<String></td>
 <td>无</td>
 </tr>
@@ -628,7 +628,7 @@ function handleChange(value) {
 
 React.render(React.createElement(
   Select,
-  { value: "lucy", style: { width: 200 }, onChange: handleChange },
+  { defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
   React.createElement(
     Option,
     { value: "jack" },
@@ -657,7 +657,7 @@ React.render(React.createElement(
 }
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -686,7 +686,7 @@ function handleChange(value) {
 
 React.render(React.createElement(
   Select,
-  { value: "lucy", showSearch: true, style: { width: 200 }, onChange: handleChange },
+  { defaultValue: "lucy", showSearch: true, style: { width: 200 }, onChange: handleChange },
   React.createElement(
     Option,
     { value: "jack" },
@@ -715,7 +715,7 @@ React.render(React.createElement(
 }
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">showSearch</span>=<span class="value">{true}</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">showSearch</span>=<span class="value">{true}</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -755,7 +755,7 @@ React.render(React.createElement(
   Select,
   {
     style: { width: 400 },
-    tags: true, value: ['name2', 'name3'], onChange: handleChange },
+    tags: true, defaultValue: ['name2', 'name3'], onChange: handleChange },
   children
 ), document.getElementById('components-select-demo-tags'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
@@ -772,7 +772,7 @@ function handleChange(value) {
 React.render(
   <span class="tag">&lt;<span class="title">Select
 </span>   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
-  <span class="attribute">tags</span> <span class="attribute">value</span>=<span class="value">{['name2',</span> '<span class="attribute">name3</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="attribute">tags</span> <span class="attribute">defaultValue</span>=<span class="value">{['name2',</span> '<span class="attribute">name3</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     {children}
   <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
 , document.getElementById('components-select-demo-tags'));</span></code></pre></div>
@@ -799,7 +799,7 @@ function handleChange(value) {
 
 React.render(React.createElement(
   Select,
-  { value: "lucy",
+  { defaultValue: "lucy",
     style: { width: 200 },
     showSearch: false,
     onChange: handleChange },
@@ -835,7 +835,7 @@ React.render(React.createElement(
 }
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span>
     <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
     <span class="attribute">showSearch</span>=<span class="value">{false}</span>
     <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
@@ -875,7 +875,7 @@ React.render(React.createElement(
   null,
   React.createElement(
     Select,
-    { size: "large", value: "lucy", style: { width: 200 }, onChange: handleChange },
+    { size: "large", defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
       { value: "jack" },
@@ -899,7 +899,7 @@ React.render(React.createElement(
   ),
   React.createElement(
     Select,
-    { value: "lucy", style: { width: 200 }, onChange: handleChange },
+    { defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
       { value: "jack" },
@@ -923,7 +923,7 @@ React.render(React.createElement(
   ),
   React.createElement(
     Select,
-    { size: "small", value: "lucy", style: { width: 200 }, onChange: handleChange },
+    { size: "small", defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
       { value: "jack" },
@@ -954,19 +954,19 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"yiminghe"</span>&gt;</span>yiminghe<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"yiminghe"</span>&gt;</span>yiminghe<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -1011,7 +1011,7 @@ React.render(React.createElement(
   Select,
   { multiple: true,
     style: { width: 400 },
-    value: ['a10', 'c12'], onChange: handleChange },
+    defaultValue: ['a10', 'c12'], onChange: handleChange },
   children
 ), document.getElementById('components-select-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
@@ -1028,7 +1028,7 @@ function handleChange(value) {
 React.render(
   <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">multiple</span>
   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
-  <span class="attribute">value</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="attribute">defaultValue</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     {children}
   <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
 , document.getElementById('components-select-demo-multiple'));</span></code></pre></div>
@@ -1147,12 +1147,19 @@ var App = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      cities: cityData[provinceData[0]]
+      cities: cityData[provinceData[0]],
+      secondCity: cityData[provinceData[0]][0]
     };
   },
   handleProvinceChange: function handleProvinceChange(value) {
     this.setState({
-      cities: cityData[value]
+      cities: cityData[value],
+      secondCity: cityData[value][0]
+    });
+  },
+  onSecondCityChange: function onSecondCityChange(value) {
+    this.setState({
+      secondCity: value
     });
   },
   render: function render() {
@@ -1181,7 +1188,7 @@ var App = React.createClass({
       ' ',
       React.createElement(
         Select,
-        { value: this.state.cities[0], style: { width: 150 }, onChange: this.handleCityChange },
+        { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
         cityOptions
       )
     );
@@ -1200,12 +1207,19 @@ React.render(React.createElement(App, null), document.getElementById('components
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
-      cities: cityData[provinceData[<span class="number">0</span>]]
+      cities: cityData[provinceData[<span class="number">0</span>]],
+      secondCity:cityData[provinceData[<span class="number">0</span>]][<span class="number">0</span>]
     };
   },
   handleProvinceChange(value) {
     <span class="keyword">this</span>.setState({
-      cities: cityData[value]
+      cities: cityData[value],
+      secondCity:cityData[value][<span class="number">0</span>]
+    });
+  },
+  onSecondCityChange(value) {
+    <span class="keyword">this</span>.setState({
+      secondCity: value
     });
   },
   render() {
@@ -1220,7 +1234,7 @@ React.render(React.createElement(App, null), document.getElementById('components
         {provinceOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.cities[0]}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleCityChange}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.secondCity}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.onSecondCityChange}</span>&gt;</span>
         {cityOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>

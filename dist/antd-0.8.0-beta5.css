@@ -331,9 +331,9 @@ a[disabled] {
 }
 @font-face {
   font-family: 'anticon';
-  src: url('//at.alicdn.com/t/font_1437110976_60069.eot');
+  src: url('//at.alicdn.com/t/font_1440074043_6914854.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1437110976_60069.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1437110976_60069.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1437110976_60069.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1437110976_60069.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1440074043_6914854.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1440074043_6914854.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1440074043_6914854.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1440074043_6914854.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .anticon {
@@ -3354,7 +3354,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   left: 2px;
   top: 1px;
   border-radius: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   content: " ";
   cursor: pointer;
   -webkit-transition: left 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -3418,7 +3418,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: left;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
 }
@@ -3528,10 +3528,10 @@ fieldset[disabled] .ant-btn-ghost.active {
   content: "";
   opacity: 0;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #fff;
   border-radius: 10px;
   -webkit-animation: progress-active 2s ease infinite;
@@ -3858,23 +3858,23 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: relative;
 }
 .ant-select .ant-select-selection--single + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
-  content: '\e613';
-  font-family: 'anticon';
-  display: inline-block;
-  font-size: 0.66666667;
-  font-size: 8px \9;
-  -webkit-transform: scale(0.66666667) rotate(0deg);
-      -ms-transform: scale(0.66666667) rotate(0deg);
-          transform: scale(0.66666667) rotate(0deg);
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
+  display: inline-block;
+  content: '\e613';
+  font-family: 'anticon';
   font-weight: bold;
   position: absolute;
   top: 6px;
-  right: 16px;
+  right: 0;
+  padding-right: 16px;
   color: #2db7f5;
-  background-color: #eaf8fe;
 }
 :root .ant-select .ant-select-selection--single + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
   -webkit-filter: none;
@@ -3890,11 +3890,11 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: relative;
 }
 .ant-select .ant-select-selection--multiple + .ant-select-dropdown .ant-select-dropdown-menu-item-selected:after {
-  font-size: 0.75;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -3916,10 +3916,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   font-size: 12px;
 }
 .ant-select-dropdown {
-  display: none;
   background-color: white;
   border: 1px solid #d9d9d9;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   border-radius: 4px;
   box-sizing: border-box;
   z-index: 100;
@@ -3927,6 +3926,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   top: -9999px;
   position: absolute;
   outline: none;
+}
+.ant-select-dropdown-hidden {
+  display: none;
 }
 .ant-select-dropdown-menu {
   outline: none;
@@ -3958,7 +3960,7 @@ li.ant-select-dropdown-menu-item {
   display: block;
   padding: 7px 16px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -4113,7 +4115,7 @@ li.ant-select-dropdown-menu-item-divider {
   text-align: left;
   background-color: #fff;
   border-radius: 6px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   line-height: 1.5;
 }
@@ -4141,7 +4143,7 @@ li.ant-select-dropdown-menu-item-divider {
 .ant-calendar-header .ant-calendar-decade-select,
 .ant-calendar-header .ant-calendar-year-select,
 .ant-calendar-header .ant-calendar-month-select {
-  padding: 0px 2px;
+  padding: 0 2px;
   font-weight: bold;
   display: inline-block;
   color: #666;
@@ -4478,10 +4480,10 @@ textarea.ant-calendar-time-input {
   height: 22px;
 }
 .ant-calendar-time-panel {
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   background: #fff;
   z-index: 10;
   position: absolute;
@@ -4542,10 +4544,10 @@ textarea.ant-calendar-time-input {
   color: #fff;
 }
 .ant-calendar-month-panel {
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   background: #fff;
   z-index: 10;
   position: absolute;
@@ -4572,7 +4574,7 @@ textarea.ant-calendar-time-input {
 .ant-calendar-month-panel-header .ant-calendar-month-panel-decade-select,
 .ant-calendar-month-panel-header .ant-calendar-month-panel-year-select,
 .ant-calendar-month-panel-header .ant-calendar-month-panel-month-select {
-  padding: 0px 2px;
+  padding: 0 2px;
   font-weight: bold;
   display: inline-block;
   color: #666;
@@ -4634,7 +4636,7 @@ textarea.ant-calendar-time-input {
   text-align: center;
   height: 24px;
   line-height: 24px;
-  padding: 0px 6px;
+  padding: 0 6px;
   border-radius: 4px;
 }
 .ant-calendar-month-panel-month:hover {
@@ -4650,10 +4652,10 @@ textarea.ant-calendar-time-input {
   color: #fff;
 }
 .ant-calendar-year-panel {
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   background: #fff;
   z-index: 10;
   position: absolute;
@@ -4680,7 +4682,7 @@ textarea.ant-calendar-time-input {
 .ant-calendar-year-panel-header .ant-calendar-year-panel-decade-select,
 .ant-calendar-year-panel-header .ant-calendar-year-panel-year-select,
 .ant-calendar-year-panel-header .ant-calendar-year-panel-month-select {
-  padding: 0px 2px;
+  padding: 0 2px;
   font-weight: bold;
   display: inline-block;
   color: #666;
@@ -4742,7 +4744,7 @@ textarea.ant-calendar-time-input {
   text-align: center;
   height: 24px;
   line-height: 24px;
-  padding: 0px 6px;
+  padding: 0 6px;
   border-radius: 4px;
 }
 .ant-calendar-year-panel-year:hover {
@@ -4776,10 +4778,10 @@ textarea.ant-calendar-time-input {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-calendar-decade-panel {
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   background: #fff;
   z-index: 10;
   position: absolute;
@@ -4806,7 +4808,7 @@ textarea.ant-calendar-time-input {
 .ant-calendar-decade-panel-header .ant-calendar-decade-panel-decade-select,
 .ant-calendar-decade-panel-header .ant-calendar-decade-panel-year-select,
 .ant-calendar-decade-panel-header .ant-calendar-decade-panel-month-select {
-  padding: 0px 2px;
+  padding: 0 2px;
   font-weight: bold;
   display: inline-block;
   color: #666;
@@ -4868,7 +4870,7 @@ textarea.ant-calendar-time-input {
   text-align: center;
   height: 24px;
   line-height: 24px;
-  padding: 0px 6px;
+  padding: 0 6px;
   border-radius: 4px;
 }
 .ant-calendar-decade-panel-decade:hover {
@@ -4923,7 +4925,7 @@ textarea.ant-calendar-time-input {
 }
 .ant-modal-content {
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
   border-radius: 6px 6px;
   background-clip: padding-box;
@@ -4946,6 +4948,7 @@ textarea.ant-calendar-time-input {
 }
 .ant-modal-close-x {
   position: absolute;
+  display: inline-block;
   font-style: normal;
   vertical-align: baseline;
   text-align: center;
@@ -4953,25 +4956,10 @@ textarea.ant-calendar-time-input {
   text-rendering: auto;
   width: 12px;
   height: 12px;
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
+  font-size: 14px;
   line-height: 12px;
   top: 18px;
   right: 18px;
-}
-:root .ant-modal-close-x {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-modal-close-x {
-  font-size: 12px;
 }
 .ant-modal-close-x:before {
   content: "\e61e";
@@ -5045,48 +5033,16 @@ textarea.ant-calendar-time-input {
           animation-play-state: paused;
 }
 .ant-modal-fade-enter.ant-modal-fade-enter-active {
-  -webkit-animation-name: rcDialogFadeIn;
-          animation-name: rcDialogFadeIn;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .ant-modal-fade-leave.ant-modal-fade-leave-active {
-  -webkit-animation-name: rcDialogFadeOut;
-          animation-name: rcDialogFadeOut;
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-}
-@-webkit-keyframes rcDialogFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes rcDialogFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes rcDialogFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes rcDialogFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 .ant-modal-header {
   padding: 13px 18px 14px 16px;
@@ -5256,6 +5212,8 @@ textarea.ant-calendar-time-input {
 }
 .ant-tabs-tab-prev {
   left: 0;
+}
+.ant-tabs-tab-prev-icon {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -5471,16 +5429,11 @@ textarea.ant-calendar-time-input {
 .ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item {
   overflow: hidden;
   padding: 7px 8px;
+}
+.ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected {
   position: relative;
 }
 .ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
-  content: '\e613';
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 6px;
-  color: #2db7f5;
-  display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
@@ -5489,7 +5442,15 @@ textarea.ant-calendar-time-input {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
-  right: 8px;
+  display: inline-block;
+  content: '\e613';
+  font-family: 'anticon';
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  padding-right: 16px;
+  color: #2db7f5;
 }
 :root .ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
   -webkit-filter: none;
@@ -5497,6 +5458,9 @@ textarea.ant-calendar-time-input {
 }
 :root .ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
   font-size: 12px;
+}
+.ant-table th .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
+  padding-right: 8px;
 }
 .ant-table th a.ant-table-filter-dropdown-link {
   color: #2db7f5;
@@ -5694,7 +5658,7 @@ textarea.ant-calendar-time-input {
   text-decoration: none;
   background-color: #373737;
   border-radius: 6px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
 }
 .ant-tooltip-arrow {
   position: absolute;
@@ -5802,7 +5766,7 @@ textarea.ant-calendar-time-input {
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
 }
 .ant-popover-title {
   margin: 0;
@@ -6611,6 +6575,9 @@ form .ant-calendar-picker {
   width: auto;
   vertical-align: middle;
 }
+.ant-form-inline .ant-calendar-picker-input {
+  width: 100%!important;
+}
 .ant-form-inline .ant-form-text {
   display: inline-block;
 }
@@ -6641,6 +6608,16 @@ form .ant-calendar-picker {
   line-height: 32px;
   text-align: center;
   font-size: 14px;
+  -webkit-animation: zoomIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation: zoomIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.has-error.has-feedback:after {
+  -webkit-animation-name: zoomIn2 !important;
+          animation-name: zoomIn2 !important;
+}
+.has-warning.has-feedback:after {
+  -webkit-animation-name: zoomIn3 !important;
+          animation-name: zoomIn3 !important;
 }
 .has-success .ant-form-explain,
 .has-success .ant-form-split {
@@ -6749,6 +6726,46 @@ form .ant-calendar-picker {
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
   content: "\e610";
+}
+@-webkit-keyframes zoomIn2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes zoomIn2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes zoomIn3 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes zoomIn3 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 .ant-steps {
   font-size: 0;
@@ -7128,7 +7145,7 @@ textarea.ant-input-number {
   height: 28px;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
-  color: #666666;
+  color: #666;
   border: 0;
   border-radius: 6px;
   padding: 0 7px;
@@ -7203,10 +7220,11 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-up-inner {
   top: 1px;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-input-number-handler-up-inner:before {
+  text-align: center;
   content: "\e600";
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -7217,6 +7235,7 @@ textarea.ant-input-number {
   cursor: pointer;
 }
 .ant-input-number-handler-down-inner:before {
+  text-align: center;
   content: "\e600";
 }
 .ant-input-number-handler-down-disabled .ant-input-number-handler-down-inner,
@@ -7252,7 +7271,6 @@ textarea.ant-input-number {
   color: #ccc;
   cursor: default;
 }
-/* 一般状态 */
 .ant-checkbox {
   white-space: nowrap;
   cursor: pointer;
@@ -7276,7 +7294,7 @@ textarea.ant-input-number {
   border-style: solid;
   border-radius: 3px;
   border-color: #d9d9d9;
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
           transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
@@ -7290,7 +7308,7 @@ textarea.ant-input-number {
   display: table;
   width: 5px;
   height: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   content: ' ';
@@ -7308,7 +7326,6 @@ textarea.ant-input-number {
   bottom: 0;
   right: 0;
 }
-/* 半选状态 */
 .ant-checkbox-indeterminate .ant-checkbox-inner {
   border-color: #2db7f5;
   background-color: #2db7f5;
@@ -7324,7 +7341,6 @@ textarea.ant-input-number {
   width: 8px;
   height: 1px;
 }
-/* 选中状态 */
 .ant-checkbox-checked:hover .ant-checkbox-inner {
   border-color: #2db7f5;
 }
@@ -7342,7 +7358,7 @@ textarea.ant-input-number {
   display: table;
   width: 5px;
   height: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   content: ' ';
@@ -7359,7 +7375,7 @@ textarea.ant-input-number {
 .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
   -webkit-animation-name: none;
           animation-name: none;
-  border-color: #cccccc;
+  border-color: #ccc;
 }
 .ant-checkbox-disabled:hover .ant-checkbox-inner {
   border-color: #d9d9d9;
@@ -7436,8 +7452,8 @@ textarea.ant-input-number {
   background-color: #fff;
 }
 .ant-collapse-content > .ant-collapse-content-box {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .ant-collapse-item:last-child > .ant-collapse-content {
   border-radius: 0 0 3px 3px;
@@ -7479,7 +7495,7 @@ textarea.ant-input-number {
   padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid #d9d9d9;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background: #fff;
   display: block;
 }
@@ -7558,7 +7574,7 @@ textarea.ant-input-number {
 .ant-slider-mark {
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: 0;
   width: 100%;
   font-size: 12px;
   z-index: 3;
@@ -7659,7 +7675,6 @@ textarea.ant-input-number {
 .ant-radio-group label {
   margin-right: 16px;
 }
-/* 一般状态 */
 .ant-radio {
   white-space: nowrap;
   outline: none;
@@ -7682,7 +7697,7 @@ textarea.ant-input-number {
   border-style: solid;
   border-radius: 14px;
   border-color: #d9d9d9;
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-transition: border-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
           transition: border-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
@@ -7715,7 +7730,6 @@ textarea.ant-input-number {
   bottom: 0;
   right: 0;
 }
-/* 选中状态 */
 .ant-radio-checked .ant-radio-inner {
   border-color: #d9d9d9;
 }
@@ -7802,25 +7816,10 @@ textarea.ant-input-number {
   color: #ff6600;
 }
 .ant-notification-notice-close-x:after {
+  font-size: 12px;
   content: "\e61e";
   font-family: "anticon";
   cursor: pointer;
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-notification-notice-close-x:after {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-notification-notice-close-x:after {
-  font-size: 12px;
 }
 .ant-notification-notice-close {
   position: absolute;
@@ -7947,11 +7946,11 @@ textarea.ant-input-number {
 }
 .ant-tag .anticon-cross {
   display: inline-block;
-  font-size: 0.58333333;
-  font-size: 7px \9;
-  -webkit-transform: scale(0.58333333) rotate(0deg);
-      -ms-transform: scale(0.58333333) rotate(0deg);
-          transform: scale(0.58333333) rotate(0deg);
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -8065,15 +8064,7 @@ textarea.ant-input-number {
 }
 .ant-alert-close-icon,
 .ant-alert-with-description-close-icon {
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
+  font-size: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -8084,15 +8075,6 @@ textarea.ant-input-number {
   width: 12px;
   height: 12px;
   overflow: hidden;
-}
-:root .ant-alert-close-icon,
-:root .ant-alert-with-description-close-icon {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-alert-close-icon,
-:root .ant-alert-with-description-close-icon {
-  font-size: 12px;
 }
 .ant-alert-close-icon-x,
 .ant-alert-with-description-close-icon-x {
@@ -8133,21 +8115,6 @@ textarea.ant-input-number {
   top: 17px;
   right: 16px;
   cursor: pointer;
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-alert-with-description-close-icon {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-alert-with-description-close-icon {
   font-size: 12px;
 }
 .ant-alert-with-description-message {
@@ -8186,7 +8153,20 @@ textarea.ant-input-number {
 .ant-alert-with-description-error .anticon {
   color: #ff6600;
 }
-/* 一般状态 */
+.ant-alert-close {
+  height: 0 !important;
+  opacity: 0 !important;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
 .ant-tree-checkbox {
   white-space: nowrap;
   cursor: pointer;
@@ -8210,7 +8190,7 @@ textarea.ant-input-number {
   border-style: solid;
   border-radius: 3px;
   border-color: #d9d9d9;
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
           transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
@@ -8224,7 +8204,7 @@ textarea.ant-input-number {
   display: table;
   width: 5px;
   height: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   content: ' ';
@@ -8242,7 +8222,6 @@ textarea.ant-input-number {
   bottom: 0;
   right: 0;
 }
-/* 半选状态 */
 .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner {
   border-color: #2db7f5;
   background-color: #2db7f5;
@@ -8258,7 +8237,6 @@ textarea.ant-input-number {
   width: 8px;
   height: 1px;
 }
-/* 选中状态 */
 .ant-tree-checkbox-checked:hover .ant-tree-checkbox-inner {
   border-color: #2db7f5;
 }
@@ -8276,7 +8254,7 @@ textarea.ant-input-number {
   display: table;
   width: 5px;
   height: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   content: ' ';
@@ -8293,7 +8271,7 @@ textarea.ant-input-number {
 .ant-tree-checkbox-disabled.ant-tree-checkbox-checked .ant-tree-checkbox-inner:after {
   -webkit-animation-name: none;
           animation-name: none;
-  border-color: #cccccc;
+  border-color: #ccc;
 }
 .ant-tree-checkbox-disabled:hover .ant-tree-checkbox-inner {
   border-color: #d9d9d9;
@@ -8555,18 +8533,14 @@ textarea.ant-input-number {
 .ant-carousel .slick-arrow.slick-hidden {
   display: none;
 }
-.ant-carousel {
-  /* Arrows */
-  /* Dots */
-}
 .ant-carousel .slick-prev,
 .ant-carousel .slick-next {
   position: absolute;
   display: block;
   height: 20px;
   width: 20px;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
@@ -8611,7 +8585,7 @@ textarea.ant-input-number {
 }
 .ant-carousel .slick-dots {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   list-style: none;
   display: block;
   text-align: center;
@@ -8634,8 +8608,8 @@ textarea.ant-input-number {
   height: 20px;
   width: 20px;
   outline: none;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   color: transparent;
   padding: 5px;
   cursor: pointer;
@@ -8739,21 +8713,6 @@ textarea.ant-input-number {
 }
 .ant-upload-list .ant-upload-list-item .anticon {
   margin-top: -2px;
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-upload-list .ant-upload-list-item .anticon {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-upload-list .ant-upload-list-item .anticon {
   font-size: 12px;
 }
 .ant-upload-list .ant-upload-list-item .anticon.anticon-cross {
@@ -8781,7 +8740,7 @@ textarea.ant-input-number {
   list-style: none;
   z-index: 1001;
   border: 1px solid #d9d9d9;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   border-radius: 6px;
   color: #666666;
 }
@@ -9051,4 +9010,4 @@ textarea.ant-input-number {
   position: fixed;
 }
 
-/*# sourceMappingURL=antd-0.8.0-beta4.css.map*/
+/*# sourceMappingURL=antd-0.8.0-beta5.css.map*/

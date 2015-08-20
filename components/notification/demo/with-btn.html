@@ -3,7 +3,7 @@
     <div id="components-notification-demo-with-btn"></div>
     <script>(function(){'use strict';
 
-var notification = require('antd/lib/notification');
+var notification = antd.Notification;
 
 var close = function close() {
   console.log('我被默认的关闭按钮关闭了！');
@@ -37,7 +37,7 @@ React.render(React.createElement(
     { className: 'ant-btn ant-btn-primary', onClick: openNotification },
     '打开通知提醒框'
   )
-), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = require(<span class="string">'antd/lib/notification'</span>);
+), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);

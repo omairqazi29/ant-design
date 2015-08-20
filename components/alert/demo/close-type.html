@@ -3,14 +3,14 @@
     <div id="components-alert-demo-close-type"></div>
     <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 var link = React.createElement(
   "a",
   { href: "javascript:;" },
   "不再提醒"
 );
 
-React.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+React.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 <span class="keyword">var</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 
 React.render(

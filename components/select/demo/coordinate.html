@@ -17,12 +17,19 @@ var App = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      cities: cityData[provinceData[0]]
+      cities: cityData[provinceData[0]],
+      secondCity: cityData[provinceData[0]][0]
     };
   },
   handleProvinceChange: function handleProvinceChange(value) {
     this.setState({
-      cities: cityData[value]
+      cities: cityData[value],
+      secondCity: cityData[value][0]
+    });
+  },
+  onSecondCityChange: function onSecondCityChange(value) {
+    this.setState({
+      secondCity: value
     });
   },
   render: function render() {
@@ -51,7 +58,7 @@ var App = React.createClass({
       ' ',
       React.createElement(
         Select,
-        { value: this.state.cities[0], style: { width: 150 }, onChange: this.handleCityChange },
+        { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
         cityOptions
       )
     );
@@ -70,12 +77,19 @@ React.render(React.createElement(App, null), document.getElementById('components
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
-      cities: cityData[provinceData[<span class="number">0</span>]]
+      cities: cityData[provinceData[<span class="number">0</span>]],
+      secondCity:cityData[provinceData[<span class="number">0</span>]][<span class="number">0</span>]
     };
   },
   handleProvinceChange(value) {
     <span class="keyword">this</span>.setState({
-      cities: cityData[value]
+      cities: cityData[value],
+      secondCity:cityData[value][<span class="number">0</span>]
+    });
+  },
+  onSecondCityChange(value) {
+    <span class="keyword">this</span>.setState({
+      secondCity: value
     });
   },
   render() {
@@ -90,7 +104,7 @@ React.render(React.createElement(App, null), document.getElementById('components
         {provinceOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.cities[0]}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleCityChange}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.secondCity}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.onSecondCityChange}</span>&gt;</span>
         {cityOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>

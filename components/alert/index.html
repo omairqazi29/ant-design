@@ -13,7 +13,7 @@ Alert 警告提示 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta5.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -35,7 +35,7 @@ Alert 警告提示 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react-router/0.13.3/ReactRouter.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
@@ -178,11 +178,11 @@ Alert 警告提示 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta4',
+        latest: '0.8.0-beta5',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta4.min.js"></script>
+    <script src="/dist/antd-0.8.0-beta5.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -524,9 +524,9 @@ Alert 警告提示 - Ant Design
     <div id="components-alert-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 
-React.render(React.createElement(Alert, { message: "成功提示的文案", type: "success" }), document.getElementById('components-alert-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+React.render(React.createElement(Alert, { message: "成功提示的文案", type: "success" }), document.getElementById('components-alert-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span> <span class="attribute">type</span>=<span class="value">"success"</span> /&gt;</span>
 , document.getElementById('components-alert-demo-basic'));</span></code></pre></div>
@@ -543,7 +543,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Alert</
     <div id="components-alert-demo-description"></div>
     <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 
 React.render(React.createElement(
   "div",
@@ -562,7 +562,7 @@ React.render(React.createElement(
     message: "错误提示的文案",
     description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
     type: "error" })
-), document.getElementById('components-alert-demo-description'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+), document.getElementById('components-alert-demo-description'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span>
@@ -593,14 +593,14 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <div id="components-alert-demo-close-type"></div>
     <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 var link = React.createElement(
   "a",
   { href: "javascript:;" },
   "不再提醒"
 );
 
-React.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+React.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 <span class="keyword">var</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 
 React.render(
@@ -619,27 +619,27 @@ React.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-closable">
   <div class="code-box-demo">
     <div id="components-alert-demo-closable"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 
 var onClose = function onClose(e) {
   console.log(e, '我要被关闭啦！');
 };
 
 React.render(React.createElement(
-  'div',
+  "div",
   null,
-  React.createElement(Alert, { message: '警告提示的文案',
-    type: 'warn',
+  React.createElement(Alert, { message: "警告提示的文案",
+    type: "warn",
     closable: true,
     onClose: onClose }),
-  React.createElement(Alert, { message: '错误提示的文案',
-    description: '错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍',
-    type: 'error',
+  React.createElement(Alert, { message: "错误提示的文案",
+    description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
+    type: "error",
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 
 <span class="keyword">var</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
   console.log(e, <span class="string">'我要被关闭啦！'</span>);
@@ -669,7 +669,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <div id="components-alert-demo-style"></div>
     <script>(function(){"use strict";
 
-var Alert = require('antd/lib/alert');
+var Alert = antd.Alert;
 
 React.render(React.createElement(
   "div",
@@ -678,7 +678,7 @@ React.render(React.createElement(
   React.createElement(Alert, { message: "消息提示的文案", type: "info" }),
   React.createElement(Alert, { message: "警告提示的文案", type: "warn" }),
   React.createElement(Alert, { message: "错误提示的文案", type: "error" })
-), document.getElementById('components-alert-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = require(<span class="string">'antd/lib/alert'</span>);
+), document.getElementById('components-alert-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span> <span class="attribute">type</span>=<span class="value">"success"</span> /&gt;</span>

@@ -12,7 +12,7 @@ function handleChange(value) {
 
 React.render(React.createElement(
   Select,
-  { value: "lucy", showSearch: true, style: { width: 200 }, onChange: handleChange },
+  { defaultValue: "lucy", showSearch: true, style: { width: 200 }, onChange: handleChange },
   React.createElement(
     Option,
     { value: "jack" },
@@ -41,7 +41,7 @@ React.render(React.createElement(
 }
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">"lucy"</span> <span class="attribute">showSearch</span>=<span class="value">{true}</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">showSearch</span>=<span class="value">{true}</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"disabled"</span> <span class="attribute">disabled</span>&gt;</span>disabled<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
