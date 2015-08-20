@@ -16992,7 +16992,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      transitionName: '',
 	      placement: 'top',
-	      trigger: 'hover'
+	      trigger: 'hover',
+	      overlayStyle: {}
 	    };
 	  },
 	  render: function render() {
@@ -17023,7 +17024,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      { placement: this.props.placement,
 	        prefixCls: prefixCls,
 	        delay: 0.1,
-	        renderPopupToBody: false,
+	        overlayStyle: this.props.overlayStyle,
+	        renderPopupToBody: true,
 	        transitionName: transitionName,
 	        trigger: this.props.trigger,
 	        overlay: overlay },
@@ -21759,6 +21761,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      transitionName: '',
 	      placement: 'top',
 	      trigger: 'click',
+	      overlayStyle: {},
 	      onConfirm: function onConfirm() {},
 	      onCancel: function onCancel() {}
 	    };
@@ -21820,8 +21823,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2['default'].createElement(
 	      _rcTooltip2['default'],
 	      { placement: this.props.placement,
+	        overlayStyle: this.props.overlayStyle,
 	        prefixCls: prefixCls,
-	        renderPopupToBody: false,
+	        renderPopupToBody: true,
 	        onVisibleChange: this.onVisibleChange,
 	        transitionName: transitionName,
 	        visible: this.state.visible,
