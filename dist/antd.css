@@ -3634,7 +3634,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 .ant-select-arrow:before {
   display: block;
@@ -3651,10 +3650,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: none;
 }
 .ant-select-arrow:before {
-  content: '\e611';
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  content: '\e600';
   -webkit-transition: -webkit-transform 0.2s ease;
           transition: transform 0.2s ease;
 }
@@ -3715,7 +3711,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-select-lg .ant-select-selection--single .ant-select-selection__rendered {
   line-height: 30px;
-  font-size: 14px;
 }
 .ant-select-lg .ant-select-selection--multiple {
   min-height: 32px;
@@ -3921,16 +3916,18 @@ fieldset[disabled] .ant-btn-ghost.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   border-radius: 4px;
   box-sizing: border-box;
-  z-index: 100;
+  z-index: 1000;
   left: -9999px;
   top: -9999px;
   position: absolute;
   outline: none;
+  overflow: hidden;
 }
 .ant-select-dropdown-hidden {
   display: none;
 }
 .ant-select-dropdown-menu {
+  font-size: 12px;
   outline: none;
   margin-bottom: 0;
   padding-left: 0;
@@ -3963,6 +3960,14 @@ li.ant-select-dropdown-menu-item {
   color: #666;
   white-space: nowrap;
   cursor: pointer;
+}
+li.ant-select-dropdown-menu-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+li.ant-select-dropdown-menu-item:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 li.ant-select-dropdown-menu-item:hover,
 li.ant-select-dropdown-menu-item-active {
@@ -4011,12 +4016,13 @@ li.ant-select-dropdown-menu-item-divider {
   display: none;
 }
 .ant-select-open .ant-select-arrow {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-transform: rotate(180deg);
 }
 .ant-select-open .ant-select-arrow:before {
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .ant-select-open .ant-select-selection {
   border-color: #57c5f7;
@@ -4055,19 +4061,20 @@ li.ant-select-dropdown-menu-item-divider {
 .ant-calendar * {
   box-sizing: border-box;
 }
-.ant-calendar-picker .ant-calendar,
 .ant-calendar-picker-container .ant-calendar {
   position: absolute;
-  display: none;
   left: -9999px;
   top: -9999px;
-  z-index: 9;
+  z-index: 1000;
+}
+.ant-calendar-picker-container .ant-calendar-hidden {
+  display: none;
 }
 .ant-calendar-picker {
   position: relative;
   display: inline-block;
 }
-.ant-calendar-picker-input {
+.ant-calendar-picker > input {
   outline: none;
 }
 .ant-calendar-picker-icon {
@@ -4488,6 +4495,7 @@ textarea.ant-calendar-time-input {
   z-index: 10;
   position: absolute;
   outline: none;
+  border-radius: 6px;
 }
 .ant-calendar-time-panel-header {
   padding: 0 10px;
@@ -8651,6 +8659,17 @@ textarea.ant-input-number {
   right: -35px;
   top: 0;
 }
+.ant-upload > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ant-upload input[type=file] {
+  cursor: pointer;
+}
+.ant-upload.ant-upload-select {
+  display: inline-block;
+}
 .ant-upload.ant-upload-drag {
   border: 1px dashed #d9d9d9;
   -webkit-transition: all 0.3s ease;
@@ -8662,14 +8681,12 @@ textarea.ant-input-number {
   height: 100%;
   position: relative;
 }
+.ant-upload.ant-upload-drag > span {
+  display: table;
+}
 .ant-upload.ant-upload-drag .ant-upload-drag-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 .ant-upload.ant-upload-drag:hover {
   border: 1px dashed #999;

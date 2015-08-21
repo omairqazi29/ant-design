@@ -603,11 +603,11 @@ React.render(React.createElement(
   { history: history },
   React.createElement(
     Route,
-    { name: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
+    { name: 'home', breadcrumbName: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
     React.createElement(
       Route,
-      { name: '应用列表', path: 'apps', component: Apps },
-      React.createElement(Route, { name: '应用:id', path: ':id' })
+      { name: 'apps', breadcrumbName: '应用列表', path: 'apps', component: Apps },
+      React.createElement(Route, { name: 'app', breadcrumbName: '应用:id', path: ':id' })
     )
   )
 ), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
@@ -647,9 +647,9 @@ React.render(React.createElement(
 
 React.render((
   <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"app"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Router</span>&gt;</span>

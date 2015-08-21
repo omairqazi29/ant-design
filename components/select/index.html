@@ -1166,14 +1166,14 @@ var App = React.createClass({
     var provinceOptions = provinceData.map(function (province) {
       return React.createElement(
         Option,
-        { value: province },
+        { key: province },
         province
       );
     });
     var cityOptions = this.state.cities.map(function (city) {
       return React.createElement(
         Option,
-        { value: city },
+        { key: city },
         city
       );
     });
@@ -1224,10 +1224,10 @@ React.render(React.createElement(App, null), document.getElementById('components
   },
   render() {
     <span class="keyword">var</span> provinceOptions = provinceData.map(<span class="function"><span class="keyword">function</span><span class="params">(province)</span> {</span>
-      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">{province}</span>&gt;</span>{province}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
+      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">key</span>=<span class="value">{province}</span>&gt;</span>{province}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
     });
     <span class="keyword">var</span> cityOptions = <span class="keyword">this</span>.state.cities.map(<span class="function"><span class="keyword">function</span><span class="params">(city)</span> {</span>
-      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">{city}</span>&gt;</span>{city}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
+      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">key</span>=<span class="value">{city}</span>&gt;</span>{city}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
     });
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">{provinceData[0]}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleProvinceChange}</span>&gt;</span>

@@ -100,12 +100,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Validation: __webpack_require__(277),
 	  Tree: __webpack_require__(306),
 	  Upload: __webpack_require__(310),
-	  Menu: __webpack_require__(319)
+	  Menu: __webpack_require__(320)
 	};
 	
 	module.exports = antd;
 	
-	antd.version = __webpack_require__(320).version;
+	antd.version = __webpack_require__(321).version;
 
 /***/ },
 /* 1 */,
@@ -1369,17 +1369,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(74);
 	
@@ -1468,295 +1460,272 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return ret;
 	}
 	
-	var Calendar = (function (_React$Component) {
-	  _inherits(Calendar, _React$Component);
+	var Calendar = _react2['default'].createClass({
+	  displayName: 'Calendar',
 	
-	  function Calendar(props) {
-	    var _this = this;
+	  propTypes: {
+	    value: _react2['default'].PropTypes.object,
+	    defaultValue: _react2['default'].PropTypes.object,
+	    className: _react2['default'].PropTypes.string,
+	    orient: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.oneOf(['left', 'top', 'right', 'bottom'])),
+	    locale: _react2['default'].PropTypes.object,
+	    showWeekNumber: _react2['default'].PropTypes.bool,
+	    style: _react2['default'].PropTypes.object,
+	    showToday: _react2['default'].PropTypes.bool,
+	    visible: _react2['default'].PropTypes.bool,
+	    showTime: _react2['default'].PropTypes.bool,
+	    onSelect: _react2['default'].PropTypes.func,
+	    onOk: _react2['default'].PropTypes.func,
+	    prefixCls: _react2['default'].PropTypes.string,
+	    onKeyDown: _react2['default'].PropTypes.func,
+	    onClear: _react2['default'].PropTypes.func,
+	    onFocus: _react2['default'].PropTypes.func,
+	    onBlur: _react2['default'].PropTypes.func
+	  },
 	
-	    _classCallCheck(this, Calendar);
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      locale: _localeEnUs2['default'],
+	      style: {},
+	      visible: true,
+	      prefixCls: 'rc-calendar',
+	      onKeyDown: noop,
+	      className: '',
+	      showToday: true,
+	      onSelect: noop,
+	      onFocus: noop,
+	      onBlur: noop,
+	      onClear: noop,
+	      onOk: noop
+	    };
+	  },
 	
-	    _get(Object.getPrototypeOf(Calendar.prototype), 'constructor', this).call(this, props);
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
 	    var value = props.value || props.defaultValue || getNow();
 	    this.dateFormatter = new _gregorianCalendarFormat2['default'](props.locale.dateFormat);
-	    this.state = {
-	      orient: props.orient,
-	      value: value
-	    };
+	    var orient = props.orient;
 	    // bind methods
 	    this.nextMonth = goMonth.bind(this, 1);
 	    this.previousMonth = goMonth.bind(this, -1);
 	    this.nextYear = goYear.bind(this, 1);
 	    this.previousYear = goYear.bind(this, -1);
+	    return { orient: orient, value: value };
+	  },
 	
-	    ['onBlur', 'onFocus', 'chooseToday', 'onClear', 'onSelect', 'setValue', 'onKeyDown', 'onOk'].forEach(function (m) {
-	      _this[m] = _this[m].bind(_this);
-	    });
-	  }
-	
-	  _createClass(Calendar, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      var value = nextProps.value;
-	      if (value !== undefined) {
-	        value = value || nextProps.defaultValue || getNowByCurrentStateValue(this.state.value);
-	        this.setState({
-	          value: value
-	        });
-	      }
-	      if (nextProps.orient) {
-	        this.setState({
-	          orient: nextProps.orient
-	        });
-	      }
-	      if (nextProps.locale !== this.props.locale) {
-	        this.dateFormatter = new _gregorianCalendarFormat2['default'](nextProps.locale.dateFormat);
-	      }
-	    }
-	  }, {
-	    key: 'shouldComponentUpdate',
-	    value: function shouldComponentUpdate() {
-	      return _rcUtil2['default'].PureRenderMixin.shouldComponentUpdate.apply(this, arguments);
-	    }
-	  }, {
-	    key: 'onSelect',
-	    value: function onSelect(current, keyDownEvent) {
-	      var props = this.props;
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    var value = nextProps.value;
+	    if (value !== undefined) {
+	      value = value || nextProps.defaultValue || getNowByCurrentStateValue(this.state.value);
 	      this.setState({
-	        value: current
+	        value: value
 	      });
-	      if (!keyDownEvent) {
-	        props.onSelect(current);
-	      }
 	    }
-	  }, {
-	    key: 'onKeyDown',
-	    value: function onKeyDown(e) {
-	      var keyCode = e.keyCode;
-	      // mac
-	      var ctrlKey = e.ctrlKey || e.metaKey;
-	      switch (keyCode) {
-	        case _rcUtil.KeyCode.DOWN:
-	          goWeek.call(this, 1);
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.UP:
-	          goWeek.call(this, -1);
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.LEFT:
-	          if (ctrlKey) {
-	            this.previousYear();
-	          } else {
-	            goDay.call(this, -1);
-	          }
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.RIGHT:
-	          if (ctrlKey) {
-	            this.nextYear();
-	          } else {
-	            goDay.call(this, 1);
-	          }
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.HOME:
-	          goStartMonth.call(this);
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.END:
-	          goEndMonth.call(this);
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.PAGE_DOWN:
-	          this.nextMonth();
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.PAGE_UP:
-	          this.previousMonth();
-	          e.preventDefault();
-	          return 1;
-	        case _rcUtil.KeyCode.ENTER:
-	          this.props.onSelect(this.state.value);
-	          e.preventDefault();
-	          return 1;
-	        default:
-	          this.props.onKeyDown(e);
-	          return 1;
-	      }
+	    if (nextProps.orient) {
+	      this.setState({
+	        orient: nextProps.orient
+	      });
 	    }
-	  }, {
-	    key: 'onClear',
-	    value: function onClear() {
-	      this.props.onClear();
+	    if (nextProps.locale !== this.props.locale) {
+	      this.dateFormatter = new _gregorianCalendarFormat2['default'](nextProps.locale.dateFormat);
 	    }
-	  }, {
-	    key: 'onFocus',
-	    value: function onFocus() {
-	      if (this._blurTimer) {
-	        clearTimeout(this._blurTimer);
-	        this._blurTimer = null;
-	      } else {
-	        this.props.onFocus();
-	      }
-	    }
-	  }, {
-	    key: 'onBlur',
-	    value: function onBlur() {
-	      var _this2 = this;
+	  },
 	
-	      if (this._blurTimer) {
-	        clearTimeout(this._blurTimer);
-	      }
-	      this._blurTimer = setTimeout(function () {
-	        _this2.props.onBlur();
-	      }, 100);
+	  shouldComponentUpdate: function shouldComponentUpdate() {
+	    return _rcUtil2['default'].PureRenderMixin.shouldComponentUpdate.apply(this, arguments);
+	  },
+	
+	  onSelect: function onSelect(value, keyDownEvent) {
+	    var props = this.props;
+	    this.setState({
+	      value: value
+	    });
+	    if (!keyDownEvent) {
+	      props.onSelect(value);
 	    }
-	  }, {
-	    key: 'onOk',
-	    value: function onOk() {
-	      this.props.onOk(this.state.value);
+	  },
+	
+	  onKeyDown: function onKeyDown(e) {
+	    var keyCode = e.keyCode;
+	    // mac
+	    var ctrlKey = e.ctrlKey || e.metaKey;
+	    switch (keyCode) {
+	      case _rcUtil.KeyCode.DOWN:
+	        goWeek.call(this, 1);
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.UP:
+	        goWeek.call(this, -1);
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.LEFT:
+	        if (ctrlKey) {
+	          this.previousYear();
+	        } else {
+	          goDay.call(this, -1);
+	        }
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.RIGHT:
+	        if (ctrlKey) {
+	          this.nextYear();
+	        } else {
+	          goDay.call(this, 1);
+	        }
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.HOME:
+	        goStartMonth.call(this);
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.END:
+	        goEndMonth.call(this);
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.PAGE_DOWN:
+	        this.nextMonth();
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.PAGE_UP:
+	        this.previousMonth();
+	        e.preventDefault();
+	        return 1;
+	      case _rcUtil.KeyCode.ENTER:
+	        this.props.onSelect(this.state.value);
+	        e.preventDefault();
+	        return 1;
+	      default:
+	        this.props.onKeyDown(e);
+	        return 1;
 	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _className;
+	  },
 	
-	      var props = this.props;
-	      var locale = props.locale;
-	      var state = this.state;
-	      var value = state.value;
-	      var prefixCls = props.prefixCls;
+	  onClear: function onClear() {
+	    this.props.onClear();
+	  },
 	
-	      var className = (_className = {}, _defineProperty(_className, prefixCls, 1), _defineProperty(_className, prefixCls + '-week-number', props.showWeekNumber), _defineProperty(_className, prefixCls + '-hidden', !props.visible), _defineProperty(_className, props.className, !!props.className), _className);
+	  onFocus: function onFocus() {
+	    if (this._blurTimer) {
+	      clearTimeout(this._blurTimer);
+	      this._blurTimer = null;
+	    } else {
+	      this.props.onFocus();
+	    }
+	  },
 	
-	      var orient = state.orient;
-	      if (orient) {
-	        orient.forEach(function (o) {
-	          className[prefixCls + '-orient-' + o] = 1;
-	        });
-	      }
+	  onBlur: function onBlur() {
+	    var _this = this;
 	
-	      return _react2['default'].createElement(
+	    if (this._blurTimer) {
+	      clearTimeout(this._blurTimer);
+	    }
+	    this._blurTimer = setTimeout(function () {
+	      _this.props.onBlur();
+	    }, 100);
+	  },
+	
+	  onOk: function onOk() {
+	    this.props.onOk(this.state.value);
+	  },
+	
+	  render: function render() {
+	    var _className;
+	
+	    var props = this.props;
+	    var locale = props.locale;
+	    var state = this.state;
+	    var value = state.value;
+	    var prefixCls = props.prefixCls;
+	
+	    var className = (_className = {}, _defineProperty(_className, prefixCls, 1), _defineProperty(_className, prefixCls + '-week-number', props.showWeekNumber), _defineProperty(_className, prefixCls + '-hidden', !props.visible), _defineProperty(_className, props.className, !!props.className), _className);
+	
+	    var orient = state.orient;
+	    if (orient) {
+	      orient.forEach(function (o) {
+	        className[prefixCls + '-orient-' + o] = 1;
+	      });
+	    }
+	
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: _rcUtil2['default'].classSet(className), style: this.props.style,
+	        tabIndex: '0', onFocus: this.onFocus,
+	        onBlur: this.onBlur, onKeyDown: this.onKeyDown },
+	      _react2['default'].createElement(
 	        'div',
-	        { className: _rcUtil2['default'].classSet(className), style: this.props.style,
-	          tabIndex: '0', onFocus: this.onFocus,
-	          onBlur: this.onBlur, onKeyDown: this.onKeyDown },
+	        { style: { outline: 'none' } },
+	        _react2['default'].createElement(_calendarCalendarHeader2['default'], {
+	          locale: locale,
+	          onValueChange: this.setValue,
+	          previousYear: this.previousYear,
+	          previousMonth: this.previousMonth,
+	          nextMonth: this.nextMonth,
+	          nextYear: this.nextYear,
+	          value: value,
+	          prefixCls: prefixCls }),
 	        _react2['default'].createElement(
 	          'div',
-	          { style: { outline: 'none' } },
-	          _react2['default'].createElement(_calendarCalendarHeader2['default'], {
+	          { className: prefixCls + '-calendar-body' },
+	          _react2['default'].createElement(_dateDateTable2['default'], {
 	            locale: locale,
-	            onValueChange: this.setValue,
-	            previousYear: this.previousYear,
-	            previousMonth: this.previousMonth,
-	            nextMonth: this.nextMonth,
-	            nextYear: this.nextYear,
 	            value: value,
-	            prefixCls: prefixCls }),
-	          _react2['default'].createElement(
-	            'div',
-	            { className: prefixCls + '-calendar-body' },
-	            _react2['default'].createElement(_dateDateTable2['default'], {
-	              locale: locale,
-	              value: value,
-	              prefixCls: prefixCls,
-	              dateRender: props.dateRender,
-	              onSelect: this.onSelect,
-	              disabledDate: props.disabledDate,
-	              showWeekNumber: props.showWeekNumber,
-	              dateFormatter: this.dateFormatter })
-	          ),
-	          _react2['default'].createElement(_calendarCalendarFooter2['default'], {
-	            locale: locale,
-	            showClear: props.showClear,
-	            showOk: props.showOk,
 	            prefixCls: prefixCls,
-	            showToday: props.showToday,
-	            showTime: props.showTime,
-	            value: value,
-	            dateFormatter: this.dateFormatter,
-	            onClear: this.onClear,
-	            onOk: this.onOk,
+	            dateRender: props.dateRender,
 	            onSelect: this.onSelect,
-	            onToday: this.chooseToday
-	          })
-	        )
-	      );
+	            disabledDate: props.disabledDate,
+	            showWeekNumber: props.showWeekNumber,
+	            dateFormatter: this.dateFormatter })
+	        ),
+	        _react2['default'].createElement(_calendarCalendarFooter2['default'], {
+	          locale: locale,
+	          showClear: props.showClear,
+	          showOk: props.showOk,
+	          prefixCls: prefixCls,
+	          showToday: props.showToday,
+	          showTime: props.showTime,
+	          value: value,
+	          disabledDate: props.disabledDate,
+	          dateFormatter: this.dateFormatter,
+	          onClear: this.onClear,
+	          onOk: this.onOk,
+	          onSelect: this.onSelect,
+	          onToday: this.chooseToday
+	        })
+	      )
+	    );
+	  },
+	
+	  chooseToday: function chooseToday() {
+	    var today = this.state.value.clone();
+	    today.setTime(Date.now());
+	    this.onSelect(today);
+	  },
+	
+	  setValue: function setValue(value) {
+	    this.setState({
+	      value: value
+	    });
+	  },
+	
+	  setOrient: function setOrient(orient) {
+	    // FIXME: hack to prevent breaking rc-animate
+	    if (this.state.orient === orient) {
+	      return;
 	    }
-	  }, {
-	    key: 'chooseToday',
-	    value: function chooseToday() {
-	      var today = this.state.value.clone();
-	      today.setTime(Date.now());
-	      this.onSelect(today);
-	    }
-	  }, {
-	    key: 'setValue',
-	    value: function setValue(current) {
-	      this.setState({
-	        value: current
+	    this.state.orient = orient;
+	    var prefixCls = this.props.prefixCls;
+	    var root = _react2['default'].findDOMNode(this);
+	    var className = root.className.replace(new RegExp(prefixCls + '-orient-\\w+', 'g'), '');
+	    if (orient) {
+	      orient.forEach(function (o) {
+	        className += ' ' + prefixCls + '-orient-' + o;
 	      });
 	    }
-	  }, {
-	    key: 'setOrient',
-	    value: function setOrient(orient) {
-	      // FIXME: hack to prevent breaking rc-animate
-	      if (this.state.orient === orient) {
-	        return;
-	      }
-	      this.state.orient = orient;
-	      var prefixCls = this.props.prefixCls;
-	      var root = _react2['default'].findDOMNode(this);
-	      var className = root.className.replace(new RegExp(prefixCls + '-orient-\\w+', 'g'), '');
-	      if (orient) {
-	        orient.forEach(function (o) {
-	          className += ' ' + prefixCls + '-orient-' + o;
-	        });
-	      }
-	      root.className = className;
-	    }
-	  }]);
-	
-	  return Calendar;
-	})(_react2['default'].Component);
+	    root.className = className;
+	  }
+	});
 	
 	exports['default'] = Calendar;
-	
-	Calendar.propTypes = {
-	  value: _react2['default'].PropTypes.object,
-	  defaultValue: _react2['default'].PropTypes.object,
-	  className: _react2['default'].PropTypes.string,
-	  orient: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.oneOf(['left', 'top', 'right', 'bottom'])),
-	  locale: _react2['default'].PropTypes.object,
-	  showWeekNumber: _react2['default'].PropTypes.bool,
-	  style: _react2['default'].PropTypes.object,
-	  showToday: _react2['default'].PropTypes.bool,
-	  visible: _react2['default'].PropTypes.bool,
-	  showTime: _react2['default'].PropTypes.bool,
-	  onSelect: _react2['default'].PropTypes.func,
-	  onOk: _react2['default'].PropTypes.func,
-	  prefixCls: _react2['default'].PropTypes.string,
-	  onKeyDown: _react2['default'].PropTypes.func,
-	  onClear: _react2['default'].PropTypes.func,
-	  onFocus: _react2['default'].PropTypes.func,
-	  onBlur: _react2['default'].PropTypes.func
-	};
-	
-	Calendar.defaultProps = {
-	  locale: _localeEnUs2['default'],
-	  style: {},
-	  visible: true,
-	  prefixCls: 'rc-calendar',
-	  onKeyDown: noop,
-	  className: '',
-	  showToday: true,
-	  onSelect: noop,
-	  onFocus: noop,
-	  onBlur: noop,
-	  onClear: noop,
-	  onOk: noop
-	};
 	module.exports = exports['default'];
 
 /***/ },
@@ -5494,12 +5463,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  _createClass(CalendarFooter, [{
+	    key: 'getTodayTimeStr',
+	    value: function getTodayTimeStr() {
+	      var today = this.getTodayTime();
+	      return this.props.dateFormatter.format(today);
+	    }
+	  }, {
 	    key: 'getTodayTime',
 	    value: function getTodayTime() {
 	      var value = this.props.value;
 	      var today = value.clone();
 	      today.setTime(Date.now());
-	      return this.props.dateFormatter.format(today);
+	      return today;
 	    }
 	  }, {
 	    key: 'render',
@@ -5516,12 +5491,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	          localeNow = locale.now || locale.today;
 	        }
 	        if (props.showToday) {
+	          var disabledToday = false;
+	          var disabledTodayClass = undefined;
+	          if (props.disabledDate) {
+	            disabledToday = props.disabledDate(this.getTodayTime());
+	            if (disabledToday) {
+	              disabledTodayClass = prefixCls + '-today-btn-disabled';
+	            }
+	          }
 	          nowEl = _react2['default'].createElement(
 	            'a',
-	            { className: prefixCls + '-today-btn',
+	            { className: prefixCls + '-today-btn ' + disabledTodayClass,
 	              role: 'button',
-	              onClick: props.onToday,
-	              title: this.getTodayTime() },
+	              onClick: disabledToday ? null : props.onToday,
+	              title: this.getTodayTimeStr() },
 	            localeNow
 	          );
 	        }
@@ -6011,17 +5994,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(74);
 	
@@ -6078,363 +6053,319 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * DatePicker = wrap input using Calendar
 	 */
+	var Picker = _react2['default'].createClass({
+	  displayName: 'Picker',
 	
-	var Picker = (function (_React$Component) {
-	  _inherits(Picker, _React$Component);
+	  propTypes: {
+	    onChange: _react2['default'].PropTypes.func,
+	    onOpen: _react2['default'].PropTypes.func,
+	    onClose: _react2['default'].PropTypes.func,
+	    calendar: _react2['default'].PropTypes.element,
+	    style: _react2['default'].PropTypes.object,
+	    open: _react2['default'].PropTypes.bool,
+	    defaultOpen: _react2['default'].PropTypes.bool,
+	    prefixCls: _react2['default'].PropTypes.string,
+	    adjustOrientOnCalendarOverflow: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.object])
+	  },
 	
-	  function Picker(props) {
-	    var _this = this;
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      prefixCls: 'rc-calendar-picker',
+	      adjustOrientOnCalendarOverflow: true,
+	      style: {},
+	      defaultOpen: false,
+	      onChange: noop,
+	      onOpen: noop,
+	      onClose: noop,
+	      formatter: new _gregorianCalendarFormat2['default']('yyyy-MM-dd')
+	    };
+	  },
 	
-	    _classCallCheck(this, Picker);
-	
-	    _get(Object.getPrototypeOf(Picker.prototype), 'constructor', this).call(this, props);
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
 	    var open = undefined;
 	    if ('open' in props) {
 	      open = props.open;
 	    } else {
 	      open = props.defaultOpen;
 	    }
-	    this.state = {
-	      open: open,
-	      value: props.value || props.defaultValue
-	    };
-	    var events = ['onCalendarAlign', 'onInputClick', 'onCalendarBlur', 'onTriggerClick', 'onCalendarClear', 'onCalendarKeyDown', 'onCalendarOk', 'onKeyDown', 'onCalendarSelect', 'focusInput', 'getInputDOMNode'];
-	    // bind methods
-	    events.forEach(function (m) {
-	      _this[m] = _this[m].bind(_this);
-	    });
+	    var value = props.value || props.defaultValue;
 	    this.saveCalendarRef = refFn.bind(this, 'calendarInstance');
 	    this.saveInputRef = refFn.bind(this, 'inputInstance');
-	  }
+	    return { open: open, value: value };
+	  },
 	
-	  _createClass(Picker, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      var value = nextProps.value;
-	      if (value !== undefined) {
-	        // null special meaning
-	        value = value || nextProps.defaultValue || null;
-	        this.setState({
-	          value: value
-	        });
-	      }
-	      if ('open' in nextProps) {
-	        this.setState({
-	          open: nextProps.open
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      if (this.haveOpened && this.props.renderCalendarToBody) {
-	        _react2['default'].render(this.getCalendarElement(), this.getCalendarContainer());
-	      }
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      if (this.calendarContainer) {
-	        _react2['default'].unmountComponentAtNode(this.calendarContainer);
-	        this.calendarContainer.parentNode.removeChild(this.calendarContainer);
-	        this.calendarContainer = null;
-	      }
-	    }
-	  }, {
-	    key: 'onCalendarAlign',
-	    value: function onCalendarAlign(node, align) {
-	      var points = align.points;
-	      var newOrient = orientMap[points[0]];
-	      this.calendarInstance.setOrient(newOrient);
-	      // focus after align
-	      _react2['default'].findDOMNode(this.calendarInstance).focus();
-	    }
-	  }, {
-	    key: 'onInputClick',
-	    value: function onInputClick() {
-	      this.toggle();
-	    }
-	  }, {
-	    key: 'onTriggerClick',
-	    value: function onTriggerClick() {
-	      this.toggle();
-	    }
-	  }, {
-	    key: 'onKeyDown',
-	    value: function onKeyDown(e) {
-	      // down
-	      if (e.keyCode === _rcUtil.KeyCode.DOWN) {
-	        e.preventDefault();
-	        this.open();
-	      }
-	    }
-	  }, {
-	    key: 'onCalendarKeyDown',
-	    value: function onCalendarKeyDown(e) {
-	      if (e.keyCode === _rcUtil.KeyCode.ESC) {
-	        e.stopPropagation();
-	        this.close(this.focusInput);
-	      }
-	    }
-	  }, {
-	    key: 'onCalendarSelect',
-	    value: function onCalendarSelect(value) {
-	      var currentValue = this.state.value;
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    var value = nextProps.value;
+	    if (value !== undefined) {
+	      // null special meaning
+	      value = value || nextProps.defaultValue || null;
 	      this.setState({
 	        value: value
 	      });
-	      if (!this.props.calendar.props.showTime) {
-	        this.close(this.focusInput);
-	      }
-	      if (!currentValue || currentValue.getTime() !== value.getTime()) {
-	        this.props.onChange(value);
-	      }
 	    }
-	  }, {
-	    key: 'onCalendarBlur',
-	    value: function onCalendarBlur() {
-	      if (document.activeElement === this.getInputDOMNode()) {
-	        return;
-	      }
-	      // if invisible, will not trigger blur
-	      // do not set if already false, avoid ruin animate
-	      this.close();
-	    }
-	  }, {
-	    key: 'onCalendarOk',
-	    value: function onCalendarOk() {
-	      this.close(this.focusInput);
-	    }
-	  }, {
-	    key: 'onCalendarClear',
-	    value: function onCalendarClear() {
+	    if ('open' in nextProps) {
 	      this.setState({
-	        value: null
+	        open: nextProps.open
 	      });
+	    }
+	  },
+	
+	  componentDidUpdate: function componentDidUpdate() {
+	    if (this.haveOpened) {
+	      _react2['default'].render(this.getCalendarElement(), this.getCalendarContainer());
+	    }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    if (this.calendarContainer) {
+	      _react2['default'].unmountComponentAtNode(this.calendarContainer);
+	      this.calendarContainer.parentNode.removeChild(this.calendarContainer);
+	      this.calendarContainer = null;
+	    }
+	  },
+	
+	  onCalendarAlign: function onCalendarAlign(node, align) {
+	    var points = align.points;
+	    var newOrient = orientMap[points[0]];
+	    this.calendarInstance.setOrient(newOrient);
+	    // focus after align
+	    _react2['default'].findDOMNode(this.calendarInstance).focus();
+	  },
+	
+	  onInputClick: function onInputClick() {
+	    this.toggle();
+	  },
+	
+	  onTriggerClick: function onTriggerClick() {
+	    this.toggle();
+	  },
+	
+	  onKeyDown: function onKeyDown(e) {
+	    // down
+	    if (e.keyCode === _rcUtil.KeyCode.DOWN) {
+	      e.preventDefault();
+	      this.open();
+	    }
+	  },
+	
+	  onCalendarKeyDown: function onCalendarKeyDown(e) {
+	    if (e.keyCode === _rcUtil.KeyCode.ESC) {
+	      e.stopPropagation();
 	      this.close(this.focusInput);
-	      if (this.state.value !== null) {
-	        this.props.onChange(null);
-	      }
 	    }
-	  }, {
-	    key: 'getInputDOMNode',
-	    value: function getInputDOMNode() {
-	      return _react2['default'].findDOMNode(this.inputInstance);
+	  },
+	
+	  onCalendarSelect: function onCalendarSelect(value) {
+	    var currentValue = this.state.value;
+	    this.setState({
+	      value: value
+	    });
+	    if (!this.props.calendar.props.showTime) {
+	      this.close(this.focusInput);
 	    }
-	  }, {
-	    key: 'getTransitionName',
-	    value: function getTransitionName() {
-	      var props = this.props;
-	      var transitionName = props.transitionName;
-	      if (!transitionName && props.animation) {
-	        transitionName = props.prefixCls + '-' + props.animation;
-	      }
-	      return transitionName;
+	    if (!currentValue || currentValue.getTime() !== value.getTime()) {
+	      this.props.onChange(value);
 	    }
-	  }, {
-	    key: 'getCalendarContainer',
-	    value: function getCalendarContainer() {
-	      if (!this.calendarContainer) {
-	        this.calendarContainer = document.createElement('div');
-	        this.calendarContainer.className = this.props.prefixCls + '-container';
-	        document.body.appendChild(this.calendarContainer);
-	      }
-	      return this.calendarContainer;
+	  },
+	
+	  onCalendarBlur: function onCalendarBlur() {
+	    if (document.activeElement === this.getInputDOMNode()) {
+	      return;
 	    }
-	  }, {
-	    key: 'getAlign',
-	    value: function getAlign(orient) {
-	      var points = ['tl', 'bl'];
-	      var offset = [0, 5];
-	      var adjustOrientOnCalendarOverflow = this.props.adjustOrientOnCalendarOverflow;
-	      if (orient.indexOf('top') !== -1 && orient.indexOf('left') !== -1) {
-	        points = ['tl', 'bl'];
-	      } else if (orient.indexOf('top') !== -1 && orient.indexOf('right') !== -1) {
-	        points = ['tr', 'br'];
-	      } else if (orient.indexOf('bottom') !== -1 && orient.indexOf('left') !== -1) {
-	        points = ['bl', 'tl'];
-	        offset = [0, -5];
-	      } else if (orient.indexOf('bottom') !== -1 && orient.indexOf('right') !== -1) {
-	        points = ['br', 'tr'];
-	        offset = [0, -5];
+	    // if invisible, will not trigger blur
+	    // do not set if already false, avoid ruin animate
+	    this.close();
+	  },
+	
+	  onCalendarOk: function onCalendarOk() {
+	    this.close(this.focusInput);
+	  },
+	
+	  onCalendarClear: function onCalendarClear() {
+	    this.setState({
+	      value: null
+	    });
+	    this.close(this.focusInput);
+	    if (this.state.value !== null) {
+	      this.props.onChange(null);
+	    }
+	  },
+	
+	  getInputDOMNode: function getInputDOMNode() {
+	    return _react2['default'].findDOMNode(this.inputInstance);
+	  },
+	
+	  getTransitionName: function getTransitionName() {
+	    var props = this.props;
+	    var transitionName = props.transitionName;
+	    if (!transitionName && props.animation) {
+	      transitionName = props.prefixCls + '-' + props.animation;
+	    }
+	    return transitionName;
+	  },
+	
+	  getCalendarContainer: function getCalendarContainer() {
+	    if (!this.calendarContainer) {
+	      this.calendarContainer = document.createElement('div');
+	      this.calendarContainer.className = this.props.prefixCls + '-container';
+	      document.body.appendChild(this.calendarContainer);
+	    }
+	    return this.calendarContainer;
+	  },
+	
+	  getAlign: function getAlign(orient) {
+	    var points = ['tl', 'bl'];
+	    var offset = [0, 5];
+	    var adjustOrientOnCalendarOverflow = this.props.adjustOrientOnCalendarOverflow;
+	    if (orient.indexOf('top') !== -1 && orient.indexOf('left') !== -1) {
+	      points = ['tl', 'bl'];
+	    } else if (orient.indexOf('top') !== -1 && orient.indexOf('right') !== -1) {
+	      points = ['tr', 'br'];
+	    } else if (orient.indexOf('bottom') !== -1 && orient.indexOf('left') !== -1) {
+	      points = ['bl', 'tl'];
+	      offset = [0, -5];
+	    } else if (orient.indexOf('bottom') !== -1 && orient.indexOf('right') !== -1) {
+	      points = ['br', 'tr'];
+	      offset = [0, -5];
+	    }
+	    var adjustX = undefined;
+	    var adjustY = undefined;
+	    if (adjustOrientOnCalendarOverflow === true) {
+	      adjustX = adjustY = true;
+	    } else if (!adjustOrientOnCalendarOverflow) {
+	      adjustX = adjustY = false;
+	    } else {
+	      adjustX = adjustOrientOnCalendarOverflow.x;
+	      adjustY = adjustOrientOnCalendarOverflow.y;
+	    }
+	    return {
+	      points: points,
+	      offset: offset,
+	      overflow: {
+	        adjustX: adjustX,
+	        adjustY: adjustY
 	      }
-	      var adjustX = undefined;
-	      var adjustY = undefined;
-	      if (adjustOrientOnCalendarOverflow === true) {
-	        adjustX = adjustY = true;
-	      } else if (!adjustOrientOnCalendarOverflow) {
-	        adjustX = adjustY = false;
-	      } else {
-	        adjustX = adjustOrientOnCalendarOverflow.x;
-	        adjustY = adjustOrientOnCalendarOverflow.y;
-	      }
-	      return {
-	        points: points,
-	        offset: offset,
-	        overflow: {
-	          adjustX: adjustX,
-	          adjustY: adjustY
-	        }
+	    };
+	  },
+	
+	  getCalendarElement: function getCalendarElement() {
+	    var props = this.props;
+	    var state = this.state;
+	    var calendarProp = props.calendar;
+	    var orient = undefined;
+	    // re align when open
+	    if (state.open) {
+	      orient = getImmutableOrient(calendarProp.props.orient) || orientMap.tl;
+	    }
+	    var calendarElement = _react2['default'].cloneElement(calendarProp, {
+	      ref: (0, _rcUtil.createChainedFunction)(calendarProp.ref, this.saveCalendarRef),
+	      value: state.value,
+	      visible: state.open,
+	      orient: orient,
+	      onBlur: this.onCalendarBlur,
+	      onKeyDown: this.onCalendarKeyDown,
+	      onOk: (0, _rcUtil.createChainedFunction)(calendarProp.props.onOk, this.onCalendarOk),
+	      onSelect: (0, _rcUtil.createChainedFunction)(calendarProp.props.onSelect, this.onCalendarSelect),
+	      onClear: (0, _rcUtil.createChainedFunction)(calendarProp.props.onClear, this.onCalendarClear)
+	    });
+	    return _react2['default'].createElement(
+	      _rcAnimate2['default'],
+	      {
+	        component: '',
+	        exclusive: true,
+	        animateMount: true,
+	        showProp: 'calendarOpen',
+	        transitionName: this.getTransitionName() },
+	      _react2['default'].createElement(
+	        _rcAlign2['default'],
+	        { target: this.getInputDOMNode,
+	          key: 'calendar',
+	          onAlign: this.onCalendarAlign,
+	          calendarOpen: state.open,
+	          disabled: !state.open,
+	          align: orient && this.getAlign(orient) },
+	        calendarElement
+	      )
+	    );
+	  },
+	
+	  render: function render() {
+	    var _classes;
+	
+	    var props = this.props;
+	    var disabled = props.disabled;
+	    var prefixCls = props.prefixCls;
+	    var input = props.children;
+	    var state = this.state;
+	    var value = state.value;
+	    this.haveOpened = this.haveOpened || state.open;
+	    var inputValue = '';
+	    if (value) {
+	      inputValue = props.formatter.format(value);
+	    }
+	    input = _react2['default'].cloneElement(input, {
+	      ref: (0, _rcUtil.createChainedFunction)(input.ref, this.saveInputRef),
+	      disabled: disabled,
+	      onChange: noop,
+	      onClick: disabled ? noop : this.onInputClick,
+	      value: inputValue,
+	      onKeyDown: disabled ? noop : this.onKeyDown
+	    });
+	    var classes = (_classes = {}, _defineProperty(_classes, prefixCls, 1), _defineProperty(_classes, prefixCls + '-open', state.open), _defineProperty(_classes, prefixCls + '-disabled', disabled), _classes);
+	    var trigger = props.trigger;
+	    if (trigger) {
+	      trigger = _react2['default'].cloneElement(trigger, {
+	        unselectable: true,
+	        onMouseDown: prevent,
+	        onClick: disabled ? noop : this.onTriggerClick
+	      });
+	    }
+	    return _react2['default'].createElement(
+	      'span',
+	      { className: (0, _rcUtil.classSet)(classes), style: props.style },
+	      toFragment([input, trigger])
+	    );
+	  },
+	
+	  focusInput: function focusInput() {
+	    if (!this.state.open) {
+	      this.getInputDOMNode().focus();
+	    }
+	  },
+	
+	  setOpen: function setOpen(open, callback) {
+	    if (this.state.open !== open) {
+	      this.setState({
+	        open: open
+	      }, callback);
+	      var _event = {
+	        open: open
 	      };
-	    }
-	  }, {
-	    key: 'getCalendarElement',
-	    value: function getCalendarElement() {
-	      var props = this.props;
-	      var state = this.state;
-	      var calendarProp = props.calendar;
-	      var orient = undefined;
-	      // re align when open
-	      if (state.open) {
-	        orient = getImmutableOrient(calendarProp.props.orient) || orientMap.tl;
-	      }
-	      var calendarElement = _react2['default'].cloneElement(calendarProp, {
-	        ref: (0, _rcUtil.createChainedFunction)(calendarProp.ref, this.saveCalendarRef),
-	        value: state.value,
-	        visible: state.open,
-	        orient: orient,
-	        onBlur: this.onCalendarBlur,
-	        onKeyDown: this.onCalendarKeyDown,
-	        onOk: (0, _rcUtil.createChainedFunction)(calendarProp.props.onOk, this.onCalendarOk),
-	        onSelect: (0, _rcUtil.createChainedFunction)(calendarProp.props.onSelect, this.onCalendarSelect),
-	        onClear: (0, _rcUtil.createChainedFunction)(calendarProp.props.onClear, this.onCalendarClear)
-	      });
-	      return _react2['default'].createElement(
-	        _rcAnimate2['default'],
-	        {
-	          component: '',
-	          exclusive: true,
-	          animateMount: true,
-	          showProp: 'calendarOpen',
-	          transitionName: this.getTransitionName() },
-	        _react2['default'].createElement(
-	          _rcAlign2['default'],
-	          { target: this.getInputDOMNode,
-	            key: 'calendar',
-	            onAlign: this.onCalendarAlign,
-	            calendarOpen: state.open,
-	            disabled: !state.open,
-	            align: orient && this.getAlign(orient) },
-	          calendarElement
-	        )
-	      );
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _classes;
-	
-	      var props = this.props;
-	      var disabled = props.disabled;
-	      var prefixCls = props.prefixCls;
-	      var renderCalendarToBody = props.renderCalendarToBody;
-	      var input = props.children;
-	      var state = this.state;
-	      var value = state.value;
-	      var calendar = undefined;
-	      this.haveOpened = this.haveOpened || state.open;
-	      if (!renderCalendarToBody && this.haveOpened) {
-	        calendar = this.getCalendarElement();
-	      }
-	      var inputValue = '';
-	      if (value) {
-	        inputValue = props.formatter.format(value);
-	      }
-	      input = _react2['default'].cloneElement(input, {
-	        ref: (0, _rcUtil.createChainedFunction)(input.ref, this.saveInputRef),
-	        disabled: disabled,
-	        onChange: noop,
-	        onClick: disabled ? noop : this.onInputClick,
-	        value: inputValue,
-	        onKeyDown: disabled ? noop : this.onKeyDown
-	      });
-	      var classes = (_classes = {}, _defineProperty(_classes, prefixCls, 1), _defineProperty(_classes, prefixCls + '-open', state.open), _defineProperty(_classes, prefixCls + '-disabled', disabled), _classes);
-	      var trigger = props.trigger;
-	      if (trigger) {
-	        trigger = _react2['default'].cloneElement(trigger, {
-	          unselectable: true,
-	          onMouseDown: prevent,
-	          onClick: disabled ? noop : this.onTriggerClick
-	        });
-	      }
-	      return _react2['default'].createElement(
-	        'span',
-	        { className: (0, _rcUtil.classSet)(classes), style: props.style },
-	        toFragment([input, calendar, trigger])
-	      );
-	    }
-	  }, {
-	    key: 'focusInput',
-	    value: function focusInput() {
-	      if (!this.state.open) {
-	        this.getInputDOMNode().focus();
-	      }
-	    }
-	  }, {
-	    key: 'setOpen',
-	    value: function setOpen(open, callback) {
-	      if (this.state.open !== open) {
-	        this.setState({
-	          open: open
-	        }, callback);
-	        var _event = {
-	          open: open
-	        };
-	        if (open) {
-	          this.props.onOpen(_event);
-	        } else {
-	          this.props.onClose(_event);
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'toggle',
-	    value: function toggle() {
-	      if (this.state.open) {
-	        this.close();
+	      if (open) {
+	        this.props.onOpen(_event);
 	      } else {
-	        this.open();
+	        this.props.onClose(_event);
 	      }
 	    }
-	  }, {
-	    key: 'open',
-	    value: function open(callback) {
-	      this.setOpen(true, callback);
+	  },
+	
+	  toggle: function toggle() {
+	    if (this.state.open) {
+	      this.close();
+	    } else {
+	      this.open();
 	    }
-	  }, {
-	    key: 'close',
-	    value: function close(callback) {
-	      this.setOpen(false, callback);
-	    }
-	  }]);
+	  },
 	
-	  return Picker;
-	})(_react2['default'].Component);
+	  open: function open(callback) {
+	    this.setOpen(true, callback);
+	  },
 	
-	Picker.propTypes = {
-	  onChange: _react2['default'].PropTypes.func,
-	  onOpen: _react2['default'].PropTypes.func,
-	  onClose: _react2['default'].PropTypes.func,
-	  calendar: _react2['default'].PropTypes.element,
-	  style: _react2['default'].PropTypes.object,
-	  open: _react2['default'].PropTypes.bool,
-	  defaultOpen: _react2['default'].PropTypes.bool,
-	  prefixCls: _react2['default'].PropTypes.string,
-	  renderCalendarToBody: _react2['default'].PropTypes.bool,
-	  adjustOrientOnCalendarOverflow: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.object])
-	};
-	
-	Picker.defaultProps = {
-	  prefixCls: 'rc-calendar-picker',
-	  adjustOrientOnCalendarOverflow: true,
-	  renderCalendarToBody: false,
-	  style: {},
-	  defaultOpen: false,
-	  onChange: noop,
-	  onOpen: noop,
-	  onClose: noop,
-	  formatter: new _gregorianCalendarFormat2['default']('yyyy-MM-dd')
-	};
+	  close: function close(callback) {
+	    this.setOpen(false, callback);
+	  }
+	});
 	
 	exports['default'] = Picker;
 	module.exports = exports['default'];
@@ -8321,15 +8252,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(74);
 	
@@ -8337,61 +8260,67 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rcUtil = __webpack_require__(76);
 	
-	var _rcUtil2 = _interopRequireDefault(_rcUtil);
-	
 	var _Popup = __webpack_require__(129);
 	
 	var _Popup2 = _interopRequireDefault(_Popup);
 	
-	var Tooltip = (function (_React$Component) {
-	  _inherits(Tooltip, _React$Component);
+	var Tooltip = _react2['default'].createClass({
+	  displayName: 'Tooltip',
 	
-	  function Tooltip(props) {
-	    var _this = this;
+	  propTypes: {
+	    trigger: _react2['default'].PropTypes.any,
+	    placement: _react2['default'].PropTypes.any,
+	    onVisibleChange: _react2['default'].PropTypes.func,
+	    overlay: _react2['default'].PropTypes.node.isRequired,
+	    overlayStyle: _react2['default'].PropTypes.object,
+	    wrapStyle: _react2['default'].PropTypes.object,
+	    delay: _react2['default'].PropTypes.number
+	  },
 	
-	    _classCallCheck(this, Tooltip);
-	
-	    _get(Object.getPrototypeOf(Tooltip.prototype), 'constructor', this).call(this, props);
-	    this.state = {
-	      visible: !!props.defaultVisible
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      prefixCls: 'rc-tooltip',
+	      onVisibleChange: function onVisibleChange() {},
+	      delay: 0.1,
+	      overlayStyle: {},
+	      wrapStyle: {},
+	      placement: 'right',
+	      trigger: ['hover']
 	    };
-	    if ('visible' in props) {
-	      this.state.visible = !!props.visible;
-	    }
-	    ['onClick', 'onMouseEnter', 'onMouseDown', 'onTouchStart', 'onMouseLeave', 'onFocus', 'onBlur', 'onDocumentClick'].forEach(function (m) {
-	      _this[m] = _this[m].bind(_this);
-	    });
-	  }
+	  },
 	
-	  _createClass(Tooltip, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.componentDidUpdate();
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
+	    var visible = undefined;
+	    if ('visible' in props) {
+	      visible = props.visible;
+	    } else {
+	      visible = props.defaultVisible;
 	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      if ('visible' in nextProps) {
-	        this.setState({
-	          visible: !!nextProps.visible
-	        });
-	      }
+	    return { visible: visible };
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this.componentDidUpdate();
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if ('visible' in nextProps) {
+	      this.setState({
+	        visible: !!nextProps.visible
+	      });
 	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      if (!this.popupRendered) {
-	        return;
-	      }
-	      if (this.props.renderPopupToBody) {
-	        this.popupInstance = _react2['default'].render(this.getPopupElement(), this.getTipContainer());
-	      }
+	  },
+	
+	  componentDidUpdate: function componentDidUpdate() {
+	    if (this.popupRendered) {
+	      this.popupInstance = _react2['default'].render(this.getPopupElement(), this.getTipContainer());
 	      var props = this.props;
 	      if (props.trigger.indexOf('click') !== -1) {
 	        if (this.state.visible) {
 	          if (!this.clickOutsideHandler) {
-	            this.clickOutsideHandler = _rcUtil2['default'].Dom.addEventListener(document, 'mousedown', this.onDocumentClick);
-	            this.touchOutsideHandler = _rcUtil2['default'].Dom.addEventListener(document, 'touchstart', this.onDocumentClick);
+	            this.clickOutsideHandler = _rcUtil.Dom.addEventListener(document, 'mousedown', this.onDocumentClick);
+	            this.touchOutsideHandler = _rcUtil.Dom.addEventListener(document, 'touchstart', this.onDocumentClick);
 	          }
 	          return;
 	        }
@@ -8403,178 +8332,166 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.touchOutsideHandler = null;
 	      }
 	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      var tipContainer = this.tipContainer;
-	      if (tipContainer) {
-	        _react2['default'].unmountComponentAtNode(tipContainer);
-	        document.body.removeChild(tipContainer);
-	        this.tipContainer = null;
-	      }
-	      if (this.delayTimer) {
-	        clearTimeout(this.delayTimer);
-	        this.delayTimer = null;
-	      }
-	      if (this.clickOutsideHandler) {
-	        this.clickOutsideHandler.remove();
-	        this.touchOutsideHandler.remove();
-	        this.clickOutsideHandler = null;
-	        this.touchOutsideHandler = null;
-	      }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    var tipContainer = this.tipContainer;
+	    if (tipContainer) {
+	      _react2['default'].unmountComponentAtNode(tipContainer);
+	      document.body.removeChild(tipContainer);
+	      this.tipContainer = null;
 	    }
-	  }, {
-	    key: 'onMouseEnter',
-	    value: function onMouseEnter() {
-	      this.delaySetVisible(true);
+	    if (this.delayTimer) {
+	      clearTimeout(this.delayTimer);
+	      this.delayTimer = null;
 	    }
-	  }, {
-	    key: 'onMouseLeave',
-	    value: function onMouseLeave() {
-	      this.delaySetVisible(false);
+	    if (this.clickOutsideHandler) {
+	      this.clickOutsideHandler.remove();
+	      this.touchOutsideHandler.remove();
+	      this.clickOutsideHandler = null;
+	      this.touchOutsideHandler = null;
 	    }
-	  }, {
-	    key: 'onFocus',
-	    value: function onFocus() {
-	      this.focusTime = Date.now();
+	  },
+	
+	  onMouseEnter: function onMouseEnter() {
+	    this.delaySetVisible(true);
+	  },
+	
+	  onMouseLeave: function onMouseLeave() {
+	    this.delaySetVisible(false);
+	  },
+	
+	  onFocus: function onFocus() {
+	    this.focusTime = Date.now();
+	    this.setVisible(true);
+	  },
+	
+	  onMouseDown: function onMouseDown() {
+	    this.preClickTime = Date.now();
+	  },
+	
+	  onTouchStart: function onTouchStart() {
+	    this.preTouchTime = Date.now();
+	  },
+	
+	  onBlur: function onBlur() {
+	    this.setVisible(false);
+	  },
+	
+	  onClick: function onClick(e) {
+	    // focus will trigger click
+	    if (this.focusTime) {
+	      var preTime = undefined;
+	      if (this.preClickTime && this.preTouchTime) {
+	        preTime = Math.min(this.preClickTime, this.preTouchTime);
+	      } else if (this.preClickTime) {
+	        preTime = this.preClickTime;
+	      } else if (this.preTouchTime) {
+	        preTime = this.preTouchTime;
+	      }
+	      if (Math.abs(preTime - this.focusTime) < 20) {
+	        return;
+	      }
+	      this.focusTime = 0;
+	    }
+	    this.preClickTime = 0;
+	    this.preTouchTime = 0;
+	    e.preventDefault();
+	    if (this.state.visible) {
+	      this.setVisible(false);
+	    } else {
 	      this.setVisible(true);
 	    }
-	  }, {
-	    key: 'onMouseDown',
-	    value: function onMouseDown() {
-	      this.preClickTime = Date.now();
-	    }
-	  }, {
-	    key: 'onTouchStart',
-	    value: function onTouchStart() {
-	      this.preTouchTime = Date.now();
-	    }
-	  }, {
-	    key: 'onBlur',
-	    value: function onBlur() {
+	  },
+	
+	  onDocumentClick: function onDocumentClick(e) {
+	    var target = e.target;
+	    var root = _react2['default'].findDOMNode(this);
+	    var popupNode = this.getPopupDomNode();
+	    if (!_rcUtil.Dom.contains(root, target) && !_rcUtil.Dom.contains(popupNode, target)) {
 	      this.setVisible(false);
 	    }
-	  }, {
-	    key: 'onClick',
-	    value: function onClick(e) {
-	      // focus will trigger click
-	      if (this.focusTime) {
-	        var preTime = undefined;
-	        if (this.preClickTime && this.preTouchTime) {
-	          preTime = Math.min(this.preClickTime, this.preTouchTime);
-	        } else if (this.preClickTime) {
-	          preTime = this.preClickTime;
-	        } else if (this.preTouchTime) {
-	          preTime = this.preTouchTime;
-	        }
-	        if (Math.abs(preTime - this.focusTime) < 20) {
-	          return;
-	        }
-	        this.focusTime = 0;
-	      }
-	      this.preClickTime = 0;
-	      this.preTouchTime = 0;
-	      e.preventDefault();
-	      if (this.state.visible) {
-	        this.setVisible(false);
-	      } else {
-	        this.setVisible(true);
-	      }
-	    }
-	  }, {
-	    key: 'onDocumentClick',
-	    value: function onDocumentClick(e) {
-	      var target = e.target;
-	      var root = _react2['default'].findDOMNode(this);
-	      var popupNode = this.getPopupDomNode();
-	      if (!_rcUtil2['default'].Dom.contains(root, target) && !_rcUtil2['default'].Dom.contains(popupNode, target)) {
-	        this.setVisible(false);
-	      }
-	    }
-	  }, {
-	    key: 'getPopupDomNode',
-	    value: function getPopupDomNode() {
-	      // for test
-	      return this.refs.popup ? this.refs.popup.getPopupDomNode() : this.popupInstance.getPopupDomNode();
-	    }
-	  }, {
-	    key: 'getTipContainer',
-	    value: function getTipContainer() {
-	      if (!this.tipContainer) {
-	        this.tipContainer = document.createElement('div');
-	        document.body.appendChild(this.tipContainer);
-	      }
-	      return this.tipContainer;
-	    }
-	  }, {
-	    key: 'getPopupElement',
-	    value: function getPopupElement() {
-	      if (!this.popupRendered) {
-	        return null;
-	      }
-	      var props = this.props;
-	      var state = this.state;
-	      var ref = {};
-	      if (!props.renderPopupToBody) {
-	        ref.ref = 'popup';
-	      }
-	      return _react2['default'].createElement(
-	        _Popup2['default'],
-	        _extends({ prefixCls: props.prefixCls
-	        }, ref, {
-	          visible: state.visible,
-	          trigger: props.trigger,
-	          placement: props.placement,
-	          animation: props.animation,
-	          wrap: this,
-	          style: props.overlayStyle,
-	          transitionName: props.transitionName }),
-	        props.overlay
-	      );
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      if (this.state.visible) {
-	        this.popupRendered = true;
-	      }
-	      var props = this.props;
-	      var children = props.children;
-	      var child = _react2['default'].Children.only(children);
-	      var childProps = child.props || {};
-	      var newChildProps = {};
-	      var trigger = props.trigger;
-	      var mouseProps = {};
-	      if (trigger.indexOf('click') !== -1) {
-	        newChildProps.onClick = (0, _rcUtil.createChainedFunction)(this.onClick, childProps.onClick);
-	        newChildProps.onMouseDown = (0, _rcUtil.createChainedFunction)(this.onMouseDown, childProps.onMouseDown);
-	        newChildProps.onTouchStart = (0, _rcUtil.createChainedFunction)(this.onTouchStart, childProps.onTouchStart);
-	      }
-	      if (trigger.indexOf('hover') !== -1) {
-	        mouseProps.onMouseEnter = (0, _rcUtil.createChainedFunction)(this.onMouseEnter, childProps.onMouseEnter);
-	        mouseProps.onMouseLeave = (0, _rcUtil.createChainedFunction)(this.onMouseLeave, childProps.onMouseLeave);
-	      }
-	      if (trigger.indexOf('focus') !== -1) {
-	        newChildProps.onFocus = (0, _rcUtil.createChainedFunction)(this.onFocus, childProps.onFocus);
-	        newChildProps.onBlur = (0, _rcUtil.createChainedFunction)(this.onBlur, childProps.onBlur);
-	      }
+	  },
 	
-	      var popupElement = props.renderPopupToBody ? null : this.getPopupElement();
-	      var className = props.prefixCls + '-wrap';
+	  getPopupDomNode: function getPopupDomNode() {
+	    // for test
+	    return this.popupInstance.getPopupDomNode();
+	  },
 	
-	      if (this.state.visible) {
-	        className += ' ' + props.prefixCls + '-wrap-open';
-	      }
-	
-	      return _react2['default'].createElement(
-	        'span',
-	        _extends({ className: className }, mouseProps, { style: props.wrapStyle }),
-	        _rcUtil2['default'].Children.mapSelf([_react2['default'].cloneElement(child, newChildProps), popupElement])
-	      );
+	  getTipContainer: function getTipContainer() {
+	    if (!this.tipContainer) {
+	      this.tipContainer = document.createElement('div');
+	      document.body.appendChild(this.tipContainer);
 	    }
-	  }, {
-	    key: 'setVisible',
-	    value: function setVisible(visible) {
+	    return this.tipContainer;
+	  },
+	
+	  getPopupElement: function getPopupElement() {
+	    if (!this.popupRendered) {
+	      return null;
+	    }
+	    var props = this.props;
+	    var state = this.state;
+	    var mouseProps = {};
+	    if (props.trigger.indexOf('hover') !== -1) {
+	      mouseProps.onMouseEnter = this.onMouseEnter;
+	      mouseProps.onMouseLeave = this.onMouseLeave;
+	    }
+	    return _react2['default'].createElement(
+	      _Popup2['default'],
+	      _extends({ prefixCls: props.prefixCls,
+	        visible: state.visible,
+	        trigger: props.trigger,
+	        placement: props.placement,
+	        animation: props.animation
+	      }, mouseProps, {
+	        wrap: this,
+	        style: props.overlayStyle,
+	        transitionName: props.transitionName }),
+	      props.overlay
+	    );
+	  },
+	
+	  render: function render() {
+	    if (this.state.visible) {
+	      this.popupRendered = true;
+	    }
+	    var props = this.props;
+	    var children = props.children;
+	    var child = _react2['default'].Children.only(children);
+	    var childProps = child.props || {};
+	    var newChildProps = {};
+	    var trigger = props.trigger;
+	    var mouseProps = {};
+	    if (trigger.indexOf('click') !== -1) {
+	      newChildProps.onClick = (0, _rcUtil.createChainedFunction)(this.onClick, childProps.onClick);
+	      newChildProps.onMouseDown = (0, _rcUtil.createChainedFunction)(this.onMouseDown, childProps.onMouseDown);
+	      newChildProps.onTouchStart = (0, _rcUtil.createChainedFunction)(this.onTouchStart, childProps.onTouchStart);
+	    }
+	    if (trigger.indexOf('hover') !== -1) {
+	      mouseProps.onMouseEnter = (0, _rcUtil.createChainedFunction)(this.onMouseEnter, childProps.onMouseEnter);
+	      mouseProps.onMouseLeave = (0, _rcUtil.createChainedFunction)(this.onMouseLeave, childProps.onMouseLeave);
+	    }
+	    if (trigger.indexOf('focus') !== -1) {
+	      newChildProps.onFocus = (0, _rcUtil.createChainedFunction)(this.onFocus, childProps.onFocus);
+	      newChildProps.onBlur = (0, _rcUtil.createChainedFunction)(this.onBlur, childProps.onBlur);
+	    }
+	
+	    var className = props.prefixCls + '-wrap';
+	
+	    if (this.state.visible) {
+	      className += ' ' + props.prefixCls + '-wrap-open';
+	    }
+	
+	    return _react2['default'].createElement(
+	      'span',
+	      _extends({ className: className }, mouseProps, { style: props.wrapStyle }),
+	      _react2['default'].cloneElement(child, newChildProps)
+	    );
+	  },
+	
+	  setVisible: function setVisible(visible) {
+	    if (this.state.visible !== visible) {
 	      if (!('visible' in this.props)) {
 	        this.setState({
 	          visible: visible
@@ -8582,50 +8499,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      this.props.onVisibleChange(visible);
 	    }
-	  }, {
-	    key: 'delaySetVisible',
-	    value: function delaySetVisible(visible) {
-	      var _this2 = this;
+	  },
 	
-	      var delay = this.props.delay * 1000;
-	      if (delay) {
-	        if (this.delayTimer) {
-	          clearTimeout(this.delayTimer);
-	        }
-	        this.delayTimer = setTimeout(function () {
-	          _this2.setVisible(visible);
-	          _this2.delayTimer = null;
-	        }, delay);
-	      } else {
-	        this.setVisible(visible);
+	  delaySetVisible: function delaySetVisible(visible) {
+	    var _this = this;
+	
+	    var delay = this.props.delay * 1000;
+	    if (delay) {
+	      if (this.delayTimer) {
+	        clearTimeout(this.delayTimer);
 	      }
+	      this.delayTimer = setTimeout(function () {
+	        _this.setVisible(visible);
+	        _this.delayTimer = null;
+	      }, delay);
+	    } else {
+	      this.setVisible(visible);
 	    }
-	  }]);
-	
-	  return Tooltip;
-	})(_react2['default'].Component);
-	
-	Tooltip.propTypes = {
-	  trigger: _react2['default'].PropTypes.any,
-	  placement: _react2['default'].PropTypes.any,
-	  onVisibleChange: _react2['default'].PropTypes.func,
-	  renderPopupToBody: _react2['default'].PropTypes.bool,
-	  overlay: _react2['default'].PropTypes.node.isRequired,
-	  overlayStyle: _react2['default'].PropTypes.object,
-	  wrapStyle: _react2['default'].PropTypes.object,
-	  delay: _react2['default'].PropTypes.number
-	};
-	
-	Tooltip.defaultProps = {
-	  prefixCls: 'rc-tooltip',
-	  renderPopupToBody: true,
-	  onVisibleChange: function onVisibleChange() {},
-	  delay: 0.1,
-	  overlayStyle: {},
-	  wrapStyle: {},
-	  placement: 'right',
-	  trigger: ['hover']
-	};
+	  }
+	});
 	
 	exports['default'] = Tooltip;
 	module.exports = exports['default'];
@@ -8669,7 +8561,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  propTypes: {
 	    visible: _react2['default'].PropTypes.bool,
 	    wrap: _react2['default'].PropTypes.object,
-	    style: _react2['default'].PropTypes.object
+	    style: _react2['default'].PropTypes.object,
+	    onMouseEnter: _react2['default'].PropTypes.func,
+	    onMouseLeave: _react2['default'].PropTypes.func
 	  },
 	
 	  // optimize for speed
@@ -8745,6 +8639,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2['default'].createElement(
 	          'div',
 	          { className: className,
+	            onMouseEnter: props.onMouseEnter,
+	            onMouseLeave: props.onMouseLeave,
 	            style: style },
 	          _react2['default'].createElement('div', { className: arrowClassName }),
 	          _react2['default'].createElement(
@@ -15203,7 +15099,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	module.exports = __webpack_require__(188);
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _Dropdown = __webpack_require__(188);
+	
+	var _Dropdown2 = _interopRequireDefault(_Dropdown);
+	
+	exports['default'] = _Dropdown2['default'];
+	module.exports = exports['default'];
 
 /***/ },
 /* 188 */
@@ -15211,18 +15118,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _react = __webpack_require__(74);
 	
-	var React = __webpack_require__(74);
-	var Tooltip = __webpack_require__(127);
-	var assign = __webpack_require__(168);
-	var rcUtil = __webpack_require__(76);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcTooltip = __webpack_require__(127);
+	
+	var _rcTooltip2 = _interopRequireDefault(_rcTooltip);
 	
 	/*
 	
@@ -15235,86 +15145,83 @@ return /******/ (function(modules) { // webpackBootstrap
 	 </DropDown>
 	 */
 	
-	var Dropdown = (function (_React$Component) {
-	  _inherits(Dropdown, _React$Component);
+	var Dropdown = _react2['default'].createClass({
+	  displayName: 'Dropdown',
 	
-	  function Dropdown(props) {
-	    _classCallCheck(this, Dropdown);
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      prefixCls: 'rc-dropdown',
+	      defaultVisible: false,
+	      onVisibleChange: function onVisibleChange() {},
+	      placement: {
+	        points: ['tl', 'bl']
+	      }
+	    };
+	  },
 	
-	    _get(Object.getPrototypeOf(Dropdown.prototype), 'constructor', this).call(this, props);
-	    this.handleClick = this.handleClick.bind(this);
-	    this.handleVisibleChange = this.handleVisibleChange.bind(this);
-	    if ('visible' in this.props) {
-	      this.state = {
-	        visible: this.props.visible
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
+	    if ('visible' in props) {
+	      return {
+	        visible: props.visible
 	      };
-	    } else {
-	      this.state = {
-	        visible: this.props.defaultVisible
-	      };
 	    }
-	  }
+	    return {
+	      visible: props.defaultVisible
+	    };
+	  },
 	
-	  _createClass(Dropdown, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(props) {
-	      if ('visible' in props) {
-	        this.setState({
-	          visible: props.visible
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      if (!('visible' in this.props)) {
-	        this.setState({
-	          visible: false
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'handleVisibleChange',
-	    value: function handleVisibleChange(v) {
-	      if (!('visible' in this.props)) {
-	        this.setState({
-	          visible: v
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'getMenuElement',
-	    value: function getMenuElement() {
-	      var props = this.props;
-	      return React.cloneElement(props.overlay, {
-	        prefixCls: props.prefixCls + '-menu',
-	        onClick: rcUtil.createChainedFunction(props.overlay.props.onClick, this.handleClick)
+	  componentWillReceiveProps: function componentWillReceiveProps(props) {
+	    if ('visible' in props) {
+	      this.setState({
+	        visible: props.visible
 	      });
 	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var props = assign({}, this.props);
-	      props.visible = this.state.visible;
-	      props.onVisibleChange = rcUtil.createChainedFunction(props.onVisibleChange, this.handleVisibleChange);
-	      props.overlay = this.getMenuElement();
-	      return React.createElement(Tooltip, props);
+	  },
+	
+	  onClick: function onClick(e) {
+	    var props = this.props;
+	    var overlayProps = props.overlay.props;
+	    if (!('visible' in props)) {
+	      this.setState({
+	        visible: false
+	      });
 	    }
-	  }]);
+	    if (overlayProps.onClick) {
+	      overlayProps.onClick(e);
+	    }
+	  },
 	
-	  return Dropdown;
-	})(React.Component);
+	  onVisibleChange: function onVisibleChange(v) {
+	    var props = this.props;
+	    if (!('visible' in props)) {
+	      this.setState({
+	        visible: v
+	      });
+	    }
+	    props.onVisibleChange(v);
+	  },
 	
-	Dropdown.defaultProps = {
-	  prefixCls: 'rc-dropdown',
-	  renderPopupToBody: false,
-	  defaultVisible: false,
-	  placement: {
-	    points: ['tl', 'bl']
+	  getMenuElement: function getMenuElement() {
+	    var props = this.props;
+	    return _react2['default'].cloneElement(props.overlay, {
+	      prefixCls: props.prefixCls + '-menu',
+	      onClick: this.onClick
+	    });
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(_rcTooltip2['default'], _extends({}, this.props, {
+	      ref: 'tooltip',
+	      visible: this.state.visible,
+	      overlay: this.getMenuElement(),
+	      onVisibleChange: this.onVisibleChange
+	    }));
 	  }
-	};
+	});
 	
-	module.exports = Dropdown;
+	exports['default'] = Dropdown;
+	module.exports = exports['default'];
 
 /***/ },
 /* 189 */
@@ -15650,7 +15557,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        prefixCls: prefixCls,
 	        delay: 0.1,
 	        overlayStyle: this.props.overlayStyle,
-	        renderPopupToBody: true,
 	        transitionName: transitionName,
 	        trigger: this.props.trigger,
 	        overlay: overlay },
@@ -19837,7 +19743,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      routes = this.context.router.state.branch;
 	      params = this.context.router.state.params;
 	      crumbs = routes.map(function (route, i) {
-	        var name = route.name.replace(/\:(.*)/g, function (replacement, key) {
+	        var name = route.breadcrumbName.replace(/\:(.*)/g, function (replacement, key) {
 	          return params[key] || replacement;
 	        });
 	        var link;
@@ -19974,7 +19880,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      { placement: this.props.placement,
 	        overlayStyle: this.props.overlayStyle,
 	        prefixCls: prefixCls,
-	        renderPopupToBody: true,
 	        onVisibleChange: this.onVisibleChange,
 	        transitionName: transitionName,
 	        visible: this.state.visible,
@@ -28399,6 +28304,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _uploadList2 = _interopRequireDefault(_uploadList);
 	
+	var _getFileItem = __webpack_require__(319);
+	
+	var _getFileItem2 = _interopRequireDefault(_getFileItem);
+	
 	var prefixCls = 'ant-upload';
 	
 	var AntUpload = _react2['default'].createClass({
@@ -28413,7 +28322,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var i = this.state.downloadList.length;
 	    var nextDownloadList = this.state.downloadList;
 	    nextDownloadList.push({
-	      id: i,
+	      index: i,
 	      uid: file.uid || '',
 	      filename: file.name,
 	      status: 'downloading'
@@ -28423,19 +28332,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	  handleSuccess: function handleSuccess(ret, file) {
-	    var matchWay = file.uid === '' ? 'byName' : 'byUid';
 	    _message2['default'].success(file.name + '上传完成');
-	    for (var i = 0; i < this.state.downloadList.length; i++) {
-	      if (matchWay === 'byName') {
-	        if (this.state.downloadList[i].filename === file.name) {
-	          this.state.downloadList[i].status = 'done';
-	        }
-	      } else {
-	        if (this.state.downloadList[i].uid === file.uid) {
-	          this.state.downloadList[i].status = 'done';
-	        }
-	      }
-	    }
+	    var targetItem = (0, _getFileItem2['default'])(file, this.state.downloadList);
+	    targetItem.status = 'done';
 	    this.setState({
 	      downloadList: this.state.downloadList
 	    });
@@ -28483,11 +28382,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    if (type === 'drag') {
 	      return _react2['default'].createElement(
-	        _rcUpload2['default'],
-	        props,
+	        'div',
+	        { className: prefixCls + ' ' + prefixCls + '-drag' },
 	        _react2['default'].createElement(
-	          'div',
-	          { className: prefixCls + ' ' + prefixCls + '-drag' },
+	          _rcUpload2['default'],
+	          props,
 	          _react2['default'].createElement(
 	            'div',
 	            { className: prefixCls + '-drag-container' },
@@ -28498,11 +28397,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else if (type === 'select') {
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: prefixCls + ' ' + prefixCls + '-select' },
+	        null,
 	        _react2['default'].createElement(
-	          _rcUpload2['default'],
-	          props,
-	          this.props.children
+	          'div',
+	          { className: prefixCls + ' ' + prefixCls + '-select' },
+	          _react2['default'].createElement(
+	            _rcUpload2['default'],
+	            props,
+	            this.props.children
+	          )
 	        ),
 	        _react2['default'].createElement(_uploadList2['default'], { items: this.state.downloadList })
 	      );
@@ -30148,6 +30051,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _getFileItem = __webpack_require__(319);
+	
+	var _getFileItem2 = _interopRequireDefault(_getFileItem);
+	
 	var prefixCls = 'ant-upload';
 	
 	exports['default'] = _react2['default'].createClass({
@@ -30171,17 +30078,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  handleClose: function handleClose(file) {
-	    var matchWay = file.uid === '' ? 'byName' : 'byUid';
+	    console.log(file.uid, file.id);
+	    var matchWay = !file.uid ? 'byName' : 'byUid';
 	    var items = this.state.items;
-	    var removeItem = items.filter(function (item) {
-	      if (matchWay === 'byName') {
-	        return item.filename === file.filename;
-	      } else {
-	        return item.uid === file.uid;
-	      }
-	    })[0];
+	    var removeItem = (0, _getFileItem2['default'])(file, items);
 	    if (removeItem) {
-	      items.splice(removeItem, 1);
+	      items.splice(items.indexOf(removeItem), 1);
 	    }
 	    this.setState({
 	      items: items
@@ -30195,7 +30097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var statusIcon = file.status === 'done' ? _react2['default'].createElement('i', { className: 'anticon anticon-check ' + prefixCls + '-success-icon' }) : _react2['default'].createElement('i', { className: 'anticon anticon-loading' });
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: prefixCls + '-list-item', key: file.id },
+	        { className: prefixCls + '-list-item', key: file.index },
 	        statusIcon,
 	        _react2['default'].createElement(
 	          'b',
@@ -30217,6 +30119,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 319 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	exports['default'] = getFileItem;
+	
+	function getFileItem(file, fileList) {
+	  var matchWay = !file.uid ? 'byName' : 'byUid';
+	  var target = fileList.filter(function (item) {
+	    if (matchWay === 'byName') {
+	      return item.filename === file.filename;
+	    } else {
+	      return item.uid === file.uid;
+	    }
+	  })[0];
+	  return target;
+	}
+	
+	;
+	module.exports = exports['default'];
+
+/***/ },
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30257,7 +30185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -30301,11 +30229,11 @@ return /******/ (function(modules) { // webpackBootstrap
 			"is-equal-shallow": "~0.1.3",
 			"object-assign": "3.x",
 			"rc-animate": "~1.1.0",
-			"rc-calendar": "~3.13.0",
+			"rc-calendar": "~3.14.0",
 			"rc-checkbox": "~1.1.1",
 			"rc-collapse": "~1.2.3",
 			"rc-dialog": "~5.0.1",
-			"rc-dropdown": "~1.2.0",
+			"rc-dropdown": "~1.3.0",
 			"rc-form-validation": "~2.4.7",
 			"rc-input-number": "~2.0.1",
 			"rc-menu": "~4.3.1",
@@ -30319,7 +30247,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.1.0",
 			"rc-tabs": "~5.3.2",
-			"rc-tooltip": "~2.5.0",
+			"rc-tooltip": "~2.6.1",
 			"rc-tree": "~0.14.3",
 			"rc-upload": "~1.3.1",
 			"rc-util": "~2.0.3",
@@ -30333,7 +30261,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			"babel-loader": "^5.3.2",
 			"busboy": "~0.2.9",
 			"chalk": "~1.1.0",
-			"css-animation": "~1.0.3",
 			"css-loader": "^0.14.1",
 			"eslint": "^1.1.0",
 			"eslint-plugin-react": "~3.2.2",
@@ -30346,7 +30273,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.5.8",
 			"precommit-hook": "^1.0.7",
-			"rc-tabs": "~5.3.3",
 			"react-router": "~1.0.0-beta3",
 			"webpack": "^1.10.1",
 			"webpack-dev-middleware": "^1.2.0"
