@@ -8,7 +8,7 @@ var TreeNode = Tree.TreeNode;
 
 React.render(React.createElement(
   Tree,
-  { className: "myCls", defaultExpandAll: true },
+  { defaultExpandAll: true },
   React.createElement(
     TreeNode,
     { title: "parent 1" },
@@ -45,7 +45,7 @@ React.render(React.createElement(
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">className</span>=<span class="value">"myCls"</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>

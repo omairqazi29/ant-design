@@ -38,7 +38,7 @@ $(function () {
       return <Select combobox style={{width: 260}}
         onSelect={this.handleSelect}
         optionLabelProp="text"
-        dropdownMenuStyle={{maxHeight: 200, overflow: 'auto'}}
+        dropdownClassName="autoComplete"
         searchPlaceholder="搜索组件..."
         filterOption={this.filterOption}>{this.getOptions()}</Select>;
     }

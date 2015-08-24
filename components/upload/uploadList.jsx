@@ -1,6 +1,7 @@
 import React from 'react';
 import getFileItem from './getFileItem';
 const prefixCls = 'ant-upload';
+import Animate from 'rc-animate';
 
 export default React.createClass({
   getDefaultProps() {
@@ -21,8 +22,6 @@ export default React.createClass({
     }
   },
   handleClose(file) {
-    console.log(file.uid, file.id);
-    let matchWay = (!file.uid) ? 'byName' : 'byUid';
     let items = this.state.items;
     let removeItem = getFileItem(file, items);
     if (removeItem) {
@@ -45,6 +44,10 @@ export default React.createClass({
         </div>
       );
     };
-    return <div className={prefixCls + '-list'}>{items.map(downloadItem)}</div>;
+    return (<div className={prefixCls + '-list'}>
+      <Animate transitionName={prefixCls + '-margin-top'}>
+        {items.map(downloadItem)}
+      </Animate>
+    </div>);
   }
 });
