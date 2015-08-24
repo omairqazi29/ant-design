@@ -8451,6 +8451,7 @@ label.ant-radio-button-checked:active {
 .ant-tree li span.ant-tree-checkbox {
   margin: 3px 7px 0 0;
 }
+.ant-tree li span.ant-tree-switcher-noop,
 .ant-tree li span.ant-tree-switcher,
 .ant-tree li span.ant-tree-iconEle {
   line-height: 0;
@@ -8462,9 +8463,6 @@ label.ant-radio-button-checked:active {
   border: 0 none;
   cursor: pointer;
   outline: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
 }
 .ant-tree li span.ant-tree-switcher-disabled {
   background: #fff;
@@ -8570,9 +8568,18 @@ label.ant-radio-button-checked:active {
       -ms-transform: rotate(270deg) scale(0.5);
           transform: rotate(270deg) scale(0.5);
 }
+.ant-tree-child-tree {
+  display: none;
+}
+.ant-tree-child-tree-open {
+  display: block;
+}
 .ant-tree-treenode-disabled > span,
 .ant-tree-treenode-disabled > a {
   color: gray;
+}
+.ant-tree-node-selected {
+  background-color: #eaf8fe;
 }
 .ant-tree-icon__open {
   margin-right: 2px;
@@ -9154,6 +9161,15 @@ label.ant-radio-button-checked:active {
 }
 .ant-menu-vertical.ant-menu-sub {
   padding: 0;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.ant-menu-vertical.ant-menu-sub > .ant-menu-item,
+.ant-menu-vertical.ant-menu-sub > .ant-menu-submenu {
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 .ant-menu-root.ant-menu-vertical,
 .ant-menu-root.ant-menu-inline {
@@ -9165,6 +9181,7 @@ label.ant-radio-button-checked:active {
   border: none;
   border-radius: 0;
   box-shadow: none;
+  overflow: hidden;
 }
 .ant-menu-sub.ant-menu-inline > .ant-menu-item,
 .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
@@ -9183,4 +9200,4 @@ label.ant-radio-button-checked:active {
   position: fixed;
 }
 
-/*# sourceMappingURL=antd-0.8.0-beta6.css.map*/
+/*# sourceMappingURL=antd-0.8.0-beta7.css.map*/

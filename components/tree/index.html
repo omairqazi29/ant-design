@@ -13,7 +13,7 @@ Tree 树形控件 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0-beta6.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.0-beta7.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Tree 树形控件 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0-beta6',
+        latest: '0.8.0-beta7',
         stable: '0.7.3'
       };
     </script>
-    <script src="/dist/antd-0.8.0-beta6.min.js"></script>
+    <script src="/dist/antd-0.8.0-beta7.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -585,54 +585,38 @@ var TreeNode = Tree.TreeNode;
 
 React.render(React.createElement(
   Tree,
-  { defaultExpandAll: true },
+  { defaultExpandAll: false },
   React.createElement(
     TreeNode,
     { title: "parent 1" },
-    React.createElement(
-      TreeNode,
-      null,
-      "leaf"
-    ),
+    React.createElement(TreeNode, { title: "leaf" }),
     React.createElement(
       TreeNode,
       { title: "parent 1-1" },
       React.createElement(
         TreeNode,
         { title: "parent 2-1" },
-        React.createElement(
-          TreeNode,
-          null,
-          "leaf"
-        )
+        React.createElement(TreeNode, { title: "leaf" }),
+        React.createElement(TreeNode, { title: "leaf" })
       ),
-      React.createElement(
-        TreeNode,
-        null,
-        "leaf"
-      )
+      React.createElement(TreeNode, { title: "leaf" })
     )
-  ),
-  React.createElement(
-    TreeNode,
-    null,
-    "leaf"
   )
 ), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{false}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
         <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
 , document.getElementById('components-tree-demo-basic'));</span></code></pre></div>
   </div>
@@ -658,54 +642,27 @@ function handleCheck(info) {
 }
 
 React.render(React.createElement(
-  Tree,
-  { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
+  "div",
+  null,
   React.createElement(
-    TreeNode,
-    { title: "parent 1" },
+    Tree,
+    { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
     React.createElement(
       TreeNode,
-      null,
-      "leaf"
-    ),
-    React.createElement(
-      TreeNode,
-      { title: "parent 1-1" },
+      { title: "parent 1" },
+      React.createElement(TreeNode, { title: "leaf" }),
       React.createElement(
         TreeNode,
-        { title: "parent 2-1" },
+        { title: "parent 1-1" },
         React.createElement(
           TreeNode,
-          null,
-          "leaf"
+          { title: "parent 2-1" },
+          React.createElement(TreeNode, { title: "leaf" }),
+          React.createElement(TreeNode, { title: "leaf" })
         ),
-        React.createElement(
-          TreeNode,
-          null,
-          "leaf"
-        )
-      ),
-      React.createElement(
-        TreeNode,
-        null,
-        "leaf"
-      ),
-      React.createElement(
-        TreeNode,
-        null,
-        "leaf"
+        React.createElement(TreeNode, { title: "leaf" })
       )
     )
-  ),
-  React.createElement(
-    TreeNode,
-    null,
-    "leaf"
-  ),
-  React.createElement(
-    TreeNode,
-    null,
-    "leaf"
   )
 ), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
@@ -714,22 +671,20 @@ React.render(React.createElement(
   console.log(<span class="string">'check: '</span>, info);
 }
 
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{true}</span> <span class="attribute">onCheck</span>=<span class="value">{handleCheck}</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{true}</span> <span class="attribute">onCheck</span>=<span class="value">{handleCheck}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
         <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>leaf<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-tree-demo-checkbox'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

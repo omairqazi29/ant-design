@@ -38,7 +38,7 @@ var Test = React.createClass({
       null,
       React.createElement(
         'div',
-        { style: { 'margin-bottom': 20 } },
+        { style: { marginBottom: 20 } },
         React.createElement(
           'button',
           { className: 'ant-btn ant-btn-primary', onClick: this.onEnter },
@@ -46,7 +46,7 @@ var Test = React.createClass({
         ),
         React.createElement(
           'button',
-          { className: 'ant-btn ant-btn-primary', style: { 'margin-left': 20 }, onClick: this.onLeave },
+          { className: 'ant-btn ant-btn-primary', style: { marginLeft: 20 }, onClick: this.onLeave },
           '出场'
         )
       ),
@@ -155,9 +155,9 @@ React.render(React.createElement(Test, null), document.getElementById('component
   render() {
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{'margin-bottom':20}}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:20}}</span>&gt;</span>
           <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onEnter}</span>&gt;</span>进场<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">style</span>=<span class="value">{{'margin-left':20}}</span> <span class="attribute">onClick</span>=<span class="value">{this.onLeave}</span>&gt;</span>出场<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">style</span>=<span class="value">{{marginLeft:20}}</span> <span class="attribute">onClick</span>=<span class="value">{this.onLeave}</span>&gt;</span>出场<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">interval</span>=<span class="value">{this.state.interval}</span> <span class="attribute">type</span>=<span class="value">{this.state.type}</span> <span class="attribute">upend</span>=<span class="value">{this.state.upend}</span> <span class="attribute">direction</span>=<span class="value">{this.state.direction}</span>&gt;</span>
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span> <span class="attribute">enter-data</span>&gt;</span>
