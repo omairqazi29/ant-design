@@ -8786,15 +8786,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var childProps = child.props || {};
 	    var newChildProps = {};
 	    var trigger = props.trigger;
-	    var mouseProps = {};
 	    if (trigger.indexOf('click') !== -1) {
 	      newChildProps.onClick = (0, _rcUtil.createChainedFunction)(this.onClick, childProps.onClick);
 	      newChildProps.onMouseDown = (0, _rcUtil.createChainedFunction)(this.onMouseDown, childProps.onMouseDown);
 	      newChildProps.onTouchStart = (0, _rcUtil.createChainedFunction)(this.onTouchStart, childProps.onTouchStart);
 	    }
 	    if (trigger.indexOf('hover') !== -1) {
-	      mouseProps.onMouseEnter = (0, _rcUtil.createChainedFunction)(this.onMouseEnter, childProps.onMouseEnter);
-	      mouseProps.onMouseLeave = (0, _rcUtil.createChainedFunction)(this.onMouseLeave, childProps.onMouseLeave);
+	      newChildProps.onMouseEnter = (0, _rcUtil.createChainedFunction)(this.onMouseEnter, childProps.onMouseEnter);
+	      newChildProps.onMouseLeave = (0, _rcUtil.createChainedFunction)(this.onMouseLeave, childProps.onMouseLeave);
 	    }
 	    if (trigger.indexOf('focus') !== -1) {
 	      newChildProps.onFocus = (0, _rcUtil.createChainedFunction)(this.onFocus, childProps.onFocus);
@@ -8809,7 +8808,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return _react2['default'].createElement(
 	      'span',
-	      _extends({ className: className }, mouseProps, { style: props.wrapStyle }),
+	      { className: className, style: props.wrapStyle },
 	      _react2['default'].cloneElement(child, newChildProps)
 	    );
 	  },
