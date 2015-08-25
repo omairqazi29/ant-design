@@ -329,6 +329,12 @@ a[disabled] {
 .invisible {
   visibility: hidden;
 }
+code,
+kbd,
+pre,
+samp {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
 @font-face {
   font-family: 'anticon';
   src: url('//at.alicdn.com/t/font_1440074043_6914854.eot');
