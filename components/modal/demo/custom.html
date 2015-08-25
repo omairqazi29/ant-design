@@ -21,14 +21,16 @@ var Test = React.createClass({
     });
   },
   handleOk: function handleOk() {
+    var _this = this;
+
     this.setState({
       ModalText: '对话框将在两秒后关闭'
     });
-    setTimeout((function () {
-      this.setState({
+    setTimeout(function () {
+      _this.setState({
         visible: false
       });
-    }).bind(this), 2000);
+    }, 2000);
   },
   handleCancel: function handleCancel() {
     console.log('点击了取消');
@@ -77,11 +79,11 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">this</span>.setState({
       ModalText: <span class="string">'对话框将在两秒后关闭'</span>
     });
-    setTimeout((<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    setTimeout(() =&gt; {
       <span class="keyword">this</span>.setState({
         visible: <span class="literal">false</span>
       });
-    }).bind(<span class="keyword">this</span>), <span class="number">2000</span>);
+    }, <span class="number">2000</span>);
   },
   handleCancel() {
     console.log(<span class="string">'点击了取消'</span>);

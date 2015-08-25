@@ -13,7 +13,7 @@ Modal 对话框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.0.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.1-beta1.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Modal 对话框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.0',
+        latest: '0.8.1-beta1',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.8.0.min.js"></script>
+    <script src="/dist/antd-0.8.1-beta1.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -524,7 +524,7 @@ Modal 对话框 - Ant Design
 <td>width</td>
 <td>宽度</td>
 <td>String or Number</td>
-<td>500</td>
+<td>520</td>
 </tr>
 <tr>
 <td>footer</td>
@@ -907,14 +907,16 @@ var Test = React.createClass({
     });
   },
   handleOk: function handleOk() {
+    var _this = this;
+
     this.setState({
       ModalText: '对话框将在两秒后关闭'
     });
-    setTimeout((function () {
-      this.setState({
+    setTimeout(function () {
+      _this.setState({
         visible: false
       });
-    }).bind(this), 2000);
+    }, 2000);
   },
   handleCancel: function handleCancel() {
     console.log('点击了取消');
@@ -963,11 +965,11 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">this</span>.setState({
       ModalText: <span class="string">'对话框将在两秒后关闭'</span>
     });
-    setTimeout((<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    setTimeout(() =&gt; {
       <span class="keyword">this</span>.setState({
         visible: <span class="literal">false</span>
       });
-    }).bind(<span class="keyword">this</span>), <span class="number">2000</span>);
+    }, <span class="number">2000</span>);
   },
   handleCancel() {
     console.log(<span class="string">'点击了取消'</span>);
@@ -1057,7 +1059,7 @@ React.render(
     </li>
     <li>
       <h2>关于我们</h2>
-      <a href="http://www.atatech.org/teams/79">博客 - Ant UED</a>
+      <a href="https://github.com/alipay/x/issues">博客 - Ant UED</a>
     </li>
     <li>
       <h2>联系我们</h2>
