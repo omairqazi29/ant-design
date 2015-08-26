@@ -29,6 +29,7 @@ var dataSource = new Table.DataSource({
   resolve: function resolve(result) {
     return result.data;
   },
+  data: {},
   // 和后台接口返回的分页数据进行适配
   getPagination: function getPagination(result) {
     return {
@@ -123,6 +124,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
     <span class="keyword">return</span> result.data;
   },
+  data: {},
   <span class="comment">// 和后台接口返回的分页数据进行适配</span>
   getPagination: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
     <span class="keyword">return</span> {

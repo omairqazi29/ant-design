@@ -7598,28 +7598,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // last props children if exclusive
 	    // exclusive needs immediate response
 	    var currentChildren = this.state.children;
-	    var newChildren = _ChildrenUtils2['default'].mergeChildren(currentChildren, nextChildren);
-	
-	    if (showProp && !exclusive) {
-	      newChildren = newChildren.map(function (c) {
-	        var ret = c;
-	        if (!c.props[showProp] && (0, _ChildrenUtils.isShownInChildren)(currentChildren, c, showProp)) {
-	          ret = _react2['default'].cloneElement(c, _defineProperty({}, showProp, true));
+	    var newChildren = undefined;
+	    var needSetState = false;
+	    if (showProp) {
+	      needSetState = true;
+	      newChildren = currentChildren.map(function (currentChild) {
+	        var nextChild = (0, _ChildrenUtils.findChildInChildrenByKey)(nextChildren, currentChild.key);
+	        if (!nextChild.props[showProp] && currentChild.props[showProp]) {
+	          return _react2['default'].cloneElement(nextChild, _defineProperty({}, showProp, true));
 	        }
-	        return ret;
+	        return nextChild;
 	      });
+	    } else {
+	      newChildren = _ChildrenUtils2['default'].mergeChildren(currentChildren, nextChildren);
+	      if (newChildren.length !== currentChildren.length || newChildren.length !== nextChildren.length) {
+	        needSetState = true;
+	      }
 	    }
-	
-	    this.setState({
-	      children: newChildren
-	    });
 	
 	    // exclusive needs immediate response
 	    if (exclusive) {
 	      Object.keys(currentlyAnimatingKeys).forEach(function (key) {
+	        needSetState = false;
 	        _this2.stop(key);
 	      });
 	      currentChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(props));
+	    }
+	
+	    if (needSetState) {
+	      this.setState({
+	        children: newChildren
+	      });
 	    }
 	
 	    nextChildren.forEach(function (c) {
@@ -7627,10 +7636,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (currentlyAnimatingKeys[key]) {
 	        return;
 	      }
-	      var hasPrev = (0, _ChildrenUtils.inChildren)(currentChildren, c);
+	      var hasPrev = (0, _ChildrenUtils.findChildInChildrenByKey)(currentChildren, key);
 	      if (showProp) {
 	        if (hasPrev) {
-	          var showInNow = (0, _ChildrenUtils.isShownInChildren)(currentChildren, c, showProp);
+	          var showInNow = (0, _ChildrenUtils.findShownChildInChildrenByKey)(currentChildren, key, showProp);
 	          var showInNext = c.props[showProp];
 	          if (!showInNow && showInNext) {
 	            _this2.keysToEnter.push(key);
@@ -7646,10 +7655,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (currentlyAnimatingKeys[key]) {
 	        return;
 	      }
-	      var hasNext = (0, _ChildrenUtils.inChildren)(nextChildren, c);
+	      var hasNext = (0, _ChildrenUtils.findChildInChildrenByKey)(nextChildren, key);
 	      if (showProp) {
 	        if (hasNext) {
-	          var showInNext = (0, _ChildrenUtils.isShownInChildren)(nextChildren, c, showProp);
+	          var showInNext = (0, _ChildrenUtils.findShownChildInChildrenByKey)(nextChildren, key, showProp);
 	          var showInNow = c.props[showProp];
 	          if (!showInNext && showInNow) {
 	            _this2.keysToLeave.push(key);
@@ -7734,11 +7743,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          props.onEnd(key, true);
 	        }
 	      }
-	      if (this.isMounted() && !(0, _ChildrenUtils.isSameChildren)(this.state.children, currentChildren)) {
-	        this.setState({
-	          children: currentChildren
-	        });
-	      }
 	    }
 	  },
 	
@@ -7762,7 +7766,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        props.onLeave(key);
 	        props.onEnd(key, false);
 	      }
-	      if (this.isMounted() && !(0, _ChildrenUtils.isSameChildren)(this.state.children, currentChildren)) {
+	      if (this.isMounted() && !(0, _ChildrenUtils.isSameChildren)(this.state.children, currentChildren, props.showProp)) {
 	        this.setState({
 	          children: currentChildren
 	        });
@@ -7773,9 +7777,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  isValidChildByKey: function isValidChildByKey(currentChildren, key) {
 	    var showProp = this.props.showProp;
 	    if (showProp) {
-	      return (0, _ChildrenUtils.isShownInChildrenByKey)(currentChildren, key, showProp);
+	      return (0, _ChildrenUtils.findShownChildInChildrenByKey)(currentChildren, key, showProp);
 	    }
-	    return (0, _ChildrenUtils.inChildrenByKey)(currentChildren, key);
+	    return (0, _ChildrenUtils.findChildInChildrenByKey)(currentChildren, key);
 	  },
 	
 	  stop: function stop(key) {
@@ -7806,20 +7810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	function inChildren(children, child) {
-	  var found = 0;
-	  children.forEach(function (c) {
-	    if (found) {
-	      return;
-	    }
-	    found = c.key === child.key;
-	  });
-	  return found;
-	}
-	
-	exports['default'] = {
-	  inChildren: inChildren,
-	
+	var utils = {
 	  toArrayChildren: function toArrayChildren(children) {
 	    var ret = [];
 	    _react2['default'].Children.forEach(children, function (c) {
@@ -7828,48 +7819,57 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return ret;
 	  },
 	
-	  isShownInChildren: function isShownInChildren(children, child, showProp) {
-	    var found = 0;
-	    children.forEach(function (c) {
-	      if (found) {
-	        return;
-	      }
-	      found = c.key === child.key && c.props[showProp];
-	    });
-	    return found;
+	  findChildInChildrenByKey: function findChildInChildrenByKey(children, key) {
+	    var ret = 0;
+	    if (children) {
+	      children.forEach(function (c) {
+	        if (ret) {
+	          return;
+	        }
+	        if (c.key === key) {
+	          ret = c;
+	        }
+	      });
+	    }
+	    return ret;
 	  },
 	
-	  inChildrenByKey: function inChildrenByKey(children, key) {
+	  findShownChildInChildrenByKey: function findShownChildInChildrenByKey(children, key, showProp) {
+	    var ret = null;
+	    if (children) {
+	      children.forEach(function (c) {
+	        if (c.key === key && c.props[showProp]) {
+	          if (ret) {
+	            throw new Error('two child with same key for <rc-animate> children');
+	          }
+	          ret = c;
+	        }
+	      });
+	    }
+	    return ret;
+	  },
+	
+	  findHiddenChildInChildrenByKey: function findHiddenChildInChildrenByKey(children, key, showProp) {
 	    var found = 0;
 	    if (children) {
 	      children.forEach(function (c) {
 	        if (found) {
 	          return;
 	        }
-	        found = c.key === key;
+	        found = c.key === key && !c.props[showProp];
 	      });
 	    }
 	    return found;
 	  },
 	
-	  isShownInChildrenByKey: function isShownInChildrenByKey(children, key, showProp) {
-	    var found = 0;
-	    if (children) {
-	      children.forEach(function (c) {
-	        if (found) {
-	          return;
-	        }
-	        found = c.key === key && c.props[showProp];
-	      });
-	    }
-	    return found;
-	  },
-	
-	  isSameChildren: function isSameChildren(c1, c2) {
+	  isSameChildren: function isSameChildren(c1, c2, showProp) {
 	    var same = c1.length === c2.length;
 	    if (same) {
-	      c1.forEach(function (c, i) {
-	        if (c !== c2[i]) {
+	      c1.forEach(function (child, i) {
+	        var child2 = c2[i];
+	        if (child.key !== child2.key) {
+	          same = false;
+	        } else if (showProp && child.props[showProp] !== child2.props[showProp]) {
 	          same = false;
 	        }
 	      });
@@ -7885,7 +7885,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var nextChildrenPending = {};
 	    var pendingChildren = [];
 	    prev.forEach(function (c) {
-	      if (inChildren(next, c)) {
+	      if (utils.findChildInChildrenByKey(next, c.key)) {
 	        if (pendingChildren.length) {
 	          nextChildrenPending[c.key] = pendingChildren;
 	          pendingChildren = [];
@@ -7907,6 +7907,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return ret;
 	  }
 	};
+	
+	exports['default'] = utils;
 	module.exports = exports['default'];
 
 /***/ },
@@ -22042,7 +22044,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function clone() {
 	      var config = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 	
-	      return new DataSource((0, _objectAssign3['default'])(config, this.config));
+	      return new DataSource((0, _objectAssign3['default'])({}, this.config, config));
 	    }
 	  }]);
 	

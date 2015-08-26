@@ -521,17 +521,18 @@ import { Datepicker, message } from <span class="string">'antd'</span>;
     };
   },
   handleChange(value) {
+    message.info(<span class="string">'您选择的日期是: '</span> + value.toString());
     <span class="keyword">this</span>.setState({
       date: value
     });
   },
   notice() {
-    message.info(<span class="keyword">this</span>.state.date.toString());
+
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{width:</span> <span class="attribute">400</span>, <span class="attribute">margin:</span> '<span class="attribute">100px</span> <span class="attribute">auto</span>'}}&gt;</span>
       <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">onSelect</span>=<span class="value">{this.handleChange}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.notice}</span>&gt;</span>显示日期<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>当前日期：{this.state.date.toString()}<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
