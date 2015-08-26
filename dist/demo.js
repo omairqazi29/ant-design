@@ -108,7 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    render: function render() {
 	      return React.createElement(
 	        Select,
-	        { combobox: true, style: { width: 260 },
+	        { combobox: true, style: { width: '100%' },
 	          onSelect: this.handleSelect,
 	          optionLabelProp: 'text',
 	          dropdownClassName: 'autoComplete',
