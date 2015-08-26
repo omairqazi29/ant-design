@@ -3962,9 +3962,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 6px;
+  top: 7px;
   right: 0;
-  padding-right: 16px;
+  padding-right: 15px;
   color: #2db7f5;
 }
 :root .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
@@ -3995,9 +3995,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 6px;
+  top: 7px;
   right: 0;
-  padding-right: 16px;
+  padding-right: 15px;
   color: #2db7f5;
 }
 :root .ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:after {
@@ -5636,9 +5636,9 @@ textarea.ant-calendar-time-input {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 6px;
+  top: 7px;
   right: 0;
-  padding-right: 16px;
+  padding-right: 15px;
   color: #2db7f5;
 }
 :root .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {

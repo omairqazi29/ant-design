@@ -22,7 +22,7 @@ function handleChange(value) {
 React.render(React.createElement(
   Select,
   {
-    style: { width: 400 },
+    style: { width: '100%' },
     tags: true, defaultValue: ['name2', 'name3'], onChange: handleChange },
   children
 ), document.getElementById('components-select-demo-tags'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
@@ -39,7 +39,7 @@ function handleChange(value) {
 
 React.render(
   <span class="tag">&lt;<span class="title">Select
-</span>   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
+</span>   <span class="attribute">style</span>=<span class="value">{{width:</span> '<span class="attribute">100</span>%'}}
   <span class="attribute">tags</span> <span class="attribute">defaultValue</span>=<span class="value">{['name2',</span> '<span class="attribute">name3</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     {children}
   <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
