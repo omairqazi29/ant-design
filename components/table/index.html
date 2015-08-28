@@ -493,10 +493,12 @@ Table 表格 - Ant Design
 <p><strong>本地数据模式</strong>是指数据一次性载入内存，纯前端进行分页、筛选、排序等功能。</p>
 <p>通过指定表格的数据源 <code>dataSource</code> 为一个数据数组。</p>
 <div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> dataSource = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -558,6 +560,13 @@ Table 表格 - Ant Design
 <td>Array</td>
 <td></td>
 <td>无</td>
+</tr>
+<tr>
+<td>rowKey</td>
+<td>表格列 key 的取值</td>
+<td>Function(recode,index):string</td>
+<td></td>
+<td>record.key</td>
 </tr>
 </tbody>
 </table>
@@ -724,14 +733,17 @@ var columns = [{
   }
 }];
 var data = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -766,14 +778,17 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
   }
 }];
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -813,14 +828,17 @@ var columns = [{
   dataIndex: 'address'
 }];
 var data = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -851,14 +869,17 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   dataIndex: <span class="string">'address'</span>
 }];
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -912,6 +933,7 @@ var data = [];
 
 for (var i = 0; i < 46; i++) {
   data.push({
+    key: i,
     name: '李大嘴' + i,
     age: 32,
     address: '西湖区湖底公园' + i + '号'
@@ -942,6 +964,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 
 <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">46</span>; i++) {
   data.push({
+    key: i,
     name: <span class="string">'李大嘴'</span> + i,
     age: <span class="number">32</span>,
     address: <span class="string">'西湖区湖底公园'</span> + i + <span class="string">'号'</span>
@@ -1002,18 +1025,22 @@ var columns = [{
 }];
 
 var data = [{
+  key: '1',
   name: '胡斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园12号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园123号'
 }, {
+  key: '4',
   name: '李秀莲大嘴哥',
   age: 32,
   address: '西湖区湖底公园123号'
@@ -1053,18 +1080,22 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
 }];
 
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园12号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园123号'</span>
 }, {
+  key: <span class="string">'4'</span>,
   name: <span class="string">'李秀莲大嘴哥'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园123号'</span>
@@ -1296,14 +1327,17 @@ var columns = [{
 }];
 
 var data = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -1322,14 +1356,17 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 }];
 
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -1362,14 +1399,17 @@ var columns = [{
   dataIndex: 'address'
 }];
 var data = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -1387,14 +1427,17 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, si
   dataIndex: <span class="string">'address'</span>
 }];
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -1435,14 +1478,17 @@ var columns = [{
 }];
 
 var data = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -1464,14 +1510,17 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, bo
 }];
 
 <span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
@@ -1511,27 +1560,33 @@ var columns = [{
   dataIndex: 'address'
 }];
 var data1 = [{
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
 }];
 var data2 = [{
+  key: '11',
   name: '胡彦斌2',
   age: 32,
   address: '西湖区湖底公园2号'
 }, {
+  key: '22',
   name: '胡彦祖2',
   age: 42,
   address: '西湖区湖底公园2号'
 }, {
+  key: '33',
   name: '李大嘴2',
   age: 32,
   address: '西湖区湖底公园2号'
@@ -1590,33 +1645,37 @@ React.render(React.createElement(App, null), document.getElementById('components
   dataIndex: <span class="string">'address'</span>
 }];
 <span class="keyword">var</span> data1 = [{
+  key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'2'</span>,
   name: <span class="string">'胡彦祖'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }, {
+  key: <span class="string">'3'</span>,
   name: <span class="string">'李大嘴'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 <span class="keyword">var</span> data2 = [{
+  key: <span class="string">'11'</span>,
   name: <span class="string">'胡彦斌2'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园2号'</span>
 }, {
+  key: <span class="string">'22'</span>,
   name: <span class="string">'胡彦祖2'</span>,
   age: <span class="number">42</span>,
   address: <span class="string">'西湖区湖底公园2号'</span>
 }, {
+  key: <span class="string">'33'</span>,
   name: <span class="string">'李大嘴2'</span>,
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园2号'</span>
 }];
-
-
 
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
