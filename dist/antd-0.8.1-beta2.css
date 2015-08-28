@@ -5606,6 +5606,20 @@ textarea.ant-calendar-time-input {
 .ant-table.ant-table-bordered td:last-child {
   border-right: 0;
 }
+.ant-table-empty {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  border-bottom: 1px solid #E9E9E9;
+  margin-bottom: 16px;
+}
+.ant-table-empty .anticon {
+  margin-right: 4px;
+  position: relative;
+  top: -1px;
+}
 .ant-table-pagination {
   margin: 16px 0;
   float: right;
@@ -8878,10 +8892,12 @@ label.ant-radio-button-checked:active {
 }
 .ant-upload-list .ant-upload-item-name {
   font-size: 12px;
-  color: #666;
   margin-left: 4px;
   margin-right: 8px;
   font-weight: normal;
+}
+.ant-upload-list b.ant-upload-item-name {
+  color: #666;
 }
 .ant-upload-list .ant-upload-success-icon {
   color: #87d068;

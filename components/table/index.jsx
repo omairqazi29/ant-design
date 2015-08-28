@@ -313,15 +313,15 @@ var AntTable = React.createClass({
     if (this.props.size === 'small') {
       classString += ' mini';
     }
-    let total;
-    if (this.isLocalDataSource()) {
+    let total = this.state.pagination.total;
+    if (!total && this.isLocalDataSource()) {
       total = this.getLocalData().length;
     }
-    return <Pagination className={classString}
+    return (total > 0) ? <Pagination className={classString}
                        onChange={this.handlePageChange}
                        total={total}
                        pageSize={10}
-      {...this.state.pagination} />;
+      {...this.state.pagination} /> : null;
   },
 
   prepareParamsArguments(state) {
@@ -471,13 +471,20 @@ var AntTable = React.createClass({
       column.key = column.dataIndex || i;
       return column;
     });
+    let emptyText;
+    if (!data || data.length === 0) {
+      emptyText = <div className="ant-table-empty">
+        <i className="anticon anticon-frown"></i>暂无数据
+      </div>;
+    }
     return <div className="clearfix">
       <Table
         {...this.props}
-        data={data || []}
+        data={data}
         columns={columns}
         className={classString}
         />
+      {emptyText}
       {this.renderPagination()}
     </div>;
   }

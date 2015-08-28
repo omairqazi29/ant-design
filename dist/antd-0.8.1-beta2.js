@@ -22344,15 +22344,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this.props.size === 'small') {
 	      classString += ' mini';
 	    }
-	    var total = undefined;
-	    if (this.isLocalDataSource()) {
+	    var total = this.state.pagination.total;
+	    if (!total && this.isLocalDataSource()) {
 	      total = this.getLocalData().length;
 	    }
-	    return _react2['default'].createElement(_pagination2['default'], _extends({ className: classString,
+	    return total > 0 ? _react2['default'].createElement(_pagination2['default'], _extends({ className: classString,
 	      onChange: this.handlePageChange,
 	      total: total,
 	      pageSize: 10
-	    }, this.state.pagination));
+	    }, this.state.pagination)) : null;
 	  },
 	
 	  prepareParamsArguments: function prepareParamsArguments(state) {
@@ -22511,14 +22511,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	      column.key = column.dataIndex || i;
 	      return column;
 	    });
+	    var emptyText = undefined;
+	    if (!data || data.length === 0) {
+	      emptyText = _react2['default'].createElement(
+	        'div',
+	        { className: 'ant-table-empty' },
+	        _react2['default'].createElement('i', { className: 'anticon anticon-frown' }),
+	        '暂无数据'
+	      );
+	    }
 	    return _react2['default'].createElement(
 	      'div',
 	      { className: 'clearfix' },
 	      _react2['default'].createElement(_rcTable2['default'], _extends({}, this.props, {
-	        data: data || [],
+	        data: data,
 	        columns: columns,
 	        className: classString
 	      })),
+	      emptyText,
 	      this.renderPagination()
 	    );
 	  }
@@ -33170,6 +33180,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _message2['default'].success(file.name + '上传完成');
 	      var targetItem = (0, _getFileItem2['default'])(file, downloadList);
 	      targetItem.status = 'done';
+	      // 解析出文件上传后的远程地址
+	      if (typeof this.props.urlResolver === 'function') {
+	        targetItem.url = this.props.urlResolver(ret);
+	      }
 	      this.setState({
 	        downloadList: downloadList
 	      });
@@ -33201,7 +33215,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onError: noop,
 	      onSuccess: noop,
 	      onProgress: noop,
-	      onRemove: noop
+	      onRemove: noop,
+	      urlResolver: function urlResolver(ret) {
+	        try {
+	          return JSON.parse(ret).url;
+	        } catch (e) {}
+	      }
 	    };
 	  },
 	  render: function render() {
@@ -34948,15 +34967,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var items = this.state.items;
 	    var downloadItem = function downloadItem(file) {
 	      var statusIcon = file.status === 'done' ? _react2['default'].createElement('i', { className: 'anticon anticon-check ' + prefixCls + '-success-icon' }) : _react2['default'].createElement('i', { className: 'anticon anticon-loading' });
+	      var filename = file.url ? _react2['default'].createElement(
+	        'a',
+	        { className: prefixCls + '-item-name', href: file.url, _target: '_blank' },
+	        file.filename
+	      ) : _react2['default'].createElement(
+	        'b',
+	        { className: prefixCls + '-item-name' },
+	        file.filename
+	      );
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: prefixCls + '-list-item', key: file.index },
 	        statusIcon,
-	        _react2['default'].createElement(
-	          'b',
-	          { className: prefixCls + '-item-name' },
-	          file.filename
-	        ),
+	        filename,
 	        _react2['default'].createElement('i', { className: 'anticon anticon-cross', ref: 'theCloseBtn',
 	          onClick: _this.handleClose.bind(_this, file) })
 	      );
