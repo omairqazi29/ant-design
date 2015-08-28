@@ -13,7 +13,7 @@ Upload 文件上传 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.1-beta1.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.8.1-beta2.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -178,11 +178,11 @@ Upload 文件上传 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.1-beta1',
+        latest: '0.8.1-beta2',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.8.1-beta1.min.js"></script>
+    <script src="/dist/antd-0.8.1-beta2.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -582,12 +582,9 @@ var props = {
   data: {},
   accept: '',
   uploadTip: '',
-  start: function start(file) {
-    console.log(file.name);
-  },
-  error: function error() {},
-  success: function success() {},
-  progress: function progress() {}
+  onStart: function onStart(file) {
+    console.log(file.uid);
+  }
 };
 
 React.render(React.createElement(
@@ -607,12 +604,9 @@ React.render(React.createElement(
   data: {},
   accept: <span class="string">''</span>,
   uploadTip: <span class="string">''</span>,
-  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
-    console.log(file.name)
-  },
-  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  onStart(file){
+    console.log(file.uid);
+  }
 };
 
 React.render(
@@ -643,11 +637,7 @@ var props = {
   action: '/upload.do',
   data: {},
   accept: '',
-  uploadTip: '',
-  error: function error() {},
-  success: function success() {},
-  progress: function progress() {},
-  start: function start() {}
+  uploadTip: ''
 };
 
 React.render(React.createElement(
@@ -661,11 +651,7 @@ React.render(React.createElement(
   action: <span class="string">'/upload.do'</span>,
   data: {},
   accept: <span class="string">''</span>,
-  uploadTip: <span class="string">''</span>,
-  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  start: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  uploadTip: <span class="string">''</span>
 };
 
 React.render(
@@ -702,15 +688,7 @@ var props = {
   action: '/upload.do',
   data: {},
   accept: 'i',
-  uploadTip: '',
-  error: function error(err) {
-    console.log(err);
-  },
-  success: function success() {},
-  progress: function progress() {},
-  start: function start(file) {
-    console.log(file);
-  }
+  uploadTip: ''
 };
 
 React.render(React.createElement(
@@ -738,15 +716,7 @@ React.render(React.createElement(
   action: <span class="string">'/upload.do'</span>,
   data: {},
   accept: <span class="string">'i'</span>,
-  uploadTip: <span class="string">''</span>,
-  error: <span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
-    console.log(err)
-  },
-  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
-    console.log(file)
-  }
+  uploadTip: <span class="string">''</span>
 };
 
 React.render(

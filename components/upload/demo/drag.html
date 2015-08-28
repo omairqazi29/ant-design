@@ -10,15 +10,7 @@ var props = {
   action: '/upload.do',
   data: {},
   accept: 'i',
-  uploadTip: '',
-  error: function error(err) {
-    console.log(err);
-  },
-  success: function success() {},
-  progress: function progress() {},
-  start: function start(file) {
-    console.log(file);
-  }
+  uploadTip: ''
 };
 
 React.render(React.createElement(
@@ -46,15 +38,7 @@ React.render(React.createElement(
   action: <span class="string">'/upload.do'</span>,
   data: {},
   accept: <span class="string">'i'</span>,
-  uploadTip: <span class="string">''</span>,
-  error: <span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
-    console.log(err)
-  },
-  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
-    console.log(file)
-  }
+  uploadTip: <span class="string">''</span>
 };
 
 React.render(

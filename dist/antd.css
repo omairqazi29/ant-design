@@ -2522,15 +2522,15 @@ samp {
 }
 .zoom-enter,
 .zoom-appear {
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
 }
 .zoom-leave {
-  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .zoom-up-enter,
 .zoom-up-appear {
@@ -2566,15 +2566,15 @@ samp {
 }
 .zoom-up-enter,
 .zoom-up-appear {
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
 }
 .zoom-up-leave {
-  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .zoom-down-enter,
 .zoom-down-appear {
@@ -2610,15 +2610,15 @@ samp {
 }
 .zoom-down-enter,
 .zoom-down-appear {
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
 }
 .zoom-down-leave {
-  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .zoom-left-enter,
 .zoom-left-appear {
@@ -2654,15 +2654,15 @@ samp {
 }
 .zoom-left-enter,
 .zoom-left-appear {
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
 }
 .zoom-left-leave {
-  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .zoom-right-enter,
 .zoom-right-appear {
@@ -2698,58 +2698,58 @@ samp {
 }
 .zoom-right-enter,
 .zoom-right-appear {
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
 }
 .zoom-right-leave {
-  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes zoomOut {
   0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 @keyframes zoomOut {
   0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 @-webkit-keyframes zoomUpIn {
@@ -2757,14 +2757,14 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes zoomUpIn {
@@ -2772,44 +2772,44 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes zoomUpOut {
   0% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @keyframes zoomUpOut {
   0% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @-webkit-keyframes zoomLeftIn {
@@ -2817,14 +2817,14 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes zoomLeftIn {
@@ -2832,44 +2832,44 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes zoomLeftOut {
   0% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @keyframes zoomLeftOut {
   0% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @-webkit-keyframes zoomRightIn {
@@ -2877,14 +2877,14 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes zoomRightIn {
@@ -2892,44 +2892,44 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes zoomRightOut {
   0% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @keyframes zoomRightOut {
   0% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @-webkit-keyframes zoomDownIn {
@@ -2937,14 +2937,14 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes zoomDownIn {
@@ -2952,44 +2952,44 @@ samp {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   100% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes zoomDownOut {
   0% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 @keyframes zoomDownOut {
   0% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 .ant-btn {
@@ -6521,7 +6521,7 @@ fieldset[disabled] .ant-checkbox label {
   position: absolute;
   font-size: 12px;
   line-height: 1.5;
-  bottom: - 18px;
+  bottom: -18px;
 }
 form * {
   font-size: 12px;

@@ -42,13 +42,15 @@ var AntTable = React.createClass({
       selectedRowKeys: [],
       // only for remote
       data: [],
+      dataSource: this.props.dataSource,
       filters: {},
-      loading: !this.isLocalDataSource(),
+      loading: false,
       sortColumn: '',
       sortOrder: '',
       sorter: null,
       pagination: this.hasPagination() ? objectAssign({
-        pageSize: 10
+        pageSize: 10,
+        current: 1
       }, this.props.pagination) : {}
     };
   },
@@ -68,25 +70,23 @@ var AntTable = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
+    let newState = {};
     if (('pagination' in nextProps) && nextProps.pagination !== false) {
-      this.setState({
-        pagination: objectAssign({}, this.state.pagination, nextProps.pagination)
-      });
+      newState.pagination = objectAssign({}, this.state.pagination, nextProps.pagination);
     }
-    if (!this.isLocalDataSource()) {
-      // 外界只有 dataSource 的变化会触发请请求
-      if (nextProps.dataSource !== this.props.dataSource) {
-        this.setState({
-          selectedRowKeys: [],
-          loading: true
-        }, this.fetch);
-      }
+    // 外界只有 dataSource 的变化会触发新请求
+    if ('dataSource' in nextProps &&
+        nextProps.dataSource !== this.props.dataSource) {
+      newState = {
+        selectedRowKeys: [],
+        dataSource: nextProps.dataSource,
+        loading: true
+      };
     }
     if (nextProps.columns !== this.props.columns) {
-      this.setState({
-        filters: {}
-      });
+      newState.filters = {};
     }
+    this.setState(newState, this.fetch);
   },
 
   hasPagination(pagination) {
@@ -97,11 +97,11 @@ var AntTable = React.createClass({
   },
 
   isLocalDataSource() {
-    return Array.isArray(this.props.dataSource);
+    return Array.isArray(this.state.dataSource);
   },
 
   getRemoteDataSource() {
-    return this.props.dataSource;
+    return this.state.dataSource;
   },
 
   toggleSortOrder(order, column) {
@@ -424,7 +424,7 @@ var AntTable = React.createClass({
 
   getLocalData() {
     let state = this.state;
-    let data = this.props.dataSource;
+    let data = this.state.dataSource;
     // 排序
     if (state.sortOrder && state.sorter) {
       data = data.sort(state.sorter);
@@ -457,7 +457,7 @@ var AntTable = React.createClass({
     let data = this.getCurrentPageData();
     let columns = this.renderRowSelection();
     let classString = '';
-    if (this.state.loading && this.isLocalDataSource()) {
+    if (this.state.loading && !this.isLocalDataSource()) {
       classString += ' ant-table-loading';
     }
     if (this.props.size === 'small') {

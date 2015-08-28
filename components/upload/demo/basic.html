@@ -11,12 +11,9 @@ var props = {
   data: {},
   accept: '',
   uploadTip: '',
-  start: function start(file) {
-    console.log(file.name);
-  },
-  error: function error() {},
-  success: function success() {},
-  progress: function progress() {}
+  onStart: function onStart(file) {
+    console.log(file.uid);
+  }
 };
 
 React.render(React.createElement(
@@ -36,12 +33,9 @@ React.render(React.createElement(
   data: {},
   accept: <span class="string">''</span>,
   uploadTip: <span class="string">''</span>,
-  start: <span class="function"><span class="keyword">function</span><span class="params">(file)</span>{</span>
-    console.log(file.name)
-  },
-  error: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  success: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>},
-  progress: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  onStart(file){
+    console.log(file.uid);
+  }
 };
 
 React.render(
