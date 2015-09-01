@@ -9322,13 +9322,13 @@ a .ant-badge-count:active {
 }
 .ant-timeline-item {
   position: relative;
-  min-height: 50px;
-  padding-bottom: 12px;
+  min-height: 36px;
+  padding-bottom: 16px;
 }
 .ant-timeline-item-tail {
   position: absolute;
   left: 5px;
-  margin-top: 3px;
+  margin-top: 2px;
   z-index: 1;
   height: 100%;
   border-left: 2px solid #e9e9e9;
@@ -9342,7 +9342,7 @@ a .ant-badge-count:active {
   width: 12px;
   height: 12px;
   background-color: #fff;
-  margin-top: 3px;
+  margin-top: 2px;
   border-radius: 6px;
 }
 .ant-timeline-item-head-blue {
@@ -9364,4 +9364,4 @@ a .ant-badge-count:active {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=antd-0.9.0-beta1.css.map*/
+/*# sourceMappingURL=antd-0.9.0-beta2.css.map*/
