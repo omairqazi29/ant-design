@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="一个 UI 设计语言"/>
     <title>
-Dropdown 下拉菜单 - Ant Design
+Timeline 时间轴 - Ant Design
 </title>
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
@@ -378,8 +378,8 @@ Dropdown 下拉菜单 - Ant Design
               <span class="chinese">折叠面板</span>
             </a>
           </li>
-          <li class="current">
-            <a href="./" class="">
+          <li class="">
+            <a href="../dropdown/" class="">
               Dropdown
               <span class="chinese">下拉菜单</span>
             </a>
@@ -432,8 +432,8 @@ Dropdown 下拉菜单 - Ant Design
               <span class="chinese">标签</span>
             </a>
           </li>
-          <li class="">
-            <a href="../timeline/" class="">
+          <li class="current">
+            <a href="./" class="">
               Timeline
               <span class="chinese">时间轴</span>
             </a>
@@ -502,45 +502,46 @@ Dropdown 下拉菜单 - Ant Design
 <section class="main-container">
   <article class="markdown">
     <h1>
-      Dropdown 下拉菜单
+      Timeline 时间轴
     </h1>
-    <p>向下弹出的列表。</p>
-<h2 id="何时使用">何时使用</h2><p>当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。</p>
-<h2 id="api">API</h2><p>属性如下</p>
+    <p>垂直展示的时间流信息。</p>
+<h2 id="何时使用">何时使用</h2><ul>
+<li>当有一系列信息需要从上至下按时间排列时；</li>
+<li>需要有一条时间轴进行视觉上的串联时；</li>
+</ul>
+<h2 id="api">API</h2><div class="highlight"><pre><code class="javascript">&lt;Timeline&gt;
+  <span class="xml"><span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>网络异常正在修复 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">Timeline</span>&gt;</span></span></code></pre></div><h3 id="timeline-item">Timeline.Item</h3><p>时间轴的每一个节点。</p>
 <table>
 <thead>
 <tr>
-<th>成员</th>
+<th>参数</th>
 <th>说明</th>
 <th>类型</th>
+<th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>trigger</td>
-<td>触发下拉的行为</td>
-<td>&quot;click&quot; or &quot;hover&quot;</td>
-<td>hover</td>
+<td>color</td>
+<td>指定圆圈颜色。</td>
+<td>string</td>
+<td>blue, red, green</td>
+<td>blue</td>
 </tr>
 <tr>
-<td>overlay</td>
-<td>菜单节点</td>
-<td>React.Element</td>
+<td>end</td>
+<td>指定最后一个幽灵节点。</td>
+<td>boolean</td>
 <td>无</td>
-</tr>
-<tr>
-<td>onSelect</td>
-<td>选择后的回调</td>
-<td>function(e) {}</td>
-<td>无</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
-<p>菜单可由 <code>antd.Menu</code> 取得，可设置 <code>onSelect</code> 回调，菜单还包括菜单项 <code>antd.Menu.Item</code>，分割线 <code>antd.Menu.Divider</code>。</p>
-<blockquote>
-<p>注意： Menu.Item 必须设置唯一的 key 属性。</p>
-</blockquote>
 
   </article>
 <h2 class="component-demos">
@@ -550,326 +551,142 @@ Dropdown 下拉菜单 - Ant Design
 <div class="code-boxes">
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
-    <div id="components-dropdown-demo-basic"></div>
-    <script>(function(){"use strict";
+    <div id="components-timeline-demo-basic"></div>
+    <script>(function(){'use strict';
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-
-var menu = React.createElement(
-  Menu,
-  null,
-  React.createElement(
-    Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.alipay.com/" },
-      "第一个菜单项"
-    )
-  ),
-  React.createElement(
-    Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.taobao.com/" },
-      "第二个菜单项"
-    )
-  ),
-  React.createElement(
-    Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.tmall.com/" },
-      "第三个菜单项"
-    )
-  )
-);
+var Timeline = antd.Timeline;
+var container = document.getElementById('components-timeline-demo-basic');
 
 React.render(React.createElement(
-  Dropdown,
-  { overlay: menu },
+  Timeline,
+  null,
   React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-menu" },
-    "某按钮 ",
-    React.createElement("i", { className: "anticon anticon-down" })
+    Timeline.Item,
+    null,
+    '创建服务现场 2015-09-01'
+  ),
+  React.createElement(
+    Timeline.Item,
+    null,
+    '初步排除网络异常 2015-09-01'
+  ),
+  React.createElement(
+    Timeline.Item,
+    null,
+    '技术测试异常 2015-09-01'
+  ),
+  React.createElement(
+    Timeline.Item,
+    null,
+    '网络异常正在修复 2015-09-01'
   )
-), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.tmall.com/"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
+<span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-basic'</span>);
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
-      某按钮 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div><style>
-.code-box-demo .ant-btn {
-  margin-right: 6px;
-}
-</style>
-
+<span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>网络异常正在修复 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">Timeline</span>&gt;</span>
+, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-basic">基本</a>
+      <a href="#demo-basic">基本用法</a>
     </div>
-    <p>最简单的下拉菜单。</p>
+    <p>基本的时间轴。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-trigger">
+</div><div class="code-box" id="demo-end">
   <div class="code-box-demo">
-    <div id="components-dropdown-demo-trigger"></div>
-    <script>(function(){"use strict";
+    <div id="components-timeline-demo-end"></div>
+    <script>(function(){'use strict';
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-
-var menu = React.createElement(
-  Menu,
-  null,
-  React.createElement(
-    Menu.Item,
-    { key: "0" },
-    React.createElement(
-      "a",
-      { href: "http://www.alipay.com/" },
-      "第一个菜单项"
-    )
-  ),
-  React.createElement(
-    Menu.Item,
-    { key: "1" },
-    React.createElement(
-      "a",
-      { href: "http://www.taobao.com/" },
-      "第二个菜单项"
-    )
-  ),
-  React.createElement(Menu.Divider, null),
-  React.createElement(
-    Menu.Item,
-    { key: "3" },
-    "第三个菜单项"
-  )
-);
+var Timeline = antd.Timeline;
+var container = document.getElementById('components-timeline-demo-end');
 
 React.render(React.createElement(
-  "div",
+  Timeline,
   null,
   React.createElement(
-    Dropdown,
-    { overlay: menu, trigger: "click" },
-    React.createElement(
-      "button",
-      { className: "ant-btn ant-btn-primary ant-btn-menu" },
-      "点击触发 ",
-      React.createElement("i", { className: "anticon anticon-down" })
-    )
+    Timeline.Item,
+    null,
+    '创建服务现场 2015-09-01'
   ),
   React.createElement(
-    Dropdown,
-    { overlay: menu },
-    React.createElement(
-      "button",
-      { className: "ant-btn ant-btn-menu" },
-      "鼠标移入 ",
-      React.createElement("i", { className: "anticon anticon-down" })
-    )
+    Timeline.Item,
+    null,
+    '初步排除网络异常 2015-09-01'
+  ),
+  React.createElement(
+    Timeline.Item,
+    { end: true },
+    '技术测试异常 2015-09-01'
   )
-), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
+<span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-end'</span>);
 
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Divider</span>/&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
-
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-menu"</span>&gt;</span>
-      点击触发 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
+React.render(
+<span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span> <span class="attribute">end</span>=<span class="value">{true}</span>&gt;</span>技术测试异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">Timeline</span>&gt;</span>
+, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-trigger">触发方式</a>
+      <a href="#demo-end">最后一个</a>
     </div>
-    <p>点击或鼠标移入触发。</p>
+    <p>在最后位置添加一个幽灵节点。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
   </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-item">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-color">
   <div class="code-box-demo">
-    <div id="components-dropdown-demo-item"></div>
+    <div id="components-timeline-demo-color"></div>
     <script>(function(){"use strict";
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
+var Timeline = antd.Timeline;
+var container = document.getElementById('components-timeline-demo-color');
 
-var menu = React.createElement(
-  Menu,
+React.render(React.createElement(
+  Timeline,
   null,
   React.createElement(
-    Menu.Item,
-    { key: "0" },
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.alipay.com/" },
-      "第一个菜单项"
-    )
+    Timeline.Item,
+    { color: "green" },
+    "创建服务现场 2015-09-01"
   ),
   React.createElement(
-    Menu.Item,
-    { key: "1" },
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.taobao.com/" },
-      "第二个菜单项"
-    )
+    Timeline.Item,
+    { color: "red" },
+    "初步排除网络异常 2015-09-01"
   ),
-  React.createElement(Menu.Divider, null),
   React.createElement(
-    Menu.Item,
-    { key: "3", disabled: true },
-    "第三个菜单项（不可用）"
+    Timeline.Item,
+    null,
+    "技术测试异常 2015-09-01"
   )
-);
-
-React.render(React.createElement(
-  Dropdown,
-  { overlay: menu },
-  React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-menu" },
-    "鼠标移入 ",
-    React.createElement("i", { className: "anticon anticon-down" })
-  )
-), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Divider</span>/&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span> <span class="attribute">disabled</span>&gt;</span>第三个菜单项（不可用）<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
+<span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-color'</span>);
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-item'));</span></code></pre></div>
+<span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span> <span class="attribute">color</span>=<span class="value">"green"</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span> <span class="attribute">color</span>=<span class="value">"red"</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">Timeline</span>&gt;</span>
+, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-item">其他元素</a>
+      <a href="#demo-color">圆圈颜色</a>
     </div>
-    <p>分割线和不可用菜单项。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-event">
-  <div class="code-box-demo">
-    <div id="components-dropdown-demo-event"></div>
-    <script>(function(){"use strict";
-
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-var onSelect = function onSelect(_ref) {
-  var key = _ref.key;
-
-  alert('选中了菜单' + key);
-};
-
-var menu = React.createElement(
-  Menu,
-  { onSelect: onSelect },
-  React.createElement(
-    Menu.Item,
-    { key: "1" },
-    "第一个菜单项"
-  ),
-  React.createElement(
-    Menu.Item,
-    { key: "2" },
-    "第二个菜单项"
-  ),
-  React.createElement(
-    Menu.Item,
-    { key: "3" },
-    "第三个菜单项"
-  )
-);
-
-React.render(React.createElement(
-  Dropdown,
-  { overlay: menu },
-  React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-menu" },
-    "鼠标移入，点击菜单 ",
-    React.createElement("i", { className: "anticon anticon-down" })
-  )
-), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> onSelect = <span class="function"><span class="keyword">function</span> <span class="params">({key})</span>{</span>
-  alert(<span class="string">'选中了菜单'</span> + key);
-};
-
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onSelect</span>=<span class="value">{onSelect}</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
-
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
-      鼠标移入，点击菜单 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-event'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-event">触发事件</a>
-    </div>
-    <p>点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作。</p>
+    <p>圆圈颜色。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -8,12 +8,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="一个 UI 设计语言"/>
     <title>
-null  - Ant Design
+CHANGELOG  - Ant Design
 </title>
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.0-beta1.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta1.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -39,8 +39,8 @@ null  - Ant Design
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Modal',
-        desc: '对话框'
+        title: 'Notification',
+        desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -107,12 +107,12 @@ null  - Ant Design
         desc: '全局提示'
       });
       ANT_COMPONENTS.push({
-        title: 'Alert',
-        desc: '警告提示'
+        title: 'Modal',
+        desc: '对话框'
       });
       ANT_COMPONENTS.push({
-        title: 'Notification',
-        desc: '通知提醒框'
+        title: 'Alert',
+        desc: '警告提示'
       });
       ANT_COMPONENTS.push({
         title: 'Pagination',
@@ -163,6 +163,10 @@ null  - Ant Design
         desc: '标签'
       });
       ANT_COMPONENTS.push({
+        title: 'Timeline',
+        desc: '时间轴'
+      });
+      ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
       });
@@ -186,7 +190,7 @@ null  - Ant Design
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.9.0-beta1.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta1.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -253,8 +257,72 @@ null  - Ant Design
  
 <section class="main-container">
   <article class="markdown">
-    <h1>null </h1>
-    
+    <h1>CHANGELOG </h1>
+    <h2 id="0-9-0-not-ready">0.9.0 <code>not ready</code></h2><h3 id="upload">Upload</h3><p><strong>重构了 API 接口，不向下兼容</strong>，支持自定义的功能扩展。</p>
+<ul>
+<li>新增 <code>onChange(file) {}</code> 接口，移出原来的 <code>onSuccess</code>、<code>onProgess</code>、<code>onError</code> 等接口。</li>
+<li>新增 <code>fileList</code> 和 <code>defaultFileList</code> 属性，以满足更多的自定义功能，具体见演示。</li>
+<li>设置 fileList 数组项的 url 属性可以作为链接展示在文件列表中方便下载。</li>
+</ul>
+<h3 id="table">Table</h3><ul>
+<li>新增无数据的展示样式。<a href="https://github.com/ant-design/ant-design/commit/4c54644116d46cb2510d2d475234529bad60e5d5">4c54644</a></li>
+<li>修复本地模式 <code>dataSource</code> 无法更新的问题。<a href="https://github.com/ant-design/ant-design/commit/6d2dcc45393b6ec0ad1ba73caf8b1ec42353743f">6d2dcc4</a></li>
+<li>修复远程模式 loading 失效的问题。<a href="https://github.com/ant-design/ant-design/commit/9b8abb219934c246970a84200818aa8f85974bdf">9b8abb2</a></li>
+<li>用 <a href="http://npmjs.com/reqwest-without-xhr2">reqwest-without-xhr2</a> 代替了 reqwest，解决某些开发环境下 xhr2 依赖的问题。</li>
+</ul>
+<h3 id="notification">Notification</h3><ul>
+<li>修复不会自动消失的问题。<a href="https://github.com/ant-design/ant-design/commit/23fce559b0b2faf4e0b686a92dbcdd045727a464">23fce55</a></li>
+</ul>
+<h3 id="steps">Steps</h3><ul>
+<li>新增竖版的步骤条。</li>
+</ul>
+<h3 id="carousel">Carousel</h3><ul>
+<li>修复 fade 模式下可以拖拽的问题。#212</li>
+</ul>
+<h3 id="collapse">Collapse</h3><ul>
+<li>修复动画不生效的问题。</li>
+</ul>
+<h3 id="datepicker">Datepicker</h3><ul>
+<li>修复无法设置为空值的问题。</li>
+</ul>
+<h3 id="其他">其他</h3><ul>
+<li>新增 <a href="http://ant.design/components/timeline">timeline</a> 和 <a href="http://ant.design/components/badge">badge</a> 组件。</li>
+<li>tooltip、popover、popconfirm 等动画效果优化。</li>
+<li>部分文案更新。</li>
+<li>优化主站在小分辨率屏幕下的样式。</li>
+</ul>
+<h2 id="0-8-0-2015-08-25">0.8.0 <code>2015-08-25</code></h2><p>这个版本是第一个稳定版，组件经过三期迭代，基本到齐，并有大量改进和变化，不向下兼容。</p>
+<ul>
+<li>新增九个组件 <code>menu</code>、<code>upload</code>、<code>carousel</code>、<code>tree</code>、<code>notification</code>、<code>validation</code>、<code>affix</code>、<code>alert</code>、<code>enterAnimation</code>。目前共有组件 34 个，基本能满足后台类项目的组件需求。</li>
+<li>新增设计文档部分，包括文字、色彩、动画。</li>
+<li>重新梳理了设计和 React 实现部分的关系，强调了 Ant Design 的设计属性，并更新了网站的信息结构。</li>
+<li>构建工具 <code>antd-bin</code> 升级到 <code>0.4.0</code> 版本，支持合并 webpack 配置，热替换（HMR）等特性，<a href="https://github.com/ant-design/antd-bin">详见</a>。</li>
+<li>组件动画优化和补充，体验更加流畅动感。</li>
+<li>排查并修复 IE 和 safari 等浏览器的兼容问题。</li>
+<li>大量代码重构，演示代码补充，文档更新、以及样式上的优化。</li>
+</ul>
+<h2 id="0-7-3-2015-07-30">0.7.3 <code>2015-07-30</code></h2><ul>
+<li>小幅重构了 Table 分页，修复了分页导致的数据不展示的问题。</li>
+<li>更新了部分文档。</li>
+</ul>
+<h2 id="0-7-2-2015-07-27">0.7.2 <code>2015-07-27</code></h2><ul>
+<li>修复本地模式下 pagination 为 false 时数据无法显示的 <a href="https://github.com/ant-design/ant-design/commit/1954586665e59031eae5d2c8b2cdb08f83d64fcb">问题</a>。</li>
+<li>重构了 message 组件。</li>
+<li>添加英文版说明文档 <a href="https://github.com/ant-design/ant-design/blob/master/README-en_US.md">README-en_US.md</a>。</li>
+<li>部分代码切换至 ES6 模式。</li>
+<li>修正了部分组件的样式和演示，优化部分动画。</li>
+</ul>
+<h2 id="0-7-1-2015-07-22">0.7.1 <code>2015-07-22</code></h2><ul>
+<li>修复了 Table 组件的 pagination 为 false 时分页未消失的 <a href="https://github.com/ant-design/ant-design/commit/01a6c0f1e6707b72a54ef30d073d148a87b391a8">问题</a>。</li>
+<li>select 组件<a href="https://github.com/ant-design/ant-design/issues/50">选中后默认显示标签内容</a>（原来是显示 value）。</li>
+<li>修正了部分组件的样式和演示。</li>
+<li>打包文件为 <a href="https://github.com/ant-design/ant-design/commit/9b7b940cb417429d8fc57d83e252991b043d0f2f">umd 模式</a>。</li>
+</ul>
+<h2 id="0-7-0-2015-07-21">0.7.0 <code>2015-07-21</code></h2><ul>
+<li>第一个公开版本，发布 <code>layout</code>、<code>iconfont</code>、<code>button</code>、<code>form</code>、<code>checkbox</code>、<code>radio</code>、<code>switch</code>、<code>slider</code>、<code>input-number</code>、<code>datepicker</code>、<code>select</code>、<code>tabs</code>、<code>steps</code>、<code>breadcrumb</code>、<code>collapse</code>、<code>pagination</code>、<code>modal</code>、<code>message</code>、<code>dropdown</code>、<code>popover</code>、<code>popconfirm</code>、<code>tooltip</code>、<code>progress</code>、<code>table</code> 等组件。</li>
+<li>发布 <a href="http://ant.design/">Ant Design 首页</a> 和入门文档。</li>
+</ul>
+
   </article>
 </section>
 
