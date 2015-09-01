@@ -243,6 +243,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
+	  propTypes: {
+	    offset: _react2['default'].PropTypes.number
+	  },
+	
 	  getInitialState: function getInitialState() {
 	    return {
 	      affix: false,
@@ -1257,10 +1261,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var defaultCalendarValue = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZhCn2['default']);
 	defaultCalendarValue.setTime(Date.now());
 	
-	function createPicker(Calendar) {
+	function createPicker(TheCalendar) {
 	  return _react2['default'].createClass({
 	    getInitialState: function getInitialState() {
-	      var value;
+	      var value = undefined;
 	      if (this.props.value) {
 	        value = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZhCn2['default']);
 	        value.setTime(new Date(this.props.value).valueOf());
@@ -1296,7 +1300,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.props.onSelect(new Date(v.getTime()));
 	    },
 	    render: function render() {
-	      var calendar = _react2['default'].createElement(Calendar, {
+	      var calendar = _react2['default'].createElement(TheCalendar, {
 	        disabledDate: this.props.disabledDate,
 	        locale: _rcCalendarLibLocaleZhCn2['default'],
 	        orient: ['top', 'left'],
@@ -15739,12 +15743,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    var props = (0, _objectAssign2['default'])({}, this.props);
 	
-	    if (parseInt(props.percent) === 100) {
+	    if (parseInt(props.percent, 10) === 100) {
 	      props.status = 'success';
 	    }
 	
-	    var progressInfo,
-	        fullCls = '';
+	    var progressInfo = undefined;
+	    var fullCls = '';
 	    if (props.showInfo === true) {
 	      if (props.status === 'exception') {
 	        progressInfo = _react2['default'].createElement(
@@ -15805,7 +15809,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    var props = (0, _objectAssign2['default'])({}, this.props);
 	
-	    if (parseInt(props.percent) === 100) {
+	    if (parseInt(props.percent, 10) === 100) {
 	      props.status = 'success';
 	    }
 	
@@ -15814,7 +15818,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'height': props.width,
 	      'fontSize': props.width * 0.16 + 6
 	    };
-	    var progressInfo;
+	    var progressInfo = undefined;
 	    if (props.status === 'exception') {
 	      progressInfo = _react2['default'].createElement(
 	        'span',
@@ -20338,6 +20342,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var BreadcrumbItem = _react2['default'].createClass({
 	  displayName: 'BreadcrumbItem',
 	
+	  propTypes: {
+	    href: _react2['default'].PropTypes.string
+	  },
 	  render: function render() {
 	    var link = _react2['default'].createElement(
 	      'a',
@@ -20368,42 +20375,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Breadcrumb = _react2['default'].createClass({
 	  displayName: 'Breadcrumb',
 	
+	  propTypes: {
+	    router: _react2['default'].PropTypes.object
+	  },
 	  contextTypes: {
 	    router: _react2['default'].PropTypes.object
 	  },
 	  render: function render() {
+	    var _this = this;
+	
 	    var crumbs = undefined,
 	        routes = undefined,
 	        params = undefined;
 	    var ReactRouter = this.props.router;
 	    if (this.context.router && ReactRouter) {
-	      var Link = ReactRouter.Link;
-	      routes = this.context.router.state.branch;
-	      params = this.context.router.state.params;
-	      crumbs = routes.map(function (route, i) {
-	        var name = route.breadcrumbName.replace(/\:(.*)/g, function (replacement, key) {
-	          return params[key] || replacement;
+	      (function () {
+	        var Link = ReactRouter.Link;
+	        routes = _this.context.router.state.branch;
+	        params = _this.context.router.state.params;
+	        crumbs = routes.map(function (route, i) {
+	          var name = route.breadcrumbName.replace(/\:(.*)/g, function (replacement, key) {
+	            return params[key] || replacement;
+	          });
+	          var link = undefined;
+	          if (i === routes.length - 1) {
+	            link = _react2['default'].createElement(
+	              'span',
+	              null,
+	              name
+	            );
+	          } else {
+	            link = _react2['default'].createElement(
+	              Link,
+	              { to: route.path, params: params },
+	              name
+	            );
+	          }
+	          return _react2['default'].createElement(
+	            BreadcrumbItem,
+	            { key: name },
+	            link
+	          );
 	        });
-	        var link;
-	        if (i === routes.length - 1) {
-	          link = _react2['default'].createElement(
-	            'span',
-	            null,
-	            name
-	          );
-	        } else {
-	          link = _react2['default'].createElement(
-	            Link,
-	            { to: route.path, params: params },
-	            name
-	          );
-	        }
-	        return _react2['default'].createElement(
-	          BreadcrumbItem,
-	          { key: name },
-	          link
-	        );
-	      });
+	      })();
 	    } else {
 	      crumbs = this.props.children;
 	    }
@@ -21147,10 +21161,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var div;
+	var div = undefined;
 	
 	exports['default'] = function (props) {
-	  var d;
+	  var d = undefined;
 	  props = props || {};
 	  props.iconClassName = props.iconClassName || 'anticon-exclamation-circle';
 	  var width = props.width || 375;
@@ -21164,7 +21178,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function onCancel() {
 	    var cancelFn = props.onCancel;
 	    if (cancelFn) {
-	      var ret;
+	      var ret = undefined;
 	      if (cancelFn.length) {
 	        ret = cancelFn(close);
 	      } else {
@@ -21184,7 +21198,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function onOk() {
 	    var okFn = props.onOk;
 	    if (okFn) {
-	      var ret;
+	      var ret = undefined;
 	      if (okFn.length) {
 	        ret = okFn(close);
 	      } else {
@@ -28210,8 +28224,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var defaultDuration = 1.5;
 	var top = undefined;
-	
-	var messageInstance;
+	var messageInstance = undefined;
 	
 	function getMessageInstance() {
 	  messageInstance = messageInstance || _rcNotification2['default'].newInstance({
@@ -30018,6 +30031,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	var _react = __webpack_require__(75);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
 	var _rcNotification = __webpack_require__(262);
 	
 	var _rcNotification2 = _interopRequireDefault(_rcNotification);
@@ -30025,10 +30042,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _objectAssign = __webpack_require__(172);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
-	
-	var _react = __webpack_require__(75);
-	
-	var _react2 = _interopRequireDefault(_react);
 	
 	var top = 24;
 	var notificationInstance = undefined;
@@ -30248,8 +30261,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      default:
 	        iconClass += 'default';
 	    }
-	    var html = undefined,
-	        closeName = !this.state.closing ? ' ' + this.props.prefixCls + '-close' : '';
+	    var html = undefined;
+	    var closeName = !this.state.closing ? ' ' + this.props.prefixCls + '-close' : '';
 	    if (this.props.description) {
 	      var _close = this.props.closable ? _react2['default'].createElement(
 	        'a',
@@ -35105,10 +35118,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _getFileItem = __webpack_require__(328);
-	
-	var _getFileItem2 = _interopRequireDefault(_getFileItem);
-	
 	var _rcAnimate = __webpack_require__(118);
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
@@ -35278,6 +35287,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  dot: false
 	};
 	
+	AntBadge.propTypes = {
+	  dot: _react2['default'].PropTypes.bool
+	};
+	
 	exports['default'] = AntBadge;
 	module.exports = exports['default'];
 
@@ -35327,6 +35340,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      case 'inline':
 	        openAnimation = _commonOpenAnimation2['default'];
 	        break;
+	      default:
 	    }
 	    if (this.props.mode === 'inline') {
 	      return _react2['default'].createElement(_rcMenu2['default'], _extends({}, this.props, { openAnimation: openAnimation }));
@@ -35401,7 +35415,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-radio": "~2.0.0",
 			"rc-select": "~4.8.5",
 			"rc-slider": "~1.4.0",
-			"rc-steps": "~1.2.1",
+			"rc-steps": "~1.2.3",
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.1.0",
 			"rc-tabs": "~5.3.2",
@@ -35414,14 +35428,17 @@ return /******/ (function(modules) { // webpackBootstrap
 			"velocity-animate": "^1.2.2"
 		},
 		"devDependencies": {
-			"autoprefixer-loader": "~2.0.0",
+			"autoprefixer-loader": "^2.0.0",
 			"babel": "^5.8.12",
 			"babel-core": "^5.8.12",
+			"babel-eslint": "^4.1.0",
 			"babel-loader": "^5.3.2",
 			"busboy": "^0.2.9",
 			"chalk": "^1.1.0",
 			"css-loader": "^0.14.1",
 			"eslint": "^1.1.0",
+			"eslint-config-airbnb": "^0.0.8",
+			"eslint-plugin-babel": "^2.1.1",
 			"eslint-plugin-react": "^3.3.1",
 			"extract-text-webpack-plugin": "^0.8.1",
 			"gh-pages": "^0.3.1",
