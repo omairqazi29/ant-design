@@ -10011,9 +10011,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _reactSlick2 = __webpack_require__(140);
+	var _reactSlick = __webpack_require__(140);
 	
-	var _reactSlick22 = _interopRequireDefault(_reactSlick2);
+	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 	
 	var _react = __webpack_require__(75);
 	
@@ -10048,7 +10048,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2['default'].createElement(
 	      'div',
 	      { className: className },
-	      _react2['default'].createElement(_reactSlick22['default'], props)
+	      _react2['default'].createElement(_reactSlick2['default'], props)
 	    );
 	  }
 	});
@@ -10078,7 +10078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _innerSlider = __webpack_require__(142);
 	
-	var _objectAssign = __webpack_require__(145);
+	var _objectAssign = __webpack_require__(148);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -10090,7 +10090,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 	
-	var _defaultProps = __webpack_require__(150);
+	var _defaultProps = __webpack_require__(153);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
@@ -10184,31 +10184,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _mixinsEventHandlers = __webpack_require__(143);
+	var _reactLibEventListener = __webpack_require__(143);
+	
+	var _reactLibEventListener2 = _interopRequireDefault(_reactLibEventListener);
+	
+	var _mixinsEventHandlers = __webpack_require__(146);
 	
 	var _mixinsEventHandlers2 = _interopRequireDefault(_mixinsEventHandlers);
 	
-	var _mixinsHelpers = __webpack_require__(146);
+	var _mixinsHelpers = __webpack_require__(149);
 	
 	var _mixinsHelpers2 = _interopRequireDefault(_mixinsHelpers);
 	
-	var _initialState = __webpack_require__(149);
+	var _initialState = __webpack_require__(152);
 	
 	var _initialState2 = _interopRequireDefault(_initialState);
 	
-	var _defaultProps = __webpack_require__(150);
+	var _defaultProps = __webpack_require__(153);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(154);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _addEventListener = __webpack_require__(152);
-	
-	var _addEventListener2 = _interopRequireDefault(_addEventListener);
-	
-	var _track = __webpack_require__(153);
+	var _track = __webpack_require__(155);
 	
 	var _dots = __webpack_require__(165);
 	
@@ -10248,21 +10248,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // Hack for autoplay -- Inspect Later
 	    this.initialize(this.props);
 	    this.adaptHeight();
-	    this._resizeEvent = (0, _addEventListener2['default'])(window, 'resize', this.onWindowResized);
+	    this.resizeListener = _reactLibEventListener2['default'].listen(window, 'resize', this.onWindowResized);
 	  },
 	  componentWillUnmount: function componentWillUnmount() {
-	    if (this._resizeEvent) {
-	      this._resizeEvent.remove();
+	    if (this.resizeListener) {
+	      this.resizeListener.remove();
 	    }
+	
 	    if (this.state.autoPlayTimer) {
 	      window.clearTimeout(this.state.autoPlayTimer);
 	    }
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    this.update(nextProps);
 	  },
 	  componentDidUpdate: function componentDidUpdate() {
 	    this.adaptHeight();
 	  },
 	  onWindowResized: function onWindowResized() {
-	    this.initialize(this.props);
+	    this.update(this.props);
 	  },
 	  render: function render() {
 	    var className = (0, _classnames2['default'])('slick-initialized', 'slick-slider', this.props.className);
@@ -10324,7 +10328,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'div',
 	        {
 	          ref: 'list',
-	          className: "slick-list",
+	          className: 'slick-list',
 	          onMouseDown: this.swipeStart,
 	          onMouseMove: this.state.dragging ? this.swipeMove : null,
 	          onMouseUp: this.swipeEnd,
@@ -10351,6 +10355,233 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule EventListener
+	 * @typechecks
+	 */
+	
+	var emptyFunction = __webpack_require__(145);
+	
+	/**
+	 * Upstream version of event listener. Does not take into account specific
+	 * nature of platform.
+	 */
+	var EventListener = {
+	  /**
+	   * Listen to DOM events during the bubble phase.
+	   *
+	   * @param {DOMEventTarget} target DOM element to register listener on.
+	   * @param {string} eventType Event type, e.g. 'click' or 'mouseover'.
+	   * @param {function} callback Callback function.
+	   * @return {object} Object with a `remove` method.
+	   */
+	  listen: function(target, eventType, callback) {
+	    if (target.addEventListener) {
+	      target.addEventListener(eventType, callback, false);
+	      return {
+	        remove: function() {
+	          target.removeEventListener(eventType, callback, false);
+	        }
+	      };
+	    } else if (target.attachEvent) {
+	      target.attachEvent('on' + eventType, callback);
+	      return {
+	        remove: function() {
+	          target.detachEvent('on' + eventType, callback);
+	        }
+	      };
+	    }
+	  },
+	
+	  /**
+	   * Listen to DOM events during the capture phase.
+	   *
+	   * @param {DOMEventTarget} target DOM element to register listener on.
+	   * @param {string} eventType Event type, e.g. 'click' or 'mouseover'.
+	   * @param {function} callback Callback function.
+	   * @return {object} Object with a `remove` method.
+	   */
+	  capture: function(target, eventType, callback) {
+	    if (!target.addEventListener) {
+	      if ("production" !== process.env.NODE_ENV) {
+	        console.error(
+	          'Attempted to listen to events during the capture phase on a ' +
+	          'browser that does not support the capture phase. Your application ' +
+	          'will not receive some events.'
+	        );
+	      }
+	      return {
+	        remove: emptyFunction
+	      };
+	    } else {
+	      target.addEventListener(eventType, callback, true);
+	      return {
+	        remove: function() {
+	          target.removeEventListener(eventType, callback, true);
+	        }
+	      };
+	    }
+	  },
+	
+	  registerDefault: function() {}
+	};
+	
+	module.exports = EventListener;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
+
+/***/ },
+/* 144 */
+/***/ function(module, exports) {
+
+	// shim for using process in browser
+	
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+	
+	function cleanUpNextTick() {
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+	
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = setTimeout(cleanUpNextTick);
+	    draining = true;
+	
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            currentQueue[queueIndex].run();
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    clearTimeout(timeout);
+	}
+	
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+	
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+	
+	function noop() {}
+	
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+	
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+	
+	// TODO(shtylman)
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 145 */
+/***/ function(module, exports) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule emptyFunction
+	 */
+	
+	function makeEmptyFunction(arg) {
+	  return function() {
+	    return arg;
+	  };
+	}
+	
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	function emptyFunction() {}
+	
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function() { return this; };
+	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
+	
+	module.exports = emptyFunction;
+
+
+/***/ },
+/* 146 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
@@ -10358,9 +10589,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _trackHelper = __webpack_require__(144);
+	var _trackHelper = __webpack_require__(147);
 	
-	var _objectAssign = __webpack_require__(145);
+	var _objectAssign = __webpack_require__(148);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -10514,7 +10745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 144 */
+/* 147 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10551,7 +10782,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    msTransform: 'translateX(' + spec.left + 'px)'
 	  };
 	
-	  if (!document.addEventListener) {
+	  // Fallback for IE8
+	  if (!window.addEventListener && window.attachEvent) {
 	    style.marginLeft = spec.left + 'px';
 	  }
 	
@@ -10633,7 +10865,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.getTrackLeft = getTrackLeft;
 
 /***/ },
-/* 145 */
+/* 148 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10665,7 +10897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 146 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10680,27 +10912,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactLibReactTransitionEvents = __webpack_require__(147);
+	var _reactLibReactTransitionEvents = __webpack_require__(150);
 	
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 	
-	var _trackHelper = __webpack_require__(144);
+	var _trackHelper = __webpack_require__(147);
 	
-	var _objectAssign = __webpack_require__(145);
+	var _objectAssign = __webpack_require__(148);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
 	var helpers = {
 	  initialize: function initialize(props) {
-	
-	    function _getWidth(elem) {
-	      return elem.getBoundingClientRect().width || elem.offsetWidth;
-	    }
-	
 	    var slideCount = _react2['default'].Children.count(props.children);
-	    var listWidth = _getWidth(this.refs.list.getDOMNode());
-	    var trackWidth = _getWidth(this.refs.track.getDOMNode());
-	    var slideWidth = _getWidth(this.getDOMNode()) / props.slidesToShow;
+	    var listWidth = this.getWidth(this.refs.list.getDOMNode());
+	    var trackWidth = this.getWidth(this.refs.track.getDOMNode());
+	    var slideWidth = this.getWidth(this.getDOMNode()) / props.slidesToShow;
 	
 	    var currentSlide = props.rtl ? slideCount - 1 - props.initialSlide : props.initialSlide;
 	
@@ -10724,6 +10951,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      this.autoPlay(); // once we're set up, trigger the initial autoplay.
 	    });
+	  },
+	  update: function update(props) {
+	    // This method has mostly same code as initialize method.
+	    // Refactor it
+	    var slideCount = _react2['default'].Children.count(props.children);
+	    var listWidth = this.getWidth(this.refs.list.getDOMNode());
+	    var trackWidth = this.getWidth(this.refs.track.getDOMNode());
+	    var slideWidth = this.getWidth(this.getDOMNode()) / props.slidesToShow;
+	
+	    this.setState({
+	      slideCount: slideCount,
+	      slideWidth: slideWidth,
+	      listWidth: listWidth,
+	      trackWidth: trackWidth
+	    }, function () {
+	
+	      var targetLeft = (0, _trackHelper.getTrackLeft)((0, _objectAssign2['default'])({
+	        slideIndex: this.state.currentSlide,
+	        trackRef: this.refs.track
+	      }, props, this.state));
+	      // getCSS function needs previously set state
+	      var trackStyle = (0, _trackHelper.getTrackCSS)((0, _objectAssign2['default'])({ left: targetLeft }, props, this.state));
+	
+	      this.setState({ trackStyle: trackStyle });
+	    });
+	  },
+	  getWidth: function getWidth(elem) {
+	    return elem.getBoundingClientRect().width || elem.offsetWidth;
 	  },
 	  adaptHeight: function adaptHeight() {
 	    if (this.props.adaptiveHeight) {
@@ -10929,7 +11184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 147 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10945,7 +11200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var ExecutionEnvironment = __webpack_require__(148);
+	var ExecutionEnvironment = __webpack_require__(151);
 	
 	/**
 	 * EVENT_NAME_MAP is used to determine which event fired when a
@@ -11044,7 +11299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 148 */
+/* 151 */
 /***/ function(module, exports) {
 
 	/**
@@ -11092,7 +11347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 149 */
+/* 152 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11142,7 +11397,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = initialState;
 
 /***/ },
-/* 150 */
+/* 153 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11194,7 +11449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = defaultProps;
 
 /***/ },
-/* 151 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11249,31 +11504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 152 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function (target, eventType, callback) {
-	  if (target.addEventListener) {
-	    target.addEventListener(eventType, callback, false);
-	    return {
-	      remove: function remove() {
-	        target.removeEventListener(eventType, callback, false);
-	      }
-	    };
-	  } else if (target.attachEvent) {
-	    target.attachEvent('on' + eventType, callback);
-	    return {
-	      remove: function remove() {
-	        target.detachEvent('on' + eventType, callback);
-	      }
-	    };
-	  }
-	};
-
-/***/ },
-/* 153 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11288,15 +11519,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactLibCloneWithProps = __webpack_require__(154);
+	var _reactLibCloneWithProps = __webpack_require__(156);
 	
 	var _reactLibCloneWithProps2 = _interopRequireDefault(_reactLibCloneWithProps);
 	
-	var _objectAssign = __webpack_require__(145);
+	var _objectAssign = __webpack_require__(148);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(154);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11418,7 +11649,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Track = Track;
 
 /***/ },
-/* 154 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -11435,11 +11666,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var ReactElement = __webpack_require__(156);
+	var ReactElement = __webpack_require__(157);
 	var ReactPropTransferer = __webpack_require__(163);
 	
 	var keyOf = __webpack_require__(164);
-	var warning = __webpack_require__(160);
+	var warning = __webpack_require__(161);
 	
 	var CHILDREN_PROP = keyOf({children: null});
 	
@@ -11477,106 +11708,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = cloneWithProps;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
 
 /***/ },
-/* 155 */
-/***/ function(module, exports) {
-
-	// shim for using process in browser
-	
-	var process = module.exports = {};
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-	
-	function cleanUpNextTick() {
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-	
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = setTimeout(cleanUpNextTick);
-	    draining = true;
-	
-	    var len = queue.length;
-	    while(len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            currentQueue[queueIndex].run();
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    clearTimeout(timeout);
-	}
-	
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
-	    }
-	};
-	
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
-	Item.prototype.run = function () {
-	    this.fun.apply(null, this.array);
-	};
-	process.title = 'browser';
-	process.browser = true;
-	process.env = {};
-	process.argv = [];
-	process.version = ''; // empty string to avoid regexp issues
-	process.versions = {};
-	
-	function noop() {}
-	
-	process.on = noop;
-	process.addListener = noop;
-	process.once = noop;
-	process.off = noop;
-	process.removeListener = noop;
-	process.removeAllListeners = noop;
-	process.emit = noop;
-	
-	process.binding = function (name) {
-	    throw new Error('process.binding is not supported');
-	};
-	
-	// TODO(shtylman)
-	process.cwd = function () { return '/' };
-	process.chdir = function (dir) {
-	    throw new Error('process.chdir is not supported');
-	};
-	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 156 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -11592,11 +11727,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var ReactContext = __webpack_require__(157);
+	var ReactContext = __webpack_require__(158);
 	var ReactCurrentOwner = __webpack_require__(162);
 	
-	var assign = __webpack_require__(158);
-	var warning = __webpack_require__(160);
+	var assign = __webpack_require__(159);
+	var warning = __webpack_require__(161);
 	
 	var RESERVED_PROPS = {
 	  key: true,
@@ -11884,10 +12019,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = ReactElement;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
 
 /***/ },
-/* 157 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -11903,9 +12038,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var assign = __webpack_require__(158);
-	var emptyObject = __webpack_require__(159);
-	var warning = __webpack_require__(160);
+	var assign = __webpack_require__(159);
+	var emptyObject = __webpack_require__(160);
+	var warning = __webpack_require__(161);
 	
 	var didWarn = false;
 	
@@ -11965,10 +12100,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = ReactContext;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
 
 /***/ },
-/* 158 */
+/* 159 */
 /***/ function(module, exports) {
 
 	/**
@@ -12021,7 +12156,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 159 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12045,10 +12180,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = emptyObject;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
 
 /***/ },
-/* 160 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12064,7 +12199,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	var emptyFunction = __webpack_require__(161);
+	var emptyFunction = __webpack_require__(145);
 	
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -12111,45 +12246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155)))
-
-/***/ },
-/* 161 */
-/***/ function(module, exports) {
-
-	/**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule emptyFunction
-	 */
-	
-	function makeEmptyFunction(arg) {
-	  return function() {
-	    return arg;
-	  };
-	}
-	
-	/**
-	 * This function accepts and discards inputs; it has no side effects. This is
-	 * primarily useful idiomatically for overridable function endpoints which
-	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
-	 */
-	function emptyFunction() {}
-	
-	emptyFunction.thatReturns = makeEmptyFunction;
-	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-	emptyFunction.thatReturnsThis = function() { return this; };
-	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
-	
-	module.exports = emptyFunction;
-
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144)))
 
 /***/ },
 /* 162 */
@@ -12206,8 +12303,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var assign = __webpack_require__(158);
-	var emptyFunction = __webpack_require__(161);
+	var assign = __webpack_require__(159);
+	var emptyFunction = __webpack_require__(145);
 	var joinClasses = __webpack_require__(76);
 	
 	/**
@@ -12359,7 +12456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(154);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12379,36 +12476,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.clickHandler(options);
 	  },
 	  render: function render() {
+	    var _this = this;
 	
 	    var dotCount = getDotCount({
 	      slideCount: this.props.slideCount,
 	      slidesToScroll: this.props.slidesToScroll
 	    });
 	
-	    var dots = [];
+	    // Apply join & split to Array to pre-fill it for IE8
+	    //
+	    // Credit: http://stackoverflow.com/a/13735425/1849458
+	    var dots = Array.apply(null, Array(dotCount + 1).join('0').split('')).map(function (x, i) {
 	
-	    for (var i = 0; i < dotCount; i++) {
 	      var className = (0, _classnames2['default'])({
-	        'slick-active': this.props.currentSlide === i * this.props.slidesToScroll
+	        'slick-active': _this.props.currentSlide === i * _this.props.slidesToScroll
 	      });
 	
 	      var dotOptions = {
 	        message: 'dots',
 	        index: i,
-	        slidesToScroll: this.props.slidesToScroll,
-	        currentSlide: this.props.currentSlide
+	        slidesToScroll: _this.props.slidesToScroll,
+	        currentSlide: _this.props.currentSlide
 	      };
 	
-	      dots.push(_react2['default'].createElement(
+	      return _react2['default'].createElement(
 	        'li',
 	        { key: i, className: className },
 	        _react2['default'].createElement(
 	          'button',
-	          { onClick: this.clickHandler.bind(this, dotOptions) },
+	          { onClick: _this.clickHandler.bind(_this, dotOptions) },
 	          i
 	        )
-	      ));
-	    }
+	      );
+	    });
 	
 	    return _react2['default'].createElement(
 	      'ul',
@@ -12437,7 +12537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(154);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -21310,7 +21410,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var props = this.props;
 	    var prefixCls = props.prefixCls;
 	    var children = props.children;
-	    var maxDescriptionWidth = props.direction === 'vertical' ? 'auto' : props.maxDescriptionWidth;
+	    var maxDescriptionWidth = props.maxDescriptionWidth;
 	    var iconPrefix = props.iconPrefix;
 	    var len = children.length - 1;
 	    var iws = this._itemsWidth;
@@ -35309,7 +35409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-tree": "~0.15.4",
 			"rc-upload": "~1.3.1",
 			"rc-util": "~2.0.3",
-			"react-slick2": "~0.6.6",
+			"react-slick": "~0.7.0",
 			"reqwest-without-xhr2": "~2.0.2",
 			"velocity-animate": "^1.2.2"
 		},
@@ -35318,13 +35418,13 @@ return /******/ (function(modules) { // webpackBootstrap
 			"babel": "^5.8.12",
 			"babel-core": "^5.8.12",
 			"babel-loader": "^5.3.2",
-			"busboy": "~0.2.9",
-			"chalk": "~1.1.0",
+			"busboy": "^0.2.9",
+			"chalk": "^1.1.0",
 			"css-loader": "^0.14.1",
 			"eslint": "^1.1.0",
-			"eslint-plugin-react": "~3.2.2",
+			"eslint-plugin-react": "^3.3.1",
 			"extract-text-webpack-plugin": "^0.8.1",
-			"gh-pages": "~0.3.1",
+			"gh-pages": "^0.3.1",
 			"json-loader": "^0.5.1",
 			"less": "~2.5.1",
 			"less-loader": "^2.2.0",
@@ -35332,7 +35432,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.5.8",
 			"precommit-hook": "^1.0.7",
-			"react-router": "~1.0.0-beta3",
+			"react-router": "1.0.0-beta3",
 			"webpack": "^1.10.1",
 			"webpack-dev-middleware": "^1.2.0"
 		},
