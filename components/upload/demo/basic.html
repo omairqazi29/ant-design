@@ -6,13 +6,12 @@
 var Upload = antd.Upload;
 
 var props = {
-  description: '支持扩展名为: .rar .zip ...',
   action: '/upload.do',
-  data: {},
-  accept: '',
-  uploadTip: '',
-  onStart: function onStart(file) {
-    console.log(file.uid);
+  onChange: function onChange(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
   }
 };
 
@@ -28,13 +27,12 @@ React.render(React.createElement(
 ), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 
 <span class="keyword">var</span> props = {
-  description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
   action: <span class="string">'/upload.do'</span>,
-  data: {},
-  accept: <span class="string">''</span>,
-  uploadTip: <span class="string">''</span>,
-  onStart(file){
-    console.log(file.uid);
+  onChange(info) {
+    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
   }
 };
 
@@ -43,9 +41,8 @@ React.render(
     <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
     <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>,
-  document.getElementById('components-upload-demo-basic')
-);</span></code></pre></div>
+  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+, document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

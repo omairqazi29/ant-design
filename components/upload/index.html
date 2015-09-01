@@ -13,7 +13,7 @@ Upload 文件上传 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.1-beta2.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta1.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -39,12 +39,16 @@ Upload 文件上传 - Ant Design
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Notification',
-        desc: '通知提醒框'
+        title: 'Modal',
+        desc: '对话框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
         desc: '固钉'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Badge',
+        desc: '徽标数字'
       });
       ANT_COMPONENTS.push({
         title: 'Breadcrumb',
@@ -103,12 +107,12 @@ Upload 文件上传 - Ant Design
         desc: '全局提示'
       });
       ANT_COMPONENTS.push({
-        title: 'Modal',
-        desc: '对话框'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Notification',
+        desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
         title: 'Pagination',
@@ -178,11 +182,11 @@ Upload 文件上传 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.1-beta2',
+        latest: '0.9.0-beta1',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.8.1-beta2.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta1.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -350,6 +354,12 @@ Upload 文件上传 - Ant Design
             <a href="../alert/" class="">
               Alert
               <span class="chinese">警告提示</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../badge/" class="">
+              Badge
+              <span class="chinese">徽标数字</span>
             </a>
           </li>
           <li class="">
@@ -521,53 +531,42 @@ Upload 文件上传 - Ant Design
 </tr>
 <tr>
 <td>multiple</td>
-<td>可选参数, 是否支持多选文件，支持ie10+</td>
+<td>可选参数, 是否支持多选文件，支持 <code>ie10+</code></td>
 <td>Boolean</td>
 <td>false</td>
 </tr>
 <tr>
 <td>accept</td>
-<td>可选参数, 接受上传的文件类型, 详见input accept Attribute</td>
+<td>可选参数, 接受上传的文件类型, 详见 input accept Attribute</td>
 <td>String</td>
 <td>无</td>
 </tr>
 <tr>
-<td>onError</td>
-<td>可选参数, error callback</td>
+<td>onChange</td>
+<td>可选参数, 上传文件改变时的状态，详见 onChange</td>
 <td>Function</td>
 <td>无</td>
-</tr>
-<tr>
-<td>onSuccess</td>
-<td>可选参数, success callback</td>
-<td>Function</td>
-<td>无</td>
-</tr>
-<tr>
-<td>onProgress</td>
-<td>可选参数, progress callback, 现代浏览器有效</td>
-<td>Function</td>
-<td>无</td>
-</tr>
-<tr>
-<td>urlResolver</td>
-<td>通过解析请求返回数据，获得文件上传的远程地址</td>
-<td>Function</td>
-<td><code>function() { return JSON.parse(ret).url }</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="onerror">onError</h3><p>错误回调，有三个参数返回：</p>
-<ol>
-<li><code>err</code> 请求返回错误信息</li>
-<li><code>responce</code> 请求响应，包括错误状态码等信息</li>
-<li><code>file</code> 错误的文件对象</li>
+<h3 id="onchange">onChange</h3><p>文件状态改变的回调，返回为：</p>
+<div class="highlight"><pre><code class="javascript">{
+  file: { ... },
+  fileList: [ ... ],
+  event: { ... }
+}</code></pre></div><ol>
+<li><p><code>file</code> 当前操作的文件对象。</p>
+<div class="highlight"><pre><code class="javascript">{
+  uid: <span class="string">'uid'</span>,      <span class="comment">// 文件唯一标识，建议设置为负数，防止和内部产生的 id 冲突</span>
+  name: <span class="string">'xx.png'</span>   <span class="comment">// 文件名</span>
+  status: <span class="string">'done'</span>,  <span class="comment">// 状态：uploading done</span>
+  response: <span class="string">'{"status":"success"}'</span>  <span class="comment">// 服务端响应内容</span>
+}</code></pre></div></li>
+<li><p><code>fileList</code> 当前的文件列表。</p>
+</li>
+<li><code>event</code> 上传中的服务端响应内容，包含了上传进度等信息，高级浏览器支持。</li>
 </ol>
-<h3 id="onsuccess">onSuccess</h3><p>成功回调，返回两个参数</p>
-<ol>
-<li><code>result</code> 上传图片返回结果</li>
-<li><code>file</code> 文件对象</li>
-</ol>
+<h2 id="显示下载链接">显示下载链接</h2><p>请使用 fileList 属性设置数组项的 url 属性进行展示控制。</p>
 
   </article>
 <h2 class="component-demos">
@@ -583,13 +582,12 @@ Upload 文件上传 - Ant Design
 var Upload = antd.Upload;
 
 var props = {
-  description: '支持扩展名为: .rar .zip ...',
   action: '/upload.do',
-  data: {},
-  accept: '',
-  uploadTip: '',
-  onStart: function onStart(file) {
-    console.log(file.uid);
+  onChange: function onChange(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
   }
 };
 
@@ -605,13 +603,12 @@ React.render(React.createElement(
 ), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 
 <span class="keyword">var</span> props = {
-  description: <span class="string">'支持扩展名为: .rar .zip ...'</span>,
   action: <span class="string">'/upload.do'</span>,
-  data: {},
-  accept: <span class="string">''</span>,
-  uploadTip: <span class="string">''</span>,
-  onStart(file){
-    console.log(file.uid);
+  onChange(info) {
+    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
   }
 };
 
@@ -620,15 +617,150 @@ React.render(
     <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
     <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>,
-  document.getElementById('components-upload-demo-basic')
-);</span></code></pre></div>
+  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+, document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-basic">点击上传</a>
     </div>
     <p>经典款式，用户点击按钮弹出文件选择框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-filelist">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-filelist"></div>
+    <script>(function(){'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var Upload = antd.Upload;
+var fileList = [{
+  uid: -1,
+  name: 'xxx.png',
+  status: 'done',
+  url: 'http://www.baidu.com/xxx.png'
+}];
+
+var MyUpload = React.createClass({
+  displayName: 'MyUpload',
+
+  getInitialState: function getInitialState() {
+    return {
+      fileList: fileList
+    };
+  },
+  handleChange: function handleChange(info) {
+    var fileList = info.fileList;
+
+    // 1. 上传列表数量的限制
+    //    只显示最近上传的一个，旧的会被新的顶掉
+    fileList = fileList.slice(-2);
+
+    // 2. 读取远程路径并显示链接
+    fileList = fileList.map(function (file) {
+      if (file.response) {
+        // 组件会将 file.url 作为链接进行展示
+        file.url = JSON.parse(file.response).url;
+      }
+      return file;
+    });
+
+    // 3. 按照服务器返回信息筛选成功上传的文件
+    fileList = fileList.filter(function (file) {
+      if (file.response) {
+        return JSON.parse(file.response).status === 'success';
+      }
+      return true;
+    });
+
+    this.setState({
+      fileList: fileList
+    });
+  },
+  render: function render() {
+    var props = {
+      action: '/upload.do',
+      onChange: this.handleChange
+    };
+    return React.createElement(
+      Upload,
+      _extends({}, props, { fileList: this.state.fileList }),
+      React.createElement(
+        'button',
+        { className: 'ant-btn ant-btn-ghost' },
+        React.createElement('i', { className: 'anticon anticon-upload' }),
+        ' 点击上传'
+      )
+    );
+  }
+});
+
+React.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+<span class="keyword">var</span> fileList = [{
+  uid: -<span class="number">1</span>,
+  name: <span class="string">'xxx.png'</span>,
+  status: <span class="string">'done'</span>,
+  url: <span class="string">'http://www.baidu.com/xxx.png'</span>
+}];
+
+<span class="keyword">var</span> MyUpload = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      fileList: fileList
+    };
+  },
+  handleChange(info) {
+    <span class="keyword">let</span> fileList = info.fileList;
+
+    <span class="comment">// 1. 上传列表数量的限制</span>
+    <span class="comment">//    只显示最近上传的一个，旧的会被新的顶掉</span>
+    fileList = fileList.slice(-<span class="number">2</span>);
+
+    <span class="comment">// 2. 读取远程路径并显示链接</span>
+    fileList = fileList.map(<span class="function"><span class="keyword">function</span><span class="params">(file)</span> {</span>
+      <span class="keyword">if</span> (file.response) {
+        <span class="comment">// 组件会将 file.url 作为链接进行展示</span>
+        file.url = JSON.parse(file.response).url;
+      }
+      <span class="keyword">return</span> file;
+    });
+
+    <span class="comment">// 3. 按照服务器返回信息筛选成功上传的文件</span>
+    fileList = fileList.filter(<span class="function"><span class="keyword">function</span><span class="params">(file)</span> {</span>
+      <span class="keyword">if</span> (file.response) {
+        <span class="keyword">return</span> JSON.parse(file.response).status === <span class="string">'success'</span>;
+      }
+      <span class="keyword">return</span> <span class="literal">true</span>;
+    });
+
+    <span class="keyword">this</span>.setState({
+      fileList: fileList
+    });
+  },
+  render() {
+    <span class="keyword">var</span> props = {
+      action: <span class="string">'/upload.do'</span>,
+      onChange: <span class="keyword">this</span>.handleChange
+    };
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} <span class="attribute">fileList</span>=<span class="value">{this.state.fileList}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>;</span>
+  }
+});
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyUpload</span> /&gt;</span>, document.getElementById('components-upload-demo-filelist'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-filelist">完全控制的上传列表</a>
+    </div>
+    <p>使用 <code>fileList</code> 对列表进行完全控制，可以实现各种自定义功能，以下演示三种情况：</p>
+<p>1) 上传列表数量的限制。</p>
+<p>2) 读取远程路径并显示链接。</p>
+<p>3) 按照服务器返回信息筛选成功上传的文件。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-drag-simple">
@@ -640,10 +772,7 @@ var Dragger = antd.Upload.Dragger;
 
 var props = {
   name: 'file',
-  action: '/upload.do',
-  data: {},
-  accept: '',
-  uploadTip: ''
+  action: '/upload.do'
 };
 
 React.render(React.createElement(
@@ -654,10 +783,7 @@ React.render(React.createElement(
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>,
-  data: {},
-  accept: <span class="string">''</span>,
-  uploadTip: <span class="string">''</span>
+  action: <span class="string">'/upload.do'</span>
 };
 
 React.render(
@@ -682,7 +808,82 @@ React.render(
   </div>
 </div>
   </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-drag">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-defaultfilelist">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-defaultfilelist"></div>
+    <script>(function(){'use strict';
+
+var Upload = antd.Upload;
+
+var props = {
+  action: '/upload.do',
+  onChange: function onChange(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
+  },
+  defaultFileList: [{
+    uid: -1,
+    name: 'xxx.png',
+    status: 'done',
+    url: 'http://www.baidu.com/xxx.png'
+  }, {
+    uid: -2,
+    name: 'yyy.png',
+    status: 'done',
+    url: 'http://www.baidu.com/yyy.png'
+  }]
+};
+
+React.render(React.createElement(
+  Upload,
+  props,
+  React.createElement(
+    'button',
+    { className: 'ant-btn ant-btn-ghost' },
+    React.createElement('i', { className: 'anticon anticon-upload' }),
+    ' 点击上传'
+  )
+), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+
+<span class="keyword">var</span> props = {
+  action: <span class="string">'/upload.do'</span>,
+  onChange(info) {
+    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
+      console.log(info.file);
+      console.log(info.fileList);
+    }
+  },
+  defaultFileList: [{
+    uid: -<span class="number">1</span>,
+    name: <span class="string">'xxx.png'</span>,
+    status: <span class="string">'done'</span>,
+    url: <span class="string">'http://www.baidu.com/xxx.png'</span>
+  }, {
+    uid: -<span class="number">2</span>,
+    name: <span class="string">'yyy.png'</span>,
+    status: <span class="string">'done'</span>,
+    url: <span class="string">'http://www.baidu.com/yyy.png'</span>
+  }]
+};
+
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+, document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-defaultfilelist">传入已上传的文件</a>
+    </div>
+    <p>对已上传的文件进行编辑。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-drag">
   <div class="code-box-demo">
     <div id="components-upload-demo-drag"></div>
     <script>(function(){'use strict';
@@ -691,10 +892,7 @@ var Dragger = antd.Upload.Dragger;
 
 var props = {
   name: 'file',
-  action: '/upload.do',
-  data: {},
-  accept: 'i',
-  uploadTip: ''
+  action: '/upload.do'
 };
 
 React.render(React.createElement(
@@ -719,10 +917,7 @@ React.render(React.createElement(
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>,
-  data: {},
-  accept: <span class="string">'i'</span>,
-  uploadTip: <span class="string">''</span>
+  action: <span class="string">'/upload.do'</span>
 };
 
 React.render(

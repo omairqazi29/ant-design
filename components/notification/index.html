@@ -13,7 +13,7 @@ Notification 通知提醒框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.8.1-beta2.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta1.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -39,12 +39,16 @@ Notification 通知提醒框 - Ant Design
     <script>
       var ANT_COMPONENTS = [];
       ANT_COMPONENTS.push({
-        title: 'Notification',
-        desc: '通知提醒框'
+        title: 'Modal',
+        desc: '对话框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
         desc: '固钉'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Badge',
+        desc: '徽标数字'
       });
       ANT_COMPONENTS.push({
         title: 'Breadcrumb',
@@ -103,12 +107,12 @@ Notification 通知提醒框 - Ant Design
         desc: '全局提示'
       });
       ANT_COMPONENTS.push({
-        title: 'Modal',
-        desc: '对话框'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Notification',
+        desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
         title: 'Pagination',
@@ -178,11 +182,11 @@ Notification 通知提醒框 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.8.1-beta2',
+        latest: '0.9.0-beta1',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.8.1-beta2.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta1.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -350,6 +354,12 @@ Notification 通知提醒框 - Ant Design
             <a href="../alert/" class="">
               Alert
               <span class="chinese">警告提示</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../badge/" class="">
+              Badge
+              <span class="chinese">徽标数字</span>
             </a>
           </li>
           <li class="">
@@ -542,9 +552,9 @@ Notification 通知提醒框 - Ant Design
 </tr>
 <tr>
 <td>duration</td>
-<td>默认五秒后自动关闭，配置为 null 则不自动关闭</td>
+<td>默认 4.5 秒后自动关闭，配置为 null 则不自动关闭</td>
 <td>Number</td>
-<td>5</td>
+<td>4.5</td>
 </tr>
 </tbody>
 </table>
@@ -810,7 +820,7 @@ React.render(
     <div class="code-box-title">
       <a href="#demo-duration">自动关闭的延时</a>
     </div>
-    <p>自定义通知框自动关闭的延时，默认<code>3s</code>，取消自动关闭只要将该值设为<code>0</code>即可。</p>
+    <p>自定义通知框自动关闭的延时，默认<code>4.5s</code>，取消自动关闭只要将该值设为 <code>0</code> 即可。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-onclose">
