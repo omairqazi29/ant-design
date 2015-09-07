@@ -512,7 +512,7 @@ Modal 对话框 - Ant Design
     </h1>
     <p>模态对话框。</p>
 <h2 id="何时使用">何时使用</h2><p>需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 <code>Modal</code> 在当前页面正中打开一个浮层，承载相应的操作。</p>
-<p>另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 <code>ant.confirm()</code> 。</p>
+<p>另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 <code>ant.Modal.confirm()</code> 等方法。</p>
 <h2 id="api">API</h2><table>
 <thead>
 <tr>
@@ -561,7 +561,14 @@ Modal 对话框 - Ant Design
 </tr>
 </tbody>
 </table>
-<h3 id="confirm">confirm()</h3><p><code>confirm</code> 为一个方法，参数为 object，具体属性如下：</p>
+<h3 id="modal-xxx">Modal.xxx()</h3><p>包括：</p>
+<ul>
+<li><code>Modal.info</code></li>
+<li><code>Modal.success</code></li>
+<li><code>Modal.error</code></li>
+<li><code>Modal.confirm</code></li>
+</ul>
+<p>以上均为一个函数，参数为 object，具体属性如下：</p>
 <table>
 <thead>
 <tr>
@@ -594,16 +601,21 @@ Modal 对话框 - Ant Design
 <td>width</td>
 <td>宽度</td>
 <td>String or Number</td>
-<td>375</td>
+<td>416</td>
 </tr>
 <tr>
 <td>iconClassName</td>
 <td>图标样式名</td>
 <td>String</td>
-<td>anticon-exclamation-circle</td>
+<td>anticon-question-circle</td>
 </tr>
 </tbody>
 </table>
+<style>
+.code-box-demo .ant-btn {
+  margin-right: 8px;
+}
+</style>
 
   </article>
 <h2 class="component-demos">
@@ -617,6 +629,8 @@ Modal 对话框 - Ant Design
     <script>(function(){"use strict";
 
 var Modal = antd.Modal;
+
+console.log(Modal.info);
 
 var Test = React.createClass({
   displayName: "Test",
@@ -673,6 +687,8 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+
+console.log(Modal.info);
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState(){
@@ -861,7 +877,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
     <div id="components-modal-demo-confirm-promise"></div>
     <script>(function(){'use strict';
 
-var confirm = antd.confirm;
+var confirm = antd.Modal.confirm;
 
 function showConfirm() {
   confirm({
@@ -881,7 +897,7 @@ React.render(React.createElement(
   'button',
   { className: 'ant-btn', onClick: showConfirm },
   '确认对话框'
-), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.confirm;
+), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({
@@ -1028,7 +1044,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
     <div id="components-modal-demo-confirm"></div>
     <script>(function(){'use strict';
 
-var confirm = antd.confirm;
+var confirm = antd.Modal.confirm;
 
 function showConfirm() {
   confirm({
@@ -1045,7 +1061,7 @@ React.render(React.createElement(
   'button',
   { className: 'ant-btn', onClick: showConfirm },
   '确认对话框'
-), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.confirm;
+), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({
@@ -1068,6 +1084,90 @@ React.render(
       <a href="#demo-confirm">确认对话框</a>
     </div>
     <p>使用 <code>confirm()</code> 可以快捷地弹出确认框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-info">
+  <div class="code-box-demo">
+    <div id="components-modal-demo-info"></div>
+    <script>(function(){'use strict';
+
+var Modal = antd.Modal;
+
+function info() {
+  Modal.info({
+    title: '这是一条通知信息',
+    content: '一些附加信息一些附加信息一些附加信息',
+    onOk: function onOk() {}
+  });
+}
+
+function success() {
+  Modal.success({
+    title: '这是一条通知信息',
+    content: '一些附加信息一些附加信息一些附加信息'
+  });
+}
+
+function error() {
+  Modal.error({
+    title: '这是一条通知信息',
+    content: '一些附加信息一些附加信息一些附加信息'
+  });
+}
+
+React.render(React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'button',
+    { className: 'ant-btn', onClick: info },
+    '信息提示'
+  ),
+  React.createElement(
+    'button',
+    { className: 'ant-btn', onClick: success },
+    '成功提示'
+  ),
+  React.createElement(
+    'button',
+    { className: 'ant-btn', onClick: error },
+    '失败提示'
+  )
+), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+
+<span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
+  Modal.info({
+    title: <span class="string">'这是一条通知信息'</span>,
+    content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>,
+    onOk: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  });
+}
+
+<span class="function"><span class="keyword">function</span> <span class="title">success</span><span class="params">()</span> {</span>
+  Modal.success({
+    title: <span class="string">'这是一条通知信息'</span>,
+    content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>
+  });
+}
+
+<span class="function"><span class="keyword">function</span> <span class="title">error</span><span class="params">()</span> {</span>
+  Modal.error({
+    title: <span class="string">'这是一条通知信息'</span>,
+    content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>
+  });
+}
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-modal-demo-info'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-info">信息提示</a>
+    </div>
+    <p>各种类型的信息提示，只有一个 <code>确认</code> 按钮。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

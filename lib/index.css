@@ -5126,9 +5126,15 @@ textarea.ant-calendar-time-input {
   top: 2px;
 }
 .ant-confirm .ant-confirm-body .anticon-exclamation-circle {
-  color: #fac450;
+  color: #ff6600;
 }
 .ant-confirm .ant-confirm-body .anticon-question-circle {
+  color: #fac450;
+}
+.ant-confirm .ant-confirm-body .anticon-check-circle {
+  color: #87d068;
+}
+.ant-confirm .ant-confirm-body .anticon-info-circle {
   color: #2db7f5;
 }
 .ant-confirm .ant-confirm-btns {
@@ -9352,16 +9358,14 @@ a .ant-badge-count:active {
 }
 .ant-timeline-item-content {
   min-height: 36px;
-  position: relative;
-  left: 24px;
-  top: -2px;
+  padding: 0 0 10px 24px;
   font-size: 12px;
-  padding-bottom: 10px;
+  position: relative;
+  top: -2px;
 }
 .ant-timeline-item-last .ant-timeline-item-tail {
   border-left: 2px dotted #e9e9e9;
 }
 .ant-timeline-item-last .ant-timeline-item-content {
-  min-height: 70px;
-  padding-bottom: 30px;
+  min-height: 48px;
 }
