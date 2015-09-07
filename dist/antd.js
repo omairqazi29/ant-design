@@ -28487,6 +28487,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var defaultDuration = 1.5;
 	var top = undefined;
 	var messageInstance = undefined;
+	var key = 1;
 	
 	function getMessageInstance() {
 	  messageInstance = messageInstance || _rcNotification2['default'].newInstance({
@@ -28499,15 +28500,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return messageInstance;
 	}
 	
-	function notice(content, duration, type) {
+	function notice(content, duration, type, onClose) {
 	  if (duration === undefined) duration = defaultDuration;
 	
 	  var iconClass = ({
 	    'info': 'anticon-info-circle ant-message-info',
 	    'success': 'anticon-check-circle ant-message-success',
-	    'error': 'anticon-exclamation-circle ant-message-error'
+	    'error': 'anticon-exclamation-circle ant-message-error',
+	    'loading': 'anticon-loading ant-message-loading'
 	  })[type];
-	  getMessageInstance().notice({
+	  var instance = getMessageInstance();
+	  instance.notice({
+	    key: key,
 	    duration: duration,
 	    style: {},
 	    content: _react2['default'].createElement(
@@ -28519,19 +28523,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	        null,
 	        content
 	      )
-	    )
+	    ),
+	    onClose: onClose
 	  });
+	  return (function () {
+	    var target = key++;
+	    return function () {
+	      instance.removeNotice(target);
+	    };
+	  })();
 	}
 	
 	exports['default'] = {
-	  info: function info(content, duration) {
-	    notice(content, duration, 'info');
+	  info: function info(content, duration, onClose) {
+	    return notice(content, duration, 'info', onClose);
 	  },
-	  success: function success(content, duration) {
-	    notice(content, duration, 'success');
+	  success: function success(content, duration, onClose) {
+	    return notice(content, duration, 'success', onClose);
 	  },
-	  error: function error(content, duration) {
-	    notice(content, duration, 'error');
+	  error: function error(content, duration, onClose) {
+	    return notice(content, duration, 'error', onClose);
+	  },
+	  loading: function loading(content, duration, onClose) {
+	    return notice(content, duration, 'loading', onClose);
 	  },
 	  config: function config(options) {
 	    if (options.top) {
@@ -35668,7 +35682,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.0-beta2",
+		"version": "0.9.0-beta3",
 		"stableVersion": "0.8.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",

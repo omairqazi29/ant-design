@@ -4959,6 +4959,7 @@ textarea.ant-calendar-time-input {
   left: -9999px;
   top: -9999px;
   z-index: 1000;
+  min-height: 240px;
 }
 .ant-modal-wrap * {
   box-sizing: border-box;
@@ -7638,7 +7639,8 @@ textarea.ant-input-number {
 .ant-message-error {
   color: #ff6600;
 }
-.ant-message-info {
+.ant-message-info,
+.ant-message-loading {
   color: #2db7f5;
 }
 .ant-message .anticon {
