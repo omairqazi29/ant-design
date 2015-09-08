@@ -33397,10 +33397,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _message = __webpack_require__(263);
-	
-	var _message2 = _interopRequireDefault(_message);
-	
 	var _uploadList = __webpack_require__(328);
 	
 	var _uploadList2 = _interopRequireDefault(_uploadList);
@@ -33443,7 +33439,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  onSuccess: function onSuccess(response, file) {
 	    var fileList = this.state.fileList.concat();
-	    _message2['default'].success(file.name + '上传完成。');
 	    var targetItem = (0, _getFileItem2['default'])(file, fileList);
 	    // 之前已经删除
 	    if (targetItem) {
@@ -33467,7 +33462,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  onError: function onError(error, response, file) {
-	    _message2['default'].error(file.name + ' 上传失败。');
 	    file.error = error;
 	    file.response = response;
 	    this.handleRemove(file);
