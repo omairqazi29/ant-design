@@ -33418,12 +33418,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  onStart: function onStart(file) {
-	    var nextFileList = this.state.fileList.concat();
 	    file.status = 'uploading';
-	    nextFileList.push(file);
 	    this.onChange({
 	      file: file,
-	      fileList: nextFileList
+	      add: true
 	    });
 	  },
 	  removeFile: function removeFile(file) {
@@ -33479,9 +33477,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // 1. 有设置外部属性时不改变 fileList
 	    // 2. 上传中状态（info.event）不改变 fileList
 	    if (!('fileList' in this.props) && !info.event) {
-	      this.setState({
-	        fileList: info.fileList
-	      });
+	      // 新增文件时，使用 multiple 属性会造成同时 setState
+	      if (info.add) {
+	        this.setState(function (prevState) {
+	          return {
+	            fileList: prevState.fileList.concat(info.file)
+	          };
+	        });
+	      } else {
+	        this.setState({
+	          fileList: info.fileList
+	        });
+	      }
 	    }
 	    this.props.onChange(info);
 	  },
@@ -35050,7 +35057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var uuid = __webpack_require__(325);
 	
 	module.exports = function () {
-	  return uuid.v1();
+	  return uuid.v4();
 	};
 
 /***/ },
