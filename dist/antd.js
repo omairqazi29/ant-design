@@ -15897,7 +15897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react2['default'].createElement(
 	        'button',
 	        { type: 'button', className: 'ant-btn-primary ant-btn ant-btn-lg', onClick: onOk },
-	        '确 定'
+	        '知道了'
 	      )
 	    );
 	  }
