@@ -4,6 +4,8 @@
 @radio-duration: .3s;
 
 .@{radio-group-prefix-cls} {
+  display: inline-block;
+  vertical-align: middle;
   label {
     margin-right: 16px;
   }
@@ -141,6 +143,10 @@
 
     &:last-child {
       border-radius: 0 @border-radius-base @border-radius-base 0;
+    }
+
+    &:first-child:last-child {
+      border-radius: @border-radius-base;
     }
 
     &:hover {

@@ -13,7 +13,7 @@ Ant Design of React  - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.0-beta3.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta4.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -186,11 +186,11 @@ Ant Design of React  - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.0-beta3',
+        latest: '0.9.0-beta4',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.9.0-beta3.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta4.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -538,36 +538,9 @@ Ant Design of React  - Ant Design
 <span class="keyword">var</span> Datepicker = antd.Datepicker;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>, mountNode);</span></code></pre></div><h2 id="版本">版本</h2><ul>
-<li>稳定版：<span class="versions" id="stable-version"></span></li>
-<li>开发版：<span class="versions" id="latest-version"></span></li>
+<li>稳定版：<a href="https://www.npmjs.org/package/antd"><img src="https://img.shields.io/npm/v/antd.svg?style=flat-square" alt="npm package"></a></li>
+<li>开发版：<a href="https://www.npmjs.org/package/antd"><img src="https://cnpmjs.org/badge/v/antd.svg?&amp;tag=beta&amp;subject=npm" alt=""></a></li>
 </ul>
-<style>
-.versions {
-  font-weight: bold;
-  color: #C05B4D;
-  font-family: Consolas;
-  margin-left: 0.3em;
-  background: #FFF1E7;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-</style>
-
-<script>
-$('#latest-version').html(antdVersion.latest);
-$('#latest-links a').each(function(i, item) {
-  $(item).attr('href', $(item).attr('href').replace('dist/antd', 'dist/antd-' + antdVersion.latest));
-});
-
-if (antdVersion.stable) {
-  $('#stable-version').html(antdVersion.stable);
-  $('#stable-link').attr('href', 'https://github.com/ant-design/ant-design/releases/tag/' + antdVersion.stable);
-} else {
-  $('#stable-version').html('暂无');
-  $('#stable-link').hide();
-}
-</script>
-
 <h2 id="链接">链接</h2><ul>
 <li><a href="http://ant.design/">首页</a></li>
 <li><a href="http://ant.design/docs/introduce">文档</a></li>
