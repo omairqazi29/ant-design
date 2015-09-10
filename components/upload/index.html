@@ -13,7 +13,7 @@ Upload 文件上传 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.0-beta6.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta7.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -186,11 +186,11 @@ Upload 文件上传 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.0-beta6',
+        latest: '0.9.0-beta7',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.9.0-beta6.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta7.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -577,7 +577,8 @@ Upload 文件上传 - Ant Design
   name: <span class="string">'xx.png'</span>   <span class="comment">// 文件名</span>
   status: <span class="string">'done'</span>,  <span class="comment">// 状态：uploading done</span>
   response: <span class="string">'{"status":"success"}'</span>  <span class="comment">// 服务端响应内容</span>
-}</code></pre></div></li>
+}</code></pre></div><p>如果上传控件是 multiple 时，此参数将为一个对象数组 <code>[file, ...]</code>。</p>
+</li>
 <li><p><code>fileList</code> 当前的文件列表。</p>
 </li>
 <li><code>event</code> 上传中的服务端响应内容，包含了上传进度等信息，高级浏览器支持。</li>
@@ -707,7 +708,8 @@ var MyUpload = React.createClass({
   render: function render() {
     var props = {
       action: '/upload.do',
-      onChange: this.handleChange
+      onChange: this.handleChange,
+      multiple: true
     };
     return React.createElement(
       Upload,
@@ -767,7 +769,8 @@ React.render(React.createElement(MyUpload, null), document.getElementById('compo
   render() {
     <span class="keyword">var</span> props = {
       action: <span class="string">'/upload.do'</span>,
-      onChange: <span class="keyword">this</span>.handleChange
+      onChange: <span class="keyword">this</span>.handleChange,
+      multiple: <span class="literal">true</span>
     };
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} <span class="attribute">fileList</span>=<span class="value">{this.state.fileList}</span>&gt;</span>
       <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
