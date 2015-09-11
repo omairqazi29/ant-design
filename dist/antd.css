@@ -2755,18 +2755,10 @@ samp {
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  50% {
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
   100% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -2774,62 +2766,32 @@ samp {
 @keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  50% {
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
   100% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
 @-webkit-keyframes zoomOut {
   0% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  90% {
-    opacity: 0.03;
-  }
   100% {
     opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
     -webkit-transform: scale(0);
             transform: scale(0);
   }
 }
 @keyframes zoomOut {
   0% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  90% {
-    opacity: 0.03;
-  }
   100% {
     opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
     -webkit-transform: scale(0);
             transform: scale(0);
   }

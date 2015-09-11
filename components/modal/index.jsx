@@ -9,7 +9,7 @@ function noop() {
 let mousePosition;
 let mousePositionEventBinded;
 
-let AntModal =  React.createClass({
+let AntModal = React.createClass({
   getDefaultProps() {
     return {
       prefixCls: 'ant-modal',
@@ -89,25 +89,25 @@ let AntModal =  React.createClass({
   }
 });
 
-AntModal.info = function(props) {
+AntModal.info = function (props) {
   props.iconClassName = 'anticon-info-circle';
   props.okCancel = false;
   return confirm(props);
 };
 
-AntModal.success = function(props) {
+AntModal.success = function (props) {
   props.iconClassName = 'anticon-check-circle';
   props.okCancel = false;
   return confirm(props);
 };
 
-AntModal.error = function(props) {
+AntModal.error = function (props) {
   props.iconClassName = 'anticon-exclamation-circle';
   props.okCancel = false;
   return confirm(props);
 };
 
-AntModal.confirm = function(props) {
+AntModal.confirm = function (props) {
   props.okCancel = true;
   return confirm(props);
 };
