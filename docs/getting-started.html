@@ -13,7 +13,7 @@
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.0-beta7.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta9.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -38,6 +38,7 @@
     <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
+      var InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
         title: 'Notification',
         desc: '通知提醒框'
@@ -186,11 +187,11 @@
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.0-beta7',
+        latest: '0.9.0-beta9',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.9.0-beta7.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta9.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -281,221 +282,257 @@
       <ul class="">
           <li class="type-divider">基本</li>
           <li class="">
-            <a href="../components/button/" class="">
+            <a href="../components/button/"
+               class="">
               Button
               <span class="chinese">按钮</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/iconfont/" class="">
+            <a href="../components/iconfont/"
+               class=""data-no-instant>
               Iconfont
               <span class="chinese">字体图标</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/layout/" class="">
+            <a href="../components/layout/"
+               class="">
               Layout
               <span class="chinese">布局</span>
             </a>
           </li>
           <li class="type-divider">表单</li>
           <li class="">
-            <a href="../components/checkbox/" class="">
+            <a href="../components/checkbox/"
+               class="">
               Checkbox
               <span class="chinese">多选框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/datepicker/" class="">
+            <a href="../components/datepicker/"
+               class="">
               Datepicker
               <span class="chinese">日期选择框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/form/" class="">
+            <a href="../components/form/"
+               class="">
               Form
               <span class="chinese">表单</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/input-number/" class="">
+            <a href="../components/input-number/"
+               class="">
               InputNumber
               <span class="chinese">数字输入框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/radio/" class="">
+            <a href="../components/radio/"
+               class="">
               Radio
               <span class="chinese">单选框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/select/" class="">
+            <a href="../components/select/"
+               class="">
               Select
               <span class="chinese">选择器</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/slider/" class="">
+            <a href="../components/slider/"
+               class="">
               Slider
               <span class="chinese">滑动输入条</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/switch/" class="">
+            <a href="../components/switch/"
+               class="">
               Switch
               <span class="chinese">开关</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/upload/" class="">
+            <a href="../components/upload/"
+               class="">
               Upload
               <span class="chinese">文件上传</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/validation/" class="">
+            <a href="../components/validation/"
+               class="">
               Validation
               <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
           <li class="">
-            <a href="../components/alert/" class="">
+            <a href="../components/alert/"
+               class="">
               Alert
               <span class="chinese">警告提示</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/badge/" class="">
+            <a href="../components/badge/"
+               class="">
               Badge
               <span class="chinese">徽标数</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/carousel/" class="">
+            <a href="../components/carousel/"
+               class="">
               Carousel
               <span class="chinese">走马灯</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/collapse/" class="">
+            <a href="../components/collapse/"
+               class="">
               Collapse
               <span class="chinese">折叠面板</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/dropdown/" class="">
+            <a href="../components/dropdown/"
+               class="">
               Dropdown
               <span class="chinese">下拉菜单</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/message/" class="">
+            <a href="../components/message/"
+               class="">
               Message
               <span class="chinese">全局提示</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/modal/" class="">
+            <a href="../components/modal/"
+               class="">
               Modal
               <span class="chinese">对话框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/notification/" class="">
+            <a href="../components/notification/"
+               class="">
               Notification
               <span class="chinese">通知提醒框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/popconfirm/" class="">
+            <a href="../components/popconfirm/"
+               class="">
               Popconfirm
               <span class="chinese">气泡确认框</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/popover/" class="">
+            <a href="../components/popover/"
+               class="">
               Popover
               <span class="chinese">气泡卡片</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/progress/" class="">
+            <a href="../components/progress/"
+               class="">
               Progress
               <span class="chinese">进度条</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/table/" class="">
+            <a href="../components/table/"
+               class="">
               Table
               <span class="chinese">表格</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/tag/" class="">
+            <a href="../components/tag/"
+               class="">
               Tag
               <span class="chinese">标签</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/timeline/" class="">
+            <a href="../components/timeline/"
+               class="">
               Timeline
               <span class="chinese">时间轴</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/tooltip/" class="">
+            <a href="../components/tooltip/"
+               class="">
               Tooltip
               <span class="chinese">文字提示</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/tree/" class="">
+            <a href="../components/tree/"
+               class="">
               Tree
               <span class="chinese">树形控件</span>
             </a>
           </li>
           <li class="type-divider">导航</li>
           <li class="">
-            <a href="../components/breadcrumb/" class="">
+            <a href="../components/breadcrumb/"
+               class="">
               Breadcrumb
               <span class="chinese">面包屑</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/menu/" class="">
+            <a href="../components/menu/"
+               class="">
               Menu
               <span class="chinese">导航菜单</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/pagination/" class="">
+            <a href="../components/pagination/"
+               class="">
               Pagination
               <span class="chinese">分页</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/steps/" class="">
+            <a href="../components/steps/"
+               class="">
               Steps
               <span class="chinese">步骤条</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/tabs/" class="">
+            <a href="../components/tabs/"
+               class="">
               Tabs
               <span class="chinese">标签页</span>
             </a>
           </li>
           <li class="type-divider">其他</li>
           <li class="">
-            <a href="../components/affix/" class="">
+            <a href="../components/affix/"
+               class="">
               Affix
               <span class="chinese">固钉</span>
             </a>
           </li>
           <li class="">
-            <a href="../components/enter-animation/" class="">
+            <a href="../components/enter-animation/"
+               class="">
               EnterAnimation
               <span class="chinese">进场动画</span>
             </a>
@@ -638,5 +675,14 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     </li>
   </ul>
 </footer>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1AmXhXg0kXXXXXXXX.js" data-no-instant></script>
+    <script data-no-instant>
+      InstantClick.on('change', function() {
+        InstantClickChangeFns.forEach(function(fn) {
+          fn();
+        });
+      });
+      InstantClick.init();
+    </script>
   </body>
 </html>

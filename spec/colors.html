@@ -13,7 +13,7 @@
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.0-beta7.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.0-beta9.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -38,6 +38,7 @@
     <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
     <script>
       var ANT_COMPONENTS = [];
+      var InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
         title: 'Notification',
         desc: '通知提醒框'
@@ -186,11 +187,11 @@
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.0-beta7',
+        latest: '0.9.0-beta9',
         stable: '0.8.0'
       };
     </script>
-    <script src="/dist/antd-0.9.0-beta7.min.js"></script>
+    <script src="/dist/antd-0.9.0-beta9.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -262,19 +263,22 @@
       <h4>风格</h4>
       <ul class="">
           <li class="">
-            <a href="font" class="">
+            <a href="font"
+               class="">
               字体
               <span class="chinese"></span>
             </a>
           </li>
           <li class="">
-            <a href="typography" class="">
+            <a href="typography"
+               class="">
               排版
               <span class="chinese"></span>
             </a>
           </li>
           <li class="current">
-            <a href="colors" class="">
+            <a href="colors"
+               class="">
               色彩
               <span class="chinese"></span>
             </a>
@@ -285,19 +289,22 @@
       <h4>动画</h4>
       <ul class="">
           <li class="">
-            <a href="easing" class="">
+            <a href="easing"
+               class="">
               自然运动
               <span class="chinese"></span>
             </a>
           </li>
           <li class="">
-            <a href="page-transition" class="">
+            <a href="page-transition"
+               class="">
               互动转换
               <span class="chinese"></span>
             </a>
           </li>
           <li class="">
-            <a href="motion" class="">
+            <a href="motion"
+               class="">
               组件动画
               <span class="chinese"></span>
             </a>
@@ -485,5 +492,14 @@ React.render(React.createElement(ExtendPalettes, null), document.getElementById(
     </li>
   </ul>
 </footer>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1AmXhXg0kXXXXXXXX.js" data-no-instant></script>
+    <script data-no-instant>
+      InstantClick.on('change', function() {
+        InstantClickChangeFns.forEach(function(fn) {
+          fn();
+        });
+      });
+      InstantClick.init();
+    </script>
   </body>
 </html>

@@ -1,126 +1,156 @@
-<div class="code-box" id="animation-demo-basic">
+<div class="code-box" id="animation-demo-enter-leave">
   <div class="code-box-demo">
-    <div id="components-enter-animation-demo-basic"></div>
-    <script>(function(){"use strict";
+    <div id="components-enter-animation-demo-enter-leave"></div>
+    <script>(function(){'use strict';
 
 var EnterAnimation = antd.EnterAnimation;
 
 var Test = React.createClass({
-  displayName: "Test",
+  displayName: 'Test',
 
   getInitialState: function getInitialState() {
     return {
-      bool: true
+      enter: {
+        type: 'right',
+        interval: 0.3,
+        callback: function callback() {
+          console.log('enter');
+        }
+      },
+      leave: {
+        type: 'left',
+        interval: .1,
+        callback: function callback() {
+          console.log('leave');
+        }
+      },
+      show: true
     };
   },
   onClick: function onClick() {
     this.setState({
-      bool: !this.state.bool
+      show: !this.state.show
+
     });
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        "div",
+        'div',
         { style: { marginBottom: 20 } },
         React.createElement(
-          "button",
-          { className: "ant-btn ant-btn-primary", onClick: this.onClick },
-          "切换"
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
+          '切换'
         )
       ),
       React.createElement(
         EnterAnimation,
-        null,
-        this.state.bool ? React.createElement(
-          "div",
-          { key: "a" },
+        { enter: this.state.enter, leave: this.state.leave },
+        this.state.show ? React.createElement(
+          'div',
+          { key: 'a' },
           React.createElement(
-            "div",
-            { className: "demo-header" },
+            'div',
+            { className: 'demo-header' },
             React.createElement(
-              "div",
-              { className: "logo" },
-              React.createElement("img", { width: "30", src: "https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" }),
+              'div',
+              { className: 'logo' },
+              React.createElement('img', { width: '30', src: 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg' }),
               React.createElement(
-                "span",
+                'span',
                 null,
-                "logo"
+                'logo'
               )
             ),
             React.createElement(
-              "ul",
+              'ul',
               null,
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null)
+              React.createElement('li', null),
+              React.createElement('li', null),
+              React.createElement('li', null),
+              React.createElement('li', null),
+              React.createElement('li', null)
             )
           ),
           React.createElement(
-            "div",
-            { className: "demo-content" },
+            'div',
+            { className: 'demo-content' },
             React.createElement(
-              "div",
-              { className: "demo-title" },
-              "我是标题"
+              'div',
+              { className: 'demo-title' },
+              '我是标题'
             ),
             React.createElement(
-              "div",
-              { className: "demo-kp" },
+              'div',
+              { className: 'demo-kp' },
               React.createElement(
-                "ul",
+                'ul',
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement('li', null),
+                React.createElement('li', null),
+                React.createElement('li', null)
               )
             ),
             React.createElement(
-              "div",
-              { className: "demo-title" },
-              "我是标题"
+              'div',
+              { className: 'demo-title' },
+              '我是标题'
             ),
             React.createElement(
-              "div",
-              { className: "demo-listBox" },
+              'div',
+              { className: 'demo-listBox' },
               React.createElement(
-                "div",
-                { className: "demo-list" },
-                React.createElement("div", { className: "title" }),
+                'div',
+                { className: 'demo-list' },
+                React.createElement('div', { className: 'title' }),
                 React.createElement(
-                  "ul",
+                  'ul',
                   null,
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null)
+                  React.createElement('li', null),
+                  React.createElement('li', null),
+                  React.createElement('li', null),
+                  React.createElement('li', null),
+                  React.createElement('li', null)
                 )
               )
             )
           ),
-          React.createElement("div", { className: "demo-footer" })
+          React.createElement('div', { className: 'demo-footer' })
         ) : null
       )
     );
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
-      bool:<span class="literal">true</span>,
+      enter:{
+        type: <span class="string">'right'</span>,
+        interval: <span class="number">0.3</span>,
+        callback:() =&gt; {
+          console.log(<span class="string">'enter'</span>);
+        }
+      },
+      leave:{
+        type: <span class="string">'left'</span>,
+        interval: <span class="number">.1</span>,
+        callback:() =&gt; {
+          console.log(<span class="string">'leave'</span>);
+        }
+      },
+      show:<span class="literal">true</span>,
     }
   },
   onClick() {
     <span class="keyword">this</span>.setState({
-      bool:!<span class="keyword">this</span>.state.bool,
+      show:!<span class="keyword">this</span>.state.show,
+
     })
   },
   render() {
@@ -129,8 +159,8 @@ React.render(React.createElement(Test, null), document.getElementById('component
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
           <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
-          {this.state.bool ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
+          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
@@ -176,8 +206,8 @@ React.render(React.createElement(Test, null), document.getElementById('component
 });
 
 React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
-, document.getElementById('components-enter-animation-demo-basic'));</span></code></pre></div><style>
-#components-enter-animation-demo-basic {
+, document.getElementById('components-enter-animation-demo-enter-leave'));</span></code></pre></div><style>
+#components-enter-animation-demo-enter-leave {
   text-align: center;
   overflow: hidden;
   margin: 20px auto;
@@ -187,9 +217,9 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#animation-demo-basic">默认</a>
+      <a href="#animation-demo-enter-leave">配置进出场的样式</a>
     </div>
-    <p>默认子节点进场动画。</p>
+    <p>配置进出场动画样式。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
