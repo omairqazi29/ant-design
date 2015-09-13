@@ -36263,7 +36263,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.0",
+		"version": "0.9.1-beta1",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
