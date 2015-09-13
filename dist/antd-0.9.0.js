@@ -33861,7 +33861,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	  removeFile: function removeFile(file) {
-	    file.status = 'removed';
 	    var fileList = this.state.fileList.concat();
 	    var targetItem = (0, _getFileItem2['default'])(file, fileList);
 	    var index = fileList.indexOf(targetItem);
@@ -33898,6 +33897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  onError: function onError(error, response, file) {
 	    file.error = error;
 	    file.response = response;
+	    file.status = 'error';
 	    this.handleRemove(file);
 	  },
 	  handleRemove: function handleRemove(file) {
@@ -33908,6 +33908,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        fileList: fileList
 	      });
 	    }
+	  },
+	  handleManualRemove: function handleManualRemove(file) {
+	    file.status = 'removed';
+	    this.handleRemove(file);
 	  },
 	  onChange: function onChange(info) {
 	    // 1. 有设置外部属性时不改变 fileList
@@ -33973,7 +33977,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          )
 	        ),
 	        _react2['default'].createElement(_uploadList2['default'], { items: this.state.fileList,
-	          onRemove: this.handleRemove })
+	          onRemove: this.handleManualRemove })
 	      );
 	    }
 	  }
@@ -36259,8 +36263,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.0-beta9",
-		"stableVersion": "0.8.0",
+		"version": "0.9.0",
+		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -36322,7 +36326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"react-slick": "~0.7.0",
 			"reqwest-without-xhr2": "~2.0.2",
 			"util-deprecate": "~1.0.1",
-			"velocity-animate": "^1.2.2"
+			"velocity-animate": "~1.2.2"
 		},
 		"devDependencies": {
 			"autoprefixer-loader": "^2.0.0",
@@ -36371,4 +36375,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.9.0-beta9.js.map
+//# sourceMappingURL=antd-0.9.0.js.map

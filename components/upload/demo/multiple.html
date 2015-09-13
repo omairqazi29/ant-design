@@ -15,7 +15,7 @@ var props = {
     }
     if (info.file.status === 'done') {
       message.success(info.file.name + ' 上传成功。');
-    } else if (info.file.error) {
+    } else if (info.file.status === 'error') {
       message.error(info.file.name + ' 上传失败。');
     }
   }
@@ -42,7 +42,7 @@ React.render(React.createElement(
     }
     <span class="keyword">if</span> (info.file.status === <span class="string">'done'</span>) {
       message.success(info.file.name + <span class="string">' 上传成功。'</span>);
-    } <span class="keyword">else</span> <span class="keyword">if</span> (info.file.error) {
+    } <span class="keyword">else</span> <span class="keyword">if</span> (info.file.status === <span class="string">'error'</span>) {
       message.error(info.file.name + <span class="string">' 上传失败。'</span>);
     }
   }
