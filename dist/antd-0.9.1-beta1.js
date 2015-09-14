@@ -21628,10 +21628,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      prefixCls: 'rc-steps',
 	      iconPrefix: 'rc',
-	      maxDescriptionWidth: 120
+	      maxDescriptionWidth: 120,
+	      direction: ''
 	    };
 	  },
 	  componentDidMount: function componentDidMount() {
+	    if (this.props.direction === 'vertical') {
+	      return;
+	    }
 	    var $dom = React.findDOMNode(this);
 	    var len = $dom.children.length - 1;
 	    var i;
@@ -21662,11 +21666,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  componentWillUnmount: function componentWillUnmount() {
+	    if (this.props.direction === 'vertical') {
+	      return;
+	    }
 	    if (window.attachEvent) {
 	      window.detachEvent('onresize', this._resize);
 	    } else {
 	      window.removeEventListener('resize', this._resize);
 	    }
+	  },
+	  componentDidUpdate: function componentDidUpdate() {
+	    this._resize();
 	  },
 	  _resize: function _resize() {
 	    var w = Math.floor(React.findDOMNode(this).offsetWidth);
@@ -22512,11 +22522,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    // 外界只有 dataSource 的变化会触发新请求
 	    if ('dataSource' in nextProps && nextProps.dataSource !== this.props.dataSource) {
-	      newState = {
+	      newState = (0, _objectAssign3['default'])(newState, {
 	        selectedRowKeys: [],
 	        dataSource: nextProps.dataSource,
 	        loading: true
-	      };
+	      });
 	    }
 	    if (nextProps.columns !== this.props.columns) {
 	      newState.filters = {};
@@ -36315,7 +36325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-radio": "~2.0.0",
 			"rc-select": "~4.9.0",
 			"rc-slider": "~1.4.0",
-			"rc-steps": "~1.2.3",
+			"rc-steps": "~1.2.4",
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.2.0",
 			"rc-tabs": "~5.3.2",
@@ -36329,7 +36339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"velocity-animate": "~1.2.2"
 		},
 		"devDependencies": {
-			"autoprefixer-loader": "^2.0.0",
+			"autoprefixer-loader": "^3.1.0",
 			"babel": "^5.8.12",
 			"babel-core": "^5.8.12",
 			"babel-eslint": "^4.1.0",

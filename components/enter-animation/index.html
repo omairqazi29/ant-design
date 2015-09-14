@@ -554,22 +554,26 @@ EnterAnimation 进场动画 - Ant Design
 <li><p>小的信息元素排布或块状较多的情况下，根据一定的路径层次依次进场，区分维度层级，来凸显量级，使页面转场更加流畅和舒适，提高整体视觉效果和产品的质感。</p>
 </li>
 </ul>
-<h2 id="api">API</h2><p>一级子元素依次进场。</p>
+<h2 id="api">API</h2><p>元素依次进场。</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo'</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></code></pre></div><p>如子节点有 <code>enter-data</code> 值，则只执行有 <code>enter-data</code> 的节点的动画，相反所有子节点上都没有 <code>enter-data</code> 值，则执行遍历 dom 下一级节点来执行动画。</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">type</span>=<span class="value">"left"</span> <span class="attribute">delay</span>=<span class="value">{2}</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>
-      依次进场
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo'</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>
+        依次进场
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>'}}&gt;</span>依次进场，并修改动画效果<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>没有动画<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>'}}&gt;</span>依次进场，并修改动画效果<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>没有动画<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></code></pre></div><h3 id=""><EnterAnimation /></h3><table>
 <thead>
 <tr>
@@ -913,630 +917,85 @@ EnterAnimation 进场动画 - Ant Design
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
 <div class="code-boxes">
-  <div class="code-boxes-col-2-1"><div class="code-box" id="animation-demo-basic">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="animation-demo-simple">
   <div class="code-box-demo">
-    <div id="components-enter-animation-demo-basic"></div>
+    <div id="components-enter-animation-demo-simple"></div>
     <script>(function(){"use strict";
 
 var EnterAnimation = antd.EnterAnimation;
 
-var Test = React.createClass({
-  displayName: "Test",
-
-  getInitialState: function getInitialState() {
-    return {
-      bool: true
-    };
-  },
-  onClick: function onClick() {
-    this.setState({
-      bool: !this.state.bool
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      "div",
+React.render(React.createElement(
+  EnterAnimation,
+  null,
+  React.createElement(
+    "ul",
+    { key: "key" },
+    React.createElement(
+      "li",
       null,
-      React.createElement(
-        "div",
-        { style: { marginBottom: 20 } },
-        React.createElement(
-          "button",
-          { className: "ant-btn ant-btn-primary", onClick: this.onClick },
-          "切换"
-        )
-      ),
-      React.createElement(
-        EnterAnimation,
-        null,
-        this.state.bool ? React.createElement(
-          "div",
-          { key: "a" },
-          React.createElement(
-            "div",
-            { className: "demo-header" },
-            React.createElement(
-              "div",
-              { className: "logo" },
-              React.createElement("img", { width: "30", src: "https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" }),
-              React.createElement(
-                "span",
-                null,
-                "logo"
-              )
-            ),
-            React.createElement(
-              "ul",
-              null,
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null),
-              React.createElement("li", null)
-            )
-          ),
-          React.createElement(
-            "div",
-            { className: "demo-content" },
-            React.createElement(
-              "div",
-              { className: "demo-title" },
-              "我是标题"
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-kp" },
-              React.createElement(
-                "ul",
-                null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
-              )
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-title" },
-              "我是标题"
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-listBox" },
-              React.createElement(
-                "div",
-                { className: "demo-list" },
-                React.createElement("div", { className: "title" }),
-                React.createElement(
-                  "ul",
-                  null,
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null)
-                )
-              )
-            )
-          ),
-          React.createElement("div", { className: "demo-footer" })
-        ) : null
-      )
-    );
-  }
-});
-
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-
-<span class="keyword">var</span> Test = React.createClass({
-  getInitialState() {
-    <span class="keyword">return</span> {
-      bool:<span class="literal">true</span>,
-    }
-  },
-  onClick() {
-    <span class="keyword">this</span>.setState({
-      bool:!<span class="keyword">this</span>.state.bool,
-    })
-  },
-  render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
-          {this.state.bool ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
-                <span class="tag">&lt;<span class="title">span</span>&gt;</span>logo<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> &gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
-        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
-  }
-});
-
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
-, document.getElementById('components-enter-animation-demo-basic'));</span></code></pre></div><style>
-#components-enter-animation-demo-basic {
-  text-align: center;
-  overflow: hidden;
-  margin: 20px auto;
-}
-</style>
-
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#animation-demo-basic">默认</a>
-    </div>
-    <p>默认子节点进场动画。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="animation-demo-enter-data">
-  <div class="code-box-demo">
-    <div id="components-enter-animation-demo-enter-data"></div>
-    <script>(function(){'use strict';
-
-var EnterAnimation = antd.EnterAnimation;
-
-var Test = React.createClass({
-  displayName: 'Test',
-
-  getInitialState: function getInitialState() {
-    return {
-      enter: {
-        type: 'right',
-        interval: .1
-      },
-      leave: {
-        interval: 0.03
-      },
-      show: true
-    };
-  },
-  onClick: function onClick() {
-    this.setState({
-      show: !this.state.show
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
       null,
-      React.createElement(
-        'div',
-        { style: { marginBottom: 20 } },
-        React.createElement(
-          'button',
-          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
-          '切换'
-        )
-      ),
-      React.createElement(
-        EnterAnimation,
-        { enter: this.state.enter, leave: this.state.leave },
-        this.state.show ? React.createElement(
-          'div',
-          { key: 'enter-data' },
-          React.createElement(
-            'div',
-            { className: 'demo-content' },
-            React.createElement(
-              'div',
-              { className: 'demo-title', 'enter-data': { type: 'alpha' } },
-              '我是标题'
-            ),
-            React.createElement(
-              'div',
-              { className: 'demo-kp' },
-              React.createElement(
-                'ul',
-                null,
-                React.createElement('li', { 'enter-data': true }),
-                React.createElement('li', { 'enter-data': true }),
-                React.createElement('li', { 'enter-data': true })
-              )
-            ),
-            React.createElement(
-              'div',
-              { className: 'demo-title', 'enter-data': { type: 'alpha', queueId: 1, delay: 0.8 }, 'leave-data': { delay: 0.1 } },
-              '我是标题'
-            ),
-            React.createElement(
-              'div',
-              { className: 'demo-listBox' },
-              React.createElement(
-                'div',
-                { className: 'demo-list' },
-                React.createElement('div', { className: 'title', 'enter-data': { type: 'bottom', queueId: 1 } }),
-                React.createElement(
-                  'ul',
-                  null,
-                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } }),
-                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } }),
-                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } })
-                )
-              )
-            )
-          )
-        ) : null
-      )
-    );
-  }
-});
-
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-
-<span class="keyword">var</span> Test = React.createClass({
-  getInitialState() {
-    <span class="keyword">return</span> {
-      enter: {
-        type: <span class="string">'right'</span>,
-        interval: <span class="number">.1</span>,
-      },
-      leave: {
-        interval: <span class="number">0.03</span>
-      },
-      show: <span class="literal">true</span>
-    }
-  },
-  onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
-    })
-  },
-  render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
-        {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'enter-data'</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>'}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>, <span class="attribute">delay:</span> <span class="attribute">0.8</span>}} <span class="attribute">leave-data</span>=<span class="value">{{delay:</span> <span class="attribute">0.1</span>}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
-        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "依次进场"
     )
-  }
-});
+  )
+), document.getElementById('components-enter-animation-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
-, document.getElementById('components-enter-animation-demo-enter-data'));</span></code></pre></div><style>
-#components-enter-animation-demo-enter-data {
-  text-align: center;
-  overflow: hidden;
-  margin: 18px auto;
-}
-</style>
-
+React.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">key</span>=<span class="value">"key"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
+, document.getElementById('components-enter-animation-demo-simple'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#animation-demo-enter-data">指定节点动画进出场</a>
+      <a href="#animation-demo-simple">默认</a>
     </div>
-    <p>通过加上 <code>enter-data</code> 属性来指定需要动画进场的元素，并且可以定义每个元素的动画效果。</p>
+    <p>最简单的进场例子。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="animation-demo-form">
-  <div class="code-box-demo">
-    <div id="components-enter-animation-demo-form"></div>
-    <script>(function(){'use strict';
-
-var EnterAnimation = antd.EnterAnimation;
-var Select = antd.Select;
-var Option = Select.Option;
-var Checkbox = antd.Checkbox;
-var Radio = antd.Radio;
-var RadioGroup = antd.Radio.Group;
-
-var Test = React.createClass({
-  displayName: 'Test',
-
-  getInitialState: function getInitialState() {
-    return {
-      enter: {
-        type: 'right',
-        callback: null,
-        interval: 0.1
-      },
-      leave: {
-        type: 'left',
-        reverse: true,
-        interval: 0.05,
-        callback: function callback() {
-          console.log('出场结束');
-        }
-      },
-      show: true
-    };
-  },
-  onClick: function onClick() {
-    this.setState({
-      show: !this.state.show
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(
-        'div',
-        { style: { marginBottom: 20, textAlign: 'center' } },
-        React.createElement(
-          'button',
-          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
-          '切换'
-        )
-      ),
-      React.createElement(
-        EnterAnimation,
-        { enter: this.state.enter, leave: this.state.leave, component: 'form', className: 'ant-form-horizontal' },
-        this.state.show ? React.createElement(
-          'div',
-          { key: 'from' },
-          React.createElement(
-            'div',
-            { className: 'ant-form-item ant-form-item-compact' },
-            React.createElement(
-              'label',
-              { htmlFor: 'userName', className: 'col-6', required: true },
-              '用户名：'
-            ),
-            React.createElement(
-              'div',
-              { className: 'col-6' },
-              React.createElement(
-                'p',
-                { className: 'ant-form-text' },
-                '大眼萌 minion'
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'ant-form-item' },
-            React.createElement(
-              'label',
-              { htmlFor: 'password', className: 'col-6', required: true },
-              '密码：'
-            ),
-            React.createElement(
-              'div',
-              { className: 'col-14' },
-              React.createElement('input', { className: 'ant-input', type: 'password', id: 'password', placeholder: '请输入密码' })
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'ant-form-item ant-form-item-compact' },
-            React.createElement(
-              'label',
-              { className: 'col-6', required: true },
-              '您的性别：'
-            ),
-            React.createElement(
-              'div',
-              { className: 'col-14' },
-              React.createElement(
-                RadioGroup,
-                { value: 'male' },
-                React.createElement(
-                  Radio,
-                  { value: 'male' },
-                  '男的'
-                ),
-                React.createElement(
-                  Radio,
-                  { value: 'female' },
-                  '女的'
-                )
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'ant-form-item' },
-            React.createElement(
-              'label',
-              { htmlFor: 'remark', className: 'col-6', required: true },
-              '备注：'
-            ),
-            React.createElement(
-              'div',
-              { className: 'col-14' },
-              React.createElement('textarea', { className: 'ant-input', id: 'remark', placeholder: '随便写' }),
-              React.createElement(
-                'p',
-                { className: 'ant-form-explain' },
-                '随便写点什么'
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'ant-form-item ant-form-item-compact' },
-            React.createElement(
-              'div',
-              { className: 'col-14 col-offset-6' },
-              React.createElement(
-                'label',
-                null,
-                React.createElement(Checkbox, null),
-                '同意'
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'row' },
-            React.createElement(
-              'div',
-              { className: 'col-16 col-offset-6' },
-              React.createElement('input', { type: 'submit', className: 'ant-btn ant-btn-primary', value: '确 定' })
-            )
-          )
-        ) : null
-      )
-    );
-  }
-});
-
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Select = antd.Select;
-<span class="keyword">var</span> Option = Select.Option;
-<span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-
-<span class="keyword">var</span> Test = React.createClass({
-  getInitialState() {
-    <span class="keyword">return</span> {
-      enter: {
-        type: <span class="string">'right'</span>,
-        callback: <span class="literal">null</span>,
-        interval: <span class="number">0.1</span>
-      },
-      leave: {
-        type: <span class="string">'left'</span>,
-        reverse: <span class="literal">true</span>,
-        interval: <span class="number">0.05</span>,
-        callback: ()=&gt; {
-          console.log(<span class="string">'出场结束'</span>)
-        }
-      },
-      show: <span class="literal">true</span>
-    }
-  },
-  onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
-    })
-  },
-  render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>, <span class="attribute">textAlign:</span> '<span class="attribute">center</span>'}}&gt;</span>
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span> <span class="attribute">component</span>=<span class="value">'form'</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
-          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'from'</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span>/&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span>  <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>您的性别：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>男的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"female"</span>&gt;</span>女的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"remark"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"remark"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>随便写点什么<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">label</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>
-                  同意
-                <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
-        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    )
-  }
-});
-
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
-, document.getElementById('components-enter-animation-demo-form'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#animation-demo-form">表单动画进出场</a>
-    </div>
-    <p>表单组合的进场与出场动画。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="animation-demo-enter-leave">
+</div><div class="code-box" id="animation-demo-enter-leave">
   <div class="code-box-demo">
     <div id="components-enter-animation-demo-enter-leave"></div>
     <script>(function(){'use strict';
@@ -2226,6 +1685,629 @@ React.render((
       <a href="#animation-demo-router">Router 默认进出场</a>
     </div>
     <p>router 组合的进场与出场动画。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="animation-demo-basic">
+  <div class="code-box-demo">
+    <div id="components-enter-animation-demo-basic"></div>
+    <script>(function(){"use strict";
+
+var EnterAnimation = antd.EnterAnimation;
+
+var Test = React.createClass({
+  displayName: "Test",
+
+  getInitialState: function getInitialState() {
+    return {
+      show: true
+    };
+  },
+  onClick: function onClick() {
+    this.setState({
+      show: !this.state.show
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "div",
+        { style: { marginBottom: 20 } },
+        React.createElement(
+          "button",
+          { className: "ant-btn ant-btn-primary", onClick: this.onClick },
+          "切换"
+        )
+      ),
+      React.createElement(
+        EnterAnimation,
+        null,
+        this.state.show ? React.createElement(
+          "div",
+          { key: "a" },
+          React.createElement(
+            "div",
+            { className: "demo-header" },
+            React.createElement(
+              "div",
+              { className: "logo" },
+              React.createElement("img", { width: "30", src: "https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" }),
+              React.createElement(
+                "span",
+                null,
+                "logo"
+              )
+            ),
+            React.createElement(
+              "ul",
+              null,
+              React.createElement("li", null),
+              React.createElement("li", null),
+              React.createElement("li", null),
+              React.createElement("li", null),
+              React.createElement("li", null)
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: "demo-content" },
+            React.createElement(
+              "div",
+              { className: "demo-title" },
+              "我是标题"
+            ),
+            React.createElement(
+              "div",
+              { className: "demo-kp" },
+              React.createElement(
+                "ul",
+                null,
+                React.createElement("li", null),
+                React.createElement("li", null),
+                React.createElement("li", null)
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "demo-title" },
+              "我是标题"
+            ),
+            React.createElement(
+              "div",
+              { className: "demo-listBox" },
+              React.createElement(
+                "div",
+                { className: "demo-list" },
+                React.createElement("div", { className: "title" }),
+                React.createElement(
+                  "ul",
+                  null,
+                  React.createElement("li", null),
+                  React.createElement("li", null),
+                  React.createElement("li", null),
+                  React.createElement("li", null),
+                  React.createElement("li", null)
+                )
+              )
+            )
+          ),
+          React.createElement("div", { className: "demo-footer" })
+        ) : null
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      show: <span class="literal">true</span>
+    }
+  },
+  onClick() {
+    <span class="keyword">this</span>.setState({
+      show: !<span class="keyword">this</span>.state.show
+    })
+  },
+  render() {
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
+          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
+                <span class="tag">&lt;<span class="title">span</span>&gt;</span>logo<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> &gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
+        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    );
+  }
+});
+
+React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+, document.getElementById('components-enter-animation-demo-basic'));</span></code></pre></div><style>
+#components-enter-animation-demo-basic {
+  text-align: center;
+  overflow: hidden;
+  margin: 20px auto;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#animation-demo-basic">进场和离场</a>
+    </div>
+    <p>自动。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="animation-demo-enter-data">
+  <div class="code-box-demo">
+    <div id="components-enter-animation-demo-enter-data"></div>
+    <script>(function(){'use strict';
+
+var EnterAnimation = antd.EnterAnimation;
+
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      enter: {
+        type: 'right',
+        interval: .1
+      },
+      leave: {
+        interval: 0.03
+      },
+      show: true
+    };
+  },
+  onClick: function onClick() {
+    this.setState({
+      show: !this.state.show
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { style: { marginBottom: 20 } },
+        React.createElement(
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
+          '切换'
+        )
+      ),
+      React.createElement(
+        EnterAnimation,
+        { enter: this.state.enter, leave: this.state.leave },
+        this.state.show ? React.createElement(
+          'div',
+          { key: 'enter-data' },
+          React.createElement(
+            'div',
+            { className: 'demo-content' },
+            React.createElement(
+              'div',
+              { className: 'demo-title', 'enter-data': { type: 'alpha' } },
+              '我是标题'
+            ),
+            React.createElement(
+              'div',
+              { className: 'demo-kp' },
+              React.createElement(
+                'ul',
+                null,
+                React.createElement('li', { 'enter-data': true }),
+                React.createElement('li', { 'enter-data': true }),
+                React.createElement('li', { 'enter-data': true })
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'demo-title', 'enter-data': { type: 'alpha', queueId: 1, delay: 0.8 }, 'leave-data': { delay: 0.1 } },
+              '我是标题'
+            ),
+            React.createElement(
+              'div',
+              { className: 'demo-listBox' },
+              React.createElement(
+                'div',
+                { className: 'demo-list' },
+                React.createElement('div', { className: 'title', 'enter-data': { type: 'bottom', queueId: 1 } }),
+                React.createElement(
+                  'ul',
+                  null,
+                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } }),
+                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } }),
+                  React.createElement('li', { 'enter-data': { type: 'bottom', queueId: 1 } })
+                )
+              )
+            )
+          )
+        ) : null
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      enter: {
+        type: <span class="string">'right'</span>,
+        interval: <span class="number">.1</span>,
+      },
+      leave: {
+        interval: <span class="number">0.03</span>
+      },
+      show: <span class="literal">true</span>
+    }
+  },
+  onClick() {
+    <span class="keyword">this</span>.setState({
+      show: !<span class="keyword">this</span>.state.show
+    })
+  },
+  render() {
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
+        {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'enter-data'</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>'}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>, <span class="attribute">delay:</span> <span class="attribute">0.8</span>}} <span class="attribute">leave-data</span>=<span class="value">{{delay:</span> <span class="attribute">0.1</span>}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
+        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    )
+  }
+});
+
+React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+, document.getElementById('components-enter-animation-demo-enter-data'));</span></code></pre></div><style>
+#components-enter-animation-demo-enter-data {
+  text-align: center;
+  overflow: hidden;
+  margin: 18px auto;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#animation-demo-enter-data">指定节点动画进出场</a>
+    </div>
+    <p>通过加上 <code>enter-data</code> 属性来指定需要动画进场的元素，并且可以定义每个元素的动画效果。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="animation-demo-form">
+  <div class="code-box-demo">
+    <div id="components-enter-animation-demo-form"></div>
+    <script>(function(){'use strict';
+
+var EnterAnimation = antd.EnterAnimation;
+var Select = antd.Select;
+var Option = Select.Option;
+var Checkbox = antd.Checkbox;
+var Radio = antd.Radio;
+var RadioGroup = antd.Radio.Group;
+
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      enter: {
+        type: 'right',
+        callback: null,
+        interval: 0.1
+      },
+      leave: {
+        type: 'left',
+        reverse: true,
+        interval: 0.05,
+        callback: function callback() {
+          console.log('出场结束');
+        }
+      },
+      show: true
+    };
+  },
+  onClick: function onClick() {
+    this.setState({
+      show: !this.state.show
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { style: { marginBottom: 20, textAlign: 'center' } },
+        React.createElement(
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
+          '切换'
+        )
+      ),
+      React.createElement(
+        EnterAnimation,
+        { enter: this.state.enter, leave: this.state.leave, component: 'form', className: 'ant-form-horizontal' },
+        this.state.show ? React.createElement(
+          'div',
+          { key: 'from' },
+          React.createElement(
+            'div',
+            { className: 'ant-form-item ant-form-item-compact' },
+            React.createElement(
+              'label',
+              { htmlFor: 'userName', className: 'col-6', required: true },
+              '用户名：'
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-6' },
+              React.createElement(
+                'p',
+                { className: 'ant-form-text' },
+                '大眼萌 minion'
+              )
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'ant-form-item' },
+            React.createElement(
+              'label',
+              { htmlFor: 'password', className: 'col-6', required: true },
+              '密码：'
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-14' },
+              React.createElement('input', { className: 'ant-input', type: 'password', id: 'password', placeholder: '请输入密码' })
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'ant-form-item ant-form-item-compact' },
+            React.createElement(
+              'label',
+              { className: 'col-6', required: true },
+              '您的性别：'
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-14' },
+              React.createElement(
+                RadioGroup,
+                { value: 'male' },
+                React.createElement(
+                  Radio,
+                  { value: 'male' },
+                  '男的'
+                ),
+                React.createElement(
+                  Radio,
+                  { value: 'female' },
+                  '女的'
+                )
+              )
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'ant-form-item' },
+            React.createElement(
+              'label',
+              { htmlFor: 'remark', className: 'col-6', required: true },
+              '备注：'
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-14' },
+              React.createElement('textarea', { className: 'ant-input', id: 'remark', placeholder: '随便写' }),
+              React.createElement(
+                'p',
+                { className: 'ant-form-explain' },
+                '随便写点什么'
+              )
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'ant-form-item ant-form-item-compact' },
+            React.createElement(
+              'div',
+              { className: 'col-14 col-offset-6' },
+              React.createElement(
+                'label',
+                null,
+                React.createElement(Checkbox, null),
+                '同意'
+              )
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'row' },
+            React.createElement(
+              'div',
+              { className: 'col-16 col-offset-6' },
+              React.createElement('input', { type: 'submit', className: 'ant-btn ant-btn-primary', value: '确 定' })
+            )
+          )
+        ) : null
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+<span class="keyword">var</span> Select = antd.Select;
+<span class="keyword">var</span> Option = Select.Option;
+<span class="keyword">var</span> Checkbox = antd.Checkbox;
+<span class="keyword">var</span> Radio = antd.Radio;
+<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      enter: {
+        type: <span class="string">'right'</span>,
+        callback: <span class="literal">null</span>,
+        interval: <span class="number">0.1</span>
+      },
+      leave: {
+        type: <span class="string">'left'</span>,
+        reverse: <span class="literal">true</span>,
+        interval: <span class="number">0.05</span>,
+        callback: ()=&gt; {
+          console.log(<span class="string">'出场结束'</span>)
+        }
+      },
+      show: <span class="literal">true</span>
+    }
+  },
+  onClick() {
+    <span class="keyword">this</span>.setState({
+      show: !<span class="keyword">this</span>.state.show
+    })
+  },
+  render() {
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>, <span class="attribute">textAlign:</span> '<span class="attribute">center</span>'}}&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span> <span class="attribute">component</span>=<span class="value">'form'</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'from'</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span>/&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">label</span>  <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>您的性别：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>男的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"female"</span>&gt;</span>女的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"remark"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"remark"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>随便写点什么<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14 col-offset-6"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+                  <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>
+                  同意
+                <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
+        <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    )
+  }
+});
+
+React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+, document.getElementById('components-enter-animation-demo-form'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#animation-demo-form">表单动画进出场</a>
+    </div>
+    <p>表单组合的进场与出场动画。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -10,12 +10,12 @@ var Test = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      bool: true
+      show: true
     };
   },
   onClick: function onClick() {
     this.setState({
-      bool: !this.state.bool
+      show: !this.state.show
     });
   },
   render: function render() {
@@ -34,7 +34,7 @@ var Test = React.createClass({
       React.createElement(
         EnterAnimation,
         null,
-        this.state.bool ? React.createElement(
+        this.state.show ? React.createElement(
           "div",
           { key: "a" },
           React.createElement(
@@ -115,12 +115,12 @@ React.render(React.createElement(Test, null), document.getElementById('component
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
-      bool:<span class="literal">true</span>,
+      show: <span class="literal">true</span>
     }
   },
   onClick() {
     <span class="keyword">this</span>.setState({
-      bool:!<span class="keyword">this</span>.state.bool,
+      show: !<span class="keyword">this</span>.state.show
     })
   },
   render() {
@@ -130,7 +130,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
           <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
-          {this.state.bool ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
+          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
@@ -187,9 +187,9 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#animation-demo-basic">默认</a>
+      <a href="#animation-demo-basic">进场和离场</a>
     </div>
-    <p>默认子节点进场动画。</p>
+    <p>自动。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
