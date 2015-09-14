@@ -6532,6 +6532,7 @@ fieldset[disabled] .ant-checkbox label {
   cursor: not-allowed;
 }
 .ant-form-item {
+  font-size: 12px;
   margin-bottom: 24px;
   color: #666;
 }
@@ -6565,10 +6566,6 @@ fieldset[disabled] .ant-checkbox label {
   font-size: 12px;
   line-height: 1.5;
   bottom: -18px;
-}
-form * {
-  font-size: 12px;
-  line-height: 1.5;
 }
 form .has-feedback .anticon {
   width: 32px;
