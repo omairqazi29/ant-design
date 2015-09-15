@@ -4,7 +4,6 @@
     <script>(function(){'use strict';
 
 var ReactRouter = require('react-router');
-var history = require('react-router/lib/HashHistory').history;
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
@@ -193,7 +192,7 @@ var Page2 = React.createClass({
 });
 React.render(React.createElement(
   Router,
-  { history: history },
+  null,
   React.createElement(
     Route,
     { path: '/', component: App, ignoreScrollBehavior: true },
@@ -201,7 +200,6 @@ React.render(React.createElement(
     React.createElement(Route, { path: 'page2', component: Page2 })
   )
 ), document.getElementById('components-enter-animation-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> history = require(<span class="string">'react-router/lib/HashHistory'</span>).history;
 <span class="keyword">var</span> Router = ReactRouter.Router;
 <span class="keyword">var</span> Route = ReactRouter.Route;
 <span class="keyword">var</span> Link = ReactRouter.Link;
@@ -265,7 +263,7 @@ var Page2 = React.createClass({
   }
 });
 React.render((
-  <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{App}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page1"</span> <span class="attribute">component</span>=<span class="value">{Page1}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page2"</span> <span class="attribute">component</span>=<span class="value">{Page2}</span> /&gt;</span>

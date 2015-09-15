@@ -3,8 +3,9 @@
     <div id="components-breadcrumb-demo-router"></div>
     <script>(function(){'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var ReactRouter = require('react-router');
-var history = require('react-router/lib/HashHistory').history;
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
@@ -71,14 +72,14 @@ var Home = React.createClass({
           } },
         '点击上面的导航切换页面，面包屑在下面：'
       ),
-      React.createElement(Breadcrumb, { router: ReactRouter })
+      React.createElement(Breadcrumb, _extends({}, this.props, { router: ReactRouter }))
     );
   }
 });
 
 React.render(React.createElement(
   Router,
-  { history: history },
+  null,
   React.createElement(
     Route,
     { name: 'home', breadcrumbName: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
@@ -89,7 +90,6 @@ React.render(React.createElement(
     )
   )
 ), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> history = require(<span class="string">'react-router/lib/HashHistory'</span>).history;
 <span class="keyword">var</span> Router = ReactRouter.Router;
 <span class="keyword">var</span> Route = ReactRouter.Route;
 <span class="keyword">var</span> Link = ReactRouter.Link;
@@ -118,13 +118,13 @@ React.render(React.createElement(
         <span class="attribute">paddingBottom:</span> <span class="attribute">15</span>,
         <span class="attribute">borderBottom:</span> '<span class="attribute">1px</span> <span class="attribute">dashed</span> #<span class="attribute">ccc</span>'
       }}&gt;</span>点击上面的导航切换页面，面包屑在下面：<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Breadcrumb</span> <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Breadcrumb</span> {<span class="attribute">...this.props</span>} <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>);
   }
 });
 
 React.render((
-  <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"app"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
@@ -152,7 +152,7 @@ React.render((
     <div class="code-box-title">
       <a href="#demo-router">路由</a>
     </div>
-    <p>和 <code>react-router@1.0.0-beta3</code> 进行结合使用。</p>
+    <p>和 <code>react-router@1.x</code> 进行结合使用。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

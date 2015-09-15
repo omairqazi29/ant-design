@@ -1377,14 +1377,11 @@ samp {
 }
 .fade-enter,
 .fade-appear {
-  opacity: 0;
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: block !important;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -1394,25 +1391,75 @@ samp {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: block !important;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
 .fade-enter.fade-enter-active,
 .fade-appear.fade-appear-active {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  -webkit-animation-name: antFadeIn;
+          animation-name: antFadeIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .fade-leave.fade-leave-active {
-  -webkit-animation-name: fadeOut;
-          animation-name: fadeOut;
+  -webkit-animation-name: antFadeOut;
+          animation-name: antFadeOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-@-webkit-keyframes fadeIn {
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.fade-leave {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.ant-modal-fade-enter,
+.ant-modal-fade-appear {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block !important;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.ant-modal-fade-leave {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block !important;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.ant-modal-fade-enter.ant-modal-fade-enter-active,
+.ant-modal-fade-appear.ant-modal-fade-appear-active {
+  -webkit-animation-name: antFadeIn;
+          animation-name: antFadeIn;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.ant-modal-fade-leave.ant-modal-fade-leave-active {
+  -webkit-animation-name: antFadeOut;
+          animation-name: antFadeOut;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.ant-modal-fade-enter,
+.ant-modal-fade-appear {
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.ant-modal-fade-leave {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes antFadeIn {
   0% {
     opacity: 0;
   }
@@ -1420,7 +1467,7 @@ samp {
     opacity: 1;
   }
 }
-@keyframes fadeIn {
+@keyframes antFadeIn {
   0% {
     opacity: 0;
   }
@@ -1428,7 +1475,7 @@ samp {
     opacity: 1;
   }
 }
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes antFadeOut {
   0% {
     opacity: 1;
   }
@@ -1436,7 +1483,7 @@ samp {
     opacity: 0;
   }
 }
-@keyframes fadeOut {
+@keyframes antFadeOut {
   0% {
     opacity: 1;
   }
@@ -1465,14 +1512,14 @@ samp {
 }
 .move-up-enter.move-up-enter-active,
 .move-up-appear.move-up-appear-active {
-  -webkit-animation-name: moveUpIn;
-          animation-name: moveUpIn;
+  -webkit-animation-name: antMoveUpIn;
+          animation-name: antMoveUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .move-up-leave.move-up-leave-active {
-  -webkit-animation-name: moveUpOut;
-          animation-name: moveUpOut;
+  -webkit-animation-name: antMoveUpOut;
+          animation-name: antMoveUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -1507,14 +1554,14 @@ samp {
 }
 .move-down-enter.move-down-enter-active,
 .move-down-appear.move-down-appear-active {
-  -webkit-animation-name: moveDownIn;
-          animation-name: moveDownIn;
+  -webkit-animation-name: antMoveDownIn;
+          animation-name: antMoveDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .move-down-leave.move-down-leave-active {
-  -webkit-animation-name: moveDownOut;
-          animation-name: moveDownOut;
+  -webkit-animation-name: antMoveDownOut;
+          animation-name: antMoveDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -1549,14 +1596,14 @@ samp {
 }
 .move-left-enter.move-left-enter-active,
 .move-left-appear.move-left-appear-active {
-  -webkit-animation-name: moveLeftIn;
-          animation-name: moveLeftIn;
+  -webkit-animation-name: antMoveLeftIn;
+          animation-name: antMoveLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .move-left-leave.move-left-leave-active {
-  -webkit-animation-name: moveLeftOut;
-          animation-name: moveLeftOut;
+  -webkit-animation-name: antMoveLeftOut;
+          animation-name: antMoveLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -1591,14 +1638,14 @@ samp {
 }
 .move-right-enter.move-right-enter-active,
 .move-right-appear.move-right-appear-active {
-  -webkit-animation-name: moveRightIn;
-          animation-name: moveRightIn;
+  -webkit-animation-name: antMoveRightIn;
+          animation-name: antMoveRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .move-right-leave.move-right-leave-active {
-  -webkit-animation-name: moveRightOut;
-          animation-name: moveRightOut;
+  -webkit-animation-name: antMoveRightOut;
+          animation-name: antMoveRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -1612,7 +1659,7 @@ samp {
   -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
           animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
 }
-@-webkit-keyframes moveDownIn {
+@-webkit-keyframes antMoveDownIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1628,7 +1675,7 @@ samp {
     opacity: 1;
   }
 }
-@keyframes moveDownIn {
+@keyframes antMoveDownIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1644,7 +1691,7 @@ samp {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveDownOut {
+@-webkit-keyframes antMoveDownOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1660,7 +1707,7 @@ samp {
     opacity: 0;
   }
 }
-@keyframes moveDownOut {
+@keyframes antMoveDownOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1676,7 +1723,7 @@ samp {
     opacity: 0;
   }
 }
-@-webkit-keyframes moveLeftIn {
+@-webkit-keyframes antMoveLeftIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1692,7 +1739,7 @@ samp {
     opacity: 1;
   }
 }
-@keyframes moveLeftIn {
+@keyframes antMoveLeftIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1708,7 +1755,7 @@ samp {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveLeftOut {
+@-webkit-keyframes antMoveLeftOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1724,7 +1771,7 @@ samp {
     opacity: 0;
   }
 }
-@keyframes moveLeftOut {
+@keyframes antMoveLeftOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1740,7 +1787,7 @@ samp {
     opacity: 0;
   }
 }
-@-webkit-keyframes moveRightIn {
+@-webkit-keyframes antMoveRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0 0;
@@ -1756,7 +1803,7 @@ samp {
             transform: translateX(0%);
   }
 }
-@keyframes moveRightIn {
+@keyframes antMoveRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0 0;
@@ -1772,7 +1819,7 @@ samp {
             transform: translateX(0%);
   }
 }
-@-webkit-keyframes moveRightOut {
+@-webkit-keyframes antMoveRightOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1788,7 +1835,7 @@ samp {
     opacity: 0;
   }
 }
-@keyframes moveRightOut {
+@keyframes antMoveRightOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1804,7 +1851,7 @@ samp {
     opacity: 0;
   }
 }
-@-webkit-keyframes moveUpIn {
+@-webkit-keyframes antMoveUpIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1820,7 +1867,7 @@ samp {
     opacity: 1;
   }
 }
-@keyframes moveUpIn {
+@keyframes antMoveUpIn {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1836,7 +1883,7 @@ samp {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveUpOut {
+@-webkit-keyframes antMoveUpOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1852,7 +1899,7 @@ samp {
     opacity: 0;
   }
 }
-@keyframes moveUpOut {
+@keyframes antMoveUpOut {
   0% {
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1917,14 +1964,14 @@ samp {
 }
 .slide-up-enter.slide-up-enter-active,
 .slide-up-appear.slide-up-appear-active {
-  -webkit-animation-name: slideUpIn;
-          animation-name: slideUpIn;
+  -webkit-animation-name: antSlideUpIn;
+          animation-name: antSlideUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .slide-up-leave.slide-up-leave-active {
-  -webkit-animation-name: slideUpOut;
-          animation-name: slideUpOut;
+  -webkit-animation-name: antSlideUpOut;
+          animation-name: antSlideUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -1959,14 +2006,14 @@ samp {
 }
 .slide-down-enter.slide-down-enter-active,
 .slide-down-appear.slide-down-appear-active {
-  -webkit-animation-name: slideDownIn;
-          animation-name: slideDownIn;
+  -webkit-animation-name: antSlideDownIn;
+          animation-name: antSlideDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .slide-down-leave.slide-down-leave-active {
-  -webkit-animation-name: slideDownOut;
-          animation-name: slideDownOut;
+  -webkit-animation-name: antSlideDownOut;
+          animation-name: antSlideDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2001,14 +2048,14 @@ samp {
 }
 .slide-left-enter.slide-left-enter-active,
 .slide-left-appear.slide-left-appear-active {
-  -webkit-animation-name: slideLeftIn;
-          animation-name: slideLeftIn;
+  -webkit-animation-name: antSlideLeftIn;
+          animation-name: antSlideLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .slide-left-leave.slide-left-leave-active {
-  -webkit-animation-name: slideLeftOut;
-          animation-name: slideLeftOut;
+  -webkit-animation-name: antSlideLeftOut;
+          animation-name: antSlideLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2043,14 +2090,14 @@ samp {
 }
 .slide-right-enter.slide-right-enter-active,
 .slide-right-appear.slide-right-appear-active {
-  -webkit-animation-name: slideRightIn;
-          animation-name: slideRightIn;
+  -webkit-animation-name: antSlideRightIn;
+          animation-name: antSlideRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .slide-right-leave.slide-right-leave-active {
-  -webkit-animation-name: slideRightOut;
-          animation-name: slideRightOut;
+  -webkit-animation-name: antSlideRightOut;
+          animation-name: antSlideRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2064,7 +2111,7 @@ samp {
   -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
           animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
-@-webkit-keyframes slideUpIn {
+@-webkit-keyframes antSlideUpIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 0%;
@@ -2080,7 +2127,7 @@ samp {
             transform: scaleY(1);
   }
 }
-@keyframes slideUpIn {
+@keyframes antSlideUpIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 0%;
@@ -2096,7 +2143,7 @@ samp {
             transform: scaleY(1);
   }
 }
-@-webkit-keyframes slideUpOut {
+@-webkit-keyframes antSlideUpOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 0% 0%;
@@ -2112,7 +2159,7 @@ samp {
             transform: scaleY(0.8);
   }
 }
-@keyframes slideUpOut {
+@keyframes antSlideUpOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 0% 0%;
@@ -2128,7 +2175,7 @@ samp {
             transform: scaleY(0.8);
   }
 }
-@-webkit-keyframes slideDownIn {
+@-webkit-keyframes antSlideDownIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 100%;
@@ -2144,7 +2191,7 @@ samp {
             transform: scaleY(1);
   }
 }
-@keyframes slideDownIn {
+@keyframes antSlideDownIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 100%;
@@ -2160,7 +2207,7 @@ samp {
             transform: scaleY(1);
   }
 }
-@-webkit-keyframes slideDownOut {
+@-webkit-keyframes antSlideDownOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 100% 100%;
@@ -2176,7 +2223,7 @@ samp {
             transform: scaleY(0.8);
   }
 }
-@keyframes slideDownOut {
+@keyframes antSlideDownOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 100% 100%;
@@ -2192,7 +2239,7 @@ samp {
             transform: scaleY(0.8);
   }
 }
-@-webkit-keyframes slideLeftIn {
+@-webkit-keyframes antSlideLeftIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 0%;
@@ -2208,7 +2255,7 @@ samp {
             transform: scaleX(1);
   }
 }
-@keyframes slideLeftIn {
+@keyframes antSlideLeftIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 0%;
@@ -2224,7 +2271,7 @@ samp {
             transform: scaleX(1);
   }
 }
-@-webkit-keyframes slideLeftOut {
+@-webkit-keyframes antSlideLeftOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 0% 0%;
@@ -2240,7 +2287,7 @@ samp {
             transform: scaleX(0.8);
   }
 }
-@keyframes slideLeftOut {
+@keyframes antSlideLeftOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 0% 0%;
@@ -2256,7 +2303,7 @@ samp {
             transform: scaleX(0.8);
   }
 }
-@-webkit-keyframes slideRightIn {
+@-webkit-keyframes antSlideRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 0%;
@@ -2272,7 +2319,7 @@ samp {
             transform: scaleX(1);
   }
 }
-@keyframes slideRightIn {
+@keyframes antSlideRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 0%;
@@ -2288,7 +2335,7 @@ samp {
             transform: scaleX(1);
   }
 }
-@-webkit-keyframes slideRightOut {
+@-webkit-keyframes antSlideRightOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 100% 0%;
@@ -2304,7 +2351,7 @@ samp {
             transform: scaleX(0.8);
   }
 }
-@keyframes slideRightOut {
+@keyframes antSlideRightOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 100% 0%;
@@ -2332,12 +2379,12 @@ samp {
 }
 .swing-enter.swing-enter-active,
 .swing-appear.swing-appear-active {
-  -webkit-animation-name: swingIn;
-          animation-name: swingIn;
+  -webkit-animation-name: antSwingIn;
+          animation-name: antSwingIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-@-webkit-keyframes swingIn {
+@-webkit-keyframes antSwingIn {
   0%,
   100% {
     -webkit-transform: translateX(0px);
@@ -2360,7 +2407,7 @@ samp {
             transform: translateX(5px);
   }
 }
-@keyframes swingIn {
+@keyframes antSwingIn {
   0%,
   100% {
     -webkit-transform: translateX(0px);
@@ -2404,14 +2451,14 @@ samp {
 }
 .zoom-enter.zoom-enter-active,
 .zoom-appear.zoom-appear-active {
-  -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
+  -webkit-animation-name: antZoomIn;
+          animation-name: antZoomIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-leave.zoom-leave-active {
-  -webkit-animation-name: zoomOut;
-          animation-name: zoomOut;
+  -webkit-animation-name: antZoomOut;
+          animation-name: antZoomOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2448,14 +2495,14 @@ samp {
 }
 .zoom-big-enter.zoom-big-enter-active,
 .zoom-big-appear.zoom-big-appear-active {
-  -webkit-animation-name: zoomBigIn;
-          animation-name: zoomBigIn;
+  -webkit-animation-name: antZoomBigIn;
+          animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-big-leave.zoom-big-leave-active {
-  -webkit-animation-name: zoomBigOut;
-          animation-name: zoomBigOut;
+  -webkit-animation-name: antZoomBigOut;
+          animation-name: antZoomBigOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2492,14 +2539,14 @@ samp {
 }
 .zoom-up-enter.zoom-up-enter-active,
 .zoom-up-appear.zoom-up-appear-active {
-  -webkit-animation-name: zoomUpIn;
-          animation-name: zoomUpIn;
+  -webkit-animation-name: antZoomUpIn;
+          animation-name: antZoomUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-up-leave.zoom-up-leave-active {
-  -webkit-animation-name: zoomUpOut;
-          animation-name: zoomUpOut;
+  -webkit-animation-name: antZoomUpOut;
+          animation-name: antZoomUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2536,14 +2583,14 @@ samp {
 }
 .zoom-down-enter.zoom-down-enter-active,
 .zoom-down-appear.zoom-down-appear-active {
-  -webkit-animation-name: zoomDownIn;
-          animation-name: zoomDownIn;
+  -webkit-animation-name: antZoomDownIn;
+          animation-name: antZoomDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-down-leave.zoom-down-leave-active {
-  -webkit-animation-name: zoomDownOut;
-          animation-name: zoomDownOut;
+  -webkit-animation-name: antZoomDownOut;
+          animation-name: antZoomDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2580,14 +2627,14 @@ samp {
 }
 .zoom-left-enter.zoom-left-enter-active,
 .zoom-left-appear.zoom-left-appear-active {
-  -webkit-animation-name: zoomLeftIn;
-          animation-name: zoomLeftIn;
+  -webkit-animation-name: antZoomLeftIn;
+          animation-name: antZoomLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-left-leave.zoom-left-leave-active {
-  -webkit-animation-name: zoomLeftOut;
-          animation-name: zoomLeftOut;
+  -webkit-animation-name: antZoomLeftOut;
+          animation-name: antZoomLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2624,14 +2671,14 @@ samp {
 }
 .zoom-right-enter.zoom-right-enter-active,
 .zoom-right-appear.zoom-right-appear-active {
-  -webkit-animation-name: zoomRightIn;
-          animation-name: zoomRightIn;
+  -webkit-animation-name: antZoomRightIn;
+          animation-name: antZoomRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 .zoom-right-leave.zoom-right-leave-active {
-  -webkit-animation-name: zoomRightOut;
-          animation-name: zoomRightOut;
+  -webkit-animation-name: antZoomRightOut;
+          animation-name: antZoomRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -2647,7 +2694,7 @@ samp {
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
           animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
-@-webkit-keyframes zoomIn {
+@-webkit-keyframes antZoomIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
@@ -2658,7 +2705,7 @@ samp {
             transform: scale(1);
   }
 }
-@keyframes zoomIn {
+@keyframes antZoomIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
@@ -2669,7 +2716,7 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomOut {
+@-webkit-keyframes antZoomOut {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -2680,7 +2727,7 @@ samp {
             transform: scale(0);
   }
 }
-@keyframes zoomOut {
+@keyframes antZoomOut {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -2691,7 +2738,7 @@ samp {
             transform: scale(0);
   }
 }
-@-webkit-keyframes zoomBigIn {
+@-webkit-keyframes antZoomBigIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -2702,7 +2749,7 @@ samp {
             transform: scale(1);
   }
 }
-@keyframes zoomBigIn {
+@keyframes antZoomBigIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -2713,7 +2760,7 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomBigOut {
+@-webkit-keyframes antZoomBigOut {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -2724,7 +2771,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@keyframes zoomBigOut {
+@keyframes antZoomBigOut {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -2735,22 +2782,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@-webkit-keyframes zoomUpIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
-  100% {
-    -webkit-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes zoomUpIn {
+@-webkit-keyframes antZoomUpIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 50% 0%;
@@ -2765,7 +2797,22 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomUpOut {
+@keyframes antZoomUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes antZoomUpOut {
   0% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
@@ -2780,7 +2827,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@keyframes zoomUpOut {
+@keyframes antZoomUpOut {
   0% {
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
@@ -2795,7 +2842,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@-webkit-keyframes zoomLeftIn {
+@-webkit-keyframes antZoomLeftIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
@@ -2810,7 +2857,7 @@ samp {
             transform: scale(1);
   }
 }
-@keyframes zoomLeftIn {
+@keyframes antZoomLeftIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 0% 50%;
@@ -2825,7 +2872,7 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomLeftOut {
+@-webkit-keyframes antZoomLeftOut {
   0% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
@@ -2840,7 +2887,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@keyframes zoomLeftOut {
+@keyframes antZoomLeftOut {
   0% {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
@@ -2855,7 +2902,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@-webkit-keyframes zoomRightIn {
+@-webkit-keyframes antZoomRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
@@ -2870,7 +2917,7 @@ samp {
             transform: scale(1);
   }
 }
-@keyframes zoomRightIn {
+@keyframes antZoomRightIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 100% 50%;
@@ -2885,7 +2932,7 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomRightOut {
+@-webkit-keyframes antZoomRightOut {
   0% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
@@ -2900,7 +2947,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@keyframes zoomRightOut {
+@keyframes antZoomRightOut {
   0% {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
@@ -2915,7 +2962,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@-webkit-keyframes zoomDownIn {
+@-webkit-keyframes antZoomDownIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
@@ -2930,7 +2977,7 @@ samp {
             transform: scale(1);
   }
 }
-@keyframes zoomDownIn {
+@keyframes antZoomDownIn {
   0% {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
@@ -2945,7 +2992,7 @@ samp {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomDownOut {
+@-webkit-keyframes antZoomDownOut {
   0% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
@@ -2960,7 +3007,7 @@ samp {
             transform: scale(0.8);
   }
 }
-@keyframes zoomDownOut {
+@keyframes antZoomDownOut {
   0% {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
@@ -5046,43 +5093,6 @@ textarea.ant-calendar-time-input {
   z-index: 1000;
   filter: alpha(opacity=50);
 }
-.ant-modal-wrap-hidden > .ant-modal-mask.ant-modal-fade-enter,
-.ant-modal-wrap-hidden > .ant-modal-mask.ant-modal-fade-leave {
-  display: block;
-}
-.ant-modal-fade-enter {
-  opacity: 0;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.ant-modal-fade-leave {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.ant-modal-fade-enter.ant-modal-fade-enter-active {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-.ant-modal-fade-leave.ant-modal-fade-leave-active {
-  -webkit-animation-name: fadeOut;
-          animation-name: fadeOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
 .ant-modal-header {
   padding: 13px 18px 14px 16px;
 }
@@ -5421,6 +5431,8 @@ textarea.ant-calendar-time-input {
 .ant-table {
   font-size: 12px;
   color: #666666;
+}
+.ant-table-body {
   -webkit-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease;
 }
@@ -5610,15 +5622,25 @@ textarea.ant-calendar-time-input {
   border-right: 0;
 }
 .ant-table-empty {
+  position: relative;
+  margin-bottom: 16px;
+}
+.ant-table-empty .ant-table-body {
+  height: 150px;
+}
+.ant-table-placeholder {
   height: 100px;
   line-height: 100px;
   text-align: center;
   font-size: 12px;
   color: #999;
   border-bottom: 1px solid #E9E9E9;
-  margin-bottom: 16px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
 }
-.ant-table-empty .anticon {
+.ant-table-placeholder .anticon {
   margin-right: 4px;
   position: relative;
   top: -1px;
@@ -5689,7 +5711,7 @@ a.ant-table-filter-dropdown-link.clear {
   width: 18px;
   height: 18px;
   text-align: center;
-  line-height: 16px;
+  line-height: 15px;
   border: 1px solid #E9E9E9;
   -webkit-user-select: none;
   -moz-user-select: none;

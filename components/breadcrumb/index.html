@@ -13,7 +13,7 @@ Breadcrumb 面包屑 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.1-beta1.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.1-beta2.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -187,11 +187,11 @@ Breadcrumb 面包屑 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta1',
+        latest: '0.9.1-beta2',
         stable: '0.9.0'
       };
     </script>
-    <script src="/dist/antd-0.9.1-beta1.min.js"></script>
+    <script src="/dist/antd-0.9.1-beta2.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -553,6 +553,65 @@ Breadcrumb 面包屑 - Ant Design
 <li>当需要告知用户“你在哪里”时；</li>
 <li>当需要向上导航的功能时。</li>
 </ul>
+<h2 id="api">API</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>应用中心<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>应用列表<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>某应用<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">Breadcrumb</span>&gt;</span></code></pre></div><h3 id="breadcrumb">Breadcrumb</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>router</td>
+<td>可传入 react-router 的实例</td>
+<td>Object</td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td>routes</td>
+<td>router 的路由栈信息</td>
+<td>Array</td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td>params</td>
+<td>路由的参数</td>
+<td>Object</td>
+<td></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="breadcrumb-item">Breadcrumb.Item</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>href</td>
+<td>链接，如不传则不可点击</td>
+<td>string</td>
+<td></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
   </article>
 <h2 class="component-demos">
@@ -613,8 +672,9 @@ React.render(
     <div id="components-breadcrumb-demo-router"></div>
     <script>(function(){'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var ReactRouter = require('react-router');
-var history = require('react-router/lib/HashHistory').history;
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
@@ -681,14 +741,14 @@ var Home = React.createClass({
           } },
         '点击上面的导航切换页面，面包屑在下面：'
       ),
-      React.createElement(Breadcrumb, { router: ReactRouter })
+      React.createElement(Breadcrumb, _extends({}, this.props, { router: ReactRouter }))
     );
   }
 });
 
 React.render(React.createElement(
   Router,
-  { history: history },
+  null,
   React.createElement(
     Route,
     { name: 'home', breadcrumbName: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
@@ -699,7 +759,6 @@ React.render(React.createElement(
     )
   )
 ), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> history = require(<span class="string">'react-router/lib/HashHistory'</span>).history;
 <span class="keyword">var</span> Router = ReactRouter.Router;
 <span class="keyword">var</span> Route = ReactRouter.Route;
 <span class="keyword">var</span> Link = ReactRouter.Link;
@@ -728,13 +787,13 @@ React.render(React.createElement(
         <span class="attribute">paddingBottom:</span> <span class="attribute">15</span>,
         <span class="attribute">borderBottom:</span> '<span class="attribute">1px</span> <span class="attribute">dashed</span> #<span class="attribute">ccc</span>'
       }}&gt;</span>点击上面的导航切换页面，面包屑在下面：<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Breadcrumb</span> <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Breadcrumb</span> {<span class="attribute">...this.props</span>} <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>);
   }
 });
 
 React.render((
-  <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"app"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
@@ -762,7 +821,7 @@ React.render((
     <div class="code-box-title">
       <a href="#demo-router">路由</a>
     </div>
-    <p>和 <code>react-router@1.0.0-beta3</code> 进行结合使用。</p>
+    <p>和 <code>react-router@1.x</code> 进行结合使用。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

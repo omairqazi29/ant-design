@@ -13,7 +13,7 @@ EnterAnimation 进场动画 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.1-beta1.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.1-beta2.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -187,11 +187,11 @@ EnterAnimation 进场动画 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta1',
+        latest: '0.9.1-beta2',
         stable: '0.9.0'
       };
     </script>
-    <script src="/dist/antd-0.9.1-beta1.min.js"></script>
+    <script src="/dist/antd-0.9.1-beta2.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -563,7 +563,7 @@ EnterAnimation 进场动画 - Ant Design
     <span class="tag">&lt;<span class="title">div</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span></code></pre></div><p>如子节点有 <code>enter-data</code> 值，则只执行有 <code>enter-data</code> 的节点的动画，相反所有子节点上都没有 <code>enter-data</code> 值，则执行遍历 dom 下一级节点来执行动画。</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">type</span>=<span class="value">"left"</span> <span class="attribute">delay</span>=<span class="value">{2}</span>&gt;</span>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{type:'left',delay:2}</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo'</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">enter-data</span>&gt;</span>
@@ -1397,7 +1397,6 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
     <script>(function(){'use strict';
 
 var ReactRouter = require('react-router');
-var history = require('react-router/lib/HashHistory').history;
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
@@ -1586,7 +1585,7 @@ var Page2 = React.createClass({
 });
 React.render(React.createElement(
   Router,
-  { history: history },
+  null,
   React.createElement(
     Route,
     { path: '/', component: App, ignoreScrollBehavior: true },
@@ -1594,7 +1593,6 @@ React.render(React.createElement(
     React.createElement(Route, { path: 'page2', component: Page2 })
   )
 ), document.getElementById('components-enter-animation-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> history = require(<span class="string">'react-router/lib/HashHistory'</span>).history;
 <span class="keyword">var</span> Router = ReactRouter.Router;
 <span class="keyword">var</span> Route = ReactRouter.Route;
 <span class="keyword">var</span> Link = ReactRouter.Link;
@@ -1658,7 +1656,7 @@ var Page2 = React.createClass({
   }
 });
 React.render((
-  <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">{history}</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{App}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page1"</span> <span class="attribute">component</span>=<span class="value">{Page1}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page2"</span> <span class="attribute">component</span>=<span class="value">{Page2}</span> /&gt;</span>
