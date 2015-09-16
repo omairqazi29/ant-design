@@ -13,7 +13,7 @@ Steps 步骤条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.1-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.1-beta6.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -187,11 +187,11 @@ Steps 步骤条 - Ant Design
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta4',
+        latest: '0.9.1-beta6',
         stable: '0.9.0'
       };
     </script>
-    <script src="/dist/antd-0.9.1-beta4.min.js"></script>
+    <script src="/dist/antd-0.9.1-beta6.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -566,6 +566,13 @@ Steps 步骤条 - Ant Design
 </thead>
 <tbody>
 <tr>
+<td>current</td>
+<td>可选参数，指定当前处理正在执行状态的步骤，从0开始记数。在子Step元素中，可以通过status属性覆盖状态。</td>
+<td>number</td>
+<td>无</td>
+<td>0</td>
+</tr>
+<tr>
 <td>size</td>
 <td>可选参数，指定大小（目前只支持普通和迷你两种大小）。</td>
 <td>string</td>
@@ -602,10 +609,11 @@ Steps 步骤条 - Ant Design
 <tbody>
 <tr>
 <td>status</td>
-<td>必要参数，指定状态。</td>
+<td>可选参数，指定状态。当不配置该属性时，会使用父Steps元素的current来自动指定状态。</td>
 <td>string</td>
 <td>wait, process, finish</td>
 <td>无</td>
+<td>wait</td>
 </tr>
 <tr>
 <td>title</td>
@@ -647,63 +655,48 @@ var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-simple');
 
 var steps = [{
-  status: 'finish',
   title: '已完成',
   description: '这里是多信息的描述啊'
 }, {
-  status: 'process',
   title: '进行中',
   description: '这里是多信息的耶哦耶哦哦耶哦耶'
 }, {
-  status: 'wait',
   title: '又一个待运行',
   description: '描述啊描述啊'
 }, {
-  status: 'wait',
   title: '待运行',
   description: '这里是多信息的描述啊'
 }].map(function (s, i) {
-  return React.createElement(Step, {
-    key: i,
-    status: s.status,
-    title: s.title,
-    description: s.description });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 React.render(React.createElement(
   Steps,
-  null,
+  { current: 1 },
   steps
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-simple'</span>);
 
 <span class="keyword">var</span> steps = [{
-  status: <span class="string">'finish'</span>,
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是多信息的描述啊'</span>
 }, {
-  status: <span class="string">'process'</span>,
   title: <span class="string">'进行中'</span>,
   description: <span class="string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
 }, {
-  status: <span class="string">'wait'</span>,
   title: <span class="string">'又一个待运行'</span>,
   description: <span class="string">'描述啊描述啊'</span>
 }, {
-  status: <span class="string">'wait'</span>,
   title: <span class="string">'待运行'</span>,
   description: <span class="string">'这里是多信息的描述啊'</span>
 }].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">Step
-</span>    <span class="attribute">key</span>=<span class="value">{i}</span>
-    <span class="attribute">status</span>=<span class="value">{s.status}</span>
-    <span class="attribute">title</span>=<span class="value">{s.title}</span>
-    <span class="attribute">description</span>=<span class="value">{s.description}</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -734,15 +727,12 @@ var steps = [{
   status: 'wait',
   title: '待运行'
 }].map(function (s, i) {
-  return React.createElement(Step, {
-    key: i,
-    status: s.status,
-    title: s.title });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 React.render(React.createElement(
   Steps,
-  { size: 'small' },
+  { size: 'small', current: 1 },
   steps
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
@@ -761,14 +751,12 @@ React.render(React.createElement(
   status: <span class="string">'wait'</span>,
   title: <span class="string">'待运行'</span>
 }].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">Step
-</span>    <span class="attribute">key</span>=<span class="value">{i}</span>
-    <span class="attribute">status</span>=<span class="value">{s.status}</span>
-    <span class="attribute">title</span>=<span class="value">{s.title}</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Step</span>&gt;</span>);
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
+  );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -797,9 +785,9 @@ React.render(React.createElement(
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'process'</span> <span class="attribute">title</span>=<span class="value">'步骤2'</span> <span class="attribute">icon</span>=<span class="value">'apple'</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'wait'</span> <span class="attribute">title</span>=<span class="value">'步骤3'</span> <span class="attribute">icon</span>=<span class="value">'github'</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'process'</span> <span class="attribute">title</span>=<span class="value">'步骤2'</span> <span class="attribute">icon</span>=<span class="value">'apple'</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'wait'</span> <span class="attribute">title</span>=<span class="value">'步骤3'</span> <span class="attribute">icon</span>=<span class="value">'github'</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -812,35 +800,31 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</
 </div><div class="code-box" id="demo-step-next">
   <div class="code-box-demo">
     <div id="components-steps-demo-step-next"></div>
-    <style type="text/css">form.my-step-form > div {
+    <style type="text/css">#components-steps-demo-step-next > div > div {
   margin-bottom: 30px;
-}</style><div class="highlight"><pre><code class="css"><span class="tag">form</span><span class="class">.my-step-form</span> &gt; <span class="tag">div</span> <span class="rules">{
+}</style><div class="highlight"><pre><code class="css"><span class="id">#components-steps-demo-step-next</span> &gt; <span class="tag">div</span> &gt; <span class="tag">div</span> <span class="rules">{
   <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
 <span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
 
 var Steps = antd.Steps;
 var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-step-next');
-var steps = (function generateRandomSteps() {
-  var n = Math.floor(Math.random() * 3) + 3;
-  var arr = [];
-  for (var i = 0; i < n; i++) {
-    arr.push({
-      title: '步骤' + (i + 1)
-    });
-  }
-  return arr;
-})();
+var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
+var steps = array.map(function (item, i) {
+  return {
+    title: '步骤' + (i + 1)
+  };
+});
 
-var MyForm = React.createClass({
-  displayName: 'MyForm',
+var App = React.createClass({
+  displayName: 'App',
 
   getInitialState: function getInitialState() {
     return {
       currentStep: Math.floor(Math.random() * steps.length)
     };
   },
-  nextStep: function nextStep() {
+  next: function next() {
     var s = this.state.currentStep + 1;
     if (s === steps.length) {
       s = 0;
@@ -852,36 +836,28 @@ var MyForm = React.createClass({
   render: function render() {
     var cs = this.state.currentStep;
     return React.createElement(
-      'form',
-      { className: 'my-step-form' },
+      'div',
+      null,
       React.createElement(
         'div',
         null,
-        '当前正在执行第',
+        '当前正在执行第 ',
         cs + 1,
-        '步'
+        ' 步'
       ),
       React.createElement(
-        'div',
-        { className: 'my-step-container' },
-        React.createElement(
-          Steps,
-          null,
-          steps.map(function (s, i) {
-            return React.createElement(Steps.Step, {
-              key: i,
-              status: cs === i ? 'process' : cs > i ? 'finish' : 'wait',
-              title: s.title
-            });
-          })
-        )
+        Steps,
+        { current: cs },
+        steps.map(function (s, i) {
+          return React.createElement(Step, { key: i, title: s.title, description: s.description });
+        })
       ),
       React.createElement(
         'div',
         null,
         React.createElement(
-          'span',
-          { className: 'ant-btn', onClick: this.nextStep },
+          'button',
+          { className: 'ant-btn', onClick: this.next },
           '下一步'
         )
       )
@@ -889,27 +865,23 @@ var MyForm = React.createClass({
   }
 });
 
-React.render(React.createElement(MyForm, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
+React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">var</span> steps = (<span class="function"><span class="keyword">function</span> <span class="title">generateRandomSteps</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> n = Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>;
-  <span class="keyword">var</span> arr = [];
-  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ) {
-    arr.push({
-      title: <span class="string">'步骤'</span> + (i+<span class="number">1</span>)
-    });
-  }
-  <span class="keyword">return</span> arr;
-})();
+<span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
+<span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
+  <span class="keyword">return</span> {
+    title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
+  };
+});
 
-<span class="keyword">var</span> MyForm = React.createClass({
+<span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
-  nextStep() {
+  next() {
     <span class="keyword">var</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
     <span class="keyword">if</span> (s === steps.length) {
       s = <span class="number">0</span>;
@@ -920,23 +892,21 @@ React.render(React.createElement(MyForm, null), container);})()</script><div cla
   },
   render() {
     <span class="keyword">var</span> cs = <span class="keyword">this</span>.state.currentStep;
-    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">'my-step-form'</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第{cs + 1}步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">'my-step-container'</span>&gt;</span><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
-        {steps.map(function(s, i) {
-          return <span class="tag">&lt;<span class="title">Steps.Step
-</span>            <span class="attribute">key</span>=<span class="value">{i}</span>
-            <span class="attribute">status</span>=<span class="value">{cs</span> =<span class="value">==</span> <span class="attribute">i</span> ? '<span class="attribute">process</span>' <span class="attribute">:</span> (<span class="attribute">cs</span> &gt;</span> i ? 'finish' : 'wait')}
-            title={s.title}
-            &gt;<span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-        })}
-      <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.nextStep}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">form</span>&gt;</span>)
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{cs}</span>&gt;</span>
+          {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
+        <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    );
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">MyForm</span>&gt;</span><span class="tag">&lt;/<span class="title">MyForm</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -955,63 +925,48 @@ var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-vertical');
 
 var steps = [{
-  status: 'finish',
   title: '已完成',
   description: '这里是信息的描述'
 }, {
-  status: 'process',
   title: '进行中',
   description: '这里是信息的描述'
 }, {
-  status: 'wait',
   title: '待运行',
   description: '这里是信息的描述'
 }, {
-  status: 'wait',
   title: '又一个待运行',
   description: '这里是信息的描述'
 }].map(function (s, i) {
-  return React.createElement(Step, {
-    key: i,
-    status: s.status,
-    title: s.title,
-    description: s.description });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 React.render(React.createElement(
   Steps,
-  { direction: 'vertical' },
+  { direction: 'vertical', current: 1 },
   steps
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
 
 <span class="keyword">var</span> steps = [{
-  status: <span class="string">'finish'</span>,
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
-  status: <span class="string">'process'</span>,
   title: <span class="string">'进行中'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
-  status: <span class="string">'wait'</span>,
   title: <span class="string">'待运行'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
-  status: <span class="string">'wait'</span>,
   title: <span class="string">'又一个待运行'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">Step
-</span>    <span class="attribute">key</span>=<span class="value">{i}</span>
-    <span class="attribute">status</span>=<span class="value">{s.status}</span>
-    <span class="attribute">title</span>=<span class="value">{s.title}</span>
-    <span class="attribute">description</span>=<span class="value">{s.description}</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1030,61 +985,116 @@ var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-vertical-small');
 
 var steps = [{
-  status: 'finish',
   title: '已完成',
   description: '这里是信息的描述'
 }, {
-  status: 'process',
   title: '进行中',
   description: '这里是信息的描述'
 }, {
-  status: 'wait',
   title: '待运行',
   description: '这里是信息的描述'
 }].map(function (s, i) {
-  return React.createElement(Step, {
-    key: i,
-    status: s.status,
-    title: s.title,
-    description: s.description });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 React.render(React.createElement(
   Steps,
-  { size: 'small', direction: 'vertical' },
+  { size: 'small', direction: 'vertical', current: 1 },
   steps
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical-small'</span>);
 
 <span class="keyword">var</span> steps = [{
-  status: <span class="string">'finish'</span>,
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
-  status: <span class="string">'process'</span>,
   title: <span class="string">'进行中'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
-  status: <span class="string">'wait'</span>,
   title: <span class="string">'待运行'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">Step
-</span>    <span class="attribute">key</span>=<span class="value">{i}</span>
-    <span class="attribute">status</span>=<span class="value">{s.status}</span>
-    <span class="attribute">title</span>=<span class="value">{s.title}</span>
-    <span class="attribute">description</span>=<span class="value">{s.description}</span>&gt;</span><span class="tag">&lt;/<span class="title">Step</span>&gt;</span>
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">'small'</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">'small'</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-vertical-small">竖直方向的小型步骤条</a>
     </div>
     <p>简单的竖直方向的小型步骤条。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-status">
+  <div class="code-box-demo">
+    <div id="components-steps-demo-status"></div>
+    <script>(function(){'use strict';
+
+var Steps = antd.Steps;
+var Step = Steps.Step;
+var container = document.getElementById('components-steps-demo-status');
+
+var steps = [{
+  status: 'finish',
+  title: '已完成',
+  description: '这里是多信息的描述啊'
+}, {
+  status: 'process',
+  title: '进行中',
+  description: '这里是多信息的耶哦耶哦哦耶哦耶'
+}, {
+  status: 'wait',
+  title: '又一个待运行',
+  description: '描述啊描述啊'
+}, {
+  status: 'wait',
+  title: '待运行',
+  description: '这里是多信息的描述啊'
+}].map(function (s, i) {
+  return React.createElement(Step, { key: i, title: s.title, status: s.status, description: s.description });
+});
+
+React.render(React.createElement(
+  Steps,
+  null,
+  steps
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
+<span class="keyword">var</span> Step = Steps.Step;
+<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-status'</span>);
+
+<span class="keyword">var</span> steps = [{
+  status: <span class="string">'finish'</span>,
+  title: <span class="string">'已完成'</span>,
+  description: <span class="string">'这里是多信息的描述啊'</span>
+}, {
+  status: <span class="string">'process'</span>,
+  title: <span class="string">'进行中'</span>,
+  description: <span class="string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
+}, {
+  status: <span class="string">'wait'</span>,
+  title: <span class="string">'又一个待运行'</span>,
+  description: <span class="string">'描述啊描述啊'</span>
+}, {
+  status: <span class="string">'wait'</span>,
+  title: <span class="string">'待运行'</span>,
+  description: <span class="string">'这里是多信息的描述啊'</span>
+}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">status</span>=<span class="value">{s.status}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
+  );
+});
+
+React.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-status">自定义状态</a>
+    </div>
+    <p>可以使用 <code>status</code> 定义每个步骤的状态。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

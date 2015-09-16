@@ -1,35 +1,31 @@
 <div class="code-box" id="demo-step-next">
   <div class="code-box-demo">
     <div id="components-steps-demo-step-next"></div>
-    <style type="text/css">form.my-step-form > div {
+    <style type="text/css">#components-steps-demo-step-next > div > div {
   margin-bottom: 30px;
-}</style><div class="highlight"><pre><code class="css"><span class="tag">form</span><span class="class">.my-step-form</span> &gt; <span class="tag">div</span> <span class="rules">{
+}</style><div class="highlight"><pre><code class="css"><span class="id">#components-steps-demo-step-next</span> &gt; <span class="tag">div</span> &gt; <span class="tag">div</span> <span class="rules">{
   <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
 <span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
 
 var Steps = antd.Steps;
 var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-step-next');
-var steps = (function generateRandomSteps() {
-  var n = Math.floor(Math.random() * 3) + 3;
-  var arr = [];
-  for (var i = 0; i < n; i++) {
-    arr.push({
-      title: '步骤' + (i + 1)
-    });
-  }
-  return arr;
-})();
+var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
+var steps = array.map(function (item, i) {
+  return {
+    title: '步骤' + (i + 1)
+  };
+});
 
-var MyForm = React.createClass({
-  displayName: 'MyForm',
+var App = React.createClass({
+  displayName: 'App',
 
   getInitialState: function getInitialState() {
     return {
       currentStep: Math.floor(Math.random() * steps.length)
     };
   },
-  nextStep: function nextStep() {
+  next: function next() {
     var s = this.state.currentStep + 1;
     if (s === steps.length) {
       s = 0;
@@ -41,36 +37,28 @@ var MyForm = React.createClass({
   render: function render() {
     var cs = this.state.currentStep;
     return React.createElement(
-      'form',
-      { className: 'my-step-form' },
+      'div',
+      null,
       React.createElement(
         'div',
         null,
-        '当前正在执行第',
+        '当前正在执行第 ',
         cs + 1,
-        '步'
+        ' 步'
       ),
       React.createElement(
-        'div',
-        { className: 'my-step-container' },
-        React.createElement(
-          Steps,
-          null,
-          steps.map(function (s, i) {
-            return React.createElement(Steps.Step, {
-              key: i,
-              status: cs === i ? 'process' : cs > i ? 'finish' : 'wait',
-              title: s.title
-            });
-          })
-        )
+        Steps,
+        { current: cs },
+        steps.map(function (s, i) {
+          return React.createElement(Step, { key: i, title: s.title, description: s.description });
+        })
       ),
       React.createElement(
         'div',
         null,
         React.createElement(
-          'span',
-          { className: 'ant-btn', onClick: this.nextStep },
+          'button',
+          { className: 'ant-btn', onClick: this.next },
           '下一步'
         )
       )
@@ -78,27 +66,23 @@ var MyForm = React.createClass({
   }
 });
 
-React.render(React.createElement(MyForm, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
+React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">var</span> steps = (<span class="function"><span class="keyword">function</span> <span class="title">generateRandomSteps</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> n = Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>;
-  <span class="keyword">var</span> arr = [];
-  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++ ) {
-    arr.push({
-      title: <span class="string">'步骤'</span> + (i+<span class="number">1</span>)
-    });
-  }
-  <span class="keyword">return</span> arr;
-})();
+<span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
+<span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
+  <span class="keyword">return</span> {
+    title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
+  };
+});
 
-<span class="keyword">var</span> MyForm = React.createClass({
+<span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
-  nextStep() {
+  next() {
     <span class="keyword">var</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
     <span class="keyword">if</span> (s === steps.length) {
       s = <span class="number">0</span>;
@@ -109,23 +93,21 @@ React.render(React.createElement(MyForm, null), container);})()</script><div cla
   },
   render() {
     <span class="keyword">var</span> cs = <span class="keyword">this</span>.state.currentStep;
-    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">'my-step-form'</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第{cs + 1}步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">'my-step-container'</span>&gt;</span><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
-        {steps.map(function(s, i) {
-          return <span class="tag">&lt;<span class="title">Steps.Step
-</span>            <span class="attribute">key</span>=<span class="value">{i}</span>
-            <span class="attribute">status</span>=<span class="value">{cs</span> =<span class="value">==</span> <span class="attribute">i</span> ? '<span class="attribute">process</span>' <span class="attribute">:</span> (<span class="attribute">cs</span> &gt;</span> i ? 'finish' : 'wait')}
-            title={s.title}
-            &gt;<span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-        })}
-      <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.nextStep}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">form</span>&gt;</span>)
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{cs}</span>&gt;</span>
+          {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
+        <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    );
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">MyForm</span>&gt;</span><span class="tag">&lt;/<span class="title">MyForm</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

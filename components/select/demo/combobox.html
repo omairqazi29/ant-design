@@ -33,11 +33,13 @@ var Test = React.createClass({
     });
   },
   render: function render() {
+    // filterOption 需要设置为 false，数据是动态设置的
     return React.createElement(
       Select,
       { combobox: true,
         style: { width: 200 },
         onChange: this.handleChange,
+        filterOption: false,
         searchPlaceholder: '请输入账户名' },
       this.state.options
     );
@@ -68,9 +70,11 @@ React.render(React.createElement(Test, null), document.getElementById('component
     });
   },
   render() {
+  <span class="comment">// filterOption 需要设置为 false，数据是动态设置的</span>
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">combobox</span>
       <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
       <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span>
+      <span class="attribute">filterOption</span>=<span class="value">{false}</span>
       <span class="attribute">searchPlaceholder</span>=<span class="value">"请输入账户名"</span>&gt;</span>
       {this.state.options}
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>;</span>

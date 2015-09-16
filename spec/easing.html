@@ -13,7 +13,7 @@
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="/dist/antd-0.9.1-beta4.min.css">
+    <link rel="stylesheet" href="/dist/antd-0.9.1-beta6.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/tomorrow.css">
     <script>
@@ -187,11 +187,11 @@
     <script src="/static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta4',
+        latest: '0.9.1-beta6',
         stable: '0.9.0'
       };
     </script>
-    <script src="/dist/antd-0.9.1-beta4.min.js"></script>
+    <script src="/dist/antd-0.9.1-beta6.min.js"></script>
     <script src="/dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -290,14 +290,14 @@
       <ul class="">
           <li class="current">
             <a href="easing"
-               class=""data-no-instant>
+               class="">
               自然运动
               <span class="chinese"></span>
             </a>
           </li>
           <li class="">
             <a href="page-transition"
-               class=""data-no-instant>
+               class="">
               互动转换
               <span class="chinese"></span>
             </a>
@@ -340,15 +340,7 @@
 </blockquote>
 <h4 id="自然缓动">自然缓动</h4><p>不要用直线缓动 Linear 做物体位移或出入动画的缓动；注：Linear 函数可做循环动画函数。</p>
 <p>如下图所示，在没有缓动的情况下启动与停止都显得突兀，感觉动画还没结束就停止了，所以在物体运动中避免直线运动。</p>
-<script src="/static/TweenMax.min.js"></script>
-<script src="/static/motion.js"></script>
 <div id="J-Linear"></div>
-
-<script>
-$(function (){
-new Motion("#J-Linear",{lineData:[{stroke:"#f2666c"},{stroke:"#71B5DE",openEaseName:"easeInOutQuad",endEaseName:"easeInOutQuad"},],mask:false});
-})
-</script>
 
 
 <p>上图所示缓动函数：红 <code>Linear</code>，蓝 <code>ease-in-out</code>。</p>
@@ -356,14 +348,6 @@ new Motion("#J-Linear",{lineData:[{stroke:"#f2666c"},{stroke:"#71B5DE",openEaseN
 <p>所以有动画的进场必须要有动画的出场，包括导航上的动画。</p>
 <div id="J-Symmetric"></div>
 
-<script>
-$(function (){
-new Motion("#J-Symmetric",{lineData:[
-{openEaseName:"easeInOutQuad",endEaseName:"null",stroke:"#f2666c"},
-{stroke:"#71B5DE",openEaseName:"easeInOutCubic",endEaseName:"easeInOutCubic"}],
-mask:false,exposure:"top"});
-})
-</script>
 
 <p>上图所示缓动函数：红 <code>ease-in-out</code>，蓝 <code>ease-in-out-cubic</code>。</p>
 <h5 id="场外出入">场外出入</h5><p>场外出入需要考虑力量与引力的关系，如向空中抛物体时，物体的初速度是最快的。</p>
@@ -372,14 +356,6 @@ mask:false,exposure:"top"});
 <p>所以最高点前后都有一定缓冲带，曲线呈现抛物线的规律。不要做图示红色球体下降时的缓动。</p>
 <div id="J-Entry"></div>
 
-<script>
-$(function (){
-new Motion("#J-Entry",{lineData:[
-{openEaseName:"easeOutQuad",endEaseName:"easeOutQuad",stroke:"#f2666c"},
-{stroke:"#71B5DE",openEaseName:"easeOutCubic",endEaseName:"easeInCubic"}],
-mask:true,exposure:"bottom"});
-})
-</script>
 
 <p>上图所示缓动函数：红 <code>ease-out</code> <code>ease-out</code>，蓝 <code>ease-out-cubic</code> <code>ease-in-cubic</code>。</p>
 <p>示例组件：<a href="/components/message/">Message 全局提示</a>，<a href="/components/dropdown/">Dropdown 下拉菜单</a>。</p>
@@ -394,16 +370,8 @@ mask:true,exposure:"bottom"});
 <blockquote>
 <p>慎用 Bounce 或 Elastic，这两种适用在特殊元素下，一般 back 即可满足页面上元素的弹动;</p>
 </blockquote>
-<div id="J-Back"></div>
-
-<script>
-$(function (){
-new Motion("#J-Back",{lineData:[
-{openEaseName:"easeOutBounce",endEaseName:"easeOutElastic",stroke:"#70f266"},
-{stroke:"#71B5DE",openEaseName:"easeOutBack",endEaseName:"easeInOutBack"}],
-mask:false,exposure:"top"});
-})
-</script>
+<p><div id="J-Back"></div></p>
+<script src="/static/motionDemoLoad.js?page=easing"></script>
 
 <p>上图所示缓动函数：绿 <code>easeOutBounce</code> <code>easeOutElastic</code>（css 需自配）， 蓝 <code>ease-out-back</code> <code>ease-in-back</code>。</p>
 <h2 id="缓动函数">缓动函数</h2><p>Ant Design 提供了一套缓动函数规范动画行为供组件使用。</p>

@@ -2694,6 +2694,10 @@ samp {
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
           animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
+.zoom-tag-leave {
+  -webkit-animation: antZoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation: antZoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
 @-webkit-keyframes antZoomIn {
   0% {
     opacity: 0;
@@ -4146,7 +4150,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: absolute;
   left: -9999px;
   top: -9999px;
-  z-index: 1000;
+  z-index: 1070;
 }
 .ant-calendar-picker-container .ant-calendar-hidden {
   display: none;
@@ -7655,7 +7659,7 @@ textarea.ant-input-number {
 .ant-message {
   font-size: 12px;
   position: fixed;
-  z-index: 1000;
+  z-index: 1050;
   width: 100%;
   top: 16px;
 }
@@ -7824,8 +7828,7 @@ textarea.ant-input-number {
   padding: 4px 0 8px 0;
 }
 .ant-slider-tooltip-inner {
-  padding: 6px 2px;
-  width: 100%;
+  padding: 6px;
   min-width: 24px;
   height: 24px;
   font-size: 12px;
@@ -8271,10 +8274,6 @@ label.ant-radio-button-checked:active {
   width: 0 !important;
   padding: 0;
   margin-right: 0;
-}
-.zoom-tag-leave {
-  -webkit-animation: zoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          animation: zoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-alert {
   position: relative;

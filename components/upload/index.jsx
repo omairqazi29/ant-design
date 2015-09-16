@@ -8,6 +8,21 @@ const prefixCls = 'ant-upload';
 function noop() {
 }
 
+// Fix IE file.status problem
+// via coping a new Object
+function fileToObject(file) {
+  return {
+    lastModified: file.lastModified,
+    lastModifiedDate: file.lastModifiedDate,
+    name: file.name,
+    size: file.size,
+    type: file.type,
+    uid: file.uid,
+    response: file.response,
+    error: file.error
+  };
+}
+
 const AntUpload = React.createClass({
   getInitialState() {
     return {
@@ -17,11 +32,14 @@ const AntUpload = React.createClass({
   onStart(file) {
     let nextFileList = this.state.fileList.concat();
     if (file.length > 0) {
-      file.forEach(function(f) {
+      file = file.map(function(f) {
+        f = fileToObject(f);
         f.status = 'uploading';
+        return f;
       });
       nextFileList = nextFileList.concat(file);
     } else {
+      file = fileToObject(file);
       file.status = 'uploading';
       nextFileList.push(file);
     }
@@ -41,6 +59,14 @@ const AntUpload = React.createClass({
     return null;
   },
   onSuccess(response, file) {
+    // 服务器端需要返回标准 json 字符串
+    // 否则视为失败
+    try {
+      JSON.parse(response);
+    } catch (e) {
+      this.onError(new Error('No response'), response, file);
+      return;
+    }
     let fileList = this.state.fileList.concat();
     let targetItem = getFileItem(file, fileList);
     // 之前已经删除
@@ -65,10 +91,12 @@ const AntUpload = React.createClass({
     }
   },
   onError(error, response, file) {
-    file.error = error;
-    file.response = response;
-    file.status = 'error';
-    this.handleRemove(file);
+    let fileList = this.state.fileList;
+    let targetItem = getFileItem(file, fileList);
+    targetItem.error = error;
+    targetItem.response = response;
+    targetItem.status = 'error';
+    this.handleRemove(targetItem);
   },
   handleRemove(file) {
     let fileList = this.removeFile(file);

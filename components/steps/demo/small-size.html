@@ -20,15 +20,12 @@ var steps = [{
   status: 'wait',
   title: '待运行'
 }].map(function (s, i) {
-  return React.createElement(Step, {
-    key: i,
-    status: s.status,
-    title: s.title });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 React.render(React.createElement(
   Steps,
-  { size: 'small' },
+  { size: 'small', current: 1 },
   steps
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
@@ -47,14 +44,12 @@ React.render(React.createElement(
   status: <span class="string">'wait'</span>,
   title: <span class="string">'待运行'</span>
 }].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">Step
-</span>    <span class="attribute">key</span>=<span class="value">{i}</span>
-    <span class="attribute">status</span>=<span class="value">{s.status}</span>
-    <span class="attribute">title</span>=<span class="value">{s.title}</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Step</span>&gt;</span>);
+  <span class="keyword">return</span> (
+    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
+  );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
