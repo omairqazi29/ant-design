@@ -36,25 +36,13 @@ var Test = React.createClass({
         null,
         this.state.show ? React.createElement(
           "div",
-          { key: "a" },
+          { className: "demo-content", key: "a" },
           React.createElement(
             "div",
-            { className: "demo-header" },
-            React.createElement(
-              "div",
-              { className: "logo" },
-              React.createElement("img", { width: "30", src: "https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" }),
-              React.createElement(
-                "span",
-                null,
-                "logo"
-              )
-            ),
+            { className: "demo-kp" },
             React.createElement(
               "ul",
               null,
-              React.createElement("li", null),
-              React.createElement("li", null),
               React.createElement("li", null),
               React.createElement("li", null),
               React.createElement("li", null)
@@ -62,15 +50,11 @@ var Test = React.createClass({
           ),
           React.createElement(
             "div",
-            { className: "demo-content" },
+            { className: "demo-listBox" },
             React.createElement(
               "div",
-              { className: "demo-title" },
-              "我是标题"
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-kp" },
+              { className: "demo-list" },
+              React.createElement("div", { className: "title" }),
               React.createElement(
                 "ul",
                 null,
@@ -78,32 +62,8 @@ var Test = React.createClass({
                 React.createElement("li", null),
                 React.createElement("li", null)
               )
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-title" },
-              "我是标题"
-            ),
-            React.createElement(
-              "div",
-              { className: "demo-listBox" },
-              React.createElement(
-                "div",
-                { className: "demo-list" },
-                React.createElement("div", { className: "title" }),
-                React.createElement(
-                  "ul",
-                  null,
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null),
-                  React.createElement("li", null)
-                )
-              )
             )
-          ),
-          React.createElement("div", { className: "demo-footer" })
+          )
         ) : null
       )
     );
@@ -130,22 +90,8 @@ React.render(React.createElement(Test, null), document.getElementById('component
           <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
-          {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
-                <span class="tag">&lt;<span class="title">span</span>&gt;</span>logo<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> &gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          {this.state.show ?
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
                   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
@@ -153,7 +99,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
                   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
                 <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
                   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -161,13 +106,9 @@ React.render(React.createElement(Test, null), document.getElementById('component
                     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
                     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
                     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
                   <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
                 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
         <span class="tag">&lt;/<span class="title">EnterAnimation</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>

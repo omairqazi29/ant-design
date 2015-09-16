@@ -15,6 +15,7 @@ var Test = React.createClass({
         interval: .1
       },
       leave: {
+        type: 'left',
         interval: 0.03
       },
       show: true
@@ -49,11 +50,6 @@ var Test = React.createClass({
             { className: 'demo-content' },
             React.createElement(
               'div',
-              { className: 'demo-title', 'enter-data': { type: 'alpha' } },
-              '我是标题'
-            ),
-            React.createElement(
-              'div',
               { className: 'demo-kp' },
               React.createElement(
                 'ul',
@@ -62,11 +58,6 @@ var Test = React.createClass({
                 React.createElement('li', { 'enter-data': true }),
                 React.createElement('li', { 'enter-data': true })
               )
-            ),
-            React.createElement(
-              'div',
-              { className: 'demo-title', 'enter-data': { type: 'alpha', queueId: 1, delay: 0.8 }, 'leave-data': { delay: 0.1 } },
-              '我是标题'
             ),
             React.createElement(
               'div',
@@ -101,6 +92,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
         interval: <span class="number">.1</span>,
       },
       leave: {
+        type:<span class="string">'left'</span>,
         interval: <span class="number">0.03</span>
       },
       show: <span class="literal">true</span>
@@ -120,7 +112,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
         {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'enter-data'</span>&gt;</span>
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>'}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
@@ -128,7 +119,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
                 <span class="tag">&lt;<span class="title">li</span> <span class="attribute">enter-data</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
               <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">alpha</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>, <span class="attribute">delay:</span> <span class="attribute">0.8</span>}} <span class="attribute">leave-data</span>=<span class="value">{{delay:</span> <span class="attribute">0.1</span>}}&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">enter-data</span>=<span class="value">{{type:</span> '<span class="attribute">bottom</span>', <span class="attribute">queueId:</span> <span class="attribute">1</span>}}&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>

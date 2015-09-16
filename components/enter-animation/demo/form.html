@@ -24,6 +24,7 @@ var Test = React.createClass({
         type: 'left',
         reverse: true,
         interval: 0.05,
+        ease: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
         callback: function callback() {
           console.log('出场结束');
         }
@@ -181,6 +182,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
         type: <span class="string">'left'</span>,
         reverse: <span class="literal">true</span>,
         interval: <span class="number">0.05</span>,
+        ease:<span class="string">'cubic-bezier(0.55, 0.085, 0.68, 0.53)'</span>,
         callback: ()=&gt; {
           console.log(<span class="string">'出场结束'</span>)
         }

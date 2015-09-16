@@ -32,6 +32,15 @@ var App = React.createClass({
         { style: { marginBottom: 20 }, mode: 'horizontal' },
         React.createElement(
           Menu.Item,
+          { key: 'home' },
+          React.createElement(
+            Link,
+            { to: '/', onClick: this.clickPage },
+            '首页'
+          )
+        ),
+        React.createElement(
+          Menu.Item,
           { key: 'page1' },
           React.createElement(
             Link,
@@ -221,6 +230,9 @@ React.render(React.createElement(
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}} <span class="attribute">mode</span>=<span class="value">"horizontal"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">'home'</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/"</span> <span class="attribute">onClick</span>=<span class="value">{this.clickPage}</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
           <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">'page1'</span>&gt;</span>
             <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/page1"</span> <span class="attribute">onClick</span>=<span class="value">{this.clickPage}</span>&gt;</span>Page 1<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
