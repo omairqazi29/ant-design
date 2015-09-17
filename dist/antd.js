@@ -21671,6 +21671,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this._update();
 	
 	    /*
+	     * 把最后一个元素设置为absolute，是为了防止动态添加元素后滚动条出现导致的布局问题。
+	     * 未来不考虑ie8一类的浏览器后，会采用纯css来避免各种问题。
+	     */
+	    $dom.children[len].style.position = 'absolute';
+	
+	    /*
 	     * 下面的代码是为了兼容window系统下滚动条出现后会占用宽度的问题。
 	     * componentDidMount时滚动条还不一定出现了，这时候获取的宽度可能不是最终宽度。
 	     * 对于滚动条不占用宽度的浏览器，下面的代码也不二次render，_resize里面会判断要不要更新。
@@ -37252,7 +37258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta6",
+		"version": "0.9.1-beta7",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -37304,7 +37310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-radio": "~2.0.0",
 			"rc-select": "~4.9.0",
 			"rc-slider": "~1.4.0",
-			"rc-steps": "~1.3.0",
+			"rc-steps": "~1.3.2",
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.2.0",
 			"rc-tabs": "~5.3.2",
@@ -37348,7 +37354,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			"release": "npm run clean && webpack --config webpack.config.production.js && webpack --config webpack.config.min.js && zip dist/${npm_package_name}-${npm_package_version}.zip -j dist dist/*",
 			"start": "npm run clean && nico server --watch",
 			"clean": "rm -rf _site dist",
-			"deploy": "rm -rf node_modules && node scripts/install.js && npm run clean && webpack && webpack --config webpack.config.min.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
+			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
+			"just-deploy": "npm run clean && webpack && webpack --config webpack.config.min.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
 			"lint": "eslint components index.js --ext '.js,.jsx'",
 			"lesslint": "lesslint style",
 			"test": "webpack && npm run lint",
@@ -37358,7 +37365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		"precommit": [
 			"lint"
 		]
-	}
+	};
 
 /***/ }
 /******/ ])

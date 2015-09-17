@@ -97,9 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	
 	    handleSelect: function handleSelect(value) {
-	      location.pathname = '/components/' + value.replace(/([a-z])([A-Z])/g, function (m, m1, m2) {
+	      location.href = rootUrl + '/components/' + value.replace(/([a-z])([A-Z])/g, function (m, m1, m2) {
 	        return m1 + '-' + m2;
-	      }).toLowerCase();
+	      }).toLowerCase() + '/';
 	    },
 	
 	    filterOption: function filterOption(input, option) {
