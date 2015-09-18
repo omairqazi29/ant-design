@@ -33932,7 +33932,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // 服务器端需要返回标准 json 字符串
 	    // 否则视为失败
 	    try {
-	      JSON.parse(response);
+	      if (typeof response === 'string') {
+	        JSON.parse(response);
+	      }
 	    } catch (e) {
 	      this.onError(new Error('No response'), response, file);
 	      return;
@@ -37256,7 +37258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta8",
+		"version": "0.9.1-beta7",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -37369,4 +37371,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.9.1-beta8.js.map
+//# sourceMappingURL=antd-0.9.1-beta7.js.map

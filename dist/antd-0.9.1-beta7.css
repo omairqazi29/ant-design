@@ -9311,6 +9311,7 @@ label.ant-radio-button-checked:active {
 .ant-badge {
   position: relative;
   display: inline-block;
+  line-height: 1;
 }
 .ant-badge-count {
   position: absolute;
@@ -9399,3 +9400,5 @@ a .ant-badge-count:active {
 .ant-timeline-item-last .ant-timeline-item-content {
   min-height: 48px;
 }
+
+/*# sourceMappingURL=antd-0.9.1-beta7.css.map*/
