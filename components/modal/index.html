@@ -13,7 +13,7 @@ Modal 对话框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1-beta7.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1-beta8.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Modal 对话框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta7',
+        latest: '0.9.1-beta8',
         stable: '0.9.0'
       };
     </script>
-    <script src="../../dist/antd-0.9.1-beta7.min.js"></script>
+    <script src="../../dist/antd-0.9.1-beta8.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -228,7 +228,7 @@ Modal 对话框 - Ant Design
   </head>
   <body >
     <header id="header" class="clearfix">
-      <a class="logo" href="/">
+      <a class="logo" href="../..">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         Ant Design
       </a>
@@ -1156,6 +1156,11 @@ function info() {
     content: '一些附加信息一些附加信息一些附加信息',
     onOk: function onOk() {}
   });
+  Modal.info({
+    title: '这是一条通知信息',
+    content: '一些附加信息一些附加信息一些附加信息',
+    onOk: function onOk() {}
+  });
 }
 
 function success() {
@@ -1193,6 +1198,11 @@ React.render(React.createElement(
 ), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
 
 <span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
+  Modal.info({
+    title: <span class="string">'这是一条通知信息'</span>,
+    content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>,
+    onOk: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  });
   Modal.info({
     title: <span class="string">'这是一条通知信息'</span>,
     content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>,

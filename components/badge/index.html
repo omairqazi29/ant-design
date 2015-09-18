@@ -13,7 +13,7 @@ Badge 徽标数 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1-beta7.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1-beta8.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Badge 徽标数 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1-beta7',
+        latest: '0.9.1-beta8',
         stable: '0.9.0'
       };
     </script>
-    <script src="../../dist/antd-0.9.1-beta7.min.js"></script>
+    <script src="../../dist/antd-0.9.1-beta8.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -228,7 +228,7 @@ Badge 徽标数 - Ant Design
   </head>
   <body >
     <header id="header" class="clearfix">
-      <a class="logo" href="/">
+      <a class="logo" href="../..">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         Ant Design
       </a>
@@ -610,8 +610,7 @@ React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">count</span>=<span class="value">"5"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">className</span>=<span class="value">"head-example"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Badge</span>&gt;</span>
-, document.getElementById('components-badge-demo-basic'));</span></code></pre></div><style>
-.ant-badge {
+, document.getElementById('components-badge-demo-basic'));</span></code></pre></div><style type="text/css">.ant-badge {
   margin-right: 16px;
 }
 .head-example {
@@ -620,9 +619,16 @@ React.render(
   border-radius: 6px;
   background: #eee;
   display: inline-block;
-}
-</style>
-
+}</style><div class="highlight"><pre><code class="css"><span class="class">.ant-badge</span> <span class="rules">{
+  <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> <span class="number">16</span>px</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.head-example</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">42</span>px</span></span>;
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">42</span>px</span></span>;
+  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">6</span>px</span></span>;
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+<span class="rule">}</span></span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -711,16 +717,32 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
 var Badge = antd.Badge;
 
 React.render(React.createElement(
-  Badge,
-  { dot: true },
-  React.createElement("i", { className: "anticon anticon-notification" })
+  "div",
+  null,
+  React.createElement(
+    Badge,
+    { dot: true },
+    React.createElement("i", { className: "anticon anticon-notification" })
+  ),
+  React.createElement(
+    Badge,
+    { dot: true },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "一个链接"
+    )
+  )
 ), document.getElementById('components-badge-demo-dot'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Badge = antd.Badge;
 
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">dot</span>=<span class="value">{true}</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">dot</span>=<span class="value">{true}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-notification"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Badge</span>&gt;</span>
-, document.getElementById('components-badge-demo-dot'));</span></code></pre></div><style>
+  <span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">dot</span>=<span class="value">{true}</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一个链接<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Badge</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-badge-demo-dot'));</span></code></pre></div><style>
 .anticon-notification {
   width: 16px;
   height: 16px;

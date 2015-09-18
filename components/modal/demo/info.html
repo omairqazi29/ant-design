@@ -11,6 +11,11 @@ function info() {
     content: '一些附加信息一些附加信息一些附加信息',
     onOk: function onOk() {}
   });
+  Modal.info({
+    title: '这是一条通知信息',
+    content: '一些附加信息一些附加信息一些附加信息',
+    onOk: function onOk() {}
+  });
 }
 
 function success() {
@@ -48,6 +53,11 @@ React.render(React.createElement(
 ), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
 
 <span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
+  Modal.info({
+    title: <span class="string">'这是一条通知信息'</span>,
+    content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>,
+    onOk: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>}
+  });
   Modal.info({
     title: <span class="string">'这是一条通知信息'</span>,
     content: <span class="string">'一些附加信息一些附加信息一些附加信息'</span>,

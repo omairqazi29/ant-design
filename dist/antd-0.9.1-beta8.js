@@ -11114,10 +11114,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this.props.fade) {
 	      currentSlide = this.state.currentSlide;
 	
-	      if (this.props.beforeChange) {
-	        this.props.beforeChange(currentSlide);
-	      }
-	
 	      //  Shifting targetSlide back into the range
 	      if (index < 0) {
 	        targetSlide = index + this.state.slideCount;
@@ -11149,6 +11145,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }, function () {
 	        _reactLibReactTransitionEvents2['default'].addEndEventListener(this.refs.track.getDOMNode().children[currentSlide], callback);
 	      });
+	
+	      if (this.props.beforeChange) {
+	        this.props.beforeChange(this.state.currentSlide, currentSlide);
+	      }
 	
 	      this.autoPlay();
 	      return;
@@ -11190,7 +11190,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	
 	    if (this.props.beforeChange) {
-	      this.props.beforeChange(currentSlide);
+	      this.props.beforeChange(this.state.currentSlide, currentSlide);
 	    }
 	
 	    if (this.props.lazyLoad) {
@@ -15711,9 +15711,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var div = undefined;
-	
 	exports['default'] = function (props) {
+	  var div = document.createElement('div');
+	  document.body.appendChild(div);
+	
 	  var d = undefined;
 	  props = props || {};
 	  props.iconClassName = props.iconClassName || 'anticon-question-circle';
@@ -15728,6 +15729,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.setState({
 	      visible: false
 	    });
+	    _react2['default'].unmountComponentAtNode(div);
 	  }
 	
 	  function onCancel() {
@@ -15825,11 +15827,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        '知道了'
 	      )
 	    );
-	  }
-	
-	  if (!div) {
-	    div = document.createElement('div');
-	    document.body.appendChild(div);
 	  }
 	
 	  _react2['default'].render(_react2['default'].createElement(
@@ -34166,7 +34163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  onKeyDown: function onKeyDown(e) {
 	    if (e.key === 'Enter') {
-	      this._onClick();
+	      this.onClick();
 	    }
 	  },
 	
@@ -35705,6 +35702,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          encType: 'multipart/form-data',
 	          method: 'post', style: formStyle },
 	        React.createElement('input', { type: 'file',
+	          name: props.name,
 	          disabled: this.state.loading,
 	          hideFocus: 'true',
 	          style: inputStyle,
@@ -35717,23 +35715,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    );
 	  },
 	
-	  componentDidMount: function componentDidMount() {
+	  updateForm: function updateForm() {
 	    var component = this;
 	    React.render(this.getFormElement(), this.getFormContainer(), function save() {
 	      component.formInstance = this;
 	    });
 	  },
 	
-	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-	    var _this = this;
+	  componentDidMount: function componentDidMount() {
+	    this.updateForm();
+	  },
 	
+	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
 	    if (prevState.uid !== this.state.uid || prevState.loading !== this.state.loading) {
-	      (function () {
-	        var component = _this;
-	        React.render(_this.getFormElement(), _this.getFormContainer(), function save() {
-	          component.formInstance = this;
-	        });
-	      })();
+	      this.updateForm();
 	    }
 	  },
 	
@@ -35792,7 +35787,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.onStart(this.file);
 	    var formNode = React.findDOMNode(this.formInstance);
 	    var dataSpan = formNode.childNodes[1];
-	    dataSpan.innerHTML = '';
 	    var data = this.props.data;
 	    if (typeof data === 'function') {
 	      data = data();
@@ -35822,7 +35816,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  render: function render() {
-	    return this.props.children;
+	    return React.createElement(
+	      'div',
+	      { onMouseEnter: this.updateForm },
+	      this.props.children
+	    );
 	  }
 	});
 	
@@ -37258,7 +37256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta7",
+		"version": "0.9.1-beta8",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -37371,4 +37369,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.9.1-beta7.js.map
+//# sourceMappingURL=antd-0.9.1-beta8.js.map

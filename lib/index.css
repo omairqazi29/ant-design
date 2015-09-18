@@ -3826,11 +3826,11 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-select-disabled .ant-select-selection__choice__remove:hover {
   color: #ccc;
 }
-.ant-select .ant-select-search__field__wrap {
+.ant-select-search__field__wrap {
   display: inline-block;
   position: relative;
 }
-.ant-select .ant-select-search__field__placeholder {
+.ant-select-search__field__placeholder {
   position: absolute;
   top: 0;
   left: 3px;
@@ -3838,6 +3838,9 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-select-search--inline {
   float: left;
+}
+.ant-select-search--inline .ant-select-search__field__wrap {
+  width: 100%;
 }
 .ant-select-search--inline .ant-select-search__field {
   border: none;
@@ -3993,33 +3996,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected {
   background-color: #eaf8fe;
-  position: relative;
-}
-.ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  display: inline-block;
-  content: '\e613';
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 7px;
-  right: 0;
-  padding-right: 15px;
-  color: #2db7f5;
-}
-:root .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
-  font-size: 12px;
 }
 .ant-select-dropdown--multiple .ant-select-dropdown-menu-item {
   padding: 7px 33px 7px 16px;
@@ -4125,6 +4101,7 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-select-dropdown .ant-select-search--dropdown .ant-select-search__field__placeholder {
   left: 4px;
+  top: 5px;
 }
 .ant-select-dropdown .ant-select-search--dropdown .ant-select-search__field__wrap {
   width: 100%;
@@ -9422,5 +9399,3 @@ a .ant-badge-count:active {
 .ant-timeline-item-last .ant-timeline-item-content {
   min-height: 48px;
 }
-
-/*# sourceMappingURL=antd-0.9.1-beta7.css.map*/
