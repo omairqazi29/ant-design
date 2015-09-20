@@ -21884,7 +21884,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	function noop() {}
 	
 	function isValueNumber(value) {
-	  return /^-?\d+?$/.test(value + '');
+	  return (/^-?\d+?$/.test(value + '')
+	  );
 	}
 	
 	function preventDefault(e) {
@@ -21894,8 +21895,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var InputNumber = React.createClass({
 	  displayName: 'InputNumber',
 	
+	  propTypes: {
+	    onChange: React.PropTypes.func
+	  },
+	
 	  getInitialState: function getInitialState() {
-	    var value;
+	    var value = undefined;
 	    var props = this.props;
 	    if ('value' in props) {
 	      value = props.value;
@@ -21914,6 +21919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      max: Infinity,
 	      min: -Infinity,
 	      style: {},
+	      defaultValue: '',
 	      onChange: noop
 	    };
 	  },
@@ -21924,42 +21930,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: nextProps.value
 	      });
 	    }
-	  },
-	
-	  setValue: function setValue(v, callback) {
-	    this.setState({
-	      value: v
-	    }, callback);
-	    this.props.onChange(v);
-	  },
-	
-	  step: function step(type, e, callback) {
-	    var _this = this;
-	
-	    if (e) {
-	      e.preventDefault();
-	    }
-	    var props = this.props;
-	    if (props.disabled) {
-	      return;
-	    }
-	    var value = this.state.value;
-	    if (isNaN(value)) {
-	      return;
-	    }
-	    var stepNum = props.step || 1;
-	    var val = value;
-	    if (type === 'down') {
-	      val -= stepNum;
-	    } else if (type === 'up') {
-	      val += stepNum;
-	    }
-	    if (val > props.max || val < props.min) {
-	      return;
-	    }
-	    this.setValue(val, function () {
-	      React.findDOMNode(_this.refs.input).focus();
-	    });
 	  },
 	
 	  onChange: function onChange(event) {
@@ -21983,15 +21953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	
-	  down: function down(e) {
-	    this.step('down', e);
-	  },
-	
-	  up: function up(e) {
-	    this.step('up', e);
-	  },
-	
-	  handleKeyDown: function handleKeyDown(e) {
+	  onKeyDown: function onKeyDown(e) {
 	    if (e.keyCode === 38) {
 	      this.up(e);
 	    } else if (e.keyCode === 40) {
@@ -21999,13 +21961,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	
-	  handleFocus: function handleFocus() {
+	  onFocus: function onFocus() {
 	    this.setState({
 	      focused: true
 	    });
 	  },
 	
-	  handleBlur: function handleBlur() {
+	  onBlur: function onBlur() {
 	    this.setState({
 	      focused: false
 	    });
@@ -22041,22 +22003,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	        { className: prefixCls + '-handler-wrap' },
 	        React.createElement(
 	          'div',
-	          { unselectable: "unselectable",
-	            ref: "up",
+	          { unselectable: 'unselectable',
+	            ref: 'up',
 	            onClick: upDisabledClass ? noop : this.up,
 	            onMouseDown: preventDefault,
 	            className: prefixCls + '-handler ' + prefixCls + '-handler-up ' + upDisabledClass },
-	          React.createElement('a', { unselectable: "unselectable", className: prefixCls + '-handler-up-inner', href: "#",
+	          React.createElement('a', { unselectable: 'unselectable', className: prefixCls + '-handler-up-inner', href: '#',
 	            onClick: preventDefault })
 	        ),
 	        React.createElement(
 	          'div',
-	          { unselectable: "unselectable",
-	            ref: "down",
+	          { unselectable: 'unselectable',
+	            ref: 'down',
 	            onMouseDown: preventDefault,
 	            onClick: downDisabledClass ? noop : this.down,
 	            className: prefixCls + '-handler ' + prefixCls + '-handler-down ' + downDisabledClass },
-	          React.createElement('a', { unselectable: "unselectable", className: prefixCls + '-handler-down-inner', href: "#",
+	          React.createElement('a', { unselectable: 'unselectable', className: prefixCls + '-handler-down-inner', href: '#',
 	            onClick: preventDefault })
 	        )
 	      ),
@@ -22064,10 +22026,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'div',
 	        { className: prefixCls + '-input-wrap' },
 	        React.createElement('input', { className: prefixCls + '-input',
-	          autoComplete: "off",
-	          onFocus: this.handleFocus,
-	          onBlur: this.handleBlur,
-	          onKeyDown: this.handleKeyDown,
+	          autoComplete: 'off',
+	          onFocus: this.onFocus,
+	          onBlur: this.onBlur,
+	          onKeyDown: this.onKeyDown,
 	          autoFocus: props.autoFocus,
 	          readOnly: props.readOnly,
 	          disabled: props.disabled,
@@ -22075,10 +22037,54 @@ return /******/ (function(modules) { // webpackBootstrap
 	          min: props.min,
 	          name: props.name,
 	          onChange: this.onChange,
-	          ref: "input",
+	          ref: 'input',
 	          value: this.state.value })
 	      )
 	    );
+	  },
+	
+	  setValue: function setValue(v, callback) {
+	    this.setState({
+	      value: v
+	    }, callback);
+	    this.props.onChange(v);
+	  },
+	
+	  step: function step(type, e) {
+	    var _this = this;
+	
+	    if (e) {
+	      e.preventDefault();
+	    }
+	    var props = this.props;
+	    if (props.disabled) {
+	      return;
+	    }
+	    var value = this.state.value;
+	    if (isNaN(value)) {
+	      return;
+	    }
+	    var stepNum = props.step || 1;
+	    var val = value;
+	    if (type === 'down') {
+	      val -= stepNum;
+	    } else if (type === 'up') {
+	      val += stepNum;
+	    }
+	    if (val > props.max || val < props.min) {
+	      return;
+	    }
+	    this.setValue(val, function () {
+	      React.findDOMNode(_this.refs.input).focus();
+	    });
+	  },
+	
+	  down: function down(e) {
+	    this.step('down', e);
+	  },
+	
+	  up: function up(e) {
+	    this.step('up', e);
 	  }
 	});
 	
@@ -33900,26 +33906,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  onStart: function onStart(file) {
+	    var targetItem = undefined;
 	    var nextFileList = this.state.fileList.concat();
 	    if (file.length > 0) {
-	      file = file.map(function (f) {
+	      targetItem = file.map(function (f) {
 	        f = fileToObject(f);
 	        f.status = 'uploading';
 	        return f;
 	      });
 	      nextFileList = nextFileList.concat(file);
 	    } else {
-	      file = fileToObject(file);
-	      file.status = 'uploading';
-	      nextFileList.push(file);
+	      targetItem = fileToObject(file);
+	      targetItem.status = 'uploading';
+	      nextFileList.push(targetItem);
 	    }
 	    this.onChange({
-	      file: file,
+	      file: targetItem,
 	      fileList: nextFileList
 	    });
 	  },
 	  removeFile: function removeFile(file) {
-	    var fileList = this.state.fileList.concat();
+	    var fileList = this.state.fileList;
 	    var targetItem = (0, _getFileItem2['default'])(file, fileList);
 	    var index = fileList.indexOf(targetItem);
 	    if (index !== -1) {
@@ -33939,7 +33946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.onError(new Error('No response'), response, file);
 	      return;
 	    }
-	    var fileList = this.state.fileList.concat();
+	    var fileList = this.state.fileList;
 	    var targetItem = (0, _getFileItem2['default'])(file, fileList);
 	    // 之前已经删除
 	    if (targetItem) {
@@ -33947,7 +33954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      targetItem.response = response;
 	      this.onChange({
 	        file: targetItem,
-	        fileList: this.state.fileList
+	        fileList: fileList
 	      });
 	    }
 	  },
@@ -35631,6 +35638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(76);
 	var uid = __webpack_require__(325);
 	var Align = __webpack_require__(327);
+	var iframeCount = 0;
 	
 	var IframeUploader = React.createClass({
 	  displayName: 'IframeUploader',
@@ -35644,6 +35652,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  getInitialState: function getInitialState() {
+	    this.iframeCount = iframeCount++;
 	    return {
 	      uid: 1,
 	      loading: false
@@ -35779,7 +35788,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // ie8/9 don't support FileList Object
 	    // http://stackoverflow.com/questions/12830058/ie8-input-type-file-get-files
 	    try {
-	      this.file.name = this.file.name || e.target.value;
+	      this.file.name = e.target.value;
 	      this.file.uid = uid();
 	    } catch (ex) {
 	      if (typeof console !== 'undefined') {
@@ -35814,7 +35823,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  getIframeName: function getIframeName() {
-	    return 'iframe_uploader_' + this.state.uid;
+	    return 'iframe_uploader_' + this.iframeCount + '_' + this.state.uid;
 	  },
 	
 	  render: function render() {
@@ -37258,7 +37267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta7",
+		"version": "0.9.1-beta9",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -37371,4 +37380,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.9.1-beta7.js.map
+//# sourceMappingURL=antd-0.9.1-beta9.js.map
