@@ -33888,7 +33888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return {
 	    lastModified: file.lastModified,
 	    lastModifiedDate: file.lastModifiedDate,
-	    name: file.name,
+	    name: file.filename || file.name,
 	    size: file.size,
 	    type: file.type,
 	    uid: file.uid,
@@ -35764,9 +35764,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var response = undefined;
 	    try {
 	      response = iframe.contentDocument.body.innerHTML;
-	      props.onSuccess(response, this.file);
 	    } catch (err) {
-	      response = 'cross-domain';
+	      response = '{"status":"cross-domain"}';
+	    }
+	    if (response) {
+	      props.onSuccess(response, this.file);
+	    } else {
 	      props.onError(err, null, this.file);
 	    }
 	
@@ -35788,7 +35791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // ie8/9 don't support FileList Object
 	    // http://stackoverflow.com/questions/12830058/ie8-input-type-file-get-files
 	    try {
-	      this.file.name = e.target.value;
+	      this.file.filename = e.target.value;
 	      this.file.uid = uid();
 	    } catch (ex) {
 	      if (typeof console !== 'undefined') {
@@ -37267,7 +37270,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta9",
+		"version": "0.9.1-beta10",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
