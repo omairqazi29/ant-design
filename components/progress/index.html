@@ -561,43 +561,7 @@ Progress 进度条 - Ant Design
 <li>当一个操作会打断当前界面，或者需要在后台运行，且耗时可能超过2秒时；</li>
 <li>当需要显示一个操作完成的百分比时。</li>
 </ul>
-<h2 id="progress-circle-api">Progress Circle API</h2><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th>类型</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>percent</td>
-<td>百分比</td>
-<td>number</td>
-<td>0</td>
-</tr>
-<tr>
-<td>status</td>
-<td>状态，有两个值normal、exception</td>
-<td>string</td>
-<td>normal</td>
-</tr>
-<tr>
-<td>strokeWidth</td>
-<td>进度条线的宽度，单位是进度条画布宽度的百分比</td>
-<td>number</td>
-<td>1</td>
-</tr>
-<tr>
-<td>width</td>
-<td>必填，进度条画布宽度，单位px。这里没有提供height属性设置，Line型高度就是strokeWidth，Circle型高度等于width</td>
-<td>number</td>
-<td>null</td>
-</tr>
-</tbody>
-</table>
-<h2 id="progress-bar-api">Progress Bar API</h2><table>
+<h2 id="api">API</h2><h2 id="progress-bar">Progress Bar</h2><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -630,6 +594,42 @@ Progress 进度条 - Ant Design
 <td>是否显示进度数值和状态图标</td>
 <td>bool</td>
 <td>true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="progress-circle">Progress Circle</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>percent</td>
+<td>百分比</td>
+<td>number</td>
+<td>0</td>
+</tr>
+<tr>
+<td>status</td>
+<td>状态，有两个值normal、exception</td>
+<td>string</td>
+<td>normal</td>
+</tr>
+<tr>
+<td>strokeWidth</td>
+<td>进度条线的宽度，单位是进度条画布宽度的百分比</td>
+<td>number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>width</td>
+<td>必填，进度条画布宽度，单位px。这里没有提供height属性设置，Line型高度就是strokeWidth，Circle型高度等于width</td>
+<td>number</td>
+<td>null</td>
 </tr>
 </tbody>
 </table>
@@ -709,31 +709,52 @@ React.render(
 </div><div class="code-box" id="demo-circle-dynamic">
   <div class="code-box-demo">
     <div id="components-progress-demo-circle-dynamic"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var ProgressCircle = antd.Progress.Circle;
 
 var MyProgress = React.createClass({
-  displayName: 'MyProgress',
+  displayName: "MyProgress",
 
   getInitialState: function getInitialState() {
     return {
       percent: 0
     };
   },
-  componentDidMount: function componentDidMount() {
-    var self = this;
-    setInterval(function () {
-      if (self.state.percent < 100) {
-        self.state.percent += 4;
-      }
-      self.setState({
-        percent: self.state.percent
-      });
-    }, 200);
+  increase: function increase() {
+    var percent = this.state.percent + 10;
+    if (percent > 100) {
+      percent = 100;
+    }
+    this.setState({ percent: percent });
+  },
+  decline: function decline() {
+    var percent = this.state.percent - 10;
+    if (percent < 0) {
+      percent = 0;
+    }
+    this.setState({ percent: percent });
   },
   render: function render() {
-    return React.createElement(ProgressCircle, { percent: this.state.percent });
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(ProgressCircle, { percent: this.state.percent }),
+      React.createElement(
+        "div",
+        { className: "ant-btn-group" },
+        React.createElement(
+          "button",
+          { className: "ant-btn ant-btn-ghost", onClick: this.decline },
+          React.createElement("i", { className: "anticon anticon-minus" })
+        ),
+        React.createElement(
+          "button",
+          { className: "ant-btn ant-btn-ghost", onClick: this.increase },
+          React.createElement("i", { className: "anticon anticon-plus" })
+        )
+      )
+    );
   }
 });
 
@@ -745,25 +766,36 @@ React.render(React.createElement(MyProgress, null), document.getElementById('com
       percent: <span class="number">0</span>
     };
   },
-  componentDidMount: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-    <span class="keyword">var</span> self = <span class="keyword">this</span>;
-    setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-      <span class="keyword">if</span> (self.state.percent &lt; <span class="number">100</span>) {
-        self.state.percent += <span class="number">4</span>;
-      }
-      self.setState({
-        percent: self.state.percent
-      });
-    }, <span class="number">200</span>);
+  increase() {
+    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent + <span class="number">10</span>;
+    <span class="keyword">if</span> (percent &gt; <span class="number">100</span>) {
+      percent = <span class="number">100</span>;
+    }
+    <span class="keyword">this</span>.setState({ percent });
+  },
+  decline() {
+    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent - <span class="number">10</span>;
+    <span class="keyword">if</span> (percent &lt; <span class="number">0</span>) {
+      percent = <span class="number">0</span>;
+    }
+    <span class="keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>;</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-minus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.increase}</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-plus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
 
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>
-  , document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -844,31 +876,52 @@ React.render(
 </div><div class="code-box" id="demo-dynamic">
   <div class="code-box-demo">
     <div id="components-progress-demo-dynamic"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var Progress = antd.Progress.Line;
 
 var MyProgress = React.createClass({
-  displayName: 'MyProgress',
+  displayName: "MyProgress",
 
   getInitialState: function getInitialState() {
     return {
       percent: 0
     };
   },
-  componentDidMount: function componentDidMount() {
-    var self = this;
-    setInterval(function () {
-      if (self.state.percent < 100) {
-        self.state.percent += 4;
-      }
-      self.setState({
-        percent: self.state.percent
-      });
-    }, 200);
+  increase: function increase() {
+    var percent = this.state.percent + 10;
+    if (percent > 100) {
+      percent = 100;
+    }
+    this.setState({ percent: percent });
+  },
+  decline: function decline() {
+    var percent = this.state.percent - 10;
+    if (percent < 0) {
+      percent = 0;
+    }
+    this.setState({ percent: percent });
   },
   render: function render() {
-    return React.createElement(Progress, { percent: this.state.percent });
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(Progress, { percent: this.state.percent }),
+      React.createElement(
+        "div",
+        { className: "ant-btn-group" },
+        React.createElement(
+          "button",
+          { className: "ant-btn ant-btn-ghost", onClick: this.decline },
+          React.createElement("i", { className: "anticon anticon-minus" })
+        ),
+        React.createElement(
+          "button",
+          { className: "ant-btn ant-btn-ghost", onClick: this.increase },
+          React.createElement("i", { className: "anticon anticon-plus" })
+        )
+      )
+    );
   }
 });
 
@@ -880,25 +933,36 @@ React.render(React.createElement(MyProgress, null), document.getElementById('com
       percent: <span class="number">0</span>
     };
   },
-  componentDidMount: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-    <span class="keyword">var</span> self = <span class="keyword">this</span>;
-    setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-      <span class="keyword">if</span> (self.state.percent &lt; <span class="number">100</span>) {
-        self.state.percent += <span class="number">4</span>;
-      }
-      self.setState({
-        percent: self.state.percent
-      });
-    }, <span class="number">200</span>);
+  increase() {
+    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent + <span class="number">10</span>;
+    <span class="keyword">if</span> (percent &gt; <span class="number">100</span>) {
+      percent = <span class="number">100</span>;
+    }
+    <span class="keyword">this</span>.setState({ percent });
+  },
+  decline() {
+    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent - <span class="number">10</span>;
+    <span class="keyword">if</span> (percent &lt; <span class="number">0</span>) {
+      percent = <span class="number">0</span>;
+    }
+    <span class="keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>;</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-minus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.increase}</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-plus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
 
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>
-  , document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
