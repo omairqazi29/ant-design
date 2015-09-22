@@ -681,13 +681,11 @@ Modal 对话框 - Ant Design
 
 var Modal = antd.Modal;
 
-var Test = React.createClass({
-  displayName: "Test",
+var App = React.createClass({
+  displayName: "App",
 
   getInitialState: function getInitialState() {
-    return {
-      visible: false
-    };
+    return { visible: false };
   },
   showModal: function showModal() {
     this.setState({
@@ -717,11 +715,8 @@ var Test = React.createClass({
       ),
       React.createElement(
         Modal,
-        { title: "第一个 Modal",
-          visible: this.state.visible,
-          confirmLoading: this.state.confirmLoading,
-          onOk: this.handleOk,
-          onCancel: this.handleCancel },
+        { title: "第一个 Modal", visible: this.state.visible,
+          confirmLoading: this.state.confirmLoading, onOk: this.handleOk, onCancel: this.handleCancel },
         React.createElement(
           "p",
           null,
@@ -742,13 +737,11 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+React.render(React.createElement(App, null), document.getElementById('components-modal-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
 
-<span class="keyword">var</span> Test = React.createClass({
-  getInitialState(){
-    <span class="keyword">return</span>{
-      visible: <span class="literal">false</span>
-    };
+<span class="keyword">var</span> App = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> { visible: <span class="literal">false</span> };
   },
   showModal() {
     <span class="keyword">this</span>.setState({
@@ -770,11 +763,8 @@ React.render(React.createElement(Test, null), document.getElementById('component
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span>
-        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span>
-        <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
-        <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span> <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
+        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -783,7 +773,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span> , document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
