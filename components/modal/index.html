@@ -569,15 +569,21 @@ Modal 对话框 - Ant Design
 </thead>
 <tbody>
 <tr>
-<td>title</td>
-<td>标题</td>
-<td>React.Element</td>
+<td>visible</td>
+<td>对话框是否可见</td>
+<td>Boolean</td>
 <td>无</td>
 </tr>
 <tr>
-<td>mousePosition</td>
-<td>鼠标位置，设置弹窗初始位置</td>
-<td>{x:number,y:number}</td>
+<td>confirmLoading</td>
+<td>确定按钮 loading</td>
+<td>Boolean</td>
+<td>无</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>React.Element</td>
 <td>无</td>
 </tr>
 <tr>
@@ -691,6 +697,7 @@ var Test = React.createClass({
   handleOk: function handleOk() {
     console.log('点击了确定');
     this.setState({
+      confirmLoading: false,
       visible: false
     });
   },
@@ -712,6 +719,7 @@ var Test = React.createClass({
         Modal,
         { title: "第一个 Modal",
           visible: this.state.visible,
+          confirmLoading: this.state.confirmLoading,
           onOk: this.handleOk,
           onCancel: this.handleCancel },
         React.createElement(
@@ -750,6 +758,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   handleOk() {
     console.log(<span class="string">'点击了确定'</span>);
     <span class="keyword">this</span>.setState({
+      confirmLoading: <span class="literal">false</span>,
       visible: <span class="literal">false</span>
     });
   },
@@ -763,6 +772,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
       <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
+        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
         <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
