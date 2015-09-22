@@ -7,6 +7,7 @@ var Upload = antd.Upload;
 var message = antd.message;
 
 var props = {
+  name: 'file',
   action: '/upload.do',
   onChange: function onChange(info) {
     if (info.file.status !== 'uploading') {
@@ -33,6 +34,7 @@ React.render(React.createElement(
 <span class="keyword">var</span> message = antd.message;
 
 <span class="keyword">var</span> props = {
+  name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>,
   onChange(info) {
     <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
