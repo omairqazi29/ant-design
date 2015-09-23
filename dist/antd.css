@@ -7243,9 +7243,9 @@ textarea.ant-input-number {
   height: 14px;
   overflow: hidden;
   color: #999;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
   position: relative;
+  -webkit-transition: all 0.1s linear;
+          transition: all 0.1s linear;
 }
 .ant-input-number-handler:hover {
   background: #fefefe;
@@ -7270,8 +7270,8 @@ textarea.ant-input-number {
   position: absolute;
   width: 12px;
   height: 12px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  -webkit-transition: all 0.1s linear;
+          transition: all 0.1s linear;
   display: inline-block;
   font-size: 0.58333333;
   font-size: 7px \9;
@@ -7405,8 +7405,6 @@ textarea.ant-input-number {
   height: 28px;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-          transition: opacity 0.2s linear;
 }
 .ant-input-number:hover .ant-input-number-handler-wrap {
   opacity: 1;
@@ -7416,8 +7414,6 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-up-inner {
   top: 1px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-input-number-handler-up-inner:before {
