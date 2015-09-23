@@ -21243,6 +21243,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setState({
 	          pageSize: size
 	        });
+	
+	        this.props.onShowSizeChange(this.state.current, size);
 	      }
 	    }
 	  }, {
@@ -21308,6 +21310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  pageSize: React.PropTypes.number,
 	  onChange: React.PropTypes.func,
 	  showSizeChanger: React.PropTypes.bool,
+	  onShowSizeChange: React.PropTypes.func,
 	  selectComponentClass: React.PropTypes.func,
 	  showQuickJumper: React.PropTypes.bool
 	};
@@ -21322,7 +21325,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  prefixCls: 'rc-pagination',
 	  selectComponentClass: null,
 	  showQuickJumper: false,
-	  showSizeChanger: false
+	  showSizeChanger: false,
+	  onShowSizeChange: noop
 	};
 	
 	module.exports = Pagination;
