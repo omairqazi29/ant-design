@@ -7243,6 +7243,12 @@ textarea.ant-input-number {
   height: 14px;
   overflow: hidden;
   color: #999;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+  position: relative;
+}
+.ant-input-number-handler:hover {
+  background: #fefefe;
 }
 .ant-input-number-handler:hover .ant-input-number-handler-up-inner,
 .ant-input-number-handler:hover .ant-input-number-handler-down-inner {
@@ -7257,19 +7263,21 @@ textarea.ant-input-number {
   text-transform: none;
   text-rendering: auto;
   line-height: 12px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   width: 12px;
   height: 12px;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
   display: inline-block;
-  font-size: 0.66666667;
-  font-size: 8px \9;
-  -webkit-transform: scale(0.66666667) rotate(0deg);
-      -ms-transform: scale(0.66666667) rotate(0deg);
-          transform: scale(0.66666667) rotate(0deg);
+  font-size: 0.58333333;
+  font-size: 7px \9;
+  -webkit-transform: scale(0.58333333) rotate(0deg);
+      -ms-transform: scale(0.58333333) rotate(0deg);
+          transform: scale(0.58333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -7317,8 +7325,8 @@ textarea.ant-input-number {
   -moz-appearance: textfield;
   line-height: 28px;
   height: 28px;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear;
   color: #666;
   border: 0;
   border-radius: 6px;
@@ -7353,7 +7361,10 @@ textarea.ant-input-number {
   top: 2px;
 }
 .ant-input-number-lg .ant-input-number-handler-down-inner {
-  top: 18px;
+  bottom: 2px;
+}
+.ant-input-number-lg .ant-input-number-handler-up:hover {
+  height: 18px;
 }
 .ant-input-number-sm {
   padding: 0;
@@ -7379,7 +7390,13 @@ textarea.ant-input-number {
   top: -1px;
 }
 .ant-input-number-sm .ant-input-number-handler-down-inner {
-  top: 10px;
+  bottom: -1px;
+}
+.ant-input-number-sm .ant-input-number-handler-up:hover {
+  height: 13px;
+}
+.ant-input-number-sm .ant-input-number-handler-down:hover .ant-input-number-handler-down-inner {
+  bottom: 4px;
 }
 .ant-input-number-handler-wrap {
   float: right;
@@ -7388,18 +7405,19 @@ textarea.ant-input-number {
   height: 28px;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s linear;
+          transition: opacity 0.2s linear;
 }
 .ant-input-number:hover .ant-input-number-handler-wrap {
   opacity: 1;
 }
 .ant-input-number-handler-up {
-  border-bottom: 1px solid #D9D9D9;
   cursor: pointer;
 }
 .ant-input-number-handler-up-inner {
   top: 1px;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-input-number-handler-up-inner:before {
@@ -7411,12 +7429,24 @@ textarea.ant-input-number {
   -webkit-transform-origin: 47.5% 51%;
   /* fix chrome position */
 }
+.ant-input-number-handler-up:hover {
+  height: 16px;
+}
+.ant-input-number-handler-up:hover .ant-input-number-handler-up-inner {
+  margin-top: 2px;
+}
 .ant-input-number-handler-down {
+  border-top: 1px solid #D9D9D9;
+  top: -1px;
   cursor: pointer;
 }
 .ant-input-number-handler-down-inner:before {
   text-align: center;
   content: "\e600";
+}
+.ant-input-number-handler-down:hover {
+  height: 16px;
+  margin-top: -2px;
 }
 .ant-input-number-handler-down-disabled .ant-input-number-handler-down-inner,
 .ant-input-number-handler-up-disabled .ant-input-number-handler-down-inner,
@@ -7441,6 +7471,9 @@ textarea.ant-input-number {
   opacity: 0.72;
   cursor: not-allowed;
   background-color: #f3f3f3;
+}
+.ant-input-number-disabled .ant-input-number-handler-wrap {
+  display: none;
 }
 .ant-input-number-disabled .ant-input-number-handler {
   opacity: 0.72;
