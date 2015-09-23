@@ -560,7 +560,7 @@ Pagination 分页 - Ant Design
 <li>当加载/渲染所有数据将花费很多时间时；</li>
 <li>可切换页码浏览数据。</li>
 </ul>
-<h2 id="api">API</h2><h3 id="pagination">Pagination</h3><table>
+<h2 id="api">API</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span></code></pre></div><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -599,6 +599,12 @@ Pagination 分页 - Ant Design
 <td>是否可以改变 pageSize</td>
 <td>Bool</td>
 <td>false</td>
+</tr>
+<tr>
+<td>onShowSizeChange</td>
+<td>pageSize 变化的回调</td>
+<td>Function</td>
+<td>noop</td>
 </tr>
 <tr>
 <td>showQuickJumper</td>
@@ -666,14 +672,22 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { showSizeChanger: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+function onShowSizeChange(current, pageSize) {
+  console.log(current, pageSize);
+}
+
+React.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
+<span class="function"><span class="keyword">function</span> <span class="title">onShowSizeChange</span><span class="params">(current, pageSize)</span> {</span>
+  console.log(current, pageSize);
+}
+
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showSizeChanger</span>=<span class="value">{true}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
+  <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showSizeChanger</span>=<span class="value">{true}</span> <span class="attribute">onShowSizeChange</span>=<span class="value">{onShowSizeChange}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-changer'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

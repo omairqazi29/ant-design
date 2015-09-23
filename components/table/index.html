@@ -1027,7 +1027,8 @@ for (var i = 0; i < 46; i++) {
 
 var pagination = {
   total: data.length,
-  current: 2
+  current: 2,
+  showSizeChanger: true
 };
 
 React.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
@@ -1058,7 +1059,8 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
 
 <span class="keyword">var</span> pagination = {
   total: data.length,
-  current: <span class="number">2</span>
+  current: <span class="number">2</span>,
+  showSizeChanger: <span class="literal">true</span>
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{pagination}</span> /&gt;</span>

@@ -22804,6 +22804,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	
+	  handleShowSizeChange: function handleShowSizeChange(current, pageSize) {
+	    var pagination = (0, _objectAssign3['default'])(this.state.pagination, {
+	      pageSize: pageSize
+	    });
+	    this.fetch({ pagination: pagination });
+	  },
+	
 	  renderPagination: function renderPagination() {
 	    // 强制不需要分页
 	    if (!this.hasPagination()) {
@@ -22820,7 +22827,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return total > 0 ? _react2['default'].createElement(_pagination2['default'], _extends({ className: classString,
 	      onChange: this.handlePageChange,
 	      total: total,
-	      pageSize: 10
+	      pageSize: 10,
+	      onShowSizeChange: this.handleShowSizeChange
 	    }, this.state.pagination)) : null;
 	  },
 	
