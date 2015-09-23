@@ -36350,7 +36350,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta11",
+		"version": "0.9.1-beta12",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -36463,4 +36463,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=antd-0.9.1-beta11.js.map
+//# sourceMappingURL=antd-0.9.1-beta12.js.map
