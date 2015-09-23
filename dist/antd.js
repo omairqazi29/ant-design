@@ -21195,8 +21195,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    // private methods
 	
-	    value: function _calcPage() {
-	      return Math.floor((this.props.total - 1) / this.state.pageSize) + 1;
+	    value: function _calcPage(pageSize) {
+	      if (typeof pageSize === 'undefined') {
+	        pageSize = this.state.pageSize;
+	      }
+	      return Math.floor((this.props.total - 1) / pageSize) + 1;
 	    }
 	  }, {
 	    key: '_isValid',
@@ -21240,11 +21243,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: '_changePageSize',
 	    value: function _changePageSize(size) {
 	      if (typeof size === 'number') {
+	        var current = this.state.current;
+	
 	        this.setState({
 	          pageSize: size
 	        });
 	
-	        this.props.onShowSizeChange(this.state.current, size);
+	        if (this.state.current > this._calcPage(size)) {
+	          current = this._calcPage(size);
+	          this.setState({
+	            current: current,
+	            _current: current
+	          });
+	        }
+	
+	        this.props.onShowSizeChange(current, size);
 	      }
 	    }
 	  }, {
