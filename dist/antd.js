@@ -8582,6 +8582,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _react = __webpack_require__(76);
@@ -8597,7 +8599,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      placement: 'top'
+	      prefixCls: 'ant-tooltip',
+	      placement: 'top',
+	      mouseEnterDelay: 0.1,
+	      mouseLeaveDelay: 0.1
 	    };
 	  },
 	  render: function render() {
@@ -8609,12 +8614,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    })[this.props.placement];
 	    return _react2['default'].createElement(
 	      _rcTooltip2['default'],
-	      { placement: this.props.placement,
-	        prefixCls: 'ant-tooltip',
-	        delay: 0.1,
-	        trigger: this.props.trigger,
-	        transitionName: transitionName,
-	        overlay: this.props.title },
+	      _extends({ transitionName: transitionName,
+	        overlay: this.props.title
+	      }, this.props),
 	      this.props.children
 	    );
 	  }
@@ -8663,8 +8665,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    afterVisibleChange: _react2['default'].PropTypes.func,
 	    overlay: _react2['default'].PropTypes.node.isRequired,
 	    overlayStyle: _react2['default'].PropTypes.object,
+	    overlayClassName: _react2['default'].PropTypes.string,
 	    wrapStyle: _react2['default'].PropTypes.object,
-	    delay: _react2['default'].PropTypes.number
+	    mouseEnterDelay: _react2['default'].PropTypes.number,
+	    mouseLeaveDelay: _react2['default'].PropTypes.number,
+	    getTooltipContainer: _react2['default'].PropTypes.func
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
@@ -8672,7 +8677,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      prefixCls: 'rc-tooltip',
 	      onVisibleChange: function onVisibleChange() {},
 	      afterVisibleChange: function afterVisibleChange() {},
-	      delay: 0.1,
+	      mouseEnterDelay: 0,
+	      mouseLeaveDelay: 0.1,
 	      overlayStyle: {},
 	      wrapStyle: {},
 	      placement: 'right',
@@ -8744,7 +8750,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var tipContainer = this.tipContainer;
 	    if (tipContainer) {
 	      _react2['default'].unmountComponentAtNode(tipContainer);
-	      document.body.removeChild(tipContainer);
+	      if (this.props.getTooltipContainer) {
+	        var mountNode = this.props.getTooltipContainer();
+	        mountNode.removeChild(tipContainer);
+	      } else {
+	        document.body.removeChild(tipContainer);
+	      }
 	      this.tipContainer = null;
 	    }
 	    if (this.delayTimer) {
@@ -8760,11 +8771,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onMouseEnter: function onMouseEnter() {
-	    this.delaySetVisible(true);
+	    this.delaySetVisible(true, this.props.mouseEnterDelay);
 	  },
 	
 	  onMouseLeave: function onMouseLeave() {
-	    this.delaySetVisible(false);
+	    this.delaySetVisible(false, this.props.mouseLeaveDelay);
 	  },
 	
 	  onFocus: function onFocus() {
@@ -8827,7 +8838,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  getTipContainer: function getTipContainer() {
 	    if (!this.tipContainer) {
 	      this.tipContainer = document.createElement('div');
-	      document.body.appendChild(this.tipContainer);
+	      if (this.props.getTooltipContainer) {
+	        var mountNode = this.props.getTooltipContainer();
+	        mountNode.appendChild(this.tipContainer);
+	      } else {
+	        document.body.appendChild(this.tipContainer);
+	      }
 	    }
 	    return this.tipContainer;
 	  },
@@ -8847,6 +8863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _Popup2['default'],
 	      _extends({ prefixCls: props.prefixCls,
 	        visible: state.visible,
+	        className: props.overlayClassName,
 	        trigger: props.trigger,
 	        placement: props.placement,
 	        animation: props.animation
@@ -8906,14 +8923,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	
-	  delaySetVisible: function delaySetVisible(visible) {
+	  delaySetVisible: function delaySetVisible(visible, delayS) {
 	    var _this2 = this;
 	
-	    var delay = this.props.delay * 1000;
+	    var delay = delayS * 1000;
+	    if (this.delayTimer) {
+	      clearTimeout(this.delayTimer);
+	      this.delayTimer = null;
+	    }
 	    if (delay) {
-	      if (this.delayTimer) {
-	        clearTimeout(this.delayTimer);
-	      }
 	      this.delayTimer = setTimeout(function () {
 	        _this2.setVisible(visible);
 	        _this2.delayTimer = null;
@@ -9037,6 +9055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _rcAlign2['default'],
 	        { target: this.getTarget,
 	          key: 'popup',
+	          monitorWindowResize: true,
 	          'data-visible': props.visible,
 	          disabled: !props.visible,
 	          align: align,
@@ -16364,6 +16383,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _react = __webpack_require__(76);
@@ -16381,9 +16402,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      transitionName: '',
+	      prefixCls: prefixCls,
 	      placement: 'top',
 	      trigger: 'hover',
+	      mouseEnterDelay: 0.1,
+	      mouseLeaveDelay: 0.1,
 	      overlayStyle: {}
 	    };
 	  },
@@ -16412,13 +16435,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return _react2['default'].createElement(
 	      _rcTooltip2['default'],
-	      { placement: this.props.placement,
-	        prefixCls: prefixCls,
-	        delay: 0.1,
-	        overlayStyle: this.props.overlayStyle,
-	        transitionName: transitionName,
-	        trigger: this.props.trigger,
-	        overlay: overlay },
+	      _extends({ transitionName: transitionName
+	      }, this.props, { overlay: overlay }),
 	      this.props.children
 	    );
 	  }
@@ -22569,22 +22587,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    var newState = {};
 	    if ('pagination' in nextProps && nextProps.pagination !== false) {
-	      newState.pagination = (0, _objectAssign3['default'])({}, this.state.pagination, nextProps.pagination);
+	      this.setState({
+	        pagination: (0, _objectAssign3['default'])({}, this.state.pagination, nextProps.pagination)
+	      });
 	    }
 	    // 外界只有 dataSource 的变化会触发新请求
 	    if ('dataSource' in nextProps && nextProps.dataSource !== this.props.dataSource) {
-	      newState = (0, _objectAssign3['default'])(newState, {
+	      this.setState({
 	        selectedRowKeys: [],
 	        dataSource: nextProps.dataSource,
 	        loading: true
-	      });
+	      }, this.fetch);
 	    }
 	    if (nextProps.columns !== this.props.columns) {
-	      newState.filters = {};
+	      this.setState({
+	        filters: {}
+	      });
 	    }
-	    this.setState(newState, this.fetch);
 	  },
 	
 	  hasPagination: function hasPagination(pagination) {
@@ -36363,7 +36383,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.9.1-beta12",
+		"version": "0.9.1",
 		"stableVersion": "0.9.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -36419,7 +36439,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.2.0",
 			"rc-tabs": "~5.3.2",
-			"rc-tooltip": "~2.6.4",
+			"rc-tooltip": "~2.8.0",
 			"rc-tree": "~0.15.4",
 			"rc-upload": "~1.6.4",
 			"rc-util": "~2.0.3",
