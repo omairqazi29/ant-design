@@ -2,6 +2,7 @@ import React from 'react';
 import reqwest from 'reqwest-without-xhr2';
 import Table from 'rc-table';
 import Checkbox from '../checkbox';
+import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
 import Pagination from '../pagination';
 import objectAssign from 'object-assign';
@@ -48,6 +49,7 @@ let AntTable = React.createClass({
       sortColumn: '',
       sortOrder: '',
       sorter: null,
+      radioIndex: null,
       pagination: this.hasPagination() ? objectAssign({
         pageSize: 10,
         current: 1
@@ -173,10 +175,33 @@ let AntTable = React.createClass({
     }
   },
 
+  handleRadioSelect: function (record, rowIndex, e) {
+    let checked = e.target.checked;
+    let selectedRowKeys = this.state.selectedRowKeys.concat();
+    let key = this.getRecordKey(record, rowIndex);
+    selectedRowKeys = [key];
+    this.setState({
+      selectedRowKeys: selectedRowKeys,
+      radioIndex: record.key
+    });
+    if (this.props.rowSelection.onSelect) {
+      let data = this.getCurrentPageData();
+      let selectedRows = data.filter((row, i) => {
+        return selectedRowKeys.indexOf(this.getRecordKey(row, i)) >= 0;
+      });
+      this.props.rowSelection.onSelect(record, checked, selectedRows);
+    }
+  },
+
   handleSelectAllRow(e) {
     let checked = e.target.checked;
     let data = this.getCurrentPageData();
-    let selectedRowKeys = checked ? data.map((item, i) => {
+    let selectedRowKeys = checked ? data.filter((item) => {
+      if (this.props.rowSelection.getCheckboxProps) {
+        return !this.props.rowSelection.getCheckboxProps(item).disabled;
+      }
+      return true;
+    }).map((item, i) => {
       return this.getRecordKey(item, i);
     }) : [];
     this.setState({
@@ -204,10 +229,29 @@ let AntTable = React.createClass({
     });
   },
 
+  onRadioChange: function (ev) {
+    this.setState({
+      radioIndex: ev.target.value
+    });
+  },
+
+  renderSelectionRadio(value, record, index) {
+    let rowIndex = this.getRecordKey(record, index); // 从 1 开始
+    let props = {};
+    if (this.props.rowSelection.getCheckboxProps) {
+      props = this.props.rowSelection.getCheckboxProps.call(this, record);
+    }
+    return <Radio disabled={props.disabled} onChange={this.handleRadioSelect.bind(this, record, rowIndex)} value={record.key} checked={this.state.radioIndex == record.key} />;
+  },
+
   renderSelectionCheckBox(value, record, index) {
     let rowIndex = this.getRecordKey(record, index); // 从 1 开始
     let checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0;
-    return <Checkbox checked={checked} onChange={this.handleSelect.bind(this, record, rowIndex)}/>;
+    let props = {};
+    if (this.props.rowSelection.getCheckboxProps) {
+      props = this.props.rowSelection.getCheckboxProps.call(this, record);
+    }
+    return <Checkbox checked={checked} disabled={props.disabled} onChange={this.handleSelect.bind(this, record, rowIndex)}/>;
   },
 
   getRecordKey(record, index) {
@@ -222,25 +266,41 @@ let AntTable = React.createClass({
       if (!data.length) {
         checked = false;
       } else {
-        checked = data.every((item, i) => {
+        checked = data.filter((item) => {
+          if (this.props.rowSelection.getCheckboxProps) {
+            return !this.props.rowSelection.getCheckboxProps(item).disabled;
+          }
+          return true;
+        }).every((item, i) => {
           let key = this.getRecordKey(item, i);
           return this.state.selectedRowKeys.indexOf(key) >= 0;
         });
       }
-      let checkboxAll = <Checkbox checked={checked} onChange={this.handleSelectAllRow}/>;
-      let selectionColumn = {
-        key: 'selection-column',
-        title: checkboxAll,
-        width: 60,
-        render: this.renderSelectionCheckBox,
-        className: 'ant-table-selection-column'
-      };
+      let selectionColumn;
+      if (this.props.rowSelection.type === 'radio') {
+        selectionColumn = {
+          key: 'selection-column',
+          width: 60,
+          render: this.renderSelectionRadio,
+          className: 'ant-table-selection-column'
+        };
+      } else {
+        let checkboxAll = <Checkbox checked={checked} onChange={this.handleSelectAllRow}/>;
+        selectionColumn = {
+          key: 'selection-column',
+          title: checkboxAll,
+          width: 60,
+          render: this.renderSelectionCheckBox,
+          className: 'ant-table-selection-column'
+        };
+      }
       if (columns[0] &&
         columns[0].key === 'selection-column') {
         columns[0] = selectionColumn;
       } else {
         columns.unshift(selectionColumn);
       }
+
     }
     return columns;
   },
@@ -460,6 +520,23 @@ let AntTable = React.createClass({
   componentDidMount() {
     if (!this.isLocalDataSource()) {
       this.fetch();
+    }
+    if (this.props.rowSelection && this.props.rowSelection.getCheckboxProps) {
+      let data = this.getCurrentPageData();
+      let selectedRowKeys = this.state.selectedRowKeys.concat();
+
+      data.filter((item) => {
+        if (this.props.rowSelection.getCheckboxProps) {
+          return this.props.rowSelection.getCheckboxProps(item).defaultValue;
+        }
+        return true;
+      }).map((record, rowIndex) => {
+        selectedRowKeys.push(this.getRecordKey(record, rowIndex));
+      });
+
+      this.setState({
+        selectedRowKeys: selectedRowKeys
+      });
     }
   },
 
