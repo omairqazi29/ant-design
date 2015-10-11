@@ -4,20 +4,22 @@
     <script>(function(){"use strict";
 
 var Affix = antd.Affix;
+var Button = antd.Button;
 
 React.render(React.createElement(
   Affix,
   null,
   React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-primary" },
+    Button,
+    { type: "primary" },
     "固定在顶部"
   )
 ), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
+<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
 , document.getElementById('components-affix-demo-basic'));</span></code></pre></div>
   </div>

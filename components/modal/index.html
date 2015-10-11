@@ -13,7 +13,7 @@ Modal 对话框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Modal 对话框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
-        stable: '0.9.0'
+        latest: '0.10.0-beta1',
+        stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -656,9 +656,9 @@ Modal 对话框 - Ant Design
 </tr>
 <tr>
 <td>iconClassName</td>
-<td>图标样式名</td>
+<td>图标 Icon 类型</td>
 <td>String</td>
-<td>anticon-question-circle</td>
+<td>question-circle</td>
 </tr>
 </tbody>
 </table>
@@ -680,6 +680,7 @@ Modal 对话框 - Ant Design
     <script>(function(){"use strict";
 
 var Modal = antd.Modal;
+var Button = antd.Button;
 
 var App = React.createClass({
   displayName: "App",
@@ -709,8 +710,8 @@ var App = React.createClass({
       "div",
       null,
       React.createElement(
-        "button",
-        { className: "ant-btn ant-btn-primary", onClick: this.showModal },
+        Button,
+        { type: "primary", onClick: this.showModal },
         "显示对话框"
       ),
       React.createElement(
@@ -738,6 +739,7 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), document.getElementById('components-modal-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
@@ -762,7 +764,7 @@ React.render(React.createElement(App, null), document.getElementById('components
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span> <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
         <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -788,6 +790,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     <script>(function(){"use strict";
 
 var Modal = antd.Modal;
+var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -819,8 +822,8 @@ var Test = React.createClass({
       "div",
       null,
       React.createElement(
-        "button",
-        { className: "ant-btn ant-btn-primary", onClick: this.showModal },
+        Button,
+        { type: "primary", onClick: this.showModal },
         "显示对话框"
       ),
       React.createElement(
@@ -829,12 +832,12 @@ var Test = React.createClass({
           visible: this.state.visible,
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
-            "button",
-            { key: "back", className: "ant-btn ant-btn-lg", onClick: this.handleCancel },
+            Button,
+            { key: "back", size: "lg", onClick: this.handleCancel },
             "返 回"
           ), React.createElement(
-            "button",
-            { key: "submit", className: 'ant-btn ant-btn-primary ant-btn-lg ' + (this.state.loading ? 'ant-btn-loading' : ''), onClick: this.handleOk },
+            Button,
+            { key: "submit", type: "primary", size: "lg", loading: this.state.loading, onClick: this.handleOk },
             "提 交"
           )] },
         React.createElement(
@@ -868,6 +871,7 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
@@ -892,17 +896,17 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>
         显示对话框
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">ref</span>=<span class="value">"modal"</span>
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
-          &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">{'ant-btn</span> <span class="attribute">ant-btn-primary</span> <span class="attribute">ant-btn-lg</span> ' + (<span class="attribute">this.state.loading</span>?'<span class="attribute">ant-btn-loading</span>'<span class="attribute">:</span>'')} <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+          &lt;<span class="attribute">Button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>,
+          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
             提 交
-          <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         ]}&gt;
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -929,6 +933,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
     <script>(function(){'use strict';
 
 var confirm = antd.Modal.confirm;
+var Button = antd.Button;
 
 function showConfirm() {
   confirm({
@@ -945,10 +950,11 @@ function showConfirm() {
 }
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn', onClick: showConfirm },
+  Button,
+  { onClick: showConfirm },
   '确认对话框'
 ), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({
@@ -965,9 +971,9 @@ React.render(React.createElement(
 }
 
 React.render(
-<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
   确认对话框
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm-promise'));</span></code></pre></div>
+<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm-promise'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -984,6 +990,8 @@ React.render(
     <script>(function(){'use strict';
 
 var Modal = antd.Modal;
+var Button = antd.Button;
+
 var ModalText = '对话框的内容';
 
 var Test = React.createClass({
@@ -1023,8 +1031,8 @@ var Test = React.createClass({
       'div',
       null,
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary', onClick: this.showModal },
+        Button,
+        { type: 'primary', onClick: this.showModal },
         '显示对话框'
       ),
       React.createElement(
@@ -1044,6 +1052,8 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-custom'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> ModalText = <span class="string">'对话框的内容'</span>;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1076,7 +1086,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"对话框标题"</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
@@ -1102,6 +1112,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</s
     <script>(function(){'use strict';
 
 var confirm = antd.Modal.confirm;
+var Button = antd.Button;
 
 function showConfirm() {
   confirm({
@@ -1115,10 +1126,11 @@ function showConfirm() {
 }
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn', onClick: showConfirm },
+  Button,
+  { onClick: showConfirm },
   '确认对话框'
 ), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({
@@ -1132,9 +1144,9 @@ React.render(React.createElement(
 }
 
 React.render(
-<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
   确认对话框
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>
+<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1149,6 +1161,7 @@ React.render(
     <script>(function(){'use strict';
 
 var Modal = antd.Modal;
+var Button = antd.Button;
 
 function info() {
   Modal.info({
@@ -1181,21 +1194,22 @@ React.render(React.createElement(
   'div',
   null,
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: info },
+    Button,
+    { onClick: info },
     '信息提示'
   ),
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: success },
+    Button,
+    { onClick: success },
     '成功提示'
   ),
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: error },
+    Button,
+    { onClick: error },
     '失败提示'
   )
 ), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
   Modal.info({
@@ -1225,9 +1239,9 @@ React.render(React.createElement(
 }
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-modal-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

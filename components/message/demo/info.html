@@ -3,22 +3,25 @@
     <div id="components-message-demo-info"></div>
     <script>(function(){'use strict';
 
+var Button = antd.Button;
+
 var message = antd.message;
 var info = function info() {
   message.info('这是一条普通的提醒');
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn ant-btn-primary', onClick: info },
+  Button,
+  { type: 'primary', onClick: info },
   '显示普通提醒'
-), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">
+), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.info(<span class="string">'这是一条普通的提醒'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

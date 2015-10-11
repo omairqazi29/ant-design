@@ -13,7 +13,7 @@ Menu 导航菜单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Menu 导航菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
-        stable: '0.9.0'
+        latest: '0.10.0-beta1',
+        stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -690,6 +690,7 @@ Menu 导航菜单 - Ant Design
 
 var Menu = antd.Menu;
 var SubMenu = Menu.SubMenu;
+var Icon = antd.Icon;
 
 var App = React.createClass({
   displayName: 'App',
@@ -712,13 +713,13 @@ var App = React.createClass({
       React.createElement(
         Menu.Item,
         { key: 'mail' },
-        React.createElement('i', { className: 'anticon anticon-mail' }),
+        React.createElement(Icon, { type: 'mail' }),
         '导航一'
       ),
       React.createElement(
         Menu.Item,
         { key: 'app' },
-        React.createElement('i', { className: 'anticon anticon-appstore' }),
+        React.createElement(Icon, { type: 'appstore' }),
         '导航二'
       ),
       React.createElement(
@@ -726,7 +727,7 @@ var App = React.createClass({
         { title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-setting' }),
+            React.createElement(Icon, { type: 'setting' }),
             '导航 - 子菜单'
           ) },
         React.createElement(
@@ -765,6 +766,7 @@ var App = React.createClass({
 
 React.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> SubMenu = Menu.SubMenu;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
@@ -781,12 +783,12 @@ React.render(React.createElement(App, null), document.getElementById('components
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick}</span> <span class="attribute">selectedKeys</span>=<span class="value">{[this.state.current]}</span> <span class="attribute">mode</span>=<span class="value">"horizontal"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"mail"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-mail"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航一
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span>导航一
     <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"app"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-appstore"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航二
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span>导航二
     <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-setting"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航 - 子菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+    <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span>导航 - 子菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -815,6 +817,7 @@ React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, 
 
 var Menu = antd.Menu;
 var SubMenu = Menu.SubMenu;
+var Icon = antd.Icon;
 
 var Sider = React.createClass({
   displayName: 'Sider',
@@ -843,7 +846,7 @@ var Sider = React.createClass({
         { key: 'sub1', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-mail' }),
+            React.createElement(Icon, { type: 'mail' }),
             React.createElement(
               'span',
               null,
@@ -876,7 +879,7 @@ var Sider = React.createClass({
         { key: 'sub2', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-appstore' }),
+            React.createElement(Icon, { type: 'appstore' }),
             React.createElement(
               'span',
               null,
@@ -913,7 +916,7 @@ var Sider = React.createClass({
         { key: 'sub4', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-setting' }),
+            React.createElement(Icon, { type: 'setting' }),
             React.createElement(
               'span',
               null,
@@ -946,6 +949,7 @@ var Sider = React.createClass({
 });
 React.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> SubMenu = Menu.SubMenu;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> Sider = React.createClass({
   getInitialState() {
@@ -965,13 +969,13 @@ React.render(React.createElement(Sider, null), document.getElementById('componen
                  <span class="attribute">defaultOpenKeys</span>=<span class="value">{['sub1']}</span>
                  <span class="attribute">selectedKeys</span>=<span class="value">{[this.state.current]}</span>
                  <span class="attribute">mode</span>=<span class="value">"inline"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-mail"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-appstore"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"5"</span>&gt;</span>选项5<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"6"</span>&gt;</span>选项6<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub3"</span> <span class="attribute">title</span>=<span class="value">"三级导航"</span>&gt;</span>
@@ -979,7 +983,7 @@ React.render(React.createElement(Sider, null), document.getElementById('componen
           <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"8"</span>&gt;</span>选项8<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-setting"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"9"</span>&gt;</span>选项9<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"10"</span>&gt;</span>选项10<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"11"</span>&gt;</span>选项11<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -1004,6 +1008,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Sider</
 
 var Menu = antd.Menu;
 var SubMenu = Menu.SubMenu;
+var Icon = antd.Icon;
 
 var Sider = React.createClass({
   displayName: 'Sider',
@@ -1041,7 +1046,7 @@ var Sider = React.createClass({
         { key: 'sub1', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-mail' }),
+            React.createElement(Icon, { type: 'mail' }),
             React.createElement(
               'span',
               null,
@@ -1074,7 +1079,7 @@ var Sider = React.createClass({
         { key: 'sub2', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-appstore' }),
+            React.createElement(Icon, { type: 'appstore' }),
             React.createElement(
               'span',
               null,
@@ -1111,7 +1116,7 @@ var Sider = React.createClass({
         { key: 'sub4', title: React.createElement(
             'span',
             null,
-            React.createElement('i', { className: 'anticon anticon-setting' }),
+            React.createElement(Icon, { type: 'setting' }),
             React.createElement(
               'span',
               null,
@@ -1144,6 +1149,7 @@ var Sider = React.createClass({
 });
 React.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider-current'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> SubMenu = Menu.SubMenu;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> Sider = React.createClass({
   getInitialState() {
@@ -1172,13 +1178,13 @@ React.render(React.createElement(Sider, null), document.getElementById('componen
                  <span class="attribute">onClose</span>=<span class="value">{this.onToggle}</span>
                  <span class="attribute">selectedKeys</span>=<span class="value">{[this.state.current]}</span>
                  <span class="attribute">mode</span>=<span class="value">"inline"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-mail"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-appstore"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"5"</span>&gt;</span>选项5<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"6"</span>&gt;</span>选项6<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub3"</span> <span class="attribute">title</span>=<span class="value">"三级导航"</span>&gt;</span>
@@ -1186,7 +1192,7 @@ React.render(React.createElement(Sider, null), document.getElementById('componen
           <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"8"</span>&gt;</span>选项8<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-setting"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"9"</span>&gt;</span>选项9<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"10"</span>&gt;</span>选项10<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"11"</span>&gt;</span>选项11<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -1212,6 +1218,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Sider</
 var Menu = antd.Menu;
 var MenuItem = Menu.Item;
 var SubMenu = Menu.SubMenu;
+var Icon = antd.Icon;
 
 function handleClick(e) {
   console.log('click', e);
@@ -1225,7 +1232,7 @@ React.render(React.createElement(
     { key: "sub1", title: React.createElement(
         "span",
         null,
-        React.createElement("i", { className: "anticon anticon-mail" }),
+        React.createElement(Icon, { type: "mail" }),
         React.createElement(
           "span",
           null,
@@ -1258,7 +1265,7 @@ React.render(React.createElement(
     { key: "sub2", title: React.createElement(
         "span",
         null,
-        React.createElement("i", { className: "anticon anticon-appstore" }),
+        React.createElement(Icon, { type: "appstore" }),
         React.createElement(
           "span",
           null,
@@ -1295,7 +1302,7 @@ React.render(React.createElement(
     { key: "sub4", title: React.createElement(
         "span",
         null,
-        React.createElement("i", { className: "anticon anticon-setting" }),
+        React.createElement("icon", { type: "setting" }),
         React.createElement(
           "span",
           null,
@@ -1326,19 +1333,20 @@ React.render(React.createElement(
 ), document.getElementById('components-menu-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> MenuItem = Menu.Item;
 <span class="keyword">var</span> SubMenu = Menu.SubMenu;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span><span class="params">(e)</span> {</span>
   console.log(<span class="string">'click'</span>, e);
 }
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onClick</span>=<span class="value">{handleClick}</span> <span class="attribute">style</span>=<span class="value">{{width:240}}</span> <span class="attribute">mode</span>=<span class="value">"vertical"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-mail"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub1"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航一<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-appstore"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub2"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航二<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"5"</span>&gt;</span>选项5<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"6"</span>&gt;</span>选项6<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub3"</span> <span class="attribute">title</span>=<span class="value">"三级导航"</span>&gt;</span>
@@ -1346,7 +1354,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Menu</s
       <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"8"</span>&gt;</span>选项8<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-setting"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+  <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">key</span>=<span class="value">"sub4"</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>导航三<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"9"</span>&gt;</span>选项9<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"10"</span>&gt;</span>选项10<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>
     <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">key</span>=<span class="value">"11"</span>&gt;</span>选项11<span class="tag">&lt;/<span class="title">MenuItem</span>&gt;</span>

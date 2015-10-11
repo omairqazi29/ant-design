@@ -40,10 +40,10 @@ var data = [{
 
 // 通过 rowSelection 对象表明需要行选择
 var rowSelection = {
-  getCheckboxProps: function getCheckboxProps(value) {
+  getCheckboxProps: function getCheckboxProps(record) {
     return {
-      defaultValue: value.name === '李大嘴', // 配置默认勾选的列
-      disabled: value.name === '胡彦祖' // 配置无法勾选的列
+      defaultValue: record.name === '李大嘴', // 配置默认勾选的列
+      disabled: record.name === '胡彦祖' // 配置无法勾选的列
     };
   },
   onSelect: function onSelect(record, selected, selectedRows) {
@@ -87,11 +87,11 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
 
 <span class="comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="keyword">var</span> rowSelection = {
-  getCheckboxProps: <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> {</span>
+  getCheckboxProps: <span class="function"><span class="keyword">function</span><span class="params">(record)</span> {</span>
     <span class="keyword">return</span> {
-      defaultValue: value.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
-      disabled: value.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
-    }
+      defaultValue: record.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
+      disabled: record.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
+    };
   },
   onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
     console.log(record, selected, selectedRows);

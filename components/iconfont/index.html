@@ -13,7 +13,7 @@ Iconfont 字体图标 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Iconfont 字体图标 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
-        stable: '0.9.0'
+        latest: '0.10.0-beta1',
+        stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,18 +556,17 @@ Iconfont 字体图标 - Ant Design
       Iconfont 字体图标
     </h1>
     <p>有含义的矢量图形，每一个图标打倒一个敌人。</p>
-<h2 id="图标的命名规范">图标的命名规范</h2><p>我们为每个图标赋予了语义化的命名。我们的命名规范如：</p>
+<h2 id="图标的命名规范">图标的命名规范</h2><p>我们为每个图标赋予了语义化的命名。只需在 <Icon> 标签内，制定对应的 type 属性即可。</p>
+<p>不同 type 命名规则如下:</p>
 <ul>
-<li><p>使用 <code>-</code> 来连接单词；</p>
-</li>
 <li><p>实心和描线图标保持同名，用 <code>-o</code> 来区分，比如 <code>question-circle</code>(实心) 和 <code>question-circle-o</code>(描线)；</p>
 </li>
 <li><p>命名顺序：<code>[icon名]-[描线与否]-[方向]</code>。</p>
 </li>
 </ul>
-<p>每个图标的类名需要在图标名称前加上 <code>anticon-</code> 前缀，如 <code>.anticon-question-circle</code>。</p>
-<h2 id="如何使用">如何使用</h2><p>使用时所有的图标都需要一个基类 <code>.anticon</code> 和对应每个图标的类。在这里，我们使用 <code>&lt;i&gt;</code> 标签，如下面代码演示使用即可。</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-link"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span></code></pre></div><blockquote>
+<h2 id="实现原理">实现原理</h2><p>所有的 Icon 标签最终会渲染为</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-${type}"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span></code></pre></div><h2 id="如何使用">如何使用</h2><p>使用 <Icon> 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"link"</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span></code></pre></div><blockquote>
 <p>点击图标复制代码。</p>
 </blockquote>
 <h2 id="图标列表">图标列表</h2><h3 id="一-方向性图标">一. 方向性图标</h3><ul class="row anticons-list clearfix">
@@ -1115,7 +1114,7 @@ $(function() {
   $('.anticons-list li').each(function(i, item) {
     var client = new ZeroClipboard(item);
     client.on( "copy", function (event) {
-      client.setText('<i className="anticon anticon-' + $(item).find('.anticon-class').html() + '"></i>');
+      client.setText('<Icon type="' + $(item).find('.anticon-class').html() + '"></Icon>');
     });
     client.on( "ready", function( readyEvent ) {
       client.on( "aftercopy", function( event ) {

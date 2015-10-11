@@ -5,6 +5,7 @@ import Checkbox from '../checkbox';
 import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
 import Pagination from '../pagination';
+import Icon from '../iconfont';
 import objectAssign from 'object-assign';
 
 function noop() {
@@ -45,6 +46,7 @@ let AntTable = React.createClass({
       data: [],
       dataSource: this.props.dataSource,
       filters: {},
+      dirty: false,
       loading: false,
       sortColumn: '',
       sortOrder: '',
@@ -69,6 +71,22 @@ let AntTable = React.createClass({
 
   propTypes: {
     dataSource: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.instanceOf(DataSource)])
+  },
+
+  getDefaultSelection() {
+    let selectedRowKeys = [];
+    if (this.props.rowSelection && this.props.rowSelection.getCheckboxProps) {
+      let data = this.getCurrentPageData();
+      data.filter((item) => {
+        if (this.props.rowSelection.getCheckboxProps) {
+          return this.props.rowSelection.getCheckboxProps(item).defaultValue;
+        }
+        return true;
+      }).map((record, rowIndex) => {
+        selectedRowKeys.push(this.getRecordKey(record, rowIndex));
+      });
+    }
+    return selectedRowKeys;
   },
 
   componentWillReceiveProps(nextProps) {
@@ -154,7 +172,11 @@ let AntTable = React.createClass({
 
   handleSelect(record, rowIndex, e) {
     let checked = e.target.checked;
-    let selectedRowKeys = this.state.selectedRowKeys.concat();
+    let defaultSelection = [];
+    if (!this.state.dirty) {
+      defaultSelection = this.getDefaultSelection();
+    }
+    let selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
     let key = this.getRecordKey(record, rowIndex);
     if (checked) {
       selectedRowKeys.push(this.getRecordKey(record, rowIndex));
@@ -164,7 +186,8 @@ let AntTable = React.createClass({
       });
     }
     this.setState({
-      selectedRowKeys: selectedRowKeys
+      selectedRowKeys: selectedRowKeys,
+      dirty: true
     });
     if (this.props.rowSelection.onSelect) {
       let data = this.getCurrentPageData();
@@ -177,12 +200,17 @@ let AntTable = React.createClass({
 
   handleRadioSelect: function (record, rowIndex, e) {
     let checked = e.target.checked;
-    let selectedRowKeys = this.state.selectedRowKeys.concat();
+    let defaultSelection = [];
+    if (!this.state.dirty) {
+      defaultSelection = this.getDefaultSelection();
+    }
+    let selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
     let key = this.getRecordKey(record, rowIndex);
     selectedRowKeys = [key];
     this.setState({
       selectedRowKeys: selectedRowKeys,
-      radioIndex: record.key
+      radioIndex: record.key,
+      dirty: true
     });
     if (this.props.rowSelection.onSelect) {
       let data = this.getCurrentPageData();
@@ -205,7 +233,8 @@ let AntTable = React.createClass({
       return this.getRecordKey(item, i);
     }) : [];
     this.setState({
-      selectedRowKeys: selectedRowKeys
+      selectedRowKeys: selectedRowKeys,
+      dirty: true
     });
     if (this.props.rowSelection.onSelectAll) {
       let selectedRows = data.filter((row, i) => {
@@ -241,12 +270,13 @@ let AntTable = React.createClass({
     if (this.props.rowSelection.getCheckboxProps) {
       props = this.props.rowSelection.getCheckboxProps.call(this, record);
     }
-    return <Radio disabled={props.disabled} onChange={this.handleRadioSelect.bind(this, record, rowIndex)} value={record.key} checked={this.state.radioIndex == record.key} />;
+    const checked = this.state.dirty ? this.state.radioIndex === record.key : this.getDefaultSelection().indexOf(rowIndex) >= 0;
+    return <Radio disabled={props.disabled} onChange={this.handleRadioSelect.bind(this, record, rowIndex)} value={record.key} checked={checked} />;
   },
 
   renderSelectionCheckBox(value, record, index) {
     let rowIndex = this.getRecordKey(record, index); // 从 1 开始
-    let checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0;
+    let checked = this.state.dirty ? this.state.selectedRowKeys.indexOf(rowIndex) >= 0 : this.getDefaultSelection().indexOf(rowIndex) >= 0;
     let props = {};
     if (this.props.rowSelection.getCheckboxProps) {
       props = this.props.rowSelection.getCheckboxProps.call(this, record);
@@ -300,7 +330,6 @@ let AntTable = React.createClass({
       } else {
         columns.unshift(selectionColumn);
       }
-
     }
     return columns;
   },
@@ -347,13 +376,13 @@ let AntTable = React.createClass({
                            ((isSortColumn && this.state.sortOrder === 'ascend') ? 'on' : 'off')}
                 title="升序排序"
                 onClick={this.toggleSortOrder.bind(this, 'ascend', column)}>
-            <i className="anticon anticon-caret-up"></i>
+            <Icon type="caret-up" />
           </span>
           <span className={'ant-table-column-sorter-down ' +
                            ((isSortColumn && this.state.sortOrder === 'descend') ? 'on' : 'off')}
                 title="降序排序"
                 onClick={this.toggleSortOrder.bind(this, 'descend', column)}>
-            <i className="anticon anticon-caret-down"></i>
+            <Icon type="caret-down" />
           </span>
         </div>;
       }
@@ -443,6 +472,7 @@ let AntTable = React.createClass({
               dataSource.getPagination.call(this, result)
             );
             this.setState({
+              dirty: false,
               loading: false,
               data: dataSource.resolve.call(this, result),
               pagination: pagination
@@ -521,23 +551,6 @@ let AntTable = React.createClass({
     if (!this.isLocalDataSource()) {
       this.fetch();
     }
-    if (this.props.rowSelection && this.props.rowSelection.getCheckboxProps) {
-      let data = this.getCurrentPageData();
-      let selectedRowKeys = this.state.selectedRowKeys.concat();
-
-      data.filter((item) => {
-        if (this.props.rowSelection.getCheckboxProps) {
-          return this.props.rowSelection.getCheckboxProps(item).defaultValue;
-        }
-        return true;
-      }).map((record, rowIndex) => {
-        selectedRowKeys.push(this.getRecordKey(record, rowIndex));
-      });
-
-      this.setState({
-        selectedRowKeys: selectedRowKeys
-      });
-    }
   },
 
   render() {
@@ -563,7 +576,7 @@ let AntTable = React.createClass({
     let emptyClass = '';
     if (!data || data.length === 0) {
       emptyText = <div className="ant-table-placeholder">
-        <i className="anticon anticon-frown"></i>暂无数据
+        <Icon type="frown" />暂无数据
       </div>;
       emptyClass = ' ant-table-empty';
     }

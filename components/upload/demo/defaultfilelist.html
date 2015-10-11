@@ -4,6 +4,8 @@
     <script>(function(){'use strict';
 
 var Upload = antd.Upload;
+var Button = antd.Button;
+var Icon = antd.Icon;
 
 var props = {
   action: '/upload.do',
@@ -30,12 +32,14 @@ React.render(React.createElement(
   Upload,
   props,
   React.createElement(
-    'button',
-    { type: 'button', className: 'ant-btn ant-btn-ghost' },
-    React.createElement('i', { className: 'anticon anticon-upload' }),
+    Button,
+    { type: 'ghost' },
+    React.createElement(Icon, { type: 'upload' }),
     ' 点击上传'
   )
 ), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   action: <span class="string">'/upload.do'</span>,
@@ -60,9 +64,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
   </div>

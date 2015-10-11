@@ -13,7 +13,7 @@ Table 表格 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Table 表格 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
-        stable: '0.9.0'
+        latest: '0.10.0-beta1',
+        stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -773,6 +773,8 @@ Table 表格 - Ant Design
     <script>(function(){'use strict';
 
 var Table = antd.Table;
+var Icon = antd.Icon;
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -812,7 +814,7 @@ var columns = [{
         'a',
         { href: 'javascript:;', className: 'ant-dropdown-link' },
         '更多 ',
-        React.createElement('i', { className: 'anticon anticon-down' })
+        React.createElement(Icon, { type: 'down' })
       )
     );
   }
@@ -835,6 +837,8 @@ var data = [{
 }];
 
 React.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> Icon = antd.Icon;
+
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -857,7 +861,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
       <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>操作二<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
       <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
       <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">className</span>=<span class="value">"ant-dropdown-link"</span>&gt;</span>
-        更多 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        更多 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
   }
@@ -990,6 +994,119 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</
     <p>第一列是联动的选择框。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-row-selection-props">
+  <div class="code-box-demo">
+    <div id="components-table-demo-row-selection-props"></div>
+    <script>(function(){'use strict';
+
+var Table = antd.Table;
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  render: function render(text) {
+    return React.createElement(
+      'a',
+      { href: 'javascript:;' },
+      text
+    );
+  }
+}, {
+  title: '年龄',
+  dataIndex: 'age'
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}];
+
+// 通过 rowSelection 对象表明需要行选择
+var rowSelection = {
+  getCheckboxProps: function getCheckboxProps(record) {
+    return {
+      defaultValue: record.name === '李大嘴', // 配置默认勾选的列
+      disabled: record.name === '胡彦祖' // 配置无法勾选的列
+    };
+  },
+  onSelect: function onSelect(record, selected, selectedRows) {
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: function onSelectAll(selected, selectedRows) {
+    console.log(selected, selectedRows);
+  }
+};
+
+React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> columns = [{
+  title: <span class="string">'姓名'</span>,
+  dataIndex: <span class="string">'name'</span>,
+  render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
+  }
+}, {
+  title: <span class="string">'年龄'</span>,
+  dataIndex: <span class="string">'age'</span>
+}, {
+  title: <span class="string">'住址'</span>,
+  dataIndex: <span class="string">'address'</span>
+}];
+<span class="keyword">var</span> data = [{
+  key: <span class="string">'1'</span>,
+  name: <span class="string">'胡彦斌'</span>,
+  age: <span class="number">32</span>,
+  address: <span class="string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="string">'2'</span>,
+  name: <span class="string">'胡彦祖'</span>,
+  age: <span class="number">42</span>,
+  address: <span class="string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="string">'3'</span>,
+  name: <span class="string">'李大嘴'</span>,
+  age: <span class="number">32</span>,
+  address: <span class="string">'西湖区湖底公园1号'</span>
+}];
+
+<span class="comment">// 通过 rowSelection 对象表明需要行选择</span>
+<span class="keyword">var</span> rowSelection = {
+  getCheckboxProps: <span class="function"><span class="keyword">function</span><span class="params">(record)</span> {</span>
+    <span class="keyword">return</span> {
+      defaultValue: record.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
+      disabled: record.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
+    };
+  },
+  onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: <span class="function"><span class="keyword">function</span><span class="params">(selected, selectedRows)</span> {</span>
+    console.log(selected, selectedRows);
+  }
+};
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+, document.getElementById('components-table-demo-row-selection-props'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-row-selection-props">配置</a>
+    </div>
+    <p>配置选择框的默认属性。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div><div class="code-box" id="demo-row-selection-radio">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection-radio"></div>
@@ -1093,9 +1210,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</
     <p>第一列是联动的单选框。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-row-selection-props">
+</div><div class="code-box" id="demo-row-selection-radio-props">
   <div class="code-box-demo">
-    <div id="components-table-demo-row-selection-props"></div>
+    <div id="components-table-demo-row-selection-radio-props"></div>
     <script>(function(){'use strict';
 
 var Table = antd.Table;
@@ -1135,10 +1252,11 @@ var data = [{
 
 // 通过 rowSelection 对象表明需要行选择
 var rowSelection = {
-  getCheckboxProps: function getCheckboxProps(value) {
+  type: 'radio',
+  getCheckboxProps: function getCheckboxProps(record) {
     return {
-      defaultValue: value.name === '李大嘴', // 配置默认勾选的列
-      disabled: value.name === '胡彦祖' // 配置无法勾选的列
+      defaultValue: record.name === '李大嘴', // 配置默认勾选的列
+      disabled: record.name === '胡彦祖' // 配置无法勾选的列
     };
   },
   onSelect: function onSelect(record, selected, selectedRows) {
@@ -1149,7 +1267,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1182,11 +1300,12 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
 
 <span class="comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="keyword">var</span> rowSelection = {
-  getCheckboxProps: <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> {</span>
+  type: <span class="string">'radio'</span>,
+  getCheckboxProps: <span class="function"><span class="keyword">function</span><span class="params">(record)</span> {</span>
     <span class="keyword">return</span> {
-      defaultValue: value.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
-      disabled: value.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
-    }
+      defaultValue: record.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
+      disabled: record.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
+    };
   },
   onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
     console.log(record, selected, selectedRows);
@@ -1197,13 +1316,13 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-row-selection-props'));</span></code></pre></div>
+, document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-row-selection-props">配置</a>
+      <a href="#demo-row-selection-radio-props">单选配置</a>
     </div>
-    <p>配置选择框的默认属性。</p>
+    <p>配置单选框的默认属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-paging">
@@ -1415,12 +1534,242 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</
 <p>对某一列数据进行排序，通过指定列的 <code>sorter</code> 函数即可启动排序按钮。<code>sorter: function(a, b) { ... }</code>， a、b 为比较的两个列数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-ajax-props">
+  <div class="code-box-demo">
+    <div id="components-table-demo-ajax-props"></div>
+    <script>(function(){'use strict';
+
+var Table = antd.Table;
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  filters: [{
+    text: '姓李的',
+    value: '李'
+  }, {
+    text: '姓胡的',
+    value: '胡'
+  }]
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  sorter: true
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+
+var dataSource = new Table.DataSource({
+  url: "/components/table/demo/data.json",
+  resolve: function resolve(result) {
+    return result.data;
+  },
+  data: {},
+  // 和后台接口返回的分页数据进行适配
+  getPagination: function getPagination(result) {
+    return {
+      total: result.totalCount,
+      pageSize: result.pageSize
+    };
+  },
+  // 和后台接口接收的参数进行适配
+  // 参数里提供了分页、筛选、排序的信息
+  getParams: function getParams(pagination, filters, sorter) {
+    console.log('getParams 的参数是：', pagination, filters, sorter);
+    var params = {
+      pageSize: pagination.pageSize,
+      currentPage: pagination.current,
+      sortField: sorter.field,
+      sortOrder: sorter.order
+    };
+    for (var key in filters) {
+      params[key] = filters[key];
+    }
+    console.log('请求参数：', params);
+    return params;
+  }
+});
+
+var rowSelection = {
+  getCheckboxProps: function getCheckboxProps(value) {
+    return {
+      defaultValue: value.name === '胡彦祖ajax2', // 配置默认勾选的列
+      disabled: value.name === '李大嘴ajax3' // 配置无法勾选的列
+    };
+  },
+  onSelect: function onSelect(record, selected, selectedRows) {
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: function onSelectAll(selected, selectedRows) {
+    console.log(selected, selectedRows);
+  }
+};
+
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      dataSource: dataSource
+    };
+  },
+  refresh: function refresh() {
+    this.setState({
+      dataSource: dataSource.clone()
+    });
+  },
+  changeAndRefresh: function changeAndRefresh() {
+    // 可以修改原来的 dataSource 再发请求
+    this.setState({
+      dataSource: dataSource.clone({
+        data: {
+          city: 'hz'
+        }
+      })
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: this.state.dataSource }),
+      React.createElement(
+        'button',
+        { className: 'ant-btn ant-btn-primary', onClick: this.refresh },
+        '重新加载数据'
+      ),
+      ' ',
+      React.createElement(
+        'button',
+        { className: 'ant-btn', onClick: this.changeAndRefresh },
+        '加载 city=hz 的数据'
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+
+<span class="keyword">var</span> columns = [{
+  title: <span class="string">'姓名'</span>,
+  dataIndex: <span class="string">'name'</span>,
+  filters: [{
+    text: <span class="string">'姓李的'</span>,
+    value: <span class="string">'李'</span>
+  }, {
+    text: <span class="string">'姓胡的'</span>,
+    value: <span class="string">'胡'</span>
+  }]
+}, {
+  title: <span class="string">'年龄'</span>,
+  dataIndex: <span class="string">'age'</span>,
+  sorter: <span class="literal">true</span>
+}, {
+  title: <span class="string">'住址'</span>,
+  dataIndex: <span class="string">'address'</span>
+}];
+
+<span class="keyword">var</span> dataSource = <span class="keyword">new</span> Table.DataSource({
+  url: <span class="string">"/components/table/demo/data.json"</span>,
+  resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
+    <span class="keyword">return</span> result.data;
+  },
+  data: {},
+  <span class="comment">// 和后台接口返回的分页数据进行适配</span>
+  getPagination: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
+    <span class="keyword">return</span> {
+      total: result.totalCount,
+      pageSize: result.pageSize
+    }
+  },
+  <span class="comment">// 和后台接口接收的参数进行适配</span>
+  <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
+  getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
+    console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
+    <span class="keyword">var</span> params = {
+      pageSize: pagination.pageSize,
+      currentPage: pagination.current,
+      sortField: sorter.field,
+      sortOrder: sorter.order
+    };
+    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filters) {
+      params[key] = filters[key];
+    }
+    console.log(<span class="string">'请求参数：'</span>, params);
+    <span class="keyword">return</span> params;
+  }
+});
+
+
+<span class="keyword">var</span> rowSelection = {
+  getCheckboxProps: <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> {</span>
+    <span class="keyword">return</span> {
+      defaultValue: value.name === <span class="string">'胡彦祖ajax2'</span>, <span class="comment">// 配置默认勾选的列</span>
+      disabled: value.name === <span class="string">'李大嘴ajax3'</span>    <span class="comment">// 配置无法勾选的列</span>
+    }
+  },
+  onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: <span class="function"><span class="keyword">function</span><span class="params">(selected, selectedRows)</span> {</span>
+    console.log(selected, selectedRows);
+  }
+};
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      dataSource: dataSource
+    };
+  },
+  refresh() {
+    <span class="keyword">this</span>.setState({
+      dataSource: dataSource.clone()
+    });
+  },
+  changeAndRefresh() {
+    <span class="comment">// 可以修改原来的 dataSource 再发请求</span>
+    <span class="keyword">this</span>.setState({
+      dataSource: dataSource.clone({
+        data: {
+          city: <span class="string">'hz'</span>
+        }
+      })
+    });
+  },
+  render() {
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
+        重新加载数据
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      &amp;nbsp;
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
+        加载 city=hz 的数据
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+  }
+});
+
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax-props'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-ajax-props">配置动态加载数据</a>
+    </div>
+    <p>远程读取的表格是<strong>更为常见的模式</strong>，下面的表格使用了 <code>dataSource</code> 对象和远程数据源绑定和适配，并具有筛选、排序等功能以及页面 loading 效果。</p>
+<p><strong>注意，此示例是静态数据模拟，数据并不准确，请打开网络面板查看请求。</strong></p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div><div class="code-box" id="demo-ajax">
   <div class="code-box-demo">
     <div id="components-table-demo-ajax"></div>
     <script>(function(){'use strict';
 
 var Table = antd.Table;
+var Button = antd.Button;
 
 var columns = [{
   title: '姓名',
@@ -1501,14 +1850,14 @@ var Test = React.createClass({
       null,
       React.createElement(Table, { columns: columns, dataSource: this.state.dataSource }),
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary', onClick: this.refresh },
+        Button,
+        { type: 'primary', onClick: this.refresh },
         '重新加载数据'
       ),
       ' ',
       React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.changeAndRefresh },
+        Button,
+        { onClick: this.changeAndRefresh },
         '加载 city=hz 的数据'
       )
     );
@@ -1516,6 +1865,7 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
@@ -1591,13 +1941,13 @@ React.render(React.createElement(Test, null), document.getElementById('component
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
         重新加载数据
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
         加载 city=hz 的数据
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
@@ -1845,6 +2195,8 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</
     <script>(function(){'use strict';
 
 var Table = antd.Table;
+var Button = antd.Button;
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -1919,14 +2271,14 @@ var App = React.createClass({
       null,
       React.createElement(Table, { columns: columns, dataSource: this.state.data }),
       React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.handleClick1 },
+        Button,
+        { onClick: this.handleClick1 },
         '加载本地数据1'
       ),
       ' ',
       React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.handleClick2 },
+        Button,
+        { onClick: this.handleClick2 },
         '加载本地数据2'
       )
     );
@@ -1934,6 +2286,8 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1999,9 +2353,9 @@ React.render(React.createElement(App, null), document.getElementById('components
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.data}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 })

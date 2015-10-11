@@ -13,7 +13,7 @@ Message 全局提示 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Message 全局提示 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
-        stable: '0.9.0'
+        latest: '0.10.0-beta1',
+        stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -627,23 +627,25 @@ Message 全局提示 - Ant Design
     <div id="components-message-demo-success"></div>
     <script>(function(){'use strict';
 
-var message = antd.message;
+var Button = antd.Button;
 
+var message = antd.message;
 var success = function success() {
   message.success('这是一条成功的提示');
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn ant-btn-primary', onClick: success },
+  Button,
+  { type: 'primary', onClick: success },
   '显示成功提示'
-), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> message = antd.message;
+), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 
+<span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示成功提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-success'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -658,22 +660,25 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">button<
     <div id="components-message-demo-info"></div>
     <script>(function(){'use strict';
 
+var Button = antd.Button;
+
 var message = antd.message;
 var info = function info() {
   message.info('这是一条普通的提醒');
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn ant-btn-primary', onClick: info },
+  Button,
+  { type: 'primary', onClick: info },
   '显示普通提醒'
-), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">
+), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.info(<span class="string">'这是一条普通的提醒'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -688,8 +693,9 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">button<
     <div id="components-message-demo-loading"></div>
     <script>(function(){'use strict';
 
-var message = antd.message;
+var Button = antd.Button;
 
+var message = antd.message;
 var success = function success() {
   var hide = message.loading('正在执行中...', 0);
   // 异步手动移除
@@ -697,18 +703,19 @@ var success = function success() {
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn', onClick: success },
+  Button,
+  { onClick: success },
   '显示加载中...'
-), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> message = antd.message;
+), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 
+<span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   <span class="keyword">var</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
   <span class="comment">// 异步手动移除</span>
   setTimeout(hide, <span class="number">2500</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-loading'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -725,22 +732,25 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">button<
     <div id="components-message-demo-error"></div>
     <script>(function(){'use strict';
 
+var Button = antd.Button;
+
 var message = antd.message;
 var error = function error() {
   message.error('这是一条失败的提示这是一条失败的提示这是一条失败的提示');
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn ant-btn-primary', onClick: error },
+  Button,
+  { type: 'primary', onClick: error },
   '显示失败提示'
-), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript">
+), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> error = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.error(<span class="string">'这是一条失败的提示这是一条失败的提示这是一条失败的提示'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>显示失败提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>显示失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-error'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -755,22 +765,25 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">button<
     <div id="components-message-demo-duration"></div>
     <script>(function(){'use strict';
 
+var Button = antd.Button;
+
 var message = antd.message;
 var success = function success() {
   message.success('这是一条成功的提示,并将于10秒后消失', 10);
 };
 
 React.render(React.createElement(
-  'button',
-  { className: 'ant-btn ant-btn-primary', onClick: success },
+  Button,
+  { type: 'primary', onClick: success },
   '自定义时长提示'
-), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript">
+), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> message = antd.message;
 <span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示,并将于10秒后消失'</span>, <span class="number">10</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>自定义时长提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>自定义时长提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-duration'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

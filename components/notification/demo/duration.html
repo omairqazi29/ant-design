@@ -4,6 +4,7 @@
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
+var Button = antd.Button;
 
 var openNotification = function openNotification() {
   var args = {
@@ -15,10 +16,11 @@ var openNotification = function openNotification() {
 };
 
 React.render(React.createElement(
-  "button",
-  { className: "ant-btn ant-btn-primary", onClick: openNotification },
+  Button,
+  { type: "primary", onClick: openNotification },
   "打开通知提醒框"
 ), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   <span class="keyword">var</span> args = {
@@ -30,7 +32,7 @@ React.render(React.createElement(
 };
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn ant-btn-primary'</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

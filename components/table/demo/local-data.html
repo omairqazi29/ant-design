@@ -4,6 +4,8 @@
     <script>(function(){'use strict';
 
 var Table = antd.Table;
+var Button = antd.Button;
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -78,14 +80,14 @@ var App = React.createClass({
       null,
       React.createElement(Table, { columns: columns, dataSource: this.state.data }),
       React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.handleClick1 },
+        Button,
+        { onClick: this.handleClick1 },
         '加载本地数据1'
       ),
       ' ',
       React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.handleClick2 },
+        Button,
+        { onClick: this.handleClick2 },
         '加载本地数据2'
       )
     );
@@ -93,6 +95,8 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -158,9 +162,9 @@ React.render(React.createElement(App, null), document.getElementById('components
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.data}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 })
