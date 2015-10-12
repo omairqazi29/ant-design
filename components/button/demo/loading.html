@@ -1,12 +1,10 @@
 <div class="code-box" id="demo-loading">
   <div class="code-box-demo">
     <div id="components-button-demo-loading"></div>
-    <script>(function(){"use strict";
-
-var Button = antd.Button;
+    <script>(function(){'use strict';
 
 var App = React.createClass({
-  displayName: "App",
+  displayName: 'App',
 
   getInitialState: function getInitialState() {
     return {
@@ -19,37 +17,36 @@ var App = React.createClass({
     });
   },
   render: function render() {
+    var loadingClass = this.state.loading ? 'ant-btn-loading' : '';
     return React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        Button,
-        { type: "primary", size: "lg", loading: true },
-        "加载中"
+        'button',
+        { className: 'ant-btn ant-btn-primary ant-btn-lg ant-btn-loading' },
+        '加载中'
       ),
       React.createElement(
-        Button,
-        { type: "primary", loading: "true" },
-        "加载中"
+        'button',
+        { className: 'ant-btn ant-btn-primary ant-btn-loading' },
+        '加载中'
       ),
       React.createElement(
-        Button,
-        { type: "primary", size: "sm", loading: true },
-        "加载中"
+        'button',
+        { className: 'ant-btn ant-btn-primary ant-btn-sm ant-btn-loading' },
+        '加载中'
       ),
-      React.createElement("br", null),
+      React.createElement('br', null),
       React.createElement(
-        Button,
-        { type: "primary", loading: this.state.loading, onClick: this.enterLoading },
-        "点击变加载"
+        'button',
+        { className: 'ant-btn ant-btn-primary ' + loadingClass, onClick: this.enterLoading },
+        '点击变加载'
       )
     );
   }
 });
 
-React.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-
-<span class="keyword">var</span> App = React.createClass({
+React.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       loading: <span class="literal">false</span>
@@ -61,20 +58,21 @@ React.render(React.createElement(App, null), document.getElementById('components
     });
   },
   render() {
+    <span class="keyword">var</span> loadingClass = <span class="keyword">this</span>.state.loading ? <span class="string">'ant-btn-loading'</span> : <span class="string">''</span>;
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg ant-btn-loading"</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">"true"</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-loading"</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">loading</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm ant-btn-loading"</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.enterLoading}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">{'ant-btn</span> <span class="attribute">ant-btn-primary</span> ' + <span class="attribute">loadingClass</span>} <span class="attribute">onClick</span>=<span class="value">{this.enterLoading}</span>&gt;</span>
         点击变加载
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
@@ -91,7 +89,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     <div class="code-box-title">
       <a href="#demo-loading">加载中</a>
     </div>
-    <p>添加 <code>loading</code> 属性即可让按钮处于加载状态，最后一个按钮演示点击后进入加载状态。</p>
+    <p>加载按钮。最后一个按钮演示点击后进入加载状态。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -1,7 +1,6 @@
 import {Circle as Progresscircle} from 'rc-progress';
 import React from 'react';
 import assign from 'object-assign';
-import Icon from '../iconfont';
 
 const prefixCls = 'ant-progress';
 
@@ -39,13 +38,13 @@ let Line = React.createClass({
       if (props.status === 'exception') {
         progressInfo = (
           <span className={prefixCls + '-line-text'}>
-            <Icon type="exclamation-circle" />
+            <i className="anticon anticon-exclamation-circle"></i>
           </span>
         );
       } else if (props.status === 'success') {
         progressInfo = (
           <span className={prefixCls + '-line-text'}>
-            <Icon type="exclamation-circle" />
+            <i className="anticon anticon-check-circle"></i>
           </span>
         );
       } else {
@@ -99,13 +98,13 @@ let Circle = React.createClass({
     if (props.status === 'exception') {
       progressInfo = (
         <span className={prefixCls + '-circle-text'}>
-          <Icon type="exclamation" />
+          <i className="anticon anticon-exclamation"></i>
         </span>
       );
     } else if (props.status === 'success') {
       progressInfo = (
         <span className={prefixCls + '-circle-text'}>
-          <Icon type="check" />
+          <i className="anticon anticon-check"></i>
         </span>
       );
     } else {

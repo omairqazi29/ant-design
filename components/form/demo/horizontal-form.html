@@ -6,7 +6,6 @@
 var Checkbox = antd.Checkbox;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
-var Button = antd.Button;
 
 React.render(React.createElement(
   "form",
@@ -109,17 +108,12 @@ React.render(React.createElement(
     React.createElement(
       "div",
       { className: "col-16 col-offset-6" },
-      React.createElement(
-        Button,
-        { type: "primary" },
-        "确定"
-      )
+      React.createElement("input", { type: "submit", className: "ant-btn ant-btn-primary", value: "确 定" })
     )
   )
 ), document.getElementById('components-form-demo-horizontal-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
@@ -160,7 +154,7 @@ React.render(
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>

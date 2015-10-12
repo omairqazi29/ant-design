@@ -13,7 +13,7 @@ Dropdown 下拉菜单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Dropdown 下拉菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -606,8 +606,6 @@ Dropdown 下拉菜单 - Ant Design
 
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
 
 var menu = React.createElement(
   Menu,
@@ -645,15 +643,13 @@ React.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
-    null,
+    "button",
+    { className: "ant-btn ant-btn-menu" },
     "某按钮 ",
-    React.createElement(Icon, { type: "down" })
+    React.createElement("i", { className: "anticon anticon-down" })
   )
 ), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
@@ -669,9 +665,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      某按钮 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
+      某按钮 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
@@ -694,8 +690,6 @@ React.render(
 
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
 
 var menu = React.createElement(
   Menu,
@@ -733,26 +727,24 @@ React.render(React.createElement(
     Dropdown,
     { overlay: menu, trigger: "click" },
     React.createElement(
-      Button,
-      { type: "primary" },
+      "button",
+      { className: "ant-btn ant-btn-primary ant-btn-menu" },
       "点击触发 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement("i", { className: "anticon anticon-down" })
     )
   ),
   React.createElement(
     Dropdown,
     { overlay: menu },
     React.createElement(
-      Button,
-      null,
+      "button",
+      { className: "ant-btn ant-btn-menu" },
       "鼠标移入 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement("i", { className: "anticon anticon-down" })
     )
   )
 ), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
@@ -767,14 +759,14 @@ React.render(React.createElement(
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-      点击触发 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-menu"</span>&gt;</span>
+      点击触发 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
+      鼠标移入 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
   </div>
@@ -794,8 +786,6 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
 
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
 
 var menu = React.createElement(
   Menu,
@@ -830,15 +820,13 @@ React.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
-    null,
+    "button",
+    { className: "ant-btn ant-btn-menu" },
     "鼠标移入 ",
-    React.createElement(Icon, { type: "down" })
+    React.createElement("i", { className: "anticon anticon-down" })
   )
 ), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
@@ -853,9 +841,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
+      鼠标移入 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-item'));</span></code></pre></div>
   </div>
@@ -873,8 +861,6 @@ React.render(
 
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
 var onSelect = function onSelect(_ref) {
   var key = _ref.key;
 
@@ -905,15 +891,13 @@ React.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
-    null,
+    "button",
+    { className: "ant-btn ant-btn-menu" },
     "鼠标移入，点击菜单 ",
-    React.createElement(Icon, { type: "down" })
+    React.createElement("i", { className: "anticon anticon-down" })
   )
 ), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
 <span class="keyword">var</span> onSelect = <span class="function"><span class="keyword">function</span> <span class="params">({key})</span>{</span>
   alert(<span class="string">'选中了菜单'</span> + key);
 };
@@ -926,9 +910,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入，点击菜单 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
+      鼠标移入，点击菜单 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-event'));</span></code></pre></div>
   </div>

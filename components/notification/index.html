@@ -13,7 +13,7 @@ Notification 通知提醒框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Notification 通知提醒框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -656,7 +656,6 @@ Notification 通知提醒框 - Ant Design
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var openNotification = function openNotification() {
   notification.open({
@@ -669,12 +668,11 @@ React.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
-    { type: "primary", onClick: openNotification },
+    "button",
+    { className: "ant-btn ant-btn-primary", onClick: openNotification },
     "打开通知提醒框"
   )
 ), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   notification.open({
@@ -685,7 +683,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn ant-btn-primary'</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
 document.getElementById('components-notification-demo-basic'));</span></code></pre></div>
   </div>
@@ -702,7 +700,6 @@ document.getElementById('components-notification-demo-basic'));</span></code></p
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
@@ -717,27 +714,26 @@ React.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('success') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('success') },
     "成功"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('info') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('info') },
     "消息"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('warn') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('warn') },
     "警告"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('error') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('error') },
     "错误"
   )
 ), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
@@ -749,10 +745,10 @@ React.render(React.createElement(
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-notification-demo-with-icon'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
@@ -774,7 +770,6 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <script>(function(){'use strict';
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var close = function close() {
   console.log('我被默认的关闭按钮关闭了！');
@@ -787,8 +782,8 @@ var openNotification = function openNotification() {
     notification.close(key);
   };
   var btn = React.createElement(
-    Button,
-    { type: 'primary', size: 'sm', onClick: btnClick },
+    'button',
+    { className: 'ant-btn ant-btn-primary ant-btn-sm', onClick: btnClick },
     '自定义关闭按钮并触发回调函数'
   );
   notification.open({
@@ -804,12 +799,11 @@ React.render(React.createElement(
   'div',
   null,
   React.createElement(
-    Button,
-    { type: 'primary', onClick: openNotification },
+    'button',
+    { className: 'ant-btn ant-btn-primary', onClick: openNotification },
     '打开通知提醒框'
   )
 ), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);
@@ -821,9 +815,9 @@ React.render(React.createElement(
     <span class="comment">// 隐藏提醒框</span>
     notification.close(key);
   };
-  <span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
+  <span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
     自定义关闭按钮并触发回调函数
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>;</span>
+  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
   notification.open({
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
@@ -835,7 +829,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
 document.getElementById('components-notification-demo-with-btn'));</span></code></pre></div>
   </div>
@@ -854,7 +848,6 @@ document.getElementById('components-notification-demo-with-btn'));</span></code>
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var openNotification = function openNotification() {
   var args = {
@@ -866,11 +859,10 @@ var openNotification = function openNotification() {
 };
 
 React.render(React.createElement(
-  Button,
-  { type: "primary", onClick: openNotification },
+  "button",
+  { className: "ant-btn ant-btn-primary", onClick: openNotification },
   "打开通知提醒框"
 ), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   <span class="keyword">var</span> args = {
@@ -882,7 +874,7 @@ React.render(React.createElement(
 };
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn ant-btn-primary'</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 , document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -898,7 +890,6 @@ React.render(
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var close = function close() {
   console.log("我被默认的关闭按钮关闭了！");
@@ -917,12 +908,11 @@ React.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
-    { type: "primary", onClick: openNotification },
+    "button",
+    { className: "ant-btn ant-btn-primary", onClick: openNotification },
     "打开通知提醒框"
   )
 ), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   console.log(<span class="string">"我被默认的关闭按钮关闭了！"</span>);
@@ -939,7 +929,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn ant-btn-primary'</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
 document.getElementById('components-notification-demo-onclose'));</span></code></pre></div>
   </div>

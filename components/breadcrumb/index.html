@@ -13,7 +13,7 @@ Breadcrumb 面包屑 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Breadcrumb 面包屑 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -837,40 +837,38 @@ React.render((
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var Breadcrumb = require('antd/lib/breadcrumb');
-var Icon = require('antd').iconfont;
 
 React.render(React.createElement(
   Breadcrumb,
   null,
   React.createElement(
     Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'home' })
+    { href: "" },
+    React.createElement("i", { className: "anticon anticon-home" })
   ),
   React.createElement(
     Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'user' }),
-    '应用列表'
+    { href: "" },
+    React.createElement("i", { className: "anticon anticon-user" }),
+    "应用列表"
   ),
   React.createElement(
     Breadcrumb.Item,
     null,
-    '应用'
+    "应用"
   )
 ), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
-<span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"home"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-home"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"user"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-user"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
       应用列表
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>

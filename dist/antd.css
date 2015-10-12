@@ -3046,8 +3046,9 @@ samp {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   color: #666;
@@ -3069,8 +3070,9 @@ samp {
 }
 .ant-btn:not([disabled]):active {
   outline: 0;
-  -webkit-transition: none;
   transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
 }
 .ant-btn.disabled,
 .ant-btn[disabled] {
@@ -3274,8 +3276,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   -webkit-transform: scale(0, 0);
   -ms-transform: scale(0, 0);
   transform: scale(0, 0);
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 0;
   background-color: #2db7f5;
 }
@@ -3325,6 +3328,24 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-btn-sm.ant-btn-loading:after {
   right: 8px;
+}
+.ant-btn-menu > .anticon {
+  display: inline-block;
+  font-size: 0.83333333;
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
+}
+:root .ant-btn-menu > .anticon {
+  -webkit-filter: none;
+          filter: none;
+}
+:root .ant-btn-menu > .anticon {
+  font-size: 12px;
 }
 .ant-btn-group {
   position: relative;
@@ -3393,10 +3414,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   padding-left: 8px;
-}
-.ant-btn > .anticon + span,
-.ant-btn > span + .anticon {
-  margin-left: 0.5em;
 }
 .ant-switch {
   position: relative;
@@ -3471,24 +3488,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-dropdown-wrap {
   position: relative;
-}
-.ant-dropdown-wrap .ant-btn > .anticon-down {
-  display: inline-block;
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-dropdown-wrap .ant-btn > .anticon-down {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-dropdown-wrap .ant-btn > .anticon-down {
-  font-size: 12px;
 }
 .ant-dropdown-wrap .anticon-down:before {
   -webkit-transition: -webkit-transform 0.2s ease;
@@ -3755,8 +3754,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid #d9d9d9;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-select-selection:hover {
   border-color: #57c5f7;
@@ -4187,8 +4187,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 12px;
   height: 12px;
   line-height: 12px;
@@ -4432,8 +4433,9 @@ fieldset[disabled] .ant-btn-ghost.active {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   color: #fff;
@@ -4463,8 +4465,9 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-calendar .ant-calendar-ok-btn:not([disabled]):active {
   outline: 0;
-  -webkit-transition: none;
   transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
 }
 .ant-calendar .ant-calendar-ok-btn.disabled,
 .ant-calendar .ant-calendar-ok-btn[disabled] {
@@ -4537,8 +4540,9 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0;
   width: 30px;
   height: 26px;
@@ -6231,8 +6235,9 @@ tr.ant-table-expanded-row:hover {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0 8px;
   width: 50px;
 }
@@ -6418,8 +6423,9 @@ label > .anticon {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-input::-moz-placeholder {
   color: #ccc;
@@ -6984,8 +6990,11 @@ form .ant-calendar-picker {
   border-radius: 26px;
   font-size: 14px;
   margin-right: 8px;
-  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
-          transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  -moz-transition: border-color 0.3s ease;
 }
 .ant-steps .ant-steps-head-inner > .ant-steps-icon {
   line-height: 1;
@@ -7031,8 +7040,9 @@ form .ant-calendar-picker {
   height: 1px;
   border-radius: 1px;
   width: 100%;
+  transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
-          transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
 }
 .ant-steps.ant-steps-small .ant-steps-head-inner {
   border: 1px solid #ccc;
@@ -7173,8 +7183,9 @@ form .ant-calendar-picker {
   background-color: #fff;
   background-image: none;
   border: 1px solid #d9d9d9;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0;
   padding: 0;
   line-height: 28px;
@@ -7395,8 +7406,6 @@ textarea.ant-input-number {
   height: 28px;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.24s linear 0.1s;
-          transition: opacity 0.24s linear 0.1s;
 }
 .ant-input-number:hover .ant-input-number-handler-wrap {
   opacity: 1;

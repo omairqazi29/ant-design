@@ -1,4 +1,5 @@
 import React from 'react';
+import joinClasses from 'react/lib/joinClasses';
 import rcUtil from 'rc-util';
 
 function getScroll(w, top) {
@@ -88,14 +89,12 @@ let Affix = React.createClass({
   },
 
   render() {
-    const className = rcUtil.classSet({
-      [this.props.className]: this.props.className,
-      'ant-affix': this.state.affix
-    });
+    let affix = this.state.affix ? 'ant-affix' : '';
+    let className = this.props.className;
 
     return (
       <div {...this.props}>
-        <div className={className} style={this.state.affixStyle}>
+        <div className={joinClasses(className, affix)} style={this.state.affixStyle}>
           {this.props.children}
         </div>
       </div>

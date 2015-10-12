@@ -1,7 +1,6 @@
 import React from 'react';
 import Notification from 'rc-notification';
 import assign from 'object-assign';
-import Icon from '../iconfont';
 
 let top = 24;
 let notificationInstance;
@@ -30,27 +29,27 @@ function notice(args) {
 
   if (args.icon) {
     let prefixCls = ' ant-notification-notice-content-icon-';
-    let iconType = '';
+    let iconClass = 'anticon anticon-';
     switch (args.icon) {
     case 'success':
-      iconType = 'check-circle-o';
+      iconClass += 'check-circle-o';
       break;
     case 'info':
-      iconType = 'info-circle-o';
+      iconClass += 'info-circle-o';
       break;
     case 'error':
-      iconType = 'exclamation-circle-o';
+      iconClass += 'exclamation-circle-o';
       break;
     case 'warn':
-      iconType = 'question-circle-o';
+      iconClass += 'question-circle-o';
       break;
     default:
-      iconType = 'info-circle';
+      iconClass += 'info-circle';
     }
 
     getNotificationInstance().notice({
       content: <div>
-        <Icon className={prefixCls + 'icon-' + args.icon + prefixCls + 'icon'} type={iconType} />
+        <i className={iconClass + prefixCls + 'icon-' + args.icon + prefixCls + 'icon'}></i>
 
         <p className={prefixCls + 'message'}>{args.message}</p>
 

@@ -13,7 +13,7 @@ Badge 徽标数 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Badge 徽标数 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -715,7 +715,6 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <script>(function(){"use strict";
 
 var Badge = antd.Badge;
-var Icon = antd.Icon;
 
 React.render(React.createElement(
   "div",
@@ -723,7 +722,7 @@ React.render(React.createElement(
   React.createElement(
     Badge,
     { dot: true },
-    React.createElement(Icon, { type: "notification" })
+    React.createElement("i", { className: "anticon anticon-notification" })
   ),
   React.createElement(
     Badge,
@@ -735,11 +734,10 @@ React.render(React.createElement(
     )
   )
 ), document.getElementById('components-badge-demo-dot'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Badge = antd.Badge;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">dot</span>=<span class="value">{true}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"notification"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-notification"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Badge</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">dot</span>=<span class="value">{true}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一个链接<span class="tag">&lt;/<span class="title">a</span>&gt;</span>

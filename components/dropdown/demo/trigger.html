@@ -5,8 +5,6 @@
 
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
 
 var menu = React.createElement(
   Menu,
@@ -44,26 +42,24 @@ React.render(React.createElement(
     Dropdown,
     { overlay: menu, trigger: "click" },
     React.createElement(
-      Button,
-      { type: "primary" },
+      "button",
+      { className: "ant-btn ant-btn-primary ant-btn-menu" },
       "点击触发 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement("i", { className: "anticon anticon-down" })
     )
   ),
   React.createElement(
     Dropdown,
     { overlay: menu },
     React.createElement(
-      Button,
-      null,
+      "button",
+      { className: "ant-btn ant-btn-menu" },
       "鼠标移入 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement("i", { className: "anticon anticon-down" })
     )
   )
 ), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
@@ -78,14 +74,14 @@ React.render(React.createElement(
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-      点击触发 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-menu"</span>&gt;</span>
+      点击触发 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-menu"</span>&gt;</span>
+      鼠标移入 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
   </div>

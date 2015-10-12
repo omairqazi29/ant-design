@@ -5,7 +5,6 @@
 
 var Menu = antd.Menu;
 var SubMenu = Menu.SubMenu;
-var Icon = antd.Icon;
 
 var App = React.createClass({
   displayName: 'App',
@@ -28,13 +27,13 @@ var App = React.createClass({
       React.createElement(
         Menu.Item,
         { key: 'mail' },
-        React.createElement(Icon, { type: 'mail' }),
+        React.createElement('i', { className: 'anticon anticon-mail' }),
         '导航一'
       ),
       React.createElement(
         Menu.Item,
         { key: 'app' },
-        React.createElement(Icon, { type: 'appstore' }),
+        React.createElement('i', { className: 'anticon anticon-appstore' }),
         '导航二'
       ),
       React.createElement(
@@ -42,7 +41,7 @@ var App = React.createClass({
         { title: React.createElement(
             'span',
             null,
-            React.createElement(Icon, { type: 'setting' }),
+            React.createElement('i', { className: 'anticon anticon-setting' }),
             '导航 - 子菜单'
           ) },
         React.createElement(
@@ -81,7 +80,6 @@ var App = React.createClass({
 
 React.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> SubMenu = Menu.SubMenu;
-<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> App = React.createClass({
   getInitialState() {
@@ -98,12 +96,12 @@ React.render(React.createElement(App, null), document.getElementById('components
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick}</span> <span class="attribute">selectedKeys</span>=<span class="value">{[this.state.current]}</span> <span class="attribute">mode</span>=<span class="value">"horizontal"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"mail"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span>导航一
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-mail"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航一
     <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"app"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span>导航二
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-appstore"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航二
     <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span>导航 - 子菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
+    <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-setting"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>导航 - 子菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>

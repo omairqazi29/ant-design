@@ -9,7 +9,6 @@ var Option = Select.Option;
 var Checkbox = antd.Checkbox;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -46,8 +45,8 @@ var Test = React.createClass({
         'div',
         { style: { marginBottom: 20, textAlign: 'center' } },
         React.createElement(
-          Button,
-          { type: 'primary', onClick: this.onClick },
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
           '切换'
         )
       ),
@@ -155,11 +154,7 @@ var Test = React.createClass({
             React.createElement(
               'div',
               { className: 'col-16 col-offset-6' },
-              React.createElement(
-                Button,
-                { type: 'primary' },
-                '确定'
-              )
+              React.createElement('input', { type: 'submit', className: 'ant-btn ant-btn-primary', value: '确 定' })
             )
           )
         ) : null
@@ -174,7 +169,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
 <span class="keyword">var</span> Checkbox = antd.Checkbox;
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -205,7 +199,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>, <span class="attribute">textAlign:</span> '<span class="attribute">center</span>'}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span> <span class="attribute">component</span>=<span class="value">'form'</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
           {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'from'</span>&gt;</span>
@@ -247,7 +241,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}

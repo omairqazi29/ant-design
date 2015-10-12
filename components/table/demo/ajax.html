@@ -4,7 +4,6 @@
     <script>(function(){'use strict';
 
 var Table = antd.Table;
-var Button = antd.Button;
 
 var columns = [{
   title: '姓名',
@@ -85,14 +84,14 @@ var Test = React.createClass({
       null,
       React.createElement(Table, { columns: columns, dataSource: this.state.dataSource }),
       React.createElement(
-        Button,
-        { type: 'primary', onClick: this.refresh },
+        'button',
+        { className: 'ant-btn ant-btn-primary', onClick: this.refresh },
         '重新加载数据'
       ),
       ' ',
       React.createElement(
-        Button,
-        { onClick: this.changeAndRefresh },
+        'button',
+        { className: 'ant-btn', onClick: this.changeAndRefresh },
         '加载 city=hz 的数据'
       )
     );
@@ -100,7 +99,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
@@ -176,13 +174,13 @@ React.render(React.createElement(Test, null), document.getElementById('component
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
         重新加载数据
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
         加载 city=hz 的数据
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });

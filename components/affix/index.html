@@ -13,7 +13,7 @@ Affix 固钉 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Affix 固钉 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -589,22 +589,20 @@ Affix 固钉 - Ant Design
     <script>(function(){"use strict";
 
 var Affix = antd.Affix;
-var Button = antd.Button;
 
 React.render(React.createElement(
   Affix,
   null,
   React.createElement(
-    Button,
-    { type: "primary" },
+    "button",
+    { className: "ant-btn ant-btn-primary" },
     "固定在顶部"
   )
 ), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
 , document.getElementById('components-affix-demo-basic'));</span></code></pre></div>
   </div>
@@ -623,22 +621,20 @@ React.render(
     <script>(function(){"use strict";
 
 var Affix = antd.Affix;
-var Button = antd.Button;
 
 React.render(React.createElement(
   Affix,
   { offset: 75 },
   React.createElement(
-    Button,
-    { type: "primary" },
+    "button",
+    { className: "ant-btn ant-btn-primary" },
     "固定在距离顶部 75px 的位置"
   )
 ), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span> <span class="attribute">offset</span>=<span class="value">{75}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在距离顶部 75px 的位置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>固定在距离顶部 75px 的位置<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
 , document.getElementById('components-affix-demo-offset'));</span></code></pre></div>
   </div>

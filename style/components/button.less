@@ -72,12 +72,13 @@
     }
   }
 
-  &-group {
-    .btn-group(@btn-prefix-cls);
+  &-menu {
+    > .@{iconfont-css-prefix} {
+      .iconfont-size-under-12px(10px);
+    }
   }
 
-  // To ensure that a space will be placed between character and `Icon`.
-  > .@{iconfont-css-prefix} + span, > span + .@{iconfont-css-prefix} {
-    margin-left: 0.5em;
+  &-group {
+    .btn-group(@btn-prefix-cls);
   }
 }

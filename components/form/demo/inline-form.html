@@ -4,7 +4,6 @@
     <script>(function(){"use strict";
 
 var Checkbox = antd.Checkbox;
-var Button = antd.Button;
 
 React.render(React.createElement(
   "form",
@@ -39,13 +38,8 @@ React.render(React.createElement(
       " 记住我"
     )
   ),
-  React.createElement(
-    Button,
-    { type: "primary" },
-    "登录"
-  )
+  React.createElement("input", { type: "submit", className: "ant-btn ant-btn-primary", value: "登 录" })
 ), document.getElementById('components-form-demo-inline-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-inline"</span>&gt;</span>
@@ -62,7 +56,7 @@ React.render(
       <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 记住我
     <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>登录<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"登 录"</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
 , document.getElementById('components-form-demo-inline-form'));</span></code></pre></div>
   </div>

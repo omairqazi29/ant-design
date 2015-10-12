@@ -13,7 +13,7 @@ EnterAnimation 进场动画 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ EnterAnimation 进场动画 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -1009,7 +1009,6 @@ React.render(
     <script>(function(){'use strict';
 
 var EnterAnimation = antd.EnterAnimation;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -1047,8 +1046,8 @@ var Test = React.createClass({
         'div',
         { style: { marginBottom: 20 } },
         React.createElement(
-          Button,
-          { type: 'primary', onClick: this.onClick },
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
           '切换'
         )
       ),
@@ -1092,7 +1091,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -1124,7 +1122,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
           {this.state.show ? 
@@ -1176,7 +1174,6 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
     <script>(function(){"use strict";
 
 var EnterAnimation = antd.EnterAnimation;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -1209,8 +1206,8 @@ var Test = React.createClass({
         "div",
         { style: { marginBottom: 20 } },
         React.createElement(
-          Button,
-          { type: "primary", onClick: this.onClick },
+          "button",
+          { className: "ant-btn ant-btn-primary", onClick: this.onClick },
           "切换"
         )
       ),
@@ -1258,7 +1255,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -1285,7 +1281,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
         {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'enter-data'</span>&gt;</span>
@@ -1343,7 +1339,6 @@ var Option = Select.Option;
 var Checkbox = antd.Checkbox;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -1380,8 +1375,8 @@ var Test = React.createClass({
         'div',
         { style: { marginBottom: 20, textAlign: 'center' } },
         React.createElement(
-          Button,
-          { type: 'primary', onClick: this.onClick },
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
           '切换'
         )
       ),
@@ -1489,11 +1484,7 @@ var Test = React.createClass({
             React.createElement(
               'div',
               { className: 'col-16 col-offset-6' },
-              React.createElement(
-                Button,
-                { type: 'primary' },
-                '确定'
-              )
+              React.createElement('input', { type: 'submit', className: 'ant-btn ant-btn-primary', value: '确 定' })
             )
           )
         ) : null
@@ -1508,7 +1499,6 @@ React.render(React.createElement(Test, null), document.getElementById('component
 <span class="keyword">var</span> Checkbox = antd.Checkbox;
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -1539,7 +1529,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>, <span class="attribute">textAlign:</span> '<span class="attribute">center</span>'}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span> <span class="attribute">component</span>=<span class="value">'form'</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
           {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'from'</span>&gt;</span>
@@ -1581,7 +1571,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
@@ -1609,7 +1599,6 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
     <script>(function(){"use strict";
 
 var EnterAnimation = antd.EnterAnimation;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -1632,8 +1621,8 @@ var Test = React.createClass({
         "div",
         { style: { marginBottom: 20 } },
         React.createElement(
-          Button,
-          { type: "primary", onClick: this.onClick },
+          "button",
+          { className: "ant-btn ant-btn-primary", onClick: this.onClick },
           "切换"
         )
       ),
@@ -1677,7 +1666,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -1694,7 +1682,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
           {this.state.show ?
@@ -1746,7 +1734,6 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
     <script>(function(){'use strict';
 
 var EnterAnimation = antd.EnterAnimation;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -1777,8 +1764,8 @@ var Test = React.createClass({
         'div',
         { style: { marginBottom: 20 } },
         React.createElement(
-          Button,
-          { type: 'primary', onClick: this.onClick },
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
           '切换'
         )
       ),
@@ -1826,7 +1813,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -1851,7 +1837,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
         {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'enter-data'</span>&gt;</span>
@@ -1904,7 +1890,6 @@ React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
     <script>(function(){'use strict';
 
 var EnterAnimation = antd.EnterAnimation;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -1937,8 +1922,8 @@ var Test = React.createClass({
         'div',
         { style: { marginBottom: 20 } },
         React.createElement(
-          Button,
-          { type: 'primary', onClick: this.onClick },
+          'button',
+          { className: 'ant-btn ant-btn-primary', onClick: this.onClick },
           '切换'
         )
       ),
@@ -2022,7 +2007,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-page'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -2049,7 +2033,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">20</span>}}&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
           {this.state.show ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'a'</span>&gt;</span>

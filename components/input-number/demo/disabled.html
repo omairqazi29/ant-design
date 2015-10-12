@@ -4,7 +4,6 @@
     <script>(function(){"use strict";
 
 var InputNumber = antd.InputNumber;
-var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -28,8 +27,8 @@ var Test = React.createClass({
         "div",
         { style: { marginTop: 20 } },
         React.createElement(
-          Button,
-          { onClick: this.toggle, type: "primary" },
+          "button",
+          { onClick: this.toggle, className: "ant-btn ant-btn-primary" },
           "Toggle disabled"
         )
       )
@@ -38,7 +37,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -55,7 +53,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }

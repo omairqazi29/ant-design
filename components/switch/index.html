@@ -13,7 +13,7 @@ Switch 开关 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Switch 开关 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../../dist/antd-0.9.1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -648,7 +648,6 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Switch<
     <script>(function(){"use strict";
 
 var Switch = antd.Switch;
-var Icon = antd.Icon;
 var container = document.getElementById('components-switch-demo-text');
 
 React.render(React.createElement(
@@ -660,15 +659,14 @@ React.render(React.createElement(
     null,
     " "
   ),
-  React.createElement(Switch, { checkedChildren: React.createElement(Icon, { type: "check" }), unCheckedChildren: React.createElement(Icon, { type: "cross" }) })
+  React.createElement(Switch, { checkedChildren: React.createElement("i", { className: "anticon anticon-check" }), unCheckedChildren: React.createElement("i", { className: "anticon anticon-cross" }) })
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Icon = antd.Icon;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">"开"</span> <span class="attribute">unCheckedChildren</span>=<span class="value">"关"</span> /&gt;</span>
   <span class="tag">&lt;<span class="title">span</span>&gt;</span> <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">{&lt;Icon</span> <span class="attribute">type</span>=<span class="value">"check"</span> /&gt;</span>} unCheckedChildren={<span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> /&gt;</span>} /&gt;
+  <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">{&lt;i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>} unCheckedChildren={<span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-cross"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>} /&gt;
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -686,7 +684,6 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <script>(function(){"use strict";
 
 var Switch = antd.Switch;
-var Button = antd.Button;
 var container = document.getElementById('components-switch-demo-disabled');
 
 var Test = React.createClass({
@@ -710,8 +707,8 @@ var Test = React.createClass({
       React.createElement("br", null),
       React.createElement("br", null),
       React.createElement(
-        Button,
-        { type: "primary", onClick: this.toggle },
+        "button",
+        { className: "ant-btn ant-btn-primary", onClick: this.toggle },
         "Toggle disabled"
       )
     );
@@ -719,7 +716,6 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -738,7 +734,7 @@ React.render(React.createElement(Test, null), container);})()</script><div class
       <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
