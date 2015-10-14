@@ -34496,15 +34496,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _velocityAnimate = __webpack_require__(285);
-	
-	var _velocityAnimate2 = _interopRequireDefault(_velocityAnimate);
+	var velocity = undefined;
+	if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+	  velocity = __webpack_require__(285);
+	}
 	
 	function animate(node, show, transitionName, done) {
 	  var ok = undefined;
@@ -34518,14 +34513,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  // Fix safari flash bug
 	  node.style.display = show ? 'block' : 'none';
-	  (0, _velocityAnimate2['default'])(node, transitionName, {
+	  velocity(node, transitionName, {
 	    duration: 240,
 	    complete: complete,
 	    easing: 'easeInOutQuad'
 	  });
 	  return {
 	    stop: function stop() {
-	      (0, _velocityAnimate2['default'])(node, 'finish');
+	      velocity(node, 'finish');
 	      complete();
 	    }
 	  };
@@ -34543,8 +34538,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	
-	exports['default'] = animation;
-	module.exports = exports['default'];
+	module.exports = animation;
 
 /***/ },
 /* 342 */
