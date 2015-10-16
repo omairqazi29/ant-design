@@ -13,7 +13,7 @@ Slider 滑动输入条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Slider 滑动输入条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -677,6 +677,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var Slider = antd.Slider;
+var Icon = antd.Icon;
 
 var IconSlider = React.createClass({
   displayName: 'IconSlider',
@@ -686,18 +687,9 @@ var IconSlider = React.createClass({
     var min = this.props.min;
     var mid = ((max - min) / 2).toFixed(5);
 
-    var preIcon, nextIcon;
-    if (this.props.value >= mid) {
-      preIcon = this.props.icon[0];
-      nextIcon = this.props.icon[1] + ' anticon-highlight';
-    } else {
-      preIcon = this.props.icon[0] + ' anticon-highlight';
-      nextIcon = this.props.icon[1];
-    }
-
     return {
-      preIcon: preIcon,
-      nextIcon: nextIcon,
+      preIconClass: this.props.value >= mid ? '' : 'anticon-highlight',
+      nextIconClass: this.props.value >= mid ? 'anticon-highlight' : '',
       mid: mid,
       sliderValue: this.props.value
     };
@@ -705,17 +697,10 @@ var IconSlider = React.createClass({
 
   handleChange: function handleChange(v) {
     var preIcon, nextIcon;
-    if (v >= this.state.mid) {
-      preIcon = this.props.icon[0];
-      nextIcon = this.props.icon[1] + ' anticon-highlight';
-    } else {
-      preIcon = this.props.icon[0] + ' anticon-highlight';
-      nextIcon = this.props.icon[1];
-    }
 
     this.setState({
-      preIcon: preIcon,
-      nextIcon: nextIcon,
+      preIconClass: v >= this.state.mid ? '' : 'anticon-highlight',
+      nextIconClass: v >= this.state.mid ? 'anticon-highlight' : '',
       sliderValue: v
     });
   },
@@ -724,14 +709,15 @@ var IconSlider = React.createClass({
     return React.createElement(
       'div',
       { className: 'iconWrapper' },
-      React.createElement('i', { className: this.state.preIcon }),
-      React.createElement('i', { className: this.state.nextIcon }),
+      React.createElement(Icon, { className: this.state.preIconClass, type: this.props.icon[0] }),
+      React.createElement(Icon, { className: this.state.nextIconClass, type: this.props.icon[1] }),
       React.createElement(Slider, _extends({}, this.props, { onChange: this.handleChange, value: this.state.sliderValue }))
     );
   }
 });
 
-React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['anticon anticon-lock', 'anticon anticon-unlock'] }), document.getElementById('components-slider-demo-icon-slider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
+React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['lock', 'unlock'] }), document.getElementById('components-slider-demo-icon-slider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> IconSlider = React.createClass({
   getInitialState() {
@@ -739,18 +725,9 @@ React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: 
     <span class="keyword">var</span> min = <span class="keyword">this</span>.props.min;
     <span class="keyword">var</span> mid = ((max - min) / <span class="number">2</span>).toFixed(<span class="number">5</span>);
 
-    <span class="keyword">var</span> preIcon, nextIcon;
-    <span class="keyword">if</span> (<span class="keyword">this</span>.props.value &gt;= mid) {
-      preIcon = <span class="keyword">this</span>.props.icon[<span class="number">0</span>];
-      nextIcon = <span class="keyword">this</span>.props.icon[<span class="number">1</span>] + <span class="string">' anticon-highlight'</span>;
-    } <span class="keyword">else</span> {
-      preIcon = <span class="keyword">this</span>.props.icon[<span class="number">0</span>] + <span class="string">' anticon-highlight'</span>;
-      nextIcon = <span class="keyword">this</span>.props.icon[<span class="number">1</span>];
-    }
-
     <span class="keyword">return</span> {
-      preIcon: preIcon,
-      nextIcon: nextIcon,
+      preIconClass: <span class="keyword">this</span>.props.value &gt;= mid ? <span class="string">''</span> : <span class="string">'anticon-highlight'</span>,
+      nextIconClass: <span class="keyword">this</span>.props.value &gt;= mid ? <span class="string">'anticon-highlight'</span> : <span class="string">''</span>,
       mid: mid,
       sliderValue: <span class="keyword">this</span>.props.value
     };
@@ -758,18 +735,11 @@ React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: 
 
   handleChange(v) {
     <span class="keyword">var</span> preIcon, nextIcon;
-    <span class="keyword">if</span> (v &gt;= <span class="keyword">this</span>.state.mid) {
-      preIcon = <span class="keyword">this</span>.props.icon[<span class="number">0</span>];
-      nextIcon = <span class="keyword">this</span>.props.icon[<span class="number">1</span>] + <span class="string">' anticon-highlight'</span>;
-    } <span class="keyword">else</span> {
-      preIcon = <span class="keyword">this</span>.props.icon[<span class="number">0</span>] + <span class="string">' anticon-highlight'</span>;
-      nextIcon = <span class="keyword">this</span>.props.icon[<span class="number">1</span>];
-    }
 
     <span class="keyword">this</span>.setState(
       {
-        preIcon: preIcon,
-        nextIcon: nextIcon,
+        preIconClass: v &gt;= <span class="keyword">this</span>.state.mid ? <span class="string">''</span> : <span class="string">'anticon-highlight'</span>,
+        nextIconClass: v &gt;= <span class="keyword">this</span>.state.mid ? <span class="string">'anticon-highlight'</span>: <span class="string">''</span>,
         sliderValue: v
       }
     );
@@ -778,8 +748,8 @@ React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: 
   render() {
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"iconWrapper"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">{this.state.preIcon}</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">{this.state.nextIcon}</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">className</span>=<span class="value">{this.state.preIconClass}</span> <span class="attribute">type</span>=<span class="value">{this.props.icon[0]}</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">className</span>=<span class="value">{this.state.nextIconClass}</span> <span class="attribute">type</span>=<span class="value">{this.props.icon[1]}</span> /&gt;</span>
         <span class="tag">&lt;<span class="title">Slider</span> {<span class="attribute">...this.props</span>} <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span> <span class="attribute">value</span>=<span class="value">{this.state.sliderValue}</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     );
@@ -787,7 +757,7 @@ React.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: 
 });
 
 React.render(
-<span class="tag">&lt;<span class="title">IconSlider</span> <span class="attribute">min</span>=<span class="value">{0}</span> <span class="attribute">max</span>=<span class="value">{20}</span> <span class="attribute">value</span>=<span class="value">{0}</span> <span class="attribute">icon</span>=<span class="value">{['anticon</span> <span class="attribute">anticon-lock</span>', '<span class="attribute">anticon</span> <span class="attribute">anticon-unlock</span>']} /&gt;</span>
+<span class="tag">&lt;<span class="title">IconSlider</span> <span class="attribute">min</span>=<span class="value">{0}</span> <span class="attribute">max</span>=<span class="value">{20}</span> <span class="attribute">value</span>=<span class="value">{0}</span> <span class="attribute">icon</span>=<span class="value">{['lock',</span> '<span class="attribute">unlock</span>']} /&gt;</span>
 , document.getElementById('components-slider-demo-icon-slider'));</span></code></pre></div><style>
 .iconWrapper {
   position: relative;

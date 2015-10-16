@@ -13,7 +13,7 @@ Button 按钮 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Button 按钮 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -558,52 +558,62 @@ Button 按钮 - Ant Design
     <p>按钮用于开始一个即时操作。</p>
 <h2 id="何时使用">何时使用</h2><p>标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</p>
 <h2 id="如何使用">如何使用</h2><ul>
-<li><p>按钮的基础样式为 <code>ant-btn</code>。</p>
+<li><p>通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：<code>type</code> -&gt; <code>shape</code> -&gt; <code>size</code> -&gt; <code>loading</code> -&gt; <code>disabled</code></p>
 </li>
-<li><p>通过类组装的形式来产生不同的按钮样式，推荐遵循如下顺序：</p>
-<pre>.ant-btn
-  &darr;
-.ant-btn-primary | .ant-btn-ghost
-  &darr;
-.ant-btn-circle | .ant-btn-circle-outline
-  &darr;
-.ant-btn-lg | .ant-btn-sm</pre></li>
-<li><p>按钮的样式参数说明如下：</p>
+<li><p>按钮的属性说明如下：</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>类名</th>
+<th>属性</th>
 <th>说明</th>
+<th>类型</th>
+<th>默认值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>.ant-btn</code></td>
-<td>按钮基础样式。</td>
+<td>type</td>
+<td>设置按钮类型，可选值为 <code>primary</code> <code>ghost</code> 或者不设</td>
+<td>Enum</td>
+<td>undefined</td>
 </tr>
 <tr>
-<td><code>.ant-btn-primary</code> <code>.ant-btn-ghost</code></td>
-<td>使用这些列出的类可以快速创建一个带有预定义样式的按钮。</td>
+<td>htmlType</td>
+<td>设置 <code>button</code> 原生的 <code>type</code> 值，可选值请参考 HTML标准</td>
+<td>Enum</td>
+<td><code>button</code></td>
 </tr>
 <tr>
-<td><code>.ant-btn-circle</code> <code>.ant-btn-circle-outline</code></td>
-<td>用于创建圆形按钮，<code>.ant-btn-circle-outline</code> 为描边按钮。</td>
+<td>shape</td>
+<td>设置按钮形状，可选值为 <code>circle</code> <code>circle-outline</code> 或者不设</td>
+<td>Enum</td>
+<td>undefined</td>
 </tr>
 <tr>
-<td><code>.ant-btn-lg</code> <code>.ant-btn-sm</code></td>
-<td>定义按钮大小尺寸，目前提供三种尺寸：大中小，默认为中。</td>
+<td>size</td>
+<td>设置按钮大小，可选值为 <code>sm</code> <code>lg</code> 或者不设</td>
+<td>Enum</td>
+<td>undefined</td>
 </tr>
 <tr>
-<td><code>.ant-btn-group</code></td>
-<td>按钮组合，通过按钮组容器把一组按钮放在同一行里。</td>
+<td>loading</td>
+<td>设置按钮载入状态，存在为 <code>true</code>，不存在为 <code>false</code>，或直接设置值，如：<code>loading=&quot;true&quot;</code></td>
+<td>Bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onClick</td>
+<td><code>click</code> 事件的 handler</td>
+<td>Function</td>
+<td><code>function() {}</code></td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>当按钮只有两个汉字时，需要在两字中加空格。</p>
-</blockquote>
+<ul>
+<li><code>&lt;Button&gt;Hello world!&lt;/Button&gt;</code> 最终会被渲染为 <code>&lt;button&gt;Hello world!&lt;/button&gt;</code>，并且除了上表中的属性，其它属性都会直接传到 <code>&lt;button&gt;&lt;/button&gt;</code></li>
+</ul>
 
   </article>
 <h2 class="component-demos">
@@ -614,98 +624,107 @@ Button 按钮 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-button-demo-basic"></div>
-    <div class="nico-insert-code"><button class="ant-btn">Button</button>
-<a href="javascript:;" class="ant-btn" role="button">Link</a>
-<input class="ant-btn" type="button" value="Input" />
-<input class="ant-btn" type="submit" value="Submit" />
+    <script>(function(){"use strict";
 
-<br>
+var Button = antd.Button;
 
-<!-- Styled Button -->
-<button class="ant-btn ant-btn-primary">主按钮</button>
-<button class="ant-btn">次按钮</button>
-<button class="ant-btn ant-btn-ghost">幽灵按钮</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-<span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"Input"</span> /&gt;</span>
-<span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"Submit"</span> /&gt;</span>
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary" },
+    "主按钮"
+  ),
+  React.createElement(
+    Button,
+    null,
+    "次按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost" },
+    "幽灵按钮"
+  )
+), document.getElementById('components-button-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 
-<span class="tag">&lt;<span class="title">br</span>&gt;</span>
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+document.getElementById('components-button-demo-basic'))</span></code></pre></div><style>
+#components-button-demo-basic .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
 
-<span class="comment">&lt;!-- Styled Button --&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-basic">标准按钮</a>
+      <a href="#demo-basic">按钮类型</a>
     </div>
-    <p>为 <code>&lt;button&gt;</code> <code>&lt;a&gt;</code> 或 <code>&lt;input&gt;</code> 元素添加 <code>.ant-btn</code> 类即可使用 ant-design 提供的样式。</p>
-<p>另外，通过使用下面的类可创建带有预定义样式的按钮，我们通过样式来显示重要程度的不同。</p>
-<p><code>.ant-btn-primary</code> <code>.ant-btn-ghost</code></p>
-<p>其中 <code>.ant-btn</code> 类定义了按钮的默认样式，语义上代表次按钮。</p>
-<p><strong>注</strong>: 当按钮文字为两个字时，中间需要<strong>间隔一个字符</strong>。</p>
+    <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>
+<p>通过设置 <code>type</code> 为 <code>primary</code> <code>ghost</code> 可分别创建主按钮、幽灵按钮，若不设置 <code>type</code> 值则为次按钮。不同的样式可以用来区别其重要程度。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-status">
+</div><div class="code-box" id="demo-size">
   <div class="code-box-demo">
-    <div id="components-button-demo-status"></div>
-    <div class="nico-insert-code"><button class="ant-btn ant-btn-primary">主按钮</button>
-<button class="ant-btn ant-btn-primary disabled">主按钮(失效)</button>
-<p></p>
-<button class="ant-btn">次按钮</button>
-<button class="ant-btn disabled">次按钮(失效)</button>
-<p></p>
-<button class="ant-btn ant-btn-ghost">幽灵按钮</button>
-<button class="ant-btn ant-btn-ghost disabled">幽灵按钮(失效)</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary disabled"</span>&gt;</span>主按钮(失效)<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn disabled"</span>&gt;</span>次按钮(失效)<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost disabled"</span>&gt;</span>幽灵按钮(失效)<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
+    <div id="components-button-demo-size"></div>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary", size: "lg" },
+    "大号按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary" },
+    "中号按钮(默认)"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", size: "sm" },
+    "小号按钮"
+  )
+), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>中号按钮(默认)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>小号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+, document.getElementById('components-button-demo-size'));</span></code></pre></div><style>
+#components-button-demo-size .ant-btn {
+  margin-right: 8px;
+}
+</style>
+
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-status">按钮状态</a>
+      <a href="#demo-size">按钮尺寸</a>
     </div>
-    <p>通过背景色透明度的变化来体现不同的操作状态，移入或点击元素可以查看状态。</p>
-<p>失效状态：为 <code>&lt;button&gt;</code> 元素添加 <code>disabled</code> 属性，即可体现。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-menu">
-  <div class="code-box-demo">
-    <div id="components-button-demo-menu"></div>
-    <div class="nico-insert-code"><button class="ant-btn ant-btn-primary ant-btn-menu">
-  <span>菜单按钮</span>
-  <span class="anticon anticon-down"></span>
-</button>
-<button class="ant-btn ant-btn-ghost ant-btn-circle ant-btn-menu">
-  <span class="anticon anticon-down"></span>
-</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-menu"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span>菜单按钮<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost ant-btn-circle ant-btn-menu"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-menu">菜单按钮</a>
-    </div>
-    <p><strong>注</strong>: 下拉按钮的 icon 大小统一成 <strong>10px</strong>。</p>
-<p>更多交互，详见 <a href="http://ant.design/components/dropdown/">Dropdown 下拉菜单</a>。</p>
+    <p>按钮有大、中、小三种尺寸。</p>
+<p>通过设置 <code>size</code> 为 <code>lg</code> <code>sm</code> 分别把按钮设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-loading">
   <div class="code-box-demo">
     <div id="components-button-demo-loading"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
 
   getInitialState: function getInitialState() {
     return {
@@ -718,36 +737,37 @@ var App = React.createClass({
     });
   },
   render: function render() {
-    var loadingClass = this.state.loading ? 'ant-btn-loading' : '';
     return React.createElement(
-      'div',
+      "div",
       null,
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary ant-btn-lg ant-btn-loading' },
-        '加载中'
+        Button,
+        { type: "primary", size: "lg", loading: true },
+        "加载中"
       ),
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary ant-btn-loading' },
-        '加载中'
+        Button,
+        { type: "primary", loading: "true" },
+        "加载中"
       ),
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary ant-btn-sm ant-btn-loading' },
-        '加载中'
+        Button,
+        { type: "primary", size: "sm", loading: true },
+        "加载中"
       ),
-      React.createElement('br', null),
+      React.createElement("br", null),
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary ' + loadingClass, onClick: this.enterLoading },
-        '点击变加载'
+        Button,
+        { type: "primary", loading: this.state.loading, onClick: this.enterLoading },
+        "点击变加载"
       )
     );
   }
 });
 
-React.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> App = React.createClass({
+React.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
+<span class="keyword">var</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       loading: <span class="literal">false</span>
@@ -759,21 +779,20 @@ React.render(React.createElement(App, null), document.getElementById('components
     });
   },
   render() {
-    <span class="keyword">var</span> loadingClass = <span class="keyword">this</span>.state.loading ? <span class="string">'ant-btn-loading'</span> : <span class="string">''</span>;
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg ant-btn-loading"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-loading"</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">"true"</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm ant-btn-loading"</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">loading</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">{'ant-btn</span> <span class="attribute">ant-btn-primary</span> ' + <span class="attribute">loadingClass</span>} <span class="attribute">onClick</span>=<span class="value">{this.enterLoading}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.enterLoading}</span>&gt;</span>
         点击变加载
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
@@ -790,234 +809,574 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     <div class="code-box-title">
       <a href="#demo-loading">加载中</a>
     </div>
-    <p>加载按钮。最后一个按钮演示点击后进入加载状态。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-size">
-  <div class="code-box-demo">
-    <div id="components-button-demo-size"></div>
-    <div class="nico-insert-code"><button class="ant-btn ant-btn-primary ant-btn-lg">大号按钮</button>
-<button class="ant-btn ant-btn-primary">中号按钮(默认)</button>
-<button class="ant-btn ant-btn-primary ant-btn-sm">小号按钮</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>中号按钮(默认)<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>小号按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-size">按钮尺寸</a>
-    </div>
-    <p>提供 大 中 小 三种尺寸。</p>
-<p>使用 <code>.ant-btn-lg</code> <code>.ant-btn-sm</code> 即可获得大 小尺寸，默认尺寸为中。</p>
+    <p>添加 <code>loading</code> 属性即可让按钮处于加载状态，最后一个按钮演示点击后进入加载状态。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-icon">
   <div class="code-box-demo">
     <div id="components-button-demo-icon"></div>
-    <div class="nico-insert-code"><button class="ant-btn ant-btn-primary ant-btn-circle ant-btn-lg">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary ant-btn-lg">
-  <i class="anticon anticon-search"></i>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+var Icon = antd.Icon;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", size: "lg" },
+    React.createElement(Icon, { type: "search" }),
+    "大按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary" },
+    React.createElement(Icon, { type: "search" }),
+    "中按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", size: "sm" },
+    React.createElement(Icon, { type: "search" }),
+    "小按钮"
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  )
+), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   大按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<button class="ant-btn ant-btn-primary ant-btn-circle">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary">
-  <i class="anticon anticon-search"></i>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   中按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<button class="ant-btn ant-btn-primary ant-btn-circle ant-btn-sm">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary ant-btn-sm">
-  <i class="anticon anticon-search"></i>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   小按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<p></p>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
 
-<button class="ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-ghost ant-btn-circle-outline">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-circle-outline ant-btn-sm">
-  <i class="anticon anticon-search"></i>
-</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  大按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+document.getElementById('components-button-demo-icon'));</span></code></pre></div><style>
+#components-button-demo-icon .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
 
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  中按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  小按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost ant-btn-circle-outline"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-circle-outline ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-icon">图标按钮</a>
     </div>
-    <p>图标一般放在文字前面，也可以单独存在。</p>
+    <p><code>Button</code> 内可以嵌套图标，图标可以放在文字前、后，也可以单独存在。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-shape">
+  <div class="code-box-demo">
+    <div id="components-button-demo-shape"></div>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+var Icon = antd.Icon;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  )
+), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+, document.getElementById('components-button-demo-shape'));</span></code></pre></div><style>
+#components-button-demo-shape .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-shape">按钮形状</a>
+    </div>
+    <p>通过设置 <code>shape</code> 为 <code>circle</code> <code>circle-outline</code>，可以把按钮形状设为圆形，并且 <code>circle-outline</code> 在 hover 时会有动画效果。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-status">
+  <div class="code-box-demo">
+    <div id="components-button-demo-status"></div>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h4",
+    null,
+    "使用 `disabled` 属性"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary" },
+    "主按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", disabled: true },
+    "主按钮(失效)"
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    Button,
+    null,
+    "次按钮"
+  ),
+  React.createElement(
+    Button,
+    { disabled: true },
+    "次按钮(失效)"
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    "h4",
+    null,
+    "使用 `.disabled` class"
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost" },
+    "幽灵按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", className: "disabled" },
+    "幽灵按钮(失效)"
+  )
+), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `disabled` 属性<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">disabled</span>&gt;</span>主按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">disabled</span>&gt;</span>次按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `.disabled` class<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">className</span>=<span class="value">"disabled"</span>&gt;</span>幽灵按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+, document.getElementById('components-button-demo-status'));</span></code></pre></div><style>
+#components-button-demo-status .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-status">按钮状态</a>
+    </div>
+    <p>添加 <code>disabled</code> 属性即可让按钮处于不可用状态，同时按钮样式也会改变。如果只是想使用按钮 disabled 后的样式，以便继续处理用户的点击事件，则使用 <code>.disabled</code> class 而非 <code>disabled</code> 属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-button-group">
   <div class="code-box-demo">
     <div id="components-button-demo-button-group"></div>
-    <div class="nico-insert-code"><h4>基本组合</h4>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-primary">确 定</button>
-  <button class="ant-btn ant-btn-primary">取 消</button>
-</div>
-<div class="ant-btn-group">
-  <button class="ant-btn">左</button>
-  <button class="ant-btn">中</button>
-  <button class="ant-btn">右</button>
-</div>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-primary">左</button>
-  <button class="ant-btn ant-btn-ghost">中</button>
-  <button class="ant-btn ant-btn-ghost">中</button>
-  <button class="ant-btn">右</button>
-</div>
-<h4>带图标按钮组合 </h4>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-primary">
-  <span class="anticon anticon-left"></span>
-  <span>后 退</span>
-  </button>
-  <button class="ant-btn ant-btn-primary">
-  <span>前 进</span>
-  <span class="anticon anticon-right"></span>
-  </button>
-</div>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-primary">
-  <span class="anticon anticon-cloud"></span>
-  </button>
-  <button class="ant-btn ant-btn-primary">
-  <span class="anticon anticon-cloud-download"></span>
-  </button>
-</div>
-<h4>多个组合</h4>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-ghost">1</button>
-  <button class="ant-btn ant-btn-ghost">2</button>
-  <button class="ant-btn ant-btn-ghost">3</button>
-  <button class="ant-btn ant-btn-ghost">4</button>
-  <button class="ant-btn ant-btn-ghost">
-  <span>前 进</span>
-  <span class="anticon anticon-right"></span>
-  </button>
-</div>
-<h4>尺寸</h4>
-<div class="ant-btn-group ant-btn-group-lg">
-  <button class="ant-btn ant-btn-ghost">大</button>
-  <button class="ant-btn ant-btn-ghost">大</button>
-  <button class="ant-btn ant-btn-ghost">大</button>
-</div>
-<div class="ant-btn-group">
-  <button class="ant-btn ant-btn-ghost">默 认</button>
-  <button class="ant-btn ant-btn-ghost">默 认</button>
-  <button class="ant-btn ant-btn-ghost">默 认</button>
-</div>
-<div class="ant-btn-group ant-btn-group-sm">
-  <button class="ant-btn ant-btn-ghost">小</button>
-  <button class="ant-btn ant-btn-ghost">小</button>
-  <button class="ant-btn ant-btn-ghost">小</button>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">h4</span>&gt;</span>基本组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>取 消<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>左<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>右<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>左<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn"</span>&gt;</span>右<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+var ButtonGroup = antd.ButtonGroup;
+var Icon = antd.Icon;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h4",
+    null,
+    "基本组合"
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "primary" },
+      "确定"
+    ),
+    React.createElement(
+      Button,
+      { type: "primary" },
+      "取消"
+    )
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      null,
+      "左"
+    ),
+    React.createElement(
+      Button,
+      null,
+      "中"
+    ),
+    React.createElement(
+      Button,
+      null,
+      "右"
+    )
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "primary" },
+      "左"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "中"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "中"
+    ),
+    React.createElement(
+      Button,
+      null,
+      "右"
+    )
+  ),
+  React.createElement(
+    "h4",
+    null,
+    "带图标按钮组合 "
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "primary" },
+      React.createElement(Icon, { type: "left" }),
+      React.createElement(
+        "span",
+        null,
+        "后退"
+      )
+    ),
+    React.createElement(
+      Button,
+      { type: "primary" },
+      "前进",
+      React.createElement(Icon, { type: "right" })
+    )
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "primary" },
+      React.createElement(Icon, { type: "cloud" })
+    ),
+    React.createElement(
+      Button,
+      { type: "primary" },
+      React.createElement(Icon, { type: "cloud-download" })
+    )
+  ),
+  React.createElement(
+    "h4",
+    null,
+    "多个组合"
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "1"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "2"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "3"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "4"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      React.createElement(
+        "span",
+        null,
+        "前进"
+      ),
+      React.createElement(Icon, { type: "right" })
+    )
+  ),
+  React.createElement(
+    "h4",
+    null,
+    "尺寸"
+  ),
+  React.createElement(
+    ButtonGroup,
+    { size: "lg" },
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "大"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "大"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "大"
+    )
+  ),
+  React.createElement(
+    ButtonGroup,
+    null,
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "默认"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "默认"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "默认"
+    )
+  ),
+  React.createElement(
+    ButtonGroup,
+    { size: "sm" },
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "小"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "小"
+    ),
+    React.createElement(
+      Button,
+      { type: "ghost" },
+      "小"
+    )
+  )
+), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>基本组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>取消<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合 <span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-left"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span>后 退<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span>前 进<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-right"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-cloud"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-cloud-download"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"left"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>后退<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    前进
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"right"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cloud"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cloud-download"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>多个组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span>前 进<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-right"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>前进<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"right"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>尺寸<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group ant-btn-group-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>默 认<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>默 认<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>默 认<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-btn-group ant-btn-group-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><style>
+, document.getElementById('components-button-demo-button-group'));</span></code></pre></div><style>
 .nico-insert-code h4 {
   margin: 8px 0;
   font-size: 12px;
@@ -1030,6 +1389,12 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
 .nico-insert-code .ant-btn {
   margin-bottom: 8px;
 }
+#components-button-demo-button-group .ant-btn-group {
+  margin-right: 8px;
+}
+#components-button-demo-button-group .ant-btn {
+  margin-bottom: 12px;
+}
 </style>
 
   </div>
@@ -1037,9 +1402,8 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     <div class="code-box-title">
       <a href="#demo-button-group">按钮组合</a>
     </div>
-    <p>将一系列的 <code>.ant-btn</code> 放入 <code>.ant-btn-group</code> 的容器中。</p>
-<p>按钮组合尺寸</p>
-<p>只要给 <code>.ant-btn-group</code> 加上 <code>.ant-btn-group-*</code> 类，即可设置不同的尺寸，目前支持大中小三种尺寸。</p>
+    <p>可以将多个 <code>Button</code> 放入 <code>ButtonGroup</code> 的容器中。</p>
+<p>通过设置 <code>size</code> 为 <code>lg</code> <code>sm</code> 分别把按钮组合设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

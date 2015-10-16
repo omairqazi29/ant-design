@@ -1,0 +1,82 @@
+<div class="code-box" id="demo-shape">
+  <div class="code-box-demo">
+    <div id="components-button-demo-shape"></div>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+var Icon = antd.Icon;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  )
+), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+, document.getElementById('components-button-demo-shape'));</span></code></pre></div><style>
+#components-button-demo-shape .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-shape">按钮形状</a>
+    </div>
+    <p>通过设置 <code>shape</code> 为 <code>circle</code> <code>circle-outline</code>，可以把按钮形状设为圆形，并且 <code>circle-outline</code> 在 hover 时会有动画效果。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

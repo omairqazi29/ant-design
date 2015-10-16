@@ -13,7 +13,7 @@ Datepicker 日期选择框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -633,15 +633,15 @@ Datepicker 日期选择框 - Ant Design
   <div class="code-box-demo">
     <div id="components-datepicker-demo-basic"></div>
     <script>(function(){// or require('antd/lib/datepicker');
-'use strict';
+"use strict";
 
 var Datepicker = antd.Datepicker;
 
-React.render(React.createElement(Datepicker, null), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="comment">// or require('antd/lib/datepicker');</span>
+React.render(React.createElement(Datepicker, { defaultValue: "2012-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="comment">// or require('antd/lib/datepicker');</span>
 <span class="keyword">var</span> Datepicker = antd.Datepicker;
 
 React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2012-12-12"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

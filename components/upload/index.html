@@ -13,7 +13,7 @@ Upload 文件上传 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Upload 文件上传 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -646,6 +646,8 @@ Upload 文件上传 - Ant Design
 
 var Upload = antd.Upload;
 var message = antd.message;
+var Button = antd.Button;
+var Icon = antd.Icon;
 
 var props = {
   name: 'file',
@@ -666,13 +668,15 @@ React.render(React.createElement(
   Upload,
   props,
   React.createElement(
-    'button',
-    { type: 'button', className: 'ant-btn ant-btn-ghost' },
-    React.createElement('i', { className: 'anticon anticon-upload' }),
+    Button,
+    { type: 'ghost' },
+    React.createElement(Icon, { type: 'upload' }),
     ' 点击上传'
   )
 ), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 <span class="keyword">var</span> message = antd.message;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
@@ -691,9 +695,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
   </div>
@@ -712,6 +716,8 @@ React.render(
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var Upload = antd.Upload;
+var Button = antd.Button;
+var Icon = antd.Icon;
 var fileList = [{
   uid: -1,
   name: 'xxx.png',
@@ -765,9 +771,9 @@ var MyUpload = React.createClass({
       Upload,
       _extends({}, props, { fileList: this.state.fileList }),
       React.createElement(
-        'button',
-        { type: 'button', className: 'ant-btn ant-btn-ghost' },
-        React.createElement('i', { className: 'anticon anticon-upload' }),
+        Button,
+        { type: 'ghost' },
+        React.createElement(Icon, { type: 'upload' }),
         ' 点击上传'
       )
     );
@@ -775,6 +781,8 @@ var MyUpload = React.createClass({
 });
 
 React.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
 <span class="keyword">var</span> fileList = [{
   uid: -<span class="number">1</span>,
   name: <span class="string">'xxx.png'</span>,
@@ -823,9 +831,9 @@ React.render(React.createElement(MyUpload, null), document.getElementById('compo
       multiple: <span class="literal">true</span>
     };
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} <span class="attribute">fileList</span>=<span class="value">{this.state.fileList}</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>;</span>
   }
 });
@@ -848,6 +856,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyUploa
     <script>(function(){'use strict';
 
 var Dragger = antd.Upload.Dragger;
+var Icon = antd.Icon;
 
 var props = {
   name: 'file',
@@ -857,8 +866,9 @@ var props = {
 React.render(React.createElement(
   Dragger,
   props,
-  React.createElement('i', { className: 'anticon anticon-plus' })
+  React.createElement(Icon, { type: 'plus' })
 ), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
@@ -867,7 +877,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-plus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag-simple')
 );</span></code></pre></div><style>
@@ -893,6 +903,8 @@ React.render(
     <script>(function(){'use strict';
 
 var Upload = antd.Upload;
+var Button = antd.Button;
+var Icon = antd.Icon;
 
 var props = {
   action: '/upload.do',
@@ -919,12 +931,14 @@ React.render(React.createElement(
   Upload,
   props,
   React.createElement(
-    'button',
-    { type: 'button', className: 'ant-btn ant-btn-ghost' },
-    React.createElement('i', { className: 'anticon anticon-upload' }),
+    Button,
+    { type: 'ghost' },
+    React.createElement(Icon, { type: 'upload' }),
     ' 点击上传'
   )
 ), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   action: <span class="string">'/upload.do'</span>,
@@ -949,9 +963,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
   </div>
@@ -968,6 +982,7 @@ React.render(
     <script>(function(){'use strict';
 
 var Dragger = antd.Upload.Dragger;
+var Icon = antd.Icon;
 
 var props = {
   name: 'file',
@@ -980,7 +995,7 @@ React.render(React.createElement(
   React.createElement(
     'p',
     { className: 'ant-upload-drag-icon' },
-    React.createElement('i', { className: 'anticon anticon-inbox' })
+    React.createElement(Icon, { type: 'inbox' })
   ),
   React.createElement(
     'p',
@@ -993,6 +1008,7 @@ React.render(React.createElement(
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
 ), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
@@ -1002,7 +1018,7 @@ React.render(React.createElement(
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-drag-icon"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-inbox"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"inbox"</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -1029,6 +1045,8 @@ React.render(
 
 var Upload = antd.Upload;
 var message = antd.message;
+var Button = antd.Button;
+var Icon = antd.Icon;
 
 var props = {
   action: '/upload.do',
@@ -1049,13 +1067,15 @@ React.render(React.createElement(
   Upload,
   props,
   React.createElement(
-    'button',
-    { type: 'button', className: 'ant-btn ant-btn-ghost' },
-    React.createElement('i', { className: 'anticon anticon-upload' }),
+    Button,
+    { type: 'ghost' },
+    React.createElement(Icon, { type: 'upload' }),
     ' 点击上传'
   )
 ), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
 <span class="keyword">var</span> message = antd.message;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   action: <span class="string">'/upload.do'</span>,
@@ -1074,9 +1094,9 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-upload"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
+    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-multiple'));</span></code></pre></div>
   </div>

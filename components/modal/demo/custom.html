@@ -4,6 +4,8 @@
     <script>(function(){'use strict';
 
 var Modal = antd.Modal;
+var Button = antd.Button;
+
 var ModalText = '对话框的内容';
 
 var Test = React.createClass({
@@ -43,8 +45,8 @@ var Test = React.createClass({
       'div',
       null,
       React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary', onClick: this.showModal },
+        Button,
+        { type: 'primary', onClick: this.showModal },
         '显示对话框'
       ),
       React.createElement(
@@ -64,6 +66,8 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-custom'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> ModalText = <span class="string">'对话框的内容'</span>;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -96,7 +100,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"对话框标题"</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>

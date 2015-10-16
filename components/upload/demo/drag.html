@@ -4,6 +4,7 @@
     <script>(function(){'use strict';
 
 var Dragger = antd.Upload.Dragger;
+var Icon = antd.Icon;
 
 var props = {
   name: 'file',
@@ -16,7 +17,7 @@ React.render(React.createElement(
   React.createElement(
     'p',
     { className: 'ant-upload-drag-icon' },
-    React.createElement('i', { className: 'anticon anticon-inbox' })
+    React.createElement(Icon, { type: 'inbox' })
   ),
   React.createElement(
     'p',
@@ -29,6 +30,7 @@ React.render(React.createElement(
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
 ), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
@@ -38,7 +40,7 @@ React.render(React.createElement(
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-drag-icon"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-inbox"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"inbox"</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>

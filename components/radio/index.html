@@ -13,7 +13,7 @@ Radio 单选框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Radio 单选框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -762,6 +762,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
     <script>(function(){"use strict";
 
 var Radio = antd.Radio;
+var Button = antd.Button;
 
 function toggleDisabled() {
   disabled = !disabled;
@@ -799,8 +800,8 @@ var App = React.createClass({
         "div",
         { style: { marginTop: 20 } },
         React.createElement(
-          "button",
-          { className: "ant-btn ant-btn-primary", onClick: this.toggleDisabled },
+          Button,
+          { type: "primary", onClick: this.toggleDisabled },
           "Toggle disabled"
         )
       )
@@ -809,6 +810,7 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">toggleDisabled</span><span class="params">()</span> {</span>
   disabled = !disabled;
@@ -831,9 +833,9 @@ React.render(React.createElement(App, null), document.getElementById('components
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">defaultChecked</span>=<span class="value">{true}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span>&gt;</span>不可用<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>
-        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggleDisabled}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggleDisabled}</span>&gt;</span>
           Toggle disabled
-        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }

@@ -4,6 +4,7 @@
     <script>(function(){'use strict';
 
 var Dragger = antd.Upload.Dragger;
+var Icon = antd.Icon;
 
 var props = {
   name: 'file',
@@ -13,8 +14,9 @@ var props = {
 React.render(React.createElement(
   Dragger,
   props,
-  React.createElement('i', { className: 'anticon anticon-plus' })
+  React.createElement(Icon, { type: 'plus' })
 ), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> props = {
   name: <span class="string">'file'</span>,
@@ -23,7 +25,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-plus"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag-simple')
 );</span></code></pre></div><style>
