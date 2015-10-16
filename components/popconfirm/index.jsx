@@ -1,7 +1,5 @@
 import React from 'react';
 import Tooltip from 'rc-tooltip';
-import Icon from '../iconfont';
-import { Button } from '../button';
 const prefixCls = 'ant-popover';
 
 export default React.createClass({
@@ -43,13 +41,13 @@ export default React.createClass({
     const overlay = <div>
       <div className={prefixCls + '-content'}>
         <p className={prefixCls + '-message'}>
-          <Icon type="exclamation-circle" />
+          <i className="anticon anticon-exclamation-circle"></i>
           {this.props.title}
         </p>
 
         <div className={prefixCls + '-buttons'}>
-          <Button onClick={this.cancel} size="sm">取 消</Button>
-          <Button onClick={this.confirm} type="primary" size="sm">确 定</Button>
+          <button onClick={this.cancel} className="ant-btn ant-btn-sm">取 消</button>
+          <button onClick={this.confirm} className="ant-btn ant-btn-primary ant-btn-sm">确 定</button>
         </div>
       </div>
     </div>;

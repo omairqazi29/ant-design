@@ -4,7 +4,6 @@
     <script>(function(){"use strict";
 
 var notification = antd.Notification;
-var Button = antd.Button;
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
@@ -19,27 +18,26 @@ React.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('success') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('success') },
     "成功"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('info') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('info') },
     "消息"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('warn') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('warn') },
     "警告"
   ),
   React.createElement(
-    Button,
-    { onClick: openNotificationWithIcon('error') },
+    "button",
+    { className: "ant-btn", onClick: openNotificationWithIcon('error') },
     "错误"
   )
 ), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
@@ -51,10 +49,10 @@ React.render(React.createElement(
 };
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-notification-demo-with-icon'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {

@@ -13,7 +13,7 @@
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../dist/antd-0.9.1.min.css">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.9.1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../dist/antd-0.10.0-beta1.min.js"></script>
+    <script src="../dist/antd-0.9.1.min.js"></script>
     <script src="../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -475,82 +475,7 @@ var ExtendPalettes = React.createClass({
     );
   }
 });
-React.render(React.createElement(ExtendPalettes, null), document.getElementById('extend-palettes'));})()</script><h2 id="色彩换算工具">色彩换算工具</h2><script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
-
-<blockquote>
-<p>正数为变淡 <code>tint</code> ，负数为加深 <code>shade</code>。</p>
-</blockquote>
-<div id="color-tint-shade-tool"></div>
-
-<p>Ant Design 专用色彩换算工具，用于解析类似 <code>#2db7f5 tint 80%</code> 的色彩标注。</p>
-<p>less 或 scss 语言可以直接使用 <code>tint(#2db7f5, 80%)</code> 和  <code>shade(#2db7f5, 80%)</code> 的语法。</p>
-<script>(function(){'use strict';
-
-var Button = antd.Button;
-var InputNumber = antd.InputNumber;
-var Slider = antd.Slider;
-var TintShadeTool = React.createClass({
-  displayName: 'TintShadeTool',
-
-  getInitialState: function getInitialState() {
-    return {
-      result: '',
-      color: '#2db7f5',
-      value: 80
-    };
-  },
-  handleChangeColor: function handleChangeColor(e) {
-    this.setState({
-      color: e.target.value
-    }, this.calculate);
-  },
-  handleChangeValue: function handleChangeValue(value) {
-    this.setState({
-      value: value
-    }, this.calculate);
-  },
-  componentDidMount: function componentDidMount() {
-    this.calculate();
-  },
-  calculate: function calculate() {
-    var tintOrShade = this.state.value >= 0 ? 'tint' : 'shade';
-    var c = new Values(this.state.color);
-    this.setState({
-      result: '#' + c[tintOrShade](Math.abs(this.state.value)).hex
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      { style: { margin: '40px 0' } },
-      React.createElement(
-        'div',
-        null,
-        React.createElement('input', { className: 'ant-input', style: { width: 120, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
-        React.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100 }),
-        React.createElement(
-          'span',
-          { style: { margin: '0 62px 0 8px' } },
-          '%'
-        ),
-        React.createElement('div', { style: { width: 60, borderRadius: 6, height: 28, backgroundColor: this.state.result, display: 'inline-block', verticalAlign: 'middle', marginRight: 8 } }),
-        React.createElement(
-          'span',
-          null,
-          this.state.result
-        )
-      ),
-      React.createElement(
-        'div',
-        { style: { width: 400, marginTop: 20, position: 'relative' } },
-        React.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100 }),
-        React.createElement('div', { style: { backgroundColor: '#81D4F9', width: 2, height: 4, position: 'absolute', top: -28, fontSize: 12, textAlign: 'center', top: -1, left: 202 } })
-      )
-    );
-  }
-});
-
-React.render(React.createElement(TintShadeTool, null), document.getElementById('color-tint-shade-tool'));})()</script>
+React.render(React.createElement(ExtendPalettes, null), document.getElementById('extend-palettes'));})()</script>
   </article>
 </section>
 

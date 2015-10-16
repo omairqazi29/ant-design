@@ -5,7 +5,6 @@
 
 var Validation = antd.Validation;
 var Validator = Validation.Validator;
-var Button = antd.Button;
 
 function cx(classNames) {
   if (typeof classNames === 'object') {
@@ -156,7 +155,7 @@ var Form = React.createClass({
 
     return React.createElement(
       'form',
-      { className: 'ant-form-horizontal' },
+      { onSubmit: this.handleSubmit, className: 'ant-form-horizontal' },
       React.createElement(
         Validation,
         { ref: 'validation', onValidate: this.handleValidate },
@@ -236,14 +235,14 @@ var Form = React.createClass({
             'div',
             { className: 'col-offset-6 col-12' },
             React.createElement(
-              Button,
-              { type: 'primary', onClick: this.handleSubmit },
+              'button',
+              { type: 'submit', className: 'ant-btn ant-btn-primary' },
               '确 定'
             ),
             '   ',
             React.createElement(
-              Button,
-              { onClick: this.handleReset },
+              'a',
+              { href: '#', className: 'ant-btn', onClick: this.handleReset },
               '重 置'
             )
           )
@@ -255,7 +254,6 @@ var Form = React.createClass({
 
 React.render(React.createElement(Form, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Validation = antd.Validation;
 <span class="keyword">var</span> Validator = Validation.Validator;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">cx</span><span class="params">(classNames)</span> {</span>
   <span class="keyword">if</span> (<span class="keyword">typeof</span> classNames === <span class="string">'object'</span>) {
@@ -395,7 +393,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
     var status = this.state.status;
 
     return (
-      <span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">form</span> <span class="attribute">onSubmit</span>=<span class="value">{this.handleSubmit}</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Validation</span> <span class="attribute">ref</span>=<span class="value">"validation"</span> <span class="attribute">onValidate</span>=<span class="value">{this.handleValidate}</span>&gt;</span>
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
@@ -434,9 +432,9 @@ React.render(React.createElement(Form, null), document.getElementById('component
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-offset-6 col-12"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleSubmit}</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
               &amp;nbsp;&amp;nbsp;&amp;nbsp;
-              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">Validation</span>&gt;</span>

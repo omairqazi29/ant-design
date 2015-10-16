@@ -9,7 +9,6 @@
 
 var Steps = antd.Steps;
 var Step = Steps.Step;
-var Button = antd.Button;
 var container = document.getElementById('components-steps-demo-step-next');
 var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 var steps = array.map(function (item, i) {
@@ -58,8 +57,8 @@ var App = React.createClass({
         'div',
         null,
         React.createElement(
-          Button,
-          { onClick: this.next },
+          'button',
+          { className: 'ant-btn', onClick: this.next },
           '下一步'
         )
       )
@@ -69,7 +68,6 @@ var App = React.createClass({
 
 React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
 <span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
 <span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
@@ -102,7 +100,7 @@ React.render(React.createElement(App, null), container);})()</script><div class=
           {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
         <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     );

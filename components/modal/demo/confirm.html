@@ -4,7 +4,6 @@
     <script>(function(){'use strict';
 
 var confirm = antd.Modal.confirm;
-var Button = antd.Button;
 
 function showConfirm() {
   confirm({
@@ -18,11 +17,10 @@ function showConfirm() {
 }
 
 React.render(React.createElement(
-  Button,
-  { onClick: showConfirm },
+  'button',
+  { className: 'ant-btn', onClick: showConfirm },
   '确认对话框'
 ), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
-<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({
@@ -36,9 +34,9 @@ React.render(React.createElement(
 }
 
 React.render(
-<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
   确认对话框
-<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>
+<span class="tag">&lt;/<span class="title">button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

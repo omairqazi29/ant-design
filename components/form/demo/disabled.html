@@ -1,106 +1,63 @@
 <div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-form-demo-disabled"></div>
-    <script>(function(){"use strict";
-
-var Form = antd.Form;
-var Input = Form.Input;
-var FormItem = Form.Item;
-var Button = antd.Button;
-var Checkbox = antd.Checkbox;
-var Radio = antd.Radio;
-var RadioGroup = antd.Radio.Group;
-
-React.render(React.createElement(
-  Form,
-  { horizontal: true },
-  React.createElement(
-    FormItem,
-    {
-      label: "单独禁用输入框：",
-      labelClassName: "col-5",
-      wrapperClassName: "col-12" },
-    React.createElement(Input, { type: "text", value: "我是禁用的", disabled: true })
-  ),
-  React.createElement(
-    "fieldset",
-    { disabled: true },
-    React.createElement(
-      "legend",
-      null,
-      "禁用的 fieldset"
-    ),
-    React.createElement(
-      FormItem,
-      {
-        label: "用户名：",
-        labelClassName: "col-5",
-        wrapperClassName: "col-12",
-        required: true,
-        isCompact: true },
-      React.createElement(Input, { type: "static", value: "大眼萌 minion", id: "userName" })
-    ),
-    React.createElement(
-      FormItem,
-      {
-        label: "密码：",
-        labelClassName: "col-5",
-        wrapperClassName: "col-12",
-        required: true },
-      React.createElement(Input, { type: "password", value: "123456", id: "password" })
-    ),
-    React.createElement(
-      "div",
-      { className: "row" },
-      React.createElement(
-        "div",
-        { className: "col-12 col-offset-5" },
-        React.createElement("input", { type: "submit", className: "ant-btn ant-btn-primary", value: "确 定" })
-      )
-    )
-  )
-), document.getElementById('components-form-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Form = antd.Form;
-<span class="keyword">var</span> Input = Form.Input;
-<span class="keyword">var</span> FormItem = Form.Item;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-
-React.render(
-<span class="xml"><span class="tag">&lt;<span class="title">Form</span> <span class="attribute">horizontal</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">FormItem
-</span>    <span class="attribute">label</span>=<span class="value">"单独禁用输入框："</span>
-    <span class="attribute">labelClassName</span>=<span class="value">"col-5"</span>
-    <span class="attribute">wrapperClassName</span>=<span class="value">"col-12"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"我是禁用的"</span> <span class="attribute">disabled</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">FormItem</span>&gt;</span>
-
+    <h4 id="禁用的表单控件">禁用的表单控件</h4><p><br></p>
+<div class="nico-insert-code"><form class="ant-form-horizontal">
+  <div class="ant-form-item">
+    <label class="col-5">禁用的输入框：</label>
+    <div class="col-12">
+      <input class="ant-input" type="text" value="我是禁用的" disabled>
+    </div>
+  </div>
+</form></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-5"</span>&gt;</span>禁用的输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"我是禁用的"</span> <span class="attribute">disabled</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div><h4 id="禁用的-fieldset">禁用的 fieldset</h4><p><br></p>
+<div class="nico-insert-code"><form class="ant-form-horizontal">
+  <fieldset disabled>
+    <div class="ant-form-item ant-form-item-compact">
+      <label for="userName" class="col-5" required>用户名：</label>
+      <div class="col-12">
+        <p class="ant-form-text">大眼萌 minion</p>
+      </div>
+    </div>
+    <div class="ant-form-item">
+      <label for="password" class="col-5" required>密码：</label>
+      <div class="col-12">
+        <input class="ant-input" type="password" id="password" value="123456"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-offset-5">
+        <input type="submit" class="ant-btn ant-btn-primary" value="确 定" />
+      </div>
+    </div>
+  </fieldset>
+</form></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">disabled</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">legend</span>&gt;</span>禁用的 fieldset<span class="tag">&lt;/<span class="title">legend</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">FormItem
-</span>      <span class="attribute">label</span>=<span class="value">"用户名："</span>
-      <span class="attribute">labelClassName</span>=<span class="value">"col-5"</span>
-      <span class="attribute">wrapperClassName</span>=<span class="value">"col-12"</span>
-      <span class="attribute">required</span>=<span class="value">{true}</span>
-      <span class="attribute">isCompact</span>=<span class="value">{true}</span> &gt;</span>
-      <span class="tag">&lt;<span class="title">Input</span> <span class="attribute">type</span>=<span class="value">"static"</span> <span class="attribute">value</span>=<span class="value">"大眼萌 minion"</span> <span class="attribute">id</span>=<span class="value">"userName"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">FormItem</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">FormItem
-</span>      <span class="attribute">label</span>=<span class="value">"密码："</span>
-      <span class="attribute">labelClassName</span>=<span class="value">"col-5"</span>
-      <span class="attribute">wrapperClassName</span>=<span class="value">"col-12"</span>
-      <span class="attribute">required</span>=<span class="value">{true}</span> &gt;</span>
-      <span class="tag">&lt;<span class="title">Input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">"123456"</span> <span class="attribute">id</span>=<span class="value">"password"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">FormItem</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-12 col-offset-5"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"userName"</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"password"</span> <span class="attribute">class</span>=<span class="value">"col-5"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">value</span>=<span class="value">"123456"</span>/&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12 col-offset-5"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Form</span>&gt;</span>
-, document.getElementById('components-form-demo-disabled'));</span></code></pre></div>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

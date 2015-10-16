@@ -1,6 +1,5 @@
 import React from 'react';
 import Animate from 'rc-animate';
-import Icon from '../iconfont';
 
 export default React.createClass({
   getDefaultProps() {
@@ -36,23 +35,22 @@ export default React.createClass({
   },
   render() {
     let iconClass = this.props.description ?
-      'ant-alert-with-description-icon' : 'ant-alert-icon';
-    let iconType = '';
+      'ant-alert-with-description-icon anticon-' : 'ant-alert-icon anticon-';
     switch (this.props.type) {
     case 'success':
-      iconType = 'check-circle';
+      iconClass += 'check-circle';
       break;
     case 'info':
-      iconType = 'info-circle';
+      iconClass += 'info-circle';
       break;
     case 'error':
-      iconType = 'exclamation-circle';
+      iconClass += 'exclamation-circle';
       break;
     case 'warn':
-      iconType = 'question-circle';
+      iconClass += 'question-circle';
       break;
     default:
-      iconType = 'default';
+      iconClass += 'default';
     }
     let html;
     let closeName = !this.state.closing ? ' ' + this.props.prefixCls + '-close' : '';
@@ -62,7 +60,7 @@ export default React.createClass({
           <span className="ant-alert-with-description-close-icon-x"></span>
         </a> : '';
       html = <div data-show={this.state.closing} className={'ant-alert-with-description ant-alert-with-description-' + this.props.type + closeName}>
-        <Icon className={iconClass} type={iconType} />
+        <i className={'anticon ' + iconClass}></i>
         <p className={'ant-alert-with-description-message'}>{this.props.message}</p>
         <span className={'ant-alert-with-description-description'}>{this.props.description}</span>
           {close}
@@ -70,7 +68,7 @@ export default React.createClass({
     } else {
       if (this.props.closeText) {
         html = <div data-show={this.state.closing} className={'ant-alert ant-alert-' + this.props.type + closeName}>
-          <Icon className={iconClass} type={iconType} />
+          <i className={'anticon ' + iconClass}></i>
           <span className={'ant-alert-description'}>{this.props.message}</span>
           <span onClick={this.handleClose} className={'ant-alert-close-text'}>{this.props.closeText}</span>
         </div>;
@@ -80,7 +78,7 @@ export default React.createClass({
             <span className="ant-alert-close-icon-x"></span>
           </a> : '';
         html = <div data-show={this.state.closing} className={'ant-alert ant-alert-' + this.props.type + closeName}>
-          <Icon className={iconClass} type={iconType} />
+          <i className={'anticon ' + iconClass}></i>
           <span className={'ant-alert-description'}>{this.props.message}</span>
           {close}
         </div>;

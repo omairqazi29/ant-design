@@ -43,11 +43,7 @@ const antd = {
   Upload: require('./components/upload'),
   Badge: require('./components/badge'),
   Menu: require('./components/menu'),
-  Timeline: require('./components/timeline'),
-  Button: require('./components/button').Button,
-  ButtonGroup: require('./components/button').ButtonGroup,
-  Icon: require('./components/iconfont'),
-  Form: require('./components/form')
+  Timeline: require('./components/timeline')
 };
 
 // deprecate antd.confirm

@@ -4,7 +4,6 @@
     <script>(function(){'use strict';
 
 var Checkbox = antd.Checkbox;
-var Button = antd.Button;
 var container = document.getElementById('components-checkbox-demo-controller');
 
 var App = React.createClass({
@@ -37,15 +36,15 @@ var App = React.createClass({
         'p',
         null,
         React.createElement(
-          Button,
-          { type: 'primary', size: 'sm',
+          'button',
+          { className: 'ant-btn ant-btn-primary ant-btn-sm',
             onClick: this.toggleChecked },
           !this.state.checked ? "选中" : "取消"
         ),
         React.createElement(
-          Button,
+          'button',
           { style: { 'marginLeft': '10px' },
-            type: 'primary', size: 'sm',
+            className: 'ant-btn ant-btn-primary ant-btn-sm',
             onClick: this.toggleDisable },
           !this.state.disabled ? "不可用" : "可用"
         )
@@ -67,7 +66,6 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-controller'</span>);
 
 <span class="keyword">var</span> App = React.createClass({
@@ -90,15 +88,15 @@ React.render(React.createElement(App, null), container);})()</script><div class=
         <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleChecked}</span>&gt;</span>
           {!this.state.checked ? "选中":"取消"}
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
-          <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
+          <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleDisable}</span>&gt;</span>
           {!this.state.disabled ? "不可用":"可用"}
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   },

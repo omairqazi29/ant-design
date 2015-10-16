@@ -4,8 +4,6 @@
     <script>(function(){'use strict';
 
 var Table = antd.Table;
-var Icon = antd.Icon;
-
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -45,7 +43,7 @@ var columns = [{
         'a',
         { href: 'javascript:;', className: 'ant-dropdown-link' },
         '更多 ',
-        React.createElement(Icon, { type: 'down' })
+        React.createElement('i', { className: 'anticon anticon-down' })
       )
     );
   }
@@ -68,8 +66,6 @@ var data = [{
 }];
 
 React.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> Icon = antd.Icon;
-
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -92,7 +88,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
       <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>操作二<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
       <span class="tag">&lt;<span class="title">span</span> <span class="attribute">className</span>=<span class="value">"ant-divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
       <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">className</span>=<span class="value">"ant-dropdown-link"</span>&gt;</span>
-        更多 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
+        更多 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-down"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
   }

@@ -1,7 +1,5 @@
 import React from 'react';
 import Dialog from './index';
-import Icon from '../iconfont';
-import {Button} from '../button';
 
 export default function (props) {
   let div = document.createElement('div');
@@ -9,9 +7,7 @@ export default function (props) {
 
   let d;
   props = props || {};
-  props.iconClassName = props.iconClassName || 'question-circle';
-  let iconClassType = props.iconClassName;
-
+  props.iconClassName = props.iconClassName || 'anticon-question-circle';
   let width = props.width || 416;
 
   // 默认为 true，保持向下兼容
@@ -67,23 +63,23 @@ export default function (props) {
   }
 
   let body = <div className="ant-confirm-body">
-    <Icon type={iconClassType} />
+    <i className={'anticon ' + props.iconClassName}></i>
     <span className="ant-confirm-title">{props.title}</span>
     <div className="ant-confirm-content">{props.content}</div>
   </div>;
   let footer = <div className="ant-confirm-btns">
-    <Button size="lg" onClick={onCancel}>取 消</Button>
-    <Button type="primary" size="lg" onClick={onOk}>确 定</Button>
+    <button type="button" className="ant-btn-default ant-btn ant-btn-lg" onClick={onCancel}>取 消</button>
+    <button type="button" className="ant-btn-primary ant-btn ant-btn-lg" onClick={onOk}>确 定</button>
   </div>;
 
   if (props.okCancel) {
     footer = <div className="ant-confirm-btns">
-      <Button size="lg" onClick={onCancel}>取 消</Button>
-      <Button type="primary" size="lg" onClick={onOk}>确 定</Button>
+      <button type="button" className="ant-btn-default ant-btn ant-btn-lg" onClick={onCancel}>取 消</button>
+      <button type="button" className="ant-btn-primary ant-btn ant-btn-lg" onClick={onOk}>确 定</button>
     </div>;
   } else {
     footer = <div className="ant-confirm-btns">
-      <Button type="primary" size="lg" onClick={onOk}>知道了</Button>
+      <button type="button" className="ant-btn-primary ant-btn ant-btn-lg" onClick={onOk}>知道了</button>
     </div>;
   }
 
