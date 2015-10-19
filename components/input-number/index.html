@@ -13,7 +13,7 @@ InputNumber 数字输入框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ InputNumber 数字输入框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,8 +556,8 @@ InputNumber 数字输入框 - Ant Design
       InputNumber 数字输入框
     </h1>
     <p>通过鼠标或键盘，输入范围内的数值。</p>
-<h2 id="何时使用">何时使用</h2><p>当需要获取标准数值时。</p>
-<h2 id="api">API</h2><p>属性如下</p>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当需要获取标准数值时。</p>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><p>属性如下</p>
 <table>
 <thead>
 <tr>
@@ -659,6 +659,7 @@ React.render(
     <script>(function(){"use strict";
 
 var InputNumber = antd.InputNumber;
+var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -682,8 +683,8 @@ var Test = React.createClass({
         "div",
         { style: { marginTop: 20 } },
         React.createElement(
-          "button",
-          { onClick: this.toggle, className: "ant-btn ant-btn-primary" },
+          Button,
+          { onClick: this.toggle, type: "primary" },
           "Toggle disabled"
         )
       )
@@ -692,6 +693,7 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -708,7 +710,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>
-        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
@@ -791,6 +793,7 @@ React.render(
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

@@ -13,7 +13,7 @@ Steps 步骤条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Steps 步骤条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,12 +556,12 @@ Steps 步骤条 - Ant Design
       Steps 步骤条
     </h1>
     <p>引导用户按照流程完成任务的导航条。</p>
-<h2 id="何时使用">何时使用</h2><p>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。</p>
-<h2 id="api">API</h2><div class="highlight"><pre><code class="javascript">&lt;Steps&gt;
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。</p>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="javascript">&lt;Steps&gt;
   <span class="xml"><span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第一步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第二步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第三步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span></span></code></pre></div><h3 id="steps">Steps</h3><p>整体步骤条。</p>
+<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span></span></code></pre></div><h3 id="steps">Steps<a href="#steps" class="anchor">#</a> </h3><p>整体步骤条。</p>
 <table>
 <thead>
 <tr>
@@ -603,7 +603,7 @@ Steps 步骤条 - Ant Design
 </tr>
 </tbody>
 </table>
-<h3 id="steps-step">Steps.Step</h3><p>步骤条内的每一个步。</p>
+<h3 id="steps-step">Steps.Step<a href="#steps-step" class="anchor">#</a> </h3><p>步骤条内的每一个步。</p>
 <table>
 <thead>
 <tr>
@@ -815,6 +815,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</
 
 var Steps = antd.Steps;
 var Step = Steps.Step;
+var Button = antd.Button;
 var container = document.getElementById('components-steps-demo-step-next');
 var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 var steps = array.map(function (item, i) {
@@ -863,8 +864,8 @@ var App = React.createClass({
         'div',
         null,
         React.createElement(
-          'button',
-          { className: 'ant-btn', onClick: this.next },
+          Button,
+          { onClick: this.next },
           '下一步'
         )
       )
@@ -874,6 +875,7 @@ var App = React.createClass({
 
 React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
+<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
 <span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
 <span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
@@ -906,7 +908,7 @@ React.render(React.createElement(App, null), container);})()</script><div class=
           {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
         <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">'ant-btn'</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     );
@@ -1128,6 +1130,7 @@ React.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{s
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

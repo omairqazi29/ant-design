@@ -13,7 +13,7 @@ Affix 固钉 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Affix 固钉 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,9 +556,9 @@ Affix 固钉 - Ant Design
       Affix 固钉
     </h1>
     <p>将页面元素钉在可视范围。</p>
-<h2 id="何时使用">何时使用</h2><p>当内容区域比较长，需要滚动页面时，这部分内容对应的操作或者导航需要在滚动范围内始终展现。常用于侧边菜单和按钮组合。</p>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当内容区域比较长，需要滚动页面时，这部分内容对应的操作或者导航需要在滚动范围内始终展现。常用于侧边菜单和按钮组合。</p>
 <p>页面可视范围过小时，慎用此功能以免遮挡页面内容。</p>
-<h2 id="api">API</h2><table>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><table>
 <thead>
 <tr>
 <th>成员</th>
@@ -589,20 +589,22 @@ Affix 固钉 - Ant Design
     <script>(function(){"use strict";
 
 var Affix = antd.Affix;
+var Button = antd.Button;
 
 React.render(React.createElement(
   Affix,
   null,
   React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-primary" },
+    Button,
+    { type: "primary" },
     "固定在顶部"
   )
 ), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
+<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
 , document.getElementById('components-affix-demo-basic'));</span></code></pre></div>
   </div>
@@ -621,20 +623,22 @@ React.render(
     <script>(function(){"use strict";
 
 var Affix = antd.Affix;
+var Button = antd.Button;
 
 React.render(React.createElement(
   Affix,
   { offset: 75 },
   React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-primary" },
+    Button,
+    { type: "primary" },
     "固定在距离顶部 75px 的位置"
   )
 ), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
+<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span> <span class="attribute">offset</span>=<span class="value">{75}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>固定在距离顶部 75px 的位置<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在距离顶部 75px 的位置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
 , document.getElementById('components-affix-demo-offset'));</span></code></pre></div>
   </div>
@@ -669,6 +673,7 @@ React.render(
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

@@ -4,6 +4,7 @@
     <script>(function(){'use strict';
 
 var notification = antd.Notification;
+var Button = antd.Button;
 
 var close = function close() {
   console.log('我被默认的关闭按钮关闭了！');
@@ -16,8 +17,8 @@ var openNotification = function openNotification() {
     notification.close(key);
   };
   var btn = React.createElement(
-    'button',
-    { className: 'ant-btn ant-btn-primary ant-btn-sm', onClick: btnClick },
+    Button,
+    { type: 'primary', size: 'sm', onClick: btnClick },
     '自定义关闭按钮并触发回调函数'
   );
   notification.open({
@@ -33,11 +34,12 @@ React.render(React.createElement(
   'div',
   null,
   React.createElement(
-    'button',
-    { className: 'ant-btn ant-btn-primary', onClick: openNotification },
+    Button,
+    { type: 'primary', onClick: openNotification },
     '打开通知提醒框'
   )
 ), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);
@@ -49,9 +51,9 @@ React.render(React.createElement(
     <span class="comment">// 隐藏提醒框</span>
     notification.close(key);
   };
-  <span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
+  <span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
     自定义关闭按钮并触发回调函数
-  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>;</span>
   notification.open({
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
@@ -63,7 +65,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
 document.getElementById('components-notification-demo-with-btn'));</span></code></pre></div>
   </div>

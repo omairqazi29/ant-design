@@ -4,6 +4,7 @@
     <script>(function(){"use strict";
 
 var Switch = antd.Switch;
+var Button = antd.Button;
 var container = document.getElementById('components-switch-demo-disabled');
 
 var Test = React.createClass({
@@ -27,8 +28,8 @@ var Test = React.createClass({
       React.createElement("br", null),
       React.createElement("br", null),
       React.createElement(
-        "button",
-        { className: "ant-btn ant-btn-primary", onClick: this.toggle },
+        Button,
+        { type: "primary", onClick: this.toggle },
         "Toggle disabled"
       )
     );
@@ -36,6 +37,7 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
+<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -54,7 +56,7 @@ React.render(React.createElement(Test, null), container);})()</script><div class
       <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });

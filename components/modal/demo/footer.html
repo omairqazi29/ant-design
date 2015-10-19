@@ -4,6 +4,7 @@
     <script>(function(){"use strict";
 
 var Modal = antd.Modal;
+var Button = antd.Button;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -35,8 +36,8 @@ var Test = React.createClass({
       "div",
       null,
       React.createElement(
-        "button",
-        { className: "ant-btn ant-btn-primary", onClick: this.showModal },
+        Button,
+        { type: "primary", onClick: this.showModal },
         "显示对话框"
       ),
       React.createElement(
@@ -45,12 +46,12 @@ var Test = React.createClass({
           visible: this.state.visible,
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
-            "button",
-            { key: "back", className: "ant-btn ant-btn-lg", onClick: this.handleCancel },
+            Button,
+            { key: "back", size: "lg", onClick: this.handleCancel },
             "返 回"
           ), React.createElement(
-            "button",
-            { key: "submit", className: 'ant-btn ant-btn-primary ant-btn-lg ' + (this.state.loading ? 'ant-btn-loading' : ''), onClick: this.handleOk },
+            Button,
+            { key: "submit", type: "primary", size: "lg", loading: this.state.loading, onClick: this.handleOk },
             "提 交"
           )] },
         React.createElement(
@@ -84,6 +85,7 @@ var Test = React.createClass({
 });
 
 React.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
@@ -108,17 +110,17 @@ React.render(React.createElement(Test, null), document.getElementById('component
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>
         显示对话框
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">ref</span>=<span class="value">"modal"</span>
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
-          &lt;<span class="attribute">button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">{'ant-btn</span> <span class="attribute">ant-btn-primary</span> <span class="attribute">ant-btn-lg</span> ' + (<span class="attribute">this.state.loading</span>?'<span class="attribute">ant-btn-loading</span>'<span class="attribute">:</span>'')} <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+          &lt;<span class="attribute">Button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>,
+          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
             提 交
-          <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         ]}&gt;
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>

@@ -13,7 +13,7 @@ Validation 表单校验 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Validation 表单校验 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,14 +556,14 @@ Validation 表单校验 - Ant Design
       Validation 表单校验
     </h1>
     <p>表单校验。</p>
-<h2 id="何时使用">何时使用</h2><p>同表单结合使用，对表单域进行校验，提供前台校验和后台实时反馈校验，并对表单错误提供有效信息提示。</p>
-<h2 id="api">API</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Validation</span>&gt;</span>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>同表单结合使用，对表单域进行校验，提供前台校验和后台实时反馈校验，并对表单错误提供有效信息提示。</p>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Validation</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Validator</span>&gt;</span>
     <span class="tag">&lt;<span class="title">CustomComponent</span>&gt;</span>
       <span class="tag">&lt;<span class="title">input</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">CustomComponent</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Validation</span>&gt;</span></code></pre></div><h3 id="validation">Validation</h3><table>
+<span class="tag">&lt;/<span class="title">Validation</span>&gt;</span></code></pre></div><h3 id="validation">Validation<a href="#validation" class="anchor">#</a> </h3><table>
 <thead>
 <tr>
 <th>属性</th>
@@ -601,7 +601,7 @@ Validation 表单校验 - Ant Design
 </tr>
 </tbody>
 </table>
-<h3 id="validation-validator">Validation.Validator</h3><p>一个 Validator 对应一个表单域，校验的表单域需要声明 <code>name</code> 属性作为校验标识，如 <code>&lt;input name=&quot;username&quot;  /&gt;</code>。</p>
+<h3 id="validation-validator">Validation.Validator<a href="#validation-validator" class="anchor">#</a> </h3><p>一个 Validator 对应一个表单域，校验的表单域需要声明 <code>name</code> 属性作为校验标识，如 <code>&lt;input name=&quot;username&quot;  /&gt;</code>。</p>
 <table>
 <thead>
 <tr>
@@ -626,7 +626,7 @@ Validation 表单校验 - Ant Design
 </tr>
 </tbody>
 </table>
-<h3 id="rules-说明（async-validator）">rules 说明（<a href="https://github.com/yiminghe/async-validator">async-validator</a>）</h3><p>示例： <code>{type: &quot;string&quot;, required: true, min: 5, message: &quot;请至少填写 5 个字符。&quot; }</code></p>
+<h3 id="rules-说明（async-validator）">rules 说明（<a href="https://github.com/yiminghe/async-validator">async-validator</a>）<a href="#rules-说明（async-validator）" class="anchor">#</a> </h3><p>示例： <code>{type: &quot;string&quot;, required: true, min: 5, message: &quot;请至少填写 5 个字符。&quot; }</code></p>
 <ul>
 <li><code>type</code> : 声明校验的值类型（如 string email），这样就会使用默认提供的规则进行校验，更多详见 <a href="https://github.com/yiminghe/async-validator#user-content-type">type</a>；</li>
 <li><code>required</code>: 是否必填；</li>
@@ -658,6 +658,7 @@ var Select = antd.Select;
 var Option = Select.Option;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
+var Button = antd.Button;
 
 function cx(classNames) {
   if (typeof classNames === 'object') {
@@ -794,7 +795,7 @@ var Form = React.createClass({
 
     return React.createElement(
       'form',
-      { onSubmit: this.handleSubmit, className: 'ant-form-horizontal' },
+      { className: 'ant-form-horizontal' },
       React.createElement(
         Validation,
         { ref: 'validation', onValidate: this.handleValidate },
@@ -1045,14 +1046,14 @@ var Form = React.createClass({
             'div',
             { className: 'col-offset-7 col-12' },
             React.createElement(
-              'button',
-              { type: 'submit', className: 'ant-btn ant-btn-primary' },
+              Button,
+              { type: 'primary', onClick: this.handleSubmit },
               '确 定'
             ),
             '   ',
             React.createElement(
-              'a',
-              { href: '#', className: 'ant-btn', onClick: this.handleReset },
+              Button,
+              { onClick: this.handleReset },
               '重 置'
             )
           )
@@ -1068,6 +1069,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
 <span class="keyword">var</span> Option = Select.Option;
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">cx</span><span class="params">(classNames)</span> {</span>
   <span class="keyword">if</span> (<span class="keyword">typeof</span> classNames === <span class="string">'object'</span>) {
@@ -1197,7 +1199,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
     <span class="keyword">var</span> status = <span class="keyword">this</span>.state.status;
 
     <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">onSubmit</span>=<span class="value">{this.handleSubmit}</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+      <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Validation</span> <span class="attribute">ref</span>=<span class="value">"validation"</span> <span class="attribute">onValidate</span>=<span class="value">{this.handleValidate}</span>&gt;</span>
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-7"</span> <span class="attribute">htmlFor</span>=<span class="value">"name"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
@@ -1300,9 +1302,9 @@ React.render(React.createElement(Form, null), document.getElementById('component
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-offset-7 col-12"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleSubmit}</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
             &amp;nbsp;&amp;nbsp;&amp;nbsp;
-              <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">Validation</span>&gt;</span>
@@ -1331,6 +1333,7 @@ React.render(<span class="tag">&lt;<span class="title">Form</span> /&gt;</span>,
 
 var Validation = antd.Validation;
 var Validator = Validation.Validator;
+var Button = antd.Button;
 
 function cx(classNames) {
   if (typeof classNames === 'object') {
@@ -1481,7 +1484,7 @@ var Form = React.createClass({
 
     return React.createElement(
       'form',
-      { onSubmit: this.handleSubmit, className: 'ant-form-horizontal' },
+      { className: 'ant-form-horizontal' },
       React.createElement(
         Validation,
         { ref: 'validation', onValidate: this.handleValidate },
@@ -1561,14 +1564,14 @@ var Form = React.createClass({
             'div',
             { className: 'col-offset-6 col-12' },
             React.createElement(
-              'button',
-              { type: 'submit', className: 'ant-btn ant-btn-primary' },
+              Button,
+              { type: 'primary', onClick: this.handleSubmit },
               '确 定'
             ),
             '   ',
             React.createElement(
-              'a',
-              { href: '#', className: 'ant-btn', onClick: this.handleReset },
+              Button,
+              { onClick: this.handleReset },
               '重 置'
             )
           )
@@ -1580,6 +1583,7 @@ var Form = React.createClass({
 
 React.render(React.createElement(Form, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Validation = antd.Validation;
 <span class="keyword">var</span> Validator = Validation.Validator;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">cx</span><span class="params">(classNames)</span> {</span>
   <span class="keyword">if</span> (<span class="keyword">typeof</span> classNames === <span class="string">'object'</span>) {
@@ -1719,7 +1723,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
     var status = this.state.status;
 
     return (
-      <span class="tag">&lt;<span class="title">form</span> <span class="attribute">onSubmit</span>=<span class="value">{this.handleSubmit}</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Validation</span> <span class="attribute">ref</span>=<span class="value">"validation"</span> <span class="attribute">onValidate</span>=<span class="value">{this.handleValidate}</span>&gt;</span>
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
@@ -1758,9 +1762,9 @@ React.render(React.createElement(Form, null), document.getElementById('component
 
           <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-offset-6 col-12"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleSubmit}</span>&gt;</span>确 定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
               &amp;nbsp;&amp;nbsp;&amp;nbsp;
-              <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleReset}</span>&gt;</span>重 置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">Validation</span>&gt;</span>
@@ -1854,6 +1858,7 @@ React.render(<span class="tag">&lt;<span class="title">Form</span> /&gt;</span>,
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

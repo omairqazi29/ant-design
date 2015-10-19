@@ -1,0 +1,177 @@
+<div class="code-box" id="demo-special">
+  <div class="code-box-demo">
+    <div id="components-tree-demo-special"></div>
+    <script>(function(){'use strict';
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tree = antd.Tree;
+var TreeNode = Tree.TreeNode;
+var Button = antd.Button;
+
+var TreeDemo = (function (_React$Component) {
+  _inherits(TreeDemo, _React$Component);
+
+  function TreeDemo(props) {
+    var _this = this;
+
+    _classCallCheck(this, TreeDemo);
+
+    _get(Object.getPrototypeOf(TreeDemo.prototype), 'constructor', this).call(this, props);
+    ['handleClick', 'handleCheck', 'handleSelect'].forEach(function (m) {
+      _this[m] = _this[m].bind(_this);
+    });
+    this.state = {
+      checkedKeys: [],
+      selectedKeys: []
+    };
+  }
+
+  _createClass(TreeDemo, [{
+    key: 'handleClick',
+    value: function handleClick() {
+      this.setState({
+        checkedKeys: ['p11'],
+        selectedKeys: ['p21', 'p11']
+      });
+    }
+  }, {
+    key: 'handleCheck',
+    value: function handleCheck(info) {
+      console.log('check: ', info);
+      this.setState({
+        checkedKeys: ['p21'],
+        selectedKeys: ['p1', 'p21']
+      });
+    }
+  }, {
+    key: 'handleSelect',
+    value: function handleSelect(info) {
+      console.log('selected: ', info);
+      this.setState({
+        checkedKeys: ['p21'],
+        selectedKeys: ['p21']
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          Tree,
+          { defaultExpandAll: true, checkable: true,
+            onCheck: this.handleCheck, checkedKeys: this.state.checkedKeys,
+            onSelect: this.handleSelect, selectedKeys: this.state.selectedKeys, multiple: true },
+          React.createElement(
+            TreeNode,
+            { title: 'parent 1', key: 'p1' },
+            React.createElement(TreeNode, { key: 'p10', title: 'leaf' }),
+            React.createElement(
+              TreeNode,
+              { title: 'parent 1-1', key: 'p11' },
+              React.createElement(
+                TreeNode,
+                { title: 'parent 2-1', key: 'p21' },
+                React.createElement(
+                  TreeNode,
+                  null,
+                  'test'
+                ),
+                React.createElement(TreeNode, { title: React.createElement(
+                    'span',
+                    null,
+                    'sss'
+                  ) })
+              ),
+              React.createElement(TreeNode, { key: 'p22', title: 'leaf' })
+            )
+          ),
+          React.createElement(TreeNode, { key: 'p12', title: 'leaf' })
+        ),
+        React.createElement(
+          Button,
+          { type: 'primary', size: 'sm', onClick: this.handleClick },
+          '点此控制树节点'
+        )
+      );
+    }
+  }]);
+
+  return TreeDemo;
+})(React.Component);
+
+React.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
+<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+<span class="keyword">var</span> Button = antd.Button;
+
+class TreeDemo extends React.Component {
+  constructor(props) {
+    super(props);
+    [<span class="string">'handleClick'</span>, <span class="string">'handleCheck'</span>, <span class="string">'handleSelect'</span>].forEach((m)=&gt; {
+      <span class="keyword">this</span>[m] = <span class="keyword">this</span>[m].bind(<span class="keyword">this</span>);
+    });
+    <span class="keyword">this</span>.state = {
+      checkedKeys: [],
+      selectedKeys: []
+    }
+  }
+  handleClick() {
+    <span class="keyword">this</span>.setState({
+      checkedKeys: [<span class="string">'p11'</span>],
+      selectedKeys: [<span class="string">'p21'</span>, <span class="string">'p11'</span>]
+    })
+  }
+  handleCheck(info) {
+    console.log(<span class="string">'check: '</span>, info);
+    <span class="keyword">this</span>.setState({
+      checkedKeys: [<span class="string">'p21'</span>],
+      selectedKeys: [<span class="string">'p1'</span>, <span class="string">'p21'</span>]
+    })
+  }
+  handleSelect(info) {
+    console.log(<span class="string">'selected: '</span>, info);
+    <span class="keyword">this</span>.setState({
+      checkedKeys: [<span class="string">'p21'</span>],
+      selectedKeys: [<span class="string">'p21'</span>]
+    })
+  }
+  render() {
+    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{true}</span>
+              <span class="attribute">onCheck</span>=<span class="value">{this.handleCheck}</span> <span class="attribute">checkedKeys</span>=<span class="value">{this.state.checkedKeys}</span>
+              <span class="attribute">onSelect</span>=<span class="value">{this.handleSelect}</span> <span class="attribute">selectedKeys</span>=<span class="value">{this.state.selectedKeys}</span> <span class="attribute">multiple</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span> <span class="attribute">key</span>=<span class="value">"p1"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">key</span>=<span class="value">"p10"</span> <span class="attribute">title</span>=<span class="value">"leaf"</span>/&gt;</span>
+            <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span> <span class="attribute">key</span>=<span class="value">"p11"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span> <span class="attribute">key</span>=<span class="value">"p21"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">TreeNode</span>&gt;</span>test<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span>sss<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}/&gt;
+              <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">key</span>=<span class="value">"p22"</span> <span class="attribute">title</span>=<span class="value">"leaf"</span>/&gt;</span>
+            <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">key</span>=<span class="value">"p12"</span> <span class="attribute">title</span>=<span class="value">"leaf"</span>/&gt;</span>
+        <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick}</span>&gt;</span>点此控制树节点<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>);
+  }
+}
+
+React.render(<span class="tag">&lt;<span class="title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-special'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-special">接收外部传参</a>
+    </div>
+    <p>受控组件，外部传入参数，控制树对象节点</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

@@ -13,7 +13,7 @@ Popover 气泡卡片 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Popover 气泡卡片 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,9 +556,9 @@ Popover 气泡卡片 - Ant Design
       Popover 气泡卡片
     </h1>
     <p>点击/鼠标移入元素，弹出气泡式的卡片浮层。</p>
-<h2 id="何时使用">何时使用</h2><p>当目标元素有进一步的描述和相关操作时，可以收纳到卡片中，根据用户的操作行为进行展现。</p>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当目标元素有进一步的描述和相关操作时，可以收纳到卡片中，根据用户的操作行为进行展现。</p>
 <p>和 <code>Tooltip</code> 的区别是，用户可以对浮层上的元素进行操作，因此它可以承载更复杂的内容，比如链接或按钮等。</p>
-<h2 id="api">API</h2><table>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -613,6 +613,8 @@ Popover 气泡卡片 - Ant Design
     <script>(function(){"use strict";
 
 var Popover = antd.Popover;
+var Button = antd.Button;
+
 var content = React.createElement(
   "div",
   null,
@@ -632,11 +634,13 @@ React.render(React.createElement(
   Popover,
   { overlay: content, title: "标题" },
   React.createElement(
-    "button",
-    { className: "ant-btn ant-btn-primary" },
+    Button,
+    { type: "primary" },
     "弹出卡片"
   )
 ), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -644,7 +648,7 @@ React.render(React.createElement(
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>弹出卡片<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>弹出卡片<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
 , document.getElementById('components-popover-demo-basic'));</span></code></pre></div>
   </div>
@@ -661,6 +665,8 @@ React.render(
     <script>(function(){"use strict";
 
 var Popover = antd.Popover;
+var Button = antd.Button;
+
 var content = React.createElement(
   "div",
   null,
@@ -683,8 +689,8 @@ React.render(React.createElement(
     Popover,
     { overlay: content, title: "标题", trigger: "hover" },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "移入"
     )
   ),
@@ -692,8 +698,8 @@ React.render(React.createElement(
     Popover,
     { overlay: content, title: "标题", trigger: "focus" },
     React.createElement(
-      "a",
-      { href: "javascript:;", className: "ant-btn" },
+      Button,
+      null,
       "聚焦"
     )
   ),
@@ -701,12 +707,14 @@ React.render(React.createElement(
     Popover,
     { overlay: content, title: "标题", trigger: "click" },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "点击"
     )
   )
 ), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -714,13 +722,13 @@ React.render(React.createElement(
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"hover"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>移入<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>移入<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"focus"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>聚焦<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>聚焦<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>点击<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>点击<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-popover-demo-triggertype'));</span></code></pre></div>
   </div>
@@ -739,6 +747,8 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     <script>(function(){"use strict";
 
 var Popover = antd.Popover;
+var Button = antd.Button;
+
 var text = React.createElement(
   "span",
   null,
@@ -766,8 +776,8 @@ React.render(React.createElement(
     Popover,
     { placement: "left", title: text, overlay: content },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "左"
     )
   ),
@@ -775,8 +785,8 @@ React.render(React.createElement(
     Popover,
     { placement: "top", title: text, overlay: content },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "上"
     )
   ),
@@ -784,8 +794,8 @@ React.render(React.createElement(
     Popover,
     { placement: "bottom", title: text, overlay: content },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "下"
     )
   ),
@@ -793,12 +803,14 @@ React.render(React.createElement(
     Popover,
     { placement: "right", title: text, overlay: content },
     React.createElement(
-      "button",
-      { className: "ant-btn" },
+      Button,
+      null,
       "右"
     )
   )
 ), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
+<span class="keyword">var</span> Button = antd.Button;
+
 <span class="keyword">var</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
 <span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -807,16 +819,16 @@ React.render(React.createElement(
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"left"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>左<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"top"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>上<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>上<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"bottom"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>下<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>下<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"right"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span>&gt;</span>右<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-popover-demo-placement'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
@@ -856,6 +868,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

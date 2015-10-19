@@ -1,38 +1,40 @@
 <div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 var Breadcrumb = require('antd/lib/breadcrumb');
+var Icon = require('antd').iconfont;
 
 React.render(React.createElement(
   Breadcrumb,
   null,
   React.createElement(
     Breadcrumb.Item,
-    { href: "" },
-    React.createElement("i", { className: "anticon anticon-home" })
+    { href: '' },
+    React.createElement(Icon, { type: 'home' })
   ),
   React.createElement(
     Breadcrumb.Item,
-    { href: "" },
-    React.createElement("i", { className: "anticon anticon-user" }),
-    "应用列表"
+    { href: '' },
+    React.createElement(Icon, { type: 'user' }),
+    '应用列表'
   ),
   React.createElement(
     Breadcrumb.Item,
     null,
-    "应用"
+    '应用'
   )
 ), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
+<span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-home"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"home"</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-user"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"user"</span> /&gt;</span>
       应用列表
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>

@@ -4,6 +4,7 @@
     <script>(function(){'use strict';
 
 var Modal = antd.Modal;
+var Button = antd.Button;
 
 function info() {
   Modal.info({
@@ -31,21 +32,22 @@ React.render(React.createElement(
   'div',
   null,
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: info },
+    Button,
+    { onClick: info },
     '信息提示'
   ),
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: success },
+    Button,
+    { onClick: success },
     '成功提示'
   ),
   React.createElement(
-    'button',
-    { className: 'ant-btn', onClick: error },
+    Button,
+    { onClick: error },
     '失败提示'
   )
 ), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+<span class="keyword">var</span> Button = antd.Button;
 
 <span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
   Modal.info({
@@ -70,9 +72,9 @@ React.render(React.createElement(
 }
 
 React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-modal-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

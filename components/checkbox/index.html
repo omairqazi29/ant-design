@@ -13,7 +13,7 @@ Checkbox 多选框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Checkbox 多选框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,11 +556,11 @@ Checkbox 多选框 - Ant Design
       Checkbox 多选框
     </h1>
     <p>多选框。</p>
-<h2 id="何时使用">何时使用</h2><ul>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><ul>
 <li>需要表示开关状态/两种状态之间的切换时；</li>
 <li>和 <code>switch</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>
 </ul>
-<h2 id="api">API</h2><h3 id="checkbox">Checkbox</h3><table>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><h3 id="checkbox">Checkbox<a href="#checkbox" class="anchor">#</a> </h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -641,6 +641,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">label</
     <script>(function(){'use strict';
 
 var Checkbox = antd.Checkbox;
+var Button = antd.Button;
 var container = document.getElementById('components-checkbox-demo-controller');
 
 var App = React.createClass({
@@ -673,15 +674,15 @@ var App = React.createClass({
         'p',
         null,
         React.createElement(
-          'button',
-          { className: 'ant-btn ant-btn-primary ant-btn-sm',
+          Button,
+          { type: 'primary', size: 'sm',
             onClick: this.toggleChecked },
           !this.state.checked ? "选中" : "取消"
         ),
         React.createElement(
-          'button',
+          Button,
           { style: { 'marginLeft': '10px' },
-            className: 'ant-btn ant-btn-primary ant-btn-sm',
+            type: 'primary', size: 'sm',
             onClick: this.toggleDisable },
           !this.state.disabled ? "不可用" : "可用"
         )
@@ -703,6 +704,7 @@ var App = React.createClass({
 });
 
 React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
+<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-controller'</span>);
 
 <span class="keyword">var</span> App = React.createClass({
@@ -725,15 +727,15 @@ React.render(React.createElement(App, null), container);})()</script><div class=
         <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>
+        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleChecked}</span>&gt;</span>
           {!this.state.checked ? "选中":"取消"}
-        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
-          <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>
+        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
+          <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleDisable}</span>&gt;</span>
           {!this.state.disabled ? "不可用":"可用"}
-        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   },
@@ -816,6 +818,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</sp
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

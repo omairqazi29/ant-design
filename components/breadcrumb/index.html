@@ -13,7 +13,7 @@ Breadcrumb 面包屑 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Breadcrumb 面包屑 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,17 +556,17 @@ Breadcrumb 面包屑 - Ant Design
       Breadcrumb 面包屑
     </h1>
     <p>显示当前页面在系统层级结构中的位置，并能向上返回。</p>
-<h2 id="何时使用">何时使用</h2><ul>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><ul>
 <li>当系统拥有超过两级以上的层级结构时；</li>
 <li>当需要告知用户“你在哪里”时；</li>
 <li>当需要向上导航的功能时。</li>
 </ul>
-<h2 id="api">API</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>应用中心<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>应用列表<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>某应用<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Breadcrumb</span>&gt;</span></code></pre></div><h3 id="breadcrumb">Breadcrumb</h3><table>
+<span class="tag">&lt;/<span class="title">Breadcrumb</span>&gt;</span></code></pre></div><h3 id="breadcrumb">Breadcrumb<a href="#breadcrumb" class="anchor">#</a> </h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -600,7 +600,7 @@ Breadcrumb 面包屑 - Ant Design
 </tr>
 </tbody>
 </table>
-<h3 id="breadcrumb-item">Breadcrumb.Item</h3><table>
+<h3 id="breadcrumb-item">Breadcrumb.Item<a href="#breadcrumb-item" class="anchor">#</a> </h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -837,38 +837,40 @@ React.render((
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 var Breadcrumb = require('antd/lib/breadcrumb');
+var Icon = require('antd').iconfont;
 
 React.render(React.createElement(
   Breadcrumb,
   null,
   React.createElement(
     Breadcrumb.Item,
-    { href: "" },
-    React.createElement("i", { className: "anticon anticon-home" })
+    { href: '' },
+    React.createElement(Icon, { type: 'home' })
   ),
   React.createElement(
     Breadcrumb.Item,
-    { href: "" },
-    React.createElement("i", { className: "anticon anticon-user" }),
-    "应用列表"
+    { href: '' },
+    React.createElement(Icon, { type: 'user' }),
+    '应用列表'
   ),
   React.createElement(
     Breadcrumb.Item,
     null,
-    "应用"
+    '应用'
   )
 ), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
+<span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
 
 React.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-home"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"home"</span> /&gt;</span>
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-user"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"user"</span> /&gt;</span>
       应用列表
     <span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>
@@ -908,6 +910,7 @@ React.render(
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>

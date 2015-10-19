@@ -1,81 +1,116 @@
 <div class="code-box" id="demo-icon">
   <div class="code-box-demo">
     <div id="components-button-demo-icon"></div>
-    <div class="nico-insert-code"><button class="ant-btn ant-btn-primary ant-btn-circle ant-btn-lg">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary ant-btn-lg">
-  <i class="anticon anticon-search"></i>
+    <script>(function(){"use strict";
+
+var Button = antd.Button;
+var Icon = antd.Icon;
+
+React.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", size: "lg" },
+    React.createElement(Icon, { type: "search" }),
+    "大按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary" },
+    React.createElement(Icon, { type: "search" }),
+    "中按钮"
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", shape: "circle", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "primary", size: "sm" },
+    React.createElement(Icon, { type: "search" }),
+    "小按钮"
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "lg" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline" },
+    React.createElement(Icon, { type: "search" })
+  ),
+  React.createElement(
+    Button,
+    { type: "ghost", shape: "circle-outline", size: "sm" },
+    React.createElement(Icon, { type: "search" })
+  )
+), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   大按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<button class="ant-btn ant-btn-primary ant-btn-circle">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary">
-  <i class="anticon anticon-search"></i>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   中按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<button class="ant-btn ant-btn-primary ant-btn-circle ant-btn-sm">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-primary ant-btn-sm">
-  <i class="anticon anticon-search"></i>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   小按钮
-</button>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-<p></p>
+  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
 
-<button class="ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-ghost ant-btn-circle-outline">
-  <i class="anticon anticon-search"></i>
-</button>
-<button class="ant-btn ant-btn-circle-outline ant-btn-sm">
-  <i class="anticon anticon-search"></i>
-</button></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  大按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+document.getElementById('components-button-demo-icon'));</span></code></pre></div><style>
+#components-button-demo-icon .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+</style>
 
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  中按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-circle ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-primary ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-  小按钮
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost ant-btn-circle-outline ant-btn-lg"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-ghost ant-btn-circle-outline"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ant-btn ant-btn-circle-outline ant-btn-sm"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-search"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-icon">图标按钮</a>
     </div>
-    <p>图标一般放在文字前面，也可以单独存在。</p>
+    <p><code>Button</code> 内可以嵌套图标，图标可以放在文字前、后，也可以单独存在。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

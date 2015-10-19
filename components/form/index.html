@@ -13,7 +13,7 @@ Form 表单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.9.1.min.css">
+    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -195,11 +195,11 @@ Form 表单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.9.1',
+        latest: '0.10.0-beta1',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.9.1.min.js"></script>
+    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -556,12 +556,12 @@ Form 表单 - Ant Design
       Form 表单
     </h1>
     <p>具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。</p>
-<h3 id="表单">表单</h3><p>我们为 <code>form</code> 提供了以下两种排列方式：</p>
+<h3 id="表单">表单<a href="#表单" class="anchor">#</a> </h3><p>我们为 <code>form</code> 提供了以下两种排列方式：</p>
 <ul>
 <li>水平排列：<code>.ant-form-horizontal</code> 类可以实现 <code>label</code> 标签和表单控件的水平排列;</li>
 <li>行内排列：<code>.ant-form-inline</code> 类可使其表现为 inline-block 级别的控件。</li>
 </ul>
-<h3 id="表单域">表单域</h3><p>表单一定会包含表单域，表单域可以是输入控件，标准表单域，标签，下拉菜单，文本域等。</p>
+<h3 id="表单域">表单域<a href="#表单域" class="anchor">#</a> </h3><p>表单一定会包含表单域，表单域可以是输入控件，标准表单域，标签，下拉菜单，文本域等。</p>
 <p>在这里，我们使用 <code>.ant-form-item</code> 类来表示表单域，它包含了一个标签和一个输入控件。</p>
 <p>为了获得更好的排列，请将 <code>label</code> 标签和 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>、<code>&lt;select&gt;</code> 控件包裹在 <code>.ant-form-item</code> 中。</p>
 
@@ -579,6 +579,7 @@ Form 表单 - Ant Design
 var Checkbox = antd.Checkbox;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
+var Button = antd.Button;
 
 React.render(React.createElement(
   "form",
@@ -681,12 +682,17 @@ React.render(React.createElement(
     React.createElement(
       "div",
       { className: "col-16 col-offset-6" },
-      React.createElement("input", { type: "submit", className: "ant-btn ant-btn-primary", value: "确 定" })
+      React.createElement(
+        Button,
+        { type: "primary" },
+        "确定"
+      )
     )
   )
 ), document.getElementById('components-form-demo-horizontal-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
@@ -727,7 +733,7 @@ React.render(
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"确 定"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
@@ -989,6 +995,7 @@ React.render(
     <script>(function(){"use strict";
 
 var Checkbox = antd.Checkbox;
+var Button = antd.Button;
 
 React.render(React.createElement(
   "form",
@@ -1023,8 +1030,13 @@ React.render(React.createElement(
       " 记住我"
     )
   ),
-  React.createElement("input", { type: "submit", className: "ant-btn ant-btn-primary", value: "登 录" })
+  React.createElement(
+    Button,
+    { type: "primary" },
+    "登录"
+  )
 ), document.getElementById('components-form-demo-inline-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
+<span class="keyword">var</span> Button = antd.Button;
 
 React.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-inline"</span>&gt;</span>
@@ -1041,7 +1053,7 @@ React.render(
       <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span> 记住我
     <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">value</span>=<span class="value">"登 录"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>登录<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
 , document.getElementById('components-form-demo-inline-form'));</span></code></pre></div>
   </div>
@@ -1626,6 +1638,7 @@ var Switch = antd.Switch;
 var Menu = antd.Menu;
 var Dropdown = antd.Dropdown;
 var Slider = antd.Slider;
+var Icon = antd.Icon;
 
 var menu = React.createElement(
   Menu,
@@ -1695,7 +1708,7 @@ React.render(React.createElement(
     React.createElement(
       "label",
       { className: "col-8", required: true },
-      React.createElement("i", { className: "anticon anticon-exclamation-circle", style: { color: '#f60' } }),
+      React.createElement(Icon, { type: "exclamation-circle", style: { color: '#f60' } }),
       " 我是标题："
     ),
     React.createElement(
@@ -1855,6 +1868,7 @@ React.render(React.createElement(
 <span class="keyword">var</span> Menu = antd.Menu;
 <span class="keyword">var</span> Dropdown = antd.Dropdown;
 <span class="keyword">var</span> Slider = antd.Slider;
+<span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
@@ -1887,7 +1901,7 @@ React.render(
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">className</span>=<span class="value">"anticon anticon-exclamation-circle"</span> <span class="attribute">style</span>=<span class="value">{{color:</span> '#<span class="attribute">f60</span>'}}&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 我是标题：
+      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"exclamation-circle"</span> <span class="attribute">style</span>=<span class="value">{{color:</span> '#<span class="attribute">f60</span>'}} /&gt;</span> 我是标题：
     <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-10"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>唧唧复唧唧木兰当户织呀<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -1980,6 +1994,7 @@ React.render(
     </li>
     <li>
       <h3>©2015 蚂蚁金服体验技术部出品</h3>
+      <h3>文档版本：<span id="versions-select"></span></h3>
     </li>
   </ul>
 </footer>
