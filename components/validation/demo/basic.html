@@ -10,6 +10,8 @@ var Option = Select.Option;
 var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
 var Button = antd.Button;
+var Datepicker = antd.Datepicker;
+var InputNumber = antd.InputNumber;
 
 function cx(classNames) {
   if (typeof classNames === 'object') {
@@ -39,7 +41,9 @@ var Form = React.createClass({
         radio: {},
         passwd: {},
         rePasswd: {},
-        textarea: {}
+        textarea: {},
+        birthday: {},
+        primeNumber: {}
       },
       formData: {
         email: undefined,
@@ -48,7 +52,9 @@ var Form = React.createClass({
         radio: undefined,
         passwd: undefined,
         rePasswd: undefined,
-        textarea: undefined
+        textarea: undefined,
+        birthday: undefined,
+        primeNumber: 9
       },
       isEmailOver: false, // email 是否输入完毕
       emailValidateMethod: 'onBlur' // 用于改变 email 的验证方法
@@ -135,6 +141,22 @@ var Form = React.createClass({
   checkPass2: function checkPass2(rule, value, callback) {
     if (value && value !== this.state.formData.passwd) {
       callback('两次输入密码不一致！');
+    } else {
+      callback();
+    }
+  },
+
+  checkBirthday: function checkBirthday(rule, value, callback) {
+    if (value && value.getTime() >= Date.now()) {
+      callback(new Error('你不可能在未来出生吧!'));
+    } else {
+      callback();
+    }
+  },
+
+  checkPrime: function checkPrime(rule, value, callback) {
+    if (value !== 11) {
+      callback(new Error('8~12之间的质数明明是11啊!'));
     } else {
       callback();
     }
@@ -368,6 +390,66 @@ var Form = React.createClass({
           { className: 'ant-form-item' },
           React.createElement(
             'label',
+            { className: 'col-7', htmlFor: 'birthday', required: true },
+            '生日：'
+          ),
+          React.createElement(
+            'div',
+            { className: 'col-12' },
+            React.createElement(
+              'div',
+              { className: this.renderValidateStyle('birthday', false) },
+              React.createElement(
+                Validator,
+                { rules: [{
+                    required: true,
+                    type: 'date',
+                    message: '你的生日是什么呢?'
+                  }, { validator: this.checkBirthday }] },
+                React.createElement(Datepicker, { name: 'birthday', value: formData.birthday })
+              ),
+              status.birthday.errors ? React.createElement(
+                'div',
+                { className: 'ant-form-explain' },
+                ' ',
+                status.birthday.errors.join(', ')
+              ) : null
+            )
+          )
+        ),
+        React.createElement(
+          'div',
+          { className: 'ant-form-item' },
+          React.createElement(
+            'label',
+            { className: 'col-7', htmlFor: 'birthday', required: true },
+            '8~12间的质数：'
+          ),
+          React.createElement(
+            'div',
+            { className: 'col-12' },
+            React.createElement(
+              'div',
+              { className: this.renderValidateStyle('primeNumber', false) },
+              React.createElement(
+                Validator,
+                { rules: [{ validator: this.checkPrime }] },
+                React.createElement(InputNumber, { name: 'primeNumber', min: 8, max: 12, value: formData.primeNumber })
+              ),
+              status.primeNumber.errors ? React.createElement(
+                'div',
+                { className: 'ant-form-explain' },
+                ' ',
+                status.primeNumber.errors.join(', ')
+              ) : null
+            )
+          )
+        ),
+        React.createElement(
+          'div',
+          { className: 'ant-form-item' },
+          React.createElement(
+            'label',
             { className: 'col-7', htmlFor: 'remark', required: true },
             '备注：'
           ),
@@ -421,6 +503,8 @@ React.render(React.createElement(Form, null), document.getElementById('component
 <span class="keyword">var</span> Radio = antd.Radio;
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
 <span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Datepicker = antd.Datepicker;
+<span class="keyword">var</span> InputNumber = antd.InputNumber;
 
 <span class="function"><span class="keyword">function</span> <span class="title">cx</span><span class="params">(classNames)</span> {</span>
   <span class="keyword">if</span> (<span class="keyword">typeof</span> classNames === <span class="string">'object'</span>) {
@@ -448,7 +532,9 @@ React.render(React.createElement(Form, null), document.getElementById('component
         radio: {},
         passwd: {},
         rePasswd: {},
-        textarea: {}
+        textarea: {},
+        birthday: {},
+        primeNumber: {}
       },
       formData: {
         email: <span class="literal">undefined</span>,
@@ -457,7 +543,9 @@ React.render(React.createElement(Form, null), document.getElementById('component
         radio: <span class="literal">undefined</span>,
         passwd: <span class="literal">undefined</span>,
         rePasswd: <span class="literal">undefined</span>,
-        textarea: <span class="literal">undefined</span>
+        textarea: <span class="literal">undefined</span>,
+        birthday: <span class="literal">undefined</span>,
+        primeNumber: <span class="number">9</span>
       },
       isEmailOver: <span class="literal">false</span>, <span class="comment">// email 是否输入完毕</span>
       emailValidateMethod: <span class="string">'onBlur'</span> <span class="comment">// 用于改变 email 的验证方法</span>
@@ -540,6 +628,22 @@ React.render(React.createElement(Form, null), document.getElementById('component
   checkPass2(rule, value, callback) {
     <span class="keyword">if</span> (value &amp;&amp; value !== <span class="keyword">this</span>.state.formData.passwd) {
       callback(<span class="string">'两次输入密码不一致！'</span>);
+    } <span class="keyword">else</span> {
+      callback();
+    }
+  },
+
+  checkBirthday(rule, value, callback) {
+    <span class="keyword">if</span> (value &amp;&amp; value.getTime() &gt;= Date.now()){
+      callback(<span class="keyword">new</span> Error(<span class="string">'你不可能在未来出生吧!'</span>));
+    } <span class="keyword">else</span> {
+      callback();
+    }
+  },
+
+  checkPrime(rule, value, callback) {
+    <span class="keyword">if</span> (value !== <span class="number">11</span>) {
+      callback(<span class="keyword">new</span> Error(<span class="string">'8~12之间的质数明明是11啊!'</span>));
     } <span class="keyword">else</span> {
       callback();
     }
@@ -634,6 +738,34 @@ React.render(React.createElement(Form, null), document.getElementById('component
                   <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"rePasswd"</span> <span class="attribute">id</span>=<span class="value">"password2"</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">onContextMenu</span>=<span class="value">{noop}</span> <span class="attribute">onPaste</span>=<span class="value">{noop}</span> <span class="attribute">onCopy</span>=<span class="value">{noop}</span> <span class="attribute">onCut</span>=<span class="value">{noop}</span> <span class="attribute">autocomplete</span>=<span class="value">"off"</span> <span class="attribute">value</span>=<span class="value">{formData.rePasswd}</span> <span class="attribute">placeholder</span>=<span class="value">"两次输入密码保持一致"</span>/&gt;</span>
                 <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
                 {status.rePasswd.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span> {status.rePasswd.errors.join(', ')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-7"</span> <span class="attribute">htmlFor</span>=<span class="value">"birthday"</span> <span class="attribute">required</span>&gt;</span>生日：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-12"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">{this.renderValidateStyle('birthday',</span> <span class="attribute">false</span>)}&gt;</span>
+                <span class="tag">&lt;<span class="title">Validator</span> <span class="attribute">rules</span>=<span class="value">{[{</span>
+                  <span class="attribute">required:</span> <span class="attribute">true</span>,
+                  <span class="attribute">type:</span> '<span class="attribute">date</span>',
+                  <span class="attribute">message:</span> '你的生日是什么呢?'
+                }, {<span class="attribute">validator:</span> <span class="attribute">this.checkBirthday</span>}]}&gt;</span>
+                  <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">name</span>=<span class="value">"birthday"</span> <span class="attribute">value</span>=<span class="value">{formData.birthday}</span>&gt;</span><span class="tag">&lt;/<span class="title">Datepicker</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
+                {status.birthday.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span> {status.birthday.errors.join(', ')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-7"</span> <span class="attribute">htmlFor</span>=<span class="value">"birthday"</span> <span class="attribute">required</span>&gt;</span>8~12间的质数：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-12"</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">{this.renderValidateStyle('primeNumber',</span> <span class="attribute">false</span>)}&gt;</span>
+                <span class="tag">&lt;<span class="title">Validator</span> <span class="attribute">rules</span>=<span class="value">{[{validator:</span> <span class="attribute">this.checkPrime</span>}]}&gt;</span>
+                  <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">name</span>=<span class="value">"primeNumber"</span> <span class="attribute">min</span>=<span class="value">{8}</span> <span class="attribute">max</span>=<span class="value">{12}</span> <span class="attribute">value</span>=<span class="value">{formData.primeNumber}</span>/&gt;</span>
+                <span class="tag">&lt;/<span class="title">Validator</span>&gt;</span>
+                {status.primeNumber.errors ? <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span> {status.primeNumber.errors.join(', ')}<span class="tag">&lt;/<span class="title">div</span>&gt;</span> : null}
               <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
             <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
           <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
