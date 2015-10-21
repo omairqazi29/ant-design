@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Carousel 走马灯 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Carousel 走马灯 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Carousel 走马灯 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -636,7 +636,7 @@ Carousel 走马灯 - Ant Design
 
 var Carousel = antd.Carousel;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Carousel,
   null,
   React.createElement(
@@ -677,7 +677,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>1<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>2<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -700,7 +700,7 @@ React.render(
 
 var Carousel = antd.Carousel;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Carousel,
   { effect: "fade" },
   React.createElement(
@@ -741,7 +741,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-carousel-demo-fade'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">effect</span>=<span class="value">"fade"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>1<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>2<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -766,7 +766,7 @@ React.render(
 
 var Carousel = antd.Carousel;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Carousel,
   { vertical: "true" },
   React.createElement(
@@ -807,7 +807,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-carousel-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">vertical</span>=<span class="value">"true"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>1<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>2<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -830,7 +830,7 @@ React.render(
 
 var Carousel = antd.Carousel;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Carousel,
   { autoplay: "true" },
   React.createElement(
@@ -871,7 +871,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-carousel-demo-autoplay'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">autoplay</span>=<span class="value">"true"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>1<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">h3</span>&gt;</span>2<span class="tag">&lt;/<span class="title">h3</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>

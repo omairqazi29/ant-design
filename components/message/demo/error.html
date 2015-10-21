@@ -10,7 +10,7 @@ var error = function error() {
   message.error('这是一条失败的提示这是一条失败的提示这是一条失败的提示');
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { type: 'primary', onClick: error },
   '显示失败提示'
@@ -21,7 +21,7 @@ React.render(React.createElement(
   message.error(<span class="string">'这是一条失败的提示这是一条失败的提示这是一条失败的提示'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>显示失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>显示失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-error'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

@@ -8,7 +8,7 @@ var TabPane = Tabs.TabPane;
 
 function callback(key) {}
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
@@ -31,7 +31,7 @@ React.render(React.createElement(
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>

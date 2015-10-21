@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Select 选择器 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Select 选择器 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Select 选择器 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -728,7 +728,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
   React.createElement(
@@ -758,7 +758,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -786,7 +786,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { defaultValue: "lucy", showSearch: true, style: { width: 200 },
     searchPlaceholder: "输入",
@@ -818,7 +818,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">showSearch</span>=<span class="value">{true}</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
   <span class="attribute">searchPlaceholder</span>=<span class="value">"输入"</span>
   <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
@@ -857,7 +857,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   {
     style: { width: '100%' },
@@ -876,7 +876,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="tag">&lt;<span class="title">Select
 </span>   <span class="attribute">style</span>=<span class="value">{{width:</span> '<span class="attribute">100</span>%'}}
    <span class="attribute">searchPlaceholder</span>=<span class="value">"标签模式"</span>
@@ -905,7 +905,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { defaultValue: "lucy",
     style: { width: 200 },
@@ -942,7 +942,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span>
     <span class="attribute">style</span>=<span class="value">{{width:200}}</span>
     <span class="attribute">showSearch</span>=<span class="value">{false}</span>
@@ -978,7 +978,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
@@ -1060,7 +1060,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
@@ -1115,7 +1115,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { multiple: true,
     style: { width: 400 },
@@ -1133,7 +1133,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">multiple</span>
   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
   <span class="attribute">defaultValue</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
@@ -1196,7 +1196,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-select-demo-combobox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-select-demo-combobox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1231,7 +1231,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-select-demo-combobox'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-select-demo-combobox'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1306,7 +1306,7 @@ var App = React.createClass({
     );
   }
 });
-React.render(React.createElement(App, null), document.getElementById('components-select-demo-coordinate'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-select-demo-coordinate'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
 
 <span class="keyword">var</span> provinceData = [<span class="string">'浙江'</span>, <span class="string">'江苏'</span>];
@@ -1352,7 +1352,7 @@ React.render(React.createElement(App, null), document.getElementById('components
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
   }
 });
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-select-demo-coordinate'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-select-demo-coordinate'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

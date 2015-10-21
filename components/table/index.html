@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Table 表格 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Table 表格 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Table 表格 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -670,7 +670,7 @@ Table 表格 - Ant Design
 <tr>
 <td>dataIndex</td>
 <td>列数据在 data 中对应的 key</td>
-<td>React.Element</td>
+<td>String</td>
 <td></td>
 <td></td>
 </tr>
@@ -836,7 +836,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> Icon = antd.Icon;
 
 <span class="keyword">var</span> columns = [{
@@ -883,7 +883,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -943,7 +943,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -984,7 +984,7 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   }
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1050,7 +1050,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1097,7 +1097,7 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   }
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1158,7 +1158,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1200,7 +1200,7 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   }
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-radio'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1267,7 +1267,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1315,7 +1315,7 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   }
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1366,7 +1366,7 @@ var pagination = {
   showSizeChanger: true
 };
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
@@ -1398,7 +1398,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
   showSizeChanger: <span class="literal">true</span>
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{pagination}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{pagination}</span> /&gt;</span>
 , document.getElementById('components-table-demo-paging'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1468,7 +1468,7 @@ var data = [{
   address: '西湖区湖底公园123号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-head'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-head'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1523,7 +1523,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data }),
   address: <span class="string">'西湖区湖底公园123号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-head'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1649,7 +1649,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
@@ -1753,7 +1753,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
 });
 
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax-props'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1864,7 +1864,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> columns = [{
@@ -1952,7 +1952,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1996,7 +1996,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>
@@ -2025,7 +2025,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, pa
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{false}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">pagination</span>=<span class="value">{false}</span> /&gt;</span>
 , document.getElementById('components-table-demo-nopagination'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -2068,7 +2068,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data, size: 'small' }), document.getElementById('components-table-demo-small'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, size: 'small' }), document.getElementById('components-table-demo-small'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>
@@ -2096,7 +2096,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, si
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">size</span>=<span class="value">"small"</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">size</span>=<span class="value">"small"</span> /&gt;</span>
 , document.getElementById('components-table-demo-small'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -2147,7 +2147,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-bordered'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-bordered'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -2179,7 +2179,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, bo
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
 , document.getElementById('components-table-demo-bordered'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -2285,7 +2285,7 @@ var App = React.createClass({
   }
 });
 
-React.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> columns = [{
@@ -2360,7 +2360,7 @@ React.render(React.createElement(App, null), document.getElementById('components
   }
 })
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>
 , document.getElementById('components-table-demo-local-data'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -2397,7 +2397,7 @@ var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '�
 
 var data = [{ name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
 
-React.render(React.createElement(Table, { columns: columns,
+ReactDOM.render(React.createElement(Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
   className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
@@ -2423,7 +2423,7 @@ React.render(React.createElement(Table, { columns: columns,
   {name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
 ];
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span>
   <span class="attribute">expandedRowRender</span>=<span class="value">{expandedRowRender}</span>
   <span class="attribute">dataSource</span>=<span class="value">{data}</span>

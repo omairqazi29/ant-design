@@ -9,13 +9,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showQuickJumper</span>=<span class="value">{true}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-jump'));</span></code></pre></div>
   </div>

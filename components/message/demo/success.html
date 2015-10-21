@@ -10,7 +10,7 @@ var success = function success() {
   message.success('这是一条成功的提示');
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { type: 'primary', onClick: success },
   '显示成功提示'
@@ -21,7 +21,7 @@ React.render(React.createElement(
   message.success(<span class="string">'这是一条成功的提示'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-success'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

@@ -11,7 +11,7 @@ function confirm() {
   message.info('点击了确定');
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
@@ -58,7 +58,7 @@ React.render(React.createElement(
   message.info(<span class="string">'点击了确定'</span>);
 }
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">placement</span>=<span class="value">"left"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>左边<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>

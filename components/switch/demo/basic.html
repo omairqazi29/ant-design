@@ -10,14 +10,14 @@ function onChange(checked) {
   console.log('switch to ' + checked);
 }
 
-React.render(React.createElement(Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
+ReactDOM.render(React.createElement(Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(checked)</span>{</span>
   console.log(<span class="string">'switch to '</span> + checked);
 }
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

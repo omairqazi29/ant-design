@@ -14,7 +14,7 @@ function cancel() {
   message.error('点击了取消');
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Popconfirm,
   { title: '确定要删除这个任务吗？', onConfirm: confirm, onCancel: cancel },
   React.createElement(
@@ -33,7 +33,7 @@ React.render(React.createElement(
   message.error(<span class="string">'点击了取消'</span>);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Popconfirm</span> <span class="attribute">title</span>=<span class="value">"确定要删除这个任务吗？"</span> <span class="attribute">onConfirm</span>=<span class="value">{confirm}</span> <span class="attribute">onCancel</span>=<span class="value">{cancel}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>删除<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popconfirm</span>&gt;</span>

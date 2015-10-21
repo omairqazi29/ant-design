@@ -1,0 +1,157 @@
+<div class="code-box" id="demo-add">
+  <div class="code-box-demo">
+    <div id="components-tabs-demo-add"></div>
+    <script>(function(){'use strict';
+
+var Tabs = antd.Tabs;
+var TabPane = Tabs.TabPane;
+var Button = antd.Button;
+var Icon = antd.Icon;
+
+var index = 0;
+var closeStyle = {
+  position: 'absolute',
+  top: 0,
+  right: -10
+};
+var addStyle = {
+  pointerEvents: 'auto',
+  color: 'black'
+};
+var extraStyle = {
+  float: 'right'
+};
+
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      tabs: [{
+        title: 'title ' + index,
+        content: 'content ' + index
+      }]
+    };
+  },
+  remove: function remove(title) {
+    if (this.state.tabs.length === 1) {
+      antd.message.error('仅剩一个，不能删除');
+      return;
+    }
+    this.setState({
+      tabs: this.state.tabs.filter(function (t) {
+        return t.title !== title;
+      })
+    });
+  },
+  add: function add() {
+    index++;
+    this.setState({
+      tabs: this.state.tabs.concat({
+        title: 'title ' + index,
+        content: 'content ' + index
+      })
+    });
+  },
+  render: function render() {
+    var _this = this;
+
+    return React.createElement(
+      Tabs,
+      { tabBarExtraContent: React.createElement(
+          'div',
+          { style: extraStyle },
+          React.createElement(
+            Button,
+            { type: 'primary' },
+            '其它操作'
+          )
+        ) },
+      this.state.tabs.map(function (t) {
+        return React.createElement(
+          TabPane,
+          { key: t.title, tab: React.createElement(
+              'div',
+              null,
+              t.title,
+              ' ',
+              React.createElement(Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
+            ) },
+          t.content
+        );
+      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
+<span class="keyword">var</span> TabPane = Tabs.TabPane;
+<span class="keyword">var</span> Button = antd.Button;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+<span class="keyword">var</span> index = <span class="number">0</span>;
+<span class="keyword">var</span> closeStyle = {
+  position: <span class="string">'absolute'</span>,
+  top: <span class="number">0</span>,
+  right: -<span class="number">10</span>,
+};
+<span class="keyword">var</span> addStyle = {
+  pointerEvents: <span class="string">'auto'</span>,
+  color: <span class="string">'black'</span>,
+};
+<span class="keyword">var</span> extraStyle = {
+  float: <span class="string">'right'</span>
+};
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      tabs: [{
+        title: <span class="string">'title '</span> + index,
+        content: <span class="string">'content '</span> + index,
+      }]
+    };
+  },
+  remove(title) {
+    <span class="keyword">if</span>(<span class="keyword">this</span>.state.tabs.length === <span class="number">1</span>) {
+      antd.message.error(<span class="string">'仅剩一个，不能删除'</span>);
+      <span class="keyword">return</span>;
+    }
+    <span class="keyword">this</span>.setState({
+      tabs: <span class="keyword">this</span>.state.tabs.filter((t)=&gt;{
+        <span class="keyword">return</span> t.title !== title;
+      })
+    });
+  },
+  add() {
+    index++;
+    <span class="keyword">this</span>.setState({
+      tabs: <span class="keyword">this</span>.state.tabs.concat({
+        title: <span class="string">'title '</span>+index,
+        content: <span class="string">'content '</span>+index,
+      })
+    });
+  },
+  render() {
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;div</span> <span class="attribute">style</span>=<span class="value">{extraStyle}</span>&gt;</span><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+    {
+      this.state.tabs.map((t)=&gt;{
+        return <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{t.title}</span> <span class="attribute">tab</span>=<span class="value">{&lt;div</span>&gt;</span>{t.title} <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,t.title)}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+          {t.content}
+        <span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>;</span>
+      }).concat(<span class="xml"><span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">"__add"</span> <span class="attribute">disabled</span> <span class="attribute">tab</span>=<span class="value">{&lt;Icon</span> <span class="attribute">style</span>=<span class="value">{addStyle}</span> <span class="attribute">type</span>=<span class="value">"plus-circle"</span> <span class="attribute">onClick</span>=<span class="value">{this.add}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span>} /&gt;)
+    }
+    <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+  }
+})
+
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-tabs-demo-add'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-add">添加</a>
+    </div>
+    <p>演示添加删除功能</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

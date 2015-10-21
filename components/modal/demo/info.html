@@ -28,7 +28,7 @@ function error() {
   });
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
@@ -71,7 +71,7 @@ React.render(React.createElement(
   });
 }
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>信息提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>

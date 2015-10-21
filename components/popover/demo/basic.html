@@ -21,7 +21,7 @@ var content = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Popover,
   { overlay: content, title: "标题" },
   React.createElement(
@@ -37,7 +37,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>弹出卡片<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>

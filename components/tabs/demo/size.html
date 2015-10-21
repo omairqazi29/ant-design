@@ -6,7 +6,7 @@
 var Tabs = antd.Tabs;
 var TabPane = Tabs.TabPane;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "2", size: "mini" },
   React.createElement(
@@ -27,7 +27,7 @@ React.render(React.createElement(
 ), document.getElementById('components-tabs-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
 <span class="keyword">var</span> TabPane = Tabs.TabPane;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span> <span class="attribute">size</span>=<span class="value">"mini"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>

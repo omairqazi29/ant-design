@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Progress 进度条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Progress 进度条 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Progress 进度条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -647,7 +647,7 @@ Progress 进度条 - Ant Design
 
 var Progress = antd.Progress.Line;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(Progress, { percent: "30" }),
@@ -657,7 +657,7 @@ React.render(React.createElement(
   React.createElement(Progress, { percent: "50", showInfo: false })
 ), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
@@ -681,7 +681,7 @@ React.render(
 
 var Progress = antd.Progress.Line;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   { style: { width: 170 } },
   React.createElement(Progress, { percent: "30", strokeWidth: "5" }),
@@ -690,7 +690,7 @@ React.render(React.createElement(
   React.createElement(Progress, { percent: "100", strokeWidth: "5" })
 ), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{</span> <span class="attribute">width:</span> <span class="attribute">170</span> }}&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"30"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
@@ -761,7 +761,7 @@ var MyProgress = React.createClass({
   }
 });
 
-React.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 <span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
 <span class="keyword">var</span> Icon = antd.Icon;
@@ -801,7 +801,7 @@ React.render(React.createElement(MyProgress, null), document.getElementById('com
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -819,7 +819,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgr
 
 var ProgressCircle = antd.Progress.Circle;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(ProgressCircle, { percent: "30" }),
@@ -827,7 +827,7 @@ React.render(React.createElement(
   React.createElement(ProgressCircle, { percent: "100" })
 ), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
@@ -856,7 +856,7 @@ React.render(
 
 var ProgressCircle = antd.Progress.Circle;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(ProgressCircle, { percent: "30", width: "80" }),
@@ -864,7 +864,7 @@ React.render(React.createElement(
   React.createElement(ProgressCircle, { percent: "100", width: "80" })
 ), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"30"</span> <span class="attribute">width</span>=<span class="value">"80"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">width</span>=<span class="value">"80"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
@@ -934,7 +934,7 @@ var MyProgress = React.createClass({
   }
 });
 
-React.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 <span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
 <span class="keyword">var</span> Icon = antd.Icon;
@@ -974,7 +974,7 @@ React.render(React.createElement(MyProgress, null), document.getElementById('com
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

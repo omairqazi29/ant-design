@@ -24,7 +24,7 @@ var tabContent = [React.createElement(
   "选项卡三"
 )];
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "2" },
   React.createElement(
@@ -52,7 +52,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"lock"</span> /&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
 ];
 
-React.render(
+ReactDOM.render(
   <span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[0]}</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[1]}</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>

@@ -17,7 +17,7 @@ function showConfirm() {
   });
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { onClick: showConfirm },
   '确认对话框'
@@ -35,7 +35,7 @@ React.render(React.createElement(
   });
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{showConfirm}</span>&gt;</span>
   确认对话框
 <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>

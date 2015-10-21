@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Steps 步骤条 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Steps 步骤条 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Steps 步骤条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -677,7 +677,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   { current: 1 },
   steps
@@ -703,7 +703,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -737,7 +737,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   { size: 'small', current: 1 },
   steps
@@ -763,7 +763,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -781,7 +781,7 @@ var Steps = antd.Steps;
 var Step = Steps.Step;
 var container = document.getElementById('components-steps-demo-icon');
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   null,
   React.createElement(Step, { status: 'finish', title: '步骤1', icon: 'cloud' }),
@@ -791,7 +791,7 @@ React.render(React.createElement(
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span> /&gt;</span>
   <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'process'</span> <span class="attribute">title</span>=<span class="value">'步骤2'</span> <span class="attribute">icon</span>=<span class="value">'apple'</span> /&gt;</span>
   <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'wait'</span> <span class="attribute">title</span>=<span class="value">'步骤3'</span> <span class="attribute">icon</span>=<span class="value">'github'</span> /&gt;</span>
@@ -873,7 +873,7 @@ var App = React.createClass({
   }
 });
 
-React.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
 <span class="keyword">var</span> Step = Steps.Step;
 <span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
@@ -915,7 +915,7 @@ React.render(React.createElement(App, null), container);})()</script><div class=
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -949,7 +949,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   { direction: 'vertical', current: 1 },
   steps
@@ -975,7 +975,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1006,7 +1006,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   { size: 'small', direction: 'vertical', current: 1 },
   steps
@@ -1029,7 +1029,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">'small'</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">'small'</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1067,7 +1067,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, status: s.status, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   null,
   steps
@@ -1097,7 +1097,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

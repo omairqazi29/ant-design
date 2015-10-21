@@ -9,7 +9,7 @@ function onChange(e) {
   console.log('checked = ' + e.target.checked);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   'label',
   null,
   React.createElement(Checkbox, { defaultChecked: false, onChange: onChange }),
@@ -20,7 +20,7 @@ React.render(React.createElement(
   console.log(<span class="string">'checked = '</span> + e.target.checked);
 }
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">label</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">label</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
   Checkbox
 <span class="tag">&lt;/<span class="title">label</span>&gt;</span>, container);</span></code></pre></div>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Timeline 时间轴 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Timeline 时间轴 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Timeline 时间轴 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -622,7 +622,7 @@ Timeline 时间轴 - Ant Design
 var Timeline = antd.Timeline;
 var container = document.getElementById('components-timeline-demo-basic');
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Timeline,
   null,
   React.createElement(
@@ -648,7 +648,7 @@ React.render(React.createElement(
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
 <span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-basic'</span>);
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
@@ -672,7 +672,7 @@ React.render(
 var Timeline = antd.Timeline;
 var container = document.getElementById('components-timeline-demo-pending');
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Timeline,
   { pending: true },
   React.createElement(
@@ -693,7 +693,7 @@ React.render(React.createElement(
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
 <span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-pending'</span>);
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Timeline</span> <span class="attribute">pending</span>=<span class="value">{true}</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
@@ -718,7 +718,7 @@ React.render(
 var Timeline = antd.Timeline;
 var container = document.getElementById('components-timeline-demo-color');
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Timeline,
   null,
   React.createElement(
@@ -772,7 +772,7 @@ React.render(React.createElement(
 ), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
 <span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-color'</span>);
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span> <span class="attribute">color</span>=<span class="value">"green"</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Timeline.Item</span> <span class="attribute">color</span>=<span class="value">"green"</span>&gt;</span>创建服务现场 2015-09-01<span class="tag">&lt;/<span class="title">Timeline.Item</span>&gt;</span>

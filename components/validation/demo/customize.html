@@ -253,7 +253,7 @@ var Form = React.createClass({
   }
 });
 
-React.render(React.createElement(Form, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Validation = antd.Validation;
+ReactDOM.render(React.createElement(Form, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Validation = antd.Validation;
 <span class="keyword">var</span> Validator = Validation.Validator;
 <span class="keyword">var</span> Button = antd.Button;
 
@@ -285,7 +285,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
         rePass: <span class="literal">undefined</span>
       },
       passBarShow: <span class="literal">false</span>, <span class="comment">// 是否显示密码强度提示条</span>
-      rePassBarShow: <span class="literal">false</span>, 
+      rePassBarShow: <span class="literal">false</span>,
       passStrength: <span class="string">'L'</span>, <span class="comment">// 密码强度</span>
       rePassStrength: <span class="string">'L'</span>
     };
@@ -445,7 +445,7 @@ React.render(React.createElement(Form, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Form</span> /&gt;</span>, document.getElementById('components-validation-demo-customize'));</span></code></pre></div><style>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Form</span> /&gt;</span>, document.getElementById('components-validation-demo-customize'));</span></code></pre></div><style>
   .ant-pwd-strength {
     display: inline-block;
     margin-left: 8px;

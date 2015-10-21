@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Form 表单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Form 表单 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Form 表单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -581,7 +581,7 @@ var Radio = antd.Radio;
 var RadioGroup = antd.Radio.Group;
 var Button = antd.Button;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-horizontal" },
   React.createElement(
@@ -694,7 +694,7 @@ React.render(React.createElement(
 <span class="keyword">var</span> RadioGroup = antd.Radio.Group;
 <span class="keyword">var</span> Button = antd.Button;
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
@@ -997,7 +997,7 @@ React.render(
 var Checkbox = antd.Checkbox;
 var Button = antd.Button;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-inline" },
   React.createElement(
@@ -1038,7 +1038,7 @@ React.render(React.createElement(
 ), document.getElementById('components-form-demo-inline-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
 <span class="keyword">var</span> Button = antd.Button;
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-inline"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span>&gt;</span>账户：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
@@ -1079,7 +1079,7 @@ function handleSelectChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-horizontal" },
   React.createElement(
@@ -1256,7 +1256,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"control-input"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
@@ -1339,7 +1339,7 @@ React.render(
 var Select = antd.Select;
 var Option = Select.Option;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-horizontal" },
   React.createElement(
@@ -1533,7 +1533,7 @@ React.render(React.createElement(
 ), document.getElementById('components-form-demo-inputs'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">htmlFor</span>=<span class="value">"site1"</span>&gt;</span>标签输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
@@ -1680,7 +1680,7 @@ function onInputNumberChange(v) {
   console.log('changed', v);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-horizontal" },
   React.createElement(
@@ -1890,7 +1890,7 @@ React.render(React.createElement(
   console.log(<span class="string">'changed'</span>,v);
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">className</span>=<span class="value">"col-8"</span> <span class="attribute">required</span>&gt;</span>InputNumber 数字输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>

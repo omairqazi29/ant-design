@@ -12,7 +12,7 @@ function callback(key) {
 
 var text = "\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n";
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Collapse,
   { onChange: callback, accordion: true },
   React.createElement(
@@ -63,7 +63,7 @@ React.render(React.createElement(
   it can be found as a welcome guest <span class="keyword">in</span> many households across the world.
 `;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Collapse</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span> <span class="attribute">accordion</span>=<span class="value">{true}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Panel</span> <span class="attribute">header</span>=<span class="value">{`This</span> <span class="attribute">is</span> <span class="attribute">panel</span> <span class="attribute">header</span> <span class="attribute">1</span>`} <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Collapse</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span>&gt;</span>

@@ -77,7 +77,7 @@ var Home = React.createClass({
   }
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Router,
   null,
   React.createElement(
@@ -123,7 +123,7 @@ React.render(React.createElement(
   }
 });
 
-React.render((
+ReactDOM.render((
   <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>

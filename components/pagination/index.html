@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Pagination 分页 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Pagination 分页 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Pagination 分页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -644,13 +644,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-basic'));</span></code></pre></div>
   </div>
@@ -676,7 +676,7 @@ function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-React.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -686,7 +686,7 @@ React.render(React.createElement(Pagination, { showSizeChanger: true, onShowSize
   console.log(current, pageSize);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showSizeChanger</span>=<span class="value">{true}</span> <span class="attribute">onShowSizeChange</span>=<span class="value">{onShowSizeChange}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-changer'));</span></code></pre></div>
   </div>
@@ -708,13 +708,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { className: "mini", onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { className: "mini", onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">className</span>=<span class="value">"mini"</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-mini'));</span></code></pre></div>
   </div>
@@ -738,13 +738,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-more'));</span></code></pre></div>
   </div>
@@ -766,13 +766,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showQuickJumper</span>=<span class="value">{true}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-jump'));</span></code></pre></div>
   </div>
@@ -794,13 +794,13 @@ function onChange(page) {
   console.log(page);
 }
 
-React.render(React.createElement(Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">simple</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span>,
 document.getElementById('components-pagination-demo-simple'));</span></code></pre></div>
   </div>

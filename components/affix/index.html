@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Affix 固钉 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Affix 固钉 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Affix 固钉 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -591,7 +591,7 @@ Affix 固钉 - Ant Design
 var Affix = antd.Affix;
 var Button = antd.Button;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Affix,
   null,
   React.createElement(
@@ -602,7 +602,7 @@ React.render(React.createElement(
 ), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
 <span class="keyword">var</span> Button = antd.Button;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在顶部<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>
@@ -625,7 +625,7 @@ React.render(
 var Affix = antd.Affix;
 var Button = antd.Button;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Affix,
   { offset: 75 },
   React.createElement(
@@ -636,7 +636,7 @@ React.render(React.createElement(
 ), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
 <span class="keyword">var</span> Button = antd.Button;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span> <span class="attribute">offset</span>=<span class="value">{75}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>固定在距离顶部 75px 的位置<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Affix</span>&gt;</span>

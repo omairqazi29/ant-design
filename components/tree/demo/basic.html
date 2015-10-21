@@ -6,7 +6,7 @@
 var Tree = antd.Tree;
 var TreeNode = Tree.TreeNode;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tree,
   { defaultExpandAll: false },
   React.createElement(
@@ -28,7 +28,7 @@ React.render(React.createElement(
 ), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
 <span class="keyword">var</span> TreeNode = Tree.TreeNode;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{false}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>

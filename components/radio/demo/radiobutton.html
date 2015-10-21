@@ -10,7 +10,7 @@ function onChange(e) {
   console.log('radio checked:' + e.target.value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   RadioGroup,
   { onChange: onChange, defaultValue: "a" },
   React.createElement(
@@ -40,7 +40,7 @@ React.render(React.createElement(
   console.log(<span class="string">'radio checked:'</span> + e.target.value);
 }
 
-React.render((
+ReactDOM.render((
   <span class="xml"><span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">defaultValue</span>=<span class="value">"a"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span>杭州<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>
     <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"b"</span>&gt;</span>上海<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>

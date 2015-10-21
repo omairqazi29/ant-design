@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Tabs 标签页 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Tabs 标签页 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Tabs 标签页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -597,6 +597,12 @@ Tabs 标签页 - Ant Design
 <td>Function</td>
 <td>无</td>
 </tr>
+<tr>
+<td>tabBarExtraContent</td>
+<td>tab bar 上格外的元素</td>
+<td>React Node</td>
+<td>无</td>
+</tr>
 </tbody>
 </table>
 <h3 id="tabs-tabpane">Tabs.TabPane<a href="#tabs-tabpane" class="anchor">#</a> </h3><table>
@@ -642,7 +648,7 @@ function callback(key) {
   console.log(key);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
@@ -667,7 +673,7 @@ React.render(React.createElement(
   console.log(key);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
@@ -682,7 +688,122 @@ React.render(
     <p>默认选中第一项。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-disabled">
+</div><div class="code-box" id="demo-icon">
+  <div class="code-box-demo">
+    <div id="components-tabs-demo-icon"></div>
+    <script>(function(){"use strict";
+
+var Tabs = antd.Tabs;
+var TabPane = Tabs.TabPane;
+var Icon = antd.Icon;
+
+var tabContent = [React.createElement(
+  "span",
+  null,
+  React.createElement(Icon, { type: "apple" }),
+  "选项卡一"
+), React.createElement(
+  "span",
+  null,
+  React.createElement(Icon, { type: "android" }),
+  "选项卡二"
+), React.createElement(
+  "span",
+  null,
+  React.createElement(Icon, { type: "lock" }),
+  "选项卡三"
+)];
+
+ReactDOM.render(React.createElement(
+  Tabs,
+  { defaultActiveKey: "2" },
+  React.createElement(
+    TabPane,
+    { tab: tabContent[0], key: "1" },
+    "选项卡一"
+  ),
+  React.createElement(
+    TabPane,
+    { tab: tabContent[1], key: "2" },
+    "选项卡二"
+  ),
+  React.createElement(
+    TabPane,
+    { tab: tabContent[2], key: "3" },
+    "选项卡三"
+  )
+), document.getElementById('components-tabs-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
+<span class="keyword">var</span> TabPane = Tabs.TabPane;
+<span class="keyword">var</span> Icon = antd.Icon;
+
+<span class="keyword">var</span> tabContent = [
+  <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"apple"</span> /&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
+  <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"android"</span> /&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
+  <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"lock"</span> /&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
+];
+
+ReactDOM.render(
+  <span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[0]}</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[1]}</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[2]}</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+, document.getElementById('components-tabs-demo-icon'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-icon">图标</a>
+    </div>
+    <p>有图标的标签。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-size">
+  <div class="code-box-demo">
+    <div id="components-tabs-demo-size"></div>
+    <script>(function(){"use strict";
+
+var Tabs = antd.Tabs;
+var TabPane = Tabs.TabPane;
+
+ReactDOM.render(React.createElement(
+  Tabs,
+  { defaultActiveKey: "2", size: "mini" },
+  React.createElement(
+    TabPane,
+    { tab: "选项卡一", key: "1" },
+    "选项卡一内容"
+  ),
+  React.createElement(
+    TabPane,
+    { tab: "选项卡二", key: "2" },
+    "选项卡二内容"
+  ),
+  React.createElement(
+    TabPane,
+    { tab: "选项卡三", key: "3" },
+    "选项卡三内容"
+  )
+), document.getElementById('components-tabs-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
+<span class="keyword">var</span> TabPane = Tabs.TabPane;
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span> <span class="attribute">size</span>=<span class="value">"mini"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡三"</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项卡三内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+, document.getElementById('components-tabs-demo-size'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-size">迷你型</a>
+    </div>
+    <p>用在弹出框等较狭窄的容器内。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-tabs-demo-disabled"></div>
     <script>(function(){"use strict";
@@ -692,7 +813,7 @@ var TabPane = Tabs.TabPane;
 
 function callback(key) {}
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
@@ -715,7 +836,7 @@ React.render(React.createElement(
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
@@ -740,7 +861,7 @@ var TabPane = Tabs.TabPane;
 
 function callback(key) {}
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
@@ -793,7 +914,7 @@ React.render(React.createElement(
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
     <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
@@ -814,119 +935,160 @@ React.render(
     <p>可以左右滑动，容纳更多标签。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-size">
+</div><div class="code-box" id="demo-add">
   <div class="code-box-demo">
-    <div id="components-tabs-demo-size"></div>
-    <script>(function(){"use strict";
+    <div id="components-tabs-demo-add"></div>
+    <script>(function(){'use strict';
 
 var Tabs = antd.Tabs;
 var TabPane = Tabs.TabPane;
-
-React.render(React.createElement(
-  Tabs,
-  { defaultActiveKey: "2", size: "mini" },
-  React.createElement(
-    TabPane,
-    { tab: "选项卡一", key: "1" },
-    "选项卡一内容"
-  ),
-  React.createElement(
-    TabPane,
-    { tab: "选项卡二", key: "2" },
-    "选项卡二内容"
-  ),
-  React.createElement(
-    TabPane,
-    { tab: "选项卡三", key: "3" },
-    "选项卡三内容"
-  )
-), document.getElementById('components-tabs-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
-
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span> <span class="attribute">size</span>=<span class="value">"mini"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项卡三"</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项卡三内容<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
-, document.getElementById('components-tabs-demo-size'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-size">迷你型</a>
-    </div>
-    <p>用在弹出框等较狭窄的容器内。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-icon">
-  <div class="code-box-demo">
-    <div id="components-tabs-demo-icon"></div>
-    <script>(function(){"use strict";
-
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var Button = antd.Button;
 var Icon = antd.Icon;
 
-var tabContent = [React.createElement(
-  "span",
-  null,
-  React.createElement(Icon, { type: "apple" }),
-  "选项卡一"
-), React.createElement(
-  "span",
-  null,
-  React.createElement(Icon, { type: "android" }),
-  "选项卡二"
-), React.createElement(
-  "span",
-  null,
-  React.createElement(Icon, { type: "lock" }),
-  "选项卡三"
-)];
+var index = 0;
+var closeStyle = {
+  position: 'absolute',
+  top: 0,
+  right: -10
+};
+var addStyle = {
+  pointerEvents: 'auto',
+  color: 'black'
+};
+var extraStyle = {
+  float: 'right'
+};
 
-React.render(React.createElement(
-  Tabs,
-  { defaultActiveKey: "2" },
-  React.createElement(
-    TabPane,
-    { tab: tabContent[0], key: "1" },
-    "选项卡一"
-  ),
-  React.createElement(
-    TabPane,
-    { tab: tabContent[1], key: "2" },
-    "选项卡二"
-  ),
-  React.createElement(
-    TabPane,
-    { tab: tabContent[2], key: "3" },
-    "选项卡三"
-  )
-), document.getElementById('components-tabs-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      tabs: [{
+        title: 'title ' + index,
+        content: 'content ' + index
+      }]
+    };
+  },
+  remove: function remove(title) {
+    if (this.state.tabs.length === 1) {
+      antd.message.error('仅剩一个，不能删除');
+      return;
+    }
+    this.setState({
+      tabs: this.state.tabs.filter(function (t) {
+        return t.title !== title;
+      })
+    });
+  },
+  add: function add() {
+    index++;
+    this.setState({
+      tabs: this.state.tabs.concat({
+        title: 'title ' + index,
+        content: 'content ' + index
+      })
+    });
+  },
+  render: function render() {
+    var _this = this;
+
+    return React.createElement(
+      Tabs,
+      { tabBarExtraContent: React.createElement(
+          'div',
+          { style: extraStyle },
+          React.createElement(
+            Button,
+            { type: 'primary' },
+            '其它操作'
+          )
+        ) },
+      this.state.tabs.map(function (t) {
+        return React.createElement(
+          TabPane,
+          { key: t.title, tab: React.createElement(
+              'div',
+              null,
+              t.title,
+              ' ',
+              React.createElement(Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
+            ) },
+          t.content
+        );
+      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
 <span class="keyword">var</span> TabPane = Tabs.TabPane;
+<span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> Icon = antd.Icon;
 
-<span class="keyword">var</span> tabContent = [
-  <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"apple"</span> /&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"android"</span> /&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"lock"</span> /&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
-];
+<span class="keyword">var</span> index = <span class="number">0</span>;
+<span class="keyword">var</span> closeStyle = {
+  position: <span class="string">'absolute'</span>,
+  top: <span class="number">0</span>,
+  right: -<span class="number">10</span>,
+};
+<span class="keyword">var</span> addStyle = {
+  pointerEvents: <span class="string">'auto'</span>,
+  color: <span class="string">'black'</span>,
+};
+<span class="keyword">var</span> extraStyle = {
+  float: <span class="string">'right'</span>
+};
 
-React.render(
-  <span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[0]}</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[1]}</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">{tabContent[2]}</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
-, document.getElementById('components-tabs-demo-icon'));</span></code></pre></div>
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      tabs: [{
+        title: <span class="string">'title '</span> + index,
+        content: <span class="string">'content '</span> + index,
+      }]
+    };
+  },
+  remove(title) {
+    <span class="keyword">if</span>(<span class="keyword">this</span>.state.tabs.length === <span class="number">1</span>) {
+      antd.message.error(<span class="string">'仅剩一个，不能删除'</span>);
+      <span class="keyword">return</span>;
+    }
+    <span class="keyword">this</span>.setState({
+      tabs: <span class="keyword">this</span>.state.tabs.filter((t)=&gt;{
+        <span class="keyword">return</span> t.title !== title;
+      })
+    });
+  },
+  add() {
+    index++;
+    <span class="keyword">this</span>.setState({
+      tabs: <span class="keyword">this</span>.state.tabs.concat({
+        title: <span class="string">'title '</span>+index,
+        content: <span class="string">'content '</span>+index,
+      })
+    });
+  },
+  render() {
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;div</span> <span class="attribute">style</span>=<span class="value">{extraStyle}</span>&gt;</span><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+    {
+      this.state.tabs.map((t)=&gt;{
+        return <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{t.title}</span> <span class="attribute">tab</span>=<span class="value">{&lt;div</span>&gt;</span>{t.title} <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,t.title)}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+          {t.content}
+        <span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>;</span>
+      }).concat(<span class="xml"><span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">"__add"</span> <span class="attribute">disabled</span> <span class="attribute">tab</span>=<span class="value">{&lt;Icon</span> <span class="attribute">style</span>=<span class="value">{addStyle}</span> <span class="attribute">type</span>=<span class="value">"plus-circle"</span> <span class="attribute">onClick</span>=<span class="value">{this.add}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span>} /&gt;)
+    }
+    <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+  }
+})
+
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-tabs-demo-add'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-icon">图标</a>
+      <a href="#demo-add">添加</a>
     </div>
-    <p>有图标的标签。</p>
+    <p>演示添加删除功能</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

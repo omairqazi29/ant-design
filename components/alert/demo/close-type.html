@@ -10,10 +10,10 @@ var link = React.createElement(
   "不再提醒"
 );
 
-React.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+ReactDOM.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
 <span class="keyword">var</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 
-React.render(
+ReactDOM.render(
 <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"消息提示的文案"</span> <span class="attribute">type</span>=<span class="value">"info"</span> <span class="attribute">closeText</span>=<span class="value">{link}</span> /&gt;</span>
 , document.getElementById('components-alert-demo-close-type'));</span></code></pre></div>
   </div>

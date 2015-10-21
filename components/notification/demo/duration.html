@@ -15,7 +15,7 @@ var openNotification = function openNotification() {
   notification.open(args);
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { type: "primary", onClick: openNotification },
   "打开通知提醒框"
@@ -31,7 +31,7 @@ React.render(React.createElement(
   notification.open(args);
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
   </div>

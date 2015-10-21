@@ -12,7 +12,7 @@ var success = function success() {
   setTimeout(hide, 2500);
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { onClick: success },
   '显示加载中...'
@@ -25,7 +25,7 @@ React.render(React.createElement(
   setTimeout(hide, <span class="number">2500</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-loading'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

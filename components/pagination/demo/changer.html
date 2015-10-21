@@ -13,7 +13,7 @@ function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-React.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -23,7 +23,7 @@ React.render(React.createElement(Pagination, { showSizeChanger: true, onShowSize
   console.log(current, pageSize);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">showSizeChanger</span>=<span class="value">{true}</span> <span class="attribute">onShowSizeChange</span>=<span class="value">{onShowSizeChange}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-changer'));</span></code></pre></div>
   </div>

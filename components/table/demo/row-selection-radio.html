@@ -49,7 +49,7 @@ var rowSelection = {
   }
 };
 
-React.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -91,7 +91,7 @@ React.render(React.createElement(Table, { rowSelection: rowSelection, columns: c
   }
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-radio'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

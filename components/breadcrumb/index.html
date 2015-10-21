@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Breadcrumb 面包屑 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Breadcrumb 面包屑 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Breadcrumb 面包屑 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -634,7 +634,7 @@ Breadcrumb 面包屑 - Ant Design
 
 var Breadcrumb = require('antd/lib/breadcrumb');
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Breadcrumb,
   null,
   React.createElement(
@@ -659,7 +659,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-breadcrumb-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>应用中心<span class="tag">&lt;/<span class="title">Breadcrumb.Item</span>&gt;</span>
@@ -754,7 +754,7 @@ var Home = React.createClass({
   }
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Router,
   null,
   React.createElement(
@@ -800,7 +800,7 @@ React.render(React.createElement(
   }
 });
 
-React.render((
+ReactDOM.render((
   <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
@@ -842,7 +842,7 @@ React.render((
 var Breadcrumb = require('antd/lib/breadcrumb');
 var Icon = require('antd').iconfont;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Breadcrumb,
   null,
   React.createElement(
@@ -864,7 +864,7 @@ React.render(React.createElement(
 ), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
 <span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Breadcrumb.Item</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"home"</span> /&gt;</span>

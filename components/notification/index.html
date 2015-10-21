@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Notification 通知提醒框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Notification 通知提醒框 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Notification 通知提醒框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -665,7 +665,7 @@ var openNotification = function openNotification() {
   });
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
@@ -683,7 +683,7 @@ React.render(React.createElement(
   });
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
@@ -713,7 +713,7 @@ var openNotificationWithIcon = function openNotificationWithIcon(type) {
   };
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
@@ -748,7 +748,7 @@ React.render(React.createElement(
   };
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -800,7 +800,7 @@ var openNotification = function openNotification() {
   });
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
@@ -833,7 +833,7 @@ React.render(React.createElement(
   });
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
@@ -865,7 +865,7 @@ var openNotification = function openNotification() {
   notification.open(args);
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { type: "primary", onClick: openNotification },
   "打开通知提醒框"
@@ -881,7 +881,7 @@ React.render(React.createElement(
   notification.open(args);
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
   </div>
@@ -913,7 +913,7 @@ var openNotification = function openNotification() {
   notification.open(args);
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
@@ -937,7 +937,7 @@ React.render(React.createElement(
   notification.open(args);
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,

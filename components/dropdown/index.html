@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Dropdown 下拉菜单 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Dropdown 下拉菜单 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Dropdown 下拉菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -641,7 +641,7 @@ var menu = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
@@ -667,7 +667,7 @@ React.render(React.createElement(
   <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
       某按钮 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
@@ -726,7 +726,7 @@ var menu = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
@@ -765,7 +765,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
       点击触发 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
@@ -826,7 +826,7 @@ var menu = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
@@ -851,7 +851,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span> <span class="attribute">disabled</span>&gt;</span>第三个菜单项（不可用）<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
       鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
@@ -901,7 +901,7 @@ var menu = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
@@ -924,7 +924,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
       鼠标移入，点击菜单 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>

@@ -19,7 +19,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { multiple: true,
     style: { width: 400 },
@@ -37,7 +37,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">multiple</span>
   <span class="attribute">style</span>=<span class="value">{{width:400}}</span>
   <span class="attribute">defaultValue</span>=<span class="value">{['a10',</span> '<span class="attribute">c12</span>']} <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>

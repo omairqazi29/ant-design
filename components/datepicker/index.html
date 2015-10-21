@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ Datepicker 日期选择框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ Datepicker 日期选择框 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -610,6 +610,12 @@ Datepicker 日期选择框 - Ant Design
 <td>false</td>
 </tr>
 <tr>
+<td>calendarStyle</td>
+<td>格外的弹出日历样式，例如 zIndex</td>
+<td>object</td>
+<td>{}</td>
+</tr>
+<tr>
 <td>size</td>
 <td>输入框大小，<code>large</code> 高度为 32px，<code>small</code> 为 22px，默认是 28px</td>
 <td>string</td>
@@ -637,10 +643,10 @@ Datepicker 日期选择框 - Ant Design
 
 var Datepicker = antd.Datepicker;
 
-React.render(React.createElement(Datepicker, { defaultValue: "2012-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="comment">// or require('antd/lib/datepicker');</span>
+ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2012-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="comment">// or require('antd/lib/datepicker');</span>
 <span class="keyword">var</span> Datepicker = antd.Datepicker;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2012-12-12"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-basic'));</span></code></pre></div>
   </div>
@@ -658,7 +664,7 @@ React.render(
 
 var Datepicker = antd.Datepicker;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(Datepicker, { size: "large" }),
@@ -666,7 +672,7 @@ React.render(React.createElement(
   React.createElement(Datepicker, { size: "small" })
 ), document.getElementById('components-datepicker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">size</span>=<span class="value">"large"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>
@@ -681,6 +687,26 @@ React.render(
     <p>三种大小的输入框，大的用在表单中，中的为默认。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-time">
+  <div class="code-box-demo">
+    <div id="components-datepicker-demo-time"></div>
+    <script>(function(){"use strict";
+
+var Datepicker = antd.Datepicker;
+
+ReactDOM.render(React.createElement(Datepicker, { showTime: true, format: "yyyy-MM-dd HH:mm:ss" }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">format</span>=<span class="value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
+, document.getElementById('components-datepicker-demo-time'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-time">时间选择</a>
+    </div>
+    <p>准确到秒的时间选择面板。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div><div class="code-box" id="demo-range">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-range"></div>
@@ -692,13 +718,13 @@ var disabledDate = function disabledDate(current, value) {
   return current.getTime() > Date.now();
 };
 
-React.render(React.createElement(Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 <span class="keyword">var</span> disabledDate = <span class="function"><span class="keyword">function</span><span class="params">(current, value)</span> {</span>
   <span class="comment">// can not select days after today</span>
   <span class="keyword">return</span> current.getTime() &gt; Date.now();
 };
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{disabledDate}</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-range'));</span></code></pre></div>
   </div>
@@ -710,26 +736,6 @@ React.render(
 <p>如上例：不可选择今天之后的日期。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-disabled">
-  <div class="code-box-demo">
-    <div id="components-datepicker-demo-disabled"></div>
-    <script>(function(){"use strict";
-
-var Datepicker = antd.Datepicker;
-
-React.render(React.createElement(Datepicker, { value: "2015-06-06", disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
-
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">value</span>=<span class="value">"2015-06-06"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span>
-, document.getElementById('components-datepicker-demo-disabled'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-disabled">禁用</a>
-    </div>
-    <p>选择框的不可用状态。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div>
   </div>
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-formatter">
@@ -739,9 +745,9 @@ React.render(
 
 var Datepicker = antd.Datepicker;
 
-React.render(React.createElement(Datepicker, { value: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Datepicker, { value: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">value</span>=<span class="value">"2015/01/01"</span> <span class="attribute">format</span>=<span class="value">"yyyy/MM/dd"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-formatter'));</span></code></pre></div>
   </div>
@@ -770,7 +776,7 @@ var Picker = React.createClass({
   }
 });
 
-React.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
 <span class="keyword">var</span> Picker = React.createClass({
   handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
@@ -781,7 +787,7 @@ React.render(React.createElement(Picker, null), document.getElementById('compone
   }
 });
 
-React.render(
+ReactDOM.render(
   <span class="tag">&lt;<span class="title">Picker</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-select'));</span></code></pre></div>
   </div>
@@ -792,24 +798,143 @@ React.render(
     <p>通过设置选择日期的回调事件 <code>onChange</code>，完成交互行为。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-time">
+</div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
-    <div id="components-datepicker-demo-time"></div>
+    <div id="components-datepicker-demo-disabled"></div>
     <script>(function(){"use strict";
 
 var Datepicker = antd.Datepicker;
 
-React.render(React.createElement(Datepicker, { showTime: true, format: "yyyy-MM-dd HH:mm:ss" }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Datepicker, { value: "2015-06-06", disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
-React.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">format</span>=<span class="value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
-, document.getElementById('components-datepicker-demo-time'));</span></code></pre></div>
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">value</span>=<span class="value">"2015-06-06"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span>
+, document.getElementById('components-datepicker-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-time">时间选择</a>
+      <a href="#demo-disabled">禁用</a>
     </div>
-    <p>准确到秒的时间选择面板。</p>
+    <p>选择框的不可用状态。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-start-end">
+  <div class="code-box-demo">
+    <div id="components-datepicker-demo-start-end"></div>
+    <script>(function(){'use strict';
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Datepicker = antd.Datepicker;
+
+var Test = React.createClass({
+  displayName: 'Test',
+
+  getInitialState: function getInitialState() {
+    return {
+      startValue: null,
+      endValue: null
+    };
+  },
+
+  disabledEndDate: function disabledEndDate(endValue) {
+    if (!endValue || !this.state.startValue) {
+      return false;
+    }
+    return endValue.getTime() <= this.state.startValue.getTime();
+  },
+
+  disabledStartDate: function disabledStartDate(startValue) {
+    if (!startValue || !this.state.endValue) {
+      return false;
+    }
+    return startValue.getTime() >= this.state.endValue.getTime();
+  },
+
+  onChange: function onChange(field, value) {
+    this.setState(_defineProperty({}, field, value));
+  },
+
+  render: function render() {
+    var state = this.state;
+    return React.createElement(
+      'div',
+      { style: { width: 240, margin: 20 } },
+      React.createElement(
+        'p',
+        null,
+        '开始时间：',
+        React.createElement(Datepicker, { disabledDate: this.disabledStartDate, value: state.startValue,
+          onChange: this.onChange.bind(this, 'startValue') })
+      ),
+      React.createElement(
+        'p',
+        null,
+        '结束时间：',
+        React.createElement(Datepicker, { disabledDate: this.disabledEndDate, value: state.endValue,
+          onChange: this.onChange.bind(this, 'endValue') })
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+
+<span class="keyword">var</span> Test = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      startValue: <span class="literal">null</span>,
+      endValue: <span class="literal">null</span>
+    };
+  },
+
+  disabledEndDate(endValue) {
+    <span class="keyword">if</span> (!endValue || !<span class="keyword">this</span>.state.startValue) {
+      <span class="keyword">return</span> <span class="literal">false</span>;
+    }
+    <span class="keyword">return</span> endValue.getTime() &lt;= <span class="keyword">this</span>.state.startValue.getTime();
+  },
+
+  disabledStartDate(startValue) {
+    <span class="keyword">if</span> (!startValue || !<span class="keyword">this</span>.state.endValue) {
+      <span class="keyword">return</span> <span class="literal">false</span>;
+    }
+    <span class="keyword">return</span> startValue.getTime() &gt;= <span class="keyword">this</span>.state.endValue.getTime();
+  },
+
+  onChange(field, value) {
+    <span class="keyword">this</span>.setState({
+      [field]: value,
+    });
+  },
+
+  render() {
+    <span class="keyword">var</span> state = <span class="keyword">this</span>.state;
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{width:</span> <span class="attribute">240</span>, <span class="attribute">margin:</span> <span class="attribute">20</span>}}&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+        开始时间：
+        <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{this.disabledStartDate}</span> <span class="attribute">value</span>=<span class="value">{state.startValue}</span>
+                <span class="attribute">onChange</span>=<span class="value">{this.onChange.bind(this,'startValue')}</span>/&gt;</span>
+      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+        结束时间：
+        <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{this.disabledEndDate}</span> <span class="attribute">value</span>=<span class="value">{state.endValue}</span>
+                <span class="attribute">onChange</span>=<span class="value">{this.onChange.bind(this,'endValue')}</span>/&gt;</span>
+      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+, document.getElementById('components-datepicker-demo-range'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-start-end">开始结束时间约束</a>
+    </div>
+    <p>设置 <code>disabledDate</code> 方法，来约束开始和结束时间的选择。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

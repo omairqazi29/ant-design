@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ EnterAnimation 进场动画 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ EnterAnimation 进场动画 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ EnterAnimation 进场动画 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -932,7 +932,7 @@ EnterAnimation 进场动画 - Ant Design
 
 var EnterAnimation = antd.EnterAnimation;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   EnterAnimation,
   null,
   React.createElement(
@@ -981,7 +981,7 @@ React.render(React.createElement(
   )
 ), document.getElementById('components-enter-animation-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">EnterAnimation</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">key</span>=<span class="value">"key"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">li</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
@@ -1091,7 +1091,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1127,7 +1127,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
           <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">EnterAnimation</span> <span class="attribute">enter</span>=<span class="value">{this.state.enter}</span> <span class="attribute">leave</span>=<span class="value">{this.state.leave}</span>&gt;</span>
-          {this.state.show ? 
+          {this.state.show ?
             <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> <span class="attribute">key</span>=<span class="value">'demo'</span>&gt;</span>
               <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span>&gt;</span>
                 <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
@@ -1153,7 +1153,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-enter-leave'));</span></code></pre></div><style>
 #components-enter-animation-demo-enter-leave {
   text-align: center;
@@ -1257,7 +1257,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1315,7 +1315,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-style'));</span></code></pre></div><style>
 #components-enter-animation-demo-style {
   text-align: center;
@@ -1502,7 +1502,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Select = antd.Select;
 <span class="keyword">var</span> Option = Select.Option;
 <span class="keyword">var</span> Checkbox = antd.Checkbox;
@@ -1591,7 +1591,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-form'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1676,7 +1676,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1723,7 +1723,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-basic'));</span></code></pre></div><style>
 #components-enter-animation-demo-basic {
   text-align: center;
@@ -1825,7 +1825,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-enter-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -1881,7 +1881,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-enter-data'));</span></code></pre></div><style>
 #components-enter-animation-demo-enter-data {
   text-align: center;
@@ -2021,7 +2021,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-page'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-enter-animation-demo-page'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> EnterAnimation = antd.EnterAnimation;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -2097,7 +2097,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
 , document.getElementById('components-enter-animation-demo-page'));</span></code></pre></div><style>
 #components-enter-animation-demo-page {
   text-align: center;
@@ -2315,7 +2315,7 @@ var Page2 = React.createClass({
     );
   }
 });
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Router,
   null,
   React.createElement(
@@ -2390,7 +2390,7 @@ var Page2 = React.createClass({
     );
   }
 });
-React.render((
+ReactDOM.render((
   <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{App}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page1"</span> <span class="attribute">component</span>=<span class="value">{Page1}</span> /&gt;</span>

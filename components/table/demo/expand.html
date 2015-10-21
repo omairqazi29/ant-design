@@ -25,7 +25,7 @@ var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '�
 
 var data = [{ name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
 
-React.render(React.createElement(Table, { columns: columns,
+ReactDOM.render(React.createElement(Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
   className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
@@ -51,7 +51,7 @@ React.render(React.createElement(Table, { columns: columns,
   {name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
 ];
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span>
   <span class="attribute">expandedRowRender</span>=<span class="value">{expandedRowRender}</span>
   <span class="attribute">dataSource</span>=<span class="value">{data}</span>

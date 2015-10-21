@@ -5,7 +5,7 @@
 
 var Progress = antd.Progress.Line;
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(Progress, { percent: "30" }),
@@ -15,7 +15,7 @@ React.render(React.createElement(
   React.createElement(Progress, { percent: "50", showInfo: false })
 ), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
     <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>

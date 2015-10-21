@@ -37,7 +37,7 @@ var menu = React.createElement(
   )
 );
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Dropdown,
   { overlay: menu },
   React.createElement(
@@ -62,7 +62,7 @@ React.render(React.createElement(
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span> <span class="attribute">disabled</span>&gt;</span>第三个菜单项（不可用）<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
       鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>

@@ -13,7 +13,7 @@ function handleSelectChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "form",
   { className: "ant-form-horizontal" },
   React.createElement(
@@ -190,7 +190,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"control-input"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>输入框：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>

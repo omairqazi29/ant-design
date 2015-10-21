@@ -39,7 +39,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-React.render(React.createElement(Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-bordered'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-bordered'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -71,7 +71,7 @@ React.render(React.createElement(Table, { columns: columns, dataSource: data, bo
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
 , document.getElementById('components-table-demo-bordered'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +14,7 @@ InputNumber 数字输入框 - Ant Design
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="../../dist/antd-0.10.0-beta1.min.css">
+    <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
     <script>
@@ -35,7 +36,7 @@ InputNumber 数字输入框 - Ant Design
         }
       })(this.console = this.console || {});
     </script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js"></script>
+    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js,es5-shim/4.1.10/es5-shim.js,es5-shim/4.1.10/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -195,11 +196,10 @@ InputNumber 数字输入框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta1',
+        latest: '0.10.0-beta3',
         stable: '0.9.1'
       };
     </script>
-    <script src="../../dist/antd-0.10.0-beta1.min.js"></script>
     <script src="../../dist/demo.js"></script>
     <script>
       window.require = function (path) {
@@ -636,13 +636,13 @@ function onChange(value) {
   console.log('changed', value);
 }
 
-React.render(React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+ReactDOM.render(React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
   console.log(<span class="string">'changed'</span>, value);
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
 , document.getElementById('components-input-number-demo-basic'));</span></code></pre></div>
   </div>
@@ -692,7 +692,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -716,7 +716,7 @@ React.render(React.createElement(Test, null), document.getElementById('component
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-input-number-demo-disabled'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-input-number-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -738,7 +738,7 @@ function onChange(value) {
   console.log('changed', value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(InputNumber, { size: "large", min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
@@ -750,7 +750,7 @@ React.render(React.createElement(
   console.log(<span class="string">'changed'</span>, value);
 }
 
-React.render(
+ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{100000}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
   <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{100000}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>

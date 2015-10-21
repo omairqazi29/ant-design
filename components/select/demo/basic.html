@@ -10,7 +10,7 @@ function handleChange(value) {
   console.log('selected ' + value);
 }
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Select,
   { defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
   React.createElement(
@@ -40,7 +40,7 @@ React.render(React.createElement(
   console.log(<span class="string">'selected '</span> + value);
 }
 
-React.render(
+ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">"lucy"</span> <span class="attribute">style</span>=<span class="value">{{width:200}}</span> <span class="attribute">onChange</span>=<span class="value">{handleChange}</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Option</span> <span class="attribute">value</span>=<span class="value">"lucy"</span>&gt;</span>Lucy<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>

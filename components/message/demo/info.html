@@ -10,7 +10,7 @@ var info = function info() {
   message.info('这是一条普通的提醒');
 };
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Button,
   { type: 'primary', onClick: info },
   '显示普通提醒'
@@ -21,7 +21,7 @@ React.render(React.createElement(
   message.info(<span class="string">'这是一条普通的提醒'</span>);
 };
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

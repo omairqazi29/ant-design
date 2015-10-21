@@ -23,7 +23,7 @@ var steps = [{
   return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
-React.render(React.createElement(
+ReactDOM.render(React.createElement(
   Steps,
   { direction: 'vertical', current: 1 },
   steps
@@ -49,7 +49,7 @@ React.render(React.createElement(
   );
 });
 
-React.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
