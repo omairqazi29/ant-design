@@ -196,7 +196,7 @@ Table 表格 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta3',
+        latest: '0.10.0-beta4',
         stable: '0.9.1'
       };
     </script>
@@ -635,7 +635,7 @@ Table 表格 - Ant Design
 <tr>
 <td>rowKey</td>
 <td>表格列 key 的取值</td>
-<td>Function(recode,index):string</td>
+<td>Function(recode, index):string</td>
 <td></td>
 <td>record.key</td>
 </tr>
@@ -645,6 +645,12 @@ Table 表格 - Ant Design
 <td>Boolean</td>
 <td></td>
 <td>true</td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>分页、排序、筛选变化时触发</td>
+<td>Function(pagination, filters, sorter)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1468,7 +1474,12 @@ var data = [{
   address: '西湖区湖底公园123号'
 }];
 
-ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-head'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+function onChange(pagination, filters, sorter) {
+  // 点击分页、筛选、排序时触发
+  console.log('各类参数是', pagination, filters, sorter);
+}
+
+ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, onChange: onChange }), document.getElementById('components-table-demo-head'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
 <span class="keyword">var</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
@@ -1523,7 +1534,12 @@ ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data 
   address: <span class="string">'西湖区湖底公园123号'</span>
 }];
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(pagination, filters, sorter)</span> {</span>
+  <span class="comment">// 点击分页、筛选、排序时触发</span>
+  console.log(<span class="string">'各类参数是'</span>, pagination, filters, sorter);
+}
+
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
 , document.getElementById('components-table-demo-head'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

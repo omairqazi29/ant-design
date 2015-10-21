@@ -196,7 +196,7 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta3',
+        latest: '0.10.0-beta4',
         stable: '0.9.1'
       };
     </script>
@@ -562,6 +562,7 @@
 $ antd init
 $ npm install</code></pre></div><h3 id="3-使用组件">3. 使用组件<a href="#3-使用组件" class="anchor">#</a> </h3><p>编辑 <code>index.js</code>，使用 Ant Design React 的组件：</p>
 <div class="highlight"><pre><code class="javascript">import React from <span class="string">'react'</span>;
+import ReactDOM from <span class="string">'react-dom'</span>;
 import { Datepicker, message } from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> App = React.createClass({
@@ -584,7 +585,7 @@ import { Datepicker, message } from <span class="string">'antd'</span>;
   }
 });
 
-React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.body);</span></code></pre></div><blockquote>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.body);</span></code></pre></div><blockquote>
 <p><code>var Datepicker = require(&#39;antd/lib/datepicker&#39;)</code> 单独引入需要的组件文件可以有效减少最终构建文件的大小。</p>
 <p><code>lib</code> 即构建后的 <code>components</code> 目录。</p>
 </blockquote>

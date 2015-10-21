@@ -196,7 +196,7 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta3',
+        latest: '0.10.0-beta4',
         stable: '0.9.1'
       };
     </script>
@@ -594,7 +594,7 @@ var Test = React.createClass({
   },
 
   componentDidMount: function componentDidMount() {
-    this.demoNode = React.findDOMNode(this.refs.demo);
+    this.demoNode = ReactDOM.findDOMNode(this.refs.demo);
   },
 
   render: function render() {
@@ -637,7 +637,7 @@ var Test = React.createClass({
   }
 });
 
-React.render(React.createElement(Test, null), document.getElementById('components-motion-demo-basic'));})()</script><style>
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-motion-demo-basic'));})()</script><style>
 .motion-container {
   height: 190px;
   line-height: 190px;
