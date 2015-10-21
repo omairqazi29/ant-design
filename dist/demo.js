@@ -37258,31 +37258,30 @@
 	      this.setOffset(0);
 	      return;
 	    }
+	
 	    var navNode = this.refs.nav;
 	    var navNodeWH = this.getOffsetWH(navNode);
 	    var navWrapNode = this.refs.navWrap;
 	    var navWrapNodeWH = this.getOffsetWH(navWrapNode);
 	    var state = this.state;
 	    var offset = state.offset;
-	    if (navWrapNodeWH - offset < navNodeWH) {
-	      if (!state.next) {
-	        this.setNext(true);
-	      }
+	    var minOffset = navWrapNodeWH - navNodeWH;
+	
+	    if (minOffset >= 0) {
+	      this.setNext(false);
+	      this.setOffset(0);
+	      offset = 0;
+	    } else if (minOffset < offset) {
+	      this.setNext(true);
 	    } else {
-	      var minOffset = navWrapNodeWH - navNodeWH;
-	      if (minOffset < 0 && minOffset > offset) {
-	        if (state.next) {
-	          this.setNext(false);
-	        }
-	        this.setOffset(minOffset);
-	        offset = minOffset;
-	      }
+	      this.setNext(false);
+	      this.setOffset(minOffset);
+	      offset = minOffset;
 	    }
+	
 	    if (offset < 0) {
-	      if (!state.prev) {
-	        this.setPrev(true);
-	      }
-	    } else if (state.prev) {
+	      this.setPrev(true);
+	    } else {
 	      this.setPrev(false);
 	    }
 	  },
@@ -37421,9 +37420,12 @@
 	  },
 	
 	  setOffset: function setOffset(offset) {
-	    this.setState({
-	      offset: Math.min(0, offset)
-	    });
+	    var target = Math.min(0, offset);
+	    if (this.state.offset !== target) {
+	      this.setState({
+	        offset: target
+	      });
+	    }
 	  },
 	
 	  prev: function prev() {
@@ -37443,15 +37445,19 @@
 	  },
 	
 	  setPrev: function setPrev(v) {
-	    this.setState({
-	      prev: v
-	    });
+	    if (this.state.prev !== v) {
+	      this.setState({
+	        prev: v
+	      });
+	    }
 	  },
 	
 	  setNext: function setNext(v) {
-	    this.setState({
-	      next: v
-	    });
+	    if (this.state.next !== v) {
+	      this.setState({
+	        next: v
+	      });
+	    }
 	  }
 	});
 	
@@ -64363,7 +64369,7 @@
 			"rc-steps": "~1.3.2",
 			"rc-switch": "~1.2.0",
 			"rc-table": "~3.2.0",
-			"rc-tabs": "~5.4.1",
+			"rc-tabs": "~5.4.2",
 			"rc-tooltip": "~3.0.1",
 			"rc-tree": "~0.16.2",
 			"rc-upload": "~1.6.4",

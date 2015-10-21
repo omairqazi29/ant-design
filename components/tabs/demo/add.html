@@ -30,19 +30,33 @@ var Test = React.createClass({
       tabs: [{
         title: 'title ' + index,
         content: 'content ' + index
-      }]
+      }],
+      activeKey: 'title ' + index
     };
   },
-  remove: function remove(title) {
+  remove: function remove(title, e) {
+    e.stopPropagation();
     if (this.state.tabs.length === 1) {
       antd.message.error('仅剩一个，不能删除');
       return;
     }
-    this.setState({
-      tabs: this.state.tabs.filter(function (t) {
-        return t.title !== title;
-      })
+    var foundIndex = 0;
+    var tabs = this.state.tabs.filter(function (t, index) {
+      if (t.title !== title) {
+        return true;
+      } else {
+        foundIndex = index;
+        return false;
+      }
     });
+    var activeKey = this.state.activeKey;
+    if (activeKey === title) {
+      if (foundIndex) {
+        foundIndex--;
+      }
+      activeKey = tabs[foundIndex].title;
+    }
+    this.setState({ tabs: tabs, activeKey: activeKey });
   },
   add: function add() {
     index++;
@@ -53,12 +67,18 @@ var Test = React.createClass({
       })
     });
   },
+  onChange: function onChange(activeKey) {
+    this.setState({ activeKey: activeKey });
+  },
   render: function render() {
     var _this = this;
 
     return React.createElement(
       Tabs,
-      { tabBarExtraContent: React.createElement(
+      {
+        onChange: this.onChange,
+        activeKey: this.state.activeKey,
+        tabBarExtraContent: React.createElement(
           'div',
           { style: extraStyle },
           React.createElement(
@@ -109,19 +129,33 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
       tabs: [{
         title: <span class="string">'title '</span> + index,
         content: <span class="string">'content '</span> + index,
-      }]
+      }],
+      activeKey: <span class="string">'title '</span> + index
     };
   },
-  remove(title) {
+  remove(title, e) {
+    e.stopPropagation();
     <span class="keyword">if</span>(<span class="keyword">this</span>.state.tabs.length === <span class="number">1</span>) {
       antd.message.error(<span class="string">'仅剩一个，不能删除'</span>);
       <span class="keyword">return</span>;
     }
-    <span class="keyword">this</span>.setState({
-      tabs: <span class="keyword">this</span>.state.tabs.filter((t)=&gt;{
-        <span class="keyword">return</span> t.title !== title;
-      })
+    <span class="keyword">var</span> foundIndex = <span class="number">0</span>;
+    <span class="keyword">var</span> tabs = <span class="keyword">this</span>.state.tabs.filter(<span class="function"><span class="keyword">function</span> <span class="params">(t, index)</span> {</span>
+      <span class="keyword">if</span> (t.title !== title) {
+        <span class="keyword">return</span> <span class="literal">true</span>;
+      } <span class="keyword">else</span> {
+        foundIndex = index;
+        <span class="keyword">return</span> <span class="literal">false</span>;
+      }
     });
+    <span class="keyword">var</span> activeKey = <span class="keyword">this</span>.state.activeKey;
+    <span class="keyword">if</span> (activeKey === title) {
+      <span class="keyword">if</span> (foundIndex) {
+        foundIndex--;
+      }
+      activeKey = tabs[foundIndex].title;
+    }
+    <span class="keyword">this</span>.setState({tabs, activeKey})
   },
   add() {
     index++;
@@ -132,8 +166,14 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
       })
     });
   },
+  onChange(activeKey) {
+    <span class="keyword">this</span>.setState({activeKey});
+  },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;div</span> <span class="attribute">style</span>=<span class="value">{extraStyle}</span>&gt;</span><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs
+</span>    <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>
+    <span class="attribute">activeKey</span>=<span class="value">{this.state.activeKey}</span>
+    <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;div</span> <span class="attribute">style</span>=<span class="value">{extraStyle}</span>&gt;</span><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
     {
       this.state.tabs.map((t)=&gt;{
         return <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{t.title}</span> <span class="attribute">tab</span>=<span class="value">{&lt;div</span>&gt;</span>{t.title} <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,t.title)}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
