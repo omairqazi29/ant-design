@@ -37425,7 +37425,7 @@
 	    key: 'render',
 	    value: function render() {
 	      var className = this.props.className || '';
-	      if (this.props.size === 'mini') {
+	      if (this.props.size === 'small' || this.props.size === 'mini') {
 	        className += ' ' + prefixCls + '-mini';
 	      }
 	      if (this.props.tabPosition === 'left' || this.props.tabPosition === 'right') {
@@ -37440,7 +37440,7 @@
 	
 	AntTabs.defaultProps = {
 	  prefixCls: prefixCls,
-	  size: 'normal'
+	  size: 'default'
 	};
 	
 	AntTabs.TabPane = _rcTabs2['default'].TabPane;
@@ -40940,9 +40940,16 @@
 	
 	      var others = _objectWithoutProperties(props, ['type', 'shape', 'size', 'onClick', 'className', 'htmlType', 'children']);
 	
+	      // large => lg
+	      // small => sm
+	      var sizeCls = ({
+	        'large': 'lg',
+	        'small': 'sm'
+	      })[size] || '';
+	
 	      var classes = _rcUtil2['default'].classSet((_rcUtil$classSet = {
 	        'ant-btn': true
-	      }, _defineProperty(_rcUtil$classSet, prefix + type, type), _defineProperty(_rcUtil$classSet, prefix + shape, shape), _defineProperty(_rcUtil$classSet, prefix + size, size), _defineProperty(_rcUtil$classSet, prefix + 'loading', 'loading' in props && props.loading !== false), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
+	      }, _defineProperty(_rcUtil$classSet, prefix + type, type), _defineProperty(_rcUtil$classSet, prefix + shape, shape), _defineProperty(_rcUtil$classSet, prefix + sizeCls, sizeCls), _defineProperty(_rcUtil$classSet, prefix + 'loading', 'loading' in props && props.loading !== false), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
 	
 	      var kids = _react2['default'].Children.map(children, insertSpace);
 	
@@ -41020,9 +41027,16 @@
 	
 	      var others = _objectWithoutProperties(_props, ['size', 'className']);
 	
+	      // large => lg
+	      // small => sm
+	      var sizeCls = ({
+	        'large': 'lg',
+	        'small': 'sm'
+	      })[size] || '';
+	
 	      var classes = _rcUtil2['default'].classSet((_rcUtil$classSet = {
 	        'ant-btn-group': true
-	      }, _defineProperty(_rcUtil$classSet, prefix + size, size), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
+	      }, _defineProperty(_rcUtil$classSet, prefix + sizeCls, sizeCls), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
 	
 	      return _react2['default'].createElement('div', _extends({}, others, { className: classes }));
 	    }
@@ -43383,7 +43397,8 @@
 	      prefixCls: 'ant-select',
 	      transitionName: 'slide-up',
 	      optionLabelProp: 'children',
-	      showSearch: false
+	      showSearch: false,
+	      size: 'default'
 	    };
 	  },
 	  render: function render() {
@@ -48692,10 +48707,14 @@
 	  _createClass(AntPagination, [{
 	    key: 'render',
 	    value: function render() {
+	      var className = this.props.className;
+	      if (this.props.size === 'small') {
+	        className += ' mini';
+	      }
 	      return _react2['default'].createElement(_rcPagination2['default'], _extends({ selectComponentClass: _rcSelect2['default'],
 	        selectPrefixCls: 'ant-select',
 	        prefixCls: prefixCls
-	      }, this.props));
+	      }, this.props, { className: className }));
 	    }
 	  }]);
 	
@@ -50272,7 +50291,7 @@
 	      useFixedHeader: false,
 	      rowSelection: null,
 	      className: '',
-	      size: 'normal',
+	      size: 'default',
 	      bordered: false,
 	      onChange: function onChange() {}
 	    };

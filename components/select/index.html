@@ -649,9 +649,9 @@ Select 选择器 - Ant Design
 </tr>
 <tr>
 <td>size</td>
-<td>选择框大小</td>
+<td>选择框大小，可选 <code>large</code> <code>small</code></td>
 <td>String</td>
-<td>无</td>
+<td>default</td>
 </tr>
 </tbody>
 </table>
@@ -1082,9 +1082,9 @@ ReactDOM.render(
     <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-select-demo-size'));</span></code></pre></div><style type="text/css">.code-box-demo .ant-select {
-  margin: 0 10px 10px 0;
+  margin: 0 8px 10px 0;
 }</style><div class="highlight"><pre><code class="css"><span class="class">.code-box-demo</span> <span class="class">.ant-select</span> <span class="rules">{
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">10</span>px <span class="number">10</span>px <span class="number">0</span></span></span>;
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">8</span>px <span class="number">10</span>px <span class="number">0</span></span></span>;
 <span class="rule">}</span></span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1297,7 +1297,6 @@ var App = React.createClass({
         { defaultValue: provinceData[0], style: { width: 150 }, onChange: this.handleProvinceChange },
         provinceOptions
       ),
-      ' ',
       React.createElement(
         Select,
         { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
@@ -1345,7 +1344,6 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">{provinceData[0]}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleProvinceChange}</span>&gt;</span>
         {provinceOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
-      &amp;nbsp;
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.secondCity}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.onSecondCityChange}</span>&gt;</span>
         {cityOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>

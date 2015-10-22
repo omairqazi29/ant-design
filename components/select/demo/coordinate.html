@@ -55,7 +55,6 @@ var App = React.createClass({
         { defaultValue: provinceData[0], style: { width: 150 }, onChange: this.handleProvinceChange },
         provinceOptions
       ),
-      ' ',
       React.createElement(
         Select,
         { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
@@ -103,7 +102,6 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">defaultValue</span>=<span class="value">{provinceData[0]}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.handleProvinceChange}</span>&gt;</span>
         {provinceOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>
-      &amp;nbsp;
       <span class="tag">&lt;<span class="title">Select</span> <span class="attribute">value</span>=<span class="value">{this.state.secondCity}</span> <span class="attribute">style</span>=<span class="value">{{width:150}}</span> <span class="attribute">onChange</span>=<span class="value">{this.onSecondCityChange}</span>&gt;</span>
         {cityOptions}
       <span class="tag">&lt;/<span class="title">Select</span>&gt;</span>

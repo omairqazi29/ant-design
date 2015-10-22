@@ -9,14 +9,14 @@ function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { className: "mini", onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(Pagination, { size: "small", onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
 }
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">className</span>=<span class="value">"mini"</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span>,
+  <span class="xml"><span class="tag">&lt;<span class="title">Pagination</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">total</span>=<span class="value">{50}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-mini'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

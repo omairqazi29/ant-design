@@ -593,7 +593,7 @@ Button 按钮 - Ant Design
 </tr>
 <tr>
 <td>size</td>
-<td>设置按钮大小，可选值为 <code>sm</code> <code>lg</code> 或者不设</td>
+<td>设置按钮大小，可选值为 <code>small</code> <code>large</code> 或者不设</td>
 <td>Enum</td>
 <td>undefined</td>
 </tr>
@@ -681,7 +681,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(
     Button,
-    { type: "primary", size: "lg" },
+    { type: "primary", size: "large" },
     "大号按钮"
   ),
   React.createElement(
@@ -691,15 +691,15 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     Button,
-    { type: "primary", size: "sm" },
+    { type: "primary", size: "small" },
     "小号按钮"
   )
 ), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>中号按钮(默认)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>小号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>小号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 , document.getElementById('components-button-demo-size'));</span></code></pre></div><style>
 #components-button-demo-size .ant-btn {
@@ -713,7 +713,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
       <a href="#demo-size">按钮尺寸</a>
     </div>
     <p>按钮有大、中、小三种尺寸。</p>
-<p>通过设置 <code>size</code> 为 <code>lg</code> <code>sm</code> 分别把按钮设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
+<p>通过设置 <code>size</code> 为 <code>large</code> <code>small</code> 分别把按钮设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-loading">
@@ -1250,7 +1250,7 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     ButtonGroup,
-    { size: "lg" },
+    { size: "large" },
     React.createElement(
       Button,
       { type: "ghost" },
@@ -1288,7 +1288,7 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     ButtonGroup,
-    { size: "sm" },
+    { size: "small" },
     React.createElement(
       Button,
       { type: "ghost" },
@@ -1360,7 +1360,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
 <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
 
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>尺寸<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -1370,7 +1370,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -1403,7 +1403,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
       <a href="#demo-button-group">按钮组合</a>
     </div>
     <p>可以将多个 <code>Button</code> 放入 <code>ButtonGroup</code> 的容器中。</p>
-<p>通过设置 <code>size</code> 为 <code>lg</code> <code>sm</code> 分别把按钮组合设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
+<p>通过设置 <code>size</code> 为 <code>large</code> <code>small</code> 分别把按钮组合设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
