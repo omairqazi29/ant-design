@@ -65534,7 +65534,8 @@
 		},
 		"main": "lib/index",
 		"files": [
-			"lib"
+			"lib",
+			"style"
 		],
 		"license": "MIT",
 		"dependencies": {
