@@ -4008,6 +4008,24 @@ fieldset[disabled] .ant-btn-ghost.active {
   overflow: hidden;
   font-size: 12px;
 }
+.ant-select-dropdown.slide-up-enter.slide-up-enter-active.ant-select-dropdown--below,
+.ant-select-dropdown.slide-up-appear.slide-up-appear-active.ant-select-dropdown--below {
+  -webkit-animation-name: antSlideUpIn;
+          animation-name: antSlideUpIn;
+}
+.ant-select-dropdown.slide-up-enter.slide-up-enter-active.ant-select-dropdown--top,
+.ant-select-dropdown.slide-up-appear.slide-up-appear-active.ant-select-dropdown--top {
+  -webkit-animation-name: antSlideDownIn;
+          animation-name: antSlideDownIn;
+}
+.ant-select-dropdown.slide-up-leave.slide-up-leave-active.ant-select-dropdown--below {
+  -webkit-animation-name: antSlideUpOut;
+          animation-name: antSlideUpOut;
+}
+.ant-select-dropdown.slide-up-leave.slide-up-leave-active.ant-select-dropdown--top {
+  -webkit-animation-name: antSlideDownOut;
+          animation-name: antSlideDownOut;
+}
 .ant-select-dropdown-menu-item {
   -webkit-transition: background 0.3s ease;
           transition: background 0.3s ease;
@@ -4184,9 +4202,9 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar-picker-icon {
   position: absolute;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 12px;
@@ -4577,6 +4595,30 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 .ant-calendar .ant-calendar-ok-btn:active,
 .ant-calendar .ant-calendar-ok-btn.active {
   color: #fff;
+}
+.ant-calendar.slide-up-enter.slide-up-enter-active.ant-calendar-placement-topLeft,
+.ant-calendar.slide-up-enter.slide-up-enter-active.ant-calendar-placement-topRight,
+.ant-calendar.slide-up-appear.slide-up-appear-active.ant-calendar-placement-topLeft,
+.ant-calendar.slide-up-appear.slide-up-appear-active.ant-calendar-placement-topRight {
+  -webkit-animation-name: antSlideUpIn;
+          animation-name: antSlideUpIn;
+}
+.ant-calendar.slide-up-enter.slide-up-enter-active.ant-calendar-placement-bottomLeft,
+.ant-calendar.slide-up-enter.slide-up-enter-active.ant-calendar-placement-bottomRight,
+.ant-calendar.slide-up-appear.slide-up-appear-active.ant-calendar-placement-bottomLeft,
+.ant-calendar.slide-up-appear.slide-up-appear-active.ant-calendar-placement-bottomRight {
+  -webkit-animation-name: antSlideDownIn;
+          animation-name: antSlideDownIn;
+}
+.ant-calendar.slide-up-leave.slide-up-leave-active.ant-calendar-placement-topLeft,
+.ant-calendar.slide-up-leave.slide-up-leave-active.ant-calendar-placement-topRight {
+  -webkit-animation-name: antSlideUpOut;
+          animation-name: antSlideUpOut;
+}
+.ant-calendar.slide-up-leave.slide-up-leave-active.ant-calendar-placement-bottomLeft,
+.ant-calendar.slide-up-leave.slide-up-leave-active.ant-calendar-placement-bottomRight {
+  -webkit-animation-name: antSlideDownOut;
+          animation-name: antSlideDownOut;
 }
 .ant-calendar-time > span {
   margin: 0 2px;
