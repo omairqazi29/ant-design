@@ -3041,7 +3041,7 @@ samp {
   line-height: 1.5;
   padding: 4px 15px;
   font-size: 12px;
-  border-radius: 14px;
+  border-radius: 100px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3079,12 +3079,12 @@ samp {
 .ant-btn-lg {
   padding: 4px 15px 5px 15px;
   font-size: 14px;
-  border-radius: 16px;
+  border-radius: 100px;
 }
 .ant-btn-sm {
   padding: 1px 7px;
   font-size: 12px;
-  border-radius: 11px;
+  border-radius: 100px;
 }
 .ant-btn:hover {
   color: #858585;
@@ -3344,12 +3344,12 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-btn-group-lg > .ant-btn {
   padding: 4px 15px 5px 15px;
   font-size: 14px;
-  border-radius: 16px;
+  border-radius: 100px;
 }
 .ant-btn-group-sm > .ant-btn {
   padding: 1px 7px;
   font-size: 12px;
-  border-radius: 11px;
+  border-radius: 100px;
 }
 .ant-btn-group-sm > .ant-btn > .anticon {
   font-size: 12px;
@@ -4508,7 +4508,6 @@ textarea.ant-calendar-input {
   white-space: nowrap;
   line-height: 1.5;
   padding: 4px 15px;
-  border-radius: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4522,7 +4521,7 @@ textarea.ant-calendar-input {
   border-color: #2db7f5;
   padding: 1px 7px;
   font-size: 12px;
-  border-radius: 11px;
+  border-radius: 100px;
   letter-spacing: 3px;
   text-indent: 3px;
   position: absolute;
@@ -4554,12 +4553,12 @@ textarea.ant-calendar-input {
 .ant-calendar .ant-calendar-ok-btn-lg {
   padding: 4px 15px 5px 15px;
   font-size: 14px;
-  border-radius: 16px;
+  border-radius: 100px;
 }
 .ant-calendar .ant-calendar-ok-btn-sm {
   padding: 1px 7px;
   font-size: 12px;
-  border-radius: 11px;
+  border-radius: 100px;
 }
 .ant-calendar .ant-calendar-ok-btn:hover {
   color: #ffffff;
