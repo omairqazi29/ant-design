@@ -4195,6 +4195,7 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar-picker {
   position: relative;
   display: inline-block;
+  outline: none;
 }
 .ant-calendar-picker > input {
   outline: none;

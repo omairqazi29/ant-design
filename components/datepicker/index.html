@@ -557,7 +557,7 @@ Datepicker 日期选择框 - Ant Design
     </h1>
     <p>输入或选择日期/时间的控件。</p>
 <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当用户需要输入一个日期/时间，可以点击标准输入框，弹出日期面板进行选择。支持键盘操作。</p>
-<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">value</span>=<span class="value">"2015-01-01"</span> /&gt;</span></code></pre></div><table>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-01-01"</span> /&gt;</span></code></pre></div><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -621,6 +621,12 @@ Datepicker 日期选择框 - Ant Design
 <td>string</td>
 <td>无</td>
 </tr>
+<tr>
+<td>locale</td>
+<td>国际化配置，<a href="https://github.com/ant-design/ant-design/issues/424">详细配置</a></td>
+<td>object</td>
+<td>-</td>
+</tr>
 </tbody>
 </table>
 <style>
@@ -638,16 +644,14 @@ Datepicker 日期选择框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-basic"></div>
-    <script>(function(){// or require('antd/lib/datepicker');
-"use strict";
+    <script>(function(){"use strict";
 
 var Datepicker = antd.Datepicker;
 
-ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2012-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="comment">// or require('antd/lib/datepicker');</span>
-<span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2015-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2012-12-12"</span> /&gt;</span>
+  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-12-12"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -734,6 +738,66 @@ ReactDOM.render(
     </div>
     <p>设置 <code>disabledDate</code> 方法，来确定不可选时段。</p>
 <p>如上例：不可选择今天之后的日期。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-locale">
+  <div class="code-box-demo">
+    <div id="components-datepicker-demo-locale"></div>
+    <script>(function(){'use strict';
+
+var Datepicker = antd.Datepicker;
+
+var App = React.createClass({
+  displayName: 'App',
+
+  getInitialState: function getInitialState() {
+    return {
+      locale: {
+        timezoneOffset: 0 * 60,
+        firstDayOfWeek: 0,
+        minimalDaysInFirstWeek: 1,
+        lang: {
+          today: 'Today',
+          now: 'Now',
+          ok: 'Ok'
+        }
+      }
+    };
+  },
+  render: function render() {
+    return React.createElement(Datepicker, { showTime: true, locale: this.state.locale });
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+
+<span class="keyword">var</span> App = React.createClass({
+  getInitialState() {
+    <span class="keyword">return</span> {
+      locale: {
+        timezoneOffset: <span class="number">0</span> * <span class="number">60</span>,
+        firstDayOfWeek: <span class="number">0</span>,
+        minimalDaysInFirstWeek: <span class="number">1</span>,
+        lang: {
+          today: <span class="string">'Today'</span>,
+          now: <span class="string">'Now'</span>,
+          ok: <span class="string">'Ok'</span>
+        }
+      }
+    };
+  },
+  render() {
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">locale</span>=<span class="value">{this.state.locale}</span> /&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-datepicker-demo-locale'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-locale">国际化</a>
+    </div>
+    <p>通过 <code>locale</code> 配置时区、语言等，<a href="https://github.com/ant-design/ant-design/issues/424">默认配置</a>。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -878,7 +942,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -928,7 +992,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>
-, document.getElementById('components-datepicker-demo-range'));</span></code></pre></div>
+, document.getElementById('components-datepicker-demo-start-end'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

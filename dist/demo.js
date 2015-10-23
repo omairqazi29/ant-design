@@ -24944,9 +24944,9 @@
 	
 	var _gregorianCalendar2 = _interopRequireDefault(_gregorianCalendar);
 	
-	var _gregorianCalendarLibLocaleZhCn = __webpack_require__(339);
+	var _locale = __webpack_require__(339);
 	
-	var _gregorianCalendarLibLocaleZhCn2 = _interopRequireDefault(_gregorianCalendarLibLocaleZhCn);
+	var _locale2 = _interopRequireDefault(_locale);
 	
 	var _rcCalendarLibLocaleZhCn = __webpack_require__(340);
 	
@@ -24956,37 +24956,49 @@
 	
 	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
 	
-	// 和顶部文案保持一致
+	var _objectAssign = __webpack_require__(338);
 	
-	var _gregorianCalendarFormatLibLocaleZhCn = __webpack_require__(341);
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _gregorianCalendarFormatLibLocaleZhCn2 = _interopRequireDefault(_gregorianCalendarFormatLibLocaleZhCn);
-	
-	_gregorianCalendarFormatLibLocaleZhCn2['default'].shortMonths = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+	// 转换 locale 为 rc-calender 接收的格式
+	function getCalendarLocale(locale) {
+	  locale.format = locale.format || {};
+	  ['eras', 'months', 'shortMonths', 'weekdays', 'shortWeekdays', 'veryShortWeekdays', 'ampms', 'datePatterns', 'timePatterns', 'dateTimePattern'].forEach(function (key) {
+	    locale.format[key] = locale[key];
+	  });
+	  return locale;
+	}
 	
 	function createPicker(TheCalendar) {
 	  return _react2['default'].createClass({
-	    getInitialState: function getInitialState() {
-	      var value = undefined;
-	      if (this.props.value) {
-	        value = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZhCn2['default']);
-	        value.setTime(new Date(this.props.value).valueOf());
-	      }
+	    getDefaultProps: function getDefaultProps() {
 	      return {
-	        value: value
+	        format: 'yyyy-MM-dd',
+	        placeholder: '请选择日期',
+	        transitionName: 'slide-up',
+	        calendarStyle: {},
+	        onSelect: null, // 向前兼容
+	        onChange: function onChange() {}, // onChange 可用于 Validator
+	        locale: {}
+	      };
+	    },
+	    getInitialState: function getInitialState() {
+	      return {
+	        value: this.parseDateFromValue(this.props.value)
 	      };
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	      if ('value' in nextProps) {
-	        var value = null;
-	        if (nextProps.value) {
-	          value = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZhCn2['default']);
-	          value.setTime(new Date(nextProps.value).valueOf());
-	        }
 	        this.setState({
-	          value: value
+	          value: this.parseDateFromValue(nextProps.value)
 	        });
 	      }
+	    },
+	    getLocale: function getLocale() {
+	      // 统一合并为完整的 Locale
+	      var locale = (0, _objectAssign2['default'])({}, _locale2['default'], this.props.locale);
+	      locale.lang = (0, _objectAssign2['default'])({}, _locale2['default'].lang, this.props.locale.lang);
+	      return locale;
 	    },
 	    getFormatter: function getFormatter() {
 	      var formats = this.formats = this.formats || {};
@@ -24997,26 +25009,24 @@
 	      formats[format] = new _gregorianCalendarFormat2['default'](format);
 	      return formats[format];
 	    },
-	    getDefaultProps: function getDefaultProps() {
-	      return {
-	        format: 'yyyy-MM-dd',
-	        placeholder: '请选择日期',
-	        transitionName: 'slide-up',
-	        onSelect: null, //向前兼容
-	        calendarStyle: {},
-	        onChange: function onChange() {} //onChange可用于Validator
-	      };
-	    },
-	    handleInputChange: function handleInputChange() {},
-	    handleChange: function handleChange(v) {
-	      this.setState({
-	        value: v
-	      });
-	      var timeValue = null;
-	      if (v) {
-	        timeValue = new Date(v.getTime());
+	    parseDateFromValue: function parseDateFromValue(value) {
+	      if (value) {
+	        if (typeof value === 'string') {
+	          return new _gregorianCalendarFormat2['default'](this.props.format).parse(value, this.getLocale());
+	        } else if (value instanceof Date) {
+	          var date = new _gregorianCalendar2['default'](this.getLocale());
+	          date.setTime(value);
+	          return date;
+	        }
 	      }
-	      //onSelect为向前兼容.
+	      return null;
+	    },
+	    // remove input readonly warning
+	    handleInputChange: function handleInputChange() {},
+	    handleChange: function handleChange(value) {
+	      this.setState({ value: value });
+	      var timeValue = value ? new Date(value.getTime()) : null;
+	      // onSelect 为向前兼容.
 	      if (this.props.onSelect) {
 	        __webpack_require__(342)(this.props.onSelect, 'onSelect property of Datepicker is deprecated, use onChange instead')(timeValue);
 	      }
@@ -25025,10 +25035,16 @@
 	    render: function render() {
 	      var _this = this;
 	
+	      // 以下两行代码
+	      // 给没有初始值的日期选择框提供本地化信息
+	      // 否则会以周日开始排
+	      var defaultCalendarValue = new _gregorianCalendar2['default'](this.getLocale());
+	      defaultCalendarValue.setTime(Date.now());
 	      var calendar = _react2['default'].createElement(TheCalendar, {
 	        style: this.props.calendarStyle,
 	        disabledDate: this.props.disabledDate,
-	        locale: _rcCalendarLibLocaleZhCn2['default'],
+	        locale: getCalendarLocale(this.getLocale().lang),
+	        defaultValue: defaultCalendarValue,
 	        showTime: this.props.showTime,
 	        prefixCls: 'ant-calendar',
 	        showOk: this.props.showTime,
@@ -25039,11 +25055,7 @@
 	      } else if (this.props.size === 'small') {
 	        sizeClass = ' ant-input-sm';
 	      }
-	      var defaultValue = undefined;
-	      if (this.props.defaultValue) {
-	        defaultValue = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZhCn2['default']);
-	        defaultValue.setTime(new Date(this.props.defaultValue).valueOf());
-	      }
+	      var defaultValue = this.parseDateFromValue(this.props.defaultValue);
 	      return _react2['default'].createElement(
 	        _rcCalendarLibPicker2['default'],
 	        {
@@ -25071,7 +25083,6 @@
 	}
 	
 	var AntDatePicker = createPicker(_rcCalendar2['default']);
-	
 	var AntMonthPicker = createPicker(_rcCalendarLibMonthCalendar2['default']);
 	
 	var AntCalendar = _react2['default'].createClass({
@@ -32596,18 +32607,57 @@
 /* 339 */
 /***/ function(module, exports) {
 
-	/**
-	 * zh-cn locale
-	 * @ignore
-	 * @author yiminghe@gmail.com
-	 */
-	module.exports = {
-	  // in minutes
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	exports['default'] = {
+	  // https://github.com/yiminghe/gregorian-calendar/blob/90898382392b7d575a19aa18696a35fee81a756f/src/locale/zh-cn.js
 	  timezoneOffset: 8 * 60,
 	  firstDayOfWeek: 1,
-	  minimalDaysInFirstWeek: 1
+	  minimalDaysInFirstWeek: 1,
+	  lang: {
+	    // https://github.com/react-component/calendar/blob/c92cc946f7dddf93d6edb5afdaecb4d72c5b75d6/src/locale/zh-cn.js
+	    today: '今天',
+	    now: '此刻',
+	    ok: '确定',
+	    clear: '清除',
+	    previousMonth: '上个月 (翻页上键)',
+	    nextMonth: '下个月 (翻页下键)',
+	    monthSelect: '选择月份',
+	    yearSelect: '选择年份',
+	    decadeSelect: '选择年代',
+	    hourInput: '上一小时(上方向键), 下一小时(下方向键)',
+	    minuteInput: '上一分钟(上方向键), 下一分钟(下方向键)',
+	    secondInput: '上一秒(上方向键), 下一小时(下方向键)',
+	    hourPanelTitle: '选择小时',
+	    minutePanelTitle: '选择分钟',
+	    secondPanelTitle: '选择秒',
+	    yearFormat: 'yyyy\'年\'',
+	    monthFormat: 'M\'月\'',
+	    dateFormat: 'yyyy\'年\'M\'月\'d\'日\'',
+	    previousYear: '上一年 (Control键加左方向键)',
+	    nextYear: '下一年 (Control键加右方向键)',
+	    previousDecade: '上一年代',
+	    nextDecade: '下一年代',
+	    previousCentury: '上一世纪',
+	    nextCentury: '下一世纪',
+	
+	    // https://github.com/yiminghe/gregorian-calendar-format/blob/d2f2b1281bfc728dd550194a29ce53fca4266327/lib/locale/zh-cn.js
+	    eras: ['公元前', '公元'],
+	    months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+	    shortMonths: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+	    weekdays: ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+	    shortWeekdays: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+	    veryShortWeekdays: ['日', '一', '二', '三', '四', '五', '六'],
+	    ampms: ['上午', '下午'],
+	    datePatterns: ['yyyy\'年\'M\'月\'d\'日\' EEEE', 'yyyy\'年\'M\'月\'d\'日\'', 'yyyy-M-d', 'yy-M-d'],
+	    timePatterns: ['ahh\'时\'mm\'分\'ss\'秒\' \'GMT\'Z', 'ahh\'时\'mm\'分\'ss\'秒\'', 'H:mm:ss', 'ah:mm'],
+	    dateTimePattern: '{date} {time}'
+	  }
 	};
-
+	module.exports = exports['default'];
 
 /***/ },
 /* 340 */
