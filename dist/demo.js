@@ -51,7 +51,7 @@
 	var antd = __webpack_require__(274);
 	var React = __webpack_require__(78);
 	var ReactDOM = __webpack_require__(278);
-	var semver = __webpack_require__(606);
+	var semver = __webpack_require__(603);
 	window.antd = antd;
 	window.React = React;
 	window.ReactDOM = ReactDOM;
@@ -23898,22 +23898,22 @@
 	  Collapse: __webpack_require__(514),
 	  message: __webpack_require__(521),
 	  Slider: __webpack_require__(524),
-	  EnterAnimation: __webpack_require__(545),
+	  QueueAnim: __webpack_require__(545),
 	  Radio: __webpack_require__(507),
-	  Notification: __webpack_require__(553),
-	  Alert: __webpack_require__(554),
-	  Validation: __webpack_require__(555),
-	  Tree: __webpack_require__(584),
-	  Upload: __webpack_require__(590),
-	  Badge: __webpack_require__(602),
-	  Menu: __webpack_require__(603),
-	  Timeline: __webpack_require__(604),
+	  Notification: __webpack_require__(550),
+	  Alert: __webpack_require__(551),
+	  Validation: __webpack_require__(552),
+	  Tree: __webpack_require__(581),
+	  Upload: __webpack_require__(587),
+	  Badge: __webpack_require__(599),
+	  Menu: __webpack_require__(600),
+	  Timeline: __webpack_require__(601),
 	  Button: __webpack_require__(416).Button,
 	  ButtonGroup: __webpack_require__(416).ButtonGroup,
 	  Icon: __webpack_require__(415)
 	};
 	
-	antd.version = __webpack_require__(605).version;
+	antd.version = __webpack_require__(602).version;
 	
 	module.exports = antd;
 
@@ -59460,6 +59460,45 @@
 	  value: true
 	});
 	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _rcQueueAnim = __webpack_require__(546);
+	
+	var _rcQueueAnim2 = _interopRequireDefault(_rcQueueAnim);
+
+	exports['default'] = _rcQueueAnim2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 546 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// export this package's api
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _QueueAnim = __webpack_require__(547);
+	
+	var _QueueAnim2 = _interopRequireDefault(_QueueAnim);
+	
+	exports['default'] = _QueueAnim2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 547 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
@@ -59474,239 +59513,318 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _enterAnimation = __webpack_require__(546);
+	var _reactDom = __webpack_require__(278);
 	
-	var _enterAnimation2 = _interopRequireDefault(_enterAnimation);
+	var _velocityAnimate = __webpack_require__(520);
 	
-	var AntEnterAnimation = (function (_React$Component) {
-	  _inherits(AntEnterAnimation, _React$Component);
+	var _velocityAnimate2 = _interopRequireDefault(_velocityAnimate);
 	
-	  function AntEnterAnimation() {
-	    _classCallCheck(this, AntEnterAnimation);
+	var _utils = __webpack_require__(548);
 	
-	    _get(Object.getPrototypeOf(AntEnterAnimation.prototype), 'constructor', this).apply(this, arguments);
-	  }
+	var _animTypes = __webpack_require__(549);
 	
-	  _createClass(AntEnterAnimation, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2['default'].createElement(_enterAnimation2['default'], this.props);
-	    }
-	  }]);
+	var _animTypes2 = _interopRequireDefault(_animTypes);
 	
-	  return AntEnterAnimation;
-	})(_react2['default'].Component);
+	var BackEase = {
+	  easeInBack: [0.6, -0.28, 0.735, 0.045],
+	  easeOutBack: [0.175, 0.885, 0.32, 1.275],
+	  easeInOutBack: [0.68, -0.55, 0.265, 1.55]
+	};
 	
-	AntEnterAnimation.to = _enterAnimation2['default'].to;
-	exports['default'] = AntEnterAnimation;
-	module.exports = exports['default'];
-
-/***/ },
-/* 546 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
+	var QueueAnim = (function (_React$Component) {
+	  _inherits(QueueAnim, _React$Component);
 	
-	module.exports = __webpack_require__(547);
-
-/***/ },
-/* 547 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(78);
-	
-	//import assign from 'object-assign';
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _EnterAnimationChild = __webpack_require__(548);
-	
-	var _EnterAnimationChild2 = _interopRequireDefault(_EnterAnimationChild);
-	
-	var _EnterUtils = __webpack_require__(549);
-	
-	var startAnimation = __webpack_require__(550);
-	
-	var EnterAnimation = (function (_Component) {
-	  _inherits(EnterAnimation, _Component);
-	
-	  function EnterAnimation(props) {
+	  function QueueAnim() {
 	    var _this = this;
 	
-	    _classCallCheck(this, EnterAnimation);
+	    _classCallCheck(this, QueueAnim);
 	
-	    _get(Object.getPrototypeOf(EnterAnimation.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(QueueAnim.prototype), 'constructor', this).apply(this, arguments);
 	
 	    this.keysToEnter = [];
 	    this.keysToLeave = [];
+	    this.keysAnimating = [];
 	
-	    //第一次进入，默认进场；
-	    var elementArr = (0, _EnterUtils.toArrayChildren)(this.props.children);
-	
-	    elementArr.map(function (m) {
-	      if (!m || !m.key) {
+	    // 第一次进入，默认进场
+	    var children = (0, _utils.toArrayChildren)((0, _utils.getChildrenFromProps)(this.props));
+	    children.forEach(function (child) {
+	      if (!child || !child.key) {
 	        return;
 	      }
-	      _this.keysToEnter.push(m.key);
+	      _this.keysToEnter.push(child.key);
 	    });
-	    this.childWapArr = (0, _EnterUtils.deleteRepeatKeyArr)(elementArr);
+	
+	    this.originalChildren = (0, _utils.toArrayChildren)(this.props.children);
+	
 	    this.state = {
-	      childWapArr: this.childWapArr
+	      children: children,
+	      childrenShow: {}
 	    };
+	
+	    ['performEnter', 'performLeave', 'enterBegin', 'leaveComplete'].forEach(function (method) {
+	      return _this[method] = _this[method].bind(_this);
+	    });
 	  }
 	
-	  _createClass(EnterAnimation, [{
-	    key: 'setData',
-	    value: function setData(props, wap) {
-	      this.setState({
-	        enter: props.enter,
-	        leave: props.leave,
-	        childWapArr: wap
-	      });
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      //添加出场时的position: absolute;
-	      //if (this.keysToEnter.length) {
-	      //  this.keysToLeave.map((key)=> {
-	      //    this.state.childWapArr.map((m)=> {
-	      //      if (key == m.key) {
-	      //        m.props.style = {position: "absolute"};
-	      //        console.log(m)
-	      //      }
-	      //    })
-	      //  })
-	      //}
-	
-	      this.childWapArr = (0, _EnterUtils.deleteRepeatKeyArr)((0, _EnterUtils.toArrayChildren)(this.props.children));
-	      this.keysToLeave = [];
-	      this.keysToEnter = [];
+	  _createClass(QueueAnim, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.componentDidUpdate();
 	    }
 	  }, {
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(nextProps) {
 	      var _this2 = this;
 	
-	      var newChildrenArr = (0, _EnterUtils.deleteRepeatKeyArr)((0, _EnterUtils.toArrayChildren)(nextProps.children));
-	      var currentChildWapArr = this.childWapArr;
+	      var nextChildren = (0, _utils.toArrayChildren)(nextProps.children);
+	      var currentChildren = this.originalChildren;
+	      var newChildren = (0, _utils.mergeChildren)(currentChildren, nextChildren);
 	
-	      var leaveChildArr = [];
-	      //增加absolute,所以把进场的也放数组里。。
-	      var enterChildArr = [];
-	
-	      this.keysToLeave = [];
 	      this.keysToEnter = [];
-	      //判断两Arr里的不同；
-	      (0, _EnterUtils.contrastArr)(currentChildWapArr, newChildrenArr, function (cm) {
-	        if (cm.key) {
-	          _this2.keysToEnter.push(cm.key);
-	          enterChildArr.push(cm);
-	          //newChildrenArr.splice(newChildrenArr.indexOf(cm), 1);//清掉进场的；
-	        }
-	      });
-	      //清掉进场；
-	      enterChildArr.map(function (cm) {
-	        newChildrenArr.splice(newChildrenArr.indexOf(cm), 1);
+	      this.keysToLeave = [];
+	      this.keysAnimating = [];
+	
+	      // need render to avoid update
+	      this.setState({
+	        children: newChildren
 	      });
 	
-	      (0, _EnterUtils.contrastArr)(newChildrenArr, currentChildWapArr, function (cm) {
-	        if (cm.key) {
-	          leaveChildArr.push(cm);
-	          _this2.keysToLeave.push(cm.key);
-	          //newChildrenArr.splice(newChildrenArr.indexOf(cm), 1);//清掉出场的；
+	      nextChildren.forEach(function (c) {
+	        var key = c.key;
+	        var hasPrev = (0, _utils.findChildInChildrenByKey)(currentChildren, key);
+	        if (!hasPrev && key) {
+	          _this2.keysToEnter.push(key);
 	        }
 	      });
 	
-	      //newChildrenArr = leaveChildArr.concat(newChildrenArr);
-	
-	      ////清掉出场;
-	      //leaveChildArr.map((cm)=>{
-	      //  newChildrenArr.splice(newChildrenArr.indexOf(cm), 1);
-	      //});
-	
-	      newChildrenArr = newChildrenArr.concat(leaveChildArr, enterChildArr);
-	
-	      this.setData(nextProps, (0, _EnterUtils.deleteRepeatKeyArr)(newChildrenArr));
-	      return false;
+	      currentChildren.forEach(function (c) {
+	        var key = c.key;
+	        var hasNext = (0, _utils.findChildInChildrenByKey)(nextChildren, key);
+	        if (!hasNext && key) {
+	          _this2.keysToLeave.push(key);
+	        }
+	      });
 	    }
 	  }, {
-	    key: 'kill',
-	    value: function kill() {
-	      this.setData(this.props, this.childWapArr);
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      this.originalChildren = (0, _utils.toArrayChildren)(this.props.children);
+	      var keysToEnter = Array.prototype.slice.call(this.keysToEnter);
+	      var keysToLeave = Array.prototype.slice.call(this.keysToLeave);
+	      if (this.keysAnimating.length === 0) {
+	        this.keysAnimating = keysToEnter.concat(keysToLeave);
+	      }
+	      keysToEnter.forEach(this.performEnter);
+	      keysToLeave.forEach(this.performLeave);
 	    }
 	  }, {
-	    key: 'start',
-	    value: function start(h) {
-	      //findDOMNode(this).style.height = h + 'px';
-	      //获取Enter的元素里的高。。
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      var _this3 = this;
+	
+	      if (this.originalChildren && this.originalChildren.length > 0) {
+	        this.originalChildren.forEach(function (child) {
+	          if (_this3.refs[child.key]) {
+	            (0, _velocityAnimate2['default'])((0, _reactDom.findDOMNode)(_this3.refs[child.key]), 'stop');
+	          }
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'getVelocityConfig',
+	    value: function getVelocityConfig(index) {
+	      if (this.props.animConfig) {
+	        return (0, _utils.transformArguments)(this.props.animConfig)[index];
+	      }
+	      return _animTypes2['default'][(0, _utils.transformArguments)(this.props.type)[index]];
+	    }
+	  }, {
+	    key: 'getVelocityEnterConfig',
+	    value: function getVelocityEnterConfig() {
+	      return this.getVelocityConfig(0);
+	    }
+	  }, {
+	    key: 'getVelocityLeaveConfig',
+	    value: function getVelocityLeaveConfig() {
+	      var config = this.getVelocityConfig(1);
+	      var ret = {};
+	      Object.keys(config).forEach(function (key) {
+	        if (Array.isArray(config[key])) {
+	          ret[key] = Array.prototype.slice.call(config[key]).reverse();
+	        } else {
+	          ret[key] = config[key];
+	        }
+	      });
+	      return ret;
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this3 = this;
+	      var _this4 = this;
 	
-	      var props = this.props;
-	      var childrenToRender = this.state.childWapArr.map(function (m) {
-	        if (!m || !m.key) {
-	          return m;
+	      var childrenToRender = (0, _utils.toArrayChildren)(this.state.children).map(function (child) {
+	        if (!child || !child.key) {
+	          return child;
 	        }
-	        var direction = _this3.keysToEnter.indexOf(m.key) >= 0 ? 'enter' : _this3.keysToLeave.indexOf(m.key) >= 0 ? 'leave' : null;
-	        var posBool = false;
-	        if (_this3.keysToEnter.length) {
-	          _this3.keysToLeave.map(function (key) {
-	            if (key === m.key) {
-	              posBool = true;
-	            }
-	          });
+	        // handle Component without props, like <App />
+	        if (typeof child.type === 'function') {
+	          return (0, _react.createElement)('div', {
+	            ref: child.key,
+	            key: child.key
+	          }, _this4.state.childrenShow[child.key] ? child : null);
 	        }
-	        return _react2['default'].createElement(
-	          _EnterAnimationChild2['default'],
-	          {
-	            key: m.key,
-	            ref: m.key,
-	            direction: direction,
-	            enter: props.enter,
-	            leave: props.leave,
-	            position: posBool,
-	            callback: _this3.kill.bind(_this3),
-	            onStart: _this3.start.bind(_this3) },
-	          m
-	        );
+	        return (0, _react.cloneElement)(child, {
+	          ref: child.key
+	        }, _this4.state.childrenShow[child.key] ? child.props.children : null);
 	      });
-	      //去重复和null
-	      childrenToRender = (0, _EnterUtils.deleteRepeatKeyArr)(childrenToRender);
-	      return (0, _react.createElement)(props.component, props, childrenToRender);
+	      return (0, _react.createElement)(this.props.component, this.props, childrenToRender);
+	    }
+	  }, {
+	    key: 'getVelocityEasing',
+	    value: function getVelocityEasing() {
+	      return (0, _utils.transformArguments)(this.props.ease).map(function (easeName) {
+	        if (typeof easeName === 'string') {
+	          return BackEase[easeName] || easeName;
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'performEnter',
+	    value: function performEnter(key, i) {
+	      var node = (0, _reactDom.findDOMNode)(this.refs[key]);
+	      if (!node) {
+	        return;
+	      }
+	      var interval = (0, _utils.transformArguments)(this.props.interval)[0];
+	      var delay = (0, _utils.transformArguments)(this.props.delay)[0];
+	      var duration = (0, _utils.transformArguments)(this.props.duration)[0];
+	      node.style.visibility = 'hidden';
+	      (0, _velocityAnimate2['default'])(node, 'stop');
+	      (0, _velocityAnimate2['default'])(node, this.getVelocityEnterConfig('enter'), {
+	        delay: interval * i + delay,
+	        duration: duration,
+	        easing: this.getVelocityEasing()[0],
+	        visibility: 'visible',
+	        begin: this.enterBegin.bind(this, key),
+	        complete: this.enterComplete.bind(this, key)
+	      });
+	      if (this.keysToEnter.indexOf(key) >= 0) {
+	        this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1);
+	      }
+	    }
+	  }, {
+	    key: 'performLeave',
+	    value: function performLeave(key, i) {
+	      var node = (0, _reactDom.findDOMNode)(this.refs[key]);
+	      if (!node) {
+	        return;
+	      }
+	      var interval = (0, _utils.transformArguments)(this.props.interval)[1];
+	      var delay = (0, _utils.transformArguments)(this.props.delay)[1];
+	      var duration = (0, _utils.transformArguments)(this.props.duration)[1];
+	      var order = this.props.leaveReverse ? this.keysToLeave.length - i - 1 : i;
+	      (0, _velocityAnimate2['default'])(node, 'stop');
+	      (0, _velocityAnimate2['default'])(node, this.getVelocityLeaveConfig('leave'), {
+	        delay: interval * order + delay,
+	        duration: duration,
+	        easing: this.getVelocityEasing()[1],
+	        begin: this.leaveBegin.bind(this),
+	        complete: this.leaveComplete.bind(this, key)
+	      });
+	    }
+	  }, {
+	    key: 'enterBegin',
+	    value: function enterBegin(key, elements) {
+	      var _this5 = this;
+	
+	      var childrenShow = this.state.childrenShow;
+	      childrenShow[key] = true;
+	      this.setState({
+	        childrenShow: childrenShow
+	      });
+	      elements.forEach(function (elem) {
+	        elem.className += ' ' + _this5.props.animatingClassName[0];
+	      });
+	    }
+	  }, {
+	    key: 'enterComplete',
+	    value: function enterComplete(key, elements) {
+	      var _this6 = this;
+	
+	      if (this.keysAnimating.indexOf(key) >= 0) {
+	        this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1);
+	      }
+	      elements.forEach(function (elem) {
+	        elem.className = elem.className.replace(_this6.props.animatingClassName[0], '').trim();
+	      });
+	    }
+	  }, {
+	    key: 'leaveBegin',
+	    value: function leaveBegin(elements) {
+	      var _this7 = this;
+	
+	      elements.forEach(function (elem) {
+	        elem.className += ' ' + _this7.props.animatingClassName[1];
+	      });
+	    }
+	  }, {
+	    key: 'leaveComplete',
+	    value: function leaveComplete(key, elements) {
+	      var _this8 = this;
+	
+	      if (this.keysAnimating.indexOf(key) < 0) {
+	        return;
+	      }
+	      this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1);
+	      var childrenShow = this.state.childrenShow;
+	      childrenShow[key] = false;
+	      if (this.keysToLeave.indexOf(key) >= 0) {
+	        this.keysToLeave.splice(this.keysToLeave.indexOf(key), 1);
+	      }
+	      if (this.keysToLeave.length === 0) {
+	        var currentChildren = (0, _utils.toArrayChildren)((0, _utils.getChildrenFromProps)(this.props));
+	        this.setState({
+	          children: currentChildren,
+	          childrenShow: childrenShow
+	        });
+	      }
+	      elements.forEach(function (elem) {
+	        elem.className = elem.className.replace(_this8.props.animatingClassName[1], '').trim();
+	      });
 	    }
 	  }]);
 	
-	  return EnterAnimation;
-	})(_react.Component);
+	  return QueueAnim;
+	})(_react2['default'].Component);
 	
-	EnterAnimation.to = startAnimation;
-	EnterAnimation.propTypes = {
-	  component: _react2['default'].PropTypes.string
-	};
-	EnterAnimation.defaultProps = {
-	  component: 'div'
+	var numberOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.array]);
+	var stringOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.array]);
+	var objectOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.object, _react2['default'].PropTypes.array]);
+	QueueAnim.propTypes = {
+	  component: _react2['default'].PropTypes.string,
+	  interval: numberOrArray,
+	  duration: numberOrArray,
+	  delay: numberOrArray,
+	  type: stringOrArray,
+	  animConfig: objectOrArray,
+	  ease: stringOrArray,
+	  leaveReverse: _react2['default'].PropTypes.bool,
+	  animatingClassName: _react2['default'].PropTypes.array
 	};
 	
-	exports['default'] = EnterAnimation;
+	QueueAnim.defaultProps = {
+	  component: 'div',
+	  interval: 100,
+	  duration: 500,
+	  delay: 0,
+	  type: 'right',
+	  animConfig: null,
+	  ease: 'easeOutQuart',
+	  leaveReverse: false,
+	  animatingClassName: ['queue-anim-entering', 'queue-anim-leaving']
+	};
+	
+	exports['default'] = QueueAnim;
 	module.exports = exports['default'];
 
 /***/ },
@@ -59718,254 +59836,11 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(78);
-	
-	var _EnterUtils = __webpack_require__(549);
-	
-	var startAnimation = __webpack_require__(550);
-	//const defaultKey = 'enter_' + Date.now();
-	
-	var EnterAnimationChild = (function (_Component) {
-	  _inherits(EnterAnimationChild, _Component);
-	
-	  function EnterAnimationChild(props) {
-	    _classCallCheck(this, EnterAnimationChild);
-	
-	    _get(Object.getPrototypeOf(EnterAnimationChild.prototype), 'constructor', this).apply(this, arguments);
-	    this.state = {
-	      enter: props.enter,
-	      leave: props.leave,
-	      children: this.props.children
-	    };
-	    this.dataArr = [];
-	    this.key = [];
-	    this.direction = '';
-	    this.defaultType = !this.state.enter && !this.state.leave ? 'right' : this.direction === 'leave' ? this.state.leave.type || this.state.leave.style || this.state.enter.type || this.state.enter.style || 'right' : this.state.enter.type || this.state.enter.style || 'right';
-	  }
-	
-	  /*遍历children里的dataEnter*/
-	
-	  _createClass(EnterAnimationChild, [{
-	    key: 'callChildrenDataEnter',
-	    value: function callChildrenDataEnter(props, mc, arr, i) {
-	      var self = this,
-	          enter,
-	          leave;
-	
-	      arr[i] = { enter: {}, leave: {} };
-	
-	      if (props) {
-	        enter = (0, _EnterUtils.isPropsPushData)(props['enter-data'], props['data-enter'], self.defaultType);
-	        leave = (0, _EnterUtils.isPropsPushData)(props['leave-data'], props['data-leave'], enter.type || enter.style || self.defaultType);
-	
-	        arr[i].enter = enter;
-	        //出场如果没有效果，继承进场效果；
-	        arr[i].leave = (0, _EnterUtils.leaveInherit)(leave, enter);
-	
-	        if (typeof props.children === 'object') {
-	          arr[i].children = [];
-	          self.componentChildrenDataEnter(props.children, mc.children, arr[i].children);
-	        }
-	      } else {
-	        var _enter = mc.getAttribute('data-enter'),
-	            _leave = mc.getAttribute('data-leave');
-	        enter = (0, _EnterUtils.noPropsPushData)(_enter, self.defaultType);
-	        leave = (0, _EnterUtils.noPropsPushData)(_leave, enter.type || enter.style || self.defaultType);
-	
-	        arr[i].enter = enter;
-	        arr[i].leave = (0, _EnterUtils.leaveInherit)(leave, enter);
-	        if (mc.children.length > 0) {
-	          arr[i].children = [];
-	          self.componentChildrenDataEnter(null, mc.children, arr[i].children);
-	        }
-	      }
-	      if (arr[i].enter.type || arr[i].enter.style || arr[i].leave.type || arr[i].leave.style) {
-	        self.dataArr.cBool = true;
-	      }
-	    }
-	  }, {
-	    key: 'componentChildrenDataEnter',
-	    value: function componentChildrenDataEnter(children, dom, arr) {
-	      var self = this,
-	          props = undefined,
-	          mc = undefined;
-	      if (children && typeof children === 'object' && children.length) {
-	        //有react时
-	        //要处理children里的enter-data,dom里的data-enter;
-	
-	        children.map(function (re, i) {
-	          props = re.props;
-	          mc = dom[i];
-	          self.callChildrenDataEnter(props, mc, arr, i);
-	        });
-	      } else if (children) {
-	        props = children ? children.props : null;
-	        self.callChildrenDataEnter(props, dom[0], arr, 0);
-	      } else if (dom) {
-	        //router时；
-	        for (var i = 0; i < dom.length || 0; i++) {
-	          mc = dom[i];
-	          self.callChildrenDataEnter(null, mc, arr, i);
-	        }
-	      } else {
-	        return console.warn('Warning: Not perform EnterAnimation, Children is null.');
-	      }
-	    }
-	  }, {
-	    key: 'callEnterAnimation',
-	    value: function callEnterAnimation(dom, wap) {
-	      var _this = this;
-	
-	      var state = this.state;
-	
-	      var enter = state.enter || {},
-	          leave = state.leave || null;
-	      var transition = this.dataArr;
-	      var direction = this.direction;
-	      if (!this.dataArr.cBool) {
-	        transition = enter.type || enter.style || 'right';
-	        if (direction === 'leave' && leave) {
-	          transition = leave.type || leave.style || transition;
-	        }
-	      }
-	      var callFunc = function callFunc() {
-	        enter.callback.call(_this, { ReactElement: wap, target: dom, direction: direction });
-	      };
-	      var callBack = typeof enter.callback === 'function' ? callFunc : null,
-	          reverse = enter.reverse,
-	          duration = enter.duration,
-	          delay = enter.delay,
-	          interval = enter.interval,
-	          ease = enter.ease;
-	      if (direction === 'leave') {
-	        callBack = function () {
-	          //动画后;
-	          if (leave && typeof leave.callback === 'function') {
-	            leave.callback.call(_this, { ReactElement: wap, target: dom, direction: direction });
-	          } else if (typeof enter.callback === 'function') {
-	            enter.callback.call(_this, { ReactElement: wap, target: dom, direction: direction });
-	          }
-	          //出场周期结束；
-	          _this.props.callback.call(_this, wap, direction);
-	        };
-	        //大标签上的继承
-	        if (leave) {
-	          reverse = leave.reverse || enter.reverse;
-	          duration = typeof leave.duration === 'number' ? leave.duration : enter.duration;
-	          delay = typeof leave.delay === 'number' ? leave.delay : enter.delay;
-	          interval = typeof leave.interval === 'number' ? leave.interval : enter.interval;
-	          ease = leave.ease || enter.ease;
-	        }
-	      }
-	      startAnimation(dom, {
-	        duration: duration,
-	        data: transition,
-	        delay: delay,
-	        direction: direction,
-	        interval: interval,
-	        reverse: reverse,
-	        ease: ease,
-	        onComplete: callBack
-	      });
-	    }
-	  }, {
-	    key: 'setDomKey',
-	    value: function setDomKey() {
-	      //取出dom下的要做动画的节点，如果没key，自动加上
-	
-	      var dom = (0, _react.findDOMNode)(this);
-	      if (typeof this.props.children === 'string') {
-	        return console.warn('Warning: Not perform EnterAnimation, Elements is String(' + this.props.children + ').');
-	      }
-	      if (typeof dom.children === 'string') {
-	        return console.warn('Warning: Not perform EnterAnimation, Elements is String(' + dom.children + ').');
-	      }
-	      var children = this.props.children instanceof Array ? this.props.children : this.props.children.props.children;
-	      var domChildren = dom.children.length >= 1 ? dom.children : dom.children.children;
-	      if (typeof children === 'string') {
-	        return console.warn('Warning: Not perform EnterAnimation, Elements is String(' + children + ').');
-	      }
-	      if (typeof domChildren === 'string') {
-	        return console.warn('Warning: Not perform EnterAnimation, Elements is String(' + domChildren + ').');
-	      }
-	      //dom的data-enter或reactElement的props的enter-data;
-	      this.componentChildrenDataEnter(children, domChildren, this.dataArr);
-	      //console.log(this.dataArr)
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      //第一次进入；默认给enter；
-	      this.direction = 'enter';
-	      this.componentWillReceiveProps(this.props);
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      var dom = (0, _react.findDOMNode)(this);
-	      var wap = this.props.children;
-	      if (this.props.direction) {
-	        this.props.onStart();
-	        this.direction = this.props.direction;
-	        this.callEnterAnimation(dom, wap);
-	      }
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      //要对新插入元素做动画;
-	      if (nextProps.direction) {
-	
-	        var dom = (0, _react.findDOMNode)(this);
-	        if (nextProps.position) {
-	          dom.style.position = 'absolute';
-	        } else {
-	          dom.style.position = '';
-	        }
-	        this.direction = nextProps.direction;
-	        this.defaultType = !nextProps.enter && !nextProps.leave ? 'right' : this.direction === 'leave' && nextProps.leave ? nextProps.leave.type || nextProps.leave.style || nextProps.enter.type || nextProps.enter.style || 'right' : nextProps.enter.type || nextProps.enter.style || 'right';
-	        this.setDomKey();
-	        this.setState({
-	          enter: nextProps.enter,
-	          leave: nextProps.leave
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	
-	      return this.props.children;
-	    }
-	  }]);
-	
-	  return EnterAnimationChild;
-	})(_react.Component);
-	
-	exports['default'] = EnterAnimationChild;
-	module.exports = exports['default'];
-
-/***/ },
-/* 549 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Created by jljsj on 15/9/1.
-	 */
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
+	exports.toArrayChildren = toArrayChildren;
+	exports.findChildInChildrenByKey = findChildInChildrenByKey;
+	exports.mergeChildren = mergeChildren;
+	exports.transformArguments = transformArguments;
+	exports.getChildrenFromProps = getChildrenFromProps;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -59973,728 +59848,125 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var utils = {
-	  toArrayChildren: function toArrayChildren(children) {
-	    var ret = [];
-	    _react2['default'].Children.forEach(children, function (c) {
-	      ret.push(c);
+	function toArrayChildren(children) {
+	  var ret = [];
+	  _react2['default'].Children.forEach(children, function (c) {
+	    ret.push(c);
+	  });
+	  return ret;
+	}
+	
+	function findChildInChildrenByKey(children, key) {
+	  var ret = null;
+	  if (children) {
+	    children.forEach(function (c) {
+	      if (ret) {
+	        return;
+	      }
+	      if (c.key === key) {
+	        ret = c;
+	      }
 	    });
-	    return ret;
-	  },
-	  //getChildrenFromProps: function (props) {
-	  //  const children = props.children;
-	  //  if (React.isValidElement(children)) {
-	  //    if (!children.key) {
-	  //      return React.cloneElement(children, {
-	  //        key: defaultKey
-	  //      });
-	  //    }
-	  //  }
-	  //  return obj;
-	  //},
+	  }
+	  return ret;
+	}
 	
-	  extend: function extend(des, src, override) {
-	    var i = undefined,
-	        len = src.length;
-	    if (src instanceof Array) {
-	      for (i = 0; i < len; i++) {
-	        utils.extend(des, src[i], override);
+	function mergeChildren(prev, next) {
+	  var ret = [];
+	  // For each key of `next`, the list of keys to insert before that key in
+	  // the combined list
+	  var nextChildrenPending = {};
+	  var pendingChildren = [];
+	  prev.forEach(function (c) {
+	    if (findChildInChildrenByKey(next, c.key)) {
+	      if (pendingChildren.length) {
+	        nextChildrenPending[c.key] = pendingChildren;
+	        pendingChildren = [];
 	      }
 	    } else {
-	      for (i in src) {
-	        if (override || !(i in des)) {
-	          des[i] = src[i];
-	        }
-	      }
-	    }
-	    return des;
-	  },
-	  deleteRepeatKeyArr: function deleteRepeatKeyArr(arr) {
-	    var result = [],
-	        hash = {};
-	    for (var i = 0; i < arr.length; i++) {
-	      var elem = arr[i];
-	      if (elem) {
-	        if (elem.key) {
-	          if (elem && !hash[elem.key]) {
-	            result.push(elem);
-	            hash[elem.key] = true;
-	          }
-	        } else {
-	          result.push(elem);
-	        }
-	      }
-	    }
-	    return result;
-	  },
-	  contrastArr: function contrastArr(_a, _b, callback) {
-	    var _this = this;
-	
-	    var a = _a,
-	        b = _b.concat();
-	    if (a.length === 0) {
-	      b.map(function (m) {
-	        callback.call(_this, m);
-	      });
-	    } else {
-	      a.map(function (m) {
-	        if (!m || !m.key) {
-	          return;
-	        }
-	        for (var i = 0; i < b.length; i++) {
-	          var cm = b[i];
-	          if (!cm || !cm.key || cm.key === m.key) {
-	            b.splice(i, 1);
-	          }
-	        }
-	      });
-	      b.map(function (m) {
-	        callback.call(_this, m);
-	      });
-	    }
-	  },
-	  isPropsPushData: function isPropsPushData(data, tagData, enterDataType) {
-	    var _data = {};
-	    if (data || tagData) {
-	      data = data || {};
-	      if (typeof data === 'boolean') {
-	        data = {};
-	      }
-	      if (typeof tagData === 'string') {
-	        tagData = JSON.parse(tagData);
-	      }
-	      tagData = tagData || {};
-	      _data = utils.extend({}, [data, tagData]);
-	
-	      if (!_data.type && !_data.style) {
-	        _data.type = enterDataType;
-	      }
-	    }
-	    return _data;
-	  },
-	  noPropsPushData: function noPropsPushData(tagData, enterDataType) {
-	    if (typeof tagData === 'string') {
-	      tagData = JSON.parse(tagData);
-	    }
-	    if (tagData) {
-	      if (typeof tagData === 'boolean') {
-	        tagData = {};
-	      }
-	      if (!tagData.type && !tagData.style) {
-	        tagData.type = enterDataType;
-	      }
-	    }
-	    return tagData || {};
-	  },
-	  leaveInherit: function leaveInherit(leave, enter) {
-	    if (leave.type || enter.type) {
-	      leave.type = leave.type || enter.type;
-	    }
-	    if (leave.style || enter.style) {
-	      leave.style = leave.style || enter.style;
-	    }
-	    if (typeof leave.duration === 'number' || enter.duration) {
-	      leave.duration = typeof leave.duration === 'number' ? leave.duration : enter.duration;
-	    }
-	    if (leave.ease || enter.ease) {
-	      leave.ease = leave.ease || enter.ease;
-	    }
-	    if (typeof leave.delay === 'number' || enter.delay) {
-	      leave.delay = typeof leave.delay === 'number' ? leave.delay : enter.delay;
-	    }
-	    if (typeof leave.queueId === 'number' || enter.queueId) {
-	      leave.queueId = typeof leave.queueId === 'number' ? leave.queueId : enter.queueId;
-	    }
-	    return leave;
-	  }
-	};
-	exports['default'] = utils;
-	module.exports = exports['default'];
-
-/***/ },
-/* 550 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var Css = __webpack_require__(551);
-	var Event = __webpack_require__(552);
-	
-	var cssStr = '';
-	
-	var startAnim = function startAnim(node, vars) {
-	  //判断浏览，ie10以下不支持；
-	  if (!(this.getTransition() in document.documentElement.style)) {
-	    if (vars && typeof vars.onComplete === 'function') {
-	      vars.onComplete();
-	    }
-	    return false;
-	  }
-	  if (!vars) {
-	    vars = {};
-	  }
-	  this.nodeStr = node;
-	  this.doc = document;
-	  this.tweenData = typeof vars.data === 'object' && vars.data.cBool ? vars.data : null;
-	  this.str = typeof vars.data === 'string' ? vars.data : 'right';
-	  this.delay = typeof vars.delay === 'number' ? vars.delay * 1000 : 30;
-	  this.interval = typeof vars.interval === 'number' ? vars.interval : 0.1;
-	  this.direction = vars.direction || 'enter';
-	  this.__ease = vars.ease || 'cubic-bezier(0.165, 0.84, 0.44, 1)';
-	  this.__timer = typeof vars.duration === 'number' ? vars.duration : 0.5;
-	  this.reverse = vars.reverse || false;
-	  var hidden = typeof vars.hidden === 'undefined' ? true : vars.hidden;
-	  this.callback = vars.onComplete;
-	  this.kill = true;
-	  if (hidden) {
-	    this.doc.documentElement.style.opacity = 0;
-	    this.doc.documentElement.style.visibility = 'hidden';
-	  }
-	  cssStr += cssStr !== this.str + ';' ? this.str + ';' : '';
-	  setTimeout(function () {
-	    cssStr = '';
-	  }, 1000); //1秒后清掉样式
-	
-	  this.init();
-	};
-	var a = startAnim.prototype = [];
-	a.addClass = Css.addClass;
-	a.removeClass = Css.removeClass;
-	a.addStyle = Css.addStyle;
-	a.removeStyle = Css.removeStyle;
-	a.getTransform = Event.getTransform;
-	a.getTransition = Event.getTransition;
-	a.getAnimation = Event.getAnimation;
-	a.error = function (msg) {
-	  throw new Error(msg);
-	};
-	a.init = function () {
-	  var self = this,
-	      regTag = /^<(\w+)\s*\/?>(?:<\/\1>|)$/;
-	  //rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/;
-	  var htmlStyle = self.doc.documentElement;
-	  self.removeStyle(htmlStyle, 'visibility:hidden;opacity:0');
-	  if (htmlStyle.style.length <= 0) {
-	    self.doc.documentElement.removeAttribute('style');
-	  }
-	  if (!self.nodeStr || regTag.test(self.nodeStr)) {
-	    return self.error('node error;');
-	  }
-	  if (typeof self.nodeStr === 'string') {
-	    //var m=rquickExpr.exec(self.nodeStr);
-	    self.push.apply(self, self.doc.querySelectorAll(self.nodeStr));
-	  } else if (typeof self.nodeStr === 'object') {
-	    if (self.nodeStr.length) {
-	      self.push.apply(self, self.nodeStr);
-	    } else {
-	      self.push(self.nodeStr);
-	    }
-	  }
-	  if (!self.length) {
-	    return self.error('node error;');
-	  }
-	  var _mc = self.length === 1 ? self[0].children : self;
-	  //默认值
-	  self.__delay = 0;
-	  self.queueIdArr = []; //管理分支队延时间；
-	
-	  self.__ease = self.__ease || 'cubic-bezier(0.165, 0.84, 0.44, 1)';
-	  self.__timer = self.__timer || 0.5;
-	  self.__qId = 0;
-	
-	  self.forTweenData(_mc, self.tweenData, function (mc, data) {
-	    if (self.kill) {
-	      var s = '';
-	      for (var c = 0; c < cssStr.split(';').length; c++) {
-	        s += self.animNameGroup(cssStr.split(';')[c]) + ';';
-	      }
-	      self.removeStyle(mc, 'transition;' + s, true);
-	    }
-	
-	    if (data) {
-	      var direction = data.direction || self.direction;
-	      var sBool = data.enter.type || data.enter.style || data.leave.type || data.leave.style;
-	      if (!data.children && !sBool && direction === 'leave') {
-	        //self.addStyle(mc, 'opacity:0');
-	      }
-	      if (direction === 'leave') {
-	        data = data.leave;
-	      } else {
-	        data = data.enter;
-	      }
-	      if (data.type || data.style || typeof data.duration === 'number' || data.ease || typeof data.delay === 'number' || typeof data.queueId === 'number') {
-	        if (self.reverse) {
-	          //判断分支；
-	          self.__qId = data.queueId || 0;
-	          //判断延时；
-	          if (!self.queueIdArr[self.__qId] && self.queueIdArr[self.__qId] !== 0) {
-	            self.queueIdArr[self.__qId] = 0 + (data.delay || 0);
-	          } else {
-	            self.queueIdArr[self.__qId] = Number(Number(self.queueIdArr[self.__qId] + (data.delay || 0) + self.interval).toFixed(3));
-	          }
-	        }
-	        var _style = data.type || data.style || self.str;
-	
-	        if (_style) {
-	          if (direction === 'leave') {
-	            self.removeStyle(mc, self.animNameGroup(_style));
-	          } else {
-	            self.addStyle(mc, self.animNameGroup(_style));
-	          }
-	        }
-	      }
-	    } else {
-	      if (self.reverse) {
-	        if (!self.queueIdArr[self.__qId] && self.queueIdArr[self.__qId] !== 0) {
-	          self.queueIdArr[self.__qId] = 0;
-	        } else {
-	          self.queueIdArr[self.__qId] = Number(Number(self.queueIdArr[self.__qId] + self.interval).toFixed(3));
-	        }
-	      }
-	      if (self.direction === 'leave') {
-	        self.removeStyle(mc, self.animNameGroup(self.str));
-	      } else {
-	        self.addStyle(mc, self.animNameGroup(self.str));
-	      }
-	    }
-	    if (!data || data && (data.type || data.style)) {
-	      self.enterLength = self.enterLength ? self.enterLength + 1 : 1;
+	      pendingChildren.push(c);
 	    }
 	  });
 	
-	  //出场隐掉没动画的。
-	  self.leaveHideNull(_mc, self.tweenData);
+	  next.forEach(function (c) {
+	    if (nextChildrenPending.hasOwnProperty(c.key)) {
+	      ret = ret.concat(nextChildrenPending[c.key]);
+	    }
+	    ret.push(c);
+	  });
 	
-	  setTimeout(function () {
-	    self.addTween();
-	  }, self.delay);
-	};
-	a.leaveHideNull = function (mc, data) {
-	  var self = this;
-	  var tm = mc.children || mc;
-	  if (data) {
-	    for (var i = 0; i < data.length; i++) {
-	      var _d = data[i],
-	          _m = tm[i];
-	      var e_d = _d.enter,
-	          l_d = _d.leave,
-	          e_data = e_d.type || e_d.style || typeof e_d.duration === 'number' || e_d.ease || typeof e_d.delay === 'number' || typeof e_d.queueId === 'number',
-	          l_data = l_d.type || l_d.style || typeof l_d.duration === 'number' || l_d.ease || typeof l_d.delay === 'number' || typeof l_d.queueId === 'number';
-	      var direction = l_d.direction || self.direction;
-	      if (!e_data && !l_data && !_d.children && direction === 'leave') {
-	        self.addStyle(mc[i], 'opacity:0');
-	      } else if (!e_data && !l_data && _m.children && _d.children && direction === 'leave') {
-	        self.leaveHideNull(_m.children, _d.children);
-	      }
+	  // 保持原有的顺序
+	  pendingChildren.forEach(function (c) {
+	    var originIndex = prev.indexOf(c);
+	    if (originIndex >= 0) {
+	      ret.splice(originIndex, 0, c);
 	    }
-	  }
-	};
-	//遍历dom节点；
-	a.forTweenData = function (mc, data, callFunc, animBool) {
-	  if (!mc) {
-	    if (!animBool) {
-	      console.log('Data redundancy:' + JSON.stringify(data));
-	    }
-	    return;
-	  }
-	  var tm = mc.children || mc,
-	      self = this;
-	  if (data) {
-	    if (data.length) {
-	      data.map(function (m, ii) {
-	        if (m.length) {
-	          self.forTweenData(tm[ii], m, callFunc, animBool);
-	        } else if (m.children) {
-	          callFunc(tm[ii], m);
-	          self.forTweenData(tm[ii], m, callFunc, animBool);
-	        } else {
-	          callFunc(tm[ii], m);
-	        }
-	      });
-	    } else if (data.children && data.children.length) {
-	      data.children.map(function (m, ii) {
-	        if (m.length) {
-	          self.forTweenData(tm[ii], m, callFunc, animBool);
-	        } else if (m.children) {
-	          callFunc(tm[ii], m);
-	          self.forTweenData(tm[ii], m, callFunc, animBool);
-	        } else {
-	          callFunc(tm[ii], m);
-	        }
-	      });
-	    } else {
-	      self.error('data(' + data + ') is error');
-	    }
-	  } else {
-	    for (var i = 0; i < tm.length; i++) {
-	      callFunc(tm[i], null);
-	    }
-	  }
-	};
+	  });
 	
-	a.fjStyle = function (node, style, tweenStr) {
-	  var self = this;
-	  if (typeof style === 'object') {
-	    for (var _s in style) {
-	      _s = _s.indexOf('margin') >= 0 ? 'margin' : _s.indexOf('padding') >= 0 ? 'padding' : _s.indexOf('background') >= 0 ? 'background' : _s.indexOf('border') >= 0 ? 'border' : _s.indexOf('stroke') >= 0 ? 'stroke' : _s === 'textShadow' ? 'text-shadow' : _s === 'textTransform' ? 'text-transform' : _s;
-	      node.style[self.getTransition()] = node.style[self.getTransition()] ? node.style[self.getTransition()] + ',' + _s + tweenStr : _s + tweenStr;
-	    }
-	  } else {
-	    var cArr = style.trim().split(';');
-	    for (var i = 0; i < cArr.length; i++) {
-	      if (cArr[i] && cArr[i] !== '') {
-	        var sArr = cArr[i].split(':');
-	        node.style[self.getTransition()] = node.style[self.getTransition()] ? node.style[self.getTransition()] + ',' + sArr[0] + tweenStr : sArr[0] + tweenStr;
-	      }
-	    }
+	  return ret;
+	}
+	
+	function transformArguments(arg) {
+	  if (Array.isArray(arg) && arg.length === 2) {
+	    return arg;
 	  }
-	};
-	a.addTween = function () {
-	  //查找tweenDataArr与dom下子级的匹配；
-	  var self = this,
-	      eNum = 0;
-	  var m = self.length === 1 ? self[0].children : self;
+	  return [arg, arg];
+	}
 	
-	  self.forTweenData(m, self.tweenData, function (mc, data) {
-	    var tweenStr = ' ' + self.__timer + 's ' + self.__ease + ' ' + self.__delay + 's';
-	    var _style = null;
-	    if (data) {
-	      var direction = data.direction || self.direction;
-	      if (direction === 'leave') {
-	        data = data.leave;
-	      } else {
-	        data = data.enter;
-	      }
-	      if (data.type || data.style || typeof data.duration === 'number' || data.ease || typeof data.delay === 'number' || typeof data.queueId === 'number') {
-	        //判断分支；
-	        self.__qId = data.queueId || 0;
-	        //判断延时；
-	        if (self.reverse) {
-	          self.queueIdArr[self.__qId] = Number(Number((self.queueIdArr[self.__qId] || 0) - (data.delay || 0)).toFixed(3));
-	          self.__delay = Number(Number(self.queueIdArr[self.__qId] + (data.delay || 0)).toFixed(3));
-	        } else {
-	          self.queueIdArr[self.__qId] = Number(Number((self.queueIdArr[self.__qId] || 0) + (data.delay || 0)).toFixed(3));
-	          self.__delay = self.queueIdArr[self.__qId];
-	        }
-	
-	        var _ease = data.ease || self.__ease,
-	            _timer = typeof data.duration === 'number' ? data.duration : self.__timer;
-	        tweenStr = ' ' + _timer + 's ' + _ease + ' ' + self.__delay + 's';
-	        _style = data.type || data.style;
-	        if (_style) {
-	          var _name = self.animNameGroup(_style);
-	          self.fjStyle(mc, _name, tweenStr);
-	          if (direction === 'leave') {
-	            self.addStyle(mc, _name);
-	          } else {
-	            self.removeStyle(mc, _name);
-	          }
-	        }
-	      }
-	    } else {
-	      self.queueIdArr[self.__qId] = self.queueIdArr[self.__qId] || 0;
-	      self.__delay = self.queueIdArr[self.__qId] || self.queueIdArr[self.__qId] === 0 ? self.queueIdArr[self.__qId] : self.__delay;
-	      tweenStr = ' ' + self.__timer + 's ' + self.__ease + ' ' + self.__delay + 's';
-	      self.fjStyle(mc, self.animNameGroup(self.str), tweenStr);
-	      if (self.direction === 'leave') {
-	        self.addStyle(mc, self.animNameGroup(self.str));
-	      } else {
-	        self.removeStyle(mc, self.animNameGroup(self.str));
-	      }
-	    }
-	
-	    if (!data || data && (data.type || data.style)) {
-	      mc.setAttribute('delay', self.__delay);
-	      if (self.reverse) {
-	        if (self.queueIdArr[self.__qId] > 0) {
-	          self.queueIdArr[self.__qId] -= self.interval;
-	        }
-	      } else {
-	        self.queueIdArr[self.__qId] += self.interval;
-	      }
-	      setTimeout(function () {
-	        Event.setTrnsitionEnd(mc, function () {
-	          eNum++;
-	          if (eNum >= self.enterLength) {
-	            if (typeof self.callback === 'function') {
-	              self.callback();
-	            }
-	          }
-	        });
-	      }, self.__delay * 1000);
-	    }
-	  }, true);
-	};
-	a.animNameGroup = function (name) {
-	  var _style = '',
-	      self = this;
-	  switch (name) {
-	    case 'alpha':
-	      _style = 'opacity:0';
-	      break;
-	    case 'left':
-	      _style = self.getTransform() + ':translateX(-30px);opacity:0';
-	      break;
-	    case 'right':
-	      _style = self.getTransform() + ':translateX(30px);opacity:0;';
-	      break;
-	    case 'bottom':
-	      _style = self.getTransform() + ':translateY(30px);opacity:0';
-	      break;
-	    case 'top':
-	      _style = self.getTransform() + ':translateY(-30px);opacity:0';
-	      break;
-	    case 'scale':
-	      _style = self.getTransform() + ':scale(0);opacity:0';
-	      break;
-	    case 'scaleBig':
-	      _style = self.getTransform() + ':scale(2);opacity:0';
-	      break;
-	    case 'scaleX':
-	      _style = self.getTransform() + ':scaleX(0);opacity:0';
-	      break;
-	    case 'scaleY':
-	      _style = self.getTransform() + ':scaleY(0);opacity:0';
-	      break;
-	    default:
-	      _style = name;
-	      break;
-	  }
-	  return _style;
-	};
-	var startAnimation = function startAnimation(node, vars) {
-	  return new startAnim(node, vars);
-	};
-	module.exports = startAnimation;
+	function getChildrenFromProps(props) {
+	  return props && props.children;
+	}
 
 /***/ },
-/* 551 */
+/* 549 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
-	module.exports = {
-	  addClass: function addClass(m, value) {
-	    //添加样式类
-	    if (!m) {
-	      return false;
-	    }
-	    var _classname = m.className,
-	        s_k = ' ';
-	    if (_classname.indexOf(value) < 0) {
-	      m.className += s_k + value;
-	    }
-	    m.className = m.className.trim();
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports["default"] = {
+	  left: {
+	    opacity: [1, 0],
+	    translateX: [0, -30]
 	  },
-	  removeClass: function removeClass(m, value) {
-	    //删除样式类
-	    if (!m) {
-	      return false;
-	    }
-	    var rclass = /[\t\r\n\f]/g;
-	    var _classname = (' ' + m.className + ' ').replace(' ' + rclass + ' ', ' ');
-	    while (_classname.indexOf(value) >= 0) {
-	      _classname = _classname.replace(value, ' ');
-	    }
-	    m.className = _classname.trim();
-	    if (!m.className || m.className === '' || m.className === ' ') {
-	      m.removeAttribute('class');
-	    }
+	  top: {
+	    opacity: [1, 0],
+	    translateY: [0, -30]
 	  },
-	  addStyle: function addStyle(m, style) {
-	    //添加style
-	    if (!m) {
-	      return false;
-	    }
-	    if (typeof style === 'object') {
-	      for (var _s in style) {
-	        m.style[_s] = style[_s];
-	      }
-	    } else {
-	      var _style = m.getAttribute('style') || '';
-	      _style += style;
-	      m.setAttribute('style', _style);
-	    }
+	  right: {
+	    opacity: [1, 0],
+	    translateX: [0, 30]
 	  },
-	  removeStyle: function removeStyle(m, style, oneBool) {
-	    //删除style;
-	    if (!m) {
-	      return false;
-	    }
-	    if (typeof style === 'object') {
-	      for (var _s in style) {
-	        m.style[_s] = '';
-	      }
-	    } else {
-	      var cArr = style.trim().split(';');
-	      cArr.map(function (arr) {
-	        if (arr && arr !== '') {
-	          var carr = m.style.cssText.split(';'),
-	              cOne = arr.split(':')[0].replace(/\s/g, ''),
-	              cTow = arr.split(':')[1] ? arr.split(':')[1].replace(/\s/g, '') : '';
-	          carr.map(function (_arr) {
-	            if (_arr && _arr !== '') {
-	              var tcOne = _arr.split(':')[0].replace(/\s/g, ''),
-	                  tcTow = _arr.split(':')[1].replace(/\s/g, '');
-	              if (oneBool && tcOne.indexOf(cOne) >= 0) {
-	                m.style[arr.split(':')[0]] = '';
-	              } else if (tcOne.indexOf(cOne) >= 0 && tcTow === cTow) {
-	                m.style[arr.split(':')[0]] = '';
-	              }
-	            }
-	          });
-	        }
-	      });
-	    }
+	  bottom: {
+	    opacity: [1, 0],
+	    translateY: [0, 30]
+	  },
+	  alpha: {
+	    opacity: [1, 0]
+	  },
+	  scale: {
+	    opacity: [1, 0],
+	    scale: [1, 0]
+	  },
+	  scaleBig: {
+	    opacity: [1, 0],
+	    scale: [1, 2]
+	  },
+	  scaleX: {
+	    opacity: [1, 0],
+	    scaleX: [1, 0]
+	  },
+	  scaleY: {
+	    opacity: [1, 0],
+	    scaleY: [1, 0]
 	  }
 	};
+	module.exports = exports["default"];
 
 /***/ },
-/* 552 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var Css = __webpack_require__(551);
-	
-	module.exports = {
-	  getTransform: function getTransform() {
-	    var style = 'transform';
-	    if (!(style in document.documentElement.style)) {
-	      var prefix = ['webkit', 'moz', 'ms', 'o'];
-	      for (var i in prefix) {
-	        style = '-' + prefix[i] + '-transform';
-	        if (style in document.documentElement.style) {
-	          break;
-	        }
-	      }
-	    }
-	    return style;
-	  },
-	  getTransition: function getTransition() {
-	    var style = 'transition';
-	    if (!(style in document.documentElement.style)) {
-	      var prefix = ['webkit', 'moz', 'ms', 'o'];
-	      for (var i in prefix) {
-	        style = '-' + prefix[i] + '-transition';
-	        if (style in document.documentElement.style) {
-	          break;
-	        }
-	      }
-	    }
-	    return style;
-	  },
-	  getAnimation: function getAnimation() {
-	    var style = 'animation';
-	    if (!(style in document.documentElement.style)) {
-	      var prefix = ['webkit', 'moz', 'ms', 'o'];
-	      for (var i in prefix) {
-	        style = '-' + prefix[i] + '-animation';
-	        if (style in document.documentElement.style) {
-	          break;
-	        }
-	      }
-	    }
-	    return style;
-	  },
-	  whichAnimationEvent: function whichAnimationEvent() {
-	    var animation = {
-	      'animation': 'animationend',
-	      'oAnimation': 'oanimationend',
-	      'MozAnimation': 'mozAnimationEnd',
-	      'WebkitAnimation': 'webkitAnimationEnd',
-	      'msAnimation': 'MSAnimationEnd'
-	    };
-	    for (var t in animation) {
-	      if (t in document.documentElement.style) {
-	        return animation[t];
-	      }
-	    }
-	  },
-	  whichTransitionEvent: function whichTransitionEvent() {
-	    var transitions = {
-	      'transition': 'transitionend',
-	      'OTransition': 'oTransitionEnd',
-	      'MozTransition': 'transitionend',
-	      'WebkitTransition': 'webkitTransitionEnd'
-	    };
-	
-	    for (var t in transitions) {
-	      if (t in document.documentElement.style) {
-	        return transitions[t];
-	      }
-	    }
-	  },
-	  setAnimEventEnd: function setAnimEventEnd(mc, css, style) {
-	    var animationEvent = this.whichAnimationEvent();
-	
-	    function _event() {
-	      if (document.addEventListener) {
-	        mc.removeEventListener(animationEvent, _event);
-	      } else {
-	        window.detachEvent(animationEvent, _event);
-	      }
-	      Css.removeClass(mc, css);
-	      Css.removeStyle(mc, style);
-	    }
-	
-	    if (document.addEventListener) {
-	      mc.addEventListener(animationEvent, _event);
-	    } else {
-	      mc.attachEvent(animationEvent, _event);
-	    }
-	  },
-	  setTrnsitionEnd: function setTrnsitionEnd(mc, callback, rem) {
-	    var transitionEvent = this.whichTransitionEvent();
-	    var self = this;
-	
-	    function _event(e) {
-	      if (document.addEventListener) {
-	        mc.removeEventListener(transitionEvent, _event);
-	      } else {
-	        window.detachEvent(transitionEvent, _event);
-	      }
-	      Css.removeStyle(mc, 'opacity:1;visibility:visible');
-	      if (mc.getAttribute('style')) {
-	        var s = mc.getAttribute('style').split(';');
-	        var i = 0,
-	            _style = '';
-	
-	        while (i < s.length) {
-	
-	          if (s[i] !== '') {
-	            if (s[i].indexOf(mc.style[self.getTransition()]) >= 0 && mc.style[self.getTransition()] && mc.style[self.getTransition()] !== '') {
-	              s[i] = '';
-	            }
-	            //这里的判断为改变s[i]值后的判断
-	            if (s[i] !== '') {
-	              _style += s[i] + ';';
-	            }
-	          }
-	          i++;
-	        }
-	
-	        if (!_style || _style.replace(/\s/g, '') === '') {
-	          mc.removeAttribute('style');
-	        } else {
-	          mc.setAttribute('style', _style);
-	        }
-	      }
-	      mc.removeAttribute('delay');
-	      if (typeof callback === 'function') {
-	        callback();
-	      }
-	    }
-	
-	    if (document.addEventListener) {
-	      mc.addEventListener(transitionEvent, _event);
-	    } else {
-	      mc.attachEvent(transitionEvent, _event);
-	    }
-	  }
-	
-	};
-
-/***/ },
-/* 553 */
+/* 550 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60868,7 +60140,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 554 */
+/* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61022,7 +60294,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 555 */
+/* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61033,7 +60305,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rcFormValidation = __webpack_require__(556);
+	var _rcFormValidation = __webpack_require__(553);
 	
 	var _rcFormValidation2 = _interopRequireDefault(_rcFormValidation);
 
@@ -61041,15 +60313,15 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 556 */
+/* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(557);
+	module.exports = __webpack_require__(554);
 
 /***/ },
-/* 557 */
+/* 554 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61072,11 +60344,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _asyncValidator = __webpack_require__(558);
+	var _asyncValidator = __webpack_require__(555);
 	
 	var _asyncValidator2 = _interopRequireDefault(_asyncValidator);
 	
-	var _Validator = __webpack_require__(582);
+	var _Validator = __webpack_require__(579);
 	
 	var _Validator2 = _interopRequireDefault(_Validator);
 	
@@ -61084,7 +60356,7 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _FieldMixin = __webpack_require__(583);
+	var _FieldMixin = __webpack_require__(580);
 	
 	var _FieldMixin2 = _interopRequireDefault(_FieldMixin);
 	
@@ -61388,7 +60660,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 558 */
+/* 555 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61399,19 +60671,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _validator = __webpack_require__(560);
+	var _validator = __webpack_require__(557);
 	
 	var _validator2 = _interopRequireDefault(_validator);
 	
-	var _messages2 = __webpack_require__(581);
+	var _messages2 = __webpack_require__(578);
 	
 	var _messages3 = _interopRequireDefault(_messages2);
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	function asyncMap(arr, func, callback) {
 	  var results = [];
@@ -61637,7 +60909,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 559 */
+/* 556 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61701,7 +60973,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 560 */
+/* 557 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61710,26 +60982,26 @@
 	  value: true
 	});
 	exports['default'] = {
-	  string: __webpack_require__(561),
-	  method: __webpack_require__(569),
-	  number: __webpack_require__(570),
-	  boolean: __webpack_require__(571),
-	  regexp: __webpack_require__(572),
-	  integer: __webpack_require__(573),
-	  'float': __webpack_require__(574),
-	  array: __webpack_require__(575),
-	  object: __webpack_require__(576),
-	  'enum': __webpack_require__(577),
-	  pattern: __webpack_require__(578),
-	  email: __webpack_require__(579),
-	  url: __webpack_require__(579),
-	  date: __webpack_require__(580),
-	  hex: __webpack_require__(579)
+	  string: __webpack_require__(558),
+	  method: __webpack_require__(566),
+	  number: __webpack_require__(567),
+	  boolean: __webpack_require__(568),
+	  regexp: __webpack_require__(569),
+	  integer: __webpack_require__(570),
+	  'float': __webpack_require__(571),
+	  array: __webpack_require__(572),
+	  object: __webpack_require__(573),
+	  'enum': __webpack_require__(574),
+	  pattern: __webpack_require__(575),
+	  email: __webpack_require__(576),
+	  url: __webpack_require__(576),
+	  date: __webpack_require__(577),
+	  hex: __webpack_require__(576)
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 561 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61740,11 +61012,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -61782,7 +61054,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 562 */
+/* 559 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61791,17 +61063,17 @@
 	  value: true
 	});
 	exports['default'] = {
-	  required: __webpack_require__(563),
-	  whitespace: __webpack_require__(564),
-	  type: __webpack_require__(565),
-	  range: __webpack_require__(566),
-	  'enum': __webpack_require__(567),
-	  pattern: __webpack_require__(568)
+	  required: __webpack_require__(560),
+	  whitespace: __webpack_require__(561),
+	  type: __webpack_require__(562),
+	  range: __webpack_require__(563),
+	  'enum': __webpack_require__(564),
+	  pattern: __webpack_require__(565)
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 563 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61812,7 +61084,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -61837,7 +61109,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 564 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61848,7 +61120,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -61873,7 +61145,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 565 */
+/* 562 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61884,11 +61156,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _required = __webpack_require__(563);
+	var _required = __webpack_require__(560);
 	
 	var _required2 = _interopRequireDefault(_required);
 	
@@ -61976,7 +61248,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 566 */
+/* 563 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61987,7 +61259,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -62044,7 +61316,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 567 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62055,7 +61327,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -62083,7 +61355,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 568 */
+/* 565 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62094,7 +61366,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -62121,7 +61393,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 569 */
+/* 566 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62132,7 +61404,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62165,7 +61437,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 570 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62176,7 +61448,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62210,7 +61482,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 571 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62221,7 +61493,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62254,7 +61526,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 572 */
+/* 569 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62265,7 +61537,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62298,7 +61570,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 573 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62309,7 +61581,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62343,7 +61615,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 574 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62354,7 +61626,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62388,7 +61660,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 575 */
+/* 572 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62399,11 +61671,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -62437,7 +61709,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 576 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62448,7 +61720,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62481,7 +61753,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 577 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62492,7 +61764,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62527,7 +61799,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 578 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62538,11 +61810,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
-	var _util = __webpack_require__(559);
+	var _util = __webpack_require__(556);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
@@ -62578,7 +61850,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 579 */
+/* 576 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62589,7 +61861,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62603,7 +61875,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 580 */
+/* 577 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62614,7 +61886,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rule = __webpack_require__(562);
+	var _rule = __webpack_require__(559);
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
@@ -62640,7 +61912,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 581 */
+/* 578 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62703,7 +61975,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 582 */
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62848,7 +62120,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 583 */
+/* 580 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62902,7 +62174,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 584 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62919,11 +62191,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcTree = __webpack_require__(585);
+	var _rcTree = __webpack_require__(582);
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var _commonOpenAnimation = __webpack_require__(589);
+	var _commonOpenAnimation = __webpack_require__(586);
 	
 	var _commonOpenAnimation2 = _interopRequireDefault(_commonOpenAnimation);
 	
@@ -62956,7 +62228,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 585 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62967,11 +62239,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _Tree = __webpack_require__(586);
+	var _Tree = __webpack_require__(583);
 	
 	var _Tree2 = _interopRequireDefault(_Tree);
 	
-	var _TreeNode = __webpack_require__(587);
+	var _TreeNode = __webpack_require__(584);
 	
 	var _TreeNode2 = _interopRequireDefault(_TreeNode);
 	
@@ -62981,7 +62253,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 586 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63381,7 +62653,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 587 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63414,7 +62686,7 @@
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _objectAssign = __webpack_require__(588);
+	var _objectAssign = __webpack_require__(585);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -63652,7 +62924,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 588 */
+/* 585 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63697,7 +62969,7 @@
 
 
 /***/ },
-/* 589 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63747,7 +63019,7 @@
 	module.exports = animation;
 
 /***/ },
-/* 590 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63764,7 +63036,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcUpload = __webpack_require__(591);
+	var _rcUpload = __webpack_require__(588);
 	
 	var _rcUpload2 = _interopRequireDefault(_rcUpload);
 	
@@ -63772,11 +63044,11 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _uploadList = __webpack_require__(600);
+	var _uploadList = __webpack_require__(597);
 	
 	var _uploadList2 = _interopRequireDefault(_uploadList);
 	
-	var _getFileItem = __webpack_require__(601);
+	var _getFileItem = __webpack_require__(598);
 	
 	var _getFileItem2 = _interopRequireDefault(_getFileItem);
 	
@@ -63974,16 +63246,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 591 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// export this package's api
 	'use strict';
 	
-	module.exports = __webpack_require__(592);
+	module.exports = __webpack_require__(589);
 
 /***/ },
-/* 592 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63998,11 +63270,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _AjaxUploader = __webpack_require__(593);
+	var _AjaxUploader = __webpack_require__(590);
 	
 	var _AjaxUploader2 = _interopRequireDefault(_AjaxUploader);
 	
-	var _IframeUploader = __webpack_require__(598);
+	var _IframeUploader = __webpack_require__(595);
 	
 	var _IframeUploader2 = _interopRequireDefault(_IframeUploader);
 	
@@ -64056,7 +63328,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 593 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64067,7 +63339,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _superagent = __webpack_require__(594);
+	var _superagent = __webpack_require__(591);
 	
 	var _superagent2 = _interopRequireDefault(_superagent);
 	
@@ -64075,7 +63347,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _uid = __webpack_require__(597);
+	var _uid = __webpack_require__(594);
 	
 	var _uid2 = _interopRequireDefault(_uid);
 	
@@ -64207,15 +63479,15 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 594 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Module dependencies.
 	 */
 	
-	var Emitter = __webpack_require__(595);
-	var reduce = __webpack_require__(596);
+	var Emitter = __webpack_require__(592);
+	var reduce = __webpack_require__(593);
 	
 	/**
 	 * Root reference for iframes.
@@ -65370,7 +64642,7 @@
 
 
 /***/ },
-/* 595 */
+/* 592 */
 /***/ function(module, exports) {
 
 	
@@ -65540,7 +64812,7 @@
 
 
 /***/ },
-/* 596 */
+/* 593 */
 /***/ function(module, exports) {
 
 	
@@ -65569,7 +64841,7 @@
 	};
 
 /***/ },
-/* 597 */
+/* 594 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -65588,7 +64860,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 598 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -65603,11 +64875,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _uid = __webpack_require__(597);
+	var _uid = __webpack_require__(594);
 	
 	var _uid2 = _interopRequireDefault(_uid);
 	
-	var _warning = __webpack_require__(599);
+	var _warning = __webpack_require__(596);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -65784,7 +65056,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 599 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -65851,7 +65123,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(81)))
 
 /***/ },
-/* 600 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -65935,7 +65207,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 601 */
+/* 598 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -65960,7 +65232,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 602 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -66048,7 +65320,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 603 */
+/* 600 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -66069,7 +65341,7 @@
 	
 	var _rcMenu2 = _interopRequireDefault(_rcMenu);
 	
-	var _commonOpenAnimation = __webpack_require__(589);
+	var _commonOpenAnimation = __webpack_require__(586);
 	
 	var _commonOpenAnimation2 = _interopRequireDefault(_commonOpenAnimation);
 	
@@ -66111,7 +65383,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 604 */
+/* 601 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -66189,7 +65461,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 605 */
+/* 602 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -66228,7 +65500,7 @@
 		"license": "MIT",
 		"dependencies": {
 			"css-animation": "~1.1.0",
-			"enter-animation": "~0.5.0",
+			"rc-queue-anim": "~0.10.5",
 			"gregorian-calendar": "~3.0.0",
 			"gregorian-calendar-format": "~3.0.1",
 			"object-assign": "~4.0.1",
@@ -66308,7 +65580,7 @@
 	};
 
 /***/ },
-/* 606 */
+/* 603 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = SemVer;
