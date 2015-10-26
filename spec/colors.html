@@ -532,18 +532,18 @@ var TintShadeTool = React.createClass({
       React.createElement(
         'div',
         null,
-        React.createElement('input', { className: 'ant-input', style: { width: 120, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
-        React.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
-        React.createElement(
-          'span',
-          { style: { margin: '0 132px 0 8px' } },
-          '%'
-        ),
         React.createElement('div', { style: { width: 60, borderRadius: 6, height: 28, backgroundColor: this.state.result, display: 'inline-block', verticalAlign: 'middle', marginRight: 8 } }),
         React.createElement(
           'span',
-          null,
+          { style: { marginRight: 140, fontFamily: 'Consolas' } },
           this.state.result
+        ),
+        React.createElement('input', { className: 'ant-input', style: { width: 80, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
+        React.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
+        React.createElement(
+          'span',
+          { style: { margin: '0 0 0 8px' } },
+          '%'
         )
       ),
       React.createElement(
@@ -556,9 +556,9 @@ var TintShadeTool = React.createClass({
         ),
         React.createElement(
           'div',
-          { style: { width: 400, display: 'inline-block', verticalAlign: 'middle', position: 'relative', top: -1, margin: '0 8px' } },
+          { style: { width: 360, display: 'inline-block', verticalAlign: 'middle', position: 'relative', top: -1, margin: '0 8px' } },
           React.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
-          React.createElement('div', { style: { backgroundColor: '#81D4F9', width: 2, height: 4, position: 'absolute', top: 10, fontSize: 12, textAlign: 'center', left: 202 } })
+          React.createElement('div', { style: { backgroundColor: '#81D4F9', width: 2, height: 4, position: 'absolute', top: 10, fontSize: 12, textAlign: 'center', left: 200 } })
         ),
         React.createElement(
           'span',

@@ -650,20 +650,20 @@ var Progress = antd.Progress.Line;
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(Progress, { percent: "30" }),
-  React.createElement(Progress, { percent: "50", status: "active" }),
-  React.createElement(Progress, { percent: "70", status: "exception" }),
-  React.createElement(Progress, { percent: "100" }),
-  React.createElement(Progress, { percent: "50", showInfo: false })
+  React.createElement(Progress, { percent: 30 }),
+  React.createElement(Progress, { percent: 50, status: "active" }),
+  React.createElement(Progress, { percent: 70, status: "exception" }),
+  React.createElement(Progress, { percent: 100 }),
+  React.createElement(Progress, { percent: 50, showInfo: false })
 ), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"100"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">showInfo</span>=<span class="value">{false}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{30}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{100}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">showInfo</span>=<span class="value">{false}</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-line'));</span></code></pre></div>
   </div>
@@ -684,18 +684,18 @@ var Progress = antd.Progress.Line;
 ReactDOM.render(React.createElement(
   "div",
   { style: { width: 170 } },
-  React.createElement(Progress, { percent: "30", strokeWidth: "5" }),
-  React.createElement(Progress, { percent: "50", strokeWidth: "5", status: "active" }),
-  React.createElement(Progress, { percent: "70", strokeWidth: "5", status: "exception" }),
-  React.createElement(Progress, { percent: "100", strokeWidth: "5" })
+  React.createElement(Progress, { percent: 30, strokeWidth: 5 }),
+  React.createElement(Progress, { percent: 50, strokeWidth: 5, status: "active" }),
+  React.createElement(Progress, { percent: 70, strokeWidth: 5, status: "exception" }),
+  React.createElement(Progress, { percent: 100, strokeWidth: 5 })
 ), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{</span> <span class="attribute">width:</span> <span class="attribute">170</span> }}&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"30"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"50"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">"100"</span> <span class="attribute">strokeWidth</span>=<span class="value">"5"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{30}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{100}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-line-mini'));</span></code></pre></div>
   </div>
@@ -822,16 +822,16 @@ var ProgressCircle = antd.Progress.Circle;
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(ProgressCircle, { percent: "30" }),
-  React.createElement(ProgressCircle, { percent: "70", status: "exception" }),
-  React.createElement(ProgressCircle, { percent: "100" })
+  React.createElement(ProgressCircle, { percent: 30 }),
+  React.createElement(ProgressCircle, { percent: 70, status: "exception" }),
+  React.createElement(ProgressCircle, { percent: 100 })
 ), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"100"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{30}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{100}</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle'));</span></code></pre></div><style>
 .ant-progress-circle-wrap,
@@ -859,16 +859,16 @@ var ProgressCircle = antd.Progress.Circle;
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(ProgressCircle, { percent: "30", width: "80" }),
-  React.createElement(ProgressCircle, { percent: "70", width: "80", status: "exception" }),
-  React.createElement(ProgressCircle, { percent: "100", width: "80" })
+  React.createElement(ProgressCircle, { percent: 30, width: 80 }),
+  React.createElement(ProgressCircle, { percent: 70, width: 80, status: "exception" }),
+  React.createElement(ProgressCircle, { percent: 100, width: 80 })
 ), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"30"</span> <span class="attribute">width</span>=<span class="value">"80"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">width</span>=<span class="value">"80"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"100"</span> <span class="attribute">width</span>=<span class="value">"80"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{30}</span> <span class="attribute">width</span>=<span class="value">{80}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">width</span>=<span class="value">{80}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{100}</span> <span class="attribute">width</span>=<span class="value">{80}</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle-mini'));</span></code></pre></div>
   </div>

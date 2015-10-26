@@ -8,16 +8,16 @@ var ProgressCircle = antd.Progress.Circle;
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(ProgressCircle, { percent: "30" }),
-  React.createElement(ProgressCircle, { percent: "70", status: "exception" }),
-  React.createElement(ProgressCircle, { percent: "100" })
+  React.createElement(ProgressCircle, { percent: 30 }),
+  React.createElement(ProgressCircle, { percent: 70, status: "exception" }),
+  React.createElement(ProgressCircle, { percent: 100 })
 ), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"30"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"70"</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">"100"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{30}</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{100}</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle'));</span></code></pre></div><style>
 .ant-progress-circle-wrap,
