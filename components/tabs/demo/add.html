@@ -18,9 +18,6 @@ var addStyle = {
   pointerEvents: 'auto',
   color: 'black'
 };
-var extraStyle = {
-  float: 'right'
-};
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -79,13 +76,9 @@ var Test = React.createClass({
         onChange: this.onChange,
         activeKey: this.state.activeKey,
         tabBarExtraContent: React.createElement(
-          'div',
-          { style: extraStyle },
-          React.createElement(
-            Button,
-            { type: 'primary' },
-            '其它操作'
-          )
+          Button,
+          { type: 'primary' },
+          '其它操作'
         ) },
       this.state.tabs.map(function (t) {
         return React.createElement(
@@ -118,9 +111,6 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 <span class="keyword">var</span> addStyle = {
   pointerEvents: <span class="string">'auto'</span>,
   color: <span class="string">'black'</span>,
-};
-<span class="keyword">var</span> extraStyle = {
-  float: <span class="string">'right'</span>
 };
 
 <span class="keyword">var</span> Test = React.createClass({
@@ -173,7 +163,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs
 </span>    <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>
     <span class="attribute">activeKey</span>=<span class="value">{this.state.activeKey}</span>
-    <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;div</span> <span class="attribute">style</span>=<span class="value">{extraStyle}</span>&gt;</span><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
+    <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>}&gt;
     {
       this.state.tabs.map((t)=&gt;{
         return <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{t.title}</span> <span class="attribute">tab</span>=<span class="value">{&lt;div</span>&gt;</span>{t.title} <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,t.title)}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
