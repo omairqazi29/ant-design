@@ -37774,16 +37774,19 @@
 	    var props = this.props;
 	    var defaultFooter = [_react2['default'].createElement(
 	      _button.Button,
-	      { key: 'cancel', size: 'lg', onClick: this.handleCancel },
-	      '取 消'
+	      { key: 'cancel',
+	        type: 'ghost',
+	        size: 'large',
+	        onClick: this.handleCancel },
+	      '取消'
 	    ), _react2['default'].createElement(
 	      _button.Button,
 	      { key: 'confirm',
 	        type: 'primary',
-	        size: 'lg',
+	        size: 'large',
 	        loading: this.state.confirmLoading,
 	        onClick: this.handleOk },
-	      '确 定'
+	      '确定'
 	    )];
 	    var footer = props.footer || defaultFooter;
 	    var visible = this.state.visible;
@@ -40200,12 +40203,12 @@
 	    { className: 'ant-confirm-btns' },
 	    _react2['default'].createElement(
 	      _button.Button,
-	      { size: 'lg', onClick: onCancel },
+	      { type: 'ghost', size: 'large', onClick: onCancel },
 	      '取 消'
 	    ),
 	    _react2['default'].createElement(
 	      _button.Button,
-	      { type: 'primary', size: 'lg', onClick: onOk },
+	      { type: 'primary', size: 'large', onClick: onOk },
 	      '确 定'
 	    )
 	  );
@@ -40216,12 +40219,12 @@
 	      { className: 'ant-confirm-btns' },
 	      _react2['default'].createElement(
 	        _button.Button,
-	        { size: 'lg', onClick: onCancel },
+	        { type: 'ghost', size: 'large', onClick: onCancel },
 	        '取 消'
 	      ),
 	      _react2['default'].createElement(
 	        _button.Button,
-	        { type: 'primary', size: 'lg', onClick: onOk },
+	        { type: 'primary', size: 'large', onClick: onOk },
 	        '确 定'
 	      )
 	    );
@@ -40231,7 +40234,7 @@
 	      { className: 'ant-confirm-btns' },
 	      _react2['default'].createElement(
 	        _button.Button,
-	        { type: 'primary', size: 'lg', onClick: onOk },
+	        { type: 'primary', size: 'large', onClick: onOk },
 	        '知道了'
 	      )
 	    );
@@ -48680,13 +48683,13 @@
 	          { className: prefixCls + '-buttons' },
 	          _react2['default'].createElement(
 	            _button.Button,
-	            { onClick: this.cancel, size: 'sm' },
-	            '取 消'
+	            { onClick: this.cancel, type: 'ghost', size: 'small' },
+	            '取消'
 	          ),
 	          _react2['default'].createElement(
 	            _button.Button,
-	            { onClick: this.confirm, type: 'primary', size: 'sm' },
-	            '确 定'
+	            { onClick: this.confirm, type: 'primary', size: 'small' },
+	            '确定'
 	          )
 	        )
 	      )

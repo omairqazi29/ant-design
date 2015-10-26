@@ -833,11 +833,11 @@ var Test = React.createClass({
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
             Button,
-            { key: "back", size: "lg", onClick: this.handleCancel },
+            { key: "back", type: "ghost", size: "large", onClick: this.handleCancel },
             "返 回"
           ), React.createElement(
             Button,
-            { key: "submit", type: "primary", size: "lg", loading: this.state.loading, onClick: this.handleOk },
+            { key: "submit", type: "primary", size: "large", loading: this.state.loading, onClick: this.handleOk },
             "提 交"
           )] },
         React.createElement(
@@ -903,8 +903,8 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
        <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
        <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
         <span class="attribute">footer</span>=<span class="value">{[</span>
-          &lt;<span class="attribute">Button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+          &lt;<span class="attribute">Button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>,
+          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
             提 交
           <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         ]}&gt;

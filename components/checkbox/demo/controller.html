@@ -38,14 +38,14 @@ var App = React.createClass({
         null,
         React.createElement(
           Button,
-          { type: 'primary', size: 'sm',
+          { type: 'primary', size: 'small',
             onClick: this.toggleChecked },
           !this.state.checked ? "选中" : "取消"
         ),
         React.createElement(
           Button,
           { style: { 'marginLeft': '10px' },
-            type: 'primary', size: 'sm',
+            type: 'primary', size: 'small',
             onClick: this.toggleDisable },
           !this.state.disabled ? "不可用" : "可用"
         )
@@ -90,12 +90,12 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
         <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
       <span class="tag">&lt;<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
+        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleChecked}</span>&gt;</span>
           {!this.state.checked ? "选中":"取消"}
         <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
-          <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>
+          <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>
           <span class="attribute">onClick</span>=<span class="value">{this.toggleDisable}</span>&gt;</span>
           {!this.state.disabled ? "不可用":"可用"}
         <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>

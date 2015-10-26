@@ -667,6 +667,7 @@ document.getElementById('components-button-demo-basic'))</span></code></pre></di
     </div>
     <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>
 <p>通过设置 <code>type</code> 为 <code>primary</code> <code>ghost</code> 可分别创建主按钮、幽灵按钮，若不设置 <code>type</code> 值则为次按钮。不同的样式可以用来区别其重要程度。</p>
+<p>主按钮和次按钮可独立使用，需要强引导用主按钮。幽灵按钮用于和主按钮组合。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-size">
@@ -742,7 +743,7 @@ var App = React.createClass({
       null,
       React.createElement(
         Button,
-        { type: "primary", size: "lg", loading: true },
+        { type: "primary", size: "large", loading: true },
         "加载中"
       ),
       React.createElement(
@@ -752,7 +753,7 @@ var App = React.createClass({
       ),
       React.createElement(
         Button,
-        { type: "primary", size: "sm", loading: true },
+        { type: "primary", size: "small", loading: true },
         "加载中"
       ),
       React.createElement("br", null),
@@ -780,13 +781,13 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span> <span class="attribute">loading</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">loading</span>&gt;</span>
         加载中
       <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">"true"</span>&gt;</span>
         加载中
       <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span> <span class="attribute">loading</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">loading</span>&gt;</span>
         加载中
       <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
@@ -825,12 +826,12 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(
     Button,
-    { type: "primary", shape: "circle", size: "lg" },
+    { type: "primary", shape: "circle", size: "large" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement(
     Button,
-    { type: "primary", size: "lg" },
+    { type: "primary", size: "large" },
     React.createElement(Icon, { type: "search" }),
     "大按钮"
   ),
@@ -847,19 +848,19 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     Button,
-    { type: "primary", shape: "circle", size: "sm" },
+    { type: "primary", shape: "circle", size: "small" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement(
     Button,
-    { type: "primary", size: "sm" },
+    { type: "primary", size: "small" },
     React.createElement(Icon, { type: "search" }),
     "小按钮"
   ),
   React.createElement("br", null),
   React.createElement(
     Button,
-    { type: "ghost", shape: "circle-outline", size: "lg" },
+    { type: "ghost", shape: "circle-outline", size: "large" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement(
@@ -869,17 +870,17 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     Button,
-    { type: "ghost", shape: "circle-outline", size: "sm" },
+    { type: "ghost", shape: "circle-outline", size: "small" },
     React.createElement(Icon, { type: "search" })
   )
 ), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> Icon = antd.Icon;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   大按钮
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -892,23 +893,23 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   中按钮
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   小按钮
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 
   <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
 
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
@@ -942,7 +943,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(
     Button,
-    { type: "primary", shape: "circle", size: "lg" },
+    { type: "primary", shape: "circle", size: "large" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement(
@@ -952,13 +953,13 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     Button,
-    { type: "primary", shape: "circle", size: "sm" },
+    { type: "primary", shape: "circle", size: "small" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement("br", null),
   React.createElement(
     Button,
-    { type: "ghost", shape: "circle-outline", size: "lg" },
+    { type: "ghost", shape: "circle-outline", size: "large" },
     React.createElement(Icon, { type: "search" })
   ),
   React.createElement(
@@ -968,30 +969,30 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     Button,
-    { type: "ghost", shape: "circle-outline", size: "sm" },
+    { type: "ghost", shape: "circle-outline", size: "small" },
     React.createElement(Icon, { type: "search" })
   )
 ), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
 <span class="keyword">var</span> Icon = antd.Icon;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"lg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"sm"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
