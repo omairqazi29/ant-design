@@ -3560,6 +3560,24 @@ fieldset[disabled] .ant-btn-ghost.active {
   background-color: #e5e5e5;
   line-height: 0;
 }
+.ant-dropdown.slide-up-enter.slide-up-enter-active.ant-dropdown-placement-bottomLeft,
+.ant-dropdown.slide-up-appear.slide-up-appear-active.ant-dropdown-placement-bottomLeft {
+  -webkit-animation-name: antSlideUpIn;
+          animation-name: antSlideUpIn;
+}
+.ant-dropdown.slide-up-enter.slide-up-enter-active.ant-dropdown-placement-topLeft,
+.ant-dropdown.slide-up-appear.slide-up-appear-active.ant-dropdown-placement-topLeft {
+  -webkit-animation-name: antSlideDownIn;
+          animation-name: antSlideDownIn;
+}
+.ant-dropdown.slide-up-leave.slide-up-leave-active.ant-dropdown-placement-bottomLeft {
+  -webkit-animation-name: antSlideUpOut;
+          animation-name: antSlideUpOut;
+}
+.ant-dropdown.slide-up-leave.slide-up-leave-active.ant-dropdown-placement-topLeft {
+  -webkit-animation-name: antSlideDownOut;
+          animation-name: antSlideDownOut;
+}
 .ant-dropdown-link .anticon-down {
   display: inline-block;
   font-size: 0.58333333;
