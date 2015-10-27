@@ -76,14 +76,17 @@ var Test = React.createClass({
         data: {
           city: 'hz'
         }
-      })
+      }),
+      pagination: {
+        current: 1
+      }
     });
   },
   render: function render() {
     return React.createElement(
       'div',
       null,
-      React.createElement(Table, { columns: columns, dataSource: this.state.dataSource }),
+      React.createElement(Table, { columns: columns, dataSource: this.state.dataSource, pagination: this.state.pagination }),
       React.createElement(
         Button,
         { type: 'primary', onClick: this.refresh },
@@ -170,12 +173,15 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
         data: {
           city: <span class="string">'hz'</span>
         }
-      })
+      }),
+      pagination: {
+        current: <span class="number">1</span>
+      }
     });
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> <span class="attribute">pagination</span>=<span class="value">{this.state.pagination}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
         重新加载数据
       <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>

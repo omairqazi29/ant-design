@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="一个 UI 设计语言"/>
     <title>
-下载  - Ant Design
+安装  - Ant Design
 </title>
     <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="../dist/demo.css">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/tomorrow.css">
+    <!--[if IE 8]>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
+    <![endif]-->
     <script>
       (function (con) {
         'use strict';
@@ -274,8 +277,8 @@
         </a>
       </li>
       <li class="current">
-        <a href="download" class="">
-          下载
+        <a href="install" class="">
+          安装
           <span class="chinese"></span>
         </a>
       </li>
@@ -552,42 +555,24 @@
  
 <section class="main-container">
   <article class="markdown">
-    <h1>下载 </h1>
-    <p>可以使用 npm 进行安装或直接下载文件。</p>
-<h2 id="从-npm-安装">从 npm 安装<a href="#从-npm-安装" class="anchor">#</a> </h2><p><strong>我们推荐使用 npm 的方式进行开发</strong>，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。</p>
+    <h1>安装 </h1>
+    <h2 id="使用-npm-安装">使用 npm 安装<a href="#使用-npm-安装" class="anchor">#</a> </h2><p><strong>我们推荐使用 npm 的方式进行开发</strong>，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。</p>
 <p>可以通过 npm 直接安装到本地，使用 <code>require</code> 或 <code>import</code> 进行引用。</p>
+<p>稳定版 <span class="versions" id="stable-version"></span>：</p>
 <p><a href="https://www.npmjs.org/package/antd"><img src="http://img.shields.io/npm/v/antd.svg?style=flat-square" alt="npm package"></a></p>
-<div class="highlight"><pre><code class="bash">$ npm install antd --save</code></pre></div><p>安装最新的开发版本：</p>
+<div class="highlight"><pre><code class="bash">$ npm install antd --save</code></pre></div><p>安装最新的开发版本 <span class="versions" id="latest-version"></span>：</p>
 <p><a href="https://www.npmjs.org/package/antd"><img src="https://cnpmjs.org/badge/v/antd.svg?&amp;tag=beta&amp;subject=npm" alt=""></a></p>
-<div class="highlight"><pre><code class="bash">$ npm install antd@beta --save</code></pre></div><h3 id="开发工具">开发工具<a href="#开发工具" class="anchor">#</a> </h3><p>我们提供了开发构建的命令行工具，可以安装到全局直接使用。</p>
-<div class="highlight"><pre><code class="bash">$ npm install antd-bin@<span class="number">0.6</span>.x -g</code></pre></div><p>或者安装到仓库下，使用 <code>package.json</code> 的 <code>scripts</code> 字段来配置命令：</p>
+<div class="highlight"><pre><code class="bash">$ npm install antd@beta --save</code></pre></div><blockquote>
+<p><strong>历史版本</strong>：<a href="https://github.com/ant-design/ant-design/releases">https://github.com/ant-design/ant-design/releases</a></p>
+</blockquote>
+<h2 id="开发工具">开发工具<a href="#开发工具" class="anchor">#</a> </h2><p>我们提供了开发构建的命令行工具，可以安装到全局直接使用。</p>
+<div class="highlight"><pre><code class="bash">$ npm install antd-bin -g</code></pre></div><p>或者安装到仓库下，使用 <code>package.json</code> 的 <code>scripts</code> 字段来配置命令：</p>
 <div class="highlight"><pre><code class="bash">$ npm install antd-bin --save-dev</code></pre></div><div class="highlight"><pre><code class="javascript"><span class="string">"scripts"</span>: {
   <span class="string">"dev"</span>: <span class="string">"antd server"</span>,
   <span class="string">"build"</span>: <span class="string">"antd build"</span>
-}</code></pre></div><h2 id="直接下载">直接下载<a href="#直接下载" class="anchor">#</a> </h2><ul>
-<li><p><strong>稳定版</strong> <span class="versions" id="stable-version"></span></p>
-<p><a id="stable-link" href="" target="_blank">下载</a></p>
-</li>
-<li><p><strong>开发版</strong> <span class="versions" id="latest-version"></span></p>
-<p>开发版并不稳定，随时可能变更。</p>
-<ul id="latest-links">
-<li>
-  <a href="http://ant.design/dist/antd.js">antd.js</a>
-</li>
-<li>
-  <a href="http://ant.design/dist/antd.min.js">antd.min.js</a>
-</li>
-<li>
-  <a href="http://ant.design/dist/antd.css">antd.css</a>
-</li>
-<li>
-  <a href="http://ant.design/dist/antd.min.css">antd.min.css</a>
-</li>
-</ul>
-</li>
-<li><p><strong>历史版本</strong>：<a href="https://github.com/ant-design/ant-design/releases">https://github.com/ant-design/ant-design/releases</a></p>
-</li>
-</ul>
+}</code></pre></div><blockquote>
+<p>更多<a href="https://github.com/ant-design/antd-bin/">使用方式</a>。</p>
+</blockquote>
 <style>
 .versions {
   font-weight: bold;

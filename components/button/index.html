@@ -17,6 +17,9 @@ Button 按钮 - Ant Design
     <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
+    <!--[if IE 8]>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
+    <![endif]-->
     <script>
       (function (con) {
         'use strict';
@@ -274,8 +277,8 @@ Button 按钮 - Ant Design
         </a>
       </li>
       <li class="">
-        <a href="../../docs/download" class="">
-          下载
+        <a href="../../docs/install" class="">
+          安装
           <span class="chinese"></span>
         </a>
       </li>
@@ -614,7 +617,12 @@ Button 按钮 - Ant Design
 <ul>
 <li><code>&lt;Button&gt;Hello world!&lt;/Button&gt;</code> 最终会被渲染为 <code>&lt;button&gt;Hello world!&lt;/button&gt;</code>，并且除了上表中的属性，其它属性都会直接传到 <code>&lt;button&gt;&lt;/button&gt;</code></li>
 </ul>
-
+<h3 id="ie8-border-radius-support">IE8 border radius support<a href="#ie8-border-radius-support" class="anchor">#</a> </h3><p>Ant Design 视觉上采用渐进降级的方案，在 IE8 下圆角按钮将降级为直角。
+如果强烈需要圆角按钮，我们提供了 <a href="http://css3pie.com/">css3pie</a> 的兼容方案。</p>
+<p>使用时只需在 html 头部加入以下代码即可。</p>
+<div class="highlight"><pre><code class="xml"><span class="comment">&lt;!--[if IE 8]&gt;
+&lt;script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span></code></pre></div>
   </article>
 <h2 class="component-demos">
   组件演示

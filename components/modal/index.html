@@ -17,6 +17,9 @@ Modal 对话框 - Ant Design
     <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
+    <!--[if IE 8]>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
+    <![endif]-->
     <script>
       (function (con) {
         'use strict';
@@ -274,8 +277,8 @@ Modal 对话框 - Ant Design
         </a>
       </li>
       <li class="">
-        <a href="../../docs/download" class="">
-          下载
+        <a href="../../docs/install" class="">
+          安装
           <span class="chinese"></span>
         </a>
       </li>
@@ -696,7 +699,6 @@ var App = React.createClass({
   handleOk: function handleOk() {
     console.log('点击了确定');
     this.setState({
-      confirmLoading: false,
       visible: false
     });
   },
@@ -717,7 +719,7 @@ var App = React.createClass({
       React.createElement(
         Modal,
         { title: "第一个 Modal", visible: this.state.visible,
-          confirmLoading: this.state.confirmLoading, onOk: this.handleOk, onCancel: this.handleCancel },
+          onOk: this.handleOk, onCancel: this.handleCancel },
         React.createElement(
           "p",
           null,
@@ -753,7 +755,6 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   handleOk() {
     console.log(<span class="string">'点击了确定'</span>);
     <span class="keyword">this</span>.setState({
-      confirmLoading: <span class="literal">false</span>,
       visible: <span class="literal">false</span>
     });
   },
@@ -766,7 +767,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span> <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
+        <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
@@ -984,9 +985,9 @@ ReactDOM.render(
   </div>
 </div>
   </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-custom">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-async">
   <div class="code-box-demo">
-    <div id="components-modal-demo-custom"></div>
+    <div id="components-modal-demo-async"></div>
     <script>(function(){'use strict';
 
 var Modal = antd.Modal;
@@ -1012,11 +1013,13 @@ var Test = React.createClass({
     var _this = this;
 
     this.setState({
-      ModalText: '对话框将在两秒后关闭'
+      ModalText: '对话框将在两秒后关闭',
+      confirmLoading: true
     });
     setTimeout(function () {
       _this.setState({
-        visible: false
+        visible: false,
+        confirmLoading: false
       });
     }, 2000);
   },
@@ -1040,6 +1043,7 @@ var Test = React.createClass({
         { title: '对话框标题',
           visible: this.state.visible,
           onOk: this.handleOk,
+          confirmLoading: this.state.confirmLoading,
           onCancel: this.handleCancel },
         React.createElement(
           'p',
@@ -1051,7 +1055,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-custom'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-async'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
 <span class="keyword">var</span> Button = antd.Button;
 
 <span class="keyword">var</span> ModalText = <span class="string">'对话框的内容'</span>;
@@ -1070,11 +1074,13 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   },
   handleOk() {
     <span class="keyword">this</span>.setState({
-      ModalText: <span class="string">'对话框将在两秒后关闭'</span>
+      ModalText: <span class="string">'对话框将在两秒后关闭'</span>,
+      confirmLoading: <span class="literal">true</span>
     });
     setTimeout(() =&gt; {
       <span class="keyword">this</span>.setState({
-        visible: <span class="literal">false</span>
+        visible: <span class="literal">false</span>,
+        confirmLoading: <span class="literal">false</span>
       });
     }, <span class="number">2000</span>);
   },
@@ -1090,6 +1096,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"对话框标题"</span>
         <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
         <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span>
+        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span>
         <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>{this.state.ModalText}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
       <span class="tag">&lt;/<span class="title">Modal</span>&gt;</span>
@@ -1097,13 +1104,13 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-custom'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-async'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-custom">异步关闭</a>
+      <a href="#demo-async">异步关闭</a>
     </div>
-    <p>点击确定后异步关闭对话框。</p>
+    <p>点击确定后异步关闭对话框，例如提交表单。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-confirm">

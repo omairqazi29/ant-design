@@ -20,7 +20,6 @@ var App = React.createClass({
   handleOk: function handleOk() {
     console.log('点击了确定');
     this.setState({
-      confirmLoading: false,
       visible: false
     });
   },
@@ -41,7 +40,7 @@ var App = React.createClass({
       React.createElement(
         Modal,
         { title: "第一个 Modal", visible: this.state.visible,
-          confirmLoading: this.state.confirmLoading, onOk: this.handleOk, onCancel: this.handleCancel },
+          onOk: this.handleOk, onCancel: this.handleCancel },
         React.createElement(
           "p",
           null,
@@ -77,7 +76,6 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   handleOk() {
     console.log(<span class="string">'点击了确定'</span>);
     <span class="keyword">this</span>.setState({
-      confirmLoading: <span class="literal">false</span>,
       visible: <span class="literal">false</span>
     });
   },
@@ -90,7 +88,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
       <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">title</span>=<span class="value">"第一个 Modal"</span> <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-        <span class="attribute">confirmLoading</span>=<span class="value">{this.state.confirmLoading}</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
+        <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
         <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>

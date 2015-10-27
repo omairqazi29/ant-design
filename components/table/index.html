@@ -17,6 +17,9 @@ Table 表格 - Ant Design
     <link rel="stylesheet" href="../../dist/demo.css">
     <link rel="stylesheet" href="../../static/style.css">
     <link rel="stylesheet" href="../../static/tomorrow.css">
+    <!--[if IE 8]>
+    <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
+    <![endif]-->
     <script>
       (function (con) {
         'use strict';
@@ -274,8 +277,8 @@ Table 表格 - Ant Design
         </a>
       </li>
       <li class="">
-        <a href="../../docs/download" class="">
-          下载
+        <a href="../../docs/install" class="">
+          安装
           <span class="chinese"></span>
         </a>
       </li>
@@ -1550,235 +1553,6 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Tabl
 <p>对某一列数据进行排序，通过指定列的 <code>sorter</code> 函数即可启动排序按钮。<code>sorter: function(a, b) { ... }</code>， a、b 为比较的两个列数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-ajax-props">
-  <div class="code-box-demo">
-    <div id="components-table-demo-ajax-props"></div>
-    <script>(function(){'use strict';
-
-var Table = antd.Table;
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name',
-  filters: [{
-    text: '姓李的',
-    value: '李'
-  }, {
-    text: '姓胡的',
-    value: '胡'
-  }]
-}, {
-  title: '年龄',
-  dataIndex: 'age',
-  sorter: true
-}, {
-  title: '住址',
-  dataIndex: 'address'
-}];
-
-var dataSource = new Table.DataSource({
-  url: "/components/table/demo/data.json",
-  resolve: function resolve(result) {
-    return result.data;
-  },
-  data: {},
-  // 和后台接口返回的分页数据进行适配
-  getPagination: function getPagination(result) {
-    return {
-      total: result.totalCount,
-      pageSize: result.pageSize
-    };
-  },
-  // 和后台接口接收的参数进行适配
-  // 参数里提供了分页、筛选、排序的信息
-  getParams: function getParams(pagination, filters, sorter) {
-    console.log('getParams 的参数是：', pagination, filters, sorter);
-    var params = {
-      pageSize: pagination.pageSize,
-      currentPage: pagination.current,
-      sortField: sorter.field,
-      sortOrder: sorter.order
-    };
-    for (var key in filters) {
-      params[key] = filters[key];
-    }
-    console.log('请求参数：', params);
-    return params;
-  }
-});
-
-var rowSelection = {
-  getCheckboxProps: function getCheckboxProps(value) {
-    return {
-      defaultValue: value.name === '胡彦祖ajax2', // 配置默认勾选的列
-      disabled: value.name === '李大嘴ajax3' // 配置无法勾选的列
-    };
-  },
-  onSelect: function onSelect(record, selected, selectedRows) {
-    console.log(record, selected, selectedRows);
-  },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
-  }
-};
-
-var Test = React.createClass({
-  displayName: 'Test',
-
-  getInitialState: function getInitialState() {
-    return {
-      dataSource: dataSource
-    };
-  },
-  refresh: function refresh() {
-    this.setState({
-      dataSource: dataSource.clone()
-    });
-  },
-  changeAndRefresh: function changeAndRefresh() {
-    // 可以修改原来的 dataSource 再发请求
-    this.setState({
-      dataSource: dataSource.clone({
-        data: {
-          city: 'hz'
-        }
-      })
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: this.state.dataSource }),
-      React.createElement(
-        'button',
-        { className: 'ant-btn ant-btn-primary', onClick: this.refresh },
-        '重新加载数据'
-      ),
-      ' ',
-      React.createElement(
-        'button',
-        { className: 'ant-btn', onClick: this.changeAndRefresh },
-        '加载 city=hz 的数据'
-      )
-    );
-  }
-});
-
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-
-<span class="keyword">var</span> columns = [{
-  title: <span class="string">'姓名'</span>,
-  dataIndex: <span class="string">'name'</span>,
-  filters: [{
-    text: <span class="string">'姓李的'</span>,
-    value: <span class="string">'李'</span>
-  }, {
-    text: <span class="string">'姓胡的'</span>,
-    value: <span class="string">'胡'</span>
-  }]
-}, {
-  title: <span class="string">'年龄'</span>,
-  dataIndex: <span class="string">'age'</span>,
-  sorter: <span class="literal">true</span>
-}, {
-  title: <span class="string">'住址'</span>,
-  dataIndex: <span class="string">'address'</span>
-}];
-
-<span class="keyword">var</span> dataSource = <span class="keyword">new</span> Table.DataSource({
-  url: <span class="string">"/components/table/demo/data.json"</span>,
-  resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
-    <span class="keyword">return</span> result.data;
-  },
-  data: {},
-  <span class="comment">// 和后台接口返回的分页数据进行适配</span>
-  getPagination: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
-    <span class="keyword">return</span> {
-      total: result.totalCount,
-      pageSize: result.pageSize
-    }
-  },
-  <span class="comment">// 和后台接口接收的参数进行适配</span>
-  <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
-  getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
-    console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
-    <span class="keyword">var</span> params = {
-      pageSize: pagination.pageSize,
-      currentPage: pagination.current,
-      sortField: sorter.field,
-      sortOrder: sorter.order
-    };
-    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filters) {
-      params[key] = filters[key];
-    }
-    console.log(<span class="string">'请求参数：'</span>, params);
-    <span class="keyword">return</span> params;
-  }
-});
-
-
-<span class="keyword">var</span> rowSelection = {
-  getCheckboxProps: <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> {</span>
-    <span class="keyword">return</span> {
-      defaultValue: value.name === <span class="string">'胡彦祖ajax2'</span>, <span class="comment">// 配置默认勾选的列</span>
-      disabled: value.name === <span class="string">'李大嘴ajax3'</span>    <span class="comment">// 配置无法勾选的列</span>
-    }
-  },
-  onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
-    console.log(record, selected, selectedRows);
-  },
-  onSelectAll: <span class="function"><span class="keyword">function</span><span class="params">(selected, selectedRows)</span> {</span>
-    console.log(selected, selectedRows);
-  }
-};
-
-<span class="keyword">var</span> Test = React.createClass({
-  getInitialState() {
-    <span class="keyword">return</span> {
-      dataSource: dataSource
-    };
-  },
-  refresh() {
-    <span class="keyword">this</span>.setState({
-      dataSource: dataSource.clone()
-    });
-  },
-  changeAndRefresh() {
-    <span class="comment">// 可以修改原来的 dataSource 再发请求</span>
-    <span class="keyword">this</span>.setState({
-      dataSource: dataSource.clone({
-        data: {
-          city: <span class="string">'hz'</span>
-        }
-      })
-    });
-  },
-  render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn ant-btn-primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
-        重新加载数据
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-      &amp;nbsp;
-      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">className</span>=<span class="value">"ant-btn"</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
-        加载 city=hz 的数据
-      <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
-  }
-});
-
-
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax-props'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-ajax-props">配置动态加载数据</a>
-    </div>
-    <p>远程读取的表格是<strong>更为常见的模式</strong>，下面的表格使用了 <code>dataSource</code> 对象和远程数据源绑定和适配，并具有筛选、排序等功能以及页面 loading 效果。</p>
-<p><strong>注意，此示例是静态数据模拟，数据并不准确，请打开网络面板查看请求。</strong></p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-ajax">
   <div class="code-box-demo">
     <div id="components-table-demo-ajax"></div>
@@ -1857,14 +1631,17 @@ var Test = React.createClass({
         data: {
           city: 'hz'
         }
-      })
+      }),
+      pagination: {
+        current: 1
+      }
     });
   },
   render: function render() {
     return React.createElement(
       'div',
       null,
-      React.createElement(Table, { columns: columns, dataSource: this.state.dataSource }),
+      React.createElement(Table, { columns: columns, dataSource: this.state.dataSource, pagination: this.state.pagination }),
       React.createElement(
         Button,
         { type: 'primary', onClick: this.refresh },
@@ -1951,12 +1728,15 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
         data: {
           city: <span class="string">'hz'</span>
         }
-      })
+      }),
+      pagination: {
+        current: <span class="number">1</span>
+      }
     });
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> <span class="attribute">pagination</span>=<span class="value">{this.state.pagination}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
         重新加载数据
       <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -2411,7 +2191,7 @@ function expandedRowRender(record) {
 
 var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '年龄', dataIndex: 'age', key: 'age' }, { title: '住址', dataIndex: 'address', key: 'address' }, { title: '操作', dataIndex: '', key: 'x', render: renderAction }];
 
-var data = [{ name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
+var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { key: 2, name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { key: 3, name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
 
 ReactDOM.render(React.createElement(Table, { columns: columns,
   expandedRowRender: expandedRowRender,
@@ -2434,9 +2214,9 @@ ReactDOM.render(React.createElement(Table, { columns: columns,
 ];
 
 <span class="keyword">var</span> data = [
-  {name: <span class="string">'胡彦斌'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园1号'</span>, description: <span class="string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
-  {name: <span class="string">'吴彦祖'</span>, age: <span class="number">42</span>, address: <span class="string">'西湖区湖底公园2号'</span>, description: <span class="string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
-  {name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
+  {key: <span class="number">1</span>, name: <span class="string">'胡彦斌'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园1号'</span>, description: <span class="string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
+  {key: <span class="number">2</span>, name: <span class="string">'吴彦祖'</span>, age: <span class="number">42</span>, address: <span class="string">'西湖区湖底公园2号'</span>, description: <span class="string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
+  {key: <span class="number">3</span>, name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
 ];
 
 ReactDOM.render(
