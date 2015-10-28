@@ -51,7 +51,7 @@
 	var antd = __webpack_require__(274);
 	var React = __webpack_require__(78);
 	var ReactDOM = __webpack_require__(278);
-	var semver = __webpack_require__(550);
+	var semver = __webpack_require__(553);
 	window.antd = antd;
 	window.React = React;
 	window.ReactDOM = ReactDOM;
@@ -23913,10 +23913,12 @@
 	  Timeline: __webpack_require__(548),
 	  Button: __webpack_require__(384).Button,
 	  ButtonGroup: __webpack_require__(384).ButtonGroup,
-	  Icon: __webpack_require__(383)
+	  Icon: __webpack_require__(383),
+	  Row: __webpack_require__(549).Row,
+	  Col: __webpack_require__(549).Col
 	};
 	
-	antd.version = __webpack_require__(549).version;
+	antd.version = __webpack_require__(552).version;
 	
 	module.exports = antd;
 
@@ -59422,10 +59424,6 @@
 	    _classCallCheck(this, AntBadge);
 	
 	    _get(Object.getPrototypeOf(AntBadge.prototype), 'constructor', this).call(this, props);
-	
-	    this.state = {
-	      count: props.count
-	    };
 	  }
 	
 	  _createClass(AntBadge, [{
@@ -59439,14 +59437,14 @@
 	          _react2['default'].createElement('sup', { className: prefixCls + '-dot' })
 	        );
 	      }
-	      var count = this.state.count;
+	      var count = this.props.count;
 	      if (!count) {
 	        return (0, _react.cloneElement)(this.props.children);
 	      } else {
 	        count = count >= 100 ? '99+' : count;
 	        return _react2['default'].createElement(
 	          'span',
-	          _extends({ className: prefixCls, title: this.state.count }, this.props),
+	          _extends({ className: prefixCls, title: count }, this.props),
 	          this.props.children,
 	          _react2['default'].createElement(
 	            'sup',
@@ -59618,6 +59616,153 @@
 
 /***/ },
 /* 549 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _row = __webpack_require__(550);
+	
+	var _row2 = _interopRequireDefault(_row);
+	
+	var _col = __webpack_require__(551);
+	
+	var _col2 = _interopRequireDefault(_col);
+	
+	exports.Row = _row2['default'];
+	exports.Col = _col2['default'];
+
+/***/ },
+/* 550 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	var _react = __webpack_require__(78);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcUtil = __webpack_require__(279);
+	
+	var _rcUtil2 = _interopRequireDefault(_rcUtil);
+	
+	var Row = _react2['default'].createClass({
+	  displayName: 'Row',
+	
+	  propTypes: {
+	    type: _react2['default'].PropTypes.string,
+	    align: _react2['default'].PropTypes.string,
+	    justify: _react2['default'].PropTypes.string,
+	    className: _react2['default'].PropTypes.string,
+	    children: _react2['default'].PropTypes.node
+	  },
+	  render: function render() {
+	    var _rcUtil$classSet;
+	
+	    var _props = this.props;
+	    var type = _props.type;
+	    var justify = _props.justify;
+	    var align = _props.align;
+	    var className = _props.className;
+	
+	    var others = _objectWithoutProperties(_props, ['type', 'justify', 'align', 'className']);
+	
+	    var classes = _rcUtil2['default'].classSet((_rcUtil$classSet = {
+	      'row': true
+	    }, _defineProperty(_rcUtil$classSet, 'row-' + type, type), _defineProperty(_rcUtil$classSet, 'row-' + type + '-' + justify, justify), _defineProperty(_rcUtil$classSet, 'row-' + type + '-' + align, align), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
+	    return _react2['default'].createElement(
+	      'div',
+	      _extends({}, others, { className: classes }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Row;
+	module.exports = exports['default'];
+
+/***/ },
+/* 551 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	var _react = __webpack_require__(78);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcUtil = __webpack_require__(279);
+	
+	var _rcUtil2 = _interopRequireDefault(_rcUtil);
+	
+	var Col = _react2['default'].createClass({
+	  displayName: 'Col',
+	
+	  propTypes: {
+	    span: _react2['default'].PropTypes.string,
+	    order: _react2['default'].PropTypes.string,
+	    offset: _react2['default'].PropTypes.string,
+	    push: _react2['default'].PropTypes.string,
+	    pull: _react2['default'].PropTypes.string,
+	    className: _react2['default'].PropTypes.string,
+	    children: _react2['default'].PropTypes.node
+	  },
+	  render: function render() {
+	    var _rcUtil$classSet;
+	
+	    var _props = this.props;
+	    var span = _props.span;
+	    var order = _props.order;
+	    var offset = _props.offset;
+	    var push = _props.push;
+	    var pull = _props.pull;
+	    var className = _props.className;
+	
+	    var others = _objectWithoutProperties(_props, ['span', 'order', 'offset', 'push', 'pull', 'className']);
+	
+	    var classes = _rcUtil2['default'].classSet((_rcUtil$classSet = {}, _defineProperty(_rcUtil$classSet, 'col-' + span, span), _defineProperty(_rcUtil$classSet, 'col-order-' + order, order), _defineProperty(_rcUtil$classSet, 'col-offset-' + offset, offset), _defineProperty(_rcUtil$classSet, 'col-push-' + push, push), _defineProperty(_rcUtil$classSet, 'col-pull-' + pull, pull), _defineProperty(_rcUtil$classSet, className, className), _rcUtil$classSet));
+	    return _react2['default'].createElement(
+	      'div',
+	      _extends({}, others, { className: classes }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Col;
+	module.exports = exports['default'];
+
+/***/ },
+/* 552 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -59736,7 +59881,7 @@
 	};
 
 /***/ },
-/* 550 */
+/* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = SemVer;

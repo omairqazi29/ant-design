@@ -1,83 +1,206 @@
 <div class="code-box" id="demo-flex">
   <div class="code-box-demo">
     <div id="components-layout-demo-flex"></div>
-    <div class="nico-insert-code"><p>子元素居左排列</p>
-<div class="row-flex row-flex-start">
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-</div>
+    <script>(function(){"use strict";
 
-<p>子元素居中排列</p>
-<div class="row-flex row-flex-center">
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-</div>
+var Row = antd.Row;
+var Col = antd.Col;
 
-<p>子元素居右排列</p>
-<div class="row-flex row-flex-end">
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-</div>
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "p",
+    null,
+    "子元素居左排列"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "start" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "子元素居中排列"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "center" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "子元素居右排列"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "end" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "子元素等宽排列"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "space-between" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "子元素分散对齐"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "space-around" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      ".col-4"
+    )
+  )
+), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
+<span class="keyword">var</span> Col = antd.Col;
 
-<p>子元素等宽排列</p>
-<div class="row-flex row-flex-space-between">
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-</div>
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居左排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"start"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
 
-<p>子元素分散对齐</p>
-<div class="row-flex row-flex-space-around">
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-  <div class="col-4">2</div>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居左排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-start"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居中排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"center"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居中排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-center"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居右排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"end"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居右排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-end"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素等宽排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-between"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素等宽排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-space-between"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素分散对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-space-around"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素分散对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-around"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  document.getElementById('components-layout-demo-flex')
+)</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

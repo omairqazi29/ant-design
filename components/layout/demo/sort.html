@@ -1,13 +1,40 @@
 <div class="code-box" id="demo-sort">
   <div class="code-box-demo">
     <div id="components-layout-demo-sort"></div>
-    <div class="nico-insert-code"><div class="row">
-  <div class="col-18 col-push-6">.col-18 .col-push-6</div>
-  <div class="col-6 col-pull-18">.col-6 .col-pull-18</div>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-18 col-push-6"</span>&gt;</span>.col-18 .col-push-6<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-pull-18"</span>&gt;</span>.col-6 .col-pull-18<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+    <script>(function(){"use strict";
+
+var Row = antd.Row;
+var Col = antd.Col;
+
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Row,
+    null,
+    React.createElement(
+      Col,
+      { span: "18", push: "6" },
+      ".col-18 .col-push-6"
+    ),
+    React.createElement(
+      Col,
+      { span: "6", pull: "18" },
+      ".col-6 .col-pull-18"
+    )
+  )
+), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
+<span class="keyword">var</span> Col = antd.Col;
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"18"</span> <span class="attribute">push</span>=<span class="value">"6"</span>&gt;</span>.col-18 .col-push-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">pull</span>=<span class="value">"18"</span>&gt;</span>.col-6 .col-pull-18<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  document.getElementById('components-layout-demo-sort')
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

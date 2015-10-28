@@ -1,27 +1,70 @@
 <div class="code-box" id="demo-offset">
   <div class="code-box-demo">
     <div id="components-layout-demo-offset"></div>
-    <div class="nico-insert-code"><div class="row">
-  <div class="col-8">.col-8</div>
-  <div class="col-8 col-offset-8">.col-8 .col-offset-8</div>
-</div>
-<div class="row">
-  <div class="col-6 col-offset-6">.col-6 .col-offset-6</div>
-  <div class="col-6 col-offset-6">.col-6 .col-offset-6</div>
-</div>
-<div class="row">
-  <div class="col-12 col-offset-6">.col-12 .col-offset-6</div>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-8 col-offset-8"</span>&gt;</span>.col-8 .col-offset-8<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-offset-6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-offset-6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-12 col-offset-6"</span>&gt;</span>.col-12 .col-offset-6<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+    <script>(function(){"use strict";
+
+var Row = antd.Row;
+var Col = antd.Col;
+
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Row,
+    null,
+    React.createElement(
+      Col,
+      { span: "8" },
+      ".col-8"
+    ),
+    React.createElement(
+      Col,
+      { span: "8", offset: "8" },
+      ".col-8"
+    )
+  ),
+  React.createElement(
+    Row,
+    null,
+    React.createElement(
+      Col,
+      { span: "6", offset: "6" },
+      ".col-6 .col-offset-6"
+    ),
+    React.createElement(
+      Col,
+      { span: "6", offset: "6" },
+      ".col-6 .col-offset-6"
+    )
+  ),
+  React.createElement(
+    Row,
+    null,
+    React.createElement(
+      Col,
+      { span: "12", offset: "6" },
+      ".col-12 .col-offset-6"
+    )
+  )
+), document.getElementById('components-layout-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
+<span class="keyword">var</span> Col = antd.Col;
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span> <span class="attribute">offset</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"12"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-12 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  document.getElementById('components-layout-demo-offset')
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

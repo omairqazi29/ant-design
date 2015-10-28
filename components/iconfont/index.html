@@ -569,7 +569,7 @@ Iconfont 字体图标 - Ant Design
 </ul>
 <h2 id="实现原理">实现原理<a href="#实现原理" class="anchor">#</a> </h2><p>所有的 Icon 标签最终会渲染为</p>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"anticon anticon-${type}"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span></code></pre></div><h2 id="如何使用">如何使用<a href="#如何使用" class="anchor">#</a> </h2><p>使用 <Icon> 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"link"</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span></code></pre></div><blockquote>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"link"</span> /&gt;</span></code></pre></div><blockquote>
 <p>点击图标复制代码。</p>
 </blockquote>
 <h2 id="图标列表">图标列表<a href="#图标列表" class="anchor">#</a> </h2><h3 id="一-方向性图标">一. 方向性图标<a href="#一-方向性图标" class="anchor">#</a> </h3><ul class="row anticons-list clearfix">
@@ -1117,7 +1117,7 @@ $(function() {
   $('.anticons-list li').each(function(i, item) {
     var client = new ZeroClipboard(item);
     client.on( "copy", function (event) {
-      client.setText('<Icon type="' + $(item).find('.anticon-class').html() + '"></Icon>');
+      client.setText('<Icon type="' + $(item).find('.anticon-class').html() + '" />');
     });
     client.on( "ready", function( readyEvent ) {
       client.on( "aftercopy", function( event ) {

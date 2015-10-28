@@ -1,17 +1,52 @@
 <div class="code-box" id="demo-flex-order">
   <div class="code-box-demo">
     <div id="components-layout-demo-flex-order"></div>
-    <div class="nico-insert-code"><div class="row-flex">
-  <div class="col-6 col-order-4">1 col-order-4</div>
-  <div class="col-6 col-order-3">2 col-order-3</div>
-  <div class="col-6 col-order-2">3 col-order-2</div>
-  <div class="col-6 col-order-1">4 col-order-1</div>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-order-4"</span>&gt;</span>1 col-order-4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-order-3"</span>&gt;</span>2 col-order-3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-order-2"</span>&gt;</span>3 col-order-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6 col-order-1"</span>&gt;</span>4 col-order-1<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+    <script>(function(){"use strict";
+
+var Row = antd.Row;
+var Col = antd.Col;
+
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Row,
+    { type: "flex" },
+    React.createElement(
+      Col,
+      { span: "6", order: "4" },
+      "1 col-order-4"
+    ),
+    React.createElement(
+      Col,
+      { span: "6", order: "3" },
+      "2 col-order-3"
+    ),
+    React.createElement(
+      Col,
+      { span: "6", order: "2" },
+      "3 col-order-2"
+    ),
+    React.createElement(
+      Col,
+      { span: "6", order: "1" },
+      "4 col-order-1"
+    )
+  )
+), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
+<span class="keyword">var</span> Col = antd.Col;
+
+ReactDOM.render(
+  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"4"</span>&gt;</span>1 col-order-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"3"</span>&gt;</span>2 col-order-3<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"2"</span>&gt;</span>3 col-order-2<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"1"</span>&gt;</span>4 col-order-1<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  document.getElementById('components-layout-demo-flex-order')
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

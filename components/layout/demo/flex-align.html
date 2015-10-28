@@ -1,51 +1,205 @@
 <div class="code-box" id="demo-flex-align">
   <div class="code-box-demo">
     <div id="components-layout-demo-flex-align"></div>
-    <div class="nico-insert-code"><p>顶部对齐</p>
-<div class="row-flex row-flex-center row-flex-top">
-  <div class="col-4 hight-100">2</div>
-  <div class="col-4 hight-50">2</div>
-  <div class="col-4 hight-120">2</div>
-  <div class="col-4 hight-80">2</div>
-</div>
+    <script>(function(){"use strict";
 
-<p>居中对齐</p>
-<div class="row-flex row-flex-space-around row-flex-middle">
-  <div class="col-4 hight-100">2</div>
-  <div class="col-4 hight-50">2</div>
-  <div class="col-4 hight-120">2</div>
-  <div class="col-4 hight-80">2</div>
-</div>
+var Row = antd.Row;
+var Col = antd.Col;
 
-<p>底部对齐</p>
-<div class="row-flex row-flex-space-between row-flex-bottom">
-  <div class="col-4 hight-100">2</div>
-  <div class="col-4 hight-50">2</div>
-  <div class="col-4 hight-120">2</div>
-  <div class="col-4 hight-80">2</div>
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>顶部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-center row-flex-top"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-100"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-50"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-120"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-80"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+var DemoBox = React.createClass({
+  displayName: "DemoBox",
 
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>居中对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-space-around row-flex-middle"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-100"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-50"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-120"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-80"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  render: function render() {
+    var value = this.props.value;
 
-<span class="tag">&lt;<span class="title">p</span>&gt;</span>底部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row-flex row-flex-space-between row-flex-bottom"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-100"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-50"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-120"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4 hight-80"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+    var className = "hight-" + value;
+    return React.createElement(
+      "p",
+      { className: className },
+      this.props.children
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "p",
+    null,
+    "顶部对齐"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "center", align: "top" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "100" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "50" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "120" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "80" },
+        ".col-4"
+      )
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "居中对齐"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "space-around", align: "middle" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "100" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "50" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "120" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "80" },
+        ".col-4"
+      )
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "底部对齐"
+  ),
+  React.createElement(
+    Row,
+    { type: "flex", justify: "space-between", align: "bottom" },
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "100" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "50" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "120" },
+        ".col-4"
+      )
+    ),
+    React.createElement(
+      Col,
+      { span: "4" },
+      React.createElement(
+        DemoBox,
+        { value: "80" },
+        ".col-4"
+      )
+    )
+  )
+), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
+<span class="keyword">var</span> Col = antd.Col;
+
+<span class="keyword">var</span> DemoBox = React.createClass({
+  render() {
+    <span class="keyword">const</span> { value } = <span class="keyword">this</span>.props;
+    <span class="keyword">const</span> className = `hight-${value}`;
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">{className}</span>&gt;</span>{this.props.children}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    )
+  }
+});
+
+ReactDOM.render(
+  <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>顶部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"center"</span> <span class="attribute">align</span>=<span class="value">"top"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>居中对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-around"</span> <span class="attribute">align</span>=<span class="value">"middle"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>底部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-between"</span> <span class="attribute">align</span>=<span class="value">"bottom"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  document.getElementById('components-layout-demo-flex-align')
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
