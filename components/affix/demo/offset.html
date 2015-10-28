@@ -1,21 +1,19 @@
 <div class="code-box" id="demo-offset">
   <div class="code-box-demo">
     <div id="components-affix-demo-offset"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Affix = antd.Affix;
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Affix,
+  _antd.Affix,
   { offset: 75 },
   React.createElement(
-    Button,
-    { type: "primary" },
-    "固定在距离顶部 75px 的位置"
+    _antd.Button,
+    { type: 'primary' },
+    '固定在距离顶部 75px 的位置'
   )
-), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript">import { Affix, Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span> <span class="attribute">offset</span>=<span class="value">{75}</span>&gt;</span>

@@ -3,8 +3,7 @@
     <div id="components-layout-demo-flex"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -15,25 +14,25 @@ ReactDOM.render(React.createElement(
     "子元素居左排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "start" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -44,25 +43,25 @@ ReactDOM.render(React.createElement(
     "子元素居中排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "center" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -73,25 +72,25 @@ ReactDOM.render(React.createElement(
     "子元素居右排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "end" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -102,25 +101,25 @@ ReactDOM.render(React.createElement(
     "子元素等宽排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-between" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -131,31 +130,30 @@ ReactDOM.render(React.createElement(
     "子元素分散对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-around" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
   )
-), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

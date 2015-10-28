@@ -3,8 +3,7 @@
     <div id="components-notification-demo-onclose"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var close = function close() {
   console.log("我被默认的关闭按钮关闭了！");
@@ -16,26 +15,25 @@ var openNotification = function openNotification() {
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
     onClose: close
   };
-  notification.open(args);
+  _antd.notification.open(args);
 };
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", onClick: openNotification },
     "打开通知提醒框"
   )
-), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   console.log(<span class="string">"我被默认的关闭按钮关闭了！"</span>);
 };
 
-<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> args = {
+<span class="keyword">const</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">const</span> args = {
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
     onClose: close

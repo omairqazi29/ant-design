@@ -3,18 +3,19 @@
     <div id="components-alert-demo-close-type"></div>
     <script>(function(){"use strict";
 
-var Alert = antd.Alert;
+var _antd = require('antd');
+
 var link = React.createElement(
   "a",
   { href: "javascript:;" },
   "不再提醒"
 );
 
-ReactDOM.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
-<span class="keyword">var</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+ReactDOM.render(React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
 
 ReactDOM.render(
-<span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"消息提示的文案"</span> <span class="attribute">type</span>=<span class="value">"info"</span> <span class="attribute">closeText</span>=<span class="value">{link}</span> /&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"消息提示的文案"</span> <span class="attribute">type</span>=<span class="value">"info"</span> <span class="attribute">closeText</span>=<span class="value">{link}</span> /&gt;</span>
 , document.getElementById('components-alert-demo-close-type'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

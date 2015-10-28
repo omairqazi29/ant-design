@@ -199,7 +199,7 @@ Alert 警告提示 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -623,9 +623,9 @@ Alert 警告提示 - Ant Design
     <div id="components-alert-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Alert = antd.Alert;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Alert, { message: "成功提示的文案", type: "success" }), document.getElementById('components-alert-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+ReactDOM.render(React.createElement(_antd.Alert, { message: "成功提示的文案", type: "success" }), document.getElementById('components-alert-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span> <span class="attribute">type</span>=<span class="value">"success"</span> /&gt;</span>
 , document.getElementById('components-alert-demo-basic'));</span></code></pre></div>
@@ -642,26 +642,26 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Aler
     <div id="components-alert-demo-description"></div>
     <script>(function(){"use strict";
 
-var Alert = antd.Alert;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(Alert, { message: "成功提示的文案",
+  React.createElement(_antd.Alert, { message: "成功提示的文案",
     description: "成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍",
     type: "success" }),
-  React.createElement(Alert, { message: "消息提示的文案",
+  React.createElement(_antd.Alert, { message: "消息提示的文案",
     description: "消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍",
     type: "info" }),
-  React.createElement(Alert, {
+  React.createElement(_antd.Alert, {
     message: "警告提示的文案",
     description: "警告提示的辅助性文字介绍警告提示的辅助性文字介绍",
     type: "warn" }),
-  React.createElement(Alert, {
+  React.createElement(_antd.Alert, {
     message: "错误提示的文案",
     description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
     type: "error" })
-), document.getElementById('components-alert-demo-description'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+), document.getElementById('components-alert-demo-description'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span>
@@ -692,18 +692,19 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-alert-demo-close-type"></div>
     <script>(function(){"use strict";
 
-var Alert = antd.Alert;
+var _antd = require('antd');
+
 var link = React.createElement(
   "a",
   { href: "javascript:;" },
   "不再提醒"
 );
 
-ReactDOM.render(React.createElement(Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
-<span class="keyword">var</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+ReactDOM.render(React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info", closeText: link }), document.getElementById('components-alert-demo-close-type'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> link = <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>不再提醒<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
 
 ReactDOM.render(
-<span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"消息提示的文案"</span> <span class="attribute">type</span>=<span class="value">"info"</span> <span class="attribute">closeText</span>=<span class="value">{link}</span> /&gt;</span>
+<span class="xml"><span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"消息提示的文案"</span> <span class="attribute">type</span>=<span class="value">"info"</span> <span class="attribute">closeText</span>=<span class="value">{link}</span> /&gt;</span>
 , document.getElementById('components-alert-demo-close-type'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -718,29 +719,29 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-closable">
   <div class="code-box-demo">
     <div id="components-alert-demo-closable"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Alert = antd.Alert;
+var _antd = require('antd');
 
 var onClose = function onClose(e) {
   console.log(e, '我要被关闭啦！');
 };
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
-  React.createElement(Alert, { message: "警告提示的文案",
-    type: "warn",
+  React.createElement(_antd.Alert, { message: '警告提示的文案',
+    type: 'warn',
     closable: true,
     onClose: onClose }),
-  React.createElement(Alert, { message: "错误提示的文案",
-    description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
-    type: "error",
+  React.createElement(_antd.Alert, { message: '错误提示的文案',
+    description: '错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍',
+    type: 'error',
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
+<span class="keyword">const</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
   console.log(e, <span class="string">'我要被关闭啦！'</span>);
 };
 
@@ -768,16 +769,16 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-alert-demo-style"></div>
     <script>(function(){"use strict";
 
-var Alert = antd.Alert;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(Alert, { message: "成功提示的文案", type: "success" }),
-  React.createElement(Alert, { message: "消息提示的文案", type: "info" }),
-  React.createElement(Alert, { message: "警告提示的文案", type: "warn" }),
-  React.createElement(Alert, { message: "错误提示的文案", type: "error" })
-), document.getElementById('components-alert-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+  React.createElement(_antd.Alert, { message: "成功提示的文案", type: "success" }),
+  React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info" }),
+  React.createElement(_antd.Alert, { message: "警告提示的文案", type: "warn" }),
+  React.createElement(_antd.Alert, { message: "错误提示的文案", type: "error" })
+), document.getElementById('components-alert-demo-style'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"成功提示的文案"</span> <span class="attribute">type</span>=<span class="value">"success"</span> /&gt;</span>

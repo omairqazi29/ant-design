@@ -3,8 +3,9 @@
     <div id="components-radio-demo-radiogroup"></div>
     <script>(function(){'use strict';
 
-var Radio = antd.Radio;
-var RadioGroup = antd.Radio.Group;
+var _antd = require('antd');
+
+var RadioGroup = _antd.Radio.Group;
 
 var App = React.createClass({
   displayName: 'App',
@@ -28,22 +29,22 @@ var App = React.createClass({
         RadioGroup,
         { onChange: this.onChange, value: this.state.value },
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'a' },
           'A'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'b' },
           'B'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'c' },
           'C'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'd' },
           'D'
         )
@@ -57,10 +58,10 @@ var App = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-radiogroup'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-radiogroup'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> RadioGroup = Radio.Group;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
     <span class="keyword">return</span> {
       value: <span class="string">'a'</span>

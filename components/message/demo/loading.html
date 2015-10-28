@@ -3,24 +3,22 @@
     <div id="components-message-demo-loading"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var success = function success() {
-  var hide = message.loading('正在执行中...', 0);
+  var hide = _antd.message.loading('正在执行中...', 0);
   // 异步手动移除
   setTimeout(hide, 2500);
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { onClick: success },
   '显示加载中...'
-), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
+<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">let</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
   <span class="comment">// 异步手动移除</span>
   setTimeout(hide, <span class="number">2500</span>);
 };

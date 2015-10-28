@@ -1,17 +1,16 @@
 <div class="code-box" id="demo-disable">
   <div class="code-box-demo">
     <div id="components-radio-demo-disable"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Radio = antd.Radio;
-var Button = antd.Button;
+var _antd = require('antd');
 
 function toggleDisabled() {
   disabled = !disabled;
 }
 
 var App = React.createClass({
-  displayName: "App",
+  displayName: 'App',
 
   getInitialState: function getInitialState() {
     return {
@@ -25,40 +24,39 @@ var App = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        Radio,
+        _antd.Radio,
         { defaultChecked: false, disabled: this.state.disabled },
-        "不可用"
+        '不可用'
       ),
-      React.createElement("br", null),
+      React.createElement('br', null),
       React.createElement(
-        Radio,
+        _antd.Radio,
         { defaultChecked: true, disabled: this.state.disabled },
-        "不可用"
+        '不可用'
       ),
       React.createElement(
-        "div",
+        'div',
         { style: { marginTop: 20 } },
         React.createElement(
-          Button,
-          { type: "primary", onClick: this.toggleDisabled },
-          "Toggle disabled"
+          _antd.Button,
+          { type: 'primary', onClick: this.toggleDisabled },
+          'Toggle disabled'
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio, Button } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">toggleDisabled</span><span class="params">()</span> {</span>
   disabled = !disabled;
 }
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       disabled: <span class="literal">true</span>

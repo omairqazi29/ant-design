@@ -3,10 +3,9 @@
     <div id="components-progress-demo-circle-dynamic"></div>
     <script>(function(){"use strict";
 
-var ProgressCircle = antd.Progress.Circle;
-var Button = antd.Button;
-var ButtonGroup = antd.ButtonGroup;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var ProgressCircle = _antd.Progress.Circle;
 
 var MyProgress = React.createClass({
   displayName: "MyProgress",
@@ -36,29 +35,27 @@ var MyProgress = React.createClass({
       null,
       React.createElement(ProgressCircle, { percent: this.state.percent }),
       React.createElement(
-        ButtonGroup,
+        _antd.ButtonGroup,
         null,
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "ghost", onClick: this.decline },
-          React.createElement(Icon, { type: "minus" })
+          React.createElement(_antd.Icon, { type: "minus" })
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "ghost", onClick: this.increase },
-          React.createElement(Icon, { type: "plus" })
+          React.createElement(_antd.Icon, { type: "plus" })
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress, Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> ProgressCircle = Progress.Circle;
 
-<span class="keyword">var</span> MyProgress = React.createClass({
+<span class="keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       percent: <span class="number">0</span>

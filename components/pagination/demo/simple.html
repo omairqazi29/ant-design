@@ -3,13 +3,13 @@
     <div id="components-pagination-demo-simple"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);

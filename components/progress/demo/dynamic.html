@@ -3,10 +3,9 @@
     <div id="components-progress-demo-dynamic"></div>
     <script>(function(){"use strict";
 
-var Progress = antd.Progress.Line;
-var Button = antd.Button;
-var ButtonGroup = antd.ButtonGroup;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var ProgressLine = _antd.Progress.Line;
 
 var MyProgress = React.createClass({
   displayName: "MyProgress",
@@ -34,31 +33,29 @@ var MyProgress = React.createClass({
     return React.createElement(
       "div",
       null,
-      React.createElement(Progress, { percent: this.state.percent }),
+      React.createElement(ProgressLine, { percent: this.state.percent }),
       React.createElement(
-        ButtonGroup,
+        _antd.ButtonGroup,
         null,
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "ghost", onClick: this.decline },
-          React.createElement(Icon, { type: "minus" })
+          React.createElement(_antd.Icon, { type: "minus" })
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "ghost", onClick: this.increase },
-          React.createElement(Icon, { type: "plus" })
+          React.createElement(_antd.Icon, { type: "plus" })
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Progress = antd.Progress.Line;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress, Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> ProgressLine = Progress.Line;
 
-<span class="keyword">var</span> MyProgress = React.createClass({
+<span class="keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       percent: <span class="number">0</span>
@@ -80,7 +77,7 @@ ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('
   },
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Progress</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
       <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
           <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"minus"</span> /&gt;</span>

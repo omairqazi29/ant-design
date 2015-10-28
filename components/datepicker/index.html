@@ -199,7 +199,7 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -647,11 +647,11 @@ Datepicker 日期选择框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2015-12-12" }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-12-12' }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-12-12"</span> /&gt;</span>
@@ -669,15 +669,15 @@ ReactDOM.render(
     <div id="components-datepicker-demo-size"></div>
     <script>(function(){"use strict";
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(Datepicker, { size: "large" }),
-  React.createElement(Datepicker, null),
-  React.createElement(Datepicker, { size: "small" })
-), document.getElementById('components-datepicker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+  React.createElement(_antd.Datepicker, { size: "large" }),
+  React.createElement(_antd.Datepicker, null),
+  React.createElement(_antd.Datepicker, { size: "small" })
+), document.getElementById('components-datepicker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
@@ -697,11 +697,11 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-time">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-time"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Datepicker, { showTime: true, format: "yyyy-MM-dd HH:mm:ss" }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(_antd.Datepicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss' }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">format</span>=<span class="value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
@@ -719,14 +719,16 @@ ReactDOM.render(
     <div id="components-datepicker-demo-range"></div>
     <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
+
 var disabledDate = function disabledDate(current, value) {
   // can not select days after today
   return current.getTime() > Date.now();
 };
 
-ReactDOM.render(React.createElement(Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
-<span class="keyword">var</span> disabledDate = <span class="function"><span class="keyword">function</span><span class="params">(current, value)</span> {</span>
+ReactDOM.render(React.createElement(_antd.Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> disabledDate = <span class="function"><span class="keyword">function</span><span class="params">(current, value)</span> {</span>
   <span class="comment">// can not select days after today</span>
   <span class="keyword">return</span> current.getTime() &gt; Date.now();
 };
@@ -748,7 +750,7 @@ ReactDOM.render(
     <div id="components-datepicker-demo-locale"></div>
     <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var App = React.createClass({
   displayName: 'App',
@@ -762,19 +764,20 @@ var App = React.createClass({
         lang: {
           today: 'Today',
           now: 'Now',
-          ok: 'Ok'
+          ok: 'OK',
+          clear: 'Clear'
         }
       }
     };
   },
   render: function render() {
-    return React.createElement(Datepicker, { showTime: true, locale: this.state.locale });
+    return React.createElement(_antd.Datepicker, { showTime: true, locale: this.state.locale });
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       locale: {
@@ -784,7 +787,8 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
         lang: {
           today: <span class="string">'Today'</span>,
           now: <span class="string">'Now'</span>,
-          ok: <span class="string">'Ok'</span>
+          ok: <span class="string">'OK'</span>,
+          clear: <span class="string">'Clear'</span>
         }
       }
     };
@@ -810,9 +814,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
     <div id="components-datepicker-demo-formatter"></div>
     <script>(function(){"use strict";
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015/01/01"</span> <span class="attribute">format</span>=<span class="value">"yyyy/MM/dd"</span> /&gt;</span>
@@ -830,7 +834,7 @@ ReactDOM.render(
     <div id="components-datepicker-demo-select"></div>
     <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var Picker = React.createClass({
   displayName: 'Picker',
@@ -839,13 +843,13 @@ var Picker = React.createClass({
     console.log(new Date(value.getTime()));
   },
   render: function render() {
-    return React.createElement(Datepicker, { onChange: this.handleChange });
+    return React.createElement(_antd.Datepicker, { onChange: this.handleChange });
   }
 });
 
-ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Picker = React.createClass({
+<span class="keyword">const</span> Picker = React.createClass({
   handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
     console.log(<span class="keyword">new</span> Date(value.getTime()));
   },
@@ -868,11 +872,11 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-disabled"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2015-06-06", disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-06-06', disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-06-06"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span>
@@ -888,14 +892,14 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-start-end">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-start-end"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var DateRange = React.createClass({
-  displayName: "DateRange",
+  displayName: 'DateRange',
 
   getInitialState: function getInitialState() {
     return {
@@ -920,23 +924,23 @@ var DateRange = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(Datepicker, { disabledDate: this.disabledStartDate,
+      React.createElement(_antd.Datepicker, { disabledDate: this.disabledStartDate,
         value: this.state.startValue,
-        placeholder: "开始日期",
+        placeholder: '开始日期',
         onChange: this.onChange.bind(this, 'startValue') }),
-      React.createElement(Datepicker, { disabledDate: this.disabledEndDate,
+      React.createElement(_antd.Datepicker, { disabledDate: this.disabledEndDate,
         value: this.state.endValue,
-        placeholder: "结束日期",
+        placeholder: '结束日期',
         onChange: this.onChange.bind(this, 'endValue') })
     );
   }
 });
 
-ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> DateRange = React.createClass({
+<span class="keyword">const</span> DateRange = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       startValue: <span class="literal">null</span>,

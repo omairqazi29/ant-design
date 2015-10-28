@@ -3,8 +3,9 @@
     <div id="components-select-demo-coordinate"></div>
     <script>(function(){'use strict';
 
-var Select = antd.Select;
-var Option = Select.Option;
+var _antd = require('antd');
+
+var Option = _antd.Select.Option;
 
 var provinceData = ['浙江', '江苏'];
 var cityData = {
@@ -51,29 +52,29 @@ var App = React.createClass({
       'div',
       null,
       React.createElement(
-        Select,
+        _antd.Select,
         { defaultValue: provinceData[0], style: { width: 150 }, onChange: this.handleProvinceChange },
         provinceOptions
       ),
       React.createElement(
-        Select,
+        _antd.Select,
         { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
         cityOptions
       )
     );
   }
 });
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-select-demo-coordinate'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
-<span class="keyword">var</span> Option = Select.Option;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-select-demo-coordinate'));})()</script><div class="highlight"><pre><code class="javascript">import { Select } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Option = Select.Option;
 
-<span class="keyword">var</span> provinceData = [<span class="string">'浙江'</span>, <span class="string">'江苏'</span>];
-<span class="keyword">var</span> cityData = {
+<span class="keyword">const</span> provinceData = [<span class="string">'浙江'</span>, <span class="string">'江苏'</span>];
+<span class="keyword">const</span> cityData = {
   <span class="string">'浙江'</span>: [<span class="string">'杭州'</span>, <span class="string">'宁波'</span>, <span class="string">'温州'</span>],
   <span class="string">'江苏'</span>: [<span class="string">'南京'</span>, <span class="string">'苏州'</span>, <span class="string">'镇江'</span>]
 };
 
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       cities: cityData[provinceData[<span class="number">0</span>]],
@@ -92,10 +93,10 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     });
   },
   render() {
-    <span class="keyword">var</span> provinceOptions = provinceData.map(<span class="function"><span class="keyword">function</span><span class="params">(province)</span> {</span>
+    <span class="keyword">const</span> provinceOptions = provinceData.map(<span class="function"><span class="keyword">function</span><span class="params">(province)</span> {</span>
       <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">key</span>=<span class="value">{province}</span>&gt;</span>{province}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
     });
-    <span class="keyword">var</span> cityOptions = <span class="keyword">this</span>.state.cities.map(<span class="function"><span class="keyword">function</span><span class="params">(city)</span> {</span>
+    <span class="keyword">const</span> cityOptions = <span class="keyword">this</span>.state.cities.map(<span class="function"><span class="keyword">function</span><span class="params">(city)</span> {</span>
       <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Option</span> <span class="attribute">key</span>=<span class="value">{city}</span>&gt;</span>{city}<span class="tag">&lt;/<span class="title">Option</span>&gt;</span>;</span>
     });
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

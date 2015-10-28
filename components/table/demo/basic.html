@@ -3,8 +3,7 @@
     <div id="components-table-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var columns = [{
   title: '姓名',
@@ -45,7 +44,7 @@ var columns = [{
         'a',
         { href: 'javascript:;', className: 'ant-dropdown-link' },
         '更多 ',
-        React.createElement(Icon, { type: 'down' })
+        React.createElement(_antd.Icon, { type: 'down' })
       )
     );
   }
@@ -67,10 +66,9 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Table, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> columns = [{
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
   render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
@@ -97,7 +95,7 @@ ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data 
     <span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
   }
 }];
-<span class="keyword">var</span> data = [{
+<span class="keyword">const</span> data = [{
   key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,

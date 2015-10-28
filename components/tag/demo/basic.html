@@ -1,38 +1,38 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tag-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tag = antd.Tag;
+var _antd = require('antd');
 
 function onClose(e) {
   console.log(this.props.children);
 }
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    Tag,
+    _antd.Tag,
     null,
-    "标签一"
+    '标签一'
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     null,
-    "标签二"
+    '标签二'
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, onClose: onClose },
-    "标签三"
+    '标签三'
   ),
   React.createElement(
-    Tag,
-    { href: "http://www.baidu.com" },
-    "标签四（链接）"
+    _antd.Tag,
+    { href: 'http://www.baidu.com' },
+    '标签四（链接）'
   )
-), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tag = antd.Tag;
+), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tag } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onClose</span><span class="params">(e)</span> {</span>
   console.log(<span class="keyword">this</span>.props.children);

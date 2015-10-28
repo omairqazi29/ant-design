@@ -3,8 +3,7 @@
     <div id="components-table-demo-local-data"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var columns = [{
   title: '姓名',
@@ -78,15 +77,15 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement(Table, { columns: columns, dataSource: this.state.data }),
+      React.createElement(_antd.Table, { columns: columns, dataSource: this.state.data }),
       React.createElement(
-        Button,
+        _antd.Button,
         { onClick: this.handleClick1 },
         '加载本地数据1'
       ),
       ' ',
       React.createElement(
-        Button,
+        _antd.Button,
         { onClick: this.handleClick2 },
         '加载本地数据2'
       )
@@ -94,10 +93,9 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript">import { Table, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> columns = [{
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
   render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
@@ -110,7 +108,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   title: <span class="string">'住址'</span>,
   dataIndex: <span class="string">'address'</span>
 }];
-<span class="keyword">var</span> data1 = [{
+<span class="keyword">const</span> data1 = [{
   key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
@@ -126,7 +124,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   age: <span class="number">32</span>,
   address: <span class="string">'西湖区湖底公园1号'</span>
 }];
-<span class="keyword">var</span> data2 = [{
+<span class="keyword">const</span> data2 = [{
   key: <span class="string">'11'</span>,
   name: <span class="string">'胡彦斌2'</span>,
   age: <span class="number">32</span>,
@@ -143,7 +141,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   address: <span class="string">'西湖区湖底公园2号'</span>
 }];
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       data: []

@@ -3,7 +3,7 @@
     <div id="components-button-demo-status"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -14,23 +14,23 @@ ReactDOM.render(React.createElement(
     "使用 `disabled` 属性"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "主按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", disabled: true },
     "主按钮(失效)"
   ),
   React.createElement("br", null),
   React.createElement(
-    Button,
+    _antd.Button,
     null,
     "次按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { disabled: true },
     "次按钮(失效)"
   ),
@@ -41,16 +41,16 @@ ReactDOM.render(React.createElement(
     "使用 `.disabled` class"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost" },
     "幽灵按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", className: "disabled" },
     "幽灵按钮(失效)"
   )
-), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `disabled` 属性<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>

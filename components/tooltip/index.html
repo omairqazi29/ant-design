@@ -199,7 +199,7 @@ Tooltip 文字提示 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -595,19 +595,19 @@ Tooltip 文字提示 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tooltip-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tooltip = antd.Tooltip;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Tooltip,
-  { title: "提示文字" },
+  _antd.Tooltip,
+  { title: '提示文字' },
   React.createElement(
-    "span",
+    'span',
     null,
-    "鼠标移上来就会出现提示"
+    '鼠标移上来就会出现提示'
   )
-), document.getElementById('components-tooltip-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tooltip = antd.Tooltip;
+), document.getElementById('components-tooltip-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tooltip } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tooltip</span> <span class="attribute">title</span>=<span class="value">"提示文字"</span>&gt;</span>
@@ -629,7 +629,8 @@ ReactDOM.render(
     <div id="components-tooltip-demo-placement"></div>
     <script>(function(){"use strict";
 
-var Tooltip = antd.Tooltip;
+var _antd = require('antd');
+
 var text = React.createElement(
   "span",
   null,
@@ -640,7 +641,7 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Tooltip,
+    _antd.Tooltip,
     { placement: "left", title: text },
     React.createElement(
       "a",
@@ -649,7 +650,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Tooltip,
+    _antd.Tooltip,
     { placement: "top", title: text },
     React.createElement(
       "a",
@@ -658,7 +659,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Tooltip,
+    _antd.Tooltip,
     { placement: "bottom", title: text },
     React.createElement(
       "a",
@@ -667,7 +668,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Tooltip,
+    _antd.Tooltip,
     { placement: "right", title: text },
     React.createElement(
       "a",
@@ -675,8 +676,8 @@ ReactDOM.render(React.createElement(
       "右边右边"
     )
   )
-), document.getElementById('components-tooltip-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tooltip = antd.Tooltip;
-<span class="keyword">var</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>提示文字<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
+), document.getElementById('components-tooltip-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript">import { Tooltip } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>提示文字<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

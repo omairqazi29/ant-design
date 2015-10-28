@@ -3,8 +3,7 @@
     <div id="components-queue-anim-demo-change"></div>
     <script>(function(){"use strict";
 
-var QueueAnim = antd.QueueAnim;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var Test = React.createClass({
   displayName: "Test",
@@ -44,17 +43,17 @@ var Test = React.createClass({
         "p",
         { className: "buttons" },
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "primary", onClick: this.onClick },
           "切换"
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { onClick: this.onAdd, style: { marginLeft: 10 } },
           "添加"
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { onClick: this.onRemove, style: { marginLeft: 10 } },
           "删除"
         )
@@ -70,7 +69,7 @@ var Test = React.createClass({
             { className: "demo-list" },
             React.createElement("div", { className: "title" }),
             React.createElement(
-              QueueAnim,
+              _antd.QueueAnim,
               { component: "ul", type: ['right', 'left'] },
               this.state.show ? this.state.items : null
             )
@@ -81,10 +80,9 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-change'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> QueueAnim = antd.QueueAnim;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-change'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       show: <span class="literal">true</span>,
@@ -101,7 +99,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     });
   },
   onAdd() {
-    var items = this.state.items;
+    let items = this.state.items;
     items.push(<span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">{Date.now()}</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>);
     this.setState({
       show: true,
@@ -109,7 +107,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     });
   },
   onRemove() {
-    var items = this.state.items;
+    let items = this.state.items;
     items.splice(items.length - 1, 1);
     this.setState({
       show: true,

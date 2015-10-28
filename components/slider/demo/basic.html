@@ -3,14 +3,14 @@
     <div id="components-slider-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Slider = antd.Slider;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   'div',
   null,
-  React.createElement(Slider, null),
-  React.createElement(Slider, { defaultValue: 65, disabled: true })
-), document.getElementById('components-slider-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
+  React.createElement(_antd.Slider, null),
+  React.createElement(_antd.Slider, { defaultValue: 65, disabled: true })
+), document.getElementById('components-slider-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Slider } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Slider</span> /&gt;</span>

@@ -3,32 +3,32 @@
     <div id="components-tag-demo-colorful"></div>
     <script>(function(){"use strict";
 
-var Tag = antd.Tag;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "blue" },
     "蓝色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "green" },
     "绿色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "yellow" },
     "黄色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "red" },
     "红色"
   )
-), document.getElementById('components-tag-demo-colorful'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tag = antd.Tag;
+), document.getElementById('components-tag-demo-colorful'));})()</script><div class="highlight"><pre><code class="javascript">import { Tag } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Tag</span> <span class="attribute">closable</span> <span class="attribute">color</span>=<span class="value">"blue"</span>&gt;</span>蓝色<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>

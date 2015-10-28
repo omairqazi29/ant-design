@@ -199,7 +199,7 @@ Switch 开关 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -622,15 +622,16 @@ Switch 开关 - Ant Design
     <div id="components-switch-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Switch = antd.Switch;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-basic');
 
 function onChange(checked) {
   console.log('switch to ' + checked);
 }
 
-ReactDOM.render(React.createElement(Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
+ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(checked)</span>{</span>
   console.log(<span class="string">'switch to '</span> + checked);
@@ -648,25 +649,24 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Swit
 </div><div class="code-box" id="demo-text">
   <div class="code-box-demo">
     <div id="components-switch-demo-text"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Switch = antd.Switch;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-text');
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
-  React.createElement(Switch, { checkedChildren: "开", unCheckedChildren: "关" }),
+  React.createElement(_antd.Switch, { checkedChildren: '开', unCheckedChildren: '关' }),
   React.createElement(
-    "span",
+    'span',
     null,
-    " "
+    ' '
   ),
-  React.createElement(Switch, { checkedChildren: React.createElement(Icon, { type: "check" }), unCheckedChildren: React.createElement(Icon, { type: "cross" }) })
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Icon = antd.Icon;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
+  React.createElement(_antd.Switch, { checkedChildren: React.createElement(_antd.Icon, { type: 'check' }), unCheckedChildren: React.createElement(_antd.Icon, { type: 'cross' }) })
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">"开"</span> <span class="attribute">unCheckedChildren</span>=<span class="value">"关"</span> /&gt;</span>
@@ -686,14 +686,14 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-switch-demo-disabled"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Switch = antd.Switch;
-var Button = antd.Button;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-disabled');
 
 var Test = React.createClass({
-  displayName: "Test",
+  displayName: 'Test',
 
   getInitialState: function getInitialState() {
     return {
@@ -707,25 +707,24 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(Switch, { disabled: this.state.disabled }),
-      React.createElement("br", null),
-      React.createElement("br", null),
+      React.createElement(_antd.Switch, { disabled: this.state.disabled }),
+      React.createElement('br', null),
+      React.createElement('br', null),
       React.createElement(
-        Button,
-        { type: "primary", onClick: this.toggle },
-        "Toggle disabled"
+        _antd.Button,
+        { type: 'primary', onClick: this.toggle },
+        'Toggle disabled'
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
+ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       disabled: <span class="literal">true</span>

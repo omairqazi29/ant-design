@@ -3,11 +3,12 @@
     <div id="components-tabs-demo-vertical-right"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", tabPosition: "right" },
   React.createElement(
     TabPane,
@@ -24,8 +25,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三长", key: "3" },
     "选项卡三内容"
   )
-), document.getElementById('components-tabs-demo-vertical-right'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-vertical-right'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">tabPosition</span>=<span class="value">"right"</span>&gt;</span>

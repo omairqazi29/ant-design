@@ -3,28 +3,26 @@
     <div id="components-layout-demo-sort"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "18", push: "6" },
       ".col-18 .col-push-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", pull: "18" },
       ".col-6 .col-pull-18"
     )
   )
-), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

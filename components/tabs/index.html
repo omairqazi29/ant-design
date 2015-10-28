@@ -199,7 +199,7 @@ Tabs 标签页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -644,15 +644,16 @@ Tabs 标签页 - Ant Design
     <div id="components-tabs-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 function callback(key) {
   console.log(key);
 }
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
     TabPane,
@@ -669,8 +670,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三", key: "3" },
     "选项卡三内容"
   )
-), document.getElementById('components-tabs-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>
   console.log(key);
@@ -696,29 +697,29 @@ ReactDOM.render(
     <div id="components-tabs-demo-icon"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 var tabContent = [React.createElement(
   "span",
   null,
-  React.createElement(Icon, { type: "apple" }),
+  React.createElement(_antd.Icon, { type: "apple" }),
   "选项卡一"
 ), React.createElement(
   "span",
   null,
-  React.createElement(Icon, { type: "android" }),
+  React.createElement(_antd.Icon, { type: "android" }),
   "选项卡二"
 ), React.createElement(
   "span",
   null,
-  React.createElement(Icon, { type: "lock" }),
+  React.createElement(_antd.Icon, { type: "lock" }),
   "选项卡三"
 )];
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "2" },
   React.createElement(
     TabPane,
@@ -735,9 +736,8 @@ ReactDOM.render(React.createElement(
     { tab: tabContent[2], key: "3" },
     "选项卡三"
   )
-), document.getElementById('components-tabs-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-tabs-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="keyword">var</span> tabContent = [
   <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"apple"</span> /&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">span</span>&gt;</span>,
@@ -765,10 +765,9 @@ ReactDOM.render(
     <div id="components-tabs-demo-add"></div>
     <script>(function(){'use strict';
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 var index = 0;
 var closeStyle = {
@@ -833,12 +832,12 @@ var Test = React.createClass({
     var _this = this;
 
     return React.createElement(
-      Tabs,
+      _antd.Tabs,
       {
         onChange: this.onChange,
         activeKey: this.state.activeKey,
         tabBarExtraContent: React.createElement(
-          Button,
+          _antd.Button,
           { type: 'primary' },
           '其它操作'
         ) },
@@ -850,22 +849,20 @@ var Test = React.createClass({
               null,
               t.title,
               ' ',
-              React.createElement(Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
+              React.createElement(_antd.Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
             ) },
           t.content
         );
-      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
+      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(_antd.Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs, Button, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="keyword">var</span> index = <span class="number">0</span>;
-<span class="keyword">var</span> closeStyle = {
+<span class="keyword">const</span> closeStyle = {
   position: <span class="string">'absolute'</span>,
   top: <span class="number">0</span>,
   right: -<span class="number">10</span>,
@@ -951,11 +948,12 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</spa
     <div id="components-tabs-demo-vertical-left"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", tabPosition: "left" },
   React.createElement(
     TabPane,
@@ -972,8 +970,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三长", key: "3" },
     "选项卡三内容"
   )
-), document.getElementById('components-tabs-demo-vertical-left'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-vertical-left'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">tabPosition</span>=<span class="value">"left"</span>&gt;</span>
@@ -997,13 +995,14 @@ ReactDOM.render(
     <div id="components-tabs-demo-disabled"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 function callback(key) {}
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
     TabPane,
@@ -1020,8 +1019,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三", key: "3" },
     "选项卡三"
   )
-), document.getElementById('components-tabs-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 
@@ -1045,13 +1044,14 @@ ReactDOM.render(
     <div id="components-tabs-demo-slide"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 function callback(key) {}
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
     TabPane,
@@ -1098,8 +1098,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项九", key: "9" },
     "选项卡九"
   )
-), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 
@@ -1129,11 +1129,12 @@ ReactDOM.render(
     <div id="components-tabs-demo-size"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "2", size: "small" },
   React.createElement(
     TabPane,
@@ -1150,8 +1151,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三", key: "3" },
     "选项卡三内容"
   )
-), document.getElementById('components-tabs-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"2"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
@@ -1173,11 +1174,12 @@ ReactDOM.render(
     <div id="components-tabs-demo-vertical-right"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", tabPosition: "right" },
   React.createElement(
     TabPane,
@@ -1194,8 +1196,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项卡三长", key: "3" },
     "选项卡三内容"
   )
-), document.getElementById('components-tabs-demo-vertical-right'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-vertical-right'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">tabPosition</span>=<span class="value">"right"</span>&gt;</span>

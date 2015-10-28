@@ -7,9 +7,9 @@
   <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
 <span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
-var Button = antd.Button;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-step-next');
 var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 var steps = array.map(function (item, i) {
@@ -48,7 +48,7 @@ var App = React.createClass({
         ' 步'
       ),
       React.createElement(
-        Steps,
+        _antd.Steps,
         { current: cs },
         steps.map(function (s, i) {
           return React.createElement(Step, { key: i, title: s.title, description: s.description });
@@ -58,7 +58,7 @@ var App = React.createClass({
         'div',
         null,
         React.createElement(
-          Button,
+          _antd.Button,
           { onClick: this.next },
           '下一步'
         )
@@ -67,25 +67,24 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
-<span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
+<span class="keyword">const</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
+<span class="keyword">const</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
   <span class="keyword">return</span> {
     title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
   };
 });
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
   next() {
-    <span class="keyword">var</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
+    <span class="keyword">let</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
     <span class="keyword">if</span> (s === steps.length) {
       s = <span class="number">0</span>;
     }
@@ -94,7 +93,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     });
   },
   render() {
-    <span class="keyword">var</span> cs = <span class="keyword">this</span>.state.currentStep;
+    <span class="keyword">const</span> cs = <span class="keyword">this</span>.state.currentStep;
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>

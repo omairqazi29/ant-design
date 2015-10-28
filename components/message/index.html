@@ -199,7 +199,7 @@ Message 全局提示 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -630,21 +630,19 @@ Message 全局提示 - Ant Design
     <div id="components-message-demo-success"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var success = function success() {
-  message.success('这是一条成功的提示');
+  _antd.message.success('这是一条成功的提示');
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: success },
   '显示成功提示'
-), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示'</span>);
 };
 
@@ -663,21 +661,19 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Butt
     <div id="components-message-demo-info"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var info = function info() {
-  message.info('这是一条普通的提醒');
+  _antd.message.info('这是一条普通的提醒');
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: info },
   '显示普通提醒'
-), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.info(<span class="string">'这是一条普通的提醒'</span>);
 };
 
@@ -696,24 +692,22 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Butt
     <div id="components-message-demo-loading"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var success = function success() {
-  var hide = message.loading('正在执行中...', 0);
+  var hide = _antd.message.loading('正在执行中...', 0);
   // 异步手动移除
   setTimeout(hide, 2500);
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { onClick: success },
   '显示加载中...'
-), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
+<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">let</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
   <span class="comment">// 异步手动移除</span>
   setTimeout(hide, <span class="number">2500</span>);
 };
@@ -735,21 +729,19 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Butt
     <div id="components-message-demo-error"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var error = function error() {
-  message.error('这是一条失败的提示这是一条失败的提示这是一条失败的提示');
+  _antd.message.error('这是一条失败的提示这是一条失败的提示这是一条失败的提示');
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: error },
   '显示失败提示'
-), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> error = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> error = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.error(<span class="string">'这是一条失败的提示这是一条失败的提示这是一条失败的提示'</span>);
 };
 
@@ -768,21 +760,19 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Butt
     <div id="components-message-demo-duration"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var success = function success() {
-  message.success('这是一条成功的提示,并将于10秒后消失', 10);
+  _antd.message.success('这是一条成功的提示,并将于10秒后消失', 10);
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: success },
   '自定义时长提示'
-), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示,并将于10秒后消失'</span>, <span class="number">10</span>);
 };
 

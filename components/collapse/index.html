@@ -199,7 +199,7 @@ Collapse 折叠面板 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -629,8 +629,9 @@ Collapse 折叠面板 - Ant Design
     <div id="components-collapse-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Collapse = antd.Collapse;
-var Panel = Collapse.Panel;
+var _antd = require('antd');
+
+var Panel = _antd.Collapse.Panel;
 
 function callback(key) {
   console.log(key);
@@ -639,7 +640,7 @@ function callback(key) {
 var text = "\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n";
 
 ReactDOM.render(React.createElement(
-  Collapse,
+  _antd.Collapse,
   { defaultActiveKey: ["1"], onChange: callback },
   React.createElement(
     Panel,
@@ -668,14 +669,14 @@ ReactDOM.render(React.createElement(
       text
     )
   )
-), document.getElementById('components-collapse-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Collapse = antd.Collapse;
-<span class="keyword">var</span> Panel = Collapse.Panel;
+), document.getElementById('components-collapse-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Collapse } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Panel = Collapse.Panel;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>
   console.log(key);
 }
 
-<span class="keyword">var</span> text = `
+<span class="keyword">const</span> text = `
   A dog is a type of domesticated animal.
   Known <span class="keyword">for</span> its loyalty and faithfulness,
   it can be found as a welcome guest <span class="keyword">in</span> many households across the world.
@@ -707,8 +708,9 @@ ReactDOM.render(
     <div id="components-collapse-demo-mix"></div>
     <script>(function(){"use strict";
 
-var Collapse = antd.Collapse;
-var Panel = Collapse.Panel;
+var _antd = require('antd');
+
+var Panel = _antd.Collapse.Panel;
 
 function callback(key) {
   console.log(key);
@@ -717,13 +719,13 @@ function callback(key) {
 var text = "\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n";
 
 ReactDOM.render(React.createElement(
-  Collapse,
+  _antd.Collapse,
   { onChange: callback, accordion: true },
   React.createElement(
     Panel,
     { header: "This is panel header 1", key: "1" },
     React.createElement(
-      Collapse,
+      _antd.Collapse,
       { defaultActiveKey: "1" },
       React.createElement(
         Panel,
@@ -754,14 +756,14 @@ ReactDOM.render(React.createElement(
       text
     )
   )
-), document.getElementById('components-collapse-demo-mix'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Collapse = antd.Collapse;
-<span class="keyword">var</span> Panel = Collapse.Panel;
+), document.getElementById('components-collapse-demo-mix'));})()</script><div class="highlight"><pre><code class="javascript">import { Collapse } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Panel = Collapse.Panel;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>
   console.log(key);
 }
 
-<span class="keyword">var</span> text = `
+<span class="keyword">const</span> text = `
   A dog is a type of domesticated animal.
   Known <span class="keyword">for</span> its loyalty and faithfulness,
   it can be found as a welcome guest <span class="keyword">in</span> many households across the world.
@@ -799,13 +801,14 @@ ReactDOM.render(
     <div id="components-collapse-demo-accordion"></div>
     <script>(function(){"use strict";
 
-var Collapse = antd.Collapse;
-var Panel = Collapse.Panel;
+var _antd = require('antd');
+
+var Panel = _antd.Collapse.Panel;
 
 var text = "\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n";
 
 ReactDOM.render(React.createElement(
-  Collapse,
+  _antd.Collapse,
   { accordion: true },
   React.createElement(
     Panel,
@@ -834,10 +837,10 @@ ReactDOM.render(React.createElement(
       text
     )
   )
-), document.getElementById('components-collapse-demo-accordion'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Collapse = antd.Collapse;
-<span class="keyword">var</span> Panel = Collapse.Panel;
+), document.getElementById('components-collapse-demo-accordion'));})()</script><div class="highlight"><pre><code class="javascript">import { Collapse } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Panel = Collapse.Panel;
 
-<span class="keyword">var</span> text = `
+<span class="keyword">const</span> text = `
   A dog is a type of domesticated animal.
   Known <span class="keyword">for</span> its loyalty and faithfulness,
   it can be found as a welcome guest <span class="keyword">in</span> many households across the world.

@@ -3,8 +3,9 @@
     <div id="components-modal-demo-confirm-promise"></div>
     <script>(function(){'use strict';
 
+var _antd = require('antd');
+
 var confirm = antd.Modal.confirm;
-var Button = antd.Button;
 
 function showConfirm() {
   confirm({
@@ -21,11 +22,11 @@ function showConfirm() {
 }
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { onClick: showConfirm },
   '确认对话框'
-), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> confirm = antd.Modal.confirm;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript">import { Modal, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> confirm = antd.Modal.confirm;
 
 <span class="function"><span class="keyword">function</span> <span class="title">showConfirm</span><span class="params">()</span>{</span>
   confirm({

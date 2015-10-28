@@ -3,9 +3,7 @@
     <div id="components-button-demo-button-group"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
-var ButtonGroup = antd.ButtonGroup;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -16,58 +14,58 @@ ReactDOM.render(React.createElement(
     "基本组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "确定"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "取消"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "左"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "右"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "左"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "右"
     )
@@ -75,15 +73,15 @@ ReactDOM.render(React.createElement(
   React.createElement(
     "h4",
     null,
-    "带图标按钮组合 "
+    "带图标按钮组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "left" }),
+      React.createElement(_antd.Icon, { type: "left" }),
       React.createElement(
         "span",
         null,
@@ -91,24 +89,24 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "前进",
-      React.createElement(Icon, { type: "right" })
+      React.createElement(_antd.Icon, { type: "right" })
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "cloud" })
+      React.createElement(_antd.Icon, { type: "cloud" })
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "cloud-download" })
+      React.createElement(_antd.Icon, { type: "cloud-download" })
     )
   ),
   React.createElement(
@@ -117,37 +115,37 @@ ReactDOM.render(React.createElement(
     "多个组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "1"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "2"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "3"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "4"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       React.createElement(
         "span",
         null,
         "前进"
       ),
-      React.createElement(Icon, { type: "right" })
+      React.createElement(_antd.Icon, { type: "right" })
     )
   ),
   React.createElement(
@@ -156,65 +154,63 @@ ReactDOM.render(React.createElement(
     "尺寸"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     { size: "large" },
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     { size: "small" },
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     )
   )
-), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>基本组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
@@ -234,7 +230,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合 <span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
 <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"left"</span> /&gt;</span>

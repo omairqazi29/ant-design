@@ -199,7 +199,7 @@ Button 按钮 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -634,27 +634,27 @@ Button 按钮 - Ant Design
     <div id="components-button-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "主按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     null,
     "次按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost" },
     "幽灵按钮"
   )
-), document.getElementById('components-button-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-button-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -683,27 +683,27 @@ document.getElementById('components-button-demo-basic'))</span></code></pre></di
     <div id="components-button-demo-size"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "large" },
     "大号按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "中号按钮(默认)"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "small" },
     "小号按钮"
   )
-), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
@@ -730,7 +730,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-button-demo-loading"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 var App = React.createClass({
   displayName: "App",
@@ -750,23 +750,23 @@ var App = React.createClass({
       "div",
       null,
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", size: "large", loading: true },
         "加载中"
       ),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", loading: true },
         "加载中"
       ),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", size: "small", loading: true },
         "加载中"
       ),
       React.createElement("br", null),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", loading: this.state.loading, onClick: this.enterLoading },
         "点击变加载"
       )
@@ -774,9 +774,9 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       loading: <span class="literal">false</span>
@@ -826,63 +826,61 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
     <div id="components-button-demo-icon"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "large" },
-    React.createElement(Icon, { type: "search" }),
+    React.createElement(_antd.Icon, { type: "search" }),
     "大按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
-    React.createElement(Icon, { type: "search" }),
+    React.createElement(_antd.Icon, { type: "search" }),
     "中按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "small" },
-    React.createElement(Icon, { type: "search" }),
+    React.createElement(_antd.Icon, { type: "search" }),
     "小按钮"
   ),
   React.createElement("br", null),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
@@ -943,45 +941,43 @@ document.getElementById('components-button-demo-icon'));</span></code></pre></di
     <div id="components-button-demo-shape"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement("br", null),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
@@ -1024,7 +1020,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-button-demo-status"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -1035,23 +1031,23 @@ ReactDOM.render(React.createElement(
     "使用 `disabled` 属性"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "主按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", disabled: true },
     "主按钮(失效)"
   ),
   React.createElement("br", null),
   React.createElement(
-    Button,
+    _antd.Button,
     null,
     "次按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { disabled: true },
     "次按钮(失效)"
   ),
@@ -1062,16 +1058,16 @@ ReactDOM.render(React.createElement(
     "使用 `.disabled` class"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost" },
     "幽灵按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", className: "disabled" },
     "幽灵按钮(失效)"
   )
-), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `disabled` 属性<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
@@ -1105,9 +1101,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-button-demo-button-group"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
-var ButtonGroup = antd.ButtonGroup;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -1118,58 +1112,58 @@ ReactDOM.render(React.createElement(
     "基本组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "确定"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "取消"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "左"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "右"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "左"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "中"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "右"
     )
@@ -1177,15 +1171,15 @@ ReactDOM.render(React.createElement(
   React.createElement(
     "h4",
     null,
-    "带图标按钮组合 "
+    "带图标按钮组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "left" }),
+      React.createElement(_antd.Icon, { type: "left" }),
       React.createElement(
         "span",
         null,
@@ -1193,24 +1187,24 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "前进",
-      React.createElement(Icon, { type: "right" })
+      React.createElement(_antd.Icon, { type: "right" })
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "cloud" })
+      React.createElement(_antd.Icon, { type: "cloud" })
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
-      React.createElement(Icon, { type: "cloud-download" })
+      React.createElement(_antd.Icon, { type: "cloud-download" })
     )
   ),
   React.createElement(
@@ -1219,37 +1213,37 @@ ReactDOM.render(React.createElement(
     "多个组合"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "1"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "2"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "3"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "4"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       React.createElement(
         "span",
         null,
         "前进"
       ),
-      React.createElement(Icon, { type: "right" })
+      React.createElement(_antd.Icon, { type: "right" })
     )
   ),
   React.createElement(
@@ -1258,65 +1252,63 @@ ReactDOM.render(React.createElement(
     "尺寸"
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     { size: "large" },
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "大"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     null,
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "默认"
     )
   ),
   React.createElement(
-    ButtonGroup,
+    _antd.ButtonGroup,
     { size: "small" },
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     ),
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "ghost" },
       "小"
     )
   )
-), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> ButtonGroup = antd.ButtonGroup;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">h4</span>&gt;</span>基本组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
@@ -1336,7 +1328,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合 <span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
 <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"left"</span> /&gt;</span>

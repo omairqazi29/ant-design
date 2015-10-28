@@ -3,8 +3,9 @@
     <div id="components-upload-demo-drag"></div>
     <script>(function(){'use strict';
 
-var Dragger = antd.Upload.Dragger;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
@@ -17,7 +18,7 @@ ReactDOM.render(React.createElement(
   React.createElement(
     'p',
     { className: 'ant-upload-drag-icon' },
-    React.createElement(Icon, { type: 'inbox' })
+    React.createElement(_antd.Icon, { type: 'inbox' })
   ),
   React.createElement(
     'p',
@@ -29,10 +30,10 @@ ReactDOM.render(React.createElement(
     { className: 'ant-upload-hint' },
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
-), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>
 };

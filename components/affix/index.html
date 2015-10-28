@@ -199,7 +199,7 @@ Affix 固钉 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -589,21 +589,19 @@ Affix 固钉 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-affix-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Affix = antd.Affix;
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Affix,
+  _antd.Affix,
   null,
   React.createElement(
-    Button,
-    { type: "primary" },
-    "固定在顶部"
+    _antd.Button,
+    { type: 'primary' },
+    '固定在顶部'
   )
-), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Affix, Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>
@@ -623,21 +621,19 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-offset">
   <div class="code-box-demo">
     <div id="components-affix-demo-offset"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Affix = antd.Affix;
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Affix,
+  _antd.Affix,
   { offset: 75 },
   React.createElement(
-    Button,
-    { type: "primary" },
-    "固定在距离顶部 75px 的位置"
+    _antd.Button,
+    { type: 'primary' },
+    '固定在距离顶部 75px 的位置'
   )
-), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-affix-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript">import { Affix, Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span> <span class="attribute">offset</span>=<span class="value">{75}</span>&gt;</span>

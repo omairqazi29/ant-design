@@ -1,19 +1,19 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tooltip-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tooltip = antd.Tooltip;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Tooltip,
-  { title: "提示文字" },
+  _antd.Tooltip,
+  { title: '提示文字' },
   React.createElement(
-    "span",
+    'span',
     null,
-    "鼠标移上来就会出现提示"
+    '鼠标移上来就会出现提示'
   )
-), document.getElementById('components-tooltip-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tooltip = antd.Tooltip;
+), document.getElementById('components-tooltip-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tooltip } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tooltip</span> <span class="attribute">title</span>=<span class="value">"提示文字"</span>&gt;</span>

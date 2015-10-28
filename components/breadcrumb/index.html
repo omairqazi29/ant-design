@@ -199,7 +199,7 @@ Breadcrumb 面包屑 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -635,32 +635,32 @@ Breadcrumb 面包屑 - Ant Design
     <div id="components-breadcrumb-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Breadcrumb = require('antd/lib/breadcrumb');
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Breadcrumb,
+  _antd.Breadcrumb,
   null,
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     null,
     "首页"
   ),
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     { href: "" },
     "应用中心"
   ),
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     { href: "" },
     "应用列表"
   ),
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     null,
     "某应用"
   )
-), document.getElementById('components-breadcrumb-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
+), document.getElementById('components-breadcrumb-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Breadcrumb } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>
@@ -685,11 +685,12 @@ ReactDOM.render(
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _antd = require('antd');
+
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
-var Breadcrumb = require('antd').Breadcrumb;
 
 var Apps = React.createClass({
   displayName: 'Apps',
@@ -752,7 +753,7 @@ var Home = React.createClass({
           } },
         '点击上面的导航切换页面，面包屑在下面：'
       ),
-      React.createElement(Breadcrumb, _extends({}, this.props, { router: ReactRouter }))
+      React.createElement(_antd.Breadcrumb, _extends({}, this.props, { router: ReactRouter }))
     );
   }
 });
@@ -769,13 +770,11 @@ ReactDOM.render(React.createElement(
       React.createElement(Route, { name: 'app', breadcrumbName: '应用:id', path: ':id' })
     )
   )
-), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> Router = ReactRouter.Router;
-<span class="keyword">var</span> Route = ReactRouter.Route;
-<span class="keyword">var</span> Link = ReactRouter.Link;
-<span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd'</span>).Breadcrumb;
+), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">const</span> ReactRouter = require(<span class="string">'react-router'</span>);
+<span class="keyword">let</span> { Router, Route, Link } = ReactRouter;
+import { Breadcrumb } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Apps = React.createClass({
+<span class="keyword">const</span> Apps = React.createClass({
   render() {
     <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">className</span>=<span class="value">"app-list"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/apps/1"</span>&gt;</span>应用1<span class="tag">&lt;/<span class="title">Link</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
@@ -784,7 +783,7 @@ ReactDOM.render(React.createElement(
   }
 });
 
-<span class="keyword">var</span> Home = React.createClass({
+<span class="keyword">const</span> Home = React.createClass({
   render() {
     <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-nav"</span>&gt;</span>
@@ -840,32 +839,30 @@ ReactDOM.render((
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var Breadcrumb = require('antd/lib/breadcrumb');
-var Icon = require('antd').iconfont;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Breadcrumb,
+  _antd.Breadcrumb,
   null,
   React.createElement(
-    Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'home' })
+    _antd.Breadcrumb.Item,
+    { href: "" },
+    React.createElement(_antd.Icon, { type: "home" })
   ),
   React.createElement(
-    Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'user' }),
-    '应用列表'
+    _antd.Breadcrumb.Item,
+    { href: "" },
+    React.createElement(_antd.Icon, { type: "user" }),
+    "应用列表"
   ),
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     null,
-    '应用'
+    "应用"
   )
-), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
-<span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
+), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript">import { Breadcrumb, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>

@@ -3,7 +3,7 @@
     <div id="components-datepicker-demo-locale"></div>
     <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var App = React.createClass({
   displayName: 'App',
@@ -17,19 +17,20 @@ var App = React.createClass({
         lang: {
           today: 'Today',
           now: 'Now',
-          ok: 'Ok'
+          ok: 'OK',
+          clear: 'Clear'
         }
       }
     };
   },
   render: function render() {
-    return React.createElement(Datepicker, { showTime: true, locale: this.state.locale });
+    return React.createElement(_antd.Datepicker, { showTime: true, locale: this.state.locale });
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       locale: {
@@ -39,7 +40,8 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
         lang: {
           today: <span class="string">'Today'</span>,
           now: <span class="string">'Now'</span>,
-          ok: <span class="string">'Ok'</span>
+          ok: <span class="string">'OK'</span>,
+          clear: <span class="string">'Clear'</span>
         }
       }
     };

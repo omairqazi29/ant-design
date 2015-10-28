@@ -3,21 +3,19 @@
     <div id="components-message-demo-info"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var info = function info() {
-  message.info('这是一条普通的提醒');
+  _antd.message.info('这是一条普通的提醒');
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: info },
   '显示普通提醒'
-), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.info(<span class="string">'这是一条普通的提醒'</span>);
 };
 

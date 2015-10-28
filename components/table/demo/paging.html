@@ -3,7 +3,7 @@
     <div id="components-table-demo-paging"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
+var _antd = require('antd');
 
 var columns = [{
   title: '姓名',
@@ -22,8 +22,8 @@ var columns = [{
   title: '住址',
   dataIndex: 'address'
 }];
-var data = [];
 
+var data = [];
 for (var i = 0; i < 46; i++) {
   data.push({
     key: i,
@@ -39,9 +39,9 @@ var pagination = {
   showSizeChanger: true
 };
 
-ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> columns = [{
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
   render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
@@ -54,8 +54,8 @@ ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data,
   title: <span class="string">'住址'</span>,
   dataIndex: <span class="string">'address'</span>
 }];
-<span class="keyword">var</span> data = [];
 
+<span class="keyword">const</span> data = [];
 <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">46</span>; i++) {
   data.push({
     key: i,
@@ -65,7 +65,7 @@ ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data,
   });
 }
 
-<span class="keyword">var</span> pagination = {
+<span class="keyword">const</span> pagination = {
   total: data.length,
   current: <span class="number">2</span>,
   showSizeChanger: <span class="literal">true</span>

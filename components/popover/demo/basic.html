@@ -3,8 +3,7 @@
     <div id="components-popover-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Popover = antd.Popover;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var content = React.createElement(
   "div",
@@ -22,17 +21,16 @@ var content = React.createElement(
 );
 
 ReactDOM.render(React.createElement(
-  Popover,
+  _antd.Popover,
   { overlay: content, title: "标题" },
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "弹出卡片"
   )
-), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>

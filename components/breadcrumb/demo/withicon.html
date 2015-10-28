@@ -1,32 +1,30 @@
 <div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var Breadcrumb = require('antd/lib/breadcrumb');
-var Icon = require('antd').iconfont;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Breadcrumb,
+  _antd.Breadcrumb,
   null,
   React.createElement(
-    Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'home' })
+    _antd.Breadcrumb.Item,
+    { href: "" },
+    React.createElement(_antd.Icon, { type: "home" })
   ),
   React.createElement(
-    Breadcrumb.Item,
-    { href: '' },
-    React.createElement(Icon, { type: 'user' }),
-    '应用列表'
+    _antd.Breadcrumb.Item,
+    { href: "" },
+    React.createElement(_antd.Icon, { type: "user" }),
+    "应用列表"
   ),
   React.createElement(
-    Breadcrumb.Item,
+    _antd.Breadcrumb.Item,
     null,
-    '应用'
+    "应用"
   )
-), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Breadcrumb = require(<span class="string">'antd/lib/breadcrumb'</span>);
-<span class="keyword">var</span> Icon = require(<span class="string">'antd'</span>).iconfont;
+), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript">import { Breadcrumb, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Breadcrumb</span>&gt;</span>

@@ -199,7 +199,7 @@ Checkbox 多选框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -609,8 +609,10 @@ Checkbox 多选框 - Ant Design
     <div id="components-checkbox-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Checkbox = antd.Checkbox;
+var _antd = require('antd');
+
 var container = document.getElementById('components-checkbox-demo-basic');
+
 function onChange(e) {
   console.log('checked = ' + e.target.checked);
 }
@@ -618,10 +620,11 @@ function onChange(e) {
 ReactDOM.render(React.createElement(
   'label',
   null,
-  React.createElement(Checkbox, { defaultChecked: false, onChange: onChange }),
+  React.createElement(_antd.Checkbox, { defaultChecked: false, onChange: onChange }),
   'Checkbox'
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-basic'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-basic'</span>);
+
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
   console.log(<span class="string">'checked = '</span> + e.target.checked);
 }
@@ -643,8 +646,8 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">labe
     <div id="components-checkbox-demo-controller"></div>
     <script>(function(){'use strict';
 
-var Checkbox = antd.Checkbox;
-var Button = antd.Button;
+var _antd = require('antd');
+
 var container = document.getElementById('components-checkbox-demo-controller');
 
 var App = React.createClass({
@@ -667,7 +670,7 @@ var App = React.createClass({
         React.createElement(
           'label',
           null,
-          React.createElement(Checkbox, { checked: this.state.checked,
+          React.createElement(_antd.Checkbox, { checked: this.state.checked,
             disabled: this.state.disabled,
             onChange: this.onChange }),
           label
@@ -677,13 +680,13 @@ var App = React.createClass({
         'p',
         null,
         React.createElement(
-          Button,
+          _antd.Button,
           { type: 'primary', size: 'small',
             onClick: this.toggleChecked },
           !this.state.checked ? "选中" : "取消"
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { style: { 'marginLeft': '10px' },
             type: 'primary', size: 'small',
             onClick: this.toggleDisable },
@@ -706,16 +709,15 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-controller'</span>);
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-controller'</span>);
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       checked: <span class="literal">true</span>,
       disabled: <span class="literal">false</span>
-    }
+    };
   },
   render() {
     <span class="keyword">var</span> label = (<span class="keyword">this</span>.state.checked ? <span class="string">'选中'</span> : <span class="string">'取消'</span>) + <span class="string">'-'</span> +
@@ -772,17 +774,18 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
     <div id="components-checkbox-demo-disable"></div>
     <script>(function(){'use strict';
 
-var Checkbox = antd.Checkbox;
+var _antd = require('antd');
+
 var container = document.getElementById('components-checkbox-demo-disable');
 
 ReactDOM.render(React.createElement(
   'div',
   null,
-  React.createElement(Checkbox, { defaultChecked: false, disabled: true }),
+  React.createElement(_antd.Checkbox, { defaultChecked: false, disabled: true }),
   React.createElement('br', null),
-  React.createElement(Checkbox, { defaultChecked: true, disabled: true })
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-disable'</span>);
+  React.createElement(_antd.Checkbox, { defaultChecked: true, disabled: true })
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-disable'</span>);
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>/&gt;</span>

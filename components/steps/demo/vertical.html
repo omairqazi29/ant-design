@@ -3,8 +3,9 @@
     <div id="components-steps-demo-vertical"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-vertical');
 
 var steps = [{
@@ -24,14 +25,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   { direction: 'vertical', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {

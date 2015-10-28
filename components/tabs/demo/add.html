@@ -3,10 +3,9 @@
     <div id="components-tabs-demo-add"></div>
     <script>(function(){'use strict';
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 var index = 0;
 var closeStyle = {
@@ -71,12 +70,12 @@ var Test = React.createClass({
     var _this = this;
 
     return React.createElement(
-      Tabs,
+      _antd.Tabs,
       {
         onChange: this.onChange,
         activeKey: this.state.activeKey,
         tabBarExtraContent: React.createElement(
-          Button,
+          _antd.Button,
           { type: 'primary' },
           '其它操作'
         ) },
@@ -88,22 +87,20 @@ var Test = React.createClass({
               null,
               t.title,
               ' ',
-              React.createElement(Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
+              React.createElement(_antd.Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
             ) },
           t.content
         );
-      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
+      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(_antd.Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs, Button, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="keyword">var</span> index = <span class="number">0</span>;
-<span class="keyword">var</span> closeStyle = {
+<span class="keyword">const</span> closeStyle = {
   position: <span class="string">'absolute'</span>,
   top: <span class="number">0</span>,
   right: -<span class="number">10</span>,

@@ -3,8 +3,7 @@
     <div id="components-modal-demo-async"></div>
     <script>(function(){'use strict';
 
-var Modal = antd.Modal;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var ModalText = '对话框的内容';
 
@@ -47,12 +46,12 @@ var Test = React.createClass({
       'div',
       null,
       React.createElement(
-        Button,
+        _antd.Button,
         { type: 'primary', onClick: this.showModal },
         '显示对话框'
       ),
       React.createElement(
-        Modal,
+        _antd.Modal,
         { title: '对话框标题',
           visible: this.state.visible,
           onOk: this.handleOk,
@@ -68,12 +67,11 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-async'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-async'));})()</script><div class="highlight"><pre><code class="javascript">import { Modal, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> ModalText = <span class="string">'对话框的内容'</span>;
+<span class="keyword">const</span> ModalText = <span class="string">'对话框的内容'</span>;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       ModalText: <span class="string">'对话框的内容'</span>,

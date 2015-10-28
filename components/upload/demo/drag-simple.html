@@ -3,8 +3,9 @@
     <div id="components-upload-demo-drag-simple"></div>
     <script>(function(){'use strict';
 
-var Dragger = antd.Upload.Dragger;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
@@ -14,11 +15,11 @@ var props = {
 ReactDOM.render(React.createElement(
   Dragger,
   props,
-  React.createElement(Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
-<span class="keyword">var</span> Icon = antd.Icon;
+  React.createElement(_antd.Icon, { type: 'plus' })
+), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>
 };

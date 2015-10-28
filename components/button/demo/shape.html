@@ -3,45 +3,43 @@
     <div id="components-button-demo-shape"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", shape: "circle", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement("br", null),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "large" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "ghost", shape: "circle-outline", size: "small" },
-    React.createElement(Icon, { type: "search" })
+    React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, Icon } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>

@@ -3,7 +3,7 @@
     <div id="components-button-demo-loading"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 var App = React.createClass({
   displayName: "App",
@@ -23,23 +23,23 @@ var App = React.createClass({
       "div",
       null,
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", size: "large", loading: true },
         "加载中"
       ),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", loading: true },
         "加载中"
       ),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", size: "small", loading: true },
         "加载中"
       ),
       React.createElement("br", null),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", loading: this.state.loading, onClick: this.enterLoading },
         "点击变加载"
       )
@@ -47,9 +47,9 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       loading: <span class="literal">false</span>

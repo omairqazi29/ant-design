@@ -3,9 +3,9 @@
     <div id="components-menu-demo-sider-current"></div>
     <script>(function(){'use strict';
 
-var Menu = antd.Menu;
-var SubMenu = Menu.SubMenu;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var SubMenu = _antd.Menu.SubMenu;
 
 var Sider = React.createClass({
   displayName: 'Sider',
@@ -30,7 +30,7 @@ var Sider = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      Menu,
+      _antd.Menu,
       { onClick: this.handleClick,
         style: { width: 240 },
         openKeys: this.state.openKeys,
@@ -43,7 +43,7 @@ var Sider = React.createClass({
         { key: 'sub1', title: React.createElement(
             'span',
             null,
-            React.createElement(Icon, { type: 'mail' }),
+            React.createElement(_antd.Icon, { type: 'mail' }),
             React.createElement(
               'span',
               null,
@@ -51,22 +51,22 @@ var Sider = React.createClass({
             )
           ) },
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '1' },
           '选项1'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '2' },
           '选项2'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '3' },
           '选项3'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '4' },
           '选项4'
         )
@@ -76,7 +76,7 @@ var Sider = React.createClass({
         { key: 'sub2', title: React.createElement(
             'span',
             null,
-            React.createElement(Icon, { type: 'appstore' }),
+            React.createElement(_antd.Icon, { type: 'appstore' }),
             React.createElement(
               'span',
               null,
@@ -84,12 +84,12 @@ var Sider = React.createClass({
             )
           ) },
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '5' },
           '选项5'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '6' },
           '选项6'
         ),
@@ -97,12 +97,12 @@ var Sider = React.createClass({
           SubMenu,
           { key: 'sub3', title: '三级导航' },
           React.createElement(
-            Menu.Item,
+            _antd.Menu.Item,
             { key: '7' },
             '选项7'
           ),
           React.createElement(
-            Menu.Item,
+            _antd.Menu.Item,
             { key: '8' },
             '选项8'
           )
@@ -113,7 +113,7 @@ var Sider = React.createClass({
         { key: 'sub4', title: React.createElement(
             'span',
             null,
-            React.createElement(Icon, { type: 'setting' }),
+            React.createElement(_antd.Icon, { type: 'setting' }),
             React.createElement(
               'span',
               null,
@@ -121,22 +121,22 @@ var Sider = React.createClass({
             )
           ) },
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '9' },
           '选项9'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '10' },
           '选项10'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '11' },
           '选项11'
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: '12' },
           '选项12'
         )
@@ -144,9 +144,8 @@ var Sider = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider-current'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> SubMenu = Menu.SubMenu;
-<span class="keyword">var</span> Icon = antd.Icon;
+ReactDOM.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider-current'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> SubMenu = Menu.SubMenu;
 
 <span class="keyword">var</span> Sider = React.createClass({
   getInitialState() {

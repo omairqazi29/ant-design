@@ -199,7 +199,7 @@ Steps 步骤条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -660,8 +660,9 @@ Steps 步骤条 - Ant Design
     <div id="components-steps-demo-simple"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-simple');
 
 var steps = [{
@@ -681,14 +682,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   { current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-simple'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-simple'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是多信息的描述啊'</span>
 }, {
@@ -720,8 +721,9 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span cla
     <div id="components-steps-demo-small-size"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-small-size');
 
 var steps = [{
@@ -741,14 +743,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   { size: 'small', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-small-size'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-small-size'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   status: <span class="string">'finish'</span>,
   title: <span class="string">'已完成'</span>
 }, {
@@ -780,19 +782,20 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span cla
     <div id="components-steps-demo-icon"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-icon');
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   null,
   React.createElement(Step, { status: 'finish', title: '步骤1', icon: 'cloud' }),
   React.createElement(Step, { status: 'process', title: '步骤2', icon: 'apple' }),
   React.createElement(Step, { status: 'wait', title: '步骤3', icon: 'github' })
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span> /&gt;</span>
@@ -816,9 +819,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Step
   <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
 <span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
-var Button = antd.Button;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-step-next');
 var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 var steps = array.map(function (item, i) {
@@ -857,7 +860,7 @@ var App = React.createClass({
         ' 步'
       ),
       React.createElement(
-        Steps,
+        _antd.Steps,
         { current: cs },
         steps.map(function (s, i) {
           return React.createElement(Step, { key: i, title: s.title, description: s.description });
@@ -867,7 +870,7 @@ var App = React.createClass({
         'div',
         null,
         React.createElement(
-          Button,
+          _antd.Button,
           { onClick: this.next },
           '下一步'
         )
@@ -876,25 +879,24 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">var</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
-<span class="keyword">var</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
+<span class="keyword">const</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
+<span class="keyword">const</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
   <span class="keyword">return</span> {
     title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
   };
 });
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
   next() {
-    <span class="keyword">var</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
+    <span class="keyword">let</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
     <span class="keyword">if</span> (s === steps.length) {
       s = <span class="number">0</span>;
     }
@@ -903,7 +905,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     });
   },
   render() {
-    <span class="keyword">var</span> cs = <span class="keyword">this</span>.state.currentStep;
+    <span class="keyword">const</span> cs = <span class="keyword">this</span>.state.currentStep;
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -932,8 +934,9 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span
     <div id="components-steps-demo-vertical"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-vertical');
 
 var steps = [{
@@ -953,14 +956,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   { direction: 'vertical', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
@@ -992,8 +995,9 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span cla
     <div id="components-steps-demo-vertical-small"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-vertical-small');
 
 var steps = [{
@@ -1010,14 +1014,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   { size: 'small', direction: 'vertical', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical-small'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical-small'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是信息的描述'</span>
 }, {
@@ -1046,8 +1050,9 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span cla
     <div id="components-steps-demo-status"></div>
     <script>(function(){'use strict';
 
-var Steps = antd.Steps;
-var Step = Steps.Step;
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
 var container = document.getElementById('components-steps-demo-status');
 
 var steps = [{
@@ -1071,14 +1076,14 @@ var steps = [{
 });
 
 ReactDOM.render(React.createElement(
-  Steps,
+  _antd.Steps,
   null,
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Steps = antd.Steps;
-<span class="keyword">var</span> Step = Steps.Step;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-steps-demo-status'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Step = Steps.Step;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-status'</span>);
 
-<span class="keyword">var</span> steps = [{
+<span class="keyword">const</span> steps = [{
   status: <span class="string">'finish'</span>,
   title: <span class="string">'已完成'</span>,
   description: <span class="string">'这里是多信息的描述啊'</span>

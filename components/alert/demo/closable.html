@@ -1,29 +1,29 @@
 <div class="code-box" id="demo-closable">
   <div class="code-box-demo">
     <div id="components-alert-demo-closable"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Alert = antd.Alert;
+var _antd = require('antd');
 
 var onClose = function onClose(e) {
   console.log(e, '我要被关闭啦！');
 };
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
-  React.createElement(Alert, { message: "警告提示的文案",
-    type: "warn",
+  React.createElement(_antd.Alert, { message: '警告提示的文案',
+    type: 'warn',
     closable: true,
     onClose: onClose }),
-  React.createElement(Alert, { message: "错误提示的文案",
-    description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
-    type: "error",
+  React.createElement(_antd.Alert, { message: '错误提示的文案',
+    description: '错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍',
+    type: 'error',
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Alert = antd.Alert;
+), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
+<span class="keyword">const</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
   console.log(e, <span class="string">'我要被关闭啦！'</span>);
 };
 

@@ -3,21 +3,19 @@
     <div id="components-message-demo-success"></div>
     <script>(function(){'use strict';
 
-var Button = antd.Button;
+var _antd = require('antd');
 
-var message = antd.message;
 var success = function success() {
-  message.success('这是一条成功的提示');
+  _antd.message.success('这是一条成功的提示');
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: 'primary', onClick: success },
   '显示成功提示'
-), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   message.success(<span class="string">'这是一条成功的提示'</span>);
 };
 

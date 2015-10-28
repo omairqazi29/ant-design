@@ -3,7 +3,7 @@
     <div id="components-slider-demo-mark"></div>
     <script>(function(){"use strict";
 
-var Slider = antd.Slider;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -13,14 +13,14 @@ ReactDOM.render(React.createElement(
     null,
     "包含关系"
   ),
-  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], defaultIndex: 1 }),
+  React.createElement(_antd.Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], defaultIndex: 1 }),
   React.createElement(
     "p",
     null,
     "并列关系"
   ),
-  React.createElement(Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], isIncluded: false, defaultIndex: 1 })
-), document.getElementById('components-slider-demo-mark'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Slider = antd.Slider;
+  React.createElement(_antd.Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], isIncluded: false, defaultIndex: 1 })
+), document.getElementById('components-slider-demo-mark'));})()</script><div class="highlight"><pre><code class="javascript">import { Slider } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"sliderContainer"</span>&gt;</span>

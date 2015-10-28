@@ -3,12 +3,11 @@
     <div id="components-notification-demo-with-icon"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
-    notification[type]({
+    _antd.notification[type]({
       message: "这是标题",
       description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
     });
@@ -19,29 +18,28 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('success') },
     "成功"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('info') },
     "消息"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('warn') },
     "警告"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('error') },
     "错误"
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
+<span class="keyword">const</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
     notification[type]({
       message: <span class="string">"这是标题"</span>,

@@ -199,7 +199,7 @@ Carousel 走马灯 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -637,10 +637,10 @@ Carousel 走马灯 - Ant Design
     <div id="components-carousel-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Carousel = antd.Carousel;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Carousel,
+  _antd.Carousel,
   null,
   React.createElement(
     'div',
@@ -678,7 +678,7 @@ ReactDOM.render(React.createElement(
       '4'
     )
   )
-), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
+), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Carousel } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span>&gt;</span>
@@ -699,50 +699,50 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-fade">
   <div class="code-box-demo">
     <div id="components-carousel-demo-fade"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Carousel = antd.Carousel;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Carousel,
-  { effect: "fade" },
+  _antd.Carousel,
+  { effect: 'fade' },
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "1"
+      '1'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "2"
+      '2'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "3"
+      '3'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "4"
+      '4'
     )
   )
-), document.getElementById('components-carousel-demo-fade'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
+), document.getElementById('components-carousel-demo-fade'));})()</script><div class="highlight"><pre><code class="javascript">import { Carousel } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">effect</span>=<span class="value">"fade"</span>&gt;</span>
@@ -765,50 +765,50 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-vertical">
   <div class="code-box-demo">
     <div id="components-carousel-demo-vertical"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Carousel = antd.Carousel;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Carousel,
-  { vertical: "true" },
+  _antd.Carousel,
+  { vertical: 'true' },
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "1"
+      '1'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "2"
+      '2'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "3"
+      '3'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "4"
+      '4'
     )
   )
-), document.getElementById('components-carousel-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
+), document.getElementById('components-carousel-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript">import { Carousel } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">vertical</span>=<span class="value">"true"</span>&gt;</span>
@@ -829,50 +829,50 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-autoplay">
   <div class="code-box-demo">
     <div id="components-carousel-demo-autoplay"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Carousel = antd.Carousel;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Carousel,
-  { autoplay: "true" },
+  _antd.Carousel,
+  { autoplay: 'true' },
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "1"
+      '1'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "2"
+      '2'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "3"
+      '3'
     )
   ),
   React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-      "h3",
+      'h3',
       null,
-      "4"
+      '4'
     )
   )
-), document.getElementById('components-carousel-demo-autoplay'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
+), document.getElementById('components-carousel-demo-autoplay'));})()</script><div class="highlight"><pre><code class="javascript">import { Carousel } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span> <span class="attribute">autoplay</span>=<span class="value">"true"</span>&gt;</span>

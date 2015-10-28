@@ -3,7 +3,7 @@
     <div id="components-table-demo-expand"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
+var _antd = require('antd');
 
 function renderAction() {
   return React.createElement(
@@ -25,10 +25,10 @@ var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '�
 
 var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { key: 2, name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { key: 3, name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
 
-ReactDOM.render(React.createElement(Table, { columns: columns,
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
-  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
+  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">renderAction</span><span class="params">()</span> {</span>
   <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>删除<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
@@ -38,14 +38,14 @@ ReactDOM.render(React.createElement(Table, { columns: columns,
   <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>{record.description}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>;</span>
 }
 
-<span class="keyword">var</span> columns = [
+<span class="keyword">const</span> columns = [
   {title: <span class="string">'姓名'</span>, dataIndex: <span class="string">'name'</span>, key: <span class="string">'name'</span>},
   {title: <span class="string">'年龄'</span>, dataIndex: <span class="string">'age'</span>, key: <span class="string">'age'</span>},
   {title: <span class="string">'住址'</span>, dataIndex: <span class="string">'address'</span>, key: <span class="string">'address'</span>},
   {title: <span class="string">'操作'</span>, dataIndex: <span class="string">''</span>, key: <span class="string">'x'</span>, render: renderAction}
 ];
 
-<span class="keyword">var</span> data = [
+<span class="keyword">const</span> data = [
   {key: <span class="number">1</span>, name: <span class="string">'胡彦斌'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园1号'</span>, description: <span class="string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
   {key: <span class="number">2</span>, name: <span class="string">'吴彦祖'</span>, age: <span class="number">42</span>, address: <span class="string">'西湖区湖底公园2号'</span>, description: <span class="string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
   {key: <span class="number">3</span>, name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}

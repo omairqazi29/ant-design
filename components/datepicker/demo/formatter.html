@@ -3,9 +3,9 @@
     <div id="components-datepicker-demo-formatter"></div>
     <script>(function(){"use strict";
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
-ReactDOM.render(React.createElement(Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015/01/01"</span> <span class="attribute">format</span>=<span class="value">"yyyy/MM/dd"</span> /&gt;</span>

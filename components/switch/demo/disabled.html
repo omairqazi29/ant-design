@@ -1,14 +1,14 @@
 <div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-switch-demo-disabled"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Switch = antd.Switch;
-var Button = antd.Button;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-disabled');
 
 var Test = React.createClass({
-  displayName: "Test",
+  displayName: 'Test',
 
   getInitialState: function getInitialState() {
     return {
@@ -22,25 +22,24 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(Switch, { disabled: this.state.disabled }),
-      React.createElement("br", null),
-      React.createElement("br", null),
+      React.createElement(_antd.Switch, { disabled: this.state.disabled }),
+      React.createElement('br', null),
+      React.createElement('br', null),
       React.createElement(
-        Button,
-        { type: "primary", onClick: this.toggle },
-        "Toggle disabled"
+        _antd.Button,
+        { type: 'primary', onClick: this.toggle },
+        'Toggle disabled'
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
+ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       disabled: <span class="literal">true</span>

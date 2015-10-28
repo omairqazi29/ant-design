@@ -3,27 +3,25 @@
     <div id="components-popconfirm-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Popconfirm = antd.Popconfirm;
-var message = antd.message;
+var _antd = require('antd');
 
 function confirm() {
-  message.success('点击了确定');
+  _antd.message.success('点击了确定');
 }
 
 function cancel() {
-  message.error('点击了取消');
+  _antd.message.error('点击了取消');
 }
 
 ReactDOM.render(React.createElement(
-  Popconfirm,
+  _antd.Popconfirm,
   { title: '确定要删除这个任务吗？', onConfirm: confirm, onCancel: cancel },
   React.createElement(
     'a',
     { href: 'javascript:;' },
     '删除'
   )
-), document.getElementById('components-popconfirm-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popconfirm = antd.Popconfirm;
-<span class="keyword">var</span> message = antd.message;
+), document.getElementById('components-popconfirm-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Popconfirm, message } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">confirm</span><span class="params">()</span> {</span>
   message.success(<span class="string">'点击了确定'</span>);

@@ -199,7 +199,7 @@ Radio 单选框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -644,13 +644,13 @@ Radio 单选框 - Ant Design
     <div id="components-radio-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Radio = antd.Radio;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Radio,
+  _antd.Radio,
   null,
   'Radio'
-), document.getElementById('components-radio-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
+), document.getElementById('components-radio-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Radio</span>&gt;</span>Radio<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
 , document.getElementById('components-radio-demo-basic'));</span></code></pre></div>
@@ -667,8 +667,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Radi
     <div id="components-radio-demo-radiogroup"></div>
     <script>(function(){'use strict';
 
-var Radio = antd.Radio;
-var RadioGroup = antd.Radio.Group;
+var _antd = require('antd');
+
+var RadioGroup = _antd.Radio.Group;
 
 var App = React.createClass({
   displayName: 'App',
@@ -692,22 +693,22 @@ var App = React.createClass({
         RadioGroup,
         { onChange: this.onChange, value: this.state.value },
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'a' },
           'A'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'b' },
           'B'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'c' },
           'C'
         ),
         React.createElement(
-          Radio,
+          _antd.Radio,
           { value: 'd' },
           'D'
         )
@@ -721,10 +722,10 @@ var App = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-radiogroup'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-radiogroup'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> RadioGroup = Radio.Group;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
     <span class="keyword">return</span> {
       value: <span class="string">'a'</span>
@@ -762,17 +763,16 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-disable">
   <div class="code-box-demo">
     <div id="components-radio-demo-disable"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Radio = antd.Radio;
-var Button = antd.Button;
+var _antd = require('antd');
 
 function toggleDisabled() {
   disabled = !disabled;
 }
 
 var App = React.createClass({
-  displayName: "App",
+  displayName: 'App',
 
   getInitialState: function getInitialState() {
     return {
@@ -786,40 +786,39 @@ var App = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        Radio,
+        _antd.Radio,
         { defaultChecked: false, disabled: this.state.disabled },
-        "不可用"
+        '不可用'
       ),
-      React.createElement("br", null),
+      React.createElement('br', null),
       React.createElement(
-        Radio,
+        _antd.Radio,
         { defaultChecked: true, disabled: this.state.disabled },
-        "不可用"
+        '不可用'
       ),
       React.createElement(
-        "div",
+        'div',
         { style: { marginTop: 20 } },
         React.createElement(
-          Button,
-          { type: "primary", onClick: this.toggleDisabled },
-          "Toggle disabled"
+          _antd.Button,
+          { type: 'primary', onClick: this.toggleDisabled },
+          'Toggle disabled'
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio, Button } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">toggleDisabled</span><span class="params">()</span> {</span>
   disabled = !disabled;
 }
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       disabled: <span class="literal">true</span>
@@ -856,10 +855,12 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
 </div><div class="code-box" id="demo-radiobutton">
   <div class="code-box-demo">
     <div id="components-radio-demo-radiobutton"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var RadioButton = antd.Radio.Button;
-var RadioGroup = antd.Radio.Group;
+var _antd = require('antd');
+
+var RadioButton = _antd.Radio.Button;
+var RadioGroup = _antd.Radio.Group;
 
 function onChange(e) {
   console.log('radio checked:' + e.target.value);
@@ -867,29 +868,30 @@ function onChange(e) {
 
 ReactDOM.render(React.createElement(
   RadioGroup,
-  { onChange: onChange, defaultValue: "a" },
+  { onChange: onChange, defaultValue: 'a' },
   React.createElement(
     RadioButton,
-    { value: "a" },
-    "杭州"
+    { value: 'a' },
+    '杭州'
   ),
   React.createElement(
     RadioButton,
-    { value: "b" },
-    "上海"
+    { value: 'b' },
+    '上海'
   ),
   React.createElement(
     RadioButton,
-    { value: "c" },
-    "北京"
+    { value: 'c' },
+    '北京'
   ),
   React.createElement(
     RadioButton,
-    { value: "d" },
-    "成都"
+    { value: 'd' },
+    '成都'
   )
-), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> RadioButton = antd.Radio.Button;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> RadioButton = Radio.Button;
+<span class="keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
   console.log(<span class="string">'radio checked:'</span> + e.target.value);

@@ -3,13 +3,14 @@
     <div id="components-collapse-demo-accordion"></div>
     <script>(function(){"use strict";
 
-var Collapse = antd.Collapse;
-var Panel = Collapse.Panel;
+var _antd = require('antd');
+
+var Panel = _antd.Collapse.Panel;
 
 var text = "\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n";
 
 ReactDOM.render(React.createElement(
-  Collapse,
+  _antd.Collapse,
   { accordion: true },
   React.createElement(
     Panel,
@@ -38,10 +39,10 @@ ReactDOM.render(React.createElement(
       text
     )
   )
-), document.getElementById('components-collapse-demo-accordion'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Collapse = antd.Collapse;
-<span class="keyword">var</span> Panel = Collapse.Panel;
+), document.getElementById('components-collapse-demo-accordion'));})()</script><div class="highlight"><pre><code class="javascript">import { Collapse } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Panel = Collapse.Panel;
 
-<span class="keyword">var</span> text = `
+<span class="keyword">const</span> text = `
   A dog is a type of domesticated animal.
   Known <span class="keyword">for</span> its loyalty and faithfulness,
   it can be found as a welcome guest <span class="keyword">in</span> many households across the world.

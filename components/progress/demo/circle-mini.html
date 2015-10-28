@@ -1,17 +1,20 @@
 <div class="code-box" id="demo-circle-mini">
   <div class="code-box-demo">
     <div id="components-progress-demo-circle-mini"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var ProgressCircle = antd.Progress.Circle;
+var _antd = require('antd');
+
+var ProgressCircle = _antd.Progress.Circle;
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(ProgressCircle, { percent: 30, width: 80 }),
-  React.createElement(ProgressCircle, { percent: 70, width: 80, status: "exception" }),
+  React.createElement(ProgressCircle, { percent: 70, width: 80, status: 'exception' }),
   React.createElement(ProgressCircle, { percent: 100, width: 80 })
-), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ProgressCircle = antd.Progress.Circle;
+), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

@@ -1,10 +1,12 @@
 <div class="code-box" id="demo-radiobutton">
   <div class="code-box-demo">
     <div id="components-radio-demo-radiobutton"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var RadioButton = antd.Radio.Button;
-var RadioGroup = antd.Radio.Group;
+var _antd = require('antd');
+
+var RadioButton = _antd.Radio.Button;
+var RadioGroup = _antd.Radio.Group;
 
 function onChange(e) {
   console.log('radio checked:' + e.target.value);
@@ -12,29 +14,30 @@ function onChange(e) {
 
 ReactDOM.render(React.createElement(
   RadioGroup,
-  { onChange: onChange, defaultValue: "a" },
+  { onChange: onChange, defaultValue: 'a' },
   React.createElement(
     RadioButton,
-    { value: "a" },
-    "杭州"
+    { value: 'a' },
+    '杭州'
   ),
   React.createElement(
     RadioButton,
-    { value: "b" },
-    "上海"
+    { value: 'b' },
+    '上海'
   ),
   React.createElement(
     RadioButton,
-    { value: "c" },
-    "北京"
+    { value: 'c' },
+    '北京'
   ),
   React.createElement(
     RadioButton,
-    { value: "d" },
-    "成都"
+    { value: 'd' },
+    '成都'
   )
-), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> RadioButton = antd.Radio.Button;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
+), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> RadioButton = Radio.Button;
+<span class="keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
   console.log(<span class="string">'radio checked:'</span> + e.target.value);

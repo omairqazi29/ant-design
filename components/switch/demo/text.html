@@ -1,25 +1,24 @@
 <div class="code-box" id="demo-text">
   <div class="code-box-demo">
     <div id="components-switch-demo-text"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Switch = antd.Switch;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-text');
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
-  React.createElement(Switch, { checkedChildren: "开", unCheckedChildren: "关" }),
+  React.createElement(_antd.Switch, { checkedChildren: '开', unCheckedChildren: '关' }),
   React.createElement(
-    "span",
+    'span',
     null,
-    " "
+    ' '
   ),
-  React.createElement(Switch, { checkedChildren: React.createElement(Icon, { type: "check" }), unCheckedChildren: React.createElement(Icon, { type: "cross" }) })
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> Icon = antd.Icon;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
+  React.createElement(_antd.Switch, { checkedChildren: React.createElement(_antd.Icon, { type: 'check' }), unCheckedChildren: React.createElement(_antd.Icon, { type: 'cross' }) })
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">"开"</span> <span class="attribute">unCheckedChildren</span>=<span class="value">"关"</span> /&gt;</span>

@@ -3,8 +3,10 @@
     <div id="components-checkbox-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Checkbox = antd.Checkbox;
+var _antd = require('antd');
+
 var container = document.getElementById('components-checkbox-demo-basic');
+
 function onChange(e) {
   console.log('checked = ' + e.target.checked);
 }
@@ -12,10 +14,11 @@ function onChange(e) {
 ReactDOM.render(React.createElement(
   'label',
   null,
-  React.createElement(Checkbox, { defaultChecked: false, onChange: onChange }),
+  React.createElement(_antd.Checkbox, { defaultChecked: false, onChange: onChange }),
   'Checkbox'
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-basic'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-basic'</span>);
+
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
   console.log(<span class="string">'checked = '</span> + e.target.checked);
 }

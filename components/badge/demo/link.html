@@ -3,17 +3,17 @@
     <div id="components-badge-demo-link"></div>
     <script>(function(){"use strict";
 
-var Badge = antd.Badge;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "a",
   { href: "#" },
   React.createElement(
-    Badge,
+    _antd.Badge,
     { count: "5" },
     React.createElement("span", { className: "head-example" })
   )
-), document.getElementById('components-badge-demo-link'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Badge = antd.Badge;
+), document.getElementById('components-badge-demo-link'));})()</script><div class="highlight"><pre><code class="javascript">import { Badge } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>

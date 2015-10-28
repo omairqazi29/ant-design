@@ -3,38 +3,36 @@
     <div id="components-layout-demo-flex-order"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "4" },
       "1 col-order-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "3" },
       "2 col-order-3"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "2" },
       "3 col-order-2"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "1" },
       "4 col-order-1"
     )
   )
-), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

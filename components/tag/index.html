@@ -199,7 +199,7 @@ Tag 标签 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -614,38 +614,38 @@ Tag 标签 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tag-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tag = antd.Tag;
+var _antd = require('antd');
 
 function onClose(e) {
   console.log(this.props.children);
 }
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    Tag,
+    _antd.Tag,
     null,
-    "标签一"
+    '标签一'
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     null,
-    "标签二"
+    '标签二'
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, onClose: onClose },
-    "标签三"
+    '标签三'
   ),
   React.createElement(
-    Tag,
-    { href: "http://www.baidu.com" },
-    "标签四（链接）"
+    _antd.Tag,
+    { href: 'http://www.baidu.com' },
+    '标签四（链接）'
   )
-), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tag = antd.Tag;
+), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tag } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onClose</span><span class="params">(e)</span> {</span>
   console.log(<span class="keyword">this</span>.props.children);
@@ -672,32 +672,32 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-tag-demo-colorful"></div>
     <script>(function(){"use strict";
 
-var Tag = antd.Tag;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "blue" },
     "蓝色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "green" },
     "绿色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "yellow" },
     "黄色"
   ),
   React.createElement(
-    Tag,
+    _antd.Tag,
     { closable: true, color: "red" },
     "红色"
   )
-), document.getElementById('components-tag-demo-colorful'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tag = antd.Tag;
+), document.getElementById('components-tag-demo-colorful'));})()</script><div class="highlight"><pre><code class="javascript">import { Tag } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Tag</span> <span class="attribute">closable</span> <span class="attribute">color</span>=<span class="value">"blue"</span>&gt;</span>蓝色<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>

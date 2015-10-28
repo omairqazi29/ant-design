@@ -1,42 +1,43 @@
 <div class="code-box" id="demo-search">
   <div class="code-box-demo">
     <div id="components-select-demo-search"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Select = antd.Select;
-var Option = Select.Option;
+var _antd = require('antd');
+
+var Option = _antd.Select.Option;
 
 function handleChange(value) {
   console.log('selected ' + value);
 }
 
 ReactDOM.render(React.createElement(
-  Select,
-  { defaultValue: "lucy", showSearch: true, style: { width: 200 },
-    searchPlaceholder: "输入",
+  _antd.Select,
+  { defaultValue: 'lucy', showSearch: true, style: { width: 200 },
+    searchPlaceholder: '输入',
     onChange: handleChange },
   React.createElement(
     Option,
-    { value: "jack" },
-    "jack"
+    { value: 'jack' },
+    'jack'
   ),
   React.createElement(
     Option,
-    { value: "lucy" },
-    "lucy"
+    { value: 'lucy' },
+    'lucy'
   ),
   React.createElement(
     Option,
-    { value: "disabled", disabled: true },
-    "disabled"
+    { value: 'disabled', disabled: true },
+    'disabled'
   ),
   React.createElement(
     Option,
-    { value: "yiminghe" },
-    "yiminghe"
+    { value: 'yiminghe' },
+    'yiminghe'
   )
-), document.getElementById('components-select-demo-search'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Select = antd.Select;
-<span class="keyword">var</span> Option = Select.Option;
+), document.getElementById('components-select-demo-search'));})()</script><div class="highlight"><pre><code class="javascript">import { Select } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Option = Select.Option;
 
 <span class="function"><span class="keyword">function</span> <span class="title">handleChange</span><span class="params">(value)</span> {</span>
   console.log(<span class="string">'selected '</span> + value);

@@ -4450,7 +4450,7 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar .ant-calendar-clear-btn {
   display: inline-block;
   text-align: center;
-  margin: 0 10px;
+  margin: 0 0 0 8px;
 }
 .ant-calendar .ant-calendar-ok-btn {
   display: inline-block;
@@ -4481,8 +4481,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   padding: 1px 7px;
   font-size: 12px;
   border-radius: 100px;
-  letter-spacing: 3px;
-  text-indent: 3px;
   position: absolute;
   bottom: 9px;
   right: 9px;
@@ -4666,10 +4664,10 @@ textarea.ant-calendar-time-input {
   line-height: 34px;
   position: relative;
   text-align: center;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-bottom: 1px solid #e9e9e9;
 }
 .ant-calendar-time-panel-body {

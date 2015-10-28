@@ -5,9 +5,8 @@
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var Upload = antd.Upload;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
 var fileList = [{
   uid: -1,
   name: 'xxx.png',
@@ -58,29 +57,28 @@ var MyUpload = React.createClass({
       multiple: true
     };
     return React.createElement(
-      Upload,
+      _antd.Upload,
       _extends({}, props, { fileList: this.state.fileList }),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: 'ghost' },
-        React.createElement(Icon, { type: 'upload' }),
+        React.createElement(_antd.Icon, { type: 'upload' }),
         ' 点击上传'
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
-<span class="keyword">var</span> fileList = [{
+ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> fileList = [{
   uid: -<span class="number">1</span>,
   name: <span class="string">'xxx.png'</span>,
   status: <span class="string">'done'</span>,
   url: <span class="string">'http://www.baidu.com/xxx.png'</span>
 }];
 
-<span class="keyword">var</span> MyUpload = React.createClass({
+<span class="keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       fileList: fileList
@@ -115,7 +113,7 @@ ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('co
     });
   },
   render() {
-    <span class="keyword">var</span> props = {
+    <span class="keyword">const</span> props = {
       action: <span class="string">'/upload.do'</span>,
       onChange: <span class="keyword">this</span>.handleChange,
       multiple: <span class="literal">true</span>

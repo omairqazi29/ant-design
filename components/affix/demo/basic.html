@@ -1,21 +1,19 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-affix-demo-basic"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Affix = antd.Affix;
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Affix,
+  _antd.Affix,
   null,
   React.createElement(
-    Button,
-    { type: "primary" },
-    "固定在顶部"
+    _antd.Button,
+    { type: 'primary' },
+    '固定在顶部'
   )
-), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Affix = antd.Affix;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Affix, Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Affix</span>&gt;</span>

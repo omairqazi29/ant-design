@@ -3,27 +3,27 @@
     <div id="components-button-demo-size"></div>
     <script>(function(){"use strict";
 
-var Button = antd.Button;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "large" },
     "大号按钮"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "中号按钮(默认)"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", size: "small" },
     "小号按钮"
   )
-), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>

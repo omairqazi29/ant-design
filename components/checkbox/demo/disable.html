@@ -3,17 +3,18 @@
     <div id="components-checkbox-demo-disable"></div>
     <script>(function(){'use strict';
 
-var Checkbox = antd.Checkbox;
+var _antd = require('antd');
+
 var container = document.getElementById('components-checkbox-demo-disable');
 
 ReactDOM.render(React.createElement(
   'div',
   null,
-  React.createElement(Checkbox, { defaultChecked: false, disabled: true }),
+  React.createElement(_antd.Checkbox, { defaultChecked: false, disabled: true }),
   React.createElement('br', null),
-  React.createElement(Checkbox, { defaultChecked: true, disabled: true })
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-checkbox-demo-disable'</span>);
+  React.createElement(_antd.Checkbox, { defaultChecked: true, disabled: true })
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-disable'</span>);
 
 ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>/&gt;</span>

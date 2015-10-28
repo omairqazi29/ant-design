@@ -199,7 +199,7 @@ Pagination 分页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -641,13 +641,13 @@ Pagination 分页 - Ant Design
     <div id="components-pagination-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -669,7 +669,7 @@ ReactDOM.render(
     <div id="components-pagination-demo-changer"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
@@ -679,7 +679,7 @@ function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-ReactDOM.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -703,15 +703,15 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-mini">
   <div class="code-box-demo">
     <div id="components-pagination-demo-mini"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { size: "small", onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { size: 'small', onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -735,13 +735,13 @@ ReactDOM.render(
     <div id="components-pagination-demo-more"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -763,13 +763,13 @@ ReactDOM.render(
     <div id="components-pagination-demo-jump"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);
@@ -791,13 +791,13 @@ ReactDOM.render(
     <div id="components-pagination-demo-simple"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
 }
 
-ReactDOM.render(React.createElement(Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);

@@ -3,10 +3,10 @@
     <div id="components-carousel-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Carousel = antd.Carousel;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Carousel,
+  _antd.Carousel,
   null,
   React.createElement(
     'div',
@@ -44,7 +44,7 @@ ReactDOM.render(React.createElement(
       '4'
     )
   )
-), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Carousel = antd.Carousel;
+), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Carousel } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Carousel</span>&gt;</span>

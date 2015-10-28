@@ -3,7 +3,8 @@
     <div id="components-table-demo-row-selection"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
+var _antd = require('antd');
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -48,8 +49,9 @@ var rowSelection = {
   }
 };
 
-ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> columns = [{
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
   render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
@@ -62,7 +64,7 @@ ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns
   title: <span class="string">'住址'</span>,
   dataIndex: <span class="string">'address'</span>
 }];
-<span class="keyword">var</span> data = [{
+<span class="keyword">const</span> data = [{
   key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,
@@ -80,7 +82,7 @@ ReactDOM.render(React.createElement(Table, { rowSelection: rowSelection, columns
 }];
 
 <span class="comment">// 通过 rowSelection 对象表明需要行选择</span>
-<span class="keyword">var</span> rowSelection = {
+<span class="keyword">const</span> rowSelection = {
   onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
     console.log(record, selected, selectedRows);
   },

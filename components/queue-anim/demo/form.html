@@ -3,13 +3,10 @@
     <div id="components-queue-anim-demo-form"></div>
     <script>(function(){"use strict";
 
-var QueueAnim = antd.QueueAnim;
-var Select = antd.Select;
-var Option = Select.Option;
-var Checkbox = antd.Checkbox;
-var Radio = antd.Radio;
-var RadioGroup = antd.Radio.Group;
-var Button = antd.Button;
+var _antd = require('antd');
+
+var Option = _antd.Select.Option;
+var RadioGroup = _antd.Radio.Group;
 
 var Test = React.createClass({
   displayName: "Test",
@@ -32,13 +29,13 @@ var Test = React.createClass({
         "p",
         { className: "buttons" },
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "primary", onClick: this.onClick },
           "切换"
         )
       ),
       React.createElement(
-        QueueAnim,
+        _antd.QueueAnim,
         { component: "form", className: "ant-form-horizontal", type: "bottom", leaveReverse: true },
         this.state.show ? [React.createElement(
           "div",
@@ -85,12 +82,12 @@ var Test = React.createClass({
               RadioGroup,
               { value: "male" },
               React.createElement(
-                Radio,
+                _antd.Radio,
                 { value: "male" },
                 "男的"
               ),
               React.createElement(
-                Radio,
+                _antd.Radio,
                 { value: "female" },
                 "女的"
               )
@@ -123,7 +120,7 @@ var Test = React.createClass({
             React.createElement(
               "label",
               null,
-              React.createElement(Checkbox, null),
+              React.createElement(_antd.Checkbox, null),
               "同意"
             )
           )
@@ -134,7 +131,7 @@ var Test = React.createClass({
             "div",
             { className: "col-16 col-offset-6" },
             React.createElement(
-              Button,
+              _antd.Button,
               { type: "primary" },
               "确定"
             )
@@ -145,15 +142,11 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> QueueAnim = antd.QueueAnim;
-<span class="keyword">var</span> Select = antd.Select;
-<span class="keyword">var</span> Option = Select.Option;
-<span class="keyword">var</span> Checkbox = antd.Checkbox;
-<span class="keyword">var</span> Radio = antd.Radio;
-<span class="keyword">var</span> RadioGroup = antd.Radio.Group;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Option = Select.Option;
+<span class="keyword">const</span> RadioGroup = Radio.Group;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       show: <span class="literal">true</span>

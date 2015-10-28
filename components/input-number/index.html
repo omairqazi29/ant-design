@@ -199,7 +199,7 @@ InputNumber 数字输入框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -633,13 +633,13 @@ InputNumber 数字输入框 - Ant Design
     <div id="components-input-number-demo-basic"></div>
     <script>(function(){'use strict';
 
-var InputNumber = antd.InputNumber;
+var _antd = require('antd');
 
 function onChange(value) {
   console.log('changed', value);
 }
 
-ReactDOM.render(React.createElement(InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+ReactDOM.render(React.createElement(_antd.InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
   console.log(<span class="string">'changed'</span>, value);
@@ -659,13 +659,12 @@ ReactDOM.render(
 </div><div class="code-box" id="number-demo-disabled">
   <div class="code-box-demo">
     <div id="components-input-number-demo-disabled"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var InputNumber = antd.InputNumber;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var Test = React.createClass({
-  displayName: "Test",
+  displayName: 'Test',
 
   getInitialState: function getInitialState() {
     return {
@@ -679,24 +678,23 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3 }),
+      React.createElement(_antd.InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3 }),
       React.createElement(
-        "div",
+        'div',
         { style: { marginTop: 20 } },
         React.createElement(
-          Button,
-          { onClick: this.toggle, type: "primary" },
-          "Toggle disabled"
+          _antd.Button,
+          { onClick: this.toggle, type: 'primary' },
+          'Toggle disabled'
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber, Button } from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {
@@ -733,21 +731,21 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test
   <div class="code-boxes-col-2-1"><div class="code-box" id="number-demo-size">
   <div class="code-box-demo">
     <div id="components-input-number-demo-size"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var InputNumber = antd.InputNumber;
+var _antd = require('antd');
 
 function onChange(value) {
   console.log('changed', value);
 }
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
-  React.createElement(InputNumber, { size: "large", min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
-  React.createElement(InputNumber, { min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
-  React.createElement(InputNumber, { size: "small", min: 1, max: 100000, defaultValue: 3, onChange: onChange })
-), document.getElementById('components-input-number-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
+  React.createElement(_antd.InputNumber, { size: 'large', min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
+  React.createElement(_antd.InputNumber, { min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
+  React.createElement(_antd.InputNumber, { size: 'small', min: 1, max: 100000, defaultValue: 3, onChange: onChange })
+), document.getElementById('components-input-number-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
   console.log(<span class="string">'changed'</span>, value);

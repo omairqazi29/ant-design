@@ -3,12 +3,12 @@
     <div id="components-queue-anim-demo-router"></div>
     <script>(function(){'use strict';
 
+var _antd = require('antd');
+
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
-var QueueAnim = antd.QueueAnim;
-var Menu = antd.Menu;
 
 var App = React.createClass({
   displayName: 'App',
@@ -20,10 +20,10 @@ var App = React.createClass({
       'div',
       null,
       React.createElement(
-        Menu,
+        _antd.Menu,
         { style: { marginBottom: 10 }, mode: 'horizontal', selectedKeys: keys },
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: 'home' },
           React.createElement(
             Link,
@@ -32,7 +32,7 @@ var App = React.createClass({
           )
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: 'page1' },
           React.createElement(
             Link,
@@ -41,7 +41,7 @@ var App = React.createClass({
           )
         ),
         React.createElement(
-          Menu.Item,
+          _antd.Menu.Item,
           { key: 'page2' },
           React.createElement(
             Link,
@@ -51,7 +51,7 @@ var App = React.createClass({
         )
       ),
       React.createElement(
-        QueueAnim,
+        _antd.QueueAnim,
         { type: ['right', 'left'], className: 'demo-router-wrap' },
         React.cloneElement(this.props.children || React.createElement(Home, null), { key: key })
       )
@@ -67,13 +67,13 @@ var Home = React.createClass({
       'div',
       { className: 'demo-router-child' },
       React.createElement(
-        QueueAnim,
+        _antd.QueueAnim,
         { className: 'demo-content' },
         React.createElement(
           'div',
           { className: 'demo-kp', key: 'a' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { component: 'ul' },
             React.createElement('li', { key: '0' }),
             React.createElement('li', { key: '1' }),
@@ -84,7 +84,7 @@ var Home = React.createClass({
           'div',
           { className: 'demo-kp', key: 'b' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { component: 'ul' },
             React.createElement('li', { key: '0' }),
             React.createElement('li', { key: '1' }),
@@ -95,7 +95,7 @@ var Home = React.createClass({
           'div',
           { className: 'demo-kp', key: 'c' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { component: 'ul' },
             React.createElement('li', { key: '0' }),
             React.createElement('li', { key: '1' }),
@@ -115,13 +115,13 @@ var Page1 = React.createClass({
       'div',
       { className: 'demo-router-child' },
       React.createElement(
-        QueueAnim,
+        _antd.QueueAnim,
         { className: 'demo-content' },
         React.createElement(
           'div',
           { className: 'demo-kp', key: 'b' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { component: 'ul' },
             React.createElement('li', { key: '0' }),
             React.createElement('li', { key: '1' }),
@@ -132,11 +132,11 @@ var Page1 = React.createClass({
           'div',
           { className: 'demo-listBox' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { className: 'demo-list', delay: 200 },
             React.createElement('div', { className: 'title', key: 'title3' }),
             React.createElement(
-              QueueAnim,
+              _antd.QueueAnim,
               { component: 'ul', animConfig: { opacity: [1, 0], translateY: [0, 30], scale: [1, 0.9] }, key: 'ul' },
               React.createElement('li', { key: '0' }),
               React.createElement('li', { key: '1' }),
@@ -163,11 +163,11 @@ var Page2 = React.createClass({
           'div',
           { className: 'demo-listBox' },
           React.createElement(
-            QueueAnim,
+            _antd.QueueAnim,
             { className: 'demo-list' },
             React.createElement('div', { className: 'title', key: 'title3' }),
             React.createElement(
-              QueueAnim,
+              _antd.QueueAnim,
               { component: 'ul', animConfig: { opacity: [1, 0], translateY: [0, 30], scale: [1, 0.9] }, key: 'li' },
               React.createElement('li', { key: '0' }),
               React.createElement('li', { key: '1' }),
@@ -192,17 +192,14 @@ ReactDOM.render(React.createElement(
     React.createElement(Route, { path: 'page1', component: Page1 }),
     React.createElement(Route, { path: 'page2', component: Page2 })
   )
-), document.getElementById('components-queue-anim-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">var</span> Router = ReactRouter.Router;
-<span class="keyword">var</span> Route = ReactRouter.Route;
-<span class="keyword">var</span> Link = ReactRouter.Link;
-<span class="keyword">var</span> QueueAnim = antd.QueueAnim;
-<span class="keyword">var</span> Menu = antd.Menu;
+), document.getElementById('components-queue-anim-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">const</span> ReactRouter = require(<span class="string">'react-router'</span>);
+<span class="keyword">let</span> { Router, Route, Link } = ReactRouter;
+import { QueueAnim, Menu } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> App = React.createClass({
+<span class="keyword">const</span> App = React.createClass({
   render() {
-    <span class="keyword">var</span> key = <span class="keyword">this</span>.props.location.pathname;
-    <span class="keyword">var</span> keys = key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ? [ key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ] : [ <span class="string">'home'</span> ];
+    <span class="keyword">const</span> key = <span class="keyword">this</span>.props.location.pathname;
+    <span class="keyword">const</span> keys = key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ? [ key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ] : [ <span class="string">'home'</span> ];
     <span class="keyword">return</span> (
       <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
         <span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">10</span>}} <span class="attribute">mode</span>=<span class="value">"horizontal"</span> <span class="attribute">selectedKeys</span>=<span class="value">{keys}</span>&gt;</span>
@@ -224,7 +221,7 @@ ReactDOM.render(React.createElement(
   }
 });
 
-var Home = React.createClass({
+const Home = React.createClass({
   render() {
     return (
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>
@@ -256,7 +253,7 @@ var Home = React.createClass({
   }
 });
 
-var Page1 = React.createClass({
+const Page1 = React.createClass({
   render() {
     return (
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>
@@ -284,7 +281,7 @@ var Page1 = React.createClass({
   }
 });
 
-var Page2 = React.createClass({
+const Page2 = React.createClass({
   render() {
     return (
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>

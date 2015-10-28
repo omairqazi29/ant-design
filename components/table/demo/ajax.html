@@ -3,8 +3,7 @@
     <div id="components-table-demo-ajax"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var columns = [{
   title: '姓名',
@@ -25,7 +24,7 @@ var columns = [{
   dataIndex: 'address'
 }];
 
-var dataSource = new Table.DataSource({
+var dataSource = new _antd.Table.DataSource({
   url: "/components/table/demo/data.json",
   resolve: function resolve(result) {
     return result.data;
@@ -86,15 +85,15 @@ var Test = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement(Table, { columns: columns, dataSource: this.state.dataSource, pagination: this.state.pagination }),
+      React.createElement(_antd.Table, { columns: columns, dataSource: this.state.dataSource, pagination: this.state.pagination }),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: 'primary', onClick: this.refresh },
         '重新加载数据'
       ),
       ' ',
       React.createElement(
-        Button,
+        _antd.Button,
         { onClick: this.changeAndRefresh },
         '加载 city=hz 的数据'
       )
@@ -102,10 +101,9 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript">import { Table, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> columns = [{
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>,
   filters: [{
@@ -124,7 +122,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   dataIndex: <span class="string">'address'</span>
 }];
 
-<span class="keyword">var</span> dataSource = <span class="keyword">new</span> Table.DataSource({
+<span class="keyword">const</span> dataSource = <span class="keyword">new</span> Table.DataSource({
   url: <span class="string">"/components/table/demo/data.json"</span>,
   resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
     <span class="keyword">return</span> result.data;
@@ -141,13 +139,13 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
   getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
     console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
-    <span class="keyword">var</span> params = {
+    <span class="keyword">const</span> params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
       sortField: sorter.field,
       sortOrder: sorter.order
     };
-    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filters) {
+    <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> filters) {
       params[key] = filters[key];
     }
     console.log(<span class="string">'请求参数：'</span>, params);
@@ -155,7 +153,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       dataSource: dataSource

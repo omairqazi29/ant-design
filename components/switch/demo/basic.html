@@ -3,15 +3,16 @@
     <div id="components-switch-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Switch = antd.Switch;
+var _antd = require('antd');
+
 var container = document.getElementById('components-switch-demo-basic');
 
 function onChange(checked) {
   console.log('switch to ' + checked);
 }
 
-ReactDOM.render(React.createElement(Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Switch = antd.Switch;
-<span class="keyword">var</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
+ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(checked)</span>{</span>
   console.log(<span class="string">'switch to '</span> + checked);

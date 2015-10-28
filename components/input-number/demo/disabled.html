@@ -1,13 +1,12 @@
 <div class="code-box" id="number-demo-disabled">
   <div class="code-box-demo">
     <div id="components-input-number-demo-disabled"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var InputNumber = antd.InputNumber;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var Test = React.createClass({
-  displayName: "Test",
+  displayName: 'Test',
 
   getInitialState: function getInitialState() {
     return {
@@ -21,24 +20,23 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3 }),
+      React.createElement(_antd.InputNumber, { min: 1, max: 10, disabled: this.state.disabled, defaultValue: 3 }),
       React.createElement(
-        "div",
+        'div',
         { style: { marginTop: 20 } },
         React.createElement(
-          Button,
-          { onClick: this.toggle, type: "primary" },
-          "Toggle disabled"
+          _antd.Button,
+          { onClick: this.toggle, type: 'primary' },
+          'Toggle disabled'
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> InputNumber = antd.InputNumber;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber, Button } from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> Test = React.createClass({
   getInitialState() {

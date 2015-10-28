@@ -199,7 +199,7 @@ Dropdown 下拉菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -607,16 +607,13 @@ Dropdown 下拉菜单 - Ant Design
     <div id="components-dropdown-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var menu = React.createElement(
-  Menu,
+  _antd.Menu,
   null,
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     null,
     React.createElement(
       "a",
@@ -625,7 +622,7 @@ var menu = React.createElement(
     )
   ),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     null,
     React.createElement(
       "a",
@@ -634,7 +631,7 @@ var menu = React.createElement(
     )
   ),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     null,
     React.createElement(
       "a",
@@ -645,20 +642,17 @@ var menu = React.createElement(
 );
 
 ReactDOM.render(React.createElement(
-  Dropdown,
+  _antd.Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
+    _antd.Button,
     null,
     "某按钮 ",
-    React.createElement(Icon, { type: "down" })
+    React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
+<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -695,16 +689,13 @@ ReactDOM.render(
     <div id="components-dropdown-demo-trigger"></div>
     <script>(function(){"use strict";
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var menu = React.createElement(
-  Menu,
+  _antd.Menu,
   null,
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "0" },
     React.createElement(
       "a",
@@ -713,7 +704,7 @@ var menu = React.createElement(
     )
   ),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "1" },
     React.createElement(
       "a",
@@ -721,9 +712,9 @@ var menu = React.createElement(
       "第二个菜单项"
     )
   ),
-  React.createElement(Menu.Divider, null),
+  React.createElement(_antd.Menu.Divider, null),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "3" },
     "第三个菜单项"
   )
@@ -733,31 +724,28 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Dropdown,
+    _antd.Dropdown,
     { overlay: menu, trigger: "click" },
     React.createElement(
-      Button,
+      _antd.Button,
       { type: "primary" },
       "点击触发 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement(_antd.Icon, { type: "down" })
     )
   ),
   React.createElement(
-    Dropdown,
+    _antd.Dropdown,
     { overlay: menu },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "鼠标移入 ",
-      React.createElement(Icon, { type: "down" })
+      React.createElement(_antd.Icon, { type: "down" })
     )
   )
-), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
+<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -795,16 +783,13 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-dropdown-demo-item"></div>
     <script>(function(){"use strict";
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var menu = React.createElement(
-  Menu,
+  _antd.Menu,
   null,
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "0" },
     React.createElement(
       "a",
@@ -813,7 +798,7 @@ var menu = React.createElement(
     )
   ),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "1" },
     React.createElement(
       "a",
@@ -821,29 +806,26 @@ var menu = React.createElement(
       "第二个菜单项"
     )
   ),
-  React.createElement(Menu.Divider, null),
+  React.createElement(_antd.Menu.Divider, null),
   React.createElement(
-    Menu.Item,
+    _antd.Menu.Item,
     { key: "3", disabled: true },
     "第三个菜单项（不可用）"
   )
 );
 
 ReactDOM.render(React.createElement(
-  Dropdown,
+  _antd.Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
+    _antd.Button,
     null,
     "鼠标移入 ",
-    React.createElement(Icon, { type: "down" })
+    React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
+<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
@@ -872,12 +854,10 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-event">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-event"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Menu = antd.Menu;
-var Dropdown = antd.Dropdown;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
 var onSelect = function onSelect(_ref) {
   var key = _ref.key;
 
@@ -885,43 +865,40 @@ var onSelect = function onSelect(_ref) {
 };
 
 var menu = React.createElement(
-  Menu,
+  _antd.Menu,
   { onSelect: onSelect },
   React.createElement(
-    Menu.Item,
-    { key: "1" },
-    "第一个菜单项"
+    _antd.Menu.Item,
+    { key: '1' },
+    '第一个菜单项'
   ),
   React.createElement(
-    Menu.Item,
-    { key: "2" },
-    "第二个菜单项"
+    _antd.Menu.Item,
+    { key: '2' },
+    '第二个菜单项'
   ),
   React.createElement(
-    Menu.Item,
-    { key: "3" },
-    "第三个菜单项"
+    _antd.Menu.Item,
+    { key: '3' },
+    '第三个菜单项'
   )
 );
 
 ReactDOM.render(React.createElement(
-  Dropdown,
+  _antd.Dropdown,
   { overlay: menu },
   React.createElement(
-    Button,
+    _antd.Button,
     null,
-    "鼠标移入，点击菜单 ",
-    React.createElement(Icon, { type: "down" })
+    '鼠标移入，点击菜单 ',
+    React.createElement(_antd.Icon, { type: 'down' })
   )
-), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Menu = antd.Menu;
-<span class="keyword">var</span> Dropdown = antd.Dropdown;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
-<span class="keyword">var</span> onSelect = <span class="function"><span class="keyword">function</span> <span class="params">({key})</span>{</span>
+), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> onSelect = <span class="function"><span class="keyword">function</span> <span class="params">({key})</span>{</span>
   alert(<span class="string">'选中了菜单'</span> + key);
 };
 
-<span class="keyword">var</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onSelect</span>=<span class="value">{onSelect}</span>&gt;</span>
+<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onSelect</span>=<span class="value">{onSelect}</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
   <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>

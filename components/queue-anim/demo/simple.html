@@ -3,10 +3,10 @@
     <div id="components-queue-anim-demo-simple"></div>
     <script>(function(){"use strict";
 
-var QueueAnim = antd.QueueAnim;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  QueueAnim,
+  _antd.QueueAnim,
   { delay: 500 },
   React.createElement(
     "div",
@@ -38,7 +38,7 @@ ReactDOM.render(React.createElement(
     { key: "f" },
     "依次进场"
   )
-), document.getElementById('components-queue-anim-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> QueueAnim = antd.QueueAnim;
+), document.getElementById('components-queue-anim-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">delay</span>=<span class="value">{500}</span>&gt;</span>

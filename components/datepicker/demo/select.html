@@ -3,7 +3,7 @@
     <div id="components-datepicker-demo-select"></div>
     <script>(function(){'use strict';
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var Picker = React.createClass({
   displayName: 'Picker',
@@ -12,13 +12,13 @@ var Picker = React.createClass({
     console.log(new Date(value.getTime()));
   },
   render: function render() {
-    return React.createElement(Datepicker, { onChange: this.handleChange });
+    return React.createElement(_antd.Datepicker, { onChange: this.handleChange });
   }
 });
 
-ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Picker = React.createClass({
+<span class="keyword">const</span> Picker = React.createClass({
   handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
     console.log(<span class="keyword">new</span> Date(value.getTime()));
   },

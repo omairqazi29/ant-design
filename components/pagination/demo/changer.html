@@ -3,7 +3,7 @@
     <div id="components-pagination-demo-changer"></div>
     <script>(function(){'use strict';
 
-var Pagination = antd.Pagination;
+var _antd = require('antd');
 
 function onChange(page) {
   console.log(page);
@@ -13,7 +13,7 @@ function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-ReactDOM.render(React.createElement(Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Pagination = antd.Pagination;
+ReactDOM.render(React.createElement(_antd.Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript">import { Pagination } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(page)</span> {</span>
   console.log(page);

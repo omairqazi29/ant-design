@@ -1,14 +1,14 @@
 <div class="code-box" id="demo-start-end">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-start-end"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Datepicker = antd.Datepicker;
+var _antd = require('antd');
 
 var DateRange = React.createClass({
-  displayName: "DateRange",
+  displayName: 'DateRange',
 
   getInitialState: function getInitialState() {
     return {
@@ -33,23 +33,23 @@ var DateRange = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      "div",
+      'div',
       null,
-      React.createElement(Datepicker, { disabledDate: this.disabledStartDate,
+      React.createElement(_antd.Datepicker, { disabledDate: this.disabledStartDate,
         value: this.state.startValue,
-        placeholder: "开始日期",
+        placeholder: '开始日期',
         onChange: this.onChange.bind(this, 'startValue') }),
-      React.createElement(Datepicker, { disabledDate: this.disabledEndDate,
+      React.createElement(_antd.Datepicker, { disabledDate: this.disabledEndDate,
         value: this.state.endValue,
-        placeholder: "结束日期",
+        placeholder: '结束日期',
         onChange: this.onChange.bind(this, 'endValue') })
     );
   }
 });
 
-ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.Datepicker;
+ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> DateRange = React.createClass({
+<span class="keyword">const</span> DateRange = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       startValue: <span class="literal">null</span>,

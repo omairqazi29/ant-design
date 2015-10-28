@@ -1,64 +1,65 @@
 <div class="code-box" id="demo-color">
   <div class="code-box-demo">
     <div id="components-timeline-demo-color"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Timeline = antd.Timeline;
+var _antd = require('antd');
+
 var container = document.getElementById('components-timeline-demo-color');
 
 ReactDOM.render(React.createElement(
-  Timeline,
+  _antd.Timeline,
   null,
   React.createElement(
-    Timeline.Item,
-    { color: "green" },
-    "创建服务现场 2015-09-01"
+    _antd.Timeline.Item,
+    { color: 'green' },
+    '创建服务现场 2015-09-01'
   ),
   React.createElement(
-    Timeline.Item,
-    { color: "green" },
-    "创建服务现场 2015-09-01"
+    _antd.Timeline.Item,
+    { color: 'green' },
+    '创建服务现场 2015-09-01'
   ),
   React.createElement(
-    Timeline.Item,
-    { color: "red" },
+    _antd.Timeline.Item,
+    { color: 'red' },
     React.createElement(
-      "p",
+      'p',
       null,
-      "初步排除网络异常1"
+      '初步排除网络异常1'
     ),
     React.createElement(
-      "p",
+      'p',
       null,
-      "初步排除网络异常2"
+      '初步排除网络异常2'
     ),
     React.createElement(
-      "p",
+      'p',
       null,
-      "初步排除网络异常3 2015-09-01"
+      '初步排除网络异常3 2015-09-01'
     )
   ),
   React.createElement(
-    Timeline.Item,
+    _antd.Timeline.Item,
     null,
     React.createElement(
-      "p",
+      'p',
       null,
-      "技术测试异常1"
+      '技术测试异常1'
     ),
     React.createElement(
-      "p",
+      'p',
       null,
-      "技术测试异常2"
+      '技术测试异常2'
     ),
     React.createElement(
-      "p",
+      'p',
       null,
-      "技术测试异常3 2015-09-01"
+      '技术测试异常3 2015-09-01'
     )
   )
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
-<span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-color'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Timeline } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-timeline-demo-color'</span>);
 
 ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Timeline</span>&gt;</span>

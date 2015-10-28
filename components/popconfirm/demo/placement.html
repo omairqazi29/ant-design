@@ -3,19 +3,19 @@
     <div id="components-popconfirm-demo-placement"></div>
     <script>(function(){'use strict';
 
-var Popconfirm = antd.Popconfirm;
-var message = antd.message;
+var _antd = require('antd');
+
 var text = '确定要删除这个任务吗？';
 
 function confirm() {
-  message.info('点击了确定');
+  _antd.message.info('点击了确定');
 }
 
 ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
-    Popconfirm,
+    _antd.Popconfirm,
     { placement: 'left', title: text, onConfirm: confirm },
     React.createElement(
       'a',
@@ -24,7 +24,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Popconfirm,
+    _antd.Popconfirm,
     { placement: 'top', title: text, onConfirm: confirm },
     React.createElement(
       'a',
@@ -33,7 +33,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Popconfirm,
+    _antd.Popconfirm,
     { placement: 'bottom', title: text, onConfirm: confirm },
     React.createElement(
       'a',
@@ -42,7 +42,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    Popconfirm,
+    _antd.Popconfirm,
     { placement: 'right', title: text, onConfirm: confirm },
     React.createElement(
       'a',
@@ -50,9 +50,9 @@ ReactDOM.render(React.createElement(
       '右边'
     )
   )
-), document.getElementById('components-popconfirm-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popconfirm = antd.Popconfirm;
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> text = <span class="string">'确定要删除这个任务吗？'</span>;
+), document.getElementById('components-popconfirm-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript">import { Popconfirm, message } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> text = <span class="string">'确定要删除这个任务吗？'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">confirm</span><span class="params">()</span> {</span>
   message.info(<span class="string">'点击了确定'</span>);

@@ -199,7 +199,7 @@ Layout 布局 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -690,71 +690,69 @@ Layout 布局 - Ant Design
     <div id="components-layout-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "12" },
       ".col-12"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "12" },
       ".col-12"
     )
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { className: "testRowClassName" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "8" },
       ".col-8"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "8" },
       ".col-8"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "8", className: "testColClassName" },
       ".col-8"
     )
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6" },
       ".col-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6" },
       ".col-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6" },
       ".col-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6" },
       ".col-6"
     )
   )
-), document.getElementById('components-layout-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
@@ -783,6 +781,7 @@ div.testColClassName {
     background: rgba(24, 115, 216, 0.9);
 }
 </style>
+
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -797,51 +796,49 @@ div.testColClassName {
     <div id="components-layout-demo-offset"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "8" },
       ".col-8"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "8", offset: "8" },
       ".col-8"
     )
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", offset: "6" },
       ".col-6 .col-offset-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", offset: "6" },
       ".col-6 .col-offset-6"
     )
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "12", offset: "6" },
       ".col-12 .col-offset-6"
     )
   )
-), document.getElementById('components-layout-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
@@ -873,28 +870,26 @@ ReactDOM.render(
     <div id="components-layout-demo-sort"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     null,
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "18", push: "6" },
       ".col-18 .col-push-6"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", pull: "18" },
       ".col-6 .col-pull-18"
     )
   )
-), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
@@ -919,8 +914,7 @@ ReactDOM.render(
     <div id="components-layout-demo-flex"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
@@ -931,25 +925,25 @@ ReactDOM.render(React.createElement(
     "子元素居左排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "start" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -960,25 +954,25 @@ ReactDOM.render(React.createElement(
     "子元素居中排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "center" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -989,25 +983,25 @@ ReactDOM.render(React.createElement(
     "子元素居右排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "end" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -1018,25 +1012,25 @@ ReactDOM.render(React.createElement(
     "子元素等宽排列"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-between" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
@@ -1047,31 +1041,30 @@ ReactDOM.render(React.createElement(
     "子元素分散对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-around" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       ".col-4"
     )
   )
-), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
@@ -1131,8 +1124,7 @@ ReactDOM.render(
     <div id="components-layout-demo-flex-align"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 var DemoBox = React.createClass({
   displayName: "DemoBox",
@@ -1158,10 +1150,10 @@ ReactDOM.render(React.createElement(
     "顶部对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "center", align: "top" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1170,7 +1162,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1179,7 +1171,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1188,7 +1180,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1203,10 +1195,10 @@ ReactDOM.render(React.createElement(
     "居中对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-around", align: "middle" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1215,7 +1207,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1224,7 +1216,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1233,7 +1225,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1248,10 +1240,10 @@ ReactDOM.render(React.createElement(
     "底部对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-between", align: "bottom" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1260,7 +1252,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1269,7 +1261,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1278,7 +1270,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -1287,8 +1279,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> DemoBox = React.createClass({
   render() {
@@ -1341,38 +1332,36 @@ ReactDOM.render(
     <div id="components-layout-demo-flex-order"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "4" },
       "1 col-order-4"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "3" },
       "2 col-order-3"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "2" },
       "3 col-order-2"
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "6", order: "1" },
       "4 col-order-1"
     )
   )
-), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>

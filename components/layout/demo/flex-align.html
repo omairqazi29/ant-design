@@ -3,8 +3,7 @@
     <div id="components-layout-demo-flex-align"></div>
     <script>(function(){"use strict";
 
-var Row = antd.Row;
-var Col = antd.Col;
+var _antd = require('antd');
 
 var DemoBox = React.createClass({
   displayName: "DemoBox",
@@ -30,10 +29,10 @@ ReactDOM.render(React.createElement(
     "顶部对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "center", align: "top" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -42,7 +41,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -51,7 +50,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -60,7 +59,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -75,10 +74,10 @@ ReactDOM.render(React.createElement(
     "居中对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-around", align: "middle" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -87,7 +86,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -96,7 +95,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -105,7 +104,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -120,10 +119,10 @@ ReactDOM.render(React.createElement(
     "底部对齐"
   ),
   React.createElement(
-    Row,
+    _antd.Row,
     { type: "flex", justify: "space-between", align: "bottom" },
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -132,7 +131,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -141,7 +140,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -150,7 +149,7 @@ ReactDOM.render(React.createElement(
       )
     ),
     React.createElement(
-      Col,
+      _antd.Col,
       { span: "4" },
       React.createElement(
         DemoBox,
@@ -159,8 +158,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Row = antd.Row;
-<span class="keyword">var</span> Col = antd.Col;
+), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
 
 <span class="keyword">var</span> DemoBox = React.createClass({
   render() {

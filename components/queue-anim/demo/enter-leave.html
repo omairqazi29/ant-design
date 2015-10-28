@@ -3,8 +3,7 @@
     <div id="components-queue-anim-demo-enter-leave"></div>
     <script>(function(){"use strict";
 
-var QueueAnim = antd.QueueAnim;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var Test = React.createClass({
   displayName: "Test",
@@ -27,13 +26,13 @@ var Test = React.createClass({
         "p",
         { className: "buttons" },
         React.createElement(
-          Button,
+          _antd.Button,
           { type: "primary", onClick: this.onClick },
           "切换"
         )
       ),
       React.createElement(
-        QueueAnim,
+        _antd.QueueAnim,
         { className: "demo-content",
           key: "demo",
           type: ['right', 'left'],
@@ -69,10 +68,9 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> QueueAnim = antd.QueueAnim;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       show: <span class="literal">true</span>

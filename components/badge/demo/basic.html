@@ -3,13 +3,13 @@
     <div id="components-badge-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Badge = antd.Badge;
+var _antd = require('antd');
 
 ReactDOM.render(React.createElement(
-  Badge,
+  _antd.Badge,
   { count: "5" },
   React.createElement("a", { href: "#", className: "head-example" })
-), document.getElementById('components-badge-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Badge = antd.Badge;
+), document.getElementById('components-badge-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Badge } from <span class="string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Badge</span> <span class="attribute">count</span>=<span class="value">"5"</span>&gt;</span>

@@ -3,11 +3,10 @@
     <div id="components-modal-demo-info"></div>
     <script>(function(){'use strict';
 
-var Modal = antd.Modal;
-var Button = antd.Button;
+var _antd = require('antd');
 
 function info() {
-  Modal.info({
+  _antd.Modal.info({
     title: '这是一条通知信息',
     content: '一些附加信息一些附加信息一些附加信息',
     onOk: function onOk() {}
@@ -15,14 +14,14 @@ function info() {
 }
 
 function success() {
-  Modal.success({
+  _antd.Modal.success({
     title: '这是一条通知信息',
     content: '一些附加信息一些附加信息一些附加信息'
   });
 }
 
 function error() {
-  Modal.error({
+  _antd.Modal.error({
     title: '这是一条通知信息',
     content: '一些附加信息一些附加信息一些附加信息'
   });
@@ -32,22 +31,21 @@ ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: info },
     '信息提示'
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: success },
     '成功提示'
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: error },
     '失败提示'
   )
-), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">import { Modal, Button } from <span class="string">'antd'</span>;
 
 <span class="function"><span class="keyword">function</span> <span class="title">info</span><span class="params">()</span> {</span>
   Modal.info({

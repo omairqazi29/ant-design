@@ -3,7 +3,8 @@
     <div id="components-table-demo-nopagination"></div>
     <script>(function(){'use strict';
 
-var Table = antd.Table;
+var _antd = require('antd');
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name'
@@ -32,8 +33,9 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Table = antd.Table;
-<span class="keyword">var</span> columns = [{
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> columns = [{
   title: <span class="string">'姓名'</span>,
   dataIndex: <span class="string">'name'</span>
 }, {
@@ -44,7 +46,7 @@ ReactDOM.render(React.createElement(Table, { columns: columns, dataSource: data,
   dataIndex: <span class="string">'address'</span>
 }];
 
-<span class="keyword">var</span> data = [{
+<span class="keyword">const</span> data = [{
   key: <span class="string">'1'</span>,
   name: <span class="string">'胡彦斌'</span>,
   age: <span class="number">32</span>,

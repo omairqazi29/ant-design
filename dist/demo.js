@@ -23903,7 +23903,7 @@
 	  Slider: __webpack_require__(470),
 	  QueueAnim: __webpack_require__(488),
 	  Radio: __webpack_require__(449),
-	  Notification: __webpack_require__(493),
+	  notification: __webpack_require__(493),
 	  Alert: __webpack_require__(494),
 	  Validation: __webpack_require__(495),
 	  Tree: __webpack_require__(524),
@@ -24984,7 +24984,13 @@
 	        calendarStyle: {},
 	        onSelect: null, // 向前兼容
 	        onChange: function onChange() {}, // onChange 可用于 Validator
-	        locale: {}
+	        locale: {},
+	        placement: {
+	          points: ['tl', 'tl'],
+	          overflow: { adjustX: 0, adjustY: 0 },
+	          offset: [0, -3],
+	          targetOffset: [0, 0]
+	        }
 	      };
 	    },
 	    getInitialState: function getInitialState() {
@@ -25053,7 +25059,7 @@
 	        showTime: this.props.showTime,
 	        prefixCls: 'ant-calendar',
 	        showOk: this.props.showTime,
-	        showClear: false });
+	        showClear: true });
 	      var sizeClass = '';
 	      if (this.props.size === 'large') {
 	        sizeClass = ' ant-input-lg';
@@ -25071,6 +25077,7 @@
 	          defaultValue: defaultValue,
 	          prefixCls: 'ant-calendar-picker',
 	          style: this.props.style,
+	          placement: this.props.placement,
 	          onChange: this.handleChange },
 	        function (_ref) {
 	          var value = _ref.value;
@@ -59767,7 +59774,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta7",
+		"version": "0.10.0-beta8",
 		"stableVersion": "0.9.2",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",

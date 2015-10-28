@@ -199,7 +199,7 @@ Upload 文件上传 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -647,10 +647,7 @@ Upload 文件上传 - Ant Design
     <div id="components-upload-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Upload = antd.Upload;
-var message = antd.message;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var props = {
   name: 'file',
@@ -660,28 +657,25 @@ var props = {
       console.log(info.file, info.fileList);
     }
     if (info.file.status === 'done') {
-      message.success(info.file.name + ' 上传成功。');
+      _antd.message.success(info.file.name + ' 上传成功。');
     } else if (info.file.status === 'error') {
-      message.error(info.file.name + ' 上传失败。');
+      _antd.message.error(info.file.name + ' 上传失败。');
     }
   }
 };
 
 ReactDOM.render(React.createElement(
-  Upload,
+  _antd.Upload,
   props,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: 'ghost' },
-    React.createElement(Icon, { type: 'upload' }),
+    React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>,
   onChange(info) {
@@ -718,9 +712,8 @@ ReactDOM.render(
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var Upload = antd.Upload;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
 var fileList = [{
   uid: -1,
   name: 'xxx.png',
@@ -771,29 +764,28 @@ var MyUpload = React.createClass({
       multiple: true
     };
     return React.createElement(
-      Upload,
+      _antd.Upload,
       _extends({}, props, { fileList: this.state.fileList }),
       React.createElement(
-        Button,
+        _antd.Button,
         { type: 'ghost' },
-        React.createElement(Icon, { type: 'upload' }),
+        React.createElement(_antd.Icon, { type: 'upload' }),
         ' 点击上传'
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
-<span class="keyword">var</span> fileList = [{
+ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
+
+<span class="keyword">const</span> fileList = [{
   uid: -<span class="number">1</span>,
   name: <span class="string">'xxx.png'</span>,
   status: <span class="string">'done'</span>,
   url: <span class="string">'http://www.baidu.com/xxx.png'</span>
 }];
 
-<span class="keyword">var</span> MyUpload = React.createClass({
+<span class="keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       fileList: fileList
@@ -828,7 +820,7 @@ ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('co
     });
   },
   render() {
-    <span class="keyword">var</span> props = {
+    <span class="keyword">const</span> props = {
       action: <span class="string">'/upload.do'</span>,
       onChange: <span class="keyword">this</span>.handleChange,
       multiple: <span class="literal">true</span>
@@ -858,8 +850,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyUp
     <div id="components-upload-demo-drag-simple"></div>
     <script>(function(){'use strict';
 
-var Dragger = antd.Upload.Dragger;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
@@ -869,11 +862,11 @@ var props = {
 ReactDOM.render(React.createElement(
   Dragger,
   props,
-  React.createElement(Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
-<span class="keyword">var</span> Icon = antd.Icon;
+  React.createElement(_antd.Icon, { type: 'plus' })
+), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>
 };
@@ -905,9 +898,7 @@ ReactDOM.render(
     <div id="components-upload-demo-defaultfilelist"></div>
     <script>(function(){'use strict';
 
-var Upload = antd.Upload;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var props = {
   action: '/upload.do',
@@ -931,19 +922,17 @@ var props = {
 };
 
 ReactDOM.render(React.createElement(
-  Upload,
+  _antd.Upload,
   props,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: 'ghost' },
-    React.createElement(Icon, { type: 'upload' }),
+    React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   action: <span class="string">'/upload.do'</span>,
   onChange(info) {
     <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
@@ -984,8 +973,9 @@ ReactDOM.render(
     <div id="components-upload-demo-drag"></div>
     <script>(function(){'use strict';
 
-var Dragger = antd.Upload.Dragger;
-var Icon = antd.Icon;
+var _antd = require('antd');
+
+var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
@@ -998,7 +988,7 @@ ReactDOM.render(React.createElement(
   React.createElement(
     'p',
     { className: 'ant-upload-drag-icon' },
-    React.createElement(Icon, { type: 'inbox' })
+    React.createElement(_antd.Icon, { type: 'inbox' })
   ),
   React.createElement(
     'p',
@@ -1010,10 +1000,10 @@ ReactDOM.render(React.createElement(
     { className: 'ant-upload-hint' },
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
-), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Dragger = antd.Upload.Dragger;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>
 };
@@ -1046,10 +1036,7 @@ ReactDOM.render(
     <div id="components-upload-demo-multiple"></div>
     <script>(function(){'use strict';
 
-var Upload = antd.Upload;
-var message = antd.message;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var props = {
   action: '/upload.do',
@@ -1059,28 +1046,25 @@ var props = {
       console.log(info.file, info.fileList);
     }
     if (info.file.status === 'done') {
-      message.success(info.file.name + ' 上传成功。');
+      _antd.message.success(info.file.name + ' 上传成功。');
     } else if (info.file.status === 'error') {
-      message.error(info.file.name + ' 上传失败。');
+      _antd.message.error(info.file.name + ' 上传失败。');
     }
   }
 };
 
 ReactDOM.render(React.createElement(
-  Upload,
+  _antd.Upload,
   props,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: 'ghost' },
-    React.createElement(Icon, { type: 'upload' }),
+    React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   action: <span class="string">'/upload.do'</span>,
   multiple: <span class="literal">true</span>,
   onChange(info) {

@@ -3,13 +3,14 @@
     <div id="components-tabs-demo-slide"></div>
     <script>(function(){"use strict";
 
-var Tabs = antd.Tabs;
-var TabPane = Tabs.TabPane;
+var _antd = require('antd');
+
+var TabPane = _antd.Tabs.TabPane;
 
 function callback(key) {}
 
 ReactDOM.render(React.createElement(
-  Tabs,
+  _antd.Tabs,
   { defaultActiveKey: "1", onChange: callback },
   React.createElement(
     TabPane,
@@ -56,8 +57,8 @@ ReactDOM.render(React.createElement(
     { tab: "选项九", key: "9" },
     "选项卡九"
   )
-), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tabs = antd.Tabs;
-<span class="keyword">var</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TabPane = Tabs.TabPane;
 
 <span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
 

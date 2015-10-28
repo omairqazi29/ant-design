@@ -199,7 +199,7 @@ Popover 气泡卡片 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -615,8 +615,7 @@ Popover 气泡卡片 - Ant Design
     <div id="components-popover-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Popover = antd.Popover;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var content = React.createElement(
   "div",
@@ -634,17 +633,16 @@ var content = React.createElement(
 );
 
 ReactDOM.render(React.createElement(
-  Popover,
+  _antd.Popover,
   { overlay: content, title: "标题" },
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary" },
     "弹出卡片"
   )
-), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
@@ -667,8 +665,7 @@ ReactDOM.render(
     <div id="components-popover-demo-triggertype"></div>
     <script>(function(){"use strict";
 
-var Popover = antd.Popover;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var content = React.createElement(
   "div",
@@ -689,36 +686,35 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Popover,
+    _antd.Popover,
     { overlay: content, title: "标题", trigger: "hover" },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "移入"
     )
   ),
   React.createElement(
-    Popover,
+    _antd.Popover,
     { overlay: content, title: "标题", trigger: "focus" },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "聚焦"
     )
   ),
   React.createElement(
-    Popover,
+    _antd.Popover,
     { overlay: content, title: "标题", trigger: "click" },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "点击"
     )
   )
-), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
@@ -749,8 +745,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-popover-demo-placement"></div>
     <script>(function(){"use strict";
 
-var Popover = antd.Popover;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var text = React.createElement(
   "span",
@@ -776,46 +771,45 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Popover,
+    _antd.Popover,
     { placement: "left", title: text, overlay: content },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "左"
     )
   ),
   React.createElement(
-    Popover,
+    _antd.Popover,
     { placement: "top", title: text, overlay: content },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "上"
     )
   ),
   React.createElement(
-    Popover,
+    _antd.Popover,
     { placement: "bottom", title: text, overlay: content },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "下"
     )
   ),
   React.createElement(
-    Popover,
+    _antd.Popover,
     { placement: "right", title: text, overlay: content },
     React.createElement(
-      Button,
+      _antd.Button,
       null,
       "右"
     )
   )
-), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Popover = antd.Popover;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
-<span class="keyword">var</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
+<span class="keyword">const</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
+<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
   <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>

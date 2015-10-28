@@ -3,8 +3,7 @@
     <div id="components-modal-demo-footer"></div>
     <script>(function(){"use strict";
 
-var Modal = antd.Modal;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var Test = React.createClass({
   displayName: "Test",
@@ -36,21 +35,21 @@ var Test = React.createClass({
       "div",
       null,
       React.createElement(
-        Button,
+        _antd.Button,
         { type: "primary", onClick: this.showModal },
         "显示对话框"
       ),
       React.createElement(
-        Modal,
+        _antd.Modal,
         { ref: "modal",
           visible: this.state.visible,
           title: "对话框标题", onOk: this.handleOk, onCancel: this.handleCancel,
           footer: [React.createElement(
-            Button,
+            _antd.Button,
             { key: "back", type: "ghost", size: "large", onClick: this.handleCancel },
             "返 回"
           ), React.createElement(
-            Button,
+            _antd.Button,
             { key: "submit", type: "primary", size: "large", loading: this.state.loading, onClick: this.handleOk },
             "提 交"
           )] },
@@ -84,10 +83,9 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Modal = antd.Modal;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript">import { Modal, Button } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
     <span class="keyword">return</span> {
       loading: <span class="literal">false</span>,

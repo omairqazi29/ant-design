@@ -3,29 +3,30 @@
     <div id="components-timeline-demo-pending"></div>
     <script>(function(){'use strict';
 
-var Timeline = antd.Timeline;
+var _antd = require('antd');
+
 var container = document.getElementById('components-timeline-demo-pending');
 
 ReactDOM.render(React.createElement(
-  Timeline,
+  _antd.Timeline,
   { pending: true },
   React.createElement(
-    Timeline.Item,
+    _antd.Timeline.Item,
     null,
     '创建服务现场 2015-09-01'
   ),
   React.createElement(
-    Timeline.Item,
+    _antd.Timeline.Item,
     null,
     '初步排除网络异常 2015-09-01'
   ),
   React.createElement(
-    Timeline.Item,
+    _antd.Timeline.Item,
     null,
     '技术测试异常 2015-09-01'
   )
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">let</span> Timeline = antd.Timeline;
-<span class="keyword">let</span> container = document.getElementById(<span class="string">'components-timeline-demo-pending'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript">import { Timeline } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-timeline-demo-pending'</span>);
 
 ReactDOM.render(
 <span class="xml"><span class="tag">&lt;<span class="title">Timeline</span> <span class="attribute">pending</span>=<span class="value">{true}</span>&gt;</span>

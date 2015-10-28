@@ -3,10 +3,7 @@
     <div id="components-upload-demo-basic"></div>
     <script>(function(){'use strict';
 
-var Upload = antd.Upload;
-var message = antd.message;
-var Button = antd.Button;
-var Icon = antd.Icon;
+var _antd = require('antd');
 
 var props = {
   name: 'file',
@@ -16,28 +13,25 @@ var props = {
       console.log(info.file, info.fileList);
     }
     if (info.file.status === 'done') {
-      message.success(info.file.name + ' 上传成功。');
+      _antd.message.success(info.file.name + ' 上传成功。');
     } else if (info.file.status === 'error') {
-      message.error(info.file.name + ' 上传失败。');
+      _antd.message.error(info.file.name + ' 上传失败。');
     }
   }
 };
 
 ReactDOM.render(React.createElement(
-  Upload,
+  _antd.Upload,
   props,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: 'ghost' },
-    React.createElement(Icon, { type: 'upload' }),
+    React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Upload = antd.Upload;
-<span class="keyword">var</span> message = antd.message;
-<span class="keyword">var</span> Button = antd.Button;
-<span class="keyword">var</span> Icon = antd.Icon;
+), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> props = {
+<span class="keyword">const</span> props = {
   name: <span class="string">'file'</span>,
   action: <span class="string">'/upload.do'</span>,
   onChange(info) {

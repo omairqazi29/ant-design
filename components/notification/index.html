@@ -199,7 +199,7 @@ Notification 通知提醒框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta7',
+        latest: '0.10.0-beta8',
         stable: '0.9.2'
       };
     </script>
@@ -658,28 +658,22 @@ Notification 通知提醒框 - Ant Design
     <div id="components-notification-demo-basic"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var openNotification = function openNotification() {
-  notification.open({
+  _antd.notification.open({
     message: "这是标题",
     description: "这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"
   });
 };
 
 ReactDOM.render(React.createElement(
-  "div",
-  null,
-  React.createElement(
-    Button,
-    { type: "primary", onClick: openNotification },
-    "打开通知提醒框"
-  )
-), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+  _antd.Button,
+  { type: "primary", onClick: openNotification },
+  "打开通知提醒框"
+), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   notification.open({
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"</span>
@@ -687,10 +681,8 @@ ReactDOM.render(React.createElement(
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-document.getElementById('components-notification-demo-basic'));</span></code></pre></div>
+  <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+,document.getElementById('components-notification-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -704,12 +696,11 @@ document.getElementById('components-notification-demo-basic'));</span></code></p
     <div id="components-notification-demo-with-icon"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
-    notification[type]({
+    _antd.notification[type]({
       message: "这是标题",
       description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
     });
@@ -720,29 +711,28 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('success') },
     "成功"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('info') },
     "消息"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('warn') },
     "警告"
   ),
   React.createElement(
-    Button,
+    _antd.Button,
     { onClick: openNotificationWithIcon('error') },
     "错误"
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
+<span class="keyword">const</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
     notification[type]({
       message: <span class="string">"这是标题"</span>,
@@ -776,8 +766,7 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <div id="components-notification-demo-with-btn"></div>
     <script>(function(){'use strict';
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var close = function close() {
   console.log('我被默认的关闭按钮关闭了！');
@@ -787,14 +776,14 @@ var openNotification = function openNotification() {
   var key = 'open' + Date.now();
   var btnClick = function btnClick() {
     // 隐藏提醒框
-    notification.close(key);
+    _antd.notification.close(key);
   };
   var btn = React.createElement(
-    Button,
+    _antd.Button,
     { type: 'primary', size: 'small', onClick: btnClick },
     '自定义关闭按钮并触发回调函数'
   );
-  notification.open({
+  _antd.notification.open({
     message: "这是标题",
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
     btn: btn,
@@ -807,24 +796,23 @@ ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: 'primary', onClick: openNotification },
     '打开通知提醒框'
   )
-), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+<span class="keyword">const</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
   console.log(<span class="string">'我被默认的关闭按钮关闭了！'</span>);
 }
 
-<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> key=<span class="string">'open'</span>+Date.now();
-  <span class="keyword">var</span> btnClick = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">const</span> key=<span class="string">'open'</span>+Date.now();
+  <span class="keyword">const</span> btnClick = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
     <span class="comment">// 隐藏提醒框</span>
     notification.close(key);
   };
-  <span class="keyword">var</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
+  <span class="keyword">const</span> btn = <span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">onClick</span>=<span class="value">{btnClick}</span>&gt;</span>
     自定义关闭按钮并触发回调函数
   <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>;</span>
   notification.open({
@@ -856,8 +844,7 @@ document.getElementById('components-notification-demo-with-btn'));</span></code>
     <div id="components-notification-demo-duration"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var openNotification = function openNotification() {
   var args = {
@@ -865,18 +852,17 @@ var openNotification = function openNotification() {
     description: "这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案",
     duration: 10
   };
-  notification.open(args);
+  _antd.notification.open(args);
 };
 
 ReactDOM.render(React.createElement(
-  Button,
+  _antd.Button,
   { type: "primary", onClick: openNotification },
   "打开通知提醒框"
-), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> args = {
+<span class="keyword">const</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">const</span> args = {
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"</span>,
     duration: <span class="number">10</span>
@@ -900,8 +886,7 @@ ReactDOM.render(
     <div id="components-notification-demo-onclose"></div>
     <script>(function(){"use strict";
 
-var notification = antd.Notification;
-var Button = antd.Button;
+var _antd = require('antd');
 
 var close = function close() {
   console.log("我被默认的关闭按钮关闭了！");
@@ -913,26 +898,25 @@ var openNotification = function openNotification() {
     description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
     onClose: close
   };
-  notification.open(args);
+  _antd.notification.open(args);
 };
 
 ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    Button,
+    _antd.Button,
     { type: "primary", onClick: openNotification },
     "打开通知提醒框"
   )
-), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> notification = antd.Notification;
-<span class="keyword">var</span> Button = antd.Button;
+), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
 
-<span class="keyword">var</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<span class="keyword">const</span> close = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
   console.log(<span class="string">"我被默认的关闭按钮关闭了！"</span>);
 };
 
-<span class="keyword">var</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">var</span> args = {
+<span class="keyword">const</span> openNotification = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">const</span> args = {
     message: <span class="string">"这是标题"</span>,
     description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>,
     onClose: close
