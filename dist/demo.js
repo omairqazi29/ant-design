@@ -59321,25 +59321,15 @@
 	      items: []
 	    };
 	  },
-	  getInitialState: function getInitialState() {
-	    return {
-	      items: this.props.items
-	    };
-	  },
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    if ('items' in nextProps) {
-	      this.setState({
-	        items: nextProps.items
-	      });
-	    }
-	  },
+	
 	  handleClose: function handleClose(file) {
 	    this.props.onRemove(file);
 	  },
+	
 	  render: function render() {
 	    var _this = this;
 	
-	    var list = this.state.items.map(function (file) {
+	    var list = this.props.items.map(function (file) {
 	      var statusIcon = file.status === 'done' ? _react2['default'].createElement(_iconfont2['default'], { type: 'check', className: prefixCls + '-success-icon' }) : _react2['default'].createElement(_iconfont2['default'], { type: 'loading' });
 	      var filename = file.url ? _react2['default'].createElement(
 	        'a',
