@@ -3,11 +3,12 @@
     <div id="components-tree-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 ReactDOM.render(React.createElement(
-  Tree,
+  _antd.Tree,
   { defaultExpandAll: false },
   React.createElement(
     TreeNode,
@@ -25,8 +26,8 @@ ReactDOM.render(React.createElement(
       React.createElement(TreeNode, { title: "leaf" })
     )
   )
-), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{false}</span>&gt;</span>

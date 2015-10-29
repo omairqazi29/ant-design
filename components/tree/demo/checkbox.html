@@ -1,40 +1,41 @@
 <div class="code-box" id="demo-checkbox">
   <div class="code-box-demo">
     <div id="components-tree-demo-checkbox"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 function handleCheck(info) {
   console.log('check: ', info);
 }
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    Tree,
+    _antd.Tree,
     { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
     React.createElement(
       TreeNode,
-      { title: "parent 1" },
-      React.createElement(TreeNode, { title: "leaf" }),
+      { title: 'parent 1' },
+      React.createElement(TreeNode, { title: 'leaf' }),
       React.createElement(
         TreeNode,
-        { title: "parent 1-1" },
+        { title: 'parent 1-1' },
         React.createElement(
           TreeNode,
-          { title: "parent 2-1" },
-          React.createElement(TreeNode, { title: "leaf" }),
-          React.createElement(TreeNode, { title: "leaf" })
+          { title: 'parent 2-1' },
+          React.createElement(TreeNode, { title: 'leaf' }),
+          React.createElement(TreeNode, { title: 'leaf' })
         ),
-        React.createElement(TreeNode, { title: "leaf" })
+        React.createElement(TreeNode, { title: 'leaf' })
       )
     )
   )
-), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(info)</span> {</span>
   console.log(<span class="string">'check: '</span>, info);

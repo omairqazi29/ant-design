@@ -10,12 +10,17 @@ var TabPane = _antd.Tabs.TabPane;
 var index = 0;
 var closeStyle = {
   position: 'absolute',
-  top: 0,
-  right: -10
+  top: 8,
+  right: -9
 };
+
 var addStyle = {
   pointerEvents: 'auto',
-  color: 'black'
+  color: '#2db7f5',
+  position: 'absolute',
+  top: 8,
+  left: 0,
+  marginLeft: -8
 };
 
 var Test = React.createClass({
@@ -25,150 +30,179 @@ var Test = React.createClass({
     return {
       tabs: [{
         title: 'title ' + index,
-        content: 'content ' + index
+        content: 'content ' + index,
+        index: index
       }],
-      activeKey: 'title ' + index
+      activeKey: index.toString()
     };
   },
-  remove: function remove(title, e) {
+  remove: function remove(index, e) {
     e.stopPropagation();
-    if (this.state.tabs.length === 1) {
-      antd.message.error('仅剩一个，不能删除');
+    var tabs = this.state.tabs;
+    var activeKey = this.state.activeKey;
+    var foundIndex = 0;
+
+    if (tabs.length === 1) {
+      _antd.message.error('仅剩一个，不能删除');
       return;
     }
-    var foundIndex = 0;
-    var tabs = this.state.tabs.filter(function (t, index) {
-      if (t.title !== title) {
+
+    var newTabs = tabs.filter(function (tab) {
+      if (tab.index !== index) {
         return true;
       } else {
         foundIndex = index;
         return false;
       }
     });
-    var activeKey = this.state.activeKey;
-    if (activeKey === title) {
-      if (foundIndex) {
-        foundIndex--;
-      }
-      activeKey = tabs[foundIndex].title;
+
+    if (activeKey === index) {
+      activeKey = tabs[foundIndex - 1].index;
     }
-    this.setState({ tabs: tabs, activeKey: activeKey });
+
+    this.setState({
+      tabs: newTabs, activeKey: activeKey
+    });
   },
   add: function add() {
-    index++;
+    index += 1;
     this.setState({
       tabs: this.state.tabs.concat({
         title: 'title ' + index,
-        content: 'content ' + index
-      })
+        content: 'content ' + index,
+        index: index
+      }),
+      activeKey: index.toString()
     });
   },
   onChange: function onChange(activeKey) {
+    console.log(activeKey);
     this.setState({ activeKey: activeKey });
   },
   render: function render() {
     var _this = this;
 
+    var addBtn = React.createElement(_antd.Icon, { style: addStyle, type: 'plus-circle', onClick: this.add });
+    var operations = React.createElement(
+      _antd.Button,
+      null,
+      '操作'
+    );
     return React.createElement(
       _antd.Tabs,
-      {
-        onChange: this.onChange,
+      { onChange: this.onChange,
         activeKey: this.state.activeKey,
-        tabBarExtraContent: React.createElement(
-          _antd.Button,
-          { type: 'primary' },
-          '其它操作'
-        ) },
-      this.state.tabs.map(function (t) {
+        tabBarExtraContent: operations },
+      this.state.tabs.map(function (tab) {
         return React.createElement(
           TabPane,
-          { key: t.title, tab: React.createElement(
+          { key: tab.index, tab: React.createElement(
               'div',
               null,
-              t.title,
-              ' ',
-              React.createElement(_antd.Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, t.title) })
+              tab.title,
+              React.createElement(_antd.Icon, { type: 'cross', style: closeStyle, onClick: _this.remove.bind(_this, tab.index) })
             ) },
-          t.content
+          tab.content
         );
-      }).concat(React.createElement(TabPane, { key: '__add', disabled: true, tab: React.createElement(_antd.Icon, { style: addStyle, type: 'plus-circle', onClick: this.add }) }))
+      }),
+      React.createElement(TabPane, { key: '__add', disabled: true, tab: addBtn })
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs, Button, Icon } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-tabs-demo-add'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs, Button, Icon, message } from <span class="string">'antd'</span>;
 <span class="keyword">const</span> TabPane = Tabs.TabPane;
 
-<span class="keyword">var</span> index = <span class="number">0</span>;
+<span class="keyword">let</span> index = <span class="number">0</span>;
 <span class="keyword">const</span> closeStyle = {
   position: <span class="string">'absolute'</span>,
-  top: <span class="number">0</span>,
-  right: -<span class="number">10</span>,
-};
-<span class="keyword">var</span> addStyle = {
-  pointerEvents: <span class="string">'auto'</span>,
-  color: <span class="string">'black'</span>,
+  top: <span class="number">8</span>,
+  right: -<span class="number">9</span>,
 };
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="keyword">const</span> addStyle = {
+  pointerEvents: <span class="string">'auto'</span>,
+  color: <span class="string">'#2db7f5'</span>,
+  position: <span class="string">'absolute'</span>,
+  top: <span class="number">8</span>,
+  left: <span class="number">0</span>,
+  marginLeft: -<span class="number">8</span>,
+};
+
+<span class="keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="keyword">return</span> {
       tabs: [{
         title: <span class="string">'title '</span> + index,
         content: <span class="string">'content '</span> + index,
+        index: index
       }],
-      activeKey: <span class="string">'title '</span> + index
+      activeKey: index.toString()
     };
   },
-  remove(title, e) {
+  remove(index, e) {
     e.stopPropagation();
-    <span class="keyword">if</span>(<span class="keyword">this</span>.state.tabs.length === <span class="number">1</span>) {
-      antd.message.error(<span class="string">'仅剩一个，不能删除'</span>);
+    <span class="keyword">let</span> tabs = <span class="keyword">this</span>.state.tabs;
+    <span class="keyword">let</span> activeKey = <span class="keyword">this</span>.state.activeKey;
+    <span class="keyword">let</span> foundIndex = <span class="number">0</span>;
+
+    <span class="keyword">if</span>(tabs.length === <span class="number">1</span>) {
+      message.error(<span class="string">'仅剩一个，不能删除'</span>);
       <span class="keyword">return</span>;
     }
-    <span class="keyword">var</span> foundIndex = <span class="number">0</span>;
-    <span class="keyword">var</span> tabs = <span class="keyword">this</span>.state.tabs.filter(<span class="function"><span class="keyword">function</span> <span class="params">(t, index)</span> {</span>
-      <span class="keyword">if</span> (t.title !== title) {
+
+    <span class="keyword">const</span> newTabs = tabs.filter(tab =&gt; {
+      <span class="keyword">if</span> (tab.index !== index) {
         <span class="keyword">return</span> <span class="literal">true</span>;
       } <span class="keyword">else</span> {
         foundIndex = index;
         <span class="keyword">return</span> <span class="literal">false</span>;
       }
     });
-    <span class="keyword">var</span> activeKey = <span class="keyword">this</span>.state.activeKey;
-    <span class="keyword">if</span> (activeKey === title) {
-      <span class="keyword">if</span> (foundIndex) {
-        foundIndex--;
-      }
-      activeKey = tabs[foundIndex].title;
+
+    <span class="keyword">if</span> (activeKey === index) {
+      activeKey = tabs[foundIndex - <span class="number">1</span>].index;
     }
-    <span class="keyword">this</span>.setState({tabs, activeKey})
+
+    <span class="keyword">this</span>.setState({
+      tabs: newTabs, activeKey
+    });
   },
   add() {
-    index++;
+    index += <span class="number">1</span>;
     <span class="keyword">this</span>.setState({
       tabs: <span class="keyword">this</span>.state.tabs.concat({
-        title: <span class="string">'title '</span>+index,
-        content: <span class="string">'content '</span>+index,
-      })
+        title: <span class="string">'title '</span> + index,
+        content: <span class="string">'content '</span> + index,
+        index: index,
+      }),
+      activeKey: index.toString(),
     });
   },
   onChange(activeKey) {
-    <span class="keyword">this</span>.setState({activeKey});
+    console.log(activeKey);
+    <span class="keyword">this</span>.setState({ activeKey });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Tabs
-</span>    <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>
-    <span class="attribute">activeKey</span>=<span class="value">{this.state.activeKey}</span>
-    <span class="attribute">tabBarExtraContent</span>=<span class="value">{&lt;Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>其它操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>}&gt;
-    {
-      this.state.tabs.map((t)=&gt;{
-        return <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{t.title}</span> <span class="attribute">tab</span>=<span class="value">{&lt;div</span>&gt;</span>{t.title} <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,t.title)}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>}&gt;
-          {t.content}
-        <span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>;</span>
-      }).concat(<span class="xml"><span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">"__add"</span> <span class="attribute">disabled</span> <span class="attribute">tab</span>=<span class="value">{&lt;Icon</span> <span class="attribute">style</span>=<span class="value">{addStyle}</span> <span class="attribute">type</span>=<span class="value">"plus-circle"</span> <span class="attribute">onClick</span>=<span class="value">{this.add}</span>&gt;</span><span class="tag">&lt;/<span class="title">Icon</span>&gt;</span>} /&gt;)
-    }
-    <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+    <span class="keyword">const</span> addBtn = <span class="xml"><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">style</span>=<span class="value">{addStyle}</span> <span class="attribute">type</span>=<span class="value">"plus-circle"</span> <span class="attribute">onClick</span>=<span class="value">{this.add}</span> /&gt;</span>;</span>
+    <span class="keyword">const</span> operations = <span class="xml"><span class="tag">&lt;<span class="title">Button</span>&gt;</span>操作<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>;</span>
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span>
+        <span class="attribute">activeKey</span>=<span class="value">{this.state.activeKey}</span>
+        <span class="attribute">tabBarExtraContent</span>=<span class="value">{operations}</span>&gt;</span>
+        {
+          this.state.tabs.map(tab =&gt; (
+            <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">{tab.index}</span> <span class="attribute">tab</span>=<span class="value">{</span>
+              &lt;<span class="attribute">div</span>&gt;</span>
+                {tab.title}
+                <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> <span class="attribute">style</span>=<span class="value">{closeStyle}</span> <span class="attribute">onClick</span>=<span class="value">{this.remove.bind(this,</span> <span class="attribute">tab.index</span>)} /&gt;</span>
+              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            }&gt;{tab.content}<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
+          ))
+        }
+        <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">key</span>=<span class="value">"__add"</span> <span class="attribute">disabled</span> <span class="attribute">tab</span>=<span class="value">{addBtn}</span> /&gt;</span>
+      <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+    );
   }
 })
 
@@ -176,9 +210,9 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</spa
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-add">添加</a>
+      <a href="#demo-add">动态的页签</a>
     </div>
-    <p>演示添加删除功能。</p>
+    <p>演示添加删除和附加操作。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

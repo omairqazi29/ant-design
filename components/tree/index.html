@@ -617,6 +617,12 @@ Tree 树形控件 - Ant Design
 <td>function(e:{checked:bool,node,checkedKeys,event})</td>
 <td>-</td>
 </tr>
+<tr>
+<td>onDataLoaded</td>
+<td>异步加载数据</td>
+<td>function(node)</td>
+<td>-</td>
+</tr>
 </tbody>
 </table>
 <h3 id="treenode-props">TreeNode props<a href="#treenode-props" class="anchor">#</a> </h3><table>
@@ -661,11 +667,12 @@ Tree 树形控件 - Ant Design
     <div id="components-tree-demo-basic"></div>
     <script>(function(){"use strict";
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 ReactDOM.render(React.createElement(
-  Tree,
+  _antd.Tree,
   { defaultExpandAll: false },
   React.createElement(
     TreeNode,
@@ -683,8 +690,8 @@ ReactDOM.render(React.createElement(
       React.createElement(TreeNode, { title: "leaf" })
     )
   )
-), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 ReactDOM.render(
   <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{false}</span>&gt;</span>
@@ -721,9 +728,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
-var Button = antd.Button;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 var TreeDemo = (function (_React$Component) {
   _inherits(TreeDemo, _React$Component);
@@ -776,7 +783,7 @@ var TreeDemo = (function (_React$Component) {
         'div',
         null,
         React.createElement(
-          Tree,
+          _antd.Tree,
           { defaultExpandAll: true, checkable: true,
             onCheck: this.handleCheck, checkedKeys: this.state.checkedKeys,
             onSelect: this.handleSelect, selectedKeys: this.state.selectedKeys, multiple: true },
@@ -807,7 +814,7 @@ var TreeDemo = (function (_React$Component) {
           React.createElement(TreeNode, { key: 'p12', title: 'leaf' })
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { type: 'primary', size: 'small', onClick: this.handleClick },
           '点此控制树节点'
         )
@@ -818,9 +825,8 @@ var TreeDemo = (function (_React$Component) {
   return TreeDemo;
 })(React.Component);
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 class TreeDemo extends React.Component {
   constructor(props) {
@@ -889,40 +895,41 @@ ReactDOM.render(<span class="tag">&lt;<span class="title">TreeDemo</span> /&gt;<
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-checkbox">
   <div class="code-box-demo">
     <div id="components-tree-demo-checkbox"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 function handleCheck(info) {
   console.log('check: ', info);
 }
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    Tree,
+    _antd.Tree,
     { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
     React.createElement(
       TreeNode,
-      { title: "parent 1" },
-      React.createElement(TreeNode, { title: "leaf" }),
+      { title: 'parent 1' },
+      React.createElement(TreeNode, { title: 'leaf' }),
       React.createElement(
         TreeNode,
-        { title: "parent 1-1" },
+        { title: 'parent 1-1' },
         React.createElement(
           TreeNode,
-          { title: "parent 2-1" },
-          React.createElement(TreeNode, { title: "leaf" }),
-          React.createElement(TreeNode, { title: "leaf" })
+          { title: 'parent 2-1' },
+          React.createElement(TreeNode, { title: 'leaf' }),
+          React.createElement(TreeNode, { title: 'leaf' })
         ),
-        React.createElement(TreeNode, { title: "leaf" })
+        React.createElement(TreeNode, { title: 'leaf' })
       )
     )
   )
-), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
+), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(info)</span> {</span>
   console.log(<span class="string">'check: '</span>, info);
@@ -949,6 +956,173 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
       <a href="#demo-checkbox">可选择</a>
     </div>
     <p>提供复选框操作功能。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-dynamic">
+  <div class="code-box-demo">
+    <div id="components-tree-demo-dynamic"></div>
+    <script>(function(){"use strict";
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
+
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
+
+var asyncTree = [{ name: "pNode 01", key: "0-0" }];
+
+var generateTreeNodes = function generateTreeNodes() {
+  var arr = [{ name: "伯约", key: "0-0-0" }];
+  return arr;
+};
+
+var TreeDemo = React.createClass({
+  displayName: "TreeDemo",
+
+  timeout: function timeout() {
+    var _this = this;
+
+    var duration = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
+
+    return new Promise(function (resolve, reject) {
+      setTimeout(resolve.bind(_this), duration);
+    });
+  },
+  getInitialState: function getInitialState() {
+    return {
+      treeData: []
+    };
+  },
+  componentDidMount: function componentDidMount() {
+    var _this2 = this;
+
+    this.timeout(1000).then(function () {
+      _this2.setState({
+        treeData: asyncTree
+      });
+      return asyncTree;
+    });
+  },
+  handleSelect: function handleSelect(info) {
+    console.log('selected', info);
+  },
+  handleDataLoaded: function handleDataLoaded(treeNode) {
+    var _this3 = this;
+
+    return this.timeout(1000).then(function () {
+      var child = generateTreeNodes();
+      var treeData = [].concat(_toConsumableArray(_this3.state.treeData));
+      treeData.forEach(function (item) {
+        if (item.key === treeNode.props.eventKey) {
+          item.children = child;
+        }
+      });
+      _this3.setState({ treeData: treeData });
+      return child;
+    });
+  },
+  render: function render() {
+    var loop = function loop(data) {
+      return data.map(function (item) {
+        if (item.children) {
+          return React.createElement(
+            TreeNode,
+            { title: item.name, key: item.key },
+            loop(item.children)
+          );
+        } else {
+          return React.createElement(TreeNode, { title: item.name, key: item.key });
+        }
+      });
+    };
+    var parseTreeNode = function parseTreeNode(data) {
+      return loop(data);
+    };
+    var treeNodes = parseTreeNode(this.state.treeData);
+    return React.createElement(
+      _antd.Tree,
+      { onSelect: this.handleSelect, onDataLoaded: this.handleDataLoaded, showLine: false },
+      treeNodes
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
+
+<span class="keyword">const</span> asyncTree = [
+  {name: <span class="string">"pNode 01"</span>, key: <span class="string">"0-0"</span>},
+];
+
+<span class="keyword">const</span> generateTreeNodes = () =&gt; {
+  <span class="keyword">const</span> arr  = [
+       {name: <span class="string">"伯约"</span>, key: <span class="string">"0-0-0"</span>},
+  ];
+  <span class="keyword">return</span> arr;
+}
+
+<span class="keyword">const</span> TreeDemo = React.createClass({
+  timeout(duration = <span class="number">0</span>) {
+    <span class="keyword">return</span> <span class="keyword">new</span> Promise((resolve, reject) =&gt; {
+        setTimeout(resolve.bind(<span class="keyword">this</span>), duration);
+    })
+  },
+  getInitialState() {
+    <span class="keyword">return</span> {
+      treeData: []
+    };
+  },
+  componentDidMount() {
+    <span class="keyword">this</span>.timeout(<span class="number">1000</span>).then(() =&gt; {
+      <span class="keyword">this</span>.setState({
+        treeData: asyncTree
+      });
+      <span class="keyword">return</span> asyncTree;
+    });
+  },
+  handleSelect(info) {
+    console.log(<span class="string">'selected'</span>, info);
+  },
+  handleDataLoaded(treeNode) {
+    <span class="keyword">return</span> <span class="keyword">this</span>.timeout(<span class="number">1000</span>).then(() =&gt; {
+      <span class="keyword">const</span> child = generateTreeNodes();
+      <span class="keyword">const</span> treeData = [...<span class="keyword">this</span>.state.treeData];
+      treeData.forEach((item) =&gt; {
+        <span class="keyword">if</span> (item.key === treeNode.props.eventKey) {
+          item.children = child;
+        }
+      });
+      <span class="keyword">this</span>.setState({treeData});
+      <span class="keyword">return</span> child;
+    });
+  },
+  render() {
+    <span class="keyword">const</span> loop = (data) =&gt; {
+      <span class="keyword">return</span> data.map((item) =&gt; {
+        <span class="keyword">if</span> (item.children) {
+          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">{item.name}</span> <span class="attribute">key</span>=<span class="value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>;</span>
+        } <span class="keyword">else</span> {
+          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">{item.name}</span> <span class="attribute">key</span>=<span class="value">{item.key}</span>&gt;</span><span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>;</span>
+        }
+      })
+    };
+    <span class="keyword">const</span> parseTreeNode = data =&gt; loop(data);
+    <span class="keyword">let</span> treeNodes = parseTreeNode(<span class="keyword">this</span>.state.treeData);
+    <span class="keyword">return</span> (
+        <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">onSelect</span>=<span class="value">{this.handleSelect}</span> <span class="attribute">onDataLoaded</span>=<span class="value">{this.handleDataLoaded}</span> <span class="attribute">showLine</span>=<span class="value">{false}</span>&gt;</span>
+          {treeNodes}
+        <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
+    )
+  }
+})
+
+ReactDOM.render(<span class="tag">&lt;<span class="title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-dynamic'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-dynamic">异步数据加载</a>
+    </div>
+    <p>异步加载数据</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

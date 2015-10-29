@@ -11,9 +11,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Tree = antd.Tree;
-var TreeNode = Tree.TreeNode;
-var Button = antd.Button;
+var _antd = require('antd');
+
+var TreeNode = _antd.Tree.TreeNode;
 
 var TreeDemo = (function (_React$Component) {
   _inherits(TreeDemo, _React$Component);
@@ -66,7 +66,7 @@ var TreeDemo = (function (_React$Component) {
         'div',
         null,
         React.createElement(
-          Tree,
+          _antd.Tree,
           { defaultExpandAll: true, checkable: true,
             onCheck: this.handleCheck, checkedKeys: this.state.checkedKeys,
             onSelect: this.handleSelect, selectedKeys: this.state.selectedKeys, multiple: true },
@@ -97,7 +97,7 @@ var TreeDemo = (function (_React$Component) {
           React.createElement(TreeNode, { key: 'p12', title: 'leaf' })
         ),
         React.createElement(
-          Button,
+          _antd.Button,
           { type: 'primary', size: 'small', onClick: this.handleClick },
           '点此控制树节点'
         )
@@ -108,9 +108,8 @@ var TreeDemo = (function (_React$Component) {
   return TreeDemo;
 })(React.Component);
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Tree = antd.Tree;
-<span class="keyword">var</span> TreeNode = Tree.TreeNode;
-<span class="keyword">var</span> Button = antd.Button;
+ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree, Button } from <span class="string">'antd'</span>;
+<span class="keyword">const</span> TreeNode = Tree.TreeNode;
 
 class TreeDemo extends React.Component {
   constructor(props) {

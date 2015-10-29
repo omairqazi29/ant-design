@@ -4452,6 +4452,33 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: center;
   margin: 0 0 0 8px;
 }
+.ant-calendar .ant-calendar-clear-btn {
+  position: absolute;
+  right: 10px;
+  text-indent: -99px;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  top: 7px;
+  margin: 0;
+}
+.ant-calendar .ant-calendar-clear-btn:after {
+  content: "\e620";
+  font-family: "anticon";
+  font-size: 12px;
+  color: #aaa;
+  display: inline-block;
+  line-height: 1;
+  width: 20px;
+  text-indent: 43px;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
+}
+.ant-calendar .ant-calendar-clear-btn:hover:after {
+  color: #666;
+}
 .ant-calendar .ant-calendar-ok-btn {
   display: inline-block;
   margin-bottom: 0;
@@ -8822,6 +8849,15 @@ label.ant-radio-button-checked:active {
   border: 0 none;
   cursor: pointer;
   outline: none;
+}
+.ant-tree li span.ant-tree-icon_loading:after {
+  content: '\e610';
+  display: inline-block;
+  font-family: 'anticon';
+  font-weight: bold;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+  margin-top: 8px;
 }
 .ant-tree li span.ant-tree-switcher-disabled {
   background: #fff;
