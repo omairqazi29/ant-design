@@ -44394,35 +44394,29 @@
 	      );
 	      emptyClass = ' ant-table-empty';
 	    }
-	    // spin holder
-	    var spinEl = undefined;
-	    var spinWrapperClass = '';
-	    if (this.state.loading && !this.isLocalDataSource()) {
-	      // if there is no pagination or no data, the height of spin should decrease by half of pagination
-	      var paginationPatchClass = this.hasPagination() && data && data.length !== 0 ? 'ant-table-with-pagination' : 'ant-table-without-pagination';
-	      var spinClass = paginationPatchClass + ' ant-table-spin-holder';
 	
-	      spinEl = _react2['default'].createElement(
-	        'div',
-	        { className: spinClass },
-	        _react2['default'].createElement(_spin2['default'], null)
-	      );
-	
-	      spinWrapperClass = ' ant-table-loading';
-	    }
-	    return _react2['default'].createElement(
+	    var table = _react2['default'].createElement(
 	      'div',
-	      { className: 'clearfix' + emptyClass + spinWrapperClass },
+	      { className: 'clearfix' + emptyClass },
 	      _react2['default'].createElement(_rcTable2['default'], _extends({}, this.props, {
 	        data: data,
 	        columns: columns,
 	        className: classString,
-	        expandIconAsCell: expandIconAsCell
-	      })),
+	        expandIconAsCell: expandIconAsCell })),
 	      emptyText,
-	      spinEl,
 	      this.renderPagination()
 	    );
+	    if (this.state.loading && !this.isLocalDataSource()) {
+	      // if there is no pagination or no data, the height of spin should decrease by half of pagination
+	      var paginationPatchClass = this.hasPagination() && data && data.length !== 0 ? 'ant-table-with-pagination' : 'ant-table-without-pagination';
+	      var spinClassName = paginationPatchClass + ' ant-table-spin-holder';
+	      return _react2['default'].createElement(
+	        _spin2['default'],
+	        { className: spinClassName },
+	        table
+	      );
+	    }
+	    return table;
 	  }
 	});
 	
