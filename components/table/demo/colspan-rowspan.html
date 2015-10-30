@@ -1,0 +1,239 @@
+<div class="code-box" id="demo-colspan-rowspan">
+  <div class="code-box-demo">
+    <div id="components-table-demo-colspan-rowspan"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外
+// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)
+var renderContent = function renderContent(value, row, index) {
+  var obj = {
+    children: value,
+    props: {}
+  };
+  if (index === 4) {
+    obj.props.colSpan = 0;
+  }
+  return obj;
+};
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  render: function render(text, row, index) {
+    if (index < 4) {
+      return React.createElement(
+        'a',
+        { href: 'javascript:;' },
+        text
+      );
+    } else {
+      return {
+        children: React.createElement(
+          'a',
+          { href: 'javascript:;' },
+          text
+        ),
+        props: {
+          align: 'center',
+          colSpan: 5
+        }
+      };
+    }
+  }
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  render: renderContent
+}, {
+  title: '家庭电话',
+  colSpan: 2,
+  dataIndex: 'tel',
+  render: function render(value, row, index) {
+    var obj = {
+      children: value,
+      props: {}
+    };
+    // 第三列的第三行行合并
+    if (index === 2) {
+      obj.props.rowSpan = 2;
+    }
+
+    // 第三列的第四行被合并没了，设置 rowSpan = 0 直接不用渲染
+    if (index === 3) {
+      obj.props.rowSpan = 0;
+    }
+
+    if (index === 4) {
+      obj.props.colSpan = 0;
+    }
+    return obj;
+  }
+}, {
+  title: '手机号',
+  colSpan: 0,
+  dataIndex: 'phone',
+  render: renderContent
+}, {
+  title: '住址',
+  dataIndex: 'address',
+  render: renderContent
+}];
+
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  tel: '0571-22098909',
+  phone: 18889898989,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  tel: '0571-22098333',
+  phone: 18889898888,
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  tel: '0575-22098909',
+  phone: 18900010002,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '4',
+  name: '李夫人',
+  age: 18,
+  tel: '0575-22098909',
+  phone: 18900010002,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '5',
+  name: '习大大',
+  age: 18,
+  tel: '0575-22098909',
+  phone: 18900010002,
+  address: '西湖区湖底公园1号'
+}];
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-colspan-rowspan'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+
+<span class="comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
+<span class="comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
+<span class="keyword">const</span> renderContent = <span class="function"><span class="keyword">function</span><span class="params">(value, row, index)</span> {</span>
+  <span class="keyword">let</span> obj = {
+    children: value,
+    props: {}
+  }
+  <span class="keyword">if</span> (index === <span class="number">4</span>) {
+    obj.props.colSpan = <span class="number">0</span>;
+  }
+  <span class="keyword">return</span> obj;
+};
+
+<span class="keyword">const</span> columns = [{
+  title: <span class="string">'姓名'</span>,
+  dataIndex: <span class="string">'name'</span>,
+  render: <span class="function"><span class="keyword">function</span><span class="params">(text, row, index)</span> {</span>
+    <span class="keyword">if</span> (index &lt; <span class="number">4</span>) {
+      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
+    } <span class="keyword">else</span> {
+      <span class="keyword">return</span> {
+        children: <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>,
+        props: {
+          align: 'center',
+          colSpan: 5
+        }
+      }
+    }
+  }
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  render: renderContent
+}, {
+  title: '家庭电话',
+  colSpan: 2,
+  dataIndex: 'tel',
+  render: function(value, row, index) {
+    let obj = {
+      children: value,
+      props:{}
+    }
+    // 第三列的第三行行合并
+    if (index === 2) {
+      obj.props.rowSpan = 2;
+    }
+
+    // 第三列的第四行被合并没了，设置 rowSpan = 0 直接不用渲染
+    if (index === 3) {
+      obj.props.rowSpan = 0;
+    }
+
+    if (index === 4) {
+      obj.props.colSpan = 0;
+    }
+    return obj;
+  }
+}, {
+  title: '手机号',
+  colSpan: 0,
+  dataIndex: 'phone',
+  render: renderContent
+}, {
+  title: '住址',
+  dataIndex: 'address',
+  render: renderContent
+}];
+
+const data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  tel: '0571-22098909',
+  phone: 18889898989,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  tel: '0571-22098333',
+  phone: 18889898888,
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  tel: '0575-22098909',
+  phone: 18900010002,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '4',
+  name: '李夫人',
+  age: 18,
+  tel: '0575-22098909',
+  phone: 18900010002,
+  address: '西湖区湖底公园1号'
+}, {
+   key: '5',
+   name: '习大大',
+   age: 18,
+   tel: '0575-22098909',
+   phone: 18900010002,
+   address: '西湖区湖底公园1号'
+ }];
+
+ReactDOM.render(<span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
+, document.getElementById('components-table-demo-colspan-rowspan'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-colspan-rowspan">表格行/列合并</a>
+    </div>
+    <p>表头只支持列合并，使用 column 里的 colSpan 进行设置。</p>
+<p>表格支持行/列合并，可以指定内容对齐方式，使用 render 里的单元格属性 colSpan 或者 rowSpan 设值为 0 时，设置的表格不会渲染。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

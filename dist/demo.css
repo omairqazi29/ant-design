@@ -4272,6 +4272,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   border: 0;
   width: 100%;
   cursor: auto;
+  outline: 0;
 }
 .ant-calendar-week-number {
   width: 286px;
@@ -4388,6 +4389,8 @@ fieldset[disabled] .ant-btn-ghost.active {
   padding: 0;
   background: transparent;
   text-align: center;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
 }
 .ant-calendar-date:hover {
   background: #eaf8fe;
@@ -4454,14 +4457,14 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-calendar .ant-calendar-clear-btn {
   position: absolute;
-  right: 10px;
+  right: 6px;
   text-indent: -99px;
   overflow: hidden;
   width: 20px;
   height: 20px;
   text-align: center;
   line-height: 20px;
-  top: 7px;
+  top: 6px;
   margin: 0;
 }
 .ant-calendar .ant-calendar-clear-btn:after {
@@ -4726,6 +4729,8 @@ textarea.ant-calendar-time-input {
   border-radius: 4px;
   margin: 0 auto;
   color: #666;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
 }
 .ant-calendar-time-panel-time:hover {
   background: #eaf8fe;
@@ -4835,6 +4840,8 @@ textarea.ant-calendar-time-input {
   line-height: 24px;
   padding: 0 6px;
   border-radius: 4px;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
 }
 .ant-calendar-month-panel-month:hover {
   background: #eaf8fe;
@@ -4944,6 +4951,8 @@ textarea.ant-calendar-time-input {
   line-height: 24px;
   padding: 0 6px;
   border-radius: 4px;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
 }
 .ant-calendar-year-panel-year:hover {
   background: #eaf8fe;
@@ -5071,6 +5080,8 @@ textarea.ant-calendar-time-input {
   line-height: 24px;
   padding: 0 6px;
   border-radius: 4px;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
 }
 .ant-calendar-decade-panel-decade:hover {
   background: #eaf8fe;

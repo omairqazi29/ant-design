@@ -25014,6 +25014,8 @@
 	        onSelect: null, // 向前兼容
 	        onChange: function onChange() {}, // onChange 可用于 Validator
 	        locale: {},
+	        // 自动换方向有很多视觉和交互问题
+	        // 需求不是很大，和设计师协商后不做
 	        placement: {
 	          points: ['tl', 'tl'],
 	          overflow: { adjustX: 0, adjustY: 0 },
@@ -25059,13 +25061,13 @@
 	          return date;
 	        }
 	      }
-	      return null;
+	      return undefined;
 	    },
 	    // remove input readonly warning
 	    handleInputChange: function handleInputChange() {},
 	    handleChange: function handleChange(value) {
 	      this.setState({ value: value });
-	      var timeValue = value ? new Date(value.getTime()) : null;
+	      var timeValue = value ? new Date(value.getTime()) : undefined;
 	      // onSelect 为向前兼容.
 	      if (this.props.onSelect) {
 	        __webpack_require__(342)(this.props.onSelect, 'onSelect property of Datepicker is deprecated, use onChange instead')(timeValue);
@@ -25111,12 +25113,16 @@
 	        function (_ref) {
 	          var value = _ref.value;
 	
-	          return [_react2['default'].createElement('input', {
-	            disabled: _this.props.disabled,
-	            onChange: _this.handleInputChange,
-	            value: value && _this.getFormatter().format(value),
-	            placeholder: _this.props.placeholder,
-	            className: 'ant-calendar-picker-input ant-input' + sizeClass }), _react2['default'].createElement('span', { className: 'ant-calendar-picker-icon' })];
+	          return _react2['default'].createElement(
+	            'span',
+	            null,
+	            _react2['default'].createElement('input', { disabled: _this.props.disabled,
+	              onChange: _this.handleInputChange,
+	              value: value && _this.getFormatter().format(value),
+	              placeholder: _this.props.placeholder,
+	              className: 'ant-calendar-picker-input ant-input' + sizeClass }),
+	            _react2['default'].createElement('span', { className: 'ant-calendar-picker-icon' })
+	          );
 	        }
 	      );
 	    }
@@ -45254,11 +45260,13 @@
 	    }
 	    ths = ths.concat(this.props.columns);
 	    return ths.map(function (c) {
-	      return _react2['default'].createElement(
-	        'th',
-	        { key: c.key, className: c.className || '' },
-	        c.title
-	      );
+	      if (c.colSpan !== 0) {
+	        return _react2['default'].createElement(
+	          'th',
+	          { key: c.key, colSpan: c.colSpan, className: c.className || '' },
+	          c.title
+	        );
+	      }
 	    });
 	  },
 	
@@ -45458,6 +45466,11 @@
 	      var text = record[col.dataIndex];
 	
 	      var expandIcon = null;
+	      var tdProps = undefined;
+	      var colSpan = undefined;
+	      var rowSpan = undefined;
+	      var notRender = false;
+	      var align = 'left';
 	
 	      if (i === 0 && expandable) {
 	        expandIcon = _react2['default'].createElement('span', {
@@ -45476,15 +45489,28 @@
 	      }
 	
 	      if (render) {
-	        text = render(text, record, index);
+	        text = render(text, record, index) || {};
+	        tdProps = text.props || {};
+	
+	        if (!_react2['default'].isValidElement(text)) {
+	          text = text.children;
+	        }
+	        rowSpan = tdProps.rowSpan;
+	        colSpan = tdProps.colSpan;
+	        align = tdProps.align || 'left';
 	      }
 	
-	      cells.push(_react2['default'].createElement(
-	        'td',
-	        { key: col.key, className: '' + colClassName },
-	        expandIcon,
-	        text
-	      ));
+	      if (rowSpan === 0 || colSpan === 0) {
+	        notRender = true;
+	      }
+	      if (!notRender) {
+	        cells.push(_react2['default'].createElement(
+	          'td',
+	          { key: col.key, style: { textAlign: align }, colSpan: colSpan, rowSpan: rowSpan, className: '' + colClassName },
+	          expandIcon,
+	          text
+	        ));
+	      }
 	    }
 	    return _react2['default'].createElement(
 	      'tr',
@@ -59919,7 +59945,7 @@
 			"rc-slider": "~1.5.0",
 			"rc-steps": "~1.4.0",
 			"rc-switch": "~1.2.0",
-			"rc-table": "~3.3.0",
+			"rc-table": "~3.4.0",
 			"rc-tabs": "~5.4.3",
 			"rc-tooltip": "~3.0.1",
 			"rc-tree": "~0.18.1",
