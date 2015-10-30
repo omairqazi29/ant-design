@@ -16,19 +16,19 @@ var Picker = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Picker = React.createClass({
-  handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
-    console.log(<span class="keyword">new</span> Date(value.getTime()));
+<span class="hljs-keyword">const</span> Picker = React.createClass({
+  handleChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(value.getTime()));
   },
-  render: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span> /&gt;</span>
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
   }
 });
 
 ReactDOM.render(
-  <span class="tag">&lt;<span class="title">Picker</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Picker</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-select'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

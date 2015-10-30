@@ -87,76 +87,76 @@ var TreeDemo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> TreeNode = Tree.TreeNode;
+ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
-<span class="keyword">const</span> asyncTree = [
-  {name: <span class="string">"pNode 01"</span>, key: <span class="string">"0-0"</span>},
+<span class="hljs-keyword">const</span> asyncTree = [
+  {name: <span class="hljs-string">"pNode 01"</span>, key: <span class="hljs-string">"0-0"</span>},
 ];
 
-<span class="keyword">const</span> generateTreeNodes = () =&gt; {
-  <span class="keyword">const</span> arr  = [
-       {name: <span class="string">"伯约"</span>, key: <span class="string">"0-0-0"</span>},
+<span class="hljs-keyword">const</span> generateTreeNodes = () =&gt; {
+  <span class="hljs-keyword">const</span> arr  = [
+       {name: <span class="hljs-string">"伯约"</span>, key: <span class="hljs-string">"0-0-0"</span>},
   ];
-  <span class="keyword">return</span> arr;
+  <span class="hljs-keyword">return</span> arr;
 }
 
-<span class="keyword">const</span> TreeDemo = React.createClass({
-  timeout(duration = <span class="number">0</span>) {
-    <span class="keyword">return</span> <span class="keyword">new</span> Promise((resolve, reject) =&gt; {
-        setTimeout(resolve.bind(<span class="keyword">this</span>), duration);
+<span class="hljs-keyword">const</span> TreeDemo = React.createClass({
+  timeout(duration = <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+        setTimeout(resolve.bind(<span class="hljs-keyword">this</span>), duration);
     })
   },
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       treeData: []
     };
   },
   componentDidMount() {
-    <span class="keyword">this</span>.timeout(<span class="number">1000</span>).then(() =&gt; {
-      <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">1000</span>).then(() =&gt; {
+      <span class="hljs-keyword">this</span>.setState({
         treeData: asyncTree
       });
-      <span class="keyword">return</span> asyncTree;
+      <span class="hljs-keyword">return</span> asyncTree;
     });
   },
   handleSelect(info) {
-    console.log(<span class="string">'selected'</span>, info);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected'</span>, info);
   },
   handleDataLoaded(treeNode) {
-    <span class="keyword">return</span> <span class="keyword">this</span>.timeout(<span class="number">1000</span>).then(() =&gt; {
-      <span class="keyword">const</span> child = generateTreeNodes();
-      <span class="keyword">const</span> treeData = [...<span class="keyword">this</span>.state.treeData];
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">1000</span>).then(() =&gt; {
+      <span class="hljs-keyword">const</span> child = generateTreeNodes();
+      <span class="hljs-keyword">const</span> treeData = [...this.state.treeData];
       treeData.forEach((item) =&gt; {
-        <span class="keyword">if</span> (item.key === treeNode.props.eventKey) {
+        <span class="hljs-keyword">if</span> (item.key === treeNode.props.eventKey) {
           item.children = child;
         }
       });
-      <span class="keyword">this</span>.setState({treeData});
-      <span class="keyword">return</span> child;
+      <span class="hljs-keyword">this</span>.setState({treeData});
+      <span class="hljs-keyword">return</span> child;
     });
   },
   render() {
-    <span class="keyword">const</span> loop = (data) =&gt; {
-      <span class="keyword">return</span> data.map((item) =&gt; {
-        <span class="keyword">if</span> (item.children) {
-          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">{item.name}</span> <span class="attribute">key</span>=<span class="value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>;</span>
-        } <span class="keyword">else</span> {
-          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">{item.name}</span> <span class="attribute">key</span>=<span class="value">{item.key}</span>&gt;</span><span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>;</span>
+    <span class="hljs-keyword">const</span> loop = (data) =&gt; {
+      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
+        <span class="hljs-keyword">if</span> (item.children) {
+          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
         }
       })
     };
-    <span class="keyword">const</span> parseTreeNode = data =&gt; loop(data);
-    <span class="keyword">let</span> treeNodes = parseTreeNode(<span class="keyword">this</span>.state.treeData);
-    <span class="keyword">return</span> (
-        <span class="xml"><span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">onSelect</span>=<span class="value">{this.handleSelect}</span> <span class="attribute">onDataLoaded</span>=<span class="value">{this.handleDataLoaded}</span> <span class="attribute">showLine</span>=<span class="value">{false}</span>&gt;</span>
+    <span class="hljs-keyword">const</span> parseTreeNode = data =&gt; loop(data);
+    <span class="hljs-keyword">let</span> treeNodes = parseTreeNode(<span class="hljs-keyword">this</span>.state.treeData);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.handleSelect}</span> <span class="hljs-attribute">onDataLoaded</span>=<span class="hljs-value">{this.handleDataLoaded}</span> <span class="hljs-attribute">showLine</span>=<span class="hljs-value">{false}</span>&gt;</span>
           {treeNodes}
-        <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
-    )
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+    )</span>
   }
 })
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

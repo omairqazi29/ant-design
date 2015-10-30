@@ -101,97 +101,97 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript">import { Table, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> columns = [{
-  title: <span class="string">'姓名'</span>,
-  dataIndex: <span class="string">'name'</span>,
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
   filters: [{
-    text: <span class="string">'姓李的'</span>,
-    value: <span class="string">'李'</span>
+    text: <span class="hljs-string">'姓李的'</span>,
+    value: <span class="hljs-string">'李'</span>
   }, {
-    text: <span class="string">'姓胡的'</span>,
-    value: <span class="string">'胡'</span>
+    text: <span class="hljs-string">'姓胡的'</span>,
+    value: <span class="hljs-string">'胡'</span>
   }]
 }, {
-  title: <span class="string">'年龄'</span>,
-  dataIndex: <span class="string">'age'</span>,
-  sorter: <span class="literal">true</span>
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>,
+  sorter: <span class="hljs-literal">true</span>
 }, {
-  title: <span class="string">'住址'</span>,
-  dataIndex: <span class="string">'address'</span>
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
 }];
 
-<span class="keyword">const</span> dataSource = <span class="keyword">new</span> Table.DataSource({
-  url: <span class="string">"/components/table/demo/data.json"</span>,
-  resolve: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
-    <span class="keyword">return</span> result.data;
+<span class="hljs-keyword">const</span> dataSource = <span class="hljs-keyword">new</span> Table.DataSource({
+  url: <span class="hljs-string">"/components/table/demo/data.json"</span>,
+  resolve: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+    <span class="hljs-keyword">return</span> result.data;
   },
   data: {},
-  <span class="comment">// 和后台接口返回的分页数据进行适配</span>
-  getPagination: <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>
-    <span class="keyword">return</span> {
+  <span class="hljs-comment">// 和后台接口返回的分页数据进行适配</span>
+  getPagination: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+    <span class="hljs-keyword">return</span> {
       total: result.totalCount,
       pageSize: result.pageSize
     }
   },
-  <span class="comment">// 和后台接口接收的参数进行适配</span>
-  <span class="comment">// 参数里提供了分页、筛选、排序的信息</span>
-  getParams: <span class="function"><span class="keyword">function</span><span class="params">(pagination, filters, sorter)</span> {</span>
-    console.log(<span class="string">'getParams 的参数是：'</span>, pagination, filters, sorter);
-    <span class="keyword">const</span> params = {
+  <span class="hljs-comment">// 和后台接口接收的参数进行适配</span>
+  <span class="hljs-comment">// 参数里提供了分页、筛选、排序的信息</span>
+  getParams: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pagination, filters, sorter</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'getParams 的参数是：'</span>, pagination, filters, sorter);
+    <span class="hljs-keyword">const</span> params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
       sortField: sorter.field,
       sortOrder: sorter.order
     };
-    <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> filters) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> filters) {
       params[key] = filters[key];
     }
-    console.log(<span class="string">'请求参数：'</span>, params);
-    <span class="keyword">return</span> params;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'请求参数：'</span>, params);
+    <span class="hljs-keyword">return</span> params;
   }
 });
 
-<span class="keyword">const</span> Test = React.createClass({
+<span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       dataSource: dataSource
     };
   },
   refresh() {
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       dataSource: dataSource.clone()
     });
   },
   changeAndRefresh() {
-    <span class="comment">// 可以修改原来的 dataSource 再发请求</span>
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-comment">// 可以修改原来的 dataSource 再发请求</span>
+    <span class="hljs-keyword">this</span>.setState({
       dataSource: dataSource.clone({
         data: {
-          city: <span class="string">'hz'</span>
+          city: <span class="hljs-string">'hz'</span>
         }
       }),
       pagination: {
-        current: <span class="number">1</span>
+        current: <span class="hljs-number">1</span>
       }
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.dataSource}</span> <span class="attribute">pagination</span>=<span class="value">{this.state.pagination}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.refresh}</span>&gt;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.dataSource}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.refresh}</span>&gt;</span>
         重新加载数据
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.changeAndRefresh}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.changeAndRefresh}</span>&gt;</span>
         加载 city=hz 的数据
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

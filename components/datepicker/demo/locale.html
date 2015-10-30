@@ -28,30 +28,30 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       locale: {
-        timezoneOffset: <span class="number">0</span> * <span class="number">60</span>,
-        firstDayOfWeek: <span class="number">0</span>,
-        minimalDaysInFirstWeek: <span class="number">1</span>,
+        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
+        firstDayOfWeek: <span class="hljs-number">0</span>,
+        minimalDaysInFirstWeek: <span class="hljs-number">1</span>,
         lang: {
-          today: <span class="string">'Today'</span>,
-          now: <span class="string">'Now'</span>,
-          ok: <span class="string">'OK'</span>,
-          clear: <span class="string">'Clear'</span>
+          today: <span class="hljs-string">'Today'</span>,
+          now: <span class="hljs-string">'Now'</span>,
+          ok: <span class="hljs-string">'OK'</span>,
+          clear: <span class="hljs-string">'Clear'</span>
         }
       }
     };
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">locale</span>=<span class="value">{this.state.locale}</span> /&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-datepicker-demo-locale'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-datepicker-demo-locale'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

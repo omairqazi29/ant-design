@@ -52,45 +52,45 @@ var MyProgress = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress, Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressCircle = Progress.Circle;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
-<span class="keyword">const</span> MyProgress = React.createClass({
+<span class="hljs-keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      percent: <span class="number">0</span>
+    <span class="hljs-keyword">return</span> {
+      percent: <span class="hljs-number">0</span>
     };
   },
   increase() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent + <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &gt; <span class="number">100</span>) {
-      percent = <span class="number">100</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent + <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &gt; <span class="hljs-number">100</span>) {
+      percent = <span class="hljs-number">100</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   decline() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent - <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &lt; <span class="number">0</span>) {
-      percent = <span class="number">0</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent - <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &lt; <span class="hljs-number">0</span>) {
+      percent = <span class="hljs-number">0</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"minus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.increase}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{this.state.percent}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

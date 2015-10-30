@@ -15,15 +15,15 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { onClick: success },
   '显示加载中...'
-), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">let</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
-  <span class="comment">// 异步手动移除</span>
-  setTimeout(hide, <span class="number">2500</span>);
+<span class="hljs-keyword">const</span> success = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> hide = message.loading(<span class="hljs-string">'正在执行中...'</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-comment">// 异步手动移除</span>
+  setTimeout(hide, <span class="hljs-number">2500</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>显示加载中...<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-loading'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

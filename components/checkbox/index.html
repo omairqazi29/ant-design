@@ -149,6 +149,10 @@ Checkbox 多选框 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Checkbox 多选框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -622,17 +633,17 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(_antd.Checkbox, { defaultChecked: false, onChange: onChange }),
   'Checkbox'
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-basic'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-checkbox-demo-basic'</span>);
 
-<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
-  console.log(<span class="string">'checked = '</span> + e.target.checked);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span> + e.target.checked);
 }
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">label</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
   Checkbox
-<span class="tag">&lt;/<span class="title">label</span>&gt;</span>, container);</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -709,56 +720,56 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-controller'</span>);
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-checkbox-demo-controller'</span>);
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      checked: <span class="literal">true</span>,
-      disabled: <span class="literal">false</span>
+    <span class="hljs-keyword">return</span> {
+      checked: <span class="hljs-literal">true</span>,
+      disabled: <span class="hljs-literal">false</span>
     };
   },
   render() {
-    <span class="keyword">var</span> label = (<span class="keyword">this</span>.state.checked ? <span class="string">'选中'</span> : <span class="string">'取消'</span>) + <span class="string">'-'</span> +
-      (<span class="keyword">this</span>.state.disabled ? <span class="string">'不可用'</span> : <span class="string">'可用'</span>);
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> '<span class="attribute">20px</span>'}}&gt;</span>
-        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">checked</span>=<span class="value">{this.state.checked}</span>
-            <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span>
-            <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span> /&gt;</span>
+    <span class="hljs-keyword">var</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
+      (<span class="hljs-keyword">this</span>.state.disabled ? <span class="hljs-string">'不可用'</span> : <span class="hljs-string">'可用'</span>);
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> '<span class="hljs-attribute">20px</span>'}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">{this.state.checked}</span>
+            <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span>
+            <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> /&gt;</span>
             {label}
-        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>
-          <span class="attribute">onClick</span>=<span class="value">{this.toggleChecked}</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
+          <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleChecked}</span>&gt;</span>
           {!this.state.checked ? "选中":"取消"}
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">style</span>=<span class="value">{{'marginLeft':</span> '<span class="attribute">10px</span>'}}
-          <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>
-          <span class="attribute">onClick</span>=<span class="value">{this.toggleDisable}</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{'marginLeft':</span> '<span class="hljs-attribute">10px</span>'}}
+          <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
+          <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleDisable}</span>&gt;</span>
           {!this.state.disabled ? "不可用":"可用"}
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   },
   toggleChecked(e) {
-    <span class="keyword">this</span>.setState({checked: !<span class="keyword">this</span>.state.checked});
+    <span class="hljs-keyword">this</span>.setState({checked: !<span class="hljs-keyword">this</span>.state.checked});
   },
   toggleDisable(e) {
-    <span class="keyword">this</span>.setState({disabled: !<span class="keyword">this</span>.state.disabled});
+    <span class="hljs-keyword">this</span>.setState({disabled: !<span class="hljs-keyword">this</span>.state.disabled});
   },
   onChange(e) {
-    console.log(<span class="string">'checked = '</span>, e.target.checked);
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span>, e.target.checked);
+    <span class="hljs-keyword">this</span>.setState({
       checked: e.target.checked
     });
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -784,14 +795,14 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.Checkbox, { defaultChecked: false, disabled: true }),
   React.createElement('br', null),
   React.createElement(_antd.Checkbox, { defaultChecked: true, disabled: true })
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Checkbox } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-checkbox-demo-disable'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-checkbox-demo-disable'</span>);
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>/&gt;</span>
-  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Checkbox</span> <span class="attribute">defaultChecked</span>=<span class="value">{true}</span> <span class="attribute">disabled</span>=<span class="value">{true}</span>/&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

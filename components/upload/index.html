@@ -149,6 +149,10 @@ Upload 文件上传 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Upload 文件上传 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -621,10 +632,10 @@ Upload 文件上传 - Ant Design
 }</code></pre></div><ol>
 <li><p><code>file</code> 当前操作的文件对象。</p>
 <div class="highlight"><pre><code class="javascript">{
-  uid: <span class="string">'uid'</span>,      <span class="comment">// 文件唯一标识，建议设置为负数，防止和内部产生的 id 冲突</span>
-  name: <span class="string">'xx.png'</span>   <span class="comment">// 文件名</span>
-  status: <span class="string">'done'</span>,  <span class="comment">// 状态有：uploading done error removed</span>
-  response: <span class="string">'{"status":"success"}'</span>  <span class="comment">// 服务端响应内容</span>
+  uid: <span class="hljs-string">'uid'</span>,      <span class="hljs-comment">// 文件唯一标识，建议设置为负数，防止和内部产生的 id 冲突</span>
+  name: <span class="hljs-string">'xx.png'</span>   <span class="hljs-comment">// 文件名</span>
+  status: <span class="hljs-string">'done'</span>,  <span class="hljs-comment">// 状态有：uploading done error removed</span>
+  response: <span class="hljs-string">'{"status":"success"}'</span>  <span class="hljs-comment">// 服务端响应内容</span>
 }</code></pre></div><p>如果上传控件是 multiple 时，此参数将为一个对象数组 <code>[file, ...]</code>。</p>
 </li>
 <li><p><code>fileList</code> 当前的文件列表。</p>
@@ -673,29 +684,29 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> props = {
-  name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>,
+<span class="hljs-keyword">const</span> props = {
+  name: <span class="hljs-string">'file'</span>,
+  action: <span class="hljs-string">'/upload.do'</span>,
   onChange(info) {
-    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
-      console.log(info.file, info.fileList);
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
     }
-    <span class="keyword">if</span> (info.file.status === <span class="string">'done'</span>) {
-      message.success(info.file.name + <span class="string">' 上传成功。'</span>);
-    } <span class="keyword">else</span> <span class="keyword">if</span> (info.file.status === <span class="string">'error'</span>) {
-      message.error(info.file.name + <span class="string">' 上传失败。'</span>);
+    <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'done'</span>) {
+      message.success(info.file.name + <span class="hljs-string">' 上传成功。'</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'error'</span>) {
+      message.error(info.file.name + <span class="hljs-string">' 上传失败。'</span>);
     }
   }
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -776,64 +787,64 @@ var MyUpload = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> fileList = [{
-  uid: -<span class="number">1</span>,
-  name: <span class="string">'xxx.png'</span>,
-  status: <span class="string">'done'</span>,
-  url: <span class="string">'http://www.baidu.com/xxx.png'</span>
+<span class="hljs-keyword">const</span> fileList = [{
+  uid: -<span class="hljs-number">1</span>,
+  name: <span class="hljs-string">'xxx.png'</span>,
+  status: <span class="hljs-string">'done'</span>,
+  url: <span class="hljs-string">'http://www.baidu.com/xxx.png'</span>
 }];
 
-<span class="keyword">const</span> MyUpload = React.createClass({
+<span class="hljs-keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       fileList: fileList
     };
   },
   handleChange(info) {
-    <span class="keyword">let</span> fileList = info.fileList;
+    <span class="hljs-keyword">let</span> fileList = info.fileList;
 
-    <span class="comment">// 1. 上传列表数量的限制</span>
-    <span class="comment">//    只显示最近上传的一个，旧的会被新的顶掉</span>
-    fileList = fileList.slice(-<span class="number">2</span>);
+    <span class="hljs-comment">// 1. 上传列表数量的限制</span>
+    <span class="hljs-comment">//    只显示最近上传的一个，旧的会被新的顶掉</span>
+    fileList = fileList.slice(-<span class="hljs-number">2</span>);
 
-    <span class="comment">// 2. 读取远程路径并显示链接</span>
-    fileList = fileList.map(<span class="function"><span class="keyword">function</span><span class="params">(file)</span> {</span>
-      <span class="keyword">if</span> (file.response) {
-        <span class="comment">// 组件会将 file.url 作为链接进行展示</span>
-        file.url = JSON.parse(file.response).url;
+    <span class="hljs-comment">// 2. 读取远程路径并显示链接</span>
+    fileList = fileList.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file</span>) </span>{
+      <span class="hljs-keyword">if</span> (file.response) {
+        <span class="hljs-comment">// 组件会将 file.url 作为链接进行展示</span>
+        file.url = <span class="hljs-built_in">JSON</span>.parse(file.response).url;
       }
-      <span class="keyword">return</span> file;
+      <span class="hljs-keyword">return</span> file;
     });
 
-    <span class="comment">// 3. 按照服务器返回信息筛选成功上传的文件</span>
-    fileList = fileList.filter(<span class="function"><span class="keyword">function</span><span class="params">(file)</span> {</span>
-      <span class="keyword">if</span> (file.response) {
-        <span class="keyword">return</span> JSON.parse(file.response).status === <span class="string">'success'</span>;
+    <span class="hljs-comment">// 3. 按照服务器返回信息筛选成功上传的文件</span>
+    fileList = fileList.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file</span>) </span>{
+      <span class="hljs-keyword">if</span> (file.response) {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(file.response).status === <span class="hljs-string">'success'</span>;
       }
-      <span class="keyword">return</span> <span class="literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
     });
 
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       fileList: fileList
     });
   },
   render() {
-    <span class="keyword">const</span> props = {
-      action: <span class="string">'/upload.do'</span>,
-      onChange: <span class="keyword">this</span>.handleChange,
-      multiple: <span class="literal">true</span>
+    <span class="hljs-keyword">const</span> props = {
+      action: <span class="hljs-string">'/upload.do'</span>,
+      onChange: <span class="hljs-keyword">this</span>.handleChange,
+      multiple: <span class="hljs-literal">true</span>
     };
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>} <span class="attribute">fileList</span>=<span class="value">{this.state.fileList}</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>} <span class="hljs-attribute">fileList</span>=<span class="hljs-value">{this.state.fileList}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyUpload</span> /&gt;</span>, document.getElementById('components-upload-demo-filelist'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyUpload</span> /&gt;</span>, document.getElementById('components-upload-demo-filelist'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -863,18 +874,18 @@ ReactDOM.render(React.createElement(
   Dragger,
   props,
   React.createElement(_antd.Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Dragger = Upload.Dragger;
+), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">const</span> props = {
-  name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>
+<span class="hljs-keyword">const</span> props = {
+  name: <span class="hljs-string">'file'</span>,
+  action: <span class="hljs-string">'/upload.do'</span>
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dragger</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag-simple')
 );</span></code></pre></div><style>
 #components-upload-demo-drag-simple {
@@ -930,35 +941,35 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> props = {
-  action: <span class="string">'/upload.do'</span>,
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
   onChange(info) {
-    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
-      console.log(info.file);
-      console.log(info.fileList);
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file);
+      <span class="hljs-built_in">console</span>.log(info.fileList);
     }
   },
   defaultFileList: [{
-    uid: -<span class="number">1</span>,
-    name: <span class="string">'xxx.png'</span>,
-    status: <span class="string">'done'</span>,
-    url: <span class="string">'http://www.baidu.com/xxx.png'</span>
+    uid: -<span class="hljs-number">1</span>,
+    name: <span class="hljs-string">'xxx.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'http://www.baidu.com/xxx.png'</span>
   }, {
-    uid: -<span class="number">2</span>,
-    name: <span class="string">'yyy.png'</span>,
-    status: <span class="string">'done'</span>,
-    url: <span class="string">'http://www.baidu.com/yyy.png'</span>
+    uid: -<span class="hljs-number">2</span>,
+    name: <span class="hljs-string">'yyy.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'http://www.baidu.com/yyy.png'</span>
   }]
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1000,22 +1011,22 @@ ReactDOM.render(React.createElement(
     { className: 'ant-upload-hint' },
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
-), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Dragger = Upload.Dragger;
+), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">const</span> props = {
-  name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>
+<span class="hljs-keyword">const</span> props = {
+  name: <span class="hljs-string">'file'</span>,
+  action: <span class="hljs-string">'/upload.do'</span>
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-drag-icon"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"inbox"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dragger</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-drag-icon"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"inbox"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag')
 );</span></code></pre></div><style>
 #components-upload-demo-drag {
@@ -1062,29 +1073,29 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> props = {
-  action: <span class="string">'/upload.do'</span>,
-  multiple: <span class="literal">true</span>,
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
+  multiple: <span class="hljs-literal">true</span>,
   onChange(info) {
-    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
-      console.log(info.file, info.fileList);
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
     }
-    <span class="keyword">if</span> (info.file.status === <span class="string">'done'</span>) {
-      message.success(info.file.name + <span class="string">' 上传成功。'</span>);
-    } <span class="keyword">else</span> <span class="keyword">if</span> (info.file.status === <span class="string">'error'</span>) {
-      message.error(info.file.name + <span class="string">' 上传失败。'</span>);
+    <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'done'</span>) {
+      message.success(info.file.name + <span class="hljs-string">' 上传成功。'</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'error'</span>) {
+      message.error(info.file.name + <span class="hljs-string">' 上传失败。'</span>);
     }
   }
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-multiple'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

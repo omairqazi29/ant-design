@@ -149,6 +149,10 @@
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@
             </a>
           </li>
           <li class="">
+            <a href="../components/spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../components/table/"
                class="">
               Table
@@ -561,34 +572,34 @@
 我们提供了一套 <code>npm</code> + <code>webpack</code> 的开发工具链来辅助开发，下面我们用一个简单的实例来说明。</p>
 <h3 id="1-安装命令行工具">1. 安装命令行工具<a href="#1-安装命令行工具" class="anchor">#</a> </h3><div class="highlight"><pre><code class="bash">$ npm install antd-init -g</code></pre></div><p><a href="https://github.com/ant-design/antd-bin#使用说明">更多使用说明</a>。</p>
 <h3 id="2-创建一个项目">2. 创建一个项目<a href="#2-创建一个项目" class="anchor">#</a> </h3><p>使用命令行进行初始化。</p>
-<div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="built_in">cd</span> antd-demo
+<div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="hljs-built_in">cd</span> antd-demo
 $ antd-init
 $ npm install</code></pre></div><p>若下面例子发生报错，尝试用 <code>npm install antd@beta --save</code> 安装 <code>0.10.x</code> 或更高版本。</p>
 <h3 id="3-使用组件">3. 使用组件<a href="#3-使用组件" class="anchor">#</a> </h3><p>编辑 <code>src/component/App.jsx</code>，用 React 的方式直接使用 Ant Design React 的组件。</p>
-<div class="highlight"><pre><code class="javascript">import React from <span class="string">'react'</span>;
-import { Datepicker, message } from <span class="string">'antd'</span>;
+<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { Datepicker, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      date: <span class="string">''</span>
+    <span class="hljs-keyword">return</span> {
+      date: <span class="hljs-string">''</span>
     };
   },
   handleChange(value) {
-    message.info(<span class="string">'您选择的日期是: '</span> + value.toString());
-    <span class="keyword">this</span>.setState({
+    message.info(<span class="hljs-string">'您选择的日期是: '</span> + value.toString());
+    <span class="hljs-keyword">this</span>.setState({
       date: value
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{width:</span> <span class="attribute">400</span>, <span class="attribute">margin:</span> '<span class="attribute">100px</span> <span class="attribute">auto</span>'}}&gt;</span>
-      <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">onSelect</span>=<span class="value">{this.handleChange}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>当前日期：{this.state.date.toString()}<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">400</span>, <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">100px</span> <span class="hljs-attribute">auto</span>'}}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginTop:</span> <span class="hljs-attribute">20</span>}}&gt;</span>当前日期：{this.state.date.toString()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-export <span class="keyword">default</span> App;</code></pre></div><p>你可以在 <a href="/components/button">这里</a> 选用更多组件。</p>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;</code></pre></div><p>你可以在 <a href="/components/button">这里</a> 选用更多组件。</p>
 <h3 id="4-开发调试">4. 开发调试<a href="#4-开发调试" class="anchor">#</a> </h3><p>一键启动调试，访问 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> 查看效果。</p>
 <div class="highlight"><pre><code class="bash">$ npm run dev</code></pre></div><h3 id="5-构建和部署">5. 构建和部署<a href="#5-构建和部署" class="anchor">#</a> </h3><div class="highlight"><pre><code class="bash">$ npm run build</code></pre></div><p>入口文件会构建到 <code>dist</code> 目录中，你可以自由部署到不同环境中进行引用。</p>
 <blockquote>
@@ -596,22 +607,22 @@ export <span class="keyword">default</span> App;</code></pre></div><p>你可以�
 </blockquote>
 <h2 id="兼容性">兼容性<a href="#兼容性" class="anchor">#</a> </h2><p>Ant Design React 支持所有的现代浏览器和 IE8+。</p>
 <p>对于 IE8，需要提供 <a href="http://facebook.github.io/react/docs/working-with-the-browser.html#browser-support-and-polyfills">es5-shim</a> 等 Polyfills 的支持。</p>
-<div class="highlight"><pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span>
-    <span class="comment">&lt;!-- 引入样式 --&gt;</span>
-    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"/index.css"</span>&gt;</span>
-    <span class="comment">&lt;!-- Polyfills --&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.js,es5-shim/4.1.14/es5-sham.js,html5shiv/3.7.2/html5shiv.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-  <span class="comment">&lt;!-- 引入公用文件 --&gt;</span>
-  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/common.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-  <span class="comment">&lt;!-- 引入入口文件 --&gt;</span>
-  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/index.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></div><div class="code-line-highlight"></div>
+<div class="highlight"><pre><code class="xml"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- 引入样式 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/index.css"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Polyfills --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.js,es5-shim/4.1.14/es5-sham.js,html5shiv/3.7.2/html5shiv.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 引入公用文件 --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/common.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 引入入口文件 --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><div class="code-line-highlight"></div>
 
 <style>
 .code-line-highlight {

@@ -90,47 +90,47 @@ ReactDOM.render(React.createElement(
       React.createElement(Route, { name: 'app', breadcrumbName: '应用:id', path: ':id' })
     )
   )
-), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">const</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">let</span> { Router, Route, Link } = ReactRouter;
-import { Breadcrumb } from <span class="string">'antd'</span>;
+), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
+<span class="hljs-keyword">let</span> { Router, Route, Link } = ReactRouter;
+<span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Apps = React.createClass({
+<span class="hljs-keyword">const</span> Apps = React.createClass({
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">className</span>=<span class="value">"app-list"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/apps/1"</span>&gt;</span>应用1<span class="tag">&lt;/<span class="title">Link</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/apps/2"</span>&gt;</span>应用2<span class="tag">&lt;/<span class="title">Link</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"app-list"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/apps/1"</span>&gt;</span>应用1<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/apps/2"</span>&gt;</span>应用2<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>;</span>
   }
 });
 
-<span class="keyword">const</span> Home = React.createClass({
+<span class="hljs-keyword">const</span> Home = React.createClass({
   render() {
-    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-nav"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/"</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/apps"</span>&gt;</span>应用列表<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/"</span>&gt;</span>首页<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/apps"</span>&gt;</span>应用列表<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       {this.props.children || 'Home'}
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{</span>
-        <span class="attribute">marginBottom:</span> <span class="attribute">15</span>,
-        <span class="attribute">marginTop:</span> <span class="attribute">15</span>,
-        <span class="attribute">paddingBottom:</span> <span class="attribute">15</span>,
-        <span class="attribute">borderBottom:</span> '<span class="attribute">1px</span> <span class="attribute">dashed</span> #<span class="attribute">ccc</span>'
-      }}&gt;</span>点击上面的导航切换页面，面包屑在下面：<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Breadcrumb</span> {<span class="attribute">...this.props</span>} <span class="attribute">router</span>=<span class="value">{ReactRouter}</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>);
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span>
+        <span class="hljs-attribute">marginBottom:</span> <span class="hljs-attribute">15</span>,
+        <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">15</span>,
+        <span class="hljs-attribute">paddingBottom:</span> <span class="hljs-attribute">15</span>,
+        <span class="hljs-attribute">borderBottom:</span> '<span class="hljs-attribute">1px</span> <span class="hljs-attribute">dashed</span> #<span class="hljs-attribute">ccc</span>'
+      }}&gt;</span>点击上面的导航切换页面，面包屑在下面：<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb</span> {<span class="hljs-attribute">...this.props</span>} <span class="hljs-attribute">router</span>=<span class="hljs-value">{ReactRouter}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
   }
 });
 
 ReactDOM.render((
-  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"home"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"首页"</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{Home}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"apps"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用列表"</span> <span class="attribute">path</span>=<span class="value">"apps"</span> <span class="attribute">component</span>=<span class="value">{Apps}</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">name</span>=<span class="value">"app"</span> <span class="attribute">breadcrumbName</span>=<span class="value">"应用:id"</span> <span class="attribute">path</span>=<span class="value">":id"</span> /&gt;</span>
-      <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Router</span>&gt;</span>
-), document.getElementById('components-breadcrumb-demo-router'));</span></code></pre></div><style>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"home"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"首页"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Home}</span> <span class="hljs-attribute">ignoreScrollBehavior</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"apps"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"应用列表"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"apps"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Apps}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"app"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"应用:id"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">":id"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Router</span>&gt;</span>
+)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-breadcrumb-demo-router'</span>));</code></pre></div><style>
 .demo-nav {
   height: 30px;
   line-height: 30px;

@@ -142,78 +142,78 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Option = Select.Option;
-<span class="keyword">const</span> RadioGroup = Radio.Group;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from 'antd';
+const Option = Select.Option;
+const RadioGroup = Radio.Group;
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"form"</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">leaveReverse</span>=<span class="value">{true}</span>&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim component="form" className="ant-form-horizontal" type="bottom" leaveReverse={true}&gt;
           {this.state.show ? [
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'name'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span> <span class="attribute">key</span>=<span class="value">'password'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span>/&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'sex'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span>  <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>您的性别：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>男的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"female"</span>&gt;</span>女的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span> <span class="attribute">key</span>=<span class="value">'remark'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"remark"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"remark"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>随便写点什么<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'checkbox'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">label</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>
+            &lt;div className="ant-form-item ant-form-item-compact" key='name'&gt;
+              &lt;label htmlFor="userName" className="col-6" required&gt;用户名：&lt;/label&gt;
+              &lt;div className="col-6"&gt;
+                &lt;p className="ant-form-text"&gt;大眼萌 minion&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item" key='password'&gt;
+              &lt;label htmlFor="password" className="col-6" required&gt;密码：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;input className="ant-input" type="password" id="password" placeholder="请输入密码"/&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item ant-form-item-compact" key='sex'&gt;
+              &lt;label  className="col-6" required&gt;您的性别：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;RadioGroup value="male"&gt;
+                  &lt;Radio value="male"&gt;男的&lt;/Radio&gt;
+                  &lt;Radio value="female"&gt;女的&lt;/Radio&gt;
+                &lt;/RadioGroup&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item" key='remark'&gt;
+              &lt;label htmlFor="remark" className="col-6" required&gt;备注：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;textarea className="ant-input" id="remark" placeholder="随便写"&gt;&lt;/textarea&gt;
+                &lt;p className="ant-form-explain"&gt;随便写点什么&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item ant-form-item-compact" key='checkbox'&gt;
+              &lt;div className="col-14 col-offset-6"&gt;
+                &lt;label&gt;
+                  &lt;Checkbox /&gt;
                   同意
-                <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span> <span class="attribute">key</span>=<span class="value">'btn'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="row" key='btn'&gt;
+              &lt;div className="col-16 col-offset-6"&gt;
+                &lt;Button type="primary"&gt;确定&lt;/Button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-form'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-form'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

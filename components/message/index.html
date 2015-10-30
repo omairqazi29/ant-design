@@ -149,6 +149,10 @@ Message 全局提示 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Message 全局提示 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -599,7 +610,7 @@ Message 全局提示 - Ant Design
 <li><code>message.config(options)</code></li>
 </ul>
 <div class="highlight"><pre><code class="javascript">message.config({
-  top: <span class="number">100</span>
+  top: <span class="hljs-number">100</span>
 });</code></pre></div><table>
 <thead>
 <tr>
@@ -640,13 +651,13 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: success },
   '显示成功提示'
-), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-success'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  message.success(<span class="string">'这是一条成功的提示'</span>);
+<span class="hljs-keyword">const</span> success = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  message.success(<span class="hljs-string">'这是一条成功的提示'</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示成功提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>显示成功提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-success'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -671,13 +682,13 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: info },
   '显示普通提醒'
-), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> info = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  message.info(<span class="string">'这是一条普通的提醒'</span>);
+<span class="hljs-keyword">const</span> info = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  message.info(<span class="hljs-string">'这是一条普通的提醒'</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{info}</span>&gt;</span>显示普通提醒<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{info}</span>&gt;</span>显示普通提醒<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-info'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -704,15 +715,15 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { onClick: success },
   '显示加载中...'
-), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  <span class="keyword">let</span> hide = message.loading(<span class="string">'正在执行中...'</span>, <span class="number">0</span>);
-  <span class="comment">// 异步手动移除</span>
-  setTimeout(hide, <span class="number">2500</span>);
+<span class="hljs-keyword">const</span> success = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> hide = message.loading(<span class="hljs-string">'正在执行中...'</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-comment">// 异步手动移除</span>
+  setTimeout(hide, <span class="hljs-number">2500</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>显示加载中...<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>显示加载中...<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-loading'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -739,13 +750,13 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: error },
   '显示失败提示'
-), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-error'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> error = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  message.error(<span class="string">'这是一条失败的提示这是一条失败的提示这是一条失败的提示'</span>);
+<span class="hljs-keyword">const</span> error = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  message.error(<span class="hljs-string">'这是一条失败的提示这是一条失败的提示这是一条失败的提示'</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{error}</span>&gt;</span>显示失败提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{error}</span>&gt;</span>显示失败提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-error'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -770,13 +781,13 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: success },
   '自定义时长提示'
-), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript">import { message, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-message-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> success = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-  message.success(<span class="string">'这是一条成功的提示,并将于10秒后消失'</span>, <span class="number">10</span>);
+<span class="hljs-keyword">const</span> success = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  message.success(<span class="hljs-string">'这是一条成功的提示,并将于10秒后消失'</span>, <span class="hljs-number">10</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{success}</span>&gt;</span>自定义时长提示<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>自定义时长提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 , document.getElementById('components-message-demo-duration'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

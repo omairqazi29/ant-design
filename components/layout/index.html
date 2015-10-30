@@ -149,6 +149,10 @@ Layout 布局 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Layout 布局 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -752,26 +763,26 @@ ReactDOM.render(React.createElement(
       ".col-6"
     )
   )
-), document.getElementById('components-layout-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"12"</span>&gt;</span>.col-12<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"12"</span>&gt;</span>.col-12<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">className</span>=<span class="value">"testRowClassName"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span> <span class="attribute">className</span>=<span class="value">"testColClassName"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span>&gt;</span>.col-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span>&gt;</span>.col-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span>&gt;</span>.col-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span>&gt;</span>.col-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"12"</span>&gt;</span>.col-12<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"12"</span>&gt;</span>.col-12<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"testRowClassName"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>.col-8<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>.col-8<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"testColClassName"</span>&gt;</span>.col-8<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-basic')
 );</span></code></pre></div><style>
 .testRowClassName {
@@ -838,22 +849,22 @@ ReactDOM.render(React.createElement(
       ".col-12 .col-offset-6"
     )
   )
-), document.getElementById('components-layout-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-offset'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"8"</span> <span class="attribute">offset</span>=<span class="value">"8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"12"</span> <span class="attribute">offset</span>=<span class="value">"6"</span>&gt;</span>.col-12 .col-offset-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>.col-8<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"8"</span>&gt;</span>.col-8<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6 .col-offset-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"12"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-12 .col-offset-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-offset')
 );</span></code></pre></div>
   </div>
@@ -889,15 +900,15 @@ ReactDOM.render(React.createElement(
       ".col-6 .col-pull-18"
     )
   )
-), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"18"</span> <span class="attribute">push</span>=<span class="value">"6"</span>&gt;</span>.col-18 .col-push-6<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">pull</span>=<span class="value">"18"</span>&gt;</span>.col-6 .col-pull-18<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span> <span class="hljs-attribute">push</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-18 .col-push-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">pull</span>=<span class="hljs-value">"18"</span>&gt;</span>.col-6 .col-pull-18<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-sort')
 );</span></code></pre></div>
   </div>
@@ -1064,50 +1075,50 @@ ReactDOM.render(React.createElement(
       ".col-4"
     )
   )
-), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-flex'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居左排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"start"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>子元素居左排列<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"start"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居中排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"center"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>子元素居中排列<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素居右排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"end"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>子元素居右排列<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"end"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素等宽排列<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-between"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>子元素等宽排列<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"space-between"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>子元素分散对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-around"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>子元素分散对齐<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"space-around"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-flex')
 )</span></code></pre></div>
   </div>
@@ -1279,44 +1290,44 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">var</span> DemoBox = React.createClass({
+<span class="hljs-keyword">var</span> DemoBox = React.createClass({
   render() {
-    <span class="keyword">const</span> { value } = <span class="keyword">this</span>.props;
-    <span class="keyword">const</span> className = `hight-${value}`;
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">{className}</span>&gt;</span>{this.props.children}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    )
+    <span class="hljs-keyword">const</span> { value } = <span class="hljs-keyword">this</span>.props;
+    <span class="hljs-keyword">const</span> className = <span class="hljs-string">`hight-<span class="hljs-subst">${value}</span>`</span>;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{className}</span>&gt;</span>{this.props.children}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    )</span>
   }
 });
 
 ReactDOM.render(
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>顶部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"center"</span> <span class="attribute">align</span>=<span class="value">"top"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>顶部对齐<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"center"</span> <span class="hljs-attribute">align</span>=<span class="hljs-value">"top"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"100"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"50"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"120"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"80"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>居中对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-around"</span> <span class="attribute">align</span>=<span class="value">"middle"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>居中对齐<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"space-around"</span> <span class="hljs-attribute">align</span>=<span class="hljs-value">"middle"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"100"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"50"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"120"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"80"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>底部对齐<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span> <span class="attribute">justify</span>=<span class="value">"space-between"</span> <span class="attribute">align</span>=<span class="value">"bottom"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"100"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"50"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"120"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;<span class="title">DemoBox</span> <span class="attribute">value</span>=<span class="value">"80"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">DemoBox</span>&gt;</span><span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>底部对齐<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span> <span class="hljs-attribute">justify</span>=<span class="hljs-value">"space-between"</span> <span class="hljs-attribute">align</span>=<span class="hljs-value">"bottom"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"100"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"50"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"120"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"80"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-flex-align')
 );</span></code></pre></div>
   </div>
@@ -1361,17 +1372,17 @@ ReactDOM.render(React.createElement(
       "4 col-order-1"
     )
   )
-), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript">import { Row, Col } from <span class="string">'antd'</span>;
+), document.getElementById('components-layout-demo-flex-order'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Row</span> <span class="attribute">type</span>=<span class="value">"flex"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"4"</span>&gt;</span>1 col-order-4<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"3"</span>&gt;</span>2 col-order-3<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"2"</span>&gt;</span>3 col-order-2<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Col</span> <span class="attribute">span</span>=<span class="value">"6"</span> <span class="attribute">order</span>=<span class="value">"1"</span>&gt;</span>4 col-order-1<span class="tag">&lt;/<span class="title">Col</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Row</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"flex"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">order</span>=<span class="hljs-value">"4"</span>&gt;</span>1 col-order-4<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">order</span>=<span class="hljs-value">"3"</span>&gt;</span>2 col-order-3<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">order</span>=<span class="hljs-value">"2"</span>&gt;</span>3 col-order-2<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">order</span>=<span class="hljs-value">"1"</span>&gt;</span>4 col-order-1<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
   document.getElementById('components-layout-demo-flex-order')
 );</span></code></pre></div>
   </div>

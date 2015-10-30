@@ -149,6 +149,10 @@
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@
             </a>
           </li>
           <li class="">
+            <a href="../components/spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../components/table/"
                class="">
               Table
@@ -567,9 +578,9 @@
 </blockquote>
 <h2 id="开发工具">开发工具<a href="#开发工具" class="anchor">#</a> </h2><p>我们提供了开发构建的命令行工具，可以安装到全局直接使用。</p>
 <div class="highlight"><pre><code class="bash">$ npm install antd-bin -g</code></pre></div><p>或者安装到仓库下，使用 <code>package.json</code> 的 <code>scripts</code> 字段来配置命令：</p>
-<div class="highlight"><pre><code class="bash">$ npm install antd-bin --save-dev</code></pre></div><div class="highlight"><pre><code class="javascript"><span class="string">"scripts"</span>: {
-  <span class="string">"dev"</span>: <span class="string">"antd server"</span>,
-  <span class="string">"build"</span>: <span class="string">"antd build"</span>
+<div class="highlight"><pre><code class="bash">$ npm install antd-bin --save-dev</code></pre></div><div class="highlight"><pre><code class="javascript"><span class="hljs-string">"scripts"</span>: {
+  <span class="hljs-string">"dev"</span>: <span class="hljs-string">"antd server"</span>,
+  <span class="hljs-string">"build"</span>: <span class="hljs-string">"antd build"</span>
 }</code></pre></div><blockquote>
 <p>更多<a href="https://github.com/ant-design/antd-bin/">使用方式</a>。</p>
 </blockquote>

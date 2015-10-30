@@ -149,6 +149,10 @@ Datepicker 日期选择框 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Datepicker 日期选择框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -560,7 +571,7 @@ Datepicker 日期选择框 - Ant Design
     </h1>
     <p>输入或选择日期/时间的控件。</p>
 <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当用户需要输入一个日期/时间，可以点击标准输入框，弹出日期面板进行选择。支持键盘操作。</p>
-<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-01-01"</span> /&gt;</span></code></pre></div><table>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-01-01"</span> /&gt;</span></code></pre></div><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -651,10 +662,10 @@ Datepicker 日期选择框 - Ant Design
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-12-12' }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-12-12' }), document.getElementById('components-datepicker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-12-12"</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-12-12"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -677,14 +688,14 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.Datepicker, { size: "large" }),
   React.createElement(_antd.Datepicker, null),
   React.createElement(_antd.Datepicker, { size: "small" })
-), document.getElementById('components-datepicker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+), document.getElementById('components-datepicker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">size</span>=<span class="value">"large"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Datepicker</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">size</span>=<span class="value">"small"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-datepicker-demo-size'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -701,10 +712,10 @@ ReactDOM.render(
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss' }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss' }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">format</span>=<span class="value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-time'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -726,15 +737,15 @@ var disabledDate = function disabledDate(current, value) {
   return current.getTime() > Date.now();
 };
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> disabledDate = <span class="function"><span class="keyword">function</span><span class="params">(current, value)</span> {</span>
-  <span class="comment">// can not select days after today</span>
-  <span class="keyword">return</span> current.getTime() &gt; Date.now();
+<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, value</span>) </span>{
+  <span class="hljs-comment">// can not select days after today</span>
+  <span class="hljs-keyword">return</span> current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{disabledDate}</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{disabledDate}</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-range'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -775,30 +786,30 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       locale: {
-        timezoneOffset: <span class="number">0</span> * <span class="number">60</span>,
-        firstDayOfWeek: <span class="number">0</span>,
-        minimalDaysInFirstWeek: <span class="number">1</span>,
+        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
+        firstDayOfWeek: <span class="hljs-number">0</span>,
+        minimalDaysInFirstWeek: <span class="hljs-number">1</span>,
         lang: {
-          today: <span class="string">'Today'</span>,
-          now: <span class="string">'Now'</span>,
-          ok: <span class="string">'OK'</span>,
-          clear: <span class="string">'Clear'</span>
+          today: <span class="hljs-string">'Today'</span>,
+          now: <span class="hljs-string">'Now'</span>,
+          ok: <span class="hljs-string">'OK'</span>,
+          clear: <span class="hljs-string">'Clear'</span>
         }
       }
     };
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">showTime</span>=<span class="value">{true}</span> <span class="attribute">locale</span>=<span class="value">{this.state.locale}</span> /&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-datepicker-demo-locale'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-datepicker-demo-locale'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -816,10 +827,10 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App<
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-datepicker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015/01/01"</span> <span class="attribute">format</span>=<span class="value">"yyyy/MM/dd"</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015/01/01"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy/MM/dd"</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-formatter'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -847,19 +858,19 @@ var Picker = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-datepicker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Picker = React.createClass({
-  handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
-    console.log(<span class="keyword">new</span> Date(value.getTime()));
+<span class="hljs-keyword">const</span> Picker = React.createClass({
+  handleChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(value.getTime()));
   },
-  render: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span> /&gt;</span>
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
   }
 });
 
 ReactDOM.render(
-  <span class="tag">&lt;<span class="title">Picker</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Picker</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-select'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -876,10 +887,10 @@ ReactDOM.render(
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-06-06', disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-06-06', disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">defaultValue</span>=<span class="value">"2015-06-06"</span> <span class="attribute">disabled</span>=<span class="value">{true}</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-06-06"</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -938,48 +949,48 @@ var DateRange = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript">import { Datepicker } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-datepicker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> DateRange = React.createClass({
+<span class="hljs-keyword">const</span> DateRange = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      startValue: <span class="literal">null</span>,
-      endValue: <span class="literal">null</span>
+    <span class="hljs-keyword">return</span> {
+      startValue: <span class="hljs-literal">null</span>,
+      endValue: <span class="hljs-literal">null</span>
     };
   },
   disabledStartDate(startValue) {
-    <span class="keyword">if</span> (!startValue || !<span class="keyword">this</span>.state.endValue) {
-      <span class="keyword">return</span> <span class="literal">false</span>;
+    <span class="hljs-keyword">if</span> (!startValue || !<span class="hljs-keyword">this</span>.state.endValue) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     }
-    <span class="keyword">return</span> startValue.getTime() &gt;= <span class="keyword">this</span>.state.endValue.getTime();
+    <span class="hljs-keyword">return</span> startValue.getTime() &gt;= <span class="hljs-keyword">this</span>.state.endValue.getTime();
   },
   disabledEndDate(endValue) {
-    <span class="keyword">if</span> (!endValue || !<span class="keyword">this</span>.state.startValue) {
-      <span class="keyword">return</span> <span class="literal">false</span>;
+    <span class="hljs-keyword">if</span> (!endValue || !<span class="hljs-keyword">this</span>.state.startValue) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     }
-    <span class="keyword">return</span> endValue.getTime() &lt;= <span class="keyword">this</span>.state.startValue.getTime();
+    <span class="hljs-keyword">return</span> endValue.getTime() &lt;= <span class="hljs-keyword">this</span>.state.startValue.getTime();
   },
   onChange(field, value) {
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       [field]: value,
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{this.disabledStartDate}</span>
-        <span class="attribute">value</span>=<span class="value">{this.state.startValue}</span>
-        <span class="attribute">placeholder</span>=<span class="value">"开始日期"</span>
-        <span class="attribute">onChange</span>=<span class="value">{this.onChange.bind(this,'startValue')}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">disabledDate</span>=<span class="value">{this.disabledEndDate}</span>
-        <span class="attribute">value</span>=<span class="value">{this.state.endValue}</span>
-        <span class="attribute">placeholder</span>=<span class="value">"结束日期"</span>
-        <span class="attribute">onChange</span>=<span class="value">{this.onChange.bind(this,'endValue')}</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
+        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
+        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'startValue')}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
+        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
+        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'endValue')}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">DateRange</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DateRange</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-start-end'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

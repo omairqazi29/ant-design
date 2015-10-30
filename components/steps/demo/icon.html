@@ -14,15 +14,15 @@ ReactDOM.render(React.createElement(
   React.createElement(Step, { status: 'finish', title: '步骤1', icon: 'cloud' }),
   React.createElement(Step, { status: 'process', title: '步骤2', icon: 'apple' }),
   React.createElement(Step, { status: 'wait', title: '步骤3', icon: 'github' })
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-icon'</span>);
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'process'</span> <span class="attribute">title</span>=<span class="value">'步骤2'</span> <span class="attribute">icon</span>=<span class="value">'apple'</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'wait'</span> <span class="attribute">title</span>=<span class="value">'步骤3'</span> <span class="attribute">icon</span>=<span class="value">'github'</span> /&gt;</span>
-<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'finish'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤1'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'cloud'</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'process'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤2'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'apple'</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'wait'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤3'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'github'</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

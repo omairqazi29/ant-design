@@ -32,18 +32,18 @@ ReactDOM.render(React.createElement(
     { href: 'http://www.baidu.com' },
     '标签四（链接）'
   )
-), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Tag } from <span class="string">'antd'</span>;
+), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tag } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="function"><span class="keyword">function</span> <span class="title">onClose</span><span class="params">(e)</span> {</span>
-  console.log(<span class="keyword">this</span>.props.children);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClose</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.props.children);
 }
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Tag</span>&gt;</span>标签一<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Tag</span>&gt;</span>标签二<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Tag</span> <span class="attribute">closable</span> <span class="attribute">onClose</span>=<span class="value">{onClose}</span>&gt;</span>标签三<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Tag</span> <span class="attribute">href</span>=<span class="value">"http://www.baidu.com"</span>&gt;</span>标签四（链接）<span class="tag">&lt;/<span class="title">Tag</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-tag-demo-basic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span>&gt;</span>标签一<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span>&gt;</span>标签二<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span> <span class="hljs-attribute">closable</span> <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span>&gt;</span>标签三<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.baidu.com"</span>&gt;</span>标签四（链接）<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-tag-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

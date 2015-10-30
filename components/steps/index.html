@@ -149,6 +149,10 @@ Steps 步骤条 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Steps 步骤条 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -561,10 +572,10 @@ Steps 步骤条 - Ant Design
     <p>引导用户按照流程完成任务的导航条。</p>
 <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。</p>
 <h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="javascript">&lt;Steps&gt;
-  <span class="xml"><span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第一步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第二步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Steps.Step</span> <span class="attribute">title</span>=<span class="value">"第三步"</span>&gt;</span><span class="tag">&lt;/<span class="title">Steps.Step</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span></span></code></pre></div><h3 id="steps">Steps<a href="#steps" class="anchor">#</a> </h3><p>整体步骤条。</p>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps.Step</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"第一步"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Steps.Step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Steps.Step</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"第二步"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Steps.Step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Steps.Step</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"第三步"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Steps.Step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span></span></code></pre></div><h3 id="steps">Steps<a href="#steps" class="anchor">#</a> </h3><p>整体步骤条。</p>
 <table>
 <thead>
 <tr>
@@ -685,29 +696,29 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-simple'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-simple'</span>);
 
-<span class="keyword">const</span> steps = [{
-  title: <span class="string">'已完成'</span>,
-  description: <span class="string">'这里是多信息的描述啊'</span>
+<span class="hljs-keyword">const</span> steps = [{
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
 }, {
-  title: <span class="string">'进行中'</span>,
-  description: <span class="string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
 }, {
-  title: <span class="string">'又一个待运行'</span>,
-  description: <span class="string">'描述啊描述啊'</span>
+  title: <span class="hljs-string">'又一个待运行'</span>,
+  description: <span class="hljs-string">'描述啊描述啊'</span>
 }, {
-  title: <span class="string">'待运行'</span>,
-  description: <span class="string">'这里是多信息的描述啊'</span>
-}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (
-    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
-  );
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -746,29 +757,29 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { size: 'small', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-small-size'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-small-size'</span>);
 
-<span class="keyword">const</span> steps = [{
-  status: <span class="string">'finish'</span>,
-  title: <span class="string">'已完成'</span>
+<span class="hljs-keyword">const</span> steps = [{
+  status: <span class="hljs-string">'finish'</span>,
+  title: <span class="hljs-string">'已完成'</span>
 }, {
-  status: <span class="string">'process'</span>,
-  title: <span class="string">'进行中'</span>
+  status: <span class="hljs-string">'process'</span>,
+  title: <span class="hljs-string">'进行中'</span>
 }, {
-  status: <span class="string">'wait'</span>,
-  title: <span class="string">'待运行'</span>
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'待运行'</span>
 }, {
-  status: <span class="string">'wait'</span>,
-  title: <span class="string">'待运行'</span>
-}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (
-    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
-  );
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'待运行'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -793,15 +804,15 @@ ReactDOM.render(React.createElement(
   React.createElement(Step, { status: 'finish', title: '步骤1', icon: 'cloud' }),
   React.createElement(Step, { status: 'process', title: '步骤2', icon: 'apple' }),
   React.createElement(Step, { status: 'wait', title: '步骤3', icon: 'github' })
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-icon'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-icon'</span>);
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Steps</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'finish'</span> <span class="attribute">title</span>=<span class="value">'步骤1'</span> <span class="attribute">icon</span>=<span class="value">'cloud'</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'process'</span> <span class="attribute">title</span>=<span class="value">'步骤2'</span> <span class="attribute">icon</span>=<span class="value">'apple'</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">status</span>=<span class="value">'wait'</span> <span class="attribute">title</span>=<span class="value">'步骤3'</span> <span class="attribute">icon</span>=<span class="value">'github'</span> /&gt;</span>
-<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'finish'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤1'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'cloud'</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'process'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤2'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'apple'</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">'wait'</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">'步骤3'</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">'github'</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -815,9 +826,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Step
     <div id="components-steps-demo-step-next"></div>
     <style type="text/css">#components-steps-demo-step-next > div > div {
   margin-bottom: 30px;
-}</style><div class="highlight"><pre><code class="css"><span class="id">#components-steps-demo-step-next</span> &gt; <span class="tag">div</span> &gt; <span class="tag">div</span> <span class="rules">{
-  <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-<span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-steps-demo-step-next</span> &gt; <span class="hljs-tag">div</span> &gt; <span class="hljs-tag">div</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>;
+}</span></code></pre></div><script>(function(){'use strict';
 
 var _antd = require('antd');
 
@@ -879,48 +890,48 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">const</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
-<span class="keyword">const</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
-  <span class="keyword">return</span> {
-    title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
+const Step = Steps.Step;
+const container = document.getElementById('components-steps-demo-step-next');
+const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
+const steps = array.map(function(item, i) {
+  return {
+    title: '步骤' + (i + 1)
   };
 });
 
-<span class="keyword">const</span> App = React.createClass({
+const App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    return {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
   next() {
-    <span class="keyword">let</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
-    <span class="keyword">if</span> (s === steps.length) {
-      s = <span class="number">0</span>;
+    let s = this.state.currentStep + 1;
+    if (s === steps.length) {
+      s = 0;
     }
-    <span class="keyword">this</span>.setState({
+    this.setState({
       currentStep: s
     });
   },
   render() {
-    <span class="keyword">const</span> cs = <span class="keyword">this</span>.state.currentStep;
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{cs}</span>&gt;</span>
-          {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
-        <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    const cs = this.state.currentStep;
+    return (
+      &lt;div&gt;
+        &lt;div&gt;当前正在执行第 {cs + 1} 步&lt;/div&gt;
+        &lt;Steps current={cs}&gt;
+          {steps.map((s, i) =&gt; &lt;Step key={i} title={s.title} description={s.description} /&gt;)}
+        &lt;/Steps&gt;
+        &lt;div&gt;
+          &lt;Button onClick={this.next}&gt;下一步&lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(&lt;App /&gt;, container);</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -959,29 +970,29 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { direction: 'vertical', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-vertical'</span>);
 
-<span class="keyword">const</span> steps = [{
-  title: <span class="string">'已完成'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
+<span class="hljs-keyword">const</span> steps = [{
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
 }, {
-  title: <span class="string">'进行中'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
 }, {
-  title: <span class="string">'待运行'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
 }, {
-  title: <span class="string">'又一个待运行'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
-}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (
-    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
-  );
+  title: <span class="hljs-string">'又一个待运行'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">'vertical'</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1017,26 +1028,26 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { size: 'small', direction: 'vertical', current: 1 },
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-vertical-small'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-vertical-small'</span>);
 
-<span class="keyword">const</span> steps = [{
-  title: <span class="string">'已完成'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
+<span class="hljs-keyword">const</span> steps = [{
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
 }, {
-  title: <span class="string">'进行中'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
 }, {
-  title: <span class="string">'待运行'</span>,
-  description: <span class="string">'这里是信息的描述'</span>
-}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (
-    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
-  );
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">size</span>=<span class="value">'small'</span> <span class="attribute">direction</span>=<span class="value">'vertical'</span> <span class="attribute">current</span>=<span class="value">{1}</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">'small'</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">'vertical'</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1079,33 +1090,33 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   null,
   steps
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-status'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-steps-demo-status'</span>);
 
-<span class="keyword">const</span> steps = [{
-  status: <span class="string">'finish'</span>,
-  title: <span class="string">'已完成'</span>,
-  description: <span class="string">'这里是多信息的描述啊'</span>
+<span class="hljs-keyword">const</span> steps = [{
+  status: <span class="hljs-string">'finish'</span>,
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
 }, {
-  status: <span class="string">'process'</span>,
-  title: <span class="string">'进行中'</span>,
-  description: <span class="string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
+  status: <span class="hljs-string">'process'</span>,
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
 }, {
-  status: <span class="string">'wait'</span>,
-  title: <span class="string">'又一个待运行'</span>,
-  description: <span class="string">'描述啊描述啊'</span>
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'又一个待运行'</span>,
+  description: <span class="hljs-string">'描述啊描述啊'</span>
 }, {
-  status: <span class="string">'wait'</span>,
-  title: <span class="string">'待运行'</span>,
-  description: <span class="string">'这里是多信息的描述啊'</span>
-}].map(<span class="function"><span class="keyword">function</span><span class="params">(s, i)</span> {</span>
-  <span class="keyword">return</span> (
-    <span class="xml"><span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">status</span>=<span class="value">{s.status}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>
-  );
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">{s.status}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Steps</span>&gt;</span>{steps}<span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

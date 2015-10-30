@@ -36,31 +36,31 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
+ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-switch-demo-disabled'</span>);
 
-<span class="keyword">const</span> Test = React.createClass({
+<span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      disabled: <span class="literal">true</span>
+    <span class="hljs-keyword">return</span> {
+      disabled: <span class="hljs-literal">true</span>
     }
   },
   toggle(){
-    <span class="keyword">this</span>.setState({
-      disabled: !<span class="keyword">this</span>.state.disabled
+    <span class="hljs-keyword">this</span>.setState({
+      disabled: !<span class="hljs-keyword">this</span>.state.disabled
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

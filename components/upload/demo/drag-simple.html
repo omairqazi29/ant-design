@@ -16,18 +16,18 @@ ReactDOM.render(React.createElement(
   Dragger,
   props,
   React.createElement(_antd.Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Dragger = Upload.Dragger;
+), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
-<span class="keyword">const</span> props = {
-  name: <span class="string">'file'</span>,
-  action: <span class="string">'/upload.do'</span>
+<span class="hljs-keyword">const</span> props = {
+  name: <span class="hljs-string">'file'</span>,
+  action: <span class="hljs-string">'/upload.do'</span>
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dragger</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dragger</span>&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dragger</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag-simple')
 );</span></code></pre></div><style>
 #components-upload-demo-drag-simple {

@@ -149,6 +149,10 @@ Dropdown 下拉菜单 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Dropdown 下拉菜单 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -650,26 +661,26 @@ ReactDOM.render(React.createElement(
     "某按钮 ",
     React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.tmall.com/"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.tmall.com/"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      某按钮 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
+      某按钮 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
   margin-right: 6px;
@@ -743,31 +754,31 @@ ReactDOM.render(React.createElement(
       React.createElement(_antd.Icon, { type: "down" })
     )
   )
-), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Divider</span>/&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Divider</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-      点击触发 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+      点击触发 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
+      鼠标移入 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -823,25 +834,25 @@ ReactDOM.render(React.createElement(
     "鼠标移入 ",
     React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Divider</span>/&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span> <span class="attribute">disabled</span>&gt;</span>第三个菜单项（不可用）<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Divider</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span> <span class="hljs-attribute">disabled</span>&gt;</span>第三个菜单项（不可用）<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
+      鼠标移入 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-item'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -893,23 +904,23 @@ ReactDOM.render(React.createElement(
     '鼠标移入，点击菜单 ',
     React.createElement(_antd.Icon, { type: 'down' })
   )
-), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Dropdown, Button, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> onSelect = <span class="function"><span class="keyword">function</span> <span class="params">({key})</span>{</span>
-  alert(<span class="string">'选中了菜单'</span> + key);
+), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> onSelect = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{key}</span>)</span>{
+  alert(<span class="hljs-string">'选中了菜单'</span> + key);
 };
 
-<span class="keyword">const</span> menu = <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onSelect</span>=<span class="value">{onSelect}</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>第一个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>第二个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>第三个菜单项<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{onSelect}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Dropdown</span> <span class="attribute">overlay</span>=<span class="value">{menu}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>
-      鼠标移入，点击菜单 <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"down"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Dropdown</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
+      鼠标移入，点击菜单 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-event'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

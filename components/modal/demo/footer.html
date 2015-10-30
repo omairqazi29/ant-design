@@ -83,54 +83,54 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript">import { Modal, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Test = React.createClass({
-  getInitialState: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
-    <span class="keyword">return</span> {
-      loading: <span class="literal">false</span>,
-      visible: <span class="literal">false</span>
+<span class="hljs-keyword">const</span> Test = React.createClass({
+  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      loading: <span class="hljs-literal">false</span>,
+      visible: <span class="hljs-literal">false</span>
     };
   },
   showModal() {
-    <span class="keyword">this</span>.setState({
-      visible: <span class="literal">true</span>
+    <span class="hljs-keyword">this</span>.setState({
+      visible: <span class="hljs-literal">true</span>
     });
   },
   handleOk() {
-    <span class="keyword">this</span>.setState({ loading: <span class="literal">true</span> });
+    <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">true</span> });
     setTimeout(() =&gt; {
-      <span class="keyword">this</span>.setState({ loading: <span class="literal">false</span>, visible: <span class="literal">false</span> });
-    }, <span class="number">3000</span>);
+      <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">false</span>, visible: <span class="hljs-literal">false</span> });
+    }, <span class="hljs-number">3000</span>);
   },
   handleCancel() {
-    <span class="keyword">this</span>.setState({ visible: <span class="literal">false</span> });
+    <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">false</span> });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.showModal}</span>&gt;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>
         显示对话框
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Modal</span> <span class="attribute">ref</span>=<span class="value">"modal"</span>
-       <span class="attribute">visible</span>=<span class="value">{this.state.visible}</span>
-       <span class="attribute">title</span>=<span class="value">"对话框标题"</span> <span class="attribute">onOk</span>=<span class="value">{this.handleOk}</span> <span class="attribute">onCancel</span>=<span class="value">{this.handleCancel}</span>
-        <span class="attribute">footer</span>=<span class="value">{[</span>
-          &lt;<span class="attribute">Button</span> <span class="attribute">key</span>=<span class="value">"back"</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">onClick</span>=<span class="value">{this.handleCancel}</span>&gt;</span>返 回<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>,
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">key</span>=<span class="value">"submit"</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.handleOk}</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">ref</span>=<span class="hljs-value">"modal"</span>
+       <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+       <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span> <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>
+        <span class="hljs-attribute">footer</span>=<span class="hljs-value">{[</span>
+          &lt;<span class="hljs-attribute">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"back"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>返 回<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>,
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleOk}</span>&gt;</span>
             提 交
-          <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        ]}&gt;
-        <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span>&gt;</span>对话框的内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">Modal</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        ]</span>}&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-footer'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-footer'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

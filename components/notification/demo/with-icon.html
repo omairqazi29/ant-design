@@ -37,23 +37,23 @@ ReactDOM.render(React.createElement(
     { onClick: openNotificationWithIcon('error') },
     "错误"
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, notification } from <span class="string">'antd'</span>;
+), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> openNotificationWithIcon = <span class="function"><span class="keyword">function</span><span class="params">(type)</span> {</span>
-  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+<span class="hljs-keyword">const</span> openNotificationWithIcon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     notification[type]({
-      message: <span class="string">"这是标题"</span>,
-      description: <span class="string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>
+      message: <span class="hljs-string">"这是标题"</span>,
+      description: <span class="hljs-string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>
     });
   };
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-notification-demo-with-icon'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
   margin-right: 1em;

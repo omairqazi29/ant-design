@@ -29,29 +29,29 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, message, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> props = {
-  action: <span class="string">'/upload.do'</span>,
-  multiple: <span class="literal">true</span>,
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
+  multiple: <span class="hljs-literal">true</span>,
   onChange(info) {
-    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
-      console.log(info.file, info.fileList);
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
     }
-    <span class="keyword">if</span> (info.file.status === <span class="string">'done'</span>) {
-      message.success(info.file.name + <span class="string">' 上传成功。'</span>);
-    } <span class="keyword">else</span> <span class="keyword">if</span> (info.file.status === <span class="string">'error'</span>) {
-      message.error(info.file.name + <span class="string">' 上传失败。'</span>);
+    <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'done'</span>) {
+      message.success(info.file.name + <span class="hljs-string">' 上传成功。'</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'error'</span>) {
+      message.error(info.file.name + <span class="hljs-string">' 上传失败。'</span>);
     }
   }
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-multiple'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

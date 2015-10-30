@@ -28,34 +28,34 @@ var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公�
 ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
-  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="function"><span class="keyword">function</span> <span class="title">renderAction</span><span class="params">()</span> {</span>
-  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>删除<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
 }
 
-<span class="function"><span class="keyword">function</span> <span class="title">expandedRowRender</span><span class="params">(record)</span> {</span>
-  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>{record.description}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">expandedRowRender</span>(<span class="hljs-params">record</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{record.description}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>;</span>
 }
 
-<span class="keyword">const</span> columns = [
-  {title: <span class="string">'姓名'</span>, dataIndex: <span class="string">'name'</span>, key: <span class="string">'name'</span>},
-  {title: <span class="string">'年龄'</span>, dataIndex: <span class="string">'age'</span>, key: <span class="string">'age'</span>},
-  {title: <span class="string">'住址'</span>, dataIndex: <span class="string">'address'</span>, key: <span class="string">'address'</span>},
-  {title: <span class="string">'操作'</span>, dataIndex: <span class="string">''</span>, key: <span class="string">'x'</span>, render: renderAction}
+<span class="hljs-keyword">const</span> columns = [
+  {title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span>},
+  {title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span>},
+  {title: <span class="hljs-string">'住址'</span>, dataIndex: <span class="hljs-string">'address'</span>, key: <span class="hljs-string">'address'</span>},
+  {title: <span class="hljs-string">'操作'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'x'</span>, render: renderAction}
 ];
 
-<span class="keyword">const</span> data = [
-  {key: <span class="number">1</span>, name: <span class="string">'胡彦斌'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园1号'</span>, description: <span class="string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
-  {key: <span class="number">2</span>, name: <span class="string">'吴彦祖'</span>, age: <span class="number">42</span>, address: <span class="string">'西湖区湖底公园2号'</span>, description: <span class="string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
-  {key: <span class="number">3</span>, name: <span class="string">'李大嘴'</span>, age: <span class="number">32</span>, address: <span class="string">'西湖区湖底公园3号'</span>, description: <span class="string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
+<span class="hljs-keyword">const</span> data = [
+  {key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'胡彦斌'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园1号'</span>, description: <span class="hljs-string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
+  {key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'吴彦祖'</span>, age: <span class="hljs-number">42</span>, address: <span class="hljs-string">'西湖区湖底公园2号'</span>, description: <span class="hljs-string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
+  {key: <span class="hljs-number">3</span>, name: <span class="hljs-string">'李大嘴'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园3号'</span>, description: <span class="hljs-string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
 ];
 
 ReactDOM.render(
-<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span>
-  <span class="attribute">expandedRowRender</span>=<span class="value">{expandedRowRender}</span>
-  <span class="attribute">dataSource</span>=<span class="value">{data}</span>
-  <span class="attribute">className</span>=<span class="value">"table"</span> /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span>
+  <span class="hljs-attribute">expandedRowRender</span>=<span class="hljs-value">{expandedRowRender}</span>
+  <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span>
+  <span class="hljs-attribute">className</span>=<span class="hljs-value">"table"</span> /&gt;</span>
 , document.getElementById('components-table-demo-expand'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

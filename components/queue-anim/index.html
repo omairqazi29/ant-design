@@ -149,6 +149,10 @@ QueueAnim 进出场动画 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ QueueAnim 进出场动画 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -568,12 +579,12 @@ QueueAnim 进出场动画 - Ant Design
 </li>
 </ul>
 <h2 id="api">API<a href="#api" class="anchor">#</a> </h2><p>元素依次进场。</p>
-<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">QueueAnim</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo1'</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo2'</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo3'</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">'demo4'</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span></code></pre></div><blockquote>
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">'demo1'</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">'demo2'</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">'demo3'</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">'demo4'</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span></code></pre></div><blockquote>
 <p>每个子标签必须带 key，如果未设置 key 将不执行动画。</p>
 </blockquote>
 <table>
@@ -847,17 +858,17 @@ ReactDOM.render(React.createElement(
     { key: "f" },
     "依次进场"
   )
-), document.getElementById('components-queue-anim-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim } from <span class="string">'antd'</span>;
+), document.getElementById('components-queue-anim-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { QueueAnim } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">delay</span>=<span class="value">{500}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"a"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"c"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"d"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"e"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">key</span>=<span class="value">"f"</span>&gt;</span>依次进场<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">delay</span>=<span class="hljs-value">{500}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"a"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"b"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"c"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"d"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"e"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"f"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
 , document.getElementById('components-queue-anim-demo-simple'));</span></code></pre></div><style type="text/css">.code-box-demo > div {
   overflow: hidden;
 }
@@ -866,15 +877,15 @@ ReactDOM.render(
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
-}</style><div class="highlight"><pre><code class="css"><span class="class">.code-box-demo</span> &gt; <span class="tag">div</span> <span class="rules">{
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;
-<span class="rule">}</span></span>
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.code-box-demo</span> &gt; <span class="hljs-tag">div</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+}</span>
 
-<span class="class">.code-box-demo</span> <span class="class">.buttons</span> <span class="rules">{
-  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
-  <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">20</span>px</span></span>;
-<span class="rule">}</span></span></code></pre></div>
+<span class="hljs-class">.code-box-demo</span> <span class="hljs-class">.buttons</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> auto</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -953,55 +964,55 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-enter-leave'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>
-          <span class="attribute">key</span>=<span class="value">"demo"</span>
-          <span class="attribute">type</span>=<span class="value">{['right',</span> '<span class="attribute">left</span>']}
-          <span class="attribute">ease</span>=<span class="value">{['easeOutQuart',</span> '<span class="attribute">easeInOutQuart</span>']}&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim className="demo-content"
+          key="demo"
+          type={['right', 'left']}
+          ease={['easeOutQuart', 'easeInOutQuart']}&gt;
           {this.state.show ? [
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"a"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            &lt;div className="demo-kp" key="a"&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;,
+            &lt;div className="demo-listBox" key="b"&gt;
+              &lt;div className="demo-list"&gt;
+              &lt;div className="title"&gt;&lt;/div&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           ]: null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-enter-leave'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-enter-leave'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1154,78 +1165,78 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Option = Select.Option;
-<span class="keyword">const</span> RadioGroup = Radio.Group;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from 'antd';
+const Option = Select.Option;
+const RadioGroup = Radio.Group;
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"form"</span> <span class="attribute">className</span>=<span class="value">"ant-form-horizontal"</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">leaveReverse</span>=<span class="value">{true}</span>&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim component="form" className="ant-form-horizontal" type="bottom" leaveReverse={true}&gt;
           {this.state.show ? [
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'name'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"userName"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-text"</span>&gt;</span>大眼萌 minion<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span> <span class="attribute">key</span>=<span class="value">'password'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"password"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>密码：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">input</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">placeholder</span>=<span class="value">"请输入密码"</span>/&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'sex'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span>  <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>您的性别：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"male"</span>&gt;</span>男的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Radio</span> <span class="attribute">value</span>=<span class="value">"female"</span>&gt;</span>女的<span class="tag">&lt;/<span class="title">Radio</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item"</span> <span class="attribute">key</span>=<span class="value">'remark'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">label</span> <span class="attribute">htmlFor</span>=<span class="value">"remark"</span> <span class="attribute">className</span>=<span class="value">"col-6"</span> <span class="attribute">required</span>&gt;</span>备注：<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">className</span>=<span class="value">"ant-input"</span> <span class="attribute">id</span>=<span class="value">"remark"</span> <span class="attribute">placeholder</span>=<span class="value">"随便写"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"ant-form-explain"</span>&gt;</span>随便写点什么<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"ant-form-item ant-form-item-compact"</span> <span class="attribute">key</span>=<span class="value">'checkbox'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-14 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">label</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">Checkbox</span> /&gt;</span>
+            &lt;div className="ant-form-item ant-form-item-compact" key='name'&gt;
+              &lt;label htmlFor="userName" className="col-6" required&gt;用户名：&lt;/label&gt;
+              &lt;div className="col-6"&gt;
+                &lt;p className="ant-form-text"&gt;大眼萌 minion&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item" key='password'&gt;
+              &lt;label htmlFor="password" className="col-6" required&gt;密码：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;input className="ant-input" type="password" id="password" placeholder="请输入密码"/&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item ant-form-item-compact" key='sex'&gt;
+              &lt;label  className="col-6" required&gt;您的性别：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;RadioGroup value="male"&gt;
+                  &lt;Radio value="male"&gt;男的&lt;/Radio&gt;
+                  &lt;Radio value="female"&gt;女的&lt;/Radio&gt;
+                &lt;/RadioGroup&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item" key='remark'&gt;
+              &lt;label htmlFor="remark" className="col-6" required&gt;备注：&lt;/label&gt;
+              &lt;div className="col-14"&gt;
+                &lt;textarea className="ant-input" id="remark" placeholder="随便写"&gt;&lt;/textarea&gt;
+                &lt;p className="ant-form-explain"&gt;随便写点什么&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="ant-form-item ant-form-item-compact" key='checkbox'&gt;
+              &lt;div className="col-14 col-offset-6"&gt;
+                &lt;label&gt;
+                  &lt;Checkbox /&gt;
                   同意
-                <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span> <span class="attribute">key</span>=<span class="value">'btn'</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-16 col-offset-6"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;,
+            &lt;div className="row" key='btn'&gt;
+              &lt;div className="col-16 col-offset-6"&gt;
+                &lt;Button type="primary"&gt;确定&lt;/Button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-form'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-form'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1344,74 +1355,74 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-page'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-page'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">type</span>=<span class="value">{['right',</span> '<span class="attribute">left</span>']}&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim type={['right', 'left']}&gt;
         {this.state.show ? [
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span> <span class="attribute">key</span>=<span class="value">"header"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
-            <span class="tag">&lt;<span class="title">span</span>&gt;</span>logo<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> <span class="attribute">key</span>=<span class="value">"content"</span> <span class="attribute">delay</span>=<span class="value">{300}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">key</span>=<span class="value">"title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">key</span>=<span class="value">"title2"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span> <span class="attribute">delay</span>=<span class="value">{500}</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">key</span>=<span class="value">"title3"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">key</span>=<span class="value">"li"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">delay</span>=<span class="value">{1000}</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">key</span>=<span class="value">"footerBox"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-footer"</span> <span class="attribute">key</span>=<span class="value">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
+        &lt;div className="demo-header" key="header"&gt;
+          &lt;div className="logo"&gt;
+            &lt;img width="30" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" /&gt;
+            &lt;span&gt;logo&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;QueueAnim component="ul"&gt;
+            &lt;li key="0"&gt;&lt;/li&gt;
+            &lt;li key="1"&gt;&lt;/li&gt;
+            &lt;li key="2"&gt;&lt;/li&gt;
+            &lt;li key="3"&gt;&lt;/li&gt;
+            &lt;li key="4"&gt;&lt;/li&gt;
+          &lt;/QueueAnim&gt;
+        &lt;/div&gt;,
+        &lt;QueueAnim className="demo-content" key="content" delay={300}&gt;
+          &lt;div className="demo-title" key="title"&gt;我是标题&lt;/div&gt;
+          &lt;div className="demo-kp" key="b"&gt;
+            &lt;QueueAnim component="ul"&gt;
+              &lt;li key="0"&gt;&lt;/li&gt;
+              &lt;li key="1"&gt;&lt;/li&gt;
+              &lt;li key="2"&gt;&lt;/li&gt;
+            &lt;/QueueAnim&gt;
+          &lt;/div&gt;
+          &lt;div className="demo-title" key="title2"&gt;我是标题&lt;/div&gt;
+          &lt;div className="demo-listBox"&gt;
+            &lt;QueueAnim className="demo-list" delay={500}&gt;
+              &lt;div className="title" key="title3"&gt;&lt;/div&gt;
+              &lt;QueueAnim component="ul" type="bottom" key="li"&gt;
+                &lt;li key="0"&gt;&lt;/li&gt;
+                &lt;li key="1"&gt;&lt;/li&gt;
+                &lt;li key="2"&gt;&lt;/li&gt;
+                &lt;li key="3"&gt;&lt;/li&gt;
+                &lt;li key="4"&gt;&lt;/li&gt;
+              &lt;/QueueAnim&gt;
+            &lt;/QueueAnim&gt;
+          &lt;/div&gt;
+        &lt;/QueueAnim&gt;,
+        &lt;QueueAnim delay={1000} type="bottom" key="footerBox"&gt;
+          &lt;div className="demo-footer" key="footer"&gt;&lt;/div&gt;
+        &lt;/QueueAnim&gt;
         ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-page'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-page'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1489,52 +1500,52 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim className="demo-content"&gt;
           {this.state.show ? [
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"a"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            &lt;div className="demo-kp" key="a"&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;,
+            &lt;div className="demo-listBox" key="b"&gt;
+              &lt;div className="demo-list"&gt;
+                &lt;div className="title"&gt;&lt;/div&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-basic'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-basic'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1611,56 +1622,56 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-custom'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-custom'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>,
+    return {
+      show: true,
     }
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show,
+    this.setState({
+      show: !this.state.show,
     })
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>
-          <span class="attribute">animConfig</span>=<span class="value">{[</span>
-            { <span class="attribute">opacity:</span> [<span class="attribute">1</span>, <span class="attribute">0</span>], <span class="attribute">translateY:</span> [<span class="attribute">0</span>, <span class="attribute">50</span>] },
-            { <span class="attribute">opacity:</span> [<span class="attribute">1</span>, <span class="attribute">0</span>], <span class="attribute">translateY:</span> [<span class="attribute">0</span>, <span class="attribute">-50</span>] }
-          ]}&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim className="demo-content"
+          animConfig={[
+            { opacity: [1, 0], translateY: [0, 50] },
+            { opacity: [1, 0], translateY: [0, -50] }
+          ]}&gt;
           {this.state.show ? [
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"a"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            &lt;div className="demo-kp" key="a"&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;,
+            &lt;div className="demo-listBox" key="b"&gt;
+              &lt;div className="demo-list"&gt;
+                &lt;div className="title"&gt;&lt;/div&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     )
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-custom'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-custom'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1751,64 +1762,64 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-change'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-change'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { QueueAnim, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Test = React.createClass({
+<span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>,
+    <span class="hljs-keyword">return</span> {
+      show: <span class="hljs-literal">true</span>,
       items: [
-        <span class="xml"><span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      ],
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>,
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>,
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      ]</span>,
     };
   },
   onClick() {
-    this.setState({
-      show: !this.state.show,
+    <span class="hljs-keyword">this</span>.setState({
+      show: !<span class="hljs-keyword">this</span>.state.show,
     });
   },
   onAdd() {
-    let items = this.state.items;
-    items.push(<span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">{Date.now()}</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>);
-    this.setState({
-      show: true,
+    <span class="hljs-keyword">let</span> items = <span class="hljs-keyword">this</span>.state.items;
+    items.push(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{Date.now()}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>)</span>;
+    <span class="hljs-keyword">this</span>.setState({
+      show: <span class="hljs-literal">true</span>,
       items: items,
     });
   },
   onRemove() {
-    let items = this.state.items;
-    items.splice(items.length - 1, 1);
-    this.setState({
-      show: true,
+    <span class="hljs-keyword">let</span> items = <span class="hljs-keyword">this</span>.state.items;
+    items.splice(items.length - <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">this</span>.setState({
+      show: <span class="hljs-literal">true</span>,
       items: items,
     });
   },
   render() {
-    return (
-      <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.onAdd}</span> <span class="attribute">style</span>=<span class="value">{{marginLeft:10}}</span>&gt;</span>添加<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.onRemove}</span> <span class="attribute">style</span>=<span class="value">{{marginLeft:10}}</span>&gt;</span>删除<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span> <span class="attribute">type</span>=<span class="value">{['right',</span> '<span class="attribute">left</span>']}&gt;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"buttons"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onClick}</span>&gt;</span>切换<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onAdd}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:10}}</span>&gt;</span>添加<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onRemove}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:10}}</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-listBox"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"b"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{['right',</span> '<span class="hljs-attribute">left</span>']}&gt;</span>
                   {this.state.show ? this.state.items: null}
-                <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+                <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-change'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-change'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2011,127 +2022,127 @@ ReactDOM.render(React.createElement(
     React.createElement(Route, { path: 'page1', component: Page1 }),
     React.createElement(Route, { path: 'page2', component: Page2 })
   )
-), document.getElementById('components-queue-anim-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="keyword">const</span> ReactRouter = require(<span class="string">'react-router'</span>);
-<span class="keyword">let</span> { Router, Route, Link } = ReactRouter;
-import { QueueAnim, Menu } from <span class="string">'antd'</span>;
+), document.getElementById('components-queue-anim-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
+<span class="hljs-keyword">let</span> { Router, Route, Link } = ReactRouter;
+<span class="hljs-keyword">import</span> { QueueAnim, Menu } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   render() {
-    <span class="keyword">const</span> key = <span class="keyword">this</span>.props.location.pathname;
-    <span class="keyword">const</span> keys = key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ? [ key.replace(<span class="string">'/'</span>, <span class="string">''</span>) ] : [ <span class="string">'home'</span> ];
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">style</span>=<span class="value">{{marginBottom:</span> <span class="attribute">10</span>}} <span class="attribute">mode</span>=<span class="value">"horizontal"</span> <span class="attribute">selectedKeys</span>=<span class="value">{keys}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"home"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/"</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"page1"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/page1"</span>&gt;</span>Page 1<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"page2"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">"/page2"</span>&gt;</span>Page 2<span class="tag">&lt;/<span class="title">Link</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">type</span>=<span class="value">{['right',</span> '<span class="attribute">left</span>']} <span class="attribute">className</span>=<span class="value">"demo-router-wrap"</span>&gt;</span>
-          {React.cloneElement(this.props.children||<span class="tag">&lt;<span class="title">Home</span>/&gt;</span>, {key: key})}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">const</span> key = <span class="hljs-keyword">this</span>.props.location.pathname;
+    <span class="hljs-keyword">const</span> keys = key.replace(<span class="hljs-string">'/'</span>, <span class="hljs-string">''</span>) ? [ key.replace(<span class="hljs-string">'/'</span>, <span class="hljs-string">''</span>) ] : [ <span class="hljs-string">'home'</span> ];
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">10</span>}} <span class="hljs-attribute">mode</span>=<span class="hljs-value">"horizontal"</span> <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{keys}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"home"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/"</span>&gt;</span>首页<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"page1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/page1"</span>&gt;</span>Page 1<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"page2"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"/page2"</span>&gt;</span>Page 2<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{['right',</span> '<span class="hljs-attribute">left</span>']} <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-router-wrap"</span>&gt;</span>
+          {React.cloneElement(this.props.children||<span class="hljs-tag">&lt;<span class="hljs-title">Home</span>/&gt;</span>, {key: key})}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
-const Home = React.createClass({
+<span class="hljs-keyword">const</span> Home = React.createClass({
   render() {
-    return (
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"a"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"c"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-router-child"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-content"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-kp"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"a"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-kp"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"b"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-kp"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"c"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
-const Page1 = React.createClass({
+<span class="hljs-keyword">const</span> Page1 = React.createClass({
   render() {
-    return (
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span> <span class="attribute">delay</span>=<span class="value">{200}</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">key</span>=<span class="value">"title3"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span> <span class="attribute">animConfig</span>=<span class="value">{{opacity:[1,</span> <span class="attribute">0</span>],<span class="attribute">translateY:</span>[<span class="attribute">0</span>, <span class="attribute">30</span>],<span class="attribute">scale:</span>[<span class="attribute">1</span>,<span class="attribute">0.9</span>]}} <span class="attribute">key</span>=<span class="value">"ul"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-router-child"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-content"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-kp"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"b"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-listBox"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-list"</span> <span class="hljs-attribute">delay</span>=<span class="hljs-value">{200}</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"title3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span> <span class="hljs-attribute">animConfig</span>=<span class="hljs-value">{{opacity:[1,</span> <span class="hljs-attribute">0</span>],<span class="hljs-attribute">translateY:</span>[<span class="hljs-attribute">0</span>, <span class="hljs-attribute">30</span>],<span class="hljs-attribute">scale:</span>[<span class="hljs-attribute">1</span>,<span class="hljs-attribute">0.9</span>]}} <span class="hljs-attribute">key</span>=<span class="hljs-value">"ul"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
-const Page2 = React.createClass({
+<span class="hljs-keyword">const</span> Page2 = React.createClass({
   render() {
-    return (
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-router-child"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">key</span>=<span class="value">"title3"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span> <span class="attribute">animConfig</span>=<span class="value">{{opacity:[1,</span> <span class="attribute">0</span>],<span class="attribute">translateY:</span>[<span class="attribute">0</span>, <span class="attribute">30</span>],<span class="attribute">scale:</span>[<span class="attribute">1</span>,<span class="attribute">0.9</span>]}} <span class="attribute">key</span>=<span class="value">"li"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"5"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-router-child"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-content"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-listBox"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-list"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"title3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">"ul"</span> <span class="hljs-attribute">animConfig</span>=<span class="hljs-value">{{opacity:[1,</span> <span class="hljs-attribute">0</span>],<span class="hljs-attribute">translateY:</span>[<span class="hljs-attribute">0</span>, <span class="hljs-attribute">30</span>],<span class="hljs-attribute">scale:</span>[<span class="hljs-attribute">1</span>,<span class="hljs-attribute">0.9</span>]}} <span class="hljs-attribute">key</span>=<span class="hljs-value">"li"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
 ReactDOM.render((
-  <span class="tag">&lt;<span class="title">Router</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{App}</span> <span class="attribute">ignoreScrollBehavior</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page1"</span> <span class="attribute">component</span>=<span class="value">{Page1}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"page2"</span> <span class="attribute">component</span>=<span class="value">{Page2}</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Router</span>&gt;</span>
-), document.getElementById('components-queue-anim-demo-router'));</span></code></pre></div><style type="text/css">#components-queue-anim-demo-router .demo-router-wrap {
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{App}</span> <span class="hljs-attribute">ignoreScrollBehavior</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"page1"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Page1}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"page2"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Page2}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Router</span>&gt;</span>
+)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-queue-anim-demo-router'</span>));</code></pre></div><style type="text/css">#components-queue-anim-demo-router .demo-router-wrap {
   position: relative;
   width: 100%;
   margin: auto;
@@ -2141,17 +2152,17 @@ ReactDOM.render((
 #components-queue-anim-demo-router .queue-anim-leaving {
   position: absolute;
   width:100%;
-}</style><div class="highlight"><pre><code class="css"><span class="id">#components-queue-anim-demo-router</span> <span class="class">.demo-router-wrap</span> <span class="rules">{
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto</span></span>;
-  <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">200</span>px</span></span>;
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;
-<span class="rule">}</span></span>
-<span class="id">#components-queue-anim-demo-router</span> <span class="class">.queue-anim-leaving</span> <span class="rules">{
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;
-<span class="rule">}</span></span></code></pre></div>
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-queue-anim-demo-router</span> <span class="hljs-class">.demo-router-wrap</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> auto</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"><span class="hljs-number">200px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+}</span>
+<span class="hljs-id">#components-queue-anim-demo-router</span> <span class="hljs-class">.queue-anim-leaving</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"><span class="hljs-number">100%</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

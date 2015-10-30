@@ -149,6 +149,10 @@ InputNumber 数字输入框 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ InputNumber 数字输入框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -639,14 +650,14 @@ function onChange(value) {
   console.log('changed', value);
 }
 
-ReactDOM.render(React.createElement(_antd.InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.InputNumber, { min: 1, max: 10, defaultValue: 3, onChange: onChange }), document.getElementById('components-input-number-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { InputNumber } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
-  console.log(<span class="string">'changed'</span>, value);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'changed'</span>, value);
 }
 
 ReactDOM.render(
-<span class="xml"><span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{3}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
 , document.getElementById('components-input-number-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -694,30 +705,30 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-input-number-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { InputNumber, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">var</span> Test = React.createClass({
+<span class="hljs-keyword">var</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      disabled: <span class="literal">true</span>
+    <span class="hljs-keyword">return</span> {
+      disabled: <span class="hljs-literal">true</span>
     };
   },
   toggle() {
-    <span class="keyword">this</span>.setState({
-      disabled: !<span class="keyword">this</span>.state.disabled
+    <span class="hljs-keyword">this</span>.setState({
+      disabled: !<span class="hljs-keyword">this</span>.state.disabled
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{10}</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{marginTop:</span> <span class="attribute">20</span>}}&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{3}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginTop:</span> <span class="hljs-attribute">20</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-input-number-demo-disabled'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-input-number-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -745,23 +756,23 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.InputNumber, { size: 'large', min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
   React.createElement(_antd.InputNumber, { min: 1, max: 100000, defaultValue: 3, onChange: onChange }),
   React.createElement(_antd.InputNumber, { size: 'small', min: 1, max: 100000, defaultValue: 3, onChange: onChange })
-), document.getElementById('components-input-number-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { InputNumber } from <span class="string">'antd'</span>;
+), document.getElementById('components-input-number-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { InputNumber } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(value)</span> {</span>
-  console.log(<span class="string">'changed'</span>, value);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'changed'</span>, value);
 }
 
 ReactDOM.render(
-<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{100000}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{100000}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{100000}</span> <span class="attribute">defaultValue</span>=<span class="value">{3}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{100000}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{3}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{100000}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{3}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{100000}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{3}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-input-number-demo-size'));</span></code></pre></div><style type="text/css">.ant-input-number{
   margin-right: 10px;
-}</style><div class="highlight"><pre><code class="css"><span class="class">.ant-input-number</span><span class="rules">{
-  <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> <span class="number">10</span>px</span></span>;
-<span class="rule">}</span></span></code></pre></div>
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.ant-input-number</span><span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

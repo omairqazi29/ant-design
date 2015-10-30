@@ -3,9 +3,9 @@
     <div id="components-steps-demo-step-next"></div>
     <style type="text/css">#components-steps-demo-step-next > div > div {
   margin-bottom: 30px;
-}</style><div class="highlight"><pre><code class="css"><span class="id">#components-steps-demo-step-next</span> &gt; <span class="tag">div</span> &gt; <span class="tag">div</span> <span class="rules">{
-  <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-<span class="rule">}</span></span></code></pre></div><script>(function(){'use strict';
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-steps-demo-step-next</span> &gt; <span class="hljs-tag">div</span> &gt; <span class="hljs-tag">div</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>;
+}</span></code></pre></div><script>(function(){'use strict';
 
 var _antd = require('antd');
 
@@ -67,48 +67,48 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> Step = Steps.Step;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-steps-demo-step-next'</span>);
-<span class="keyword">const</span> array = Array.apply(<span class="literal">null</span>, Array(Math.floor(Math.random() * <span class="number">3</span>) + <span class="number">3</span>));
-<span class="keyword">const</span> steps = array.map(<span class="function"><span class="keyword">function</span><span class="params">(item, i)</span> {</span>
-  <span class="keyword">return</span> {
-    title: <span class="string">'步骤'</span> + (i + <span class="number">1</span>)
+ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
+const Step = Steps.Step;
+const container = document.getElementById('components-steps-demo-step-next');
+const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
+const steps = array.map(function(item, i) {
+  return {
+    title: '步骤' + (i + 1)
   };
 });
 
-<span class="keyword">const</span> App = React.createClass({
+const App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    return {
       currentStep: Math.floor(Math.random() * steps.length)
     }
   },
   next() {
-    <span class="keyword">let</span> s = <span class="keyword">this</span>.state.currentStep + <span class="number">1</span>;
-    <span class="keyword">if</span> (s === steps.length) {
-      s = <span class="number">0</span>;
+    let s = this.state.currentStep + 1;
+    if (s === steps.length) {
+      s = 0;
     }
-    <span class="keyword">this</span>.setState({
+    this.setState({
       currentStep: s
     });
   },
   render() {
-    <span class="keyword">const</span> cs = <span class="keyword">this</span>.state.currentStep;
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span>&gt;</span>当前正在执行第 {cs + 1} 步<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Steps</span> <span class="attribute">current</span>=<span class="value">{cs}</span>&gt;</span>
-          {steps.map((s, i) =&gt; <span class="tag">&lt;<span class="title">Step</span> <span class="attribute">key</span>=<span class="value">{i}</span> <span class="attribute">title</span>=<span class="value">{s.title}</span> <span class="attribute">description</span>=<span class="value">{s.description}</span> /&gt;</span>)}
-        <span class="tag">&lt;/<span class="title">Steps</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.next}</span>&gt;</span>下一步<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    const cs = this.state.currentStep;
+    return (
+      &lt;div&gt;
+        &lt;div&gt;当前正在执行第 {cs + 1} 步&lt;/div&gt;
+        &lt;Steps current={cs}&gt;
+          {steps.map((s, i) =&gt; &lt;Step key={i} title={s.title} description={s.description} /&gt;)}
+        &lt;/Steps&gt;
+        &lt;div&gt;
+          &lt;Button onClick={this.next}&gt;下一步&lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(&lt;App /&gt;, container);</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

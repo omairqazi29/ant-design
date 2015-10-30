@@ -34,27 +34,27 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript">import { Tree } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> TreeNode = Tree.TreeNode;
+), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
-<span class="function"><span class="keyword">function</span> <span class="title">handleCheck</span><span class="params">(info)</span> {</span>
-  console.log(<span class="string">'check: '</span>, info);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleCheck</span>(<span class="hljs-params">info</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'check: '</span>, info);
 }
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
- <span class="tag">&lt;<span class="title">Tree</span> <span class="attribute">defaultExpandAll</span>=<span class="value">{true}</span> <span class="attribute">checkable</span>=<span class="value">{true}</span> <span class="attribute">onCheck</span>=<span class="value">{handleCheck}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 1-1"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"parent 2-1"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
-          <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">TreeNode</span> <span class="attribute">title</span>=<span class="value">"leaf"</span> /&gt;</span>
-      <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">TreeNode</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Tree</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandAll</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">checkable</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{handleCheck}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-tree-demo-checkbox'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

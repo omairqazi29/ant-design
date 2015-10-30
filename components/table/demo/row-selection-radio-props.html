@@ -56,56 +56,56 @@ var rowSelection = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> columns = [{
-  title: <span class="string">'姓名'</span>,
-  dataIndex: <span class="string">'name'</span>,
-  render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
-  title: <span class="string">'年龄'</span>,
-  dataIndex: <span class="string">'age'</span>
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>
 }, {
-  title: <span class="string">'住址'</span>,
-  dataIndex: <span class="string">'address'</span>
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
 }];
-<span class="keyword">const</span> data = [{
-  key: <span class="string">'1'</span>,
-  name: <span class="string">'胡彦斌'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="string">'2'</span>,
-  name: <span class="string">'胡彦祖'</span>,
-  age: <span class="number">42</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="string">'3'</span>,
-  name: <span class="string">'李大嘴'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }];
 
-<span class="comment">// 通过 rowSelection 对象表明需要行选择</span>
-<span class="keyword">const</span> rowSelection = {
-  type: <span class="string">'radio'</span>,
-  getCheckboxProps: <span class="function"><span class="keyword">function</span><span class="params">(record)</span> {</span>
-    <span class="keyword">return</span> {
-      defaultValue: record.name === <span class="string">'李大嘴'</span>, <span class="comment">// 配置默认勾选的列</span>
-      disabled: record.name === <span class="string">'胡彦祖'</span>    <span class="comment">// 配置无法勾选的列</span>
+<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
+<span class="hljs-keyword">const</span> rowSelection = {
+  type: <span class="hljs-string">'radio'</span>,
+  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      defaultValue: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
+      disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
     };
   },
-  onSelect: <span class="function"><span class="keyword">function</span><span class="params">(record, selected, selectedRows)</span> {</span>
-    console.log(record, selected, selectedRows);
+  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll: <span class="function"><span class="keyword">function</span><span class="params">(selected, selectedRows)</span> {</span>
-    console.log(selected, selectedRows);
+  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
   }
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Table</span> <span class="attribute">rowSelection</span>=<span class="value">{rowSelection}</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

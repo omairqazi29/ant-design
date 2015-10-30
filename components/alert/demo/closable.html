@@ -21,23 +21,23 @@ ReactDOM.render(React.createElement(
     type: 'error',
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript">import { Alert } from <span class="string">'antd'</span>;
+), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> onClose = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> {</span>
-  console.log(e, <span class="string">'我要被关闭啦！'</span>);
+<span class="hljs-keyword">const</span> onClose = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(e, <span class="hljs-string">'我要被关闭啦！'</span>);
 };
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"警告提示的文案"</span>
-    <span class="attribute">type</span>=<span class="value">"warn"</span>
-    <span class="attribute">closable</span>
-    <span class="attribute">onClose</span>=<span class="value">{onClose}</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Alert</span> <span class="attribute">message</span>=<span class="value">"错误提示的文案"</span>
-    <span class="attribute">description</span>=<span class="value">"错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍"</span>
-    <span class="attribute">type</span>=<span class="value">"error"</span>
-    <span class="attribute">closable</span>
-    <span class="attribute">onClose</span>=<span class="value">{onClose}</span> /&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-alert-demo-closable'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"警告提示的文案"</span>
+    <span class="hljs-attribute">type</span>=<span class="hljs-value">"warn"</span>
+    <span class="hljs-attribute">closable</span>
+    <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"错误提示的文案"</span>
+    <span class="hljs-attribute">description</span>=<span class="hljs-value">"错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍"</span>
+    <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span>
+    <span class="hljs-attribute">closable</span>
+    <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-alert-demo-closable'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

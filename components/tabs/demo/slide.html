@@ -57,23 +57,23 @@ ReactDOM.render(React.createElement(
     { tab: "选项九", key: "9" },
     "选项卡九"
   )
-), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript">import { Tabs } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> TabPane = Tabs.TabPane;
+), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
-<span class="function"><span class="keyword">function</span> <span class="title">callback</span><span class="params">(key)</span> {</span>}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params">key</span>) </span>{}
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Tabs</span> <span class="attribute">defaultActiveKey</span>=<span class="value">"1"</span> <span class="attribute">onChange</span>=<span class="value">{callback}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项一"</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span>选项卡一<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项二"</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span>选项卡二<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项三"</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span>选项卡三<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项四"</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span>选项卡四<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项五"</span> <span class="attribute">key</span>=<span class="value">"5"</span>&gt;</span>选项卡五<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项六"</span> <span class="attribute">key</span>=<span class="value">"6"</span>&gt;</span>选项卡六<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项七"</span> <span class="attribute">key</span>=<span class="value">"7"</span>&gt;</span>选项卡七<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项八"</span> <span class="attribute">key</span>=<span class="value">"8"</span>&gt;</span>选项卡八<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tab</span>=<span class="value">"选项九"</span> <span class="attribute">key</span>=<span class="value">"9"</span>&gt;</span>选项卡九<span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Tabs</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{callback}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项一"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项卡一<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项二"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项三"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项卡三<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项四"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"4"</span>&gt;</span>选项卡四<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项五"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"5"</span>&gt;</span>选项卡五<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项六"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"6"</span>&gt;</span>选项卡六<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项七"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"7"</span>&gt;</span>选项卡七<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项八"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"8"</span>&gt;</span>选项卡八<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项九"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"9"</span>&gt;</span>选项卡九<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Tabs</span>&gt;</span>
 , document.getElementById('components-tabs-demo-slide'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

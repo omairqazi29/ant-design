@@ -36,7 +36,6 @@ var columns = [{
           text
         ),
         props: {
-          align: 'center',
           colSpan: 5
         }
       };
@@ -118,32 +117,31 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-colspan-rowspan'));})()</script><div class="highlight"><pre><code class="javascript">import { Table } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-colspan-rowspan'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
-<span class="comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
-<span class="keyword">const</span> renderContent = <span class="function"><span class="keyword">function</span><span class="params">(value, row, index)</span> {</span>
-  <span class="keyword">let</span> obj = {
+<span class="hljs-comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
+<span class="hljs-comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
+<span class="hljs-keyword">const</span> renderContent = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, row, index</span>) </span>{
+  <span class="hljs-keyword">let</span> obj = {
     children: value,
     props: {}
   }
-  <span class="keyword">if</span> (index === <span class="number">4</span>) {
-    obj.props.colSpan = <span class="number">0</span>;
+  <span class="hljs-keyword">if</span> (index === <span class="hljs-number">4</span>) {
+    obj.props.colSpan = <span class="hljs-number">0</span>;
   }
-  <span class="keyword">return</span> obj;
+  <span class="hljs-keyword">return</span> obj;
 };
 
-<span class="keyword">const</span> columns = [{
-  title: <span class="string">'姓名'</span>,
-  dataIndex: <span class="string">'name'</span>,
-  render: <span class="function"><span class="keyword">function</span><span class="params">(text, row, index)</span> {</span>
-    <span class="keyword">if</span> (index &lt; <span class="number">4</span>) {
-      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
-    } <span class="keyword">else</span> {
-      <span class="keyword">return</span> {
-        children: <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>,
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, row, index</span>) </span>{
+    <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">4</span>) {
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> {
+        children: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>,
         props: {
-          align: 'center',
           colSpan: 5
         }
       }
@@ -225,7 +223,7 @@ const data = [{
    address: '西湖区湖底公园1号'
  }];
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{data}</span> <span class="attribute">bordered</span>=<span class="value">{true}</span> /&gt;</span>
+ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">bordered</span>=<span class="hljs-value">{true}</span> /&gt;</span>
 , document.getElementById('components-table-demo-colspan-rowspan'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

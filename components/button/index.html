@@ -149,6 +149,10 @@ Button 按钮 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Button 按钮 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -620,7 +631,7 @@ Button 按钮 - Ant Design
 <h3 id="ie8-border-radius-support">IE8 border radius support<a href="#ie8-border-radius-support" class="anchor">#</a> </h3><p>Ant Design 视觉上采用渐进降级的方案，在 IE8 下圆角按钮将降级为直角。
 如果强烈需要圆角按钮，我们提供了 <a href="http://css3pie.com/">css3pie</a> 的兼容方案。</p>
 <p>使用时只需在 html 头部加入以下代码即可。</p>
-<div class="highlight"><pre><code class="xml"><span class="comment">&lt;!--[if IE 8]&gt;
+<div class="highlight"><pre><code class="xml"><span class="hljs-comment">&lt;!--[if IE 8]&gt;
 &lt;script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"&gt;&lt;/script&gt;
 &lt;![endif]--&gt;</span></code></pre></div>
   </article>
@@ -654,13 +665,13 @@ ReactDOM.render(React.createElement(
     { type: "ghost" },
     "幽灵按钮"
   )
-), document.getElementById('components-button-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>主按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>次按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>幽灵按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
 document.getElementById('components-button-demo-basic'))</span></code></pre></div><style>
 #components-button-demo-basic .ant-btn {
   margin-right: 8px;
@@ -703,13 +714,13 @@ ReactDOM.render(React.createElement(
     { type: "primary", size: "small" },
     "小号按钮"
   )
-), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>大号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>中号按钮(默认)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>小号按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>大号按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>中号按钮(默认)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>小号按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-button-demo-size'));</span></code></pre></div><style>
 #components-button-demo-size .ant-btn {
   margin-right: 8px;
@@ -774,39 +785,39 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      loading: <span class="literal">false</span>
+    <span class="hljs-keyword">return</span> {
+      loading: <span class="hljs-literal">false</span>
     };
   },
   enterLoading() {
-    <span class="keyword">this</span>.setState({
-      loading: <span class="literal">true</span>
+    <span class="hljs-keyword">this</span>.setState({
+      loading: <span class="hljs-literal">true</span>
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span> <span class="attribute">loading</span>=<span class="value">{true}</span>&gt;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{true}</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">{true}</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{true}</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span> <span class="attribute">loading</span>=<span class="value">{true}</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{true}</span>&gt;</span>
         加载中
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">loading</span>=<span class="value">{this.state.loading}</span> <span class="attribute">onClick</span>=<span class="value">{this.enterLoading}</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterLoading}</span>&gt;</span>
         点击变加载
-      <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-button-demo-loading'));</span></code></pre></div><style>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-button-demo-loading'));</span></code></pre></div><style>
 #components-button-demo-loading .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;
@@ -880,45 +891,45 @@ ReactDOM.render(React.createElement(
     { type: "ghost", shape: "circle-outline", size: "small" },
     React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
   大按钮
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
   中按钮
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
   小按钮
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 
-  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
 
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
 document.getElementById('components-button-demo-icon'));</span></code></pre></div><style>
 #components-button-demo-icon .ant-btn {
   margin-right: 8px;
@@ -977,29 +988,29 @@ ReactDOM.render(React.createElement(
     { type: "ghost", shape: "circle-outline", size: "small" },
     React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-shape'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">shape</span>=<span class="value">"circle"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">shape</span>=<span class="value">"circle-outline"</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"search"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle-outline"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-button-demo-shape'));</span></code></pre></div><style>
 #components-button-demo-shape .ant-btn {
   margin-right: 8px;
@@ -1015,9 +1026,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
     <p>通过设置 <code>shape</code> 为 <code>circle</code> <code>circle-outline</code>，可以把按钮形状设为圆形，并且 <code>circle-outline</code> 在 hover 时会有动画效果。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-status">
+</div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
-    <div id="components-button-demo-status"></div>
+    <div id="components-button-demo-disabled"></div>
     <script>(function(){"use strict";
 
 var _antd = require('antd');
@@ -1025,11 +1036,6 @@ var _antd = require('antd');
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(
-    "h4",
-    null,
-    "使用 `disabled` 属性"
-  ),
   React.createElement(
     _antd.Button,
     { type: "primary" },
@@ -1053,36 +1059,29 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement("br", null),
   React.createElement(
-    "h4",
-    null,
-    "使用 `.disabled` class"
-  ),
-  React.createElement(
     _antd.Button,
     { type: "ghost" },
     "幽灵按钮"
   ),
   React.createElement(
     _antd.Button,
-    { type: "ghost", className: "disabled" },
+    { type: "ghost", disabled: true },
     "幽灵按钮(失效)"
   )
-), document.getElementById('components-button-demo-status'));})()</script><div class="highlight"><pre><code class="javascript">import { Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `disabled` 属性<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>主按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">disabled</span>&gt;</span>主按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>次按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">disabled</span>&gt;</span>次按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">h4</span>&gt;</span>使用 `.disabled` class<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>幽灵按钮<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">className</span>=<span class="value">"disabled"</span>&gt;</span>幽灵按钮(失效)<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-, document.getElementById('components-button-demo-status'));</span></code></pre></div><style>
-#components-button-demo-status .ant-btn {
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>主按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">disabled</span>&gt;</span>主按钮(失效)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>次按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">disabled</span>&gt;</span>次按钮(失效)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>幽灵按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">disabled</span>&gt;</span>幽灵按钮(失效)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+, document.getElementById('components-button-demo-disabled'));</span></code></pre></div><style>
+#components-button-demo-disabled .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;
 }
@@ -1091,9 +1090,9 @@ ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div<
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-status">按钮状态</a>
+      <a href="#demo-disabled">不可用</a>
     </div>
-    <p>添加 <code>disabled</code> 属性即可让按钮处于不可用状态，同时按钮样式也会改变。如果只是想使用按钮 disabled 后的样式，以便继续处理用户的点击事件，则使用 <code>.disabled</code> class 而非 <code>disabled</code> 属性。</p>
+    <p>添加 <code>disabled</code> 属性即可让按钮处于不可用状态，同时按钮样式也会改变。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-button-group">
@@ -1308,86 +1307,86 @@ ReactDOM.render(React.createElement(
       "小"
     )
   )
-), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript">import { Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>基本组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>确定<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>取消<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>中<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>基本组合<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>取消<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>中<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>中<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>中<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>带图标按钮组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"left"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>后退<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>带图标按钮组合<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"left"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>后退<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
     前进
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"right"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cloud"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cloud-download"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"right"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"cloud"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"cloud-download"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>多个组合<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>前进<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"right"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>多个组合<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>前进<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"right"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>尺寸<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"large"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>大<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>默认<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;<span class="title">ButtonGroup</span> <span class="attribute">size</span>=<span class="value">"small"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>小<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>尺寸<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>大<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>大<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>大<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>默认<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>默认<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>默认<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>小<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>小<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>小<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-button-demo-button-group'));</span></code></pre></div><style>
-.nico-insert-code h4 {
-  margin: 8px 0;
-  font-size: 12px;
-  line-height: 12px;
+#components-button-demo-button-group h4 {
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1;
   font-weight: normal;
 }
-.nico-insert-code h4:first-child {
+#components-button-demo-button-group h4:first-child {
   margin-top: 0;
 }
-.nico-insert-code .ant-btn {
+#components-button-demo-button-group .ant-btn {
   margin-bottom: 8px;
 }
 #components-button-demo-button-group .ant-btn-group {

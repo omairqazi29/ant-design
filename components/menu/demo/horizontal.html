@@ -79,43 +79,43 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript">import { Menu, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> SubMenu = Menu.SubMenu;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      current: <span class="string">'mail'</span>
+    <span class="hljs-keyword">return</span> {
+      current: <span class="hljs-string">'mail'</span>
     }
   },
   handleClick(e) {
-    console.log(<span class="string">'click '</span>, e);
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click '</span>, e);
+    <span class="hljs-keyword">this</span>.setState({
       current: e.key
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Menu</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick}</span> <span class="attribute">selectedKeys</span>=<span class="value">{[this.state.current]}</span> <span class="attribute">mode</span>=<span class="value">"horizontal"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"mail"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"mail"</span> /&gt;</span>导航一
-      <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"app"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"appstore"</span> /&gt;</span>导航二
-      <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">SubMenu</span> <span class="attribute">title</span>=<span class="value">{&lt;span</span>&gt;</span><span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"setting"</span> /&gt;</span>导航 - 子菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>}&gt;
-        <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"setting:4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">SubMenu</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Menu.Item</span> <span class="attribute">key</span>=<span class="value">"alipay"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.alipay.com/"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>导航四 - 链接<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">Menu.Item</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">Menu</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick}</span> <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{[this.state.current]}</span> <span class="hljs-attribute">mode</span>=<span class="hljs-value">"horizontal"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"mail"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"mail"</span> /&gt;</span>导航一
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"appstore"</span> /&gt;</span>导航二
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">SubMenu</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"setting"</span> /&gt;</span>导航 - 子菜单<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"setting:1"</span>&gt;</span>选项1<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"setting:2"</span>&gt;</span>选项2<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"setting:3"</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"setting:4"</span>&gt;</span>选项4<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"alipay"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.alipay.com/"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>导航四 - 链接<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>, document.getElementById('components-menu-demo-horizontal'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-menu-demo-horizontal'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

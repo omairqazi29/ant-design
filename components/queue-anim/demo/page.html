@@ -108,74 +108,74 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-page'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-page'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
-<span class="keyword">const</span> Test = React.createClass({
+const Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      show: <span class="literal">true</span>
+    return {
+      show: true
     };
   },
   onClick() {
-    <span class="keyword">this</span>.setState({
-      show: !<span class="keyword">this</span>.state.show
+    this.setState({
+      show: !this.state.show
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">p</span> <span class="attribute">className</span>=<span class="value">"buttons"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.onClick}</span>&gt;</span>切换<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">type</span>=<span class="value">{['right',</span> '<span class="attribute">left</span>']}&gt;</span>
+    return (
+      &lt;div&gt;
+        &lt;p className="buttons"&gt;
+          &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
+        &lt;/p&gt;
+        &lt;QueueAnim type={['right', 'left']}&gt;
         {this.state.show ? [
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-header"</span> <span class="attribute">key</span>=<span class="value">"header"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"logo"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">img</span> <span class="attribute">width</span>=<span class="value">"30"</span> <span class="attribute">src</span>=<span class="value">"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"</span> /&gt;</span>
-            <span class="tag">&lt;<span class="title">span</span>&gt;</span>logo<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-content"</span> <span class="attribute">key</span>=<span class="value">"content"</span> <span class="attribute">delay</span>=<span class="value">{300}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">key</span>=<span class="value">"title"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-kp"</span> <span class="attribute">key</span>=<span class="value">"b"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-title"</span> <span class="attribute">key</span>=<span class="value">"title2"</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-listBox"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">className</span>=<span class="value">"demo-list"</span> <span class="attribute">delay</span>=<span class="value">{500}</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"title"</span> <span class="attribute">key</span>=<span class="value">"title3"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">component</span>=<span class="value">"ul"</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">key</span>=<span class="value">"li"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"0"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"1"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"2"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"3"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">"4"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-              <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>,
-        <span class="tag">&lt;<span class="title">QueueAnim</span> <span class="attribute">delay</span>=<span class="value">{1000}</span> <span class="attribute">type</span>=<span class="value">"bottom"</span> <span class="attribute">key</span>=<span class="value">"footerBox"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"demo-footer"</span> <span class="attribute">key</span>=<span class="value">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
+        &lt;div className="demo-header" key="header"&gt;
+          &lt;div className="logo"&gt;
+            &lt;img width="30" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" /&gt;
+            &lt;span&gt;logo&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;QueueAnim component="ul"&gt;
+            &lt;li key="0"&gt;&lt;/li&gt;
+            &lt;li key="1"&gt;&lt;/li&gt;
+            &lt;li key="2"&gt;&lt;/li&gt;
+            &lt;li key="3"&gt;&lt;/li&gt;
+            &lt;li key="4"&gt;&lt;/li&gt;
+          &lt;/QueueAnim&gt;
+        &lt;/div&gt;,
+        &lt;QueueAnim className="demo-content" key="content" delay={300}&gt;
+          &lt;div className="demo-title" key="title"&gt;我是标题&lt;/div&gt;
+          &lt;div className="demo-kp" key="b"&gt;
+            &lt;QueueAnim component="ul"&gt;
+              &lt;li key="0"&gt;&lt;/li&gt;
+              &lt;li key="1"&gt;&lt;/li&gt;
+              &lt;li key="2"&gt;&lt;/li&gt;
+            &lt;/QueueAnim&gt;
+          &lt;/div&gt;
+          &lt;div className="demo-title" key="title2"&gt;我是标题&lt;/div&gt;
+          &lt;div className="demo-listBox"&gt;
+            &lt;QueueAnim className="demo-list" delay={500}&gt;
+              &lt;div className="title" key="title3"&gt;&lt;/div&gt;
+              &lt;QueueAnim component="ul" type="bottom" key="li"&gt;
+                &lt;li key="0"&gt;&lt;/li&gt;
+                &lt;li key="1"&gt;&lt;/li&gt;
+                &lt;li key="2"&gt;&lt;/li&gt;
+                &lt;li key="3"&gt;&lt;/li&gt;
+                &lt;li key="4"&gt;&lt;/li&gt;
+              &lt;/QueueAnim&gt;
+            &lt;/QueueAnim&gt;
+          &lt;/div&gt;
+        &lt;/QueueAnim&gt;,
+        &lt;QueueAnim delay={1000} type="bottom" key="footerBox"&gt;
+          &lt;div className="demo-footer" key="footer"&gt;&lt;/div&gt;
+        &lt;/QueueAnim&gt;
         ] : null}
-        <span class="tag">&lt;/<span class="title">QueueAnim</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        &lt;/QueueAnim&gt;
+      &lt;/div&gt;
     );
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-queue-anim-demo-page'));</span></code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-page'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

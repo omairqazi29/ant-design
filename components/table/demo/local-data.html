@@ -93,81 +93,81 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript">import { Table, Button } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> columns = [{
-  title: <span class="string">'姓名'</span>,
-  dataIndex: <span class="string">'name'</span>,
-  render: <span class="function"><span class="keyword">function</span><span class="params">(text)</span> {</span>
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>{text}<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
-  title: <span class="string">'年龄'</span>,
-  dataIndex: <span class="string">'age'</span>
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>
 }, {
-  title: <span class="string">'住址'</span>,
-  dataIndex: <span class="string">'address'</span>
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
 }];
-<span class="keyword">const</span> data1 = [{
-  key: <span class="string">'1'</span>,
-  name: <span class="string">'胡彦斌'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+<span class="hljs-keyword">const</span> data1 = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="string">'2'</span>,
-  name: <span class="string">'胡彦祖'</span>,
-  age: <span class="number">42</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="string">'3'</span>,
-  name: <span class="string">'李大嘴'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园1号'</span>
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }];
-<span class="keyword">const</span> data2 = [{
-  key: <span class="string">'11'</span>,
-  name: <span class="string">'胡彦斌2'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园2号'</span>
+<span class="hljs-keyword">const</span> data2 = [{
+  key: <span class="hljs-string">'11'</span>,
+  name: <span class="hljs-string">'胡彦斌2'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园2号'</span>
 }, {
-  key: <span class="string">'22'</span>,
-  name: <span class="string">'胡彦祖2'</span>,
-  age: <span class="number">42</span>,
-  address: <span class="string">'西湖区湖底公园2号'</span>
+  key: <span class="hljs-string">'22'</span>,
+  name: <span class="hljs-string">'胡彦祖2'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园2号'</span>
 }, {
-  key: <span class="string">'33'</span>,
-  name: <span class="string">'李大嘴2'</span>,
-  age: <span class="number">32</span>,
-  address: <span class="string">'西湖区湖底公园2号'</span>
+  key: <span class="hljs-string">'33'</span>,
+  name: <span class="hljs-string">'李大嘴2'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园2号'</span>
 }];
 
-<span class="keyword">const</span> App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
+    <span class="hljs-keyword">return</span> {
       data: []
     };
   },
   handleClick1() {
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       data: data1
     });
   },
   handleClick2() {
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       data: data2
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Table</span> <span class="attribute">columns</span>=<span class="value">{columns}</span> <span class="attribute">dataSource</span>=<span class="value">{this.state.data}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       &amp;nbsp;
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">onClick</span>=<span class="value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 })
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">App</span> /&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>
 , document.getElementById('components-table-demo-local-data'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

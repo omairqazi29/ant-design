@@ -42,45 +42,45 @@ var IconSlider = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['lock', 'unlock'] }), document.getElementById('components-slider-demo-icon-slider'));})()</script><div class="highlight"><pre><code class="javascript">import { Slider, Icon } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['lock', 'unlock'] }), document.getElementById('components-slider-demo-icon-slider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> IconSlider = React.createClass({
+<span class="hljs-keyword">const</span> IconSlider = React.createClass({
   getInitialState() {
-    <span class="keyword">const</span> max = <span class="keyword">this</span>.props.max;
-    <span class="keyword">const</span> min = <span class="keyword">this</span>.props.min;
-    <span class="keyword">const</span> mid = ((max - min) / <span class="number">2</span>).toFixed(<span class="number">5</span>);
+    <span class="hljs-keyword">const</span> max = <span class="hljs-keyword">this</span>.props.max;
+    <span class="hljs-keyword">const</span> min = <span class="hljs-keyword">this</span>.props.min;
+    <span class="hljs-keyword">const</span> mid = ((max - min) / <span class="hljs-number">2</span>).toFixed(<span class="hljs-number">5</span>);
 
-    <span class="keyword">return</span> {
-      preIconClass: <span class="keyword">this</span>.props.value &gt;= mid ? <span class="string">''</span> : <span class="string">'anticon-highlight'</span>,
-      nextIconClass: <span class="keyword">this</span>.props.value &gt;= mid ? <span class="string">'anticon-highlight'</span> : <span class="string">''</span>,
+    <span class="hljs-keyword">return</span> {
+      preIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">''</span> : <span class="hljs-string">'anticon-highlight'</span>,
+      nextIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">'anticon-highlight'</span> : <span class="hljs-string">''</span>,
       mid: mid,
-      sliderValue: <span class="keyword">this</span>.props.value
+      sliderValue: <span class="hljs-keyword">this</span>.props.value
     };
   },
 
   handleChange(v) {
-    <span class="keyword">this</span>.setState(
+    <span class="hljs-keyword">this</span>.setState(
       {
-        preIconClass: v &gt;= <span class="keyword">this</span>.state.mid ? <span class="string">''</span> : <span class="string">'anticon-highlight'</span>,
-        nextIconClass: v &gt;= <span class="keyword">this</span>.state.mid ? <span class="string">'anticon-highlight'</span>: <span class="string">''</span>,
+        preIconClass: v &gt;= <span class="hljs-keyword">this</span>.state.mid ? <span class="hljs-string">''</span> : <span class="hljs-string">'anticon-highlight'</span>,
+        nextIconClass: v &gt;= <span class="hljs-keyword">this</span>.state.mid ? <span class="hljs-string">'anticon-highlight'</span>: <span class="hljs-string">''</span>,
         sliderValue: v
       }
     );
   },
 
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"iconWrapper"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">className</span>=<span class="value">{this.state.preIconClass}</span> <span class="attribute">type</span>=<span class="value">{this.props.icon[0]}</span> /&gt;</span>
-        <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">className</span>=<span class="value">{this.state.nextIconClass}</span> <span class="attribute">type</span>=<span class="value">{this.props.icon[1]}</span> /&gt;</span>
-        <span class="tag">&lt;<span class="title">Slider</span> {<span class="attribute">...this.props</span>} <span class="attribute">onChange</span>=<span class="value">{this.handleChange}</span> <span class="attribute">value</span>=<span class="value">{this.state.sliderValue}</span> /&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"iconWrapper"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{this.state.preIconClass}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{this.props.icon[0]}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{this.state.nextIconClass}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{this.props.icon[1]}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> {<span class="hljs-attribute">...this.props</span>} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.sliderValue}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
 ReactDOM.render(
-<span class="tag">&lt;<span class="title">IconSlider</span> <span class="attribute">min</span>=<span class="value">{0}</span> <span class="attribute">max</span>=<span class="value">{20}</span> <span class="attribute">value</span>=<span class="value">{0}</span> <span class="attribute">icon</span>=<span class="value">{['lock',</span> '<span class="attribute">unlock</span>']} /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">IconSlider</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">{['lock',</span> '<span class="hljs-attribute">unlock</span>']} /&gt;</span>
 , document.getElementById('components-slider-demo-icon-slider'));</span></code></pre></div><style>
 .iconWrapper {
   position: relative;

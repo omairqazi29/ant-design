@@ -149,6 +149,10 @@ Popover 气泡卡片 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Popover 气泡卡片 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -640,17 +651,17 @@ ReactDOM.render(React.createElement(
     { type: "primary" },
     "弹出卡片"
   )
-), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-popover-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> content = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span>&gt;</span>弹出卡片<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>弹出卡片<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
 , document.getElementById('components-popover-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -712,24 +723,24 @@ ReactDOM.render(React.createElement(
       "点击"
     )
   )
-), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-popover-demo-triggertype'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> content = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"hover"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>移入<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"focus"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>聚焦<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">overlay</span>=<span class="value">{content}</span> <span class="attribute">title</span>=<span class="value">"标题"</span> <span class="attribute">trigger</span>=<span class="value">"click"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>点击<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-popover-demo-triggertype'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"hover"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>移入<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"focus"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>聚焦<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>点击<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-popover-demo-triggertype'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -806,28 +817,28 @@ ReactDOM.render(React.createElement(
       "右"
     )
   )
-), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript">import { Popover, Button } from <span class="string">'antd'</span>;
+), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> text = <span class="xml"><span class="tag">&lt;<span class="title">span</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;</span>
-<span class="keyword">const</span> content = <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> text = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> content = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"left"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>左<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"top"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>上<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"bottom"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>下<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Popover</span> <span class="attribute">placement</span>=<span class="value">"right"</span> <span class="attribute">title</span>=<span class="value">{text}</span> <span class="attribute">overlay</span>=<span class="value">{content}</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span>&gt;</span>右<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Popover</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, document.getElementById('components-popover-demo-placement'));</span></code></pre></div><style>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"left"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"top"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>上<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>下<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"right"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-popover-demo-placement'));</span></code></pre></div><style>
 .code-box-demo .ant-btn {
   margin-right: 1em;
 }

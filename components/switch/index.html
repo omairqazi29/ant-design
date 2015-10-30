@@ -149,6 +149,10 @@ Switch 开关 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Switch 开关 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -630,14 +641,14 @@ function onChange(checked) {
   console.log('switch to ' + checked);
 }
 
-ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-basic'</span>);
+ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-switch-demo-basic'</span>);
 
-<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(checked)</span>{</span>
-  console.log(<span class="string">'switch to '</span> + checked);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checked</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch to '</span> + checked);
 }
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">defaultChecked</span>=<span class="value">{false}</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -665,14 +676,14 @@ ReactDOM.render(React.createElement(
     ' '
   ),
   React.createElement(_antd.Switch, { checkedChildren: React.createElement(_antd.Icon, { type: 'check' }), unCheckedChildren: React.createElement(_antd.Icon, { type: 'cross' }) })
-), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-text'</span>);
+), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-switch-demo-text'</span>);
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">"开"</span> <span class="attribute">unCheckedChildren</span>=<span class="value">"关"</span> /&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span>&gt;</span> <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">checkedChildren</span>=<span class="value">{&lt;Icon</span> <span class="attribute">type</span>=<span class="value">"check"</span> /&gt;</span>} unCheckedChildren={<span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"cross"</span> /&gt;</span>} /&gt;
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checkedChildren</span>=<span class="hljs-value">"开"</span> <span class="hljs-attribute">unCheckedChildren</span>=<span class="hljs-value">"关"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checkedChildren</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"check"</span> /&gt;</span>} unCheckedChildren={<span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"cross"</span> /&gt;</span>} /&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -721,31 +732,31 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Switch, Button } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> container = document.getElementById(<span class="string">'components-switch-demo-disabled'</span>);
+ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-switch-demo-disabled'</span>);
 
-<span class="keyword">const</span> Test = React.createClass({
+<span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      disabled: <span class="literal">true</span>
+    <span class="hljs-keyword">return</span> {
+      disabled: <span class="hljs-literal">true</span>
     }
   },
   toggle(){
-    <span class="keyword">this</span>.setState({
-      disabled: !<span class="keyword">this</span>.state.disabled
+    <span class="hljs-keyword">this</span>.setState({
+      disabled: !<span class="hljs-keyword">this</span>.state.disabled
     });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Switch</span> <span class="attribute">disabled</span>=<span class="value">{this.state.disabled}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">br</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"primary"</span> <span class="attribute">onClick</span>=<span class="value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

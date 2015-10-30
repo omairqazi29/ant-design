@@ -35,22 +35,22 @@ ReactDOM.render(React.createElement(
     { value: 'd' },
     '成都'
   )
-), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript">import { Radio } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> RadioButton = Radio.Button;
-<span class="keyword">const</span> RadioGroup = Radio.Group;
+), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> RadioButton = Radio.Button;
+<span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
-<span class="function"><span class="keyword">function</span> <span class="title">onChange</span><span class="params">(e)</span> {</span>
-  console.log(<span class="string">'radio checked:'</span> + e.target.value);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked:'</span> + e.target.value);
 }
 
 ReactDOM.render((
-  <span class="xml"><span class="tag">&lt;<span class="title">RadioGroup</span> <span class="attribute">onChange</span>=<span class="value">{onChange}</span> <span class="attribute">defaultValue</span>=<span class="value">"a"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"a"</span>&gt;</span>杭州<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"b"</span>&gt;</span>上海<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"c"</span>&gt;</span>北京<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">value</span>=<span class="value">"d"</span>&gt;</span>成都<span class="tag">&lt;/<span class="title">RadioButton</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">RadioGroup</span>&gt;</span>
-), document.getElementById('components-radio-demo-radiobutton'));</span></code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"a"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>杭州<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>北京<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-radio-demo-radiobutton'</span>));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

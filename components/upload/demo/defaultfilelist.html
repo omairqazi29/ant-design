@@ -35,35 +35,35 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript">import { Upload, Button, Icon } from <span class="string">'antd'</span>;
+), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> props = {
-  action: <span class="string">'/upload.do'</span>,
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
   onChange(info) {
-    <span class="keyword">if</span> (info.file.status !== <span class="string">'uploading'</span>) {
-      console.log(info.file);
-      console.log(info.fileList);
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file);
+      <span class="hljs-built_in">console</span>.log(info.fileList);
     }
   },
   defaultFileList: [{
-    uid: -<span class="number">1</span>,
-    name: <span class="string">'xxx.png'</span>,
-    status: <span class="string">'done'</span>,
-    url: <span class="string">'http://www.baidu.com/xxx.png'</span>
+    uid: -<span class="hljs-number">1</span>,
+    name: <span class="hljs-string">'xxx.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'http://www.baidu.com/xxx.png'</span>
   }, {
-    uid: -<span class="number">2</span>,
-    name: <span class="string">'yyy.png'</span>,
-    status: <span class="string">'done'</span>,
-    url: <span class="string">'http://www.baidu.com/yyy.png'</span>
+    uid: -<span class="hljs-number">2</span>,
+    name: <span class="hljs-string">'yyy.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'http://www.baidu.com/yyy.png'</span>
   }]
 };
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">Upload</span> {<span class="attribute">...props</span>}&gt;</span>
-    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"upload"</span> /&gt;</span> 点击上传
-    <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">Upload</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
 , document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

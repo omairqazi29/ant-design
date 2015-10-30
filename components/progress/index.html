@@ -149,6 +149,10 @@ Progress 进度条 - Ant Design
         desc: '滑动输入条'
       });
       ANT_COMPONENTS.push({
+        title: 'Spin',
+        desc: '加载中'
+      });
+      ANT_COMPONENTS.push({
         title: 'Steps',
         desc: '步骤条'
       });
@@ -463,6 +467,13 @@ Progress 进度条 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../spin/"
+               class="">
+              Spin
+              <span class="chinese">加载中</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../table/"
                class="">
               Table
@@ -660,17 +671,17 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressLine, { percent: 70, status: "exception" }),
   React.createElement(ProgressLine, { percent: 100 }),
   React.createElement(ProgressLine, { percent: 50, showInfo: false })
-), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressLine = Progress.Line;
+), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{30}</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{100}</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">showInfo</span>=<span class="value">{false}</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"active"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">showInfo</span>=<span class="hljs-value">{false}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-progress-demo-line'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -696,16 +707,16 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressLine, { percent: 50, strokeWidth: 5, status: "active" }),
   React.createElement(ProgressLine, { percent: 70, strokeWidth: 5, status: "exception" }),
   React.createElement(ProgressLine, { percent: 100, strokeWidth: 5 })
-), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressLine = Progress.Line;
+), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">{{</span> <span class="attribute">width:</span> <span class="attribute">170</span> }}&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{30}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{50}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> <span class="attribute">status</span>=<span class="value">"active"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{100}</span> <span class="attribute">strokeWidth</span>=<span class="value">{5}</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">170</span> }}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"active"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-progress-demo-line-mini'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -769,45 +780,45 @@ var MyProgress = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress, Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressCircle = Progress.Circle;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
-<span class="keyword">const</span> MyProgress = React.createClass({
+<span class="hljs-keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      percent: <span class="number">0</span>
+    <span class="hljs-keyword">return</span> {
+      percent: <span class="hljs-number">0</span>
     };
   },
   increase() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent + <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &gt; <span class="number">100</span>) {
-      percent = <span class="number">100</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent + <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &gt; <span class="hljs-number">100</span>) {
+      percent = <span class="hljs-number">100</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   decline() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent - <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &lt; <span class="number">0</span>) {
-      percent = <span class="number">0</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent - <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &lt; <span class="hljs-number">0</span>) {
+      percent = <span class="hljs-number">0</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"minus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.increase}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{this.state.percent}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-circle-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -833,15 +844,15 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressCircle, { percent: 30 }),
   React.createElement(ProgressCircle, { percent: 70, status: 'exception' }),
   React.createElement(ProgressCircle, { percent: 100 })
-), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressCircle = Progress.Circle;
+), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{30}</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{100}</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle'));</span></code></pre></div><style>
 .ant-progress-circle-wrap,
 .ant-progress-line-wrap {
@@ -873,15 +884,15 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressCircle, { percent: 30, width: 80 }),
   React.createElement(ProgressCircle, { percent: 70, width: 80, status: 'exception' }),
   React.createElement(ProgressCircle, { percent: 100, width: 80 })
-), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressCircle = Progress.Circle;
+), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
-  <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{30}</span> <span class="attribute">width</span>=<span class="value">{80}</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{70}</span> <span class="attribute">width</span>=<span class="value">{80}</span> <span class="attribute">status</span>=<span class="value">"exception"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="title">ProgressCircle</span> <span class="attribute">percent</span>=<span class="value">{100}</span> <span class="attribute">width</span>=<span class="value">{80}</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle-mini'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -945,45 +956,45 @@ var MyProgress = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript">import { Progress, Button, ButtonGroup, Icon } from <span class="string">'antd'</span>;
-<span class="keyword">const</span> ProgressLine = Progress.Line;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
-<span class="keyword">const</span> MyProgress = React.createClass({
+<span class="hljs-keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      percent: <span class="number">0</span>
+    <span class="hljs-keyword">return</span> {
+      percent: <span class="hljs-number">0</span>
     };
   },
   increase() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent + <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &gt; <span class="number">100</span>) {
-      percent = <span class="number">100</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent + <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &gt; <span class="hljs-number">100</span>) {
+      percent = <span class="hljs-number">100</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   decline() {
-    <span class="keyword">let</span> percent = <span class="keyword">this</span>.state.percent - <span class="number">10</span>;
-    <span class="keyword">if</span> (percent &lt; <span class="number">0</span>) {
-      percent = <span class="number">0</span>;
+    <span class="hljs-keyword">let</span> percent = <span class="hljs-keyword">this</span>.state.percent - <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">if</span> (percent &lt; <span class="hljs-number">0</span>) {
+      percent = <span class="hljs-number">0</span>;
     }
-    <span class="keyword">this</span>.setState({ percent });
+    <span class="hljs-keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">ProgressLine</span> <span class="attribute">percent</span>=<span class="value">{this.state.percent}</span> /&gt;</span>
-      <span class="tag">&lt;<span class="title">ButtonGroup</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.decline}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"minus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">type</span>=<span class="value">"ghost"</span> <span class="attribute">onClick</span>=<span class="value">{this.increase}</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Icon</span> <span class="attribute">type</span>=<span class="value">"plus"</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">Button</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">ButtonGroup</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{this.state.percent}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyProgress</span> /&gt;</span>, document.getElementById('components-progress-demo-dynamic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

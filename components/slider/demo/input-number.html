@@ -37,35 +37,35 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-slider-demo-input-number'));})()</script><div class="highlight"><pre><code class="javascript">import { Slider, InputNumber } from <span class="string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-slider-demo-input-number'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, InputNumber } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="keyword">const</span> Test = React.createClass({
+<span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
-    <span class="keyword">return</span> {
-      inputValue: <span class="number">1</span>
+    <span class="hljs-keyword">return</span> {
+      inputValue: <span class="hljs-number">1</span>
     };
   },
   onChange(value) {
-    <span class="keyword">this</span>.setState({
+    <span class="hljs-keyword">this</span>.setState({
       inputValue: value
     });
   },
   render() {
-    <span class="keyword">return</span> (
-      <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"row"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-12"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{20}</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span> <span class="attribute">value</span>=<span class="value">{this.state.inputValue}</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"col-4"</span>&gt;</span>
-          <span class="tag">&lt;<span class="title">InputNumber</span> <span class="attribute">min</span>=<span class="value">{1}</span> <span class="attribute">max</span>=<span class="value">{20}</span> <span class="attribute">style</span>=<span class="value">{{marginLeft:</span> '<span class="attribute">16px</span>'}}
-            <span class="attribute">value</span>=<span class="value">{this.state.inputValue}</span> <span class="attribute">onChange</span>=<span class="value">{this.onChange}</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    );
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"col-12"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.inputValue}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"col-4"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> '<span class="hljs-attribute">16px</span>'}}
+            <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.inputValue}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
-ReactDOM.render(<span class="tag">&lt;<span class="title">Test</span> /&gt;</span>, document.getElementById('components-slider-demo-input-number'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-slider-demo-input-number'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
