@@ -4204,14 +4204,12 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar * {
   box-sizing: border-box;
 }
+.ant-calendar-picker-container {
+  position: absolute;
+}
 .ant-calendar-picker-container .ant-calendar {
   position: absolute;
-  left: -9999px;
-  top: -9999px;
   z-index: 1070;
-}
-.ant-calendar-picker-container .ant-calendar-hidden {
-  display: none;
 }
 .ant-calendar-picker {
   position: relative;
@@ -4246,10 +4244,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   line-height: 1;
   vertical-align: bottom;
 }
-.ant-calendar-picker-open .ant-calendar,
-.ant-calendar-picker-container-open .ant-calendar {
-  display: block;
-}
 .ant-calendar {
   position: relative;
   outline: none;
@@ -4281,7 +4275,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: center;
 }
 .ant-calendar-header {
-  padding: 0 10px;
   height: 34px;
   line-height: 34px;
   text-align: center;
@@ -4458,7 +4451,7 @@ fieldset[disabled] .ant-btn-ghost.active {
 .ant-calendar .ant-calendar-clear-btn {
   position: absolute;
   right: 6px;
-  text-indent: -99px;
+  text-indent: -76px;
   overflow: hidden;
   width: 20px;
   height: 20px;
@@ -4759,7 +4752,6 @@ textarea.ant-calendar-time-input {
   display: none;
 }
 .ant-calendar-month-panel-header {
-  padding: 0 10px;
   height: 34px;
   line-height: 34px;
   text-align: center;
@@ -4870,7 +4862,6 @@ textarea.ant-calendar-time-input {
   display: none;
 }
 .ant-calendar-year-panel-header {
-  padding: 0 10px;
   height: 34px;
   line-height: 34px;
   text-align: center;
@@ -4999,7 +4990,6 @@ textarea.ant-calendar-time-input {
   display: none;
 }
 .ant-calendar-decade-panel-header {
-  padding: 0 10px;
   height: 34px;
   line-height: 34px;
   text-align: center;
