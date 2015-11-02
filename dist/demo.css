@@ -4215,6 +4215,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: relative;
   display: inline-block;
   outline: none;
+  font-size: 12px;
 }
 .ant-calendar-picker > input {
   outline: none;
@@ -6719,6 +6720,7 @@ textarea.ant-input {
   border: 1px solid #d9d9d9;
   border-radius: 6px;
 }
+.ant-input-group > div > .ant-input:first-child,
 .ant-input-group > .ant-input:first-child,
 .ant-input-group-addon:first-child {
   border-bottom-right-radius: 0;
@@ -6885,6 +6887,9 @@ form .ant-calendar-picker {
 .ant-form-horizontal .ant-radio-inline,
 .ant-form-horizontal .ant-checkbox-inline {
   vertical-align: top;
+}
+.ant-form-inline div {
+  display: inline-block;
 }
 .ant-form-inline .ant-form-item {
   display: inline-block;
