@@ -185,7 +185,7 @@ Validation 表单校验 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta14',
+        latest: '0.10.0-beta15',
         stable: '0.9.3'
       };
     </script>
@@ -932,7 +932,7 @@ var Demo = React.createClass({
           React.createElement(
             Validator,
             { rules: [{ required: true, whitespace: true, message: '请填写密码' }, { validator: this.checkPass }] },
-            React.createElement(_antd.Input, { name: 'passwd', id: 'password', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.passwd })
+            React.createElement(_antd.Input, { name: 'passwd', id: 'password', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autoComplete: 'off', value: formData.passwd })
           )
         ),
         React.createElement(
@@ -953,7 +953,7 @@ var Demo = React.createClass({
                 whitespace: true,
                 message: '请再次输入密码'
               }, { validator: this.checkPass2 }] },
-            React.createElement(_antd.Input, { name: 'rePasswd', id: 'password2', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.rePasswd, placeholder: '两次输入密码保持一致' })
+            React.createElement(_antd.Input, { name: 'rePasswd', id: 'password2', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autoComplete: 'off', value: formData.rePasswd, placeholder: '两次输入密码保持一致' })
           )
         ),
         React.createElement(
@@ -1258,7 +1258,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.passwd.errors</span> ? <span class="hljs-attribute">status.passwd.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
             <span class="hljs-attribute">required</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">whitespace:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请填写密码'}, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPass</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"passwd"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autocomplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.passwd}</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"passwd"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.passwd}</span>/&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
@@ -1276,7 +1276,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
                 <span class="hljs-attribute">whitespace:</span> <span class="hljs-attribute">true</span>,
                 <span class="hljs-attribute">message:</span> '请再次输入密码'
               }, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPass2</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"rePasswd"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autocomplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.rePasswd}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"两次输入密码保持一致"</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"rePasswd"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.rePasswd}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"两次输入密码保持一致"</span>/&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
@@ -1802,7 +1802,7 @@ var Demo = React.createClass({
               React.createElement(
                 Validator,
                 { rules: [{ required: true, whitespace: true, message: '请填写密码' }, { validator: this.checkPass }], trigger: 'onChange' },
-                React.createElement(_antd.Input, { name: 'pass', id: 'confirmPass', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.pass })
+                React.createElement(_antd.Input, { name: 'pass', id: 'confirmPass', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autoComplete: 'off', value: formData.pass })
               )
             )
           ),
@@ -1835,7 +1835,7 @@ var Demo = React.createClass({
                     whitespace: true,
                     message: '请再次输入密码'
                   }, { validator: this.checkPass2 }] },
-                React.createElement(_antd.Input, { name: 'rePass', id: 'confirmPass2', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autocomplete: 'off', value: formData.rePass })
+                React.createElement(_antd.Input, { name: 'rePass', id: 'confirmPass2', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autoComplete: 'off', value: formData.rePass })
               )
             )
           ),
@@ -2021,7 +2021,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
                 <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.pass.errors</span> ? <span class="hljs-attribute">status.pass.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
                 <span class="hljs-attribute">required</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">whitespace:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请填写密码'}, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPass</span>}]} <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"onChange"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"pass"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"confirmPass"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autocomplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.pass}</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"pass"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"confirmPass"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.pass}</span>/&gt;</span>
                   <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
@@ -2045,7 +2045,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
                     <span class="hljs-attribute">whitespace:</span> <span class="hljs-attribute">true</span>,
                     <span class="hljs-attribute">message:</span> '请再次输入密码'
                   }, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPass2</span>}]}&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"rePass"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"confirmPass2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autocomplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.rePass}</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"rePass"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"confirmPass2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.rePass}</span>/&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>

@@ -48,7 +48,7 @@ let AntTable = React.createClass({
       dataSource: this.props.dataSource,
       filters: {},
       dirty: false,
-      loading: false,
+      loading: this.props.loading,
       sortColumn: '',
       sortOrder: '',
       sorter: null,
@@ -67,6 +67,7 @@ let AntTable = React.createClass({
       rowSelection: null,
       className: '',
       size: 'default',
+      loading: false,
       bordered: false,
       onChange: function () {
       }
@@ -111,6 +112,11 @@ let AntTable = React.createClass({
     if (nextProps.columns !== this.props.columns) {
       this.setState({
         filters: {}
+      });
+    }
+    if ('loading' in nextProps) {
+      this.setState({
+        loading: nextProps.loading
       });
     }
   },
@@ -590,26 +596,28 @@ let AntTable = React.createClass({
       emptyClass = ' ant-table-empty';
     }
 
-    const table = (
-      <div className={'clearfix' + emptyClass}>
-        <Table {...this.props}
-          data={data}
-          columns={columns}
-          className={classString}
-          expandIconAsCell={expandIconAsCell} />
-        {emptyText}
-        {this.renderPagination()}
-      </div>
+    let table = (
+      <Table {...this.props}
+        data={data}
+        columns={columns}
+        className={classString}
+        expandIconAsCell={expandIconAsCell} />
     );
-    if (this.state.loading && !this.isLocalDataSource()) {
+    if (this.state.loading) {
       // if there is no pagination or no data, the height of spin should decrease by half of pagination
       let paginationPatchClass = (this.hasPagination() && data && data.length !== 0)
               ? 'ant-table-with-pagination'
               : 'ant-table-without-pagination';
       let spinClassName = `${paginationPatchClass} ant-table-spin-holder`;
-      return <Spin className={spinClassName}>{table}</Spin>;
+      table = <Spin className={spinClassName}>{table}</Spin>;
     }
-    return table;
+    return (
+      <div className={'clearfix' + emptyClass}>
+        {table}
+        {emptyText}
+        {this.renderPagination()}
+      </div>
+    );
   }
 });
 
