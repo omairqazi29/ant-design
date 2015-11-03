@@ -5963,16 +5963,24 @@ tr.ant-table-expanded-row:hover {
 .ant-tooltip-hidden {
   display: none;
 }
-.ant-tooltip-placement-top {
+.ant-tooltip-placement-top,
+.ant-tooltip-placement-topLeft,
+.ant-tooltip-placement-topRight {
   padding: 5px 0 9px 0;
 }
-.ant-tooltip-placement-right {
+.ant-tooltip-placement-right,
+.ant-tooltip-placement-rightTop,
+.ant-tooltip-placement-rightBottom {
   padding: 0 5px 0 9px;
 }
-.ant-tooltip-placement-bottom {
+.ant-tooltip-placement-bottom,
+.ant-tooltip-placement-bottomLeft,
+.ant-tooltip-placement-bottomRight {
   padding: 9px 0 5px 0;
 }
-.ant-tooltip-placement-left {
+.ant-tooltip-placement-left,
+.ant-tooltip-placement-leftTop,
+.ant-tooltip-placement-leftBottom {
   padding: 0 9px 0 5px;
 }
 .ant-tooltip-inner {
@@ -5993,33 +6001,75 @@ tr.ant-table-expanded-row:hover {
   border-color: transparent;
   border-style: solid;
 }
-.ant-tooltip-placement-top .ant-tooltip-arrow {
+.ant-tooltip-placement-top .ant-tooltip-arrow,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
   bottom: 4px;
-  left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #373737;
 }
-.ant-tooltip-placement-right .ant-tooltip-arrow {
-  top: 50%;
+.ant-tooltip-placement-top .ant-tooltip-arrow {
+  left: 50%;
+}
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow {
+  left: 15%;
+}
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+  right: 15%;
+}
+.ant-tooltip-placement-right .ant-tooltip-arrow,
+.ant-tooltip-placement-rightTop .ant-tooltip-arrow,
+.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {
   left: 4px;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
   border-right-color: #373737;
 }
-.ant-tooltip-placement-left .ant-tooltip-arrow {
+.ant-tooltip-placement-right .ant-tooltip-arrow {
   top: 50%;
+}
+.ant-tooltip-placement-rightTop .ant-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {
+  bottom: 15%;
+}
+.ant-tooltip-placement-left .ant-tooltip-arrow,
+.ant-tooltip-placement-leftTop .ant-tooltip-arrow,
+.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {
   right: 4px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: #373737;
 }
-.ant-tooltip-placement-bottom .ant-tooltip-arrow {
+.ant-tooltip-placement-left .ant-tooltip-arrow {
+  top: 50%;
+}
+.ant-tooltip-placement-leftTop .ant-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {
+  bottom: 15%;
+}
+.ant-tooltip-placement-bottom .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
   top: 4px;
-  left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
   border-bottom-color: #373737;
+}
+.ant-tooltip-placement-bottom .ant-tooltip-arrow {
+  left: 50%;
+}
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow {
+  left: 15%;
+}
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
+  right: 15%;
 }
 .ant-popover {
   position: absolute;

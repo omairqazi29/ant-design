@@ -185,8 +185,8 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta8',
-        stable: '0.9.2'
+        latest: '0.10.0-beta10',
+        stable: '0.9.3'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -716,14 +716,14 @@ var _antd = require('antd');
 
 var disabledDate = function disabledDate(current, value) {
   // can not select days after today
-  return current.getTime() > Date.now();
+  return current && current.getTime() > Date.now();
 };
 
 ReactDOM.render(React.createElement(_antd.Datepicker, { disabledDate: disabledDate }), document.getElementById('components-datepicker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, value</span>) </span>{
   <span class="hljs-comment">// can not select days after today</span>
-  <span class="hljs-keyword">return</span> current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
+  <span class="hljs-keyword">return</span> current &amp;&amp; current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
 };
 
 ReactDOM.render(
@@ -913,6 +913,7 @@ var DateRange = React.createClass({
     return endValue.getTime() <= this.state.startValue.getTime();
   },
   onChange: function onChange(field, value) {
+    console.log(field, 'change', value);
     this.setState(_defineProperty({}, field, value));
   },
   render: function render() {
@@ -953,6 +954,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
     <span class="hljs-keyword">return</span> endValue.getTime() &lt;= <span class="hljs-keyword">this</span>.state.startValue.getTime();
   },
   onChange(field, value) {
+    <span class="hljs-built_in">console</span>.log(field,<span class="hljs-string">'change'</span>,value);
     <span class="hljs-keyword">this</span>.setState({
       [field]: value,
     });

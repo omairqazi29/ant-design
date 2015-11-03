@@ -185,8 +185,8 @@ Dropdown 下拉菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta8',
-        stable: '0.9.2'
+        latest: '0.10.0-beta10',
+        stable: '0.9.3'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -718,7 +718,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(
     _antd.Dropdown,
-    { overlay: menu, trigger: "click" },
+    { overlay: menu, trigger: ["click"] },
     React.createElement(
       _antd.Button,
       { type: "primary" },
@@ -750,7 +750,7 @@ ReactDOM.render(React.createElement(
 <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">{["click"]}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
       点击触发 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>

@@ -29,6 +29,7 @@ var DateRange = React.createClass({
     return endValue.getTime() <= this.state.startValue.getTime();
   },
   onChange: function onChange(field, value) {
+    console.log(field, 'change', value);
     this.setState(_defineProperty({}, field, value));
   },
   render: function render() {
@@ -69,6 +70,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
     <span class="hljs-keyword">return</span> endValue.getTime() &lt;= <span class="hljs-keyword">this</span>.state.startValue.getTime();
   },
   onChange(field, value) {
+    <span class="hljs-built_in">console</span>.log(field,<span class="hljs-string">'change'</span>,value);
     <span class="hljs-keyword">this</span>.setState({
       [field]: value,
     });
