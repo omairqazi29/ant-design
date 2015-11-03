@@ -32,6 +32,17 @@ var columns = [{
 }, {
   title: '地址',
   dataIndex: 'address',
+  filters: [{
+    text: '南湖',
+    value: '南湖'
+  }, {
+    text: '西湖',
+    value: '西湖'
+  }],
+  filterMultiple: false,
+  onFilter: function onFilter(value, record) {
+    return record.address.indexOf(value) === 0;
+  },
   sorter: function sorter(a, b) {
     return a.address.length - b.address.length;
   }
@@ -41,7 +52,7 @@ var data = [{
   key: '1',
   name: '胡斌',
   age: 32,
-  address: '西湖区湖底公园1号'
+  address: '南湖区湖底公园1号'
 }, {
   key: '2',
   name: '胡彦祖',
@@ -51,7 +62,7 @@ var data = [{
   key: '3',
   name: '李大嘴',
   age: 32,
-  address: '西湖区湖底公园123号'
+  address: '南湖区湖底公园123号'
 }, {
   key: '4',
   name: '李秀莲大嘴哥',
@@ -93,6 +104,17 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }, {
   title: <span class="hljs-string">'地址'</span>,
   dataIndex: <span class="hljs-string">'address'</span>,
+  filters: [{
+    text: <span class="hljs-string">'南湖'</span>,
+    value: <span class="hljs-string">'南湖'</span>
+  }, {
+    text: <span class="hljs-string">'西湖'</span>,
+    value: <span class="hljs-string">'西湖'</span>
+  }],
+  filterMultiple: <span class="hljs-literal">false</span>,
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+    <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
+  },
   sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.address.length - b.address.length;
   }
@@ -102,7 +124,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   key: <span class="hljs-string">'1'</span>,
   name: <span class="hljs-string">'胡斌'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  address: <span class="hljs-string">'南湖区湖底公园1号'</span>
 }, {
   key: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖'</span>,
@@ -112,7 +134,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   key: <span class="hljs-string">'3'</span>,
   name: <span class="hljs-string">'李大嘴'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园123号'</span>
+  address: <span class="hljs-string">'南湖区湖底公园123号'</span>
 }, {
   key: <span class="hljs-string">'4'</span>,
   name: <span class="hljs-string">'李秀莲大嘴哥'</span>,
@@ -132,7 +154,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#demo-head">筛选和排序</a>
     </div>
-    <p>对某一列数据进行筛选，使用列的 <code>filter</code> 属性来指定筛选的列表。</p>
+    <p>对某一列数据进行筛选，使用列的 <code>filter</code> 属性来指定需要筛选菜单的列，<code>onFilter</code> 用于筛选当前数据，<code>filterMultiple</code> 用于指定多选和单选。</p>
 <p>对某一列数据进行排序，通过指定列的 <code>sorter</code> 函数即可启动排序按钮。<code>sorter: function(a, b) { ... }</code>， a、b 为比较的两个列数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>

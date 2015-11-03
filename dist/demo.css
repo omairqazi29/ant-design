@@ -9768,6 +9768,7 @@ a .ant-badge-count:active {
           filter: blur(1px);
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=1, MakeShadow=false);
   /* IE6~IE9 */
+  pointer-events: none;
 }
 .ant-spin-dot {
   -webkit-animation: antSpinPulse 1s infinite ease-in-out;

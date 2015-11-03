@@ -32071,6 +32071,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -32079,18 +32088,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -32227,10 +32224,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -32284,66 +32280,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -32558,9 +32513,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -32715,11 +32670,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;
@@ -34946,6 +34901,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -34954,18 +34918,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -35102,10 +35054,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -35159,66 +35110,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -35433,9 +35343,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -35590,11 +35500,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;
@@ -39866,6 +39776,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -39874,18 +39793,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -40022,10 +39929,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -40079,66 +39985,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -40353,9 +40218,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -40510,11 +40375,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;
@@ -42279,6 +42144,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -42287,18 +42161,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -42435,10 +42297,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -42492,66 +42353,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -42766,9 +42586,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -42923,11 +42743,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;
@@ -47210,6 +47030,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -47218,18 +47047,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -47366,10 +47183,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -47423,66 +47239,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -47697,9 +47472,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -47854,11 +47629,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;
@@ -51927,9 +51702,14 @@
 	  },
 	  render: function render() {
 	    var column = this.props.column;
+	    // default multiple selection in filter dropdown
+	    var multiple = true;
+	    if ('filterMultiple' in column) {
+	      multiple = column.filterMultiple;
+	    }
 	    var menus = _react2['default'].createElement(
 	      _rcMenu2['default'],
-	      { multiple: true,
+	      { multiple: multiple,
 	        prefixCls: 'ant-dropdown-menu',
 	        className: 'ant-table-filter-dropdown',
 	        onSelect: this.setSelectedKeys,
@@ -58550,6 +58330,15 @@
 	    }
 	  }
 	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(el, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  });
+	
 	  // need judge to in case set fixed with in css on height auto element
 	  if (newElRegion.width !== elRegion.width) {
 	    _utils2['default'].css(el, 'width', el.width() + newElRegion.width - elRegion.width);
@@ -58558,18 +58347,6 @@
 	  if (newElRegion.height !== elRegion.height) {
 	    _utils2['default'].css(el, 'height', el.height() + newElRegion.height - elRegion.height);
 	  }
-	
-	  // https://github.com/kissyteam/kissy/issues/190
-	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
-	  // 相对于屏幕位置没变，而 left/top 变了
-	  // 例如 <div 'relative'><el absolute></div>
-	  _utils2['default'].offset(el, {
-	    left: newElRegion.left,
-	    top: newElRegion.top
-	  }, {
-	    useCssRight: align.useCssRight,
-	    useCssBottom: align.useCssBottom
-	  });
 	
 	  return {
 	    points: points,
@@ -58706,10 +58483,9 @@
 	  var computedStyle = cs;
 	  var val = '';
 	  var d = elem.ownerDocument;
-	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
 	
 	  // https://github.com/kissyteam/kissy/issues/61
-	  if (computedStyle) {
+	  if (computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null)) {
 	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
 	  }
 	
@@ -58763,66 +58539,25 @@
 	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
 	}
 	
-	function getOffsetDirection(dir, option) {
-	  if (dir === 'left') {
-	    return option.useCssRight ? 'right' : dir;
-	  }
-	  return option.useCssBottom ? 'bottom' : dir;
-	}
-	
-	function oppositeOffsetDirection(dir) {
-	  if (dir === 'left') {
-	    return 'right';
-	  } else if (dir === 'right') {
-	    return 'left';
-	  } else if (dir === 'top') {
-	    return 'bottom';
-	  } else if (dir === 'bottom') {
-	    return 'top';
-	  }
-	}
-	
 	// 设置 elem 相对 elem.ownerDocument 的坐标
-	function setOffset(elem, offset, option) {
+	function setOffset(elem, offset) {
 	  // set position first, in-case top/left are set even on static elem
 	  if (css(elem, 'position') === 'static') {
 	    elem.style.position = 'relative';
 	  }
-	  var presetH = -999;
-	  var presetV = -999;
-	  var horizontalProperty = getOffsetDirection('left', option);
-	  var verticalProperty = getOffsetDirection('top', option);
-	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
-	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
-	
-	  if (horizontalProperty !== 'left') {
-	    presetH = 999;
-	  }
-	
-	  if (verticalProperty !== 'top') {
-	    presetV = 999;
-	  }
-	
+	  var preset = -9999;
 	  if ('left' in offset) {
-	    elem.style[oppositeHorizontalProperty] = '';
-	    elem.style[horizontalProperty] = presetH + 'px';
+	    elem.style.left = preset + 'px';
 	  }
 	  if ('top' in offset) {
-	    elem.style[oppositeVerticalProperty] = '';
-	    elem.style[verticalProperty] = presetV + 'px';
+	    elem.style.top = preset + 'px';
 	  }
 	  var old = getOffset(elem);
 	  var ret = {};
 	  var key = undefined;
 	  for (key in offset) {
 	    if (offset.hasOwnProperty(key)) {
-	      var dir = getOffsetDirection(key, option);
-	      var preset = key === 'left' ? presetH : presetV;
-	      if (dir === key) {
-	        ret[dir] = preset + offset[key] - old[key];
-	      } else {
-	        ret[dir] = preset + old[key] - offset[key];
-	      }
+	      ret[key] = preset + offset[key] - old[key];
 	    }
 	  }
 	  css(elem, ret);
@@ -59037,9 +58772,9 @@
 	    var doc = node.ownerDocument || node;
 	    return doc.defaultView || doc.parentWindow;
 	  },
-	  offset: function offset(el, value, option) {
+	  offset: function offset(el, value) {
 	    if (typeof value !== 'undefined') {
-	      setOffset(el, value, option || {});
+	      setOffset(el, value);
 	    } else {
 	      return getOffset(el);
 	    }
@@ -59194,11 +58929,11 @@
 	  // all scrollable containers.
 	  while (el) {
 	    // clientWidth is zero for inline block elements in ie.
-	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && (
 	    // body may have overflow set on it, yet we still get the entire
 	    // viewport. In some browsers, el.offsetParent may be
 	    // document.documentElement, so check for that too.
-	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible')) {
 	      var pos = _utils2['default'].offset(el);
 	      // add border
 	      pos.left += el.clientLeft;

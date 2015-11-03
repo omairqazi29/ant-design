@@ -52,7 +52,7 @@ var App = React.createClass({
       React.createElement(_antd.Table, { columns: columns, dataSource: data, loading: this.state.loading }),
       React.createElement(
         _antd.Button,
-        { onClick: this.toggleLoading },
+        { type: 'primary', onClick: this.toggleLoading },
         '切换 loading 状态'
       )
     );
@@ -102,7 +102,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   render() {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 })
