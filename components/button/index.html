@@ -185,7 +185,7 @@ Button 按钮 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta10',
+        latest: '0.10.0-beta14',
         stable: '0.9.3'
       };
     </script>
@@ -1084,6 +1084,8 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
+var ButtonGroup = _antd.Button.Group;
+
 ReactDOM.render(React.createElement(
   "div",
   null,
@@ -1093,7 +1095,7 @@ ReactDOM.render(React.createElement(
     "基本组合"
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1107,7 +1109,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1126,7 +1128,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1155,7 +1157,7 @@ ReactDOM.render(React.createElement(
     "带图标按钮组合"
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1175,7 +1177,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1194,7 +1196,7 @@ ReactDOM.render(React.createElement(
     "多个组合"
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1233,7 +1235,7 @@ ReactDOM.render(React.createElement(
     "尺寸"
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     { size: "large" },
     React.createElement(
       _antd.Button,
@@ -1252,7 +1254,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     null,
     React.createElement(
       _antd.Button,
@@ -1271,7 +1273,7 @@ ReactDOM.render(React.createElement(
     )
   ),
   React.createElement(
-    _antd.ButtonGroup,
+    ButtonGroup,
     { size: "small" },
     React.createElement(
       _antd.Button,
@@ -1289,7 +1291,8 @@ ReactDOM.render(React.createElement(
       "小"
     )
   )
-), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> ButtonGroup = Button.Group;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>基本组合<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
@@ -1384,7 +1387,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#demo-button-group">按钮组合</a>
     </div>
-    <p>可以将多个 <code>Button</code> 放入 <code>ButtonGroup</code> 的容器中。</p>
+    <p>可以将多个 <code>Button</code> 放入 <code>Button.Group</code> 的容器中。</p>
 <p>通过设置 <code>size</code> 为 <code>large</code> <code>small</code> 分别把按钮组合设为大、小尺寸。若不设置 <code>size</code>，则尺寸为中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>

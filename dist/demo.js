@@ -24478,8 +24478,8 @@
 	  Badge: __webpack_require__(606),
 	  Menu: __webpack_require__(607),
 	  Timeline: __webpack_require__(608),
-	  Button: __webpack_require__(419).Button,
-	  ButtonGroup: __webpack_require__(419).ButtonGroup,
+	  Button: __webpack_require__(419),
+	  ButtonGroup: __webpack_require__(419).Group,
 	  Icon: __webpack_require__(418),
 	  Row: __webpack_require__(609).Row,
 	  Col: __webpack_require__(609).Col,
@@ -24489,13 +24489,6 @@
 	};
 	
 	antd.version = __webpack_require__(617).version;
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var warning = __webpack_require__(236);
-	  var semver = __webpack_require__(618);
-	  var reactVersionInDeps = __webpack_require__(617).devDependencies.react;
-	  warning(semver.satisfies(_react2['default'].version, reactVersionInDeps) || semver.gtr(_react2['default'].version, reactVersionInDeps), 'antd@' + antd.version + ' need react@' + reactVersionInDeps + ' or higher.');
-	}
 	
 	if (process.env.NODE_ENV !== 'production') {
 	  var warning = __webpack_require__(236);
@@ -40881,8 +40874,9 @@
 	
 	var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 	
-	exports.Button = _button2['default'];
-	exports.ButtonGroup = _buttonGroup2['default'];
+	_button2['default'].Group = _buttonGroup2['default'];
+	exports['default'] = _button2['default'];
+	module.exports = exports['default'];
 
 /***/ },
 /* 420 */
@@ -66584,7 +66578,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta10",
+		"version": "0.10.0-beta14",
 		"stableVersion": "0.9.3",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -66684,7 +66678,7 @@
 			"webpack-dev-middleware": "^1.2.0"
 		},
 		"scripts": {
-			"babel": "babel components --out-dir lib",
+			"babel": "babel components index.js --out-dir lib",
 			"start": "npm run clean && nico server --watch",
 			"clean": "rm -rf _site dist",
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",

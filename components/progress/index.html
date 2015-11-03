@@ -185,7 +185,7 @@ Progress 进度条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta10',
+        latest: '0.10.0-beta14',
         stable: '0.9.3'
       };
     </script>
@@ -716,6 +716,7 @@ ReactDOM.render(
 var _antd = require('antd');
 
 var ProgressCircle = _antd.Progress.Circle;
+var ButtonGroup = _antd.Button.Group;
 
 var MyProgress = React.createClass({
   displayName: "MyProgress",
@@ -745,7 +746,7 @@ var MyProgress = React.createClass({
       null,
       React.createElement(ProgressCircle, { percent: this.state.percent }),
       React.createElement(
-        _antd.ButtonGroup,
+        ButtonGroup,
         null,
         React.createElement(
           _antd.Button,
@@ -762,8 +763,9 @@ var MyProgress = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-circle-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
+<span class="hljs-keyword">const</span> ButtonGroup = Button.Group;
 
 <span class="hljs-keyword">const</span> MyProgress = React.createClass({
   getInitialState() {
@@ -892,6 +894,7 @@ ReactDOM.render(
 var _antd = require('antd');
 
 var ProgressLine = _antd.Progress.Line;
+var ButtonGroup = _antd.Button.Group;
 
 var MyProgress = React.createClass({
   displayName: "MyProgress",
@@ -921,7 +924,7 @@ var MyProgress = React.createClass({
       null,
       React.createElement(ProgressLine, { percent: this.state.percent }),
       React.createElement(
-        _antd.ButtonGroup,
+        ButtonGroup,
         null,
         React.createElement(
           _antd.Button,
@@ -938,8 +941,9 @@ var MyProgress = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, ButtonGroup, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(MyProgress, null), document.getElementById('components-progress-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
+<span class="hljs-keyword">const</span> ButtonGroup = Button.Group;
 
 <span class="hljs-keyword">const</span> MyProgress = React.createClass({
   getInitialState() {

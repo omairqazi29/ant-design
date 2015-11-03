@@ -15,123 +15,113 @@ ReactDOM.render(React.createElement(
   "div",
   null,
   React.createElement(
-    "div",
-    { style: { margin: 10 } },
+    _antd.Tooltip,
+    { placement: "left", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "left", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "左边 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "top", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "上边 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "bottom", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "下边 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "right", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "右边 要对齐"
-      )
+      "a",
+      { href: "#" },
+      "左边"
     )
   ),
   React.createElement(
-    "div",
-    { style: { margin: 10 } },
+    _antd.Tooltip,
+    { placement: "top", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "leftTop", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "左上 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "leftBottom", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "左下 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "rightTop", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "右上 要对齐"
-      )
-    ),
-    React.createElement(
-      _antd.Tooltip,
-      { placement: "rightBottom", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "右下 要对齐"
-      )
+      "a",
+      { href: "#" },
+      "上边"
     )
   ),
   React.createElement(
-    "div",
-    { style: { margin: 10 } },
+    _antd.Tooltip,
+    { placement: "bottom", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "topLeft", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "上左 要对齐"
-      )
-    ),
+      "a",
+      { href: "#" },
+      "下边"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "right", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "topRight", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "上右 要对齐"
-      )
-    ),
+      "a",
+      { href: "#" },
+      "右边"
+    )
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "leftTop", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "bottomLeft", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "下左 要对齐"
-      )
-    ),
+      "a",
+      { href: "#" },
+      "左上"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "leftBottom", title: text },
     React.createElement(
-      _antd.Tooltip,
-      { placement: "bottomRight", title: text },
-      React.createElement(
-        "a",
-        { href: "#" },
-        "下右 要对齐"
-      )
+      "a",
+      { href: "#" },
+      "左下"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "rightTop", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "右上"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "rightBottom", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "右下"
+    )
+  ),
+  React.createElement("br", null),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "topLeft", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "上左"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "topRight", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "上右"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "bottomLeft", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "下左"
+    )
+  ),
+  React.createElement(
+    _antd.Tooltip,
+    { placement: "bottomRight", title: text },
+    React.createElement(
+      "a",
+      { href: "#" },
+      "下右"
     )
   )
 ), document.getElementById('components-tooltip-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -139,52 +129,56 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{margin:10}}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"left"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左边 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"top"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上边 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下边 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"right"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右边 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{margin:10}}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"leftTop"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左上 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"leftBottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左下 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"rightTop"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右上 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"rightBottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右下 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{margin:10}}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"topLeft"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上左 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"topRight"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上右 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottomLeft"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下左 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottomRight"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下右 要对齐<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"left"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左边<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"top"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上边<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下边<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"right"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右边<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"leftTop"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左上<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"leftBottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>左下<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"rightTop"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右上<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"rightBottom"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>右下<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"topLeft"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上左<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"topRight"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>上右<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottomLeft"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下左<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottomRight"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{text}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>下右<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-tooltip-demo-placement'));</span></code></pre></div><style>
 #components-tooltip-demo-placement a {
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  background: #f6f6f6;
   margin-right: 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
 }
 </style>
 
