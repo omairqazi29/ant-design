@@ -38919,6 +38919,8 @@
 	
 	var _button = __webpack_require__(419);
 	
+	var _button2 = _interopRequireDefault(_button);
+	
 	function noop() {}
 	
 	var mousePosition = undefined;
@@ -38971,14 +38973,14 @@
 	  render: function render() {
 	    var props = this.props;
 	    var defaultFooter = [_react2['default'].createElement(
-	      _button.Button,
+	      _button2['default'],
 	      { key: 'cancel',
 	        type: 'ghost',
 	        size: 'large',
 	        onClick: this.handleCancel },
 	      '取消'
 	    ), _react2['default'].createElement(
-	      _button.Button,
+	      _button2['default'],
 	      { key: 'confirm',
 	        type: 'primary',
 	        size: 'large',
@@ -40782,6 +40784,8 @@
 	
 	var _button = __webpack_require__(419);
 	
+	var _button2 = _interopRequireDefault(_button);
+	
 	exports['default'] = function (props) {
 	  var div = document.createElement('div');
 	  document.body.appendChild(div);
@@ -40864,12 +40868,12 @@
 	    'div',
 	    { className: 'ant-confirm-btns' },
 	    _react2['default'].createElement(
-	      _button.Button,
+	      _button2['default'],
 	      { type: 'ghost', size: 'large', onClick: onCancel },
 	      '取 消'
 	    ),
 	    _react2['default'].createElement(
-	      _button.Button,
+	      _button2['default'],
 	      { type: 'primary', size: 'large', onClick: onOk },
 	      '确 定'
 	    )
@@ -40880,12 +40884,12 @@
 	      'div',
 	      { className: 'ant-confirm-btns' },
 	      _react2['default'].createElement(
-	        _button.Button,
+	        _button2['default'],
 	        { type: 'ghost', size: 'large', onClick: onCancel },
 	        '取 消'
 	      ),
 	      _react2['default'].createElement(
-	        _button.Button,
+	        _button2['default'],
 	        { type: 'primary', size: 'large', onClick: onOk },
 	        '确 定'
 	      )
@@ -40895,7 +40899,7 @@
 	      'div',
 	      { className: 'ant-confirm-btns' },
 	      _react2['default'].createElement(
-	        _button.Button,
+	        _button2['default'],
 	        { type: 'primary', size: 'large', onClick: onOk },
 	        '知道了'
 	      )
@@ -48267,6 +48271,8 @@
 	
 	var _button = __webpack_require__(419);
 	
+	var _button2 = _interopRequireDefault(_button);
+	
 	var prefixCls = 'ant-popover';
 	
 	exports['default'] = _react2['default'].createClass({
@@ -48321,12 +48327,12 @@
 	          'div',
 	          { className: prefixCls + '-buttons' },
 	          _react2['default'].createElement(
-	            _button.Button,
+	            _button2['default'],
 	            { onClick: this.cancel, type: 'ghost', size: 'small' },
 	            '取消'
 	          ),
 	          _react2['default'].createElement(
-	            _button.Button,
+	            _button2['default'],
 	            { onClick: this.confirm, type: 'primary', size: 'small' },
 	            '确定'
 	          )
@@ -66849,7 +66855,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta15",
+		"version": "0.10.0-beta16",
 		"stableVersion": "0.9.3",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
