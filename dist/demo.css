@@ -7898,7 +7898,7 @@ textarea.ant-input-number {
   vertical-align: middle;
   -webkit-transition: -webkit-transform 0.24s ease;
           transition: transform 0.24s ease;
-  top: -1px;
+  top: 0;
   left: 16px;
   top: 16px \9;
   left: 0 \9;
@@ -7940,9 +7940,7 @@ textarea.ant-input-number {
 .ant-collapse-item:last-child > .ant-collapse-content {
   border-radius: 0 0 3px 3px;
 }
-.ant-collapse > .ant-collapse-item-active > .ant-collapse-header .arrow {
-  top: -1px;
-  left: 16px;
+.ant-collapse > .ant-collapse-item > .ant-collapse-header[aria-expanded="true"] .arrow {
   display: inline-block;
   font-size: 0.58333333;
   font-size: 7px \9;
@@ -7953,11 +7951,11 @@ textarea.ant-input-number {
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0.00000000000000024493, M21=-0.00000000000000024493, M22=1);
   zoom: 1;
 }
-:root .ant-collapse > .ant-collapse-item-active > .ant-collapse-header .arrow {
+:root .ant-collapse > .ant-collapse-item > .ant-collapse-header[aria-expanded="true"] .arrow {
   -webkit-filter: none;
           filter: none;
 }
-:root .ant-collapse > .ant-collapse-item-active > .ant-collapse-header .arrow {
+:root .ant-collapse > .ant-collapse-item > .ant-collapse-header[aria-expanded="true"] .arrow {
   font-size: 12px;
 }
 .ant-message {

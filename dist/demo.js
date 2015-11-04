@@ -66990,7 +66990,8 @@
 	        );
 	      }
 	      var count = this.props.count;
-	      if (!count) {
+	      // null undefined "" "0" 0
+	      if (!count || count === '0') {
 	        return (0, _react.cloneElement)(this.props.children);
 	      } else {
 	        count = count >= 100 ? '99+' : count;
@@ -67819,7 +67820,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta16",
+		"version": "0.10.0-beta17",
 		"stableVersion": "0.9.4",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",

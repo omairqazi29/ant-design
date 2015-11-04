@@ -18,7 +18,7 @@ ReactDOM.render(React.createElement(
       wrapperCol: { span: 12 },
       validateStatus: "error",
       help: "请输入数字和字母组合" },
-    React.createElement(_antd.Input, { value: "无效选择", id: "error" })
+    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
   ),
   React.createElement(
     FormItem,
@@ -27,7 +27,7 @@ ReactDOM.render(React.createElement(
       labelCol: { span: 5 },
       wrapperCol: { span: 12 },
       validateStatus: "warning" },
-    React.createElement(_antd.Input, { value: "前方高能预警", id: "warning" })
+    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
   ),
   React.createElement(
     FormItem,
@@ -38,7 +38,7 @@ ReactDOM.render(React.createElement(
       hasFeedback: true,
       validateStatus: "validating",
       help: "信息审核中..." },
-    React.createElement(_antd.Input, { value: "我是被校验的内容", id: "validating" })
+    React.createElement(_antd.Input, { defaultValue: "我是被校验的内容", id: "validating" })
   ),
   React.createElement(
     FormItem,
@@ -48,7 +48,7 @@ ReactDOM.render(React.createElement(
       wrapperCol: { span: 12 },
       hasFeedback: true,
       validateStatus: "success" },
-    React.createElement(_antd.Input, { value: "我是正文", id: "success" })
+    React.createElement(_antd.Input, { defaultValue: "我是正文", id: "success" })
   ),
   React.createElement(
     FormItem,
@@ -58,7 +58,7 @@ ReactDOM.render(React.createElement(
       wrapperCol: { span: 12 },
       hasFeedback: true,
       validateStatus: "warning" },
-    React.createElement(_antd.Input, { value: "前方高能预警", id: "warning" })
+    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
   ),
   React.createElement(
     FormItem,
@@ -69,7 +69,7 @@ ReactDOM.render(React.createElement(
       hasFeedback: true,
       validateStatus: "error",
       help: "请输入数字和字母组合" },
-    React.createElement(_antd.Input, { value: "无效选择", id: "error" })
+    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
   ),
   React.createElement(
     FormItem,
@@ -117,7 +117,7 @@ ReactDOM.render(
       <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
       <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -125,7 +125,7 @@ ReactDOM.render(
       <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
       <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -135,7 +135,7 @@ ReactDOM.render(
       <span class="hljs-attribute">hasFeedback</span>=<span class="hljs-value">{true}</span>
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"validating"</span>
       <span class="hljs-attribute">help</span>=<span class="hljs-value">"信息审核中..."</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"我是被校验的内容"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"validating"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是被校验的内容"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"validating"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -144,7 +144,7 @@ ReactDOM.render(
       <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
       <span class="hljs-attribute">hasFeedback</span>=<span class="hljs-value">{true}</span>
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"success"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"我是正文"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"success"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是正文"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"success"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -153,7 +153,7 @@ ReactDOM.render(
       <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
       <span class="hljs-attribute">hasFeedback</span>=<span class="hljs-value">{true}</span>
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -163,7 +163,7 @@ ReactDOM.render(
       <span class="hljs-attribute">hasFeedback</span>=<span class="hljs-value">{true}</span>
       <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
       <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>

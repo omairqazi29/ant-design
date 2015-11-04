@@ -42,14 +42,14 @@ var Demo = React.createClass({
         {
           id: 'userName',
           label: '账户：' },
-        React.createElement(_antd.Input, { placeholder: '请输入账户名', id: 'userName', name: 'userName', onChange: this.setValue.bind(this, 'userName') })
+        React.createElement(_antd.Input, { placeholder: '请输入账户名', id: 'userName', name: 'userName', onChange: this.setValue.bind(this, 'userName'), value: formData.userName })
       ),
       React.createElement(
         FormItem,
         {
           id: 'password',
           label: '密码：' },
-        React.createElement(_antd.Input, { type: 'password', placeholder: '请输入密码', id: 'password', name: 'password', onChange: this.setValue.bind(this, 'password') })
+        React.createElement(_antd.Input, { type: 'password', placeholder: '请输入密码', id: 'password', name: 'password', onChange: this.setValue.bind(this, 'password'), value: formData.password })
       ),
       React.createElement(
         FormItem,
@@ -103,12 +103,12 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"账户："</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入账户名"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">userName</span>')} /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入账户名"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">userName</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.userName}</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">password</span>')} /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">password</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.password}</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
