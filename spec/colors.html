@@ -213,6 +213,7 @@
         return result;
       };
     </script>
+    <script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
     
   </head>
   <body >
@@ -464,10 +465,7 @@ var ExtendPalettes = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(ExtendPalettes, null), document.getElementById('extend-palettes'));})()</script><h2 id="色彩换算工具">色彩换算工具<a href="#色彩换算工具" class="anchor">#</a> </h2><script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
-<script src="https://t.alipayobjects.com/images/T1gXXjXeXeXXXXXXXX.js"></script>
-
-<blockquote>
+ReactDOM.render(React.createElement(ExtendPalettes, null), document.getElementById('extend-palettes'));})()</script><h2 id="色彩换算工具">色彩换算工具<a href="#色彩换算工具" class="anchor">#</a> </h2><blockquote>
 <p>正数为变淡 <code>tint</code> ，负数为加深 <code>shade</code>。</p>
 </blockquote>
 <div id="color-tint-shade-tool"></div>
@@ -485,7 +483,7 @@ var TintShadeTool = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      result: '',
+      result: '#2db7f5',
       color: '#2db7f5',
       value: 80
     };
@@ -537,7 +535,7 @@ var TintShadeTool = React.createClass({
         ),
         React.createElement(
           'span',
-          { style: { marginRight: 140, fontFamily: 'Consolas' } },
+          { style: { width: 188, display: 'inline-block', fontFamily: 'Consolas' } },
           this.state.result
         ),
         React.createElement('input', { className: 'ant-input', style: { width: 80, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),

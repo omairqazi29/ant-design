@@ -25285,16 +25285,12 @@
 	    key: 'render',
 	    value: function render() {
 	      var dataAttributes = this.propsWith(/^data-/);
-	      var attributes = this.propsWith(/^span-/, true);
-	      return _react2['default'].createElement(
-	        'span',
-	        _extends({
-	          id: this.id,
-	          className: this.props.className || '',
-	          style: this.props.style || {}
-	        }, dataAttributes, attributes),
-	        this.props.children
-	      );
+	      var component = this.props.component || 'span';
+	      return _react2['default'].createElement(component, _extends({
+	        id: this.id,
+	        className: this.props.className || '',
+	        style: this.props.style || {}
+	      }, dataAttributes), this.props.children);
 	    }
 	  }]);
 	
