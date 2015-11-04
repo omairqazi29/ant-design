@@ -50933,7 +50933,7 @@
 	      var data = this.getCurrentPageData();
 	      data.filter(function (item) {
 	        if (_this.props.rowSelection.getCheckboxProps) {
-	          return _this.props.rowSelection.getCheckboxProps(item).defaultValue;
+	          return _this.props.rowSelection.getCheckboxProps(item).defaultChecked;
 	        }
 	        return true;
 	      }).map(function (record, rowIndex) {

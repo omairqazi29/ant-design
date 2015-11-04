@@ -43,7 +43,7 @@ var data = [{
 var rowSelection = {
   getCheckboxProps: function getCheckboxProps(record) {
     return {
-      defaultValue: record.name === '李大嘴', // 配置默认勾选的列
+      defaultChecked: record.name === '李大嘴', // 配置默认勾选的列
       disabled: record.name === '胡彦祖' // 配置无法勾选的列
     };
   },
@@ -91,7 +91,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 <span class="hljs-keyword">const</span> rowSelection = {
   getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record</span>) </span>{
     <span class="hljs-keyword">return</span> {
-      defaultValue: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
+      defaultChecked: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
       disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
     };
   },
