@@ -186,7 +186,7 @@
     <script>
       window.antdVersion = {
         latest: '0.10.0-beta16',
-        stable: '0.9.3'
+        stable: '0.9.4'
       };
     </script>
     <script src="../dist/demo.js"></script>
@@ -465,6 +465,7 @@ var ExtendPalettes = React.createClass({
   }
 });
 ReactDOM.render(React.createElement(ExtendPalettes, null), document.getElementById('extend-palettes'));})()</script><h2 id="色彩换算工具">色彩换算工具<a href="#色彩换算工具" class="anchor">#</a> </h2><script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
+<script src="https://t.alipayobjects.com/images/T1gXXjXeXeXXXXXXXX.js"></script>
 
 <blockquote>
 <p>正数为变淡 <code>tint</code> ，负数为加深 <code>shade</code>。</p>
@@ -478,6 +479,7 @@ ReactDOM.render(React.createElement(ExtendPalettes, null), document.getElementBy
 var Button = antd.Button;
 var InputNumber = antd.InputNumber;
 var Slider = antd.Slider;
+var Tooltip = antd.Tooltip;
 var TintShadeTool = React.createClass({
   displayName: 'TintShadeTool',
 
@@ -514,6 +516,9 @@ var TintShadeTool = React.createClass({
       result: '#' + c[tintOrShade](Math.abs(this.state.value)).hex
     });
   },
+  copySuccess: function copySuccess(e) {
+    antd.message.success('复制色值成功：' + e.text);
+  },
   render: function render() {
     return React.createElement(
       'div',
@@ -521,11 +526,19 @@ var TintShadeTool = React.createClass({
       React.createElement(
         'div',
         null,
-        React.createElement('div', { style: { width: 60, borderRadius: 6, height: 28, backgroundColor: this.state.result, display: 'inline-block', verticalAlign: 'middle', marginRight: 8 } }),
         React.createElement(
-          'span',
-          { style: { marginRight: 140, fontFamily: 'Consolas' } },
-          this.state.result
+          ClipboardButton,
+          { onSuccess: this.copySuccess, 'data-clipboard-text': this.state.result, style: { border: 0, background: '#fff' } },
+          React.createElement('div', { style: { width: 60, borderRadius: 6, height: 28, backgroundColor: this.state.result, display: 'inline-block', verticalAlign: 'middle', marginRight: 8 } })
+        ),
+        React.createElement(
+          Tooltip,
+          { title: '点击左边色块复制色值' },
+          React.createElement(
+            'span',
+            { style: { marginRight: 140, fontFamily: 'Consolas' } },
+            this.state.result
+          )
         ),
         React.createElement('input', { className: 'ant-input', style: { width: 80, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
         React.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),

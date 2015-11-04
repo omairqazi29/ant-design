@@ -6,8 +6,6 @@
 var _antd = require('antd');
 
 var Validator = _antd.Validation.Validator;
-var Option = _antd.Select.Option;
-var RadioGroup = _antd.Radio.Group;
 var FormItem = _antd.Form.Item;
 
 function cx(classNames) {
@@ -34,24 +32,16 @@ var Demo = React.createClass({
       status: {
         email: {},
         name: {},
-        select: {},
-        radio: {},
         passwd: {},
         rePasswd: {},
-        textarea: {},
-        birthday: {},
-        primeNumber: {}
+        textarea: {}
       },
       formData: {
         email: undefined,
         name: undefined,
-        select: undefined,
-        radio: undefined,
         passwd: undefined,
         rePasswd: undefined,
-        textarea: undefined,
-        birthday: undefined,
-        primeNumber: 9
+        textarea: undefined
       },
       isEmailOver: false, // email 是否输入完毕
       emailValidateMethod: 'onBlur' // 用于改变 email 的验证方法
@@ -140,22 +130,6 @@ var Demo = React.createClass({
     }
   },
 
-  checkBirthday: function checkBirthday(rule, value, callback) {
-    if (value && value.getTime() >= Date.now()) {
-      callback(new Error('你不可能在未来出生吧!'));
-    } else {
-      callback();
-    }
-  },
-
-  checkPrime: function checkPrime(rule, value, callback) {
-    if (value !== 11) {
-      callback(new Error('8~12之间的质数明明是11啊!'));
-    } else {
-      callback();
-    }
-  },
-
   render: function render() {
     var formData = this.state.formData;
     var status = this.state.status;
@@ -203,79 +177,6 @@ var Demo = React.createClass({
         React.createElement(
           FormItem,
           {
-            label: '国籍：',
-            id: 'select',
-            labelCol: { span: 7 },
-            wrapperCol: { span: 12 },
-            validateStatus: this.renderValidateStyle('select'),
-            help: status.select.errors ? status.select.errors.join(',') : null,
-            required: true },
-          React.createElement(
-            Validator,
-            { rules: [{ required: true, message: '请选择您的国籍' }] },
-            React.createElement(
-              _antd.Select,
-              { size: 'large', placeholder: '请选择国家', style: { width: "100%" }, name: 'select', value: formData.select },
-              React.createElement(
-                Option,
-                { value: 'china' },
-                '中国'
-              ),
-              React.createElement(
-                Option,
-                { value: 'use' },
-                '美国'
-              ),
-              React.createElement(
-                Option,
-                { value: 'japan' },
-                '日本'
-              ),
-              React.createElement(
-                Option,
-                { value: 'korean' },
-                '韩国'
-              ),
-              React.createElement(
-                Option,
-                { value: 'Thailand' },
-                '泰国'
-              )
-            )
-          )
-        ),
-        React.createElement(
-          FormItem,
-          {
-            label: '性别：',
-            id: 'radio',
-            labelCol: { span: 7 },
-            wrapperCol: { span: 12 },
-            validateStatus: this.renderValidateStyle('radio'),
-            help: status.radio.errors ? status.radio.errors.join(',') : null,
-            required: true },
-          React.createElement(
-            Validator,
-            { rules: [{ required: true, message: '请选择您的性别' }] },
-            React.createElement(
-              RadioGroup,
-              { name: 'radio', value: formData.radio },
-              React.createElement(
-                _antd.Radio,
-                { value: 'male' },
-                '男'
-              ),
-              React.createElement(
-                _antd.Radio,
-                { value: 'female' },
-                '女'
-              )
-            )
-          )
-        ),
-        React.createElement(
-          FormItem,
-          {
             label: '密码：',
             id: 'password',
             labelCol: { span: 7 },
@@ -309,42 +210,6 @@ var Demo = React.createClass({
                 message: '请再次输入密码'
               }, { validator: this.checkPass2 }] },
             React.createElement(_antd.Input, { name: 'rePasswd', id: 'password2', type: 'password', onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop, autoComplete: 'off', value: formData.rePasswd, placeholder: '两次输入密码保持一致' })
-          )
-        ),
-        React.createElement(
-          FormItem,
-          {
-            label: '生日：',
-            id: 'birthday',
-            labelCol: { span: 7 },
-            wrapperCol: { span: 12 },
-            validateStatus: this.renderValidateStyle('birthday'),
-            help: status.birthday.errors ? status.birthday.errors.join(',') : null,
-            required: true },
-          React.createElement(
-            Validator,
-            { rules: [{
-                required: true,
-                type: 'date',
-                message: '你的生日是什么呢?'
-              }, { validator: this.checkBirthday }] },
-            React.createElement(_antd.Datepicker, { name: 'birthday', value: formData.birthday })
-          )
-        ),
-        React.createElement(
-          FormItem,
-          {
-            label: '8~12间的质数：',
-            id: 'primeNumber',
-            labelCol: { span: 7 },
-            wrapperCol: { span: 12 },
-            validateStatus: this.renderValidateStyle('primeNumber'),
-            help: status.primeNumber.errors ? status.primeNumber.errors.join(',') : null,
-            required: true },
-          React.createElement(
-            Validator,
-            { rules: [{ validator: this.checkPrime }] },
-            React.createElement(_antd.InputNumber, { name: 'primeNumber', min: 8, max: 12, value: formData.primeNumber })
           )
         ),
         React.createElement(
@@ -384,11 +249,8 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">
-<span class="hljs-keyword">import</span> {Validation, Select, Radio, Button, Datepicker, InputNumber, Form, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Button, Form, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Validator = Validation.Validator;
-<span class="hljs-keyword">const</span> Option = Select.Option;
-<span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cx</span>(<span class="hljs-params">classNames</span>) </span>{
@@ -413,24 +275,16 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
       status: {
         email: {},
         name: {},
-        select: {},
-        radio: {},
         passwd: {},
         rePasswd: {},
-        textarea: {},
-        birthday: {},
-        primeNumber: {}
+        textarea: {}
       },
       formData: {
         email: <span class="hljs-literal">undefined</span>,
         name: <span class="hljs-literal">undefined</span>,
-        select: <span class="hljs-literal">undefined</span>,
-        radio: <span class="hljs-literal">undefined</span>,
         passwd: <span class="hljs-literal">undefined</span>,
         rePasswd: <span class="hljs-literal">undefined</span>,
-        textarea: <span class="hljs-literal">undefined</span>,
-        birthday: <span class="hljs-literal">undefined</span>,
-        primeNumber: <span class="hljs-number">9</span>
+        textarea: <span class="hljs-literal">undefined</span>
       },
       isEmailOver: <span class="hljs-literal">false</span>, <span class="hljs-comment">// email 是否输入完毕</span>
       emailValidateMethod: <span class="hljs-string">'onBlur'</span> <span class="hljs-comment">// 用于改变 email 的验证方法</span>
@@ -517,22 +371,6 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
     }
   },
 
-  checkBirthday(rule, value, callback) {
-    <span class="hljs-keyword">if</span> (value &amp;&amp; value.getTime() &gt;= <span class="hljs-built_in">Date</span>.now()){
-      callback(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'你不可能在未来出生吧!'</span>));
-    } <span class="hljs-keyword">else</span> {
-      callback();
-    }
-  },
-
-  checkPrime(rule, value, callback) {
-    <span class="hljs-keyword">if</span> (value !== <span class="hljs-number">11</span>) {
-      callback(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'8~12之间的质数明明是11啊!'</span>));
-    } <span class="hljs-keyword">else</span> {
-      callback();
-    }
-  },
-
   render() {
     <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">this</span>.state.formData;
     <span class="hljs-keyword">const</span> status = <span class="hljs-keyword">this</span>.state.status;
@@ -569,41 +407,6 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-            <span class="hljs-attribute">label</span>=<span class="hljs-value">"国籍："</span>
-            <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span>
-            <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
-            <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-            <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">{this.renderValidateStyle('select')}</span>
-            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.select.errors</span> ? <span class="hljs-attribute">status.select.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
-            <span class="hljs-attribute">required</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的国籍'}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择国家"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:"100%"}}</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.select}</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"china"</span>&gt;</span>中国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"use"</span>&gt;</span>美国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"japan"</span>&gt;</span>日本<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"korean"</span>&gt;</span>韩国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Thailand"</span>&gt;</span>泰国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-            <span class="hljs-attribute">label</span>=<span class="hljs-value">"性别："</span>
-            <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio"</span>
-            <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
-            <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-            <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">{this.renderValidateStyle('radio')}</span>
-            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.radio.errors</span> ? <span class="hljs-attribute">status.radio.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
-            <span class="hljs-attribute">required</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的性别'}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.radio}</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
             <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>
             <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span>
             <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
@@ -636,36 +439,6 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-            <span class="hljs-attribute">label</span>=<span class="hljs-value">"生日："</span>
-            <span class="hljs-attribute">id</span>=<span class="hljs-value">"birthday"</span>
-            <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
-            <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-            <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">{this.renderValidateStyle('birthday')}</span>
-            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.birthday.errors</span> ? <span class="hljs-attribute">status.birthday.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
-            <span class="hljs-attribute">required</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{</span>
-                <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>,
-                <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">date</span>',
-                <span class="hljs-attribute">message:</span> '你的生日是什么呢?'
-              }, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkBirthday</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"birthday"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.birthday}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Datepicker</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-            <span class="hljs-attribute">label</span>=<span class="hljs-value">"8~12间的质数："</span>
-            <span class="hljs-attribute">id</span>=<span class="hljs-value">"primeNumber"</span>
-            <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
-            <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-            <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">{this.renderValidateStyle('primeNumber')}</span>
-            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.primeNumber.errors</span> ? <span class="hljs-attribute">status.primeNumber.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
-            <span class="hljs-attribute">required</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{validator:</span> <span class="hljs-attribute">this.checkPrime</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"primeNumber"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{8}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{12}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.primeNumber}</span>/&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
             <span class="hljs-attribute">label</span>=<span class="hljs-value">"备注："</span>
             <span class="hljs-attribute">id</span>=<span class="hljs-value">"textarea"</span>
             <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">7</span>}}
@@ -694,10 +467,10 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-basic">基本</a>
+      <a href="#demo-basic">Input 表单域</a>
     </div>
     <p>基本的表单校验例子。</p>
-<p>每个表单域要声明 <code>name</code> 属性作为校验的标识，可通过其 <code>isValidating</code>、<code>errors</code> 属性判断是否处于校验中、是否校验不通过状态，具体可参见 <strong>用户名</strong> 校验。</p>
+<p><strong>每个表单域要声明 <code>name</code> 属性作为校验的标识</strong>，可通过其 <code>isValidating</code>、<code>errors</code> 属性判断是否处于校验中、是否校验不通过状态，具体可参见 <strong>用户名</strong> 校验。</p>
 <p>表单提交的时候，通过 Validation 的 validate 方法判断是否所有表单域校验通过（isValid 会作为回调函数的参数传入）。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>

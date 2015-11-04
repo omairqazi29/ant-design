@@ -1,12 +1,12 @@
 <div class="code-box" id="demo-nested">
   <div class="code-box-demo">
     <div id="components-spin-demo-nested"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var _antd = require('antd');
 
 var Card = React.createClass({
-  displayName: 'Card',
+  displayName: "Card",
 
   getInitialState: function getInitialState() {
     return {
@@ -19,22 +19,24 @@ var Card = React.createClass({
     });
   },
   render: function render() {
-    var card = React.createElement('div', { className: 'card-example' });
+    var container = React.createElement(_antd.Alert, { message: "消息提示的文案",
+      description: "消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍",
+      type: "info" });
     return React.createElement(
-      'div',
+      "div",
       null,
       this.state.loading ? React.createElement(
         _antd.Spin,
         null,
-        card
-      ) : card,
-      '切换加载状态：',
+        container
+      ) : container,
+      "切换加载状态：",
       React.createElement(_antd.Switch, { checked: this.state.loading, onChange: this.toggle })
     );
   }
 });
 
-ReactDOM.render(React.createElement(Card, null), document.getElementById('components-spin-demo-nested'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Card, null), document.getElementById('components-spin-demo-nested'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Card = React.createClass({
   getInitialState() {
@@ -48,9 +50,11 @@ ReactDOM.render(React.createElement(Card, null), document.getElementById('compon
     });
   },
   render() {
-    <span class="hljs-keyword">const</span> card = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"card-example"</span> /&gt;</span>;</span>
+    <span class="hljs-keyword">const</span> container =  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"消息提示的文案"</span>
+      <span class="hljs-attribute">description</span>=<span class="hljs-value">"消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍"</span>
+      <span class="hljs-attribute">type</span>=<span class="hljs-value">"info"</span> /&gt;</span>;</span>
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      {this.state.loading ? <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span>&gt;</span>{card}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span> : card}
+      {this.state.loading ? <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span>&gt;</span>{container}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span> : container}
       切换加载状态：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.toggle}</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }

@@ -186,7 +186,7 @@ Upload 文件上传 - Ant Design
     <script>
       window.antdVersion = {
         latest: '0.10.0-beta16',
-        stable: '0.9.3'
+        stable: '0.9.4'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -587,6 +587,12 @@ Upload 文件上传 - Ant Design
 <td>无</td>
 </tr>
 <tr>
+<td>showUploadList</td>
+<td>可选参数, 是否展示 uploadList, 默认开启</td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
 <td>multiple</td>
 <td>可选参数, 是否支持多选文件，支持 <code>ie10+</code></td>
 <td>Boolean</td>
@@ -849,6 +855,7 @@ var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
+  showUploadList: false,
   action: '/upload.do'
 };
 
@@ -861,6 +868,7 @@ ReactDOM.render(React.createElement(
 
 <span class="hljs-keyword">const</span> props = {
   name: <span class="hljs-string">'file'</span>,
+  showUploadList: <span class="hljs-literal">false</span>,
   action: <span class="hljs-string">'/upload.do'</span>
 };
 
@@ -869,13 +877,11 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag-simple')
-);</span></code></pre></div><style>
-#components-upload-demo-drag-simple {
+);</span></code></pre></div><style type="text/css">#components-upload-demo-drag-simple {
   width: 246px;
-  height: 146px;
-}
-</style>
-
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-upload-demo-drag-simple</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">246px</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -972,6 +978,7 @@ var Dragger = _antd.Upload.Dragger;
 
 var props = {
   name: 'file',
+  showUploadList: false,
   action: '/upload.do'
 };
 
@@ -998,6 +1005,7 @@ ReactDOM.render(React.createElement(
 
 <span class="hljs-keyword">const</span> props = {
   name: <span class="hljs-string">'file'</span>,
+  showUploadList: <span class="hljs-literal">false</span>,
   action: <span class="hljs-string">'/upload.do'</span>
 };
 
@@ -1010,12 +1018,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag')
-);</span></code></pre></div><style>
-#components-upload-demo-drag {
-  height: 300px;
-}
-</style>
-
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
