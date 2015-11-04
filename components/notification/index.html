@@ -185,7 +185,7 @@ Notification 通知提醒框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta17',
+        latest: '0.10.0-beta18',
         stable: '0.9.4'
       };
     </script>
@@ -843,8 +843,8 @@ var _antd = require('antd');
 var openNotification = function openNotification() {
   var args = {
     message: "这是标题",
-    description: "这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案",
-    duration: 10
+    description: "我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，",
+    duration: 0
   };
   _antd.notification.open(args);
 };
@@ -858,8 +858,8 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
     message: <span class="hljs-string">"这是标题"</span>,
-    description: <span class="hljs-string">"这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"</span>,
-    duration: <span class="hljs-number">10</span>
+    description: <span class="hljs-string">"我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，"</span>,
+    duration: <span class="hljs-number">0</span>
   };
   notification.open(args);
 };

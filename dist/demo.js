@@ -44478,8 +44478,8 @@
 	
 	var prefixCls = 'ant-popover';
 	
-	exports['default'] = _react2['default'].createClass({
-	  displayName: 'index',
+	var Popover = _react2['default'].createClass({
+	  displayName: 'Popover',
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
@@ -44491,8 +44491,39 @@
 	      overlayStyle: {}
 	    };
 	  },
+	
 	  render: function render() {
-	    var overlay = _react2['default'].createElement(
+	    var transitionName = ({
+	      top: 'zoom-down',
+	      bottom: 'zoom-up',
+	      left: 'zoom-right',
+	      right: 'zoom-left',
+	      topLeft: 'zoom-down',
+	      bottomLeft: 'zoom-up',
+	      leftTop: 'zoom-right',
+	      rightTop: 'zoom-left',
+	      topRight: 'zoom-down',
+	      bottomRight: 'zoom-up',
+	      leftBottom: 'zoom-right',
+	      rightBottom: 'zoom-left'
+	    })[this.props.placement];
+	
+	    return _react2['default'].createElement(
+	      _rcTooltip2['default'],
+	      _extends({ transitionName: transitionName,
+	        ref: 'tooltip'
+	      }, this.props, {
+	        overlay: this.getOverlay() }),
+	      this.props.children
+	    );
+	  },
+	
+	  getPopupDomNode: function getPopupDomNode() {
+	    return this.refs.tooltip.refs.trigger.popupDomNode;
+	  },
+	
+	  getOverlay: function getOverlay() {
+	    return _react2['default'].createElement(
 	      'div',
 	      null,
 	      _react2['default'].createElement(
@@ -44506,22 +44537,10 @@
 	        this.props.overlay
 	      )
 	    );
-	
-	    var transitionName = ({
-	      top: 'zoom-down',
-	      bottom: 'zoom-up',
-	      left: 'zoom-right',
-	      right: 'zoom-left'
-	    })[this.props.placement];
-	
-	    return _react2['default'].createElement(
-	      _rcTooltip2['default'],
-	      _extends({ transitionName: transitionName
-	      }, this.props, { overlay: overlay }),
-	      this.props.children
-	    );
 	  }
 	});
+	
+	exports['default'] = Popover;
 	module.exports = exports['default'];
 
 /***/ },
@@ -61043,12 +61062,12 @@
 	        null,
 	        _react2['default'].createElement(_iconfont2['default'], { className: prefixCls + 'icon-' + args.icon + prefixCls + 'icon', type: iconType }),
 	        _react2['default'].createElement(
-	          'p',
+	          'div',
 	          { className: prefixCls + 'message' },
 	          args.message
 	        ),
 	        _react2['default'].createElement(
-	          'p',
+	          'div',
 	          { className: prefixCls + 'description' },
 	          args.description
 	        )
@@ -61066,12 +61085,12 @@
 	          'div',
 	          null,
 	          _react2['default'].createElement(
-	            'p',
+	            'div',
 	            { className: prefixCls + 'message' },
 	            args.message
 	          ),
 	          _react2['default'].createElement(
-	            'p',
+	            'div',
 	            { className: prefixCls + 'description' },
 	            args.description
 	          )
@@ -61087,12 +61106,12 @@
 	          'div',
 	          null,
 	          _react2['default'].createElement(
-	            'p',
+	            'div',
 	            { className: prefixCls + 'message' },
 	            args.message
 	          ),
 	          _react2['default'].createElement(
-	            'p',
+	            'div',
 	            { className: prefixCls + 'description' },
 	            args.description
 	          ),
@@ -67820,7 +67839,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta17",
+		"version": "0.10.0-beta18",
 		"stableVersion": "0.9.4",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -67903,6 +67922,7 @@
 			"eslint-config-airbnb": "^0.1.0",
 			"eslint-plugin-babel": "^2.1.1",
 			"eslint-plugin-react": "^3.3.1",
+			"expect.js": "~0.3.1",
 			"extract-text-webpack-plugin": "^0.8.1",
 			"gh-pages": "^0.3.1",
 			"jest-cli": "~0.6.1",
@@ -67925,7 +67945,7 @@
 			"clean": "rm -rf _site dist",
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
 			"just-deploy": "npm run clean && webpack --config webpack.deploy.config.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
-			"lint": "eslint components index.js --ext '.js,.jsx'",
+			"lint": "eslint components test index.js --ext '.js,.jsx'",
 			"test": "npm run lint && webpack && npm run jest",
 			"jest": "jest",
 			"pub": "sh ./scripts/publish.sh",

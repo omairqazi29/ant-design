@@ -185,7 +185,7 @@ Iconfont 字体图标 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta17',
+        latest: '0.10.0-beta18',
         stable: '0.9.4'
       };
     </script>
@@ -681,8 +681,8 @@ var IconSet = React.createClass({
     return React.createElement(
       'ul',
       { className: 'anticons-list clearfix' },
-      this.props.icons.map(function (type) {
-        return React.createElement(CopyableIcon, { type: type });
+      this.props.icons.map(function (type, i) {
+        return React.createElement(CopyableIcon, { key: i, type: type });
       })
     );
   }
