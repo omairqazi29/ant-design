@@ -442,58 +442,99 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-validation-demo-customize'));</span></code></pre></div><style>
-  .ant-pwd-strength {
-    display: inline-block;
-    margin-left: 8px;
-    line-height: 32px;
-    height: 32px;
-    vertical-align: middle;
-  }
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-validation-demo-customize'));</span></code></pre></div><style type="text/css">.ant-pwd-strength {
+  display: inline-block;
+  margin-left: 8px;
+  line-height: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
 
-  .ant-pwd-strength-item {
-    float: left;
-    margin-right: 1px;
-    margin-top: 12px;
-    width: 19px;
-    height: 8px;
-    line-height: 8px;
-    list-style: none;
-    background-color: #f3f3f3;
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
+.ant-pwd-strength-item {
+  float: left;
+  margin-right: 1px;
+  margin-top: 12px;
+  width: 19px;
+  height: 8px;
+  line-height: 8px;
+  list-style: none;
+  background-color: #f3f3f3;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
-  .ant-pwd-strength-item-1 {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-  }
+.ant-pwd-strength-item-1 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
 
-  .ant-pwd-strength-item-2 {
-    width: 20px;
-  }
+.ant-pwd-strength-item-2 {
+  width: 20px;
+}
 
-  .ant-pwd-strength-item-3 {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    margin-right: 8px;
-  }
+.ant-pwd-strength-item-3 {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 8px;
+}
 
-  .ant-pwd-strength-low .ant-pwd-strength-item-1, .ant-pwd-strength-medium .ant-pwd-strength-item-1, .ant-pwd-strength-high .ant-pwd-strength-item-1 {
-    background-color: #FAC450;
-  }
+.ant-pwd-strength-low .ant-pwd-strength-item-1, .ant-pwd-strength-medium .ant-pwd-strength-item-1, .ant-pwd-strength-high .ant-pwd-strength-item-1 {
+  background-color: #FAC450;
+}
 
-  .ant-pwd-strength-medium .ant-pwd-strength-item-2, .ant-pwd-strength-high .ant-pwd-strength-item-2 {
-    background-color: rgba(135, 208, 104, .6);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9987D068,endColorstr=#9987D068);
-  }
+.ant-pwd-strength-medium .ant-pwd-strength-item-2, .ant-pwd-strength-high .ant-pwd-strength-item-2 {
+  background-color: rgba(135, 208, 104, .6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9987D068,endColorstr=#9987D068);
+}
 
-  .ant-pwd-strength-high .ant-pwd-strength-item-3 {
-    background-color: #87D068;
-  }
-</style>
+.ant-pwd-strength-high .ant-pwd-strength-item-3 {
+  background-color: #87D068;
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.ant-pwd-strength</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> inline-block</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">32px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">32px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">vertical-align</span>:<span class="hljs-value"> middle</span></span>;
+}</span>
 
+<span class="hljs-class">.ant-pwd-strength-item</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> left</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-number">1px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">12px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">19px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">list-style</span>:<span class="hljs-value"> none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f3f3f3</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> all <span class="hljs-number">0.3s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>)</span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-item-1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border-top-left-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-left-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-item-2</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-item-3</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border-top-right-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-right-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-low</span> <span class="hljs-class">.ant-pwd-strength-item-1</span>, <span class="hljs-class">.ant-pwd-strength-medium</span> <span class="hljs-class">.ant-pwd-strength-item-1</span>, <span class="hljs-class">.ant-pwd-strength-high</span> <span class="hljs-class">.ant-pwd-strength-item-1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FAC450</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-medium</span> <span class="hljs-class">.ant-pwd-strength-item-2</span>, <span class="hljs-class">.ant-pwd-strength-high</span> <span class="hljs-class">.ant-pwd-strength-item-2</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">rgba</span>(<span class="hljs-number">135</span>, <span class="hljs-number">208</span>, <span class="hljs-number">104</span>, .<span class="hljs-number">6</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">filter</span>:<span class="hljs-value">progid:DXImageTransform.Microsoft.<span class="hljs-function">gradient</span>(startColorstr=<span class="hljs-hexcolor">#9987D068</span>,endColorstr=<span class="hljs-hexcolor">#9987D068</span>)</span></span>;
+}</span>
+
+<span class="hljs-class">.ant-pwd-strength-high</span> <span class="hljs-class">.ant-pwd-strength-item-3</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#87D068</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
