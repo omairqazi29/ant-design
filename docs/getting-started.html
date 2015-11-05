@@ -583,7 +583,7 @@ $ npm install</code></pre></div><p>若下面例子发生报错，尝试用 <code
 });
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;</code></pre></div><p>你可以在 <a href="/components/button">这里</a> 选用更多组件。</p>
-<h3 id="4-开发调试">4. 开发调试<a href="#4-开发调试" class="anchor">#</a> </h3><p>一键启动调试，访问 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> 查看效果。</p>
+<h3 id="4-开发调试">4. 开发调试<a href="#4-开发调试" class="anchor">#</a> </h3><p>一键启动调试，访问 <a href="http://127.0.0.1:8001">http://127.0.0.1:8001</a> 查看效果。</p>
 <div class="highlight"><pre><code class="bash">$ npm run dev</code></pre></div><h3 id="5-构建和部署">5. 构建和部署<a href="#5-构建和部署" class="anchor">#</a> </h3><div class="highlight"><pre><code class="bash">$ npm run build</code></pre></div><p>入口文件会构建到 <code>dist</code> 目录中，你可以自由部署到不同环境中进行引用。</p>
 <blockquote>
 <p>上述例子用于帮助你理解 Ant Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。</p>
@@ -615,6 +615,8 @@ $ npm install</code></pre></div><p>若下面例子发生报错，尝试用 <code
 }
 </style>
 
+
+<h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试，可以参考我们所使用的 <a href="https://github.com/ant-design/antd-build/blob/master/lib/webpack.common.config.js">webpack 配置</a>。</p>
 <h2 id="小甜点">小甜点<a href="#小甜点" class="anchor">#</a> </h2><ul>
 <li>你可以享用 <code>npm</code> 生态圈里的所有模块。</li>
 <li>我们使用了 <code>babel</code>，试试用 <a href="http://babeljs.io/blog/2015/06/07/react-on-es6-plus/">ES6</a> 的写法来提升编码的愉悦感。</li>
