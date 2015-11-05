@@ -599,13 +599,20 @@ Carousel 走马灯 - Ant Design
 <td>linear</td>
 </tr>
 <tr>
-<td>onChange</td>
+<td>beforeChange</td>
 <td>切换面板的回调</td>
-<td>Function</td>
+<td>function(from, to)</td>
+<td>无</td>
+</tr>
+<tr>
+<td>afterChange</td>
+<td>切换面板的回调</td>
+<td>function(current)</td>
 <td>无</td>
 </tr>
 </tbody>
 </table>
+<p>更多参数可参考：<a href="https://github.com/akiran/react-slick">https://github.com/akiran/react-slick</a></p>
 <style>
 .ant-carousel .slick-slide {
   text-align: center;
@@ -633,9 +640,13 @@ Carousel 走马灯 - Ant Design
 
 var _antd = require('antd');
 
+function onChange(a, b, c) {
+  console.log(a, b, c);
+}
+
 ReactDOM.render(React.createElement(
   _antd.Carousel,
-  null,
+  { afterChange: onChange },
   React.createElement(
     'div',
     null,
@@ -674,8 +685,12 @@ ReactDOM.render(React.createElement(
   )
 ), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">a, b, c</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(a, b, c);
+}
+
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Carousel</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Carousel</span> <span class="hljs-attribute">afterChange</span>=<span class="hljs-value">{onChange}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
