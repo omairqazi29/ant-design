@@ -1563,7 +1563,7 @@ var Test = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      dataSource: dataSource
+      dataSource: null
     };
   },
   refresh: function refresh() {
@@ -1592,7 +1592,7 @@ var Test = React.createClass({
       React.createElement(
         _antd.Button,
         { type: 'primary', onClick: this.refresh },
-        '重新加载数据'
+        '加载初始数据'
       ),
       ' ',
       React.createElement(
@@ -1659,7 +1659,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      dataSource: dataSource
+      dataSource: <span class="hljs-literal">null</span>
     };
   },
   refresh() {
@@ -1684,7 +1684,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.dataSource}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span> /&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.refresh}</span>&gt;</span>
-        重新加载数据
+        加载初始数据
       <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       &amp;nbsp;
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.changeAndRefresh}</span>&gt;</span>

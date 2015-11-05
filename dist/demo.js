@@ -51587,14 +51587,19 @@
 	      }
 	    } else {
 	      var _ret2 = (function () {
+	        // remote 模式使用 this.dataSource
+	        var dataSource = _this9.getRemoteDataSource();
+	        if (!dataSource) {
+	          return {
+	            v: null
+	          };
+	        }
 	        var state = (0, _objectAssign3['default'])({}, _this9.state, newState);
 	        if (newState || !_this9.state.loading) {
 	          _this9.setState((0, _objectAssign3['default'])({
 	            loading: true
 	          }, newState));
 	        }
-	        // remote 模式使用 this.dataSource
-	        var dataSource = _this9.getRemoteDataSource();
 	        var buildInParams = dataSource.getParams.apply(_this9, _this9.prepareParamsArguments(state)) || {};
 	        return {
 	          v: (0, _reqwest2['default'])({
@@ -51724,11 +51729,16 @@
 	      emptyClass = ' ant-table-empty';
 	    }
 	
-	    var table = _react2['default'].createElement(_rcTable2['default'], _extends({}, this.props, {
-	      data: data,
-	      columns: columns,
-	      className: classString,
-	      expandIconAsCell: expandIconAsCell }));
+	    var table = _react2['default'].createElement(
+	      'div',
+	      null,
+	      _react2['default'].createElement(_rcTable2['default'], _extends({}, this.props, {
+	        data: data,
+	        columns: columns,
+	        className: classString,
+	        expandIconAsCell: expandIconAsCell })),
+	      emptyText
+	    );
 	    if (this.state.loading) {
 	      // if there is no pagination or no data, the height of spin should decrease by half of pagination
 	      var paginationPatchClass = this.hasPagination() && data && data.length !== 0 ? 'ant-table-with-pagination' : 'ant-table-without-pagination';
@@ -51743,7 +51753,6 @@
 	      'div',
 	      { className: 'clearfix' + emptyClass },
 	      table,
-	      emptyText,
 	      this.renderPagination()
 	    );
 	  }
