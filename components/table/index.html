@@ -741,6 +741,13 @@ Table 表格 - Ant Design
 <td></td>
 <td>无</td>
 </tr>
+<tr>
+<td>className</td>
+<td>列的 className</td>
+<td>String</td>
+<td></td>
+<td>无</td>
+</tr>
 </tbody>
 </table>
 <h3 id="datasource">dataSource<a href="#datasource" class="anchor">#</a> </h3><p>远程数据源配置对象。</p>
@@ -1863,8 +1870,9 @@ var columns = [{
     );
   }
 }, {
-  title: '年龄',
-  dataIndex: 'age'
+  title: '资产',
+  className: 'column-money',
+  dataIndex: 'money'
 }, {
   title: '住址',
   dataIndex: 'address'
@@ -1873,17 +1881,17 @@ var columns = [{
 var data = [{
   key: '1',
   name: '胡彦斌',
-  age: 32,
+  money: '￥300,000.00',
   address: '西湖区湖底公园1号'
 }, {
   key: '2',
   name: '胡彦祖',
-  age: 42,
+  money: '￥1,256,000.00',
   address: '西湖区湖底公园1号'
 }, {
   key: '3',
   name: '李大嘴',
-  age: 32,
+  money: '￥120,000.00',
   address: '西湖区湖底公园1号'
 }];
 
@@ -1896,8 +1904,9 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
+  title: <span class="hljs-string">'资产'</span>,
+  className: <span class="hljs-string">'column-money'</span>,
+  dataIndex: <span class="hljs-string">'money'</span>
 }, {
   title: <span class="hljs-string">'住址'</span>,
   dataIndex: <span class="hljs-string">'address'</span>
@@ -1906,22 +1915,26 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> data = [{
   key: <span class="hljs-string">'1'</span>,
   name: <span class="hljs-string">'胡彦斌'</span>,
-  age: <span class="hljs-number">32</span>,
+  money: <span class="hljs-string">'￥300,000.00'</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
   key: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
+  money: <span class="hljs-string">'￥1,256,000.00'</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
   key: <span class="hljs-string">'3'</span>,
   name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
+  money: <span class="hljs-string">'￥120,000.00'</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">bordered</span>=<span class="hljs-value">{true}</span> /&gt;</span>
-, document.getElementById('components-table-demo-bordered'));</span></code></pre></div>
+, document.getElementById('components-table-demo-bordered'));</span></code></pre></div><style type="text/css">.column-money {
+  text-align: right;
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.column-money</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> right</span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2409,7 +2422,7 @@ ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span>
       <a href="#demo-colspan-rowspan">表格行/列合并</a>
     </div>
     <p>表头只支持列合并，使用 column 里的 colSpan 进行设置。</p>
-<p>表格支持行/列合并，可以指定内容对齐方式，使用 render 里的单元格属性 colSpan 或者 rowSpan 设值为 0 时，设置的表格不会渲染。</p>
+<p>表格支持行/列合并，使用 render 里的单元格属性 colSpan 或者 rowSpan 设值为 0 时，设置的表格不会渲染。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-loading">

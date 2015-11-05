@@ -5634,7 +5634,6 @@ textarea.ant-calendar-time-input {
   font-weight: bold;
   -webkit-transition: background .3s ease;
           transition: background .3s ease;
-  text-align: left;
 }
 .ant-table th .anticon-bars {
   margin-left: 4px;
