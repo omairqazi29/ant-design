@@ -4037,7 +4037,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: absolute;
   top: 7px;
   right: 0;
-  padding-right: 15px;
+  padding-right: 14px;
   color: #2db7f5;
 }
 :root .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
@@ -4066,7 +4066,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: absolute;
   top: 7px;
   right: 0;
-  padding-right: 15px;
+  padding-right: 14px;
   color: #2db7f5;
 }
 :root .ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:after {
@@ -5861,7 +5861,7 @@ textarea.ant-calendar-time-input {
   position: absolute;
   top: 7px;
   right: 0;
-  padding-right: 15px;
+  padding-right: 14px;
   color: #2db7f5;
 }
 :root .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
@@ -6066,27 +6066,11 @@ tr.ant-table-expanded-row:hover {
   margin-top: -4px;
   padding-bottom: 8px;
 }
-.ant-popover-placement-top:after,
-.ant-popover-placement-topLeft:after,
-.ant-popover-placement-topRight:after {
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 8px;
-}
 .ant-popover-placement-right,
 .ant-popover-placement-rightTop,
 .ant-popover-placement-rightBottom {
   margin-left: 4px;
   padding-left: 8px;
-}
-.ant-popover-placement-right:after,
-.ant-popover-placement-rightTop:after,
-.ant-popover-placement-rightBottom:after {
-  top: 0;
-  left: -8px;
-  width: 8px;
-  height: 100%;
 }
 .ant-popover-placement-bottom,
 .ant-popover-placement-bottomLeft,
@@ -6094,27 +6078,11 @@ tr.ant-table-expanded-row:hover {
   margin-top: 4px;
   padding-top: 8px;
 }
-.ant-popover-placement-bottom:after,
-.ant-popover-placement-bottomLeft:after,
-.ant-popover-placement-bottomRight:after {
-  top: -8px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-}
 .ant-popover-placement-left,
 .ant-popover-placement-leftTop,
 .ant-popover-placement-leftBottom {
   margin-left: -4px;
   padding-right: 8px;
-}
-.ant-popover-placement-left:after,
-.ant-popover-placement-leftTop:after,
-.ant-popover-placement-leftBottom:after {
-  top: 0;
-  left: 100%;
-  width: 8px;
-  height: 100%;
 }
 .ant-popover-inner {
   max-width: 276px;
@@ -7464,6 +7432,7 @@ form .ant-calendar-picker {
   border: 1px solid #D9D9D9;
   border-radius: 6px;
   overflow: hidden;
+  width: 90px;
 }
 .ant-input-number::-moz-placeholder {
   color: #ccc;

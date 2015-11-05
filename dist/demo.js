@@ -44793,7 +44793,7 @@
 	  },
 	
 	  getPopupDomNode: function getPopupDomNode() {
-	    return this.refs.tooltip.refs.trigger.popupDomNode;
+	    return this.refs.tooltip.getPopupDomNode();
 	  },
 	
 	  getOverlay: function getOverlay() {
@@ -50398,6 +50398,8 @@
 	    };
 	  },
 	  componentDidMount: function componentDidMount() {
+	    var _this = this;
+	
 	    if (this.props.direction === 'vertical') {
 	      return;
 	    }
@@ -50425,9 +50427,8 @@
 	     * componentDidMount时滚动条还不一定出现了，这时候获取的宽度可能不是最终宽度。
 	     * 对于滚动条不占用宽度的浏览器，下面的代码也不二次render，_resize里面会判断要不要更新。
 	     */
-	    var me = this;
 	    setTimeout(function () {
-	      me._resize();
+	      _this._resize();
 	    });
 	
 	    if (window.attachEvent) {
@@ -50475,6 +50476,8 @@
 	    });
 	  },
 	  render: function render() {
+	    var _this2 = this;
+	
 	    var props = this.props;
 	    var prefixCls = props.prefixCls;
 	    var children = props.children;
@@ -50493,7 +50496,7 @@
 	        var np = {
 	          stepNumber: (idx + 1).toString(),
 	          stepLast: idx === len,
-	          tailWidth: iws.length === 0 || idx === len ? 'auto' : iws[idx] + this.state.tailWidth,
+	          tailWidth: iws.length === 0 || idx === len ? 'auto' : iws[idx] + _this2.state.tailWidth,
 	          prefixCls: prefixCls,
 	          iconPrefix: iconPrefix,
 	          maxDescriptionWidth: maxDescriptionWidth
@@ -50616,7 +50619,7 @@
 	    } else if (this.props.size === 'small') {
 	      sizeClass = 'ant-input-number-sm';
 	    }
-	    return _react2['default'].createElement(_rcInputNumber2['default'], _extends({ className: sizeClass, style: { width: 90 } }, this.props));
+	    return _react2['default'].createElement(_rcInputNumber2['default'], _extends({ className: sizeClass }, this.props));
 	  }
 	});
 	module.exports = exports['default'];
@@ -51306,7 +51309,7 @@
 	      data: [],
 	      dataSource: this.props.dataSource,
 	      filters: {},
-	      dirty: false,
+	      selectionDirty: false,
 	      loading: this.props.loading,
 	      sortColumn: '',
 	      sortOrder: '',
@@ -51355,6 +51358,8 @@
 	  },
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    var _this2 = this;
+	
 	    if ('pagination' in nextProps && nextProps.pagination !== false) {
 	      this.setState({
 	        pagination: (0, _objectAssign3['default'])({}, this.state.pagination, nextProps.pagination)
@@ -51362,8 +51367,18 @@
 	    }
 	    // 外界只有 dataSource 的变化会触发新请求
 	    if ('dataSource' in nextProps && nextProps.dataSource !== this.props.dataSource) {
+	      var selectedRowKeys = this.state.selectedRowKeys;
+	      // 把不在当前页的选中项去掉
+	      if (this.isLocalDataSource()) {
+	        (function () {
+	          var currentPageRowKeys = _this2.getLocalDataPaging(nextProps.dataSource);
+	          selectedRowKeys = selectedRowKeys.filter(function (key) {
+	            return currentPageRowKeys.indexOf(key) >= 0;
+	          });
+	        })();
+	      }
 	      this.setState({
-	        selectedRowKeys: [],
+	        selectionDirty: false,
 	        dataSource: nextProps.dataSource,
 	        loading: true
 	      }, this.fetch);
@@ -51439,6 +51454,7 @@
 	    filters = (0, _objectAssign3['default'])({}, this.state.filters, _defineProperty({}, this.getColumnKey(column), filters));
 	    var newState = {
 	      selectedRowKeys: [],
+	      selectionDirty: false,
 	      filters: filters
 	    };
 	    this.fetch(newState);
@@ -51446,11 +51462,11 @@
 	  },
 	
 	  handleSelect: function handleSelect(record, rowIndex, e) {
-	    var _this2 = this;
+	    var _this3 = this;
 	
 	    var checked = e.target.checked;
 	    var defaultSelection = [];
-	    if (!this.state.dirty) {
+	    if (!this.state.selectionDirty) {
 	      defaultSelection = this.getDefaultSelection();
 	    }
 	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
@@ -51464,32 +51480,7 @@
 	    }
 	    this.setState({
 	      selectedRowKeys: selectedRowKeys,
-	      dirty: true
-	    });
-	    if (this.props.rowSelection.onSelect) {
-	      var data = this.getCurrentPageData();
-	      var selectedRows = data.filter(function (row, i) {
-	        return selectedRowKeys.indexOf(_this2.getRecordKey(row, i)) >= 0;
-	      });
-	      this.props.rowSelection.onSelect(record, checked, selectedRows);
-	    }
-	  },
-	
-	  handleRadioSelect: function handleRadioSelect(record, rowIndex, e) {
-	    var _this3 = this;
-	
-	    var checked = e.target.checked;
-	    var defaultSelection = [];
-	    if (!this.state.dirty) {
-	      defaultSelection = this.getDefaultSelection();
-	    }
-	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
-	    var key = this.getRecordKey(record, rowIndex);
-	    selectedRowKeys = [key];
-	    this.setState({
-	      selectedRowKeys: selectedRowKeys,
-	      radioIndex: record.key,
-	      dirty: true
+	      selectionDirty: true
 	    });
 	    if (this.props.rowSelection.onSelect) {
 	      var data = this.getCurrentPageData();
@@ -51500,26 +51491,51 @@
 	    }
 	  },
 	
-	  handleSelectAllRow: function handleSelectAllRow(e) {
+	  handleRadioSelect: function handleRadioSelect(record, rowIndex, e) {
 	    var _this4 = this;
+	
+	    var checked = e.target.checked;
+	    var defaultSelection = [];
+	    if (!this.state.selectionDirty) {
+	      defaultSelection = this.getDefaultSelection();
+	    }
+	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
+	    var key = this.getRecordKey(record, rowIndex);
+	    selectedRowKeys = [key];
+	    this.setState({
+	      selectedRowKeys: selectedRowKeys,
+	      radioIndex: record.key,
+	      selectionDirty: true
+	    });
+	    if (this.props.rowSelection.onSelect) {
+	      var data = this.getCurrentPageData();
+	      var selectedRows = data.filter(function (row, i) {
+	        return selectedRowKeys.indexOf(_this4.getRecordKey(row, i)) >= 0;
+	      });
+	      this.props.rowSelection.onSelect(record, checked, selectedRows);
+	    }
+	  },
+	
+	  handleSelectAllRow: function handleSelectAllRow(e) {
+	    var _this5 = this;
 	
 	    var checked = e.target.checked;
 	    var data = this.getCurrentPageData();
 	    var selectedRowKeys = checked ? data.filter(function (item) {
-	      if (_this4.props.rowSelection.getCheckboxProps) {
-	        return !_this4.props.rowSelection.getCheckboxProps(item).disabled;
+	      if (_this5.props.rowSelection.getCheckboxProps) {
+	        return !_this5.props.rowSelection.getCheckboxProps(item).disabled;
 	      }
 	      return true;
 	    }).map(function (item, i) {
-	      return _this4.getRecordKey(item, i);
+	      return _this5.getRecordKey(item, i);
 	    }) : [];
 	    this.setState({
 	      selectedRowKeys: selectedRowKeys,
-	      dirty: true
+	      selectionDirty: true
 	    });
 	    if (this.props.rowSelection.onSelectAll) {
 	      var selectedRows = data.filter(function (row, i) {
-	        return selectedRowKeys.indexOf(_this4.getRecordKey(row, i)) >= 0;
+	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelectAll(checked, selectedRows);
 	    }
@@ -51535,6 +51551,7 @@
 	    var newState = {
 	      // 防止内存泄漏，只维持当页
 	      selectedRowKeys: [],
+	      selectionDirty: false,
 	      pagination: pagination
 	    };
 	    this.fetch(newState);
@@ -51553,14 +51570,24 @@
 	    if (this.props.rowSelection.getCheckboxProps) {
 	      props = this.props.rowSelection.getCheckboxProps.call(this, record);
 	    }
-	    var checked = this.state.dirty ? this.state.radioIndex === record.key : this.getDefaultSelection().indexOf(rowIndex) >= 0;
+	    var checked = undefined;
+	    if (this.state.selectionDirty) {
+	      checked = this.state.radioIndex === record.key;
+	    } else {
+	      checked = this.state.radioIndex === record.key || this.getDefaultSelection().indexOf(rowIndex) >= 0;
+	    }
 	    return _react2['default'].createElement(_radio2['default'], { disabled: props.disabled, onChange: this.handleRadioSelect.bind(this, record, rowIndex),
 	      value: record.key, checked: checked });
 	  },
 	
 	  renderSelectionCheckBox: function renderSelectionCheckBox(value, record, index) {
 	    var rowIndex = this.getRecordKey(record, index); // 从 1 开始
-	    var checked = this.state.dirty ? this.state.selectedRowKeys.indexOf(rowIndex) >= 0 : this.getDefaultSelection().indexOf(rowIndex) >= 0;
+	    var checked = undefined;
+	    if (this.state.selectionDirty) {
+	      checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0;
+	    } else {
+	      checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0 || this.getDefaultSelection().indexOf(rowIndex) >= 0;
+	    }
 	    var props = {};
 	    if (this.props.rowSelection.getCheckboxProps) {
 	      props = this.props.rowSelection.getCheckboxProps.call(this, record);
@@ -51574,7 +51601,7 @@
 	  },
 	
 	  renderRowSelection: function renderRowSelection() {
-	    var _this5 = this;
+	    var _this6 = this;
 	
 	    var columns = this.props.columns.concat();
 	    if (this.props.rowSelection) {
@@ -51584,13 +51611,13 @@
 	        checked = false;
 	      } else {
 	        checked = data.filter(function (item) {
-	          if (_this5.props.rowSelection.getCheckboxProps) {
-	            return !_this5.props.rowSelection.getCheckboxProps(item).disabled;
+	          if (_this6.props.rowSelection.getCheckboxProps) {
+	            return !_this6.props.rowSelection.getCheckboxProps(item).disabled;
 	          }
 	          return true;
 	        }).every(function (item, i) {
-	          var key = _this5.getRecordKey(item, i);
-	          return _this5.state.selectedRowKeys.indexOf(key) >= 0;
+	          var key = _this6.getRecordKey(item, i);
+	          return _this6.state.selectedRowKeys.indexOf(key) >= 0;
 	        });
 	      }
 	      var selectionColumn = undefined;
@@ -51638,24 +51665,24 @@
 	  },
 	
 	  renderColumnsDropdown: function renderColumnsDropdown(columns) {
-	    var _this6 = this;
+	    var _this7 = this;
 	
 	    return columns.map(function (column, i) {
 	      column = (0, _objectAssign3['default'])({}, column);
-	      var key = _this6.getColumnKey(column, i);
+	      var key = _this7.getColumnKey(column, i);
 	      var filterDropdown = undefined,
 	          sortButton = undefined;
 	      if (column.filters && column.filters.length > 0) {
-	        var colFilters = _this6.state.filters[key] || [];
+	        var colFilters = _this7.state.filters[key] || [];
 	        filterDropdown = _react2['default'].createElement(_filterDropdown2['default'], { column: column,
 	          selectedKeys: colFilters,
-	          confirmFilter: _this6.handleFilter });
+	          confirmFilter: _this7.handleFilter });
 	      }
 	      if (column.sorter) {
-	        var isSortColumn = _this6.isSortColumn(column);
+	        var isSortColumn = _this7.isSortColumn(column);
 	        if (isSortColumn) {
 	          column.className = column.className || '';
-	          if (_this6.state.sortOrder) {
+	          if (_this7.state.sortOrder) {
 	            column.className += ' ant-table-column-sort';
 	          }
 	        }
@@ -51664,16 +51691,16 @@
 	          { className: 'ant-table-column-sorter' },
 	          _react2['default'].createElement(
 	            'span',
-	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this6.state.sortOrder === 'ascend' ? 'on' : 'off'),
+	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this7.state.sortOrder === 'ascend' ? 'on' : 'off'),
 	              title: '升序排序',
-	              onClick: _this6.toggleSortOrder.bind(_this6, 'ascend', column) },
+	              onClick: _this7.toggleSortOrder.bind(_this7, 'ascend', column) },
 	            _react2['default'].createElement(_iconfont2['default'], { type: 'caret-up' })
 	          ),
 	          _react2['default'].createElement(
 	            'span',
-	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this6.state.sortOrder === 'descend' ? 'on' : 'off'),
+	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this7.state.sortOrder === 'descend' ? 'on' : 'off'),
 	              title: '降序排序',
-	              onClick: _this6.toggleSortOrder.bind(_this6, 'descend', column) },
+	              onClick: _this7.toggleSortOrder.bind(_this7, 'descend', column) },
 	            _react2['default'].createElement(_iconfont2['default'], { type: 'caret-down' })
 	          )
 	        );
@@ -51718,7 +51745,7 @@
 	  },
 	
 	  prepareParamsArguments: function prepareParamsArguments(state) {
-	    var _this7 = this;
+	    var _this8 = this;
 	
 	    // 准备筛选、排序、分页的参数
 	    var pagination = undefined;
@@ -51726,9 +51753,9 @@
 	    var sorter = {};
 	    pagination = state.pagination;
 	    this.props.columns.forEach(function (column) {
-	      var colFilters = state.filters[_this7.getColumnKey(column)] || [];
+	      var colFilters = state.filters[_this8.getColumnKey(column)] || [];
 	      if (colFilters.length > 0) {
-	        filters[_this7.getColumnKey(column)] = colFilters;
+	        filters[_this8.getColumnKey(column)] = colFilters;
 	      }
 	    });
 	    if (state.sortColumn && state.sortOrder && state.sortColumn.dataIndex) {
@@ -51739,23 +51766,23 @@
 	  },
 	
 	  fetch: function fetch(newState) {
-	    var _this8 = this;
+	    var _this9 = this;
 	
 	    if (this.isLocalDataSource()) {
 	      if (newState) {
 	        this.setState(newState);
 	      }
 	    } else {
-	      var _ret = (function () {
-	        var state = (0, _objectAssign3['default'])({}, _this8.state, newState);
-	        if (newState || !_this8.state.loading) {
-	          _this8.setState((0, _objectAssign3['default'])({
+	      var _ret2 = (function () {
+	        var state = (0, _objectAssign3['default'])({}, _this9.state, newState);
+	        if (newState || !_this9.state.loading) {
+	          _this9.setState((0, _objectAssign3['default'])({
 	            loading: true
 	          }, newState));
 	        }
 	        // remote 模式使用 this.dataSource
-	        var dataSource = _this8.getRemoteDataSource();
-	        var buildInParams = dataSource.getParams.apply(_this8, _this8.prepareParamsArguments(state)) || {};
+	        var dataSource = _this9.getRemoteDataSource();
+	        var buildInParams = dataSource.getParams.apply(_this9, _this9.prepareParamsArguments(state)) || {};
 	        return {
 	          v: (0, _reqwest2['default'])({
 	            url: dataSource.url,
@@ -51764,18 +51791,18 @@
 	            headers: dataSource.headers,
 	            type: 'json',
 	            success: function success(result) {
-	              if (_this8.isMounted()) {
-	                var pagination = (0, _objectAssign3['default'])(state.pagination, dataSource.getPagination.call(_this8, result));
-	                _this8.setState({
-	                  dirty: false,
+	              if (_this9.isMounted()) {
+	                var pagination = (0, _objectAssign3['default'])(state.pagination, dataSource.getPagination.call(_this9, result));
+	                _this9.setState({
+	                  selectionDirty: false,
 	                  loading: false,
-	                  data: dataSource.resolve.call(_this8, result),
+	                  data: dataSource.resolve.call(_this9, result),
 	                  pagination: pagination
 	                });
 	              }
 	            },
 	            error: function error() {
-	              _this8.setState({
+	              _this9.setState({
 	                loading: false,
 	                data: []
 	              });
@@ -51784,20 +51811,20 @@
 	        };
 	      })();
 	
-	      if (typeof _ret === 'object') return _ret.v;
+	      if (typeof _ret2 === 'object') return _ret2.v;
 	    }
 	  },
 	
 	  findColumn: function findColumn(myKey) {
-	    var _this9 = this;
+	    var _this10 = this;
 	
 	    return this.props.columns.filter(function (c) {
-	      return _this9.getColumnKey(c) === myKey;
+	      return _this10.getColumnKey(c) === myKey;
 	    })[0];
 	  },
 	
-	  getLocalDataPaging: function getLocalDataPaging() {
-	    var data = this.getLocalData();
+	  getLocalDataPaging: function getLocalDataPaging(dataSource) {
+	    var data = this.getLocalData(dataSource);
 	    var current = undefined,
 	        pageSize = undefined;
 	    var state = this.state;
@@ -51823,11 +51850,11 @@
 	    return data;
 	  },
 	
-	  getLocalData: function getLocalData() {
-	    var _this10 = this;
+	  getLocalData: function getLocalData(dataSource) {
+	    var _this11 = this;
 	
 	    var state = this.state;
-	    var data = this.state.dataSource;
+	    var data = dataSource || this.state.dataSource;
 	    // 排序
 	    if (state.sortOrder && state.sorter) {
 	      data = data.sort(state.sorter);
@@ -51835,7 +51862,7 @@
 	    // 筛选
 	    if (state.filters) {
 	      Object.keys(state.filters).forEach(function (columnKey) {
-	        var col = _this10.findColumn(columnKey);
+	        var col = _this11.findColumn(columnKey);
 	        var values = state.filters[columnKey] || [];
 	        if (values.length === 0) {
 	          return;
@@ -67478,13 +67505,41 @@
 	
 	var _commonOpenAnimation2 = _interopRequireDefault(_commonOpenAnimation);
 	
+	function noop() {}
+	
 	var AntMenu = _react2['default'].createClass({
 	  displayName: 'AntMenu',
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      prefixCls: 'ant-menu'
+	      prefixCls: 'ant-menu',
+	      onClick: noop,
+	      onOpen: noop,
+	      onClose: noop
 	    };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      openKeys: []
+	    };
+	  },
+	  handleClick: function handleClick() {
+	    this.setState({
+	      openKeys: []
+	    });
+	    this.props.onClick();
+	  },
+	  handleOpenKeys: function handleOpenKeys(e) {
+	    this.setState({
+	      openKeys: e.openKeys
+	    });
+	    this.props.onOpen();
+	  },
+	  handleCloseKeys: function handleCloseKeys(e) {
+	    this.setState({
+	      openKeys: e.openKeys
+	    });
+	    this.props.onClose();
 	  },
 	  render: function render() {
 	    var openAnimation = '';
@@ -67500,10 +67555,16 @@
 	        break;
 	      default:
 	    }
+	    var props = {
+	      openKeys: this.state.openKeys,
+	      onClick: this.handleClick,
+	      onOpen: this.handleOpenKeys,
+	      onClose: this.handleCloseKeys
+	    };
 	    if (this.props.mode === 'inline') {
 	      return _react2['default'].createElement(_rcMenu2['default'], _extends({}, this.props, { openAnimation: openAnimation }));
 	    } else {
-	      return _react2['default'].createElement(_rcMenu2['default'], _extends({}, this.props, { openTransitionName: openAnimation }));
+	      return _react2['default'].createElement(_rcMenu2['default'], _extends({}, this.props, props, { openTransitionName: openAnimation }));
 	    }
 	  }
 	});
@@ -68246,7 +68307,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta19",
+		"version": "0.10.0-beta21",
 		"stableVersion": "0.9.4",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -68291,7 +68352,7 @@
 			"rc-dropdown": "~1.4.3",
 			"rc-form-validation": "~2.4.7",
 			"rc-input-number": "~2.3.0",
-			"rc-menu": "~4.7.0",
+			"rc-menu": "~4.8.0",
 			"rc-notification": "~1.2.0",
 			"rc-pagination": "~1.1.0",
 			"rc-progress": "~1.0.0",
