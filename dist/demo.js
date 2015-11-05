@@ -67336,11 +67336,11 @@
 	      openKeys: []
 	    };
 	  },
-	  handleClick: function handleClick() {
+	  handleClick: function handleClick(e) {
 	    this.setState({
 	      openKeys: []
 	    });
-	    this.props.onClick();
+	    this.props.onClick(e);
 	  },
 	  handleOpenKeys: function handleOpenKeys(e) {
 	    this.setState({
