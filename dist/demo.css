@@ -9826,6 +9826,14 @@ a .ant-badge-count:active {
   display: inline-block;
   font-size: 1em;
   text-align: center;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+.ant-spin-spining {
+  opacity: 1;
+  position: static;
 }
 .ant-spin-nested-loading {
   position: relative;
@@ -9839,8 +9847,8 @@ a .ant-badge-count:active {
   z-index: 4;
 }
 .ant-spin-container {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-spin-nested-loading > .ant-spin-container {
   opacity: 0.7;

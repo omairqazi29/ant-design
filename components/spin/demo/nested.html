@@ -25,11 +25,11 @@ var Card = React.createClass({
     return React.createElement(
       "div",
       null,
-      this.state.loading ? React.createElement(
+      React.createElement(
         _antd.Spin,
-        null,
+        { spining: this.state.loading },
         container
-      ) : container,
+      ),
       "切换加载状态：",
       React.createElement(_antd.Switch, { checked: this.state.loading, onChange: this.toggle })
     );
@@ -54,7 +54,7 @@ ReactDOM.render(React.createElement(Card, null), document.getElementById('compon
       <span class="hljs-attribute">description</span>=<span class="hljs-value">"消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍"</span>
       <span class="hljs-attribute">type</span>=<span class="hljs-value">"info"</span> /&gt;</span>;</span>
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      {this.state.loading ? <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span>&gt;</span>{container}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span> : container}
+      <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> <span class="hljs-attribute">spining</span>=<span class="hljs-value">{this.state.loading}</span>&gt;</span>{container}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span>
       切换加载状态：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.toggle}</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }

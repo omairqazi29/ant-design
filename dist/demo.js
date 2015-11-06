@@ -53913,7 +53913,8 @@
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      size: 'default'
+	      size: 'default',
+	      spining: true
 	    };
 	  },
 	
@@ -53937,7 +53938,7 @@
 	
 	    var spinClassName = (0, _rcUtil.classSet)((_classSet = {
 	      'ant-spin': true
-	    }, _defineProperty(_classSet, 'ant-spin-' + size, size), _defineProperty(_classSet, className, !!className), _classSet));
+	    }, _defineProperty(_classSet, 'ant-spin-' + size, size), _defineProperty(_classSet, className, !!className), _defineProperty(_classSet, 'ant-spin-spining', this.props.spining), _classSet));
 	
 	    var spinElement = undefined;
 	    if (!_cssAnimation.isCssAnimationSupported) {
@@ -53960,7 +53961,7 @@
 	    if (this.isNestedPattern()) {
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: 'ant-spin-nested-loading' },
+	        { className: this.props.spining ? 'ant-spin-nested-loading' : '' },
 	        spinElement,
 	        _react2['default'].createElement(
 	          'div',
