@@ -1,6 +1,6 @@
 {
   "name": "antd",
-  "version": "0.10.0-beta21",
+  "version": "0.10.0-beta22",
   "stableVersion": "0.9.4",
   "title": "Ant Design",
   "description": "一个 UI 设计语言",
@@ -95,7 +95,7 @@
     "react": "~0.14.1",
     "react-addons-test-utils": "~0.14.1",
     "react-dom": "~0.14.1",
-    "react-router": "1.0.0-rc3",
+    "react-router": "1.0.0-rc4",
     "webpack": "^1.10.1",
     "webpack-babel-jest": "^1.0.0",
     "webpack-dev-middleware": "^1.2.0"
