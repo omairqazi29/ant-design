@@ -53913,6 +53913,7 @@
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
+	      prefixCls: 'ant-spin',
 	      size: 'default',
 	      spining: true
 	    };
@@ -53933,12 +53934,11 @@
 	    var _props = this.props;
 	    var className = _props.className;
 	    var size = _props.size;
+	    var prefixCls = _props.prefixCls;
 	
-	    var others = _objectWithoutProperties(_props, ['className', 'size']);
+	    var others = _objectWithoutProperties(_props, ['className', 'size', 'prefixCls']);
 	
-	    var spinClassName = (0, _rcUtil.classSet)((_classSet = {
-	      'ant-spin': true
-	    }, _defineProperty(_classSet, 'ant-spin-' + size, size), _defineProperty(_classSet, className, !!className), _defineProperty(_classSet, 'ant-spin-spining', this.props.spining), _classSet));
+	    var spinClassName = (0, _rcUtil.classSet)((_classSet = {}, _defineProperty(_classSet, prefixCls, true), _defineProperty(_classSet, prefixCls + '-' + size, size), _defineProperty(_classSet, className, !!className), _defineProperty(_classSet, prefixCls + '-spining', this.props.spining), _classSet));
 	
 	    var spinElement = undefined;
 	    if (!_cssAnimation.isCssAnimationSupported) {
@@ -53952,20 +53952,20 @@
 	      spinElement = _react2['default'].createElement(
 	        'div',
 	        { className: spinClassName },
-	        _react2['default'].createElement('span', { className: 'ant-spin-dot ant-spin-dot-first' }),
-	        _react2['default'].createElement('span', { className: 'ant-spin-dot ant-spin-dot-second' }),
-	        _react2['default'].createElement('span', { className: 'ant-spin-dot ant-spin-dot-third' })
+	        _react2['default'].createElement('span', { className: prefixCls + '-dot ' + prefixCls + '-dot-first' }),
+	        _react2['default'].createElement('span', { className: prefixCls + '-dot ' + prefixCls + '-dot-second' }),
+	        _react2['default'].createElement('span', { className: prefixCls + '-dot ' + prefixCls + '-dot-third' })
 	      );
 	    }
 	
 	    if (this.isNestedPattern()) {
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: this.props.spining ? 'ant-spin-nested-loading' : '' },
+	        { className: this.props.spining ? prefixCls + '-nested-loading' : '' },
 	        spinElement,
 	        _react2['default'].createElement(
 	          'div',
-	          { className: 'ant-spin-container' },
+	          { className: prefixCls + '-container' },
 	          this.props.children
 	        )
 	      );
