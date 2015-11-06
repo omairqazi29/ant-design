@@ -3480,7 +3480,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   margin: 0;
   text-align: left;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 6px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
@@ -4589,8 +4589,8 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0;
   width: 30px;
   height: 26px;
@@ -5096,7 +5096,7 @@ textarea.ant-calendar-time-input {
   position: relative;
   background-color: #fff;
   border: none;
-  border-radius: 6px 6px;
+  border-radius: 6px;
   background-clip: padding-box;
   outline: 0;
 }
@@ -6465,8 +6465,8 @@ tr.ant-table-expanded-row:hover {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0 8px;
   width: 50px;
 }
@@ -6652,8 +6652,8 @@ label > .anticon {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-input::-moz-placeholder {
   color: #ccc;
@@ -7419,8 +7419,8 @@ form .ant-calendar-picker {
   background-color: #fff;
   background-image: none;
   border: 1px solid #d9d9d9;
-  -webkit-transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: border .3s cubic-bezier(0.645, 0.045, 0.355, 1), background .3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0;
   padding: 0;
   line-height: 28px;
@@ -9743,7 +9743,7 @@ a .ant-badge-count:active {
   width: 12px;
   height: 12px;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 100px;
 }
 .ant-timeline-item-head-blue {
   border: 2px solid #2db7f5;
