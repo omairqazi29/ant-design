@@ -3484,6 +3484,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
+  overflow: hidden;
 }
 .ant-dropdown-menu > li {
   margin: 0;
@@ -8314,6 +8315,31 @@ label.ant-radio-button-checked:active {
   background: #2baee9;
   border-color: #2baee9;
   box-shadow: -1px 0 0 0 #2baee9;
+}
+label.ant-radio-button-disabled {
+  border-color: #d9d9d9;
+  background-color: #f3f3f3;
+  cursor: not-allowed;
+  color: #ccc;
+}
+label.ant-radio-button-disabled:first-child,
+label.ant-radio-button-disabled:hover {
+  border-color: #d9d9d9;
+  background-color: #f3f3f3;
+}
+label.ant-radio-button-disabled:first-child:before,
+label.ant-radio-button-disabled:hover:before {
+  display: none;
+}
+label.ant-radio-button-disabled:first-child {
+  box-shadow: none;
+  border-left-color: #d9d9d9;
+}
+label.ant-radio-button-disabled.ant-radio-button-checked {
+  color: #fff;
+  background-color: #ccc;
+  box-shadow: -1px 0px 0px 0px #CCC;
+  border-color: #ccc;
 }
 .ant-notification {
   position: fixed;

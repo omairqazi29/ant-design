@@ -861,27 +861,63 @@ function onChange(e) {
 }
 
 ReactDOM.render(React.createElement(
-  RadioGroup,
-  { onChange: onChange, defaultValue: 'a' },
+  'div',
+  null,
   React.createElement(
-    RadioButton,
-    { value: 'a' },
-    '杭州'
+    'div',
+    null,
+    React.createElement(
+      RadioGroup,
+      { onChange: onChange, defaultValue: 'a' },
+      React.createElement(
+        RadioButton,
+        { value: 'a' },
+        '杭州'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'b' },
+        '上海'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'c' },
+        '北京'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'd' },
+        '成都'
+      )
+    )
   ),
   React.createElement(
-    RadioButton,
-    { value: 'b' },
-    '上海'
-  ),
-  React.createElement(
-    RadioButton,
-    { value: 'c' },
-    '北京'
-  ),
-  React.createElement(
-    RadioButton,
-    { value: 'd' },
-    '成都'
+    'div',
+    { style: { marginTop: 16 } },
+    React.createElement(
+      RadioGroup,
+      { disabled: true, onChange: onChange, defaultValue: 'a' },
+      React.createElement(
+        RadioButton,
+        { value: 'a' },
+        '杭州'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'b' },
+        '上海'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'c' },
+        '北京'
+      ),
+      React.createElement(
+        RadioButton,
+        { value: 'd' },
+        '成都'
+      )
+    )
   )
 ), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> RadioButton = Radio.Button;
@@ -891,14 +927,24 @@ ReactDOM.render(React.createElement(
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked:'</span> + e.target.value);
 }
 
-ReactDOM.render((
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"a"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>杭州<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>北京<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
-)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-radio-demo-radiobutton'</span>));</code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"a"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>杭州<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>北京<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">16</span> }}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"a"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>杭州<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>北京<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-radio-demo-radiobutton'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
