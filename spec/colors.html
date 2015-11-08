@@ -485,6 +485,7 @@ var TintShadeTool = React.createClass({
     return {
       result: '#2db7f5',
       color: '#2db7f5',
+      justCopied: false,
       value: 80
     };
   },
@@ -515,7 +516,13 @@ var TintShadeTool = React.createClass({
     });
   },
   copySuccess: function copySuccess(e) {
-    antd.message.success('复制色值成功：' + e.text);
+    var _this = this;
+
+    this.setState({ justCopied: true }, function () {
+      setTimeout(function () {
+        _this.setState({ justCopied: false });
+      }, 1000);
+    });
   },
   render: function render() {
     return React.createElement(
@@ -530,7 +537,7 @@ var TintShadeTool = React.createClass({
           React.createElement(
             Tooltip,
             { title: '点击色块复制色值' },
-            React.createElement('div', { style: { width: 60, borderRadius: 6, height: 28, backgroundColor: this.state.result, display: 'inline-block', verticalAlign: 'middle', marginRight: 8 } })
+            React.createElement('div', { style: { backgroundColor: this.state.result }, className: 'color-block ' + (this.state.justCopied ? 'copied' : '') })
           )
         ),
         React.createElement(
@@ -570,7 +577,36 @@ var TintShadeTool = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(TintShadeTool, null), document.getElementById('color-tint-shade-tool'));})()</script>
+ReactDOM.render(React.createElement(TintShadeTool, null), document.getElementById('color-tint-shade-tool'));})()</script><style>
+.color-block {
+  position: relative;
+  width: 60px;
+  border-radius: 6px;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.color-block:after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "Copied!";
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  color: #444;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  opacity: 0;
+}
+.color-block.copied:after {
+  opacity: 1;
+  top: 0;
+}
+</style>
+
   </article>
 </section>
 
