@@ -25150,7 +25150,7 @@
 	    var selectedText;
 	
 	    if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
-	        element.select();
+	        element.setSelectionRange(0, element.value.length);
 	
 	        selectedText = element.value;
 	    }
@@ -25164,6 +25164,8 @@
 	
 	        selectedText = selection.toString();
 	    }
+	
+	    element.focus();
 	
 	    return selectedText;
 	}
@@ -27180,24 +27182,13 @@
 	
 	var _rcCalendarLibLocaleZh_CN2 = _interopRequireDefault(_rcCalendarLibLocaleZh_CN);
 	
-	var _gregorianCalendarFormat = __webpack_require__(332);
+	var _gregorianCalendarFormat = __webpack_require__(327);
 	
 	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
 	
 	var _objectAssign = __webpack_require__(311);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
-	
-	var localeFields = ['eras', 'months', 'shortMonths', 'weekdays', 'shortWeekdays', 'veryShortWeekdays', 'ampms', 'datePatterns', 'timePatterns', 'dateTimePattern'];
-	
-	// 转换 locale 为 rc-calender 接收的格式
-	function getCalendarLocale(locale) {
-	  locale.format = locale.format || {};
-	  localeFields.forEach(function (key) {
-	    locale.format[key] = locale[key];
-	  });
-	  return locale;
-	}
 	
 	function createPicker(TheCalendar) {
 	  return _react2['default'].createClass({
@@ -27244,13 +27235,13 @@
 	      if (formats[format]) {
 	        return formats[format];
 	      }
-	      formats[format] = new _gregorianCalendarFormat2['default'](format);
+	      formats[format] = new _gregorianCalendarFormat2['default'](format, this.getLocale().lang.format);
 	      return formats[format];
 	    },
 	    parseDateFromValue: function parseDateFromValue(value) {
 	      if (value) {
 	        if (typeof value === 'string') {
-	          return new _gregorianCalendarFormat2['default'](this.props.format).parse(value, this.getLocale());
+	          return this.getFormatter().parse(value, { locale: this.getLocale() });
 	        } else if (value instanceof Date) {
 	          var date = new _gregorianCalendar2['default'](this.getLocale());
 	          date.setTime(value);
@@ -27283,7 +27274,7 @@
 	      var calendar = _react2['default'].createElement(TheCalendar, {
 	        style: this.props.calendarStyle,
 	        disabledDate: this.props.disabledDate,
-	        locale: getCalendarLocale(this.getLocale().lang),
+	        locale: this.getLocale().lang,
 	        defaultValue: defaultCalendarValue,
 	        dateInputPlaceholder: this.props.placeholder,
 	        showTime: this.props.showTime,
@@ -27399,7 +27390,7 @@
 	
 	var _dateDateTable2 = _interopRequireDefault(_dateDateTable);
 	
-	var _calendarCalendarHeader = __webpack_require__(327);
+	var _calendarCalendarHeader = __webpack_require__(329);
 	
 	var _calendarCalendarHeader2 = _interopRequireDefault(_calendarCalendarHeader);
 	
@@ -29693,6 +29684,13 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.getTodayTime = getTodayTime;
+	exports.getTitleString = getTitleString;
+	exports.compareByDay = compareByDay;
+	exports.getFormatter = getFormatter;
+	exports.getTodayElement = getTodayElement;
+	exports.getOkElement = getOkElement;
+	exports.syncTime = syncTime;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -29700,1098 +29698,108 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	function _getTodayTime(value) {
+	var _gregorianCalendarFormat = __webpack_require__(327);
+	
+	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
+	
+	function getTodayTime(value) {
 	  var today = value.clone();
 	  today.setTime(Date.now());
 	  return today;
 	}
 	
-	function _getTitleString(value) {
+	function getTitleString(value) {
 	  return value.getYear() + '-' + (value.getMonth() + 1) + '-' + value.getDayOfMonth();
 	}
 	
 	function getTodayTimeStr(value) {
-	  var today = _getTodayTime(value);
-	  return _getTitleString(today);
+	  var today = getTodayTime(value);
+	  return getTitleString(today);
 	}
 	
-	exports['default'] = {
-	  compareByDay: function compareByDay(v1, v2) {
-	    if (v1.getYear() > v2.getYear()) {
-	      return 1;
-	    }
-	    if (v1.getYear() < v2.getYear()) {
-	      return -1;
-	    }
-	    if (v1.getMonth() > v2.getMonth()) {
-	      return 1;
-	    }
-	    if (v1.getMonth() < v2.getMonth()) {
-	      return -1;
-	    }
-	
-	    if (v1.getDayOfMonth() > v2.getDayOfMonth()) {
-	      return 1;
-	    }
-	    if (v1.getDayOfMonth() < v2.getDayOfMonth()) {
-	      return -1;
-	    }
-	
-	    return 0;
-	  },
-	
-	  getTitleString: function getTitleString(value) {
-	    return _getTitleString(value);
-	  },
-	
-	  getTodayTime: function getTodayTime(value) {
-	    return _getTodayTime(value);
-	  },
-	
-	  getTodayElement: function getTodayElement(componentProps) {
-	    var prefixCls = componentProps.prefixCls;
-	    var locale = componentProps.locale;
-	    var value = componentProps.value;
-	
-	    var disabledToday = false;
-	    var localeNow = locale.today;
-	    if (componentProps.showTime) {
-	      localeNow = locale.now || locale.today;
-	    }
-	    var disabledTodayClass = '';
-	    if (componentProps.disabledDate) {
-	      disabledToday = componentProps.disabledDate(_getTodayTime(value), value);
-	      if (disabledToday) {
-	        disabledTodayClass = prefixCls + '-today-btn-disabled';
-	      }
-	    }
-	    return _react2['default'].createElement(
-	      'a',
-	      { className: prefixCls + '-today-btn ' + disabledTodayClass,
-	        role: 'button',
-	        onClick: disabledToday ? null : componentProps.onToday,
-	        title: getTodayTimeStr(componentProps.value) },
-	      localeNow
-	    );
-	  },
-	
-	  getOkElement: function getOkElement(componentProps) {
-	    var prefixCls = componentProps.prefixCls;
-	    var locale = componentProps.locale;
-	
-	    var className = prefixCls + '-ok-btn';
-	    if (componentProps.okDisabled) {
-	      className += ' ' + prefixCls + '-ok-btn-disabled';
-	    }
-	    return _react2['default'].createElement(
-	      'a',
-	      { className: className,
-	        role: 'button',
-	        onClick: componentProps.okDisabled ? null : componentProps.onOk },
-	      locale.ok
-	    );
-	  },
-	
-	  syncTime: function syncTime(from, to) {
-	    to.setHourOfDay(from.getHourOfDay());
-	    to.setMinutes(from.getMinutes());
-	    to.setSeconds(from.getSeconds());
+	function compareByDay(v1, v2) {
+	  if (v1.getYear() > v2.getYear()) {
+	    return 1;
 	  }
-	};
-	module.exports = exports['default'];
+	  if (v1.getYear() < v2.getYear()) {
+	    return -1;
+	  }
+	  if (v1.getMonth() > v2.getMonth()) {
+	    return 1;
+	  }
+	  if (v1.getMonth() < v2.getMonth()) {
+	    return -1;
+	  }
+	
+	  if (v1.getDayOfMonth() > v2.getDayOfMonth()) {
+	    return 1;
+	  }
+	  if (v1.getDayOfMonth() < v2.getDayOfMonth()) {
+	    return -1;
+	  }
+	
+	  return 0;
+	}
+	
+	function getFormatter(format, locale) {
+	  if (typeof format === 'string') {
+	    return new _gregorianCalendarFormat2['default'](format, locale.format);
+	  }
+	  return format;
+	}
+	
+	function getTodayElement(componentProps) {
+	  var prefixCls = componentProps.prefixCls;
+	  var locale = componentProps.locale;
+	  var value = componentProps.value;
+	
+	  var disabledToday = false;
+	  var localeNow = locale.today;
+	  if (componentProps.showTime) {
+	    localeNow = locale.now || locale.today;
+	  }
+	  var disabledTodayClass = '';
+	  if (componentProps.disabledDate) {
+	    disabledToday = componentProps.disabledDate(getTodayTime(value), value);
+	    if (disabledToday) {
+	      disabledTodayClass = prefixCls + '-today-btn-disabled';
+	    }
+	  }
+	  return _react2['default'].createElement(
+	    'a',
+	    { className: prefixCls + '-today-btn ' + disabledTodayClass,
+	      role: 'button',
+	      onClick: disabledToday ? null : componentProps.onToday,
+	      title: getTodayTimeStr(componentProps.value) },
+	    localeNow
+	  );
+	}
+	
+	function getOkElement(componentProps) {
+	  var prefixCls = componentProps.prefixCls;
+	  var locale = componentProps.locale;
+	
+	  var className = prefixCls + '-ok-btn';
+	  if (componentProps.okDisabled) {
+	    className += ' ' + prefixCls + '-ok-btn-disabled';
+	  }
+	  return _react2['default'].createElement(
+	    'a',
+	    { className: className,
+	      role: 'button',
+	      onClick: componentProps.okDisabled ? null : componentProps.onOk },
+	    locale.ok
+	  );
+	}
+	
+	function syncTime(from, to) {
+	  to.setHourOfDay(from.getHourOfDay());
+	  to.setMinutes(from.getMinutes());
+	  to.setSeconds(from.getSeconds());
+	}
 
 /***/ },
 /* 327 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(81);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _monthMonthPanel = __webpack_require__(328);
-	
-	var _monthMonthPanel2 = _interopRequireDefault(_monthMonthPanel);
-	
-	var _gregorianCalendarFormat = __webpack_require__(332);
-	
-	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
-	
-	var _yearYearPanel = __webpack_require__(329);
-	
-	var _yearYearPanel2 = _interopRequireDefault(_yearYearPanel);
-	
-	var _rcUtil = __webpack_require__(298);
-	
-	var _rcUtil2 = _interopRequireDefault(_rcUtil);
-	
-	var toFragment = _rcUtil2['default'].Children.mapSelf;
-	
-	function goMonth(direction) {
-	  var next = this.props.value.clone();
-	  next.addMonth(direction);
-	  this.props.onValueChange(next);
-	}
-	
-	function goYear(direction) {
-	  var next = this.props.value.clone();
-	  next.addYear(direction);
-	  this.props.onValueChange(next);
-	}
-	
-	var CalendarHeader = _react2['default'].createClass({
-	  displayName: 'CalendarHeader',
-	
-	  propTypes: {
-	    locale: _react.PropTypes.object,
-	    value: _react.PropTypes.object,
-	    onValueChange: _react.PropTypes.func
-	  },
-	
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      enableNext: 1,
-	      enablePrev: 1
-	    };
-	  },
-	
-	  getInitialState: function getInitialState() {
-	    var props = this.props;
-	    this.yearFormatter = new _gregorianCalendarFormat2['default'](props.locale.yearFormat);
-	    this.monthFormatter = new _gregorianCalendarFormat2['default'](props.locale.monthFormat);
-	    this.nextMonth = goMonth.bind(this, 1);
-	    this.previousMonth = goMonth.bind(this, -1);
-	    this.nextYear = goYear.bind(this, 1);
-	    this.previousYear = goYear.bind(this, -1);
-	    return {};
-	  },
-	
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    var locale = this.props.locale;
-	    if (nextProps.locale !== locale) {
-	      this.yearFormatter = new _gregorianCalendarFormat2['default'](locale.yearFormat);
-	      this.monthFormatter = new _gregorianCalendarFormat2['default'](locale.monthFormat);
-	    }
-	  },
-	
-	  onSelect: function onSelect(value) {
-	    this.setState({
-	      showMonthPanel: 0,
-	      showYearPanel: 0
-	    });
-	    this.props.onValueChange(value);
-	  },
-	
-	  getMonthYearElement: function getMonthYearElement() {
-	    var props = this.props;
-	    var prefixCls = props.prefixCls;
-	    var locale = props.locale;
-	    var value = this.props.value;
-	    var monthBeforeYear = locale.monthBeforeYear;
-	    var selectClassName = prefixCls + '-' + (monthBeforeYear ? 'my-select' : 'ym-select');
-	    var year = _react2['default'].createElement(
-	      'a',
-	      { className: prefixCls + '-year-select',
-	        role: 'button',
-	        onClick: this.showYearPanel,
-	        title: locale.monthSelect },
-	      this.yearFormatter.format(value)
-	    );
-	    var month = _react2['default'].createElement(
-	      'a',
-	      { className: prefixCls + '-month-select',
-	        role: 'button',
-	        onClick: this.showMonthPanel,
-	        title: locale.monthSelect },
-	      this.monthFormatter.format(value)
-	    );
-	    var my = [];
-	    if (monthBeforeYear) {
-	      my = [month, year];
-	    } else {
-	      my = [year, month];
-	    }
-	    return _react2['default'].createElement(
-	      'span',
-	      { className: selectClassName },
-	      toFragment(my)
-	    );
-	  },
-	
-	  showIf: function showIf(condition, el) {
-	    return condition ? el : null;
-	  },
-	
-	  showMonthPanel: function showMonthPanel() {
-	    this.setState({
-	      showMonthPanel: 1,
-	      showYearPanel: 0
-	    });
-	  },
-	
-	  showYearPanel: function showYearPanel() {
-	    this.setState({
-	      showMonthPanel: 0,
-	      showYearPanel: 1
-	    });
-	  },
-	
-	  render: function render() {
-	    var props = this.props;
-	    var enableNext = props.enableNext;
-	    var enablePrev = props.enablePrev;
-	    var prefixCls = props.prefixCls;
-	    var locale = props.locale;
-	    var value = props.value;
-	
-	    var state = this.state;
-	    var PanelClass = null;
-	    if (state.showMonthPanel) {
-	      PanelClass = _monthMonthPanel2['default'];
-	    } else if (state.showYearPanel) {
-	      PanelClass = _yearYearPanel2['default'];
-	    }
-	    var panel = undefined;
-	    if (PanelClass) {
-	      panel = _react2['default'].createElement(PanelClass, { locale: locale, defaultValue: value, rootPrefixCls: prefixCls, onSelect: this.onSelect });
-	    }
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: prefixCls + '-header' },
-	      _react2['default'].createElement(
-	        'div',
-	        { style: { position: 'relative' } },
-	        this.showIf(enablePrev, _react2['default'].createElement(
-	          'a',
-	          { className: prefixCls + '-prev-year-btn',
-	            role: 'button',
-	            onClick: this.previousYear,
-	            title: locale.previousYear },
-	          '«'
-	        )),
-	        this.showIf(enablePrev, _react2['default'].createElement(
-	          'a',
-	          { className: prefixCls + '-prev-month-btn',
-	            role: 'button',
-	            onClick: this.previousMonth,
-	            title: locale.previousMonth },
-	          '‹'
-	        )),
-	        this.getMonthYearElement(),
-	        this.showIf(enableNext, _react2['default'].createElement(
-	          'a',
-	          { className: prefixCls + '-next-month-btn',
-	            onClick: this.nextMonth,
-	            title: locale.nextMonth },
-	          '›'
-	        )),
-	        this.showIf(enableNext, _react2['default'].createElement(
-	          'a',
-	          { className: prefixCls + '-next-year-btn',
-	            onClick: this.nextYear,
-	            title: locale.nextYear },
-	          '»'
-	        ))
-	      ),
-	      panel
-	    );
-	  }
-	});
-	
-	exports['default'] = CalendarHeader;
-	module.exports = exports['default'];
-
-/***/ },
-/* 328 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(81);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _yearYearPanel = __webpack_require__(329);
-	
-	var _yearYearPanel2 = _interopRequireDefault(_yearYearPanel);
-	
-	var _MonthTable = __webpack_require__(331);
-	
-	var _MonthTable2 = _interopRequireDefault(_MonthTable);
-	
-	function goYear(direction) {
-	  var next = this.state.value.clone();
-	  next.addYear(direction);
-	  this.setAndChangeValue(next);
-	}
-	
-	function noop() {}
-	
-	var MonthPanel = _react2['default'].createClass({
-	  displayName: 'MonthPanel',
-	
-	  propTypes: {
-	    onChange: _react.PropTypes.func,
-	    onSelect: _react.PropTypes.func
-	  },
-	
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      onChange: noop,
-	      onSelect: noop
-	    };
-	  },
-	
-	  getInitialState: function getInitialState() {
-	    var props = this.props;
-	    // bind methods
-	    this.nextYear = goYear.bind(this, 1);
-	    this.previousYear = goYear.bind(this, -1);
-	    this.prefixCls = props.rootPrefixCls + '-month-panel';
-	    return {
-	      value: props.value || props.defaultValue
-	    };
-	  },
-	
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    if ('value' in nextProps) {
-	      this.setState({
-	        value: nextProps.value
-	      });
-	    }
-	  },
-	
-	  onYearPanelSelect: function onYearPanelSelect(current) {
-	    this.setState({
-	      showYearPanel: 0
-	    });
-	    this.setAndChangeValue(current);
-	  },
-	
-	  setAndChangeValue: function setAndChangeValue(value) {
-	    this.setValue(value);
-	    this.props.onChange(value);
-	  },
-	
-	  setAndSelectValue: function setAndSelectValue(value) {
-	    this.setValue(value);
-	    this.props.onSelect(value);
-	  },
-	
-	  setValue: function setValue(value) {
-	    if (!('value' in this.props)) {
-	      this.setState({
-	        value: value
-	      });
-	    }
-	  },
-	
-	  showYearPanel: function showYearPanel() {
-	    this.setState({
-	      showYearPanel: 1
-	    });
-	  },
-	
-	  render: function render() {
-	    var props = this.props;
-	    var value = this.state.value;
-	    var locale = props.locale;
-	    var year = value.getYear();
-	    var prefixCls = this.prefixCls;
-	    var yearPanel = undefined;
-	    if (this.state.showYearPanel) {
-	      yearPanel = _react2['default'].createElement(_yearYearPanel2['default'], { locale: locale, value: value, rootPrefixCls: props.rootPrefixCls,
-	        onSelect: this.onYearPanelSelect });
-	    }
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: prefixCls, style: props.style },
-	      _react2['default'].createElement(
-	        'div',
-	        null,
-	        _react2['default'].createElement(
-	          'div',
-	          { className: prefixCls + '-header' },
-	          _react2['default'].createElement(
-	            'a',
-	            { className: prefixCls + '-prev-year-btn',
-	              role: 'button',
-	              onClick: this.previousYear,
-	              title: locale.previousYear },
-	            '«'
-	          ),
-	          _react2['default'].createElement(
-	            'a',
-	            { className: prefixCls + '-year-select',
-	              role: 'button',
-	              onClick: this.showYearPanel,
-	              title: locale.yearSelect },
-	            _react2['default'].createElement(
-	              'span',
-	              { className: prefixCls + '-year-select-content' },
-	              year
-	            ),
-	            _react2['default'].createElement(
-	              'span',
-	              { className: prefixCls + '-year-select-arrow' },
-	              'x'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'a',
-	            { className: prefixCls + '-next-year-btn',
-	              role: 'button',
-	              onClick: this.nextYear,
-	              title: locale.nextYear },
-	            '»'
-	          )
-	        ),
-	        _react2['default'].createElement(_MonthTable2['default'], {
-	          onSelect: this.setAndSelectValue,
-	          locale: locale,
-	          value: value,
-	          rootPrefixCls: props.rootPrefixCls })
-	      ),
-	      yearPanel
-	    );
-	  }
-	});
-	
-	exports['default'] = MonthPanel;
-	module.exports = exports['default'];
-
-/***/ },
-/* 329 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(81);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _rcUtil = __webpack_require__(298);
-	
-	var _decadeDecadePanel = __webpack_require__(330);
-	
-	var _decadeDecadePanel2 = _interopRequireDefault(_decadeDecadePanel);
-	
-	var ROW = 4;
-	var COL = 3;
-	
-	function goYear(direction) {
-	  var next = this.state.value.clone();
-	  next.addYear(direction);
-	  this.setState({ value: next });
-	}
-	
-	function chooseYear(year) {
-	  var next = this.state.value.clone();
-	  next.setYear(year);
-	  next.rollSetMonth(this.state.value.getMonth());
-	  this.props.onSelect(next);
-	}
-	
-	var YearPanel = (function (_React$Component) {
-	  _inherits(YearPanel, _React$Component);
-	
-	  function YearPanel(props) {
-	    var _this = this;
-	
-	    _classCallCheck(this, YearPanel);
-	
-	    _get(Object.getPrototypeOf(YearPanel.prototype), 'constructor', this).call(this, props);
-	    this.prefixCls = props.rootPrefixCls + '-year-panel';
-	    this.state = {
-	      value: props.value || props.defaultValue
-	    };
-	    this.nextDecade = goYear.bind(this, 10);
-	    this.previousDecade = goYear.bind(this, -10);
-	    ['showDecadePanel', 'onDecadePanelSelect'].forEach(function (method) {
-	      _this[method] = _this[method].bind(_this);
-	    });
-	  }
-	
-	  _createClass(YearPanel, [{
-	    key: 'onDecadePanelSelect',
-	    value: function onDecadePanelSelect(current) {
-	      this.setState({
-	        value: current,
-	        showDecadePanel: 0
-	      });
-	    }
-	  }, {
-	    key: 'getYears',
-	    value: function getYears() {
-	      var value = this.state.value;
-	      var currentYear = value.getYear();
-	      var startYear = parseInt(currentYear / 10, 10) * 10;
-	      var previousYear = startYear - 1;
-	      var endYear = startYear + 9;
-	      var years = [];
-	      var index = 0;
-	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
-	        years[rowIndex] = [];
-	        for (var colIndex = 0; colIndex < COL; colIndex++) {
-	          var year = previousYear + index;
-	          var content = undefined;
-	          if (year < startYear) {
-	            content = '';
-	          } else if (year > endYear) {
-	            content = '';
-	          } else {
-	            content = year + '';
-	          }
-	          years[rowIndex][colIndex] = {
-	            content: content,
-	            year: year,
-	            title: content
-	          };
-	          index++;
-	        }
-	      }
-	      return years;
-	    }
-	  }, {
-	    key: 'showDecadePanel',
-	    value: function showDecadePanel() {
-	      this.setState({
-	        showDecadePanel: 1
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-	
-	      var props = this.props;
-	      var value = this.state.value;
-	      var locale = props.locale;
-	      var years = this.getYears();
-	      var currentYear = value.getYear();
-	      var startYear = parseInt(currentYear / 10, 10) * 10;
-	      var endYear = startYear + 9;
-	      var prefixCls = this.prefixCls;
-	
-	      var yeasEls = years.map(function (row, index) {
-	        var tds = row.map(function (yearData) {
-	          var _classNameMap;
-	
-	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-selected-cell', yearData.year === currentYear), _defineProperty(_classNameMap, prefixCls + '-last-decade-cell', yearData.year < startYear), _defineProperty(_classNameMap, prefixCls + '-next-decade-cell', yearData.year > endYear), _classNameMap);
-	          var clickHandler = undefined;
-	          if (yearData.year < startYear) {
-	            clickHandler = _this2.previousDecade;
-	          } else if (yearData.year > endYear) {
-	            clickHandler = _this2.nextDecade;
-	          } else {
-	            clickHandler = chooseYear.bind(_this2, yearData.year);
-	          }
-	          return _react2['default'].createElement(
-	            'td',
-	            { role: 'gridcell',
-	              title: yearData.title,
-	              key: yearData.content,
-	              onClick: clickHandler,
-	              className: (0, _rcUtil.classSet)(classNameMap)
-	            },
-	            _react2['default'].createElement(
-	              'a',
-	              {
-	                className: prefixCls + '-year' },
-	              yearData.content
-	            )
-	          );
-	        });
-	        return _react2['default'].createElement(
-	          'tr',
-	          { key: index, role: 'row' },
-	          tds
-	        );
-	      });
-	
-	      var decadePanel = undefined;
-	      if (this.state.showDecadePanel) {
-	        decadePanel = _react2['default'].createElement(_decadeDecadePanel2['default'], { locale: locale, value: value, rootPrefixCls: props.rootPrefixCls,
-	          onSelect: this.onDecadePanelSelect });
-	      }
-	
-	      return _react2['default'].createElement(
-	        'div',
-	        { className: this.prefixCls },
-	        _react2['default'].createElement(
-	          'div',
-	          null,
-	          _react2['default'].createElement(
-	            'div',
-	            { className: prefixCls + '-header' },
-	            _react2['default'].createElement(
-	              'a',
-	              { className: prefixCls + '-prev-decade-btn',
-	                role: 'button',
-	                onClick: this.previousDecade,
-	                title: locale.previousDecade },
-	              '«'
-	            ),
-	            _react2['default'].createElement(
-	              'a',
-	              { className: prefixCls + '-decade-select',
-	                role: 'button',
-	                onClick: this.showDecadePanel,
-	                title: locale.decadeSelect },
-	              _react2['default'].createElement(
-	                'span',
-	                { className: prefixCls + '-decade-select-content' },
-	                startYear,
-	                '-',
-	                endYear
-	              ),
-	              _react2['default'].createElement(
-	                'span',
-	                { className: prefixCls + '-decade-select-arrow' },
-	                'x'
-	              )
-	            ),
-	            _react2['default'].createElement(
-	              'a',
-	              { className: prefixCls + '-next-decade-btn',
-	                role: 'button',
-	                onClick: this.nextDecade,
-	                title: locale.nextDecade },
-	              '»'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { className: prefixCls + '-body' },
-	            _react2['default'].createElement(
-	              'table',
-	              { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
-	              _react2['default'].createElement(
-	                'tbody',
-	                { className: prefixCls + '-tbody' },
-	                yeasEls
-	              )
-	            )
-	          )
-	        ),
-	        decadePanel
-	      );
-	    }
-	  }]);
-	
-	  return YearPanel;
-	})(_react2['default'].Component);
-	
-	exports['default'] = YearPanel;
-	
-	YearPanel.propTypes = {
-	  rootPrefixCls: _react.PropTypes.string,
-	  value: _react.PropTypes.object,
-	  defaultValue: _react.PropTypes.object
-	};
-	
-	YearPanel.defaultProps = {
-	  onSelect: function onSelect() {}
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 330 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(81);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _rcUtil = __webpack_require__(298);
-	
-	var ROW = 4;
-	var COL = 3;
-	
-	function goYear(direction) {
-	  var next = this.state.value.clone();
-	  next.addYear(direction);
-	  this.setState({
-	    value: next
-	  });
-	}
-	
-	function chooseDecade(year, event) {
-	  var next = this.state.value.clone();
-	  next.setYear(year);
-	  next.rollSetMonth(this.state.value.getMonth());
-	  this.props.onSelect(next);
-	  event.preventDefault();
-	}
-	
-	var DecadePanel = (function (_React$Component) {
-	  _inherits(DecadePanel, _React$Component);
-	
-	  function DecadePanel(props) {
-	    _classCallCheck(this, DecadePanel);
-	
-	    _get(Object.getPrototypeOf(DecadePanel.prototype), 'constructor', this).call(this, props);
-	    this.state = {
-	      value: props.value || props.defaultValue
-	    };
-	
-	    // bind methods
-	    this.prefixCls = props.rootPrefixCls + '-decade-panel';
-	    this.nextCentury = goYear.bind(this, 100);
-	    this.previousCentury = goYear.bind(this, -100);
-	  }
-	
-	  _createClass(DecadePanel, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this = this;
-	
-	      var value = this.state.value;
-	      var locale = this.props.locale;
-	      var currentYear = value.getYear();
-	      var startYear = parseInt(currentYear / 100, 10) * 100;
-	      var preYear = startYear - 10;
-	      var endYear = startYear + 99;
-	      var decades = [];
-	      var index = 0;
-	      var prefixCls = this.prefixCls;
-	
-	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
-	        decades[rowIndex] = [];
-	        for (var colIndex = 0; colIndex < COL; colIndex++) {
-	          var startDecade = preYear + index * 10;
-	          var endDecade = preYear + index * 10 + 9;
-	          decades[rowIndex][colIndex] = {
-	            startDecade: startDecade,
-	            endDecade: endDecade
-	          };
-	          index++;
-	        }
-	      }
-	
-	      var decadesEls = decades.map(function (row, decadeIndex) {
-	        var tds = row.map(function (decadeData) {
-	          var _classNameMap;
-	
-	          var dStartDecade = decadeData.startDecade;
-	          var dEndDecade = decadeData.endDecade;
-	          var isLast = dStartDecade < startYear;
-	          var isNext = dEndDecade > endYear;
-	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-selected-cell', dStartDecade <= currentYear && currentYear <= dEndDecade), _defineProperty(_classNameMap, prefixCls + '-last-century-cell', isLast), _defineProperty(_classNameMap, prefixCls + '-next-century-cell', isNext), _classNameMap);
-	          var content = undefined;
-	          var clickHandler = undefined;
-	          if (isLast) {
-	            clickHandler = _this.previousCentury;
-	          } else if (isNext) {
-	            clickHandler = _this.nextCentury;
-	          } else {
-	            content = dStartDecade + '-' + dEndDecade;
-	            clickHandler = chooseDecade.bind(_this, dStartDecade);
-	          }
-	          return _react2['default'].createElement(
-	            'td',
-	            {
-	              key: dStartDecade,
-	              onClick: clickHandler,
-	              role: 'gridcell',
-	              className: (0, _rcUtil.classSet)(classNameMap)
-	            },
-	            _react2['default'].createElement(
-	              'a',
-	              {
-	                className: prefixCls + '-decade' },
-	              content
-	            )
-	          );
-	        });
-	        return _react2['default'].createElement(
-	          'tr',
-	          { key: decadeIndex, role: 'row' },
-	          tds
-	        );
-	      });
-	
-	      return _react2['default'].createElement(
-	        'div',
-	        { className: this.prefixCls },
-	        _react2['default'].createElement(
-	          'div',
-	          { className: prefixCls + '-header' },
-	          _react2['default'].createElement(
-	            'a',
-	            { className: prefixCls + '-prev-century-btn',
-	              role: 'button',
-	              onClick: this.previousCentury,
-	              title: locale.previousCentury },
-	            '«'
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { className: prefixCls + '-century' },
-	            startYear,
-	            '-',
-	            endYear
-	          ),
-	          _react2['default'].createElement(
-	            'a',
-	            { className: prefixCls + '-next-century-btn',
-	              role: 'button',
-	              onClick: this.nextCentury,
-	              title: locale.nextCentury },
-	            '»'
-	          )
-	        ),
-	        _react2['default'].createElement(
-	          'div',
-	          { className: prefixCls + '-body' },
-	          _react2['default'].createElement(
-	            'table',
-	            { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
-	            _react2['default'].createElement(
-	              'tbody',
-	              { className: prefixCls + '-tbody' },
-	              decadesEls
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return DecadePanel;
-	})(_react2['default'].Component);
-	
-	exports['default'] = DecadePanel;
-	
-	DecadePanel.propTypes = {
-	  locale: _react.PropTypes.object,
-	  value: _react.PropTypes.object,
-	  defaultValue: _react.PropTypes.object,
-	  rootPrefixCls: _react.PropTypes.string
-	};
-	
-	DecadePanel.defaultProps = {
-	  onSelect: function onSelect() {}
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 331 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(81);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _rcUtil = __webpack_require__(298);
-	
-	var ROW = 4;
-	var COL = 3;
-	
-	function chooseMonth(month) {
-	  var next = this.state.value.clone();
-	  next.rollSetMonth(month);
-	  this.setAndSelectValue(next);
-	}
-	
-	function noop() {}
-	
-	var MonthTable = (function (_Component) {
-	  _inherits(MonthTable, _Component);
-	
-	  function MonthTable(props) {
-	    _classCallCheck(this, MonthTable);
-	
-	    _get(Object.getPrototypeOf(MonthTable.prototype), 'constructor', this).call(this, props);
-	
-	    this.prefixCls = props.rootPrefixCls + '-month-panel';
-	
-	    this.state = {
-	      value: props.value
-	    };
-	  }
-	
-	  _createClass(MonthTable, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      if ('value' in nextProps) {
-	        this.setState({
-	          value: nextProps.value
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'getMonths',
-	    value: function getMonths() {
-	      var props = this.props;
-	      var value = this.state.value;
-	      var current = value.clone();
-	      var locale = props.locale;
-	      var months = [];
-	      var shortMonths = locale.format.shortMonths;
-	      var index = 0;
-	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
-	        months[rowIndex] = [];
-	        for (var colIndex = 0; colIndex < COL; colIndex++) {
-	          current.rollSetMonth(index);
-	          months[rowIndex][colIndex] = {
-	            value: index,
-	            content: shortMonths[index],
-	            title: shortMonths[index]
-	          };
-	          index++;
-	        }
-	      }
-	      return months;
-	    }
-	  }, {
-	    key: 'setAndSelectValue',
-	    value: function setAndSelectValue(value) {
-	      this.setState({
-	        value: value
-	      });
-	      this.props.onSelect(value);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this = this;
-	
-	      var props = this.props;
-	      var value = this.state.value;
-	      var months = this.getMonths();
-	      var currentMonth = value.getMonth();
-	      var prefixCls = this.prefixCls;
-	      var monthsEls = months.map(function (month, index) {
-	        var tds = month.map(function (monthData) {
-	          var _classNameMap;
-	
-	          var disabled = false;
-	          if (props.disabledDate) {
-	            var testValue = value.clone();
-	            testValue.rollSetMonth(monthData.value);
-	            disabled = props.disabledDate(testValue);
-	          }
-	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-cell-disabled', disabled), _defineProperty(_classNameMap, prefixCls + '-selected-cell', monthData.value === currentMonth), _classNameMap);
-	          return _react2['default'].createElement(
-	            'td',
-	            { role: 'gridcell',
-	              key: monthData.value,
-	              onClick: disabled ? null : chooseMonth.bind(_this, monthData.value),
-	              title: monthData.title,
-	              className: (0, _rcUtil.classSet)(classNameMap) },
-	            _react2['default'].createElement(
-	              'a',
-	              {
-	                className: prefixCls + '-month' },
-	              monthData.content
-	            )
-	          );
-	        });
-	        return _react2['default'].createElement(
-	          'tr',
-	          { key: index, role: 'row' },
-	          tds
-	        );
-	      });
-	
-	      return _react2['default'].createElement(
-	        'div',
-	        { className: prefixCls + '-body' },
-	        _react2['default'].createElement(
-	          'table',
-	          { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
-	          _react2['default'].createElement(
-	            'tbody',
-	            { className: prefixCls + '-tbody' },
-	            monthsEls
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return MonthTable;
-	})(_react.Component);
-	
-	MonthTable.defaultProps = {
-	  onSelect: noop
-	};
-	MonthTable.propTypes = {
-	  onSelect: _react.PropTypes.func,
-	  rootPrefixCls: _react.PropTypes.string,
-	  value: _react.PropTypes.object
-	};
-	exports['default'] = MonthTable;
-	module.exports = exports['default'];
-
-/***/ },
-/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -30804,7 +29812,7 @@
 	'use strict';
 	
 	var GregorianCalendar = __webpack_require__(318);
-	var enUsLocale = __webpack_require__(333);
+	var enUsLocale = __webpack_require__(328);
 	var MAX_VALUE = Number.MAX_VALUE;
 	var warning = __webpack_require__(80);
 	
@@ -31621,7 +30629,7 @@
 	// gc_format@163.com
 
 /***/ },
-/* 333 */
+/* 328 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31638,6 +30646,996 @@
 	  timePatterns: ['h:mm:ss a \'GMT\'Z', 'h:mm:ss a', 'h:mm:ss a', 'h:mm a'],
 	  dateTimePattern: '{date} {time}'
 	};
+
+/***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(81);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _monthMonthPanel = __webpack_require__(330);
+	
+	var _monthMonthPanel2 = _interopRequireDefault(_monthMonthPanel);
+	
+	var _utilIndex = __webpack_require__(326);
+	
+	var _yearYearPanel = __webpack_require__(331);
+	
+	var _yearYearPanel2 = _interopRequireDefault(_yearYearPanel);
+	
+	var _rcUtil = __webpack_require__(298);
+	
+	var _rcUtil2 = _interopRequireDefault(_rcUtil);
+	
+	var toFragment = _rcUtil2['default'].Children.mapSelf;
+	
+	function goMonth(direction) {
+	  var next = this.props.value.clone();
+	  next.addMonth(direction);
+	  this.props.onValueChange(next);
+	}
+	
+	function goYear(direction) {
+	  var next = this.props.value.clone();
+	  next.addYear(direction);
+	  this.props.onValueChange(next);
+	}
+	
+	var CalendarHeader = _react2['default'].createClass({
+	  displayName: 'CalendarHeader',
+	
+	  propTypes: {
+	    locale: _react.PropTypes.object,
+	    value: _react.PropTypes.object,
+	    onValueChange: _react.PropTypes.func
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      enableNext: 1,
+	      enablePrev: 1
+	    };
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
+	    this.yearFormatter = (0, _utilIndex.getFormatter)(props.locale.yearFormat, props.locale);
+	    this.monthFormatter = (0, _utilIndex.getFormatter)(props.locale.monthFormat, props.locale);
+	    this.nextMonth = goMonth.bind(this, 1);
+	    this.previousMonth = goMonth.bind(this, -1);
+	    this.nextYear = goYear.bind(this, 1);
+	    this.previousYear = goYear.bind(this, -1);
+	    return {};
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    var locale = this.props.locale;
+	    var nextLocale = nextProps.locale;
+	
+	    if (nextProps.locale !== locale) {
+	      this.yearFormatter = (0, _utilIndex.getFormatter)(nextLocale.yearFormat, nextLocale);
+	      this.monthFormatter = (0, _utilIndex.getFormatter)(nextLocale.monthFormat, nextLocale);
+	    }
+	  },
+	
+	  onSelect: function onSelect(value) {
+	    this.setState({
+	      showMonthPanel: 0,
+	      showYearPanel: 0
+	    });
+	    this.props.onValueChange(value);
+	  },
+	
+	  getMonthYearElement: function getMonthYearElement() {
+	    var props = this.props;
+	    var prefixCls = props.prefixCls;
+	    var locale = props.locale;
+	    var value = this.props.value;
+	    var monthBeforeYear = locale.monthBeforeYear;
+	    var selectClassName = prefixCls + '-' + (monthBeforeYear ? 'my-select' : 'ym-select');
+	    var year = _react2['default'].createElement(
+	      'a',
+	      { className: prefixCls + '-year-select',
+	        role: 'button',
+	        onClick: this.showYearPanel,
+	        title: locale.monthSelect },
+	      this.yearFormatter.format(value)
+	    );
+	    var month = _react2['default'].createElement(
+	      'a',
+	      { className: prefixCls + '-month-select',
+	        role: 'button',
+	        onClick: this.showMonthPanel,
+	        title: locale.monthSelect },
+	      this.monthFormatter.format(value)
+	    );
+	    var my = [];
+	    if (monthBeforeYear) {
+	      my = [month, year];
+	    } else {
+	      my = [year, month];
+	    }
+	    return _react2['default'].createElement(
+	      'span',
+	      { className: selectClassName },
+	      toFragment(my)
+	    );
+	  },
+	
+	  showIf: function showIf(condition, el) {
+	    return condition ? el : null;
+	  },
+	
+	  showMonthPanel: function showMonthPanel() {
+	    this.setState({
+	      showMonthPanel: 1,
+	      showYearPanel: 0
+	    });
+	  },
+	
+	  showYearPanel: function showYearPanel() {
+	    this.setState({
+	      showMonthPanel: 0,
+	      showYearPanel: 1
+	    });
+	  },
+	
+	  render: function render() {
+	    var props = this.props;
+	    var enableNext = props.enableNext;
+	    var enablePrev = props.enablePrev;
+	    var prefixCls = props.prefixCls;
+	    var locale = props.locale;
+	    var value = props.value;
+	
+	    var state = this.state;
+	    var PanelClass = null;
+	    if (state.showMonthPanel) {
+	      PanelClass = _monthMonthPanel2['default'];
+	    } else if (state.showYearPanel) {
+	      PanelClass = _yearYearPanel2['default'];
+	    }
+	    var panel = undefined;
+	    if (PanelClass) {
+	      panel = _react2['default'].createElement(PanelClass, { locale: locale, defaultValue: value, rootPrefixCls: prefixCls, onSelect: this.onSelect });
+	    }
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: prefixCls + '-header' },
+	      _react2['default'].createElement(
+	        'div',
+	        { style: { position: 'relative' } },
+	        this.showIf(enablePrev, _react2['default'].createElement(
+	          'a',
+	          { className: prefixCls + '-prev-year-btn',
+	            role: 'button',
+	            onClick: this.previousYear,
+	            title: locale.previousYear },
+	          '«'
+	        )),
+	        this.showIf(enablePrev, _react2['default'].createElement(
+	          'a',
+	          { className: prefixCls + '-prev-month-btn',
+	            role: 'button',
+	            onClick: this.previousMonth,
+	            title: locale.previousMonth },
+	          '‹'
+	        )),
+	        this.getMonthYearElement(),
+	        this.showIf(enableNext, _react2['default'].createElement(
+	          'a',
+	          { className: prefixCls + '-next-month-btn',
+	            onClick: this.nextMonth,
+	            title: locale.nextMonth },
+	          '›'
+	        )),
+	        this.showIf(enableNext, _react2['default'].createElement(
+	          'a',
+	          { className: prefixCls + '-next-year-btn',
+	            onClick: this.nextYear,
+	            title: locale.nextYear },
+	          '»'
+	        ))
+	      ),
+	      panel
+	    );
+	  }
+	});
+	
+	exports['default'] = CalendarHeader;
+	module.exports = exports['default'];
+
+/***/ },
+/* 330 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(81);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _yearYearPanel = __webpack_require__(331);
+	
+	var _yearYearPanel2 = _interopRequireDefault(_yearYearPanel);
+	
+	var _MonthTable = __webpack_require__(333);
+	
+	var _MonthTable2 = _interopRequireDefault(_MonthTable);
+	
+	function goYear(direction) {
+	  var next = this.state.value.clone();
+	  next.addYear(direction);
+	  this.setAndChangeValue(next);
+	}
+	
+	function noop() {}
+	
+	var MonthPanel = _react2['default'].createClass({
+	  displayName: 'MonthPanel',
+	
+	  propTypes: {
+	    onChange: _react.PropTypes.func,
+	    onSelect: _react.PropTypes.func
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      onChange: noop,
+	      onSelect: noop
+	    };
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    var props = this.props;
+	    // bind methods
+	    this.nextYear = goYear.bind(this, 1);
+	    this.previousYear = goYear.bind(this, -1);
+	    this.prefixCls = props.rootPrefixCls + '-month-panel';
+	    return {
+	      value: props.value || props.defaultValue
+	    };
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if ('value' in nextProps) {
+	      this.setState({
+	        value: nextProps.value
+	      });
+	    }
+	  },
+	
+	  onYearPanelSelect: function onYearPanelSelect(current) {
+	    this.setState({
+	      showYearPanel: 0
+	    });
+	    this.setAndChangeValue(current);
+	  },
+	
+	  setAndChangeValue: function setAndChangeValue(value) {
+	    this.setValue(value);
+	    this.props.onChange(value);
+	  },
+	
+	  setAndSelectValue: function setAndSelectValue(value) {
+	    this.setValue(value);
+	    this.props.onSelect(value);
+	  },
+	
+	  setValue: function setValue(value) {
+	    if (!('value' in this.props)) {
+	      this.setState({
+	        value: value
+	      });
+	    }
+	  },
+	
+	  showYearPanel: function showYearPanel() {
+	    this.setState({
+	      showYearPanel: 1
+	    });
+	  },
+	
+	  render: function render() {
+	    var props = this.props;
+	    var value = this.state.value;
+	    var locale = props.locale;
+	    var year = value.getYear();
+	    var prefixCls = this.prefixCls;
+	    var yearPanel = undefined;
+	    if (this.state.showYearPanel) {
+	      yearPanel = _react2['default'].createElement(_yearYearPanel2['default'], { locale: locale, value: value, rootPrefixCls: props.rootPrefixCls,
+	        onSelect: this.onYearPanelSelect });
+	    }
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: prefixCls, style: props.style },
+	      _react2['default'].createElement(
+	        'div',
+	        null,
+	        _react2['default'].createElement(
+	          'div',
+	          { className: prefixCls + '-header' },
+	          _react2['default'].createElement(
+	            'a',
+	            { className: prefixCls + '-prev-year-btn',
+	              role: 'button',
+	              onClick: this.previousYear,
+	              title: locale.previousYear },
+	            '«'
+	          ),
+	          _react2['default'].createElement(
+	            'a',
+	            { className: prefixCls + '-year-select',
+	              role: 'button',
+	              onClick: this.showYearPanel,
+	              title: locale.yearSelect },
+	            _react2['default'].createElement(
+	              'span',
+	              { className: prefixCls + '-year-select-content' },
+	              year
+	            ),
+	            _react2['default'].createElement(
+	              'span',
+	              { className: prefixCls + '-year-select-arrow' },
+	              'x'
+	            )
+	          ),
+	          _react2['default'].createElement(
+	            'a',
+	            { className: prefixCls + '-next-year-btn',
+	              role: 'button',
+	              onClick: this.nextYear,
+	              title: locale.nextYear },
+	            '»'
+	          )
+	        ),
+	        _react2['default'].createElement(_MonthTable2['default'], {
+	          onSelect: this.setAndSelectValue,
+	          locale: locale,
+	          value: value,
+	          rootPrefixCls: props.rootPrefixCls })
+	      ),
+	      yearPanel
+	    );
+	  }
+	});
+	
+	exports['default'] = MonthPanel;
+	module.exports = exports['default'];
+
+/***/ },
+/* 331 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(81);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcUtil = __webpack_require__(298);
+	
+	var _decadeDecadePanel = __webpack_require__(332);
+	
+	var _decadeDecadePanel2 = _interopRequireDefault(_decadeDecadePanel);
+	
+	var ROW = 4;
+	var COL = 3;
+	
+	function goYear(direction) {
+	  var next = this.state.value.clone();
+	  next.addYear(direction);
+	  this.setState({ value: next });
+	}
+	
+	function chooseYear(year) {
+	  var next = this.state.value.clone();
+	  next.setYear(year);
+	  next.rollSetMonth(this.state.value.getMonth());
+	  this.props.onSelect(next);
+	}
+	
+	var YearPanel = (function (_React$Component) {
+	  _inherits(YearPanel, _React$Component);
+	
+	  function YearPanel(props) {
+	    var _this = this;
+	
+	    _classCallCheck(this, YearPanel);
+	
+	    _get(Object.getPrototypeOf(YearPanel.prototype), 'constructor', this).call(this, props);
+	    this.prefixCls = props.rootPrefixCls + '-year-panel';
+	    this.state = {
+	      value: props.value || props.defaultValue
+	    };
+	    this.nextDecade = goYear.bind(this, 10);
+	    this.previousDecade = goYear.bind(this, -10);
+	    ['showDecadePanel', 'onDecadePanelSelect'].forEach(function (method) {
+	      _this[method] = _this[method].bind(_this);
+	    });
+	  }
+	
+	  _createClass(YearPanel, [{
+	    key: 'onDecadePanelSelect',
+	    value: function onDecadePanelSelect(current) {
+	      this.setState({
+	        value: current,
+	        showDecadePanel: 0
+	      });
+	    }
+	  }, {
+	    key: 'getYears',
+	    value: function getYears() {
+	      var value = this.state.value;
+	      var currentYear = value.getYear();
+	      var startYear = parseInt(currentYear / 10, 10) * 10;
+	      var previousYear = startYear - 1;
+	      var endYear = startYear + 9;
+	      var years = [];
+	      var index = 0;
+	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
+	        years[rowIndex] = [];
+	        for (var colIndex = 0; colIndex < COL; colIndex++) {
+	          var year = previousYear + index;
+	          var content = undefined;
+	          if (year < startYear) {
+	            content = '';
+	          } else if (year > endYear) {
+	            content = '';
+	          } else {
+	            content = year + '';
+	          }
+	          years[rowIndex][colIndex] = {
+	            content: content,
+	            year: year,
+	            title: content
+	          };
+	          index++;
+	        }
+	      }
+	      return years;
+	    }
+	  }, {
+	    key: 'showDecadePanel',
+	    value: function showDecadePanel() {
+	      this.setState({
+	        showDecadePanel: 1
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+	
+	      var props = this.props;
+	      var value = this.state.value;
+	      var locale = props.locale;
+	      var years = this.getYears();
+	      var currentYear = value.getYear();
+	      var startYear = parseInt(currentYear / 10, 10) * 10;
+	      var endYear = startYear + 9;
+	      var prefixCls = this.prefixCls;
+	
+	      var yeasEls = years.map(function (row, index) {
+	        var tds = row.map(function (yearData) {
+	          var _classNameMap;
+	
+	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-selected-cell', yearData.year === currentYear), _defineProperty(_classNameMap, prefixCls + '-last-decade-cell', yearData.year < startYear), _defineProperty(_classNameMap, prefixCls + '-next-decade-cell', yearData.year > endYear), _classNameMap);
+	          var clickHandler = undefined;
+	          if (yearData.year < startYear) {
+	            clickHandler = _this2.previousDecade;
+	          } else if (yearData.year > endYear) {
+	            clickHandler = _this2.nextDecade;
+	          } else {
+	            clickHandler = chooseYear.bind(_this2, yearData.year);
+	          }
+	          return _react2['default'].createElement(
+	            'td',
+	            { role: 'gridcell',
+	              title: yearData.title,
+	              key: yearData.content,
+	              onClick: clickHandler,
+	              className: (0, _rcUtil.classSet)(classNameMap)
+	            },
+	            _react2['default'].createElement(
+	              'a',
+	              {
+	                className: prefixCls + '-year' },
+	              yearData.content
+	            )
+	          );
+	        });
+	        return _react2['default'].createElement(
+	          'tr',
+	          { key: index, role: 'row' },
+	          tds
+	        );
+	      });
+	
+	      var decadePanel = undefined;
+	      if (this.state.showDecadePanel) {
+	        decadePanel = _react2['default'].createElement(_decadeDecadePanel2['default'], { locale: locale, value: value, rootPrefixCls: props.rootPrefixCls,
+	          onSelect: this.onDecadePanelSelect });
+	      }
+	
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: this.prefixCls },
+	        _react2['default'].createElement(
+	          'div',
+	          null,
+	          _react2['default'].createElement(
+	            'div',
+	            { className: prefixCls + '-header' },
+	            _react2['default'].createElement(
+	              'a',
+	              { className: prefixCls + '-prev-decade-btn',
+	                role: 'button',
+	                onClick: this.previousDecade,
+	                title: locale.previousDecade },
+	              '«'
+	            ),
+	            _react2['default'].createElement(
+	              'a',
+	              { className: prefixCls + '-decade-select',
+	                role: 'button',
+	                onClick: this.showDecadePanel,
+	                title: locale.decadeSelect },
+	              _react2['default'].createElement(
+	                'span',
+	                { className: prefixCls + '-decade-select-content' },
+	                startYear,
+	                '-',
+	                endYear
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { className: prefixCls + '-decade-select-arrow' },
+	                'x'
+	              )
+	            ),
+	            _react2['default'].createElement(
+	              'a',
+	              { className: prefixCls + '-next-decade-btn',
+	                role: 'button',
+	                onClick: this.nextDecade,
+	                title: locale.nextDecade },
+	              '»'
+	            )
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: prefixCls + '-body' },
+	            _react2['default'].createElement(
+	              'table',
+	              { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
+	              _react2['default'].createElement(
+	                'tbody',
+	                { className: prefixCls + '-tbody' },
+	                yeasEls
+	              )
+	            )
+	          )
+	        ),
+	        decadePanel
+	      );
+	    }
+	  }]);
+	
+	  return YearPanel;
+	})(_react2['default'].Component);
+	
+	exports['default'] = YearPanel;
+	
+	YearPanel.propTypes = {
+	  rootPrefixCls: _react.PropTypes.string,
+	  value: _react.PropTypes.object,
+	  defaultValue: _react.PropTypes.object
+	};
+	
+	YearPanel.defaultProps = {
+	  onSelect: function onSelect() {}
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 332 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(81);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcUtil = __webpack_require__(298);
+	
+	var ROW = 4;
+	var COL = 3;
+	
+	function goYear(direction) {
+	  var next = this.state.value.clone();
+	  next.addYear(direction);
+	  this.setState({
+	    value: next
+	  });
+	}
+	
+	function chooseDecade(year, event) {
+	  var next = this.state.value.clone();
+	  next.setYear(year);
+	  next.rollSetMonth(this.state.value.getMonth());
+	  this.props.onSelect(next);
+	  event.preventDefault();
+	}
+	
+	var DecadePanel = (function (_React$Component) {
+	  _inherits(DecadePanel, _React$Component);
+	
+	  function DecadePanel(props) {
+	    _classCallCheck(this, DecadePanel);
+	
+	    _get(Object.getPrototypeOf(DecadePanel.prototype), 'constructor', this).call(this, props);
+	    this.state = {
+	      value: props.value || props.defaultValue
+	    };
+	
+	    // bind methods
+	    this.prefixCls = props.rootPrefixCls + '-decade-panel';
+	    this.nextCentury = goYear.bind(this, 100);
+	    this.previousCentury = goYear.bind(this, -100);
+	  }
+	
+	  _createClass(DecadePanel, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this = this;
+	
+	      var value = this.state.value;
+	      var locale = this.props.locale;
+	      var currentYear = value.getYear();
+	      var startYear = parseInt(currentYear / 100, 10) * 100;
+	      var preYear = startYear - 10;
+	      var endYear = startYear + 99;
+	      var decades = [];
+	      var index = 0;
+	      var prefixCls = this.prefixCls;
+	
+	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
+	        decades[rowIndex] = [];
+	        for (var colIndex = 0; colIndex < COL; colIndex++) {
+	          var startDecade = preYear + index * 10;
+	          var endDecade = preYear + index * 10 + 9;
+	          decades[rowIndex][colIndex] = {
+	            startDecade: startDecade,
+	            endDecade: endDecade
+	          };
+	          index++;
+	        }
+	      }
+	
+	      var decadesEls = decades.map(function (row, decadeIndex) {
+	        var tds = row.map(function (decadeData) {
+	          var _classNameMap;
+	
+	          var dStartDecade = decadeData.startDecade;
+	          var dEndDecade = decadeData.endDecade;
+	          var isLast = dStartDecade < startYear;
+	          var isNext = dEndDecade > endYear;
+	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-selected-cell', dStartDecade <= currentYear && currentYear <= dEndDecade), _defineProperty(_classNameMap, prefixCls + '-last-century-cell', isLast), _defineProperty(_classNameMap, prefixCls + '-next-century-cell', isNext), _classNameMap);
+	          var content = undefined;
+	          var clickHandler = undefined;
+	          if (isLast) {
+	            clickHandler = _this.previousCentury;
+	          } else if (isNext) {
+	            clickHandler = _this.nextCentury;
+	          } else {
+	            content = dStartDecade + '-' + dEndDecade;
+	            clickHandler = chooseDecade.bind(_this, dStartDecade);
+	          }
+	          return _react2['default'].createElement(
+	            'td',
+	            {
+	              key: dStartDecade,
+	              onClick: clickHandler,
+	              role: 'gridcell',
+	              className: (0, _rcUtil.classSet)(classNameMap)
+	            },
+	            _react2['default'].createElement(
+	              'a',
+	              {
+	                className: prefixCls + '-decade' },
+	              content
+	            )
+	          );
+	        });
+	        return _react2['default'].createElement(
+	          'tr',
+	          { key: decadeIndex, role: 'row' },
+	          tds
+	        );
+	      });
+	
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: this.prefixCls },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: prefixCls + '-header' },
+	          _react2['default'].createElement(
+	            'a',
+	            { className: prefixCls + '-prev-century-btn',
+	              role: 'button',
+	              onClick: this.previousCentury,
+	              title: locale.previousCentury },
+	            '«'
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: prefixCls + '-century' },
+	            startYear,
+	            '-',
+	            endYear
+	          ),
+	          _react2['default'].createElement(
+	            'a',
+	            { className: prefixCls + '-next-century-btn',
+	              role: 'button',
+	              onClick: this.nextCentury,
+	              title: locale.nextCentury },
+	            '»'
+	          )
+	        ),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: prefixCls + '-body' },
+	          _react2['default'].createElement(
+	            'table',
+	            { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
+	            _react2['default'].createElement(
+	              'tbody',
+	              { className: prefixCls + '-tbody' },
+	              decadesEls
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return DecadePanel;
+	})(_react2['default'].Component);
+	
+	exports['default'] = DecadePanel;
+	
+	DecadePanel.propTypes = {
+	  locale: _react.PropTypes.object,
+	  value: _react.PropTypes.object,
+	  defaultValue: _react.PropTypes.object,
+	  rootPrefixCls: _react.PropTypes.string
+	};
+	
+	DecadePanel.defaultProps = {
+	  onSelect: function onSelect() {}
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(81);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _rcUtil = __webpack_require__(298);
+	
+	var ROW = 4;
+	var COL = 3;
+	
+	function chooseMonth(month) {
+	  var next = this.state.value.clone();
+	  next.rollSetMonth(month);
+	  this.setAndSelectValue(next);
+	}
+	
+	function noop() {}
+	
+	var MonthTable = (function (_Component) {
+	  _inherits(MonthTable, _Component);
+	
+	  function MonthTable(props) {
+	    _classCallCheck(this, MonthTable);
+	
+	    _get(Object.getPrototypeOf(MonthTable.prototype), 'constructor', this).call(this, props);
+	
+	    this.prefixCls = props.rootPrefixCls + '-month-panel';
+	
+	    this.state = {
+	      value: props.value
+	    };
+	  }
+	
+	  _createClass(MonthTable, [{
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if ('value' in nextProps) {
+	        this.setState({
+	          value: nextProps.value
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'getMonths',
+	    value: function getMonths() {
+	      var props = this.props;
+	      var value = this.state.value;
+	      var current = value.clone();
+	      var locale = props.locale;
+	      var months = [];
+	      var shortMonths = locale.format.shortMonths;
+	      var index = 0;
+	      for (var rowIndex = 0; rowIndex < ROW; rowIndex++) {
+	        months[rowIndex] = [];
+	        for (var colIndex = 0; colIndex < COL; colIndex++) {
+	          current.rollSetMonth(index);
+	          months[rowIndex][colIndex] = {
+	            value: index,
+	            content: shortMonths[index],
+	            title: shortMonths[index]
+	          };
+	          index++;
+	        }
+	      }
+	      return months;
+	    }
+	  }, {
+	    key: 'setAndSelectValue',
+	    value: function setAndSelectValue(value) {
+	      this.setState({
+	        value: value
+	      });
+	      this.props.onSelect(value);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this = this;
+	
+	      var props = this.props;
+	      var value = this.state.value;
+	      var months = this.getMonths();
+	      var currentMonth = value.getMonth();
+	      var prefixCls = this.prefixCls;
+	      var monthsEls = months.map(function (month, index) {
+	        var tds = month.map(function (monthData) {
+	          var _classNameMap;
+	
+	          var disabled = false;
+	          if (props.disabledDate) {
+	            var testValue = value.clone();
+	            testValue.rollSetMonth(monthData.value);
+	            disabled = props.disabledDate(testValue);
+	          }
+	          var classNameMap = (_classNameMap = {}, _defineProperty(_classNameMap, prefixCls + '-cell', 1), _defineProperty(_classNameMap, prefixCls + '-cell-disabled', disabled), _defineProperty(_classNameMap, prefixCls + '-selected-cell', monthData.value === currentMonth), _classNameMap);
+	          return _react2['default'].createElement(
+	            'td',
+	            { role: 'gridcell',
+	              key: monthData.value,
+	              onClick: disabled ? null : chooseMonth.bind(_this, monthData.value),
+	              title: monthData.title,
+	              className: (0, _rcUtil.classSet)(classNameMap) },
+	            props.cellRender ? props.cellRender(monthData.value, props.locale) : _react2['default'].createElement(
+	              'a',
+	              { className: prefixCls + '-month' },
+	              monthData.content
+	            )
+	          );
+	        });
+	        return _react2['default'].createElement(
+	          'tr',
+	          { key: index, role: 'row' },
+	          tds
+	        );
+	      });
+	
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: prefixCls + '-body' },
+	        _react2['default'].createElement(
+	          'table',
+	          { className: prefixCls + '-table', cellSpacing: '0', role: 'grid' },
+	          _react2['default'].createElement(
+	            'tbody',
+	            { className: prefixCls + '-tbody' },
+	            monthsEls
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return MonthTable;
+	})(_react.Component);
+	
+	MonthTable.defaultProps = {
+	  onSelect: noop
+	};
+	MonthTable.propTypes = {
+	  onSelect: _react.PropTypes.func,
+	  cellRender: _react.PropTypes.func,
+	  rootPrefixCls: _react.PropTypes.string,
+	  value: _react.PropTypes.object
+	};
+	exports['default'] = MonthTable;
+	module.exports = exports['default'];
 
 /***/ },
 /* 334 */
@@ -32287,9 +32285,7 @@
 	
 	var _localeEn_US2 = _interopRequireDefault(_localeEn_US);
 	
-	var _gregorianCalendarFormat = __webpack_require__(332);
-	
-	var _gregorianCalendarFormat2 = _interopRequireDefault(_gregorianCalendarFormat);
+	var _utilIndex = __webpack_require__(326);
 	
 	function noop() {}
 	
@@ -32323,25 +32319,23 @@
 	
 	  getFormatter: function getFormatter() {
 	    var formatter = this.props.formatter;
+	    var locale = this.props.locale;
 	    if (formatter) {
-	      if (typeof formatter === 'string') {
-	        if (formatter === this.lastFormatter) {
-	          return this.normalFormatter;
-	        }
-	        this.normalFormatter = new _gregorianCalendarFormat2['default'](formatter);
-	        this.lastFormatter = formatter;
+	      if (formatter === this.lastFormatter) {
 	        return this.normalFormatter;
 	      }
-	      return formatter;
+	      this.normalFormatter = (0, _utilIndex.getFormatter)(formatter, locale);
+	      this.lastFormatter = formatter;
+	      return this.normalFormatter;
 	    }
 	    if (this.props.showTime) {
 	      if (!this.showTimeFormatter) {
-	        this.showTimeFormatter = new _gregorianCalendarFormat2['default']('yyyy-MM-dd HH:mm:ss');
+	        this.showTimeFormatter = (0, _utilIndex.getFormatter)('yyyy-MM-dd HH:mm:ss', locale);
 	      }
 	      return this.showTimeFormatter;
 	    }
 	    if (!this.showDateFormatter) {
-	      this.showDateFormatter = new _gregorianCalendarFormat2['default']('yyyy-MM-dd');
+	      this.showDateFormatter = (0, _utilIndex.getFormatter)('yyyy-MM-dd', locale);
 	    }
 	    return this.showDateFormatter;
 	  }
@@ -32360,7 +32354,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _gregorianCalendarFormatLibLocaleEn_US = __webpack_require__(333);
+	var _gregorianCalendarFormatLibLocaleEn_US = __webpack_require__(328);
 	
 	var _gregorianCalendarFormatLibLocaleEn_US2 = _interopRequireDefault(_gregorianCalendarFormatLibLocaleEn_US);
 	
@@ -32540,7 +32534,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _monthMonthPanel = __webpack_require__(328);
+	var _monthMonthPanel = __webpack_require__(330);
 	
 	var _monthMonthPanel2 = _interopRequireDefault(_monthMonthPanel);
 	
@@ -34652,8 +34646,6 @@
 	
 	var _ChildrenUtils = __webpack_require__(360);
 	
-	var _ChildrenUtils2 = _interopRequireDefault(_ChildrenUtils);
-	
 	var _AnimateChild = __webpack_require__(361);
 	
 	var _AnimateChild2 = _interopRequireDefault(_AnimateChild);
@@ -34687,6 +34679,7 @@
 	    transitionName: _react2['default'].PropTypes.string,
 	    transitionEnter: _react2['default'].PropTypes.bool,
 	    transitionAppear: _react2['default'].PropTypes.bool,
+	    exclusive: _react2['default'].PropTypes.bool,
 	    transitionLeave: _react2['default'].PropTypes.bool,
 	    onEnd: _react2['default'].PropTypes.func,
 	    onEnter: _react2['default'].PropTypes.func,
@@ -34739,7 +34732,6 @@
 	    var nextChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(nextProps));
 	    var props = this.props;
 	    var showProp = props.showProp;
-	    var exclusive = props.exclusive;
 	    var currentlyAnimatingKeys = this.currentlyAnimatingKeys;
 	    // last props children if exclusive
 	    // exclusive needs immediate response
@@ -34765,15 +34757,7 @@
 	        }
 	      });
 	    } else {
-	      newChildren = _ChildrenUtils2['default'].mergeChildren(currentChildren, nextChildren);
-	    }
-	
-	    // exclusive needs immediate response
-	    if (exclusive) {
-	      Object.keys(currentlyAnimatingKeys).forEach(function (key) {
-	        _this2.stop(key);
-	      });
-	      currentChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(props));
+	      newChildren = (0, _ChildrenUtils.mergeChildren)(currentChildren, nextChildren);
 	    }
 	
 	    // need render to avoid update
@@ -34825,12 +34809,22 @@
 	  },
 	
 	  componentDidUpdate: function componentDidUpdate() {
-	    var keysToEnter = this.keysToEnter;
-	    this.keysToEnter = [];
-	    keysToEnter.forEach(this.performEnter);
-	    var keysToLeave = this.keysToLeave;
-	    this.keysToLeave = [];
-	    keysToLeave.forEach(this.performLeave);
+	    var _this3 = this;
+	
+	    // exclusive needs immediate response
+	    if (this.props.exclusive) {
+	      Object.keys(this.currentlyAnimatingKeys).forEach(function (key) {
+	        _this3.stop(key);
+	      });
+	    }
+	    if (this.isMounted()) {
+	      var keysToEnter = this.keysToEnter;
+	      this.keysToEnter = [];
+	      keysToEnter.forEach(this.performEnter);
+	      var keysToLeave = this.keysToLeave;
+	      this.keysToLeave = [];
+	      keysToLeave.forEach(this.performLeave);
+	    }
 	  },
 	
 	  performEnter: function performEnter(key) {
@@ -34961,6 +34955,12 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.toArrayChildren = toArrayChildren;
+	exports.findChildInChildrenByKey = findChildInChildrenByKey;
+	exports.findShownChildInChildrenByKey = findShownChildInChildrenByKey;
+	exports.findHiddenChildInChildrenByKey = findHiddenChildInChildrenByKey;
+	exports.isSameChildren = isSameChildren;
+	exports.mergeChildren = mergeChildren;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -34968,106 +34968,101 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var utils = {
-	  toArrayChildren: function toArrayChildren(children) {
-	    var ret = [];
-	    _react2['default'].Children.forEach(children, function (child) {
-	      ret.push(child);
-	    });
-	    return ret;
-	  },
+	function toArrayChildren(children) {
+	  var ret = [];
+	  _react2['default'].Children.forEach(children, function (child) {
+	    ret.push(child);
+	  });
+	  return ret;
+	}
 	
-	  findChildInChildrenByKey: function findChildInChildrenByKey(children, key) {
-	    var ret = null;
-	    if (children) {
-	      children.forEach(function (child) {
-	        if (ret) {
-	          return;
-	        }
-	        if (child.key === key) {
-	          ret = child;
-	        }
-	      });
-	    }
-	    return ret;
-	  },
-	
-	  findShownChildInChildrenByKey: function findShownChildInChildrenByKey(children, key, showProp) {
-	    var ret = null;
-	    if (children) {
-	      children.forEach(function (child) {
-	        if (child.key === key && child.props[showProp]) {
-	          if (ret) {
-	            throw new Error('two child with same key for <rc-animate> children');
-	          }
-	          ret = child;
-	        }
-	      });
-	    }
-	    return ret;
-	  },
-	
-	  findHiddenChildInChildrenByKey: function findHiddenChildInChildrenByKey(children, key, showProp) {
-	    var found = 0;
-	    if (children) {
-	      children.forEach(function (child) {
-	        if (found) {
-	          return;
-	        }
-	        found = child.key === key && !child.props[showProp];
-	      });
-	    }
-	    return found;
-	  },
-	
-	  isSameChildren: function isSameChildren(c1, c2, showProp) {
-	    var same = c1.length === c2.length;
-	    if (same) {
-	      c1.forEach(function (child, index) {
-	        var child2 = c2[index];
-	        if (child.key !== child2.key) {
-	          same = false;
-	        } else if (showProp && child.props[showProp] !== child2.props[showProp]) {
-	          same = false;
-	        }
-	      });
-	    }
-	    return same;
-	  },
-	
-	  mergeChildren: function mergeChildren(prev, next) {
-	    var ret = [];
-	
-	    // For each key of `next`, the list of keys to insert before that key in
-	    // the combined list
-	    var nextChildrenPending = {};
-	    var pendingChildren = [];
-	    prev.forEach(function (child) {
-	      if (utils.findChildInChildrenByKey(next, child.key)) {
-	        if (pendingChildren.length) {
-	          nextChildrenPending[child.key] = pendingChildren;
-	          pendingChildren = [];
-	        }
-	      } else {
-	        pendingChildren.push(child);
+	function findChildInChildrenByKey(children, key) {
+	  var ret = null;
+	  if (children) {
+	    children.forEach(function (child) {
+	      if (ret) {
+	        return;
+	      }
+	      if (child.key === key) {
+	        ret = child;
 	      }
 	    });
-	
-	    next.forEach(function (child) {
-	      if (nextChildrenPending.hasOwnProperty(child.key)) {
-	        ret = ret.concat(nextChildrenPending[child.key]);
-	      }
-	      ret.push(child);
-	    });
-	
-	    ret = ret.concat(pendingChildren);
-	
-	    return ret;
 	  }
-	};
+	  return ret;
+	}
 	
-	exports['default'] = utils;
-	module.exports = exports['default'];
+	function findShownChildInChildrenByKey(children, key, showProp) {
+	  var ret = null;
+	  if (children) {
+	    children.forEach(function (child) {
+	      if (child.key === key && child.props[showProp]) {
+	        if (ret) {
+	          throw new Error('two child with same key for <rc-animate> children');
+	        }
+	        ret = child;
+	      }
+	    });
+	  }
+	  return ret;
+	}
+	
+	function findHiddenChildInChildrenByKey(children, key, showProp) {
+	  var found = 0;
+	  if (children) {
+	    children.forEach(function (child) {
+	      if (found) {
+	        return;
+	      }
+	      found = child.key === key && !child.props[showProp];
+	    });
+	  }
+	  return found;
+	}
+	
+	function isSameChildren(c1, c2, showProp) {
+	  var same = c1.length === c2.length;
+	  if (same) {
+	    c1.forEach(function (child, index) {
+	      var child2 = c2[index];
+	      if (child.key !== child2.key) {
+	        same = false;
+	      } else if (showProp && child.props[showProp] !== child2.props[showProp]) {
+	        same = false;
+	      }
+	    });
+	  }
+	  return same;
+	}
+	
+	function mergeChildren(prev, next) {
+	  var ret = [];
+	
+	  // For each key of `next`, the list of keys to insert before that key in
+	  // the combined list
+	  var nextChildrenPending = {};
+	  var pendingChildren = [];
+	  prev.forEach(function (child) {
+	    if (findChildInChildrenByKey(next, child.key)) {
+	      if (pendingChildren.length) {
+	        nextChildrenPending[child.key] = pendingChildren;
+	        pendingChildren = [];
+	      }
+	    } else {
+	      pendingChildren.push(child);
+	    }
+	  });
+	
+	  next.forEach(function (child) {
+	    if (nextChildrenPending.hasOwnProperty(child.key)) {
+	      ret = ret.concat(nextChildrenPending[child.key]);
+	    }
+	    ret.push(child);
+	  });
+	
+	  ret = ret.concat(pendingChildren);
+	
+	  return ret;
+	}
 
 /***/ },
 /* 361 */
@@ -35157,9 +35152,10 @@
 	  },
 	
 	  stop: function stop() {
-	    if (this.stopper) {
-	      this.stopper.stop();
+	    var stopper = this.stopper;
+	    if (stopper) {
 	      this.stopper = null;
+	      stopper.stop();
 	    }
 	  },
 	
@@ -35305,21 +35301,17 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _gregorianCalendarLibLocaleZh_CNJs = __webpack_require__(366);
+	var _gregorianCalendarLibLocaleZh_CN = __webpack_require__(366);
 	
-	var _gregorianCalendarLibLocaleZh_CNJs2 = _interopRequireDefault(_gregorianCalendarLibLocaleZh_CNJs);
+	var _gregorianCalendarLibLocaleZh_CN2 = _interopRequireDefault(_gregorianCalendarLibLocaleZh_CN);
 	
-	var _rcCalendarLibLocaleZh_CNJs = __webpack_require__(367);
+	var _rcCalendarLibLocaleZh_CN = __webpack_require__(367);
 	
-	var _rcCalendarLibLocaleZh_CNJs2 = _interopRequireDefault(_rcCalendarLibLocaleZh_CNJs);
-	
-	var _gregorianCalendarFormatLibLocaleZh_CN = __webpack_require__(368);
-	
-	var _gregorianCalendarFormatLibLocaleZh_CN2 = _interopRequireDefault(_gregorianCalendarFormatLibLocaleZh_CN);
+	var _rcCalendarLibLocaleZh_CN2 = _interopRequireDefault(_rcCalendarLibLocaleZh_CN);
 	
 	// 统一合并为完整的 Locale
-	var locale = (0, _objectAssign2['default'])({}, _gregorianCalendarLibLocaleZh_CNJs2['default']);
-	locale.lang = (0, _objectAssign2['default'])({}, _rcCalendarLibLocaleZh_CNJs2['default'], _gregorianCalendarFormatLibLocaleZh_CN2['default']);
+	var locale = (0, _objectAssign2['default'])({}, _gregorianCalendarLibLocaleZh_CN2['default']);
+	locale.lang = (0, _objectAssign2['default'])({}, _rcCalendarLibLocaleZh_CN2['default']);
 	
 	// All settings at:
 	// https://github.com/ant-design/ant-design/issues/424
@@ -68747,6 +68739,14 @@
 	  }).join(' ');
 	}
 	
+	function ieGT9() {
+	  if (typeof document === undefined) {
+	    return false;
+	  }
+	  var documentMode = document.documentMode || 0;
+	  return documentMode > 9;
+	}
+	
 	var Group = (function (_React$Component) {
 	  _inherits(Group, _React$Component);
 	
@@ -68831,13 +68831,16 @@
 	          inputClassName = prefixClsFn(prefixCls, 'input', 'input-lg');break;
 	        default:
 	      }
-	
+	      var placeholder = props.placeholder;
+	      if (placeholder && ieGT9()) {
+	        placeholder = null;
+	      }
 	      switch (props.type) {
 	        case 'textarea':
-	          return _react2['default'].createElement('textarea', _extends({}, props, { className: inputClassName, ref: 'input' }));
+	          return _react2['default'].createElement('textarea', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
 	        default:
 	          inputClassName = props.className ? props.className : inputClassName;
-	          return _react2['default'].createElement('input', _extends({}, props, { className: inputClassName, ref: 'input' }));
+	          return _react2['default'].createElement('input', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
 	      }
 	    }
 	  }, {
@@ -68879,8 +68882,8 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta22",
-		"stableVersion": "0.9.4",
+		"version": "0.10.0-beta23",
+		"stableVersion": "0.9.5",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -68917,7 +68920,7 @@
 			"gregorian-calendar-format": "~4.0.4",
 			"object-assign": "~4.0.1",
 			"rc-animate": "~2.0.0",
-			"rc-calendar": "4.0.0-alpha10",
+			"rc-calendar": "4.0.0-alpha13",
 			"rc-checkbox": "~1.1.1",
 			"rc-collapse": "~1.4.0",
 			"rc-dialog": "~5.2.0",
@@ -68970,7 +68973,7 @@
 			"less-loader": "^2.2.0",
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.6.0",
-			"precommit-hook": "^1.0.7",
+			"pre-commit": "1.x",
 			"react": "~0.14.1",
 			"react-addons-test-utils": "~0.14.1",
 			"react-dom": "~0.14.1",
@@ -69009,7 +69012,7 @@
 			"testDirectoryName": "tests",
 			"preprocessCachingDisabled": false
 		},
-		"precommit": [
+		"pre-commit": [
 			"lint"
 		]
 	};

@@ -185,8 +185,8 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta22',
-        stable: '0.9.4'
+        latest: '0.10.0-beta23',
+        stable: '0.9.5'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -691,14 +691,14 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-time">
   <div class="code-box-demo">
     <div id="components-datepicker-demo-time"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Datepicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss' }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Datepicker, { showTime: true, format: "yyyy-MM-dd HH:mm:ss", defaultValue: "2015-11-11 11:11:11" }), document.getElementById('components-datepicker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-11-11 11:11:11"</span>/&gt;</span>
 , document.getElementById('components-datepicker-demo-time'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
