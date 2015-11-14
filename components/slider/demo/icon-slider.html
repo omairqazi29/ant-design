@@ -81,15 +81,14 @@ ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, ico
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">IconSlider</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">{['lock',</span> '<span class="hljs-attribute">unlock</span>']} /&gt;</span>
-, document.getElementById('components-slider-demo-icon-slider'));</span></code></pre></div><style>
-.iconWrapper {
+, document.getElementById('components-slider-demo-icon-slider'));</span></code></pre></div><style type="text/css">.iconWrapper {
   position: relative;
-  padding: 0 24px 0 9px;
+  padding: 0px 30px;
 }
 
 .iconWrapper .anticon {
   position: absolute;
-  top: -6px;
+  top: -3px;
   width: 16px;
   height: 16px;
   line-height: 1;
@@ -106,9 +105,31 @@ ReactDOM.render(
 
 .anticon.anticon-highlight {
   color: #666;
-}
-</style>
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.iconWrapper</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0px</span> <span class="hljs-number">30px</span></span></span>;
+}</span>
 
+<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> -<span class="hljs-number">3px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ccc</span></span></span>;
+}</span>
+
+<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon-lock</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+}</span>
+<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon-unlock</span><span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+}</span>
+
+<span class="hljs-class">.anticon</span><span class="hljs-class">.anticon-highlight</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#666</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

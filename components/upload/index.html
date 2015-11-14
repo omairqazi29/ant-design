@@ -47,6 +47,10 @@ Upload 文件上传 - Ant Design
         desc: '按钮'
       });
       ANT_COMPONENTS.push({
+        title: 'Calendar',
+        desc: '日历'
+      });
+      ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
       });
@@ -185,7 +189,7 @@ Upload 文件上传 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta23',
+        latest: '0.10.0-beta24',
         stable: '0.9.5'
       };
     </script>
@@ -384,6 +388,13 @@ Upload 文件上传 - Ant Design
                class="">
               Badge
               <span class="chinese">徽标数</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../calendar/"
+               class="">
+              Calendar
+              <span class="chinese">日历</span>
             </a>
           </li>
           <li class="">
@@ -638,7 +649,7 @@ Upload 文件上传 - Ant Design
 
   </article>
 <h2 class="component-demos">
-  组件演示
+  代码演示
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
 <div class="code-boxes">
@@ -880,8 +891,10 @@ ReactDOM.render(
   document.getElementById('components-upload-demo-drag-simple')
 );</span></code></pre></div><style type="text/css">#components-upload-demo-drag-simple {
   width: 246px;
+  height: 146px;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-upload-demo-drag-simple</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">246px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">146px</span></span></span>;
 }</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1019,7 +1032,11 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
   document.getElementById('components-upload-demo-drag')
-);</span></code></pre></div>
+);</span></code></pre></div><style type="text/css">#components-upload-demo-drag {
+  height: 180px;
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-upload-demo-drag</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">180px</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

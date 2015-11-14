@@ -47,6 +47,10 @@ Select 选择器 - Ant Design
         desc: '按钮'
       });
       ANT_COMPONENTS.push({
+        title: 'Calendar',
+        desc: '日历'
+      });
+      ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
       });
@@ -185,7 +189,7 @@ Select 选择器 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta23',
+        latest: '0.10.0-beta24',
         stable: '0.9.5'
       };
     </script>
@@ -384,6 +388,13 @@ Select 选择器 - Ant Design
                class="">
               Badge
               <span class="chinese">徽标数</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../calendar/"
+               class="">
+              Calendar
+              <span class="chinese">日历</span>
             </a>
           </li>
           <li class="">
@@ -621,6 +632,12 @@ Select 选择器 - Ant Design
 <td>false</td>
 </tr>
 <tr>
+<td>onSearch</td>
+<td>文本框值变化时回调</td>
+<td>function(value: String)</td>
+<td></td>
+</tr>
+<tr>
 <td>placeholder</td>
 <td>选择框默认文字</td>
 <td>string</td>
@@ -709,7 +726,7 @@ Select 选择器 - Ant Design
 
   </article>
 <h2 class="component-demos">
-  组件演示
+  代码演示
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
 <div class="code-boxes">

@@ -12,6 +12,8 @@ const AntMenu = React.createClass({
       onClick: noop,
       onOpen: noop,
       onClose: noop,
+      className: '',
+      theme: 'light',  // or dark
     };
   },
   getInitialState() {
@@ -51,16 +53,18 @@ const AntMenu = React.createClass({
       break;
     default:
     }
+
     let props = {
       openKeys: this.state.openKeys,
       onClick: this.handleClick,
       onOpen: this.handleOpenKeys,
       onClose: this.handleCloseKeys,
     };
+    const className = this.props.className + ' ' + this.props.prefixCls + '-' + this.props.theme;
     if (this.props.mode === 'inline') {
-      return <Menu {...this.props} openAnimation={openAnimation} />;
+      return <Menu {...this.props} className={className} openAnimation={openAnimation} />;
     } else {
-      return <Menu {...this.props} {...props} openTransitionName={openAnimation} />;
+      return <Menu {...this.props} {...props} className={className} openTransitionName={openAnimation} />;
     }
   }
 });
