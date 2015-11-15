@@ -121,7 +121,7 @@
 	  var Select = antd.Select;
 	  var Option = Select.Option;
 	  var versionsHistory = {
-	    '0.9.2': '09x.ant.design'
+	    '0.9.x': '09x.ant.design'
 	  };
 	  versionsHistory[antdVersion.latest] = versionsHistory[antdVersion.latest] || 'ant.design';
 	  var versions = Object.keys(versionsHistory).sort(function (a, b) {
@@ -32281,6 +32281,7 @@
 	
 	exports['default'] = CalendarMixin;
 	module.exports = exports['default'];
+
 
 /***/ },
 /* 339 */
@@ -73982,6 +73983,15 @@
 	      return date;
 	    }
 	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if ('value' in nextProps) {
+	        this.setState({
+	          value: this.parseDateFromValue(nextProps.value)
+	        });
+	      }
+	    }
+	  }, {
 	    key: 'monthCellRender',
 	    value: function monthCellRender(value, locale) {
 	      var prefixCls = this.props.prefixCls;
@@ -74241,6 +74251,7 @@
 	exports['default'] = FullCalendar;
 	module.exports = exports['default'];
 
+
 /***/ },
 /* 740 */
 /***/ function(module, exports, __webpack_require__) {
@@ -74466,7 +74477,7 @@
 	  value: true
 	});
 	exports['default'] = {
-	  PREFIX_CLS: 'ant-full-calendar'
+	  PREFIX_CLS: 'ant-fullcalendar'
 	};
 	module.exports = exports['default'];
 
