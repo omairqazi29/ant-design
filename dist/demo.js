@@ -121,7 +121,7 @@
 	  var Select = antd.Select;
 	  var Option = Select.Option;
 	  var versionsHistory = {
-	    '0.9.x': '09x.ant.design'
+	    '0.9.2': '09x.ant.design'
 	  };
 	  versionsHistory[antdVersion.latest] = versionsHistory[antdVersion.latest] || 'ant.design';
 	  var versions = Object.keys(versionsHistory).sort(function (a, b) {
@@ -32281,7 +32281,6 @@
 	
 	exports['default'] = CalendarMixin;
 	module.exports = exports['default'];
-
 
 /***/ },
 /* 339 */
@@ -73970,7 +73969,7 @@
 	
 	    _get(Object.getPrototypeOf(Calendar.prototype), 'constructor', this).call(this);
 	    this.state = {
-	      value: this.parseDateFromValue(props.value),
+	      value: this.parseDateFromValue(props.value || new Date()),
 	      mode: props.mode
 	    };
 	  }
@@ -74033,10 +74032,10 @@
 	  }, {
 	    key: 'setValue',
 	    value: function setValue(value) {
-	      if (this.state.value !== value) {
+	      if (!('value' in this.props) && this.state.value !== value) {
 	        this.setState({ value: value });
-	        this.props.onPanelChange(value, this.state.mode);
 	      }
+	      this.props.onPanelChange(value, this.state.mode);
 	    }
 	  }, {
 	    key: 'setType',
@@ -74062,9 +74061,14 @@
 	
 	      var type = mode === 'year' ? 'month' : 'date';
 	
+	      var cls = className || '';
+	      if (fullscreen) {
+	        cls += ' ' + prefixCls + '-fullscreen';
+	      }
+	
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: (className ? className : '') + ' ' + (fullscreen ? prefixCls + '-fullscreen' : ''), style: style },
+	        { className: cls, style: style },
 	        _react2['default'].createElement(_Header2['default'], {
 	          fullscreen: fullscreen,
 	          type: type,
@@ -74106,8 +74110,7 @@
 	  fullscreen: true,
 	  prefixCls: _Constants.PREFIX_CLS,
 	  onPanelChange: noop,
-	  mode: 'month',
-	  value: new Date()
+	  mode: 'month'
 	};
 	
 	exports['default'] = Calendar;
@@ -74250,7 +74253,6 @@
 	
 	exports['default'] = FullCalendar;
 	module.exports = exports['default'];
-
 
 /***/ },
 /* 740 */
@@ -74677,7 +74679,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta24",
+		"version": "0.10.0-beta25",
 		"stableVersion": "0.9.5",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",

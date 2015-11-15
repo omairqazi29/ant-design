@@ -21,7 +21,7 @@ function monthCellRender(value) {
   );
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { value: new Date('2010-10-10'),
+ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('2010-10-10'),
   dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-custom-render'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dateCellRender</span>(<span class="hljs-params">value</span>) </span>{
@@ -33,7 +33,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { value: new Date('2010-10-1
 }
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{new</span> <span class="hljs-attribute">Date</span>('<span class="hljs-attribute">2010-10-10</span>')}
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{new</span> <span class="hljs-attribute">Date</span>('<span class="hljs-attribute">2010-10-10</span>')}
   <span class="hljs-attribute">dateCellRender</span>=<span class="hljs-value">{dateCellRender}</span> <span class="hljs-attribute">monthCellRender</span>=<span class="hljs-value">{monthCellRender}</span> /&gt;</span>
 , document.getElementById('components-calendar-demo-custom-render'));</span></code></pre></div>
   </div>

@@ -6,7 +6,6 @@
 var _antd = require('antd');
 
 function getListData(value) {
-  console.log(value.getDayOfMonth());
   var listData;
   switch (value.getDayOfMonth()) {
     case 8:
@@ -66,7 +65,6 @@ function monthCellRender(value) {
 ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-notice-calendar'));})()</script><div class="highlight"><pre><code class="javascript">import { Calendar } from 'antd';
 
 function getListData(value) {
-  console.log(value.getDayOfMonth());
   var listData;
   switch (value.getDayOfMonth()) {
     case 8:
