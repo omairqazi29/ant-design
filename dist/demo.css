@@ -433,10 +433,10 @@ samp {
 .anticon-star:before {
   content: "\e694";
 }
-.anticon-enviroment:before {
+.anticon-environment:before {
   content: "\e665";
 }
-.anticon-enviroment-o:before {
+.anticon-environment-o:before {
   content: "\e666";
 }
 .anticon-eye:before {
@@ -3533,8 +3533,11 @@ fieldset[disabled] .ant-btn-ghost.active {
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item a {
+.ant-dropdown-menu > .ant-dropdown-menu-item > a {
   color: #666;
+  display: block;
+  padding: 7px 16px;
+  margin: -7px -16px;
 }
 .ant-dropdown-menu > .ant-dropdown-menu-item:hover {
   background-color: #eaf8fe;
@@ -3946,6 +3949,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-rendering: auto;
   line-height: 1;
   color: #919191;
+  line-height: 20px;
   cursor: pointer;
   font-weight: bold;
   display: inline-block;
@@ -10056,7 +10060,8 @@ a .ant-badge-count:active {
 .ant-fullcalendar-month-panel-cell .ant-fullcalendar-value {
   width: 48px;
 }
-.ant-fullcalendar-today .ant-fullcalendar-value {
+.ant-fullcalendar-today .ant-fullcalendar-value,
+.ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value {
   background: #2db7f5;
   color: #fff;
 }
@@ -10086,37 +10091,6 @@ a .ant-badge-count:active {
   table-layout: fixed;
   width: 100%;
   border-collapse: separate;
-}
-.ant-fullcalendar-month-panel-cell .ant-fullcalendar-month-panel-month {
-  display: block;
-  width: 46px;
-  margin: 0 auto;
-  color: #666;
-  border-radius: 4px;
-  height: 36px;
-  padding: 0;
-  background: transparent;
-  line-height: 36px;
-  text-align: center;
-}
-.ant-fullcalendar-month-panel-cell .ant-fullcalendar-month-panel-month:hover {
-  background: #eaf8fe;
-  cursor: pointer;
-}
-.ant-fullcalendar-month-panel-cell-disabled .ant-fullcalendar-month-panel-cell-month-panel-month {
-  color: #bfbfbf;
-}
-.ant-fullcalendar-month-panel-cell-disabled .ant-fullcalendar-month-panel-cell-month-panel-month:hover {
-  background: white;
-  cursor: not-allowed;
-}
-.ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month-panel-month {
-  background: #2db7f5;
-  color: #fff;
-}
-.ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month-panel-month:hover {
-  background: #2db7f5;
-  color: #fff;
 }
 .ant-fullcalendar-content {
   position: absolute;
@@ -10167,14 +10141,13 @@ a .ant-badge-count:active {
 .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-value {
   color: #666;
 }
-.ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month {
-  background-color: #eaf8fe;
-  color: #666;
-}
-.ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month,
+.ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-month,
 .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-date {
   border-top-color: #2db7f5;
   background-color: #eaf8fe;
+  color: #2db7f5;
+}
+.ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value {
   color: #2db7f5;
 }
 .ant-fullcalendar-fullscreen .ant-fullcalendar-last-month-cell .ant-fullcalendar-date,

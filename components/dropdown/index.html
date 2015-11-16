@@ -189,7 +189,7 @@ Dropdown 下拉菜单 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta25',
+        latest: '0.10.0-beta26',
         stable: '0.9.5'
       };
     </script>
@@ -199,7 +199,7 @@ Dropdown 下拉菜单 - Ant Design
         var result = window;
         var namespaces = path.split('/');
         namespaces.forEach(function (key, i) {
-          if (i !== 0 && i === namespaces.length - 1) {
+          if (i === 2) {
             key = capitalizeFirstLetter(key);
           }
           if (key !== 'lib') {
