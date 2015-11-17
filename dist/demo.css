@@ -333,9 +333,9 @@ samp {
 }
 @font-face {
   font-family: 'anticon';
-  src: url('//at.alicdn.com/t/font_1447430015_7197566.eot');
+  src: url('//at.alicdn.com/t/font_1447745222_4559345.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1447430015_7197566.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1447430015_7197566.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1447430015_7197566.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1447430015_7197566.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1447745222_4559345.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1447745222_4559345.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1447745222_4559345.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1447745222_4559345.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .anticon {
@@ -837,6 +837,9 @@ samp {
 }
 .anticon-caret-circle-down:before {
   content: "\e607";
+}
+.anticon-qrcode:before {
+  content: "\e6a5";
 }
 .anticon-loading:before {
   display: inline-block;
@@ -3054,8 +3057,6 @@ samp {
 }
 .ant-btn > .anticon {
   line-height: 1;
-  position: relative;
-  top: 1px;
 }
 .ant-btn,
 .ant-btn:active,
@@ -3234,10 +3235,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   padding: 0;
   font-size: 14px;
   border-radius: 50%;
-}
-.ant-btn-circle > .anticon,
-.ant-btn-circle-outline > .anticon {
-  top: 1px;
 }
 .ant-btn-circle.ant-btn-lg,
 .ant-btn-circle-outline.ant-btn-lg {
@@ -4062,11 +4059,11 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: relative;
 }
 .ant-select-dropdown--single .ant-select-dropdown-menu-item-selected:after {
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
+  font-size: 0.75;
+  font-size: 9px \9;
+  -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
+          transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -4076,7 +4073,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   font-weight: bold;
   position: absolute;
   top: 7px;
-  right: 0;
+  right: -1px;
   padding-right: 14px;
   color: #2db7f5;
   -webkit-transform: scale(0.75);
@@ -4094,11 +4091,11 @@ fieldset[disabled] .ant-btn-ghost.active {
   position: relative;
 }
 .ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:after {
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
+  font-size: 0.75;
+  font-size: 9px \9;
+  -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
+          transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -4108,7 +4105,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   font-weight: bold;
   position: absolute;
   top: 7px;
-  right: 0;
+  right: -1px;
   padding-right: 14px;
   color: #2db7f5;
   -webkit-transform: scale(0.75);
@@ -4154,7 +4151,6 @@ fieldset[disabled] .ant-btn-ghost.active {
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .ant-select-dropdown-menu-item:first-child {
   border-top-left-radius: 4px;
@@ -4497,7 +4493,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   height: 20px;
   text-align: center;
   line-height: 20px;
-  top: 8px;
+  top: 7px;
   margin: 0;
 }
 .ant-calendar .ant-calendar-clear-btn:after {
@@ -4550,8 +4546,6 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-calendar .ant-calendar-ok-btn > .anticon {
   line-height: 1;
-  position: relative;
-  top: 1px;
 }
 .ant-calendar .ant-calendar-ok-btn,
 .ant-calendar .ant-calendar-ok-btn:active,
@@ -5488,7 +5482,7 @@ textarea.ant-calendar-time-input {
   width: 14px;
   height: 14px;
   margin-right: 8px;
-  top: 1px;
+  line-height: 1.5;
 }
 .ant-tabs-nav .ant-tabs-tab > .ant-tabs-tab-inner:hover {
   color: #6ccdf8;
@@ -5690,8 +5684,6 @@ textarea.ant-calendar-time-input {
 }
 .ant-table th .anticon-bars {
   margin-left: 4px;
-  position: relative;
-  top: 1px;
   display: inline-block;
   font-size: 0.83333333;
   font-size: 10px \9;
@@ -5878,8 +5870,6 @@ textarea.ant-calendar-time-input {
 }
 .ant-table-placeholder .anticon {
   margin-right: 4px;
-  position: relative;
-  top: 1px;
 }
 .ant-table-pagination {
   margin: 16px 0;
@@ -5898,11 +5888,11 @@ textarea.ant-calendar-time-input {
   position: relative;
 }
 .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected:after {
-  font-size: 0.83333333;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-      -ms-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
+  font-size: 0.75;
+  font-size: 9px \9;
+  -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
+          transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
@@ -5912,7 +5902,7 @@ textarea.ant-calendar-time-input {
   font-weight: bold;
   position: absolute;
   top: 7px;
-  right: 0;
+  right: -1px;
   padding-right: 14px;
   color: #2db7f5;
   -webkit-transform: scale(0.75);
@@ -6168,8 +6158,6 @@ tr.ant-table-expanded-row:hover {
 .ant-popover-message .anticon {
   margin-right: 8px;
   color: #f60;
-  position: relative;
-  top: 1px;
 }
 .ant-popover-buttons {
   text-align: right;
@@ -7277,8 +7265,6 @@ form .ant-calendar-picker {
 }
 .ant-steps .ant-steps-head-inner > .ant-steps-icon.anticon {
   font-size: 12px;
-  position: relative;
-  top: 1px;
 }
 .ant-steps .ant-steps-main {
   margin-top: 3px;
@@ -7344,7 +7330,7 @@ form .ant-calendar-picker {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
-  top: 1px;
+  top: 0;
 }
 :root .ant-steps.ant-steps-small .ant-steps-head-inner > .ant-steps-icon.anticon {
   -webkit-filter: none;
@@ -7453,12 +7439,8 @@ form .ant-calendar-picker {
   margin: 0 8px;
   color: #d9d9d9;
 }
-.ant-breadcrumb .anticon {
-  position: relative;
-  top: 1px;
-}
 .ant-breadcrumb .anticon + span {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .ant-input-number {
   position: relative;
@@ -7935,7 +7917,7 @@ textarea.ant-input-number {
   color: #666;
   display: inline-block;
   margin-right: 8px;
-  line-height: 38px;
+  line-height: 40px;
   content: "\e611";
   vertical-align: middle;
   -webkit-transition: -webkit-transform 0.24s ease;
@@ -8038,7 +8020,7 @@ textarea.ant-input-number {
 .ant-message .anticon {
   margin-right: 8px;
   font-size: 14px;
-  top: 2px;
+  top: 1px;
 }
 .ant-divider {
   margin: 0 4px;
@@ -8442,7 +8424,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   left: 16px;
   top: 50%;
   margin-top: -17px;
-  font-size: 35px;
+  font-size: 34px;
 }
 .ant-notification-notice-content-icon-icon-success {
   color: #87d068;
@@ -8600,8 +8582,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   cursor: pointer;
   font-weight: bold;
   margin-left: 3px;
-  position: relative;
-  top: 1px;
   color: #666;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -8668,7 +8648,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-alert-icon {
   margin-right: 8px;
   font-size: 14px;
-  top: 2px;
+  top: 1px;
 }
 .ant-alert-description {
   font-size: 12px;
@@ -8971,7 +8951,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   line-height: 0;
   margin: 0;
   width: 16px;
-  height: 17px;
+  height: 18px;
   display: inline-block;
   vertical-align: middle;
   border: 0 none;
@@ -9394,7 +9374,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   margin-right: 4px;
   font-size: 12px;
   color: #999;
-  top: 2px;
+  top: 1px;
 }
 .ant-upload-list .ant-upload-list-item .ant-upload-list-item-info .anticon-cross {
   display: inline-block;
@@ -9645,8 +9625,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-item .anticon,
 .ant-menu-submenu-title .anticon {
   width: 14px;
-  margin-right: 9px;
-  top: 1px;
+  margin-right: 8px;
 }
 .ant-menu-horizontal {
   border: none;
@@ -9871,7 +9850,7 @@ a .ant-badge-count:active {
   padding: 0 0 10px 24px;
   font-size: 12px;
   position: relative;
-  top: -2px;
+  top: -3px;
 }
 .ant-timeline-item-last .ant-timeline-item-tail {
   border-left: 2px dotted #e9e9e9;
