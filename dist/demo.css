@@ -6994,13 +6994,17 @@ form .ant-calendar-picker {
   -webkit-animation: zoomIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   animation: zoomIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+.has-success.has-feedback:after {
+  -webkit-animation-name: diffZoomIn1 !important;
+          animation-name: diffZoomIn1 !important;
+}
 .has-error.has-feedback:after {
-  -webkit-animation-name: zoomIn2 !important;
-          animation-name: zoomIn2 !important;
+  -webkit-animation-name: diffZoomIn2 !important;
+          animation-name: diffZoomIn2 !important;
 }
 .has-warning.has-feedback:after {
-  -webkit-animation-name: zoomIn3 !important;
-          animation-name: zoomIn3 !important;
+  -webkit-animation-name: diffZoomIn3 !important;
+          animation-name: diffZoomIn3 !important;
 }
 .has-success .ant-form-explain,
 .has-success .ant-form-split {
@@ -7072,6 +7076,9 @@ form .ant-calendar-picker {
   border-color: #fac450;
   box-shadow: 0 0 0 2px #fef3dc;
 }
+.has-warning .ant-input-number:not([disabled]):hover {
+  border-color: #fac450;
+}
 .has-error .ant-form-explain,
 .has-error .ant-form-split {
   color: #f60;
@@ -7112,13 +7119,16 @@ form .ant-calendar-picker {
   border-color: #f60;
   box-shadow: 0 0 0 2px #ffe0cc;
 }
+.has-error .ant-input-number:not([disabled]):hover {
+  border-color: #f60;
+}
 .is-validating.has-feedback:after {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
   content: "\e6a1";
 }
-@-webkit-keyframes zoomIn2 {
+@-webkit-keyframes diffZoomIn1 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -7128,7 +7138,7 @@ form .ant-calendar-picker {
             transform: scale(1);
   }
 }
-@keyframes zoomIn2 {
+@keyframes diffZoomIn1 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -7138,7 +7148,7 @@ form .ant-calendar-picker {
             transform: scale(1);
   }
 }
-@-webkit-keyframes zoomIn3 {
+@-webkit-keyframes diffZoomIn2 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -7148,7 +7158,27 @@ form .ant-calendar-picker {
             transform: scale(1);
   }
 }
-@keyframes zoomIn3 {
+@keyframes diffZoomIn2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes diffZoomIn3 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes diffZoomIn3 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
