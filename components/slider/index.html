@@ -189,7 +189,7 @@ Slider 滑动输入条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta27',
+        latest: '0.10.0-beta28',
         stable: '0.9.5'
       };
     </script>
@@ -564,7 +564,7 @@ Slider 滑动输入条 - Ant Design
       Slider 滑动输入条
     </h1>
     <p>滑动型输入器，展示当前值和可选范围。</p>
-<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当用户需要在数值区间/自定义区间内进行选择时，输入值可为连续或离散值。</p>
+<h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当用户需要在数值区间/自定义区间内进行选择时，可为连续或离散值。</p>
 <h2 id="api">API<a href="#api" class="anchor">#</a> </h2><table>
 <thead>
 <tr>
@@ -597,43 +597,37 @@ Slider 滑动输入条 - Ant Design
 <td>value</td>
 <td>Number or [Number, Number]</td>
 <td></td>
-<td>设置当前取值。当 <code>range</code> 为 <code>false</code> 时，使用 <code>Number</code>。否则用 <code>[Number, Number]</code></td>
+<td>设置当前取值。当 <code>range</code> 为 <code>false</code> 时，使用 <code>Number</code>，否则用 <code>[Number, Number]</code></td>
 </tr>
 <tr>
 <td>defaultValue</td>
 <td>Number or [Number, Number]</td>
 <td>0 or [0, 0]</td>
-<td>设置初始取值。当 <code>range</code> 为 <code>false</code> 时，使用 <code>Number</code>。否则用 <code>[Number, Number]</code></td>
+<td>设置初始取值。当 <code>range</code> 为 <code>false</code> 时，使用 <code>Number</code>，否则用 <code>[Number, Number]</code></td>
 </tr>
 <tr>
 <td>marks</td>
-<td>Array</td>
-<td>[]</td>
-<td>分段标记，标记每一个 step，如果 step 属性没有定义，则 <code>marks</code> 属性会被忽略。当 <code>range</code> 为 <code>true</code> 时，忽略该属性</td>
+<td>Object {Number: String}</td>
+<td>{}</td>
+<td>分段标记，key 的类型必须为 <code>Number</code> 且取值在闭区间 [min, max] 内</td>
 </tr>
 <tr>
 <td>included</td>
 <td>Boolean</td>
 <td>true</td>
-<td>分段式滑块，值为 true 时表示值为包含关系，false 表示并列</td>
-</tr>
-<tr>
-<td>index</td>
-<td>Number</td>
-<td></td>
-<td>为具备 <code>step</code> 或者 <code>marks</code> 的 slider 提供滑块操作的当前位置。当 <code>range</code> 为 <code>true</code> 时，忽略该属性</td>
-</tr>
-<tr>
-<td>defaultIndex</td>
-<td>Number</td>
-<td>0</td>
-<td>为具备 <code>step</code> 或者 <code>marks</code> 的 slider 提供滑块操作的初始位置。当 <code>range</code> 为 <code>true</code> 时，忽略该属性</td>
+<td><code>marks</code> 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列</td>
 </tr>
 <tr>
 <td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
-<td>值为 <code>true</code> 时，滑块为 disable 禁用状态</td>
+<td>值为 <code>true</code> 时，滑块为禁用状态</td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>Function</td>
+<td>NOOP</td>
+<td>当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入。</td>
 </tr>
 </tbody>
 </table>
@@ -654,17 +648,23 @@ var _antd = require('antd');
 ReactDOM.render(React.createElement(
   'div',
   null,
-  React.createElement(_antd.Slider, null),
-  React.createElement(_antd.Slider, { defaultValue: 65, disabled: true })
+  React.createElement(_antd.Slider, { defaultValue: 30 }),
+  React.createElement(_antd.Slider, { range: true, defaultValue: [20, 50] }),
+  React.createElement(_antd.Slider, { range: true, defaultValue: [20, 50], disabled: true })
 ), document.getElementById('components-slider-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{65}</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{30}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[20,</span> <span class="hljs-attribute">50</span>]} /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[20,</span> <span class="hljs-attribute">50</span>]} <span class="hljs-attribute">disabled</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-basic'));</span></code></pre></div><style>
 .code-box-demo .ant-slider {
   margin-bottom: 50px;
+}
+
+.code-box-demo .ant-slider:last-child {
+  margin-bottom: 10px;
 }
 </style>
 
@@ -673,7 +673,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#demo-basic">基本</a>
     </div>
-    <p>基本滑动条。</p>
+    <p>基本滑动条。当 <code>range</code> 为 <code>true</code> 时，渲染为双滑块。当 <code>disabled</code> 为 <code>true</code> 时，滑块处于不可用状态。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-icon-slider">
@@ -816,32 +816,40 @@ ReactDOM.render(
     <p>滑块左右可以设置图标来表达业务含义。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-range">
+</div><div class="code-box" id="demo-event">
   <div class="code-box-demo">
-    <div id="components-slider-demo-range"></div>
+    <div id="components-slider-demo-event"></div>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
 
+function log(value) {
+  console.log(value);
+}
+
 ReactDOM.render(React.createElement(
   'div',
   null,
-  React.createElement(_antd.Slider, { range: true, defaultValue: [0, 30] }),
-  React.createElement(_antd.Slider, { range: true, step: 10, value: [20, 50] })
-), document.getElementById('components-slider-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  React.createElement(_antd.Slider, { defaultValue: 30, onChange: log }),
+  React.createElement(_antd.Slider, { range: true, step: 10, defaultValue: [20, 50], onChange: log })
+), document.getElementById('components-slider-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(value);
+}
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[0,</span> <span class="hljs-attribute">30</span>]} /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{[20,</span> <span class="hljs-attribute">50</span>]} /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{log}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[20,</span> <span class="hljs-attribute">50</span>]} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{log}</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-slider-demo-range'));</span></code></pre></div>
+, document.getElementById('components-slider-demo-event'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-range">双滑块</a>
+      <a href="#demo-event">事件</a>
     </div>
-    <p>设置 <code>range</code> 为 <code>true</code>，将会渲染两个滑块。</p>
+    <p>当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -925,33 +933,57 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-mark">
   <div class="code-box-demo">
     <div id="components-slider-demo-mark"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 var _antd = require('antd');
 
+var marks = {
+  0: '0°C',
+  26: '26°C',
+  37: '37°C',
+  100: '100°C'
+};
+
 ReactDOM.render(React.createElement(
-  "div",
-  { className: "sliderContainer" },
+  'div',
+  null,
   React.createElement(
-    "p",
+    'p',
     null,
-    "包含关系"
+    '包含关系'
   ),
-  React.createElement(_antd.Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], defaultIndex: 1 }),
+  React.createElement(_antd.Slider, { marks: marks, defaultValue: 37 }),
+  React.createElement(_antd.Slider, { range: true, marks: marks, defaultValue: [26, 37] }),
   React.createElement(
-    "p",
+    'p',
     null,
-    "并列关系"
+    '并列关系'
   ),
-  React.createElement(_antd.Slider, { marks: ["状态1", "状态2", "状态3", "状态4"], included: false, defaultIndex: 1 })
+  React.createElement(_antd.Slider, { marks: marks, included: false, defaultValue: 37 }),
+  React.createElement(
+    'p',
+    null,
+    '结合 step'
+  ),
+  React.createElement(_antd.Slider, { marks: marks, step: 10, defaultValue: 37 })
 ), document.getElementById('components-slider-demo-mark'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
+<span class="hljs-keyword">const</span> marks = {
+  <span class="hljs-number">0</span>: <span class="hljs-string">'0°C'</span>,
+  <span class="hljs-number">26</span>: <span class="hljs-string">'26°C'</span>,
+  <span class="hljs-number">37</span>: <span class="hljs-string">'37°C'</span>,
+  <span class="hljs-number">100</span>: <span class="hljs-string">'100°C'</span>
+};
+
 ReactDOM.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"sliderContainer"</span>&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>包含关系<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{["状态1","状态2","状态3","状态4"]}</span> <span class="hljs-attribute">defaultIndex</span>=<span class="hljs-value">{1}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[26,</span> <span class="hljs-attribute">37</span>]} /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>并列关系<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{["状态1","状态2","状态3","状态4"]}</span> <span class="hljs-attribute">included</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">defaultIndex</span>=<span class="hljs-value">{1}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">included</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>结合 step<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-mark'));</span></code></pre></div>
   </div>
@@ -959,7 +991,7 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-mark">分段式滑块</a>
     </div>
-    <p>使用 <code>marks</code> 属性标注分段式滑块，结合 <code>index</code> 可以指定滑块按钮初始位置。</p>
+    <p>使用 <code>marks</code> 属性标注分段式滑块，使用 <code>value</code> / <code>defaultValue</code> 指定滑块位置。可以结合 <code>step</code> <code>included</code> 使用。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

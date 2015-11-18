@@ -190,7 +190,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
   font-size: 12px;
   line-height: 1.5;
   color: #666;
@@ -353,499 +353,499 @@ samp {
   font-family: "anticon" !important;
 }
 .anticon-iconfont-caretcircle-o-up:before {
-  content: "\e60c";
+  content: "\E60C";
 }
 .anticon-android:before {
-  content: "\e64f";
+  content: "\E64F";
 }
 .anticon-chrome:before {
-  content: "\e65c";
+  content: "\E65C";
 }
 .anticon-appstore:before {
-  content: "\e64d";
+  content: "\E64D";
 }
 .anticon-apple:before {
-  content: "\e64e";
+  content: "\E64E";
 }
 .anticon-github:before {
-  content: "\e674";
+  content: "\E674";
 }
 .anticon-inbox:before {
-  content: "\e67b";
+  content: "\E67B";
 }
 .anticon-ie:before {
-  content: "\e67c";
+  content: "\E67C";
 }
 .anticon-smile:before {
-  content: "\e677";
+  content: "\E677";
 }
 .anticon-smile-circle:before {
-  content: "\e676";
+  content: "\E676";
 }
 .anticon-meh-circle:before {
-  content: "\e678";
+  content: "\E678";
 }
 .anticon-frown:before {
-  content: "\e673";
+  content: "\E673";
 }
 .anticon-frown-circle:before {
-  content: "\e672";
+  content: "\E672";
 }
 .anticon-meh:before {
-  content: "\e679";
+  content: "\E679";
 }
 .anticon-pie-chart:before {
-  content: "\e68a";
+  content: "\E68A";
 }
 .anticon-tags:before {
-  content: "\e656";
+  content: "\E656";
 }
 .anticon-tags-o:before {
-  content: "\e657";
+  content: "\E657";
 }
 .anticon-tag:before {
-  content: "\e658";
+  content: "\E658";
 }
 .anticon-tag-o:before {
-  content: "\e659";
+  content: "\E659";
 }
 .anticon-cloud:before {
-  content: "\e65a";
+  content: "\E65A";
 }
 .anticon-cloud-upload-o:before {
-  content: "\e697";
+  content: "\E697";
 }
 .anticon-cloud-download-o:before {
-  content: "\e698";
+  content: "\E698";
 }
 .anticon-cloud-upload:before {
-  content: "\e696";
+  content: "\E696";
 }
 .anticon-cloud-o:before {
-  content: "\e699";
+  content: "\E699";
 }
 .anticon-cloud-download:before {
-  content: "\e65b";
+  content: "\E65B";
 }
 .anticon-star-o:before {
-  content: "\e693";
+  content: "\E693";
 }
 .anticon-star:before {
-  content: "\e694";
+  content: "\E694";
 }
 .anticon-environment:before {
-  content: "\e665";
+  content: "\E665";
 }
 .anticon-environment-o:before {
-  content: "\e666";
+  content: "\E666";
 }
 .anticon-eye:before {
-  content: "\e66e";
+  content: "\E66E";
 }
 .anticon-eye-o:before {
-  content: "\e66d";
+  content: "\E66D";
 }
 .anticon-camera:before {
-  content: "\e653";
+  content: "\E653";
 }
 .anticon-camera-o:before {
-  content: "\e652";
+  content: "\E652";
 }
 .anticon-aliwangwang:before {
-  content: "\e64b";
+  content: "\E64B";
 }
 .anticon-aliwangwang-o:before {
-  content: "\e64a";
+  content: "\E64A";
 }
 .anticon-windows:before {
-  content: "\e6a0";
+  content: "\E6A0";
 }
 .anticon-shopping-cart:before {
-  content: "\e692";
+  content: "\E692";
 }
 .anticon-unlock:before {
-  content: "\e69f";
+  content: "\E69F";
 }
 .anticon-lock:before {
-  content: "\e69d";
+  content: "\E69D";
 }
 .anticon-save:before {
-  content: "\e69e";
+  content: "\E69E";
 }
 .anticon-user:before {
-  content: "\e69c";
+  content: "\E69C";
 }
 .anticon-video-camera:before {
-  content: "\e69b";
+  content: "\E69B";
 }
 .anticon-to-top:before {
-  content: "\e69a";
+  content: "\E69A";
 }
 .anticon-team:before {
-  content: "\e680";
+  content: "\E680";
 }
 .anticon-tablet:before {
-  content: "\e695";
+  content: "\E695";
 }
 .anticon-solution:before {
-  content: "\e68f";
+  content: "\E68F";
 }
 .anticon-poweroff:before {
-  content: "\e691";
+  content: "\E691";
 }
 .anticon-search:before {
-  content: "\e690";
+  content: "\E690";
 }
 .anticon-share-alt:before {
-  content: "\e68e";
+  content: "\E68E";
 }
 .anticon-setting:before {
-  content: "\e68d";
+  content: "\E68D";
 }
 .anticon-search:before {
-  content: "\e68c";
+  content: "\E68C";
 }
 .anticon-poweroff:before {
-  content: "\e68b";
+  content: "\E68B";
 }
 .anticon-picture:before {
-  content: "\e689";
+  content: "\E689";
 }
 .anticon-phone:before {
-  content: "\e688";
+  content: "\E688";
 }
 .anticon-paper-clip:before {
-  content: "\e687";
+  content: "\E687";
 }
 .anticon-notification:before {
-  content: "\e686";
+  content: "\E686";
 }
 .anticon-mobile:before {
-  content: "\e685";
+  content: "\E685";
 }
 .anticon-menu-fold:before {
-  content: "\e684";
+  content: "\E684";
 }
 .anticon-menu-unfold:before {
-  content: "\e683";
+  content: "\E683";
 }
 .anticon-mail:before {
-  content: "\e682";
+  content: "\E682";
 }
 .anticon-logout:before {
-  content: "\e681";
+  content: "\E681";
 }
 .anticon-link:before {
-  content: "\e67e";
+  content: "\E67E";
 }
 .anticon-line-chart:before {
-  content: "\e67f";
+  content: "\E67F";
 }
 .anticon-home:before {
-  content: "\e67d";
+  content: "\E67D";
 }
 .anticon-laptop:before {
-  content: "\e67a";
+  content: "\E67A";
 }
 .anticon-hdd:before {
-  content: "\e675";
+  content: "\E675";
 }
 .anticon-folder-open:before {
-  content: "\e671";
+  content: "\E671";
 }
 .anticon-folder:before {
-  content: "\e670";
+  content: "\E670";
 }
 .anticon-filter:before {
-  content: "\e66f";
+  content: "\E66F";
 }
 .anticon-file-text:before {
-  content: "\e66c";
+  content: "\E66C";
 }
 .anticon-file:before {
-  content: "\e66b";
+  content: "\E66B";
 }
 .anticon-exception:before {
-  content: "\e66a";
+  content: "\E66A";
 }
 .anticon-export:before {
-  content: "\e669";
+  content: "\E669";
 }
 .anticon-desktop:before {
-  content: "\e662";
+  content: "\E662";
 }
 .anticon-edit:before {
-  content: "\e668";
+  content: "\E668";
 }
 .anticon-ellipsis:before {
-  content: "\e667";
+  content: "\E667";
 }
 .anticon-upload:before {
-  content: "\e664";
+  content: "\E664";
 }
 .anticon-download:before {
-  content: "\e663";
+  content: "\E663";
 }
 .anticon-download-line:before {
-  content: "\e663";
+  content: "\E663";
 }
 .anticon-delete:before {
-  content: "\e661";
+  content: "\E661";
 }
 .anticon-copy:before {
-  content: "\e660";
+  content: "\E660";
 }
 .anticon-customerservice:before {
-  content: "\e65e";
+  content: "\E65E";
 }
 .anticon-credit-card:before {
-  content: "\e65f";
+  content: "\E65F";
 }
 .anticon-code:before {
-  content: "\e65d";
+  content: "\E65D";
 }
 .anticon-calendar:before {
-  content: "\e654";
+  content: "\E654";
 }
 .anticon-book:before {
-  content: "\e655";
+  content: "\E655";
 }
 .anticon-bars:before {
-  content: "\e650";
+  content: "\E650";
 }
 .anticon-bar-chart:before {
-  content: "\e651";
+  content: "\E651";
 }
 .anticon-area-chart:before {
-  content: "\e64c";
+  content: "\E64C";
 }
 .anticon-question-circle-o:before {
-  content: "\e648";
+  content: "\E648";
 }
 .anticon-question:before {
-  content: "\e649";
+  content: "\E649";
 }
 .anticon-question-circle:before {
-  content: "\e647";
+  content: "\E647";
 }
 .anticon-pause-circle:before {
-  content: "\e644";
+  content: "\E644";
 }
 .anticon-pause:before {
-  content: "\e646";
+  content: "\E646";
 }
 .anticon-pause-circle-o:before {
-  content: "\e645";
+  content: "\E645";
 }
 .anticon-clock-circle:before {
-  content: "\e642";
+  content: "\E642";
 }
 .anticon-clock-circle-o:before {
-  content: "\e643";
+  content: "\E643";
 }
 .anticon-swap:before {
-  content: "\e641";
+  content: "\E641";
 }
 .anticon-swap-left:before {
-  content: "\e63f";
+  content: "\E63F";
 }
 .anticon-swap-right:before {
-  content: "\e640";
+  content: "\E640";
 }
 .anticon-plus-circle:before {
-  content: "\e63d";
+  content: "\E63D";
 }
 .anticon-plus:before {
-  content: "\e63e";
+  content: "\E63E";
 }
 .anticon-plus-circle-o:before {
-  content: "\e63c";
+  content: "\E63C";
 }
 .anticon-minus:before {
-  content: "\e63b";
+  content: "\E63B";
 }
 .anticon-minus-circle-o:before {
-  content: "\e63a";
+  content: "\E63A";
 }
 .anticon-minus-circle:before {
-  content: "\e639";
+  content: "\E639";
 }
 .anticon-info-circle-o:before {
-  content: "\e638";
+  content: "\E638";
 }
 .anticon-info-circle:before {
-  content: "\e637";
+  content: "\E637";
 }
 .anticon-info:before {
-  content: "\e636";
+  content: "\E636";
 }
 .anticon-exclamation-circle:before {
-  content: "\e634";
+  content: "\E634";
 }
 .anticon-exclamation-circle-o:before {
-  content: "\e635";
+  content: "\E635";
 }
 .anticon-exclamation:before {
-  content: "\e633";
+  content: "\E633";
 }
 .anticon-cross-circle:before {
-  content: "\e631";
+  content: "\E631";
 }
 .anticon-cross-circle-o:before {
-  content: "\e632";
+  content: "\E632";
 }
 .anticon-check-circle:before {
-  content: "\e62f";
+  content: "\E62F";
 }
 .anticon-check-circle-o:before {
-  content: "\e630";
+  content: "\E630";
 }
 .anticon-cross:before {
-  content: "\e62d";
+  content: "\E62D";
 }
 .anticon-check:before {
-  content: "\e62e";
+  content: "\E62E";
 }
 .anticon-verticle-right:before {
-  content: "\e62c";
+  content: "\E62C";
 }
 .anticon-verticle-left:before {
-  content: "\e62b";
+  content: "\E62B";
 }
 .anticon-rollback:before {
-  content: "\e62a";
+  content: "\E62A";
 }
 .anticon-retweet:before {
-  content: "\e627";
+  content: "\E627";
 }
 .anticon-shrink:before {
-  content: "\e628";
+  content: "\E628";
 }
 .anticon-arrow-salt:before {
-  content: "\e629";
+  content: "\E629";
 }
 .anticon-reload:before {
-  content: "\e626";
+  content: "\E626";
 }
 .anticon-double-right:before {
-  content: "\e625";
+  content: "\E625";
 }
 .anticon-double-left:before {
-  content: "\e624";
+  content: "\E624";
 }
 .anticon-arrow-right:before {
-  content: "\e621";
+  content: "\E621";
 }
 .anticon-arrow-up:before {
-  content: "\e622";
+  content: "\E622";
 }
 .anticon-arrow-down:before {
-  content: "\e623";
+  content: "\E623";
 }
 .anticon-arrow-left:before {
-  content: "\e620";
+  content: "\E620";
 }
 .anticon-left:before {
-  content: "\e601";
+  content: "\E601";
 }
 .anticon-right:before {
-  content: "\e600";
+  content: "\E600";
 }
 .anticon-down:before {
-  content: "\e603";
+  content: "\E603";
 }
 .anticon-up:before {
-  content: "\e602";
+  content: "\E602";
 }
 .anticon-play-circle:before {
-  content: "\e61e";
+  content: "\E61E";
 }
 .anticon-play-circle-o:before {
-  content: "\e61f";
+  content: "\E61F";
 }
 .anticon-circle-left:before {
-  content: "\e61b";
+  content: "\E61B";
 }
 .anticon-circle-up:before {
-  content: "\e61c";
+  content: "\E61C";
 }
 .anticon-circle-down:before {
-  content: "\e61d";
+  content: "\E61D";
 }
 .anticon-circle-right:before {
-  content: "\e61a";
+  content: "\E61A";
 }
 .anticon-circle-o-right:before {
-  content: "\e616";
+  content: "\E616";
 }
 .anticon-circle-o-up:before {
-  content: "\e618";
+  content: "\E618";
 }
 .anticon-circle-o-down:before {
-  content: "\e617";
+  content: "\E617";
 }
 .anticon-circle-o-left:before {
-  content: "\e619";
+  content: "\E619";
 }
 .anticon-step-backward:before {
-  content: "\e614";
+  content: "\E614";
 }
 .anticon-step-forward:before {
-  content: "\e615";
+  content: "\E615";
 }
 .anticon-fast-backward:before {
-  content: "\e613";
+  content: "\E613";
 }
 .anticon-fast-forward:before {
-  content: "\e612";
+  content: "\E612";
 }
 .anticon-caret-left:before {
-  content: "\e60f";
+  content: "\E60F";
 }
 .anticon-caret-right:before {
-  content: "\e60a";
+  content: "\E60A";
 }
 .anticon-caret-down:before {
-  content: "\e611";
+  content: "\E611";
 }
 .anticon-caret-up:before {
-  content: "\e610";
+  content: "\E610";
 }
 .anticon-forward:before {
-  content: "\e608";
+  content: "\E608";
 }
 .anticon-backward:before {
-  content: "\e609";
+  content: "\E609";
 }
 .anticon-caret-circle-o-down:before {
-  content: "\e60e";
+  content: "\E60E";
 }
 .anticon-caret-circle-o-right:before {
-  content: "\e60d";
+  content: "\E60D";
 }
 .anticon-caret-circle-o-left:before {
-  content: "\e60b";
+  content: "\E60B";
 }
 .anticon-caret-circle-left:before {
-  content: "\e604";
+  content: "\E604";
 }
 .anticon-caret-circle-right:before {
-  content: "\e605";
+  content: "\E605";
 }
 .anticon-caret-circle-up:before {
-  content: "\e606";
+  content: "\E606";
 }
 .anticon-caret-circle-down:before {
-  content: "\e607";
+  content: "\E607";
 }
 .anticon-qrcode:before {
-  content: "\e6a5";
+  content: "\E6A5";
 }
 .anticon-loading:before {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
-  content: "\e6a1";
+  content: "\E6A1";
 }
 .layout-fixed {
   margin-right: auto;
@@ -3294,7 +3294,7 @@ fieldset[disabled] .ant-btn-ghost.active {
 }
 .ant-btn:after {
   font-family: anticon;
-  content: "\e6a1";
+  content: "\E6A1";
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -3761,7 +3761,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   display: none;
 }
 .ant-select-arrow:before {
-  content: '\e603';
+  content: '\E603';
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -3977,7 +3977,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   color: #333;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
-  content: "\e62d";
+  content: "\E62D";
 }
 .ant-select-open .ant-select-arrow {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
@@ -4068,7 +4068,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
   display: inline-block;
-  content: '\e62e';
+  content: '\E62E';
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
@@ -4100,7 +4100,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
   display: inline-block;
-  content: '\e62e';
+  content: '\E62E';
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
@@ -4272,7 +4272,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   margin-top: -6px;
 }
 .ant-calendar-picker-icon:after {
-  content: "\e654";
+  content: "\E654";
   font-family: "anticon";
   font-size: 12px;
   color: #999;
@@ -4497,7 +4497,7 @@ fieldset[disabled] .ant-btn-ghost.active {
   margin: 0;
 }
 .ant-calendar .ant-calendar-clear-btn:after {
-  content: "\e631";
+  content: "\E631";
   font-family: "anticon";
   font-size: 12px;
   color: #ccc;
@@ -4976,14 +4976,14 @@ textarea.ant-calendar-time-input {
 }
 .ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year:before,
 .ant-calendar-year-panel-next-decade-cell .ant-calendar-year-panel-year:before {
-  content: "\e600";
+  content: "\E600";
   font-family: "anticon" !important;
 }
 .ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year:before {
-  content: "\e601";
+  content: "\E601";
 }
 .ant-calendar-decade-panel {
   left: 0;
@@ -5104,14 +5104,14 @@ textarea.ant-calendar-time-input {
 }
 .ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade:before,
 .ant-calendar-decade-panel-next-century-cell .ant-calendar-decade-panel-decade:before {
-  content: "\e600";
+  content: "\E600";
   font-family: "anticon" !important;
 }
 .ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade:before {
-  content: "\e601";
+  content: "\E601";
 }
 .ant-modal {
   outline: none;
@@ -5173,7 +5173,7 @@ textarea.ant-calendar-time-input {
   right: 18px;
 }
 .ant-modal-close-x:before {
-  content: "\e62d";
+  content: "\E62D";
   display: block;
   font-family: "anticon" !important;
 }
@@ -5410,7 +5410,7 @@ textarea.ant-calendar-time-input {
   right: 2px;
 }
 .ant-tabs-tab-next-icon:before {
-  content: "\e600";
+  content: "\E600";
 }
 .ant-tabs-tab-prev {
   left: 0;
@@ -5419,7 +5419,7 @@ textarea.ant-calendar-time-input {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .ant-tabs-tab-prev-icon:before {
-  content: "\e601";
+  content: "\E601";
 }
 :root .ant-tabs-tab-prev {
   -webkit-filter: none;
@@ -5897,7 +5897,7 @@ textarea.ant-calendar-time-input {
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
   display: inline-block;
-  content: '\e62e';
+  content: '\E62E';
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
@@ -6330,7 +6330,7 @@ tr.ant-table-expanded-row:hover {
 }
 .ant-pagination-jump-prev:after,
 .ant-pagination-jump-next:after {
-  content: "•••";
+  content: "\2022\2022\2022";
   display: block;
   letter-spacing: 2px;
   color: #ccc;
@@ -6361,10 +6361,10 @@ tr.ant-table-expanded-row:hover {
   font-size: 12px;
 }
 .ant-pagination-jump-prev:hover:after {
-  content: "\e601\e601";
+  content: "\E601\E601";
 }
 .ant-pagination-jump-next:hover:after {
-  content: "\e600\e600";
+  content: "\E600\E600";
 }
 .ant-pagination-prev,
 .ant-pagination-jump-prev,
@@ -6433,11 +6433,11 @@ tr.ant-table-expanded-row:hover {
 }
 .ant-pagination-prev a:after {
   margin-top: -0.5px;
-  content: "\e601";
+  content: "\E601";
   display: block;
 }
 .ant-pagination-next a:after {
-  content: "\e600";
+  content: "\E600";
   display: block;
 }
 .ant-pagination-disabled {
@@ -7032,7 +7032,7 @@ form .ant-calendar-picker {
   box-shadow: none;
 }
 .has-success.has-feedback:after {
-  content: '\e62f';
+  content: '\E62F';
   color: #87d068;
 }
 .has-warning .ant-form-explain,
@@ -7058,7 +7058,7 @@ form .ant-calendar-picker {
   color: #fac450;
 }
 .has-warning.has-feedback:after {
-  content: '\e634';
+  content: '\E634';
   color: #fac450;
 }
 .has-warning .ant-select-selection {
@@ -7101,7 +7101,7 @@ form .ant-calendar-picker {
   color: #f60;
 }
 .has-error.has-feedback:after {
-  content: '\e634';
+  content: '\E634';
   color: #f60;
 }
 .has-error .ant-select-selection {
@@ -7125,7 +7125,7 @@ form .ant-calendar-picker {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
-  content: "\e6a1";
+  content: "\E6A1";
 }
 @-webkit-keyframes diffZoomIn1 {
   0% {
@@ -7721,7 +7721,7 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-up-inner:before {
   text-align: center;
-  content: "\e602";
+  content: "\E602";
 }
 .ant-input-number-handler-up:hover {
   height: 16px;
@@ -7736,7 +7736,7 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-down-inner:before {
   text-align: center;
-  content: "\e603";
+  content: "\E603";
 }
 .ant-input-number-handler-down:hover {
   height: 16px;
@@ -7947,7 +7947,7 @@ textarea.ant-input-number {
   display: inline-block;
   margin-right: 8px;
   line-height: 40px;
-  content: "\e611";
+  content: "\E611";
   vertical-align: middle;
   -webkit-transition: -webkit-transform 0.24s ease;
   transition: -webkit-transform 0.24s ease;
@@ -7970,7 +7970,7 @@ textarea.ant-input-number {
   font-family: "anticon" !important;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow:before {
-  content: "\e611";
+  content: "\E611";
 }
 .ant-collapse-content {
   display: none;
@@ -8469,7 +8469,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-notification-notice-close-x:after {
   font-size: 12px;
-  content: "\e62d";
+  content: "\E62D";
   font-family: "anticon";
   cursor: pointer;
 }
@@ -8734,7 +8734,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-alert-with-description-close-icon-x:before {
   font-weight: 700;
   text-shadow: 0 1px 0 #fff;
-  content: "\e62d";
+  content: "\E62D";
   font-family: "anticon";
 }
 .ant-alert-close-icon:hover,
@@ -8988,7 +8988,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   outline: none;
 }
 .ant-tree li span.ant-tree-icon_loading:after {
-  content: '\e6a1';
+  content: '\E6A1';
   display: inline-block;
   font-family: 'anticon';
   font-weight: bold;
@@ -9025,7 +9025,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
-  content: '\e611';
+  content: '\E611';
   display: inline-block;
   font-family: 'anticon';
   font-weight: bold;
@@ -9070,7 +9070,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
   zoom: 1;
-  content: '\e611';
+  content: '\E611';
   display: inline-block;
   font-family: 'anticon';
   font-weight: bold;
@@ -9246,13 +9246,13 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   left: -25px;
 }
 .ant-carousel .slick-prev:before {
-  content: "←";
+  content: "\2190";
 }
 .ant-carousel .slick-next {
   right: -25px;
 }
 .ant-carousel .slick-next:before {
-  content: "→";
+  content: "\2192";
 }
 .ant-carousel .slick-slider {
   padding-bottom: 45px;
@@ -9300,7 +9300,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
+  content: "\2022";
   width: 20px;
   height: 20px;
   font-size: 18px;
@@ -9606,7 +9606,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease;
-  content: "\e603";
+  content: "\E603";
   right: 16px;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg) scale(0.75);
@@ -9625,7 +9625,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease;
-  content: "\e603";
+  content: "\E603";
   right: 16px;
   top: 0;
   display: inline-block;
@@ -9701,7 +9701,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   left: 0;
 }
 .ant-menu-horizontal:after {
-  content: "\20";
+  content: " ";
   display: block;
   height: 0;
   clear: both;

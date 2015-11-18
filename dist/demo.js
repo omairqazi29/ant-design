@@ -54052,6 +54052,8 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
 	var _react = __webpack_require__(82);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -54070,7 +54072,41 @@
 	    };
 	  },
 	  render: function render() {
-	    return _react2['default'].createElement(_rcSlider2['default'], this.props);
+	    var _props = this.props;
+	    var isIncluded = _props.isIncluded;
+	    var marks = _props.marks;
+	    var index = _props.index;
+	    var defaultIndex = _props.defaultIndex;
+	
+	    var rest = _objectWithoutProperties(_props, ['isIncluded', 'marks', 'index', 'defaultIndex']);
+	
+	    if (isIncluded !== undefined) {
+	      // 兼容 `isIncluded`
+	      rest.included = isIncluded;
+	    }
+	
+	    if (Array.isArray(marks)) {
+	      // 兼容当 marks 为数组的情况
+	      rest.min = 0;
+	      rest.max = marks.length - 1;
+	      rest.step = 1;
+	
+	      if (index !== undefined) {
+	        rest.value = index;
+	      }
+	      if (defaultIndex !== undefined) {
+	        rest.defaultValue = defaultIndex;
+	      }
+	
+	      rest.marks = {};
+	      marks.forEach(function (val, idx) {
+	        rest.marks[idx] = val;
+	      });
+	    } else {
+	      rest.marks = marks;
+	    }
+	
+	    return _react2['default'].createElement(_rcSlider2['default'], rest);
 	  }
 	});
 	module.exports = exports['default'];
@@ -54146,12 +54182,8 @@
 	  e.preventDefault();
 	}
 	
-	// This is an utility method, tries to get property, then defaultPropery with
-	// special check using 'in', because propery can be '0'
-	function propOrDefault(props, name, fallback) {
-	  var defaultName = 'default' + name.charAt(0).toUpperCase() + name.substring(1);
-	  var defaultValue = defaultName in props ? props[defaultName] : fallback;
-	  return name in props ? props[name] : defaultValue;
+	function isEmpty(collection) {
+	  return Object.keys(collection).length === 0;
 	}
 	
 	var Slider = (function (_React$Component) {
@@ -54162,32 +54194,29 @@
 	
 	    _get(Object.getPrototypeOf(Slider.prototype), 'constructor', this).call(this, props);
 	
+	    var range = props.range;
+	    var min = props.min;
+	    var max = props.max;
+	
+	    var initialValue = range ? [min, min] : min;
+	    var defaultValue = 'defaultValue' in props ? props.defaultValue : initialValue;
+	    var value = 'value' in props ? props.value : defaultValue;
+	
 	    var upperBound = undefined;
 	    var lowerBound = undefined;
-	    var initialValue = props.range ? [0, 0] : 0;
-	    if (props.marks.length > 0) {
-	      var index = propOrDefault(props, 'index', initialValue);
-	
-	      var _getBoundsFromIndex = this.getBoundsFromIndex(index, props);
-	
-	      lowerBound = _getBoundsFromIndex.lowerBound;
-	      upperBound = _getBoundsFromIndex.upperBound;
+	    if (props.range) {
+	      lowerBound = this.trimAlignValue(value[0]);
+	      upperBound = this.trimAlignValue(value[1]);
 	    } else {
-	      var value = propOrDefault(props, 'value', initialValue);
-	      if (props.range) {
-	        lowerBound = this.trimAlignValue(value[0]);
-	        upperBound = this.trimAlignValue(value[1]);
-	      } else {
-	        upperBound = this.trimAlignValue(value);
-	      }
+	      upperBound = this.trimAlignValue(value);
 	    }
 	
 	    var recent = undefined;
 	    if (props.range && upperBound === lowerBound) {
-	      if (lowerBound === props.max) {
+	      if (lowerBound === max) {
 	        recent = 'lowerBound';
 	      }
-	      if (upperBound === props.min) {
+	      if (upperBound === min) {
 	        recent = 'upperBound';
 	      }
 	    } else {
@@ -54199,7 +54228,7 @@
 	      recent: recent,
 	      upperBound: upperBound,
 	      // If Slider is not range, set `lowerBound` equal to `min`.
-	      lowerBound: lowerBound || props.min
+	      lowerBound: lowerBound || min
 	    };
 	  }
 	
@@ -54218,10 +54247,25 @@
 	        this.setState({
 	          upperBound: nextProps.value
 	        });
-	      } else if ('index' in nextProps) {
-	        var index = 'index' in nextProps ? nextProps.index : nextProps.defaultIndex;
-	        this.setState(this.getBoundsFromIndex(index, nextProps));
 	      }
+	    }
+	  }, {
+	    key: 'onChange',
+	    value: function onChange(handle, value) {
+	      var props = this.props;
+	      var isNotControlled = !('value' in props);
+	      if (isNotControlled) {
+	        this.setState(_defineProperty({}, handle, value));
+	      }
+	
+	      var state = this.state;
+	      var data = {
+	        upperBound: state.upperBound,
+	        lowerBound: state.lowerBound
+	      };
+	      data[handle] = value;
+	      var changedValue = props.range ? [data.lowerBound, data.upperBound] : data.upperBound;
+	      props.onChange(changedValue);
 	    }
 	  }, {
 	    key: 'onMouseMove',
@@ -54243,8 +54287,6 @@
 	  }, {
 	    key: 'onMove',
 	    value: function onMove(e, position) {
-	      var _this = this;
-	
 	      pauseEvent(e);
 	      var props = this.props;
 	      var state = this.state;
@@ -54256,11 +54298,7 @@
 	      var oldValue = state[state.handle];
 	      if (value === oldValue) return;
 	
-	      if (!('value' in props) && !('index' in props)) {
-	        this.setState(_defineProperty({}, state.handle, value), function () {
-	          _this.triggerEvents('onChange', _this.getValue());
-	        });
-	      }
+	      this.onChange(state.handle, value);
 	    }
 	  }, {
 	    key: 'onTouchStart',
@@ -54273,8 +54311,8 @@
 	      pauseEvent(e);
 	    }
 	  }, {
-	    key: 'onSliderMouseDown',
-	    value: function onSliderMouseDown(e) {
+	    key: 'onMouseDown',
+	    value: function onMouseDown(e) {
 	      var position = getMousePosition(e);
 	      this.onStart(position);
 	      this.addDocumentEvents('mouse');
@@ -54283,9 +54321,8 @@
 	  }, {
 	    key: 'onStart',
 	    value: function onStart(position) {
-	      var _this2 = this;
-	
-	      this.triggerEvents('onBeforeChange');
+	      var props = this.props;
+	      props.onBeforeChange(this.getValue());
 	
 	      var value = this.calcValueByPos(position);
 	      this.startValue = value;
@@ -54312,12 +54349,15 @@
 	        }
 	      }
 	
-	      this.setState(_defineProperty({
+	      this.setState({
 	        handle: valueNeedChanging,
 	        recent: valueNeedChanging
-	      }, valueNeedChanging, value), function () {
-	        _this2.triggerEvents('onChange', _this2.getValue());
 	      });
+	
+	      var oldValue = state[valueNeedChanging];
+	      if (value === oldValue) return;
+	
+	      this.onChange(valueNeedChanging, value);
 	    }
 	  }, {
 	    key: 'getValue',
@@ -54329,32 +54369,21 @@
 	      return this.props.range ? [lowerBound, upperBound] : upperBound;
 	    }
 	  }, {
-	    key: 'getIndex',
-	    value: function getIndex(value) {
+	    key: 'getPoints',
+	    value: function getPoints() {
 	      var _props = this.props;
 	      var marks = _props.marks;
+	      var step = _props.step;
 	      var min = _props.min;
 	      var max = _props.max;
-	      var step = _props.step;
 	
-	      if (marks.length === 0) {
-	        return Math.floor((value - min) / step);
+	      var points = Object.keys(marks);
+	      if (isEmpty(marks) || step > 1) {
+	        for (var i = min; i <= max; i = i + step) {
+	          points.push(i);
+	        }
 	      }
-	      var unit = ((max - min) / (marks.length - 1)).toFixed(5);
-	      return Math.round(value / unit);
-	    }
-	  }, {
-	    key: 'getBoundsFromIndex',
-	    value: function getBoundsFromIndex(value, props) {
-	      if (props.range) {
-	        return {
-	          lowerBound: this.calcValueFromIndex(value[0], props),
-	          upperBound: this.calcValueFromIndex(value[1], props)
-	        };
-	      }
-	      return {
-	        upperBound: this.calcValueFromIndex(value, props)
-	      };
+	      return points;
 	    }
 	  }, {
 	    key: 'getSliderLength',
@@ -54378,12 +54407,12 @@
 	    key: 'trimAlignValue',
 	    value: function trimAlignValue(v) {
 	      var state = this.state || {};
-	      var props = this.props;
-	      var marks = props.marks;
-	      var min = props.min;
-	      var max = props.max;
-	
-	      var step = marks.length > 0 ? (max - min) / (marks.length - 1) : props.step;
+	      var handle = state.handle;
+	      var lowerBound = state.lowerBound;
+	      var upperBound = state.upperBound;
+	      var _props2 = this.props;
+	      var min = _props2.min;
+	      var max = _props2.max;
 	
 	      var val = v;
 	      if (val <= min) {
@@ -54392,28 +54421,27 @@
 	      if (val >= max) {
 	        val = max;
 	      }
-	      if (state.handle === 'upperBound' && val <= state.lowerBound) {
-	        val = state.lowerBound;
+	      if (handle === 'upperBound' && val <= lowerBound) {
+	        val = lowerBound;
 	      }
-	      if (state.handle === 'lowerBound' && val >= state.upperBound) {
-	        val = state.upperBound;
-	      }
-	
-	      var valModStep = (val - min) % step;
-	      var alignValue = val - valModStep;
-	
-	      if (Math.abs(valModStep) * 2 >= step) {
-	        alignValue += valModStep > 0 ? step : -step;
+	      if (handle === 'lowerBound' && val >= upperBound) {
+	        val = upperBound;
 	      }
 	
-	      return parseFloat(alignValue.toFixed(5));
+	      var points = this.getPoints().map(parseFloat);
+	      var diffs = points.map(function (point) {
+	        return Math.abs(val - point);
+	      });
+	      var closestPoint = points[diffs.indexOf(Math.min.apply(Math, diffs))];
+	
+	      return closestPoint;
 	    }
 	  }, {
 	    key: 'calcOffset',
 	    value: function calcOffset(value) {
-	      var _props2 = this.props;
-	      var min = _props2.min;
-	      var max = _props2.max;
+	      var _props3 = this.props;
+	      var min = _props3.min;
+	      var max = _props3.max;
 	
 	      var ratio = (value - min) / (max - min);
 	      return ratio * 100;
@@ -54421,9 +54449,9 @@
 	  }, {
 	    key: 'calcValue',
 	    value: function calcValue(offset) {
-	      var _props3 = this.props;
-	      var min = _props3.min;
-	      var max = _props3.max;
+	      var _props4 = this.props;
+	      var min = _props4.min;
+	      var max = _props4.max;
 	
 	      var ratio = offset / this.getSliderLength();
 	      return ratio * (max - min) + min;
@@ -54434,42 +54462,6 @@
 	      var pixelOffset = position - this.getSliderStart();
 	      var nextValue = this.trimAlignValue(this.calcValue(pixelOffset));
 	      return nextValue;
-	    }
-	  }, {
-	    key: 'calcValueFromIndex',
-	    value: function calcValueFromIndex(index, props) {
-	      var marksLen = props.marks.length;
-	      if (marksLen > 0) {
-	        var value = (props.max - props.min) / (marksLen - 1) * index;
-	        // `'1' / 1 => 1`, to make sure that the returned value is a `Number`.
-	        return value.toFixed(5) / 1;
-	      }
-	      return 'value' in props ? props.value : props.defaultValue;
-	    }
-	  }, {
-	    key: 'triggerEvents',
-	    value: function triggerEvents(event, v) {
-	      var _this3 = this;
-	
-	      var props = this.props;
-	      var hasMarks = props.marks.length > 0;
-	      if (props[event]) {
-	        var data = undefined;
-	        if (hasMarks) {
-	          if (props.range) {
-	            data = v.map(function (bound) {
-	              return _this3.getIndex(bound);
-	            });
-	          } else {
-	            data = this.getIndex(v);
-	          }
-	        } else if (v === undefined) {
-	          data = this.state.value;
-	        } else {
-	          data = v;
-	        }
-	        props[event](data);
-	      }
 	    }
 	  }, {
 	    key: 'addDocumentEvents',
@@ -54498,7 +54490,7 @@
 	    key: 'end',
 	    value: function end(type) {
 	      this.removeEventons(type);
-	      this.triggerEvents('onAfterChange', this.getValue());
+	      this.props.onAfterChange(this.getValue());
 	      this.setState({ handle: null });
 	    }
 	  }, {
@@ -54510,24 +54502,21 @@
 	      var handle = _state2.handle;
 	      var upperBound = _state2.upperBound;
 	      var lowerBound = _state2.lowerBound;
+	      var _props5 = this.props;
+	      var className = _props5.className;
+	      var prefixCls = _props5.prefixCls;
+	      var disabled = _props5.disabled;
+	      var dots = _props5.dots;
+	      var included = _props5.included;
+	      var range = _props5.range;
+	      var marks = _props5.marks;
+	      var max = _props5.max;
+	      var min = _props5.min;
+	      var tipTransitionName = _props5.tipTransitionName;
+	      var tipFormatter = _props5.tipFormatter;
+	      var children = _props5.children;
 	
-	      var props = this.props;
-	      var className = props.className;
-	      var prefixCls = props.prefixCls;
-	      var disabled = props.disabled;
-	      var included = props.included;
-	      var isIncluded = props.isIncluded;
-	      var dots = props.dots;
-	      var range = props.range;
-	      var marks = props.marks;
-	      var step = props.step;
-	      var max = props.max;
-	      var min = props.min;
-	      var tipTransitionName = props.tipTransitionName;
-	      var tipFormatter = props.tipFormatter;
-	      var children = props.children;
-	
-	      var marksLen = marks.length;
+	      var marksCount = Object.keys(marks).length;
 	
 	      var sliderClassName = (0, _rcUtil.classSet)((_classSet = {}, _defineProperty(_classSet, prefixCls, true), _defineProperty(_classSet, prefixCls + '-disabled', disabled), _defineProperty(_classSet, className, !!className), _classSet));
 	
@@ -54535,13 +54524,13 @@
 	      var lowerOffset = this.calcOffset(lowerBound);
 	
 	      var track = null;
-	      if (included && isIncluded || range) {
+	      if (included || range) {
 	        var trackClassName = prefixCls + '-track';
 	        track = _react2['default'].createElement(_Track2['default'], { className: trackClassName, offset: lowerOffset, length: upperOffset - lowerOffset });
 	      }
 	
 	      var handleClassName = prefixCls + '-handle';
-	      var isNoTip = marksLen > 0 && !tipFormatter;
+	      var isNoTip = marksCount > 0 && !tipFormatter;
 	      var upper = _react2['default'].createElement(_Handle2['default'], { className: handleClassName, tipTransitionName: tipTransitionName, noTip: isNoTip, tipFormatter: tipFormatter,
 	        offset: upperOffset, value: upperBound, dragging: handle === 'upperBound' });
 	
@@ -54551,34 +54540,21 @@
 	          offset: lowerOffset, value: lowerBound, dragging: handle === 'lowerBound' });
 	      }
 	
-	      var upperIndex = this.getIndex(upperBound);
-	
-	      var steps = null;
-	      if (marksLen > 0 || step > 1 && dots) {
-	        var stepsClassName = prefixCls + '-step';
-	        var stepNum = marksLen > 0 ? marksLen : Math.floor((max - min) / step) + 1;
-	        steps = _react2['default'].createElement(_Steps2['default'], { className: stepsClassName, stepNum: stepNum,
-	          lowerIndex: this.getIndex(lowerBound), upperIndex: upperIndex,
-	          included: included && isIncluded || range });
-	      }
-	
-	      var mark = null;
-	      if (marksLen > 0) {
-	        var markClassName = prefixCls + '-mark';
-	        mark = _react2['default'].createElement(_Marks2['default'], { className: markClassName, marks: marks,
-	          index: upperIndex, included: included && isIncluded });
-	      }
-	
+	      var isIncluded = included || range;
 	      return _react2['default'].createElement(
 	        'div',
 	        { ref: 'slider', className: sliderClassName,
 	          onTouchStart: disabled ? noop : this.onTouchStart.bind(this),
-	          onMouseDown: disabled ? noop : this.onSliderMouseDown.bind(this) },
+	          onMouseDown: disabled ? noop : this.onMouseDown.bind(this) },
 	        track,
 	        upper,
 	        lower,
-	        steps,
-	        mark,
+	        _react2['default'].createElement(_Steps2['default'], { prefixCls: prefixCls, points: this.getPoints(), dots: dots,
+	          included: isIncluded, lowerBound: lowerBound,
+	          upperBound: upperBound, max: max, min: min }),
+	        _react2['default'].createElement(_Marks2['default'], { className: prefixCls + '-mark', marks: marks,
+	          included: isIncluded, lowerBound: lowerBound,
+	          upperBound: upperBound, max: max, min: min }),
 	        children
 	      );
 	    }
@@ -54592,11 +54568,8 @@
 	  max: _react2['default'].PropTypes.number,
 	  step: _react2['default'].PropTypes.number,
 	  defaultValue: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.number)]),
-	  defaultIndex: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.number)]),
 	  value: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.number)]),
-	  index: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.number)]),
-	  marks: _react2['default'].PropTypes.array,
-	  isIncluded: _react2['default'].PropTypes.bool, // @Deprecated
+	  marks: _react2['default'].PropTypes.object,
 	  included: _react2['default'].PropTypes.bool,
 	  className: _react2['default'].PropTypes.string,
 	  prefixCls: _react2['default'].PropTypes.string,
@@ -54612,17 +54585,18 @@
 	};
 	
 	Slider.defaultProps = {
+	  prefixCls: 'rc-slider',
+	  className: '',
+	  tipTransitionName: '',
 	  min: 0,
 	  max: 100,
 	  step: 1,
-	  defaultIndex: 0,
-	  marks: [],
-	  isIncluded: true, // @Deprecated
+	  marks: {},
+	  onBeforeChange: noop,
+	  onChange: noop,
+	  onAfterChange: noop,
 	  included: true,
-	  className: '',
-	  prefixCls: 'rc-slider',
 	  disabled: false,
-	  tipTransitionName: '',
 	  dots: false,
 	  range: false
 	};
@@ -54742,7 +54716,7 @@
 	      return _react2['default'].createElement(
 	        _rcTooltip2['default'],
 	        {
-	          prefixCls: className.replace('handle', 'tooltip'),
+	          prefixCls: className.replace('slider-handle', 'tooltip'),
 	          placement: 'top',
 	          visible: isTooltipVisible,
 	          overlay: _react2['default'].createElement(
@@ -54793,34 +54767,34 @@
 	
 	var _rcUtil = __webpack_require__(300);
 	
-	var _rcUtil2 = _interopRequireDefault(_rcUtil);
-	
 	var Steps = function Steps(_ref) {
-	  var className = _ref.className;
-	  var stepNum = _ref.stepNum;
+	  var prefixCls = _ref.prefixCls;
+	  var points = _ref.points;
+	  var dots = _ref.dots;
 	  var included = _ref.included;
-	  var lowerIndex = _ref.lowerIndex;
-	  var upperIndex = _ref.upperIndex;
+	  var lowerBound = _ref.lowerBound;
+	  var upperBound = _ref.upperBound;
+	  var max = _ref.max;
+	  var min = _ref.min;
 	
-	  var dotClassName = className.replace('step', 'dot');
-	  var unit = 100 / (stepNum - 1);
+	  var range = max - min;
+	  var elements = points.filter(function (point) {
+	    return typeof point === 'string' || dots;
+	  }).map(parseFloat).map(function (point) {
+	    var _classSet;
 	
-	  var elements = [];
-	  for (var i = 0; i < stepNum; i++) {
-	    var _rcUtil$classSet;
-	
-	    var offset = unit * i + '%';
+	    var offset = (point - min) / range * 100 + '%';
 	    var style = { left: offset };
 	
-	    var isActived = included && i <= upperIndex && i >= lowerIndex || !included && i === upperIndex;
-	    var stepClassName = _rcUtil2['default'].classSet((_rcUtil$classSet = {}, _defineProperty(_rcUtil$classSet, dotClassName, true), _defineProperty(_rcUtil$classSet, dotClassName + '-active', isActived), _rcUtil$classSet));
+	    var isActived = !included && point === upperBound || included && point <= upperBound && point >= lowerBound;
+	    var pointClassName = (0, _rcUtil.classSet)((_classSet = {}, _defineProperty(_classSet, prefixCls + '-dot', true), _defineProperty(_classSet, prefixCls + '-dot-active', isActived), _classSet));
 	
-	    elements.push(_react2['default'].createElement('span', { className: stepClassName, style: style, key: i }));
-	  }
+	    return _react2['default'].createElement('span', { className: pointClassName, style: style, key: point });
+	  });
 	
 	  return _react2['default'].createElement(
 	    'div',
-	    { className: className },
+	    { className: prefixCls + '-step' },
 	    elements
 	  );
 	};
@@ -54853,34 +54827,33 @@
 	var Marks = function Marks(_ref) {
 	  var className = _ref.className;
 	  var marks = _ref.marks;
-	  var index = _ref.index;
 	  var included = _ref.included;
+	  var upperBound = _ref.upperBound;
+	  var lowerBound = _ref.lowerBound;
+	  var max = _ref.max;
+	  var min = _ref.min;
 	
-	  var marksLen = marks.length;
-	  var unit = 100 / (marksLen - 1);
+	  var marksKeys = Object.keys(marks);
+	  var marksCount = marksKeys.length;
+	  var unit = 100 / (marksCount - 1);
 	  var markWidth = unit / 2 + '%';
 	
-	  var elements = [];
-	  for (var i = 0; i < marksLen; i++) {
+	  var range = max - min;
+	  var elements = marksKeys.map(parseFloat).map(function (point) {
 	    var _rcUtil$classSet;
 	
-	    var isActived = included && i <= index || !included && i === index;
+	    var isActived = !included && point === upperBound || included && point <= upperBound && point >= lowerBound;
 	    var markClassName = _rcUtil2['default'].classSet((_rcUtil$classSet = {}, _defineProperty(_rcUtil$classSet, className + '-text', true), _defineProperty(_rcUtil$classSet, className + '-text-active', isActived), _rcUtil$classSet));
 	
 	    var style = { width: markWidth };
-	    var offset = unit * i;
-	    if (i === marksLen - 1) {
-	      style.right = -unit / 4 + '%';
-	    } else {
-	      style.left = (i > 0 ? offset - unit / 4 : -unit / 4) + '%';
-	    }
+	    style.left = (point - min) / range * 100 - unit / 4 + '%';
 	
-	    elements.push(_react2['default'].createElement(
+	    return _react2['default'].createElement(
 	      'span',
-	      { className: markClassName, style: style, key: i },
-	      marks[i]
-	    ));
-	  }
+	      { className: markClassName, style: style, key: point },
+	      marks[point]
+	    );
+	  });
 	
 	  return _react2['default'].createElement(
 	    'div',
@@ -57874,7 +57847,10 @@
 	        _react2['default'].Children.forEach(children, function (item, index) {
 	          var pos = level + '-' + index;
 	          var newChildren = item.props.children;
-	          if (Array.isArray(newChildren)) {
+	          if (newChildren) {
+	            if (!Array.isArray(newChildren)) {
+	              newChildren = [newChildren];
+	            }
 	            loop(newChildren, pos);
 	          }
 	          callback(item, index, pos);
@@ -57889,9 +57865,21 @@
 	      if (typeof unCheckEvent === 'boolean') {
 	        evt = true;
 	      }
+	      var splitPos = function splitPos(pos) {
+	        return pos.split('-');
+	      };
+	      // stripTail('x-xx-sss-xx')
+	      var stripTail = function stripTail(str) {
+	        var arr = str.match(/(.+)(-[^-]+)$/);
+	        var st = '';
+	        if (arr && arr.length === 3) {
+	          st = arr[1];
+	        }
+	        return st;
+	      };
 	      checkedArr.forEach(function (_pos) {
 	        Object.keys(obj).forEach(function (i) {
-	          if (i.length > _pos.length && i.indexOf(_pos) === 0) {
+	          if (splitPos(i).length > splitPos(_pos).length && i.indexOf(_pos) === 0) {
 	            obj[i].checkPart = false;
 	            if (evt) {
 	              if (unCheckEvent) {
@@ -57905,15 +57893,15 @@
 	          }
 	        });
 	        var loop = function loop(__pos) {
-	          var _posLen = __pos.length;
-	          if (_posLen <= 3) {
+	          var _posLen = splitPos(__pos).length;
+	          if (_posLen <= 2) {
 	            return;
 	          }
 	          var sibling = 0;
 	          var siblingChecked = 0;
-	          var parentPos = __pos.substring(0, _posLen - 2);
+	          var parentPos = stripTail(__pos);
 	          Object.keys(obj).forEach(function (i) {
-	            if (i.length === _posLen && i.substring(0, _posLen - 2) === parentPos) {
+	            if (splitPos(i).length === _posLen && i.indexOf(parentPos) === 0) {
 	              sibling++;
 	              if (obj[i].checked) {
 	                siblingChecked++;
@@ -60664,7 +60652,7 @@
 	  displayName: 'FullCalendar',
 	
 	  propTypes: {
-	    type: _react.PropTypes.string,
+	    defaultType: _react.PropTypes.string,
 	    fullscreen: _react.PropTypes.bool,
 	    monthCellRender: _react.PropTypes.func,
 	    dateCellRender: _react.PropTypes.func,
@@ -60678,7 +60666,7 @@
 	  mixins: [_mixinCommonMixin2['default'], _mixinCalendarMixin2['default']],
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      type: 'date',
+	      defaultType: 'date',
 	      fullscreen: false,
 	      showTypeSwitch: true,
 	      showHeader: true
@@ -60686,14 +60674,8 @@
 	  },
 	  getInitialState: function getInitialState() {
 	    return {
-	      type: this.props.type
+	      type: this.props.defaultType
 	    };
-	  },
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    var type = nextProps.type;
-	    if (type !== undefined) {
-	      this.setState({ type: type });
-	    }
 	  },
 	  onMonthSelect: function onMonthSelect(value) {
 	    this.setType('date');
@@ -61178,7 +61160,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta27",
+		"version": "0.10.0-beta28",
 		"stableVersion": "0.9.5",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -61216,7 +61198,7 @@
 			"gregorian-calendar-format": "~4.0.4",
 			"object-assign": "~4.0.1",
 			"rc-animate": "~2.0.2",
-			"rc-calendar": "4.0.0-alpha20",
+			"rc-calendar": "~4.0.0",
 			"rc-checkbox": "~1.1.1",
 			"rc-collapse": "~1.4.3",
 			"rc-dialog": "~5.2.2",
@@ -61230,7 +61212,7 @@
 			"rc-queue-anim": "~0.11.2",
 			"rc-radio": "~2.0.0",
 			"rc-select": "~5.1.2",
-			"rc-slider": "~2.3.2",
+			"rc-slider": "~3.0.0",
 			"rc-steps": "~1.4.1",
 			"rc-switch": "~1.3.1",
 			"rc-table": "~3.6.1",
@@ -61256,16 +61238,16 @@
 			"babel-loader": "^5.3.2",
 			"busboy": "^0.2.9",
 			"chalk": "^1.1.0",
-			"clipboard": "~1.5.3",
-			"css-loader": "^0.14.1",
+			"clipboard": "^1.5.5",
+			"css-loader": "^0.23.0",
 			"eslint": "^1.1.0",
-			"eslint-config-airbnb": "^0.1.0",
+			"eslint-config-airbnb": "^1.0.0",
 			"eslint-plugin-babel": "^2.1.1",
 			"eslint-plugin-react": "^3.3.1",
 			"expect.js": "~0.3.1",
-			"extract-text-webpack-plugin": "^0.8.1",
-			"gh-pages": "^0.3.1",
-			"history": "~1.13.1",
+			"extract-text-webpack-plugin": "^0.9.1",
+			"gh-pages": "^0.5.0",
+			"history": "^1.13.1",
 			"jest-cli": "~0.6.1",
 			"json-loader": "^0.5.1",
 			"less": "~2.5.3",
@@ -61273,9 +61255,9 @@
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.6.0",
 			"pre-commit": "1.x",
-			"react": "~0.14.1",
-			"react-addons-test-utils": "~0.14.1",
-			"react-dom": "~0.14.1",
+			"react": "~0.14.2",
+			"react-addons-test-utils": "~0.14.2",
+			"react-dom": "~0.14.2",
 			"react-router": "~1.0.0",
 			"webpack": "^1.10.1",
 			"webpack-babel-jest": "^1.0.0",

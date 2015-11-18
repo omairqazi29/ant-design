@@ -189,7 +189,7 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta27',
+        latest: '0.10.0-beta28',
         stable: '0.9.5'
       };
     </script>
@@ -536,6 +536,11 @@ var TintShadeTool = React.createClass({
     });
   },
   render: function render() {
+    var marks = {
+      '-100': '加黑',
+      '0': '原色',
+      '100': '加白'
+    };
     return React.createElement(
       'div',
       { style: { margin: '40px 0' } },
@@ -566,23 +571,8 @@ var TintShadeTool = React.createClass({
       ),
       React.createElement(
         'div',
-        { style: { marginTop: 20 } },
-        React.createElement(
-          'span',
-          null,
-          '加黑'
-        ),
-        React.createElement(
-          'div',
-          { style: { width: 360, display: 'inline-block', verticalAlign: 'middle', position: 'relative', top: -1, margin: '0 8px' } },
-          React.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
-          React.createElement('div', { style: { backgroundColor: '#81D4F9', width: 2, height: 4, position: 'absolute', top: 10, fontSize: 12, textAlign: 'center', left: 180 } })
-        ),
-        React.createElement(
-          'span',
-          null,
-          '加白'
-        )
+        { style: { width: 420, margin: '40px 10px 60px' } },
+        React.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5, marks: marks })
       )
     );
   }
