@@ -6130,7 +6130,6 @@ tr.ant-table-expanded-row:hover {
   padding-right: 8px;
 }
 .ant-popover-inner {
-  max-width: 276px;
   min-width: 177px;
   background-color: #fff;
   background-clip: padding-box;
@@ -9404,7 +9403,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   margin-right: 4px;
   font-size: 12px;
   color: #999;
-  top: 1px;
 }
 .ant-upload-list .ant-upload-list-item .ant-upload-list-item-info .anticon-cross {
   display: inline-block;
@@ -9422,6 +9420,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   cursor: pointer;
   float: right;
   color: #999;
+  line-height: 22px;
 }
 :root .ant-upload-list .ant-upload-list-item .ant-upload-list-item-info .anticon-cross {
   -webkit-filter: none;
