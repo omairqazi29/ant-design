@@ -49283,8 +49283,6 @@
 	
 	var _iconfont2 = _interopRequireDefault(_iconfont);
 	
-	var prefixCls = 'ant-tag';
-	
 	var AntTag = (function (_React$Component) {
 	  _inherits(AntTag, _React$Component);
 	
@@ -49331,7 +49329,7 @@
 	        _rcAnimate2['default'],
 	        { component: '',
 	          showProp: 'data-show',
-	          transitionName: 'zoom-tag',
+	          transitionName: this.props.prefixCls + '-zoom',
 	          onEnd: this.animationEnd.bind(this) },
 	        _react2['default'].createElement(
 	          'div',
@@ -49347,7 +49345,7 @@
 	})(_react2['default'].Component);
 	
 	AntTag.defaultProps = {
-	  prefixCls: prefixCls,
+	  prefixCls: 'ant-tag',
 	  closable: false,
 	  onClose: function onClose() {}
 	};
@@ -59486,7 +59484,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var prefixCls = 'ant-badge';
+	var _rcAnimate = __webpack_require__(360);
+	
+	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
 	var AntBadge = (function (_React$Component) {
 	  _inherits(AntBadge, _React$Component);
@@ -59500,31 +59500,40 @@
 	  _createClass(AntBadge, [{
 	    key: 'render',
 	    value: function render() {
-	      if (this.props.dot) {
-	        return _react2['default'].createElement(
-	          'span',
-	          _extends({ className: prefixCls }, this.props),
-	          this.props.children,
-	          _react2['default'].createElement('sup', { className: prefixCls + '-dot' })
-	        );
+	      var _props = this.props;
+	      var count = _props.count;
+	      var prefixCls = _props.prefixCls;
+	
+	      var dot = this.props.dot;
+	
+	      count = count >= 100 ? '99+' : count;
+	
+	      // dot mode don't need count
+	      if (dot) {
+	        count = '';
 	      }
-	      var count = this.props.count;
+	
 	      // null undefined "" "0" 0
-	      if (!count || count === '0') {
-	        return (0, _react.cloneElement)(this.props.children);
-	      } else {
-	        count = count >= 100 ? '99+' : count;
-	        return _react2['default'].createElement(
-	          'span',
-	          _extends({ className: prefixCls, title: count }, this.props),
-	          this.props.children,
-	          _react2['default'].createElement(
+	      var hidden = (!count || count === '0') && !dot;
+	      var className = prefixCls + (dot ? '-dot' : '-count');
+	
+	      return _react2['default'].createElement(
+	        'span',
+	        _extends({ className: prefixCls, title: count }, this.props),
+	        this.props.children,
+	        _react2['default'].createElement(
+	          _rcAnimate2['default'],
+	          { component: '',
+	            showProp: 'data-show',
+	            transitionName: prefixCls + '-zoom',
+	            transitionAppear: true },
+	          hidden ? null : _react2['default'].createElement(
 	            'sup',
-	            { className: prefixCls + '-count' },
+	            { 'data-show': !hidden, className: className },
 	            count
 	          )
-	        );
-	      }
+	        )
+	      );
 	    }
 	  }]);
 	
@@ -59532,7 +59541,7 @@
 	})(_react2['default'].Component);
 	
 	AntBadge.defaultProps = {
-	  prefixCls: prefixCls,
+	  prefixCls: 'ant-badge',
 	  count: null,
 	  dot: false
 	};
