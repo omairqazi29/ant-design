@@ -163,6 +163,10 @@ Progress 进度条 - Ant Design
         desc: '时间轴'
       });
       ANT_COMPONENTS.push({
+        title: 'Timepicker',
+        desc: '时间选择框'
+      });
+      ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
       });
@@ -189,7 +193,7 @@ Progress 进度条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta28',
+        latest: '0.10.0-beta29',
         stable: '0.9.5'
       };
     </script>
@@ -359,6 +363,13 @@ Progress 进度条 - Ant Design
                class="">
               Switch
               <span class="chinese">开关</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../timepicker/"
+               class="">
+              Timepicker
+              <span class="chinese">时间选择框</span>
             </a>
           </li>
           <li class="">
@@ -586,8 +597,14 @@ Progress 进度条 - Ant Design
 <td>0</td>
 </tr>
 <tr>
+<td>format</td>
+<td>数字的模板</td>
+<td>string</td>
+<td>&quot;${percent}%&quot;</td>
+</tr>
+<tr>
 <td>status</td>
-<td>状态，有两个值normal、exception、active三种状态</td>
+<td>状态，可选：normal、exception、active</td>
 <td>string</td>
 <td>normal</td>
 </tr>
@@ -622,8 +639,14 @@ Progress 进度条 - Ant Design
 <td>0</td>
 </tr>
 <tr>
+<td>format</td>
+<td>数字的模板</td>
+<td>string</td>
+<td>&quot;${percent}%&quot;</td>
+</tr>
+<tr>
 <td>status</td>
-<td>状态，有两个值normal、exception</td>
+<td>状态，可选：normal、exception</td>
 <td>string</td>
 <td>normal</td>
 </tr>
@@ -662,17 +685,17 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(ProgressLine, { percent: 30 }),
   React.createElement(ProgressLine, { percent: 50, status: "active" }),
-  React.createElement(ProgressLine, { percent: 70, status: "exception" }),
+  React.createElement(ProgressLine, { percent: 70, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressLine, { percent: 100 }),
   React.createElement(ProgressLine, { percent: 50, showInfo: false })
-), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"active"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">showInfo</span>=<span class="hljs-value">{false}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -699,16 +722,16 @@ ReactDOM.render(React.createElement(
   { style: { width: 170 } },
   React.createElement(ProgressLine, { percent: 30, strokeWidth: 5 }),
   React.createElement(ProgressLine, { percent: 50, strokeWidth: 5, status: "active" }),
-  React.createElement(ProgressLine, { percent: 70, strokeWidth: 5, status: "exception" }),
+  React.createElement(ProgressLine, { percent: 70, strokeWidth: 5, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressLine, { percent: 100, strokeWidth: 5 })
-), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">170</span> }}&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"active"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-progress-demo-line-mini'));</span></code></pre></div>
@@ -828,25 +851,25 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-circle">
   <div class="code-box-demo">
     <div id="components-progress-demo-circle"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var _antd = require('antd');
 
 var ProgressCircle = _antd.Progress.Circle;
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(ProgressCircle, { percent: 30 }),
-  React.createElement(ProgressCircle, { percent: 70, status: 'exception' }),
+  React.createElement(ProgressCircle, { percent: 70, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressCircle, { percent: 100 })
-), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle'));</span></code></pre></div><style>
@@ -868,25 +891,25 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-circle-mini">
   <div class="code-box-demo">
     <div id="components-progress-demo-circle-mini"></div>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
 var _antd = require('antd');
 
 var ProgressCircle = _antd.Progress.Circle;
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(ProgressCircle, { percent: 30, width: 80 }),
-  React.createElement(ProgressCircle, { percent: 70, width: 80, status: 'exception' }),
+  React.createElement(ProgressCircle, { percent: 70, width: 80, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressCircle, { percent: 100, width: 80 })
-), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-progress-demo-circle-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{80}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   , document.getElementById('components-progress-demo-circle-mini'));</span></code></pre></div>

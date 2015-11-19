@@ -163,6 +163,10 @@ Slider 滑动输入条 - Ant Design
         desc: '时间轴'
       });
       ANT_COMPONENTS.push({
+        title: 'Timepicker',
+        desc: '时间选择框'
+      });
+      ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
       });
@@ -189,7 +193,7 @@ Slider 滑动输入条 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta28',
+        latest: '0.10.0-beta29',
         stable: '0.9.5'
       };
     </script>
@@ -359,6 +363,13 @@ Slider 滑动输入条 - Ant Design
                class="">
               Switch
               <span class="chinese">开关</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../timepicker/"
+               class="">
+              Timepicker
+              <span class="chinese">时间选择框</span>
             </a>
           </li>
           <li class="">
@@ -589,9 +600,15 @@ Slider 滑动输入条 - Ant Design
 </tr>
 <tr>
 <td>step</td>
-<td>Number</td>
+<td>Number or null</td>
 <td>1</td>
-<td>步长，取值必须大于 0，并且可被 (max - min) 整除</td>
+<td>步长，取值必须大于 0，并且可被 (max - min) 整除。当 <code>marks</code> 不为空对象时，可以设置 <code>step</code> 为 <code>null</code>，此时 Slider 的可选值仅有 marks 标出来的部分。</td>
+</tr>
+<tr>
+<td>marks</td>
+<td>Object {Number: String}</td>
+<td>{}</td>
+<td>分段标记，key 的类型必须为 <code>Number</code> 且取值在闭区间 [min, max] 内</td>
 </tr>
 <tr>
 <td>value</td>
@@ -604,12 +621,6 @@ Slider 滑动输入条 - Ant Design
 <td>Number or [Number, Number]</td>
 <td>0 or [0, 0]</td>
 <td>设置初始取值。当 <code>range</code> 为 <code>false</code> 时，使用 <code>Number</code>，否则用 <code>[Number, Number]</code></td>
-</tr>
-<tr>
-<td>marks</td>
-<td>Object {Number: String}</td>
-<td>{}</td>
-<td>分段标记，key 的类型必须为 <code>Number</code> 且取值在闭区间 [min, max] 内</td>
 </tr>
 <tr>
 <td>included</td>
@@ -965,7 +976,13 @@ ReactDOM.render(React.createElement(
     null,
     '结合 step'
   ),
-  React.createElement(_antd.Slider, { marks: marks, step: 10, defaultValue: 37 })
+  React.createElement(_antd.Slider, { marks: marks, step: 10, defaultValue: 37 }),
+  React.createElement(
+    'p',
+    null,
+    '`step=null`'
+  ),
+  React.createElement(_antd.Slider, { marks: marks, step: null, defaultValue: 37 })
 ), document.getElementById('components-slider-demo-mark'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> marks = {
@@ -984,6 +1001,8 @@ ReactDOM.render(
   <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">included</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>结合 step<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>`step=null`<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">marks</span>=<span class="hljs-value">{marks}</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{null}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{37}</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-mark'));</span></code></pre></div>
   </div>
@@ -991,7 +1010,7 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-mark">分段式滑块</a>
     </div>
-    <p>使用 <code>marks</code> 属性标注分段式滑块，使用 <code>value</code> / <code>defaultValue</code> 指定滑块位置。可以结合 <code>step</code> <code>included</code> 使用。</p>
+    <p>使用 <code>marks</code> 属性标注分段式滑块，使用 <code>value</code> / <code>defaultValue</code> 指定滑块位置。当 <code>included=false</code> 时，表明不同标记间为并列关系。当 <code>step=null</code> 时，Slider 的可选值仅有 <code>marks</code> 标出来的部分。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

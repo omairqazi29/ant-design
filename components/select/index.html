@@ -163,6 +163,10 @@ Select 选择器 - Ant Design
         desc: '时间轴'
       });
       ANT_COMPONENTS.push({
+        title: 'Timepicker',
+        desc: '时间选择框'
+      });
+      ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
       });
@@ -189,7 +193,7 @@ Select 选择器 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0-beta28',
+        latest: '0.10.0-beta29',
         stable: '0.9.5'
       };
     </script>
@@ -359,6 +363,13 @@ Select 选择器 - Ant Design
                class="">
               Switch
               <span class="chinese">开关</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../timepicker/"
+               class="">
+              Timepicker
+              <span class="chinese">时间选择框</span>
             </a>
           </li>
           <li class="">
@@ -1241,7 +1252,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     });
   },
   render() {
-  <span class="hljs-comment">// filterOption 需要设置为 false，数据是动态设置的</span>
+    <span class="hljs-comment">// filterOption 需要设置为 false，数据是动态设置的</span>
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">combobox</span>
       <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span>
       <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
