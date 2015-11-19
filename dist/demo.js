@@ -61314,6 +61314,7 @@
 	    prefixCls: _react.PropTypes.string,
 	    inputClassName: _react.PropTypes.string,
 	    locale: _react.PropTypes.object,
+	    value: _react.PropTypes.object,
 	    children: _react.PropTypes.func,
 	    disabled: _react.PropTypes.bool,
 	    defaultValue: _react.PropTypes.object,
@@ -61349,19 +61350,22 @@
 	    var _props = this.props;
 	    var open = _props.open;
 	    var defaultValue = _props.defaultValue;
+	    var value = _props.value;
 	
 	    return {
 	      open: open,
-	      value: defaultValue
+	      value: value || defaultValue
 	    };
 	  },
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    var defaultValue = nextProps.defaultValue;
+	    var value = nextProps.value;
 	    var open = nextProps.open;
 	
-	    if (defaultValue !== undefined) {
-	      this.setState({ value: defaultValue });
+	    if (value !== undefined) {
+	      this.setState({
+	        value: value
+	      });
 	    }
 	    if (open !== undefined) {
 	      this.setState({ open: open });
@@ -61369,16 +61373,11 @@
 	  },
 	
 	  onPanelChange: function onPanelChange(value) {
-	    this.setState({
-	      value: value
-	    });
-	    this.props.onChange(value);
+	    this.setValue(value);
 	  },
 	
 	  onPanelClear: function onPanelClear() {
-	    this.setState({
-	      value: ''
-	    });
+	    this.setValue('');
 	    this.setOpen(false);
 	  },
 	
@@ -61391,6 +61390,15 @@
 	        _reactDom2['default'].findDOMNode(_this.panelInstance).focus();
 	      }
 	    });
+	  },
+	
+	  setValue: function setValue(value) {
+	    if (!('value' in this.props)) {
+	      this.setState({
+	        value: value
+	      });
+	    }
+	    this.props.onChange(value);
 	  },
 	
 	  getPanel: function getPanel() {
@@ -61420,7 +61428,7 @@
 	    var panel = this.getPanel();
 	    var extraProps = {
 	      ref: this.savePanelRef,
-	      defaultValue: this.state.value || panel.props.defaultValue,
+	      value: this.state.value,
 	      onChange: (0, _rcUtil.createChainedFunction)(panel.props.onChange, this.onPanelChange),
 	      onClear: (0, _rcUtil.createChainedFunction)(panel.props.onClear, this.onPanelClear)
 	    };
@@ -61456,7 +61464,6 @@
 	    var align = _props4.align;
 	    var disabled = _props4.disabled;
 	    var transitionName = _props4.transitionName;
-	    var children = _props4.children;
 	    var formatter = _props4.formatter;
 	    var inputClassName = _props4.inputClassName;
 	    var _state = this.state;
@@ -61466,7 +61473,7 @@
 	    return _react2['default'].createElement(
 	      _rcTrigger2['default'],
 	      {
-	        prefixCls: prefixCls + '-picker-container',
+	        prefixCls: prefixCls + '-container',
 	        popup: this.getPanelElement(),
 	        popupAlign: align,
 	        builtinPlacements: _utilPlacements2['default'],
@@ -61479,9 +61486,10 @@
 	      },
 	      _react2['default'].createElement(
 	        'span',
-	        { className: prefixCls + '-picker' },
-	        _react2['default'].createElement('input', { className: inputClassName, ref: 'picker', type: 'text', placeholder: placeholder, readOnly: true, disabled: disabled, value: value && formatter.format(value) }),
-	        _react2['default'].createElement('span', { className: prefixCls + '-picker-icon' })
+	        { className: '' + prefixCls },
+	        _react2['default'].createElement('input', { className: inputClassName, ref: 'picker', type: 'text', placeholder: placeholder, readOnly: true,
+	          disabled: disabled, value: value && formatter.format(value) }),
+	        _react2['default'].createElement('span', { className: prefixCls + '-icon' })
 	      )
 	    );
 	  }
@@ -62788,7 +62796,7 @@
 	
 	  propTypes: {
 	    prefixCls: _react.PropTypes.string,
-	    defaultValue: _react.PropTypes.object,
+	    value: _react.PropTypes.object,
 	    locale: _react.PropTypes.object,
 	    placeholder: _react.PropTypes.string,
 	    formatter: _react.PropTypes.object,
@@ -62812,13 +62820,13 @@
 	  },
 	
 	  getInitialState: function getInitialState() {
-	    var defaultValue = this.props.defaultValue;
-	    if (!defaultValue) {
-	      defaultValue = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZh_CN2['default']);
-	      defaultValue.setTime(Date.now());
+	    var value = this.props.value;
+	    if (!value) {
+	      value = new _gregorianCalendar2['default'](_gregorianCalendarLibLocaleZh_CN2['default']);
+	      value.setTime(Date.now());
 	    }
 	    return {
-	      value: defaultValue
+	      value: value
 	    };
 	  },
 	
@@ -62829,6 +62837,15 @@
 	      this.showSecond = false;
 	    } else if (pattern === 'mm:ss') {
 	      this.showHour = false;
+	    }
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    var value = nextProps.value;
+	    if (value) {
+	      this.setState({
+	        value: value
+	      });
 	    }
 	  },
 	
@@ -62848,13 +62865,12 @@
 	    var _props = this.props;
 	    var locale = _props.locale;
 	    var prefixCls = _props.prefixCls;
-	    var defaultValue = _props.defaultValue;
 	    var placeholder = _props.placeholder;
 	    var hourOptions = _props.hourOptions;
 	    var minuteOptions = _props.minuteOptions;
 	    var secondOptions = _props.secondOptions;
 	
-	    var value = this.state.value || defaultValue;
+	    var value = this.state.value;
 	    var cls = (0, _classnames2['default'])({ 'narrow': !this.showHour || !this.showSecond });
 	
 	    return _react2['default'].createElement(
@@ -63581,7 +63597,7 @@
 			"rc-switch": "~1.3.1",
 			"rc-table": "~3.6.1",
 			"rc-tabs": "~5.5.0",
-			"rc-time-picker": "~0.5.6",
+			"rc-time-picker": "~0.6.0",
 			"rc-tooltip": "~3.2.0",
 			"rc-tree": "~0.19.0",
 			"rc-trigger": "~1.0.6",

@@ -5116,35 +5116,35 @@ textarea.ant-calendar-time-input {
 .ant-timepicker * {
   box-sizing: border-box;
 }
-.ant-timepicker-picker-container {
+.ant-timepicker-container {
   z-index: 1070;
   position: absolute;
 }
-.ant-timepicker-picker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-picker-container-placement-topLeft,
-.ant-timepicker-picker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-picker-container-placement-topRight,
-.ant-timepicker-picker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-picker-container-placement-topLeft,
-.ant-timepicker-picker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-picker-container-placement-topRight {
+.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-topLeft,
+.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-topRight,
+.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-topLeft,
+.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-topRight {
   -webkit-animation-name: antSlideDownIn;
           animation-name: antSlideDownIn;
 }
-.ant-timepicker-picker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-picker-container-placement-bottomLeft,
-.ant-timepicker-picker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-picker-container-placement-bottomRight,
-.ant-timepicker-picker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-picker-container-placement-bottomLeft,
-.ant-timepicker-picker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-picker-container-placement-bottomRight {
+.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-bottomLeft,
+.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-bottomRight,
+.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-bottomLeft,
+.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-bottomRight {
   -webkit-animation-name: antSlideUpIn;
           animation-name: antSlideUpIn;
 }
-.ant-timepicker-picker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-picker-container-placement-topLeft,
-.ant-timepicker-picker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-picker-container-placement-topRight {
+.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-topLeft,
+.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-topRight {
   -webkit-animation-name: antSlideDownOut;
           animation-name: antSlideDownOut;
 }
-.ant-timepicker-picker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-picker-container-placement-bottomLeft,
-.ant-timepicker-picker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-picker-container-placement-bottomRight {
+.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-bottomLeft,
+.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-bottomRight {
   -webkit-animation-name: antSlideUpOut;
           animation-name: antSlideUpOut;
 }
-.ant-timepicker-picker {
+.ant-timepicker {
   position: relative;
   display: inline-block;
   outline: none;
@@ -5152,13 +5152,13 @@ textarea.ant-calendar-time-input {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.ant-timepicker-picker > input {
+.ant-timepicker > input {
   width: 100px;
 }
-.ant-timepicker-picker-open {
+.ant-timepicker-open {
   opacity: 0;
 }
-.ant-timepicker-picker-icon {
+.ant-timepicker-icon {
   position: absolute;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -5174,7 +5174,7 @@ textarea.ant-calendar-time-input {
   top: 50%;
   margin-top: -6px;
 }
-.ant-timepicker-picker-icon:after {
+.ant-timepicker-icon:after {
   content: "\E643";
   font-family: "anticon";
   font-size: 12px;
