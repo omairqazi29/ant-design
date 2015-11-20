@@ -56617,7 +56617,7 @@
 	
 	var pattern = {
 	  email: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
-	  url: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+	  url: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})(([\/\w\.-]*)?)(\?[-_+=~\.;&%\w]*)?(\#[-_\/\!\w]*)?( *)?$/i,
 	  hex: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
 	};
 	
@@ -61230,7 +61230,11 @@
 	  },
 	
 	  handleChange: function handleChange(value) {
-	    this.props.onChange(new Date(value.getTime()));
+	    var args = null;
+	    if (value) {
+	      args = new Date(value.getTime());
+	    }
+	    this.props.onChange(args);
 	  },
 	
 	  getLocale: function getLocale() {
@@ -61373,7 +61377,7 @@
 	  },
 	
 	  onPanelClear: function onPanelClear() {
-	    this.setValue('');
+	    this.setValue(null);
 	    this.setOpen(false);
 	  },
 	
@@ -61469,7 +61473,7 @@
 	    return _react2['default'].createElement(
 	      _rcTrigger2['default'],
 	      {
-	        prefixCls: prefixCls + '-container',
+	        prefixCls: prefixCls + '-panel',
 	        popup: this.getPanelElement(),
 	        popupAlign: align,
 	        builtinPlacements: _utilPlacements2['default'],
@@ -62871,7 +62875,7 @@
 	
 	    return _react2['default'].createElement(
 	      'div',
-	      { className: prefixCls + '-panel ' + cls },
+	      { className: prefixCls + '-panel-inner ' + cls },
 	      _react2['default'].createElement(_Header2['default'], {
 	        prefixCls: prefixCls,
 	        gregorianTimePickerLocale: value.locale,
@@ -63536,8 +63540,8 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta30",
-		"stableVersion": "0.9.5",
+		"version": "0.10.0",
+		"stableVersion": "0.10.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -63593,7 +63597,7 @@
 			"rc-switch": "~1.3.1",
 			"rc-table": "~3.6.1",
 			"rc-tabs": "~5.5.0",
-			"rc-time-picker": "~0.6.0",
+			"rc-time-picker": "~0.7.1",
 			"rc-tooltip": "~3.2.0",
 			"rc-tree": "~0.19.0",
 			"rc-trigger": "~1.0.6",

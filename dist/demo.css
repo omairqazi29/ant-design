@@ -5115,31 +5115,31 @@ textarea.ant-calendar-time-input {
 .ant-timepicker * {
   box-sizing: border-box;
 }
-.ant-timepicker-container {
+.ant-timepicker-panel {
   z-index: 1070;
   position: absolute;
 }
-.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-topLeft,
-.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-topRight,
-.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-topLeft,
-.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-topRight {
+.ant-timepicker-panel.slide-up-enter.slide-up-enter-active.ant-timepicker-panel-placement-topLeft,
+.ant-timepicker-panel.slide-up-enter.slide-up-enter-active.ant-timepicker-panel-placement-topRight,
+.ant-timepicker-panel.slide-up-appear.slide-up-appear-active.ant-timepicker-panel-placement-topLeft,
+.ant-timepicker-panel.slide-up-appear.slide-up-appear-active.ant-timepicker-panel-placement-topRight {
   -webkit-animation-name: antSlideDownIn;
           animation-name: antSlideDownIn;
 }
-.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-bottomLeft,
-.ant-timepicker-container.slide-up-enter.slide-up-enter-active.ant-timepicker-container-placement-bottomRight,
-.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-bottomLeft,
-.ant-timepicker-container.slide-up-appear.slide-up-appear-active.ant-timepicker-container-placement-bottomRight {
+.ant-timepicker-panel.slide-up-enter.slide-up-enter-active.ant-timepicker-panel-placement-bottomLeft,
+.ant-timepicker-panel.slide-up-enter.slide-up-enter-active.ant-timepicker-panel-placement-bottomRight,
+.ant-timepicker-panel.slide-up-appear.slide-up-appear-active.ant-timepicker-panel-placement-bottomLeft,
+.ant-timepicker-panel.slide-up-appear.slide-up-appear-active.ant-timepicker-panel-placement-bottomRight {
   -webkit-animation-name: antSlideUpIn;
           animation-name: antSlideUpIn;
 }
-.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-topLeft,
-.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-topRight {
+.ant-timepicker-panel.slide-up-leave.slide-up-leave-active.ant-timepicker-panel-placement-topLeft,
+.ant-timepicker-panel.slide-up-leave.slide-up-leave-active.ant-timepicker-panel-placement-topRight {
   -webkit-animation-name: antSlideDownOut;
           animation-name: antSlideDownOut;
 }
-.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-bottomLeft,
-.ant-timepicker-container.slide-up-leave.slide-up-leave-active.ant-timepicker-container-placement-bottomRight {
+.ant-timepicker-panel.slide-up-leave.slide-up-leave-active.ant-timepicker-panel-placement-bottomLeft,
+.ant-timepicker-panel.slide-up-leave.slide-up-leave-active.ant-timepicker-panel-placement-bottomRight {
   -webkit-animation-name: antSlideUpOut;
           animation-name: antSlideUpOut;
 }
@@ -5182,7 +5182,7 @@ textarea.ant-calendar-time-input {
   line-height: 1;
   vertical-align: bottom;
 }
-.ant-timepicker-panel {
+.ant-timepicker-panel-inner {
   display: inline-block;
   position: relative;
   outline: none;
@@ -5216,14 +5216,14 @@ textarea.ant-calendar-time-input {
 }
 .ant-timepicker-clear-btn {
   position: absolute;
-  right: 6px;
+  right: 5px;
   cursor: pointer;
   overflow: hidden;
   width: 20px;
   height: 20px;
   text-align: center;
   line-height: 20px;
-  top: 6px;
+  top: 5px;
   margin: 0;
 }
 .ant-timepicker-clear-btn:after {
