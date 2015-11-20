@@ -601,6 +601,9 @@ Table 表格 - Ant Design
 }];
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{dataSource}</span> /&gt;</span></span></code></pre></div><p><strong>远程数据模式</strong>是更常见的业务场景，是一次只从服务端读取一页的数据放在前端，执行筛选、排序、切换页码等操作时均向后台发送请求，后台返回当页的数据和相关分页信息。</p>
+<blockquote>
+<p>远程数据模式后续可能删除，目前不推荐使用。</p>
+</blockquote>
 <p>通过指定表格的数据源 <code>dataSource</code> 为一个 DataSource 的实例如下。</p>
 <div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> dataSource = <span class="hljs-keyword">new</span> Table.DataSource({
   url: <span class="hljs-string">'/api/users'</span>,
