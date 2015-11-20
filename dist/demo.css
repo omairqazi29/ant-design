@@ -352,7 +352,7 @@ samp {
   display: block;
   font-family: "anticon" !important;
 }
-.anticon-iconfont-caretcircle-o-up:before {
+.anticon-caret-circle-o-up:before {
   content: "\E60C";
 }
 .anticon-android:before {

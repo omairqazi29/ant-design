@@ -25766,19 +25766,6 @@
 	
 	__webpack_require__(301);
 	
-	// matchMedia polyfill for
-	// https://github.com/WickyNilliams/enquire.js/issues/82
-	if (typeof window !== 'undefined') {
-	  var matchMediaPolyfill = function matchMediaPolyfill() {
-	    return {
-	      matches: false,
-	      addListener: function addListener() {},
-	      removeListener: function removeListener() {}
-	    };
-	  };
-	  window.matchMedia = window.matchMedia || matchMediaPolyfill;
-	}
-	
 	var antd = {
 	  Affix: __webpack_require__(303),
 	  Datepicker: __webpack_require__(322),
@@ -35912,6 +35899,8 @@
 /* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// matchMedia polyfill for
+	// https://github.com/WickyNilliams/enquire.js/issues/82
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
@@ -35931,6 +35920,17 @@
 	var _objectAssign = __webpack_require__(318);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
+	if (typeof window !== 'undefined') {
+	  var matchMediaPolyfill = function matchMediaPolyfill() {
+	    return {
+	      matches: false,
+	      addListener: function addListener() {},
+	      removeListener: function removeListener() {}
+	    };
+	  };
+	  window.matchMedia = window.matchMedia || matchMediaPolyfill;
+	}
 	
 	var AntCarousel = _react2['default'].createClass({
 	  displayName: 'AntCarousel',
@@ -40723,9 +40723,9 @@
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var _button = __webpack_require__(428);
 	
@@ -40797,7 +40797,7 @@
 	  var body = _react2['default'].createElement(
 	    'div',
 	    { className: 'ant-confirm-body' },
-	    _react2['default'].createElement(_iconfont2['default'], { type: iconClassType }),
+	    _react2['default'].createElement(_icon2['default'], { type: iconClassType }),
 	    _react2['default'].createElement(
 	      'span',
 	      { className: 'ant-confirm-title' },
@@ -41450,9 +41450,9 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var prefixCls = 'ant-progress';
 	
@@ -41502,7 +41502,7 @@
 	        progressInfo = _react2['default'].createElement(
 	          'span',
 	          { className: prefixCls + '-line-text' },
-	          _react2['default'].createElement(_iconfont2['default'], { type: 'check' })
+	          _react2['default'].createElement(_icon2['default'], { type: 'check' })
 	        );
 	      } else {
 	        progressInfo = _react2['default'].createElement(
@@ -41578,7 +41578,7 @@
 	      progressInfo = _react2['default'].createElement(
 	        'span',
 	        { className: prefixCls + '-circle-text' },
-	        _react2['default'].createElement(_iconfont2['default'], { type: 'check' })
+	        _react2['default'].createElement(_icon2['default'], { type: 'check' })
 	      );
 	    } else {
 	      progressInfo = _react2['default'].createElement(
@@ -45193,9 +45193,9 @@
 	
 	var _rcTooltip2 = _interopRequireDefault(_rcTooltip);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var _button = __webpack_require__(428);
 	
@@ -45248,7 +45248,7 @@
 	        _react2['default'].createElement(
 	          'p',
 	          { className: prefixCls + '-message' },
-	          _react2['default'].createElement(_iconfont2['default'], { type: 'exclamation-circle' }),
+	          _react2['default'].createElement(_icon2['default'], { type: 'exclamation-circle' }),
 	          this.props.title
 	        ),
 	        _react2['default'].createElement(
@@ -47002,9 +47002,9 @@
 	
 	var _pagination2 = _interopRequireDefault(_pagination);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var _objectAssign2 = __webpack_require__(318);
 	
@@ -47455,14 +47455,14 @@
 	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this7.state.sortOrder === 'ascend' ? 'on' : 'off'),
 	              title: '升序排序',
 	              onClick: _this7.toggleSortOrder.bind(_this7, 'ascend', column) },
-	            _react2['default'].createElement(_iconfont2['default'], { type: 'caret-up' })
+	            _react2['default'].createElement(_icon2['default'], { type: 'caret-up' })
 	          ),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this7.state.sortOrder === 'descend' ? 'on' : 'off'),
 	              title: '降序排序',
 	              onClick: _this7.toggleSortOrder.bind(_this7, 'descend', column) },
-	            _react2['default'].createElement(_iconfont2['default'], { type: 'caret-down' })
+	            _react2['default'].createElement(_icon2['default'], { type: 'caret-down' })
 	          )
 	        );
 	      }
@@ -47671,7 +47671,7 @@
 	      emptyText = _react2['default'].createElement(
 	        'div',
 	        { className: 'ant-table-placeholder' },
-	        _react2['default'].createElement(_iconfont2['default'], { type: 'frown' }),
+	        _react2['default'].createElement(_icon2['default'], { type: 'frown' }),
 	        '暂无数据'
 	      );
 	      emptyClass = ' ant-table-empty';
@@ -49024,9 +49024,9 @@
 	
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var FilterMenu = _react2['default'].createClass({
 	  displayName: 'FilterMenu',
@@ -49134,7 +49134,7 @@
 	        visible: this.state.visible,
 	        onVisibleChange: this.onVisibleChange,
 	        closeOnSelect: false },
-	      _react2['default'].createElement(_iconfont2['default'], { title: '筛选', type: 'bars', className: dropdownSelectedClass })
+	      _react2['default'].createElement(_icon2['default'], { title: '筛选', type: 'bars', className: dropdownSelectedClass })
 	    );
 	  }
 	});
@@ -49270,9 +49270,9 @@
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var AntTag = (function (_React$Component) {
 	  _inherits(AntTag, _React$Component);
@@ -49311,7 +49311,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var close = this.props.closable ? _react2['default'].createElement(_iconfont2['default'], { type: 'cross', onClick: this.close.bind(this) }) : '';
+	      var close = this.props.closable ? _react2['default'].createElement(_icon2['default'], { type: 'cross', onClick: this.close.bind(this) }) : '';
 	      var colorClass = this.props.color ? this.props.prefixCls + '-' + this.props.color : '';
 	      var className = this.props.prefixCls + ' ' + colorClass;
 	      className = this.state.closing ? className + ' ' + this.props.prefixCls + '-close' : className;
@@ -53691,9 +53691,9 @@
 	
 	var _rcNotification2 = _interopRequireDefault(_rcNotification);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var defaultDuration = 1.5;
 	var top = undefined;
@@ -53736,7 +53736,7 @@
 	    content: _react2['default'].createElement(
 	      'div',
 	      { className: 'ant-message-custom-content ' + iconClass },
-	      _react2['default'].createElement(_iconfont2['default'], { className: iconClass, type: iconType }),
+	      _react2['default'].createElement(_icon2['default'], { className: iconClass, type: iconType }),
 	      _react2['default'].createElement(
 	        'span',
 	        null,
@@ -55444,9 +55444,9 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var top = 24;
 	var notificationInstance = undefined;
@@ -55497,7 +55497,7 @@
 	      content: _react2['default'].createElement(
 	        'div',
 	        null,
-	        _react2['default'].createElement(_iconfont2['default'], { className: prefixCls + 'icon-' + args.icon + prefixCls + 'icon', type: iconType }),
+	        _react2['default'].createElement(_icon2['default'], { className: prefixCls + 'icon-' + args.icon + prefixCls + 'icon', type: iconType }),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: prefixCls + 'message' },
@@ -55618,9 +55618,9 @@
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	exports['default'] = _react2['default'].createClass({
 	  displayName: 'index',
@@ -55686,7 +55686,7 @@
 	      html = _react2['default'].createElement(
 	        'div',
 	        { 'data-show': this.state.closing, className: 'ant-alert-with-description ant-alert-with-description-' + this.props.type + closeName },
-	        _react2['default'].createElement(_iconfont2['default'], { className: iconClass, type: iconType }),
+	        _react2['default'].createElement(_icon2['default'], { className: iconClass, type: iconType }),
 	        _react2['default'].createElement(
 	          'p',
 	          { className: 'ant-alert-with-description-message' },
@@ -55704,7 +55704,7 @@
 	        html = _react2['default'].createElement(
 	          'div',
 	          { 'data-show': this.state.closing, className: 'ant-alert ant-alert-' + this.props.type + closeName },
-	          _react2['default'].createElement(_iconfont2['default'], { className: iconClass, type: iconType }),
+	          _react2['default'].createElement(_icon2['default'], { className: iconClass, type: iconType }),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-alert-description' },
@@ -55725,7 +55725,7 @@
 	        html = _react2['default'].createElement(
 	          'div',
 	          { 'data-show': this.state.closing, className: 'ant-alert ant-alert-' + this.props.type + closeName },
-	          _react2['default'].createElement(_iconfont2['default'], { className: iconClass, type: iconType }),
+	          _react2['default'].createElement(_icon2['default'], { className: iconClass, type: iconType }),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-alert-description' },
@@ -59352,9 +59352,9 @@
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _iconfont = __webpack_require__(427);
+	var _icon = __webpack_require__(427);
 	
-	var _iconfont2 = _interopRequireDefault(_iconfont);
+	var _icon2 = _interopRequireDefault(_icon);
 	
 	var _progress = __webpack_require__(435);
 	
@@ -59394,13 +59394,13 @@
 	        _react2['default'].createElement(
 	          'div',
 	          { className: prefixCls + '-list-item-info' },
-	          _react2['default'].createElement(_iconfont2['default'], { type: 'paper-clip' }),
+	          _react2['default'].createElement(_icon2['default'], { type: 'paper-clip' }),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'ant-upload-item-name' },
 	            file.name
 	          ),
-	          _react2['default'].createElement(_iconfont2['default'], { type: 'cross', ref: 'theCloseBtn',
+	          _react2['default'].createElement(_icon2['default'], { type: 'cross', ref: 'theCloseBtn',
 	            onClick: _this.handleClose.bind(_this, file) })
 	        ),
 	        progress
@@ -63540,7 +63540,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.0-beta29",
+		"version": "0.10.0-beta30",
 		"stableVersion": "0.9.5",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
