@@ -585,7 +585,7 @@
 <h3 id="2-创建一个项目">2. 创建一个项目<a href="#2-创建一个项目" class="anchor">#</a> </h3><p>使用命令行进行初始化。</p>
 <div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="hljs-built_in">cd</span> antd-demo
 $ antd-init
-$ npm install</code></pre></div><p>若下面例子发生报错，尝试用 <code>npm install antd@beta --save</code> 安装 <code>0.10.x</code> 或更高版本。</p>
+$ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cnpm</code> 或别的镜像源自行安装：<code>rm -rf node_modules &amp;&amp; cnpm install</code>.</p>
 <h3 id="3-使用组件">3. 使用组件<a href="#3-使用组件" class="anchor">#</a> </h3><p>编辑 <code>src/component/App.jsx</code>，用 React 的方式直接使用 Ant Design React 的组件。</p>
 <div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> { Datepicker, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
