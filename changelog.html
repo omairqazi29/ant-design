@@ -579,12 +579,17 @@
   <article class="markdown">
     <h1>更新日志 </h1>
     <h2 id="0-10-1-2015-11-20">0.10.1 <code>2015-11-20</code><a href="#0-10-1-2015-11-20" class="anchor">#</a> </h2><ul>
-<li>修改内部组件的引用结构，方便工具优化。<a href="https://github.com/ant-design/ant-design/pull/566">#566</a><ul>
+<li><p>修改内部组件的引用结构，方便工具优化。<a href="https://github.com/ant-design/ant-design/pull/566">#566</a></p>
+<ul>
 <li>移除了演示中没有使用过的 <code>antd.ButtonGroup</code>，依然用 <code>const ButtonGroup = Button.Group</code> 来使用。</li>
-<li>Form 和 Input 目录分离，<code>import { Form, Input } from &#39;ant/lib/form&#39;</code> 的引用方式被废弃，现在可以 <code>import Form from &#39;ant/lib/form&#39;</code> 和 <code>import Input from &#39;ant/lib/input&#39;</code>。原有的 <code>import { form, input } from &#39;antd&#39;</code> 则不受影响。</li>
+<li><p>Form 和 Input 目录分离，<code>import { Form, Input } from &#39;ant/lib/form&#39;</code> 的引用方式被废弃。</p>
+<p>现在可以 <code>import Form from &#39;ant/lib/form&#39;</code> 和 <code>import Input from &#39;ant/lib/input&#39;</code>。</p>
+<p>原有的 <code>import { Form, Input } from &#39;antd&#39;</code> 则不受影响。</p>
+</li>
 </ul>
 </li>
-<li>修复 Datepicker 的 <code>style</code> 和 <code>calendarStyle</code> 属性失效的问题，并将 <code>calendarStyle</code> 更名为 <code>popStyle</code>。</li>
+<li><p>修复 Datepicker 的 <code>style</code> 和 <code>calendarStyle</code> 属性失效的问题，并将 <code>calendarStyle</code> 更名为 <code>popStyle</code>。</p>
+</li>
 </ul>
 <h2 id="0-10-0-2015-11-20">0.10.0 <code>2015-11-20</code><a href="#0-10-0-2015-11-20" class="anchor">#</a> </h2><ul>
 <li>全面兼容 <code>react@0.14.x</code>。</li>
