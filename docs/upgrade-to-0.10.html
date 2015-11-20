@@ -584,7 +584,7 @@
 <li><code>0.9.x</code> 文档：<a href="http://09x.ant.design">http://09x.ant.design</a></li>
 </ul>
 <h3 id="升级-react">升级 React<a href="#升级-react" class="anchor">#</a> </h3><p>新版本推荐使用 react@0.14.x 及以上版本，并增加了对低版本 react 的警告。建议进行同步升级，参考官方的<a href="http://facebook.github.io/react/blog/2015/10/07/react-v0.14.html">升级文档</a>。</p>
-<h3 id="组件化改造">组件化改造<a href="#组件化改造" class="anchor">#</a> </h3><p>此版本对 <a href="/components/button/">Button</a>、<a href="/components/icon/">Iconfont</a>、<a href="/components/layout/">Layout</a>、<a href="/components/form/">Form</a>、<a href="/components/form/#demo-input">Input</a> 模块进行了 React 组件化的改造，请基于新的使用方式修改。</p>
+<h3 id="组件化改造">组件化改造<a href="#组件化改造" class="anchor">#</a> </h3><p>此版本对 <a href="/components/button/">Button</a>、<a href="/components/icon/">Iconfont</a>、<a href="/components/layout/">Layout</a>、<a href="/components/form/">Form</a>、<a href="/components/form/#demo-input">Input</a> 模块进行了 React 组件化的改造，请基于新的使用方式修改，原有的书写方式理论上无影响。</p>
 <p>例如：</p>
 <div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-btn ant-btn-primary"</span>&gt;</span>按 钮<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
   ==&gt;
@@ -600,6 +600,7 @@
 <li>Carousel 升级依赖，参考新的<a href="/components/carousel/">新的 API 和使用方式</a>进行修改。</li>
 <li><code>antd.Notification()</code> 修改为小写的 <code>antd.notification()</code>。</li>
 <li>Datepicker 的 <code>onSelect</code> 属性修改为 <code>onChange</code> 属性。</li>
+<li>Dropdown 的 <code>onSelect</code> 属性应修正为 <code>onClick</code> 属性，因为原有的 onSelect 只在变化时触发。</li>
 <li>Slider 的 <code>withDots</code> <code>isIncluded</code> 属性修改为 <code>dots</code> <code>included</code>。</li>
 <li>iconfont 的基线更新，可能导致原有图标的位置偏移。</li>
 </ul>

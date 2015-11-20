@@ -49154,8 +49154,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	var _react = __webpack_require__(87);
@@ -49193,8 +49191,6 @@
 	    var className = _props.className;
 	    var size = _props.size;
 	    var prefixCls = _props.prefixCls;
-	
-	    var others = _objectWithoutProperties(_props, ['className', 'size', 'prefixCls']);
 	
 	    var spinClassName = (0, _rcUtil.classSet)((_classSet = {}, _defineProperty(_classSet, prefixCls, true), _defineProperty(_classSet, prefixCls + '-' + size, size), _defineProperty(_classSet, className, !!className), _defineProperty(_classSet, prefixCls + '-spining', this.props.spining), _classSet));
 	
@@ -63614,7 +63610,6 @@
 			"autoprefixer-loader": "^3.1.0",
 			"babel": "^5.8.29",
 			"babel-core": "^5.8.29",
-			"babel-eslint": "^4.1.0",
 			"babel-jest": "^5.3.0",
 			"babel-loader": "^5.3.2",
 			"busboy": "^0.2.9",
