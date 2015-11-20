@@ -193,8 +193,8 @@
     <script src="./static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0',
-        stable: '0.10.0'
+        latest: '0.10.1',
+        stable: '0.10.1'
       };
     </script>
     <script src="./dist/demo.js"></script>
@@ -578,7 +578,15 @@
 <section class="main-container">
   <article class="markdown">
     <h1>更新日志 </h1>
-    <h2 id="0-10-0-2015-11-20">0.10.0 <code>2015-11-20</code><a href="#0-10-0-2015-11-20" class="anchor">#</a> </h2><ul>
+    <h2 id="0-10-1-2015-11-20">0.10.1 <code>2015-11-20</code><a href="#0-10-1-2015-11-20" class="anchor">#</a> </h2><ul>
+<li>修改内部组件的引用结构，方便工具优化。<a href="https://github.com/ant-design/ant-design/pull/566">#566</a><ul>
+<li>移除了演示中没有使用过的 <code>antd.ButtonGroup</code>，依然用 <code>const ButtonGroup = Button.Group</code> 来使用。</li>
+<li>Form 和 Input 目录分离，<code>import { Form, Input } from &#39;ant/lib/form&#39;</code> 的引用方式被废弃，现在可以 <code>import Form from &#39;ant/lib/form&#39;</code> 和 <code>import Input from &#39;ant/lib/input&#39;</code>。原有的 <code>import { form, input } from &#39;antd&#39;</code> 则不受影响。</li>
+</ul>
+</li>
+<li>修复 Datepicker 的 <code>style</code> 和 <code>calendarStyle</code> 属性失效的问题，并将 <code>calendarStyle</code> 更名为 <code>popStyle</code>。</li>
+</ul>
+<h2 id="0-10-0-2015-11-20">0.10.0 <code>2015-11-20</code><a href="#0-10-0-2015-11-20" class="anchor">#</a> </h2><ul>
 <li>全面兼容 <code>react@0.14.x</code>。</li>
 <li>新增 <a href="http://ant.design/components/timepicker/">时间选择 Timepicker</a>、<a href="http://ant.design/components/calendar/">日历 Calendar</a>、<a href="http://ant.design/components/spin/">加载中 Spin</a> 组件。</li>
 <li><a href="http://ant.design/components/button/">Button</a>、<a href="http://ant.design/components/icon/">Iconfont</a>、<a href="http://ant.design/components/layout/">Layout</a>、<a href="http://ant.design/components/form/">Form</a>、<a href="http://ant.design/components/form/#demo-input">Input</a> 等样式模块改造为 React 组件。</li>

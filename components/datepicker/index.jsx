@@ -94,7 +94,7 @@ function createPicker(TheCalendar) {
       defaultCalendarValue.setTime(Date.now());
 
       const placeholder = ('placeholder' in this.props)
-        ? this.placeholder : this.getLocale().lang.placeholder;
+        ? this.props.placeholder : this.getLocale().lang.placeholder;
       const calendar = (
         <TheCalendar
           disabledDate={this.props.disabledDate}
@@ -139,6 +139,7 @@ function createPicker(TheCalendar) {
                          onChange={this.handleInputChange}
                          value={value && this.getFormatter().format(value)}
                          placeholder={placeholder}
+                         style={this.props.style}
                          className={'ant-calendar-picker-input ant-input' + sizeClass}/>
                   <span className="ant-calendar-picker-icon"/>
                 </span>

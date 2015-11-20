@@ -193,8 +193,8 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.0',
-        stable: '0.10.0'
+        latest: '0.10.1',
+        stable: '0.10.1'
       };
     </script>
     <script src="../dist/demo.js"></script>
@@ -578,7 +578,7 @@
 <section class="main-container">
   <article class="markdown">
     <h1>0.10 升级指南 </h1>
-    <p><code>0.10.0</code> 版本有大量改动，是一个不完全向下兼容的版本。以下文档尽力列出了 <code>0.9.x</code> 到 <code>0.10.0</code> 的不兼容变动，以帮助开发者升级。</p>
+    <p><code>0.10.x</code> 版本有大量改动，是一个不完全向下兼容的版本。以下文档尽力列出了 <code>0.9.x</code> 到 <code>0.10.x</code> 的不兼容变动，以帮助开发者升级。</p>
 <ul>
 <li><code>0.10.x</code> 文档：<a href="http://ant.design">http://ant.design</a></li>
 <li><code>0.9.x</code> 文档：<a href="http://09x.ant.design">http://09x.ant.design</a></li>
@@ -600,6 +600,7 @@
 <li>Carousel 升级依赖，参考新的<a href="/components/carousel/">新的 API 和使用方式</a>进行修改。</li>
 <li><code>antd.Notification()</code> 修改为小写的 <code>antd.notification()</code>。</li>
 <li>Datepicker 的 <code>onSelect</code> 属性修改为 <code>onChange</code> 属性。</li>
+<li>Datepicker 的 <code>calendarStyle</code> 属性修改为 <code>popupStyle</code> 属性。</li>
 <li>Dropdown 的 <code>onSelect</code> 属性应修正为 <code>onClick</code> 属性，因为原有的 onSelect 只在变化时触发。</li>
 <li>Slider 的 <code>withDots</code> <code>isIncluded</code> 属性修改为 <code>dots</code> <code>included</code>。</li>
 <li>iconfont 的基线更新，可能导致原有图标的位置偏移。</li>
