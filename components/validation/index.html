@@ -1153,20 +1153,16 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div id="components-validation-demo-customize"></div>
     <script>(function(){'use strict';
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
 var _antd = require('antd');
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var Validator = _antd.Validation.Validator;
 var FormItem = _antd.Form.Item;
-
-function cx(classNames) {
-  if (typeof classNames === 'object') {
-    return Object.keys(classNames).filter(function (className) {
-      return classNames[className];
-    }).join(' ');
-  } else {
-    return Array.prototype.join.call(arguments, ' ');
-  }
-}
 
 function noop() {
   return false;
@@ -1220,7 +1216,7 @@ var Demo = React.createClass({
     var formData = this.state.formData;
     var status = this.state.status;
 
-    var classes = cx({
+    var classes = (0, _classnames2['default'])({
       'error': status[item].errors,
       'validating': status[item].isValidating,
       'success': formData[item] && !status[item].errors && !status[item].isValidating
@@ -1268,7 +1264,7 @@ var Demo = React.createClass({
 
   renderPassStrengthBar: function renderPassStrengthBar(type) {
     var strength = type === 'pass' ? this.state.passStrength : this.state.rePassStrength;
-    var classSet = cx({
+    var classSet = (0, _classnames2['default'])({
       'ant-pwd-strength': true,
       'ant-pwd-strength-low': strength === 'L',
       'ant-pwd-strength-medium': strength === 'M',
@@ -1392,19 +1388,10 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Button, Form, Input, Row, Col} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-customize'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Validation, Button, Form, Input, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
 <span class="hljs-keyword">const</span> Validator = Validation.Validator;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cx</span>(<span class="hljs-params">classNames</span>) </span>{
-  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> classNames === <span class="hljs-string">'object'</span>) {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(classNames).filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">className</span>) </span>{
-      <span class="hljs-keyword">return</span> classNames[className];
-    }).join(<span class="hljs-string">' '</span>);
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>.prototype.join.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-string">' '</span>);
-  }
-}
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">noop</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
@@ -1454,7 +1441,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
     <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">this</span>.state.formData;
     <span class="hljs-keyword">const</span> status = <span class="hljs-keyword">this</span>.state.status;
 
-    <span class="hljs-keyword">const</span> classes = cx({
+    <span class="hljs-keyword">const</span> classes = classNames({
       <span class="hljs-string">'error'</span>: status[item].errors,
       <span class="hljs-string">'validating'</span>: status[item].isValidating,
       <span class="hljs-string">'success'</span>: formData[item] &amp;&amp; !status[item].errors &amp;&amp; !status[item].isValidating
@@ -1502,7 +1489,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
 
   renderPassStrengthBar(type) {
     <span class="hljs-keyword">const</span> strength = type === <span class="hljs-string">'pass'</span> ? <span class="hljs-keyword">this</span>.state.passStrength : <span class="hljs-keyword">this</span>.state.rePassStrength;
-    <span class="hljs-keyword">const</span> classSet = cx({
+    <span class="hljs-keyword">const</span> classSet = classNames({
       <span class="hljs-string">'ant-pwd-strength'</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-string">'ant-pwd-strength-low'</span>: strength === <span class="hljs-string">'L'</span>,
       <span class="hljs-string">'ant-pwd-strength-medium'</span>: strength === <span class="hljs-string">'M'</span>,
@@ -1515,16 +1502,16 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
     };
 
     <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{classSet}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-text"</span>&gt;</span>
-          {level[strength]}
-        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{classSet}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-pwd-strength-item ant-pwd-strength-item-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-text"</span>&gt;</span>
+            {level[strength]}
+          <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   },
 
