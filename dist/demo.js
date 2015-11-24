@@ -42145,9 +42145,9 @@
 	      }
 	      value = [selectedValue];
 	      label = [selectedLabel];
+	      this.setOpenState(false);
 	    }
 	    this.fireChange(value, label);
-	    this.setOpenState(false);
 	    this.setState({
 	      inputValue: ''
 	    });
@@ -42161,11 +42161,14 @@
 	  onMenuDeselect: function onMenuDeselect(_ref2) {
 	    var item = _ref2.item;
 	    var domEvent = _ref2.domEvent;
+	    var props = this.props;
 	
 	    if (domEvent.type === 'click') {
 	      this.removeSelected((0, _util.getValuePropValue)(item));
 	    }
-	    this.setOpenState(false);
+	    if (!(0, _util.isMultipleOrTags)(props)) {
+	      this.setOpenState(false);
+	    }
 	    this.setState({
 	      inputValue: ''
 	    });
@@ -42481,6 +42484,7 @@
 	
 	exports['default'] = Select;
 	module.exports = exports['default'];
+
 
 /***/ },
 /* 442 */
@@ -48737,7 +48741,7 @@
 	        text = render(text, record, index) || {};
 	        tdProps = text.props || {};
 	
-	        if (!_react2['default'].isValidElement(text)) {
+	        if (!_react2['default'].isValidElement(text) && 'children' in text) {
 	          text = text.children;
 	        }
 	        rowSpan = tdProps.rowSpan;
@@ -54372,6 +54376,17 @@
 	      return rect.left;
 	    }
 	  }, {
+	    key: 'getPrecision',
+	    value: function getPrecision() {
+	      var props = this.props;
+	      var stepString = props.step.toString();
+	      var precision = 0;
+	      if (stepString.indexOf('.') >= 0) {
+	        precision = stepString.length - stepString.indexOf('.') - 1;
+	      }
+	      return precision;
+	    }
+	  }, {
 	    key: 'trimAlignValue',
 	    value: function trimAlignValue(v) {
 	      var state = this.state || {};
@@ -54409,7 +54424,7 @@
 	      });
 	      var closestPoint = points[diffs.indexOf(Math.min.apply(Math, diffs))];
 	
-	      return closestPoint;
+	      return step !== null ? parseFloat(closestPoint.toFixed(this.getPrecision())) : closestPoint;
 	    }
 	  }, {
 	    key: 'calcOffset',
@@ -58607,7 +58622,7 @@
 	        f.status = 'uploading';
 	        return f;
 	      });
-	      nextFileList = nextFileList.concat(file);
+	      nextFileList = nextFileList.concat(targetItem);
 	    } else {
 	      targetItem = fileToObject(file);
 	      targetItem.status = 'uploading';
@@ -63628,7 +63643,7 @@
 			"rc-queue-anim": "~0.11.2",
 			"rc-radio": "~2.0.0",
 			"rc-select": "~5.1.2",
-			"rc-slider": "~3.1.0",
+			"rc-slider": "~3.1.2",
 			"rc-steps": "~1.4.1",
 			"rc-switch": "~1.3.1",
 			"rc-table": "~3.6.1",

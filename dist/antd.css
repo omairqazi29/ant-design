@@ -6061,7 +6061,7 @@ textarea.ant-calendar-time-input {
 }
 .ant-table-filter-dropdown .ant-dropdown-menu-item {
   overflow: hidden;
-  padding: 7px 8px;
+  padding: 7px 24px 8px 7px;
 }
 .ant-table-filter-dropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-selected {
   position: relative;
