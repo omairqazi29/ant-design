@@ -59819,7 +59819,11 @@
 	      var props = (0, _objectAssign2['default'])({}, this.props, {
 	        className: this.props.prefixCls + ' ' + this.props.className
 	      });
-	      return (0, _react.createElement)(this.props.component, props, this.renderNumberElement());
+	      if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+	        return (0, _react.createElement)(this.props.component, props, this.renderNumberElement());
+	      } else {
+	        return (0, _react.createElement)(this.props.component, props, props.count);
+	      }
 	    }
 	  }]);
 	
@@ -60672,7 +60676,7 @@
 	      }
 	      switch (props.type) {
 	        case 'textarea':
-	          return _react2['default'].createElement('textarea', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
+	          return _react2['default'].createElement('textarea', _extends({}, props, { value: props.value || props.defaultValue, placeholder: placeholder, className: inputClassName, ref: 'input' }));
 	        default:
 	          inputClassName = props.className ? props.className : inputClassName;
 	          return _react2['default'].createElement('input', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
