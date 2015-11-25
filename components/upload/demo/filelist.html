@@ -7,19 +7,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _antd = require('antd');
 
-var fileList = [{
-  uid: -1,
-  name: 'xxx.png',
-  status: 'done',
-  url: 'http://www.baidu.com/xxx.png'
-}];
-
 var MyUpload = React.createClass({
   displayName: 'MyUpload',
 
   getInitialState: function getInitialState() {
     return {
-      fileList: fileList
+      fileList: [{
+        uid: -1,
+        name: 'xxx.png',
+        status: 'done',
+        url: 'http://www.baidu.com/xxx.png'
+      }]
     };
   },
   handleChange: function handleChange(info) {
@@ -46,9 +44,7 @@ var MyUpload = React.createClass({
       return true;
     });
 
-    this.setState({
-      fileList: fileList
-    });
+    this.setState({ fileList: fileList });
   },
   render: function render() {
     var props = {
@@ -71,17 +67,15 @@ var MyUpload = React.createClass({
 
 ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> fileList = [{
-  uid: -<span class="hljs-number">1</span>,
-  name: <span class="hljs-string">'xxx.png'</span>,
-  status: <span class="hljs-string">'done'</span>,
-  url: <span class="hljs-string">'http://www.baidu.com/xxx.png'</span>
-}];
-
 <span class="hljs-keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      fileList: fileList
+      fileList: [{
+        uid: -<span class="hljs-number">1</span>,
+        name: <span class="hljs-string">'xxx.png'</span>,
+        status: <span class="hljs-string">'done'</span>,
+        url: <span class="hljs-string">'http://www.baidu.com/xxx.png'</span>
+      }]
     };
   },
   handleChange(info) {
@@ -108,9 +102,7 @@ ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('co
       <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
     });
 
-    <span class="hljs-keyword">this</span>.setState({
-      fileList: fileList
-    });
+    <span class="hljs-keyword">this</span>.setState({ fileList });
   },
   render() {
     <span class="hljs-keyword">const</span> props = {

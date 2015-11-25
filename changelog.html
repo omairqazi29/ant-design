@@ -193,8 +193,8 @@
     <script src="./static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="./dist/demo.js"></script>
@@ -578,7 +578,18 @@
 <section class="main-container">
   <article class="markdown">
     <h1>更新日志 </h1>
-    <h2 id="0-10-1-2015-11-20">0.10.1 <code>2015-11-20</code><a href="#0-10-1-2015-11-20" class="anchor">#</a> </h2><ul>
+    <h2 id="0-10-2-2015-11-25">0.10.2 <code>2015-11-25</code><a href="#0-10-2-2015-11-25" class="anchor">#</a> </h2><ul>
+<li>Slider 新增 <code>tipFormatter</code> 用于格式化 Tooltip 的内容。</li>
+<li>优化 Badge 动画效果。</li>
+<li>修复以下问题：<ul>
+<li>文本域的表单校验无法重置。</li>
+<li>设置 Upload 的 <code>multiple</code> 为 <code>true</code> 时，未显示每个文件的上传进度。</li>
+<li>Breadcrumb 配合 Router 的时候如果没有 <code>breadcrumbName</code> 会抛错。</li>
+<li>InputNumber 同时设置 <code>size</code> <code>className</code> 时会有冲突。</li>
+</ul>
+</li>
+</ul>
+<h2 id="0-10-1-2015-11-20">0.10.1 <code>2015-11-20</code><a href="#0-10-1-2015-11-20" class="anchor">#</a> </h2><ul>
 <li><p>修改内部组件的引用结构，方便工具优化。<a href="https://github.com/ant-design/ant-design/pull/566">#566</a></p>
 <ul>
 <li>移除了演示中没有使用过的 <code>antd.ButtonGroup</code>，依然用 <code>const ButtonGroup = Button.Group</code> 来使用。</li>

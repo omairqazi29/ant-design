@@ -11,7 +11,7 @@ var columns = [{
   render: function render(text) {
     return React.createElement(
       'a',
-      { href: 'javascript:;' },
+      { href: '#' },
       text
     );
   }
@@ -99,7 +99,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
@@ -165,7 +165,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
-})
+});
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>
 , document.getElementById('components-table-demo-local-data'));</span></code></pre></div>

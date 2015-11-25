@@ -82,14 +82,14 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon, Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-menu-demo-horizontal'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
       current: <span class="hljs-string">'mail'</span>
-    }
+    };
   },
   handleClick(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click '</span>, e);

@@ -70,7 +70,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
     <span class="hljs-keyword">return</span> endValue.getTime() &lt;= <span class="hljs-keyword">this</span>.state.startValue.getTime();
   },
   onChange(field, value) {
-    <span class="hljs-built_in">console</span>.log(field,<span class="hljs-string">'change'</span>,value);
+    <span class="hljs-built_in">console</span>.log(field, <span class="hljs-string">'change'</span>, value);
     <span class="hljs-keyword">this</span>.setState({
       [field]: value,
     });
@@ -80,11 +80,11 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
       <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
         <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
         <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'startValue')}</span> /&gt;</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
         <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
         <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'endValue')}</span> /&gt;</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });

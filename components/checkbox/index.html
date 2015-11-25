@@ -193,8 +193,8 @@ Checkbox 多选框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -705,14 +705,14 @@ var App = React.createClass({
           _antd.Button,
           { type: 'primary', size: 'small',
             onClick: this.toggleChecked },
-          !this.state.checked ? "选中" : "取消"
+          !this.state.checked ? '选中' : '取消'
         ),
         React.createElement(
           _antd.Button,
-          { style: { 'marginLeft': '10px' },
+          { style: { marginLeft: '10px' },
             type: 'primary', size: 'small',
             onClick: this.toggleDisable },
-          !this.state.disabled ? "不可用" : "可用"
+          !this.state.disabled ? '不可用' : '可用'
         )
       )
     );
@@ -742,7 +742,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     };
   },
   render() {
-    <span class="hljs-keyword">var</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
+    <span class="hljs-keyword">const</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
       (<span class="hljs-keyword">this</span>.state.disabled ? <span class="hljs-string">'不可用'</span> : <span class="hljs-string">'可用'</span>);
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> '<span class="hljs-attribute">20px</span>'}}&gt;</span>
@@ -756,12 +756,12 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
           <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleChecked}</span>&gt;</span>
-          {!this.state.checked ? "选中":"取消"}
+          {!this.state.checked ? '选中' : '取消'}
         <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{'marginLeft':</span> '<span class="hljs-attribute">10px</span>'}}
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> '<span class="hljs-attribute">10px</span>'}}
           <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
           <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleDisable}</span>&gt;</span>
-          {!this.state.disabled ? "不可用":"可用"}
+          {!this.state.disabled ? '不可用' : '可用'}
         <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
@@ -810,16 +810,17 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-checkbox-demo-disable'</span>);
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">defaultChecked</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, container);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-disable">不可用</a>
+      <a href="#demo-disable">null</a>
     </div>
-    <p>checkbox 不可用。</p>
+    <p> 不可用</p>
+<p>checkbox 不可用。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

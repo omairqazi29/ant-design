@@ -5,7 +5,6 @@
 
 var _antd = require('antd');
 
-var Option = _antd.Select.Option;
 var RadioGroup = _antd.Radio.Group;
 
 var Test = React.createClass({
@@ -142,8 +141,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Select, Checkbox, Radio } from 'antd';
-const Option = Select.Option;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Checkbox, Radio } from 'antd';
 const RadioGroup = Radio.Group;
 
 const Test = React.createClass({
@@ -163,22 +161,22 @@ const Test = React.createClass({
         &lt;p className="buttons"&gt;
           &lt;Button type="primary" onClick={this.onClick}&gt;切换&lt;/Button&gt;
         &lt;/p&gt;
-        &lt;QueueAnim component="form" className="ant-form-horizontal" type="bottom" leaveReverse={true}&gt;
+        &lt;QueueAnim component="form" className="ant-form-horizontal" type="bottom" leaveReverse&gt;
           {this.state.show ? [
-            &lt;div className="ant-form-item ant-form-item-compact" key='name'&gt;
+            &lt;div className="ant-form-item ant-form-item-compact" key="name"&gt;
               &lt;label htmlFor="userName" className="col-6" required&gt;用户名：&lt;/label&gt;
               &lt;div className="col-6"&gt;
                 &lt;p className="ant-form-text"&gt;大眼萌 minion&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
-            &lt;div className="ant-form-item" key='password'&gt;
+            &lt;div className="ant-form-item" key="password"&gt;
               &lt;label htmlFor="password" className="col-6" required&gt;密码：&lt;/label&gt;
               &lt;div className="col-14"&gt;
                 &lt;input className="ant-input" type="password" id="password" placeholder="请输入密码"/&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
-            &lt;div className="ant-form-item ant-form-item-compact" key='sex'&gt;
-              &lt;label  className="col-6" required&gt;您的性别：&lt;/label&gt;
+            &lt;div className="ant-form-item ant-form-item-compact" key="sex"&gt;
+              &lt;label className="col-6" required&gt;您的性别：&lt;/label&gt;
               &lt;div className="col-14"&gt;
                 &lt;RadioGroup value="male"&gt;
                   &lt;Radio value="male"&gt;男的&lt;/Radio&gt;
@@ -186,14 +184,14 @@ const Test = React.createClass({
                 &lt;/RadioGroup&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
-            &lt;div className="ant-form-item" key='remark'&gt;
+            &lt;div className="ant-form-item" key="remark"&gt;
               &lt;label htmlFor="remark" className="col-6" required&gt;备注：&lt;/label&gt;
               &lt;div className="col-14"&gt;
                 &lt;textarea className="ant-input" id="remark" placeholder="随便写"&gt;&lt;/textarea&gt;
                 &lt;p className="ant-form-explain"&gt;随便写点什么&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
-            &lt;div className="ant-form-item ant-form-item-compact" key='checkbox'&gt;
+            &lt;div className="ant-form-item ant-form-item-compact" key="checkbox"&gt;
               &lt;div className="col-14 col-offset-6"&gt;
                 &lt;label&gt;
                   &lt;Checkbox /&gt;
@@ -201,7 +199,7 @@ const Test = React.createClass({
                 &lt;/label&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
-            &lt;div className="row" key='btn'&gt;
+            &lt;div className="row" key="btn"&gt;
               &lt;div className="col-16 col-offset-6"&gt;
                 &lt;Button type="primary"&gt;确定&lt;/Button&gt;
               &lt;/div&gt;

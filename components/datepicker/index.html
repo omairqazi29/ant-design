@@ -193,8 +193,8 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -728,7 +728,11 @@ var selectdDate = undefined,
     selectdTime = undefined;
 function handleChange(from, value) {
   if (!value) {
-    from === 'date' ? selectdDate = false : selectdTime = false;
+    if (from === 'date') {
+      selectdDate = false;
+    } else {
+      selectdTime = false;
+    }
     return;
   }
   if (from === 'date') {
@@ -758,8 +762,11 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">let</span> selectdDate, selectdTime;
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">from, value</span>) </span>{
   <span class="hljs-keyword">if</span> (!value) {
-    from === <span class="hljs-string">'date'</span> ?
-      (selectdDate = <span class="hljs-literal">false</span>) : (selectdTime = <span class="hljs-literal">false</span>);
+    <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {
+      selectdDate = <span class="hljs-literal">false</span>;
+    } <span class="hljs-keyword">else</span> {
+      selectdTime = <span class="hljs-literal">false</span>;
+    }
     <span class="hljs-keyword">return</span>;
   }
   <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {
@@ -851,26 +858,26 @@ var App = React.createClass({
     };
   },
   render: function render() {
-    return React.createElement(_antd.Datepicker, { showTime: true, locale: this.state.locale });
+    return React.createElement(_antd.Datepicker, { locale: this.state.locale });
   }
 });
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/datepicker/locale/en_US'</span>;
-<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>
+<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
 
-const App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    return {
+    <span class="hljs-keyword">return</span> {
       locale: assign({}, enUS, {
-        timezoneOffset: 0 * 60,
-        firstDayOfWeek: 0,
-        minimalDaysInFirstWeek: 1
+        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
+        firstDayOfWeek: <span class="hljs-number">0</span>,
+        minimalDaysInFirstWeek: <span class="hljs-number">1</span>
       })
     };
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
   }
 });
 
@@ -930,12 +937,12 @@ ReactDOM.render(React.createElement(Picker, null), document.getElementById('comp
     <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(value.getTime()));
   },
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>;</span>
   }
 });
 
 ReactDOM.render(
-  <span class="hljs-tag">&lt;<span class="hljs-title">Picker</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Picker</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-select'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -955,7 +962,7 @@ var _antd = require('antd');
 ReactDOM.render(React.createElement(_antd.Datepicker, { defaultValue: '2015-06-06', disabled: true }), document.getElementById('components-datepicker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-06-06"</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-06-06"</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
 , document.getElementById('components-datepicker-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -1037,7 +1044,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
     <span class="hljs-keyword">return</span> endValue.getTime() &lt;= <span class="hljs-keyword">this</span>.state.startValue.getTime();
   },
   onChange(field, value) {
-    <span class="hljs-built_in">console</span>.log(field,<span class="hljs-string">'change'</span>,value);
+    <span class="hljs-built_in">console</span>.log(field, <span class="hljs-string">'change'</span>, value);
     <span class="hljs-keyword">this</span>.setState({
       [field]: value,
     });
@@ -1047,11 +1054,11 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
       <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
         <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
         <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'startValue')}</span> /&gt;</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
         <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
         <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,'endValue')}</span> /&gt;</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });

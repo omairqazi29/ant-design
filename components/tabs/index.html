@@ -193,8 +193,8 @@ Tabs 标签页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -761,7 +761,7 @@ ReactDOM.render(React.createElement(
 ), document.getElementById('components-tabs-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
-<span class="hljs-keyword">var</span> tabContent = [
+<span class="hljs-keyword">const</span> tabContent = [
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"apple"</span> /&gt;</span>选项卡一<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>,
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"android"</span> /&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>,
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"lock"</span> /&gt;</span>选项卡三<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>,
@@ -820,7 +820,7 @@ var Test = React.createClass({
       activeKey: index.toString()
     };
   },
-  remove: function remove(index, e) {
+  remove: function remove(targetIndex, e) {
     e.stopPropagation();
     var tabs = this.state.tabs;
     var activeKey = this.state.activeKey;
@@ -832,15 +832,15 @@ var Test = React.createClass({
     }
 
     var newTabs = tabs.filter(function (tab) {
-      if (tab.index !== index) {
+      if (tab.index !== targetIndex) {
         return true;
       } else {
-        foundIndex = index;
+        foundIndex = targetIndex;
         return false;
       }
     });
 
-    if (activeKey === index) {
+    if (activeKey === targetIndex) {
       activeKey = tabs[foundIndex - 1].index;
     }
 
@@ -924,7 +924,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
       activeKey: index.toString()
     };
   },
-  remove(index, e) {
+  remove(targetIndex, e) {
     e.stopPropagation();
     <span class="hljs-keyword">let</span> tabs = <span class="hljs-keyword">this</span>.state.tabs;
     <span class="hljs-keyword">let</span> activeKey = <span class="hljs-keyword">this</span>.state.activeKey;
@@ -936,15 +936,15 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     }
 
     <span class="hljs-keyword">const</span> newTabs = tabs.filter(tab =&gt; {
-      <span class="hljs-keyword">if</span> (tab.index !== index) {
+      <span class="hljs-keyword">if</span> (tab.index !== targetIndex) {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
       } <span class="hljs-keyword">else</span> {
-        foundIndex = index;
+        foundIndex = targetIndex;
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
       }
     });
 
-    <span class="hljs-keyword">if</span> (activeKey === index) {
+    <span class="hljs-keyword">if</span> (activeKey === targetIndex) {
       activeKey = tabs[foundIndex - <span class="hljs-number">1</span>].index;
     }
 
@@ -988,7 +988,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
       <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">Tabs</span>&gt;</span>
     )</span>;
   }
-})
+});
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-tabs-demo-add'));</span></code></pre></div>
   </div>
@@ -1083,7 +1083,7 @@ ReactDOM.render(React.createElement(
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{callback}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡一"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项卡一<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡二"</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡二"</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡三"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项卡三<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tabs</span>&gt;</span>
 , document.getElementById('components-tabs-demo-disabled'));</span></code></pre></div>

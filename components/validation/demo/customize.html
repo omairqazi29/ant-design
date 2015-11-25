@@ -86,9 +86,17 @@ var Demo = React.createClass({
       } else {
         strength = 'H';
       }
-      type === 'pass' ? this.setState({ passBarShow: true, passStrength: strength }) : this.setState({ rePassBarShow: true, rePassStrength: strength });
+      if (type === 'pass') {
+        this.setState({ passBarShow: true, passStrength: strength });
+      } else {
+        this.setState({ rePassBarShow: true, rePassStrength: strength });
+      }
     } else {
-      type === 'pass' ? this.setState({ passBarShow: false }) : this.setState({ rePassBarShow: false });
+      if (type === 'pass') {
+        this.setState({ passBarShow: false });
+      } else {
+        this.setState({ rePassBarShow: false });
+      }
     }
   },
 
@@ -269,7 +277,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
 
   handleSubmit(e) {
     e.preventDefault();
-    <span class="hljs-keyword">var</span> validation = <span class="hljs-keyword">this</span>.refs.validation;
+    <span class="hljs-keyword">const</span> validation = <span class="hljs-keyword">this</span>.refs.validation;
     validation.validate((valid) =&gt; {
       <span class="hljs-keyword">if</span> (!valid) {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'error in form'</span>);
@@ -311,9 +319,17 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
       } <span class="hljs-keyword">else</span> {
         strength = <span class="hljs-string">'H'</span>;
       }
-      type === <span class="hljs-string">'pass'</span> ? <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">true</span>, passStrength: strength }) : <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">true</span>, rePassStrength: strength });
+      <span class="hljs-keyword">if</span> (type === <span class="hljs-string">'pass'</span>) {
+        <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">true</span>, passStrength: strength });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">true</span>, rePassStrength: strength });
+      }
     } <span class="hljs-keyword">else</span> {
-      type === <span class="hljs-string">'pass'</span> ? <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">false</span> }) : <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">false</span> });
+      <span class="hljs-keyword">if</span> (type === <span class="hljs-string">'pass'</span>) {
+        <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">false</span> });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">false</span> });
+      }
     }
   },
 

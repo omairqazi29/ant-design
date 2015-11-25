@@ -21305,13 +21305,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _rcInputNumber = __webpack_require__(265);
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _rcInputNumber2 = _interopRequireDefault(_rcInputNumber);
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	var _react = __webpack_require__(82);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(104);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _rcInputNumber = __webpack_require__(265);
+	
+	var _rcInputNumber2 = _interopRequireDefault(_rcInputNumber);
 	
 	exports['default'] = _react2['default'].createClass({
 	  displayName: 'index',
@@ -21323,13 +21331,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  render: function render() {
-	    var sizeClass = '';
-	    if (this.props.size === 'large') {
-	      sizeClass = 'ant-input-number-lg';
-	    } else if (this.props.size === 'small') {
-	      sizeClass = 'ant-input-number-sm';
-	    }
-	    return _react2['default'].createElement(_rcInputNumber2['default'], _extends({ className: sizeClass }, this.props));
+	    var _props = this.props;
+	    var className = _props.className;
+	    var size = _props.size;
+	
+	    var other = _objectWithoutProperties(_props, ['className', 'size']);
+	
+	    var inputNumberClass = (0, _classnames2['default'])(_defineProperty({
+	      'ant-input-number-lg': size === 'large',
+	      'ant-input-number-sm': size === 'small'
+	    }, className, !!className));
+	
+	    return _react2['default'].createElement(_rcInputNumber2['default'], _extends({ className: inputNumberClass }, other));
 	  }
 	});
 	module.exports = exports['default'];
@@ -30639,6 +30652,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  handleClose: function handleClose(e) {
+	    e.preventDefault();
 	    var dom = _reactDom2['default'].findDOMNode(this);
 	    dom.style.height = dom.offsetHeight + 'px';
 	    // Magic code
@@ -38750,8 +38764,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.1",
-		"stableVersion": "0.10.1",
+		"version": "0.10.2",
+		"stableVersion": "0.10.2",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -38850,6 +38864,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"react-addons-test-utils": "~0.14.2",
 			"react-dom": "~0.14.2",
 			"react-router": "~1.0.0",
+			"eslint-plugin-markdown": "git+https://github.com/ant-design/eslint-plugin-markdown.git",
 			"webpack": "^1.10.1",
 			"webpack-babel-jest": "^1.0.0",
 			"webpack-dev-middleware": "^1.2.0"
@@ -38860,7 +38875,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			"clean": "rm -rf _site dist",
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
 			"just-deploy": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
-			"lint": "eslint components test index.js --ext '.js,.jsx'",
+			"lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint",
+			"mdlint": "eslint components/*/demo/*.md --ext '.md' --global 'React,ReactDOM' --rule 'no-console: 0'",
 			"test": "npm run lint && webpack && npm run jest",
 			"jest": "jest",
 			"pub": "sh ./scripts/publish.sh",

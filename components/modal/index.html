@@ -193,8 +193,8 @@ Modal 对话框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -796,7 +796,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span> , document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -937,7 +937,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-footer'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, document.getElementById('components-modal-demo-footer'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -953,14 +953,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var confirm = antd.Modal.confirm;
+var confirm = _antd.Modal.confirm;
 
 function showConfirm() {
   confirm({
     title: '您是否确认要删除这项内容',
-    content: '一些解释',
+    content: '点确认 1 秒后关闭',
     onOk: function onOk() {
-      alert('1 秒后关闭');
       return new Promise(function (resolve) {
         setTimeout(resolve, 1000);
       });
@@ -974,14 +973,13 @@ ReactDOM.render(React.createElement(
   { onClick: showConfirm },
   '确认对话框'
 ), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> confirm = antd.Modal.confirm;
+<span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
-    content: <span class="hljs-string">'一些解释'</span>,
+    content: <span class="hljs-string">'点确认 1 秒后关闭'</span>,
     onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      alert(<span class="hljs-string">'1 秒后关闭'</span>);
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve</span>) </span>{
         setTimeout(resolve, <span class="hljs-number">1000</span>);
       });
@@ -1010,8 +1008,6 @@ ReactDOM.render(
     <script>(function(){'use strict';
 
 var _antd = require('antd');
-
-var ModalText = '对话框的内容';
 
 var Test = React.createClass({
   displayName: 'Test',
@@ -1075,8 +1071,6 @@ var Test = React.createClass({
 
 ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-async'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> ModalText = <span class="hljs-string">'对话框的内容'</span>;
-
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
@@ -1121,7 +1115,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span> , document.getElementById('components-modal-demo-async'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, document.getElementById('components-modal-demo-async'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1137,14 +1131,14 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var confirm = antd.Modal.confirm;
+var confirm = _antd.Modal.confirm;
 
 function showConfirm() {
   confirm({
     title: '您是否确认要删除这项内容',
     content: '一些解释',
     onOk: function onOk() {
-      alert('确定');
+      console.log('确定');
     },
     onCancel: function onCancel() {}
   });
@@ -1155,14 +1149,14 @@ ReactDOM.render(React.createElement(
   { onClick: showConfirm },
   '确认对话框'
 ), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> confirm = antd.Modal.confirm;
+<span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
     content: <span class="hljs-string">'一些解释'</span>,
     onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      alert(<span class="hljs-string">'确定'</span>);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'确定'</span>);
     },
     onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
   });

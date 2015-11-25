@@ -11,7 +11,7 @@ var columns = [{
   render: function render(text) {
     return React.createElement(
       'a',
-      { href: 'javascript:;' },
+      { href: '#' },
       text
     );
   }
@@ -30,19 +30,19 @@ var columns = [{
       null,
       React.createElement(
         'a',
-        { href: 'javascript:;' },
+        { href: '#' },
         '操作一'
       ),
       React.createElement('span', { className: 'ant-divider' }),
       React.createElement(
         'a',
-        { href: 'javascript:;' },
+        { href: '#' },
         '操作二'
       ),
       React.createElement('span', { className: 'ant-divider' }),
       React.createElement(
         'a',
-        { href: 'javascript:;', className: 'ant-dropdown-link' },
+        { href: '#', className: 'ant-dropdown-link' },
         '更多 ',
         React.createElement(_antd.Icon, { type: 'down' })
       )
@@ -72,7 +72,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
@@ -85,11 +85,11 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   dataIndex: <span class="hljs-string">''</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, record</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>操作一<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span>&gt;</span>操作二<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作二<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span>&gt;</span>
         更多 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>;</span>

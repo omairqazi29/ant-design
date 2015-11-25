@@ -24,7 +24,7 @@ var Demo = React.createClass({
 
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
-    _antd.message.success("收到表单值~~~ ：" + JSON.stringify(this.state.formData, function (k, v) {
+    _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
       if (typeof v === 'undefined') {
         return '';
       }
@@ -88,7 +88,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
 
   handleSubmit(e) {
     e.preventDefault();
-    message.success(<span class="hljs-string">"收到表单值~~~ ："</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
+    message.success(<span class="hljs-string">'收到表单值~~~ ：'</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'undefined'</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
       }

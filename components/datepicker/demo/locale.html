@@ -28,26 +28,26 @@ var App = React.createClass({
     };
   },
   render: function render() {
-    return React.createElement(_antd.Datepicker, { showTime: true, locale: this.state.locale });
+    return React.createElement(_antd.Datepicker, { locale: this.state.locale });
   }
 });
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('components-datepicker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/datepicker/locale/en_US'</span>;
-<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>
+<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
 
-const App = React.createClass({
+<span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
-    return {
+    <span class="hljs-keyword">return</span> {
       locale: assign({}, enUS, {
-        timezoneOffset: 0 * 60,
-        firstDayOfWeek: 0,
-        minimalDaysInFirstWeek: 1
+        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
+        firstDayOfWeek: <span class="hljs-number">0</span>,
+        minimalDaysInFirstWeek: <span class="hljs-number">1</span>
       })
     };
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">showTime</span>=<span class="hljs-value">{true}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
   }
 });
 

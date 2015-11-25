@@ -40,14 +40,14 @@ var App = React.createClass({
           _antd.Button,
           { type: 'primary', size: 'small',
             onClick: this.toggleChecked },
-          !this.state.checked ? "选中" : "取消"
+          !this.state.checked ? '选中' : '取消'
         ),
         React.createElement(
           _antd.Button,
-          { style: { 'marginLeft': '10px' },
+          { style: { marginLeft: '10px' },
             type: 'primary', size: 'small',
             onClick: this.toggleDisable },
-          !this.state.disabled ? "不可用" : "可用"
+          !this.state.disabled ? '不可用' : '可用'
         )
       )
     );
@@ -77,7 +77,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     };
   },
   render() {
-    <span class="hljs-keyword">var</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
+    <span class="hljs-keyword">const</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
       (<span class="hljs-keyword">this</span>.state.disabled ? <span class="hljs-string">'不可用'</span> : <span class="hljs-string">'可用'</span>);
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> '<span class="hljs-attribute">20px</span>'}}&gt;</span>
@@ -91,12 +91,12 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
           <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleChecked}</span>&gt;</span>
-          {!this.state.checked ? "选中":"取消"}
+          {!this.state.checked ? '选中' : '取消'}
         <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{'marginLeft':</span> '<span class="hljs-attribute">10px</span>'}}
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> '<span class="hljs-attribute">10px</span>'}}
           <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>
           <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleDisable}</span>&gt;</span>
-          {!this.state.disabled ? "不可用":"可用"}
+          {!this.state.disabled ? '不可用' : '可用'}
         <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>

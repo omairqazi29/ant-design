@@ -27,7 +27,7 @@ var Demo = React.createClass({
 
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
-    _antd.message.success("收到表单值~~~ ：" + JSON.stringify(this.state.formData, function (k, v) {
+    _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
       if (typeof v === 'undefined') {
         return '';
       }
@@ -72,7 +72,7 @@ var Demo = React.createClass({
           required: true },
         React.createElement(
           RadioGroup,
-          { value: 'male', name: 'gender', value: formData.gender, onChange: this.setValue.bind(this, 'gender') },
+          { name: 'gender', value: formData.gender, onChange: this.setValue.bind(this, 'gender') },
           React.createElement(
             _antd.Radio,
             { value: 'male' },
@@ -145,7 +145,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
 
   handleSubmit(e) {
     e.preventDefault();
-    message.success(<span class="hljs-string">"收到表单值~~~ ："</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
+    message.success(<span class="hljs-string">'收到表单值~~~ ：'</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'undefined'</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
       }
@@ -161,7 +161,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"用户名："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
           <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-          <span class="hljs-attribute">required</span>=<span class="hljs-value">{true}</span> &gt;</span>
+          <span class="hljs-attribute">required</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span>&gt;</span>大眼萌 minion<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
@@ -169,15 +169,15 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
           <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}
-          <span class="hljs-attribute">required</span>=<span class="hljs-value">{true}</span> &gt;</span>
+          <span class="hljs-attribute">required</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.password}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">password</span>')} /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"您的性别："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
           <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}
-          <span class="hljs-attribute">required</span>=<span class="hljs-value">{true}</span> &gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gender"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.gender}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">gender</span>')} &gt;</span>
+          <span class="hljs-attribute">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gender"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.gender}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">gender</span>')} &gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
@@ -187,8 +187,8 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"备注："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
           <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}
-          <span class="hljs-attribute">required</span>=<span class="hljs-value">{true}</span>
-          <span class="hljs-attribute">help</span>=<span class="hljs-value">"随便写点什么"</span> &gt;</span>
+          <span class="hljs-attribute">required</span>
+          <span class="hljs-attribute">help</span>=<span class="hljs-value">"随便写点什么"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"随便写"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"remark"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"remark"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.remark}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">remark</span>')} /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>

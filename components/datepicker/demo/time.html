@@ -10,7 +10,11 @@ var selectdDate = undefined,
     selectdTime = undefined;
 function handleChange(from, value) {
   if (!value) {
-    from === 'date' ? selectdDate = false : selectdTime = false;
+    if (from === 'date') {
+      selectdDate = false;
+    } else {
+      selectdTime = false;
+    }
     return;
   }
   if (from === 'date') {
@@ -40,8 +44,11 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">let</span> selectdDate, selectdTime;
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">from, value</span>) </span>{
   <span class="hljs-keyword">if</span> (!value) {
-    from === <span class="hljs-string">'date'</span> ?
-      (selectdDate = <span class="hljs-literal">false</span>) : (selectdTime = <span class="hljs-literal">false</span>);
+    <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {
+      selectdDate = <span class="hljs-literal">false</span>;
+    } <span class="hljs-keyword">else</span> {
+      selectdTime = <span class="hljs-literal">false</span>;
+    }
     <span class="hljs-keyword">return</span>;
   }
   <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {

@@ -193,8 +193,8 @@ Validation 表单校验 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.1',
-        stable: '0.10.1'
+        latest: '0.10.2',
+        stable: '0.10.2'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -823,7 +823,7 @@ var Demo = React.createClass({
             wrapperCol: { span: 12 },
             validateStatus: this.renderValidateStyle('name'),
             hasFeedback: true,
-            help: status.name.isValidating ? "正在校验中.." : status.name.errors ? status.name.errors.join(',') : null,
+            help: status.name.isValidating ? '正在校验中..' : status.name.errors && status.name.errors.join(','),
             required: true },
           React.createElement(
             Validator,
@@ -1059,7 +1059,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
             <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">{this.renderValidateStyle('name')}</span>
             <span class="hljs-attribute">hasFeedback</span>
-            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.name.isValidating</span> ? "正在校验中<span class="hljs-attribute">..</span>" <span class="hljs-attribute">:</span> <span class="hljs-attribute">status.name.errors</span> ? <span class="hljs-attribute">status.name.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
+            <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.name.isValidating</span> ? '正在校验中<span class="hljs-attribute">..</span>' <span class="hljs-attribute">:</span> (<span class="hljs-attribute">status.name.errors</span> &amp;&amp; <span class="hljs-attribute">status.name.errors.join</span>(','))}
             <span class="hljs-attribute">required</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">min:</span> <span class="hljs-attribute">5</span>, <span class="hljs-attribute">message:</span> '用户名至少为 <span class="hljs-attribute">5</span> 个字符'}, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.userExists</span>}]}&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.name}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"实时校验，输入 JasonWood 看看"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setField.bind(this,</span> '<span class="hljs-attribute">name</span>')} /&gt;</span>
@@ -1076,7 +1076,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.email.errors</span> ? <span class="hljs-attribute">status.email.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
             <span class="hljs-attribute">required</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">type:</span>'<span class="hljs-attribute">email</span>', <span class="hljs-attribute">message:</span> '请输入正确的邮箱地址'}]} <span class="hljs-attribute">trigger</span>=<span class="hljs-value">{this.state.emailValidateMethod}</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.email}</span>  <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"onBlur 与 onChange 相结合"</span> <span class="hljs-attribute">onBlur</span>=<span class="hljs-value">{this.handleEmailInputBlur}</span> <span class="hljs-attribute">onFocus</span>=<span class="hljs-value">{this.handleEmailInputFocus}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.email}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"onBlur 与 onChange 相结合"</span> <span class="hljs-attribute">onBlur</span>=<span class="hljs-value">{this.handleEmailInputBlur}</span> <span class="hljs-attribute">onFocus</span>=<span class="hljs-value">{this.handleEmailInputFocus}</span> /&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
@@ -1236,9 +1236,17 @@ var Demo = React.createClass({
       } else {
         strength = 'H';
       }
-      type === 'pass' ? this.setState({ passBarShow: true, passStrength: strength }) : this.setState({ rePassBarShow: true, rePassStrength: strength });
+      if (type === 'pass') {
+        this.setState({ passBarShow: true, passStrength: strength });
+      } else {
+        this.setState({ rePassBarShow: true, rePassStrength: strength });
+      }
     } else {
-      type === 'pass' ? this.setState({ passBarShow: false }) : this.setState({ rePassBarShow: false });
+      if (type === 'pass') {
+        this.setState({ passBarShow: false });
+      } else {
+        this.setState({ rePassBarShow: false });
+      }
     }
   },
 
@@ -1419,7 +1427,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
 
   handleSubmit(e) {
     e.preventDefault();
-    <span class="hljs-keyword">var</span> validation = <span class="hljs-keyword">this</span>.refs.validation;
+    <span class="hljs-keyword">const</span> validation = <span class="hljs-keyword">this</span>.refs.validation;
     validation.validate((valid) =&gt; {
       <span class="hljs-keyword">if</span> (!valid) {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'error in form'</span>);
@@ -1461,9 +1469,17 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
       } <span class="hljs-keyword">else</span> {
         strength = <span class="hljs-string">'H'</span>;
       }
-      type === <span class="hljs-string">'pass'</span> ? <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">true</span>, passStrength: strength }) : <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">true</span>, rePassStrength: strength });
+      <span class="hljs-keyword">if</span> (type === <span class="hljs-string">'pass'</span>) {
+        <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">true</span>, passStrength: strength });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">true</span>, rePassStrength: strength });
+      }
     } <span class="hljs-keyword">else</span> {
-      type === <span class="hljs-string">'pass'</span> ? <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">false</span> }) : <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">false</span> });
+      <span class="hljs-keyword">if</span> (type === <span class="hljs-string">'pass'</span>) {
+        <span class="hljs-keyword">this</span>.setState({ passBarShow: <span class="hljs-literal">false</span> });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">false</span> });
+      }
     }
   },
 
@@ -1705,10 +1721,6 @@ function cx(classNames) {
   }
 }
 
-function noop() {
-  return false;
-}
-
 var Demo = React.createClass({
   displayName: 'Demo',
 
@@ -1812,7 +1824,7 @@ var Demo = React.createClass({
             { rules: [{ required: true, message: '请选择您的国籍' }] },
             React.createElement(
               _antd.Select,
-              { size: 'large', placeholder: '请选择国家', style: { width: "100%" }, name: 'select', value: formData.select },
+              { size: 'large', placeholder: '请选择国家', style: { width: '100%' }, name: 'select', value: formData.select },
               React.createElement(
                 Option,
                 { value: 'china' },
@@ -1855,7 +1867,7 @@ var Demo = React.createClass({
             { rules: [{ required: true, message: '请选择您喜欢的颜色', type: 'array' }] },
             React.createElement(
               _antd.Select,
-              { multiple: true, size: 'large', placeholder: '请选择颜色', style: { width: "100%" }, name: 'multiSelect', value: formData.multiSelect },
+              { multiple: true, size: 'large', placeholder: '请选择颜色', style: { width: '100%' }, name: 'multiSelect', value: formData.multiSelect },
               React.createElement(
                 Option,
                 { value: 'red' },
@@ -1986,10 +1998,6 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">noop</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-}
-
 <span class="hljs-keyword">const</span> Demo = React.createClass({
   mixins: [Validation.FieldMixin],
 
@@ -2080,7 +2088,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.select.errors</span> ? <span class="hljs-attribute">status.select.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
             <span class="hljs-attribute">required</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的国籍'}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择国家"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:"100%"}}</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.select}</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择国家"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> '<span class="hljs-attribute">100</span>%'}} <span class="hljs-attribute">name</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.select}</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"china"</span>&gt;</span>中国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"use"</span>&gt;</span>美国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"japan"</span>&gt;</span>日本<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -2098,7 +2106,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.multiSelect.errors</span> ? <span class="hljs-attribute">status.multiSelect.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
             <span class="hljs-attribute">required</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您喜欢的颜色', <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">array</span>'}]}&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择颜色"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:"100%"}}</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"multiSelect"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.multiSelect}</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择颜色"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> '<span class="hljs-attribute">100</span>%'}} <span class="hljs-attribute">name</span>=<span class="hljs-value">"multiSelect"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.multiSelect}</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"red"</span>&gt;</span>红色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"orange"</span>&gt;</span>橙色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yellow"</span>&gt;</span>黄色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -2137,7 +2145,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
                 <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">date</span>',
                 <span class="hljs-attribute">message:</span> '你的生日是什么呢?'
               }, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkBirthday</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"birthday"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.birthday}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Datepicker</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"birthday"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.birthday}</span> /&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
@@ -2150,7 +2158,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
             <span class="hljs-attribute">help</span>=<span class="hljs-value">{status.primeNumber.errors</span> ? <span class="hljs-attribute">status.primeNumber.errors.join</span>(',') <span class="hljs-attribute">:</span> <span class="hljs-attribute">null</span>}
             <span class="hljs-attribute">required</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Validator</span> <span class="hljs-attribute">rules</span>=<span class="hljs-value">{[{validator:</span> <span class="hljs-attribute">this.checkPrime</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"primeNumber"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{8}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{12}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.primeNumber}</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"primeNumber"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{8}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{12}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.primeNumber}</span> /&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 

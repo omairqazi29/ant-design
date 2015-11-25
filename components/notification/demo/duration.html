@@ -1,14 +1,14 @@
 <div class="code-box" id="demo-duration">
   <div class="code-box-demo">
     <div id="components-notification-demo-duration"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 var _antd = require('antd');
 
 var openNotification = function openNotification() {
   var args = {
-    message: "这是标题",
-    description: "我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，",
+    message: '这是标题',
+    description: '我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭',
     duration: 0
   };
   _antd.notification.open(args);
@@ -16,14 +16,14 @@ var openNotification = function openNotification() {
 
 ReactDOM.render(React.createElement(
   _antd.Button,
-  { type: "primary", onClick: openNotification },
-  "打开通知提醒框"
+  { type: 'primary', onClick: openNotification },
+  '打开通知提醒框'
 ), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
-    message: <span class="hljs-string">"这是标题"</span>,
-    description: <span class="hljs-string">"我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，"</span>,
+    message: <span class="hljs-string">'这是标题'</span>,
+    description: <span class="hljs-string">'我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭'</span>,
     duration: <span class="hljs-number">0</span>
   };
   notification.open(args);

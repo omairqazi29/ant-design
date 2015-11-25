@@ -129,45 +129,45 @@ const Test = React.createClass({
         &lt;/p&gt;
         &lt;QueueAnim type={['right', 'left']}&gt;
         {this.state.show ? [
-        &lt;div className="demo-header" key="header"&gt;
-          &lt;div className="logo"&gt;
-            &lt;img width="30" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" /&gt;
-            &lt;span&gt;logo&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;QueueAnim component="ul"&gt;
-            &lt;li key="0"&gt;&lt;/li&gt;
-            &lt;li key="1"&gt;&lt;/li&gt;
-            &lt;li key="2"&gt;&lt;/li&gt;
-            &lt;li key="3"&gt;&lt;/li&gt;
-            &lt;li key="4"&gt;&lt;/li&gt;
-          &lt;/QueueAnim&gt;
-        &lt;/div&gt;,
-        &lt;QueueAnim className="demo-content" key="content" delay={300}&gt;
-          &lt;div className="demo-title" key="title"&gt;我是标题&lt;/div&gt;
-          &lt;div className="demo-kp" key="b"&gt;
+          &lt;div className="demo-header" key="header"&gt;
+            &lt;div className="logo"&gt;
+              &lt;img width="30" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" /&gt;
+              &lt;span&gt;logo&lt;/span&gt;
+            &lt;/div&gt;
             &lt;QueueAnim component="ul"&gt;
               &lt;li key="0"&gt;&lt;/li&gt;
               &lt;li key="1"&gt;&lt;/li&gt;
               &lt;li key="2"&gt;&lt;/li&gt;
+              &lt;li key="3"&gt;&lt;/li&gt;
+              &lt;li key="4"&gt;&lt;/li&gt;
             &lt;/QueueAnim&gt;
-          &lt;/div&gt;
-          &lt;div className="demo-title" key="title2"&gt;我是标题&lt;/div&gt;
-          &lt;div className="demo-listBox"&gt;
-            &lt;QueueAnim className="demo-list" delay={500}&gt;
-              &lt;div className="title" key="title3"&gt;&lt;/div&gt;
-              &lt;QueueAnim component="ul" type="bottom" key="li"&gt;
+          &lt;/div&gt;,
+          &lt;QueueAnim className="demo-content" key="content" delay={300}&gt;
+            &lt;div className="demo-title" key="title"&gt;我是标题&lt;/div&gt;
+            &lt;div className="demo-kp" key="b"&gt;
+              &lt;QueueAnim component="ul"&gt;
                 &lt;li key="0"&gt;&lt;/li&gt;
                 &lt;li key="1"&gt;&lt;/li&gt;
                 &lt;li key="2"&gt;&lt;/li&gt;
-                &lt;li key="3"&gt;&lt;/li&gt;
-                &lt;li key="4"&gt;&lt;/li&gt;
               &lt;/QueueAnim&gt;
-            &lt;/QueueAnim&gt;
-          &lt;/div&gt;
-        &lt;/QueueAnim&gt;,
-        &lt;QueueAnim delay={1000} type="bottom" key="footerBox"&gt;
-          &lt;div className="demo-footer" key="footer"&gt;&lt;/div&gt;
-        &lt;/QueueAnim&gt;
+            &lt;/div&gt;
+            &lt;div className="demo-title" key="title2"&gt;我是标题&lt;/div&gt;
+            &lt;div className="demo-listBox"&gt;
+              &lt;QueueAnim className="demo-list" delay={500}&gt;
+                &lt;div className="title" key="title3"&gt;&lt;/div&gt;
+                &lt;QueueAnim component="ul" type="bottom" key="li"&gt;
+                  &lt;li key="0"&gt;&lt;/li&gt;
+                  &lt;li key="1"&gt;&lt;/li&gt;
+                  &lt;li key="2"&gt;&lt;/li&gt;
+                  &lt;li key="3"&gt;&lt;/li&gt;
+                  &lt;li key="4"&gt;&lt;/li&gt;
+                &lt;/QueueAnim&gt;
+              &lt;/QueueAnim&gt;
+            &lt;/div&gt;
+          &lt;/QueueAnim&gt;,
+          &lt;QueueAnim delay={1000} type="bottom" key="footerBox"&gt;
+            &lt;div className="demo-footer" key="footer"&gt;&lt;/div&gt;
+          &lt;/QueueAnim&gt;
         ] : null}
         &lt;/QueueAnim&gt;
       &lt;/div&gt;

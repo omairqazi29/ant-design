@@ -1,49 +1,49 @@
 <div class="code-box" id="demo-with-icon">
   <div class="code-box-demo">
     <div id="components-notification-demo-with-icon"></div>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
 var _antd = require('antd');
 
 var openNotificationWithIcon = function openNotificationWithIcon(type) {
   return function () {
     _antd.notification[type]({
-      message: "这是标题",
-      description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
+      message: '这是标题',
+      description: '这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'
     });
   };
 };
 
 ReactDOM.render(React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
     _antd.Button,
     { onClick: openNotificationWithIcon('success') },
-    "成功"
+    '成功'
   ),
   React.createElement(
     _antd.Button,
     { onClick: openNotificationWithIcon('info') },
-    "消息"
+    '消息'
   ),
   React.createElement(
     _antd.Button,
     { onClick: openNotificationWithIcon('warn') },
-    "警告"
+    '警告'
   ),
   React.createElement(
     _antd.Button,
     { onClick: openNotificationWithIcon('error') },
-    "错误"
+    '错误'
   )
 ), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotificationWithIcon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     notification[type]({
-      message: <span class="hljs-string">"这是标题"</span>,
-      description: <span class="hljs-string">"这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"</span>
+      message: <span class="hljs-string">'这是标题'</span>,
+      description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>
     });
   };
 };

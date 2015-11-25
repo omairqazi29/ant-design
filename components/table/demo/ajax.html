@@ -25,7 +25,7 @@ var columns = [{
 }];
 
 var dataSource = new _antd.Table.DataSource({
-  url: "/components/table/demo/data.json",
+  url: '/components/table/demo/data.json',
   resolve: function resolve(result) {
     return result.data;
   },
@@ -123,7 +123,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 }];
 
 <span class="hljs-keyword">const</span> dataSource = <span class="hljs-keyword">new</span> Table.DataSource({
-  url: <span class="hljs-string">"/components/table/demo/data.json"</span>,
+  url: <span class="hljs-string">'/components/table/demo/data.json'</span>,
   resolve: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
     <span class="hljs-keyword">return</span> result.data;
   },
@@ -133,7 +133,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     <span class="hljs-keyword">return</span> {
       total: result.totalCount,
       pageSize: result.pageSize
-    }
+    };
   },
   <span class="hljs-comment">// 和后台接口接收的参数进行适配</span>
   <span class="hljs-comment">// 参数里提供了分页、筛选、排序的信息</span>
