@@ -1730,7 +1730,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	  Copyright (c) 2015 Jed Watson.
 	  Licensed under the MIT License (MIT), see
 	  http://jedwatson.github.io/classnames
@@ -1771,9 +1771,9 @@ return /******/ (function(modules) { // webpackBootstrap
 			module.exports = classNames;
 		} else if (true) {
 			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return classNames;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 			window.classNames = classNames;
 		}
@@ -20408,9 +20408,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    _get(Object.getPrototypeOf(Pagination.prototype), 'constructor', this).call(this, props);
 	
+	    var hasOnChange = props.onChange !== noop;
+	    var hasCurrent = ('current' in props);
+	    if (hasCurrent && !hasOnChange) {
+	      console.warn('Warning: You provided a `current` prop to a Pagination component without an `onChange` handler. This will render a read-only component.');
+	    }
+	
+	    var current = props.defaultCurrent;
+	    if ('current' in props) {
+	      current = props.current;
+	    }
+	
 	    this.state = {
-	      current: props.current,
-	      _current: props.current,
+	      current: current,
+	      _current: current,
 	      pageSize: props.pageSize
 	    };
 	
@@ -20513,10 +20524,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (page > this._calcPage()) {
 	          page = this._calcPage();
 	        }
-	        this.setState({
-	          current: page,
-	          _current: page
-	        });
+	
+	        if (!('current' in this.props)) {
+	          this.setState({
+	            current: page,
+	            _current: page
+	          });
+	        }
+	
 	        this.props.onChange(page);
 	
 	        return page;
@@ -20691,6 +20706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	Pagination.propTypes = {
 	  current: React.PropTypes.number,
+	  defaultCurrent: React.PropTypes.number,
 	  total: React.PropTypes.number,
 	  pageSize: React.PropTypes.number,
 	  onChange: React.PropTypes.func,
@@ -20704,7 +20720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	
 	Pagination.defaultProps = {
-	  current: 1,
+	  defaultCurrent: 1,
 	  total: 0,
 	  pageSize: 10,
 	  onChange: noop,
@@ -38764,8 +38780,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.2",
-		"stableVersion": "0.10.2",
+		"version": "0.10.3",
+		"stableVersion": "0.10.3",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -38812,7 +38828,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-input-number": "~2.4.1",
 			"rc-menu": "~4.8.1",
 			"rc-notification": "~1.3.0",
-			"rc-pagination": "~1.2.1",
+			"rc-pagination": "~1.3.5",
 			"rc-progress": "~1.0.4",
 			"rc-queue-anim": "~0.11.2",
 			"rc-radio": "~2.0.0",
@@ -38820,7 +38836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-slider": "~3.1.2",
 			"rc-steps": "~1.4.1",
 			"rc-switch": "~1.3.1",
-			"rc-table": "~3.6.1",
+			"rc-table": "~3.6.2",
 			"rc-tabs": "~5.5.0",
 			"rc-time-picker": "~0.7.1",
 			"rc-tooltip": "~3.2.0",
@@ -38848,6 +38864,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"eslint": "^1.1.0",
 			"eslint-config-airbnb": "^1.0.0",
 			"eslint-plugin-babel": "^2.1.1",
+			"eslint-plugin-markdown": "git+https://github.com/ant-design/eslint-plugin-markdown.git",
 			"eslint-plugin-react": "^3.3.1",
 			"expect.js": "~0.3.1",
 			"extract-text-webpack-plugin": "^0.9.1",
@@ -38857,6 +38874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"json-loader": "^0.5.1",
 			"less": "~2.5.3",
 			"less-loader": "^2.2.0",
+			"lesshint": "git+https://github.com/ant-design/lesshint.git",
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.6.0",
 			"pre-commit": "1.x",
@@ -38864,7 +38882,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			"react-addons-test-utils": "~0.14.2",
 			"react-dom": "~0.14.2",
 			"react-router": "~1.0.0",
-			"eslint-plugin-markdown": "git+https://github.com/ant-design/eslint-plugin-markdown.git",
 			"webpack": "^1.10.1",
 			"webpack-babel-jest": "^1.0.0",
 			"webpack-dev-middleware": "^1.2.0"
@@ -38875,8 +38892,9 @@ return /******/ (function(modules) { // webpackBootstrap
 			"clean": "rm -rf _site dist",
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
 			"just-deploy": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
-			"lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint",
+			"lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint && npm run lesshint",
 			"mdlint": "eslint components/*/demo/*.md --ext '.md' --global 'React,ReactDOM' --rule 'no-console: 0'",
+			"lesshint": "lesshint style/ -e 'style/+(core|mixins)/+(base|iconfont|normalize|layouts|compatibility|grid).less'",
 			"test": "npm run lint && webpack && npm run jest",
 			"jest": "jest",
 			"pub": "sh ./scripts/publish.sh",

@@ -60,25 +60,36 @@ var Test = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      dataSource: null
+      dataSource: null,
+      pagination: {
+        onChange: this.hanlePageChange
+      }
     };
   },
+  hanlePageChange: function hanlePageChange(page) {
+    // 使用受控属性 current，方便外部设置页数
+    var pagination = this.state.pagination;
+    pagination.current = page;
+    this.setState({ pagination: pagination });
+  },
   refresh: function refresh() {
+    // 回到第一页
+    var pagination = this.state.pagination;
+    pagination.current = 1;
     this.setState({
       dataSource: dataSource.clone()
     });
   },
   changeAndRefresh: function changeAndRefresh() {
+    // 回到第一页
+    var pagination = this.state.pagination;
+    pagination.current = 1;
     // 可以修改原来的 dataSource 再发请求
     this.setState({
       dataSource: dataSource.clone({
-        data: {
-          city: 'hz'
-        }
+        data: { city: 'hz' }
       }),
-      pagination: {
-        current: 1
-      }
+      pagination: pagination
     });
   },
   render: function render() {
@@ -156,25 +167,36 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      dataSource: <span class="hljs-literal">null</span>
+      dataSource: <span class="hljs-literal">null</span>,
+      pagination: {
+        onChange: <span class="hljs-keyword">this</span>.hanlePageChange
+      }
     };
   },
+  hanlePageChange(page) {
+    <span class="hljs-comment">// 使用受控属性 current，方便外部设置页数</span>
+    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
+    pagination.current = page;
+    <span class="hljs-keyword">this</span>.setState({ pagination });
+  },
   refresh() {
+    <span class="hljs-comment">// 回到第一页</span>
+    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
+    pagination.current = <span class="hljs-number">1</span>;
     <span class="hljs-keyword">this</span>.setState({
       dataSource: dataSource.clone()
     });
   },
   changeAndRefresh() {
+    <span class="hljs-comment">// 回到第一页</span>
+    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
+    pagination.current = <span class="hljs-number">1</span>;
     <span class="hljs-comment">// 可以修改原来的 dataSource 再发请求</span>
     <span class="hljs-keyword">this</span>.setState({
       dataSource: dataSource.clone({
-        data: {
-          city: <span class="hljs-string">'hz'</span>
-        }
+        data: { city: <span class="hljs-string">'hz'</span> }
       }),
-      pagination: {
-        current: <span class="hljs-number">1</span>
-      }
+      pagination,
     });
   },
   render() {

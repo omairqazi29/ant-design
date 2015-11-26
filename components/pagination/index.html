@@ -193,8 +193,8 @@ Pagination 分页 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.2',
-        stable: '0.10.2'
+        latest: '0.10.3',
+        stable: '0.10.3'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -599,6 +599,12 @@ Pagination 分页 - Ant Design
 <td>current</td>
 <td>当前页数</td>
 <td>Number</td>
+<td>无</td>
+</tr>
+<tr>
+<td>defaultCurrent</td>
+<td>默认的当前页数</td>
+<td>Number</td>
 <td>1</td>
 </tr>
 <tr>
@@ -665,18 +671,10 @@ Pagination 分页 - Ant Design
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
-
-ReactDOM.render(React.createElement(_antd.Pagination, { onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { defaultCurrent: 1, total: 50 }), document.getElementById('components-pagination-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -693,26 +691,18 @@ ReactDOM.render(
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
-
 function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-ReactDOM.render(React.createElement(_antd.Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, defaultCurrent: 3, total: 500 }), document.getElementById('components-pagination-demo-changer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onShowSizeChange</span>(<span class="hljs-params">current, pageSize</span>) </span>{
   <span class="hljs-built_in">console</span>.log(current, pageSize);
 }
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">showSizeChanger</span> <span class="hljs-attribute">onShowSizeChange</span>=<span class="hljs-value">{onShowSizeChange}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">showSizeChanger</span> <span class="hljs-attribute">onShowSizeChange</span>=<span class="hljs-value">{onShowSizeChange}</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{3}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-changer'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -729,18 +719,10 @@ ReactDOM.render(
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
-
-ReactDOM.render(React.createElement(_antd.Pagination, { size: 'small', onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { size: 'small', defaultCurrent: 2, total: 50 }), document.getElementById('components-pagination-demo-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{2}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-mini'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -750,32 +732,31 @@ ReactDOM.render(
     <p>迷你版本。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-simple">
+</div><div class="code-box" id="demo-locale">
   <div class="code-box-demo">
-    <div id="components-pagination-demo-simple"></div>
+    <div id="components-pagination-demo-locale"></div>
     <script>(function(){'use strict';
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
+var _antdLibPaginationLocaleEn_US = require('antd/lib/pagination/locale/en_US');
 
-ReactDOM.render(React.createElement(_antd.Pagination, { simple: true, onChange: onChange, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+var _antdLibPaginationLocaleEn_US2 = _interopRequireDefault(_antdLibPaginationLocaleEn_US);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { defaultCurrent: 1, total: 50, locale: _antdLibPaginationLocaleEn_US2['default'] }), document.getElementById('components-pagination-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/pagination/locale/en_US'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">simple</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
-document.getElementById('components-pagination-demo-simple'));</span></code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{enUS}</span> /&gt;</span>,
+ document.getElementById('components-pagination-demo-locale'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-simple">简洁</a>
+      <a href="#demo-locale">国际化</a>
     </div>
-    <p>简单地翻页。</p>
+    <p>通过 <code>locale</code> 配置时区、语言等, 默认支持 en_US, zh_CN</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -787,18 +768,10 @@ document.getElementById('components-pagination-demo-simple'));</span></code></pr
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
-
-ReactDOM.render(React.createElement(_antd.Pagination, { onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { defaultCurrent: 1, total: 500 }), document.getElementById('components-pagination-demo-more'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{1}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-more'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -815,18 +788,10 @@ ReactDOM.render(
 
 var _antd = require('antd');
 
-function onChange(page) {
-  console.log(page);
-}
-
-ReactDOM.render(React.createElement(_antd.Pagination, { showQuickJumper: true, onChange: onChange, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { showQuickJumper: true, defaultCurrent: 2, total: 500 }), document.getElementById('components-pagination-demo-jump'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">showQuickJumper</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">showQuickJumper</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{2}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{500}</span> /&gt;</span>,
  document.getElementById('components-pagination-demo-jump'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -836,39 +801,80 @@ ReactDOM.render(
     <p>快速跳转到某一页。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-locale">
+</div><div class="code-box" id="demo-simple">
   <div class="code-box-demo">
-    <div id="components-pagination-demo-locale"></div>
+    <div id="components-pagination-demo-simple"></div>
     <script>(function(){'use strict';
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _antd = require('antd');
 
-var _antdLibPaginationLocaleEn_US = require('antd/lib/pagination/locale/en_US');
-
-var _antdLibPaginationLocaleEn_US2 = _interopRequireDefault(_antdLibPaginationLocaleEn_US);
-
-function onChange(page) {
-  console.log(page);
-}
-
-ReactDOM.render(React.createElement(_antd.Pagination, { onChange: onChange, total: 50, locale: _antdLibPaginationLocaleEn_US2['default'] }), document.getElementById('components-pagination-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/pagination/locale/en_US'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">page</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(page);
-}
+ReactDOM.render(React.createElement(_antd.Pagination, { simple: true, defaultCurrent: 2, total: 50 }), document.getElementById('components-pagination-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{enUS}</span> /&gt;</span>,
- document.getElementById('components-pagination-demo-locale'));</span></code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">simple</span> <span class="hljs-attribute">defaultCurrent</span>=<span class="hljs-value">{2}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>,
+document.getElementById('components-pagination-demo-simple'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-locale">国际化</a>
+      <a href="#demo-simple">简洁</a>
     </div>
-    <p>通过 <code>locale</code> 配置时区、语言等, 默认支持 en_US, zh_CN</p>
+    <p>简单地翻页。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-controlled">
+  <div class="code-box-demo">
+    <div id="components-pagination-demo-controlled"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var Container = React.createClass({
+  displayName: 'Container',
+
+  getInitialState: function getInitialState() {
+    return {
+      current: 3
+    };
+  },
+  onChange: function onChange(page) {
+    console.log(page);
+    this.setState({
+      current: page
+    });
+  },
+  render: function render() {
+    return React.createElement(_antd.Pagination, { current: this.state.current, onChange: this.onChange, total: 50 });
+  }
+});
+
+ReactDOM.render(React.createElement(Container, null), document.getElementById('components-pagination-demo-controlled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">let</span> Container = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      current: <span class="hljs-number">3</span>
+    };
+  },
+  onChange(page) {
+    <span class="hljs-built_in">console</span>.log(page);
+    <span class="hljs-keyword">this</span>.setState({
+      current: page
+    });
+  },
+  render() {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pagination</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{this.state.current}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> <span class="hljs-attribute">total</span>=<span class="hljs-value">{50}</span> /&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Container</span> /&gt;</span>,
+document.getElementById('components-pagination-demo-controlled'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-controlled">受控</a>
+    </div>
+    <p>受控制的页码。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
