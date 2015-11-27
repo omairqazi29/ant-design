@@ -20,7 +20,7 @@ Radio 单选框 - Ant Design
     <!--[if IE 8]>
     <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
     <![endif]-->
-    <script src="https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://as.alipayobjects.com/??component/console-polyfill/0.2.2/index.js,component/es5-shim/4.1.14/es5-shim.min.js,component/es5-shim/4.1.14/es5-sham.min.js,component/html5shiv/3.7.2/html5shiv.min.js,g/component/media-match/2.0.2/media.match.min.js"></script>
     <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js"></script>
     <script>
     (function() {
@@ -202,6 +202,7 @@ Radio 单选框 - Ant Design
       window.require = function (path) {
         var result = window;
         var namespaces = path.split('/');
+        console.log(path, namespaces);
         namespaces.forEach(function (key, i) {
           if (i === 2) {
             key = capitalizeFirstLetter(key);
@@ -896,7 +897,7 @@ ReactDOM.render(React.createElement(
       ),
       React.createElement(
         RadioButton,
-        { value: 'b' },
+        { value: 'b', disabled: true },
         '上海'
       ),
       React.createElement(
@@ -951,7 +952,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"a"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>杭州<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span> <span class="hljs-attribute">disabled</span>&gt;</span>上海<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>北京<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
