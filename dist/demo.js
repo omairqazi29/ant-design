@@ -48,8 +48,7 @@
 	
 	window['css-animation'] = __webpack_require__(78);
 	window['react-router'] = __webpack_require__(81);
-	window.Clipboard = __webpack_require__(288);
-	window.Clip = __webpack_require__(297);
+	window.Clip = __webpack_require__(288);
 	var antd = __webpack_require__(298);
 	var React = __webpack_require__(85);
 	var ReactDOM = __webpack_require__(302);
@@ -24876,6 +24875,116 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(85);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _clipboard = __webpack_require__(289);
+	
+	var _clipboard2 = _interopRequireDefault(_clipboard);
+	
+	var counter = 0;
+	
+	var Clip = (function (_React$Component) {
+	  _inherits(Clip, _React$Component);
+	
+	  _createClass(Clip, [{
+	    key: 'propsWith',
+	
+	    /* Returns a object with all props that fulfill a certain naming pattern
+	     *
+	     * @param {RegExp} regexp - Regular expression representing which pattern
+	     *                          you'll be searching for.
+	     * @param {Boolean} remove - Determines if the regular expression should be
+	     *                           removed when transmitting the key from the props
+	     *                           to the new object.
+	     *
+	     * e.g:
+	     *
+	     * // Considering:
+	     * // this.props = {option-foo: 1, onBar: 2, data-foobar: 3 data-baz: 4};
+	     *
+	     * // *RegExps not using // so that this comment doesn't break up
+	     * this.propsWith(option-*, true); // returns {foo: 1}
+	     * this.propsWith(on*, true); // returns {Bar: 2}
+	     * this.propsWith(data-*); // returns {data-foobar: 1, data-baz: 4}
+	     */
+	    value: function propsWith(regexp) {
+	      var remove = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+	
+	      var object = {};
+	
+	      Object.keys(this.props).forEach(function (key) {
+	        if (key.search(regexp) !== -1) {
+	          var objectKey = remove ? key.replace(regexp, '') : key;
+	          object[objectKey] = this.props[key];
+	        }
+	      }, this);
+	
+	      return object;
+	    }
+	  }]);
+	
+	  function Clip(props) {
+	    _classCallCheck(this, Clip);
+	
+	    _get(Object.getPrototypeOf(Clip.prototype), 'constructor', this).call(this, props);
+	    this.id = '__react_clipboard_' + counter++ + '__';
+	  }
+	
+	  _createClass(Clip, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      // Support old API by trying to assign this.props.options first;
+	      var options = this.props.options || this.propsWith(/^option-/, true);
+	      this.clipboard = new _clipboard2['default']('#' + this.id, options);
+	
+	      var callbacks = this.propsWith(/^on/, true);
+	      Object.keys(callbacks).forEach(function (callback) {
+	        this.clipboard.on(callback.toLowerCase(), this.props['on' + callback]);
+	      }, this);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var dataAttributes = this.propsWith(/^data-/);
+	      var component = this.props.component || 'span';
+	      return _react2['default'].createElement(component, _extends({
+	        id: this.id,
+	        className: this.props.className || '',
+	        style: this.props.style || {}
+	      }, dataAttributes), this.props.children);
+	    }
+	  }]);
+	
+	  return Clip;
+	})(_react2['default'].Component);
+	
+	exports['default'] = Clip;
+	module.exports = exports['default'];
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
 	exports.__esModule = true;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -24884,15 +24993,15 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _clipboardAction = __webpack_require__(289);
+	var _clipboardAction = __webpack_require__(290);
 	
 	var _clipboardAction2 = _interopRequireDefault(_clipboardAction);
 	
-	var _tinyEmitter = __webpack_require__(291);
+	var _tinyEmitter = __webpack_require__(292);
 	
 	var _tinyEmitter2 = _interopRequireDefault(_tinyEmitter);
 	
-	var _goodListener = __webpack_require__(292);
+	var _goodListener = __webpack_require__(293);
 	
 	var _goodListener2 = _interopRequireDefault(_goodListener);
 	
@@ -25032,8 +25141,9 @@
 	exports['default'] = Clipboard;
 	module.exports = exports['default'];
 
+
 /***/ },
-/* 289 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25046,7 +25156,7 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _select = __webpack_require__(290);
+	var _select = __webpack_require__(291);
 	
 	var _select2 = _interopRequireDefault(_select);
 	
@@ -25270,7 +25380,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 290 */
+/* 291 */
 /***/ function(module, exports) {
 
 	function select(element) {
@@ -25304,7 +25414,7 @@
 
 
 /***/ },
-/* 291 */
+/* 292 */
 /***/ function(module, exports) {
 
 	function E () {
@@ -25376,11 +25486,11 @@
 
 
 /***/ },
-/* 292 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var is = __webpack_require__(293);
-	var delegate = __webpack_require__(294);
+	var is = __webpack_require__(294);
+	var delegate = __webpack_require__(295);
 	
 	/**
 	 * Validates all params and calls the right
@@ -25391,7 +25501,11 @@
 	 * @param {Function} callback
 	 * @return {Object}
 	 */
+	console.log('clipboard111');
+	
 	function listen(target, type, callback) {
+	console.log('clipboard');
+	
 	    if (!target && !type && !callback) {
 	        throw new Error('Missing required arguments');
 	    }
@@ -25477,7 +25591,7 @@
 
 
 /***/ },
-/* 293 */
+/* 294 */
 /***/ function(module, exports) {
 
 	/**
@@ -25532,10 +25646,10 @@
 
 
 /***/ },
-/* 294 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var closest = __webpack_require__(295);
+	var closest = __webpack_require__(296);
 	
 	/**
 	 * Delegates event to a selector.
@@ -25581,10 +25695,10 @@
 
 
 /***/ },
-/* 295 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var matches = __webpack_require__(296)
+	var matches = __webpack_require__(297)
 	
 	module.exports = function (element, selector, checkYoSelf) {
 	  var parent = checkYoSelf ? element : element.parentNode
@@ -25597,7 +25711,7 @@
 
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports) {
 
 	
@@ -25640,116 +25754,6 @@
 	  }
 	  return false;
 	}
-
-/***/ },
-/* 297 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(85);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _clipboard = __webpack_require__(288);
-	
-	var _clipboard2 = _interopRequireDefault(_clipboard);
-	
-	var counter = 0;
-	
-	var Clip = (function (_React$Component) {
-	  _inherits(Clip, _React$Component);
-	
-	  _createClass(Clip, [{
-	    key: 'propsWith',
-	
-	    /* Returns a object with all props that fulfill a certain naming pattern
-	     *
-	     * @param {RegExp} regexp - Regular expression representing which pattern
-	     *                          you'll be searching for.
-	     * @param {Boolean} remove - Determines if the regular expression should be
-	     *                           removed when transmitting the key from the props
-	     *                           to the new object.
-	     *
-	     * e.g:
-	     *
-	     * // Considering:
-	     * // this.props = {option-foo: 1, onBar: 2, data-foobar: 3 data-baz: 4};
-	     *
-	     * // *RegExps not using // so that this comment doesn't break up
-	     * this.propsWith(option-*, true); // returns {foo: 1}
-	     * this.propsWith(on*, true); // returns {Bar: 2}
-	     * this.propsWith(data-*); // returns {data-foobar: 1, data-baz: 4}
-	     */
-	    value: function propsWith(regexp) {
-	      var remove = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
-	
-	      var object = {};
-	
-	      Object.keys(this.props).forEach(function (key) {
-	        if (key.search(regexp) !== -1) {
-	          var objectKey = remove ? key.replace(regexp, '') : key;
-	          object[objectKey] = this.props[key];
-	        }
-	      }, this);
-	
-	      return object;
-	    }
-	  }]);
-	
-	  function Clip(props) {
-	    _classCallCheck(this, Clip);
-	
-	    _get(Object.getPrototypeOf(Clip.prototype), 'constructor', this).call(this, props);
-	    this.id = '__react_clipboard_' + counter++ + '__';
-	  }
-	
-	  _createClass(Clip, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      // Support old API by trying to assign this.props.options first;
-	      var options = this.props.options || this.propsWith(/^option-/, true);
-	      this.clipboard = new _clipboard2['default']('#' + this.id, options);
-	
-	      var callbacks = this.propsWith(/^on/, true);
-	      Object.keys(callbacks).forEach(function (callback) {
-	        this.clipboard.on(callback.toLowerCase(), this.props['on' + callback]);
-	      }, this);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var dataAttributes = this.propsWith(/^data-/);
-	      var component = this.props.component || 'span';
-	      return _react2['default'].createElement(component, _extends({
-	        id: this.id,
-	        className: this.props.className || '',
-	        style: this.props.style || {}
-	      }, dataAttributes), this.props.children);
-	    }
-	  }]);
-	
-	  return Clip;
-	})(_react2['default'].Component);
-	
-	exports['default'] = Clip;
-	module.exports = exports['default'];
 
 /***/ },
 /* 298 */
