@@ -46,6 +46,28 @@
 
 	'use strict';
 	
+	function capitalizeFirstLetter(string) {
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+	
+	window.require = function (path) {
+	  var result = window;
+	  var namespaces = path.split('/');
+	  namespaces.forEach(function (key, i) {
+	    if (i === 2) {
+	      key = capitalizeFirstLetter(key);
+	    }
+	    if (key !== 'lib') {
+	      if (result[key]) {
+	        result = result[key];
+	      } else {
+	        throw 'There should not have modules here: ' + path;
+	      }
+	    }
+	  });
+	  return result;
+	};
+	
 	window['css-animation'] = __webpack_require__(78);
 	window['react-router'] = __webpack_require__(81);
 	window.Clip = __webpack_require__(288);
@@ -25501,10 +25523,8 @@
 	 * @param {Function} callback
 	 * @return {Object}
 	 */
-	console.log('clipboard111');
 	
 	function listen(target, type, callback) {
-	console.log('clipboard');
 	
 	    if (!target && !type && !callback) {
 	        throw new Error('Missing required arguments');
@@ -27293,11 +27313,11 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	function createPicker(TheCalendar) {
+	function createPicker(TheCalendar, defaultFormat) {
 	  return _react2['default'].createClass({
 	    getDefaultProps: function getDefaultProps() {
 	      return {
-	        format: 'yyyy-MM-dd',
+	        format: defaultFormat || 'yyyy-MM-dd',
 	        transitionName: 'slide-up',
 	        popupStyle: {},
 	        onSelect: null, // 向前兼容
@@ -27437,7 +27457,7 @@
 	}
 	
 	var AntDatePicker = createPicker(_rcCalendar2['default']);
-	var AntMonthPicker = createPicker(_rcCalendarLibMonthCalendar2['default']);
+	var AntMonthPicker = createPicker(_rcCalendarLibMonthCalendar2['default'], 'yyyy-MM');
 	
 	var AntCalendar = _react2['default'].createClass({
 	  displayName: 'AntCalendar',
@@ -40852,48 +40872,24 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(85);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var Icon = (function (_React$Component) {
-	  _inherits(Icon, _React$Component);
+	function Icon(props) {
+	  var type = props.type;
+	  var _props$className = props.className;
+	  var className = _props$className === undefined ? '' : _props$className;
 	
-	  function Icon() {
-	    _classCallCheck(this, Icon);
+	  var other = _objectWithoutProperties(props, ['type', 'className']);
 	
-	    _get(Object.getPrototypeOf(Icon.prototype), 'constructor', this).apply(this, arguments);
-	  }
-	
-	  _createClass(Icon, [{
-	    key: 'render',
-	    value: function render() {
-	      var _props = this.props;
-	      var type = _props.type;
-	      var _props$className = _props.className;
-	      var className = _props$className === undefined ? '' : _props$className;
-	
-	      var other = _objectWithoutProperties(_props, ['type', 'className']);
-	
-	      className += ' anticon anticon-' + type;
-	      return _react2['default'].createElement('i', _extends({ className: className }, other));
-	    }
-	  }]);
-	
-	  return Icon;
-	})(_react2['default'].Component);
+	  className += ' anticon anticon-' + type;
+	  return _react2['default'].createElement('i', _extends({ className: className }, other));
+	}
 	
 	exports['default'] = Icon;
 	module.exports = exports['default'];
@@ -54840,6 +54836,7 @@
 	    this.keysToEnter = [];
 	    this.keysToLeave = [];
 	    this.keysAnimating = [];
+	    this.placeholderTimeoutIds = {};
 	
 	    // 第一次进入，默认进场
 	    var children = (0, _utils.toArrayChildren)((0, _utils.getChildrenFromProps)(this.props));
@@ -54930,6 +54927,9 @@
 	            (0, _velocityAnimate2['default'])((0, _reactDom.findDOMNode)(_this3.refs[child.key]), 'stop');
 	          }
 	        });
+	        Object.keys(this.placeholderTimeoutIds).forEach(function (key) {
+	          clearTimeout(_this3.placeholderTimeoutIds[key]);
+	        });
 	      }
 	    }
 	  }, {
@@ -54987,19 +54987,9 @@
 	  }, {
 	    key: 'performEnter',
 	    value: function performEnter(key, i) {
-	      var placeholderNode = (0, _reactDom.findDOMNode)(this.refs[placeholderKeyPrefix + key]);
-	      if (!placeholderNode) {
-	        return;
-	      }
 	      var interval = (0, _utils.transformArguments)(this.props.interval, key, i)[0];
 	      var delay = (0, _utils.transformArguments)(this.props.delay, key, i)[0];
-	      placeholderNode.style.visibility = 'hidden';
-	      (0, _velocityAnimate2['default'])(placeholderNode, 'stop');
-	      (0, _velocityAnimate2['default'])(placeholderNode, { opacity: [0, 0] }, {
-	        delay: interval * i + delay,
-	        duration: 0,
-	        begin: this.performEnterBegin.bind(this, key, i)
-	      });
+	      this.placeholderTimeoutIds[key] = setTimeout(this.performEnterBegin.bind(this, key, i), interval * i + delay);
 	      if (this.keysToEnter.indexOf(key) >= 0) {
 	        this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1);
 	      }
@@ -55032,6 +55022,8 @@
 	  }, {
 	    key: 'performLeave',
 	    value: function performLeave(key, i) {
+	      clearTimeout(this.placeholderTimeoutIds[key]);
+	      delete this.placeholderTimeoutIds[key];
 	      var node = (0, _reactDom.findDOMNode)(this.refs[key]);
 	      if (!node) {
 	        return;
@@ -55093,7 +55085,10 @@
 	      if (this.keysToLeave.indexOf(key) >= 0) {
 	        this.keysToLeave.splice(this.keysToLeave.indexOf(key), 1);
 	      }
-	      if (this.keysToLeave.length === 0) {
+	      var needLeave = this.keysToLeave.some(function (c) {
+	        return childrenShow[c];
+	      });
+	      if (!needLeave) {
 	        var currentChildren = (0, _utils.toArrayChildren)((0, _utils.getChildrenFromProps)(this.props));
 	        this.setState({
 	          children: currentChildren,
@@ -58059,6 +58054,7 @@
 	
 	exports['default'] = Tree;
 	module.exports = exports['default'];
+
 
 /***/ },
 /* 552 */
@@ -63593,8 +63589,8 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.10.3",
-		"stableVersion": "0.10.3",
+		"version": "0.10.4",
+		"stableVersion": "0.10.4",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",

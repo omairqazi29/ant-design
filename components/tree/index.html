@@ -193,34 +193,11 @@ Tree 树形控件 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.3',
-        stable: '0.10.3'
+        latest: '0.10.4',
+        stable: '0.10.4'
       };
     </script>
     <script src="../../dist/demo.js"></script>
-    <script>
-      window.require = function (path) {
-        var result = window;
-        var namespaces = path.split('/');
-        namespaces.forEach(function (key, i) {
-          if (i === 2) {
-            key = capitalizeFirstLetter(key);
-          }
-          if (key !== 'lib') {
-            if (result[key]) {
-              result = result[key];
-            } else {
-              throw 'There should not have modules here 2.';
-            }
-          }
-        });
-        function capitalizeFirstLetter(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        return result;
-      };
-    </script>
     <script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
     
   </head>
@@ -819,11 +796,7 @@ var TreeDemo = (function (_React$Component) {
               React.createElement(
                 TreeNode,
                 { title: 'parent 2-1', key: 'p21' },
-                React.createElement(
-                  TreeNode,
-                  null,
-                  'test'
-                ),
+                React.createElement(TreeNode, { title: 'test' }),
                 React.createElement(TreeNode, { title: React.createElement(
                     'span',
                     null,
@@ -890,7 +863,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p10"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p11"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p21"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"test"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span>sss<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}/&gt;
             <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p22"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>

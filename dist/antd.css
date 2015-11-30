@@ -4479,6 +4479,11 @@ fieldset[disabled] .ant-btn-ghost.active {
   text-align: center;
   margin: 0 0 0 8px;
 }
+.ant-calendar .ant-calendar-today-btn-disabled,
+.ant-calendar .ant-calendar-clear-btn-disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
 .ant-calendar .ant-calendar-clear-btn {
   position: absolute;
   right: 5px;
@@ -6111,6 +6116,7 @@ a.ant-table-filter-dropdown-link.confirm {
 }
 a.ant-table-filter-dropdown-link.clear {
   float: right;
+  margin-right: -32px;
 }
 .ant-table-row-expand-icon {
   cursor: pointer;

@@ -193,34 +193,11 @@ Datepicker 日期选择框 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.3',
-        stable: '0.10.3'
+        latest: '0.10.4',
+        stable: '0.10.4'
       };
     </script>
     <script src="../../dist/demo.js"></script>
-    <script>
-      window.require = function (path) {
-        var result = window;
-        var namespaces = path.split('/');
-        namespaces.forEach(function (key, i) {
-          if (i === 2) {
-            key = capitalizeFirstLetter(key);
-          }
-          if (key !== 'lib') {
-            if (result[key]) {
-              result = result[key];
-            } else {
-              throw 'There should not have modules here 2.';
-            }
-          }
-        });
-        function capitalizeFirstLetter(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        return result;
-      };
-    </script>
     <script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
     
   </head>
@@ -1090,6 +1067,27 @@ ReactDOM.render(
       <a href="#demo-start-end">日期范围选择</a>
     </div>
     <p>设置 <code>disabledDate</code> 方法，来约束开始和结束日期。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-month-picker">
+  <div class="code-box-demo">
+    <div id="components-datepicker-demo-month-picker"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var MonthPicker = _antd.Datepicker.MonthPicker;
+ReactDOM.render(React.createElement(MonthPicker, { defaultValue: '2015-12' }), document.getElementById('components-datepicker-demo-month-picker'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Datepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> MonthPicker = Datepicker.MonthPicker;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MonthPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-12"</span> /&gt;</span>
+, document.getElementById('components-datepicker-demo-month-picker'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-month-picker">月选择器</a>
+    </div>
+    <p>使用 MonthPicker 实现月选择器.</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

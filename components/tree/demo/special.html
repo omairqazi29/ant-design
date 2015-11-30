@@ -80,11 +80,7 @@ var TreeDemo = (function (_React$Component) {
               React.createElement(
                 TreeNode,
                 { title: 'parent 2-1', key: 'p21' },
-                React.createElement(
-                  TreeNode,
-                  null,
-                  'test'
-                ),
+                React.createElement(TreeNode, { title: 'test' }),
                 React.createElement(TreeNode, { title: React.createElement(
                     'span',
                     null,
@@ -151,7 +147,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p10"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p11"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p21"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"test"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span>sss<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}/&gt;
             <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p22"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
