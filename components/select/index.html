@@ -586,19 +586,19 @@ Select 选择器 - Ant Design
 <tr>
 <td>multiple</td>
 <td>支持多选</td>
-<td></td>
+<td>boolean</td>
 <td>false</td>
 </tr>
 <tr>
 <td>filterOption</td>
 <td>是否根据输入项进行筛选</td>
-<td></td>
+<td>boolean</td>
 <td>true</td>
 </tr>
 <tr>
 <td>tags</td>
 <td>可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配</td>
-<td></td>
+<td>boolean</td>
 <td>false</td>
 </tr>
 <tr>
@@ -622,7 +622,7 @@ Select 选择器 - Ant Design
 <tr>
 <td>allowClear</td>
 <td>显示清除按钮</td>
-<td></td>
+<td>boolean</td>
 <td>false</td>
 </tr>
 <tr>
@@ -652,7 +652,7 @@ Select 选择器 - Ant Design
 <tr>
 <td>combobox</td>
 <td>输入框自动提示模式</td>
-<td></td>
+<td>boolean</td>
 <td>false</td>
 </tr>
 <tr>
@@ -660,6 +660,18 @@ Select 选择器 - Ant Design
 <td>选择框大小，可选 <code>large</code> <code>small</code></td>
 <td>String</td>
 <td>default</td>
+</tr>
+<tr>
+<td>showSearch</td>
+<td>在下拉中显示搜索框</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
@@ -738,27 +750,40 @@ function handleChange(value) {
 }
 
 ReactDOM.render(React.createElement(
-  _antd.Select,
-  { defaultValue: 'lucy', style: { width: 120 }, onChange: handleChange },
+  'div',
+  null,
   React.createElement(
-    Option,
-    { value: 'jack' },
-    'Jack'
+    _antd.Select,
+    { defaultValue: 'lucy', style: { width: 120 }, onChange: handleChange },
+    React.createElement(
+      Option,
+      { value: 'jack' },
+      'Jack'
+    ),
+    React.createElement(
+      Option,
+      { value: 'lucy' },
+      'Lucy'
+    ),
+    React.createElement(
+      Option,
+      { value: 'disabled', disabled: true },
+      'Disabled'
+    ),
+    React.createElement(
+      Option,
+      { value: 'yiminghe' },
+      'yiminghe'
+    )
   ),
   React.createElement(
-    Option,
-    { value: 'lucy' },
-    'Lucy'
-  ),
-  React.createElement(
-    Option,
-    { value: 'disabled', disabled: true },
-    'Disabled'
-  ),
-  React.createElement(
-    Option,
-    { value: 'yiminghe' },
-    'yiminghe'
+    _antd.Select,
+    { defaultValue: 'lucy', style: { width: 120 }, disabled: true },
+    React.createElement(
+      Option,
+      { value: 'lucy' },
+      'Lucy'
+    )
   )
 ), document.getElementById('components-select-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
@@ -767,14 +792,17 @@ ReactDOM.render(React.createElement(
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
 }
 
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-, document.getElementById('components-select-demo-basic'));</span></code></pre></div>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">disabled</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-select-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

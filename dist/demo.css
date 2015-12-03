@@ -3440,13 +3440,13 @@ fieldset[disabled] .ant-btn-ghost.active {
   left: 22px;
 }
 .ant-switch-disabled {
-  cursor: no-drop;
+  cursor: not-allowed;
   background: #f4f4f4;
   border-color: #f4f4f4;
 }
 .ant-switch-disabled:after {
   background: #ccc;
-  cursor: no-drop;
+  cursor: not-allowed;
 }
 .ant-switch-disabled-inner {
   color: #ccc;
