@@ -36115,9 +36115,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	function noop() {}
 	
 	function generateOptions(length) {
-	  return Array.apply(null, { length: length }).map(function (item, index) {
-	    return index;
-	  });
+	  var arr = [];
+	  for (var i = 0; i < length; i++) {
+	    arr.push(i);
+	  }
+	  return arr;
 	}
 	
 	var Panel = _react2['default'].createClass({
