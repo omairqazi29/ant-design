@@ -20021,9 +20021,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcUtil = __webpack_require__(85);
+	var _classnames = __webpack_require__(88);
 	
-	var _rcUtil2 = _interopRequireDefault(_rcUtil);
+	var _classnames2 = _interopRequireDefault(_classnames);
 	
 	function noop() {}
 	
@@ -20035,7 +20035,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  displayName: 'InputNumber',
 	
 	  propTypes: {
-	    onChange: _react2['default'].PropTypes.func
+	    onChange: _react2['default'].PropTypes.func,
+	    step: _react2['default'].PropTypes.number
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
@@ -20043,6 +20044,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      prefixCls: 'rc-input-number',
 	      max: Infinity,
 	      min: -Infinity,
+	      step: 1,
 	      style: {},
 	      defaultValue: '',
 	      onChange: noop
@@ -20153,15 +20155,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  upStep: function upStep(val) {
-	    var props = this.props;
-	    var stepNum = props.step || 1;
+	    var stepNum = this.props.step;
 	    var precisionFactor = this.getPrecisionFactor();
 	    return (precisionFactor * val + precisionFactor * stepNum) / precisionFactor;
 	  },
 	
 	  downStep: function downStep(val) {
-	    var props = this.props;
-	    var stepNum = props.step || 1;
+	    var stepNum = this.props.step;
 	    var precisionFactor = this.getPrecisionFactor();
 	    return (precisionFactor * val - precisionFactor * stepNum) / precisionFactor;
 	  },
@@ -20195,11 +20195,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  render: function render() {
-	    var _rcUtil$classSet;
+	    var _classNames;
 	
 	    var props = this.props;
 	    var prefixCls = props.prefixCls;
-	    var classes = _rcUtil2['default'].classSet((_rcUtil$classSet = {}, _defineProperty(_rcUtil$classSet, prefixCls, true), _defineProperty(_rcUtil$classSet, props.className, !!props.className), _defineProperty(_rcUtil$classSet, prefixCls + '-disabled', props.disabled), _defineProperty(_rcUtil$classSet, prefixCls + '-focused', this.state.focused), _rcUtil$classSet));
+	    var classes = (0, _classnames2['default'])((_classNames = {}, _defineProperty(_classNames, prefixCls, true), _defineProperty(_classNames, props.className, !!props.className), _defineProperty(_classNames, prefixCls + '-disabled', props.disabled), _defineProperty(_classNames, prefixCls + '-focused', this.state.focused), _classNames));
 	    var upDisabledClass = '';
 	    var downDisabledClass = '';
 	    var value = this.state.value;
@@ -27690,6 +27690,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
+	var _objectAssign2 = __webpack_require__(98);
+	
+	var _objectAssign3 = _interopRequireDefault(_objectAssign2);
+	
 	var _Track = __webpack_require__(285);
 	
 	var _Track2 = _interopRequireDefault(_Track);
@@ -27774,18 +27778,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(Slider, [{
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(nextProps) {
+	      if (!('value' in nextProps || 'min' in nextProps || 'max' in nextProps)) return;
+	
+	      var _state = this.state;
+	      var lowerBound = _state.lowerBound;
+	      var upperBound = _state.upperBound;
+	
 	      if (nextProps.range) {
 	        var value = nextProps.value;
-	        if (value) {
-	          this.setState({
-	            upperBound: value[1],
-	            lowerBound: value[0]
-	          });
-	        }
-	      } else if ('value' in nextProps) {
+	        var nextUpperBound = this.trimAlignValue(value[1], nextProps);
+	        var nextLowerBound = this.trimAlignValue(value[0], nextProps);
+	        if (nextLowerBound === lowerBound && nextUpperBound === upperBound) return;
+	
 	        this.setState({
-	          upperBound: nextProps.value
+	          upperBound: nextUpperBound,
+	          lowerBound: nextLowerBound
 	        });
+	        if (this.isValueOutOfBounds(upperBound, nextProps) || this.isValueOutOfBounds(lowerBound, nextProps)) {
+	          this.props.onChange([nextLowerBound, nextUpperBound]);
+	        }
+	      } else {
+	        var nextValue = this.trimAlignValue(nextProps.value, nextProps);
+	        if (nextValue === upperBound && lowerBound === nextProps.min) return;
+	
+	        this.setState({
+	          upperBound: nextValue,
+	          lowerBound: nextProps.min
+	        });
+	        if (this.isValueOutOfBounds(upperBound, nextProps)) {
+	          this.props.onChange(nextValue);
+	        }
 	      }
 	    }
 	  }, {
@@ -27901,9 +27923,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'getValue',
 	    value: function getValue() {
-	      var _state = this.state;
-	      var lowerBound = _state.lowerBound;
-	      var upperBound = _state.upperBound;
+	      var _state2 = this.state;
+	      var lowerBound = _state2.lowerBound;
+	      var upperBound = _state2.upperBound;
 	
 	      return this.props.range ? [lowerBound, upperBound] : upperBound;
 	    }
@@ -27937,17 +27959,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return precision;
 	    }
 	  }, {
+	    key: 'isValueOutOfBounds',
+	    value: function isValueOutOfBounds(value, props) {
+	      return value < props.min || value > props.max;
+	    }
+	  }, {
 	    key: 'trimAlignValue',
-	    value: function trimAlignValue(v) {
+	    value: function trimAlignValue(v, nextProps) {
 	      var state = this.state || {};
 	      var handle = state.handle;
 	      var lowerBound = state.lowerBound;
 	      var upperBound = state.upperBound;
-	      var _props = this.props;
-	      var marks = _props.marks;
-	      var step = _props.step;
-	      var min = _props.min;
-	      var max = _props.max;
+	
+	      var _objectAssign = (0, _objectAssign3['default'])({}, this.props, nextProps || {});
+	
+	      var marks = _objectAssign.marks;
+	      var step = _objectAssign.step;
+	      var min = _objectAssign.min;
+	      var max = _objectAssign.max;
 	
 	      var val = v;
 	      if (val <= min) {
@@ -27979,9 +28008,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'calcOffset',
 	    value: function calcOffset(value) {
-	      var _props2 = this.props;
-	      var min = _props2.min;
-	      var max = _props2.max;
+	      var _props = this.props;
+	      var min = _props.min;
+	      var max = _props.max;
 	
 	      var ratio = (value - min) / (max - min);
 	      return ratio * 100;
@@ -27989,9 +28018,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'calcValue',
 	    value: function calcValue(offset) {
-	      var _props3 = this.props;
-	      var min = _props3.min;
-	      var max = _props3.max;
+	      var _props2 = this.props;
+	      var min = _props2.min;
+	      var max = _props2.max;
 	
 	      var ratio = offset / this.getSliderLength();
 	      return ratio * (max - min) + min;
@@ -28038,24 +28067,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      var _classNames;
 	
-	      var _state2 = this.state;
-	      var handle = _state2.handle;
-	      var upperBound = _state2.upperBound;
-	      var lowerBound = _state2.lowerBound;
-	      var _props4 = this.props;
-	      var className = _props4.className;
-	      var prefixCls = _props4.prefixCls;
-	      var disabled = _props4.disabled;
-	      var dots = _props4.dots;
-	      var included = _props4.included;
-	      var range = _props4.range;
-	      var step = _props4.step;
-	      var marks = _props4.marks;
-	      var max = _props4.max;
-	      var min = _props4.min;
-	      var tipTransitionName = _props4.tipTransitionName;
-	      var tipFormatter = _props4.tipFormatter;
-	      var children = _props4.children;
+	      var _state3 = this.state;
+	      var handle = _state3.handle;
+	      var upperBound = _state3.upperBound;
+	      var lowerBound = _state3.lowerBound;
+	      var _props3 = this.props;
+	      var className = _props3.className;
+	      var prefixCls = _props3.prefixCls;
+	      var disabled = _props3.disabled;
+	      var dots = _props3.dots;
+	      var included = _props3.included;
+	      var range = _props3.range;
+	      var step = _props3.step;
+	      var marks = _props3.marks;
+	      var max = _props3.max;
+	      var min = _props3.min;
+	      var tipTransitionName = _props3.tipTransitionName;
+	      var tipFormatter = _props3.tipFormatter;
+	      var children = _props3.children;
 	
 	      var upperOffset = this.calcOffset(upperBound);
 	      var lowerOffset = this.calcOffset(lowerBound);
@@ -32965,8 +32994,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            { className: 'ant-upload-item-name' },
 	            file.name
 	          ),
-	          _react2['default'].createElement(_icon2['default'], { type: 'cross', ref: 'theCloseBtn',
-	            onClick: _this.handleClose.bind(_this, file) })
+	          _react2['default'].createElement(_icon2['default'], { type: 'cross', onClick: _this.handleClose.bind(_this, file) })
 	        ),
 	        progress
 	      );
