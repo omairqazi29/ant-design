@@ -29105,6 +29105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      duration: duration,
 	      closable: true,
 	      onClose: args.onClose,
+	      key: args.key,
 	      style: {}
 	    });
 	  } else {
@@ -29128,6 +29129,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        duration: duration,
 	        closable: true,
 	        onClose: args.onClose,
+	        key: args.key,
 	        style: {}
 	      });
 	    } else {
@@ -29720,9 +29722,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var _validator = __webpack_require__(301);
 	
@@ -29900,7 +29904,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (rule.message) {
 	              errors = [].concat(rule.message).map(complementError(rule));
 	            } else {
-	              errors = [options.error(rule, _util2['default'].format(options.messages.required, rule.field))];
+	              errors = [options.error(rule, util.format(options.messages.required, rule.field))];
 	            }
 	            return doIt(null, errors);
 	          }
@@ -29933,7 +29937,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      rule.type = 'pattern';
 	    }
 	    if (typeof rule.validator !== 'function' && rule.type && !_validator2['default'].hasOwnProperty(rule.type)) {
-	      throw new Error(_util2['default'].format('Unknown rule type %s', rule.type));
+	      throw new Error(util.format('Unknown rule type %s', rule.type));
 	    }
 	    return rule.type || 'string';
 	  },
@@ -29966,60 +29970,59 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.format = format;
+	exports.isEmptyValue = isEmptyValue;
 	var formatRegExp = /%[sdj%]/g;
 	
-	exports['default'] = {
-	  format: function format() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-	
-	    var i = 1;
-	    var f = args[0];
-	    var len = args.length;
-	    var str = String(f).replace(formatRegExp, function (x) {
-	      if (x === '%%') {
-	        return '%';
-	      }
-	      if (i >= len) {
-	        return x;
-	      }
-	      switch (x) {
-	        case '%s':
-	          return String(args[i++]);
-	        case '%d':
-	          return Number(args[i++]);
-	        case '%j':
-	          try {
-	            return JSON.stringify(args[i++]);
-	          } catch (_) {
-	            return '[Circular]';
-	          }
-	          break;
-	        default:
-	          return x;
-	      }
-	    });
-	    for (var arg = args[i]; i < len; arg = args[++i]) {
-	      str += ' ' + arg;
-	    }
-	    return str;
-	  },
-	
-	  isEmptyValue: function isEmptyValue(value, type) {
-	    if (value === undefined || value === null) {
-	      return true;
-	    }
-	    if (type === 'array' && Array.isArray(value) && !value.length) {
-	      return true;
-	    }
-	    if (type === 'string' && typeof value === 'string' && !value) {
-	      return true;
-	    }
-	    return false;
+	function format() {
+	  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    args[_key] = arguments[_key];
 	  }
-	};
-	module.exports = exports['default'];
+	
+	  var i = 1;
+	  var f = args[0];
+	  var len = args.length;
+	  var str = String(f).replace(formatRegExp, function (x) {
+	    if (x === '%%') {
+	      return '%';
+	    }
+	    if (i >= len) {
+	      return x;
+	    }
+	    switch (x) {
+	      case '%s':
+	        return String(args[i++]);
+	      case '%d':
+	        return Number(args[i++]);
+	      case '%j':
+	        try {
+	          return JSON.stringify(args[i++]);
+	        } catch (_) {
+	          return '[Circular]';
+	        }
+	        break;
+	      default:
+	        return x;
+	    }
+	  });
+	  for (var arg = args[i]; i < len; arg = args[++i]) {
+	    str += ' ' + arg;
+	  }
+	  return str;
+	}
+	
+	function isEmptyValue(value, type) {
+	  if (value === undefined || value === null) {
+	    return true;
+	  }
+	  if (type === 'array' && Array.isArray(value) && !value.length) {
+	    return true;
+	  }
+	  if (type === 'string' && typeof value === 'string' && !value) {
+	    return true;
+	  }
+	  return false;
+	}
 
 /***/ },
 /* 301 */
@@ -30067,8 +30070,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Performs validation for string types.
 	 *
@@ -30083,11 +30084,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'string') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'string') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options, 'string');
-	    if (!_util2['default'].isEmptyValue(value, 'string')) {
+	    if (!(0, _util.isEmptyValue)(value, 'string')) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	      _rule2['default'].range(rule, value, source, errors, options);
 	      _rule2['default'].pattern(rule, value, source, errors, options);
@@ -30131,11 +30132,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating required fields.
@@ -30149,8 +30150,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *  @param options.messages The validation messages.
 	 */
 	function required(rule, value, source, errors, options, type) {
-	  if (rule.required && (!source.hasOwnProperty(rule.field) || _util2['default'].isEmptyValue(value, type))) {
-	    errors.push(_util2['default'].format(options.messages.required, rule.fullField));
+	  if (rule.required && (!source.hasOwnProperty(rule.field) || util.isEmptyValue(value, type))) {
+	    errors.push(util.format(options.messages.required, rule.fullField));
 	  }
 	}
 	
@@ -30167,11 +30168,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating whitespace.
@@ -30186,7 +30187,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function whitespace(rule, value, source, errors, options) {
 	  if (/^\s+$/.test(value) || value === '') {
-	    errors.push(_util2['default'].format(options.messages.whitespace, rule.fullField));
+	    errors.push(util.format(options.messages.whitespace, rule.fullField));
 	  }
 	}
 	
@@ -30205,9 +30206,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var _required = __webpack_require__(304);
 	
@@ -30285,11 +30288,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var ruleType = rule.type;
 	  if (custom.indexOf(ruleType) > -1) {
 	    if (!types[ruleType](value)) {
-	      errors.push(_util2['default'].format(options.messages.types[ruleType], rule.fullField, rule.type));
+	      errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
 	    }
 	    // straight typeof check
 	  } else if (ruleType && typeof value !== rule.type) {
-	      errors.push(_util2['default'].format(options.messages.types[ruleType], rule.fullField, rule.type));
+	      errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
 	    }
 	}
 	
@@ -30306,11 +30309,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating minimum and maximum allowed values.
@@ -30350,14 +30353,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	  if (len) {
 	    if (val !== rule.len) {
-	      errors.push(_util2['default'].format(options.messages[key].len, rule.fullField, rule.len));
+	      errors.push(util.format(options.messages[key].len, rule.fullField, rule.len));
 	    }
 	  } else if (min && !max && val < rule.min) {
-	    errors.push(_util2['default'].format(options.messages[key].min, rule.fullField, rule.min));
+	    errors.push(util.format(options.messages[key].min, rule.fullField, rule.min));
 	  } else if (max && !min && val > rule.max) {
-	    errors.push(_util2['default'].format(options.messages[key].max, rule.fullField, rule.max));
+	    errors.push(util.format(options.messages[key].max, rule.fullField, rule.max));
 	  } else if (min && max && (val < rule.min || val > rule.max)) {
-	    errors.push(_util2['default'].format(options.messages[key].range, rule.fullField, rule.min, rule.max));
+	    errors.push(util.format(options.messages[key].range, rule.fullField, rule.min, rule.max));
 	  }
 	}
 	
@@ -30374,11 +30377,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var ENUM = 'enum';
 	
@@ -30396,7 +30399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function enumerable(rule, value, source, errors, options) {
 	  rule[ENUM] = Array.isArray(rule[ENUM]) ? rule[ENUM] : [];
 	  if (rule[ENUM].indexOf(value) === -1) {
-	    errors.push(_util2['default'].format(options.messages[ENUM], rule.fullField, rule[ENUM].join(', ')));
+	    errors.push(util.format(options.messages[ENUM], rule.fullField, rule[ENUM].join(', ')));
 	  }
 	}
 	
@@ -30413,11 +30416,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating a regular expression pattern.
@@ -30433,7 +30436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function pattern(rule, value, source, errors, options) {
 	  if (rule.pattern instanceof RegExp) {
 	    if (!rule.pattern.test(value)) {
-	      errors.push(_util2['default'].format(options.messages.pattern.mismatch, rule.fullField, value, rule.pattern));
+	      errors.push(util.format(options.messages.pattern.mismatch, rule.fullField, value, rule.pattern));
 	    }
 	  }
 	}
@@ -30590,6 +30593,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
+	var _util = __webpack_require__(300);
+	
 	/**
 	 *  Validates the regular expression type.
 	 *
@@ -30604,11 +30609,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (value === undefined && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value) && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (value !== undefined) {
+	    if (!(0, _util.isEmptyValue)(value)) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	    }
 	  }
@@ -30726,8 +30731,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Validates an array.
 	 *
@@ -30742,11 +30745,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'array') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'array') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options, 'array');
-	    if (!_util2['default'].isEmptyValue(value, 'array')) {
+	    if (!(0, _util.isEmptyValue)(value, 'array')) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	      _rule2['default'].range(rule, value, source, errors, options);
 	    }
@@ -30865,8 +30868,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _util = __webpack_require__(300);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Validates a regular expression pattern.
 	 *
@@ -30884,11 +30885,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'string') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'string') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (!_util2['default'].isEmptyValue(value, 'string')) {
+	    if (!(0, _util.isEmptyValue)(value, 'string')) {
 	      _rule2['default'].pattern(rule, value, source, errors, options);
 	    }
 	  }
@@ -30939,19 +30940,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
+	var _util = __webpack_require__(300);
+	
 	function date(rule, value, callback, source, options) {
 	  // console.log('integer rule called %j', rule);
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  // console.log('validate on %s value', value);
 	  if (validate) {
-	    if (value === undefined && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value) && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (value) {
+	    if (!(0, _util.isEmptyValue)(value)) {
 	      _rule2['default'].type(rule, value, source, errors, options);
-	      _rule2['default'].range(rule, value.getTime(), source, errors, options);
+	      if (value) {
+	        _rule2['default'].range(rule, value.getTime(), source, errors, options);
+	      }
 	    }
 	  }
 	  callback(errors);
@@ -30985,6 +30990,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    array: '%s is not an %s',
 	    object: '%s is not an %s',
 	    number: '%s is not a %s',
+	    date: '%s is not a %s',
 	    boolean: '%s is not a %s',
 	    integer: '%s is not an %s',
 	    float: '%s is not a %s',
@@ -34030,6 +34036,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _objectAssign = __webpack_require__(98);
+	
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
 	function prefixClsFn(prefixCls) {
 	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 	    args[_key - 1] = arguments[_key];
@@ -34046,6 +34056,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	  var documentMode = document.documentMode || 0;
 	  return documentMode > 9;
+	}
+	
+	function fixControlledValue(value) {
+	  if (typeof value === 'undefined' || value === null) {
+	    return '';
+	  }
+	  return value;
 	}
 	
 	var Group = (function (_React$Component) {
@@ -34118,7 +34135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'renderInput',
 	    value: function renderInput() {
-	      var props = this.props;
+	      var props = (0, _objectAssign2['default'])({}, this.props);
 	      var prefixCls = props.prefixCls;
 	      var inputClassName = prefixClsFn(prefixCls, 'input');
 	      if (!props.type) {
@@ -34136,9 +34153,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (placeholder && ieGT9()) {
 	        placeholder = null;
 	      }
+	      if ('value' in props) {
+	        props.value = fixControlledValue(props.value);
+	      }
 	      switch (props.type) {
 	        case 'textarea':
-	          return _react2['default'].createElement('textarea', _extends({}, props, { value: props.value || props.defaultValue, placeholder: placeholder, className: inputClassName, ref: 'input' }));
+	          return _react2['default'].createElement('textarea', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
 	        default:
 	          inputClassName = props.className ? props.className : inputClassName;
 	          return _react2['default'].createElement('input', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));

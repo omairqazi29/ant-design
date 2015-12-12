@@ -20529,6 +20529,10 @@
 	
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 	
+	var _parsePath = __webpack_require__(254);
+	
+	var _parsePath2 = _interopRequireDefault(_parsePath);
+	
 	function isAbsolutePath(path) {
 	  return typeof path === 'string' && path.charAt(0) === '/';
 	}
@@ -20587,7 +20591,9 @@
 	      key = state = null;
 	    }
 	
-	    return history.createLocation(path, state, undefined, key);
+	    var location = _parsePath2['default'](path);
+	
+	    return history.createLocation(_extends({}, location, { state: state }), undefined, key);
 	  }
 	
 	  function startHashChangeListener(_ref) {
@@ -20674,6 +20680,18 @@
 	    };
 	  }
 	
+	  function push(location) {
+	    process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || location.state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+	
+	    history.push(location);
+	  }
+	
+	  function replace(location) {
+	    process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || location.state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+	
+	    history.replace(location);
+	  }
+	
 	  var goIsSupportedWithoutReload = _DOMUtils.supportsGoWithoutReloadUsingHash();
 	
 	  function go(n) {
@@ -20700,14 +20718,14 @@
 	    if (--listenerCount === 0) stopHashChangeListener();
 	  }
 	
-	  // deprecated - warning is in createHistory
+	  // deprecated
 	  function pushState(state, path) {
 	    process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
 	
 	    history.pushState(state, path);
 	  }
 	
-	  // deprecated - warning is in createHistory
+	  // deprecated
 	  function replaceState(state, path) {
 	    process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
 	
@@ -20717,12 +20735,15 @@
 	  return _extends({}, history, {
 	    listenBefore: listenBefore,
 	    listen: listen,
-	    pushState: pushState,
-	    replaceState: replaceState,
+	    push: push,
+	    replace: replace,
 	    go: go,
 	    createHref: createHref,
-	    registerTransitionHook: registerTransitionHook,
-	    unregisterTransitionHook: unregisterTransitionHook
+	
+	    registerTransitionHook: registerTransitionHook, // deprecated - warning is in createHistory
+	    unregisterTransitionHook: unregisterTransitionHook, // deprecated - warning is in createHistory
+	    pushState: pushState, // deprecated - warning is in createHistory
+	    replaceState: replaceState // deprecated - warning is in createHistory
 	  });
 	}
 	
@@ -21043,6 +21064,7 @@
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
+	//import warning from 'warning'
 	'use strict';
 	
 	exports.__esModule = true;
@@ -21063,13 +21085,13 @@
 	
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 	
-	var _parsePath = __webpack_require__(254);
-	
-	var _parsePath2 = _interopRequireDefault(_parsePath);
-	
 	var _runTransitionHook = __webpack_require__(256);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+	
+	var _parsePath = __webpack_require__(254);
+	
+	var _parsePath2 = _interopRequireDefault(_parsePath);
 	
 	var _deprecate = __webpack_require__(257);
 	
@@ -21208,11 +21230,11 @@
 	  }
 	
 	  function push(location) {
-	    transitionTo(createLocation(location, null, _Actions.PUSH, createKey()));
+	    transitionTo(createLocation(location, _Actions.PUSH, createKey()));
 	  }
 	
 	  function replace(location) {
-	    transitionTo(createLocation(location, null, _Actions.REPLACE, createKey()));
+	    transitionTo(createLocation(location, _Actions.REPLACE, createKey()));
 	  }
 	
 	  function goBack() {
@@ -21227,12 +21249,12 @@
 	    return createRandomKey(keyLength);
 	  }
 	
-	  function createPath(path) {
-	    if (path == null || typeof path === 'string') return path;
+	  function createPath(location) {
+	    if (location == null || typeof location === 'string') return location;
 	
-	    var pathname = path.pathname;
-	    var search = path.search;
-	    var hash = path.hash;
+	    var pathname = location.pathname;
+	    var search = location.search;
+	    var hash = location.hash;
 	
 	    var result = pathname;
 	
@@ -21243,14 +21265,29 @@
 	    return result;
 	  }
 	
-	  function createHref(path) {
-	    return createPath(path);
+	  function createHref(location) {
+	    return createPath(location);
 	  }
 	
-	  function createLocation(path, state, action) {
-	    var key = arguments.length <= 3 || arguments[3] === undefined ? createKey() : arguments[3];
+	  function createLocation(location, action) {
+	    var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
 	
-	    return _createLocation3['default'](path, state, action, key);
+	    if (typeof action === 'object') {
+	      //warning(
+	      //  false,
+	      //  'The state (2nd) argument to history.createLocation is deprecated; use a ' +
+	      //  'location descriptor instead'
+	      //)
+	
+	      if (typeof location === 'string') location = _parsePath2['default'](location);
+	
+	      location = _extends({}, location, { state: action });
+	
+	      action = key;
+	      key = arguments[3] || createKey();
+	    }
+	
+	    return _createLocation3['default'](location, action, key);
 	  }
 	
 	  // deprecated
@@ -21495,9 +21532,12 @@
 /* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
+	//import warning from 'warning'
 	'use strict';
 	
 	exports.__esModule = true;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -21509,18 +21549,30 @@
 	
 	function createLocation() {
 	  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
-	  var state = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
-	  var action = arguments.length <= 2 || arguments[2] === undefined ? _Actions.POP : arguments[2];
-	  var key = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
+	  var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
+	  var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+	
+	  var _fourthArg = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
 	
 	  if (typeof location === 'string') location = _parsePath2['default'](location);
+	
+	  if (typeof action === 'object') {
+	    //warning(
+	    //  false,
+	    //  'The state (2nd) argument to createLocation is deprecated; use a ' +
+	    //  'location descriptor instead'
+	    //)
+	
+	    location = _extends({}, location, { state: action });
+	
+	    action = key || _Actions.POP;
+	    key = _fourthArg;
+	  }
 	
 	  var pathname = location.pathname || '/';
 	  var search = location.search || '';
 	  var hash = location.hash || '';
-	
-	  // TODO: Deprecate passing state directly into createLocation.
-	  state = location.state || state;
+	  var state = location.state || null;
 	
 	  return {
 	    pathname: pathname,
@@ -21635,28 +21687,23 @@
 
 /***/ },
 /* 257 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	//import warning from 'warning'
+	
+	"use strict";
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _warning = __webpack_require__(84);
-	
-	var _warning2 = _interopRequireDefault(_warning);
-	
-	function deprecate(fn, message) {
-	  return function () {
-	    process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] ' + message) : undefined;
-	    return fn.apply(this, arguments);
-	  };
+	function deprecate(fn) {
+	  return fn;
+	  //return function () {
+	  //  warning(false, '[history] ' + message)
+	  //  return fn.apply(this, arguments)
+	  //}
 	}
 	
-	exports['default'] = deprecate;
-	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(83)))
+	exports["default"] = deprecate;
+	module.exports = exports["default"];
 
 /***/ },
 /* 258 */
@@ -22608,12 +22655,14 @@
 	      history.replace(appendQuery(location, location.query));
 	    }
 	
-	    function createPath(path, query) {
-	      return history.createPath(appendQuery(path, query));
+	    function createPath(location, query) {
+	      process.env.NODE_ENV !== 'production' ? _warning2['default'](query, 'the query argument to createPath is deprecated; use a location descriptor instead') : undefined;
+	      return history.createPath(appendQuery(location, query || location.query));
 	    }
 	
-	    function createHref(path, query) {
-	      return history.createHref(appendQuery(path, query));
+	    function createHref(location, query) {
+	      process.env.NODE_ENV !== 'production' ? _warning2['default'](query, 'the query argument to createHref is deprecated; use a location descriptor instead') : undefined;
+	      return history.createHref(appendQuery(location, query || location.query));
 	    }
 	
 	    function createLocation() {
@@ -24144,6 +24193,10 @@
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
+	var _parsePath = __webpack_require__(254);
+	
+	var _parsePath2 = _interopRequireDefault(_parsePath);
+	
 	function createStateStorage(entries) {
 	  return entries.filter(function (entry) {
 	    return entry.state;
@@ -24223,7 +24276,9 @@
 	      entry.key = key;
 	    }
 	
-	    return history.createLocation(path, state, undefined, key);
+	    var location = _parsePath2['default'](path);
+	
+	    return history.createLocation(_extends({}, location, { state: state }), undefined, key);
 	  }
 	
 	  function canGo(n) {
@@ -24371,12 +24426,12 @@
 	      history.replace(prependBasename(location));
 	    }
 	
-	    function createPath(path) {
-	      return history.createPath(prependBasename(path));
+	    function createPath(location) {
+	      return history.createPath(prependBasename(location));
 	    }
 	
-	    function createHref(path) {
-	      return history.createHref(prependBasename(path));
+	    function createHref(location) {
+	      return history.createHref(prependBasename(location));
 	    }
 	
 	    function createLocation() {
@@ -53782,6 +53837,7 @@
 	      duration: duration,
 	      closable: true,
 	      onClose: args.onClose,
+	      key: args.key,
 	      style: {}
 	    });
 	  } else {
@@ -53805,6 +53861,7 @@
 	        duration: duration,
 	        closable: true,
 	        onClose: args.onClose,
+	        key: args.key,
 	        style: {}
 	      });
 	    } else {
@@ -54397,9 +54454,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var _validator = __webpack_require__(511);
 	
@@ -54577,7 +54636,7 @@
 	            if (rule.message) {
 	              errors = [].concat(rule.message).map(complementError(rule));
 	            } else {
-	              errors = [options.error(rule, _util2['default'].format(options.messages.required, rule.field))];
+	              errors = [options.error(rule, util.format(options.messages.required, rule.field))];
 	            }
 	            return doIt(null, errors);
 	          }
@@ -54610,7 +54669,7 @@
 	      rule.type = 'pattern';
 	    }
 	    if (typeof rule.validator !== 'function' && rule.type && !_validator2['default'].hasOwnProperty(rule.type)) {
-	      throw new Error(_util2['default'].format('Unknown rule type %s', rule.type));
+	      throw new Error(util.format('Unknown rule type %s', rule.type));
 	    }
 	    return rule.type || 'string';
 	  },
@@ -54643,60 +54702,59 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.format = format;
+	exports.isEmptyValue = isEmptyValue;
 	var formatRegExp = /%[sdj%]/g;
 	
-	exports['default'] = {
-	  format: function format() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-	
-	    var i = 1;
-	    var f = args[0];
-	    var len = args.length;
-	    var str = String(f).replace(formatRegExp, function (x) {
-	      if (x === '%%') {
-	        return '%';
-	      }
-	      if (i >= len) {
-	        return x;
-	      }
-	      switch (x) {
-	        case '%s':
-	          return String(args[i++]);
-	        case '%d':
-	          return Number(args[i++]);
-	        case '%j':
-	          try {
-	            return JSON.stringify(args[i++]);
-	          } catch (_) {
-	            return '[Circular]';
-	          }
-	          break;
-	        default:
-	          return x;
-	      }
-	    });
-	    for (var arg = args[i]; i < len; arg = args[++i]) {
-	      str += ' ' + arg;
-	    }
-	    return str;
-	  },
-	
-	  isEmptyValue: function isEmptyValue(value, type) {
-	    if (value === undefined || value === null) {
-	      return true;
-	    }
-	    if (type === 'array' && Array.isArray(value) && !value.length) {
-	      return true;
-	    }
-	    if (type === 'string' && typeof value === 'string' && !value) {
-	      return true;
-	    }
-	    return false;
+	function format() {
+	  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    args[_key] = arguments[_key];
 	  }
-	};
-	module.exports = exports['default'];
+	
+	  var i = 1;
+	  var f = args[0];
+	  var len = args.length;
+	  var str = String(f).replace(formatRegExp, function (x) {
+	    if (x === '%%') {
+	      return '%';
+	    }
+	    if (i >= len) {
+	      return x;
+	    }
+	    switch (x) {
+	      case '%s':
+	        return String(args[i++]);
+	      case '%d':
+	        return Number(args[i++]);
+	      case '%j':
+	        try {
+	          return JSON.stringify(args[i++]);
+	        } catch (_) {
+	          return '[Circular]';
+	        }
+	        break;
+	      default:
+	        return x;
+	    }
+	  });
+	  for (var arg = args[i]; i < len; arg = args[++i]) {
+	    str += ' ' + arg;
+	  }
+	  return str;
+	}
+	
+	function isEmptyValue(value, type) {
+	  if (value === undefined || value === null) {
+	    return true;
+	  }
+	  if (type === 'array' && Array.isArray(value) && !value.length) {
+	    return true;
+	  }
+	  if (type === 'string' && typeof value === 'string' && !value) {
+	    return true;
+	  }
+	  return false;
+	}
 
 /***/ },
 /* 511 */
@@ -54744,8 +54802,6 @@
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Performs validation for string types.
 	 *
@@ -54760,11 +54816,11 @@
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'string') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'string') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options, 'string');
-	    if (!_util2['default'].isEmptyValue(value, 'string')) {
+	    if (!(0, _util.isEmptyValue)(value, 'string')) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	      _rule2['default'].range(rule, value, source, errors, options);
 	      _rule2['default'].pattern(rule, value, source, errors, options);
@@ -54808,11 +54864,11 @@
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating required fields.
@@ -54826,8 +54882,8 @@
 	 *  @param options.messages The validation messages.
 	 */
 	function required(rule, value, source, errors, options, type) {
-	  if (rule.required && (!source.hasOwnProperty(rule.field) || _util2['default'].isEmptyValue(value, type))) {
-	    errors.push(_util2['default'].format(options.messages.required, rule.fullField));
+	  if (rule.required && (!source.hasOwnProperty(rule.field) || util.isEmptyValue(value, type))) {
+	    errors.push(util.format(options.messages.required, rule.fullField));
 	  }
 	}
 	
@@ -54844,11 +54900,11 @@
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating whitespace.
@@ -54863,7 +54919,7 @@
 	 */
 	function whitespace(rule, value, source, errors, options) {
 	  if (/^\s+$/.test(value) || value === '') {
-	    errors.push(_util2['default'].format(options.messages.whitespace, rule.fullField));
+	    errors.push(util.format(options.messages.whitespace, rule.fullField));
 	  }
 	}
 	
@@ -54882,9 +54938,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var _required = __webpack_require__(514);
 	
@@ -54962,11 +55020,11 @@
 	  var ruleType = rule.type;
 	  if (custom.indexOf(ruleType) > -1) {
 	    if (!types[ruleType](value)) {
-	      errors.push(_util2['default'].format(options.messages.types[ruleType], rule.fullField, rule.type));
+	      errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
 	    }
 	    // straight typeof check
 	  } else if (ruleType && typeof value !== rule.type) {
-	      errors.push(_util2['default'].format(options.messages.types[ruleType], rule.fullField, rule.type));
+	      errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
 	    }
 	}
 	
@@ -54983,11 +55041,11 @@
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating minimum and maximum allowed values.
@@ -55027,14 +55085,14 @@
 	  }
 	  if (len) {
 	    if (val !== rule.len) {
-	      errors.push(_util2['default'].format(options.messages[key].len, rule.fullField, rule.len));
+	      errors.push(util.format(options.messages[key].len, rule.fullField, rule.len));
 	    }
 	  } else if (min && !max && val < rule.min) {
-	    errors.push(_util2['default'].format(options.messages[key].min, rule.fullField, rule.min));
+	    errors.push(util.format(options.messages[key].min, rule.fullField, rule.min));
 	  } else if (max && !min && val > rule.max) {
-	    errors.push(_util2['default'].format(options.messages[key].max, rule.fullField, rule.max));
+	    errors.push(util.format(options.messages[key].max, rule.fullField, rule.max));
 	  } else if (min && max && (val < rule.min || val > rule.max)) {
-	    errors.push(_util2['default'].format(options.messages[key].range, rule.fullField, rule.min, rule.max));
+	    errors.push(util.format(options.messages[key].range, rule.fullField, rule.min, rule.max));
 	  }
 	}
 	
@@ -55051,11 +55109,11 @@
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	var ENUM = 'enum';
 	
@@ -55073,7 +55131,7 @@
 	function enumerable(rule, value, source, errors, options) {
 	  rule[ENUM] = Array.isArray(rule[ENUM]) ? rule[ENUM] : [];
 	  if (rule[ENUM].indexOf(value) === -1) {
-	    errors.push(_util2['default'].format(options.messages[ENUM], rule.fullField, rule[ENUM].join(', ')));
+	    errors.push(util.format(options.messages[ENUM], rule.fullField, rule[ENUM].join(', ')));
 	  }
 	}
 	
@@ -55090,11 +55148,11 @@
 	  value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
+	var util = _interopRequireWildcard(_util);
 	
 	/**
 	 *  Rule for validating a regular expression pattern.
@@ -55110,7 +55168,7 @@
 	function pattern(rule, value, source, errors, options) {
 	  if (rule.pattern instanceof RegExp) {
 	    if (!rule.pattern.test(value)) {
-	      errors.push(_util2['default'].format(options.messages.pattern.mismatch, rule.fullField, value, rule.pattern));
+	      errors.push(util.format(options.messages.pattern.mismatch, rule.fullField, value, rule.pattern));
 	    }
 	  }
 	}
@@ -55267,6 +55325,8 @@
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
+	var _util = __webpack_require__(510);
+	
 	/**
 	 *  Validates the regular expression type.
 	 *
@@ -55281,11 +55341,11 @@
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (value === undefined && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value) && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (value !== undefined) {
+	    if (!(0, _util.isEmptyValue)(value)) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	    }
 	  }
@@ -55403,8 +55463,6 @@
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Validates an array.
 	 *
@@ -55419,11 +55477,11 @@
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'array') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'array') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options, 'array');
-	    if (!_util2['default'].isEmptyValue(value, 'array')) {
+	    if (!(0, _util.isEmptyValue)(value, 'array')) {
 	      _rule2['default'].type(rule, value, source, errors, options);
 	      _rule2['default'].range(rule, value, source, errors, options);
 	    }
@@ -55542,8 +55600,6 @@
 	
 	var _util = __webpack_require__(510);
 	
-	var _util2 = _interopRequireDefault(_util);
-	
 	/**
 	 *  Validates a regular expression pattern.
 	 *
@@ -55561,11 +55617,11 @@
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  if (validate) {
-	    if (_util2['default'].isEmptyValue(value, 'string') && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value, 'string') && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (!_util2['default'].isEmptyValue(value, 'string')) {
+	    if (!(0, _util.isEmptyValue)(value, 'string')) {
 	      _rule2['default'].pattern(rule, value, source, errors, options);
 	    }
 	  }
@@ -55616,19 +55672,23 @@
 	
 	var _rule2 = _interopRequireDefault(_rule);
 	
+	var _util = __webpack_require__(510);
+	
 	function date(rule, value, callback, source, options) {
 	  // console.log('integer rule called %j', rule);
 	  var errors = [];
 	  var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
 	  // console.log('validate on %s value', value);
 	  if (validate) {
-	    if (value === undefined && !rule.required) {
+	    if ((0, _util.isEmptyValue)(value) && !rule.required) {
 	      return callback();
 	    }
 	    _rule2['default'].required(rule, value, source, errors, options);
-	    if (value) {
+	    if (!(0, _util.isEmptyValue)(value)) {
 	      _rule2['default'].type(rule, value, source, errors, options);
-	      _rule2['default'].range(rule, value.getTime(), source, errors, options);
+	      if (value) {
+	        _rule2['default'].range(rule, value.getTime(), source, errors, options);
+	      }
 	    }
 	  }
 	  callback(errors);
@@ -55662,6 +55722,7 @@
 	    array: '%s is not an %s',
 	    object: '%s is not an %s',
 	    number: '%s is not a %s',
+	    date: '%s is not a %s',
 	    boolean: '%s is not a %s',
 	    integer: '%s is not an %s',
 	    float: '%s is not a %s',
@@ -58707,6 +58768,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _objectAssign = __webpack_require__(313);
+	
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
 	function prefixClsFn(prefixCls) {
 	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 	    args[_key - 1] = arguments[_key];
@@ -58723,6 +58788,13 @@
 	  }
 	  var documentMode = document.documentMode || 0;
 	  return documentMode > 9;
+	}
+	
+	function fixControlledValue(value) {
+	  if (typeof value === 'undefined' || value === null) {
+	    return '';
+	  }
+	  return value;
 	}
 	
 	var Group = (function (_React$Component) {
@@ -58795,7 +58867,7 @@
 	  }, {
 	    key: 'renderInput',
 	    value: function renderInput() {
-	      var props = this.props;
+	      var props = (0, _objectAssign2['default'])({}, this.props);
 	      var prefixCls = props.prefixCls;
 	      var inputClassName = prefixClsFn(prefixCls, 'input');
 	      if (!props.type) {
@@ -58813,9 +58885,12 @@
 	      if (placeholder && ieGT9()) {
 	        placeholder = null;
 	      }
+	      if ('value' in props) {
+	        props.value = fixControlledValue(props.value);
+	      }
 	      switch (props.type) {
 	        case 'textarea':
-	          return _react2['default'].createElement('textarea', _extends({}, props, { value: props.value || props.defaultValue, placeholder: placeholder, className: inputClassName, ref: 'input' }));
+	          return _react2['default'].createElement('textarea', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
 	        default:
 	          inputClassName = props.className ? props.className : inputClassName;
 	          return _react2['default'].createElement('input', _extends({}, props, { placeholder: placeholder, className: inputClassName, ref: 'input' }));
