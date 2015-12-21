@@ -8,6 +8,7 @@ var _antd = require('antd');
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
+  key: 'name',
   render: function render(text) {
     return React.createElement(
       'a',
@@ -17,13 +18,15 @@ var columns = [{
   }
 }, {
   title: '年龄',
-  dataIndex: 'age'
+  dataIndex: 'age',
+  key: 'age'
 }, {
   title: '住址',
-  dataIndex: 'address'
+  dataIndex: 'address',
+  key: 'address'
 }, {
   title: '操作',
-  dataIndex: '',
+  key: 'operation',
   render: function render(text, record) {
     return React.createElement(
       'span',
@@ -71,18 +74,21 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
+  key: <span class="hljs-string">'name'</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
+  dataIndex: <span class="hljs-string">'age'</span>,
+  key: <span class="hljs-string">'age'</span>,
 }, {
   title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
+  dataIndex: <span class="hljs-string">'address'</span>,
+  key: <span class="hljs-string">'address'</span>,
 }, {
   title: <span class="hljs-string">'操作'</span>,
-  dataIndex: <span class="hljs-string">''</span>,
+  key: <span class="hljs-string">'operation'</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, record</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>

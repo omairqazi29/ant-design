@@ -9,7 +9,6 @@ var _antd = require('antd');
 
 var IconSlider = React.createClass({
   displayName: 'IconSlider',
-
   getInitialState: function getInitialState() {
     var max = this.props.max;
     var min = this.props.min;
@@ -22,7 +21,6 @@ var IconSlider = React.createClass({
       sliderValue: this.props.value
     };
   },
-
   handleChange: function handleChange(v) {
     this.setState({
       preIconClass: v >= this.state.mid ? '' : 'anticon-highlight',
@@ -30,7 +28,6 @@ var IconSlider = React.createClass({
       sliderValue: v
     });
   },
-
   render: function render() {
     return React.createElement(
       'div',

@@ -20,7 +20,7 @@ Tree 树形控件 - Ant Design
     <!--[if IE 8]>
     <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
     <![endif]-->
-    <script src="https://as.alipayobjects.com/??component/console-polyfill/0.2.2/index.js,component/es5-shim/4.1.14/es5-shim.min.js,component/es5-shim/4.1.14/es5-sham.min.js,component/html5shiv/3.7.2/html5shiv.min.js,g/component/media-match/2.0.2/media.match.min.js"></script>
+    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>
     <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js"></script>
     <script>
     (function() {
@@ -63,7 +63,7 @@ Tree 树形控件 - Ant Design
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
-        title: 'Datepicker',
+        title: 'DatePicker',
         desc: '日期选择框'
       });
       ANT_COMPONENTS.push({
@@ -159,12 +159,12 @@ Tree 树形控件 - Ant Design
         desc: '标签'
       });
       ANT_COMPONENTS.push({
-        title: 'Timeline',
-        desc: '时间轴'
+        title: 'TimePicker',
+        desc: '时间选择框'
       });
       ANT_COMPONENTS.push({
-        title: 'Timepicker',
-        desc: '时间选择框'
+        title: 'Timeline',
+        desc: '时间轴'
       });
       ANT_COMPONENTS.push({
         title: 'Tooltip',
@@ -193,7 +193,7 @@ Tree 树形控件 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.4',
+        latest: '0.11.0-beta1',
         stable: '0.10.4'
       };
     </script>
@@ -219,11 +219,8 @@ Tree 树形控件 - Ant Design
           <li class="">
             <a href="../../spec/introduce">设计</a>
           </li>
-          <li>
-            <a class="nav-link-disabled" href="">案例</a>
-          </li>
           <li class="current">
-            <a href="../../docs/introduce">React</a>
+            <a href="../../docs/introduce">React UI</a>
           </li>
           <li>
             <a target="_blank" href="https://github.com/ant-design/ant-design">Github</a>
@@ -255,8 +252,8 @@ Tree 树形控件 - Ant Design
         </a>
       </li>
       <li class="">
-        <a href="../../docs/upgrade-to-0.10" class="">
-          0.10 升级指南
+        <a href="../../docs/upgrade-notes" class="">
+          升级指南
           <span class="chinese"></span>
         </a>
       </li>
@@ -300,9 +297,9 @@ Tree 树形控件 - Ant Design
             </a>
           </li>
           <li class="">
-            <a href="../datepicker/"
+            <a href="../date-picker/"
                class="">
-              Datepicker
+              DatePicker
               <span class="chinese">日期选择框</span>
             </a>
           </li>
@@ -349,9 +346,9 @@ Tree 树形控件 - Ant Design
             </a>
           </li>
           <li class="">
-            <a href="../timepicker/"
+            <a href="../time-picker/"
                class="">
-              Timepicker
+              TimePicker
               <span class="chinese">时间选择框</span>
             </a>
           </li>
@@ -666,7 +663,7 @@ Tree 树形控件 - Ant Design
     <div id="components-tree-demo-basic"></div>
     <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var TreeNode = _antd.Tree.TreeNode;
 
@@ -719,15 +716,15 @@ ReactDOM.render(
     <div id="components-tree-demo-special"></div>
     <script>(function(){'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _antd = require('antd');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var TreeNode = _antd.Tree.TreeNode;
 
@@ -735,18 +732,18 @@ var TreeDemo = (function (_React$Component) {
   _inherits(TreeDemo, _React$Component);
 
   function TreeDemo(props) {
-    var _this = this;
-
     _classCallCheck(this, TreeDemo);
 
-    _get(Object.getPrototypeOf(TreeDemo.prototype), 'constructor', this).call(this, props);
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TreeDemo).call(this, props));
+
     ['handleClick', 'handleCheck', 'handleSelect'].forEach(function (m) {
       _this[m] = _this[m].bind(_this);
     });
-    this.state = {
+    _this.state = {
       checkedKeys: [],
       selectedKeys: []
     };
+    return _this;
   }
 
   _createClass(TreeDemo, [{
@@ -958,9 +955,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div id="components-tree-demo-dynamic"></div>
     <script>(function(){'use strict';
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
-
 var _antd = require('antd');
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
 
@@ -978,7 +975,6 @@ var generateTreeNodes = function generateTreeNodes() {
 
 var TreeDemo = React.createClass({
   displayName: 'TreeDemo',
-
   timeout: function timeout() {
     var _this = this;
 
@@ -1138,11 +1134,11 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <h2>GitHub</h2>
       <a target="_blank "href="https://github.com/ant-design/ant-design">仓库</a>
       <a target="_blank" href="https://github.com/ant-design/ant-design/tree/master/style">样式</a>
-      <a target="_blank" href="https://github.com/ant-design/antd-bin">开发工具</a>
+      <a target="_blank" href="https://github.com/ant-tool/xtool">开发工具</a>
     </li>
     <li>
       <h2>关于我们</h2>
-      <a href="https://github.com/alipay/x/issues">博客 - Ant UED</a>
+      <a href="https://github.com/ant-ued/blog">博客 - Ant UED</a>
     </li>
     <li>
       <h2>联系我们</h2>

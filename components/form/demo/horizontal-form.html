@@ -24,7 +24,6 @@ var Demo = React.createClass({
       }
     };
   },
-
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
     _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
@@ -34,7 +33,6 @@ var Demo = React.createClass({
       return v;
     }));
   },
-
   render: function render() {
     var formData = this.state.formData;
     return React.createElement(

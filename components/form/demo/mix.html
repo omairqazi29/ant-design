@@ -17,8 +17,8 @@ var Demo = React.createClass({
     return {
       formData: {
         inputNumber: undefined,
-        'static': '唧唧复唧唧木兰当户织呀',
-        'switch': undefined,
+        static: '唧唧复唧唧木兰当户织呀',
+        switch: undefined,
         slider: undefined,
         select: undefined,
         startDate: undefined,
@@ -26,7 +26,6 @@ var Demo = React.createClass({
       }
     };
   },
-
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
     _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
@@ -36,7 +35,6 @@ var Demo = React.createClass({
       return v;
     }));
   },
-
   render: function render() {
     var formData = this.state.formData;
     return React.createElement(
@@ -85,7 +83,7 @@ var Demo = React.createClass({
           labelCol: { span: 8 },
           wrapperCol: { span: 10 },
           required: true },
-        React.createElement(_antd.Switch, { name: 'switch', onChange: this.setValue.bind(this, 'switch'), value: formData['switch'] })
+        React.createElement(_antd.Switch, { name: 'switch', onChange: this.setValue.bind(this, 'switch'), value: formData.switch })
       ),
       React.createElement(
         FormItem,
@@ -131,13 +129,13 @@ var Demo = React.createClass({
       React.createElement(
         FormItem,
         {
-          label: 'Datepicker 日期选择框：',
+          label: 'DatePicker 日期选择框：',
           labelCol: { span: 8 },
           required: true },
         React.createElement(
           _antd.Col,
           { span: '6' },
-          React.createElement(_antd.Datepicker, { name: 'startDate', onChange: this.setValue.bind(this, 'startDate'), value: formData.startDate })
+          React.createElement(_antd.DatePicker, { name: 'startDate', onChange: this.setValue.bind(this, 'startDate'), value: formData.startDate })
         ),
         React.createElement(
           _antd.Col,
@@ -151,7 +149,7 @@ var Demo = React.createClass({
         React.createElement(
           _antd.Col,
           { span: '6' },
-          React.createElement(_antd.Datepicker, { name: 'endDate', onChange: this.setValue.bind(this, 'endDate'), value: formData.endDate })
+          React.createElement(_antd.DatePicker, { name: 'endDate', onChange: this.setValue.bind(this, 'endDate'), value: formData.endDate })
         )
       ),
       React.createElement(
@@ -171,7 +169,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-form-demo-mix'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, Datepicker, Switch, Slider, Button, message, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-form-demo-mix'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, Switch, Slider, Button, message, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
@@ -256,17 +254,17 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"Datepicker 日期选择框："</span>
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"DatePicker 日期选择框："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">8</span>}}
           <span class="hljs-attribute">required</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"startDate"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">startDate</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.startDate}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"startDate"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">startDate</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.startDate}</span> /&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"1"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-split"</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"endDate"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">endDate</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.endDate}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"endDate"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">endDate</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.endDate}</span> /&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>

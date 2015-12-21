@@ -5,11 +5,8 @@
 
 var _antd = require('antd');
 
-var container = document.getElementById('components-checkbox-demo-controller');
-
 var App = React.createClass({
   displayName: 'App',
-
   getInitialState: function getInitialState() {
     return {
       checked: true,
@@ -66,8 +63,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-checkbox-demo-controller'</span>);
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-checkbox-demo-controller'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -115,7 +111,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-checkbox-demo-controller'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

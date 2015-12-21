@@ -44,7 +44,7 @@ var data2 = [{
   age: 32,
   address: '西湖区湖底公园2号'
 }, {
-  key: '22',
+  key: '2',
   name: '胡彦祖2',
   age: 42,
   address: '西湖区湖底公园2号'
@@ -57,7 +57,6 @@ var data2 = [{
 
 var App = React.createClass({
   displayName: 'App',
-
   getInitialState: function getInitialState() {
     return {
       data: []
@@ -74,10 +73,19 @@ var App = React.createClass({
     });
   },
   render: function render() {
+    // 通过 rowSelection 对象表明需要行选择
+    var rowSelection = {
+      onSelect: function onSelect(record, selected, selectedRows) {
+        console.log(record, selected, selectedRows);
+      },
+      onSelectAll: function onSelectAll(selected, selectedRows) {
+        console.log(selected, selectedRows);
+      }
+    };
     return React.createElement(
       'div',
       null,
-      React.createElement(_antd.Table, { columns: columns, dataSource: this.state.data }),
+      React.createElement(_antd.Table, { columns: columns, dataSource: this.state.data, rowSelection: rowSelection }),
       React.createElement(
         _antd.Button,
         { onClick: this.handleClick1 },
@@ -130,7 +138,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   age: <span class="hljs-number">32</span>,
   address: <span class="hljs-string">'西湖区湖底公园2号'</span>
 }, {
-  key: <span class="hljs-string">'22'</span>,
+  key: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖2'</span>,
   age: <span class="hljs-number">42</span>,
   address: <span class="hljs-string">'西湖区湖底公园2号'</span>
@@ -158,8 +166,17 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     });
   },
   render() {
+    <span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
+    <span class="hljs-keyword">const</span> rowSelection = {
+      onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
+      },
+      onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(selected, selectedRows);
+      }
+    };
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> /&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick1}</span>&gt;</span>加载本地数据1<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
       &amp;nbsp;
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick2}</span>&gt;</span>加载本地数据2<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>

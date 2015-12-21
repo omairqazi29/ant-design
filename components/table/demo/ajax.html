@@ -5,6 +5,12 @@
 
 var _antd = require('antd');
 
+var _reqwest = require('reqwest');
+
+var _reqwest2 = _interopRequireDefault(_reqwest);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
@@ -24,23 +30,21 @@ var columns = [{
   dataIndex: 'address'
 }];
 
-var dataSource = new _antd.Table.DataSource({
-  url: '/components/table/demo/data.json',
-  resolve: function resolve(result) {
-    return result.data;
-  },
-  data: {},
-  // 和后台接口返回的分页数据进行适配
-  getPagination: function getPagination(result) {
+var Test = React.createClass({
+  displayName: 'Test',
+  getInitialState: function getInitialState() {
     return {
-      total: result.totalCount,
-      pageSize: result.pageSize
+      data: [],
+      pagination: {},
+      loading: false
     };
   },
-  // 和后台接口接收的参数进行适配
-  // 参数里提供了分页、筛选、排序的信息
-  getParams: function getParams(pagination, filters, sorter) {
-    console.log('getParams 的参数是：', pagination, filters, sorter);
+  handleTableChange: function handleTableChange(pagination, filters, sorter) {
+    var pager = this.state.pagination;
+    pager.current = pagination.current;
+    this.setState({
+      pagination: pager
+    });
     var params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
@@ -50,73 +54,45 @@ var dataSource = new _antd.Table.DataSource({
     for (var key in filters) {
       params[key] = filters[key];
     }
+    this.fetch(params);
+  },
+  fetch: function fetch() {
+    var _this = this;
+
+    var params = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
     console.log('请求参数：', params);
-    return params;
-  }
-});
-
-var Test = React.createClass({
-  displayName: 'Test',
-
-  getInitialState: function getInitialState() {
-    return {
-      dataSource: null,
-      pagination: {
-        onChange: this.hanlePageChange
+    this.setState({ loading: true });
+    (0, _reqwest2.default)({
+      url: 'demo/data.json',
+      method: 'get',
+      data: params,
+      type: 'json',
+      success: function success(result) {
+        var pagination = _this.state.pagination;
+        pagination.total = result.totalCount;
+        _this.setState({
+          loading: false,
+          data: result.data,
+          pagination: pagination
+        });
       }
-    };
-  },
-  hanlePageChange: function hanlePageChange(page) {
-    // 使用受控属性 current，方便外部设置页数
-    var pagination = this.state.pagination;
-    pagination.current = page;
-    this.setState({
-      pagination: pagination,
-      dataSource: dataSource.clone()
     });
   },
-  refresh: function refresh() {
-    // 回到第一页
-    var pagination = this.state.pagination;
-    pagination.current = 1;
-    this.setState({
-      pagination: pagination,
-      dataSource: dataSource.clone()
-    });
-  },
-  changeAndRefresh: function changeAndRefresh() {
-    // 回到第一页
-    var pagination = this.state.pagination;
-    pagination.current = 1;
-    // 可以修改原来的 dataSource 再发请求
-    this.setState({
-      pagination: pagination,
-      dataSource: dataSource.clone({
-        data: { city: 'hz' }
-      })
-    });
+  componentDidMount: function componentDidMount() {
+    this.fetch();
   },
   render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.Table, { columns: columns, dataSource: this.state.dataSource, pagination: this.state.pagination }),
-      React.createElement(
-        _antd.Button,
-        { type: 'primary', onClick: this.refresh },
-        '加载初始数据'
-      ),
-      ' ',
-      React.createElement(
-        _antd.Button,
-        { onClick: this.changeAndRefresh },
-        '加载 city=hz 的数据'
-      )
-    );
+    return React.createElement(_antd.Table, { columns: columns,
+      dataSource: this.state.data,
+      pagination: this.state.pagination,
+      loading: this.state.loading,
+      onChange: this.handleTableChange });
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> reqwest <span class="hljs-keyword">from</span> <span class="hljs-string">'reqwest'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -137,23 +113,20 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   dataIndex: <span class="hljs-string">'address'</span>
 }];
 
-<span class="hljs-keyword">const</span> dataSource = <span class="hljs-keyword">new</span> Table.DataSource({
-  url: <span class="hljs-string">'/components/table/demo/data.json'</span>,
-  resolve: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
-    <span class="hljs-keyword">return</span> result.data;
-  },
-  data: {},
-  <span class="hljs-comment">// 和后台接口返回的分页数据进行适配</span>
-  getPagination: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+<span class="hljs-keyword">const</span> Test = React.createClass({
+  getInitialState() {
     <span class="hljs-keyword">return</span> {
-      total: result.totalCount,
-      pageSize: result.pageSize
+      data: [],
+      pagination: {},
+      loading: <span class="hljs-literal">false</span>,
     };
   },
-  <span class="hljs-comment">// 和后台接口接收的参数进行适配</span>
-  <span class="hljs-comment">// 参数里提供了分页、筛选、排序的信息</span>
-  getParams: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pagination, filters, sorter</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'getParams 的参数是：'</span>, pagination, filters, sorter);
+  handleTableChange(pagination, filters, sorter) {
+    <span class="hljs-keyword">const</span> pager = <span class="hljs-keyword">this</span>.state.pagination;
+    pager.current = pagination.current;
+    <span class="hljs-keyword">this</span>.setState({
+      pagination: pager
+    });
     <span class="hljs-keyword">const</span> params = {
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
@@ -163,61 +136,38 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> filters) {
       params[key] = filters[key];
     }
+    <span class="hljs-keyword">this</span>.fetch(params);
+  },
+  fetch(params = {}) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'请求参数：'</span>, params);
-    <span class="hljs-keyword">return</span> params;
-  }
-});
-
-<span class="hljs-keyword">const</span> Test = React.createClass({
-  getInitialState() {
-    <span class="hljs-keyword">return</span> {
-      dataSource: <span class="hljs-literal">null</span>,
-      pagination: {
-        onChange: <span class="hljs-keyword">this</span>.hanlePageChange
+    <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">true</span> });
+    reqwest({
+      url: <span class="hljs-string">'demo/data.json'</span>,
+      method: <span class="hljs-string">'get'</span>,
+      data: params,
+      type: <span class="hljs-string">'json'</span>,
+      success: (result) =&gt; {
+        <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
+        pagination.total = result.totalCount;
+        <span class="hljs-keyword">this</span>.setState({
+          loading: <span class="hljs-literal">false</span>,
+          data: result.data,
+          pagination,
+        });
       }
-    };
-  },
-  hanlePageChange(page) {
-    <span class="hljs-comment">// 使用受控属性 current，方便外部设置页数</span>
-    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
-    pagination.current = page;
-    <span class="hljs-keyword">this</span>.setState({
-      pagination,
-      dataSource: dataSource.clone(),
     });
   },
-  refresh() {
-    <span class="hljs-comment">// 回到第一页</span>
-    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
-    pagination.current = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">this</span>.setState({
-      pagination,
-      dataSource: dataSource.clone(),
-    });
-  },
-  changeAndRefresh() {
-    <span class="hljs-comment">// 回到第一页</span>
-    <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
-    pagination.current = <span class="hljs-number">1</span>;
-    <span class="hljs-comment">// 可以修改原来的 dataSource 再发请求</span>
-    <span class="hljs-keyword">this</span>.setState({
-      pagination,
-      dataSource: dataSource.clone({
-        data: { city: <span class="hljs-string">'hz'</span> }
-      }),
-    });
+  componentDidMount() {
+    <span class="hljs-keyword">this</span>.fetch();
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.dataSource}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.refresh}</span>&gt;</span>
-        加载初始数据
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      &amp;nbsp;
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.changeAndRefresh}</span>&gt;</span>
-        加载 city=hz 的数据
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span>
+             <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span>
+             <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span>
+             <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span>
+             <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleTableChange}</span> /&gt;</span>
+    )</span>;
   }
 });
 
@@ -225,10 +175,12 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-ajax">动态加载数据</a>
+      <a href="#demo-ajax">远程加载数据</a>
     </div>
-    <p>远程读取的表格是<strong>更为常见的模式</strong>，下面的表格使用了 <code>dataSource</code> 对象和远程数据源绑定和适配，并具有筛选、排序等功能以及页面 loading 效果。</p>
-<p><strong>注意，此示例是静态数据模拟，数据并不准确，请打开网络面板查看请求。</strong></p>
+    <p>在 <code>0.11.0</code> 以后，<code>dataSource</code> 远程模式被移除，用户可以自行实现数据读取方式。</p>
+<p>这个例子通过简单的 ajax 读取方式，演示了如何从服务端读取并展现数据，具有筛选、排序等功能以及页面 loading 效果。开发者可以自行接入其他数据处理方式。</p>
+<p>另外，本例也展示了筛选排序功能如何交给服务端实现，列不需要指定具体的 <code>onFilter</code> 和 <code>sorter</code> 函数，而是在把筛选和排序的参数发到服务端来处理。</p>
+<p><strong>注意，此示例是静态数据模拟，展示数据不会变化，请打开网络面板查看请求。</strong></p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -1,5 +1,7 @@
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+function camelize(str) {
+  return str.replace (/(?:^|[-_])(\w)/g, function (_, c) {
+    return c ? c.toUpperCase () : '';
+  });
 }
 
 window.require = function (path) {
@@ -7,7 +9,7 @@ window.require = function (path) {
   var namespaces = path.split('/');
   namespaces.forEach(function (key, i) {
     if (i === 2) {
-      key = capitalizeFirstLetter(key);
+      key = camelize(key);
     }
     if (key !== 'lib') {
       if (result[key]) {
@@ -22,7 +24,7 @@ window.require = function (path) {
 
 window['css-animation'] = require('css-animation');
 window['react-router'] = require('react-router');
-window.Clip = require('./clip');
+window.CopyToClipboard = require('react-copy-to-clipboard');
 var antd = require('../index');
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -32,10 +34,12 @@ window.React = React;
 window.ReactDOM = ReactDOM;
 window['object-assign'] = require('object-assign');
 window['classnames'] = require('classnames');
+window['reqwest'] = require('reqwest');
+require('./importCss');
 
-antd.Datepicker.locale = {
-  en_US: require('../components/datepicker/locale/en_US'),
-  zh_CN: require('../components/datepicker/locale/zh_CN'),
+antd.DatePicker.locale = {
+  en_US: require('../components/date-picker/locale/en_US'),
+  zh_CN: require('../components/date-picker/locale/zh_CN'),
 };
 
 antd.Calendar.locale = {
@@ -95,7 +99,8 @@ InstantClickChangeFns.push(function () {
   var Select = antd.Select;
   var Option = Select.Option;
   var versionsHistory = {
-    '0.9.2': '09x.ant.design'
+    '0.9.2': '09x.ant.design',
+    '0.10.4': '010x.ant.design'
   };
   versionsHistory[antdVersion.latest] =
     versionsHistory[antdVersion.latest] || 'ant.design';

@@ -5,8 +5,6 @@
 
 var _antd = require('antd');
 
-var container = document.getElementById('components-timeline-demo-basic');
-
 ReactDOM.render(React.createElement(
   _antd.Timeline,
   null,
@@ -30,8 +28,7 @@ ReactDOM.render(React.createElement(
     null,
     '网络异常正在修复 2015-09-01'
   )
-), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-timeline-demo-basic'</span>);
+), document.getElementById('components-timeline-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Timeline</span>&gt;</span>
@@ -40,7 +37,7 @@ ReactDOM.render(
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>网络异常正在修复 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Timeline</span>&gt;</span>
-, container);</span></code></pre></div>
+, document.getElementById('components-timeline-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -6,10 +6,10 @@
 var _antd = require('antd');
 
 var SubMenu = _antd.Menu.SubMenu;
+var MenuItemGroup = _antd.Menu.ItemGroup;
 
 var Sider = React.createClass({
   displayName: 'Sider',
-
   getInitialState: function getInitialState() {
     return {
       current: '1'
@@ -42,24 +42,32 @@ var Sider = React.createClass({
             )
           ) },
         React.createElement(
-          _antd.Menu.Item,
-          { key: '1' },
-          '选项1'
+          MenuItemGroup,
+          { title: '分组1' },
+          React.createElement(
+            _antd.Menu.Item,
+            { key: '1' },
+            '选项1'
+          ),
+          React.createElement(
+            _antd.Menu.Item,
+            { key: '2' },
+            '选项2'
+          )
         ),
         React.createElement(
-          _antd.Menu.Item,
-          { key: '2' },
-          '选项2'
-        ),
-        React.createElement(
-          _antd.Menu.Item,
-          { key: '3' },
-          '选项3'
-        ),
-        React.createElement(
-          _antd.Menu.Item,
-          { key: '4' },
-          '选项4'
+          MenuItemGroup,
+          { title: '分组2' },
+          React.createElement(
+            _antd.Menu.Item,
+            { key: '3' },
+            '选项3'
+          ),
+          React.createElement(
+            _antd.Menu.Item,
+            { key: '4' },
+            '选项4'
+          )
         )
       ),
       React.createElement(
@@ -137,6 +145,7 @@ var Sider = React.createClass({
 });
 ReactDOM.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
+<span class="hljs-keyword">const</span> MenuItemGroup = Menu.ItemGroup;
 
 <span class="hljs-keyword">const</span> Sider = React.createClass({
   getInitialState() {
@@ -157,10 +166,14 @@ ReactDOM.render(React.createElement(Sider, null), document.getElementById('compo
                  <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{[this.state.current]}</span>
                  <span class="hljs-attribute">mode</span>=<span class="hljs-value">"inline"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">SubMenu</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"sub1"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"mail"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>导航一<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}&gt;
-        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项1<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项2<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"4"</span>&gt;</span>选项4<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">MenuItemGroup</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"分组1"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项1<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项2<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">MenuItemGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">MenuItemGroup</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"分组2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"4"</span>&gt;</span>选项4<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">MenuItemGroup</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">SubMenu</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"sub2"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"appstore"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>导航二<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}&gt;
         <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"5"</span>&gt;</span>选项5<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>

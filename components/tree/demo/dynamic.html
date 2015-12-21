@@ -3,9 +3,9 @@
     <div id="components-tree-demo-dynamic"></div>
     <script>(function(){'use strict';
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
-
 var _antd = require('antd');
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
 
@@ -23,7 +23,6 @@ var generateTreeNodes = function generateTreeNodes() {
 
 var TreeDemo = React.createClass({
   displayName: 'TreeDemo',
-
   timeout: function timeout() {
     var _this = this;
 

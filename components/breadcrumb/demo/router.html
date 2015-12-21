@@ -14,7 +14,6 @@ var Link = ReactRouter.Link;
 
 var Apps = React.createClass({
   displayName: 'Apps',
-
   render: function render() {
     return React.createElement(
       'ul',
@@ -43,7 +42,6 @@ var Apps = React.createClass({
 
 var Home = React.createClass({
   displayName: 'Home',
-
   render: function render() {
     return React.createElement(
       'div',
@@ -83,7 +81,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(
     Route,
-    { name: 'home', breadcrumbName: '首页', path: '/', component: Home, ignoreScrollBehavior: true },
+    { name: 'home', breadcrumbName: '首页', path: '/', component: Home },
     React.createElement(
       Route,
       { name: 'apps', breadcrumbName: '应用列表', path: 'apps', component: Apps },
@@ -124,7 +122,7 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render((
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Router</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"home"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"首页"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Home}</span> <span class="hljs-attribute">ignoreScrollBehavior</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"home"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"首页"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Home}</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"apps"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"应用列表"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"apps"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Apps}</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"app"</span> <span class="hljs-attribute">breadcrumbName</span>=<span class="hljs-value">"应用:id"</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">":id"</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>

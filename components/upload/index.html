@@ -20,7 +20,7 @@ Upload 文件上传 - Ant Design
     <!--[if IE 8]>
     <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
     <![endif]-->
-    <script src="https://as.alipayobjects.com/??component/console-polyfill/0.2.2/index.js,component/es5-shim/4.1.14/es5-shim.min.js,component/es5-shim/4.1.14/es5-sham.min.js,component/html5shiv/3.7.2/html5shiv.min.js,g/component/media-match/2.0.2/media.match.min.js"></script>
+    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>
     <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js"></script>
     <script>
     (function() {
@@ -63,7 +63,7 @@ Upload 文件上传 - Ant Design
         desc: '折叠面板'
       });
       ANT_COMPONENTS.push({
-        title: 'Datepicker',
+        title: 'DatePicker',
         desc: '日期选择框'
       });
       ANT_COMPONENTS.push({
@@ -159,12 +159,12 @@ Upload 文件上传 - Ant Design
         desc: '标签'
       });
       ANT_COMPONENTS.push({
-        title: 'Timeline',
-        desc: '时间轴'
+        title: 'TimePicker',
+        desc: '时间选择框'
       });
       ANT_COMPONENTS.push({
-        title: 'Timepicker',
-        desc: '时间选择框'
+        title: 'Timeline',
+        desc: '时间轴'
       });
       ANT_COMPONENTS.push({
         title: 'Tooltip',
@@ -193,7 +193,7 @@ Upload 文件上传 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.4',
+        latest: '0.11.0-beta1',
         stable: '0.10.4'
       };
     </script>
@@ -219,11 +219,8 @@ Upload 文件上传 - Ant Design
           <li class="">
             <a href="../../spec/introduce">设计</a>
           </li>
-          <li>
-            <a class="nav-link-disabled" href="">案例</a>
-          </li>
           <li class="current">
-            <a href="../../docs/introduce">React</a>
+            <a href="../../docs/introduce">React UI</a>
           </li>
           <li>
             <a target="_blank" href="https://github.com/ant-design/ant-design">Github</a>
@@ -255,8 +252,8 @@ Upload 文件上传 - Ant Design
         </a>
       </li>
       <li class="">
-        <a href="../../docs/upgrade-to-0.10" class="">
-          0.10 升级指南
+        <a href="../../docs/upgrade-notes" class="">
+          升级指南
           <span class="chinese"></span>
         </a>
       </li>
@@ -300,9 +297,9 @@ Upload 文件上传 - Ant Design
             </a>
           </li>
           <li class="">
-            <a href="../datepicker/"
+            <a href="../date-picker/"
                class="">
-              Datepicker
+              DatePicker
               <span class="chinese">日期选择框</span>
             </a>
           </li>
@@ -349,9 +346,9 @@ Upload 文件上传 - Ant Design
             </a>
           </li>
           <li class="">
-            <a href="../timepicker/"
+            <a href="../time-picker/"
                class="">
-              Timepicker
+              TimePicker
               <span class="chinese">时间选择框</span>
             </a>
           </li>
@@ -616,6 +613,18 @@ Upload 文件上传 - Ant Design
 <td>Function</td>
 <td>无</td>
 </tr>
+<tr>
+<td>listType</td>
+<td>上传列表的内建样式，支持两种基本样式 <code>text</code> or <code>picture</code></td>
+<td>String</td>
+<td>&#39;text&#39;</td>
+</tr>
+<tr>
+<td>className</td>
+<td>自定义类名</td>
+<td>String</td>
+<td>无</td>
+</tr>
 </tbody>
 </table>
 <h3 id="onchange">onChange<a href="#onchange" class="anchor">#</a> </h3><p>文件状态改变的回调，返回为：</p>
@@ -638,7 +647,7 @@ Upload 文件上传 - Ant Design
 </ol>
 <h2 id="显示下载链接">显示下载链接<a href="#显示下载链接" class="anchor">#</a> </h2><p>请使用 fileList 属性设置数组项的 url 属性进行展示控制。</p>
 <h2 id="ie-note">IE note<a href="#ie-note" class="anchor">#</a> </h2><ul>
-<li><a href="https://github.com/react-component/upload#ie89-note"><a href="https://github.com/react-component/upload#ie89-note">https://github.com/react-component/upload#ie89-note</a></a></li>
+<li><a href="https://github.com/react-component/upload#ie89-note">https://github.com/react-component/upload#ie89-note</a></li>
 </ul>
 
   </article>
@@ -721,7 +730,6 @@ var _antd = require('antd');
 
 var MyUpload = React.createClass({
   displayName: 'MyUpload',
-
   getInitialState: function getInitialState() {
     return {
       fileList: [{
@@ -890,6 +898,71 @@ ReactDOM.render(
     <p>样式简单一些。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-picture-style">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-picture-style"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var props = {
+  action: '/upload.do',
+  listType: 'picture',
+  defaultFileList: [{
+    uid: -1,
+    name: 'xxx.png',
+    status: 'done',
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+  }, {
+    uid: -2,
+    name: 'yyy.png',
+    status: 'done',
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+  }]
+};
+
+ReactDOM.render(React.createElement(
+  _antd.Upload,
+  props,
+  React.createElement(
+    _antd.Button,
+    { type: 'ghost' },
+    React.createElement(_antd.Icon, { type: 'upload' }),
+    ' 点击上传'
+  )
+), document.getElementById('components-upload-demo-picture-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
+  listType: <span class="hljs-string">'picture'</span>,
+  defaultFileList: [{
+    uid: -<span class="hljs-number">1</span>,
+    name: <span class="hljs-string">'xxx.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+  }, {
+    uid: -<span class="hljs-number">2</span>,
+    name: <span class="hljs-string">'yyy.png'</span>,
+    status: <span class="hljs-string">'done'</span>,
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+  }]
+};
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
+, document.getElementById('components-upload-demo-picture-style'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-picture-style">图片列表样式</a>
+    </div>
+    <p>上传文件为图片，可展示缩略图。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div>
   </div>
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-defaultfilelist">
@@ -907,6 +980,7 @@ var props = {
       console.log(info.fileList);
     }
   },
+
   defaultFileList: [{
     uid: -1,
     name: 'xxx.png',
@@ -1106,11 +1180,11 @@ ReactDOM.render(
       <h2>GitHub</h2>
       <a target="_blank "href="https://github.com/ant-design/ant-design">仓库</a>
       <a target="_blank" href="https://github.com/ant-design/ant-design/tree/master/style">样式</a>
-      <a target="_blank" href="https://github.com/ant-design/antd-bin">开发工具</a>
+      <a target="_blank" href="https://github.com/ant-tool/xtool">开发工具</a>
     </li>
     <li>
       <h2>关于我们</h2>
-      <a href="https://github.com/alipay/x/issues">博客 - Ant UED</a>
+      <a href="https://github.com/ant-ued/blog">博客 - Ant UED</a>
     </li>
     <li>
       <h2>联系我们</h2>

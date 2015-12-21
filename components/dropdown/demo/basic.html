@@ -3,7 +3,7 @@
     <div id="components-dropdown-demo-basic"></div>
     <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var menu = React.createElement(
   _antd.Menu,
@@ -41,12 +41,12 @@ ReactDOM.render(React.createElement(
   _antd.Dropdown,
   { overlay: menu },
   React.createElement(
-    _antd.Button,
-    null,
-    "某按钮 ",
+    "a",
+    { className: "ant-dropdown-link", href: "#" },
+    "触发链接 ",
     React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
@@ -62,16 +62,11 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
-      某按钮 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>
+      触发链接 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div><style>
-.code-box-demo .ant-btn {
-  margin-right: 6px;
-}
-</style>
-
+, document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

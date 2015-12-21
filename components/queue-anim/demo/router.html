@@ -12,7 +12,6 @@ var Link = ReactRouter.Link;
 
 var App = React.createClass({
   displayName: 'App',
-
   render: function render() {
     var key = this.props.location.pathname;
     var keys = key.replace('/', '') ? [key.replace('/', '')] : ['home'];
@@ -61,7 +60,6 @@ var App = React.createClass({
 
 var Home = React.createClass({
   displayName: 'Home',
-
   render: function render() {
     return React.createElement(
       'div',
@@ -109,7 +107,6 @@ var Home = React.createClass({
 
 var Page1 = React.createClass({
   displayName: 'Page1',
-
   render: function render() {
     return React.createElement(
       'div',
@@ -151,7 +148,6 @@ var Page1 = React.createClass({
 
 var Page2 = React.createClass({
   displayName: 'Page2',
-
   render: function render() {
     return React.createElement(
       'div',

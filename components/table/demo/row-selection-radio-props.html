@@ -23,17 +23,17 @@ var columns = [{
   dataIndex: 'address'
 }];
 var data = [{
-  key: '1',
+  id: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
-  key: '2',
+  id: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
-  key: '3',
+  id: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
@@ -56,7 +56,11 @@ var rowSelection = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+function rowKey(record) {
+  return record.id;
+}
+
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -72,17 +76,17 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   dataIndex: <span class="hljs-string">'address'</span>
 }];
 <span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
+  id: <span class="hljs-string">'1'</span>,
   name: <span class="hljs-string">'胡彦斌'</span>,
   age: <span class="hljs-number">32</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="hljs-string">'2'</span>,
+  id: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖'</span>,
   age: <span class="hljs-number">42</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
 }, {
-  key: <span class="hljs-string">'3'</span>,
+  id: <span class="hljs-string">'3'</span>,
   name: <span class="hljs-string">'李大嘴'</span>,
   age: <span class="hljs-number">32</span>,
   address: <span class="hljs-string">'西湖区湖底公园1号'</span>
@@ -105,7 +109,11 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   }
 };
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rowKey</span>(<span class="hljs-params">record</span>) </span>{
+  <span class="hljs-keyword">return</span> record.id;
+}
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">rowKey</span>=<span class="hljs-value">{rowKey}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
 , document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

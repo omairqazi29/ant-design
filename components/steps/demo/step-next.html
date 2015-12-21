@@ -10,7 +10,6 @@
 var _antd = require('antd');
 
 var Step = _antd.Steps.Step;
-var container = document.getElementById('components-steps-demo-step-next');
 var array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 var steps = array.map(function (item, i) {
   return {
@@ -20,7 +19,6 @@ var steps = array.map(function (item, i) {
 
 var App = React.createClass({
   displayName: 'App',
-
   getInitialState: function getInitialState() {
     return {
       currentStep: Math.floor(Math.random() * steps.length)
@@ -67,9 +65,8 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-steps-demo-step-next'));})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
 const Step = Steps.Step;
-const container = document.getElementById('components-steps-demo-step-next');
 const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 const steps = array.map(function(item, i) {
   return {
@@ -108,7 +105,7 @@ const App = React.createClass({
   }
 });
 
-ReactDOM.render(&lt;App /&gt;, container);</code></pre></div>
+ReactDOM.render(&lt;App /&gt;, document.getElementById('components-steps-demo-step-next'));</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -5,11 +5,8 @@
 
 var _antd = require('antd');
 
-var container = document.getElementById('components-switch-demo-disabled');
-
 var Test = React.createClass({
   displayName: 'Test',
-
   getInitialState: function getInitialState() {
     return {
       disabled: true
@@ -36,8 +33,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-switch-demo-disabled'</span>);
+ReactDOM.render(React.createElement(Test, null), document.getElementById('components-switch-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
@@ -60,7 +56,7 @@ ReactDOM.render(React.createElement(Test, null), container);})()</script><div cl
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-switch-demo-disabled'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

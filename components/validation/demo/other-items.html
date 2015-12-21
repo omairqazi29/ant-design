@@ -5,13 +5,15 @@
 
 var _antd = require('antd');
 
+function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+
 var Validator = _antd.Validation.Validator;
 var Option = _antd.Select.Option;
 var RadioGroup = _antd.Radio.Group;
 var FormItem = _antd.Form.Item;
 
 function cx(classNames) {
-  if (typeof classNames === 'object') {
+  if ((typeof classNames === 'undefined' ? 'undefined' : _typeof(classNames)) === 'object') {
     return Object.keys(classNames).filter(function (className) {
       return classNames[className];
     }).join(' ');
@@ -43,7 +45,6 @@ var Demo = React.createClass({
       }
     };
   },
-
   renderValidateStyle: function renderValidateStyle(item) {
     var formData = this.state.formData;
     var status = this.state.status;
@@ -56,13 +57,11 @@ var Demo = React.createClass({
 
     return classes;
   },
-
   handleReset: function handleReset(e) {
     this.refs.validation.reset();
     this.setState(this.getInitialState());
     e.preventDefault();
   },
-
   handleSubmit: function handleSubmit(e) {
     var _this = this;
 
@@ -81,7 +80,6 @@ var Demo = React.createClass({
       console.log(_this.state.formData);
     });
   },
-
   checkBirthday: function checkBirthday(rule, value, callback) {
     if (value && value.getTime() >= Date.now()) {
       callback(new Error('你不可能在未来出生吧!'));
@@ -89,7 +87,6 @@ var Demo = React.createClass({
       callback();
     }
   },
-
   checkPrime: function checkPrime(rule, value, callback) {
     if (value !== 11) {
       callback(new Error('8~12之间的质数明明是11啊!'));
@@ -97,7 +94,6 @@ var Demo = React.createClass({
       callback();
     }
   },
-
   render: function render() {
     var formData = this.state.formData;
     var status = this.state.status;
@@ -241,7 +237,7 @@ var Demo = React.createClass({
                 type: 'date',
                 message: '你的生日是什么呢?'
               }, { validator: this.checkBirthday }] },
-            React.createElement(_antd.Datepicker, { name: 'birthday', value: formData.birthday })
+            React.createElement(_antd.DatePicker, { name: 'birthday', value: formData.birthday })
           )
         ),
         React.createElement(
@@ -281,7 +277,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-other-items'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Select, Radio, Button, Datepicker, InputNumber, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-other-items'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Select, Radio, Button, DatePicker, InputNumber, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Validator = Validation.Validator;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
@@ -444,7 +440,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
                 <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">date</span>',
                 <span class="hljs-attribute">message:</span> '你的生日是什么呢?'
               }, {<span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkBirthday</span>}]}&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">Datepicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"birthday"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.birthday}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"birthday"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.birthday}</span> /&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Validator</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
@@ -480,7 +476,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-other-items">其他表单域校验</a>
     </div>
     <p>提供以下组件表单域的校验。</p>
-<p><code>Select</code> <code>Radio</code> <code>Datepicker</code> <code>InputNumber</code>。</p>
+<p><code>Select</code> <code>Radio</code> <code>DatePicker</code> <code>InputNumber</code>。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

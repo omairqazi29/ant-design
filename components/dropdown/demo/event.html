@@ -35,12 +35,12 @@ ReactDOM.render(React.createElement(
   _antd.Dropdown,
   { overlay: menu },
   React.createElement(
-    _antd.Button,
-    null,
+    'a',
+    { className: 'ant-dropdown-link', href: '#' },
     '鼠标移入，点击菜单 ',
     React.createElement(_antd.Icon, { type: 'down' })
   )
-), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> onClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{key}</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'点击了菜单'</span> + key);
 };
@@ -53,9 +53,9 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>
       鼠标移入，点击菜单 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
 , document.getElementById('components-dropdown-demo-event'));</span></code></pre></div>
   </div>

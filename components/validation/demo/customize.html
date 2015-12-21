@@ -3,13 +3,13 @@
     <div id="components-validation-demo-customize"></div>
     <script>(function(){'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
 var _antd = require('antd');
 
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Validator = _antd.Validation.Validator;
 var FormItem = _antd.Form.Item;
@@ -39,7 +39,6 @@ var Demo = React.createClass({
       rePassStrength: 'L'
     };
   },
-
   handleSubmit: function handleSubmit(e) {
     var _this = this;
 
@@ -55,18 +54,16 @@ var Demo = React.createClass({
       console.log(_this.state.formData);
     });
   },
-
   handleReset: function handleReset(e) {
     this.refs.validation.reset();
     this.setState(this.getInitialState());
     e.preventDefault();
   },
-
   renderValidateStyle: function renderValidateStyle(item) {
     var formData = this.state.formData;
     var status = this.state.status;
 
-    var classes = (0, _classnames2['default'])({
+    var classes = (0, _classnames2.default)({
       'error': status[item].errors,
       'validating': status[item].isValidating,
       'success': formData[item] && !status[item].errors && !status[item].isValidating
@@ -74,7 +71,6 @@ var Demo = React.createClass({
 
     return classes;
   },
-
   getPassStrenth: function getPassStrenth(value, type) {
     if (value) {
       var strength = undefined;
@@ -99,7 +95,6 @@ var Demo = React.createClass({
       }
     }
   },
-
   checkPass: function checkPass(rule, value, callback) {
     this.getPassStrenth(value, 'pass');
 
@@ -109,7 +104,6 @@ var Demo = React.createClass({
 
     callback();
   },
-
   checkPass2: function checkPass2(rule, value, callback) {
     this.getPassStrenth(value, 'rePass');
 
@@ -119,10 +113,9 @@ var Demo = React.createClass({
       callback();
     }
   },
-
   renderPassStrengthBar: function renderPassStrengthBar(type) {
     var strength = type === 'pass' ? this.state.passStrength : this.state.rePassStrength;
-    var classSet = (0, _classnames2['default'])({
+    var classSet = (0, _classnames2.default)({
       'ant-pwd-strength': true,
       'ant-pwd-strength-low': strength === 'L',
       'ant-pwd-strength-medium': strength === 'M',
@@ -151,7 +144,6 @@ var Demo = React.createClass({
       )
     );
   },
-
   render: function render() {
     var formData = this.state.formData;
     var status = this.state.status;
