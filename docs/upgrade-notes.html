@@ -563,18 +563,7 @@
 <section class="main-container">
   <article class="markdown">
     <h1>升级指南 </h1>
-    <h2 id="0-10-gt-0-11-升级指南">0.10 =&gt; 0.11 升级指南<a href="#0-10-gt-0-11-升级指南" class="anchor">#</a> </h2><p><code>0.11.x</code> 版本有大量更新，其中部分为不兼容更新。以下列表为其中不兼容的更新及对应升级方案。如果您在升级过程中遇到下面没有提到的情况，可以到 Github 上面咨询。</p>
-<h3 id="默认加载样式">默认加载样式<a href="#默认加载样式" class="anchor">#</a> </h3><p>样式现在不再会在 <code>antd</code> 中默认加载，如果升级后没有样式，开发者需要手动自行引入样式。</p>
-<div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> <span class="hljs-string">'antd/lib/index.css'</span>;
-<span class="hljs-comment">// 或者</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">'antd/style/index.less'</span>;</code></pre></div><h3 id="表格远程模式">表格远程模式<a href="#表格远程模式" class="anchor">#</a> </h3><p><code>Table</code> 的 <code>dataSource</code> 远程模式被移除，用户需要自行实现数据获取方式，ajax 获取数据的演示可以参见 <a href="TODO">演示</a>。</p>
-<h3 id="timepicker、datepicker-重命名">Timepicker、Datepicker 重命名<a href="#timepicker、datepicker-重命名" class="anchor">#</a> </h3><p><code>Timepicker</code> 被重命名为 <code>TimePicker</code>，<code>Datepicker</code> 被重命名为 <code>DatePicker</code>，需要做以下改动：</p>
-<div class="highlight"><pre><code class="javascript">&lt;Timepicker /&gt; ==&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> /&gt;</span></span></code></pre></div><div class="highlight"><pre><code class="javascript">&lt;Datepicker /&gt; ==&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span></span></code></pre></div><h3 id="受控的-datepicker">受控的 DatePicker<a href="#受控的-datepicker" class="anchor">#</a> </h3><p>由于 <code>DatePicker</code> 已改为 <a href="https://facebook.github.io/react/docs/forms.html#controlled-components">受控组件</a>，所以 <code>DatePicker</code> 显示的值必然与其 <code>value</code> 一致。</p>
-<p>如果无法理解受控组件，只须在发现在选中日期后 <code>Datepicker</code> 显示的值不变的情况后，把其 <code>value</code> 属性改为 <code>defaultValue</code> 即可。</p>
-<h2 id="其他">其他<a href="#其他" class="anchor">#</a> </h2><ul>
-<li>Alert 组件默认不展示样式，可以用 <code>showIcon</code> 属性添加图标。</li>
-<li>TimePicker 的 <code>hourOptions</code> <code>minuteOptions</code> <code>secondOptions</code> 属性已移除，可使用 <code>disabledHours</code> <code>disabledMinutes</code> <code>disabledSeconds</code> 配和 <code>hideDisabled</code> 属性来完成原有功能。<a href="TODO">演示</a></li>
-</ul>
+    <h2 id="0-10-gt-0-11-升级指南">0.10 =&gt; 0.11 升级指南<a href="#0-10-gt-0-11-升级指南" class="anchor">#</a> </h2><p>待补充。</p>
 <h2 id="0-9-gt-0-10-升级指南">0.9 =&gt; 0.10 升级指南<a href="#0-9-gt-0-10-升级指南" class="anchor">#</a> </h2><p><code>0.10.x</code> 版本有大量改动，是一个不完全向下兼容的版本。以下文档尽力列出了 <code>0.9.x</code> 到 <code>0.10.x</code> 的不兼容变动，以帮助开发者升级。</p>
 <ul>
 <li><code>0.10.x</code> 文档：<a href="http://ant.design">http://ant.design</a></li>
