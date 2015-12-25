@@ -27,8 +27,8 @@ Checkbox 多选框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -103,12 +103,12 @@ Checkbox 多选框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Alert',
-        desc: '警告提示'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Alert',
+        desc: '警告提示'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -169,6 +169,10 @@ Checkbox 多选框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Transfer',
+        desc: '穿梭框'
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
@@ -350,6 +354,13 @@ Checkbox 多选框 - Ant Design
                class="">
               TimePicker
               <span class="chinese">时间选择框</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../transfer/"
+               class="">
+              Transfer
+              <span class="chinese">穿梭框</span>
             </a>
           </li>
           <li class="">
@@ -593,6 +604,47 @@ Checkbox 多选框 - Ant Design
 </tr>
 </tbody>
 </table>
+<h3 id="checkbox-group">Checkbox Group<a href="#checkbox-group" class="anchor">#</a> </h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaultValue</td>
+<td>默认选中的选项</td>
+<td>array</td>
+<td></td>
+<td>[]</td>
+</tr>
+<tr>
+<td>value</td>
+<td>指定选中的选项</td>
+<td>array</td>
+<td></td>
+<td>[]</td>
+</tr>
+<tr>
+<td>options</td>
+<td>指定可选项</td>
+<td>array</td>
+<td></td>
+<td>[]</td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>变化时回调函数</td>
+<td>Function(checkedValue)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
   </article>
 <h2 class="component-demos">
@@ -784,6 +836,37 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-disable">不可用</a>
     </div>
     <p>checkbox 不可用。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-group">
+  <div class="code-box-demo">
+    <div id="components-checkbox-demo-group"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var CheckboxGroup = _antd.Checkbox.Group;
+
+function onChange(checkedValues) {
+  console.log('checked = ', checkedValues);
+}
+
+ReactDOM.render(React.createElement(CheckboxGroup, { options: ['Apple', 'Pear', 'Orange'], defaultValue: ['Apple'], onChange: onChange }), document.getElementById('components-checkbox-demo-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> CheckboxGroup = Checkbox.Group;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checkedValues</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span>, checkedValues);
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">CheckboxGroup</span> <span class="hljs-attribute">options</span>=<span class="hljs-value">{['Apple',</span> '<span class="hljs-attribute">Pear</span>', '<span class="hljs-attribute">Orange</span>']} <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{['Apple']}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+, document.getElementById('components-checkbox-demo-group'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-group">Checkbox 组</a>
+    </div>
+    <p>方便的生成一个 Checkbox 组。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

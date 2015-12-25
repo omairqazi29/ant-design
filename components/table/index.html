@@ -27,8 +27,8 @@ Table 表格 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -103,12 +103,12 @@ Table 表格 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Alert',
-        desc: '警告提示'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Alert',
+        desc: '警告提示'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -169,6 +169,10 @@ Table 表格 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Transfer',
+        desc: '穿梭框'
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
@@ -350,6 +354,13 @@ Table 表格 - Ant Design
                class="">
               TimePicker
               <span class="chinese">时间选择框</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../transfer/"
+               class="">
+              Transfer
+              <span class="chinese">穿梭框</span>
             </a>
           </li>
           <li class="">
@@ -1295,7 +1306,10 @@ for (var i = 0; i < 46; i++) {
 var pagination = {
   total: data.length,
   current: 1,
-  showSizeChanger: true
+  showSizeChanger: true,
+  onShowSizeChange: function onShowSizeChange(current, pageSize) {
+    console.log('Current: ', current, '; PageSize: ', pageSize);
+  }
 };
 
 ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -1327,7 +1341,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> pagination = {
   total: data.length,
   current: <span class="hljs-number">1</span>,
-  showSizeChanger: <span class="hljs-literal">true</span>
+  showSizeChanger: <span class="hljs-literal">true</span>,
+  onShowSizeChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, pageSize</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Current: '</span>, current, <span class="hljs-string">'; PageSize: '</span>, pageSize);
+  }
 };
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{pagination}</span> /&gt;</span>

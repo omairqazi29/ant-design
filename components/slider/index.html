@@ -27,8 +27,8 @@ Slider 滑动输入条 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -103,12 +103,12 @@ Slider 滑动输入条 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Alert',
-        desc: '警告提示'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Alert',
+        desc: '警告提示'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -169,6 +169,10 @@ Slider 滑动输入条 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Transfer',
+        desc: '穿梭框'
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
@@ -350,6 +354,13 @@ Slider 滑动输入条 - Ant Design
                class="">
               TimePicker
               <span class="chinese">时间选择框</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../transfer/"
+               class="">
+              Transfer
+              <span class="chinese">穿梭框</span>
             </a>
           </li>
           <li class="">
@@ -627,10 +638,16 @@ Slider 滑动输入条 - Ant Design
 <td>当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入。</td>
 </tr>
 <tr>
-<td>tipFormatter</td>
+<td>onAfterChange</td>
 <td>Function</td>
-<td></td>
-<td>Slider 会把当前值传给 <code>tipFormatter</code>，并在 Tooltip 中显示 <code>tipFormatter</code> 的返回值。</td>
+<td>NOOP</td>
+<td>与 <code>onmouseup</code> 触发时机一致，把当前值作为参数传入。</td>
+</tr>
+<tr>
+<td>tipFormatter</td>
+<td>Function or null</td>
+<td>IDENTITY</td>
+<td>Slider 会把当前值传给 <code>tipFormatter</code>，并在 Tooltip 中显示 <code>tipFormatter</code> 的返回值，若为 null，则隐藏 Tooltip。</td>
 </tr>
 </tbody>
 </table>
@@ -829,7 +846,8 @@ ReactDOM.render(React.createElement(
   'div',
   null,
   React.createElement(_antd.Slider, { defaultValue: 30, onChange: log }),
-  React.createElement(_antd.Slider, { range: true, step: 10, defaultValue: [20, 50], onChange: log })
+  React.createElement(_antd.Slider, { range: true, step: 10, defaultValue: [20, 50], onChange: log }),
+  React.createElement(_antd.Slider, { defaultValue: 30, onAfterChange: log })
 ), document.getElementById('components-slider-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log</span>(<span class="hljs-params">value</span>) </span>{
@@ -840,6 +858,7 @@ ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{log}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">range</span> <span class="hljs-attribute">step</span>=<span class="hljs-value">{10}</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{[20,</span> <span class="hljs-attribute">50</span>]} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{log}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{30}</span> <span class="hljs-attribute">onAfterChange</span>=<span class="hljs-value">{log}</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , document.getElementById('components-slider-demo-event'));</span></code></pre></div>
   </div>
@@ -847,7 +866,7 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-event">事件</a>
     </div>
-    <p>当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入。</p>
+    <p>当 Slider 的值发生改变时，会触发 <code>onChange</code> 事件，并把改变后的值作为参数传入。在 <code>onmouseup</code> 时，会触发 <code>onAfterChange</code> 事件，并把当前值作为参数传入。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -1075,20 +1094,27 @@ function formatter(value) {
   return '$' + value;
 }
 
-ReactDOM.render(React.createElement(_antd.Slider, { tipFormatter: formatter }), document.getElementById('components-slider-demo-tip-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(
+  'div',
+  null,
+  React.createElement(_antd.Slider, { tipFormatter: formatter }),
+  React.createElement(_antd.Slider, { tipFormatter: null })
+), document.getElementById('components-slider-demo-tip-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatter</span>(<span class="hljs-params">value</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-string">'$'</span> + value;
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">tipFormatter</span>=<span class="hljs-value">{formatter}</span> /&gt;</span>
-, document.getElementById('components-slider-demo-tip-formatter'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">tipFormatter</span>=<span class="hljs-value">{formatter}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> <span class="hljs-attribute">tipFormatter</span>=<span class="hljs-value">{null}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-slider-demo-tip-formatter'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-tip-formatter">格式化 <code>Tooltip</code> 内容</a>
     </div>
-    <p>使用 <code>tipFormatter</code> 可以格式化 <code>Tooltip</code> 的内容。</p>
+    <p>使用 <code>tipFormatter</code> 可以格式化 <code>Tooltip</code> 的内容，设置 <code>tipFormatter={null}</code>，则隐藏 <code>Tooltip</code>。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

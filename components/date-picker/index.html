@@ -27,8 +27,8 @@ DatePicker 日期选择框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -103,12 +103,12 @@ DatePicker 日期选择框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Alert',
-        desc: '警告提示'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Alert',
+        desc: '警告提示'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -169,6 +169,10 @@ DatePicker 日期选择框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Tooltip',
         desc: '文字提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Transfer',
+        desc: '穿梭框'
       });
       ANT_COMPONENTS.push({
         title: 'Tree',
@@ -350,6 +354,13 @@ DatePicker 日期选择框 - Ant Design
                class="">
               TimePicker
               <span class="chinese">时间选择框</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="../transfer/"
+               class="">
+              Transfer
+              <span class="chinese">穿梭框</span>
             </a>
           </li>
           <li class="">
@@ -556,7 +567,7 @@ DatePicker 日期选择框 - Ant Design
     </h1>
     <p>输入或选择日期的控件。</p>
 <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><p>当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。</p>
-<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-01-01"</span> /&gt;</span></code></pre></div><blockquote>
+<h2 id="api">API<a href="#api" class="anchor">#</a> </h2><h3 id="datepicker">DatePicker<a href="#datepicker" class="anchor">#</a> </h3><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-01-01"</span> /&gt;</span></code></pre></div><blockquote>
 <p>注意：<code>0.11+</code> 后 <code>Datepicker</code> 改名为 <code>DatePicker</code>。</p>
 </blockquote>
 <table>
@@ -629,8 +640,57 @@ DatePicker 日期选择框 - Ant Design
 <td>object</td>
 <td><a href="https://github.com/ant-design/ant-design/issues/424">默认配置</a></td>
 </tr>
+<tr>
+<td>showTime</td>
+<td>增加时间选择功能</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onOk</td>
+<td>点击确定按钮的回调</td>
+<td>function</td>
+<td>无</td>
+</tr>
 </tbody>
 </table>
+<h3 id="rangepicker">RangePicker<a href="#rangepicker" class="anchor">#</a> </h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>日期</td>
+<td>[string, string]</td>
+<td>无</td>
+</tr>
+<tr>
+<td>defaultValue</td>
+<td>默认日期</td>
+<td>[string, string]</td>
+<td>无</td>
+</tr>
+<tr>
+<td>format</td>
+<td>展示的日期格式</td>
+<td>string</td>
+<td>&quot;yyyy-MM-dd HH:mm:ss&quot;</td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>时间发生变化的回调，发生在用户选择时间时</td>
+<td>function([Date start, Date end])</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<p><code>disabled</code> <code>style</code> <code>popupStyle</code> <code>size</code> <code>locale</code> <code>showTime</code> <code>onOk</code> 属性与 DatePicker 的一致。</p>
 <style>
 .code-box-demo .ant-calendar-picker {
   margin: 0 8px 12px 0;
@@ -650,10 +710,18 @@ DatePicker 日期选择框 - Ant Design
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: '2015-12-12' }), document.getElementById('components-date-picker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+function onChange(value) {
+  console.log(value);
+}
+
+ReactDOM.render(React.createElement(_antd.DatePicker, { onChange: onChange }), document.getElementById('components-date-picker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(value);
+}
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-12-12"</span> /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
 , document.getElementById('components-date-picker-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -691,258 +759,6 @@ ReactDOM.render(
       <a href="#picker-demo-size">三种大小</a>
     </div>
     <p>三种大小的输入框，大的用在表单中，中的为默认。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="picker-demo-time">
-  <div class="code-box-demo">
-    <div id="components-date-picker-demo-time"></div>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var DateTimePicker = React.createClass({
-  displayName: 'DateTimePicker',
-  handleChange: function handleChange(from, value) {
-    this.result = this.result || new Date();
-    if (!value) {
-      if (from === 'date') {
-        this.selectedDate = false;
-      } else {
-        this.selectedTime = false;
-      }
-      return;
-    }
-    if (from === 'date') {
-      this.result.setFullYear(value.getFullYear());
-      this.result.setMonth(value.getMonth());
-      this.result.setDate(value.getDate());
-      this.selectedDate = true;
-    } else {
-      this.result.setHours(value.getHours());
-      this.result.setMinutes(value.getMinutes());
-      this.result.setSeconds(value.getSeconds());
-      this.selectedTime = true;
-    }
-    if (this.selectedDate && this.selectedTime) {
-      this.props.onSelect(this.result);
-    }
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.DatePicker, { onChange: this.handleChange.bind(null, 'date') }),
-      React.createElement(_antd.TimePicker, { onChange: this.handleChange.bind(null, 'time') })
-    );
-  }
-});
-
-function onSelect(value) {
-  console.log('选择了时间：', value);
-}
-
-ReactDOM.render(React.createElement(DateTimePicker, { onSelect: onSelect }), document.getElementById('components-date-picker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker, TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> DateTimePicker = React.createClass({
-  handleChange(from, value) {
-    <span class="hljs-keyword">this</span>.result = <span class="hljs-keyword">this</span>.result || <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
-    <span class="hljs-keyword">if</span> (!value) {
-      <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {
-        <span class="hljs-keyword">this</span>.selectedDate = <span class="hljs-literal">false</span>;
-      } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">this</span>.selectedTime = <span class="hljs-literal">false</span>;
-      }
-      <span class="hljs-keyword">return</span>;
-    }
-    <span class="hljs-keyword">if</span> (from === <span class="hljs-string">'date'</span>) {
-      <span class="hljs-keyword">this</span>.result.setFullYear(value.getFullYear());
-      <span class="hljs-keyword">this</span>.result.setMonth(value.getMonth());
-      <span class="hljs-keyword">this</span>.result.setDate(value.getDate());
-      <span class="hljs-keyword">this</span>.selectedDate = <span class="hljs-literal">true</span>;
-    } <span class="hljs-keyword">else</span> {
-      <span class="hljs-keyword">this</span>.result.setHours(value.getHours());
-      <span class="hljs-keyword">this</span>.result.setMinutes(value.getMinutes());
-      <span class="hljs-keyword">this</span>.result.setSeconds(value.getSeconds());
-      <span class="hljs-keyword">this</span>.selectedTime = <span class="hljs-literal">true</span>;
-    }
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.selectedDate &amp;&amp; <span class="hljs-keyword">this</span>.selectedTime) {
-      <span class="hljs-keyword">this</span>.props.onSelect(<span class="hljs-keyword">this</span>.result);
-    }
-  },
-  render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">date</span>')} /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">time</span>')} /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
-  }
-});
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onSelect</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'选择了时间：'</span>, value);
-}
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DateTimePicker</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{onSelect}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-time'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#picker-demo-time">日期时间选择</a>
-    </div>
-    <p>和 <a href="/components/timepicer">时间选择框</a> 配合使用。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="picker-demo-range">
-  <div class="code-box-demo">
-    <div id="components-date-picker-demo-range"></div>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var disabledDate = function disabledDate(current, value) {
-  // can not select days after today
-  return current && current.getTime() > Date.now();
-};
-
-ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), document.getElementById('components-date-picker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, value</span>) </span>{
-  <span class="hljs-comment">// can not select days after today</span>
-  <span class="hljs-keyword">return</span> current &amp;&amp; current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
-};
-
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{disabledDate}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-range'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#picker-demo-range">指定不可选择日期</a>
-    </div>
-    <p>设置 <code>disabledDate</code> 方法，来确定不可选时段。</p>
-<p>如上例：不可选择今天之后的日期。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="picker-demo-locale">
-  <div class="code-box-demo">
-    <div id="components-date-picker-demo-locale"></div>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var _en_US = require('antd/lib/date-picker/locale/en_US');
-
-var _en_US2 = _interopRequireDefault(_en_US);
-
-var _objectAssign = require('object-assign');
-
-var _objectAssign2 = _interopRequireDefault(_objectAssign);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = React.createClass({
-  displayName: 'App',
-  getInitialState: function getInitialState() {
-    return {
-      locale: (0, _objectAssign2.default)({}, _en_US2.default, {
-        timezoneOffset: 0 * 60,
-        firstDayOfWeek: 0,
-        minimalDaysInFirstWeek: 1
-      })
-    };
-  },
-  render: function render() {
-    return React.createElement(_antd.DatePicker, { locale: this.state.locale });
-  }
-});
-
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-date-picker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/date-picker/locale/en_US'</span>;
-<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
-
-<span class="hljs-keyword">const</span> App = React.createClass({
-  getInitialState() {
-    <span class="hljs-keyword">return</span> {
-      locale: assign({}, enUS, {
-        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
-        firstDayOfWeek: <span class="hljs-number">0</span>,
-        minimalDaysInFirstWeek: <span class="hljs-number">1</span>
-      })
-    };
-  },
-  render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
-  }
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-date-picker-demo-locale'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#picker-demo-locale">国际化</a>
-    </div>
-    <p>通过 <code>locale</code> 配置时区、语言等, 默认支持 en_US, zh_CN</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-formatter">
-  <div class="code-box-demo">
-    <div id="components-date-picker-demo-formatter"></div>
-    <script>(function(){"use strict";
-
-var _antd = require("antd");
-
-ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-date-picker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015/01/01"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy/MM/dd"</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-formatter'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#picker-demo-formatter">日期格式</a>
-    </div>
-    <p>使用 <code>format</code> 属性，可以自定义你需要的日期显示格式，如 <code>yyyy/MM/dd</code>。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="picker-demo-select">
-  <div class="code-box-demo">
-    <div id="components-date-picker-demo-select"></div>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var Picker = React.createClass({
-  displayName: 'Picker',
-
-  handleChange: function handleChange(value) {
-    console.log(new Date(value.getTime()));
-  },
-  render: function render() {
-    return React.createElement(_antd.DatePicker, { onChange: this.handleChange });
-  }
-});
-
-ReactDOM.render(React.createElement(Picker, null), document.getElementById('components-date-picker-demo-select'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> Picker = React.createClass({
-  handleChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(value.getTime()));
-  },
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>;</span>
-  }
-});
-
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Picker</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-select'));</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#picker-demo-select">选择日期</a>
-    </div>
-    <p>通过设置选择日期的回调事件 <code>onChange</code>，完成交互行为。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="picker-demo-disabled">
@@ -1061,9 +877,9 @@ ReactDOM.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#picker-demo-start-end">日期范围选择</a>
+      <a href="#picker-demo-start-end">日期范围一</a>
     </div>
-    <p>设置 <code>disabledDate</code> 方法，来约束开始和结束日期。</p>
+    <p>可以设置 <code>disabledDate</code> 方法，来约束开始和结束日期。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="picker-demo-month-picker">
@@ -1084,7 +900,186 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#picker-demo-month-picker">月选择器</a>
     </div>
-    <p>使用 MonthPicker 实现月选择器.</p>
+    <p>使用 <code>MonthPicker</code> 实现月选择器.</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-formatter">
+  <div class="code-box-demo">
+    <div id="components-date-picker-demo-formatter"></div>
+    <script>(function(){"use strict";
+
+var _antd = require("antd");
+
+ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-date-picker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015/01/01"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy/MM/dd"</span> /&gt;</span>
+, document.getElementById('components-date-picker-demo-formatter'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#picker-demo-formatter">日期格式</a>
+    </div>
+    <p>使用 <code>format</code> 属性，可以自定义你需要的日期显示格式，如 <code>yyyy/MM/dd</code>。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="picker-demo-time">
+  <div class="code-box-demo">
+    <div id="components-date-picker-demo-time"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+function onChange(value) {
+  console.log('选择了时间：', value);
+}
+
+ReactDOM.render(React.createElement(_antd.DatePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange, style: { width: 160 } }), document.getElementById('components-date-picker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'选择了时间：'</span>, value);
+}
+
+ReactDOM.render(
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">160</span>}} /&gt;</span>
+, document.getElementById('components-date-picker-demo-time'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#picker-demo-time">日期时间选择</a>
+    </div>
+    <p>增加选择时间功能。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="picker-demo-disabled-date">
+  <div class="code-box-demo">
+    <div id="components-date-picker-demo-disabled-date"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var disabledDate = function disabledDate(current, value) {
+  // can not select days after today
+  return current && current.getTime() > Date.now();
+};
+
+ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), document.getElementById('components-date-picker-demo-disabled-date'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, value</span>) </span>{
+  <span class="hljs-comment">// can not select days after today</span>
+  <span class="hljs-keyword">return</span> current &amp;&amp; current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
+};
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{disabledDate}</span> /&gt;</span>
+, document.getElementById('components-date-picker-demo-disabled-date'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#picker-demo-disabled-date">指定不可选择日期</a>
+    </div>
+    <p>设置 <code>disabledDate</code> 方法，来确定不可选时段。</p>
+<p>如上例：不可选择今天之后的日期。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="picker-demo-range">
+  <div class="code-box-demo">
+    <div id="components-date-picker-demo-range"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var RangePicker = _antd.DatePicker.RangePicker;
+
+function onChange(value) {
+  console.log('From: ', value[0], ', to: ', value[1]);
+}
+ReactDOM.render(React.createElement(
+  'div',
+  null,
+  React.createElement(RangePicker, { style: { width: 184 }, onChange: onChange }),
+  React.createElement('br', null),
+  React.createElement(RangePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange })
+), document.getElementById('components-date-picker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> RangePicker = DatePicker.RangePicker;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'From: '</span>, value[<span class="hljs-number">0</span>], <span class="hljs-string">', to: '</span>, value[<span class="hljs-number">1</span>]);
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">184</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-date-picker-demo-range'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#picker-demo-range">日期范围二</a>
+    </div>
+    <p>使用 <code>RangePicker</code> 实现日期范围选择有更好的交互体验。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="picker-demo-locale">
+  <div class="code-box-demo">
+    <div id="components-date-picker-demo-locale"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var _en_US = require('antd/lib/date-picker/locale/en_US');
+
+var _en_US2 = _interopRequireDefault(_en_US);
+
+var _objectAssign = require('object-assign');
+
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = React.createClass({
+  displayName: 'App',
+  getInitialState: function getInitialState() {
+    return {
+      locale: (0, _objectAssign2.default)({}, _en_US2.default, {
+        timezoneOffset: 0 * 60,
+        firstDayOfWeek: 0,
+        minimalDaysInFirstWeek: 1
+      })
+    };
+  },
+  render: function render() {
+    return React.createElement(_antd.DatePicker, { locale: this.state.locale });
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-date-picker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/date-picker/locale/en_US'</span>;
+<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
+
+<span class="hljs-keyword">const</span> App = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      locale: assign({}, enUS, {
+        timezoneOffset: <span class="hljs-number">0</span> * <span class="hljs-number">60</span>,
+        firstDayOfWeek: <span class="hljs-number">0</span>,
+        minimalDaysInFirstWeek: <span class="hljs-number">1</span>,
+      })
+    };
+  },
+  render() {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{this.state.locale}</span> /&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-date-picker-demo-locale'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#picker-demo-locale">国际化</a>
+    </div>
+    <p>通过 <code>locale</code> 配置时区、语言等, 默认支持 en_US, zh_CN</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
