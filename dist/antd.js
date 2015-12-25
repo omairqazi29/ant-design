@@ -10118,7 +10118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              className: 'ant-calendar-range-picker-input' }),
 	            _react2["default"].createElement(
 	              'span',
-	              null,
+	              { className: 'ant-calendar-range-picker-separator' },
 	              ' ~ '
 	            ),
 	            _react2["default"].createElement('input', { disabled: disabled,
@@ -24236,7 +24236,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    rowClassName: _react2['default'].PropTypes.func,
 	    expandedRowClassName: _react2['default'].PropTypes.func,
 	    childrenColumnName: _react2['default'].PropTypes.string,
-	    onExpandedRowsChange: _react2['default'].PropTypes.func
+	    onExpandedRowsChange: _react2['default'].PropTypes.func,
+	    indentSize: _react2['default'].PropTypes.number
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
@@ -24259,7 +24260,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      prefixCls: 'rc-table',
 	      bodyStyle: {},
 	      style: {},
-	      childrenColumnName: 'children'
+	      childrenColumnName: 'children',
+	      indentSize: 15
 	    };
 	  },
 	
@@ -24362,7 +24364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    );
 	  },
 	
-	  getRowsByData: function getRowsByData(data, visible) {
+	  getRowsByData: function getRowsByData(data, visible, indent) {
 	    var props = this.props;
 	    var columns = props.columns;
 	    var childrenColumnName = props.childrenColumnName;
@@ -24383,6 +24385,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      var className = rowClassName(record, i);
 	      rst.push(_react2['default'].createElement(_TableRow2['default'], {
+	        indent: indent,
+	        indentSize: props.indentSize,
 	        className: className,
 	        record: record,
 	        expandIconAsCell: expandIconAsCell,
@@ -24403,14 +24407,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        rst.push(this.getExpandedRow(key, expandedRowContent, subVisible, expandedRowClassName(record, i)));
 	      }
 	      if (childrenColumn) {
-	        rst = rst.concat(this.getRowsByData(childrenColumn, subVisible));
+	        rst = rst.concat(this.getRowsByData(childrenColumn, subVisible, indent + 1));
 	      }
 	    }
 	    return rst;
 	  },
 	
 	  getRows: function getRows() {
-	    return this.getRowsByData(this.state.data, true);
+	    return this.getRowsByData(this.state.data, true, 0);
 	  },
 	
 	  getColGroup: function getColGroup() {
@@ -24538,6 +24542,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var expanded = props.expanded;
 	    var expandable = props.expandable;
 	    var expandIconAsCell = props.expandIconAsCell;
+	    var indent = props.indent;
+	    var indentSize = props.indentSize;
 	
 	    for (var i = 0; i < columns.length; i++) {
 	      var col = columns[i];
@@ -24550,6 +24556,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var colSpan = undefined;
 	      var rowSpan = undefined;
 	      var notRender = false;
+	      var indentText = undefined;
 	
 	      if (i === 0 && expandable) {
 	        expandIcon = _react2['default'].createElement('span', {
@@ -24581,10 +24588,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (rowSpan === 0 || colSpan === 0) {
 	        notRender = true;
 	      }
+	
+	      indentText = i === 0 ? _react2['default'].createElement('span', { style: { paddingLeft: indentSize * indent + 'px' }, className: prefixCls + '-indent indent-level-' + indent }) : null;
+	
 	      if (!notRender) {
 	        cells.push(_react2['default'].createElement(
 	          'td',
 	          { key: col.key, colSpan: colSpan, rowSpan: rowSpan, className: '' + colClassName },
+	          indentText,
 	          expandIcon,
 	          text
 	        ));
@@ -36042,15 +36053,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(Form, [{
 	    key: 'render',
 	    value: function render() {
-	      var _formClassName;
+	      var _classNames;
 	
-	      var prefixCls = this.props.prefixCls;
-	      var formClassName = (_formClassName = {}, _defineProperty(_formClassName, prefixCls + '-horizontal', this.props.horizontal), _defineProperty(_formClassName, prefixCls + '-inline', this.props.inline), _formClassName);
-	      var classes = (0, _classnames2["default"])(formClassName);
+	      var _props = this.props;
+	      var prefixCls = _props.prefixCls;
+	      var className = _props.className;
+	
+	      var formClassName = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, prefixCls + '-horizontal', this.props.horizontal), _defineProperty(_classNames, prefixCls + '-inline', this.props.inline), _classNames));
 	
 	      return _react2["default"].createElement(
 	        'form',
-	        _extends({}, this.props, { className: classes }),
+	        _extends({}, this.props, { className: formClassName }),
 	        this.props.children
 	      );
 	    }
@@ -38218,7 +38231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.11.0-beta3",
+		"version": "0.11.0-beta4",
 		"stableVersion": "0.10.4",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
@@ -38274,7 +38287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-slider": "~3.3.0",
 			"rc-steps": "~1.4.1",
 			"rc-switch": "~1.3.1",
-			"rc-table": "~3.6.2",
+			"rc-table": "~3.7.0",
 			"rc-tabs": "~5.5.0",
 			"rc-time-picker": "~1.0.0",
 			"rc-tooltip": "~3.3.0",

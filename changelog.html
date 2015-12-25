@@ -197,7 +197,7 @@
     <script src="./static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.11.0-beta3',
+        latest: '0.11.0-beta4',
         stable: '0.10.4'
       };
     </script>
@@ -563,7 +563,101 @@
 <section class="main-container">
   <article class="markdown">
     <h1>更新日志 </h1>
-    <h2 id="0-10-4-2015-11-30">0.10.4 <code>2015-11-30</code><a href="#0-10-4-2015-11-30" class="anchor">#</a> </h2><ul>
+    <h2 id="0-11-0-2015-12-25">0.11.0 <code>2015-12-25</code><a href="#0-11-0-2015-12-25" class="anchor">#</a> </h2><ul>
+<li>移除默认加载的样式文件，样式现在需要独立加载。</li>
+<li>Modal、Popconfirm、Table、TimePicker 支持国际化配置。</li>
+<li>按钮圆角调整为 <code>6px</code>。</li>
+<li>新增虚线型按钮。</li>
+<li>新增 <a href="http://ant.design/components/form/#demo-search-input">通用搜索框</a> 样式。</li>
+<li>新增图片上传列表样式<a href="http://ant.design/components/upload/#demo-picture-style">演示</a>。</li>
+<li>部分设计资源开放 <a href="http://ant.design/spec/tools">下载</a>。</li>
+<li>新增 <a href="http://ant.design/spec/layout/#demo-ceiling">吊顶规范</a>。</li>
+<li>新增穿梭框 <a href="http://ant.design/components/transfer/">Transfer</a> 组件。</li>
+<li>新增小尺寸的 Switch 开关组件。</li>
+<li>增加更多的图标。<a href="https://github.com/ant-design/ant-design/commit/087c64649d73206a4d62e52f9b3f6042c1d28608#diff-dc1a1f4794c1c4ee3b083381d4c50c47R180">#</a></li>
+<li>调整警告和错误状态色。</li>
+<li>Tree 节点标签增加 2px 圆角。</li>
+<li>Select<ul>
+<li>选中样式进行了调整。</li>
+<li>在标签/多选模式下，选中或删除选项增加了动画效果。</li>
+</ul>
+</li>
+<li>Pagination 的 <code>pageSize</code> 选择器样式与 Select 样式统一。</li>
+<li>Alert<ul>
+<li>默认样式不展示图标。</li>
+<li>带描述的警告框图标改为描线图标。</li>
+<li><code>type=&quot;warn&quot;</code> 图标修改。</li>
+</ul>
+</li>
+<li>Dropdown 新增带菜单触发的按钮 <code>Dropdown.Button</code>。<a href="http://ant.design/components/dropdown/#demo-dropdown-button">演示</a></li>
+<li>Menu 新增 <code>Menu.ItemGroup</code> 用于把菜单项分组。</li>
+<li>Badge<ul>
+<li>徽章可以独立使用。<a href="http://ant.design/components/badge/#demo-no-wrapper">演示</a></li>
+<li>支持设置封顶的 <code>99+</code> 的数字。<a href="http://ant.design/components/badge/#demo-overflow">演示</a></li>
+</ul>
+</li>
+<li>Slider<ul>
+<li>增加 <code>onAfterChange</code> 事件。<a href="http://ant.design/components/slider/#demo-event">演示</a></li>
+<li>现在设置 <code>tipFormatter={null}</code> 可以隐藏 <code>Tooltip</code>。</li>
+<li>双滑块拖动体验优化，一个滑块在拖动时可以直接跨过另一滑块。</li>
+</ul>
+</li>
+<li>Breadcrumb 可以自定义分隔符。<a href="http://ant.design/components/breadcrumb/#demo-separator">演示</a></li>
+<li>Popconfirm 添加 <code>visible</code> 属性，使其可以控制是否显示。<a href="http://ant.design/components/popconfirm/#demo-dynamic-trigger">演示</a></li>
+<li>修复 Icon <code>ref</code> 引起的报错。</li>
+<li>Tabs<ul>
+<li>新增 <a href="http://ant.design/components/tabs/#demo-card">卡片式页签</a>。</li>
+<li>调整 <a href="http://ant.design/components/tabs/#demo-editable-card">新增和关闭页签</a> 的样式。</li>
+<li>现在支持页签的四个位置 <code>tabPosition=&quot;top|right|bottom|left&quot;</code>。</li>
+<li>移除 <code>animation</code> 属性，并在 <code>tabPosition=&quot;top|bottom&quot;</code> 时默认启用切换动画。</li>
+</ul>
+</li>
+<li>Timepicker<ul>
+<li>重命名为 TimePicker。</li>
+<li>新增 <code>value</code> 属性。</li>
+<li>新增属性 <code>disabledHours</code> <code>disabledMinutes</code> <code>disabledSeconds</code>。<a href="http://ant.design/components/time-picker/#picker-demo-disable-options">演示</a></li>
+<li>移除 <code>hourOptions</code> <code>minuteOptions</code> <code>secondOptions</code>，新增 <code>hideDisabled</code> 属性用于替代。</li>
+</ul>
+</li>
+<li>Datepicker<ul>
+<li>重命名为 DatePicker。</li>
+<li>修改 <code>showTime</code> 的交互。<a href="http://ant.design/components/date-picker/#picker-demo-time">演示</a></li>
+<li>新增 <a href="http://ant.design/components/date-picker/#picker-demo-range">日期范围选择控件</a>。</li>
+<li>修正为受控组件。</li>
+</ul>
+</li>
+<li>Table<ul>
+<li>新增 <a href="http://ant.design/components/table/#demo-size">紧凑型表格</a>。</li>
+<li>允许监听分页的 <code>onShowSizeChange</code>。<a href="http://ant.design/components/table/#demo-paging">演示</a></li>
+<li>移除 <code>dataSource</code> 的远程模式。</li>
+<li>优化表格对树形数据的显示。<a href="TODO">演示</a></li>
+<li>优化了筛选菜单的样式，并添加了最大高度。<a href="http://ant.design/components/table/#demo-head">演示</a>。</li>
+<li>修复 column.key 设置失效的问题。<a href="https://github.com/ant-design/ant-design/issues/642">#642</a></li>
+<li>修复设置时 rowKey 时单选会导致全部选中的问题。<a href="https://github.com/ant-design/ant-design/issues/697">#697</a></li>
+<li>修复一个列重新渲染导致选项错乱的问题。<a href="https://github.com/ant-design/ant-design/issues/418#issuecomment-163093580">#418</a></li>
+<li>修复选择列无法设置宽度的问题。<a href="https://github.com/ant-design/ant-design/issues/649">#649</a></li>
+</ul>
+</li>
+<li>Form<ul>
+<li>修复了 Textarea 无法输入的问题。<a href="https://github.com/ant-design/ant-design/issues/646">#646</a></li>
+<li>修复了 Textarea 设置 <code>cols</code> 和 <code>rows</code> 属性失效的问题。<a href="https://github.com/ant-design/ant-design/issues/694">#694</a></li>
+<li>修复无法设置 <code>className</code> 的问题。<a href="https://github.com/ant-design/ant-design/issues/711">#711</a></li>
+</ul>
+</li>
+<li>工具<ul>
+<li>替换 <code>antd build</code> 为 <a href="https://github.com/ant-tool/atool-build">atool-build</a>，重构，并改善了 webpack 配置的自定义方式</li>
+<li>替换 <code>antd server</code> 为 <a href="https://github.com/dora-js/dora">dora</a>，一个完全插件化的开发服务器，支持<a href="https://github.com/dora-js/dora-plugin-proxy">代理转发和数据 Mock</a>、<a href="https://github.com/dora-js/dora-plugin-atool-build">atool-build</a>、<a href="https://github.com/dora-js/dora-plugin-hmr">热替换</a></li>
+<li>新增 babel 插件 <a href="https://github.com/ant-design/babel-plugin-antd">babel-plugin-antd</a>，转换 <code>import {Button} from &#39;antd&#39;</code> 为 <code>import Button from &#39;antd/lib/button&#39;</code></li>
+<li>antd-init@0.5.0，支持以上改动</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><a href="http://ant.design/docs/upgrade-notes">0.11 升级指南</a></li>
+</ul>
+</blockquote>
+<h2 id="0-10-4-2015-11-30">0.10.4 <code>2015-11-30</code><a href="#0-10-4-2015-11-30" class="anchor">#</a> </h2><ul>
 <li>将 media-match 加入默认的 polyfill 文件中。<a href="https://github.com/ant-design/ant-design/commit/562697423b1139eb324c1dceb051c143f4870ed7">5626974</a></li>
 <li>修复了 <a href="http://ant.design/components/datepicker/#demo-month-picker">MonthPicker</a> 报错问题，并增加了相关演示。</li>
 <li>修复 RadioGroup 中的 Radio/RadioButton 无法单独设置 disabled 的问题。<a href="https://github.com/ant-design/ant-design/issues/603">#603</a></li>

@@ -4318,7 +4318,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-calendar {
   position: relative;
   outline: none;
-  width: 253px;
+  width: 231px;
   border: 1px solid #d9d9d9;
   list-style: none;
   font-size: 12px;
@@ -4410,7 +4410,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   right: 29px;
 }
 .ant-calendar-calendar-body {
-  padding: 5px 8px;
+  padding: 4px 8px;
 }
 .ant-calendar table {
   border-collapse: collapse;
@@ -4447,10 +4447,11 @@ fieldset[disabled] .ant-btn-dashed.active {
   display: block;
   margin: 0 auto;
   color: #666;
-  border-radius: 4px 4px;
+  border-radius: 4px;
   width: 20px;
   height: 20px;
   line-height: 18px;
+  border: 1px solid transparent;
   padding: 0;
   background: transparent;
   text-align: center;
@@ -4466,9 +4467,9 @@ fieldset[disabled] .ant-btn-dashed.active {
   background: #57c5f7;
 }
 .ant-calendar-today .ant-calendar-date {
-  border: 1px solid #96dbfa;
-  line-height: 18px;
-  background: #eaf8fe;
+  border-color: #2db7f5;
+  font-weight: bold;
+  color: #2db7f5;
 }
 .ant-calendar-selected-day .ant-calendar-date {
   background: #2db7f5;
@@ -4502,14 +4503,14 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-calendar-footer {
   padding: 0 15px;
-  height: 42px;
-  line-height: 42px;
+  height: 38px;
+  line-height: 38px;
   border-top: 1px solid #e9e9e9;
 }
 .ant-calendar-footer-btn {
   text-align: center;
   display: block;
-  line-height: 42px;
+  line-height: 38px;
 }
 .ant-calendar-footer > div {
   display: inline-block;
@@ -4661,16 +4662,20 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   line-height: 18px;
   outline: 0;
   width: 43%;
+  text-align: center;
 }
 .ant-calendar-range-picker-input[disabled] {
   cursor: not-allowed;
 }
+.ant-calendar-range-picker-separator {
+  color: #999;
+}
 .ant-calendar-range {
-  width: 502px;
+  width: 470px;
   overflow: hidden;
 }
 .ant-calendar-range-part {
-  width: 250px;
+  width: 50%;
   position: relative;
 }
 .ant-calendar-range-left {
@@ -4683,22 +4688,20 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   position: absolute;
   left: 50%;
   width: 20px;
-  margin-left: -147px;
+  margin-left: -132px;
   text-align: center;
   height: 34px;
   line-height: 34px;
+  color: #999;
 }
 .ant-calendar-range-right .ant-calendar-date-input-wrap {
-  margin-left: -133px;
+  margin-left: -118px;
 }
 .ant-calendar-range.ant-calendar-time .ant-calendar-range-middle {
-  margin-left: -45px;
+  margin-left: -29px;
 }
 .ant-calendar-range.ant-calendar-time .ant-calendar-range-right .ant-calendar-date-input-wrap {
-  margin-left: -30px;
-}
-.ant-calendar-range.ant-calendar-time .ant-calendar-range-right .ant-calendar-time-picker-wrap {
-  left: 78px;
+  margin-left: -15px;
 }
 .ant-calendar-range .ant-calendar-input-wrap {
   height: 34px;
@@ -4754,6 +4757,18 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 .ant-calendar-range .ant-calendar-today-btn {
   margin: 9px;
 }
+.ant-calendar-time .ant-calendar-input-wrap {
+  direction: rtl;
+}
+.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-date-input-wrap,
+.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-time-picker-wrap {
+  direction: ltr;
+  display: inline-block;
+}
+.ant-calendar-time .ant-calendar-input-wrap .ant-time-picker-panel,
+.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-clear-btn {
+  direction: ltr;
+}
 .ant-calendar-time .ant-calendar-input,
 .ant-calendar-time .ant-time-picker-input {
   position: relative;
@@ -4773,6 +4788,7 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   height: 22px;
   width: 96px;
+  margin-right: 6px;
 }
 .ant-calendar-time .ant-calendar-input::-moz-placeholder,
 .ant-calendar-time .ant-time-picker-input::-moz-placeholder {
@@ -4830,14 +4846,9 @@ textarea.ant-calendar-time .ant-time-picker-input {
 .ant-calendar-time .ant-time-picker-icon {
   display: none;
 }
-.ant-calendar-time-picker-wrap {
-  position: absolute;
-  left: 108px;
-  top: 6px;
-}
 .ant-calendar-month-panel {
   left: 0;
-  top: 0;
+  top: 34px;
   bottom: 0;
   right: 0;
   background: #fff;
@@ -4947,7 +4958,7 @@ textarea.ant-calendar-time .ant-time-picker-input {
 }
 .ant-calendar-year-panel {
   left: 0;
-  top: 0;
+  top: 34px;
   bottom: 0;
   right: 0;
   background: #fff;
@@ -6400,6 +6411,9 @@ textarea.ant-time-picker-input {
 tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {
   background: #fbfbfb;
+}
+.ant-table .ant-table-row-indent + .ant-table-row-expand-icon {
+  margin-right: 5px;
 }
 .ant-tooltip {
   position: absolute;
