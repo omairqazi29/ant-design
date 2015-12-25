@@ -197,7 +197,7 @@ Table 表格 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.11.0-beta5',
+        latest: '0.11.0-beta6',
         stable: '0.10.4'
       };
     </script>
@@ -1030,7 +1030,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-row-selection">选择</a>
+      <a href="#demo-row-selection">可选择</a>
     </div>
     <p>第一列是联动的选择框。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
@@ -1145,7 +1145,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-row-selection-props">配置</a>
+      <a href="#demo-row-selection-props">默认选择</a>
     </div>
     <p>配置选择框的默认属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
@@ -1270,7 +1270,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-row-selection-radio-props">单选配置</a>
+      <a href="#demo-row-selection-radio-props">单选</a>
     </div>
     <p>配置单选框的默认属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
@@ -1821,7 +1821,17 @@ var data = [{
 ReactDOM.render(React.createElement(
   'div',
   null,
+  React.createElement(
+    'h4',
+    null,
+    '中号表格（紧凑型）'
+  ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'middle' }),
+  React.createElement(
+    'h4',
+    null,
+    '小号表格'
+  ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
 ), document.getElementById('components-table-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -1853,9 +1863,12 @@ ReactDOM.render(React.createElement(
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>中号表格（紧凑型）<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"middle"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>小号表格<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
+
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2536,20 +2549,76 @@ ReactDOM.render(
     </div>
 </div>
 <ul class="demos-anchor">
-  <li><a title="基本用法" href="#demo-basic">基本用法</a></li>
-  <li><a title="选择" href="#demo-row-selection">选择</a></li>
-  <li><a title="配置" href="#demo-row-selection-props">配置</a></li>
-  <li><a title="单选配置" href="#demo-row-selection-radio-props">单选配置</a></li>
-  <li><a title="分页" href="#demo-paging">分页</a></li>
-  <li><a title="筛选和排序" href="#demo-head">筛选和排序</a></li>
-  <li><a title="远程加载数据" href="#demo-ajax">远程加载数据</a></li>
-  <li><a title="不显示分页" href="#demo-nopagination">不显示分页</a></li>
-  <li><a title="中小型列表" href="#demo-size">中小型列表</a></li>
-  <li><a title="边框" href="#demo-bordered">边框</a></li>
-  <li><a title="可展开" href="#demo-expand">可展开</a></li>
-  <li><a title="表格行/列合并" href="#demo-colspan-rowspan">表格行/列合并</a></li>
-  <li><a title="加载中的表格" href="#demo-loading">加载中的表格</a></li>
-  <li><a title="树形数据展示" href="#demo-indent-size">树形数据展示</a></li>
+  <li>
+    <a title="基本用法" href="#demo-basic">
+      <span>基本用法</span>
+    </a>
+  </li>
+  <li>
+    <a title="可选择" href="#demo-row-selection">
+      <span>可选择</span>
+    </a>
+  </li>
+  <li>
+    <a title="默认选择" href="#demo-row-selection-props">
+      <span>默认选择</span>
+    </a>
+  </li>
+  <li>
+    <a title="单选" href="#demo-row-selection-radio-props">
+      <span>单选</span>
+    </a>
+  </li>
+  <li>
+    <a title="分页" href="#demo-paging">
+      <span>分页</span>
+    </a>
+  </li>
+  <li>
+    <a title="筛选和排序" href="#demo-head">
+      <span>筛选和排序</span>
+    </a>
+  </li>
+  <li>
+    <a title="远程加载数据" href="#demo-ajax">
+      <span>远程加载数据</span>
+    </a>
+  </li>
+  <li>
+    <a title="不显示分页" href="#demo-nopagination">
+      <span>不显示分页</span>
+    </a>
+  </li>
+  <li>
+    <a title="中小型列表" href="#demo-size">
+      <span>中小型列表</span>
+    </a>
+  </li>
+  <li>
+    <a title="边框" href="#demo-bordered">
+      <span>边框</span>
+    </a>
+  </li>
+  <li>
+    <a title="可展开" href="#demo-expand">
+      <span>可展开</span>
+    </a>
+  </li>
+  <li>
+    <a title="表格行/列合并" href="#demo-colspan-rowspan">
+      <span>表格行/列合并</span>
+    </a>
+  </li>
+  <li>
+    <a title="加载中的表格" href="#demo-loading">
+      <span>加载中的表格</span>
+    </a>
+  </li>
+  <li>
+    <a title="树形数据展示" href="#demo-indent-size">
+      <span>树形数据展示</span>
+    </a>
+  </li>
 </ul>
   <div class="api-container markdown"></div>
 </section>

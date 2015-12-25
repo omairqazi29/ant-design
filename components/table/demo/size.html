@@ -35,7 +35,17 @@ var data = [{
 ReactDOM.render(React.createElement(
   'div',
   null,
+  React.createElement(
+    'h4',
+    null,
+    '中号表格（紧凑型）'
+  ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'middle' }),
+  React.createElement(
+    'h4',
+    null,
+    '小号表格'
+  ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
 ), document.getElementById('components-table-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -67,9 +77,12 @@ ReactDOM.render(React.createElement(
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>中号表格（紧凑型）<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"middle"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>小号表格<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
+
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
