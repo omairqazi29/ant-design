@@ -12,12 +12,14 @@ var props = {
     uid: -1,
     name: 'xxx.png',
     status: 'done',
-    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
+    thumbUrl: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
   }, {
     uid: -2,
     name: 'yyy.png',
     status: 'done',
-    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
+    thumbUrl: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
   }]
 };
 
@@ -39,12 +41,14 @@ ReactDOM.render(React.createElement(
     uid: -<span class="hljs-number">1</span>,
     name: <span class="hljs-string">'xxx.png'</span>,
     status: <span class="hljs-string">'done'</span>,
-    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
+    thumbUrl: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
   }, {
     uid: -<span class="hljs-number">2</span>,
     name: <span class="hljs-string">'yyy.png'</span>,
     status: <span class="hljs-string">'done'</span>,
-    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
+    thumbUrl: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
   }]
 };
 
@@ -60,7 +64,8 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-picture-style">图片列表样式</a>
     </div>
-    <p>上传文件为图片，可展示缩略图。</p>
+    <p>上传文件为图片，可展示本地缩略图。</p>
+<p><code>IE8/9</code> 不支持浏览器本地缩略图展示(<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL">ref</a>)，可以写 <code>thumbUrl</code> 属性来代替。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

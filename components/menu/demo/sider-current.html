@@ -24,7 +24,7 @@ var Sider = React.createClass({
   },
   onToggle: function onToggle(info) {
     this.setState({
-      openKeys: info.openKeys
+      openKeys: info.open ? info.keyPath : info.keyPath.slice(1)
     });
   },
   render: function render() {
@@ -160,9 +160,9 @@ ReactDOM.render(React.createElement(Sider, null), document.getElementById('compo
       openKeys: e.keyPath.slice(<span class="hljs-number">1</span>)
     });
   },
-  onToggle(info){
+  onToggle(info) {
     <span class="hljs-keyword">this</span>.setState({
-      openKeys: info.openKeys
+      openKeys: info.open ? info.keyPath : info.keyPath.slice(<span class="hljs-number">1</span>)
     });
   },
   render() {

@@ -31,7 +31,7 @@ var Demo = React.createClass({
   onEdit: function onEdit(targetKey, action) {
     this[action](targetKey);
   },
-  add: function add(targetKey) {
+  add: function add() {
     var panes = this.state.panes;
     var activeKey = 'newTab' + this.newTabIndex++;
     panes.push(React.createElement(
@@ -85,7 +85,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   onEdit(targetKey, action) {
     this[action](targetKey);
   },
-  add(targetKey) {
+  add() {
     const panes = this.state.panes;
     const activeKey = 'newTab' + this.newTabIndex++;
     panes.push(<span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"新建页签"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{activeKey}</span>&gt;</span>新页面<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>)</span>;

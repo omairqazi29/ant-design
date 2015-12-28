@@ -214,6 +214,9 @@ Tree 树形控件 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -991,7 +994,7 @@ var TreeDemo = React.createClass({
 
     var duration = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       setTimeout(resolve.bind(_this), duration);
     });
   },
@@ -1071,7 +1074,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
 
 <span class="hljs-keyword">const</span> TreeDemo = React.createClass({
   timeout(duration = <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
       setTimeout(resolve.bind(<span class="hljs-keyword">this</span>), duration);
     });
   },

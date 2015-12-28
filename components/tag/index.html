@@ -214,6 +214,9 @@ Tag 标签 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -626,7 +629,7 @@ Tag 标签 - Ant Design
 var _antd = require('antd');
 
 function onClose(e) {
-  console.log(this.props.children);
+  console.log(e, this);
 }
 
 ReactDOM.render(React.createElement(
@@ -655,7 +658,7 @@ ReactDOM.render(React.createElement(
 ), document.getElementById('components-tag-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tag } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClose</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.props.children);
+  <span class="hljs-built_in">console</span>.log(e, <span class="hljs-keyword">this</span>);
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>

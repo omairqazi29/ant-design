@@ -214,6 +214,9 @@ Calendar 日历 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -677,7 +680,8 @@ function dateCellRender(value) {
   return React.createElement(
     'div',
     null,
-    '自定义日数据'
+    '自定义日数据 ',
+    value.getDayOfMonth()
   );
 }
 
@@ -685,7 +689,8 @@ function monthCellRender(value) {
   return React.createElement(
     'div',
     null,
-    '自定义月数据'
+    '自定义月数据 ',
+    value.getMonth()
   );
 }
 
@@ -693,11 +698,11 @@ ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('20
   dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-custom-render'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dateCellRender</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义日数据<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义日数据 {value.getDayOfMonth()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monthCellRender</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义月数据<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义月数据 {value.getMonth()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 }
 
 ReactDOM.render(

@@ -28,7 +28,7 @@ var TreeDemo = React.createClass({
 
     var duration = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       setTimeout(resolve.bind(_this), duration);
     });
   },
@@ -108,7 +108,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
 
 <span class="hljs-keyword">const</span> TreeDemo = React.createClass({
   timeout(duration = <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
       setTimeout(resolve.bind(<span class="hljs-keyword">this</span>), duration);
     });
   },

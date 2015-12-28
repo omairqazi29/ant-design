@@ -333,9 +333,9 @@ samp {
 }
 @font-face {
   font-family: 'anticon';
-  src: url('//at.alicdn.com/t/font_1450842624_7594283.eot');
+  src: url('//at.alicdn.com/t/font_1448877086_9971855.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1450842624_7594283.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1450842624_7594283.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1450842624_7594283.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1450842624_7594283.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1448877086_9971855.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1448877086_9971855.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1448877086_9971855.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1448877086_9971855.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .anticon {
@@ -667,12 +667,6 @@ samp {
 .anticon-minus-circle:before {
   content: "\E639";
 }
-.anticon-plus-square:before {
-  content: "\E6AE";
-}
-.anticon-minus-square:before {
-  content: "\E6AD";
-}
 .anticon-info-circle-o:before {
   content: "\E638";
 }
@@ -858,9 +852,6 @@ samp {
 }
 .anticon-message:before {
   content: "\E6A4";
-}
-.anticon-file-unknown:before {
-  content: "\E6A6";
 }
 .anticon-loading:before {
   display: inline-block;
@@ -2496,6 +2487,7 @@ samp {
 .zoom-enter,
 .zoom-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2537,6 +2529,7 @@ samp {
 .zoom-big-enter,
 .zoom-big-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2578,6 +2571,7 @@ samp {
 .zoom-up-enter,
 .zoom-up-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2619,6 +2613,7 @@ samp {
 .zoom-down-enter,
 .zoom-down-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2660,6 +2655,7 @@ samp {
 .zoom-left-enter,
 .zoom-left-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2701,6 +2697,7 @@ samp {
 .zoom-right-enter,
 .zoom-right-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -3326,6 +3323,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   border-radius: 50% 50%;
   content: " ";
   -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
   transform: scale(0, 0);
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -3343,6 +3341,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 .ant-btn-circle-outline:not([disabled]):active:before,
@@ -3542,9 +3541,10 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-dropdown-wrap .ant-btn > .anticon-down {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -3565,6 +3565,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-dropdown-wrap-open .anticon-down:before {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .ant-dropdown-hidden {
@@ -3655,9 +3656,10 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-dropdown-link .anticon-down {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -3676,9 +3678,10 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-dropdown-button .anticon-down {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -3769,6 +3772,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   line-height: 1;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
 }
@@ -3827,9 +3831,10 @@ fieldset[disabled] .ant-btn-dashed.active {
   line-height: 1;
   margin-top: -5px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -4022,7 +4027,15 @@ fieldset[disabled] .ant-btn-dashed.active {
   overflow: hidden;
   -webkit-transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-select-selection--multiple .ant-select-selection__choice:hover {
   padding: 0 20px 0 10px;
+}
+.ant-select-selection--multiple .ant-select-selection__choice:hover .ant-select-selection__choice__remove {
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
+  opacity: 1;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__content {
   display: inline-block;
@@ -4041,16 +4054,15 @@ fieldset[disabled] .ant-btn-dashed.active {
   text-transform: none;
   text-rendering: auto;
   line-height: 1;
-  color: #999;
+  color: #919191;
   line-height: 20px;
   cursor: pointer;
   font-weight: bold;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -4058,6 +4070,17 @@ fieldset[disabled] .ant-btn-dashed.active {
   position: absolute;
   right: 4px;
   padding: 0 0 0 8px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+          transform-origin: 50%;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
   display: block;
@@ -4071,7 +4094,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:hover {
-  color: #404040;
+  color: #333;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
   content: "\E62D";
@@ -4082,6 +4105,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-select-open .ant-select-arrow:before {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .ant-select-open .ant-select-selection {
@@ -4318,7 +4342,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-calendar {
   position: relative;
   outline: none;
-  width: 231px;
+  width: 253px;
   border: 1px solid #d9d9d9;
   list-style: none;
   font-size: 12px;
@@ -4330,7 +4354,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   line-height: 1.5;
 }
 .ant-calendar-input-wrap {
-  height: 34px;
   padding: 6px;
   border-bottom: 1px solid #e9e9e9;
 }
@@ -4339,7 +4362,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   width: 100%;
   cursor: auto;
   outline: 0;
-  height: 22px;
 }
 .ant-calendar-week-number {
   width: 286px;
@@ -4410,7 +4432,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   right: 29px;
 }
 .ant-calendar-calendar-body {
-  padding: 4px 8px;
+  padding: 5px 8px;
 }
 .ant-calendar table {
   border-collapse: collapse;
@@ -4447,11 +4469,10 @@ fieldset[disabled] .ant-btn-dashed.active {
   display: block;
   margin: 0 auto;
   color: #666;
-  border-radius: 4px;
+  border-radius: 4px 4px;
   width: 20px;
   height: 20px;
   line-height: 18px;
-  border: 1px solid transparent;
   padding: 0;
   background: transparent;
   text-align: center;
@@ -4467,9 +4488,9 @@ fieldset[disabled] .ant-btn-dashed.active {
   background: #57c5f7;
 }
 .ant-calendar-today .ant-calendar-date {
-  border-color: #2db7f5;
-  font-weight: bold;
-  color: #2db7f5;
+  border: 1px solid #96dbfa;
+  line-height: 18px;
+  background: #eaf8fe;
 }
 .ant-calendar-selected-day .ant-calendar-date {
   background: #2db7f5;
@@ -4503,14 +4524,14 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-calendar-footer {
   padding: 0 15px;
-  height: 38px;
-  line-height: 38px;
+  height: 42px;
+  line-height: 42px;
   border-top: 1px solid #e9e9e9;
 }
 .ant-calendar-footer-btn {
   text-align: center;
   display: block;
-  line-height: 38px;
+  line-height: 42px;
 }
 .ant-calendar-footer > div {
   display: inline-block;
@@ -4535,7 +4556,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   height: 20px;
   text-align: center;
   line-height: 20px;
-  top: 7px;
+  top: 6px;
   margin: 0;
 }
 .ant-calendar .ant-calendar-clear-btn:after {
@@ -4652,125 +4673,14 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 .ant-calendar .ant-calendar-ok-btn.active {
   color: #fff;
 }
-.ant-calendar-range-picker.ant-input {
-  padding-right: 26px;
+.ant-calendar-time > span {
+  margin: 0 2px;
 }
-.ant-calendar-range-picker-input {
-  background-color: transparent;
-  border: 0;
-  height: 18px;
-  line-height: 18px;
-  outline: 0;
-  width: 43%;
-  text-align: center;
+.ant-calendar-time ~ .ant-calendar-footer-btn {
+  display: inline;
+  text-align: left;
 }
-.ant-calendar-range-picker-input[disabled] {
-  cursor: not-allowed;
-}
-.ant-calendar-range-picker-separator {
-  color: #999;
-}
-.ant-calendar-range {
-  width: 470px;
-  overflow: hidden;
-}
-.ant-calendar-range-part {
-  width: 50%;
-  position: relative;
-}
-.ant-calendar-range-left {
-  float: left;
-}
-.ant-calendar-range-right {
-  float: right;
-}
-.ant-calendar-range-middle {
-  position: absolute;
-  left: 50%;
-  width: 20px;
-  margin-left: -132px;
-  text-align: center;
-  height: 34px;
-  line-height: 34px;
-  color: #999;
-}
-.ant-calendar-range-right .ant-calendar-date-input-wrap {
-  margin-left: -118px;
-}
-.ant-calendar-range.ant-calendar-time .ant-calendar-range-middle {
-  margin-left: -29px;
-}
-.ant-calendar-range.ant-calendar-time .ant-calendar-range-right .ant-calendar-date-input-wrap {
-  margin-left: -15px;
-}
-.ant-calendar-range .ant-calendar-input-wrap {
-  height: 34px;
-}
-.ant-calendar-range .ant-calendar-input {
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-}
-.ant-calendar-range .ant-calendar-input,
-.ant-calendar-range .ant-time-picker-input {
-  padding: 1px 7px;
-  height: 22px;
-  width: 96px;
-}
-.ant-calendar-range .ant-time-picker-icon {
-  display: none;
-}
-.ant-calendar-range .ant-calendar-calendar-body,
-.ant-calendar-range .ant-calendar-decade-panel-body,
-.ant-calendar-range .ant-calendar-year-panel-body,
-.ant-calendar-range .ant-calendar-month-panel-body {
-  border-bottom: 1px solid #e9e9e9;
-}
-.ant-calendar-range.ant-calendar-week-number {
-  width: 574px;
-}
-.ant-calendar-range.ant-calendar-week-number .ant-calendar-range-part {
-  width: 286px;
-}
-.ant-calendar-range .ant-calendar-year-panel,
-.ant-calendar-range .ant-calendar-month-panel {
-  top: 34px;
-}
-.ant-calendar-range .ant-calendar-month-panel .ant-calendar-year-panel {
-  top: 0;
-}
-.ant-calendar-range .ant-calendar-decade-panel-table,
-.ant-calendar-range .ant-calendar-year-panel-table,
-.ant-calendar-range .ant-calendar-month-panel-table {
-  height: 208px;
-}
-.ant-calendar-range .ant-calendar-in-range-cell {
-  background: #eaf8fe;
-  border-radius: 0;
-}
-.ant-calendar-range-bottom {
-  text-align: right;
-}
-.ant-calendar-range .ant-calendar-ok-btn {
-  position: static;
-  margin: 7px 9px 9px;
-}
-.ant-calendar-range .ant-calendar-today-btn {
-  margin: 9px;
-}
-.ant-calendar-time .ant-calendar-input-wrap {
-  direction: rtl;
-}
-.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-date-input-wrap,
-.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-time-picker-wrap {
-  direction: ltr;
-  display: inline-block;
-}
-.ant-calendar-time .ant-calendar-input-wrap .ant-time-picker-panel,
-.ant-calendar-time .ant-calendar-input-wrap .ant-calendar-clear-btn {
-  direction: ltr;
-}
-.ant-calendar-time .ant-calendar-input,
-.ant-calendar-time .ant-time-picker-input {
+.ant-calendar-time-input {
   position: relative;
   display: inline-block;
   padding: 4px 7px;
@@ -4786,69 +4696,123 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   border-radius: 6px;
   -webkit-transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border .2s cubic-bezier(0.645, 0.045, 0.355, 1), background .2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  height: 22px;
-  width: 96px;
-  margin-right: 6px;
+  margin: 0;
+  width: 30px;
+  height: 26px;
+  padding: 0;
+  text-align: center;
 }
-.ant-calendar-time .ant-calendar-input::-moz-placeholder,
-.ant-calendar-time .ant-time-picker-input::-moz-placeholder {
+.ant-calendar-time-input::-moz-placeholder {
   color: #ccc;
   opacity: 1;
 }
-.ant-calendar-time .ant-calendar-input:-ms-input-placeholder,
-.ant-calendar-time .ant-time-picker-input:-ms-input-placeholder {
+.ant-calendar-time-input:-ms-input-placeholder {
   color: #ccc;
 }
-.ant-calendar-time .ant-calendar-input::-webkit-input-placeholder,
-.ant-calendar-time .ant-time-picker-input::-webkit-input-placeholder {
+.ant-calendar-time-input::-webkit-input-placeholder {
   color: #ccc;
 }
-.ant-calendar-time .ant-calendar-input:hover,
-.ant-calendar-time .ant-time-picker-input:hover {
+.ant-calendar-time-input:hover {
   border-color: #57c5f7;
 }
-.ant-calendar-time .ant-calendar-input:focus,
-.ant-calendar-time .ant-time-picker-input:focus {
+.ant-calendar-time-input:focus {
   border-color: #57c5f7;
   outline: 0;
   box-shadow: 0 0 0 2px #d5f1fd;
 }
-.ant-calendar-time .ant-calendar-input[disabled],
-.ant-calendar-time .ant-time-picker-input[disabled],
-fieldset[disabled] .ant-calendar-time .ant-calendar-input,
-fieldset[disabled] .ant-calendar-time .ant-time-picker-input {
+.ant-calendar-time-input[disabled],
+fieldset[disabled] .ant-calendar-time-input {
   background-color: #f3f5f7;
   opacity: 1;
   cursor: not-allowed;
 }
-.ant-calendar-time .ant-calendar-input[disabled]:hover,
-.ant-calendar-time .ant-time-picker-input[disabled]:hover,
-fieldset[disabled] .ant-calendar-time .ant-calendar-input:hover,
-fieldset[disabled] .ant-calendar-time .ant-time-picker-input:hover {
+.ant-calendar-time-input[disabled]:hover,
+fieldset[disabled] .ant-calendar-time-input:hover {
   border-color: #e1e1e1;
 }
-textarea.ant-calendar-time .ant-calendar-input,
-textarea.ant-calendar-time .ant-time-picker-input {
+textarea.ant-calendar-time-input {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
-.ant-calendar-time .ant-calendar-input-lg,
-.ant-calendar-time .ant-time-picker-input-lg {
+.ant-calendar-time-input-lg {
   padding: 6px 7px;
   height: 32px;
 }
-.ant-calendar-time .ant-calendar-input-sm,
-.ant-calendar-time .ant-time-picker-input-sm {
+.ant-calendar-time-input-sm {
   padding: 1px 7px;
   height: 22px;
 }
-.ant-calendar-time .ant-time-picker-icon {
-  display: none;
+.ant-calendar-time-panel {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: 10;
+  position: absolute;
+  outline: none;
+  border-radius: 6px;
+}
+.ant-calendar-time-panel-header {
+  padding: 0 10px;
+  height: 34px;
+  line-height: 34px;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 1px solid #e9e9e9;
+}
+.ant-calendar-time-panel-body {
+  padding: 2px 10px;
+}
+.ant-calendar-time-panel-title {
+  width: 180px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 5px;
+  text-align: center;
+  height: 30px;
+  line-height: 22px;
+  border-radius: 4px;
+}
+.ant-calendar-time-panel-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+}
+.ant-calendar-time-panel-cell {
+  text-align: center;
+  height: 40px;
+  vertical-align: middle;
+}
+.ant-calendar-time-panel-time {
+  line-height: 24px;
+  display: block;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: #666;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.ant-calendar-time-panel-time:hover {
+  background: #eaf8fe;
+  cursor: pointer;
+}
+.ant-calendar-time-panel-selected-cell .ant-calendar-time-panel-time {
+  background: #2db7f5;
+  color: #fff;
+}
+.ant-calendar-time-panel-selected-cell .ant-calendar-time-panel-time:hover {
+  background: #2db7f5;
+  color: #fff;
 }
 .ant-calendar-month-panel {
   left: 0;
-  top: 34px;
+  top: 0;
   bottom: 0;
   right: 0;
   background: #fff;
@@ -4958,7 +4922,7 @@ textarea.ant-calendar-time .ant-time-picker-input {
 }
 .ant-calendar-year-panel {
   left: 0;
-  top: 34px;
+  top: 0;
   bottom: 0;
   right: 0;
   background: #fff;
@@ -5219,7 +5183,6 @@ textarea.ant-calendar-time .ant-time-picker-input {
   box-sizing: border-box;
 }
 .ant-time-picker-panel {
-  min-width: 168px;
   z-index: 1070;
   position: absolute;
 }
@@ -5464,13 +5427,6 @@ textarea.ant-time-picker-input {
 .ant-time-picker-panel-select li.ant-time-picker-panel-select-option-selected {
   background: #d5f1fd;
 }
-.ant-time-picker-panel-select li.ant-time-picker-panel-select-option-disabled {
-  color: #ccc;
-}
-.ant-time-picker-panel-select li.ant-time-picker-panel-select-option-disabled:hover {
-  background: transparent;
-  cursor: not-allowed;
-}
 .ant-modal {
   outline: none;
   position: absolute;
@@ -5633,7 +5589,6 @@ textarea.ant-time-picker-input {
   position: relative;
   overflow: hidden;
   zoom: 1;
-  color: #666;
 }
 .ant-tabs:before,
 .ant-tabs:after {
@@ -5666,8 +5621,10 @@ textarea.ant-time-picker-input {
   height: 2px;
   background-color: #2db7f5;
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-tabs-ink-bar-transition-forward {
@@ -5679,7 +5636,7 @@ textarea.ant-time-picker-input {
   transition: right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.09s, left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-tabs-bar {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #e9e9e9;
   margin-bottom: 16px;
 }
 .ant-tabs-nav-container {
@@ -5739,6 +5696,7 @@ textarea.ant-time-picker-input {
 .ant-tabs-tab-prev-icon,
 .ant-tabs-tab-next-icon {
   position: relative;
+  display: inline-block;
   font-style: normal;
   font-weight: bold;
   font-variant: normal;
@@ -5747,28 +5705,16 @@ textarea.ant-time-picker-input {
   text-align: center;
   text-transform: none;
   font-family: sans-serif;
-  display: inline-block;
-  font-size: 12px;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-tabs-tab-prev-icon,
-:root .ant-tabs-tab-next-icon {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-tabs-tab-prev-icon,
-:root .ant-tabs-tab-next-icon {
   font-size: 12px;
 }
 .ant-tabs-tab-prev-icon:before,
 .ant-tabs-tab-next-icon:before {
   display: block;
   font-family: "anticon" !important;
+}
+.ant-tabs-tab-prev:hover,
+.ant-tabs-tab-next:hover {
+  color: #57c5f7;
 }
 .ant-tabs-tab-btn-disabled {
   cursor: default;
@@ -5820,11 +5766,17 @@ textarea.ant-time-picker-input {
 .ant-tabs-nav:after {
   clear: both;
 }
-.ant-tabs-nav .ant-tabs-tab-disabled {
+.ant-tabs-nav div.ant-tabs-tab-active > .ant-tabs-tab-inner,
+.ant-tabs-nav div.ant-tabs-tab-active > .ant-tabs-tab-inner:hover {
+  color: #57c5f7;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ant-tabs-nav div.ant-tabs-tab-disabled {
   pointer-events: none;
   cursor: default;
 }
-.ant-tabs-nav .ant-tabs-tab-disabled .ant-tabs-tab-inner {
+.ant-tabs-nav div.ant-tabs-tab-disabled .ant-tabs-tab-inner {
   color: #ccc;
 }
 .ant-tabs-nav .ant-tabs-tab {
@@ -5834,27 +5786,25 @@ textarea.ant-time-picker-input {
   box-sizing: border-box;
   position: relative;
 }
-.ant-tabs-nav .ant-tabs-tab-inner {
+.ant-tabs-nav .ant-tabs-tab > .ant-tabs-tab-inner {
   padding: 8px 20px;
   -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: block;
-  cursor: pointer;
-  text-decoration: none;
+  color: #666;
 }
-.ant-tabs-nav .ant-tabs-tab-inner:hover {
-  color: #57c5f7;
-}
-.ant-tabs-nav .ant-tabs-tab-inner:active {
-  color: #2baee9;
-}
-.ant-tabs-nav .ant-tabs-tab-inner .anticon {
+.ant-tabs-nav .ant-tabs-tab > .ant-tabs-tab-inner .anticon {
   width: 14px;
   height: 14px;
   margin-right: 8px;
+  line-height: 1.5;
 }
-.ant-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-inner {
-  color: #2db7f5;
+.ant-tabs-nav .ant-tabs-tab > .ant-tabs-tab-inner:hover {
+  color: #6ccdf8;
+  cursor: pointer;
+}
+.ant-tabs-nav .ant-tabs-tab > .ant-tabs-tab-inner:hover {
+  text-decoration: none;
 }
 .ant-tabs-mini .ant-tabs-nav-container {
   font-size: 12px;
@@ -5862,7 +5812,7 @@ textarea.ant-time-picker-input {
 .ant-tabs-mini .ant-tabs-tab {
   margin-right: 24px;
 }
-.ant-tabs-mini .ant-tabs-tab .ant-tabs-tab-inner {
+.ant-tabs-mini .ant-tabs-tab > .ant-tabs-tab-inner {
   padding: 8px 16px;
 }
 .ant-tabs-tabpane-hidden {
@@ -5956,7 +5906,7 @@ textarea.ant-time-picker-input {
 .ant-tabs-vertical .ant-tabs-tab:last-child {
   margin-bottom: 0;
 }
-.ant-tabs-vertical .ant-tabs-tab .ant-tabs-tab-inner {
+.ant-tabs-vertical .ant-tabs-tab > .ant-tabs-tab-inner {
   padding: 8px 24px;
 }
 .ant-tabs-vertical .ant-tabs-nav-scroll {
@@ -5993,12 +5943,13 @@ textarea.ant-time-picker-input {
 }
 .ant-tabs-vertical.ant-tabs-left .ant-tabs-tabs-bar {
   float: left;
+}
+.ant-tabs-vertical.ant-tabs-left .ant-tabs-tab > .ant-tabs-tab-inner {
+  text-align: right;
+}
+.ant-tabs-vertical.ant-tabs-left .ant-tabs-tabs-bar {
   border-right: 1px solid #e9e9e9;
   margin-right: -1px;
-  margin-bottom: 0;
-}
-.ant-tabs-vertical.ant-tabs-left .ant-tabs-tab .ant-tabs-tab-inner {
-  text-align: right;
 }
 .ant-tabs-vertical.ant-tabs-left .ant-tabs-nav-container {
   margin-right: -1px;
@@ -6017,7 +5968,6 @@ textarea.ant-time-picker-input {
   float: right;
   border-left: 1px solid #e9e9e9;
   margin-left: -1px;
-  margin-bottom: 0;
 }
 .ant-tabs-vertical.ant-tabs-right .ant-tabs-nav-container {
   margin-left: -1px;
@@ -6031,104 +5981,6 @@ textarea.ant-time-picker-input {
 .ant-tabs-vertical.ant-tabs-right .ant-tabs-content {
   padding-right: 24px;
   border-right: 1px solid #e9e9e9;
-}
-.ant-tabs-bottom .ant-tabs-tabs-bar {
-  margin-bottom: 0;
-  margin-top: 16px;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-ink-bar {
-  visibility: hidden;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab {
-  margin: 0;
-  border: 1px solid transparent;
-  border-bottom: 0;
-  border-radius: 6px 6px 0 0;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background: #f9f9f9;
-  margin-right: 2px;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-inner {
-  padding: 7px 16px 6px;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-active {
-  background: #fff;
-  border-color: #d9d9d9;
-  color: #2db7f5;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-active .ant-tabs-tab-inner {
-  padding-bottom: 7px;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-nav-wrap {
-  margin-bottom: 0;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-inner .anticon-cross {
-  margin-right: 0;
-  color: #999;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  display: inline-block;
-  font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  width: 0;
-  text-align: right;
-  vertical-align: middle;
-  overflow: hidden;
-}
-:root .ant-tabs.ant-tabs-card .ant-tabs-tab-inner .anticon-cross {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-tabs.ant-tabs-card .ant-tabs-tab-inner .anticon-cross {
-  font-size: 12px;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-inner .anticon-cross:hover {
-  color: #404040;
-  font-weight: bold;
-}
-.ant-tabs.ant-tabs-card .ant-tabs-tab-active .anticon-cross,
-.ant-tabs.ant-tabs-card .ant-tabs-tab:hover .anticon-cross {
-  width: 16px;
-}
-.ant-tabs-extra-content {
-  float: right;
-  line-height: 32px;
-}
-.ant-tabs-extra-content .ant-tabs-new-tab {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 3px;
-  border: 1px solid #d9d9d9;
-  display: inline-block;
-  font-size: 12px;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  color: #999;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-:root .ant-tabs-extra-content .ant-tabs-new-tab {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-tabs-extra-content .ant-tabs-new-tab {
-  font-size: 12px;
-}
-.ant-tabs-extra-content .ant-tabs-new-tab:hover {
-  color: #404040;
 }
 .ant-table {
   font-size: 12px;
@@ -6154,9 +6006,10 @@ textarea.ant-time-picker-input {
 .ant-table th .anticon-filter {
   margin-left: 4px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -6279,9 +6132,10 @@ textarea.ant-time-picker-input {
 .ant-table-column-sorter .anticon-caret-up,
 .ant-table-column-sorter .anticon-caret-down {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.5;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -6411,9 +6265,6 @@ textarea.ant-time-picker-input {
 tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {
   background: #fbfbfb;
-}
-.ant-table .ant-table-row-indent + .ant-table-row-expand-icon {
-  margin-right: 5px;
 }
 .ant-tooltip {
   position: absolute;
@@ -6794,9 +6645,10 @@ tr.ant-table-expanded-row:hover {
 .ant-pagination-jump-next:hover:after {
   color: #2db7f5;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -6853,9 +6705,10 @@ tr.ant-table-expanded-row:hover {
 .ant-pagination-prev a:after,
 .ant-pagination-next a:after {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -7330,9 +7183,6 @@ form .ant-input-group .ant-input-group-addon {
   padding: 6px 7px;
   height: 32px;
 }
-form textarea.ant-input {
-  height: auto;
-}
 form .ant-upload {
   background: transparent;
 }
@@ -7344,14 +7194,10 @@ form input[type="checkbox"] {
 form .ant-radio-inline,
 form .ant-checkbox-inline {
   display: inline-block;
+  margin-right: 16px;
   vertical-align: middle;
   font-weight: normal;
   cursor: pointer;
-  margin-left: 16px;
-}
-form .ant-radio-inline:first-child,
-form .ant-checkbox-inline:first-child {
-  margin-left: 0;
 }
 form .ant-checkbox-vertical,
 form .ant-radio-vertical {
@@ -7995,9 +7841,10 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 }
 .ant-steps.ant-steps-small .ant-steps-head-inner > .ant-steps-icon.anticon {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.75;
   font-size: 9px \9;
   -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
           transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -8217,9 +8064,10 @@ textarea.ant-input-number {
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.58333333;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(0deg);
+      -ms-transform: scale(0.58333333) rotate(0deg);
           transform: scale(0.58333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -8448,6 +8296,7 @@ textarea.ant-input-number {
 }
 .ant-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -8482,6 +8331,7 @@ textarea.ant-input-number {
 .ant-checkbox-indeterminate .ant-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -8501,6 +8351,7 @@ textarea.ant-input-number {
 }
 .ant-checkbox-checked .ant-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -8545,16 +8396,6 @@ textarea.ant-input-number {
 .ant-checkbox + span {
   margin-left: 8px;
 }
-.ant-checkbox-group {
-  font-size: 12px;
-}
-.ant-checkbox-group-item {
-  display: inline-block;
-  margin-left: 16px;
-}
-.ant-checkbox-group-item:first-child {
-  margin-left: 0;
-}
 .ant-collapse {
   background-color: #f4f4f4;
   border-radius: 3px;
@@ -8575,9 +8416,10 @@ textarea.ant-input-number {
   position: relative;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow {
-  font-size: 12px;
+  font-size: 0.58333333;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(270deg);
+      -ms-transform: scale(0.58333333) rotate(270deg);
           transform: scale(0.58333333) rotate(270deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=-0.0000000000000001837, M12=1, M21=-1, M22=-0.0000000000000001837);
@@ -8633,14 +8475,21 @@ textarea.ant-input-number {
 .ant-collapse-content-active {
   display: block;
 }
+.ant-collapse-collapsing {
+  -webkit-transition-duration: .24s;
+          transition-duration: .24s;
+  -webkit-transition-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          transition-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+}
 .ant-collapse-item:last-child > .ant-collapse-content {
   border-radius: 0 0 3px 3px;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header[aria-expanded="true"] .arrow {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.58333333;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(360deg);
+      -ms-transform: scale(0.58333333) rotate(360deg);
           transform: scale(0.58333333) rotate(360deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0.00000000000000024493, M21=-0.00000000000000024493, M22=1);
@@ -8704,7 +8553,7 @@ textarea.ant-input-number {
 }
 .ant-slider {
   position: relative;
-  margin: 10px 8px;
+  margin: 10px 0;
   height: 12px;
   border-radius: 5px;
   background-color: #e9e9e9;
@@ -8902,6 +8751,7 @@ textarea.ant-input-number {
   content: ' ';
   background-color: #2db7f5;
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   opacity: 0;
   -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -8924,6 +8774,7 @@ textarea.ant-input-number {
 }
 .ant-radio-checked .ant-radio-inner:after {
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
   -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -9233,6 +9084,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   -webkit-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
   vertical-align: middle;
   opacity: 0.85;
@@ -9248,9 +9100,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tag .anticon-cross {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -9431,6 +9284,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
           transform-origin: 50% 0;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -9464,6 +9318,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -9498,6 +9353,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -9517,6 +9373,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-checkbox-checked .ant-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -9560,16 +9417,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-checkbox + span {
   margin-left: 8px;
-}
-.ant-tree-checkbox-group {
-  font-size: 12px;
-}
-.ant-tree-checkbox-group-item {
-  display: inline-block;
-  margin-left: 16px;
-}
-.ant-tree-checkbox-group-item:first-child {
-  margin-left: 0;
 }
 .ant-tree {
   margin: 0;
@@ -9644,9 +9491,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
-  font-size: 12px;
+  font-size: 0.5;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -9688,9 +9536,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-  font-size: 12px;
+  font-size: 0.5;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -9726,6 +9575,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
   -webkit-transform: rotate(270deg) scale(0.5);
+      -ms-transform: rotate(270deg) scale(0.5);
           transform: rotate(270deg) scale(0.5);
 }
 .ant-tree-child-tree {
@@ -10031,9 +9881,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-upload-list-item-info .anticon-cross {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.83333333;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -10062,13 +9913,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-upload-list-item:hover .anticon-cross {
   opacity: 1;
 }
-.ant-upload-list-item-error,
-.ant-upload-list-item-error .anticon-paper-clip {
-  color: #f50;
-}
-.ant-upload-list-item-error .anticon-cross {
-  opacity: 1;
-}
 .ant-upload-list-item-progress {
   padding: 0 8px 0 20px;
   margin-top: -2px;
@@ -10093,6 +9937,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-upload-list-picture .ant-upload-list-item:hover .ant-upload-list-item-info {
   background: transparent;
+  color: #345678;
 }
 .ant-upload-list-picture .ant-upload-list-item-uploading {
   border-style: dashed;
@@ -10293,6 +10138,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   right: 16px;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg) scale(0.75);
+      -ms-transform: rotate(270deg) scale(0.75);
           transform: rotate(270deg) scale(0.75);
 }
 .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
@@ -10311,9 +10157,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   right: 16px;
   top: 0;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.66666667;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
@@ -10329,6 +10176,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-submenu-open.ant-menu-submenu-inline > .ant-menu-submenu-title:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(180deg) scale(0.75);
+      -ms-transform: rotate(180deg) scale(0.75);
           transform: rotate(180deg) scale(0.75);
 }
 .ant-menu-item .anticon,
@@ -10400,11 +10248,13 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-vertical.ant-menu-sub {
   padding: 0;
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-menu-vertical.ant-menu-sub > .ant-menu-item,
 .ant-menu-vertical.ant-menu-sub > .ant-menu-submenu {
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-menu-root.ant-menu-vertical,
@@ -10486,20 +10336,21 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-badge-count {
   position: absolute;
   -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -10px;
   height: 20px;
   border-radius: 10px;
   min-width: 20px;
   background: #f50;
-  border: 1px solid transparent;
   color: #fff;
-  line-height: 18px;
+  line-height: 20px;
   text-align: center;
-  padding: 0 6px;
+  padding: 0 7px;
   font-size: 12px;
   white-space: nowrap;
   -webkit-transform-origin: -10% center;
+      -ms-transform-origin: -10% center;
           transform-origin: -10% center;
   z-index: 10;
   font-family: tahoma;
@@ -10512,8 +10363,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-badge-dot {
   position: absolute;
   -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transform-origin: 0px center;
+      -ms-transform-origin: 0px center;
           transform-origin: 0px center;
   top: -4px;
   height: 8px;
@@ -10536,17 +10389,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.ant-badge-not-a-wrapper .ant-badge-count {
-  top: auto;
-  display: block;
-  position: relative;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-a -count:hover {
+a .ant-badge-count:hover {
   background: #ff7733;
 }
-a -count:active {
+a .ant-badge-count:active {
   background: #f25100;
 }
 .ant-scroll-number {
@@ -10926,261 +10772,6 @@ a -count:active {
   width: auto;
   left: auto;
   bottom: auto;
-}
-.ant-transfer-checkbox {
-  white-space: nowrap;
-  cursor: pointer;
-  outline: none;
-  display: inline-block;
-  line-height: 1;
-  position: relative;
-  vertical-align: middle;
-}
-.ant-transfer-checkbox:hover .ant-transfer-checkbox-inner {
-  border-color: #bcbcbc;
-}
-.ant-transfer-checkbox-inner {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 3px;
-  border-color: #d9d9d9;
-  background-color: #fff;
-  -webkit-transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: border-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.ant-transfer-checkbox-inner:after {
-  -webkit-transform: rotate(45deg) scale(0);
-          transform: rotate(45deg) scale(0);
-  position: absolute;
-  left: 4px;
-  top: 1px;
-  display: table;
-  width: 5px;
-  height: 8px;
-  border: 2px solid #fff;
-  border-top: 0;
-  border-left: 0;
-  content: ' ';
-  -webkit-transition: all 0.1s cubic-bezier(0.6, -0.3, 0.74, 0.05);
-  transition: all 0.1s cubic-bezier(0.6, -0.3, 0.74, 0.05);
-}
-.ant-transfer-checkbox-input {
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-.ant-transfer-checkbox-indeterminate .ant-transfer-checkbox-inner {
-  border-color: #2db7f5;
-  background-color: #2db7f5;
-}
-.ant-transfer-checkbox-indeterminate .ant-transfer-checkbox-inner:after {
-  content: ' ';
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  position: absolute;
-  left: 2px;
-  top: 5px;
-  width: 8px;
-  height: 1px;
-}
-.ant-transfer-checkbox-indeterminate:hover .ant-transfer-checkbox-inner {
-  border-color: #2db7f5;
-}
-.ant-transfer-checkbox-checked:hover .ant-transfer-checkbox-inner {
-  border-color: #2db7f5;
-}
-.ant-transfer-checkbox-checked .ant-transfer-checkbox-inner {
-  border-color: #2db7f5;
-  background-color: #2db7f5;
-}
-.ant-transfer-checkbox-checked .ant-transfer-checkbox-inner:after {
-  -webkit-transform: rotate(45deg) scale(1);
-          transform: rotate(45deg) scale(1);
-  position: absolute;
-  left: 4px;
-  top: 1px;
-  display: table;
-  width: 5px;
-  height: 8px;
-  border: 2px solid #fff;
-  border-top: 0;
-  border-left: 0;
-  content: ' ';
-  -webkit-transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.1s;
-  transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.1s;
-}
-.ant-transfer-checkbox-disabled.ant-transfer-checkbox-checked:hover .ant-transfer-checkbox-inner {
-  border-color: #d9d9d9;
-}
-.ant-transfer-checkbox-disabled.ant-transfer-checkbox-checked .ant-transfer-checkbox-inner {
-  background-color: #f3f3f3;
-  border-color: #d9d9d9;
-}
-.ant-transfer-checkbox-disabled.ant-transfer-checkbox-checked .ant-transfer-checkbox-inner:after {
-  -webkit-animation-name: none;
-          animation-name: none;
-  border-color: #ccc;
-}
-.ant-transfer-checkbox-disabled:hover .ant-transfer-checkbox-inner {
-  border-color: #d9d9d9;
-}
-.ant-transfer-checkbox-disabled .ant-transfer-checkbox-inner {
-  border-color: #d9d9d9;
-  background-color: #f3f3f3;
-}
-.ant-transfer-checkbox-disabled .ant-transfer-checkbox-inner:after {
-  -webkit-animation-name: none;
-          animation-name: none;
-  border-color: #f3f3f3;
-}
-.ant-transfer-checkbox-disabled .ant-transfer-checkbox-inner-input {
-  cursor: default;
-}
-.ant-transfer-checkbox + span {
-  margin-left: 8px;
-}
-.ant-transfer-checkbox-group {
-  font-size: 12px;
-}
-.ant-transfer-checkbox-group-item {
-  display: inline-block;
-  margin-left: 16px;
-}
-.ant-transfer-checkbox-group-item:first-child {
-  margin-left: 0;
-}
-.ant-transfer {
-  position: relative;
-}
-.ant-transfer-list {
-  font-size: 12px;
-  border: 1px solid #d9d9d9;
-  display: inline-block;
-  border-radius: 6px;
-  vertical-align: middle;
-  position: relative;
-  width: 160px;
-  height: 200px;
-  padding-top: 33px;
-}
-.ant-transfer-list-with-footer {
-  padding-bottom: 33px;
-}
-.ant-transfer-list-search-action {
-  color: #ccc;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  font-size: 14px;
-}
-.ant-transfer-list-header {
-  padding: 7px 16px;
-  border-radius: 6px 6px 0 0;
-  background: #fff;
-  color: #666;
-  border-bottom: 1px solid #e9e9e9;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.ant-transfer-list-header-title {
-  float: right;
-}
-.ant-transfer-list-body {
-  font-size: 12px;
-  line-height: 1.5;
-  position: relative;
-  height: 100%;
-}
-.ant-transfer-list-body-search-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 28px;
-  padding: 4px;
-  width: 100%;
-}
-.ant-transfer-list-body-not-found {
-  margin-top: 24px;
-  color: #ccc;
-  text-align: center;
-}
-.ant-transfer-list-body ul {
-  height: 100%;
-  overflow: auto;
-}
-.ant-transfer-list-body ul li {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 7px 16px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.ant-transfer-list-body ul li:hover {
-  cursor: pointer;
-  background-color: #eaf8fe;
-}
-.ant-transfer-list-body-with-search {
-  padding-top: 34px;
-}
-.ant-transfer-list-footer {
-  border-top: 1px solid #e9e9e9;
-  border-radius: 0 0 6px 6px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-.ant-transfer-operation {
-  display: inline-block;
-  overflow: hidden;
-  margin: 0 8px;
-  vertical-align: middle;
-}
-.ant-transfer-operation .ant-btn {
-  float: left;
-  clear: both;
-}
-.ant-transfer-operation .ant-btn:first-child {
-  margin-bottom: 4px;
-}
-.ant-transfer-operation .ant-btn .anticon {
-  display: inline-block;
-  font-size: 12px;
-  font-size: 10px \9;
-  -webkit-transform: scale(0.83333333) rotate(0deg);
-          transform: scale(0.83333333) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-}
-:root .ant-transfer-operation .ant-btn .anticon {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-transfer-operation .ant-btn .anticon {
-  font-size: 12px;
 }
 
 /*# sourceMappingURL=index.css.map*/

@@ -197,7 +197,15 @@ ReactDOM.render(React.createElement(
         React.createElement(
           "div",
           { className: "ant-layout-content" },
-          React.createElement("div", { style: { height: 240 } })
+          React.createElement(
+            "div",
+            { style: { height: 240 } },
+            React.createElement(
+              "div",
+              { style: { clear: 'both' } },
+              "内容区域"
+            )
+          )
         )
       ),
       React.createElement(
@@ -266,7 +274,9 @@ ReactDOM.render(
             <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-layout-content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">height:</span> <span class="hljs-attribute">240</span> }}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">height:</span> <span class="hljs-attribute">240</span> }}&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{clear:</span> '<span class="hljs-attribute">both</span>'}}&gt;</span>内容区域<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-layout-footer"</span>&gt;</span>
@@ -322,72 +332,78 @@ ReactDOM.render(
 
 .ant-layout-topaside .ant-layout-content {
   border-left: 1px solid #e9e9e9;
-  margin-left: 223px;
-}
-
-.ant-layout-topaside .ant-layout-footer {
-  height; 64px;
-  line-height: 64px;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}</style><div class="highlight"><pre><code class="css">.ant-layout-topaside {
-  height: 100%;
-}
-
-.ant-layout-topaside .ant-layout-wrapper {
-  padding: 0 50px;
-}
-
-.ant-layout-topaside .ant-layout-header {
-  background: #404040;
-  height: 64px;
-}
-
-.ant-layout-topaside .ant-layout-logo {
-  width: 120px;
-  height: 32px;
-  background: #333;
-  border-radius: 6px;
-  margin: 16px 28px 16px 0;
-  float: left;
-}
-
-.ant-layout-topaside .ant-layout-subheader {
-  height: 48px;
-  border-bottom: 1px solid #e9e9e9;
-  background: #fff;
-}
-
-.ant-layout-topaside .ant-layout-breadcrumb {
-  margin: 7px 0 -17px 24px;
-}
-
-.ant-layout-topaside .ant-layout-container {
-  background: #fff;
-  margin: 24px 0 0;
+  padding: 0 24px;
+  overflow: auto;
   position: relative;
-  padding: 24px 0;
-  overflow: hidden;
-}
-
-.ant-layout-topaside .ant-layout-sider {
-  width: 224px;
-  float: left;
-}
-
-.ant-layout-topaside .ant-layout-content {
-  border-left: 1px solid #e9e9e9;
-  margin-left: 223px;
+  left: -1px;
 }
 
 .ant-layout-topaside .ant-layout-footer {
-  height; 64px;
+  height: 64px;
   line-height: 64px;
   text-align: center;
   font-size: 12px;
   color: #999;
-}</code></pre></div>
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-wrapper</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">50px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-header</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#404040</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">64px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-logo</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">120px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">32px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#333</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">16px</span> <span class="hljs-number">28px</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> left</span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-subheader</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">48px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#e9e9e9</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-breadcrumb</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">7px</span> <span class="hljs-number">0</span> -<span class="hljs-number">17px</span> <span class="hljs-number">24px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-container</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">24px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">24px</span> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-sider</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">224px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> left</span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-content</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border-left</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#e9e9e9</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">24px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> auto</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> -<span class="hljs-number">1px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.ant-layout-topaside</span> <span class="hljs-class">.ant-layout-footer</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">64px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">64px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">12px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#999</span></span></span>;
+}</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

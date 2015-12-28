@@ -214,6 +214,9 @@ Upload 文件上传 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -619,6 +622,12 @@ Upload 文件上传 - Ant Design
 <td>无</td>
 </tr>
 <tr>
+<td>beforeUpload</td>
+<td>可选参数, 上传文件之前的钩子，参数为上传的文件，若返回 <code>false</code> 或者 Promise 则停止上传。<strong>注意：该方法不支持老 IE</strong>。</td>
+<td>Function</td>
+<td>无</td>
+</tr>
+<tr>
 <td>onChange</td>
 <td>可选参数, 上传文件改变时的状态，详见 onChange</td>
 <td>Function</td>
@@ -923,12 +932,14 @@ var props = {
     uid: -1,
     name: 'xxx.png',
     status: 'done',
-    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
+    thumbUrl: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
   }, {
     uid: -2,
     name: 'yyy.png',
     status: 'done',
-    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+    url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
+    thumbUrl: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
   }]
 };
 
@@ -950,12 +961,14 @@ ReactDOM.render(React.createElement(
     uid: -<span class="hljs-number">1</span>,
     name: <span class="hljs-string">'xxx.png'</span>,
     status: <span class="hljs-string">'done'</span>,
-    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
+    thumbUrl: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
   }, {
     uid: -<span class="hljs-number">2</span>,
     name: <span class="hljs-string">'yyy.png'</span>,
     status: <span class="hljs-string">'done'</span>,
-    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>
+    url: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
+    thumbUrl: <span class="hljs-string">'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'</span>,
   }]
 };
 
@@ -971,7 +984,8 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-picture-style">图片列表样式</a>
     </div>
-    <p>上传文件为图片，可展示缩略图。</p>
+    <p>上传文件为图片，可展示本地缩略图。</p>
+<p><code>IE8/9</code> 不支持浏览器本地缩略图展示(<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL">ref</a>)，可以写 <code>thumbUrl</code> 属性来代替。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -1179,6 +1193,61 @@ ReactDOM.render(
     <p>按住 ctrl 可选择多个文件，<code>ie10+</code> 支持。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-beforeupload">
+  <div class="code-box-demo">
+    <div id="components-upload-demo-beforeupload"></div>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var props = {
+  action: '/upload.do',
+  beforeUpload: function beforeUpload(file) {
+    var isJPG = file.type === 'image/jpeg';
+    if (!isJPG) {
+      _antd.message.error('只能上传 JPG 文件哦！');
+    }
+    return isJPG;
+  }
+};
+
+ReactDOM.render(React.createElement(
+  _antd.Upload,
+  props,
+  React.createElement(
+    _antd.Button,
+    { type: 'ghost' },
+    React.createElement(_antd.Icon, { type: 'upload' }),
+    ' 点击上传'
+  )
+), document.getElementById('components-upload-demo-beforeupload'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> props = {
+  action: <span class="hljs-string">'/upload.do'</span>,
+  beforeUpload: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file</span>) </span>{
+    <span class="hljs-keyword">const</span> isJPG = file.type === <span class="hljs-string">'image/jpeg'</span>;
+    <span class="hljs-keyword">if</span> (!isJPG) {
+      message.error(<span class="hljs-string">'只能上传 JPG 文件哦！'</span>);
+    }
+    <span class="hljs-keyword">return</span> isJPG;
+  }
+};
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
+, document.getElementById('components-upload-demo-beforeupload'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-beforeupload">限制用户上传的文件</a>
+    </div>
+    <p>可以通过 <code>beforeUpload</code> 在文件上传之前进行干预，如限制用户只能上传 JPG 文件。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div>
   </div>
 </div>
@@ -1216,6 +1285,11 @@ ReactDOM.render(
   <li>
     <a title="图片列表样式" href="#demo-picture-style">
       <span>图片列表样式</span>
+    </a>
+  </li>
+  <li>
+    <a title="限制用户上传的文件" href="#demo-beforeupload">
+      <span>限制用户上传的文件</span>
     </a>
   </li>
 </ul>

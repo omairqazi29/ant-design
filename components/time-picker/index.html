@@ -214,6 +214,9 @@ TimePicker 时间选择框 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -753,13 +756,13 @@ function newArray(start, end) {
   return result;
 }
 
-function disabledMinutes(h) {
+function disabledMinutes() {
   return newArray(0, 60).filter(function (value) {
     return value % 10 !== 0;
   });
 }
 
-function disabledSeconds(h, m) {
+function disabledSeconds() {
   return newArray(0, 60).filter(function (value) {
     return value % 30 !== 0;
   });
@@ -775,11 +778,11 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disable
   <span class="hljs-keyword">return</span> result;
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disabledMinutes</span>(<span class="hljs-params">h</span>) </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disabledMinutes</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">0</span>, <span class="hljs-number">60</span>).filter(value =&gt; value % <span class="hljs-number">10</span> !== <span class="hljs-number">0</span>);
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disabledSeconds</span>(<span class="hljs-params">h, m</span>) </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disabledSeconds</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">0</span>, <span class="hljs-number">60</span>).filter(value =&gt; value % <span class="hljs-number">30</span> !== <span class="hljs-number">0</span>);
 }
 

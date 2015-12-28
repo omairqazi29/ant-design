@@ -49,10 +49,10 @@ var App = React.createClass({
       )
     );
   },
-  toggleChecked: function toggleChecked(e) {
+  toggleChecked: function toggleChecked() {
     this.setState({ checked: !this.state.checked });
   },
-  toggleDisable: function toggleDisable(e) {
+  toggleDisable: function toggleDisable() {
     this.setState({ disabled: !this.state.disabled });
   },
   onChange: function onChange(e) {
@@ -97,16 +97,16 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
       <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   },
-  toggleChecked(e) {
+  toggleChecked() {
     <span class="hljs-keyword">this</span>.setState({checked: !<span class="hljs-keyword">this</span>.state.checked});
   },
-  toggleDisable(e) {
+  toggleDisable() {
     <span class="hljs-keyword">this</span>.setState({disabled: !<span class="hljs-keyword">this</span>.state.disabled});
   },
   onChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span>, e.target.checked);
     <span class="hljs-keyword">this</span>.setState({
-      checked: e.target.checked
+      checked: e.target.checked,
     });
   }
 });

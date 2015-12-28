@@ -9,7 +9,8 @@ function dateCellRender(value) {
   return React.createElement(
     'div',
     null,
-    '自定义日数据'
+    '自定义日数据 ',
+    value.getDayOfMonth()
   );
 }
 
@@ -17,7 +18,8 @@ function monthCellRender(value) {
   return React.createElement(
     'div',
     null,
-    '自定义月数据'
+    '自定义月数据 ',
+    value.getMonth()
   );
 }
 
@@ -25,11 +27,11 @@ ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('20
   dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-custom-render'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dateCellRender</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义日数据<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义日数据 {value.getDayOfMonth()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monthCellRender</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义月数据<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义月数据 {value.getMonth()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
 }
 
 ReactDOM.render(

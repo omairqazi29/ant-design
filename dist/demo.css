@@ -3358,27 +3358,33 @@ fieldset[disabled] .ant-btn-dashed.active {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-.ant-btn-loading {
-  padding-right: 31px;
+.ant-btn.ant-btn-loading {
+  padding-left: 29px;
   pointer-events: none;
   opacity: 0.75;
 }
-.ant-btn-loading:after {
+.ant-btn.ant-btn-loading:after {
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
   height: 12px;
   line-height: 12px;
-  right: 11px;
+  left: 10px;
   top: 50%;
   margin-top: -6px;
   opacity: 1;
   visibility: visible;
 }
+.ant-btn.ant-btn-loading > .anticon {
+  display: none;
+}
+.ant-btn.ant-btn-loading > .anticon + span {
+  margin-left: 0;
+}
 .ant-btn-sm.ant-btn-loading {
-  padding-right: 24px;
+  padding-left: 24px;
 }
 .ant-btn-sm.ant-btn-loading:after {
-  right: 7px;
+  left: 7px;
 }
 .ant-btn-group {
   position: relative;
@@ -4744,8 +4750,13 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   height: 208px;
 }
 .ant-calendar-range .ant-calendar-in-range-cell {
-  background: #eaf8fe;
   border-radius: 0;
+}
+.ant-calendar-range .ant-calendar-in-range-cell > span {
+  background: #eaf8fe;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
 }
 .ant-calendar-range-bottom {
   text-align: right;
@@ -9059,7 +9070,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-notification-notice {
   padding: 16px;
   border-radius: 6px;
-  box-shadow: 0 0 4px #d9d9d9;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+  border: 1px solid #d9d9d9;
   background: #fff;
   line-height: 1.5;
   position: relative;

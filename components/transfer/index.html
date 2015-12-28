@@ -214,6 +214,9 @@ Transfer 穿梭框 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -659,8 +662,6 @@ Transfer 穿梭框 - Ant Design
 
 var _antd = require('antd');
 
-var container = document.getElementById('components-transfer-demo-basic');
-
 var App = React.createClass({
   displayName: 'App',
   getInitialState: function getInitialState() {
@@ -687,17 +688,12 @@ var App = React.createClass({
       }
       mockData.push(data);
     }
-    this.setState({
-      mockData: mockData,
-      targetKeys: targetKeys
-    });
+    this.setState({ mockData: mockData, targetKeys: targetKeys });
   },
   handleChange: function handleChange(targetKeys) {
-    this.setState({
-      targetKeys: targetKeys
-    });
+    this.setState({ targetKeys: targetKeys });
   },
-  renderFooter: function renderFooter(props) {
+  renderFooter: function renderFooter() {
     return React.createElement(
       _antd.Button,
       { type: 'primary', size: 'small', style: { float: 'right', margin: '5' },
@@ -706,22 +702,17 @@ var App = React.createClass({
     );
   },
   render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.Transfer, {
-        dataSource: this.state.mockData,
-        targetKeys: this.state.targetKeys,
-        onChange: this.handleChange,
-        render: function render(item) {
-          return item.title;
-        } })
-    );
+    return React.createElement(_antd.Transfer, {
+      dataSource: this.state.mockData,
+      targetKeys: this.state.targetKeys,
+      onChange: this.handleChange,
+      render: function render(item) {
+        return item.title;
+      } });
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Transfer, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-transfer-demo-basic'</span>);
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-transfer-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Transfer, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -730,11 +721,9 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       targetKeys: [],
     };
   },
-
   componentDidMount() {
     <span class="hljs-keyword">this</span>.getMock();
   },
-
   getMock() {
     <span class="hljs-keyword">let</span> targetKeys = [];
     <span class="hljs-keyword">let</span> mockData = [];
@@ -750,35 +739,27 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       }
       mockData.push(data);
     }
-    <span class="hljs-keyword">this</span>.setState({
-      mockData: mockData,
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ mockData, targetKeys });
   },
-
   handleChange(targetKeys) {
-    <span class="hljs-keyword">this</span>.setState({
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ targetKeys });
   },
-
-  renderFooter(props) {
+  renderFooter() {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">float:</span> '<span class="hljs-attribute">right</span>', <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">5</span>' }}
                    <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.getMock}</span>&gt;</span>刷新<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>;</span>
   },
-
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
         <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.mockData}</span>
         <span class="hljs-attribute">targetKeys</span>=<span class="hljs-value">{this.state.targetKeys}</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
-        <span class="hljs-attribute">render</span>=<span class="hljs-value">{(item)</span> =&gt;</span> { return item.title; }} /&gt;
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+        <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> item.title} /&gt;
+    )</span>;
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-transfer-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -794,8 +775,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var container = document.getElementById('components-transfer-demo-search');
-
 var App = React.createClass({
   displayName: 'App',
   getInitialState: function getInitialState() {
@@ -822,34 +801,24 @@ var App = React.createClass({
       }
       mockData.push(data);
     }
-    this.setState({
-      mockData: mockData,
-      targetKeys: targetKeys
-    });
+    this.setState({ mockData: mockData, targetKeys: targetKeys });
   },
   handleChange: function handleChange(targetKeys) {
-    this.setState({
-      targetKeys: targetKeys
-    });
+    this.setState({ targetKeys: targetKeys });
   },
   render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.Transfer, {
-        dataSource: this.state.mockData,
-        showSearch: true,
-        targetKeys: this.state.targetKeys,
-        onChange: this.handleChange,
-        render: function render(item) {
-          return item.title;
-        } })
-    );
+    return React.createElement(_antd.Transfer, {
+      dataSource: this.state.mockData,
+      showSearch: true,
+      targetKeys: this.state.targetKeys,
+      onChange: this.handleChange,
+      render: function render(item) {
+        return item.title;
+      } });
   }
 });
 
-ReactDOM.render(React.createElement(App, null), container);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Transfer } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-transfer-demo-search'</span>);
+ReactDOM.render(React.createElement(App, null), document.getElementById('components-transfer-demo-search'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Transfer } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -858,11 +827,9 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       targetKeys: [],
     };
   },
-
   componentDidMount() {
     <span class="hljs-keyword">this</span>.getMock();
   },
-
   getMock() {
     <span class="hljs-keyword">let</span> targetKeys = [];
     <span class="hljs-keyword">let</span> mockData = [];
@@ -878,31 +845,24 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       }
       mockData.push(data);
     }
-    <span class="hljs-keyword">this</span>.setState({
-      mockData: mockData,
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ mockData, targetKeys });
   },
-
   handleChange(targetKeys) {
-    <span class="hljs-keyword">this</span>.setState({
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ targetKeys });
   },
-
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
         <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.mockData}</span>
         <span class="hljs-attribute">showSearch</span>
         <span class="hljs-attribute">targetKeys</span>=<span class="hljs-value">{this.state.targetKeys}</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
-        <span class="hljs-attribute">render</span>=<span class="hljs-value">{(item)</span> =&gt;</span> { return item.title;}} /&gt;
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+        <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> item.title} /&gt;
+    )</span>;
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, container);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-transfer-demo-search'));</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -946,17 +906,12 @@ var App = React.createClass({
       }
       mockData.push(data);
     }
-    this.setState({
-      mockData: mockData,
-      targetKeys: targetKeys
-    });
+    this.setState({ mockData: mockData, targetKeys: targetKeys });
   },
   handleChange: function handleChange(targetKeys) {
-    this.setState({
-      targetKeys: targetKeys
-    });
+    this.setState({ targetKeys: targetKeys });
   },
-  renderFooter: function renderFooter(props) {
+  renderFooter: function renderFooter() {
     return React.createElement(
       _antd.Button,
       { type: 'ghost', size: 'small', style: { float: 'right', margin: '5' },
@@ -965,24 +920,20 @@ var App = React.createClass({
     );
   },
   render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.Transfer, {
-        dataSource: this.state.mockData,
-        showSearch: true,
-        listStyle: {
-          width: 250,
-          height: 300
-        },
-        operations: ['向右操作文案', '向左操作文案'],
-        targetKeys: this.state.targetKeys,
-        onChange: this.handleChange,
-        render: function render(item) {
-          return item.title + '-' + item.description;
-        },
-        footer: this.renderFooter })
-    );
+    return React.createElement(_antd.Transfer, {
+      dataSource: this.state.mockData,
+      showSearch: true,
+      listStyle: {
+        width: 250,
+        height: 300
+      },
+      operations: ['向右操作文案', '向左操作文案'],
+      targetKeys: this.state.targetKeys,
+      onChange: this.handleChange,
+      render: function render(item) {
+        return item.title + '-' + item.description;
+      },
+      footer: this.renderFooter });
   }
 });
 
@@ -996,11 +947,9 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       targetKeys: [],
     };
   },
-
   componentDidMount() {
     <span class="hljs-keyword">this</span>.getMock();
   },
-
   getMock() {
     <span class="hljs-keyword">let</span> targetKeys = [];
     <span class="hljs-keyword">let</span> mockData = [];
@@ -1016,26 +965,18 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
       }
       mockData.push(data);
     }
-    <span class="hljs-keyword">this</span>.setState({
-      mockData: mockData,
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ mockData, targetKeys });
   },
-
   handleChange(targetKeys) {
-    <span class="hljs-keyword">this</span>.setState({
-      targetKeys: targetKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ targetKeys });
   },
-
-  renderFooter(props) {
+  renderFooter() {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">float:</span> '<span class="hljs-attribute">right</span>', <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">5</span>' }}
                    <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.getMock}</span>&gt;</span>刷新<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>;</span>
   },
-
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
         <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.mockData}</span>
         <span class="hljs-attribute">showSearch</span>
         <span class="hljs-attribute">listStyle</span>=<span class="hljs-value">{{</span>
@@ -1045,9 +986,9 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
         <span class="hljs-attribute">operations</span>=<span class="hljs-value">{['向右操作文案',</span> '向左操作文案']}
         <span class="hljs-attribute">targetKeys</span>=<span class="hljs-value">{this.state.targetKeys}</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
-        <span class="hljs-attribute">render</span>=<span class="hljs-value">{(item)</span> =&gt;</span> { return item.title + '-' + item.description; }}
-        footer={this.renderFooter}/&gt;
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+        <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> item.title + '-' + item.description}
+        footer={this.renderFooter} /&gt;
+    )</span>;
   }
 });
 

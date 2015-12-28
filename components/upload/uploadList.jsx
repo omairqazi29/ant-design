@@ -5,6 +5,15 @@ const prefixCls = 'ant-upload';
 import { Line } from '../progress';
 import classNames from 'classnames';
 
+// https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
+const previewFile = function(file, callback) {
+  const reader = new FileReader();
+  reader.onloadend = function() {
+    callback(reader.result);
+  };
+  reader.readAsDataURL(file);
+};
+
 export default React.createClass({
   getDefaultProps() {
     return {
@@ -19,17 +28,36 @@ export default React.createClass({
   handleClose(file) {
     this.props.onRemove(file);
   },
+  componentDidUpdate() {
+    if (this.props.listType !== 'picture') {
+      return;
+    }
+    this.props.items.forEach(file => {
+      if (typeof document === 'undefined' ||
+          typeof window === 'undefined' ||
+          !window.FileReader || !window.File ||
+          (!file.originFileObj instanceof File) ||
+          file.thumbUrl !== undefined) {
+        return;
+      }
+      file.thumbUrl = '';
+      previewFile(file.originFileObj, (previewDataUrl) => {
+        file.thumbUrl = previewDataUrl;
+        this.forceUpdate();
+      });
+    });
+  },
   render() {
-    let list = this.props.items.map((file) => {
+    let list = this.props.items.map(file => {
       let progress;
       let icon = <Icon type="paper-clip" />;
 
       if (this.props.listType === 'picture') {
-        icon = (file.status === 'uploading' || !file.url)
+        icon = (file.status === 'uploading' || (!file.thumbUrl && !file.url))
           ? <Icon className={prefixCls + '-list-item-thumbnail'} type="picture" />
           : <a className={prefixCls + '-list-item-thumbnail'}
                href={file.url}
-               target="_blank"><img src={file.url} alt={file.name} /></a>;
+               target="_blank"><img src={file.thumbUrl || file.url} alt={file.name} /></a>;
       }
       if (file.status === 'uploading') {
         progress = <div className={prefixCls + '-list-item-progress'}>

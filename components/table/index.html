@@ -214,6 +214,9 @@ Table 表格 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -838,7 +841,8 @@ var columns = [{
       React.createElement(
         'a',
         { href: '#' },
-        '操作一'
+        '操作一',
+        record.name
       ),
       React.createElement('span', { className: 'ant-divider' }),
       React.createElement(
@@ -895,7 +899,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   key: <span class="hljs-string">'operation'</span>,
   render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, record</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一{record.name}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作二<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>

@@ -214,6 +214,9 @@ Menu 导航菜单 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -1100,7 +1103,7 @@ var Sider = React.createClass({
   },
   onToggle: function onToggle(info) {
     this.setState({
-      openKeys: info.openKeys
+      openKeys: info.open ? info.keyPath : info.keyPath.slice(1)
     });
   },
   render: function render() {
@@ -1236,9 +1239,9 @@ ReactDOM.render(React.createElement(Sider, null), document.getElementById('compo
       openKeys: e.keyPath.slice(<span class="hljs-number">1</span>)
     });
   },
-  onToggle(info){
+  onToggle(info) {
     <span class="hljs-keyword">this</span>.setState({
-      openKeys: info.openKeys
+      openKeys: info.open ? info.keyPath : info.keyPath.slice(<span class="hljs-number">1</span>)
     });
   },
   render() {

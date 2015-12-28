@@ -214,6 +214,9 @@ Tabs 标签页 - Ant Design
       <div class="search">
         <div id="autoComplete"></div>
       </div>
+      <div class="global-hint">
+        0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
+      </div>
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -990,7 +993,7 @@ var Demo = React.createClass({
   onEdit: function onEdit(targetKey, action) {
     this[action](targetKey);
   },
-  add: function add(targetKey) {
+  add: function add() {
     var panes = this.state.panes;
     var activeKey = 'newTab' + this.newTabIndex++;
     panes.push(React.createElement(
@@ -1044,7 +1047,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   onEdit(targetKey, action) {
     this[action](targetKey);
   },
-  add(targetKey) {
+  add() {
     const panes = this.state.panes;
     const activeKey = 'newTab' + this.newTabIndex++;
     panes.push(<span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"新建页签"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{activeKey}</span>&gt;</span>新页面<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>)</span>;
@@ -1089,11 +1092,9 @@ var _antd = require("antd");
 
 var TabPane = _antd.Tabs.TabPane;
 
-function callback(key) {}
-
 ReactDOM.render(React.createElement(
   _antd.Tabs,
-  { defaultActiveKey: "1", onChange: callback },
+  { defaultActiveKey: "1" },
   React.createElement(
     TabPane,
     { tab: "选项卡一", key: "1" },
@@ -1112,10 +1113,8 @@ ReactDOM.render(React.createElement(
 ), document.getElementById('components-tabs-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params">key</span>) </span>{}
-
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{callback}</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡一"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项卡一<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡二"</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡三"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项卡三<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
@@ -1138,11 +1137,9 @@ var _antd = require("antd");
 
 var TabPane = _antd.Tabs.TabPane;
 
-function callback(key) {}
-
 ReactDOM.render(React.createElement(
   _antd.Tabs,
-  { defaultActiveKey: "1", onChange: callback },
+  { defaultActiveKey: "1" },
   React.createElement(
     TabPane,
     { tab: "选项一", key: "1" },
@@ -1191,10 +1188,8 @@ ReactDOM.render(React.createElement(
 ), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params">key</span>) </span>{}
-
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{callback}</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tabs</span> <span class="hljs-attribute">defaultActiveKey</span>=<span class="hljs-value">"1"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项一"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>选项卡一<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项二"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项三"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项卡三<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
