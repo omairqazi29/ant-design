@@ -579,7 +579,7 @@
 <div class="highlight"><pre><code class="javascript">&lt;Timepicker /&gt; ==&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> /&gt;</span></span></code></pre></div><div class="highlight"><pre><code class="javascript">&lt;Datepicker /&gt; ==&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span></span></code></pre></div><p>相应的，两个组件的文档地址也改为 <a href="/components/date-picker">/components/date-picker</a> 和 <a href="/components/time-picker">/components/time-picker</a>。</p>
 <h3 id="受控的-datepicker">受控的 DatePicker<a href="#受控的-datepicker" class="anchor">#</a> </h3><p>由于 <code>DatePicker</code> 已改为 <a href="https://facebook.github.io/react/docs/forms.html#controlled-components">受控组件</a>，所以 <code>DatePicker</code> 显示的值必然与其 <code>value</code> 一致。</p>
 <p>如果无法理解受控组件，只须在发现在选中日期后 <code>Datepicker</code> 显示的值不变的情况后，把其 <code>value</code> 属性改为 <code>defaultValue</code> 即可。</p>
-<h2 id="其他">其他<a href="#其他" class="anchor">#</a> </h2><ul>
+<h3 id="其他">其他<a href="#其他" class="anchor">#</a> </h3><ul>
 <li>Alert 组件默认不展示样式，可以用 <code>showIcon</code> 属性添加图标。</li>
 <li>在 <code>0.10.x</code> 中 Datepicker 已废弃的 <code>onSelect</code> 属性被删除，请使用 <code>onChange</code> 属性。。</li>
 <li>TimePicker 的 <code>hourOptions</code> <code>minuteOptions</code> <code>secondOptions</code> 属性已移除，可使用 <code>disabledHours</code> <code>disabledMinutes</code> <code>disabledSeconds</code> 配和 <code>hideDisabled</code> 属性来完成原有功能。<a href="http://ant.design/components/time-picker/#picker-demo-disable-options">演示</a></li>
