@@ -339,7 +339,6 @@ samp {
   /* iOS 4.1- */
 }
 .anticon {
-  position: relative;
   display: inline-block;
   font-style: normal;
   vertical-align: baseline;
@@ -3821,7 +3820,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   background-color: #fff;
 }
 .ant-select-arrow {
-  position: relative;
   font-style: normal;
   vertical-align: baseline;
   text-align: center;
@@ -4040,7 +4038,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   transition: margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove {
-  position: relative;
   font-style: normal;
   vertical-align: baseline;
   text-align: center;
@@ -7405,30 +7402,6 @@ form .ant-calendar-picker {
   border-radius: 6px;
 }
 .ant-search-input .ant-search-btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  line-height: 1.5;
-  padding: 4px 11px;
-  font-size: 12px;
-  border-radius: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  position: relative\0;
   color: #666;
   background-color: #f4f4f4;
   border-color: #d9d9d9;
@@ -7439,36 +7412,6 @@ form .ant-calendar-picker {
   z-index: 2;
   padding-left: 8px;
   padding-right: 8px;
-}
-.ant-search-input .ant-search-btn > .anticon {
-  line-height: 1;
-}
-.ant-search-input .ant-search-btn,
-.ant-search-input .ant-search-btn:active,
-.ant-search-input .ant-search-btn:focus {
-  outline: 0;
-}
-.ant-search-input .ant-search-btn:not([disabled]):hover {
-  text-decoration: none;
-}
-.ant-search-input .ant-search-btn:not([disabled]):active {
-  outline: 0;
-  -webkit-transition: none;
-  transition: none;
-}
-.ant-search-input .ant-search-btn.disabled,
-.ant-search-input .ant-search-btn[disabled] {
-  cursor: not-allowed;
-}
-.ant-search-input .ant-search-btn-lg {
-  padding: 4px 11px 5px 11px;
-  font-size: 14px;
-  border-radius: 6px;
-}
-.ant-search-input .ant-search-btn-sm {
-  padding: 1px 7px;
-  font-size: 12px;
-  border-radius: 6px;
 }
 .ant-search-input .ant-search-btn:hover {
   color: #858585;
@@ -7514,6 +7457,10 @@ fieldset[disabled] .ant-search-input .ant-search-btn.active {
 }
 .ant-search-input .ant-search-btn:hover {
   border-color: #d9d9d9;
+}
+form .ant-search-input .ant-search-btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty,
 .ant-search-input:hover .ant-search-btn-noempty {
@@ -8210,7 +8157,6 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-up-inner,
 .ant-input-number-handler-down-inner {
-  position: relative;
   font-style: normal;
   vertical-align: baseline;
   text-align: center;
@@ -8593,7 +8539,6 @@ textarea.ant-input-number {
   /* IE6-IE8 */
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=-0.0000000000000001837, M12=1, M21=-1, M22=-0.0000000000000001837);
   zoom: 1;
-  position: relative;
   font-style: normal;
   vertical-align: baseline;
   text-align: center;
@@ -8704,6 +8649,7 @@ textarea.ant-input-number {
   margin-right: 8px;
   font-size: 14px;
   top: 1px;
+  position: relative;
 }
 .ant-divider {
   margin: 0 4px;
@@ -9343,6 +9289,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   margin-right: 8px;
   font-size: 14px;
   top: 1px;
+  position: relative;
 }
 .ant-alert-description {
   font-size: 12px;
