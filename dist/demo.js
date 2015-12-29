@@ -61242,7 +61242,7 @@
 
 	module.exports = {
 		"name": "antd",
-		"version": "0.11.0",
+		"version": "0.11.1",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
@@ -61356,8 +61356,9 @@
 			"babel": "babel components index.js --out-dir lib",
 			"start": "npm run clean && nico server --watch",
 			"clean": "rm -rf _site dist",
+			"site": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build",
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
-			"just-deploy": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
+			"just-deploy": "npm run site && node scripts/deploy.js",
 			"lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint && npm run lesshint",
 			"mdlint": "eslint components/*/demo/*.md --ext '.md' --global 'React,ReactDOM,mountNode' --rule 'no-console: 0'",
 			"lesshint": "lesshint style/ -e 'style/+(core|mixins)/+(base|iconfont|normalize|layouts|compatibility|grid).less'",
@@ -63276,7 +63277,8 @@
 	// 统一合并为完整的 Locale
 	var locale = (0, _objectAssign2["default"])({}, _en_US2["default"]);
 	locale.lang = (0, _objectAssign2["default"])({
-	  placeholder: 'Select a date'
+	  placeholder: 'Select date',
+	  timePlaceholder: 'Select time'
 	}, _en_US4["default"]);
 	
 	// All settings at:
