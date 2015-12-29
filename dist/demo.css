@@ -6416,10 +6416,10 @@ textarea.ant-time-picker-input {
 .ant-table-row-collapsed:after {
   content: '+';
 }
-.ant-table-row-expand-icon.ant-table-row-spaced {
+.ant-table-row-spaced {
   visibility: hidden;
 }
-.ant-table-row-expand-icon.ant-table-row-spaced:after {
+.ant-table-row-spaced:after {
   content: '.';
 }
 tr.ant-table-expanded-row,
@@ -11106,6 +11106,12 @@ a -count:active {
   cursor: pointer;
   background-color: #eaf8fe;
 }
+ul li.ant-transfer-list-highlight-enter {
+  -webkit-animation: transferHighlightIn 1s ease;
+          animation: transferHighlightIn 1s ease;
+  -webkit-transition: none;
+  transition: none;
+}
 .ant-transfer-list-body-with-search {
   padding-top: 34px;
 }
@@ -11146,6 +11152,22 @@ a -count:active {
 }
 :root .ant-transfer-operation .ant-btn .anticon {
   font-size: 12px;
+}
+@-webkit-keyframes transferHighlightIn {
+  0% {
+    background: #d5f1fd;
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes transferHighlightIn {
+  0% {
+    background: #d5f1fd;
+  }
+  100% {
+    background: transparent;
+  }
 }
 
 /*# sourceMappingURL=demo.css.map*/

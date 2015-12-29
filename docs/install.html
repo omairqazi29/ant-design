@@ -197,8 +197,7 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.11.0',
-        stable: '0.11.0'
+        latest: '0.11.0'
       };
     </script>
     <script src="../dist/demo.js"></script>
@@ -568,9 +567,9 @@
     <h1>安装 </h1>
     <h2 id="使用-npm-安装">使用 npm 安装<a href="#使用-npm-安装" class="anchor">#</a> </h2><p><strong>我们推荐使用 npm 的方式进行开发</strong>，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。</p>
 <p>可以通过 npm 直接安装到项目中，使用 <code>import</code> 或 <code>require</code> 进行引用。</p>
-<p>稳定版 <span class="versions" id="stable-version"></span>：</p>
+<p>稳定版：</p>
 <p><a href="https://www.npmjs.org/package/antd"><img src="http://img.shields.io/npm/v/antd.svg?style=flat-square" alt="npm package"></a></p>
-<div class="highlight"><pre><code class="bash">$ npm install antd --save</code></pre></div><p>安装最新的开发版本 <span class="versions" id="latest-version"></span>：</p>
+<div class="highlight"><pre><code class="bash">$ npm install antd --save</code></pre></div><p>开发版本：</p>
 <p><a href="https://www.npmjs.org/package/antd"><img src="https://cnpmjs.org/badge/v/antd.svg?&amp;tag=beta&amp;subject=npm" alt=""></a></p>
 <div class="highlight"><pre><code class="bash">$ npm install antd@beta --save</code></pre></div><blockquote>
 <p><strong>历史版本</strong>：<a href="https://github.com/ant-design/ant-design/releases">https://github.com/ant-design/ant-design/releases</a></p>
@@ -580,27 +579,6 @@
 <blockquote>
 <p>更多 <a href="https://github.com/ant-tool/xtool/">使用方式</a>。</p>
 </blockquote>
-<style>
-.versions {
-  font-weight: bold;
-  color: #C05B4D;
-  font-family: Consolas;
-  margin-left: 0.3em;
-  background: #FFF1E7;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-</style>
-
-<script>
-$('#latest-version').html(antdVersion.latest);
-
-if (antdVersion.stable) {
-  $('#stable-version').html(antdVersion.stable);
-} else {
-  $('#stable-version').html('暂无');
-}
-</script>
 
   </article>
 </section>

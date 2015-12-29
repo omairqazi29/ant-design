@@ -22461,6 +22461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      size: 'large',
 	      loading: false,
 	      bordered: false,
+	      indentSize: 20,
 	      onChange: noop,
 	      locale: {}
 	    };
@@ -36689,6 +36690,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
+	var _rcAnimate = __webpack_require__(67);
+	
+	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -36707,10 +36712,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function TransferList(props) {
 	    _classCallCheck(this, TransferList);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TransferList).call(this, props));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TransferList).call(this, props));
+	
+	    _this.state = {
+	      mounted: false
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(TransferList, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+	
+	      setTimeout(function () {
+	        _this2.setState({
+	          mounted: true
+	        });
+	      }, 0);
+	    }
+	  }, {
 	    key: 'handleSelectALl',
 	    value: function handleSelectALl() {
 	      this.props.handleSelectAll();
@@ -36765,7 +36786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'render',
 	    value: function render() {
 	      var _classNames2,
-	          _this2 = this;
+	          _this3 = this;
 	
 	      var _props = this.props;
 	      var prefixCls = _props.prefixCls;
@@ -36822,19 +36843,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _react2["default"].createElement(_search2["default"], { prefixCls: prefixCls + '-search', onChange: this.handleFilter.bind(this), handleClear: this.handleClear.bind(this), value: filter })
 	          ) : null,
 	          _react2["default"].createElement(
-	            'ul',
-	            null,
+	            _rcAnimate2["default"],
+	            { component: 'ul',
+	              transitionName: this.state.mounted ? prefixCls + '-highlight' : '',
+	              transitionLeave: false },
 	            dataSource.length > 0 ? dataSource.map(function (item) {
 	              // apply filter
-	              var itemText = _this2.props.render(item);
-	              var filterResult = _this2.matchFilter(itemText, filter);
+	              var itemText = _this3.props.render(item);
+	              var filterResult = _this3.matchFilter(itemText, filter);
 	
-	              var renderedText = _this2.props.render(item);
+	              var renderedText = _this3.props.render(item);
 	
 	              if (filterResult) {
 	                return _react2["default"].createElement(
 	                  'li',
-	                  { onClick: _this2.handleSelect.bind(_this2, item), key: item.key, title: renderedText },
+	                  { onClick: _this3.handleSelect.bind(_this3, item), key: item.key, title: renderedText },
 	                  _react2["default"].createElement(_checkbox2["default"], { checked: checkedKeys.some(function (key) {
 	                      return key === item.key;
 	                    }) }),
@@ -37091,7 +37114,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		"name": "antd",
 		"version": "0.11.0",
-		"stableVersion": "0.11.0",
 		"title": "Ant Design",
 		"description": "一个 UI 设计语言",
 		"homepage": "http://ant.design/",
