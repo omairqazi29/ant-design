@@ -1,6 +1,7 @@
 <div class="code-box" id="anim-demo-router">
   <div class="code-box-demo">
     <div id="components-queue-anim-demo-router"></div>
+    <script>mountNode = document.getElementById('components-queue-anim-demo-router');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -188,7 +189,7 @@ ReactDOM.render(React.createElement(
     React.createElement(Route, { path: 'page1', component: Page1 }),
     React.createElement(Route, { path: 'page2', component: Page2 })
   )
-), document.getElementById('components-queue-anim-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
 <span class="hljs-keyword">let</span> { Router, Route, Link } = ReactRouter;
 <span class="hljs-keyword">import</span> { QueueAnim, Menu } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -308,7 +309,7 @@ ReactDOM.render((
       <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"page2"</span> <span class="hljs-attribute">component</span>=<span class="hljs-value">{Page2}</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Router</span>&gt;</span>
-)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-queue-anim-demo-router'</span>));</code></pre></div><style type="text/css">#components-queue-anim-demo-router .demo-router-wrap {
+)</span>, mountNode);</code></pre></div><style type="text/css">#components-queue-anim-demo-router .demo-router-wrap {
   position: relative;
   width: 100%;
   margin: auto;

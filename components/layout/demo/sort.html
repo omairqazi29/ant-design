@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-sort">
   <div class="code-box-demo">
     <div id="components-layout-demo-sort"></div>
+    <script>mountNode = document.getElementById('components-layout-demo-sort');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -22,7 +23,7 @@ ReactDOM.render(React.createElement(
       ".col-6 .col-pull-18"
     )
   )
-), document.getElementById('components-layout-demo-sort'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -31,7 +32,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">pull</span>=<span class="hljs-value">"18"</span>&gt;</span>.col-6 .col-pull-18<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-  document.getElementById('components-layout-demo-sort')
+  mountNode
 );</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-dynamic">
   <div class="code-box-demo">
     <div id="components-tree-demo-dynamic"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-dynamic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -91,7 +92,7 @@ var TreeDemo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="hljs-keyword">const</span> asyncTree = [{
@@ -161,7 +162,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

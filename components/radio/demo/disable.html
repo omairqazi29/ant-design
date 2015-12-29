@@ -1,12 +1,13 @@
 <div class="code-box" id="demo-disable">
   <div class="code-box-demo">
     <div id="components-radio-demo-disable"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-radio-demo-disable');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       disabled: true
@@ -19,33 +20,33 @@ var App = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      'div',
+      "div",
       null,
       React.createElement(
         _antd.Radio,
         { defaultChecked: false, disabled: this.state.disabled },
-        '不可用'
+        "不可用"
       ),
-      React.createElement('br', null),
+      React.createElement("br", null),
       React.createElement(
         _antd.Radio,
         { defaultChecked: true, disabled: this.state.disabled },
-        '不可用'
+        "不可用"
       ),
       React.createElement(
-        'div',
+        "div",
         { style: { marginTop: 20 } },
         React.createElement(
           _antd.Button,
-          { type: 'primary', onClick: this.toggleDisabled },
-          'Toggle disabled'
+          { type: "primary", onClick: this.toggleDisabled },
+          "Toggle disabled"
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -72,7 +73,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-radio-demo-disable'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

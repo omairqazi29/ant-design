@@ -808,6 +808,7 @@ Table 表格 - Ant Design
     <div class="code-boxes-col-1-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-table-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-table-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -877,7 +878,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data }), document.getElementById('components-table-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -927,7 +928,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -939,6 +940,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-row-selection">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -987,7 +989,7 @@ var rowSelection = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1030,7 +1032,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 };
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-row-selection'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1042,6 +1044,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-row-selection-props">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection-props"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection-props');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1096,7 +1099,7 @@ var rowSelection = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1145,7 +1148,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 };
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-row-selection-props'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1157,6 +1160,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-row-selection-radio-props">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection-radio-props"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection-radio-props');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1216,7 +1220,7 @@ function rowKey(record) {
   return record.id;
 }
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1270,7 +1274,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, r
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">rowKey</span>=<span class="hljs-value">{rowKey}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1282,6 +1286,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-paging">
   <div class="code-box-demo">
     <div id="components-table-demo-paging"></div>
+    <script>mountNode = document.getElementById('components-table-demo-paging');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1323,7 +1328,7 @@ var pagination = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1359,7 +1364,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 };
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{pagination}</span> /&gt;</span>
-, document.getElementById('components-table-demo-paging'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1371,6 +1376,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-head">
   <div class="code-box-demo">
     <div id="components-table-demo-head"></div>
+    <script>mountNode = document.getElementById('components-table-demo-head');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1445,7 +1451,7 @@ function onChange(pagination, filters, sorter) {
   console.log('各类参数是', pagination, filters, sorter);
 }
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, onChange: onChange }), document.getElementById('components-table-demo-head'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1518,7 +1524,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, document.getElementById('components-table-demo-head'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1531,6 +1537,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-ajax">
   <div class="code-box-demo">
     <div id="components-table-demo-ajax"></div>
+    <script>mountNode = document.getElementById('components-table-demo-ajax');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1621,7 +1628,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-table-demo-ajax'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> reqwest <span class="hljs-keyword">from</span> <span class="hljs-string">'reqwest'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
@@ -1701,7 +1708,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-table-demo-ajax'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1716,6 +1723,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-nopagination">
   <div class="code-box-demo">
     <div id="components-table-demo-nopagination"></div>
+    <script>mountNode = document.getElementById('components-table-demo-nopagination');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1748,7 +1756,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1779,7 +1787,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{false}</span> /&gt;</span>
-, document.getElementById('components-table-demo-nopagination'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1791,6 +1799,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-table-demo-size"></div>
+    <script>mountNode = document.getElementById('components-table-demo-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1837,7 +1846,7 @@ ReactDOM.render(React.createElement(
     '小号表格'
   ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
-), document.getElementById('components-table-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1871,7 +1880,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"middle"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>小号表格<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
 
   </div>
   <div class="code-box-meta markdown">
@@ -1884,6 +1893,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-bordered">
   <div class="code-box-demo">
     <div id="components-table-demo-bordered"></div>
+    <script>mountNode = document.getElementById('components-table-demo-bordered');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1924,7 +1934,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-bordered'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -1959,7 +1969,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">bordered</span> /&gt;</span>
-, document.getElementById('components-table-demo-bordered'));</span></code></pre></div><style type="text/css">.column-money {
+, mountNode);</span></code></pre></div><style type="text/css">.column-money {
   text-align: right;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.column-money</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> right</span></span>;
@@ -1975,6 +1985,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-expand">
   <div class="code-box-demo">
     <div id="components-table-demo-expand"></div>
+    <script>mountNode = document.getElementById('components-table-demo-expand');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2002,7 +2013,7 @@ var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公�
 ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
-  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  className: 'table' }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAction</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
@@ -2030,7 +2041,7 @@ ReactDOM.render(
   <span class="hljs-attribute">expandedRowRender</span>=<span class="hljs-value">{expandedRowRender}</span>
   <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span>
   <span class="hljs-attribute">className</span>=<span class="hljs-value">"table"</span> /&gt;</span>
-, document.getElementById('components-table-demo-expand'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2042,6 +2053,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-colspan-rowspan">
   <div class="code-box-demo">
     <div id="components-table-demo-colspan-rowspan"></div>
+    <script>mountNode = document.getElementById('components-table-demo-colspan-rowspan');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2158,7 +2170,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-colspan-rowspan'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
 <span class="hljs-comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
@@ -2265,7 +2277,7 @@ const data = [{
 }];
 
 ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">bordered</span> /&gt;</span>
-, document.getElementById('components-table-demo-colspan-rowspan'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2278,6 +2290,7 @@ ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span>
 </div><div class="code-box" id="demo-loading">
   <div class="code-box-demo">
     <div id="components-table-demo-loading"></div>
+    <script>mountNode = document.getElementById('components-table-demo-loading');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2335,7 +2348,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -2383,7 +2396,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-table-demo-loading'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2395,6 +2408,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-indent-size">
   <div class="code-box-demo">
     <div id="components-table-demo-indent-size"></div>
+    <script>mountNode = document.getElementById('components-table-demo-indent-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2467,7 +2481,7 @@ var data = [{
   address: '我是b'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 30 }), document.getElementById('components-table-demo-indent-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 30 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -2539,7 +2553,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{30}</span> /&gt;</span>,
-  document.getElementById('components-table-demo-indent-size')
+  mountNode
 );</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

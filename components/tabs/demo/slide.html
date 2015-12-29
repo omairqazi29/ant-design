@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-slide">
   <div class="code-box-demo">
     <div id="components-tabs-demo-slide"></div>
+    <script>mountNode = document.getElementById('components-tabs-demo-slide');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -55,7 +56,7 @@ ReactDOM.render(React.createElement(
     { tab: "选项九", key: "9" },
     "选项卡九"
   )
-), document.getElementById('components-tabs-demo-slide'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
@@ -70,7 +71,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项八"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"8"</span>&gt;</span>选项卡八<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项九"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"9"</span>&gt;</span>选项卡九<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tabs</span>&gt;</span>
-, document.getElementById('components-tabs-demo-slide'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

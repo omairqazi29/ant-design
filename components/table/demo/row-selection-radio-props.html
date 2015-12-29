@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-row-selection-radio-props">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection-radio-props"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection-radio-props');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -60,7 +61,7 @@ function rowKey(record) {
   return record.id;
 }
 
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), document.getElementById('components-table-demo-row-selection-radio-props'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -114,7 +115,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, r
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">rowKey</span>=<span class="hljs-value">{rowKey}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, document.getElementById('components-table-demo-row-selection-radio-props'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

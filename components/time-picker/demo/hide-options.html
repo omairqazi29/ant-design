@@ -1,6 +1,7 @@
 <div class="code-box" id="picker-demo-hide-options">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-hide-options"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-hide-options');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -25,7 +26,7 @@ function disabledSeconds() {
   });
 }
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disabledMinutes, disabledSeconds: disabledSeconds, hideDisabledOptions: true }), document.getElementById('components-time-picker-demo-hide-options'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disabledMinutes, disabledSeconds: disabledSeconds, hideDisabledOptions: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newArray</span>(<span class="hljs-params">start, end</span>) </span>{
   <span class="hljs-keyword">let</span> result = [];
@@ -45,7 +46,7 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disable
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">disabledMinutes</span>=<span class="hljs-value">{disabledMinutes}</span> <span class="hljs-attribute">disabledSeconds</span>=<span class="hljs-value">{disabledSeconds}</span> <span class="hljs-attribute">hideDisabledOptions</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-hide-options'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

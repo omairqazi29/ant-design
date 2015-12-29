@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-upload-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -29,7 +30,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   name: <span class="hljs-string">'file'</span>,
@@ -52,7 +53,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

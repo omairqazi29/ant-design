@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-other-items">
   <div class="code-box-demo">
     <div id="components-validation-demo-other-items"></div>
+    <script>mountNode = document.getElementById('components-validation-demo-other-items');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -277,7 +278,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-validation-demo-other-items'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Select, Radio, Button, DatePicker, InputNumber, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Validation, Select, Radio, Button, DatePicker, InputNumber, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Validator = Validation.Validator;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
@@ -469,7 +470,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-validation-demo-other-items'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

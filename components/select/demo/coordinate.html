@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-coordinate">
   <div class="code-box-demo">
     <div id="components-select-demo-coordinate"></div>
+    <script>mountNode = document.getElementById('components-select-demo-coordinate');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -63,7 +64,7 @@ var App = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-select-demo-coordinate'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-keyword">const</span> provinceData = [<span class="hljs-string">'浙江'</span>, <span class="hljs-string">'江苏'</span>];
@@ -108,7 +109,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-select-demo-coordinate'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-drag-simple">
   <div class="code-box-demo">
     <div id="components-upload-demo-drag-simple"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-drag-simple');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -17,7 +18,7 @@ ReactDOM.render(React.createElement(
   Dragger,
   props,
   React.createElement(_antd.Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
 <span class="hljs-keyword">const</span> props = {
@@ -30,7 +31,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dragger</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
-  document.getElementById('components-upload-demo-drag-simple')
+  mountNode
 );</span></code></pre></div><style type="text/css">#components-upload-demo-drag-simple {
   width: 246px;
   height: 146px;

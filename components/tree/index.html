@@ -675,6 +675,7 @@ Tree 树形控件 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tree-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -700,7 +701,7 @@ ReactDOM.render(React.createElement(
       React.createElement(TreeNode, { title: "leaf" })
     )
   )
-), document.getElementById('components-tree-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
 ReactDOM.render(
@@ -716,7 +717,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-, document.getElementById('components-tree-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -728,6 +729,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-special">
   <div class="code-box-demo">
     <div id="components-tree-demo-special"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-special');</script>
     <script>(function(){'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -831,7 +833,7 @@ var TreeDemo = (function (_React$Component) {
   return TreeDemo;
 })(React.Component);
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-special'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeDemo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -887,7 +889,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
   }
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-special'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -901,6 +903,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-checkbox">
   <div class="code-box-demo">
     <div id="components-tree-demo-checkbox"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-checkbox');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -934,7 +937,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-tree-demo-checkbox'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleCheck</span>(<span class="hljs-params">info</span>) </span>{
@@ -955,7 +958,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-tree-demo-checkbox'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -967,6 +970,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-dynamic">
   <div class="code-box-demo">
     <div id="components-tree-demo-dynamic"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-dynamic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1057,7 +1061,7 @@ var TreeDemo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('components-tree-demo-dynamic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
 
 <span class="hljs-keyword">const</span> asyncTree = [{
@@ -1127,7 +1131,7 @@ ReactDOM.render(React.createElement(TreeDemo, null), document.getElementById('co
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, document.getElementById('components-tree-demo-dynamic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

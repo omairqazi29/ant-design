@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-link">
   <div class="code-box-demo">
     <div id="components-badge-demo-link"></div>
+    <script>mountNode = document.getElementById('components-badge-demo-link');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -13,7 +14,7 @@ ReactDOM.render(React.createElement(
     { count: 5 },
     React.createElement("span", { className: "head-example" })
   )
-), document.getElementById('components-badge-demo-link'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>
@@ -21,7 +22,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-, document.getElementById('components-badge-demo-link'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

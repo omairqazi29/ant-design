@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-sider">
   <div class="code-box-demo">
     <div id="components-menu-demo-sider"></div>
+    <script>mountNode = document.getElementById('components-menu-demo-sider');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -143,7 +144,7 @@ var Sider = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(Sider, null), document.getElementById('components-menu-demo-sider'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Sider, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
 <span class="hljs-keyword">const</span> MenuItemGroup = Menu.ItemGroup;
 
@@ -192,7 +193,7 @@ ReactDOM.render(React.createElement(Sider, null), document.getElementById('compo
     <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
   }
 });
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Sider</span> /&gt;</span>, document.getElementById('components-menu-demo-sider'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Sider</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

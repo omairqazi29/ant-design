@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-button-demo-disabled"></div>
+    <script>mountNode = document.getElementById('components-button-demo-disabled');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -51,7 +52,7 @@ ReactDOM.render(React.createElement(
     { type: "dashed", disabled: true },
     "虚线按钮(失效)"
   )
-), document.getElementById('components-button-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>主按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
@@ -66,7 +67,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"dashed"</span>&gt;</span>虚线按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"dashed"</span> <span class="hljs-attribute">disabled</span>&gt;</span>虚线按钮(失效)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-button-demo-disabled'));</span></code></pre></div><style>
+, mountNode);</span></code></pre></div><style>
 #components-button-demo-disabled .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;

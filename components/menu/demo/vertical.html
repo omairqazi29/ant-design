@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-vertical">
   <div class="code-box-demo">
     <div id="components-menu-demo-vertical"></div>
+    <script>mountNode = document.getElementById('components-menu-demo-vertical');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -126,7 +127,7 @@ ReactDOM.render(React.createElement(
       '选项12'
     )
   )
-), document.getElementById('components-menu-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
 <span class="hljs-keyword">const</span> MenuItemGroup = Menu.ItemGroup;
 
@@ -160,7 +161,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"12"</span>&gt;</span>选项12<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
-, document.getElementById('components-menu-demo-vertical'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

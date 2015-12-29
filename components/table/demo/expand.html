@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-expand">
   <div class="code-box-demo">
     <div id="components-table-demo-expand"></div>
+    <script>mountNode = document.getElementById('components-table-demo-expand');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -28,7 +29,7 @@ var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公�
 ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
   expandedRowRender: expandedRowRender,
   dataSource: data,
-  className: 'table' }), document.getElementById('components-table-demo-expand'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  className: 'table' }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAction</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
@@ -56,7 +57,7 @@ ReactDOM.render(
   <span class="hljs-attribute">expandedRowRender</span>=<span class="hljs-value">{expandedRowRender}</span>
   <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span>
   <span class="hljs-attribute">className</span>=<span class="hljs-value">"table"</span> /&gt;</span>
-, document.getElementById('components-table-demo-expand'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

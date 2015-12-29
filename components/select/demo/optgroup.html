@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-optgroup">
   <div class="code-box-demo">
     <div id="components-select-demo-optgroup"></div>
+    <script>mountNode = document.getElementById('components-select-demo-optgroup');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -41,7 +42,7 @@ ReactDOM.render(React.createElement(
       'yiminghe'
     )
   )
-), document.getElementById('components-select-demo-optgroup'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> OptGroup = Select.OptGroup;
 
@@ -62,7 +63,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">OptGroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-, document.getElementById('components-select-demo-optgroup'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

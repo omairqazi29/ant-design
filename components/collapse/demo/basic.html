@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-collapse-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-collapse-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -43,7 +44,7 @@ ReactDOM.render(React.createElement(
       text
     )
   )
-), document.getElementById('components-collapse-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Collapse } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Collapse } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Panel = Collapse.Panel;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params">key</span>) </span>{
@@ -68,7 +69,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Panel</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Collapse</span>&gt;</span>
-, document.getElementById('components-collapse-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

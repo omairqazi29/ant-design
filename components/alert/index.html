@@ -637,14 +637,15 @@ Alert 警告提示 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-alert-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.Alert, { message: "成功提示的文案", type: "success" }), document.getElementById('components-alert-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Alert, { message: "成功提示的文案", type: "success" }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"成功提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"success"</span> /&gt;</span>
-, document.getElementById('components-alert-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -656,6 +657,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-closable">
   <div class="code-box-demo">
     <div id="components-alert-demo-closable"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-closable');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -676,7 +678,7 @@ ReactDOM.render(React.createElement(
     type: 'error',
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> onClose = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
   <span class="hljs-built_in">console</span>.log(e, <span class="hljs-string">'我要被关闭啦！'</span>);
@@ -692,7 +694,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span>
     <span class="hljs-attribute">closable</span>
     <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-alert-demo-closable'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -704,6 +706,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-icon">
   <div class="code-box-demo">
     <div id="components-alert-demo-icon"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-icon');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -733,7 +736,7 @@ ReactDOM.render(React.createElement(
     description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
     type: "error",
     showIcon: true })
-), document.getElementById('components-alert-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"成功提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"success"</span> <span class="hljs-attribute">showIcon</span> /&gt;</span>
@@ -758,7 +761,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-attribute">description</span>=<span class="hljs-value">"错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍"</span>
     <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span>
     <span class="hljs-attribute">showIcon</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-alert-demo-icon'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -772,6 +775,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-style">
   <div class="code-box-demo">
     <div id="components-alert-demo-style"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-style');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -783,7 +787,7 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info" }),
   React.createElement(_antd.Alert, { message: "警告提示的文案", type: "warn" }),
   React.createElement(_antd.Alert, { message: "错误提示的文案", type: "error" })
-), document.getElementById('components-alert-demo-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"成功提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"success"</span> /&gt;</span>
@@ -791,7 +795,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"警告提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"warn"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"错误提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-document.getElementById('components-alert-demo-style'));</span></code></pre></div>
+mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -803,6 +807,7 @@ document.getElementById('components-alert-demo-style'));</span></code></pre></di
 </div><div class="code-box" id="demo-description">
   <div class="code-box-demo">
     <div id="components-alert-demo-description"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-description');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -824,7 +829,7 @@ ReactDOM.render(React.createElement(
     message: "错误提示的文案",
     description: "错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍",
     type: "error" })
-), document.getElementById('components-alert-demo-description'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"成功提示的文案"</span>
@@ -841,7 +846,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-attribute">message</span>=<span class="hljs-value">"错误提示的文案"</span>
     <span class="hljs-attribute">description</span>=<span class="hljs-value">"错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍"</span>
     <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-alert-demo-description'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -853,15 +858,16 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-close-text">
   <div class="code-box-demo">
     <div id="components-alert-demo-close-text"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-close-text');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info", closeText: "不再提醒" }), document.getElementById('components-alert-demo-close-text'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Alert, { message: "消息提示的文案", type: "info", closeText: "不再提醒" }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"消息提示的文案"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"info"</span> <span class="hljs-attribute">closeText</span>=<span class="hljs-value">"不再提醒"</span> /&gt;</span>
-, document.getElementById('components-alert-demo-close-text'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

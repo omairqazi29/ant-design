@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-locale">
   <div class="code-box-demo">
     <div id="components-modal-demo-locale"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-locale');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -78,7 +79,7 @@ ReactDOM.render(React.createElement(
     { onClick: confirm },
     "confirm"
   )
-), document.getElementById('components-modal-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> LocalizedModal = React.createClass({
   getInitialState() {
@@ -126,7 +127,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">LocalizedModal</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{confirm}</span>&gt;</span>confirm<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-modal-demo-locale'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

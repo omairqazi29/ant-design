@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-paging">
   <div class="code-box-demo">
     <div id="components-table-demo-paging"></div>
+    <script>mountNode = document.getElementById('components-table-demo-paging');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -42,7 +43,7 @@ var pagination = {
   }
 };
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), document.getElementById('components-table-demo-paging'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -78,7 +79,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 };
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{pagination}</span> /&gt;</span>
-, document.getElementById('components-table-demo-paging'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

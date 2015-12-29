@@ -1,6 +1,7 @@
 <div class="code-box" id="picker-demo-basic">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -11,7 +12,7 @@ function onChange(time) {
   }
 }
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), document.getElementById('components-time-picker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">time</span>) </span>{
   <span class="hljs-keyword">if</span> (time) {
@@ -21,7 +22,7 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), d
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

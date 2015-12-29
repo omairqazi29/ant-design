@@ -645,6 +645,7 @@ Dropdown 下拉菜单 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-dropdown-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -690,7 +691,7 @@ ReactDOM.render(React.createElement(
     "触发链接 ",
     React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
@@ -710,7 +711,7 @@ ReactDOM.render(
       触发链接 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -722,6 +723,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-trigger">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-trigger"></div>
+    <script>mountNode = document.getElementById('components-dropdown-demo-trigger');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -768,7 +770,7 @@ ReactDOM.render(React.createElement(
       React.createElement(_antd.Icon, { type: "down" })
     )
   )
-), document.getElementById('components-dropdown-demo-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span>
@@ -787,7 +789,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       点击触发 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-dropdown-demo-trigger'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -799,6 +801,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-dropdown-button">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-dropdown-button"></div>
+    <script>mountNode = document.getElementById('components-dropdown-demo-dropdown-button');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -841,7 +844,7 @@ ReactDOM.render(React.createElement(
   DropdownButton,
   { overlay: menu, type: "primary" },
   "某功能按钮"
-), document.getElementById('components-dropdown-demo-dropdown-button'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> DropdownButton = Dropdown.Button;
 
 <span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
@@ -860,7 +863,7 @@ ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DropdownButton</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
   某功能按钮
 <span class="hljs-tag">&lt;/<span class="hljs-title">DropdownButton</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-dropdown-button'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -874,6 +877,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-item">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-item"></div>
+    <script>mountNode = document.getElementById('components-dropdown-demo-item');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -916,7 +920,7 @@ ReactDOM.render(React.createElement(
     "鼠标移入 ",
     React.createElement(_antd.Icon, { type: "down" })
   )
-), document.getElementById('components-dropdown-demo-item'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0"</span>&gt;</span>
@@ -935,7 +939,7 @@ ReactDOM.render(
       鼠标移入 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-item'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -947,6 +951,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-event">
   <div class="code-box-demo">
     <div id="components-dropdown-demo-event"></div>
+    <script>mountNode = document.getElementById('components-dropdown-demo-event');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -986,7 +991,7 @@ ReactDOM.render(React.createElement(
     '鼠标移入，点击菜单 ',
     React.createElement(_antd.Icon, { type: 'down' })
   )
-), document.getElementById('components-dropdown-demo-event'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> onClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{key}</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'点击了菜单'</span> + key);
 };
@@ -1003,7 +1008,7 @@ ReactDOM.render(
       鼠标移入，点击菜单 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dropdown</span>&gt;</span>
-, document.getElementById('components-dropdown-demo-event'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

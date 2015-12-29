@@ -23176,19 +23176,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var keyFn = props.rowKey;
 	    var rowClassName = props.rowClassName;
 	    var expandedRowClassName = props.expandedRowClassName;
+	    var needIndentSpaced = props.data.some(function (record) {
+	      return record[childrenColumnName] && record[childrenColumnName].length > 0;
+	    });
 	    for (var i = 0; i < data.length; i++) {
 	      var record = data[i];
 	      var key = keyFn ? keyFn(record, i) : undefined;
 	      var childrenColumn = record[childrenColumnName];
 	      var isRowExpanded = this.isRowExpanded(record);
 	      var expandedRowContent = undefined;
-	      if (expandedRowRender) {
+	      if (expandedRowRender && isRowExpanded) {
 	        expandedRowContent = expandedRowRender(record, i);
 	      }
 	      var className = rowClassName(record, i);
 	      rst.push(_react2['default'].createElement(_TableRow2['default'], {
 	        indent: indent,
 	        indentSize: props.indentSize,
+	        needIndentSpaced: needIndentSpaced,
 	        className: className,
 	        record: record,
 	        expandIconAsCell: expandIconAsCell,
@@ -23196,7 +23200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        index: i,
 	        visible: visible,
 	        onExpand: this.onExpanded,
-	        expandable: childrenColumn || expandedRowContent,
+	        expandable: childrenColumn || expandedRowRender,
 	        expanded: isRowExpanded,
 	        prefixCls: props.prefixCls + '-row',
 	        childrenColumnName: childrenColumnName,
@@ -23346,6 +23350,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var expandIconAsCell = props.expandIconAsCell;
 	    var indent = props.indent;
 	    var indentSize = props.indentSize;
+	    var needIndentSpaced = props.needIndentSpaced;
 	
 	    for (var i = 0; i < columns.length; i++) {
 	      var col = columns[i];
@@ -23364,6 +23369,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        expandIcon = _react2['default'].createElement('span', {
 	          className: prefixCls + '-expand-icon ' + prefixCls + '-' + (expanded ? 'expanded' : 'collapsed'),
 	          onClick: props.onExpand.bind(null, !expanded, record) });
+	      } else if (i === 0 && needIndentSpaced) {
+	        expandIcon = _react2['default'].createElement('span', {
+	          className: prefixCls + '-expand-icon ' + prefixCls + '-spaced' });
 	      }
 	
 	      if (expandIconAsCell && i === 0) {
@@ -37138,7 +37146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"rc-slider": "~3.3.0",
 			"rc-steps": "~1.4.1",
 			"rc-switch": "~1.3.1",
-			"rc-table": "~3.7.0",
+			"rc-table": "~3.7.1",
 			"rc-tabs": "~5.5.0",
 			"rc-time-picker": "~1.0.0",
 			"rc-tooltip": "~3.3.0",
@@ -37200,7 +37208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"deploy": "rm -rf node_modules && node scripts/install.js && npm run just-deploy",
 			"just-deploy": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build && node scripts/deploy.js",
 			"lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint && npm run lesshint",
-			"mdlint": "eslint components/*/demo/*.md --ext '.md' --global 'React,ReactDOM' --rule 'no-console: 0'",
+			"mdlint": "eslint components/*/demo/*.md --ext '.md' --global 'React,ReactDOM,mountNode' --rule 'no-console: 0'",
 			"lesshint": "lesshint style/ -e 'style/+(core|mixins)/+(base|iconfont|normalize|layouts|compatibility|grid).less'",
 			"test": "npm run lint && webpack && npm run jest",
 			"jest": "jest",

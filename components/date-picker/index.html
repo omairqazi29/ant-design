@@ -709,6 +709,7 @@ DatePicker 日期选择框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-basic">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -717,15 +718,13 @@ function onChange(value) {
   console.log(value);
 }
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { onChange: onChange }), document.getElementById('components-date-picker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
   <span class="hljs-built_in">console</span>.log(value);
 }
 
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-basic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -737,6 +736,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-size">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-size"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-size');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -747,7 +747,7 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.DatePicker, { size: "large" }),
   React.createElement(_antd.DatePicker, null),
   React.createElement(_antd.DatePicker, { size: "small" })
-), document.getElementById('components-date-picker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -755,7 +755,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-date-picker-demo-size'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -767,15 +767,16 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-disabled">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-disabled"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-date-picker-demo-disabled');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: '2015-06-06', disabled: true }), document.getElementById('components-date-picker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: "2015-06-06", disabled: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-06-06"</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-disabled'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -787,6 +788,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-start-end">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-start-end"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-start-end');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -833,7 +835,7 @@ var DateRange = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-date-picker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(DateRange, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> DateRange = React.createClass({
   getInitialState() {
@@ -876,7 +878,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DateRange</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-start-end'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -888,16 +890,17 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-month-picker">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-month-picker"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-date-picker-demo-month-picker');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var MonthPicker = _antd.DatePicker.MonthPicker;
-ReactDOM.render(React.createElement(MonthPicker, { defaultValue: '2015-12' }), document.getElementById('components-date-picker-demo-month-picker'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(MonthPicker, { defaultValue: "2015-12" }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> MonthPicker = DatePicker.MonthPicker;
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MonthPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015-12"</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-month-picker'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -911,15 +914,16 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-formatter">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-formatter"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-formatter');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), document.getElementById('components-date-picker-demo-formatter'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { defaultValue: "2015/01/01", format: "yyyy/MM/dd" }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"2015/01/01"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy/MM/dd"</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-formatter'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -931,6 +935,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-time">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-time"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-time');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -939,7 +944,7 @@ function onChange(value) {
   console.log('选择了时间：', value);
 }
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange, style: { width: 160 } }), document.getElementById('components-date-picker-demo-time'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange, style: { width: 160 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'选择了时间：'</span>, value);
@@ -947,7 +952,7 @@ ReactDOM.render(React.createElement(_antd.DatePicker, { showTime: true, format: 
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">160</span>}} /&gt;</span>
-, document.getElementById('components-date-picker-demo-time'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -959,6 +964,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-disabled-date">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-disabled-date"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-disabled-date');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -968,7 +974,7 @@ var disabledDate = function disabledDate(current) {
   return current && current.getTime() > Date.now();
 };
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), document.getElementById('components-date-picker-demo-disabled-date'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current</span>) </span>{
   <span class="hljs-comment">// can not select days after today</span>
@@ -977,7 +983,7 @@ ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDa
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{disabledDate}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-disabled-date'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -990,6 +996,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-range">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-range"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-range');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1005,7 +1012,7 @@ ReactDOM.render(React.createElement(
   React.createElement(RangePicker, { style: { width: 184 }, onChange: onChange }),
   React.createElement('br', null),
   React.createElement(RangePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange })
-), document.getElementById('components-date-picker-demo-range'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> RangePicker = DatePicker.RangePicker;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">value</span>) </span>{
@@ -1015,7 +1022,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">184</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-date-picker-demo-range'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1027,6 +1034,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="picker-demo-locale">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-locale"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-locale');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1057,7 +1065,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-date-picker-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/date-picker/locale/en_US'</span>;
 <span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
 
@@ -1076,7 +1084,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-date-picker-demo-locale'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

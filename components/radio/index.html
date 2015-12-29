@@ -652,6 +652,7 @@ Radio 单选框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-radio-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-radio-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -660,10 +661,10 @@ ReactDOM.render(React.createElement(
   _antd.Radio,
   null,
   'Radio'
-), document.getElementById('components-radio-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Radio</span>&gt;</span>Radio<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-, document.getElementById('components-radio-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -675,6 +676,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-radiogroup">
   <div class="code-box-demo">
     <div id="components-radio-demo-radiogroup"></div>
+    <script>mountNode = document.getElementById('components-radio-demo-radiogroup');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -732,7 +734,7 @@ var App = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-radiogroup'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
@@ -759,7 +761,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
   }
 });
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-radio-demo-radiogroup'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -773,12 +775,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-disable">
   <div class="code-box-demo">
     <div id="components-radio-demo-disable"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-radio-demo-disable');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       disabled: true
@@ -791,33 +794,33 @@ var App = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      'div',
+      "div",
       null,
       React.createElement(
         _antd.Radio,
         { defaultChecked: false, disabled: this.state.disabled },
-        '不可用'
+        "不可用"
       ),
-      React.createElement('br', null),
+      React.createElement("br", null),
       React.createElement(
         _antd.Radio,
         { defaultChecked: true, disabled: this.state.disabled },
-        '不可用'
+        "不可用"
       ),
       React.createElement(
-        'div',
+        "div",
         { style: { marginTop: 20 } },
         React.createElement(
           _antd.Button,
-          { type: 'primary', onClick: this.toggleDisabled },
-          'Toggle disabled'
+          { type: "primary", onClick: this.toggleDisabled },
+          "Toggle disabled"
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-radio-demo-disable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -844,7 +847,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-radio-demo-disable'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -856,6 +859,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-radiobutton">
   <div class="code-box-demo">
     <div id="components-radio-demo-radiobutton"></div>
+    <script>mountNode = document.getElementById('components-radio-demo-radiobutton');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -926,7 +930,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-radio-demo-radiobutton'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> RadioButton = Radio.Button;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
@@ -951,7 +955,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <span class="hljs-tag">&lt;<span class="hljs-title">RadioButton</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>成都<span class="hljs-tag">&lt;/<span class="hljs-title">RadioButton</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-radio-demo-radiobutton'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -662,6 +662,7 @@ TimePicker 时间选择框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-basic">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -672,7 +673,7 @@ function onChange(time) {
   }
 }
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), document.getElementById('components-time-picker-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">time</span>) </span>{
   <span class="hljs-keyword">if</span> (time) {
@@ -682,7 +683,7 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), d
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -694,6 +695,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-size">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-size"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-size');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -704,7 +706,7 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.TimePicker, { defaultValue: "12:08:23", size: "large" }),
   React.createElement(_antd.TimePicker, { defaultValue: "12:08:23" }),
   React.createElement(_antd.TimePicker, { defaultValue: "12:08:23", size: "small" })
-), document.getElementById('components-time-picker-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -712,7 +714,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"12:08:23"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"12:08:23"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-time-picker-demo-size'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -724,15 +726,16 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-disabled">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-disabled"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-time-picker-demo-disabled');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { defaultValue: '12:08:23', disabled: true }), document.getElementById('components-time-picker-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { defaultValue: "12:08:23", disabled: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"12:08:23"</span> <span class="hljs-attribute">disabled</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-disabled'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -744,6 +747,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-hide-options">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-hide-options"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-hide-options');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -768,7 +772,7 @@ function disabledSeconds() {
   });
 }
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disabledMinutes, disabledSeconds: disabledSeconds, hideDisabledOptions: true }), document.getElementById('components-time-picker-demo-hide-options'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disabledMinutes, disabledSeconds: disabledSeconds, hideDisabledOptions: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newArray</span>(<span class="hljs-params">start, end</span>) </span>{
   <span class="hljs-keyword">let</span> result = [];
@@ -788,7 +792,7 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledMinutes: disable
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">disabledMinutes</span>=<span class="hljs-value">{disabledMinutes}</span> <span class="hljs-attribute">disabledSeconds</span>=<span class="hljs-value">{disabledSeconds}</span> <span class="hljs-attribute">hideDisabledOptions</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-hide-options'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -802,6 +806,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="picker-demo-value">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-value"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-value');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -825,7 +830,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-time-picker-demo-value'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
@@ -845,7 +850,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-time-picker-demo-value'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -857,15 +862,16 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="picker-demo-without-seconds">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-without-seconds"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-without-seconds');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { defaultValue: "12:08:23", format: "HH:mm" }), document.getElementById('components-time-picker-demo-without-seconds'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { defaultValue: "12:08:23", format: "HH:mm" }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"12:08:23"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"HH:mm"</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-without-seconds'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -877,6 +883,7 @@ ReactDOM.render(
 </div><div class="code-box" id="picker-demo-disable-options">
   <div class="code-box-demo">
     <div id="components-time-picker-demo-disable-options"></div>
+    <script>mountNode = document.getElementById('components-time-picker-demo-disable-options');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -905,7 +912,7 @@ function disabledMinutes(h) {
   }
 }
 
-ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledHours, disabledMinutes: disabledMinutes }), document.getElementById('components-time-picker-demo-disable-options'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledHours, disabledMinutes: disabledMinutes }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newArray</span>(<span class="hljs-params">start, end</span>) </span>{
   <span class="hljs-keyword">let</span> result = [];
@@ -933,7 +940,7 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledH
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">disabledHours</span>=<span class="hljs-value">{disabledHours}</span> <span class="hljs-attribute">disabledMinutes</span>=<span class="hljs-value">{disabledMinutes}</span> /&gt;</span>
-, document.getElementById('components-time-picker-demo-disable-options'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-input-number">
   <div class="code-box-demo">
     <div id="components-slider-demo-input-number"></div>
+    <script>mountNode = document.getElementById('components-slider-demo-input-number');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -72,7 +73,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(IntegerStep, null),
   React.createElement(DecimalStep, null)
-), document.getElementById('components-slider-demo-input-number'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, InputNumber } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, InputNumber } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> IntegerStep = React.createClass({
   getInitialState() {
@@ -129,7 +130,7 @@ ReactDOM.render(React.createElement(
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">IntegerStep</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">DecimalStep</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-slider-demo-input-number'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

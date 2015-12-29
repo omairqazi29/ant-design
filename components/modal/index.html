@@ -714,6 +714,7 @@ Modal 对话框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-modal-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -772,7 +773,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-modal-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -807,7 +808,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -819,6 +820,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-footer">
   <div class="code-box-demo">
     <div id="components-modal-demo-footer"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-footer');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -901,7 +903,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-footer'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -948,7 +950,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, document.getElementById('components-modal-demo-footer'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -960,6 +962,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-confirm-promise">
   <div class="code-box-demo">
     <div id="components-modal-demo-confirm-promise"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-confirm-promise');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -983,7 +986,7 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { onClick: showConfirm },
   '确认对话框'
-), document.getElementById('components-modal-demo-confirm-promise'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
@@ -1002,7 +1005,7 @@ ReactDOM.render(React.createElement(
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{showConfirm}</span>&gt;</span>
   确认对话框
-<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm-promise'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1014,6 +1017,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-locale">
   <div class="code-box-demo">
     <div id="components-modal-demo-locale"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-locale');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -1091,7 +1095,7 @@ ReactDOM.render(React.createElement(
     { onClick: confirm },
     "confirm"
   )
-), document.getElementById('components-modal-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> LocalizedModal = React.createClass({
   getInitialState() {
@@ -1139,7 +1143,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">LocalizedModal</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{confirm}</span>&gt;</span>confirm<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-modal-demo-locale'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1153,6 +1157,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-async">
   <div class="code-box-demo">
     <div id="components-modal-demo-async"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-async');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1216,7 +1221,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-modal-demo-async'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
@@ -1262,7 +1267,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, document.getElementById('components-modal-demo-async'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span>/&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1274,6 +1279,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-confirm">
   <div class="code-box-demo">
     <div id="components-modal-demo-confirm"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-confirm');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1295,7 +1301,7 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { onClick: showConfirm },
   '确认对话框'
-), document.getElementById('components-modal-demo-confirm'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
@@ -1312,7 +1318,7 @@ ReactDOM.render(React.createElement(
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{showConfirm}</span>&gt;</span>
   确认对话框
-<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>, document.getElementById('components-modal-demo-confirm'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1324,6 +1330,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-info">
   <div class="code-box-demo">
     <div id="components-modal-demo-info"></div>
+    <script>mountNode = document.getElementById('components-modal-demo-info');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1368,7 +1375,7 @@ ReactDOM.render(React.createElement(
     { onClick: error },
     '失败提示'
   )
-), document.getElementById('components-modal-demo-info'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">info</span>(<span class="hljs-params"></span>) </span>{
   Modal.info({
@@ -1396,7 +1403,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{info}</span>&gt;</span>信息提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>成功提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{error}</span>&gt;</span>失败提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-modal-demo-info'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

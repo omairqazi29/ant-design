@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-local-data">
   <div class="code-box-demo">
     <div id="components-table-demo-local-data"></div>
+    <script>mountNode = document.getElementById('components-table-demo-local-data');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -101,7 +102,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-table-demo-local-data'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -185,7 +186,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
 });
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>
-, document.getElementById('components-table-demo-local-data'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

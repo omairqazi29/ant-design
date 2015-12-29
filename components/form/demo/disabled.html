@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-form-demo-disabled"></div>
+    <script>mountNode = document.getElementById('components-form-demo-disabled');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -64,7 +65,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-form-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Button, Input, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Button, Input, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 ReactDOM.render(
@@ -101,7 +102,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, document.getElementById('components-form-demo-disabled'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

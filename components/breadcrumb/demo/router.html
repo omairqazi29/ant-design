@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-router">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-router"></div>
+    <script>mountNode = document.getElementById('components-breadcrumb-demo-router');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -88,7 +89,7 @@ ReactDOM.render(React.createElement(
       React.createElement(Route, { name: 'app', breadcrumbName: '应用:id', path: ':id' })
     )
   )
-), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
 <span class="hljs-keyword">let</span> { Router, Route, Link } = ReactRouter;
 <span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -128,7 +129,7 @@ ReactDOM.render((
       <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Router</span>&gt;</span>
-)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-breadcrumb-demo-router'</span>));</code></pre></div><style>
+)</span>, mountNode);</code></pre></div><style>
 .demo-nav {
   height: 30px;
   line-height: 30px;

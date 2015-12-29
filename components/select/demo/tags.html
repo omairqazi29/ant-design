@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-tags">
   <div class="code-box-demo">
     <div id="components-select-demo-tags"></div>
+    <script>mountNode = document.getElementById('components-select-demo-tags');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -27,7 +28,7 @@ ReactDOM.render(React.createElement(
     searchPlaceholder: '标签模式',
     tags: true, onChange: handleChange },
   children
-), document.getElementById('components-select-demo-tags'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-keyword">let</span> children = [];
@@ -46,7 +47,7 @@ ReactDOM.render(
   <span class="hljs-attribute">tags</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     {children}
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-, document.getElementById('components-select-demo-tags'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-other">
   <div class="code-box-demo">
     <div id="components-message-demo-other"></div>
+    <script>mountNode = document.getElementById('components-message-demo-other');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -35,7 +36,7 @@ ReactDOM.render(React.createElement(
     { onClick: warn },
     '显示警告提示'
   )
-), document.getElementById('components-message-demo-other'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> success = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   message.success(<span class="hljs-string">'这是一条成功提示'</span>);
@@ -53,7 +54,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{success}</span>&gt;</span>显示成功提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{error}</span>&gt;</span>显示报错提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{warn}</span>&gt;</span>显示警告提示<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-message-demo-other'));</span></code></pre></div><style>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style>
 #components-message-demo-other .ant-btn {
   margin-right: 8px;
 }

@@ -1,6 +1,7 @@
 <div class="code-box" id="anim-demo-form">
   <div class="code-box-demo">
     <div id="components-queue-anim-demo-form"></div>
+    <script>mountNode = document.getElementById('components-queue-anim-demo-form');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -140,7 +141,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-form'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Checkbox, Radio } from 'antd';
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button, Checkbox, Radio } from 'antd';
 const RadioGroup = Radio.Group;
 
 const Test = React.createClass({
@@ -210,7 +211,7 @@ const Test = React.createClass({
   }
 });
 
-ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-form'));</code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, mountNode);</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

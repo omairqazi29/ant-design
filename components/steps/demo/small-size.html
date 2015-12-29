@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-small-size">
   <div class="code-box-demo">
     <div id="components-steps-demo-small-size"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-small-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -27,7 +28,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { size: 'small', current: 1 },
   steps
-), document.getElementById('components-steps-demo-small-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -48,7 +49,7 @@ ReactDOM.render(React.createElement(
   )</span>;
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, document.getElementById('components-steps-demo-small-size'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

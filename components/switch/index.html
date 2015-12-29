@@ -638,6 +638,7 @@ Switch 开关 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-switch-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-switch-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -646,14 +647,14 @@ function onChange(checked) {
   console.log('switch to ' + checked);
 }
 
-ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), document.getElementById('components-switch-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checked</span>)</span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch to '</span> + checked);
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>,
-  document.getElementById('components-switch-demo-basic'));</span></code></pre></div>
+  mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -665,6 +666,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-text">
   <div class="code-box-demo">
     <div id="components-switch-demo-text"></div>
+    <script>mountNode = document.getElementById('components-switch-demo-text');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -679,13 +681,13 @@ ReactDOM.render(React.createElement(
     " "
   ),
   React.createElement(_antd.Switch, { checkedChildren: React.createElement(_antd.Icon, { type: "check" }), unCheckedChildren: React.createElement(_antd.Icon, { type: "cross" }) })
-), document.getElementById('components-switch-demo-text'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checkedChildren</span>=<span class="hljs-value">"开"</span> <span class="hljs-attribute">unCheckedChildren</span>=<span class="hljs-value">"关"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checkedChildren</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"check"</span> /&gt;</span>} unCheckedChildren={<span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"cross"</span> /&gt;</span>} /&gt;
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-switch-demo-text'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -699,12 +701,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-switch-demo-disabled"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-switch-demo-disabled');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Test = React.createClass({
-  displayName: 'Test',
+  displayName: "Test",
   getInitialState: function getInitialState() {
     return {
       disabled: true
@@ -717,21 +720,21 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      'div',
+      "div",
       null,
       React.createElement(_antd.Switch, { disabled: this.state.disabled }),
-      React.createElement('br', null),
-      React.createElement('br', null),
+      React.createElement("br", null),
+      React.createElement("br", null),
       React.createElement(
         _antd.Button,
-        { type: 'primary', onClick: this.toggle },
-        'Toggle disabled'
+        { type: "primary", onClick: this.toggle },
+        "Toggle disabled"
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-switch-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
@@ -754,7 +757,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-switch-demo-disabled'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -766,17 +769,18 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-switch-demo-size"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-switch-demo-size');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(_antd.Switch, null),
-  ' ',
-  React.createElement(_antd.Switch, { size: 'small' })
-), document.getElementById('components-switch-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  " ",
+  React.createElement(_antd.Switch, { size: "small" })
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -784,7 +788,7 @@ ReactDOM.render(
     &amp;nbsp;
     <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-switch-demo-size'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

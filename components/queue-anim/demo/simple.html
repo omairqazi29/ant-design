@@ -1,6 +1,7 @@
 <div class="code-box" id="anim-demo-simple">
   <div class="code-box-demo">
     <div id="components-queue-anim-demo-simple"></div>
+    <script>mountNode = document.getElementById('components-queue-anim-demo-simple');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -38,7 +39,7 @@ ReactDOM.render(React.createElement(
     { key: "f" },
     "依次进场"
   )
-), document.getElementById('components-queue-anim-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { QueueAnim } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { QueueAnim } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">delay</span>=<span class="hljs-value">{500}</span>&gt;</span>
@@ -49,7 +50,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"e"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"f"</span>&gt;</span>依次进场<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
-, document.getElementById('components-queue-anim-demo-simple'));</span></code></pre></div><style type="text/css">.code-box-demo > div {
+, mountNode);</span></code></pre></div><style type="text/css">.code-box-demo > div {
   overflow: hidden;
 }
 

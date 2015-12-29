@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-line">
   <div class="code-box-demo">
     <div id="components-progress-demo-line"></div>
+    <script>mountNode = document.getElementById('components-progress-demo-line');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -15,7 +16,7 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressLine, { percent: 70, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressLine, { percent: 100 }),
   React.createElement(ProgressLine, { percent: 50, showInfo: false })
-), document.getElementById('components-progress-demo-line'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
@@ -26,7 +27,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">showInfo</span>=<span class="hljs-value">{false}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-progress-demo-line'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

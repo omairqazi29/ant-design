@@ -644,6 +644,7 @@ Calendar 日历 - Ant Design
     <div class="code-boxes-col-1-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-calendar-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -652,7 +653,7 @@ function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange }), document.getElementById('components-calendar-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPanelChange</span>(<span class="hljs-params">value, mode</span>) </span>{
   <span class="hljs-built_in">console</span>.log(value, mode);
@@ -660,7 +661,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChan
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">onPanelChange</span>=<span class="hljs-value">{onPanelChange}</span> /&gt;</span>
-, document.getElementById('components-calendar-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -672,6 +673,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-custom-render">
   <div class="code-box-demo">
     <div id="components-calendar-demo-custom-render"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-custom-render');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -695,7 +697,7 @@ function monthCellRender(value) {
 }
 
 ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('2010-10-10'),
-  dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-custom-render'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  dateCellRender: dateCellRender, monthCellRender: monthCellRender }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dateCellRender</span>(<span class="hljs-params">value</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>自定义日数据 {value.getDayOfMonth()}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
@@ -708,7 +710,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('20
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{new</span> <span class="hljs-attribute">Date</span>('<span class="hljs-attribute">2010-10-10</span>')}
   <span class="hljs-attribute">dateCellRender</span>=<span class="hljs-value">{dateCellRender}</span> <span class="hljs-attribute">monthCellRender</span>=<span class="hljs-value">{monthCellRender}</span> /&gt;</span>
-, document.getElementById('components-calendar-demo-custom-render'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -720,6 +722,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-notice-calendar">
   <div class="code-box-demo">
     <div id="components-calendar-demo-notice-calendar"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-notice-calendar');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -782,7 +785,7 @@ function monthCellRender(value) {
   ) : null;
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-notice-calendar'));})()</script><div class="highlight"><pre><code class="javascript">import { Calendar } from 'antd';
+ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRender, monthCellRender: monthCellRender }), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { Calendar } from 'antd';
 
 function getListData(value) {
   let listData;
@@ -841,7 +844,7 @@ function monthCellRender(value) {
 
 ReactDOM.render(
   &lt;Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} /&gt;
-, document.getElementById('components-calendar-demo-notice-calendar'));</code></pre></div><style type="text/css">.events {
+, mountNode);</code></pre></div><style type="text/css">.events {
   line-height: 24px;
   list-style: none;
   margin: 0;
@@ -933,6 +936,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-locale">
   <div class="code-box-demo">
     <div id="components-calendar-demo-locale"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-locale');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -947,7 +951,7 @@ function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange, locale: _en_US2.default }), document.getElementById('components-calendar-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange, locale: _en_US2.default }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> enUS <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/calendar/locale/en_US'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPanelChange</span>(<span class="hljs-params">value, mode</span>) </span>{
@@ -956,7 +960,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChan
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">onPanelChange</span>=<span class="hljs-value">{onPanelChange}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{enUS}</span>/&gt;</span>
-, document.getElementById('components-calendar-demo-locale'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -968,6 +972,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-card">
   <div class="code-box-demo">
     <div id="components-calendar-demo-card"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-card');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -980,7 +985,7 @@ ReactDOM.render(React.createElement(
   'div',
   { style: { width: 290, border: '1px solid #d9d9d9', borderRadius: 4 } },
   React.createElement(_antd.Calendar, { fullscreen: false, onPanelChange: onPanelChange })
-), document.getElementById('components-calendar-demo-card'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPanelChange</span>(<span class="hljs-params">value, mode</span>) </span>{
   <span class="hljs-built_in">console</span>.log(value, mode);
@@ -990,7 +995,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">290</span>, <span class="hljs-attribute">border:</span> '<span class="hljs-attribute">1px</span> <span class="hljs-attribute">solid</span> #<span class="hljs-attribute">d9d9d9</span>', <span class="hljs-attribute">borderRadius:</span> <span class="hljs-attribute">4</span> }}&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">fullscreen</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onPanelChange</span>=<span class="hljs-value">{onPanelChange}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-calendar-demo-card'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

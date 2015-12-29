@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-search-input">
   <div class="code-box-demo">
     <div id="components-form-demo-search-input"></div>
+    <script>mountNode = document.getElementById('components-form-demo-search-input');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -65,7 +66,7 @@ var SearchInput = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), document.getElementById('components-form-demo-search-input'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Icon, Input, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Icon, Input, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
 <span class="hljs-keyword">const</span> InputGroup = Input.Group;
 
@@ -114,7 +115,7 @@ ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search te
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">SearchInput</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"input search text"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">200</span>}} /&gt;</span>
-, document.getElementById('components-form-demo-search-input'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

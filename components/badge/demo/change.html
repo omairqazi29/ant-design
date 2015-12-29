@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-change">
   <div class="code-box-demo">
     <div id="components-badge-demo-change"></div>
+    <script>mountNode = document.getElementById('components-badge-demo-change');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -83,7 +84,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-badge-demo-change'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ButtonGroup = Button.Group;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
@@ -145,7 +146,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>
-, document.getElementById('components-badge-demo-change'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

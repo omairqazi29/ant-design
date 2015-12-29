@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-input">
   <div class="code-box-demo">
     <div id="components-form-demo-input"></div>
+    <script>mountNode = document.getElementById('components-form-demo-input');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -29,7 +30,7 @@ ReactDOM.render(React.createElement(
       React.createElement(_antd.Input, { id: "smallInput", placeholder: "小尺寸", size: "small" })
     )
   )
-), document.getElementById('components-form-demo-input'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> InputGroup = Input.Group;
 
 ReactDOM.render(
@@ -46,7 +47,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">InputGroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
-, document.getElementById('components-form-demo-input'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

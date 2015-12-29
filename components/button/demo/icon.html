@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-icon">
   <div class="code-box-demo">
     <div id="components-button-demo-icon"></div>
+    <script>mountNode = document.getElementById('components-button-demo-icon');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -57,7 +58,7 @@ ReactDOM.render(React.createElement(
     { type: "ghost", shape: "circle-outline", size: "small" },
     React.createElement(_antd.Icon, { type: "search" })
   )
-), document.getElementById('components-button-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">shape</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>
@@ -96,7 +97,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-document.getElementById('components-button-demo-icon'));</span></code></pre></div><style>
+mountNode);</span></code></pre></div><style>
 #components-button-demo-icon .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;

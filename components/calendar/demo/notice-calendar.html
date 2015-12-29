@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-notice-calendar">
   <div class="code-box-demo">
     <div id="components-calendar-demo-notice-calendar"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-notice-calendar');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -63,7 +64,7 @@ function monthCellRender(value) {
   ) : null;
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRender, monthCellRender: monthCellRender }), document.getElementById('components-calendar-demo-notice-calendar'));})()</script><div class="highlight"><pre><code class="javascript">import { Calendar } from 'antd';
+ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRender, monthCellRender: monthCellRender }), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { Calendar } from 'antd';
 
 function getListData(value) {
   let listData;
@@ -122,7 +123,7 @@ function monthCellRender(value) {
 
 ReactDOM.render(
   &lt;Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} /&gt;
-, document.getElementById('components-calendar-demo-notice-calendar'));</code></pre></div><style type="text/css">.events {
+, mountNode);</code></pre></div><style type="text/css">.events {
   line-height: 24px;
   list-style: none;
   margin: 0;

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-button-demo-size"></div>
+    <script>mountNode = document.getElementById('components-button-demo-size');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -23,14 +24,14 @@ ReactDOM.render(React.createElement(
     { type: "primary", size: "small" },
     "小号按钮"
   )
-), document.getElementById('components-button-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span>&gt;</span>大号按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>中号按钮(默认)<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span>&gt;</span>小号按钮<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-button-demo-size'));</span></code></pre></div><style>
+, mountNode);</span></code></pre></div><style>
 #components-button-demo-size .ant-btn {
   margin-right: 8px;
 }

@@ -778,6 +778,7 @@ Form 表单 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-input">
   <div class="code-box-demo">
     <div id="components-form-demo-input"></div>
+    <script>mountNode = document.getElementById('components-form-demo-input');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -806,7 +807,7 @@ ReactDOM.render(React.createElement(
       React.createElement(_antd.Input, { id: "smallInput", placeholder: "小尺寸", size: "small" })
     )
   )
-), document.getElementById('components-form-demo-input'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Input} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> InputGroup = Input.Group;
 
 ReactDOM.render(
@@ -823,7 +824,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">InputGroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
-, document.getElementById('components-form-demo-input'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -836,6 +837,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-horizontal-form">
   <div class="code-box-demo">
     <div id="components-form-demo-horizontal-form"></div>
+    <script>mountNode = document.getElementById('components-form-demo-horizontal-form');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -957,7 +959,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-form-demo-horizontal-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, Radio, Row, Col, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, Radio, Row, Col, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
@@ -1040,7 +1042,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-form-demo-horizontal-form'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1053,6 +1055,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-input-group">
   <div class="code-box-demo">
     <div id="components-form-demo-input-group"></div>
+    <script>mountNode = document.getElementById('components-form-demo-input-group');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -1199,7 +1202,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-form-demo-input-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Row, Col} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Row, Col} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> InputGroup = Input.Group;
 <span class="hljs-keyword">const</span> Option = Select.Option;
@@ -1285,7 +1288,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
 
-, document.getElementById('components-form-demo-input-group'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1297,6 +1300,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-validate">
   <div class="code-box-demo">
     <div id="components-form-demo-validate"></div>
+    <script>mountNode = document.getElementById('components-form-demo-validate');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -1402,7 +1406,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-form-demo-validate'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, DatePicker, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, DatePicker, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 ReactDOM.render(
@@ -1480,7 +1484,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, document.getElementById('components-form-demo-validate'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1495,6 +1499,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-search-input">
   <div class="code-box-demo">
     <div id="components-form-demo-search-input"></div>
+    <script>mountNode = document.getElementById('components-form-demo-search-input');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -1559,7 +1564,7 @@ var SearchInput = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), document.getElementById('components-form-demo-search-input'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Icon, Input, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Icon, Input, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
 <span class="hljs-keyword">const</span> InputGroup = Input.Group;
 
@@ -1608,7 +1613,7 @@ ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search te
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">SearchInput</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"input search text"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">200</span>}} /&gt;</span>
-, document.getElementById('components-form-demo-search-input'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1622,6 +1627,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-inline-form">
   <div class="code-box-demo">
     <div id="components-form-demo-inline-form"></div>
+    <script>mountNode = document.getElementById('components-form-demo-inline-form');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1689,7 +1695,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-form-demo-inline-form'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({
@@ -1740,7 +1746,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-form-demo-inline-form'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1752,6 +1758,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-form-controls">
   <div class="code-box-demo">
     <div id="components-form-demo-form-controls"></div>
+    <script>mountNode = document.getElementById('components-form-demo-form-controls');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1898,7 +1905,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-form-demo-form-controls'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Checkbox, Radio} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Checkbox, Radio} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
@@ -1980,7 +1987,7 @@ ReactDOM.render(
         <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, document.getElementById('components-form-demo-form-controls'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1993,6 +2000,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-mix">
   <div class="code-box-demo">
     <div id="components-form-demo-mix"></div>
+    <script>mountNode = document.getElementById('components-form-demo-mix');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2161,7 +2169,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), document.getElementById('components-form-demo-mix'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, Switch, Slider, Button, message, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, Switch, Slider, Button, message, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
@@ -2269,7 +2277,7 @@ ReactDOM.render(React.createElement(Demo, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('components-form-demo-mix'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -2281,6 +2289,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-form-demo-disabled"></div>
+    <script>mountNode = document.getElementById('components-form-demo-disabled');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -2344,7 +2353,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-form-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Button, Input, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Row, Col, Button, Input, Form} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 ReactDOM.render(
@@ -2381,7 +2390,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, document.getElementById('components-form-demo-disabled'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

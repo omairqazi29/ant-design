@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-drag">
   <div class="code-box-demo">
     <div id="components-upload-demo-drag"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-drag');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -31,7 +32,7 @@ ReactDOM.render(React.createElement(
     { className: 'ant-upload-hint' },
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
-), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
 <span class="hljs-keyword">const</span> props = {
@@ -48,7 +49,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
-  document.getElementById('components-upload-demo-drag')
+  mountNode
 );</span></code></pre></div><style type="text/css">#components-upload-demo-drag {
   height: 180px;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-upload-demo-drag</span> <span class="hljs-rules">{

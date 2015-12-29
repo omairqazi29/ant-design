@@ -1,12 +1,13 @@
 <div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-switch-demo-disabled"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-switch-demo-disabled');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Test = React.createClass({
-  displayName: 'Test',
+  displayName: "Test",
   getInitialState: function getInitialState() {
     return {
       disabled: true
@@ -19,21 +20,21 @@ var Test = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      'div',
+      "div",
       null,
       React.createElement(_antd.Switch, { disabled: this.state.disabled }),
-      React.createElement('br', null),
-      React.createElement('br', null),
+      React.createElement("br", null),
+      React.createElement("br", null),
       React.createElement(
         _antd.Button,
-        { type: 'primary', onClick: this.toggle },
-        'Toggle disabled'
+        { type: "primary", onClick: this.toggle },
+        "Toggle disabled"
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-switch-demo-disabled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
   getInitialState() {
@@ -56,7 +57,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, document.getElementById('components-switch-demo-disabled'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Test</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

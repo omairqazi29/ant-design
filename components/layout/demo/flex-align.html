@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-flex-align">
   <div class="code-box-demo">
     <div id="components-layout-demo-flex-align"></div>
+    <script>mountNode = document.getElementById('components-layout-demo-flex-align');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -157,7 +158,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-layout-demo-flex-align'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> DemoBox = React.createClass({
   render() {
@@ -195,7 +196,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">DemoBox</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"80"</span>&gt;</span>.col-4<span class="hljs-tag">&lt;/<span class="hljs-title">DemoBox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-  document.getElementById('components-layout-demo-flex-align')
+  mountNode
 );</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

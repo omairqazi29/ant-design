@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-pending">
   <div class="code-box-demo">
     <div id="components-timeline-demo-pending"></div>
+    <script>mountNode = document.getElementById('components-timeline-demo-pending');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -23,7 +24,7 @@ ReactDOM.render(React.createElement(
     null,
     '技术测试异常 2015-09-01'
   )
-), document.getElementById('components-timeline-demo-pending'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Timeline</span> <span class="hljs-attribute">pending</span>&gt;</span>
@@ -31,7 +32,7 @@ ReactDOM.render(
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>初步排除网络异常 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Timeline</span>&gt;</span>
-, document.getElementById('components-timeline-demo-pending'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

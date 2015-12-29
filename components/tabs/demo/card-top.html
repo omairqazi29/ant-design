@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-card-top">
   <div class="code-box-demo">
     <div id="components-tabs-demo-card-top"></div>
+    <script>mountNode = document.getElementById('components-tabs-demo-card-top');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -29,7 +30,7 @@ ReactDOM.render(React.createElement(
       "选项卡三内容"
     )
   )
-), document.getElementById('components-tabs-demo-card-top'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TabPane = Tabs.TabPane;
 
 ReactDOM.render(
@@ -39,7 +40,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡二"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项卡二内容<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"选项卡三"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项卡三内容<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-tabs-demo-card-top'));</span></code></pre></div><style type="text/css">#components-tabs-demo-card-top {
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style type="text/css">#components-tabs-demo-card-top {
   background: #ECECEC;
   overflow: hidden;
   padding: 24px;

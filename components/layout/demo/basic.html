@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-layout-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-layout-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -65,7 +66,7 @@ ReactDOM.render(React.createElement(
       ".col-6"
     )
   )
-), document.getElementById('components-layout-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -85,7 +86,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-  document.getElementById('components-layout-demo-basic')
+  mountNode
 );</span></code></pre></div><style>
 .testRowClassName {
     background: #f0f0f0;

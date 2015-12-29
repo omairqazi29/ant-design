@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-nested">
   <div class="code-box-demo">
     <div id="components-spin-demo-nested"></div>
+    <script>mountNode = document.getElementById('components-spin-demo-nested');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -35,7 +36,7 @@ var Card = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Card, null), document.getElementById('components-spin-demo-nested'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Card, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Card = React.createClass({
   getInitialState() {
@@ -59,7 +60,7 @@ ReactDOM.render(React.createElement(Card, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Card</span> /&gt;</span>, document.getElementById('components-spin-demo-nested'));</span></code></pre></div><style type="text/css">.card-example {
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Card</span> /&gt;</span>, mountNode);</span></code></pre></div><style type="text/css">.card-example {
   border-radius: 4px;
   padding: 24px;
   height: 100px;

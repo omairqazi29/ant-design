@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-select-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-select-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -47,7 +48,7 @@ ReactDOM.render(React.createElement(
       'Lucy'
     )
   )
-), document.getElementById('components-select-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
@@ -64,7 +65,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">disabled</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-select-demo-basic'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

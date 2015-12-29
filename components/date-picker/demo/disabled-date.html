@@ -1,6 +1,7 @@
 <div class="code-box" id="picker-demo-disabled-date">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-disabled-date"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-disabled-date');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -10,7 +11,7 @@ var disabledDate = function disabledDate(current) {
   return current && current.getTime() > Date.now();
 };
 
-ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), document.getElementById('components-date-picker-demo-disabled-date'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current</span>) </span>{
   <span class="hljs-comment">// can not select days after today</span>
@@ -19,7 +20,7 @@ ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDa
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{disabledDate}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-disabled-date'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

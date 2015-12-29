@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-nopagination">
   <div class="code-box-demo">
     <div id="components-table-demo-nopagination"></div>
+    <script>mountNode = document.getElementById('components-table-demo-nopagination');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -33,7 +34,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), document.getElementById('components-table-demo-nopagination'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -64,7 +65,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }];
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{false}</span> /&gt;</span>
-, document.getElementById('components-table-demo-nopagination'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

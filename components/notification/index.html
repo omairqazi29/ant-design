@@ -666,6 +666,7 @@ Notification 通知提醒框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-notification-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -681,7 +682,7 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: openNotification },
   '打开通知提醒框'
-), document.getElementById('components-notification-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   notification.open({
@@ -692,7 +693,7 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-, document.getElementById('components-notification-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -704,6 +705,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-with-icon">
   <div class="code-box-demo">
     <div id="components-notification-demo-with-icon"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-with-icon');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -740,7 +742,7 @@ ReactDOM.render(React.createElement(
     { onClick: openNotificationWithIcon('error') },
     '错误'
   )
-), document.getElementById('components-notification-demo-with-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotificationWithIcon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -757,7 +759,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-notification-demo-with-icon'));</span></code></pre></div><style>
+, mountNode);</span></code></pre></div><style>
 .code-box-demo .ant-btn {
   margin-right: 1em;
 }
@@ -774,6 +776,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-with-btn">
   <div class="code-box-demo">
     <div id="components-notification-demo-with-btn"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-with-btn');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -810,7 +813,7 @@ ReactDOM.render(React.createElement(
     { type: 'primary', onClick: openNotification },
     '打开通知提醒框'
   )
-), document.getElementById('components-notification-demo-with-btn'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'我被默认的关闭按钮关闭了！'</span>);
@@ -838,7 +841,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-document.getElementById('components-notification-demo-with-btn'));</span></code></pre></div>
+mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -852,6 +855,7 @@ document.getElementById('components-notification-demo-with-btn'));</span></code>
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-duration">
   <div class="code-box-demo">
     <div id="components-notification-demo-duration"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-duration');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -869,7 +873,7 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: openNotification },
   '打开通知提醒框'
-), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
@@ -882,7 +886,7 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-, document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -894,6 +898,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-onclose">
   <div class="code-box-demo">
     <div id="components-notification-demo-onclose"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-onclose');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -919,7 +924,7 @@ ReactDOM.render(React.createElement(
     { type: 'primary', onClick: openNotification },
     '打开通知提醒框'
   )
-), document.getElementById('components-notification-demo-onclose'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'我被默认的关闭按钮关闭了！'</span>);
@@ -938,7 +943,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
-document.getElementById('components-notification-demo-onclose'));</span></code></pre></div>
+mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

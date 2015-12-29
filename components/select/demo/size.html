@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-select-demo-size"></div>
+    <script>mountNode = document.getElementById('components-select-demo-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -86,7 +87,7 @@ ReactDOM.render(React.createElement(
       'yiminghe'
     )
   )
-), document.getElementById('components-select-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
@@ -114,7 +115,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-select-demo-size'));</span></code></pre></div><style type="text/css">.code-box-demo .ant-select {
+, mountNode);</span></code></pre></div><style type="text/css">.code-box-demo .ant-select {
   margin: 0 8px 10px 0;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-class">.code-box-demo</span> <span class="hljs-class">.ant-select</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">8px</span> <span class="hljs-number">10px</span> <span class="hljs-number">0</span></span></span>;

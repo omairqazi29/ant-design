@@ -650,6 +650,7 @@ Breadcrumb 面包屑 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-breadcrumb-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -677,7 +678,7 @@ ReactDOM.render(React.createElement(
     null,
     "某应用"
   )
-), document.getElementById('components-breadcrumb-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb</span>&gt;</span>
@@ -686,7 +687,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb.Item</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>应用列表<span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>某应用<span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb</span>&gt;</span>
-, document.getElementById('components-breadcrumb-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -698,6 +699,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-router">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-router"></div>
+    <script>mountNode = document.getElementById('components-breadcrumb-demo-router');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -785,7 +787,7 @@ ReactDOM.render(React.createElement(
       React.createElement(Route, { name: 'app', breadcrumbName: '应用:id', path: ':id' })
     )
   )
-), document.getElementById('components-breadcrumb-demo-router'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">const</span> ReactRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-router'</span>);
 <span class="hljs-keyword">let</span> { Router, Route, Link } = ReactRouter;
 <span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -825,7 +827,7 @@ ReactDOM.render((
       <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Router</span>&gt;</span>
-)</span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'components-breadcrumb-demo-router'</span>));</code></pre></div><style>
+)</span>, mountNode);</code></pre></div><style>
 .demo-nav {
   height: 30px;
   line-height: 30px;
@@ -854,6 +856,7 @@ ReactDOM.render((
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-withicon">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-withicon"></div>
+    <script>mountNode = document.getElementById('components-breadcrumb-demo-withicon');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -877,7 +880,7 @@ ReactDOM.render(React.createElement(
     null,
     "应用"
   )
-), document.getElementById('components-breadcrumb-demo-withicon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb</span>&gt;</span>
@@ -892,7 +895,7 @@ ReactDOM.render(
       应用
     <span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb</span>&gt;</span>
-, document.getElementById('components-breadcrumb-demo-withicon'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -904,6 +907,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-separator">
   <div class="code-box-demo">
     <div id="components-breadcrumb-demo-separator"></div>
+    <script>mountNode = document.getElementById('components-breadcrumb-demo-separator');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -931,7 +935,7 @@ ReactDOM.render(React.createElement(
     null,
     "某应用"
   )
-), document.getElementById('components-breadcrumb-demo-separator'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Breadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb</span> <span class="hljs-attribute">separator</span>=<span class="hljs-value">"&gt;"</span>&gt;</span>
@@ -940,7 +944,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb.Item</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>应用列表<span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>某应用<span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Breadcrumb</span>&gt;</span>
-, document.getElementById('components-breadcrumb-demo-separator'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

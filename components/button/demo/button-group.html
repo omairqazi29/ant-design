@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-button-group">
   <div class="code-box-demo">
     <div id="components-button-demo-button-group"></div>
+    <script>mountNode = document.getElementById('components-button-demo-button-group');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -212,7 +213,7 @@ ReactDOM.render(React.createElement(
       "小"
     )
   )
-), document.getElementById('components-button-demo-button-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ButtonGroup = Button.Group;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -282,7 +283,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>小<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-button-demo-button-group'));</span></code></pre></div><style>
+, mountNode);</span></code></pre></div><style>
 #components-button-demo-button-group h4 {
   margin: 16px 0;
   font-size: 14px;

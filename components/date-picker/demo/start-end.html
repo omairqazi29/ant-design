@@ -1,6 +1,7 @@
 <div class="code-box" id="picker-demo-start-end">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-start-end"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-start-end');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -47,7 +48,7 @@ var DateRange = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(DateRange, null), document.getElementById('components-date-picker-demo-start-end'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(DateRange, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> DateRange = React.createClass({
   getInitialState() {
@@ -90,7 +91,7 @@ ReactDOM.render(React.createElement(DateRange, null), document.getElementById('c
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DateRange</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-start-end'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

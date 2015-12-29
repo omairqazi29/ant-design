@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-control">
   <div class="code-box-demo">
     <div id="components-popover-demo-control"></div>
+    <script>mountNode = document.getElementById('components-popover-demo-control');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -43,7 +44,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-popover-demo-control'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -70,7 +71,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-popover-demo-control'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

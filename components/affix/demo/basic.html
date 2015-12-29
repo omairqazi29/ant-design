@@ -1,25 +1,26 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-affix-demo-basic"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-affix-demo-basic');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
   _antd.Affix,
   null,
   React.createElement(
     _antd.Button,
-    { type: 'primary' },
-    '固定在顶部'
+    { type: "primary" },
+    "固定在顶部"
   )
-), document.getElementById('components-affix-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Affix, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Affix, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Affix</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>固定在顶部<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Affix</span>&gt;</span>
-, document.getElementById('components-affix-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

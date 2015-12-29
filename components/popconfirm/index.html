@@ -629,6 +629,7 @@ Popconfirm 气泡确认框 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-popconfirm-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-popconfirm-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -649,7 +650,7 @@ ReactDOM.render(React.createElement(
     { href: '#' },
     '删除'
   )
-), document.getElementById('components-popconfirm-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">confirm</span>(<span class="hljs-params"></span>) </span>{
   message.success(<span class="hljs-string">'点击了确定'</span>);
@@ -663,7 +664,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Popconfirm</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"确定要删除这个任务吗？"</span> <span class="hljs-attribute">onConfirm</span>=<span class="hljs-value">{confirm}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{cancel}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Popconfirm</span>&gt;</span>
-, document.getElementById('components-popconfirm-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -675,6 +676,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-locale">
   <div class="code-box-demo">
     <div id="components-popconfirm-demo-locale"></div>
+    <script>mountNode = document.getElementById('components-popconfirm-demo-locale');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -687,13 +689,13 @@ ReactDOM.render(React.createElement(
     { href: "#" },
     "Delete"
   )
-), document.getElementById('components-popconfirm-demo-locale'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Popconfirm</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Are you sure？"</span> <span class="hljs-attribute">okText</span>=<span class="hljs-value">"Yes"</span> <span class="hljs-attribute">cancelText</span>=<span class="hljs-value">"No"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Popconfirm</span>&gt;</span>
-, document.getElementById('components-popconfirm-demo-locale'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -707,6 +709,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-placement">
   <div class="code-box-demo">
     <div id="components-popconfirm-demo-placement"></div>
+    <script>mountNode = document.getElementById('components-popconfirm-demo-placement');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -844,7 +847,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-popconfirm-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, message, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> text = <span class="hljs-string">'确定要删除这个任务吗？'</span>;
 
@@ -897,7 +900,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>下右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Popconfirm</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-popconfirm-demo-placement'));</span></code></pre></div><style>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style>
 .code-box-demo .ant-popover-wrap > a {
   margin-right: 1em;
 }
@@ -918,6 +921,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-dynamic-trigger">
   <div class="code-box-demo">
     <div id="components-popconfirm-demo-dynamic-trigger"></div>
+    <script>mountNode = document.getElementById('components-popconfirm-demo-dynamic-trigger');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -977,7 +981,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-popconfirm-demo-dynamic-trigger'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, Switch, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popconfirm, Switch, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">let</span> App = React.createClass({
   getInitialState() {
@@ -1024,7 +1028,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-popconfirm-demo-dynamic-trigger'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

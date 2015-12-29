@@ -1,6 +1,7 @@
 <div class="code-box" id="picker-demo-with-time-picker">
   <div class="code-box-demo">
     <div id="components-date-picker-demo-with-time-picker"></div>
+    <script>mountNode = document.getElementById('components-date-picker-demo-with-time-picker');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -46,7 +47,7 @@ function onSelect(value) {
   console.log('选择了时间：', value);
 }
 
-ReactDOM.render(React.createElement(DateTimePicker, { onSelect: onSelect }), document.getElementById('components-date-picker-demo-with-time-picker'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker, TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(DateTimePicker, { onSelect: onSelect }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker, TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> DateTimePicker = React.createClass({
   handleChange(from, value) {
@@ -87,7 +88,7 @@ ReactDOM.render(React.createElement(DateTimePicker, { onSelect: onSelect }), doc
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DateTimePicker</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{onSelect}</span> /&gt;</span>
-, document.getElementById('components-date-picker-demo-with-time-picker'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

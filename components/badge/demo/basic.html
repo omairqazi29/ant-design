@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-badge-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-badge-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -9,13 +10,13 @@ ReactDOM.render(React.createElement(
   _antd.Badge,
   { count: 5 },
   React.createElement("a", { href: "#", className: "head-example" })
-), document.getElementById('components-badge-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Badge } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Badge</span> <span class="hljs-attribute">count</span>=<span class="hljs-value">{5}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
-, document.getElementById('components-badge-demo-basic'));</span></code></pre></div><style type="text/css">.ant-badge {
+, mountNode);</span></code></pre></div><style type="text/css">.ant-badge {
   margin-right: 16px;
 }
 .head-example {

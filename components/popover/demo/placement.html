@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-placement">
   <div class="code-box-demo">
     <div id="components-popover-demo-placement"></div>
+    <script>mountNode = document.getElementById('components-popover-demo-placement');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -152,7 +153,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-popover-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Popover, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> text = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>;</span>
 <span class="hljs-keyword">const</span> content = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -205,7 +206,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>下右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-popover-demo-placement'));</span></code></pre></div><style>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style>
 .code-box-demo .ant-btn {
   margin-right: 1em;
   margin-bottom: 1em;

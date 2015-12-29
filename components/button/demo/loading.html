@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-loading">
   <div class="code-box-demo">
     <div id="components-button-demo-loading"></div>
+    <script>mountNode = document.getElementById('components-button-demo-loading');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -54,7 +55,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-button-demo-loading'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
@@ -91,7 +92,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('compone
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, document.getElementById('components-button-demo-loading'));</span></code></pre></div><style>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div><style>
 #components-button-demo-loading .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;

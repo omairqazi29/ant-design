@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-colspan-rowspan">
   <div class="code-box-demo">
     <div id="components-table-demo-colspan-rowspan"></div>
+    <script>mountNode = document.getElementById('components-table-demo-colspan-rowspan');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -117,7 +118,7 @@ var data = [{
   address: '西湖区湖底公园1号'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), document.getElementById('components-table-demo-colspan-rowspan'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, bordered: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
 <span class="hljs-comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
@@ -224,7 +225,7 @@ const data = [{
 }];
 
 ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">bordered</span> /&gt;</span>
-, document.getElementById('components-table-demo-colspan-rowspan'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="anim-demo-basic">
   <div class="code-box-demo">
     <div id="components-queue-anim-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-queue-anim-demo-basic');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -64,7 +65,7 @@ var Test = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Test, null), document.getElementById('components-queue-anim-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
+ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { QueueAnim, Button } from 'antd';
 
 const Test = React.createClass({
   getInitialState() {
@@ -109,7 +110,7 @@ const Test = React.createClass({
   }
 });
 
-ReactDOM.render(&lt;Test /&gt;, document.getElementById('components-queue-anim-demo-basic'));</code></pre></div>
+ReactDOM.render(&lt;Test /&gt;, mountNode);</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

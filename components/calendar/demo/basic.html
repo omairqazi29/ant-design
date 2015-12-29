@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-calendar-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-calendar-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -9,7 +10,7 @@ function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
-ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange }), document.getElementById('components-calendar-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Calendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPanelChange</span>(<span class="hljs-params">value, mode</span>) </span>{
   <span class="hljs-built_in">console</span>.log(value, mode);
@@ -17,7 +18,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { onPanelChange: onPanelChan
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">onPanelChange</span>=<span class="hljs-value">{onPanelChange}</span> /&gt;</span>
-, document.getElementById('components-calendar-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

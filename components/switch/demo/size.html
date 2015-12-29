@@ -1,17 +1,18 @@
 <div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-switch-demo-size"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-switch-demo-size');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(_antd.Switch, null),
-  ' ',
-  React.createElement(_antd.Switch, { size: 'small' })
-), document.getElementById('components-switch-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+  " ",
+  React.createElement(_antd.Switch, { size: "small" })
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -19,7 +20,7 @@ ReactDOM.render(
     &amp;nbsp;
     <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-switch-demo-size'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

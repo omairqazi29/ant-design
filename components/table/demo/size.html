@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-table-demo-size"></div>
+    <script>mountNode = document.getElementById('components-table-demo-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -47,7 +48,7 @@ ReactDOM.render(React.createElement(
     '小号表格'
   ),
   React.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
-), document.getElementById('components-table-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -81,7 +82,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"middle"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>小号表格<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-table-demo-size'));</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div><style>#components-table-demo-size h4 { margin-bottom: 16px; }</style>
 
   </div>
   <div class="code-box-meta markdown">

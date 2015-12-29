@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-duration">
   <div class="code-box-demo">
     <div id="components-notification-demo-duration"></div>
+    <script>mountNode = document.getElementById('components-notification-demo-duration');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -18,7 +19,7 @@ ReactDOM.render(React.createElement(
   _antd.Button,
   { type: 'primary', onClick: openNotification },
   '打开通知提醒框'
-), document.getElementById('components-notification-demo-duration'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
@@ -31,7 +32,7 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotification}</span>&gt;</span>打开通知提醒框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-, document.getElementById('components-notification-demo-duration'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

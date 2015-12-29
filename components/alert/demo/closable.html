@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-closable">
   <div class="code-box-demo">
     <div id="components-alert-demo-closable"></div>
+    <script>mountNode = document.getElementById('components-alert-demo-closable');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -21,7 +22,7 @@ ReactDOM.render(React.createElement(
     type: 'error',
     closable: true,
     onClose: onClose })
-), document.getElementById('components-alert-demo-closable'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> onClose = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
   <span class="hljs-built_in">console</span>.log(e, <span class="hljs-string">'我要被关闭啦！'</span>);
@@ -37,7 +38,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <span class="hljs-attribute">type</span>=<span class="hljs-value">"error"</span>
     <span class="hljs-attribute">closable</span>
     <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, document.getElementById('components-alert-demo-closable'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

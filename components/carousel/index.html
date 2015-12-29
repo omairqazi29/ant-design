@@ -652,6 +652,7 @@ Carousel 走马灯 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-carousel-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-carousel-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -699,7 +700,7 @@ ReactDOM.render(React.createElement(
       '4'
     )
   )
-), document.getElementById('components-carousel-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">a, b, c</span>) </span>{
   <span class="hljs-built_in">console</span>.log(a, b, c);
@@ -712,7 +713,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Carousel</span>&gt;</span>
-, document.getElementById('components-carousel-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -724,50 +725,51 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-fade">
   <div class="code-box-demo">
     <div id="components-carousel-demo-fade"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-carousel-demo-fade');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
   _antd.Carousel,
-  { effect: 'fade' },
+  { effect: "fade" },
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '1'
+      "1"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '2'
+      "2"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '3'
+      "3"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '4'
+      "4"
     )
   )
-), document.getElementById('components-carousel-demo-fade'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Carousel</span> <span class="hljs-attribute">effect</span>=<span class="hljs-value">"fade"</span>&gt;</span>
@@ -776,7 +778,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Carousel</span>&gt;</span>
-, document.getElementById('components-carousel-demo-fade'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -790,50 +792,51 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-vertical">
   <div class="code-box-demo">
     <div id="components-carousel-demo-vertical"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-carousel-demo-vertical');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
   _antd.Carousel,
-  { vertical: 'true' },
+  { vertical: "true" },
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '1'
+      "1"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '2'
+      "2"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '3'
+      "3"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '4'
+      "4"
     )
   )
-), document.getElementById('components-carousel-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Carousel</span> <span class="hljs-attribute">vertical</span>=<span class="hljs-value">"true"</span>&gt;</span>
@@ -842,7 +845,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Carousel</span>&gt;</span>
-, document.getElementById('components-carousel-demo-vertical'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -854,50 +857,51 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-autoplay">
   <div class="code-box-demo">
     <div id="components-carousel-demo-autoplay"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-carousel-demo-autoplay');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
   _antd.Carousel,
-  { autoplay: 'true' },
+  { autoplay: "true" },
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '1'
+      "1"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '2'
+      "2"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '3'
+      "3"
     )
   ),
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      '4'
+      "4"
     )
   )
-), document.getElementById('components-carousel-demo-autoplay'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Carousel</span> <span class="hljs-attribute">autoplay</span>=<span class="hljs-value">"true"</span>&gt;</span>
@@ -906,7 +910,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Carousel</span>&gt;</span>
-, document.getElementById('components-carousel-demo-autoplay'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

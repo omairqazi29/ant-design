@@ -605,25 +605,26 @@ Tooltip 文字提示 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-tooltip-demo-basic"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-tooltip-demo-basic');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
   _antd.Tooltip,
-  { title: '提示文字' },
+  { title: "提示文字" },
   React.createElement(
-    'span',
+    "span",
     null,
-    '鼠标移上来就会出现提示'
+    "鼠标移上来就会出现提示"
   )
-), document.getElementById('components-tooltip-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"提示文字"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>鼠标移上来就会出现提示<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
-, document.getElementById('components-tooltip-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -637,6 +638,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-placement">
   <div class="code-box-demo">
     <div id="components-tooltip-demo-placement"></div>
+    <script>mountNode = document.getElementById('components-tooltip-demo-placement');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -774,7 +776,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), document.getElementById('components-tooltip-demo-placement'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> text = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>提示文字<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>;</span>
 
 ReactDOM.render(
@@ -824,7 +826,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-tooltip-demo-placement'));</span></code></pre></div><style>
+, mountNode);</span></code></pre></div><style>
 #components-tooltip-demo-placement a {
   display: inline-block;
   line-height: 32px;

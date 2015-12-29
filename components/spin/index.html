@@ -604,15 +604,16 @@ Spin 加载中 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-spin-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-spin-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
 
-ReactDOM.render(React.createElement(_antd.Spin, null), document.getElementById('components-spin-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Spin, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> /&gt;</span>
-, document.getElementById('components-spin-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -624,21 +625,22 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-inside">
   <div class="code-box-demo">
     <div id="components-spin-demo-inside"></div>
-    <script>(function(){'use strict';
+    <script>mountNode = document.getElementById('components-spin-demo-inside');</script>
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 ReactDOM.render(React.createElement(
-  'div',
-  { className: 'example' },
+  "div",
+  { className: "example" },
   React.createElement(_antd.Spin, null)
-), document.getElementById('components-spin-demo-inside'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"example"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-spin-demo-inside'));</span></code></pre></div><style type="text/css">.example {
+, mountNode);</span></code></pre></div><style type="text/css">.example {
   text-align: center;
   background: rgba(0,0,0,0.05);
   border-radius: 4px;
@@ -666,6 +668,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-spin-demo-size"></div>
+    <script>mountNode = document.getElementById('components-spin-demo-size');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -678,7 +681,7 @@ ReactDOM.render(React.createElement(
   React.createElement(_antd.Spin, null),
   React.createElement("br", null),
   React.createElement(_antd.Spin, { size: "large" })
-), document.getElementById('components-spin-demo-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
@@ -688,7 +691,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-spin-demo-size'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -700,6 +703,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-nested">
   <div class="code-box-demo">
     <div id="components-spin-demo-nested"></div>
+    <script>mountNode = document.getElementById('components-spin-demo-nested');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -734,7 +738,7 @@ var Card = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Card, null), document.getElementById('components-spin-demo-nested'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Card, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Spin, Switch, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Card = React.createClass({
   getInitialState() {
@@ -758,7 +762,7 @@ ReactDOM.render(React.createElement(Card, null), document.getElementById('compon
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Card</span> /&gt;</span>, document.getElementById('components-spin-demo-nested'));</span></code></pre></div><style type="text/css">.card-example {
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Card</span> /&gt;</span>, mountNode);</span></code></pre></div><style type="text/css">.card-example {
   border-radius: 4px;
   padding: 24px;
   height: 100px;

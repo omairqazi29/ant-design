@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-controlled">
   <div class="code-box-demo">
     <div id="components-pagination-demo-controlled"></div>
+    <script>mountNode = document.getElementById('components-pagination-demo-controlled');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -23,7 +24,7 @@ var Container = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Container, null), document.getElementById('components-pagination-demo-controlled'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Container, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Pagination } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">let</span> Container = React.createClass({
   getInitialState() {
@@ -44,7 +45,7 @@ ReactDOM.render(React.createElement(Container, null), document.getElementById('c
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Container</span> /&gt;</span>,
-document.getElementById('components-pagination-demo-controlled'));</span></code></pre></div>
+mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -679,6 +679,7 @@ Upload 文件上传 - Ant Design
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-upload-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -707,7 +708,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   name: <span class="hljs-string">'file'</span>,
@@ -730,7 +731,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -742,6 +743,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-filelist">
   <div class="code-box-demo">
     <div id="components-upload-demo-filelist"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-filelist');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -805,7 +807,7 @@ var MyUpload = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(MyUpload, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
@@ -858,7 +860,7 @@ ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('co
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyUpload</span> /&gt;</span>, document.getElementById('components-upload-demo-filelist'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyUpload</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -873,6 +875,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-drag-simple">
   <div class="code-box-demo">
     <div id="components-upload-demo-drag-simple"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-drag-simple');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -889,7 +892,7 @@ ReactDOM.render(React.createElement(
   Dragger,
   props,
   React.createElement(_antd.Icon, { type: 'plus' })
-), document.getElementById('components-upload-demo-drag-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
 <span class="hljs-keyword">const</span> props = {
@@ -902,7 +905,7 @@ ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dragger</span> {<span class="hljs-attribute">...props</span>}&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
-  document.getElementById('components-upload-demo-drag-simple')
+  mountNode
 );</span></code></pre></div><style type="text/css">#components-upload-demo-drag-simple {
   width: 246px;
   height: 146px;
@@ -921,6 +924,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-picture-style">
   <div class="code-box-demo">
     <div id="components-upload-demo-picture-style"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-picture-style');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -952,7 +956,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-picture-style'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   action: <span class="hljs-string">'/upload.do'</span>,
@@ -978,7 +982,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-picture-style'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -993,6 +997,7 @@ ReactDOM.render(
   <div class="code-boxes-col-2-1"><div class="code-box" id="demo-defaultfilelist">
   <div class="code-box-demo">
     <div id="components-upload-demo-defaultfilelist"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-defaultfilelist');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1028,7 +1033,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-defaultfilelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   action: <span class="hljs-string">'/upload.do'</span>,
@@ -1057,7 +1062,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-defaultfilelist'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1069,6 +1074,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-drag">
   <div class="code-box-demo">
     <div id="components-upload-demo-drag"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-drag');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1099,7 +1105,7 @@ ReactDOM.render(React.createElement(
     { className: 'ant-upload-hint' },
     '支持单个或批量上传，严禁上传公司内部资料及其他违禁文件'
   )
-), document.getElementById('components-upload-demo-drag'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Dragger = Upload.Dragger;
 
 <span class="hljs-keyword">const</span> props = {
@@ -1116,7 +1122,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-text"</span>&gt;</span>点击或将文件拖拽到此区域上传<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-upload-hint"</span>&gt;</span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Dragger</span>&gt;</span>,
-  document.getElementById('components-upload-demo-drag')
+  mountNode
 );</span></code></pre></div><style type="text/css">#components-upload-demo-drag {
   height: 180px;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-upload-demo-drag</span> <span class="hljs-rules">{
@@ -1133,6 +1139,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-multiple">
   <div class="code-box-demo">
     <div id="components-upload-demo-multiple"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-multiple');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1161,7 +1168,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-multiple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, message, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   action: <span class="hljs-string">'/upload.do'</span>,
@@ -1184,7 +1191,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-multiple'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1196,6 +1203,7 @@ ReactDOM.render(
 </div><div class="code-box" id="demo-beforeupload">
   <div class="code-box-demo">
     <div id="components-upload-demo-beforeupload"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-beforeupload');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1220,7 +1228,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'upload' }),
     ' 点击上传'
   )
-), document.getElementById('components-upload-demo-beforeupload'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon, message } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> props = {
   action: <span class="hljs-string">'/upload.do'</span>,
@@ -1239,7 +1247,7 @@ ReactDOM.render(
       <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
     <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-, document.getElementById('components-upload-demo-beforeupload'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

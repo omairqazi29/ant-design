@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-circle">
   <div class="code-box-demo">
     <div id="components-progress-demo-circle"></div>
+    <script>mountNode = document.getElementById('components-progress-demo-circle');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -13,7 +14,7 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressCircle, { percent: 30 }),
   React.createElement(ProgressCircle, { percent: 70, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressCircle, { percent: 100 })
-), document.getElementById('components-progress-demo-circle'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
@@ -22,7 +23,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  , document.getElementById('components-progress-demo-circle'));</span></code></pre></div><style>
+  , mountNode);</span></code></pre></div><style>
 .ant-progress-circle-wrap,
 .ant-progress-line-wrap {
   margin-right: 8px;

@@ -4474,6 +4474,10 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-weight: bold;
   color: #2db7f5;
 }
+.ant-calendar-last-month-cell .ant-calendar-date,
+.ant-calendar-next-month-btn-day .ant-calendar-date {
+  color: #ccc;
+}
 .ant-calendar-selected-day .ant-calendar-date {
   background: #2db7f5;
   color: #fff;
@@ -4499,10 +4503,6 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-calendar-disabled-cell-last-of-row .ant-calendar-date {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-}
-.ant-calendar-last-month-cell .ant-calendar-date,
-.ant-calendar-next-month-btn-day .ant-calendar-date {
-  color: #bbb;
 }
 .ant-calendar-footer {
   padding: 0 15px;
@@ -6415,6 +6415,12 @@ textarea.ant-time-picker-input {
 }
 .ant-table-row-collapsed:after {
   content: '+';
+}
+.ant-table-row-expand-icon.ant-table-row-spaced {
+  visibility: hidden;
+}
+.ant-table-row-expand-icon.ant-table-row-spaced:after {
+  content: '.';
 }
 tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {

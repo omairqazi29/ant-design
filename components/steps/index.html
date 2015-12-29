@@ -668,6 +668,7 @@ Steps 步骤条 - Ant Design
     <div class="code-boxes-col-1-1"><div class="code-box" id="demo-simple">
   <div class="code-box-demo">
     <div id="components-steps-demo-simple"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-simple');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -694,7 +695,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { current: 1 },
   steps
-), document.getElementById('components-steps-demo-simple'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -715,7 +716,7 @@ ReactDOM.render(React.createElement(
   )</span>;
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, document.getElementById('components-steps-demo-simple'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -727,6 +728,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-small-size">
   <div class="code-box-demo">
     <div id="components-steps-demo-small-size"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-small-size');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -753,7 +755,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { size: 'small', current: 1 },
   steps
-), document.getElementById('components-steps-demo-small-size'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -774,7 +776,7 @@ ReactDOM.render(React.createElement(
   )</span>;
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, document.getElementById('components-steps-demo-small-size'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -786,6 +788,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-icon">
   <div class="code-box-demo">
     <div id="components-steps-demo-icon"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-icon');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -798,14 +801,14 @@ ReactDOM.render(React.createElement(
   React.createElement(Step, { status: "finish", title: "步骤1", icon: "cloud" }),
   React.createElement(Step, { status: "process", title: "步骤2", icon: "apple" }),
   React.createElement(Step, { status: "wait", title: "步骤3", icon: "github" })
-), document.getElementById('components-steps-demo-icon'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"finish"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤1"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"cloud"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"process"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤2"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"apple"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"wait"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤3"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"github"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, document.getElementById('components-steps-demo-icon'));</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -817,6 +820,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-step-next">
   <div class="code-box-demo">
     <div id="components-steps-demo-step-next"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-step-next');</script>
     <style type="text/css">#components-steps-demo-step-next > div > div {
   margin-bottom: 30px;
 }</style><div class="highlight"><pre><code class="css"><span class="hljs-id">#components-steps-demo-step-next</span> &gt; <span class="hljs-tag">div</span> &gt; <span class="hljs-tag">div</span> <span class="hljs-rules">{
@@ -881,7 +885,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('components-steps-demo-step-next'));})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { Steps, Button } from 'antd';
 const Step = Steps.Step;
 const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 const steps = array.map(function(item, i) {
@@ -921,7 +925,7 @@ const App = React.createClass({
   }
 });
 
-ReactDOM.render(&lt;App /&gt;, document.getElementById('components-steps-demo-step-next'));</code></pre></div>
+ReactDOM.render(&lt;App /&gt;, mountNode);</code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -933,6 +937,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('components-steps-demo-st
 </div><div class="code-box" id="demo-vertical">
   <div class="code-box-demo">
     <div id="components-steps-demo-vertical"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-vertical');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -959,7 +964,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { direction: 'vertical', current: 1 },
   steps
-), document.getElementById('components-steps-demo-vertical'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -981,7 +986,7 @@ ReactDOM.render(React.createElement(
 });
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">"vertical"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>,
-  document.getElementById('components-steps-demo-vertical'));</span></code></pre></div>
+  mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -993,6 +998,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-vertical-small">
   <div class="code-box-demo">
     <div id="components-steps-demo-vertical-small"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-vertical-small');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1016,7 +1022,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   { size: 'small', direction: 'vertical', current: 1 },
   steps
-), document.getElementById('components-steps-demo-vertical-small'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -1035,7 +1041,7 @@ ReactDOM.render(React.createElement(
 });
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">"vertical"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>,
-  document.getElementById('components-steps-demo-vertical-small'));</span></code></pre></div>
+  mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -1047,6 +1053,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 </div><div class="code-box" id="demo-status">
   <div class="code-box-demo">
     <div id="components-steps-demo-status"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-status');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -1077,7 +1084,7 @@ ReactDOM.render(React.createElement(
   _antd.Steps,
   null,
   steps
-), document.getElementById('components-steps-demo-status'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Step = Steps.Step;
 
 <span class="hljs-keyword">const</span> steps = [{
@@ -1102,7 +1109,7 @@ ReactDOM.render(React.createElement(
   )</span>;
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, document.getElementById('components-steps-demo-status'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-group">
   <div class="code-box-demo">
     <div id="components-checkbox-demo-group"></div>
+    <script>mountNode = document.getElementById('components-checkbox-demo-group');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -11,7 +12,7 @@ function onChange(checkedValues) {
   console.log('checked = ', checkedValues);
 }
 
-ReactDOM.render(React.createElement(CheckboxGroup, { options: ['Apple', 'Pear', 'Orange'], defaultValue: ['Apple'], onChange: onChange }), document.getElementById('components-checkbox-demo-group'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(CheckboxGroup, { options: ['Apple', 'Pear', 'Orange'], defaultValue: ['Apple'], onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> CheckboxGroup = Checkbox.Group;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checkedValues</span>) </span>{
@@ -20,7 +21,7 @@ ReactDOM.render(React.createElement(CheckboxGroup, { options: ['Apple', 'Pear', 
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">CheckboxGroup</span> <span class="hljs-attribute">options</span>=<span class="hljs-value">{['Apple',</span> '<span class="hljs-attribute">Pear</span>', '<span class="hljs-attribute">Orange</span>']} <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{['Apple']}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, document.getElementById('components-checkbox-demo-group'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

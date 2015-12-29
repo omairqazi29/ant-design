@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-search">
   <div class="code-box-demo">
     <div id="components-select-demo-search"></div>
+    <script>mountNode = document.getElementById('components-select-demo-search');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -36,7 +37,7 @@ ReactDOM.render(React.createElement(
     { value: 'yiminghe' },
     'yiminghe'
   )
-), document.getElementById('components-select-demo-search'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
@@ -52,7 +53,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-, document.getElementById('components-select-demo-search'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

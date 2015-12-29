@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-timeline-demo-basic"></div>
+    <script>mountNode = document.getElementById('components-timeline-demo-basic');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -28,7 +29,7 @@ ReactDOM.render(React.createElement(
     null,
     '网络异常正在修复 2015-09-01'
   )
-), document.getElementById('components-timeline-demo-basic'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Timeline } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 ReactDOM.render(
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Timeline</span>&gt;</span>
@@ -37,7 +38,7 @@ ReactDOM.render(
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>技术测试异常 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Timeline.Item</span>&gt;</span>网络异常正在修复 2015-09-01<span class="hljs-tag">&lt;/<span class="hljs-title">Timeline.Item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Timeline</span>&gt;</span>
-, document.getElementById('components-timeline-demo-basic'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

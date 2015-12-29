@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-line-mini">
   <div class="code-box-demo">
     <div id="components-progress-demo-line-mini"></div>
+    <script>mountNode = document.getElementById('components-progress-demo-line-mini');</script>
     <script>(function(){"use strict";
 
 var _antd = require("antd");
@@ -14,7 +15,7 @@ ReactDOM.render(React.createElement(
   React.createElement(ProgressLine, { percent: 50, strokeWidth: 5, status: "active" }),
   React.createElement(ProgressLine, { percent: 70, strokeWidth: 5, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
   React.createElement(ProgressLine, { percent: 100, strokeWidth: 5 })
-), document.getElementById('components-progress-demo-line-mini'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressLine = Progress.Line;
 
 ReactDOM.render(
@@ -24,7 +25,7 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> <span class="hljs-attribute">strokeWidth</span>=<span class="hljs-value">{5}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('components-progress-demo-line-mini'));</span></code></pre></div>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

@@ -1,6 +1,7 @@
 <div class="code-box" id="demo-filelist">
   <div class="code-box-demo">
     <div id="components-upload-demo-filelist"></div>
+    <script>mountNode = document.getElementById('components-upload-demo-filelist');</script>
     <script>(function(){'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -64,7 +65,7 @@ var MyUpload = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('components-upload-demo-filelist'));})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(MyUpload, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Upload, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> MyUpload = React.createClass({
   getInitialState() {
@@ -117,7 +118,7 @@ ReactDOM.render(React.createElement(MyUpload, null), document.getElementById('co
   }
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyUpload</span> /&gt;</span>, document.getElementById('components-upload-demo-filelist'));</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">MyUpload</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
