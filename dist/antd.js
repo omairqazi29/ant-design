@@ -14459,6 +14459,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var newActiveKey = this.state.activeKey;
 	    if ('activeKey' in nextProps) {
 	      newActiveKey = nextProps.activeKey;
+	      if (!newActiveKey) {
+	        this.setState({
+	          activeKey: newActiveKey
+	        });
+	        return;
+	      }
 	    }
 	    var found = undefined;
 	    _react2['default'].Children.forEach(nextProps.children, function (child) {
@@ -14478,8 +14484,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onTabClick: function onTabClick(key) {
-	    this.props.onTabClick(key);
 	    this.setActiveKey(key);
+	    this.props.onTabClick(key);
 	    if (this.state.activeKey !== key) {
 	      this.props.onChange(key);
 	    }
@@ -14586,9 +14592,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return { currentIndex: currentIndex, nextIndex: nextIndex };
 	  },
 	
-	  setActiveKey: function setActiveKey(activeKey, props) {
+	  setActiveKey: function setActiveKey(activeKey, ps) {
+	    var props = ps || this.props;
 	    var currentActiveKey = this.state.activeKey;
-	    if (currentActiveKey === activeKey) {
+	    if (currentActiveKey === activeKey || 'activeKey' in props && props === this.props) {
 	      return;
 	    }
 	    if (!currentActiveKey) {
@@ -14596,7 +14603,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        activeKey: activeKey
 	      });
 	    } else {
-	      var _getIndexPair = this.getIndexPair(props || this.props, currentActiveKey, activeKey);
+	      var _getIndexPair = this.getIndexPair(props, currentActiveKey, activeKey);
 	
 	      var currentIndex = _getIndexPair.currentIndex;
 	      var nextIndex = _getIndexPair.nextIndex;
@@ -37212,10 +37219,10 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.7.0",
 			"pre-commit": "1.x",
-			"react": "~0.14.2",
-			"react-addons-test-utils": "~0.14.2",
+			"react": "~0.14.5",
+			"react-addons-test-utils": "~0.14.5",
 			"react-copy-to-clipboard": "^3.0.4",
-			"react-dom": "~0.14.2",
+			"react-dom": "~0.14.5",
 			"react-router": "~1.0.3",
 			"react-stateless-wrapper": "~1.0.2",
 			"reqwest": "~2.0.5",
