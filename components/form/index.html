@@ -1844,7 +1844,8 @@ var Demo = React.createClass({
         {
           label: 'logo图：',
           labelCol: { span: 8 },
-          wrapperCol: { span: 16 } },
+          wrapperCol: { span: 16 },
+          help: '提示信息要长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长' },
         React.createElement(
           _antd.Upload,
           { name: 'logo', action: '/upload.do', listType: 'picture', onChange: this.handleUpload },
@@ -1854,11 +1855,6 @@ var Demo = React.createClass({
             React.createElement(_antd.Icon, { type: 'upload' }),
             ' 点击上传'
           )
-        ),
-        React.createElement(
-          'p',
-          null,
-          '仅支持上传一张。'
         )
       ),
       React.createElement(
@@ -1991,13 +1987,13 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"logo图："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">8</span>}}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">16</span>}}
+          <span class="hljs-attribute">help</span>=<span class="hljs-value">"提示信息要长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"logo"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"/upload.do"</span> <span class="hljs-attribute">listType</span>=<span class="hljs-value">"picture"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleUpload}</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
             <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>仅支持上传一张。<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"16"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"8"</span>&gt;</span>

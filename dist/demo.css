@@ -3572,7 +3572,8 @@ fieldset[disabled] .ant-btn-dashed.active {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.ant-dropdown-hidden {
+.ant-dropdown-hidden,
+.ant-dropdown-menu-hidden {
   display: none;
 }
 .ant-dropdown-menu {
@@ -3587,14 +3588,11 @@ fieldset[disabled] .ant-btn-dashed.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
   border: 1px solid #d9d9d9;
-  overflow: hidden;
 }
-.ant-dropdown-menu > li {
-  margin: 0;
-  padding: 0;
-}
-.ant-dropdown-menu > .ant-dropdown-menu-item {
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
   padding: 7px 15px;
+  margin: 0;
   clear: both;
   font-size: 12px;
   font-weight: normal;
@@ -3604,38 +3602,83 @@ fieldset[disabled] .ant-btn-dashed.active {
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item > a {
+.ant-dropdown-menu-item > a,
+.ant-dropdown-menu-submenu-title > a {
   color: #666;
   display: block;
   padding: 7px 15px;
   margin: -7px -15px;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item:hover {
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
   background-color: #eaf8fe;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item-disabled {
+.ant-dropdown-menu-item-disabled,
+.ant-dropdown-menu-submenu-title-disabled {
   color: #ccc;
   cursor: not-allowed;
   pointer-events: none;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item-disabled:hover {
+.ant-dropdown-menu-item-disabled:hover,
+.ant-dropdown-menu-submenu-title-disabled:hover {
   color: #ccc;
   background-color: #fff;
   cursor: not-allowed;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+.ant-dropdown-menu-item:first-child,
+.ant-dropdown-menu-submenu-title:first-child {
+  border-radius: 6px 6px 0 0;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+.ant-dropdown-menu-item:last-child,
+.ant-dropdown-menu-submenu-title:last-child {
+  border-radius: 0 0 6px 6px;
 }
-.ant-dropdown-menu > .ant-dropdown-menu-item-divider {
+.ant-dropdown-menu-item-divider,
+.ant-dropdown-menu-submenu-title-divider {
   height: 1px;
   overflow: hidden;
   background-color: #e9e9e9;
   line-height: 0;
+}
+.ant-dropdown-menu-submenu-title:after {
+  font-family: "anticon" !important;
+  position: absolute;
+  content: "\E600";
+  right: 15px;
+  color: #999;
+  display: inline-block;
+  font-size: 12px;
+  font-size: 8px \9;
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
+  /* IE6-IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+  zoom: 1;
+}
+:root .ant-dropdown-menu-submenu-title:after {
+  -webkit-filter: none;
+          filter: none;
+}
+:root .ant-dropdown-menu-submenu-title:after {
+  font-size: 12px;
+}
+.ant-dropdown-menu-submenu-vertical {
+  position: relative;
+}
+.ant-dropdown-menu-submenu-vertical > .ant-dropdown-menu {
+  top: 0;
+  left: 100%;
+  position: absolute;
+  min-width: 100%;
+  margin-left: 4px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.ant-dropdown-menu-submenu:first-child .ant-dropdown-menu-submenu-title {
+  border-radius: 6px 6px 0 0;
+}
+.ant-dropdown-menu-submenu:last-child .ant-dropdown-menu-submenu-title {
+  border-radius: 0 0 6px 6px;
 }
 .ant-dropdown.slide-up-enter.slide-up-enter-active.ant-dropdown-placement-bottomLeft,
 .ant-dropdown.slide-up-appear.slide-up-appear-active.ant-dropdown-placement-bottomLeft {
@@ -4179,8 +4222,9 @@ fieldset[disabled] .ant-btn-dashed.active {
   padding: 7px 15px;
   font-weight: normal;
   color: #666;
-  white-space: nowrap;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -7302,6 +7346,9 @@ fieldset[disabled] .ant-checkbox label {
   margin-bottom: 24px;
   color: #666;
 }
+.ant-form-item.ant-form-item-with-help {
+  margin-bottom: 6px;
+}
 .ant-form-item > label {
   color: #666;
   text-align: right;
@@ -7328,10 +7375,7 @@ fieldset[disabled] .ant-checkbox label {
   text-align: center;
 }
 .ant-form-explain {
-  position: absolute;
-  font-size: 12px;
-  line-height: 1.5;
-  bottom: -18px;
+  float: left;
 }
 form .has-feedback .anticon {
   width: 32px;

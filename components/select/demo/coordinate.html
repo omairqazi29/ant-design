@@ -53,12 +53,12 @@ var App = React.createClass({
       null,
       React.createElement(
         _antd.Select,
-        { defaultValue: provinceData[0], style: { width: 150 }, onChange: this.handleProvinceChange },
+        { defaultValue: provinceData[0], style: { width: 90 }, onChange: this.handleProvinceChange },
         provinceOptions
       ),
       React.createElement(
         _antd.Select,
-        { value: this.state.secondCity, style: { width: 150 }, onChange: this.onSecondCityChange },
+        { value: this.state.secondCity, style: { width: 90 }, onChange: this.onSecondCityChange },
         cityOptions
       )
     );
@@ -100,10 +100,10 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
       <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{city}</span>&gt;</span>{city}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
     });
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{provinceData[0]}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:150}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleProvinceChange}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{provinceData[0]}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">90</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleProvinceChange}</span>&gt;</span>
         {provinceOptions}
       <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.secondCity}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:150}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onSecondCityChange}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.secondCity}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">90</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onSecondCityChange}</span>&gt;</span>
         {cityOptions}
       <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
