@@ -27,6 +27,16 @@ var Demo = React.createClass({
       }
     };
   },
+  handleUpload: function handleUpload(info) {
+    if (info.file.status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (info.file.status === 'done') {
+      _antd.message.success(info.file.name + ' 上传成功。');
+    } else if (info.file.status === 'error') {
+      _antd.message.error(info.file.name + ' 上传失败。');
+    }
+  },
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
     _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
@@ -154,6 +164,28 @@ var Demo = React.createClass({
         )
       ),
       React.createElement(
+        FormItem,
+        {
+          label: 'logo图：',
+          labelCol: { span: 8 },
+          wrapperCol: { span: 16 } },
+        React.createElement(
+          _antd.Upload,
+          { name: 'logo', action: '/upload.do', listType: 'picture', onChange: this.handleUpload },
+          React.createElement(
+            _antd.Button,
+            { type: 'ghost' },
+            React.createElement(_antd.Icon, { type: 'upload' }),
+            ' 点击上传'
+          )
+        ),
+        React.createElement(
+          'p',
+          null,
+          '仅支持上传一张。'
+        )
+      ),
+      React.createElement(
         _antd.Row,
         null,
         React.createElement(
@@ -170,7 +202,8 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, Switch, Slider, Button, message, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, Switch,
+         Slider, Button, message, Row, Col, Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
@@ -189,6 +222,17 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         endDate: <span class="hljs-literal">undefined</span>,
       }
     };
+  },
+
+  handleUpload(info) {
+    <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
+      <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
+    }
+    <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'done'</span>) {
+      message.success(info.file.name + <span class="hljs-string">' 上传成功。'</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'error'</span>) {
+      message.error(info.file.name + <span class="hljs-string">' 上传失败。'</span>);
+    }
   },
 
   handleSubmit(e) {
@@ -267,6 +311,17 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"endDate"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">endDate</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.endDate}</span> /&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"logo图："</span>
+          <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">8</span>}}
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Upload</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"logo"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"/upload.do"</span> <span class="hljs-attribute">listType</span>=<span class="hljs-value">"picture"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleUpload}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"upload"</span> /&gt;</span> 点击上传
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>仅支持上传一张。<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"16"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"8"</span>&gt;</span>
