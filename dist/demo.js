@@ -77,26 +77,26 @@
 	var antd = __webpack_require__(292);
 	var React = __webpack_require__(88);
 	var ReactDOM = __webpack_require__(294);
-	var semver = __webpack_require__(587);
+	var semver = __webpack_require__(588);
 	window.antd = antd;
 	window.React = React;
 	window.ReactDOM = ReactDOM;
 	window['object-assign'] = __webpack_require__(308);
 	window['classnames'] = __webpack_require__(298);
-	window['reqwest'] = __webpack_require__(588);
+	window['reqwest'] = __webpack_require__(589);
 	
 	antd.DatePicker.locale = {
-	  en_US: __webpack_require__(590),
+	  en_US: __webpack_require__(591),
 	  zh_CN: __webpack_require__(379)
 	};
 	
 	antd.Calendar.locale = {
-	  en_US: __webpack_require__(591),
-	  zh_CN: __webpack_require__(574)
+	  en_US: __webpack_require__(592),
+	  zh_CN: __webpack_require__(575)
 	};
 	
 	antd.Pagination.locale = {
-	  en_US: __webpack_require__(592),
+	  en_US: __webpack_require__(593),
 	  zh_CN: __webpack_require__(464)
 	};
 	
@@ -24714,29 +24714,29 @@
 	  Alert: __webpack_require__(515),
 	  Validation: __webpack_require__(516),
 	  Tree: __webpack_require__(545),
-	  Upload: __webpack_require__(550),
-	  Badge: __webpack_require__(559),
-	  Menu: __webpack_require__(561),
-	  Timeline: __webpack_require__(562),
+	  Upload: __webpack_require__(551),
+	  Badge: __webpack_require__(560),
+	  Menu: __webpack_require__(562),
+	  Timeline: __webpack_require__(563),
 	  Button: __webpack_require__(420),
 	  Icon: __webpack_require__(413),
-	  Row: __webpack_require__(563),
-	  Col: __webpack_require__(567),
+	  Row: __webpack_require__(564),
+	  Col: __webpack_require__(568),
 	  Spin: __webpack_require__(490),
-	  Form: __webpack_require__(568),
-	  Input: __webpack_require__(572),
-	  Calendar: __webpack_require__(573),
-	  TimePicker: __webpack_require__(579),
-	  Transfer: __webpack_require__(582)
+	  Form: __webpack_require__(569),
+	  Input: __webpack_require__(573),
+	  Calendar: __webpack_require__(574),
+	  TimePicker: __webpack_require__(580),
+	  Transfer: __webpack_require__(583)
 	};
 	
-	antd.version = __webpack_require__(586).version;
+	antd.version = __webpack_require__(587).version;
 	
 	var ReactVersion = _react2["default"].version;
 	if (process.env.NODE_ENV !== 'production') {
 	  var warning = __webpack_require__(87);
-	  var semver = __webpack_require__(587);
-	  var reactVersionInDeps = __webpack_require__(586).devDependencies.react;
+	  var semver = __webpack_require__(588);
+	  var reactVersionInDeps = __webpack_require__(587).devDependencies.react;
 	  warning(semver.satisfies(ReactVersion, reactVersionInDeps) || semver.gtr(ReactVersion, reactVersionInDeps), 'antd@' + antd.version + ' need react@' + reactVersionInDeps + ' or higher, which is react@' + ReactVersion + ' now.');
 	}
 	
@@ -38590,6 +38590,12 @@
 	    var newActiveKey = this.state.activeKey;
 	    if ('activeKey' in nextProps) {
 	      newActiveKey = nextProps.activeKey;
+	      if (!newActiveKey) {
+	        this.setState({
+	          activeKey: newActiveKey
+	        });
+	        return;
+	      }
 	    }
 	    var found = undefined;
 	    _react2['default'].Children.forEach(nextProps.children, function (child) {
@@ -38609,8 +38615,8 @@
 	  },
 	
 	  onTabClick: function onTabClick(key) {
-	    this.props.onTabClick(key);
 	    this.setActiveKey(key);
+	    this.props.onTabClick(key);
 	    if (this.state.activeKey !== key) {
 	      this.props.onChange(key);
 	    }
@@ -38717,9 +38723,10 @@
 	    return { currentIndex: currentIndex, nextIndex: nextIndex };
 	  },
 	
-	  setActiveKey: function setActiveKey(activeKey, props) {
+	  setActiveKey: function setActiveKey(activeKey, ps) {
+	    var props = ps || this.props;
 	    var currentActiveKey = this.state.activeKey;
-	    if (currentActiveKey === activeKey) {
+	    if (currentActiveKey === activeKey || 'activeKey' in props && props === this.props) {
 	      return;
 	    }
 	    if (!currentActiveKey) {
@@ -38727,7 +38734,7 @@
 	        activeKey: activeKey
 	      });
 	    } else {
-	      var _getIndexPair = this.getIndexPair(props || this.props, currentActiveKey, activeKey);
+	      var _getIndexPair = this.getIndexPair(props, currentActiveKey, activeKey);
 	
 	      var currentIndex = _getIndexPair.currentIndex;
 	      var nextIndex = _getIndexPair.nextIndex;
@@ -46626,23 +46633,16 @@
 	  getDefaultSelection: function getDefaultSelection() {
 	    var _this = this;
 	
-	    var selectedRowKeys = [];
-	    if (this.props.rowSelection && this.props.rowSelection.getCheckboxProps) {
-	      var data = this.getCurrentPageData();
-	      data.filter(function (item) {
-	        if (_this.props.rowSelection.getCheckboxProps) {
-	          return _this.props.rowSelection.getCheckboxProps(item).defaultChecked;
-	        }
-	        return true;
-	      }).map(function (record, rowIndex) {
-	        selectedRowKeys.push(_this.getRecordKey(record, rowIndex));
-	      });
+	    if (!this.props.rowSelection || !this.props.rowSelection.getCheckboxProps) {
+	      return [];
 	    }
-	    return selectedRowKeys;
+	    return this.getCurrentPageData().filter(function (item) {
+	      return _this.props.rowSelection.getCheckboxProps(item).defaultChecked;
+	    }).map(function (record, rowIndex) {
+	      return _this.getRecordKey(record, rowIndex);
+	    });
 	  },
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    var _this2 = this;
-	
 	    if ('pagination' in nextProps && nextProps.pagination !== false) {
 	      this.setState({
 	        pagination: (0, _objectAssign3["default"])({}, this.state.pagination, nextProps.pagination)
@@ -46650,20 +46650,13 @@
 	    }
 	    // 外界只有 dataSource 的变化会触发新请求
 	    if ('dataSource' in nextProps && nextProps.dataSource !== this.props.dataSource) {
-	      (function () {
-	        var selectedRowKeys = _this2.state.selectedRowKeys;
-	        // 把不在当前页的选中项去掉
-	        var currentPageRowKeys = _this2.getCurrentPageData(nextProps.dataSource).map(function (record, i) {
-	          return _this2.getRecordKey(record, i);
-	        });
-	        selectedRowKeys = selectedRowKeys.filter(function (key) {
-	          return currentPageRowKeys.indexOf(key) >= 0;
-	        });
-	        _this2.setState({
-	          selectionDirty: false,
-	          selectedRowKeys: selectedRowKeys
-	        });
-	      })();
+	      this.setState({
+	        selectionDirty: false,
+	        selectedRowKeys: []
+	      });
+	      if (this.props.rowSelection && this.props.rowSelection.onChange) {
+	        this.props.rowSelection.onChange([]);
+	      }
 	    }
 	  },
 	  hasPagination: function hasPagination() {
@@ -46709,12 +46702,12 @@
 	    this.props.onChange.apply(this, this.prepareParamsArguments((0, _objectAssign3["default"])({}, this.state, newState)));
 	  },
 	  handleFilter: function handleFilter(column, filters) {
-	    var _this3 = this;
+	    var _this2 = this;
 	
 	    filters = (0, _objectAssign3["default"])({}, this.state.filters, _defineProperty({}, this.getColumnKey(column), filters));
 	    // Remove filters not in current columns
 	    var currentColumnKeys = this.props.columns.map(function (c) {
-	      return _this3.getColumnKey(c);
+	      return _this2.getColumnKey(c);
 	    });
 	    Object.keys(filters).forEach(function (columnKey) {
 	      if (currentColumnKeys.indexOf(columnKey) < 0) {
@@ -46730,13 +46723,10 @@
 	    this.props.onChange.apply(this, this.prepareParamsArguments((0, _objectAssign3["default"])({}, this.state, newState)));
 	  },
 	  handleSelect: function handleSelect(record, rowIndex, e) {
-	    var _this4 = this;
+	    var _this3 = this;
 	
 	    var checked = e.target.checked;
-	    var defaultSelection = [];
-	    if (!this.state.selectionDirty) {
-	      defaultSelection = this.getDefaultSelection();
-	    }
+	    var defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
 	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
 	    var key = this.getRecordKey(record, rowIndex);
 	    if (checked) {
@@ -46753,20 +46743,20 @@
 	    if (this.props.rowSelection.onSelect) {
 	      var data = this.getCurrentPageData();
 	      var selectedRows = data.filter(function (row, i) {
-	        return selectedRowKeys.indexOf(_this4.getRecordKey(row, i)) >= 0;
+	        return selectedRowKeys.indexOf(_this3.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelect(record, checked, selectedRows);
+	    }
+	    if (this.props.rowSelection.onChange) {
+	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	
 	  handleRadioSelect: function handleRadioSelect(record, rowIndex, e) {
-	    var _this5 = this;
+	    var _this4 = this;
 	
 	    var checked = e.target.checked;
-	    var defaultSelection = [];
-	    if (!this.state.selectionDirty) {
-	      defaultSelection = this.getDefaultSelection();
-	    }
+	    var defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
 	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
 	    var key = this.getRecordKey(record, rowIndex);
 	    selectedRowKeys = [key];
@@ -46778,34 +46768,52 @@
 	    if (this.props.rowSelection.onSelect) {
 	      var data = this.getCurrentPageData();
 	      var selectedRows = data.filter(function (row, i) {
-	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
+	        return selectedRowKeys.indexOf(_this4.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelect(record, checked, selectedRows);
+	    }
+	    if (this.props.rowSelection.onChange) {
+	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	
 	  handleSelectAllRow: function handleSelectAllRow(e) {
-	    var _this6 = this;
+	    var _this5 = this;
 	
 	    var checked = e.target.checked;
 	    var data = this.getCurrentPageData();
-	    var selectedRowKeys = checked ? data.filter(function (item) {
-	      if (_this6.props.rowSelection.getCheckboxProps) {
-	        return !_this6.props.rowSelection.getCheckboxProps(item).disabled;
-	      }
-	      return true;
+	    var defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
+	    var selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
+	    var changableRowKeys = data.filter(function (item) {
+	      return !_this5.props.rowSelection.getCheckboxProps || !_this5.props.rowSelection.getCheckboxProps(item).disabled;
 	    }).map(function (item, i) {
-	      return _this6.getRecordKey(item, i);
-	    }) : [];
+	      return _this5.getRecordKey(item, i);
+	    });
+	    if (checked) {
+	      changableRowKeys.forEach(function (key) {
+	        if (selectedRowKeys.indexOf(key) < 0) {
+	          selectedRowKeys.push(key);
+	        }
+	      });
+	    } else {
+	      changableRowKeys.forEach(function (key) {
+	        if (selectedRowKeys.indexOf(key) >= 0) {
+	          selectedRowKeys.splice(selectedRowKeys.indexOf(key), 1);
+	        }
+	      });
+	    }
 	    this.setState({
 	      selectedRowKeys: selectedRowKeys,
 	      selectionDirty: true
 	    });
 	    if (this.props.rowSelection.onSelectAll) {
 	      var selectedRows = data.filter(function (row, i) {
-	        return selectedRowKeys.indexOf(_this6.getRecordKey(row, i)) >= 0;
+	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelectAll(checked, selectedRows);
+	    }
+	    if (this.props.rowSelection.onChange) {
+	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	  handlePageChange: function handlePageChange(current) {
@@ -46822,6 +46830,9 @@
 	      pagination: pagination
 	    };
 	    this.setState(newState);
+	    if (this.props.rowSelection && this.props.rowSelection.onChange) {
+	      this.props.rowSelection.onChange([]);
+	    }
 	    this.props.onChange.apply(this, this.prepareParamsArguments((0, _objectAssign3["default"])({}, this.state, newState)));
 	  },
 	
@@ -46868,13 +46879,13 @@
 	    return record.key || index;
 	  },
 	  renderRowSelection: function renderRowSelection() {
-	    var _this7 = this;
+	    var _this6 = this;
 	
 	    var columns = this.props.columns.concat();
 	    if (this.props.rowSelection) {
 	      var data = this.getCurrentPageData().filter(function (item) {
-	        if (_this7.props.rowSelection.getCheckboxProps) {
-	          return !_this7.props.rowSelection.getCheckboxProps(item).disabled;
+	        if (_this6.props.rowSelection.getCheckboxProps) {
+	          return !_this6.props.rowSelection.getCheckboxProps(item).disabled;
 	        }
 	        return true;
 	      });
@@ -46883,9 +46894,9 @@
 	        checked = false;
 	      } else {
 	        checked = this.state.selectionDirty ? data.every(function (item, i) {
-	          return _this7.state.selectedRowKeys.indexOf(_this7.getRecordKey(item, i)) >= 0;
+	          return _this6.state.selectedRowKeys.indexOf(_this6.getRecordKey(item, i)) >= 0;
 	        }) : data.every(function (item) {
-	          return _this7.props.rowSelection.getCheckboxProps && _this7.props.rowSelection.getCheckboxProps(item).defaultChecked;
+	          return _this6.props.rowSelection.getCheckboxProps && _this6.props.rowSelection.getCheckboxProps(item).defaultChecked;
 	        });
 	      }
 	      var selectionColumn = undefined;
@@ -46896,7 +46907,12 @@
 	          className: 'ant-table-selection-column'
 	        };
 	      } else {
-	        var checkboxAll = _react2["default"].createElement(_checkbox2["default"], { checked: checked, onChange: this.handleSelectAllRow });
+	        var checkboxAllDisabled = data.every(function (item) {
+	          return _this6.props.rowSelection.getCheckboxProps && _this6.props.rowSelection.getCheckboxProps(item).disabled;
+	        });
+	        var checkboxAll = _react2["default"].createElement(_checkbox2["default"], { checked: checked,
+	          disabled: checkboxAllDisabled,
+	          onChange: this.handleSelectAllRow });
 	        selectionColumn = {
 	          key: 'selection-column',
 	          title: checkboxAll,
@@ -46924,25 +46940,25 @@
 	    return isSortColumn;
 	  },
 	  renderColumnsDropdown: function renderColumnsDropdown(columns) {
-	    var _this8 = this;
+	    var _this7 = this;
 	
 	    var locale = (0, _objectAssign3["default"])({}, defaultLocale, this.props.locale);
 	    return columns.map(function (column, i) {
 	      column = (0, _objectAssign3["default"])({}, column);
-	      var key = _this8.getColumnKey(column, i);
+	      var key = _this7.getColumnKey(column, i);
 	      var filterDropdown = undefined,
 	          sortButton = undefined;
 	      if (column.filters && column.filters.length > 0) {
-	        var colFilters = _this8.state.filters[key] || [];
+	        var colFilters = _this7.state.filters[key] || [];
 	        filterDropdown = _react2["default"].createElement(_filterDropdown2["default"], { locale: locale, column: column,
 	          selectedKeys: colFilters,
-	          confirmFilter: _this8.handleFilter });
+	          confirmFilter: _this7.handleFilter });
 	      }
 	      if (column.sorter) {
-	        var isSortColumn = _this8.isSortColumn(column);
+	        var isSortColumn = _this7.isSortColumn(column);
 	        if (isSortColumn) {
 	          column.className = column.className || '';
-	          if (_this8.state.sortOrder) {
+	          if (_this7.state.sortOrder) {
 	            column.className += ' ant-table-column-sort';
 	          }
 	        }
@@ -46952,16 +46968,16 @@
 	          { className: 'ant-table-column-sorter' },
 	          _react2["default"].createElement(
 	            'span',
-	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this8.state.sortOrder === 'ascend' ? 'on' : 'off'),
+	            { className: 'ant-table-column-sorter-up ' + (isSortColumn && _this7.state.sortOrder === 'ascend' ? 'on' : 'off'),
 	              title: '↑',
-	              onClick: _this8.toggleSortOrder.bind(_this8, 'ascend', column) },
+	              onClick: _this7.toggleSortOrder.bind(_this7, 'ascend', column) },
 	            _react2["default"].createElement(_icon2["default"], { type: 'caret-up' })
 	          ),
 	          _react2["default"].createElement(
 	            'span',
-	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this8.state.sortOrder === 'descend' ? 'on' : 'off'),
+	            { className: 'ant-table-column-sorter-down ' + (isSortColumn && _this7.state.sortOrder === 'descend' ? 'on' : 'off'),
 	              title: '↓',
-	              onClick: _this8.toggleSortOrder.bind(_this8, 'descend', column) },
+	              onClick: _this7.toggleSortOrder.bind(_this7, 'descend', column) },
 	            _react2["default"].createElement(_icon2["default"], { type: 'caret-down' })
 	          )
 	        );
@@ -47017,10 +47033,10 @@
 	    return [pagination, filters, sorter];
 	  },
 	  findColumn: function findColumn(myKey) {
-	    var _this9 = this;
+	    var _this8 = this;
 	
 	    return this.props.columns.filter(function (c) {
-	      return _this9.getColumnKey(c) === myKey;
+	      return _this8.getColumnKey(c) === myKey;
 	    })[0];
 	  },
 	  getCurrentPageData: function getCurrentPageData(dataSource) {
@@ -47050,7 +47066,7 @@
 	    return data;
 	  },
 	  getLocalData: function getLocalData(dataSource) {
-	    var _this10 = this;
+	    var _this9 = this;
 	
 	    var state = this.state;
 	    var data = dataSource || this.props.dataSource;
@@ -47061,7 +47077,7 @@
 	    // 筛选
 	    if (state.filters) {
 	      Object.keys(state.filters).forEach(function (columnKey) {
-	        var col = _this10.findColumn(columnKey);
+	        var col = _this9.findColumn(columnKey);
 	        if (!col) {
 	          return;
 	        }
@@ -56469,7 +56485,7 @@
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var _openAnimation = __webpack_require__(549);
+	var _openAnimation = __webpack_require__(550);
 	
 	var _openAnimation2 = _interopRequireDefault(_openAnimation);
 	
@@ -56547,6 +56563,8 @@
 	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
@@ -56555,14 +56573,24 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcUtil = __webpack_require__(295);
+	var _classnames = __webpack_require__(298);
 	
-	// sorted array ['0-0','0-1', '0-0-1', '0-1-1'] => ['0-0', '0-1']
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _TreeNode = __webpack_require__(548);
+	
+	var _TreeNode2 = _interopRequireDefault(_TreeNode);
+	
+	var _util = __webpack_require__(549);
+	
+	var splitPos = function splitPos(pos) {
+	  return pos.split('-');
+	};
 	var filterMin = function filterMin(arr) {
 	  var a = [];
 	  arr.forEach(function (item) {
 	    var b = a.filter(function (i) {
-	      return item.indexOf(i) === 0;
+	      return item.indexOf(i) === 0 && (item[i.length] === '-' || !item[i.length]);
 	    });
 	    if (!b.length) {
 	      a.push(item);
@@ -56570,6 +56598,9 @@
 	  });
 	  return a;
 	};
+	// console.log(filterMin(['0-0','0-1', '0-10', '0-0-1', '0-1-1', '0-10-0']));
+	
+	function noop() {}
 	
 	var Tree = (function (_React$Component) {
 	  _inherits(Tree, _React$Component);
@@ -56580,57 +56611,385 @@
 	    _classCallCheck(this, Tree);
 	
 	    _get(Object.getPrototypeOf(Tree.prototype), 'constructor', this).call(this, props);
-	    ['handleKeyDown', 'handleCheck'].forEach(function (m) {
+	    ['onKeyDown', 'onCheck'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
-	    this.defaultExpandAll = props.defaultExpandAll;
-	    var expandedKeys = props.defaultExpandedKeys;
-	    var checkedKeys = props.defaultCheckedKeys;
-	    if ('checkedKeys' in props) {
-	      checkedKeys = props.checkedKeys || [];
-	    }
-	    var selectedKeys = props.multiple ? [].concat(_toConsumableArray(props.defaultSelectedKeys)) : [props.defaultSelectedKeys[0]];
-	    if ('selectedKeys' in props) {
-	      selectedKeys = props.multiple ? [].concat(_toConsumableArray(props.selectedKeys)) : [props.selectedKeys[0]];
-	    }
-	    this.state = {
-	      expandedKeys: expandedKeys,
-	      checkedKeys: checkedKeys,
-	      selectedKeys: selectedKeys
-	    };
 	    this.contextmenuKeys = [];
+	
+	    this.state = {
+	      expandedKeys: this.getDefaultExpandedKeys(props),
+	      checkedKeys: this.getDefaultCheckedKeys(props),
+	      selectedKeys: this.getDefaultSelectedKeys(props),
+	      dragNodesKeys: '',
+	      dragOverNodeKey: '',
+	      dropNodeKey: ''
+	    };
 	  }
 	
 	  _createClass(Tree, [{
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(nextProps) {
-	      var props = {};
-	      if ('checkedKeys' in nextProps) {
-	        props.checkedKeys = nextProps.checkedKeys;
+	      var _setState;
+	
+	      var expandedKeys = this.getDefaultExpandedKeys(nextProps, true);
+	      var checkedKeys = this.getDefaultCheckedKeys(nextProps, true);
+	      var selectedKeys = this.getDefaultSelectedKeys(nextProps, true);
+	      this.setState((_setState = {}, _defineProperty(_setState, expandedKeys && 'expandedKeys', expandedKeys), _defineProperty(_setState, checkedKeys && 'checkedKeys', checkedKeys), _defineProperty(_setState, selectedKeys && 'selectedKeys', selectedKeys), _setState));
+	    }
+	
+	    /*
+	    // ie8
+	    createDragElement(treeNode) {
+	      const props = this.props;
+	       // copy treeNode and it's childNodes, remove data-reactid attribute.
+	      let tn = treeNode.refs.selectHandle.cloneNode(true);
+	      [...tn.childNodes].forEach(child => {
+	        if (child.nodeType !== 1) {
+	          return;
+	        }
+	        child.removeAttribute('data-reactid');
+	      });
+	      tn.removeAttribute('data-reactid');
+	       // make element
+	      const li = document.createElement("li");
+	      li.className = treeNode.props.className || '';
+	      li.appendChild(tn);
+	      const ul = document.createElement("ul");
+	      ul.className = `${props.prefixCls}-dragUl ${classNames(props.className, props.prefixCls)}`;
+	      ul.appendChild(li);
+	       ul.setAttribute('draggable', 'true');
+	      this.refs.tree.parentNode.insertBefore(ul, this.refs.tree);
+	      ul.focus();
+	    }
+	    */
+	  }, {
+	    key: 'onDragStart',
+	    value: function onDragStart(e, treeNode) {
+	      // console.log(this.refs.tree.parentNode, treeNode.refs.selectHandle);
+	      // this.createDragElement(treeNode);
+	      this.dragNode = treeNode;
+	      this.dragNodesKeys = this.getDragNodes(treeNode);
+	      var st = {
+	        dragNodesKeys: this.dragNodesKeys
+	      };
+	      var expandedKeys = this.getExpandedKeys(treeNode, false);
+	      if (expandedKeys) {
+	        // Controlled expand, save and then reset
+	        this.getOriginExpandedKeys();
+	        // if ('expandedKeys' in this.props) {
+	        //   this._originExpandedKeys = [...this.state.expandedKeys];
+	        // }
+	        st.expandedKeys = expandedKeys;
 	      }
-	      if ('selectedKeys' in nextProps) {
-	        props.selectedKeys = nextProps.multiple ? nextProps.selectedKeys : [nextProps.selectedKeys[0]];
+	      this.setState(st);
+	      this.props.onTreeDragStart({
+	        event: e,
+	        node: treeNode
+	      });
+	    }
+	  }, {
+	    key: 'onDragEnterGap',
+	    value: function onDragEnterGap(e, treeNode) {
+	      // console.log(e.pageY, getOffset(treeNode.refs.selectHandle), treeNode.props.eventKey);
+	      var offsetTop = (0, _util.getOffset)(treeNode.refs.selectHandle).top;
+	      var offsetHeight = treeNode.refs.selectHandle.offsetHeight;
+	      var pageY = e.pageY;
+	      var gapHeight = 2;
+	      if (pageY > offsetTop + offsetHeight - gapHeight) {
+	        // console.log('enter gap');
+	        this.dropPos = 1;
+	        return 1;
 	      }
-	      this.setState(props);
+	      if (pageY < offsetTop + gapHeight) {
+	        // console.log('ee');
+	        this.dropPos = -1;
+	        return -1;
+	      }
+	      // console.log('xx');
+	      this.dropPos = 0;
+	      return 0;
+	    }
+	  }, {
+	    key: 'onDragEnter',
+	    value: function onDragEnter(e, treeNode) {
+	      var enterGap = this.onDragEnterGap(e, treeNode);
+	      if (this.dragNode.props.eventKey === treeNode.props.eventKey && enterGap === 0) {
+	        this.setState({
+	          dragOverNodeKey: ''
+	        });
+	        return;
+	      }
+	      // console.log('en...', this.dropPos);
+	      var st = {
+	        dragOverNodeKey: treeNode.props.eventKey
+	      };
+	      var expandedKeys = this.getExpandedKeys(treeNode, true);
+	      if (expandedKeys) {
+	        this.getOriginExpandedKeys();
+	        st.expandedKeys = expandedKeys;
+	      }
+	      this.setState(st);
+	      this.props.onTreeDragEnter({
+	        event: e,
+	        node: treeNode,
+	        expandedKeys: expandedKeys || this.state.expandedKeys
+	      });
+	    }
+	  }, {
+	    key: 'onDragOver',
+	    value: function onDragOver(e, treeNode) {
+	      this.props.onTreeDragOver({ event: e, node: treeNode });
+	    }
+	  }, {
+	    key: 'onDragLeave',
+	    value: function onDragLeave(e, treeNode) {
+	      this.props.onTreeDragLeave({ event: e, node: treeNode });
+	    }
+	  }, {
+	    key: 'onDrop',
+	    value: function onDrop(e, treeNode) {
+	      var key = treeNode.props.eventKey;
+	      if (this.dragNode.props.eventKey === key) {
+	        return;
+	      }
+	      var st = {
+	        dragOverNodeKey: '',
+	        dropNodeKey: key
+	      };
+	      this.setState(st);
+	
+	      var posArr = treeNode.props.pos.split('-');
+	      var res = {
+	        event: e,
+	        node: treeNode,
+	        dragNode: this.dragNode,
+	        dragNodesKeys: this.dragNodesKeys,
+	        dropPos: this.dropPos + Number(posArr[posArr.length - 1])
+	      };
+	      if (this.dropPos !== 0) {
+	        res.dropToGap = true;
+	      }
+	      if ('expandedKeys' in this.props) {
+	        res.originExpandedKeys = this._originExpandedKeys || [].concat(_toConsumableArray(this.state.expandedKeys));
+	      }
+	      this.props.onTreeDrop(res);
+	    }
+	  }, {
+	    key: 'onExpand',
+	    value: function onExpand(treeNode) {
+	      var _this2 = this;
+	
+	      var thisProps = this.props;
+	      var tnProps = treeNode.props;
+	      var expandedKeys = [].concat(_toConsumableArray(this.state.expandedKeys));
+	      var expanded = !tnProps.expanded;
+	      var index = expandedKeys.indexOf(tnProps.eventKey);
+	      if (expanded) {
+	        if (index === -1) {
+	          expandedKeys.push(tnProps.eventKey);
+	          if (thisProps.loadData) {
+	            return thisProps.loadData(treeNode).then(function () {
+	              _this2.setState({
+	                expandedKeys: expandedKeys
+	              });
+	            })['catch'](function () {
+	              // console.error('Something went wrong', reason);
+	            });
+	          }
+	        }
+	      } else {
+	          expandedKeys.splice(index, 1);
+	        }
+	      if (!('expandedKeys' in this.props)) {
+	        this.setState({ expandedKeys: expandedKeys });
+	      }
+	      thisProps.onExpand(treeNode, expanded, expandedKeys);
+	    }
+	  }, {
+	    key: 'onCheck',
+	    value: function onCheck(treeNode) {
+	      var _this3 = this;
+	
+	      var tnProps = treeNode.props;
+	      var checked = !tnProps.checked;
+	      if (tnProps.checkPart) {
+	        checked = true;
+	      }
+	      var pos = undefined;
+	      Object.keys(this.treeNodesStates).forEach(function (item) {
+	        var itemObj = _this3.treeNodesStates[item];
+	        if (itemObj.key === (treeNode.key || tnProps.eventKey)) {
+	          pos = item;
+	          itemObj.checked = checked;
+	          itemObj.checkPart = false;
+	        }
+	      });
+	      this.handleCheckState(this.treeNodesStates, [pos], !checked);
+	      var checkKeys = this.getCheckKeys();
+	      this.checkPartKeys = checkKeys.checkPartKeys;
+	      var checkedKeys = checkKeys.checkedKeys;
+	      var newSt = {
+	        event: 'check',
+	        node: treeNode,
+	        allCheckedNodesKeys: checkKeys.checkedNodesKeys
+	      };
+	      if (!('checkedKeys' in this.props)) {
+	        this.setState({
+	          checkedKeys: checkedKeys
+	        });
+	        newSt.checked = checked;
+	      } else {
+	        checkedKeys = [].concat(_toConsumableArray(this.state.checkedKeys));
+	        newSt.allCheckedNodesKeys = [];
+	        Object.keys(this.treeNodesStates).forEach(function (item) {
+	          var itemObj = _this3.treeNodesStates[item];
+	          // 此处用 this.checkedKeys，能包含上一次所有选中的节点，
+	          // 供用户判断点击节点，下次是否需要选中
+	          if (_this3.checkedKeys.indexOf(itemObj.key) !== -1) {
+	            newSt.allCheckedNodesKeys.push({ key: itemObj.key, node: itemObj.node, pos: item });
+	          }
+	        });
+	      }
+	      newSt.checkedKeys = checkedKeys;
+	      this.props.onCheck(newSt);
+	    }
+	  }, {
+	    key: 'onSelect',
+	    value: function onSelect(treeNode) {
+	      var props = this.props;
+	      var selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
+	      var eventKey = treeNode.props.eventKey;
+	      var index = selectedKeys.indexOf(eventKey);
+	      var selected = undefined;
+	      if (index !== -1) {
+	        selected = false;
+	        selectedKeys.splice(index, 1);
+	      } else {
+	        selected = true;
+	        if (!props.multiple) {
+	          selectedKeys.length = 0;
+	        }
+	        selectedKeys.push(eventKey);
+	      }
+	      var newSt = {
+	        event: 'select',
+	        node: treeNode
+	      };
+	      if (!('selectedKeys' in this.props)) {
+	        this.setState({
+	          selectedKeys: selectedKeys
+	        });
+	        newSt.selected = selected;
+	      } else {
+	        selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
+	      }
+	      newSt.selectedKeys = selectedKeys;
+	      props.onSelect(newSt);
+	    }
+	  }, {
+	    key: 'onMouseEnter',
+	    value: function onMouseEnter(e, treeNode) {
+	      this.props.onMouseEnter({ event: e, node: treeNode });
+	    }
+	  }, {
+	    key: 'onMouseLeave',
+	    value: function onMouseLeave(e, treeNode) {
+	      this.props.onMouseLeave({ event: e, node: treeNode });
+	    }
+	  }, {
+	    key: 'onContextMenu',
+	    value: function onContextMenu(e, treeNode) {
+	      var selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
+	      var eventKey = treeNode.props.eventKey;
+	      if (this.contextmenuKeys.indexOf(eventKey) === -1) {
+	        this.contextmenuKeys.push(eventKey);
+	      }
+	      this.contextmenuKeys.forEach(function (key) {
+	        var index = selectedKeys.indexOf(key);
+	        if (index !== -1) {
+	          selectedKeys.splice(index, 1);
+	        }
+	      });
+	      if (selectedKeys.indexOf(eventKey) === -1) {
+	        selectedKeys.push(eventKey);
+	      }
+	      this.setState({
+	        selectedKeys: selectedKeys
+	      });
+	      this.props.onRightClick({ event: e, node: treeNode });
+	    }
+	
+	    // all keyboard events callbacks run from here at first
+	  }, {
+	    key: 'onKeyDown',
+	    value: function onKeyDown(e) {
+	      e.preventDefault();
+	    }
+	  }, {
+	    key: 'getDefaultExpandedKeys',
+	    value: function getDefaultExpandedKeys(props, willReceiveProps) {
+	      var defaultExpandedKeys = props.defaultExpandedKeys;
+	      if (props.defaultExpandAll) {
+	        defaultExpandedKeys = [];
+	        this.loopAllChildren(props.children, function (item, index, pos) {
+	          var key = item.key || pos;
+	          defaultExpandedKeys.push(key);
+	        });
+	      }
+	      var expandedKeys = willReceiveProps ? undefined : defaultExpandedKeys;
+	      if ('expandedKeys' in props) {
+	        expandedKeys = props.expandedKeys || [];
+	      }
+	      return expandedKeys;
+	    }
+	  }, {
+	    key: 'getDefaultCheckedKeys',
+	    value: function getDefaultCheckedKeys(props, willReceiveProps) {
+	      var checkedKeys = willReceiveProps ? undefined : props.defaultCheckedKeys;
+	      if ('checkedKeys' in props) {
+	        checkedKeys = props.checkedKeys || [];
+	      }
+	      return checkedKeys;
+	    }
+	  }, {
+	    key: 'getDefaultSelectedKeys',
+	    value: function getDefaultSelectedKeys(props, willReceiveProps) {
+	      var defaultSelectedKeys = props.multiple ? [].concat(_toConsumableArray(props.defaultSelectedKeys)) : [props.defaultSelectedKeys[0]];
+	      var selectedKeys = willReceiveProps ? undefined : defaultSelectedKeys;
+	      if ('selectedKeys' in props) {
+	        selectedKeys = props.multiple ? [].concat(_toConsumableArray(props.selectedKeys)) : [props.selectedKeys[0]];
+	      }
+	      return selectedKeys;
 	    }
 	  }, {
 	    key: 'getCheckKeys',
 	    value: function getCheckKeys() {
-	      var _this2 = this;
+	      var _this4 = this;
 	
 	      var checkPartKeys = [];
 	      var checkedKeys = [];
-	      Object.keys(this.treeNodesChkStates).forEach(function (item) {
-	        var itemObj = _this2.treeNodesChkStates[item];
+	      var checkedNodes = [];
+	      var checkedNodesKeys = [];
+	      Object.keys(this.treeNodesStates).forEach(function (item) {
+	        var itemObj = _this4.treeNodesStates[item];
 	        if (itemObj.checked) {
 	          checkedKeys.push(itemObj.key);
+	          checkedNodes.push(itemObj.node);
+	          checkedNodesKeys.push({ key: itemObj.key, node: itemObj.node, pos: item });
 	        } else if (itemObj.checkPart) {
 	          checkPartKeys.push(itemObj.key);
 	        }
 	      });
 	      return {
-	        checkPartKeys: checkPartKeys, checkedKeys: checkedKeys
+	        checkPartKeys: checkPartKeys, checkedKeys: checkedKeys, checkedNodes: checkedNodes
 	      };
+	    }
+	  }, {
+	    key: 'getOriginExpandedKeys',
+	    value: function getOriginExpandedKeys() {
+	      if (!this._originExpandedKeys && 'expandedKeys' in this.props) {
+	        this._originExpandedKeys = [].concat(_toConsumableArray(this.state.expandedKeys));
+	      }
 	    }
 	  }, {
 	    key: 'getOpenTransitionName',
@@ -56644,22 +57003,42 @@
 	      return transitionName;
 	    }
 	  }, {
-	    key: 'loopAllChildren',
-	    value: function loopAllChildren(childs, callback) {
-	      var loop = function loop(children, level) {
-	        _react2['default'].Children.forEach(children, function (item, index) {
-	          var pos = level + '-' + index;
-	          var newChildren = item.props.children;
-	          if (newChildren) {
-	            if (!Array.isArray(newChildren)) {
-	              newChildren = [newChildren];
-	            }
-	            loop(newChildren, pos);
-	          }
-	          callback(item, index, pos);
-	        });
-	      };
-	      loop(childs, 0);
+	    key: 'getDragNodes',
+	    value: function getDragNodes(treeNode) {
+	      var _this5 = this;
+	
+	      var dragNodesKeys = [];
+	      Object.keys(this.treeNodesStates).forEach(function (item) {
+	        if (item.indexOf(treeNode.props.pos) === 0) {
+	          dragNodesKeys.push(_this5.treeNodesStates[item].key);
+	        }
+	      });
+	      return dragNodesKeys;
+	    }
+	  }, {
+	    key: 'getExpandedKeys',
+	    value: function getExpandedKeys(treeNode, expand) {
+	      var key = treeNode.props.eventKey;
+	      var expandedKeys = this.state.expandedKeys;
+	      var expandedIndex = expandedKeys.indexOf(key);
+	      var exKeys = undefined;
+	      if (expandedIndex > -1 && !expand) {
+	        exKeys = [].concat(_toConsumableArray(expandedKeys));
+	        exKeys.splice(expandedIndex, 1);
+	        return exKeys;
+	      }
+	      if (expand && expandedKeys.indexOf(key) === -1) {
+	        return expandedKeys.concat([key]);
+	      }
+	    }
+	  }, {
+	    key: 'filterTreeNode',
+	    value: function filterTreeNode(treeNode) {
+	      var filterTreeNode = this.props.filterTreeNode;
+	      if (typeof filterTreeNode !== 'function' || treeNode.props.disabled) {
+	        return false;
+	      }
+	      return filterTreeNode.call(this, treeNode);
 	    }
 	  }, {
 	    key: 'handleCheckState',
@@ -56668,9 +57047,6 @@
 	      if (typeof unCheckEvent === 'boolean') {
 	        evt = true;
 	      }
-	      var splitPos = function splitPos(pos) {
-	        return pos.split('-');
-	      };
 	      // stripTail('x-xx-sss-xx')
 	      var stripTail = function stripTail(str) {
 	        var arr = str.match(/(.+)(-[^-]+)$/);
@@ -56732,193 +57108,73 @@
 	      });
 	    }
 	  }, {
-	    key: 'handleCheck',
-	    value: function handleCheck(treeNode) {
-	      var _this3 = this;
-	
-	      var tnProps = treeNode.props;
-	      var checked = !tnProps.checked;
-	      if (tnProps.checkPart) {
-	        checked = true;
-	      }
-	      var pos = undefined;
-	      Object.keys(this.treeNodesChkStates).forEach(function (item) {
-	        var itemObj = _this3.treeNodesChkStates[item];
-	        if (itemObj.key === (treeNode.key || tnProps.eventKey)) {
-	          pos = item;
-	          itemObj.checked = checked;
-	          itemObj.checkPart = false;
-	        }
-	      });
-	      this.handleCheckState(this.treeNodesChkStates, [pos], !checked);
-	      var checkKeys = this.getCheckKeys();
-	      this.checkPartKeys = checkKeys.checkPartKeys;
-	      var checkedKeys = checkKeys.checkedKeys;
-	      var newSt = {
-	        event: 'check',
-	        node: treeNode
-	      };
-	      if (!('checkedKeys' in this.props)) {
-	        this.setState({
-	          checkedKeys: checkedKeys
-	        });
-	        newSt.checked = checked;
-	      } else {
-	        checkedKeys = this.state.checkedKeys;
-	      }
-	      newSt.checkedKeys = checkedKeys;
-	      if (this.props.onCheck) {
-	        this.props.onCheck(newSt);
-	      }
-	    }
-	  }, {
-	    key: 'handleSelect',
-	    value: function handleSelect(treeNode) {
-	      var props = this.props;
-	      var selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
-	      var eventKey = treeNode.props.eventKey;
-	      var index = selectedKeys.indexOf(eventKey);
-	      var selected = undefined;
-	      if (index !== -1) {
-	        selected = false;
-	        selectedKeys.splice(index, 1);
-	      } else {
-	        selected = true;
-	        if (!props.multiple) {
-	          selectedKeys.length = 0;
-	        }
-	        selectedKeys.push(eventKey);
-	      }
-	      var newSt = {
-	        event: 'select',
-	        node: treeNode
-	      };
-	      if (!('selectedKeys' in this.props)) {
-	        this.setState({
-	          selectedKeys: selectedKeys
-	        });
-	        newSt.selected = selected;
-	      } else {
-	        selectedKeys = this.state.selectedKeys;
-	      }
-	      newSt.selectedKeys = selectedKeys;
-	      if (props.onSelect) {
-	        props.onSelect(newSt);
-	      }
-	    }
-	  }, {
-	    key: 'handleContextMenu',
-	    value: function handleContextMenu(e, treeNode) {
-	      var selectedKeys = [].concat(_toConsumableArray(this.state.selectedKeys));
-	      var eventKey = treeNode.props.eventKey;
-	      if (this.contextmenuKeys.indexOf(eventKey) === -1) {
-	        this.contextmenuKeys.push(eventKey);
-	      }
-	      this.contextmenuKeys.forEach(function (key) {
-	        var index = selectedKeys.indexOf(key);
-	        if (index !== -1) {
-	          selectedKeys.splice(index, 1);
-	        }
-	      });
-	      if (selectedKeys.indexOf(eventKey) === -1) {
-	        selectedKeys.push(eventKey);
-	      }
-	      this.setState({
-	        selectedKeys: selectedKeys
-	      });
-	      this.props.onRightClick({ event: e, node: treeNode });
-	    }
-	  }, {
-	    key: 'handleExpand',
-	    value: function handleExpand(treeNode) {
-	      var _this4 = this;
-	
-	      var thisProps = this.props;
-	      var tnProps = treeNode.props;
-	      var expandedKeys = this.state.expandedKeys.concat([]);
-	      var expanded = !tnProps.expanded;
-	      if (this.defaultExpandAll) {
-	        this.loopAllChildren(thisProps.children, function (item, index, pos) {
-	          var key = item.key || pos;
-	          if (expandedKeys.indexOf(key) === -1) {
-	            expandedKeys.push(key);
+	    key: 'loopAllChildren',
+	    value: function loopAllChildren(childs, callback) {
+	      var loop = function loop(children, level) {
+	        _react2['default'].Children.forEach(children, function (item, index) {
+	          var pos = level + '-' + index;
+	          if (item.props.children && item.type === _TreeNode2['default']) {
+	            loop(item.props.children, pos);
 	          }
+	          callback(item, index, pos);
 	        });
-	        this.defaultExpandAll = false;
-	      }
-	      var index = expandedKeys.indexOf(tnProps.eventKey);
-	      if (expanded) {
-	        if (index === -1) {
-	          expandedKeys.push(tnProps.eventKey);
-	          if (thisProps.onDataLoaded) {
-	            return thisProps.onDataLoaded(treeNode).then(function () {
-	              _this4.setState({
-	                expandedKeys: expandedKeys
-	              });
-	            })['catch'](function () {
-	              // console.error('Something went wrong', reason);
-	            });
-	          }
-	        }
-	      } else {
-	          expandedKeys.splice(index, 1);
-	        }
-	      this.setState({
-	        expandedKeys: expandedKeys
-	      });
-	    }
-	
-	    // all keyboard events callbacks run from here at first
-	  }, {
-	    key: 'handleKeyDown',
-	    value: function handleKeyDown(e) {
-	      e.preventDefault();
+	      };
+	      loop(childs, 0);
 	    }
 	  }, {
 	    key: 'renderTreeNode',
 	    value: function renderTreeNode(child, index) {
 	      var level = arguments.length <= 2 || arguments[2] === undefined ? 0 : arguments[2];
 	
-	      var key = child.key || level + '-' + index;
+	      var pos = level + '-' + index;
+	      var key = child.key || pos;
 	      var state = this.state;
 	      var props = this.props;
 	      var cloneProps = {
-	        ref: 'treeNode',
+	        ref: 'treeNode-' + key,
 	        root: this,
 	        eventKey: key,
-	        pos: level + '-' + index,
-	        onDataLoaded: props.onDataLoaded,
+	        pos: pos,
+	        loadData: props.loadData,
+	        onMouseEnter: props.onMouseEnter,
+	        onMouseLeave: props.onMouseLeave,
 	        onRightClick: props.onRightClick,
 	        prefixCls: props.prefixCls,
 	        showLine: props.showLine,
 	        showIcon: props.showIcon,
 	        checkable: props.checkable,
-	        expanded: this.defaultExpandAll || state.expandedKeys.indexOf(key) !== -1,
+	        draggable: props.draggable,
+	        dragOver: state.dragOverNodeKey === key && this.dropPos === 0,
+	        dragOverGapTop: state.dragOverNodeKey === key && this.dropPos === -1,
+	        dragOverGapBottom: state.dragOverNodeKey === key && this.dropPos === 1,
+	        expanded: state.expandedKeys.indexOf(key) !== -1,
 	        selected: state.selectedKeys.indexOf(key) !== -1,
 	        checked: this.checkedKeys.indexOf(key) !== -1,
 	        checkPart: this.checkPartKeys.indexOf(key) !== -1,
 	        openTransitionName: this.getOpenTransitionName(),
-	        openAnimation: props.openAnimation
+	        openAnimation: props.openAnimation,
+	        filterTreeNode: this.filterTreeNode.bind(this)
 	      };
 	      return _react2['default'].cloneElement(child, cloneProps);
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this5 = this;
+	      var _this6 = this;
 	
 	      var props = this.props;
 	      var domProps = {
-	        className: (0, _rcUtil.classSet)(props.className, props.prefixCls),
+	        className: (0, _classnames2['default'])(props.className, props.prefixCls),
 	        role: 'tree-node'
 	      };
 	      if (props.focusable) {
 	        domProps.tabIndex = '0';
-	        domProps.onKeyDown = this.handleKeyDown;
+	        domProps.onKeyDown = this.onKeyDown;
 	      }
+	      // console.log(this.state.expandedKeys, this._originExpandedKeys, props.children);
 	      var checkedKeys = this.state.checkedKeys;
 	      var checkedPos = [];
-	      this.treeNodesChkStates = {};
+	      this.treeNodesStates = {};
 	      this.loopAllChildren(props.children, function (item, index, pos) {
 	        var key = item.key || pos;
 	        var checked = false;
@@ -56926,21 +57182,22 @@
 	          checked = true;
 	          checkedPos.push(pos);
 	        }
-	        _this5.treeNodesChkStates[pos] = {
+	        _this6.treeNodesStates[pos] = {
+	          node: item,
 	          key: key,
 	          checked: checked,
 	          checkPart: false
 	        };
 	      });
-	      this.handleCheckState(this.treeNodesChkStates, filterMin(checkedPos.sort()));
+	      this.handleCheckState(this.treeNodesStates, filterMin(checkedPos.sort()));
 	      var checkKeys = this.getCheckKeys();
 	      this.checkPartKeys = checkKeys.checkPartKeys;
 	      this.checkedKeys = checkKeys.checkedKeys;
-	      this.newChildren = _react2['default'].Children.map(props.children, this.renderTreeNode, this);
+	
 	      return _react2['default'].createElement(
 	        'ul',
-	        _extends({}, domProps, { ref: 'tree' }),
-	        this.newChildren
+	        _extends({}, domProps, { unselectable: true, ref: 'tree' }),
+	        _react2['default'].Children.map(props.children, this.renderTreeNode, this)
 	      );
 	    }
 	  }]);
@@ -56949,35 +57206,53 @@
 	})(_react2['default'].Component);
 	
 	Tree.propTypes = {
-	  prefixCls: _react2['default'].PropTypes.string,
-	  checkable: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
-	  multiple: _react2['default'].PropTypes.bool,
-	  showLine: _react2['default'].PropTypes.bool,
-	  showIcon: _react2['default'].PropTypes.bool,
-	  defaultExpandAll: _react2['default'].PropTypes.bool,
-	  defaultExpandedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  checkedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  defaultCheckedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  selectedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  defaultSelectedKeys: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
-	  onCheck: _react2['default'].PropTypes.func,
-	  onSelect: _react2['default'].PropTypes.func,
-	  onDataLoaded: _react2['default'].PropTypes.func,
-	  onRightClick: _react2['default'].PropTypes.func,
-	  openTransitionName: _react2['default'].PropTypes.string,
-	  openAnimation: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.object])
+	  prefixCls: _react.PropTypes.string,
+	  checkable: _react.PropTypes.oneOfType([_react.PropTypes.bool, _react.PropTypes.node]),
+	  multiple: _react.PropTypes.bool,
+	  showLine: _react.PropTypes.bool,
+	  showIcon: _react.PropTypes.bool,
+	  defaultExpandAll: _react.PropTypes.bool,
+	  defaultExpandedKeys: _react.PropTypes.arrayOf(_react.PropTypes.string),
+	  checkedKeys: _react.PropTypes.arrayOf(_react.PropTypes.string),
+	  defaultCheckedKeys: _react.PropTypes.arrayOf(_react.PropTypes.string),
+	  selectedKeys: _react.PropTypes.arrayOf(_react.PropTypes.string),
+	  defaultSelectedKeys: _react.PropTypes.arrayOf(_react.PropTypes.string),
+	  onExpand: _react.PropTypes.func,
+	  onCheck: _react.PropTypes.func,
+	  onSelect: _react.PropTypes.func,
+	  loadData: _react.PropTypes.func,
+	  onMouseEnter: _react.PropTypes.func,
+	  onMouseLeave: _react.PropTypes.func,
+	  onRightClick: _react.PropTypes.func,
+	  onTreeDragStart: _react.PropTypes.func,
+	  onTreeDragEnter: _react.PropTypes.func,
+	  onTreeDragOver: _react.PropTypes.func,
+	  onTreeDragLeave: _react.PropTypes.func,
+	  onTreeDrop: _react.PropTypes.func,
+	  filterTreeNode: _react.PropTypes.func,
+	  openTransitionName: _react.PropTypes.string,
+	  openAnimation: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object])
 	};
 	
 	Tree.defaultProps = {
 	  prefixCls: 'rc-tree',
 	  multiple: false,
 	  checkable: false,
+	  draggable: false,
 	  showLine: false,
 	  showIcon: true,
 	  defaultExpandAll: false,
 	  defaultExpandedKeys: [],
 	  defaultCheckedKeys: [],
-	  defaultSelectedKeys: []
+	  defaultSelectedKeys: [],
+	  onExpand: noop,
+	  onCheck: noop,
+	  onSelect: noop,
+	  onTreeDragStart: noop,
+	  onTreeDragEnter: noop,
+	  onTreeDragOver: noop,
+	  onTreeDragLeave: noop,
+	  onTreeDrop: noop
 	};
 	
 	exports['default'] = Tree;
@@ -57011,15 +57286,24 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcUtil = __webpack_require__(295);
+	var _objectAssign = __webpack_require__(308);
+	
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
+	var _classnames = __webpack_require__(298);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
 	
 	var _rcAnimate = __webpack_require__(355);
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _objectAssign = __webpack_require__(308);
+	var _util = __webpack_require__(549);
 	
-	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	var browserUa = (0, _util.browser)(window.navigator.userAgent || '');
+	var ieOrEdge = /.*(IE|Edge).+/.test(browserUa);
+	// const uaArray = browserUa.split(' ');
+	// const gtIE8 = uaArray.length !== 2 || uaArray[0].indexOf('IE') === -1 || Number(uaArray[1]) > 8;
 	
 	var defaultTitle = '---';
 	
@@ -57032,56 +57316,94 @@
 	    _classCallCheck(this, TreeNode);
 	
 	    _get(Object.getPrototypeOf(TreeNode.prototype), 'constructor', this).call(this, props);
-	    ['handleExpand', 'handleCheck', 'handleContextMenu'].forEach(function (m) {
+	    ['onExpand', 'onCheck', 'onContextMenu', 'onMouseEnter', 'onMouseLeave', 'onDragStart', 'onDragEnter', 'onDragOver', 'onDragLeave', 'onDrop'].forEach(function (m) {
 	      _this[m] = _this[m].bind(_this);
 	    });
 	    this.state = {
-	      dataLoading: false
+	      dataLoading: false,
+	      dragNodeHighlight: false
 	    };
 	  }
 	
 	  _createClass(TreeNode, [{
-	    key: 'getPosition',
-	    value: function getPosition(pos) {
-	      var obj = {
-	        last: false,
-	        center: false
-	      };
-	      var siblings = Object.keys(this.props.root.treeNodesChkStates).filter(function (item) {
-	        var len = pos.length;
-	        return len === item.length && pos.substring(0, len - 2) === item.substring(0, len - 2);
-	      });
-	      var sLen = siblings.length;
-	      var posIndex = Number(pos.substr(-1, 1));
-	      if (sLen === 1 || posIndex === sLen - 1) {
-	        obj.last = true;
-	      } else {
-	        obj.center = true;
-	      }
-	      return obj;
+	    key: 'onCheck',
+	    value: function onCheck() {
+	      this.props.root.onCheck(this);
 	    }
 	  }, {
-	    key: 'handleCheck',
-	    value: function handleCheck() {
-	      this.props.root.handleCheck(this);
+	    key: 'onSelect',
+	    value: function onSelect() {
+	      this.props.root.onSelect(this);
 	    }
 	  }, {
-	    key: 'handleSelect',
-	    value: function handleSelect() {
-	      this.props.root.handleSelect(this);
-	    }
-	  }, {
-	    key: 'handleContextMenu',
-	    value: function handleContextMenu(e) {
+	    key: 'onMouseEnter',
+	    value: function onMouseEnter(e) {
 	      e.preventDefault();
-	      this.props.root.handleContextMenu(e, this);
+	      this.props.root.onMouseEnter(e, this);
 	    }
 	  }, {
-	    key: 'handleExpand',
-	    value: function handleExpand() {
+	    key: 'onMouseLeave',
+	    value: function onMouseLeave(e) {
+	      e.preventDefault();
+	      this.props.root.onMouseLeave(e, this);
+	    }
+	  }, {
+	    key: 'onContextMenu',
+	    value: function onContextMenu(e) {
+	      e.preventDefault();
+	      this.props.root.onContextMenu(e, this);
+	    }
+	  }, {
+	    key: 'onDragStart',
+	    value: function onDragStart(e) {
+	      // console.log('dragstart', this.props.eventKey, e);
+	      // e.preventDefault();
+	      e.stopPropagation();
+	      this.setState({
+	        dragNodeHighlight: true
+	      });
+	      this.props.root.onDragStart(e, this);
+	    }
+	  }, {
+	    key: 'onDragEnter',
+	    value: function onDragEnter(e) {
+	      // console.log('dragenter', this.props.eventKey, e);
+	      e.preventDefault();
+	      e.stopPropagation();
+	      this.props.root.onDragEnter(e, this);
+	    }
+	  }, {
+	    key: 'onDragOver',
+	    value: function onDragOver(e) {
+	      // console.log(this.props.eventKey, e);
+	      // todo disabled
+	      e.preventDefault();
+	      e.stopPropagation();
+	      this.props.root.onDragOver(e, this);
+	      return false;
+	    }
+	  }, {
+	    key: 'onDragLeave',
+	    value: function onDragLeave(e) {
+	      // console.log(this.props.eventKey, e);
+	      e.stopPropagation();
+	      this.props.root.onDragLeave(e, this);
+	    }
+	  }, {
+	    key: 'onDrop',
+	    value: function onDrop(e) {
+	      e.stopPropagation();
+	      this.setState({
+	        dragNodeHighlight: false
+	      });
+	      this.props.root.onDrop(e, this);
+	    }
+	  }, {
+	    key: 'onExpand',
+	    value: function onExpand() {
 	      var _this2 = this;
 	
-	      var callbackPromise = this.props.root.handleExpand(this);
+	      var callbackPromise = this.props.root.onExpand(this);
 	      if (callbackPromise && typeof callbackPromise === 'object') {
 	        (function () {
 	          var setLoading = function setLoading(dataLoading) {
@@ -57101,9 +57423,29 @@
 	
 	    // keyboard event support
 	  }, {
-	    key: 'handleKeyDown',
-	    value: function handleKeyDown(e) {
+	    key: 'onKeyDown',
+	    value: function onKeyDown(e) {
 	      e.preventDefault();
+	    }
+	  }, {
+	    key: 'getPosition',
+	    value: function getPosition(pos) {
+	      var obj = {
+	        last: false,
+	        center: false
+	      };
+	      var siblings = Object.keys(this.props.root.treeNodesStates).filter(function (item) {
+	        var len = pos.length;
+	        return len === item.length && pos.substring(0, len - 2) === item.substring(0, len - 2);
+	      });
+	      var sLen = siblings.length;
+	      var posIndex = Number(pos.substr(-1, 1));
+	      if (sLen === 1 || posIndex === sLen - 1) {
+	        obj.last = true;
+	      } else {
+	        obj.center = true;
+	      }
+	      return obj;
 	    }
 	  }, {
 	    key: 'renderSwitcher',
@@ -57112,7 +57454,7 @@
 	      var switcherCls = _defineProperty({}, prefixCls + '-switcher', true);
 	      if (props.disabled) {
 	        switcherCls[prefixCls + '-switcher-disabled'] = true;
-	        return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls) });
+	        return _react2['default'].createElement('span', { className: (0, _classnames2['default'])(switcherCls) });
 	      }
 	
 	      var posObj = this.getPosition(props.pos);
@@ -57125,7 +57467,7 @@
 	        switcherCls[prefixCls + '-center_' + expandedState] = posObj.center;
 	        switcherCls[prefixCls + '-bottom_' + expandedState] = posObj.last;
 	      }
-	      return _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(switcherCls), onClick: this.handleExpand });
+	      return _react2['default'].createElement('span', { className: (0, _classnames2['default'])(switcherCls), onClick: this.onExpand });
 	    }
 	  }, {
 	    key: 'renderCheckbox',
@@ -57145,13 +57487,13 @@
 	        checkboxCls[prefixCls + '-checkbox-disabled'] = true;
 	        return _react2['default'].createElement(
 	          'span',
-	          { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls) },
+	          { ref: 'checkbox', className: (0, _classnames2['default'])(checkboxCls) },
 	          customEle
 	        );
 	      }
 	      return _react2['default'].createElement(
 	        'span',
-	        { ref: 'checkbox', className: (0, _rcUtil.classSet)(checkboxCls), onClick: this.handleCheck },
+	        { ref: 'checkbox', className: (0, _classnames2['default'])(checkboxCls), onClick: this.onCheck },
 	        customEle
 	      );
 	    }
@@ -57187,7 +57529,7 @@
 	            delete animProps.animation.appear;
 	          }
 	        }
-	        newChildren = this.newChildren = _react2['default'].createElement(
+	        newChildren = _react2['default'].createElement(
 	          _rcAnimate2['default'],
 	          _extends({}, animProps, {
 	            showProp: 'expanded',
@@ -57195,7 +57537,7 @@
 	            component: '' }),
 	          _react2['default'].createElement(
 	            'ul',
-	            { className: (0, _rcUtil.classSet)(cls), expanded: props.expanded },
+	            { className: (0, _classnames2['default'])(cls), expanded: props.expanded },
 	            _react2['default'].Children.map(children, function (item, index) {
 	              return props.root.renderTreeNode(item, index, props.pos);
 	            }, props.root)
@@ -57222,13 +57564,13 @@
 	      if (!newChildren || newChildren === props.children) {
 	        // content = newChildren;
 	        newChildren = null;
-	        if (!props.onDataLoaded) {
+	        if (!props.loadData || props.isLeaf) {
 	          canRenderSwitcher = false;
 	        }
 	      }
 	
 	      var selectHandle = function selectHandle() {
-	        var icon = props.showIcon || props.onDataLoaded && _this3.state.dataLoading ? _react2['default'].createElement('span', { className: (0, _rcUtil.classSet)(iconEleCls) }) : null;
+	        var icon = props.showIcon || props.loadData && _this3.state.dataLoading ? _react2['default'].createElement('span', { className: (0, _classnames2['default'])(iconEleCls) }) : null;
 	        var title = _react2['default'].createElement(
 	          'span',
 	          { className: prefixCls + '-title' },
@@ -57236,17 +57578,34 @@
 	        );
 	        var domProps = {};
 	        if (!props.disabled) {
-	          if (props.selected) {
+	          if (props.selected || _this3.state.dragNodeHighlight) {
 	            domProps.className = prefixCls + '-node-selected';
 	          }
-	          domProps.onClick = function () {
-	            _this3.handleSelect();
-	            if (props.checkable) {
-	              _this3.handleCheck();
-	            }
+	          domProps.onClick = function (e) {
+	            e.preventDefault();
+	            _this3.onSelect();
+	            // not fire check event
+	            // if (props.checkable) {
+	            //   this.onCheck();
+	            // }
 	          };
 	          if (props.onRightClick) {
-	            domProps.onContextMenu = _this3.handleContextMenu;
+	            domProps.onContextMenu = _this3.onContextMenu;
+	          }
+	          if (props.onMouseEnter) {
+	            domProps.onMouseEnter = _this3.onMouseEnter;
+	          }
+	          if (props.onMouseLeave) {
+	            domProps.onMouseLeave = _this3.onMouseLeave;
+	          }
+	          if (props.draggable) {
+	            if (ieOrEdge) {
+	              // ie bug!
+	              domProps.href = '#';
+	            }
+	            domProps.draggable = true;
+	            domProps['aria-grabbed'] = true;
+	            domProps.onDragStart = _this3.onDragStart;
 	          }
 	        }
 	        return _react2['default'].createElement(
@@ -57257,9 +57616,31 @@
 	        );
 	      };
 	
+	      var liProps = {};
+	      if (props.draggable) {
+	        liProps.onDragEnter = this.onDragEnter;
+	        liProps.onDragOver = this.onDragOver;
+	        liProps.onDragLeave = this.onDragLeave;
+	        liProps.onDrop = this.onDrop;
+	      }
+	
+	      var disabledCls = '';
+	      var dragOverCls = '';
+	      if (props.disabled) {
+	        disabledCls = prefixCls + '-treenode-disabled';
+	      } else if (props.dragOver) {
+	        dragOverCls = 'drag-over';
+	      } else if (props.dragOverGapTop) {
+	        dragOverCls = 'drag-over-gap-top';
+	      } else if (props.dragOverGapBottom) {
+	        dragOverCls = 'drag-over-gap-bottom';
+	      }
+	
+	      var filterCls = props.filterTreeNode(this) ? 'filter-node' : '';
+	
 	      return _react2['default'].createElement(
 	        'li',
-	        { className: (0, _rcUtil.joinClasses)(props.className, props.disabled ? prefixCls + '-treenode-disabled' : '') },
+	        _extends({}, liProps, { ref: 'li', className: (0, _classnames2['default'])(props.className, disabledCls, dragOverCls, filterCls) }),
 	        canRenderSwitcher ? this.renderSwitcher(props, expandedState) : _react2['default'].createElement('span', { className: prefixCls + '-switcher-noop' }),
 	        props.checkable ? this.renderCheckbox(props) : null,
 	        selectHandle(),
@@ -57272,10 +57653,11 @@
 	})(_react2['default'].Component);
 	
 	TreeNode.propTypes = {
-	  prefixCls: _react2['default'].PropTypes.string,
-	  expanded: _react2['default'].PropTypes.bool,
-	  root: _react2['default'].PropTypes.object,
-	  onSelect: _react2['default'].PropTypes.func
+	  prefixCls: _react.PropTypes.string,
+	  expanded: _react.PropTypes.bool,
+	  isLeaf: _react.PropTypes.bool,
+	  root: _react.PropTypes.object,
+	  onSelect: _react.PropTypes.func
 	};
 	TreeNode.defaultProps = {
 	  title: defaultTitle
@@ -57286,6 +57668,77 @@
 
 /***/ },
 /* 549 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	exports.browser = browser;
+	exports.getOffset = getOffset;
+	
+	function browser(ua) {
+	  var tem = undefined;
+	  var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+	  if (/trident/i.test(M[1])) {
+	    tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+	    return 'IE ' + (tem[1] || '');
+	  }
+	  if (M[1] === 'Chrome') {
+	    tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+	    if (tem) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+	  }
+	  M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+	  tem = ua.match(/version\/(\d+)/i);
+	  if (tem) {
+	    M.splice(1, 1, tem[1]);
+	  }
+	  return M.join(' ');
+	}
+	
+	// export function getOffset(el) {
+	//   const obj = el.getBoundingClientRect();
+	//   return {
+	//     left: obj.left + document.body.scrollLeft,
+	//     top: obj.top + document.body.scrollTop,
+	//     width: obj.width,
+	//     height: obj.height
+	//   };
+	// }
+	
+	// // iscroll offset
+	// offset = function (el) {
+	//   var left = -el.offsetLeft,
+	//     top = -el.offsetTop;
+	
+	//   // jshint -W084
+	//   while (el = el.offsetParent) {
+	//     left -= el.offsetLeft;
+	//     top -= el.offsetTop;
+	//   }
+	//   // jshint +W084
+	
+	//   return {
+	//     left: left,
+	//     top: top
+	//   };
+	// }
+	
+	function getOffset(ele) {
+	  var el = ele;
+	  var _x = 0;
+	  var _y = 0;
+	  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+	    _x += el.offsetLeft - el.scrollLeft;
+	    _y += el.offsetTop - el.scrollTop;
+	    el = el.offsetParent;
+	  }
+	  return { top: _y, left: _x };
+	}
+
+/***/ },
+/* 550 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57335,7 +57788,7 @@
 	module.exports = animation;
 
 /***/ },
-/* 550 */
+/* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57350,7 +57803,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _rcUpload = __webpack_require__(551);
+	var _rcUpload = __webpack_require__(552);
 	
 	var _rcUpload2 = _interopRequireDefault(_rcUpload);
 	
@@ -57358,11 +57811,11 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _uploadList = __webpack_require__(557);
+	var _uploadList = __webpack_require__(558);
 	
 	var _uploadList2 = _interopRequireDefault(_uploadList);
 	
-	var _getFileItem = __webpack_require__(558);
+	var _getFileItem = __webpack_require__(559);
 	
 	var _getFileItem2 = _interopRequireDefault(_getFileItem);
 	
@@ -57639,16 +58092,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 551 */
+/* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// export this package's api
 	'use strict';
 	
-	module.exports = __webpack_require__(552);
+	module.exports = __webpack_require__(553);
 
 /***/ },
-/* 552 */
+/* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57663,11 +58116,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _AjaxUploader = __webpack_require__(553);
+	var _AjaxUploader = __webpack_require__(554);
 	
 	var _AjaxUploader2 = _interopRequireDefault(_AjaxUploader);
 	
-	var _IframeUploader = __webpack_require__(556);
+	var _IframeUploader = __webpack_require__(557);
 	
 	var _IframeUploader2 = _interopRequireDefault(_IframeUploader);
 	
@@ -57721,7 +58174,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 553 */
+/* 554 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57732,7 +58185,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _request = __webpack_require__(554);
+	var _request = __webpack_require__(555);
 	
 	var _request2 = _interopRequireDefault(_request);
 	
@@ -57740,7 +58193,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _uid = __webpack_require__(555);
+	var _uid = __webpack_require__(556);
 	
 	var _uid2 = _interopRequireDefault(_uid);
 	
@@ -57871,7 +58324,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 554 */
+/* 555 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -57945,7 +58398,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 555 */
+/* 556 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -57964,7 +58417,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 556 */
+/* 557 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57983,7 +58436,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _uid = __webpack_require__(555);
+	var _uid = __webpack_require__(556);
 	
 	var _uid2 = _interopRequireDefault(_uid);
 	
@@ -58164,7 +58617,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 557 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58299,7 +58752,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58322,7 +58775,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58343,7 +58796,7 @@
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
 	
-	var _ScrollNumber = __webpack_require__(560);
+	var _ScrollNumber = __webpack_require__(561);
 	
 	var _ScrollNumber2 = _interopRequireDefault(_ScrollNumber);
 	
@@ -58434,7 +58887,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 560 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58613,7 +59066,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 561 */
+/* 562 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58632,7 +59085,7 @@
 	
 	var _rcMenu2 = _interopRequireDefault(_rcMenu);
 	
-	var _openAnimation = __webpack_require__(549);
+	var _openAnimation = __webpack_require__(550);
 	
 	var _openAnimation2 = _interopRequireDefault(_openAnimation);
 	
@@ -58725,7 +59178,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 562 */
+/* 563 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58801,7 +59254,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 563 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58810,13 +59263,13 @@
 	  value: true
 	});
 	
-	var _layout = __webpack_require__(564);
+	var _layout = __webpack_require__(565);
 	
 	exports["default"] = _layout.Row;
 	module.exports = exports['default'];
 
 /***/ },
-/* 564 */
+/* 565 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58826,11 +59279,11 @@
 	});
 	exports.Col = exports.Row = undefined;
 	
-	var _row = __webpack_require__(565);
+	var _row = __webpack_require__(566);
 	
 	var _row2 = _interopRequireDefault(_row);
 	
-	var _col = __webpack_require__(566);
+	var _col = __webpack_require__(567);
 	
 	var _col2 = _interopRequireDefault(_col);
 	
@@ -58840,7 +59293,7 @@
 	exports.Col = _col2["default"];
 
 /***/ },
-/* 565 */
+/* 566 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58901,7 +59354,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 566 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58964,21 +59417,6 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 567 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _layout = __webpack_require__(564);
-	
-	exports["default"] = _layout.Col;
-	module.exports = exports['default'];
-
-/***/ },
 /* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -58988,19 +59426,34 @@
 	  value: true
 	});
 	
-	var _Form = __webpack_require__(569);
+	var _layout = __webpack_require__(565);
+	
+	exports["default"] = _layout.Col;
+	module.exports = exports['default'];
+
+/***/ },
+/* 569 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _Form = __webpack_require__(570);
 	
 	var _Form2 = _interopRequireDefault(_Form);
 	
-	var _FormItem = __webpack_require__(570);
+	var _FormItem = __webpack_require__(571);
 	
 	var _FormItem2 = _interopRequireDefault(_FormItem);
 	
-	var _ValueMixin = __webpack_require__(571);
+	var _ValueMixin = __webpack_require__(572);
 	
 	var _ValueMixin2 = _interopRequireDefault(_ValueMixin);
 	
-	var _input = __webpack_require__(572);
+	var _input = __webpack_require__(573);
 	
 	var _input2 = _interopRequireDefault(_input);
 	
@@ -59019,7 +59472,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 569 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59092,7 +59545,7 @@
 	module.exports = Form;
 
 /***/ },
-/* 570 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59284,7 +59737,7 @@
 	module.exports = FormItem;
 
 /***/ },
-/* 571 */
+/* 572 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -59326,7 +59779,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 572 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59508,7 +59961,7 @@
 	module.exports.Group = Group;
 
 /***/ },
-/* 573 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59529,17 +59982,17 @@
 	
 	var _gregorianCalendar2 = _interopRequireDefault(_gregorianCalendar);
 	
-	var _zh_CN = __webpack_require__(574);
+	var _zh_CN = __webpack_require__(575);
 	
 	var _zh_CN2 = _interopRequireDefault(_zh_CN);
 	
-	var _FullCalendar = __webpack_require__(575);
+	var _FullCalendar = __webpack_require__(576);
 	
 	var _FullCalendar2 = _interopRequireDefault(_FullCalendar);
 	
-	var _Constants = __webpack_require__(577);
+	var _Constants = __webpack_require__(578);
 	
-	var _Header = __webpack_require__(578);
+	var _Header = __webpack_require__(579);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
@@ -59720,7 +60173,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 574 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59728,7 +60181,7 @@
 	module.exports = __webpack_require__(379);
 
 /***/ },
-/* 575 */
+/* 576 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59761,7 +60214,7 @@
 	
 	var _mixinCommonMixin2 = _interopRequireDefault(_mixinCommonMixin);
 	
-	var _fullCalendarCalendarHeader = __webpack_require__(576);
+	var _fullCalendarCalendarHeader = __webpack_require__(577);
 	
 	var _fullCalendarCalendarHeader2 = _interopRequireDefault(_fullCalendarCalendarHeader);
 	
@@ -59877,7 +60330,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 576 */
+/* 577 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60078,7 +60531,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 577 */
+/* 578 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60089,7 +60542,7 @@
 	var PREFIX_CLS = exports.PREFIX_CLS = 'ant-fullcalendar';
 
 /***/ },
-/* 578 */
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60104,7 +60557,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Constants = __webpack_require__(577);
+	var _Constants = __webpack_require__(578);
 	
 	var _select = __webpack_require__(433);
 	
@@ -60281,7 +60734,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 579 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60308,7 +60761,7 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _zh_CN = __webpack_require__(580);
+	var _zh_CN = __webpack_require__(581);
 	
 	var _zh_CN2 = _interopRequireDefault(_zh_CN);
 	
@@ -60417,7 +60870,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 580 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60434,7 +60887,7 @@
 	
 	var _zh_CN2 = _interopRequireDefault(_zh_CN);
 	
-	var _zh_CN3 = __webpack_require__(581);
+	var _zh_CN3 = __webpack_require__(582);
 	
 	var _zh_CN4 = _interopRequireDefault(_zh_CN3);
 	
@@ -60453,7 +60906,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 581 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60475,7 +60928,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 582 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60490,15 +60943,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _list = __webpack_require__(583);
+	var _list = __webpack_require__(584);
 	
 	var _list2 = _interopRequireDefault(_list);
 	
-	var _operation = __webpack_require__(585);
+	var _operation = __webpack_require__(586);
 	
 	var _operation2 = _interopRequireDefault(_operation);
 	
-	var _search = __webpack_require__(584);
+	var _search = __webpack_require__(585);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
@@ -60812,7 +61265,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 583 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60833,7 +61286,7 @@
 	
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 	
-	var _search = __webpack_require__(584);
+	var _search = __webpack_require__(585);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
@@ -61067,7 +61520,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 584 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61154,7 +61607,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 585 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61259,7 +61712,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 586 */
+/* 587 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -61424,7 +61877,7 @@
 	};
 
 /***/ },
-/* 587 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = SemVer;
@@ -62631,7 +63084,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(86)))
 
 /***/ },
-/* 588 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -62655,7 +63108,7 @@
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(589)
+	      XHR2 = __webpack_require__(590)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -63267,13 +63720,13 @@
 
 
 /***/ },
-/* 589 */
+/* 590 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 590 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63310,23 +63763,23 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 591 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	module.exports = __webpack_require__(590);
-
-/***/ },
 /* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(593);
+	module.exports = __webpack_require__(591);
 
 /***/ },
 /* 593 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	module.exports = __webpack_require__(594);
+
+/***/ },
+/* 594 */
 /***/ function(module, exports) {
 
 	'use strict';

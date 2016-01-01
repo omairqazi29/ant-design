@@ -67,19 +67,12 @@ let AntTable = React.createClass({
   },
 
   getDefaultSelection() {
-    let selectedRowKeys = [];
-    if (this.props.rowSelection && this.props.rowSelection.getCheckboxProps) {
-      let data = this.getCurrentPageData();
-      data.filter((item) => {
-        if (this.props.rowSelection.getCheckboxProps) {
-          return this.props.rowSelection.getCheckboxProps(item).defaultChecked;
-        }
-        return true;
-      }).map((record, rowIndex) => {
-        selectedRowKeys.push(this.getRecordKey(record, rowIndex));
-      });
+    if (!this.props.rowSelection || !this.props.rowSelection.getCheckboxProps) {
+      return [];
     }
-    return selectedRowKeys;
+    return this.getCurrentPageData()
+      .filter(item => this.props.rowSelection.getCheckboxProps(item).defaultChecked)
+      .map((record, rowIndex) => this.getRecordKey(record, rowIndex));
   },
 
   componentWillReceiveProps(nextProps) {
@@ -91,19 +84,13 @@ let AntTable = React.createClass({
     // 外界只有 dataSource 的变化会触发新请求
     if ('dataSource' in nextProps &&
         nextProps.dataSource !== this.props.dataSource) {
-      let selectedRowKeys = this.state.selectedRowKeys;
-      // 把不在当前页的选中项去掉
-      let currentPageRowKeys =
-        this.getCurrentPageData(nextProps.dataSource).map(
-          (record, i) => this.getRecordKey(record, i)
-        );
-      selectedRowKeys = selectedRowKeys.filter((key) => {
-        return currentPageRowKeys.indexOf(key) >= 0;
-      });
       this.setState({
         selectionDirty: false,
-        selectedRowKeys,
+        selectedRowKeys: [],
       });
+      if (this.props.rowSelection && this.props.rowSelection.onChange) {
+        this.props.rowSelection.onChange([]);
+      }
     }
   },
 
@@ -168,11 +155,8 @@ let AntTable = React.createClass({
   },
 
   handleSelect(record, rowIndex, e) {
-    let checked = e.target.checked;
-    let defaultSelection = [];
-    if (!this.state.selectionDirty) {
-      defaultSelection = this.getDefaultSelection();
-    }
+    const checked = e.target.checked;
+    const defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
     let selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
     let key = this.getRecordKey(record, rowIndex);
     if (checked) {
@@ -183,7 +167,7 @@ let AntTable = React.createClass({
       });
     }
     this.setState({
-      selectedRowKeys: selectedRowKeys,
+      selectedRowKeys,
       selectionDirty: true
     });
     if (this.props.rowSelection.onSelect) {
@@ -193,19 +177,19 @@ let AntTable = React.createClass({
       });
       this.props.rowSelection.onSelect(record, checked, selectedRows);
     }
+    if (this.props.rowSelection.onChange) {
+      this.props.rowSelection.onChange(selectedRowKeys);
+    }
   },
 
   handleRadioSelect: function (record, rowIndex, e) {
-    let checked = e.target.checked;
-    let defaultSelection = [];
-    if (!this.state.selectionDirty) {
-      defaultSelection = this.getDefaultSelection();
-    }
+    const checked = e.target.checked;
+    const defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
     let selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
     let key = this.getRecordKey(record, rowIndex);
     selectedRowKeys = [key];
     this.setState({
-      selectedRowKeys: selectedRowKeys,
+      selectedRowKeys,
       radioIndex: key,
       selectionDirty: true
     });
@@ -216,21 +200,35 @@ let AntTable = React.createClass({
       });
       this.props.rowSelection.onSelect(record, checked, selectedRows);
     }
+    if (this.props.rowSelection.onChange) {
+      this.props.rowSelection.onChange(selectedRowKeys);
+    }
   },
 
   handleSelectAllRow(e) {
-    let checked = e.target.checked;
-    let data = this.getCurrentPageData();
-    let selectedRowKeys = checked ? data.filter((item) => {
-      if (this.props.rowSelection.getCheckboxProps) {
-        return !this.props.rowSelection.getCheckboxProps(item).disabled;
-      }
-      return true;
-    }).map((item, i) => {
-      return this.getRecordKey(item, i);
-    }) : [];
+    const checked = e.target.checked;
+    const data = this.getCurrentPageData();
+    const defaultSelection = this.state.selectionDirty ? [] : this.getDefaultSelection();
+    const selectedRowKeys = this.state.selectedRowKeys.concat(defaultSelection);
+    const changableRowKeys = data.filter(item =>
+      !this.props.rowSelection.getCheckboxProps ||
+      !this.props.rowSelection.getCheckboxProps(item).disabled
+    ).map((item, i) => this.getRecordKey(item, i));
+    if (checked) {
+      changableRowKeys.forEach(key => {
+        if (selectedRowKeys.indexOf(key) < 0) {
+          selectedRowKeys.push(key);
+        }
+      });
+    } else {
+      changableRowKeys.forEach(key => {
+        if (selectedRowKeys.indexOf(key) >= 0) {
+          selectedRowKeys.splice(selectedRowKeys.indexOf(key), 1);
+        }
+      });
+    }
     this.setState({
-      selectedRowKeys: selectedRowKeys,
+      selectedRowKeys,
       selectionDirty: true
     });
     if (this.props.rowSelection.onSelectAll) {
@@ -238,6 +236,9 @@ let AntTable = React.createClass({
         return selectedRowKeys.indexOf(this.getRecordKey(row, i)) >= 0;
       });
       this.props.rowSelection.onSelectAll(checked, selectedRows);
+    }
+    if (this.props.rowSelection.onChange) {
+      this.props.rowSelection.onChange(selectedRowKeys);
     }
   },
 
@@ -255,6 +256,9 @@ let AntTable = React.createClass({
       pagination
     };
     this.setState(newState);
+    if (this.props.rowSelection && this.props.rowSelection.onChange) {
+      this.props.rowSelection.onChange([]);
+    }
     this.props.onChange.apply(this, this.prepareParamsArguments(objectAssign({}, this.state, newState)));
   },
 
@@ -333,7 +337,14 @@ let AntTable = React.createClass({
           className: 'ant-table-selection-column'
         };
       } else {
-        let checkboxAll = <Checkbox checked={checked} onChange={this.handleSelectAllRow}/>;
+        const checkboxAllDisabled = data.every(item =>
+          this.props.rowSelection.getCheckboxProps &&
+          this.props.rowSelection.getCheckboxProps(item).disabled);
+        const checkboxAll = (
+            <Checkbox checked={checked}
+                      disabled={checkboxAllDisabled}
+                      onChange={this.handleSelectAllRow} />
+        );
         selectionColumn = {
           key: 'selection-column',
           title: checkboxAll,

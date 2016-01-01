@@ -51,9 +51,6 @@ var rowSelection = {
   },
   onSelect: function onSelect(record, selected, selectedRows) {
     console.log(record, selected, selectedRows);
-  },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
   }
 };
 
@@ -105,9 +102,6 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, r
   onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
-  }
 };
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rowKey</span>(<span class="hljs-params">record</span>) </span>{
