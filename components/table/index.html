@@ -802,15 +802,21 @@ Table 表格 - Ant Design
 </thead>
 <tbody>
 <tr>
-<td>getCheckboxProps</td>
-<td>选择框的默认属性配置</td>
-<td>Function(record)</td>
-<td>-</td>
+<td>selectedRowKeys</td>
+<td>指定选中项的 key 数组，需要和 onChange 进行配合</td>
+<td>Array</td>
+<td>[]</td>
 </tr>
 <tr>
 <td>onChange</td>
 <td>选中项发生变化的时的回调，用户手动点选、换页、更新数据均会触发</td>
 <td>Function(selectedRowKeys)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>getCheckboxProps</td>
+<td>选择框的默认属性配置</td>
+<td>Function(record)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -1207,24 +1213,17 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>配置选择框的默认属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-row-selection-radio-props">
+</div><div class="code-box" id="demo-row-selection-and-operation">
   <div class="code-box-demo">
-    <div id="components-table-demo-row-selection-radio-props"></div>
-    <script>mountNode = document.getElementById('components-table-demo-row-selection-radio-props');</script>
+    <div id="components-table-demo-row-selection-and-operation"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection-and-operation');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
 
 var columns = [{
   title: '姓名',
-  dataIndex: 'name',
-  render: function render(text) {
-    return React.createElement(
-      'a',
-      { href: '#' },
-      text
-    );
-  }
+  dataIndex: 'name'
 }, {
   title: '年龄',
   dataIndex: 'age'
@@ -1232,99 +1231,155 @@ var columns = [{
   title: '住址',
   dataIndex: 'address'
 }];
+
 var data = [{
-  id: '1',
+  key: '1',
   name: '胡彦斌',
   age: 32,
   address: '西湖区湖底公园1号'
 }, {
-  id: '2',
+  key: '2',
   name: '胡彦祖',
   age: 42,
   address: '西湖区湖底公园1号'
 }, {
-  id: '3',
+  key: '3',
   name: '李大嘴',
   age: 32,
   address: '西湖区湖底公园1号'
 }];
 
-// 通过 rowSelection 对象表明需要行选择
-var rowSelection = {
-  type: 'radio',
-  getCheckboxProps: function getCheckboxProps(record) {
+var App = React.createClass({
+  displayName: 'App',
+  getInitialState: function getInitialState() {
     return {
-      defaultChecked: record.name === '李大嘴', // 配置默认勾选的列
-      disabled: record.name === '胡彦祖' // 配置无法勾选的列
+      selectedRowKeys: [],
+      loading: false
     };
   },
-  onSelect: function onSelect(record, selected, selectedRows) {
-    console.log(record, selected, selectedRows);
+  start: function start() {
+    var _this = this;
+
+    this.setState({ loading: true });
+    // 模拟 ajax 请求，完成后清空
+    setTimeout(function () {
+      _this.setState({
+        selectedRowKeys: [],
+        loading: false
+      });
+    }, 1000);
+  },
+  onSelectChange: function onSelectChange(selectedRowKeys) {
+    this.setState({ selectedRowKeys: selectedRowKeys });
+  },
+  render: function render() {
+    var _state = this.state;
+    var loading = _state.loading;
+    var selectedRowKeys = _state.selectedRowKeys;
+
+    var rowSelection = {
+      selectedRowKeys: selectedRowKeys,
+      onChange: this.onSelectChange
+    };
+    var hasSelected = selectedRowKeys.length > 0;
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { style: { marginBottom: 16 } },
+        React.createElement(
+          _antd.Button,
+          { type: 'primary', onClick: this.start,
+            disabled: !hasSelected, loading: loading },
+          '操作'
+        ),
+        React.createElement(
+          'span',
+          { style: { marginLeft: 8 } },
+          hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
+        )
+      ),
+      React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data })
+    );
   }
-};
+});
 
-function rowKey(record) {
-  return record.id;
-}
-
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, rowKey: rowKey, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
-  }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
+  dataIndex: <span class="hljs-string">'age'</span>,
 }, {
   title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
+  dataIndex: <span class="hljs-string">'address'</span>,
 }];
+
 <span class="hljs-keyword">const</span> data = [{
-  id: <span class="hljs-string">'1'</span>,
+  key: <span class="hljs-string">'1'</span>,
   name: <span class="hljs-string">'胡彦斌'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>,
 }, {
-  id: <span class="hljs-string">'2'</span>,
+  key: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖'</span>,
   age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>,
 }, {
-  id: <span class="hljs-string">'3'</span>,
+  key: <span class="hljs-string">'3'</span>,
   name: <span class="hljs-string">'李大嘴'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>,
 }];
 
-<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
-<span class="hljs-keyword">const</span> rowSelection = {
-  type: <span class="hljs-string">'radio'</span>,
-  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record</span>) </span>{
+<span class="hljs-keyword">const</span> App = React.createClass({
+  getInitialState() {
     <span class="hljs-keyword">return</span> {
-      defaultChecked: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
-      disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
+      selectedRowKeys: [],
+      loading: <span class="hljs-literal">false</span>,
     };
   },
-  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
+  start() {
+    <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">true</span> });
+    <span class="hljs-comment">// 模拟 ajax 请求，完成后清空</span>
+    setTimeout(() =&gt; {
+      <span class="hljs-keyword">this</span>.setState({
+        selectedRowKeys: [],
+        loading: <span class="hljs-literal">false</span>,
+      });
+    }, <span class="hljs-number">1000</span>);
   },
-};
+  onSelectChange(selectedRowKeys) {
+    <span class="hljs-keyword">this</span>.setState({ selectedRowKeys });
+  },
+  render() {
+    <span class="hljs-keyword">const</span> { loading, selectedRowKeys } = <span class="hljs-keyword">this</span>.state;
+    <span class="hljs-keyword">const</span> rowSelection = {
+      selectedRowKeys,
+      onChange: <span class="hljs-keyword">this</span>.onSelectChange,
+    };
+    <span class="hljs-keyword">const</span> hasSelected = selectedRowKeys.length &gt; <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
+           <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> <span class="hljs-attribute">8</span>}}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  }
+});
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rowKey</span>(<span class="hljs-params">record</span>) </span>{
-  <span class="hljs-keyword">return</span> record.id;
-}
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">rowKey</span>=<span class="hljs-value">{rowKey}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-row-selection-radio-props">单选</a>
+      <a href="#demo-row-selection-and-operation">选择和操作</a>
     </div>
-    <p>配置单选框的默认属性。</p>
+    <p>选择后进行操作，完成后清空选择，通过 <code>rowSelection.selectedRowKeys</code> 来控制选中项。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-paging">
@@ -2627,8 +2682,8 @@ ReactDOM.render(
     </a>
   </li>
   <li>
-    <a title="单选" href="#demo-row-selection-radio-props">
-      <span>单选</span>
+    <a title="选择和操作" href="#demo-row-selection-and-operation">
+      <span>选择和操作</span>
     </a>
   </li>
   <li>

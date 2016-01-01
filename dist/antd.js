@@ -22457,7 +22457,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  getInitialState: function getInitialState() {
 	    return {
 	      // 减少状态
-	      selectedRowKeys: [],
+	      selectedRowKeys: this.props.selectedRowKeys || [],
 	      filters: {},
 	      selectionDirty: false,
 	      sortColumn: '',
@@ -22517,15 +22517,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        pagination: (0, _objectAssign3["default"])({}, this.state.pagination, nextProps.pagination)
 	      });
 	    }
-	    // 外界只有 dataSource 的变化会触发新请求
+	    // dataSource 的变化会清空选中项
 	    if ('dataSource' in nextProps && nextProps.dataSource !== this.props.dataSource) {
 	      this.setState({
-	        selectionDirty: false,
-	        selectedRowKeys: []
+	        selectionDirty: false
 	      });
-	      if (this.props.rowSelection && this.props.rowSelection.onChange) {
-	        this.props.rowSelection.onChange([]);
-	      }
+	      this.setSelectedRowKeys([]);
+	    }
+	    if (nextProps.rowSelection && 'selectedRowKeys' in nextProps.rowSelection) {
+	      this.setState({
+	        selectedRowKeys: nextProps.rowSelection.selectedRowKeys || []
+	      });
+	    }
+	  },
+	  setSelectedRowKeys: function setSelectedRowKeys(selectedRowKeys) {
+	    if (this.props.rowSelection && !('selectedRowKeys' in this.props.rowSelection)) {
+	      this.setState({ selectedRowKeys: selectedRowKeys });
+	    }
+	    if (this.props.rowSelection && this.props.rowSelection.onChange) {
+	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	  hasPagination: function hasPagination() {
@@ -22584,11 +22594,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    });
 	    var newState = {
-	      selectedRowKeys: [],
 	      selectionDirty: false,
 	      filters: filters
 	    };
 	    this.setState(newState);
+	    this.setSelectedRowKeys([]);
 	    this.props.onChange.apply(this, this.prepareParamsArguments((0, _objectAssign3["default"])({}, this.state, newState)));
 	  },
 	  handleSelect: function handleSelect(record, rowIndex, e) {
@@ -22606,18 +22616,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    }
 	    this.setState({
-	      selectedRowKeys: selectedRowKeys,
 	      selectionDirty: true
 	    });
+	    this.setSelectedRowKeys(selectedRowKeys);
 	    if (this.props.rowSelection.onSelect) {
 	      var data = this.getCurrentPageData();
 	      var selectedRows = data.filter(function (row, i) {
 	        return selectedRowKeys.indexOf(_this3.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelect(record, checked, selectedRows);
-	    }
-	    if (this.props.rowSelection.onChange) {
-	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	
@@ -22630,19 +22637,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var key = this.getRecordKey(record, rowIndex);
 	    selectedRowKeys = [key];
 	    this.setState({
-	      selectedRowKeys: selectedRowKeys,
 	      radioIndex: key,
 	      selectionDirty: true
 	    });
+	    this.setSelectedRowKeys(selectedRowKeys);
 	    if (this.props.rowSelection.onSelect) {
 	      var data = this.getCurrentPageData();
 	      var selectedRows = data.filter(function (row, i) {
 	        return selectedRowKeys.indexOf(_this4.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelect(record, checked, selectedRows);
-	    }
-	    if (this.props.rowSelection.onChange) {
-	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	
@@ -22672,17 +22676,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    }
 	    this.setState({
-	      selectedRowKeys: selectedRowKeys,
 	      selectionDirty: true
 	    });
+	    this.setSelectedRowKeys(selectedRowKeys);
 	    if (this.props.rowSelection.onSelectAll) {
 	      var selectedRows = data.filter(function (row, i) {
 	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
 	      this.props.rowSelection.onSelectAll(checked, selectedRows);
-	    }
-	    if (this.props.rowSelection.onChange) {
-	      this.props.rowSelection.onChange(selectedRowKeys);
 	    }
 	  },
 	  handlePageChange: function handlePageChange(current) {
@@ -22693,15 +22694,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      pagination.current = pagination.current || 1;
 	    }
 	    var newState = {
-	      // 防止内存泄漏，只维持当页
-	      selectedRowKeys: [],
 	      selectionDirty: false,
 	      pagination: pagination
 	    };
 	    this.setState(newState);
-	    if (this.props.rowSelection && this.props.rowSelection.onChange) {
-	      this.props.rowSelection.onChange([]);
-	    }
+	    this.setSelectedRowKeys([]);
 	    this.props.onChange.apply(this, this.prepareParamsArguments((0, _objectAssign3["default"])({}, this.state, newState)));
 	  },
 	
@@ -37685,10 +37682,10 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.7.0",
 			"pre-commit": "1.x",
-			"react": "~0.14.5",
-			"react-addons-test-utils": "~0.14.5",
+			"react": "0.14.x",
+			"react-addons-test-utils": "0.14.x",
 			"react-copy-to-clipboard": "^3.0.4",
-			"react-dom": "~0.14.5",
+			"react-dom": "0.14.x",
 			"react-router": "~1.0.3",
 			"react-stateless-wrapper": "~1.0.2",
 			"reqwest": "~2.0.5",
