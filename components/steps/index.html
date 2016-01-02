@@ -663,45 +663,8 @@ Steps 步骤条 - Ant Design
   代码演示
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
-<ul class="demos-anchor">
-  <li>
-    <a title="基本用法" href="#demo-simple">
-      <span>基本用法</span>
-    </a>
-  </li>
-  <li>
-    <a title="迷你版" href="#demo-small-size">
-      <span>迷你版</span>
-    </a>
-  </li>
-  <li>
-    <a title="带ICON图标的步骤条" href="#demo-icon">
-      <span>带ICON图标的步骤条</span>
-    </a>
-  </li>
-  <li>
-    <a title="切换到下一步" href="#demo-step-next">
-      <span>切换到下一步</span>
-    </a>
-  </li>
-  <li>
-    <a title="竖直方向的步骤条" href="#demo-vertical">
-      <span>竖直方向的步骤条</span>
-    </a>
-  </li>
-  <li>
-    <a title="竖直方向的小型步骤条" href="#demo-vertical-small">
-      <span>竖直方向的小型步骤条</span>
-    </a>
-  </li>
-  <li>
-    <a title="自定义状态" href="#demo-status">
-      <span>自定义状态</span>
-    </a>
-  </li>
-</ul>
 <div class="code-boxes">
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-simple">
+    <div class="code-boxes-col-1-1"><div class="code-box" id="demo-simple">
   <div class="code-box-demo">
     <div id="components-steps-demo-simple"></div>
     <script>mountNode = document.getElementById('components-steps-demo-simple');</script>
@@ -761,170 +724,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>简单的步骤条。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-icon">
-  <div class="code-box-demo">
-    <div id="components-steps-demo-icon"></div>
-    <script>mountNode = document.getElementById('components-steps-demo-icon');</script>
-    <script>(function(){"use strict";
-
-var _antd = require("antd");
-
-var Step = _antd.Steps.Step;
-
-ReactDOM.render(React.createElement(
-  _antd.Steps,
-  null,
-  React.createElement(Step, { status: "finish", title: "步骤1", icon: "cloud" }),
-  React.createElement(Step, { status: "process", title: "步骤2", icon: "apple" }),
-  React.createElement(Step, { status: "wait", title: "步骤3", icon: "github" })
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> Step = Steps.Step;
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"finish"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤1"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"cloud"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"process"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤2"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"apple"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"wait"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤3"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"github"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-icon">带ICON图标的步骤条</a>
-    </div>
-    <p>通过设置 <code>Steps.Step</code> 的 <code>icon</code> 属性，可以启用自定义图标。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-vertical">
-  <div class="code-box-demo">
-    <div id="components-steps-demo-vertical"></div>
-    <script>mountNode = document.getElementById('components-steps-demo-vertical');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var Step = _antd.Steps.Step;
-
-var steps = [{
-  title: '已完成',
-  description: '这里是信息的描述'
-}, {
-  title: '进行中',
-  description: '这里是信息的描述'
-}, {
-  title: '待运行',
-  description: '这里是信息的描述'
-}, {
-  title: '又一个待运行',
-  description: '这里是信息的描述'
-}].map(function (s, i) {
-  return React.createElement(Step, { key: i, title: s.title, description: s.description });
-});
-
-ReactDOM.render(React.createElement(
-  _antd.Steps,
-  { direction: 'vertical', current: 1 },
-  steps
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> Step = Steps.Step;
-
-<span class="hljs-keyword">const</span> steps = [{
-  title: <span class="hljs-string">'已完成'</span>,
-  description: <span class="hljs-string">'这里是信息的描述'</span>
-}, {
-  title: <span class="hljs-string">'进行中'</span>,
-  description: <span class="hljs-string">'这里是信息的描述'</span>
-}, {
-  title: <span class="hljs-string">'待运行'</span>,
-  description: <span class="hljs-string">'这里是信息的描述'</span>
-}, {
-  title: <span class="hljs-string">'又一个待运行'</span>,
-  description: <span class="hljs-string">'这里是信息的描述'</span>
-}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
-  )</span>;
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">"vertical"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>,
-  mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-vertical">竖直方向的步骤条</a>
-    </div>
-    <p>简单的竖直方向的步骤条。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-status">
-  <div class="code-box-demo">
-    <div id="components-steps-demo-status"></div>
-    <script>mountNode = document.getElementById('components-steps-demo-status');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var Step = _antd.Steps.Step;
-
-var steps = [{
-  status: 'finish',
-  title: '已完成',
-  description: '这里是多信息的描述啊'
-}, {
-  status: 'process',
-  title: '进行中',
-  description: '这里是多信息的耶哦耶哦哦耶哦耶'
-}, {
-  status: 'wait',
-  title: '又一个待运行',
-  description: '描述啊描述啊'
-}, {
-  status: 'wait',
-  title: '待运行',
-  description: '这里是多信息的描述啊'
-}].map(function (s, i) {
-  return React.createElement(Step, { key: i, title: s.title, status: s.status, description: s.description });
-});
-
-ReactDOM.render(React.createElement(
-  _antd.Steps,
-  null,
-  steps
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> Step = Steps.Step;
-
-<span class="hljs-keyword">const</span> steps = [{
-  status: <span class="hljs-string">'finish'</span>,
-  title: <span class="hljs-string">'已完成'</span>,
-  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
-}, {
-  status: <span class="hljs-string">'process'</span>,
-  title: <span class="hljs-string">'进行中'</span>,
-  description: <span class="hljs-string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
-}, {
-  status: <span class="hljs-string">'wait'</span>,
-  title: <span class="hljs-string">'又一个待运行'</span>,
-  description: <span class="hljs-string">'描述啊描述啊'</span>
-}, {
-  status: <span class="hljs-string">'wait'</span>,
-  title: <span class="hljs-string">'待运行'</span>,
-  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
-}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">{s.status}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
-  )</span>;
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-status">自定义状态</a>
-    </div>
-    <p>可以使用 <code>status</code> 定义每个步骤的状态。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-small-size">
+</div><div class="code-box" id="demo-small-size">
   <div class="code-box-demo">
     <div id="components-steps-demo-small-size"></div>
     <script>mountNode = document.getElementById('components-steps-demo-small-size');</script>
@@ -982,6 +782,38 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-small-size">迷你版</a>
     </div>
     <p>迷你版的步骤条，通过设置 <code>&lt;Steps size=&quot;small&quot;&gt;</code> 启用.</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-icon">
+  <div class="code-box-demo">
+    <div id="components-steps-demo-icon"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-icon');</script>
+    <script>(function(){"use strict";
+
+var _antd = require("antd");
+
+var Step = _antd.Steps.Step;
+
+ReactDOM.render(React.createElement(
+  _antd.Steps,
+  null,
+  React.createElement(Step, { status: "finish", title: "步骤1", icon: "cloud" }),
+  React.createElement(Step, { status: "process", title: "步骤2", icon: "apple" }),
+  React.createElement(Step, { status: "wait", title: "步骤3", icon: "github" })
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"finish"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤1"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"cloud"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"process"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤2"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"apple"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"wait"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"步骤3"</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">"github"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-icon">带ICON图标的步骤条</a>
+    </div>
+    <p>通过设置 <code>Steps.Step</code> 的 <code>icon</code> 属性，可以启用自定义图标。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-step-next">
@@ -1101,6 +933,67 @@ ReactDOM.render(&lt;App /&gt;, mountNode);</code></pre></div>
     <p>随机生成 3~6 个步骤，初始随机进行到其中一个步骤。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-vertical">
+  <div class="code-box-demo">
+    <div id="components-steps-demo-vertical"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-vertical');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
+
+var steps = [{
+  title: '已完成',
+  description: '这里是信息的描述'
+}, {
+  title: '进行中',
+  description: '这里是信息的描述'
+}, {
+  title: '待运行',
+  description: '这里是信息的描述'
+}, {
+  title: '又一个待运行',
+  description: '这里是信息的描述'
+}].map(function (s, i) {
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
+});
+
+ReactDOM.render(React.createElement(
+  _antd.Steps,
+  { direction: 'vertical', current: 1 },
+  steps
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+
+<span class="hljs-keyword">const</span> steps = [{
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}, {
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}, {
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}, {
+  title: <span class="hljs-string">'又一个待运行'</span>,
+  description: <span class="hljs-string">'这里是信息的描述'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">direction</span>=<span class="hljs-value">"vertical"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>,
+  mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-vertical">竖直方向的步骤条</a>
+    </div>
+    <p>简单的竖直方向的步骤条。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div><div class="code-box" id="demo-vertical-small">
   <div class="code-box-demo">
     <div id="components-steps-demo-vertical-small"></div>
@@ -1156,9 +1049,114 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>简单的竖直方向的小型步骤条。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div>
+</div><div class="code-box" id="demo-status">
+  <div class="code-box-demo">
+    <div id="components-steps-demo-status"></div>
+    <script>mountNode = document.getElementById('components-steps-demo-status');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var Step = _antd.Steps.Step;
+
+var steps = [{
+  status: 'finish',
+  title: '已完成',
+  description: '这里是多信息的描述啊'
+}, {
+  status: 'process',
+  title: '进行中',
+  description: '这里是多信息的耶哦耶哦哦耶哦耶'
+}, {
+  status: 'wait',
+  title: '又一个待运行',
+  description: '描述啊描述啊'
+}, {
+  status: 'wait',
+  title: '待运行',
+  description: '这里是多信息的描述啊'
+}].map(function (s, i) {
+  return React.createElement(Step, { key: i, title: s.title, status: s.status, description: s.description });
+});
+
+ReactDOM.render(React.createElement(
+  _antd.Steps,
+  null,
+  steps
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Steps } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> Step = Steps.Step;
+
+<span class="hljs-keyword">const</span> steps = [{
+  status: <span class="hljs-string">'finish'</span>,
+  title: <span class="hljs-string">'已完成'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
+}, {
+  status: <span class="hljs-string">'process'</span>,
+  title: <span class="hljs-string">'进行中'</span>,
+  description: <span class="hljs-string">'这里是多信息的耶哦耶哦哦耶哦耶'</span>
+}, {
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'又一个待运行'</span>,
+  description: <span class="hljs-string">'描述啊描述啊'</span>
+}, {
+  status: <span class="hljs-string">'wait'</span>,
+  title: <span class="hljs-string">'待运行'</span>,
+  description: <span class="hljs-string">'这里是多信息的描述啊'</span>
+}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">{s.status}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
+  )</span>;
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-status">自定义状态</a>
+    </div>
+    <p>可以使用 <code>status</code> 定义每个步骤的状态。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
+    </div>
+</div>
+<ul class="demos-anchor">
+  <li>
+    <a title="基本用法" href="#demo-simple">
+      <span>基本用法</span>
+    </a>
+  </li>
+  <li>
+    <a title="迷你版" href="#demo-small-size">
+      <span>迷你版</span>
+    </a>
+  </li>
+  <li>
+    <a title="带ICON图标的步骤条" href="#demo-icon">
+      <span>带ICON图标的步骤条</span>
+    </a>
+  </li>
+  <li>
+    <a title="切换到下一步" href="#demo-step-next">
+      <span>切换到下一步</span>
+    </a>
+  </li>
+  <li>
+    <a title="竖直方向的步骤条" href="#demo-vertical">
+      <span>竖直方向的步骤条</span>
+    </a>
+  </li>
+  <li>
+    <a title="竖直方向的小型步骤条" href="#demo-vertical-small">
+      <span>竖直方向的小型步骤条</span>
+    </a>
+  </li>
+  <li>
+    <a title="自定义状态" href="#demo-status">
+      <span>自定义状态</span>
+    </a>
+  </li>
+</ul>
   <div class="api-container markdown"></div>
 </section>
 
