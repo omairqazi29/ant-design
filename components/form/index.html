@@ -778,8 +778,60 @@ Form 表单 - Ant Design
   代码演示
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
+<ul class="demos-anchor">
+  <li>
+    <a title="Input 输入框" href="#demo-input">
+      <span>Input 输入框</span>
+    </a>
+  </li>
+  <li>
+    <a title="平行排列" href="#demo-inline-form">
+      <span>平行排列</span>
+    </a>
+  </li>
+  <li>
+    <a title="水平排列的表单" href="#demo-horizontal-form">
+      <span>水平排列的表单</span>
+    </a>
+  </li>
+  <li>
+    <a title="表单控件" href="#demo-form-controls">
+      <span>表单控件</span>
+    </a>
+  </li>
+  <li>
+    <a title="输入框组合" href="#demo-input-group">
+      <span>输入框组合</span>
+    </a>
+  </li>
+  <li>
+    <a title="表单组合" href="#demo-mix">
+      <span>表单组合</span>
+    </a>
+  </li>
+  <li>
+    <a title="校验提示" href="#demo-validate">
+      <span>校验提示</span>
+    </a>
+  </li>
+  <li>
+    <a title="禁用状态" href="#demo-disabled">
+      <span>禁用状态</span>
+    </a>
+  </li>
+  <li>
+    <a title="高级搜索" href="#demo-advanced-search-form">
+      <span>高级搜索</span>
+    </a>
+  </li>
+  <li>
+    <a title="搜索框" href="#demo-search-input">
+      <span>搜索框</span>
+    </a>
+  </li>
+</ul>
 <div class="code-boxes">
-    <div class="code-boxes-col-1-1"><div class="code-box" id="demo-input">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-input">
   <div class="code-box-demo">
     <div id="components-form-demo-input"></div>
     <script>mountNode = document.getElementById('components-form-demo-input');</script>
@@ -836,137 +888,6 @@ ReactDOM.render(
     </div>
     <p>我们为 <code>&lt;Input /&gt;</code> 输入框定义了三种尺寸（大、默认、小），具体使用详见 <a href="/components/form/#input">API</a>。</p>
 <p>注意： 在表单里面，我们只使用<strong>大尺寸</strong>， 即高度为 <strong>32px</strong>，作为唯一的尺寸。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-inline-form">
-  <div class="code-box-demo">
-    <div id="components-form-demo-inline-form"></div>
-    <script>mountNode = document.getElementById('components-form-demo-inline-form');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var FormItem = _antd.Form.Item;
-
-var Demo = React.createClass({
-  displayName: 'Demo',
-
-  mixins: [_antd.Form.ValueMixin],
-
-  getInitialState: function getInitialState() {
-    return {
-      formData: {
-        userName: undefined,
-        password: undefined,
-        agreement: undefined
-      }
-    };
-  },
-  handleSubmit: function handleSubmit(e) {
-    e.preventDefault();
-    _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
-      if (typeof v === 'undefined') {
-        return '';
-      }
-      return v;
-    }));
-  },
-  render: function render() {
-    var formData = this.state.formData;
-    return React.createElement(
-      _antd.Form,
-      { inline: true, onSubmit: this.handleSubmit },
-      React.createElement(
-        FormItem,
-        {
-          id: 'userName',
-          label: '账户：' },
-        React.createElement(_antd.Input, { placeholder: '请输入账户名', id: 'userName', name: 'userName', onChange: this.setValue.bind(this, 'userName'), value: formData.userName })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          id: 'password',
-          label: '密码：' },
-        React.createElement(_antd.Input, { type: 'password', placeholder: '请输入密码', id: 'password', name: 'password', onChange: this.setValue.bind(this, 'password'), value: formData.password })
-      ),
-      React.createElement(
-        FormItem,
-        null,
-        React.createElement(
-          'label',
-          { className: 'ant-checkbox-inline' },
-          React.createElement(_antd.Checkbox, { name: 'agreement', value: formData.agreement, onChange: this.setValue.bind(this, 'agreement') }),
-          ' 记住我'
-        )
-      ),
-      React.createElement(
-        _antd.Button,
-        { type: 'primary', htmlType: 'submit' },
-        '登录'
-      )
-    );
-  }
-});
-
-ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> FormItem = Form.Item;
-
-<span class="hljs-keyword">const</span> Demo = React.createClass({
-  mixins: [Form.ValueMixin],
-
-  getInitialState() {
-    <span class="hljs-keyword">return</span> {
-      formData: {
-        userName: <span class="hljs-literal">undefined</span>,
-        password: <span class="hljs-literal">undefined</span>,
-        agreement: <span class="hljs-literal">undefined</span>,
-      }
-    };
-  },
-
-  handleSubmit(e) {
-    e.preventDefault();
-    message.success(<span class="hljs-string">'收到表单值~~~ ：'</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
-      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'undefined'</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
-      }
-      <span class="hljs-keyword">return</span> v;
-    }));
-  },
-
-  render() {
-    <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">this</span>.state.formData;
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">inline</span> <span class="hljs-attribute">onSubmit</span>=<span class="hljs-value">{this.handleSubmit}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"账户："</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入账户名"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">userName</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.userName}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">password</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.password}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"agreement"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.agreement}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">agreement</span>')} /&gt;</span> 记住我
-          <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>登录<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-    )</span>;
-  }
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-inline-form">平行排列</a>
-    </div>
-    <p>行内排列，常用于登录界面。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-horizontal-form">
@@ -1185,248 +1106,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     </div>
     <p>示例展示了如何通过使用 <code>Form.ValueMixin</code> 来获取和更新表单提交的数值。</p>
 <p><strong>注意：</strong> 1）需要为每个输入控件声明 <code>name</code> 属性；2）ES6 语法 <a href="https://facebook.github.io/react/docs/reusable-components.html#no-mixins">不支持 <code>mixins</code></a>；</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-form-controls">
-  <div class="code-box-demo">
-    <div id="components-form-demo-form-controls"></div>
-    <script>mountNode = document.getElementById('components-form-demo-form-controls');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var FormItem = _antd.Form.Item;
-var Option = _antd.Select.Option;
-var RadioGroup = _antd.Radio.Group;
-
-function handleSelectChange(value) {
-  console.log('selected ' + value);
-}
-
-ReactDOM.render(React.createElement(
-  _antd.Form,
-  { horizontal: true },
-  React.createElement(
-    FormItem,
-    {
-      id: 'control-input',
-      label: '输入框：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 14 } },
-    React.createElement(_antd.Input, { id: 'control-input', placeholder: 'Please enter...' })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      id: 'control-textarea',
-      label: '文本域：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 14 } },
-    React.createElement(_antd.Input, { type: 'textarea', id: 'control-textarea', rows: '3' })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      id: 'select',
-      label: 'Select 选择器：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 14 } },
-    React.createElement(
-      _antd.Select,
-      { id: 'select', size: 'large', defaultValue: 'lucy', style: { width: 200 }, onChange: handleSelectChange },
-      React.createElement(
-        Option,
-        { value: 'jack' },
-        'jack'
-      ),
-      React.createElement(
-        Option,
-        { value: 'lucy' },
-        'lucy'
-      ),
-      React.createElement(
-        Option,
-        { value: 'disabled', disabled: true },
-        'disabled'
-      ),
-      React.createElement(
-        Option,
-        { value: 'yiminghe' },
-        'yiminghe'
-      )
-    )
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: 'Checkbox 多选框：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 18 } },
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
-      React.createElement(_antd.Checkbox, null),
-      '选项一'
-    ),
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
-      React.createElement(_antd.Checkbox, null),
-      '选项二'
-    ),
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
-      React.createElement(_antd.Checkbox, { disabled: true }),
-      '选项三（不可选）'
-    )
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: 'Checkbox 多选框：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 18 } },
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
-      React.createElement(_antd.Checkbox, null),
-      '选项一'
-    ),
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
-      React.createElement(_antd.Checkbox, null),
-      '选项二'
-    ),
-    React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
-      React.createElement(_antd.Checkbox, null),
-      '选项三'
-    )
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: 'Radio 单选框：',
-      labelCol: { span: 6 },
-      wrapperCol: { span: 18 } },
-    React.createElement(
-      RadioGroup,
-      { value: 'b' },
-      React.createElement(
-        _antd.Radio,
-        { value: 'a' },
-        'A'
-      ),
-      React.createElement(
-        _antd.Radio,
-        { value: 'b' },
-        'B'
-      ),
-      React.createElement(
-        _antd.Radio,
-        { value: 'c' },
-        'C'
-      ),
-      React.createElement(
-        _antd.Radio,
-        { value: 'd' },
-        'D'
-      )
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Checkbox, Radio} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> FormItem = Form.Item;
-<span class="hljs-keyword">const</span> Option = Select.Option;
-<span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSelectChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
-}
-
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"输入框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Please enter..."</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"文本域："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"3"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Select 选择器："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleSelectChange}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-        <span class="hljs-tag">&lt; <span class="hljs-attribute">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项二
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">disabled</span> /&gt;</span>选项三（不可选）
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项二
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项三
-        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Radio 单选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-form-controls">表单控件</a>
-    </div>
-    <p>展示所有支持的表单控件。</p>
-<p><code>注</code>： 输入框：只有正确设置了 type 属性的输入控件才能被赋予正确的样式。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-input-group">
@@ -1672,6 +1351,836 @@ ReactDOM.render(
       <a href="#demo-input-group">输入框组合</a>
     </div>
     <p>各类输入框的组合展现。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-validate">
+  <div class="code-box-demo">
+    <div id="components-form-demo-validate"></div>
+    <script>mountNode = document.getElementById('components-form-demo-validate');</script>
+    <script>(function(){"use strict";
+
+var _antd = require("antd");
+
+var FormItem = _antd.Form.Item;
+
+ReactDOM.render(React.createElement(
+  _antd.Form,
+  { horizontal: true },
+  React.createElement(
+    FormItem,
+    {
+      label: "失败校验：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      validateStatus: "error",
+      help: "请输入数字和字母组合" },
+    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "警告校验：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      validateStatus: "warning" },
+    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "校验中：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      hasFeedback: true,
+      validateStatus: "validating",
+      help: "信息审核中..." },
+    React.createElement(_antd.Input, { defaultValue: "我是被校验的内容", id: "validating" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "成功校验：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      hasFeedback: true,
+      validateStatus: "success" },
+    React.createElement(_antd.Input, { defaultValue: "我是正文", id: "success" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "警告校验：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      hasFeedback: true,
+      validateStatus: "warning" },
+    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "失败校验：",
+      labelCol: { span: 5 },
+      wrapperCol: { span: 12 },
+      hasFeedback: true,
+      validateStatus: "error",
+      help: "请输入数字和字母组合" },
+    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: "Datepicker：",
+      labelCol: { span: 5 },
+      validateStatus: "error" },
+    React.createElement(
+      _antd.Col,
+      { span: "6" },
+      React.createElement(_antd.DatePicker, null)
+    ),
+    React.createElement(
+      _antd.Col,
+      { span: "1" },
+      React.createElement(
+        "p",
+        { className: "ant-form-split" },
+        "-"
+      )
+    ),
+    React.createElement(
+      _antd.Col,
+      { span: "6" },
+      React.createElement(_antd.DatePicker, null)
+    ),
+    React.createElement(
+      _antd.Col,
+      { span: "19", offset: "5" },
+      React.createElement(
+        "p",
+        { className: "ant-form-explain" },
+        "请输入正确选项"
+      )
+    )
+  )
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, DatePicker, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> FormItem = Form.Item;
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"失败校验："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
+      <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"警告校验："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"校验中："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">hasFeedback</span>
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"validating"</span>
+      <span class="hljs-attribute">help</span>=<span class="hljs-value">"信息审核中..."</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是被校验的内容"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"validating"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"成功校验："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">hasFeedback</span>
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"success"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是正文"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"success"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"警告校验："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">hasFeedback</span>
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"失败校验："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
+      <span class="hljs-attribute">hasFeedback</span>
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
+      <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Datepicker："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
+      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-split"</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"19"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"5"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-explain"</span>&gt;</span>请输入正确选项<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-validate">校验提示</a>
+    </div>
+    <p>我们为表单控件定义了三种校验状态，为 <code>&lt;FormItem&gt;</code> 定义 <code>validateStatus</code> 属性即可。</p>
+<p>validateStatus: [&#39;success&#39;, &#39;warning&#39;, &#39;error&#39;, &#39;validating&#39;]。</p>
+<p>另外为输入框添加反馈图标，设置 <code>&lt;FormItem&gt;</code> 的 <code>hasFeedback</code> 属性值为 <code>true</code> 即可。</p>
+<p><strong>注意</strong>: 反馈图标只对 <code>&lt;Input /&gt;</code> 有效。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-advanced-search-form">
+  <div class="code-box-demo">
+    <div id="components-form-demo-advanced-search-form"></div>
+    <script>mountNode = document.getElementById('components-form-demo-advanced-search-form');</script>
+    <script>(function(){"use strict";
+
+var _antd = require("antd");
+
+var FormItem = _antd.Form.Item;
+
+ReactDOM.render(React.createElement(
+  _antd.Form,
+  { horizontal: true, className: "advanced-search-form" },
+  React.createElement(
+    _antd.Row,
+    null,
+    React.createElement(
+      _antd.Col,
+      { span: "8" },
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "较长搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      )
+    ),
+    React.createElement(
+      _antd.Col,
+      { span: "8" },
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "较长搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      )
+    ),
+    React.createElement(
+      _antd.Col,
+      { span: "8" },
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "较长搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          label: "搜索名称：",
+          labelCol: { span: 10 },
+          wrapperCol: { span: 14 } },
+        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
+      )
+    )
+  ),
+  React.createElement(
+    _antd.Row,
+    null,
+    React.createElement(
+      _antd.Col,
+      { span: "8", offset: "16", style: { textAlign: 'right' } },
+      React.createElement(
+        _antd.Button,
+        { type: "primary", htmlType: "submit" },
+        "搜索"
+      ),
+      React.createElement(
+        _antd.Button,
+        { type: "ghost" },
+        "清除条件"
+      )
+    )
+  )
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Row, Col, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> FormItem = Form.Item;
+
+ReactDOM.render(
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"advanced-search-form"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
+        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
+        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"16"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{textAlign:</span> '<span class="hljs-attribute">right</span>'}}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>搜索<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>清除条件<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
+, mountNode);</span></code></pre></div><style type="text/css">/* 定制样式 */
+
+.advanced-search-form {
+  padding: 16px 8px;
+  background: #f8f8f8;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+
+/* 由于输入标签长度不确定，所以需要微调使之看上去居中 */
+.advanced-search-form > .row {
+  margin-left: -10px;
+}
+
+.advanced-search-form > .row > .col-8 {
+  padding: 0 8px;
+}
+
+.advanced-search-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.advanced-search-form .ant-btn + .ant-btn {
+  margin-left: 8px;
+}</style><div class="highlight"><pre><code class="css"><span class="hljs-comment">/* 定制样式 */</span>
+
+<span class="hljs-class">.advanced-search-form</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">16px</span> <span class="hljs-number">8px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f8f8f8</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#d9d9d9</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
+}</span>
+
+<span class="hljs-comment">/* 由于输入标签长度不确定，所以需要微调使之看上去居中 */</span>
+<span class="hljs-class">.advanced-search-form</span> &gt; <span class="hljs-class">.row</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> -<span class="hljs-number">10px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.advanced-search-form</span> &gt; <span class="hljs-class">.row</span> &gt; <span class="hljs-class">.col-8</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">8px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.advanced-search-form</span> <span class="hljs-class">.ant-form-item</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.advanced-search-form</span> <span class="hljs-class">.ant-btn</span> + <span class="hljs-class">.ant-btn</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
+}</span></code></pre></div><style>
+#components-form-demo-advanced-search-form .ant-form-horizontal {
+  max-width: none;
+}
+</style>
+
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-advanced-search-form">高级搜索</a>
+    </div>
+    <p>三列栅格式的表单排列方式，常用于数据表格的高级搜索。</p>
+<p>有部分定制的样式代码，由于输入标签长度不确定，需要根据具体情况自行调整。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-inline-form">
+  <div class="code-box-demo">
+    <div id="components-form-demo-inline-form"></div>
+    <script>mountNode = document.getElementById('components-form-demo-inline-form');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var FormItem = _antd.Form.Item;
+
+var Demo = React.createClass({
+  displayName: 'Demo',
+
+  mixins: [_antd.Form.ValueMixin],
+
+  getInitialState: function getInitialState() {
+    return {
+      formData: {
+        userName: undefined,
+        password: undefined,
+        agreement: undefined
+      }
+    };
+  },
+  handleSubmit: function handleSubmit(e) {
+    e.preventDefault();
+    _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
+      if (typeof v === 'undefined') {
+        return '';
+      }
+      return v;
+    }));
+  },
+  render: function render() {
+    var formData = this.state.formData;
+    return React.createElement(
+      _antd.Form,
+      { inline: true, onSubmit: this.handleSubmit },
+      React.createElement(
+        FormItem,
+        {
+          id: 'userName',
+          label: '账户：' },
+        React.createElement(_antd.Input, { placeholder: '请输入账户名', id: 'userName', name: 'userName', onChange: this.setValue.bind(this, 'userName'), value: formData.userName })
+      ),
+      React.createElement(
+        FormItem,
+        {
+          id: 'password',
+          label: '密码：' },
+        React.createElement(_antd.Input, { type: 'password', placeholder: '请输入密码', id: 'password', name: 'password', onChange: this.setValue.bind(this, 'password'), value: formData.password })
+      ),
+      React.createElement(
+        FormItem,
+        null,
+        React.createElement(
+          'label',
+          { className: 'ant-checkbox-inline' },
+          React.createElement(_antd.Checkbox, { name: 'agreement', value: formData.agreement, onChange: this.setValue.bind(this, 'agreement') }),
+          ' 记住我'
+        )
+      ),
+      React.createElement(
+        _antd.Button,
+        { type: 'primary', htmlType: 'submit' },
+        '登录'
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> FormItem = Form.Item;
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  mixins: [Form.ValueMixin],
+
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      formData: {
+        userName: <span class="hljs-literal">undefined</span>,
+        password: <span class="hljs-literal">undefined</span>,
+        agreement: <span class="hljs-literal">undefined</span>,
+      }
+    };
+  },
+
+  handleSubmit(e) {
+    e.preventDefault();
+    message.success(<span class="hljs-string">'收到表单值~~~ ：'</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'undefined'</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
+      }
+      <span class="hljs-keyword">return</span> v;
+    }));
+  },
+
+  render() {
+    <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">this</span>.state.formData;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">inline</span> <span class="hljs-attribute">onSubmit</span>=<span class="hljs-value">{this.handleSubmit}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+          <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span>
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"账户："</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入账户名"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">userName</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.userName}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+          <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span>
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">password</span>')} <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.password}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"agreement"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.agreement}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">agreement</span>')} /&gt;</span> 记住我
+          <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>登录<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
+    )</span>;
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-inline-form">平行排列</a>
+    </div>
+    <p>行内排列，常用于登录界面。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-form-controls">
+  <div class="code-box-demo">
+    <div id="components-form-demo-form-controls"></div>
+    <script>mountNode = document.getElementById('components-form-demo-form-controls');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var FormItem = _antd.Form.Item;
+var Option = _antd.Select.Option;
+var RadioGroup = _antd.Radio.Group;
+
+function handleSelectChange(value) {
+  console.log('selected ' + value);
+}
+
+ReactDOM.render(React.createElement(
+  _antd.Form,
+  { horizontal: true },
+  React.createElement(
+    FormItem,
+    {
+      id: 'control-input',
+      label: '输入框：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 } },
+    React.createElement(_antd.Input, { id: 'control-input', placeholder: 'Please enter...' })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      id: 'control-textarea',
+      label: '文本域：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 } },
+    React.createElement(_antd.Input, { type: 'textarea', id: 'control-textarea', rows: '3' })
+  ),
+  React.createElement(
+    FormItem,
+    {
+      id: 'select',
+      label: 'Select 选择器：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 } },
+    React.createElement(
+      _antd.Select,
+      { id: 'select', size: 'large', defaultValue: 'lucy', style: { width: 200 }, onChange: handleSelectChange },
+      React.createElement(
+        Option,
+        { value: 'jack' },
+        'jack'
+      ),
+      React.createElement(
+        Option,
+        { value: 'lucy' },
+        'lucy'
+      ),
+      React.createElement(
+        Option,
+        { value: 'disabled', disabled: true },
+        'disabled'
+      ),
+      React.createElement(
+        Option,
+        { value: 'yiminghe' },
+        'yiminghe'
+      )
+    )
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: 'Checkbox 多选框：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 18 } },
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-vertical' },
+      React.createElement(_antd.Checkbox, null),
+      '选项一'
+    ),
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-vertical' },
+      React.createElement(_antd.Checkbox, null),
+      '选项二'
+    ),
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-vertical' },
+      React.createElement(_antd.Checkbox, { disabled: true }),
+      '选项三（不可选）'
+    )
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: 'Checkbox 多选框：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 18 } },
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-inline' },
+      React.createElement(_antd.Checkbox, null),
+      '选项一'
+    ),
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-inline' },
+      React.createElement(_antd.Checkbox, null),
+      '选项二'
+    ),
+    React.createElement(
+      'label',
+      { className: 'ant-checkbox-inline' },
+      React.createElement(_antd.Checkbox, null),
+      '选项三'
+    )
+  ),
+  React.createElement(
+    FormItem,
+    {
+      label: 'Radio 单选框：',
+      labelCol: { span: 6 },
+      wrapperCol: { span: 18 } },
+    React.createElement(
+      RadioGroup,
+      { value: 'b' },
+      React.createElement(
+        _antd.Radio,
+        { value: 'a' },
+        'A'
+      ),
+      React.createElement(
+        _antd.Radio,
+        { value: 'b' },
+        'B'
+      ),
+      React.createElement(
+        _antd.Radio,
+        { value: 'c' },
+        'C'
+      ),
+      React.createElement(
+        _antd.Radio,
+        { value: 'd' },
+        'D'
+      )
+    )
+  )
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Checkbox, Radio} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> FormItem = Form.Item;
+<span class="hljs-keyword">const</span> Option = Select.Option;
+<span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSelectChange</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"输入框："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Please enter..."</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"文本域："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"3"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Select 选择器："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleSelectChange}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+        <span class="hljs-tag">&lt; <span class="hljs-attribute">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项二
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">disabled</span> /&gt;</span>选项三（不可选）
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项二
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项三
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Radio 单选框："</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-form-controls">表单控件</a>
+    </div>
+    <p>展示所有支持的表单控件。</p>
+<p><code>注</code>： 输入框：只有正确设置了 type 属性的输入控件才能被赋予正确的样式。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-mix">
@@ -2014,205 +2523,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>集中营，展示和表单相关的其他 ant-design 组件。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-validate">
-  <div class="code-box-demo">
-    <div id="components-form-demo-validate"></div>
-    <script>mountNode = document.getElementById('components-form-demo-validate');</script>
-    <script>(function(){"use strict";
-
-var _antd = require("antd");
-
-var FormItem = _antd.Form.Item;
-
-ReactDOM.render(React.createElement(
-  _antd.Form,
-  { horizontal: true },
-  React.createElement(
-    FormItem,
-    {
-      label: "失败校验：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      validateStatus: "error",
-      help: "请输入数字和字母组合" },
-    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "警告校验：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      validateStatus: "warning" },
-    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "校验中：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      hasFeedback: true,
-      validateStatus: "validating",
-      help: "信息审核中..." },
-    React.createElement(_antd.Input, { defaultValue: "我是被校验的内容", id: "validating" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "成功校验：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      hasFeedback: true,
-      validateStatus: "success" },
-    React.createElement(_antd.Input, { defaultValue: "我是正文", id: "success" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "警告校验：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      hasFeedback: true,
-      validateStatus: "warning" },
-    React.createElement(_antd.Input, { defaultValue: "前方高能预警", id: "warning" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "失败校验：",
-      labelCol: { span: 5 },
-      wrapperCol: { span: 12 },
-      hasFeedback: true,
-      validateStatus: "error",
-      help: "请输入数字和字母组合" },
-    React.createElement(_antd.Input, { defaultValue: "无效选择", id: "error" })
-  ),
-  React.createElement(
-    FormItem,
-    {
-      label: "Datepicker：",
-      labelCol: { span: 5 },
-      validateStatus: "error" },
-    React.createElement(
-      _antd.Col,
-      { span: "6" },
-      React.createElement(_antd.DatePicker, null)
-    ),
-    React.createElement(
-      _antd.Col,
-      { span: "1" },
-      React.createElement(
-        "p",
-        { className: "ant-form-split" },
-        "-"
-      )
-    ),
-    React.createElement(
-      _antd.Col,
-      { span: "6" },
-      React.createElement(_antd.DatePicker, null)
-    ),
-    React.createElement(
-      _antd.Col,
-      { span: "19", offset: "5" },
-      React.createElement(
-        "p",
-        { className: "ant-form-explain" },
-        "请输入正确选项"
-      )
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, DatePicker, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> FormItem = Form.Item;
-
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"失败校验："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
-      <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"警告校验："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"校验中："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">hasFeedback</span>
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"validating"</span>
-      <span class="hljs-attribute">help</span>=<span class="hljs-value">"信息审核中..."</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是被校验的内容"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"validating"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"成功校验："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">hasFeedback</span>
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"success"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"我是正文"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"success"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"警告校验："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">hasFeedback</span>
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"warning"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"前方高能预警"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"warning"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"失败校验："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">12</span>}}
-      <span class="hljs-attribute">hasFeedback</span>
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>
-      <span class="hljs-attribute">help</span>=<span class="hljs-value">"请输入数字和字母组合"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"无效选择"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-      <span class="hljs-attribute">label</span>=<span class="hljs-value">"Datepicker："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">5</span>}}
-      <span class="hljs-attribute">validateStatus</span>=<span class="hljs-value">"error"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"1"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-split"</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"19"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"5"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-explain"</span>&gt;</span>请输入正确选项<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-validate">校验提示</a>
-    </div>
-    <p>我们为表单控件定义了三种校验状态，为 <code>&lt;FormItem&gt;</code> 定义 <code>validateStatus</code> 属性即可。</p>
-<p>validateStatus: [&#39;success&#39;, &#39;warning&#39;, &#39;error&#39;, &#39;validating&#39;]。</p>
-<p>另外为输入框添加反馈图标，设置 <code>&lt;FormItem&gt;</code> 的 <code>hasFeedback</code> 属性值为 <code>true</code> 即可。</p>
-<p><strong>注意</strong>: 反馈图标只对 <code>&lt;Input /&gt;</code> 有效。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-disabled">
   <div class="code-box-demo">
     <div id="components-form-demo-disabled"></div>
@@ -2325,262 +2635,6 @@ ReactDOM.render(
     </div>
     <p>1) 单独为输入控件设置 <code>disabled</code> 属性；</p>
 <p>2) 为 <code>&lt;fieldset&gt;</code> 设置 <code>disabled</code> 属性，可以禁用 <code>&lt;fieldset&gt;</code> 中包含的所有控件。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-advanced-search-form">
-  <div class="code-box-demo">
-    <div id="components-form-demo-advanced-search-form"></div>
-    <script>mountNode = document.getElementById('components-form-demo-advanced-search-form');</script>
-    <script>(function(){"use strict";
-
-var _antd = require("antd");
-
-var FormItem = _antd.Form.Item;
-
-ReactDOM.render(React.createElement(
-  _antd.Form,
-  { horizontal: true, className: "advanced-search-form" },
-  React.createElement(
-    _antd.Row,
-    null,
-    React.createElement(
-      _antd.Col,
-      { span: "8" },
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "较长搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      )
-    ),
-    React.createElement(
-      _antd.Col,
-      { span: "8" },
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "较长搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      )
-    ),
-    React.createElement(
-      _antd.Col,
-      { span: "8" },
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "较长搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      ),
-      React.createElement(
-        FormItem,
-        {
-          label: "搜索名称：",
-          labelCol: { span: 10 },
-          wrapperCol: { span: 14 } },
-        React.createElement(_antd.Input, { placeholder: "请输入搜索名称" })
-      )
-    )
-  ),
-  React.createElement(
-    _antd.Row,
-    null,
-    React.createElement(
-      _antd.Col,
-      { span: "8", offset: "16", style: { textAlign: 'right' } },
-      React.createElement(
-        _antd.Button,
-        { type: "primary", htmlType: "submit" },
-        "搜索"
-      ),
-      React.createElement(
-        _antd.Button,
-        { type: "ghost" },
-        "清除条件"
-      )
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Row, Col, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> FormItem = Form.Item;
-
-ReactDOM.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"advanced-search-form"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"较长搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-        <span class="hljs-attribute">label</span>=<span class="hljs-value">"搜索名称："</span>
-        <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">10</span>}}
-        <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入搜索名称"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"8"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"16"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{textAlign:</span> '<span class="hljs-attribute">right</span>'}}&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>搜索<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span>&gt;</span>清除条件<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-, mountNode);</span></code></pre></div><style type="text/css">/* 定制样式 */
-
-.advanced-search-form {
-  padding: 16px 8px;
-  background: #f8f8f8;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-}
-
-/* 由于输入标签长度不确定，所以需要微调使之看上去居中 */
-.advanced-search-form > .row {
-  margin-left: -10px;
-}
-
-.advanced-search-form > .row > .col-8 {
-  padding: 0 8px;
-}
-
-.advanced-search-form .ant-form-item {
-  margin-bottom: 16px;
-}
-
-.advanced-search-form .ant-btn + .ant-btn {
-  margin-left: 8px;
-}</style><div class="highlight"><pre><code class="css"><span class="hljs-comment">/* 定制样式 */</span>
-
-<span class="hljs-class">.advanced-search-form</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">16px</span> <span class="hljs-number">8px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f8f8f8</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#d9d9d9</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">6px</span></span></span>;
-}</span>
-
-<span class="hljs-comment">/* 由于输入标签长度不确定，所以需要微调使之看上去居中 */</span>
-<span class="hljs-class">.advanced-search-form</span> &gt; <span class="hljs-class">.row</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> -<span class="hljs-number">10px</span></span></span>;
-}</span>
-
-<span class="hljs-class">.advanced-search-form</span> &gt; <span class="hljs-class">.row</span> &gt; <span class="hljs-class">.col-8</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">8px</span></span></span>;
-}</span>
-
-<span class="hljs-class">.advanced-search-form</span> <span class="hljs-class">.ant-form-item</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
-}</span>
-
-<span class="hljs-class">.advanced-search-form</span> <span class="hljs-class">.ant-btn</span> + <span class="hljs-class">.ant-btn</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">8px</span></span></span>;
-}</span></code></pre></div><style>
-#components-form-demo-advanced-search-form .ant-form-horizontal {
-  max-width: none;
-}
-</style>
-
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-advanced-search-form">高级搜索</a>
-    </div>
-    <p>三列栅格式的表单排列方式，常用于数据表格的高级搜索。</p>
-<p>有部分定制的样式代码，由于输入标签长度不确定，需要根据具体情况自行调整。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-search-input">
@@ -2710,60 +2764,8 @@ ReactDOM.render(
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
-    </div>
+  </div>
 </div>
-<ul class="demos-anchor">
-  <li>
-    <a title="Input 输入框" href="#demo-input">
-      <span>Input 输入框</span>
-    </a>
-  </li>
-  <li>
-    <a title="平行排列" href="#demo-inline-form">
-      <span>平行排列</span>
-    </a>
-  </li>
-  <li>
-    <a title="水平排列的表单" href="#demo-horizontal-form">
-      <span>水平排列的表单</span>
-    </a>
-  </li>
-  <li>
-    <a title="表单控件" href="#demo-form-controls">
-      <span>表单控件</span>
-    </a>
-  </li>
-  <li>
-    <a title="输入框组合" href="#demo-input-group">
-      <span>输入框组合</span>
-    </a>
-  </li>
-  <li>
-    <a title="表单组合" href="#demo-mix">
-      <span>表单组合</span>
-    </a>
-  </li>
-  <li>
-    <a title="校验提示" href="#demo-validate">
-      <span>校验提示</span>
-    </a>
-  </li>
-  <li>
-    <a title="禁用状态" href="#demo-disabled">
-      <span>禁用状态</span>
-    </a>
-  </li>
-  <li>
-    <a title="高级搜索" href="#demo-advanced-search-form">
-      <span>高级搜索</span>
-    </a>
-  </li>
-  <li>
-    <a title="搜索框" href="#demo-search-input">
-      <span>搜索框</span>
-    </a>
-  </li>
-</ul>
   <div class="api-container markdown"></div>
 </section>
 

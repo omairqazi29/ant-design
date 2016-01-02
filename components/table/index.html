@@ -852,8 +852,80 @@ Table 表格 - Ant Design
   代码演示
   <i class="anticon anticon-appstore icon-all" title="展开全部代码"></i>
 </h2>
+<ul class="demos-anchor">
+  <li>
+    <a title="基本用法" href="#demo-basic">
+      <span>基本用法</span>
+    </a>
+  </li>
+  <li>
+    <a title="可选择" href="#demo-row-selection">
+      <span>可选择</span>
+    </a>
+  </li>
+  <li>
+    <a title="默认选择" href="#demo-row-selection-props">
+      <span>默认选择</span>
+    </a>
+  </li>
+  <li>
+    <a title="选择和操作" href="#demo-row-selection-and-operation">
+      <span>选择和操作</span>
+    </a>
+  </li>
+  <li>
+    <a title="分页" href="#demo-paging">
+      <span>分页</span>
+    </a>
+  </li>
+  <li>
+    <a title="筛选和排序" href="#demo-head">
+      <span>筛选和排序</span>
+    </a>
+  </li>
+  <li>
+    <a title="远程加载数据" href="#demo-ajax">
+      <span>远程加载数据</span>
+    </a>
+  </li>
+  <li>
+    <a title="不显示分页" href="#demo-nopagination">
+      <span>不显示分页</span>
+    </a>
+  </li>
+  <li>
+    <a title="中小型列表" href="#demo-size">
+      <span>中小型列表</span>
+    </a>
+  </li>
+  <li>
+    <a title="边框" href="#demo-bordered">
+      <span>边框</span>
+    </a>
+  </li>
+  <li>
+    <a title="可展开" href="#demo-expand">
+      <span>可展开</span>
+    </a>
+  </li>
+  <li>
+    <a title="表格行/列合并" href="#demo-colspan-rowspan">
+      <span>表格行/列合并</span>
+    </a>
+  </li>
+  <li>
+    <a title="加载中的表格" href="#demo-loading">
+      <span>加载中的表格</span>
+    </a>
+  </li>
+  <li>
+    <a title="树形数据展示" href="#demo-indent-size">
+      <span>树形数据展示</span>
+    </a>
+  </li>
+</ul>
 <div class="code-boxes">
-    <div class="code-boxes-col-1-1"><div class="code-box" id="demo-basic">
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-basic">
   <div class="code-box-demo">
     <div id="components-table-demo-basic"></div>
     <script>mountNode = document.getElementById('components-table-demo-basic');</script>
@@ -985,117 +1057,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>简单的表格，最后一列是各种操作。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-row-selection">
-  <div class="code-box-demo">
-    <div id="components-table-demo-row-selection"></div>
-    <script>mountNode = document.getElementById('components-table-demo-row-selection');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name',
-  render: function render(text) {
-    return React.createElement(
-      'a',
-      { href: '#' },
-      text
-    );
-  }
-}, {
-  title: '年龄',
-  dataIndex: 'age'
-}, {
-  title: '住址',
-  dataIndex: 'address'
-}];
-var data = [{
-  key: '1',
-  name: '胡彦斌',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '2',
-  name: '胡彦祖',
-  age: 42,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '3',
-  name: '李大嘴',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}];
-
-// 通过 rowSelection 对象表明需要行选择
-var rowSelection = {
-  onChange: function onChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
-  },
-
-  onSelect: function onSelect(record, selected, selectedRows) {
-    console.log(record, selected, selectedRows);
-  },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
-  }
-};
-
-ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> columns = [{
-  title: <span class="hljs-string">'姓名'</span>,
-  dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
-  }
-}, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
-}, {
-  title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
-}];
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
-  name: <span class="hljs-string">'胡彦斌'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'2'</span>,
-  name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'3'</span>,
-  name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}];
-
-<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
-<span class="hljs-keyword">const</span> rowSelection = {
-  onChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
-  },
-  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
-  },
-  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
-  }
-};
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-row-selection">可选择</a>
-    </div>
-    <p>第一列是联动的选择框。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-row-selection-props">
   <div class="code-box-demo">
     <div id="components-table-demo-row-selection-props"></div>
@@ -1219,164 +1180,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>配置选择框的默认属性。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-row-selection-and-operation">
-  <div class="code-box-demo">
-    <div id="components-table-demo-row-selection-and-operation"></div>
-    <script>mountNode = document.getElementById('components-table-demo-row-selection-and-operation');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name'
-}, {
-  title: '年龄',
-  dataIndex: 'age'
-}, {
-  title: '住址',
-  dataIndex: 'address'
-}];
-
-var data = [];
-for (var i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    name: '李大嘴' + i,
-    age: 32,
-    address: '西湖区湖底公园' + i + '号'
-  });
-}
-
-var App = React.createClass({
-  displayName: 'App',
-  getInitialState: function getInitialState() {
-    return {
-      selectedRowKeys: [],
-      loading: false
-    };
-  },
-  start: function start() {
-    var _this = this;
-
-    this.setState({ loading: true });
-    // 模拟 ajax 请求，完成后清空
-    setTimeout(function () {
-      _this.setState({
-        selectedRowKeys: [],
-        loading: false
-      });
-    }, 1000);
-  },
-  onSelectChange: function onSelectChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
-    this.setState({ selectedRowKeys: selectedRowKeys });
-  },
-  render: function render() {
-    var _state = this.state;
-    var loading = _state.loading;
-    var selectedRowKeys = _state.selectedRowKeys;
-
-    var rowSelection = {
-      selectedRowKeys: selectedRowKeys,
-      onChange: this.onSelectChange
-    };
-    var hasSelected = selectedRowKeys.length > 0;
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(
-        'div',
-        { style: { marginBottom: 16 } },
-        React.createElement(
-          _antd.Button,
-          { type: 'primary', onClick: this.start,
-            disabled: !hasSelected, loading: loading },
-          '操作'
-        ),
-        React.createElement(
-          'span',
-          { style: { marginLeft: 8 } },
-          hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
-        )
-      ),
-      React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data })
-    );
-  }
-});
-
-ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> columns = [{
-  title: <span class="hljs-string">'姓名'</span>,
-  dataIndex: <span class="hljs-string">'name'</span>,
-}, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>,
-}, {
-  title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>,
-}];
-
-<span class="hljs-keyword">const</span> data = [];
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">46</span>; i++) {
-  data.push({
-    key: i,
-    name: <span class="hljs-string">'李大嘴'</span> + i,
-    age: <span class="hljs-number">32</span>,
-    address: <span class="hljs-string">'西湖区湖底公园'</span> + i + <span class="hljs-string">'号'</span>
-  });
-}
-
-<span class="hljs-keyword">const</span> App = React.createClass({
-  getInitialState() {
-    <span class="hljs-keyword">return</span> {
-      selectedRowKeys: [],
-      loading: <span class="hljs-literal">false</span>,
-    };
-  },
-  start() {
-    <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">true</span> });
-    <span class="hljs-comment">// 模拟 ajax 请求，完成后清空</span>
-    setTimeout(() =&gt; {
-      <span class="hljs-keyword">this</span>.setState({
-        selectedRowKeys: [],
-        loading: <span class="hljs-literal">false</span>,
-      });
-    }, <span class="hljs-number">1000</span>);
-  },
-  onSelectChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
-    <span class="hljs-keyword">this</span>.setState({ selectedRowKeys });
-  },
-  render() {
-    <span class="hljs-keyword">const</span> { loading, selectedRowKeys } = <span class="hljs-keyword">this</span>.state;
-    <span class="hljs-keyword">const</span> rowSelection = {
-      selectedRowKeys,
-      onChange: <span class="hljs-keyword">this</span>.onSelectChange,
-    };
-    <span class="hljs-keyword">const</span> hasSelected = selectedRowKeys.length &gt; <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
-           <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> <span class="hljs-attribute">8</span>}}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
-  }
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-row-selection-and-operation">选择和操作</a>
-    </div>
-    <p>选择后进行操作，完成后清空选择，通过 <code>rowSelection.selectedRowKeys</code> 来控制选中项。</p>
-<p>不支持跨页选择，选中项只限当页，换页后将会清空。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-paging">
   <div class="code-box-demo">
     <div id="components-table-demo-paging"></div>
@@ -1465,167 +1268,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-paging">分页</a>
     </div>
     <p>数据项较多时显示分页。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-head">
-  <div class="code-box-demo">
-    <div id="components-table-demo-head"></div>
-    <script>mountNode = document.getElementById('components-table-demo-head');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name',
-  filters: [{
-    text: '姓李的',
-    value: '李'
-  }, {
-    text: '姓胡的',
-    value: '胡'
-  }],
-  // 指定确定筛选的条件函数
-  // 这里是名字中第一个字是 value
-  onFilter: function onFilter(value, record) {
-    return record.name.indexOf(value) === 0;
-  },
-  sorter: function sorter(a, b) {
-    return a.name.length - b.name.length;
-  }
-}, {
-  title: '年龄',
-  dataIndex: 'age',
-  sorter: function sorter(a, b) {
-    return a.age - b.age;
-  }
-}, {
-  title: '地址',
-  dataIndex: 'address',
-  filters: [{
-    text: '南湖',
-    value: '南湖'
-  }, {
-    text: '西湖',
-    value: '西湖'
-  }],
-  filterMultiple: false,
-  onFilter: function onFilter(value, record) {
-    return record.address.indexOf(value) === 0;
-  },
-  sorter: function sorter(a, b) {
-    return a.address.length - b.address.length;
-  }
-}];
-
-var data = [{
-  key: '1',
-  name: '胡斌',
-  age: 32,
-  address: '南湖区湖底公园1号'
-}, {
-  key: '2',
-  name: '胡彦祖',
-  age: 42,
-  address: '西湖区湖底公园12号'
-}, {
-  key: '3',
-  name: '李大嘴',
-  age: 32,
-  address: '南湖区湖底公园123号'
-}, {
-  key: '4',
-  name: '李秀莲大嘴哥',
-  age: 32,
-  address: '西湖区湖底公园123号'
-}];
-
-function onChange(pagination, filters, sorter) {
-  // 点击分页、筛选、排序时触发
-  console.log('各类参数是', pagination, filters, sorter);
-}
-
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> columns = [{
-  title: <span class="hljs-string">'姓名'</span>,
-  dataIndex: <span class="hljs-string">'name'</span>,
-  filters: [{
-    text: <span class="hljs-string">'姓李的'</span>,
-    value: <span class="hljs-string">'李'</span>
-  }, {
-    text: <span class="hljs-string">'姓胡的'</span>,
-    value: <span class="hljs-string">'胡'</span>
-  }],
-  <span class="hljs-comment">// 指定确定筛选的条件函数</span>
-  <span class="hljs-comment">// 这里是名字中第一个字是 value</span>
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
-    <span class="hljs-keyword">return</span> record.name.indexOf(value) === <span class="hljs-number">0</span>;
-  },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
-    <span class="hljs-keyword">return</span> a.name.length - b.name.length;
-  }
-}, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>,
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
-    <span class="hljs-keyword">return</span> a.age - b.age;
-  }
-}, {
-  title: <span class="hljs-string">'地址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>,
-  filters: [{
-    text: <span class="hljs-string">'南湖'</span>,
-    value: <span class="hljs-string">'南湖'</span>
-  }, {
-    text: <span class="hljs-string">'西湖'</span>,
-    value: <span class="hljs-string">'西湖'</span>
-  }],
-  filterMultiple: <span class="hljs-literal">false</span>,
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
-    <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
-  },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
-    <span class="hljs-keyword">return</span> a.address.length - b.address.length;
-  }
-}];
-
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
-  name: <span class="hljs-string">'胡斌'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'南湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'2'</span>,
-  name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园12号'</span>
-}, {
-  key: <span class="hljs-string">'3'</span>,
-  name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'南湖区湖底公园123号'</span>
-}, {
-  key: <span class="hljs-string">'4'</span>,
-  name: <span class="hljs-string">'李秀莲大嘴哥'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园123号'</span>
-}];
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">pagination, filters, sorter</span>) </span>{
-  <span class="hljs-comment">// 点击分页、筛选、排序时触发</span>
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'各类参数是'</span>, pagination, filters, sorter);
-}
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-head">筛选和排序</a>
-    </div>
-    <p>对某一列数据进行筛选，使用列的 <code>filter</code> 属性来指定需要筛选菜单的列，<code>onFilter</code> 用于筛选当前数据，<code>filterMultiple</code> 用于指定多选和单选。</p>
-<p>对某一列数据进行排序，通过指定列的 <code>sorter</code> 函数即可启动排序按钮。<code>sorter: function(a, b) { ... }</code>， a、b 为比较的两个列数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-ajax">
@@ -1814,82 +1456,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 <p><strong>注意，此示例是静态数据模拟，展示数据不会变化，请打开网络面板查看请求。</strong></p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-nopagination">
-  <div class="code-box-demo">
-    <div id="components-table-demo-nopagination"></div>
-    <script>mountNode = document.getElementById('components-table-demo-nopagination');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name'
-}, {
-  title: '年龄',
-  dataIndex: 'age'
-}, {
-  title: '住址',
-  dataIndex: 'address'
-}];
-
-var data = [{
-  key: '1',
-  name: '胡彦斌',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '2',
-  name: '胡彦祖',
-  age: 42,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '3',
-  name: '李大嘴',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}];
-
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> columns = [{
-  title: <span class="hljs-string">'姓名'</span>,
-  dataIndex: <span class="hljs-string">'name'</span>
-}, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
-}, {
-  title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
-}];
-
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
-  name: <span class="hljs-string">'胡彦斌'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'2'</span>,
-  name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'3'</span>,
-  name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}];
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{false}</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-nopagination">不显示分页</a>
-    </div>
-    <p>传入 pagination 为 false 即可。此时表格将完整显示 dataSource 内的数据，不进行任何分页。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-size">
   <div class="code-box-demo">
     <div id="components-table-demo-size"></div>
@@ -1984,6 +1550,700 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>紧凑型的列表, 中型列表用于需要数据紧凑展示的情况，小型列表只用于对话框内。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-expand">
+  <div class="code-box-demo">
+    <div id="components-table-demo-expand"></div>
+    <script>mountNode = document.getElementById('components-table-demo-expand');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+function renderAction() {
+  return React.createElement(
+    'a',
+    { href: '#' },
+    '删除'
+  );
+}
+
+function expandedRowRender(record) {
+  return React.createElement(
+    'p',
+    null,
+    record.description
+  );
+}
+
+var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '年龄', dataIndex: 'age', key: 'age' }, { title: '住址', dataIndex: 'address', key: 'address' }, { title: '操作', dataIndex: '', key: 'x', render: renderAction }];
+
+var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { key: 2, name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { key: 3, name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
+  expandedRowRender: expandedRowRender,
+  dataSource: data,
+  className: 'table' }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">expandedRowRender</span>(<span class="hljs-params">record</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{record.description}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>;</span>
+}
+
+<span class="hljs-keyword">const</span> columns = [
+  {title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span>},
+  {title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span>},
+  {title: <span class="hljs-string">'住址'</span>, dataIndex: <span class="hljs-string">'address'</span>, key: <span class="hljs-string">'address'</span>},
+  {title: <span class="hljs-string">'操作'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'x'</span>, render: renderAction}
+];
+
+<span class="hljs-keyword">const</span> data = [
+  {key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'胡彦斌'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园1号'</span>, description: <span class="hljs-string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
+  {key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'吴彦祖'</span>, age: <span class="hljs-number">42</span>, address: <span class="hljs-string">'西湖区湖底公园2号'</span>, description: <span class="hljs-string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
+  {key: <span class="hljs-number">3</span>, name: <span class="hljs-string">'李大嘴'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园3号'</span>, description: <span class="hljs-string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
+];
+
+ReactDOM.render(
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span>
+  <span class="hljs-attribute">expandedRowRender</span>=<span class="hljs-value">{expandedRowRender}</span>
+  <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span>
+  <span class="hljs-attribute">className</span>=<span class="hljs-value">"table"</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-expand">可展开</a>
+    </div>
+    <p>当表格内容较多不能一次性完全展示时。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-loading">
+  <div class="code-box-demo">
+    <div id="components-table-demo-loading"></div>
+    <script>mountNode = document.getElementById('components-table-demo-loading');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name'
+}, {
+  title: '年龄',
+  dataIndex: 'age'
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}];
+
+var App = React.createClass({
+  displayName: 'App',
+  getInitialState: function getInitialState() {
+    return {
+      loading: false
+    };
+  },
+  toggleLoading: function toggleLoading() {
+    this.setState({
+      loading: !this.state.loading
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(_antd.Table, { columns: columns, dataSource: data, loading: this.state.loading }),
+      React.createElement(
+        _antd.Button,
+        { type: 'primary', onClick: this.toggleLoading },
+        '切换 loading 状态'
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>
+}, {
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
+}];
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}];
+
+<span class="hljs-keyword">const</span> App = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      loading: <span class="hljs-literal">false</span>
+    };
+  },
+  toggleLoading() {
+    <span class="hljs-keyword">this</span>.setState({
+      loading: !<span class="hljs-keyword">this</span>.state.loading
+    });
+  },
+  render() {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-loading">加载中的表格</a>
+    </div>
+    <p>用属性 <code>loading</code> 控制表格加载中状态。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-row-selection">
+  <div class="code-box-demo">
+    <div id="components-table-demo-row-selection"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  render: function render(text) {
+    return React.createElement(
+      'a',
+      { href: '#' },
+      text
+    );
+  }
+}, {
+  title: '年龄',
+  dataIndex: 'age'
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}];
+
+// 通过 rowSelection 对象表明需要行选择
+var rowSelection = {
+  onChange: function onChange(selectedRowKeys) {
+    console.log('selectedRowKeys changed: ' + selectedRowKeys);
+  },
+
+  onSelect: function onSelect(record, selected, selectedRows) {
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: function onSelectAll(selected, selectedRows) {
+    console.log(selected, selectedRows);
+  }
+};
+
+ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+  }
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>
+}, {
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
+}];
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}];
+
+<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
+<span class="hljs-keyword">const</span> rowSelection = {
+  onChange(selectedRowKeys) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
+  },
+  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
+  },
+  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
+  }
+};
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-row-selection">可选择</a>
+    </div>
+    <p>第一列是联动的选择框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-row-selection-and-operation">
+  <div class="code-box-demo">
+    <div id="components-table-demo-row-selection-and-operation"></div>
+    <script>mountNode = document.getElementById('components-table-demo-row-selection-and-operation');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name'
+}, {
+  title: '年龄',
+  dataIndex: 'age'
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+
+var data = [];
+for (var i = 0; i < 46; i++) {
+  data.push({
+    key: i,
+    name: '李大嘴' + i,
+    age: 32,
+    address: '西湖区湖底公园' + i + '号'
+  });
+}
+
+var App = React.createClass({
+  displayName: 'App',
+  getInitialState: function getInitialState() {
+    return {
+      selectedRowKeys: [],
+      loading: false
+    };
+  },
+  start: function start() {
+    var _this = this;
+
+    this.setState({ loading: true });
+    // 模拟 ajax 请求，完成后清空
+    setTimeout(function () {
+      _this.setState({
+        selectedRowKeys: [],
+        loading: false
+      });
+    }, 1000);
+  },
+  onSelectChange: function onSelectChange(selectedRowKeys) {
+    console.log('selectedRowKeys changed: ' + selectedRowKeys);
+    this.setState({ selectedRowKeys: selectedRowKeys });
+  },
+  render: function render() {
+    var _state = this.state;
+    var loading = _state.loading;
+    var selectedRowKeys = _state.selectedRowKeys;
+
+    var rowSelection = {
+      selectedRowKeys: selectedRowKeys,
+      onChange: this.onSelectChange
+    };
+    var hasSelected = selectedRowKeys.length > 0;
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { style: { marginBottom: 16 } },
+        React.createElement(
+          _antd.Button,
+          { type: 'primary', onClick: this.start,
+            disabled: !hasSelected, loading: loading },
+          '操作'
+        ),
+        React.createElement(
+          'span',
+          { style: { marginLeft: 8 } },
+          hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
+        )
+      ),
+      React.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data })
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>,
+}, {
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>,
+}];
+
+<span class="hljs-keyword">const</span> data = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">46</span>; i++) {
+  data.push({
+    key: i,
+    name: <span class="hljs-string">'李大嘴'</span> + i,
+    age: <span class="hljs-number">32</span>,
+    address: <span class="hljs-string">'西湖区湖底公园'</span> + i + <span class="hljs-string">'号'</span>
+  });
+}
+
+<span class="hljs-keyword">const</span> App = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      selectedRowKeys: [],
+      loading: <span class="hljs-literal">false</span>,
+    };
+  },
+  start() {
+    <span class="hljs-keyword">this</span>.setState({ loading: <span class="hljs-literal">true</span> });
+    <span class="hljs-comment">// 模拟 ajax 请求，完成后清空</span>
+    setTimeout(() =&gt; {
+      <span class="hljs-keyword">this</span>.setState({
+        selectedRowKeys: [],
+        loading: <span class="hljs-literal">false</span>,
+      });
+    }, <span class="hljs-number">1000</span>);
+  },
+  onSelectChange(selectedRowKeys) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
+    <span class="hljs-keyword">this</span>.setState({ selectedRowKeys });
+  },
+  render() {
+    <span class="hljs-keyword">const</span> { loading, selectedRowKeys } = <span class="hljs-keyword">this</span>.state;
+    <span class="hljs-keyword">const</span> rowSelection = {
+      selectedRowKeys,
+      onChange: <span class="hljs-keyword">this</span>.onSelectChange,
+    };
+    <span class="hljs-keyword">const</span> hasSelected = selectedRowKeys.length &gt; <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
+           <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> <span class="hljs-attribute">8</span>}}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-row-selection-and-operation">选择和操作</a>
+    </div>
+    <p>选择后进行操作，完成后清空选择，通过 <code>rowSelection.selectedRowKeys</code> 来控制选中项。</p>
+<p>不支持跨页选择，选中项只限当页，换页后将会清空。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-head">
+  <div class="code-box-demo">
+    <div id="components-table-demo-head"></div>
+    <script>mountNode = document.getElementById('components-table-demo-head');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  filters: [{
+    text: '姓李的',
+    value: '李'
+  }, {
+    text: '姓胡的',
+    value: '胡'
+  }],
+  // 指定确定筛选的条件函数
+  // 这里是名字中第一个字是 value
+  onFilter: function onFilter(value, record) {
+    return record.name.indexOf(value) === 0;
+  },
+  sorter: function sorter(a, b) {
+    return a.name.length - b.name.length;
+  }
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  sorter: function sorter(a, b) {
+    return a.age - b.age;
+  }
+}, {
+  title: '地址',
+  dataIndex: 'address',
+  filters: [{
+    text: '南湖',
+    value: '南湖'
+  }, {
+    text: '西湖',
+    value: '西湖'
+  }],
+  filterMultiple: false,
+  onFilter: function onFilter(value, record) {
+    return record.address.indexOf(value) === 0;
+  },
+  sorter: function sorter(a, b) {
+    return a.address.length - b.address.length;
+  }
+}];
+
+var data = [{
+  key: '1',
+  name: '胡斌',
+  age: 32,
+  address: '南湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园12号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '南湖区湖底公园123号'
+}, {
+  key: '4',
+  name: '李秀莲大嘴哥',
+  age: 32,
+  address: '西湖区湖底公园123号'
+}];
+
+function onChange(pagination, filters, sorter) {
+  // 点击分页、筛选、排序时触发
+  console.log('各类参数是', pagination, filters, sorter);
+}
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  filters: [{
+    text: <span class="hljs-string">'姓李的'</span>,
+    value: <span class="hljs-string">'李'</span>
+  }, {
+    text: <span class="hljs-string">'姓胡的'</span>,
+    value: <span class="hljs-string">'胡'</span>
+  }],
+  <span class="hljs-comment">// 指定确定筛选的条件函数</span>
+  <span class="hljs-comment">// 这里是名字中第一个字是 value</span>
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+    <span class="hljs-keyword">return</span> record.name.indexOf(value) === <span class="hljs-number">0</span>;
+  },
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a.name.length - b.name.length;
+  }
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>,
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a.age - b.age;
+  }
+}, {
+  title: <span class="hljs-string">'地址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>,
+  filters: [{
+    text: <span class="hljs-string">'南湖'</span>,
+    value: <span class="hljs-string">'南湖'</span>
+  }, {
+    text: <span class="hljs-string">'西湖'</span>,
+    value: <span class="hljs-string">'西湖'</span>
+  }],
+  filterMultiple: <span class="hljs-literal">false</span>,
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+    <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
+  },
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a.address.length - b.address.length;
+  }
+}];
+
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'南湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园12号'</span>
+}, {
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'南湖区湖底公园123号'</span>
+}, {
+  key: <span class="hljs-string">'4'</span>,
+  name: <span class="hljs-string">'李秀莲大嘴哥'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园123号'</span>
+}];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">pagination, filters, sorter</span>) </span>{
+  <span class="hljs-comment">// 点击分页、筛选、排序时触发</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'各类参数是'</span>, pagination, filters, sorter);
+}
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-head">筛选和排序</a>
+    </div>
+    <p>对某一列数据进行筛选，使用列的 <code>filter</code> 属性来指定需要筛选菜单的列，<code>onFilter</code> 用于筛选当前数据，<code>filterMultiple</code> 用于指定多选和单选。</p>
+<p>对某一列数据进行排序，通过指定列的 <code>sorter</code> 函数即可启动排序按钮。<code>sorter: function(a, b) { ... }</code>， a、b 为比较的两个列数据。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-nopagination">
+  <div class="code-box-demo">
+    <div id="components-table-demo-nopagination"></div>
+    <script>mountNode = document.getElementById('components-table-demo-nopagination');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name'
+}, {
+  title: '年龄',
+  dataIndex: 'age'
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}];
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: false }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>
+}, {
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>
+}];
+
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}, {
+  key: <span class="hljs-string">'3'</span>,
+  name: <span class="hljs-string">'李大嘴'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+}];
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{false}</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-nopagination">不显示分页</a>
+    </div>
+    <p>传入 pagination 为 false 即可。此时表格将完整显示 dataSource 内的数据，不进行任何分页。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div><div class="code-box" id="demo-bordered">
   <div class="code-box-demo">
     <div id="components-table-demo-bordered"></div>
@@ -2074,74 +2334,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-bordered">边框</a>
     </div>
     <p>添加表格边框线，<code>bordered</code>。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div><div class="code-box" id="demo-expand">
-  <div class="code-box-demo">
-    <div id="components-table-demo-expand"></div>
-    <script>mountNode = document.getElementById('components-table-demo-expand');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-function renderAction() {
-  return React.createElement(
-    'a',
-    { href: '#' },
-    '删除'
-  );
-}
-
-function expandedRowRender(record) {
-  return React.createElement(
-    'p',
-    null,
-    record.description
-  );
-}
-
-var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '年龄', dataIndex: 'age', key: 'age' }, { title: '住址', dataIndex: 'address', key: 'address' }, { title: '操作', dataIndex: '', key: 'x', render: renderAction }];
-
-var data = [{ key: 1, name: '胡彦斌', age: 32, address: '西湖区湖底公园1号', description: '我是胡彦斌，今年32岁，住在西湖区湖底公园1号。' }, { key: 2, name: '吴彦祖', age: 42, address: '西湖区湖底公园2号', description: '我是吴彦祖，今年42岁，住在西湖区湖底公园2号。' }, { key: 3, name: '李大嘴', age: 32, address: '西湖区湖底公园3号', description: '我是李大嘴，今年32岁，住在西湖区湖底公园3号。' }];
-
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
-  expandedRowRender: expandedRowRender,
-  dataSource: data,
-  className: 'table' }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAction</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">expandedRowRender</span>(<span class="hljs-params">record</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{record.description}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>;</span>
-}
-
-<span class="hljs-keyword">const</span> columns = [
-  {title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span>},
-  {title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span>},
-  {title: <span class="hljs-string">'住址'</span>, dataIndex: <span class="hljs-string">'address'</span>, key: <span class="hljs-string">'address'</span>},
-  {title: <span class="hljs-string">'操作'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'x'</span>, render: renderAction}
-];
-
-<span class="hljs-keyword">const</span> data = [
-  {key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'胡彦斌'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园1号'</span>, description: <span class="hljs-string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
-  {key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'吴彦祖'</span>, age: <span class="hljs-number">42</span>, address: <span class="hljs-string">'西湖区湖底公园2号'</span>, description: <span class="hljs-string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
-  {key: <span class="hljs-number">3</span>, name: <span class="hljs-string">'李大嘴'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园3号'</span>, description: <span class="hljs-string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
-];
-
-ReactDOM.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span>
-  <span class="hljs-attribute">expandedRowRender</span>=<span class="hljs-value">{expandedRowRender}</span>
-  <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span>
-  <span class="hljs-attribute">className</span>=<span class="hljs-value">"table"</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-expand">可展开</a>
-    </div>
-    <p>当表格内容较多不能一次性完全展示时。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-colspan-rowspan">
@@ -2381,124 +2573,6 @@ ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span>
 <p>表格支持行/列合并，使用 render 里的单元格属性 colSpan 或者 rowSpan 设值为 0 时，设置的表格不会渲染。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-loading">
-  <div class="code-box-demo">
-    <div id="components-table-demo-loading"></div>
-    <script>mountNode = document.getElementById('components-table-demo-loading');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var columns = [{
-  title: '姓名',
-  dataIndex: 'name'
-}, {
-  title: '年龄',
-  dataIndex: 'age'
-}, {
-  title: '住址',
-  dataIndex: 'address'
-}];
-var data = [{
-  key: '1',
-  name: '胡彦斌',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '2',
-  name: '胡彦祖',
-  age: 42,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '3',
-  name: '李大嘴',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}];
-
-var App = React.createClass({
-  displayName: 'App',
-  getInitialState: function getInitialState() {
-    return {
-      loading: false
-    };
-  },
-  toggleLoading: function toggleLoading() {
-    this.setState({
-      loading: !this.state.loading
-    });
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(_antd.Table, { columns: columns, dataSource: data, loading: this.state.loading }),
-      React.createElement(
-        _antd.Button,
-        { type: 'primary', onClick: this.toggleLoading },
-        '切换 loading 状态'
-      )
-    );
-  }
-});
-
-ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-
-<span class="hljs-keyword">const</span> columns = [{
-  title: <span class="hljs-string">'姓名'</span>,
-  dataIndex: <span class="hljs-string">'name'</span>
-}, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
-}, {
-  title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
-}];
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
-  name: <span class="hljs-string">'胡彦斌'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'2'</span>,
-  name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}, {
-  key: <span class="hljs-string">'3'</span>,
-  name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
-}];
-
-<span class="hljs-keyword">const</span> App = React.createClass({
-  getInitialState() {
-    <span class="hljs-keyword">return</span> {
-      loading: <span class="hljs-literal">false</span>
-    };
-  },
-  toggleLoading() {
-    <span class="hljs-keyword">this</span>.setState({
-      loading: !<span class="hljs-keyword">this</span>.state.loading
-    });
-  },
-  render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
-  }
-});
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-loading">加载中的表格</a>
-    </div>
-    <p>用属性 <code>loading</code> 控制表格加载中状态。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
 </div><div class="code-box" id="demo-indent-size">
   <div class="code-box-demo">
     <div id="components-table-demo-indent-size"></div>
@@ -2658,80 +2732,8 @@ ReactDOM.render(
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
-    </div>
+  </div>
 </div>
-<ul class="demos-anchor">
-  <li>
-    <a title="基本用法" href="#demo-basic">
-      <span>基本用法</span>
-    </a>
-  </li>
-  <li>
-    <a title="可选择" href="#demo-row-selection">
-      <span>可选择</span>
-    </a>
-  </li>
-  <li>
-    <a title="默认选择" href="#demo-row-selection-props">
-      <span>默认选择</span>
-    </a>
-  </li>
-  <li>
-    <a title="选择和操作" href="#demo-row-selection-and-operation">
-      <span>选择和操作</span>
-    </a>
-  </li>
-  <li>
-    <a title="分页" href="#demo-paging">
-      <span>分页</span>
-    </a>
-  </li>
-  <li>
-    <a title="筛选和排序" href="#demo-head">
-      <span>筛选和排序</span>
-    </a>
-  </li>
-  <li>
-    <a title="远程加载数据" href="#demo-ajax">
-      <span>远程加载数据</span>
-    </a>
-  </li>
-  <li>
-    <a title="不显示分页" href="#demo-nopagination">
-      <span>不显示分页</span>
-    </a>
-  </li>
-  <li>
-    <a title="中小型列表" href="#demo-size">
-      <span>中小型列表</span>
-    </a>
-  </li>
-  <li>
-    <a title="边框" href="#demo-bordered">
-      <span>边框</span>
-    </a>
-  </li>
-  <li>
-    <a title="可展开" href="#demo-expand">
-      <span>可展开</span>
-    </a>
-  </li>
-  <li>
-    <a title="表格行/列合并" href="#demo-colspan-rowspan">
-      <span>表格行/列合并</span>
-    </a>
-  </li>
-  <li>
-    <a title="加载中的表格" href="#demo-loading">
-      <span>加载中的表格</span>
-    </a>
-  </li>
-  <li>
-    <a title="树形数据展示" href="#demo-indent-size">
-      <span>树形数据展示</span>
-    </a>
-  </li>
-</ul>
   <div class="api-container markdown"></div>
 </section>
 
