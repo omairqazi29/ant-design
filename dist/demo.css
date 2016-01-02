@@ -10111,6 +10111,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   height: 48px;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
 }
 .ant-upload-list-picture .ant-upload-list-item-thumbnail img {
   width: 48px;
@@ -10126,7 +10127,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  vertical-align: top;
   margin: 0 0 0 8px;
   line-height: 42px;
   -webkit-transition: all 0.3s ease;
