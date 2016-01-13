@@ -220,16 +220,22 @@ Checkbox 多选框 - Ant Design
         <span class="bar"></span>
         <ul>
           <li class="">
-            <a href="../.." data-no-instant>首页</a>
+            <a href="../..">首页</a>
           </li>
           <li class="">
-            <a href="../../spec/introduce">设计</a>
+            <a href="../../docs/practice/cases">实践</a>
+          </li>
+          <li class="">
+            <a href="../../docs/pattern/navigation">模式</a>
           </li>
           <li class="current">
-            <a href="../../docs/introduce">React UI</a>
+            <a href="../../docs/react/introduce">组件</a>
           </li>
-          <li>
-            <a target="_blank" href="https://github.com/ant-design/ant-design">Github</a>
+          <li class="">
+            <a href="../../docs/spec/introduce">语言</a>
+          </li>
+          <li class="">
+            <a href="../../docs/resource/download">资源</a>
           </li>
         </ul>
       </nav>
@@ -240,31 +246,36 @@ Checkbox 多选框 - Ant Design
 <aside class="aside-container">
   <ul>
       <li class="">
-        <a href="../../docs/introduce" class="">
+        <a href="../../docs/react/introduce"
+           class="">
           Ant Design of React
           <span class="chinese"></span>
         </a>
       </li>
       <li class="">
-        <a href="../../docs/getting-started" class="">
+        <a href="../../docs/react/getting-started"
+           class="">
           快速上手
           <span class="chinese"></span>
         </a>
       </li>
       <li class="">
-        <a href="../../docs/install" class="">
+        <a href="../../docs/react/install"
+           class="">
           安装
           <span class="chinese"></span>
         </a>
       </li>
       <li class="">
-        <a href="../../docs/upgrade-notes" class="">
+        <a href="../../docs/react/upgrade-notes"
+           class="">
           升级指南
           <span class="chinese"></span>
         </a>
       </li>
       <li class="">
-        <a href="../../changelog" class="">
+        <a href="../../changelog"
+           class="">
           更新日志
           <span class="chinese"></span>
         </a>
@@ -569,8 +580,8 @@ Checkbox 多选框 - Ant Design
     </h1>
     <p>多选框。</p>
 <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a> </h2><ul>
-<li>需要表示开关状态/两种状态之间的切换时；</li>
-<li>和 <code>switch</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>
+<li>在一组可选项中进行多项选择时；</li>
+<li>单独使用可以表示两种状态之间的切换，和 <code>switch</code> 类似。区别在于切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>
 </ul>
 <h2 id="api">API<a href="#api" class="anchor">#</a> </h2><h3 id="checkbox">Checkbox<a href="#checkbox" class="anchor">#</a> </h3><table>
 <thead>
@@ -878,7 +889,7 @@ ReactDOM.render(
 </div>
   </div>
 </div>
-<ul class="demos-anchor">
+<ul class="toc demos-anchor">
   <li>
     <a title="基本用法" href="#demo-basic">
       <span>基本用法</span>
@@ -922,8 +933,8 @@ ReactDOM.render(
       <a target="_blank" href="http://t.cn/R4XEpoQ">报告 Bug</a>
     </li>
     <li>
-      <h3>©2015 蚂蚁金服体验技术部出品</h3>
-      <h3>文档版本：<span id="versions-select"></span></h3>
+      <div>©2015 蚂蚁金服体验技术部出品</div>
+      <div>文档版本：<span id="versions-select"></span></div>
     </li>
   </ul>
 </footer>
