@@ -62,7 +62,11 @@ var Sider = React.createClass({
           React.createElement(
             _antd.Menu.Item,
             { key: '3' },
-            '选项3'
+            React.createElement(
+              'a',
+              { href: '#' },
+              '选项3'
+            )
           ),
           React.createElement(
             _antd.Menu.Item,
@@ -172,7 +176,7 @@ ReactDOM.render(React.createElement(Sider, null), mountNode);})()</script><div c
           <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>选项2<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">MenuItemGroup</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">MenuItemGroup</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"分组2"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"4"</span>&gt;</span>选项4<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">MenuItemGroup</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
