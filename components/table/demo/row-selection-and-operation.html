@@ -48,7 +48,7 @@ var App = React.createClass({
     }, 1000);
   },
   onSelectChange: function onSelectChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
+    console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys: selectedRowKeys });
   },
   render: function render() {
@@ -125,7 +125,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     }, <span class="hljs-number">1000</span>);
   },
   onSelectChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span>, selectedRowKeys);
     <span class="hljs-keyword">this</span>.setState({ selectedRowKeys });
   },
   render() {
@@ -153,7 +153,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-row-selection-and-operation">选择和操作</a>
     </div>
     <p>选择后进行操作，完成后清空选择，通过 <code>rowSelection.selectedRowKeys</code> 来控制选中项。</p>
-<p>不支持跨页选择，选中项只限当页，换页后将会清空。</p>
+<p>此版本换页后将会清空选中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
