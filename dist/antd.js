@@ -43611,8 +43611,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			"warning": "~2.1.0"
 		},
 		"devDependencies": {
-			"rc-scroll-anim": "0.1.0",
-			"rc-tween-one": "0.1.8",
 			"autoprefixer-loader": "^3.1.0",
 			"babel-cli": "^6.2.0",
 			"babel-core": "^6.2.1",
@@ -43634,6 +43632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"extract-text-webpack-plugin": "^0.9.1",
 			"gh-pages": "^0.5.0",
 			"history": "^1.17.0",
+			"instantclick": "^3.1.0",
 			"jest-cli": "~0.8.0",
 			"json-loader": "^0.5.1",
 			"less": "~2.5.3",
@@ -43642,6 +43641,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.7.0",
 			"pre-commit": "1.x",
+			"rc-scroll-anim": "^0.1.1",
+			"rc-tween-one": "^0.1.8",
 			"react": "0.14.x",
 			"react-addons-test-utils": "0.14.x",
 			"react-copy-to-clipboard": "^3.0.4",
@@ -43649,6 +43650,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"react-router": "~1.0.3",
 			"react-stateless-wrapper": "~1.0.2",
 			"reqwest": "~2.0.5",
+			"values.js": "^1.0.3",
 			"webpack": "^1.10.1",
 			"webpack-babel-jest": "^1.0.0",
 			"webpack-dev-middleware": "^1.2.0"

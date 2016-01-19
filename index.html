@@ -18,8 +18,7 @@
     <!--[if IE 8]>
     <script src="https://t.alipayobjects.com/images/rmsweb/T1q8JiXftaXXXXXXXX.js"></script>
     <![endif]-->
-    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>
-    <script src="https://a.alipayobjects.com/??bluebird/2.9.30/bluebird.js,jquery/jquery/1.11.1/jquery.js"></script>
+    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js,jquery/1.11.3/jquery.min.js,bluebird/3.1.1/bluebird.min.js"></script>
     <script>
     (function() {
       window.ANT_COMPONENTS = [];
@@ -199,7 +198,6 @@
       };
     </script>
     <script src="./dist/demo.js?20160114"></script>
-    <script src="https://t.alipayobjects.com/images/T1DrxhXe0mXXXXXXXX.js"></script>
     
   </head>
   <body class="index-page">
@@ -239,6 +237,7 @@
     <div class="main-wrapper">
        
 <link href="http://fonts.useso.com/css?family=Raleway:600,500,400,300" rel="stylesheet" type="text/css">
+<div id="list"></div>
 <section id="banner"></section>
 <section id="page1" class="page"></section>
 <section id="page2" class="page"></section>
@@ -330,10 +329,10 @@
     height: 76px;
     position: absolute;
     background: rgba(255, 255, 255, .44);
-    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.03), rgba(255,255,255,0.6), rgba(255,255,255,0.03));
-    background-image: -moz-linear-gradient(top, rgba(255,255,255,0.03), rgba(255,255,255,0.6), rgba(255,255,255,0.03));
-    background-image: -ms-linear-gradient(top, rgba(255,255,255,0.03), rgba(255,255,255,0.6), rgba(255,255,255,0.03));
-    background-image: -o-linear-gradient(top, rgba(255,255,255,0.03), rgba(255,255,255,0.6), rgba(255,255,255,0.03));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.03));
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.03));
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.03));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.03));
     top: 16px;
     right: -25px;
   }
@@ -481,6 +480,31 @@
   footer ul li > a {
     color: #eee;
   }
+
+  #list {
+    position: fixed;
+    z-index: 9998;
+    top: 50%;
+    right: 20px;
+    width: 6px;
+    margin-top: -35px;
+  }
+
+  .list-point {
+    width: 6px;
+    height: 6px;
+    background: #00AAEE;
+    border-radius: 6px;
+    float: left;
+    margin: 4px auto;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity .3s;
+  }
+
+  .list-point:hover, .list-point.active {
+    opacity: 1;
+  }
 </style>
 
     </div><footer id="footer">
@@ -507,7 +531,6 @@
     </li>
   </ul>
 </footer>
-    <script src="https://t.alipayobjects.com/images/rmsweb/T1AmXhXg0kXXXXXXXX.js" data-no-instant></script>
     <script data-no-instant>
       InstantClick.on('change', function() {
         InstantClickChangeFns.forEach(function(fn) {
