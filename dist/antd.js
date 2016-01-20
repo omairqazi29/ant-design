@@ -9160,13 +9160,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    var _this2 = this;
 	
+	    this.nextProps = nextProps;
 	    var nextChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(nextProps));
 	    var props = this.props;
+	    // exclusive needs immediate response
+	    if (props.exclusive) {
+	      Object.keys(this.currentlyAnimatingKeys).forEach(function (key) {
+	        _this2.stop(key);
+	      });
+	    }
 	    var showProp = props.showProp;
 	    var currentlyAnimatingKeys = this.currentlyAnimatingKeys;
 	    // last props children if exclusive
-	    // exclusive needs immediate response
-	    var currentChildren = this.state.children;
+	    var currentChildren = props.exclusive ? (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(props)) : this.state.children;
 	    // in case destroy in showProp mode
 	    var newChildren = [];
 	    if (showProp) {
@@ -9239,15 +9245,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	
-	  componentDidUpdate: function componentDidUpdate(prevProps) {
-	    var _this3 = this;
-	
-	    // exclusive needs immediate response
-	    if (this.props.exclusive && this.props !== prevProps) {
-	      Object.keys(this.currentlyAnimatingKeys).forEach(function (key) {
-	        _this3.stop(key);
-	      });
-	    }
+	  componentDidUpdate: function componentDidUpdate() {
 	    if (this.isMounted()) {
 	      var keysToEnter = this.keysToEnter;
 	      this.keysToEnter = [];
@@ -9276,6 +9274,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  handleDoneAdding: function handleDoneAdding(key, type) {
 	    var props = this.props;
 	    delete this.currentlyAnimatingKeys[key];
+	    // if update on exclusive mode, skip check
+	    if (props.exclusive && props !== this.nextProps) {
+	      return;
+	    }
 	    var currentChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(props));
 	    if (!this.isValidChildByKey(currentChildren, key)) {
 	      // exclusive will not need this
@@ -9306,6 +9308,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  handleDoneLeaving: function handleDoneLeaving(key) {
 	    var props = this.props;
 	    delete this.currentlyAnimatingKeys[key];
+	    // if update on exclusive mode, skip check
+	    if (props.exclusive && props !== this.nextProps) {
+	      return;
+	    }
 	    var currentChildren = (0, _ChildrenUtils.toArrayChildren)(getChildrenFromProps(props));
 	    // in case state change is too fast
 	    if (this.isValidChildByKey(currentChildren, key)) {
@@ -9341,10 +9347,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  render: function render() {
 	    var props = this.props;
+	    this.nextProps = props;
 	    var stateChildren = this.state.children;
 	    var children = null;
 	    if (stateChildren) {
 	      children = stateChildren.map(function (child) {
+	        if (child === null) {
+	          return child;
+	        }
 	        if (!child.key) {
 	          throw new Error('must set key for <rc-animate> children');
 	        }
@@ -21937,7 +21947,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.setState({
 	      focused: false
 	    });
-	    if (!isNaN(val)) {
+	    if (val === '') {
+	      val = '';
+	    } else if (!isNaN(val)) {
 	      val = Number(val);
 	      if (val < props.min) {
 	        val = props.min;
@@ -21970,6 +21982,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  getPrecision: function getPrecision() {
 	    var props = this.props;
 	    var stepString = props.step.toString();
+	    if (stepString.indexOf('e-') >= 0) {
+	      return parseInt(stepString.slice(stepString.indexOf('-e')), 10);
+	    }
 	    var precision = 0;
 	    if (stepString.indexOf('.') >= 0) {
 	      precision = stepString.length - stepString.indexOf('.') - 1;
@@ -21983,7 +21998,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  toPrecisionAsStep: function toPrecisionAsStep(num) {
-	    if (isNaN(num)) {
+	    if (isNaN(num) || num === '') {
 	      return num;
 	    }
 	    var precision = this.getPrecision();
@@ -37481,7 +37496,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"lodash": "^3.10.0",
 			"nico-jsx": "~0.7.0",
 			"pre-commit": "1.x",
-			"rc-scroll-anim": "^0.1.1",
+			"rc-scroll-anim": "^0.1.5",
 			"rc-tween-one": "^0.1.8",
 			"react": "0.14.x",
 			"react-addons-test-utils": "0.14.x",
