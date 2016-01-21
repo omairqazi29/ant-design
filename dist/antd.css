@@ -7385,9 +7385,6 @@ fieldset[disabled] .ant-checkbox label {
   display: block;
   text-align: center;
 }
-.ant-form-explain {
-  float: left;
-}
 form .has-feedback .anticon {
   width: 32px;
   height: 32px;
@@ -7639,7 +7636,7 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 .has-error.has-feedback:after,
 .is-validating.has-feedback:after {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   font-family: "anticon" !important;
   width: 32px;
