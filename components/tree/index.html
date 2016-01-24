@@ -1214,6 +1214,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-72788897-1', 'auto');
       ga('send', 'pageview');
+      InstantClick.on('change', function() {
+        ga('send', 'pageview', location.pathname + location.search);
+      });
     }
     </script>
     <script data-no-instant>
