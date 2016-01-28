@@ -777,19 +777,14 @@ Tree 树形控件 - Ant Design
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var TreeNode = _antd.Tree.TreeNode;
+var PropTypes = React.PropTypes;
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
 
   propTypes: {
-    keys: _react.PropTypes.array
+    keys: PropTypes.array
   },
   getDefaultProps: function getDefaultProps() {
     return {
@@ -824,15 +819,15 @@ var Demo = _react2.default.createClass({
     });
   },
   render: function render() {
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       { style: { margin: '0 20px' } },
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'simple'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { className: 'myCls', showLine: true, multiple: true, checkable: true,
           defaultExpandedKeys: this.state.defaultExpandedKeys,
@@ -840,19 +835,19 @@ var Demo = _react2.default.createClass({
           defaultSelectedKeys: this.state.defaultSelectedKeys,
           defaultCheckedKeys: this.state.defaultCheckedKeys,
           onSelect: this.onSelect, onCheck: this.onCheck },
-        _react2.default.createElement(
+        React.createElement(
           TreeNode,
           { title: 'parent 1', key: '0-0' },
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-0', key: '0-0-0', disabled: true },
-            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-0', disableCheckbox: true }),
-            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-1' })
+            React.createElement(TreeNode, { title: 'leaf', key: '0-0-0-0', disableCheckbox: true }),
+            React.createElement(TreeNode, { title: 'leaf', key: '0-0-0-1' })
           ),
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-1', key: '0-0-1' },
-            _react2.default.createElement(TreeNode, { title: _react2.default.createElement(
+            React.createElement(TreeNode, { title: React.createElement(
                 'span',
                 { style: { color: 'red' } },
                 'sss'
@@ -860,16 +855,16 @@ var Demo = _react2.default.createClass({
           )
         )
       ),
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
+      React.createElement('br', null),
+      React.createElement(
         'div',
         null,
-        _react2.default.createElement(
+        React.createElement(
           'button',
           { onClick: this.change },
           'change state'
         ),
-        _react2.default.createElement(
+        React.createElement(
           'p',
           null,
           'defaultXX 的初始化状态不会改变'
@@ -879,9 +874,9 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React, { PropTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">const</span> PropTypes = React.PropTypes;
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({
   propTypes: {
@@ -965,13 +960,8 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var TreeNode = _antd.Tree.TreeNode;
+var PropTypes = React.PropTypes;
 
 var x = 3;
 var y = 2;
@@ -1034,11 +1024,11 @@ function getFilterExpandedKeys(data, expandedKeys) {
   return filterExpandedKeys;
 }
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
 
   propTypes: {
-    multiple: _react.PropTypes.bool
+    multiple: PropTypes.bool
   },
   getDefaultProps: function getDefaultProps() {
     return {
@@ -1084,24 +1074,24 @@ var Demo = _react2.default.createClass({
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return _react2.default.createElement(
+          return React.createElement(
             TreeNode,
             { key: item.key, title: item.key, disableCheckbox: item.key === '0-0-0' ? true : false },
             loop(item.children)
           );
         }
-        return _react2.default.createElement(TreeNode, { key: item.key, title: item.key });
+        return React.createElement(TreeNode, { key: item.key, title: item.key });
       });
     };
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       null,
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'controlled'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { checkable: true, multiple: this.props.multiple, defaultExpandAll: true,
           onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
@@ -1113,9 +1103,9 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React, { PropTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">const</span> PropTypes = React.PropTypes;
 
 <span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
@@ -1262,12 +1252,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
@@ -1315,7 +1299,7 @@ function getNewTreeData(treeData, curKey, child, level) {
   setLeaf(treeData, curKey, level);
 }
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
 
   propTypes: {},
@@ -1352,25 +1336,25 @@ var Demo = _react2.default.createClass({
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return _react2.default.createElement(
+          return React.createElement(
             TreeNode,
             { title: item.name, key: item.key },
             loop(item.children)
           );
         }
-        return _react2.default.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
+        return React.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
       });
     };
     var treeNodes = loop(this.state.treeData);
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       null,
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'dynamic render'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { onSelect: this.onSelect, loadData: this.onLoadData },
         treeNodes
@@ -1379,9 +1363,8 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateTreeNodes</span>(<span class="hljs-params">treeNode</span>) </span>{
   <span class="hljs-keyword">const</span> arr = [];
@@ -1502,10 +1485,6 @@ var _objectAssign = require('object-assign');
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TreeNode = _antd.Tree.TreeNode;
@@ -1521,7 +1500,7 @@ function contains(root, n) {
   return false;
 }
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
 
   propTypes: {},
@@ -1563,14 +1542,14 @@ var Demo = _react2.default.createClass({
       ReactDOM.unmountComponentAtNode(this.cmContainer);
       this.toolTip = null;
     }
-    this.toolTip = _react2.default.createElement(
+    this.toolTip = React.createElement(
       _antd.Tooltip,
-      { trigger: 'click', placement: 'bottomRight', prefixCls: 'rc-tree-contextmenu', defaultVisible: true, overlay: _react2.default.createElement(
+      { trigger: 'click', placement: 'bottomRight', prefixCls: 'rc-tree-contextmenu', defaultVisible: true, overlay: React.createElement(
           'h4',
           null,
           info.node.props.title
         ) },
-      _react2.default.createElement('span', null)
+      React.createElement('span', null)
     );
 
     var container = this.getContainer();
@@ -1583,57 +1562,57 @@ var Demo = _react2.default.createClass({
     ReactDOM.render(this.toolTip, container);
   },
   render: function render() {
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       null,
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'right click contextmenu'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { onRightClick: this.onRightClick, onSelect: this.onSelect,
           defaultSelectedKeys: ['0-1', '0-1-1'],
           multiple: true, defaultExpandAll: true, showLine: true },
-        _react2.default.createElement(
+        React.createElement(
           TreeNode,
           { title: 'parent 1', key: '0-1' },
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-0', key: '0-1-1' },
-            _react2.default.createElement(TreeNode, { title: 'leaf0' }),
-            _react2.default.createElement(TreeNode, { title: 'leaf1' }),
-            _react2.default.createElement(TreeNode, { title: 'leaf2' })
+            React.createElement(TreeNode, { title: 'leaf0' }),
+            React.createElement(TreeNode, { title: 'leaf1' }),
+            React.createElement(TreeNode, { title: 'leaf2' })
           ),
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-1' },
-            _react2.default.createElement(TreeNode, { title: 'leaf' })
+            React.createElement(TreeNode, { title: 'leaf' })
           )
         )
       ),
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'hover popup contextmenu'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { onMouseEnter: this.onMouseEnter, onMouseLeave: this.onMouseLeave, onSelect: this.onSelect, multiple: true, defaultExpandAll: true, showLine: true },
-        _react2.default.createElement(
+        React.createElement(
           TreeNode,
           { title: 'parent 1', key: '0-1' },
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-0', key: '0-1-1' },
-            _react2.default.createElement(TreeNode, { title: 'leaf' }),
-            _react2.default.createElement(TreeNode, { title: 'leaf' })
+            React.createElement(TreeNode, { title: 'leaf' }),
+            React.createElement(TreeNode, { title: 'leaf' })
           ),
-          _react2.default.createElement(
+          React.createElement(
             TreeNode,
             { title: 'parent 1-1' },
-            _react2.default.createElement(TreeNode, { title: 'leaf' })
+            React.createElement(TreeNode, { title: 'leaf' })
           )
         )
       )
@@ -1641,10 +1620,9 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">contains</span>(<span class="hljs-params">root, n</span>) </span>{
   <span class="hljs-keyword">let</span> node = n;
@@ -1762,12 +1740,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
@@ -1800,7 +1772,7 @@ var generateData = function generateData(_level, _preKey, _tns) {
 };
 generateData(z);
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
   getInitialState: function getInitialState() {
     return {
@@ -1860,32 +1832,32 @@ var Demo = _react2.default.createClass({
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return _react2.default.createElement(
+          return React.createElement(
             TreeNode,
             { key: item.key, title: item.key },
             loop(item.children)
           );
         }
-        return _react2.default.createElement(TreeNode, { key: item.key, title: item.key });
+        return React.createElement(TreeNode, { key: item.key, title: item.key });
       });
     };
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       { className: 'draggable-demo' },
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'draggable '
       ),
-      _react2.default.createElement(
+      React.createElement(
         'p',
         null,
         'drag a node into another node'
       ),
-      _react2.default.createElement(
+      React.createElement(
         'div',
         { className: 'draggable-container' },
-        _react2.default.createElement(
+        React.createElement(
           _antd.Tree,
           { defaultExpandedKeys: this.state.expandedKeys, openAnimation: {}, draggable: true,
             onDragStart: this.onDragStart,
@@ -1898,9 +1870,8 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
 <span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;

@@ -6,12 +6,6 @@
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
@@ -59,7 +53,7 @@ function getNewTreeData(treeData, curKey, child, level) {
   setLeaf(treeData, curKey, level);
 }
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
 
   propTypes: {},
@@ -96,25 +90,25 @@ var Demo = _react2.default.createClass({
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return _react2.default.createElement(
+          return React.createElement(
             TreeNode,
             { title: item.name, key: item.key },
             loop(item.children)
           );
         }
-        return _react2.default.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
+        return React.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
       });
     };
     var treeNodes = loop(this.state.treeData);
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       null,
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'dynamic render'
       ),
-      _react2.default.createElement(
+      React.createElement(
         _antd.Tree,
         { onSelect: this.onSelect, loadData: this.onLoadData },
         treeNodes
@@ -123,9 +117,8 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateTreeNodes</span>(<span class="hljs-params">treeNode</span>) </span>{
   <span class="hljs-keyword">const</span> arr = [];

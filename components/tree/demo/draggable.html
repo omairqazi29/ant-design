@@ -6,12 +6,6 @@
 
 var _antd = require('antd');
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
@@ -44,7 +38,7 @@ var generateData = function generateData(_level, _preKey, _tns) {
 };
 generateData(z);
 
-var Demo = _react2.default.createClass({
+var Demo = React.createClass({
   displayName: 'Demo',
   getInitialState: function getInitialState() {
     return {
@@ -104,32 +98,32 @@ var Demo = _react2.default.createClass({
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return _react2.default.createElement(
+          return React.createElement(
             TreeNode,
             { key: item.key, title: item.key },
             loop(item.children)
           );
         }
-        return _react2.default.createElement(TreeNode, { key: item.key, title: item.key });
+        return React.createElement(TreeNode, { key: item.key, title: item.key });
       });
     };
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       { className: 'draggable-demo' },
-      _react2.default.createElement(
+      React.createElement(
         'h2',
         null,
         'draggable '
       ),
-      _react2.default.createElement(
+      React.createElement(
         'p',
         null,
         'drag a node into another node'
       ),
-      _react2.default.createElement(
+      React.createElement(
         'div',
         { className: 'draggable-container' },
-        _react2.default.createElement(
+        React.createElement(
           _antd.Tree,
           { defaultExpandedKeys: this.state.expandedKeys, openAnimation: {}, draggable: true,
             onDragStart: this.onDragStart,
@@ -142,9 +136,8 @@ var Demo = _react2.default.createClass({
   }
 });
 
-ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
 <span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
