@@ -55,8 +55,6 @@ function getNewTreeData(treeData, curKey, child, level) {
 
 var Demo = React.createClass({
   displayName: 'Demo',
-
-  propTypes: {},
   getInitialState: function getInitialState() {
     return {
       treeData: []
@@ -96,23 +94,14 @@ var Demo = React.createClass({
             loop(item.children)
           );
         }
-        return React.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
+        return React.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' });
       });
     };
     var treeNodes = loop(this.state.treeData);
     return React.createElement(
-      'div',
-      null,
-      React.createElement(
-        'h2',
-        null,
-        'dynamic render'
-      ),
-      React.createElement(
-        _antd.Tree,
-        { onSelect: this.onSelect, loadData: this.onLoadData },
-        treeNodes
-      )
+      _antd.Tree,
+      { onSelect: this.onSelect, loadData: this.onLoadData },
+      treeNodes
     );
   }
 });
@@ -165,7 +154,6 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
 }
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({
-  propTypes: {},
   getInitialState() {
     <span class="hljs-keyword">return</span> {
       treeData: [],
@@ -196,22 +184,17 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
     });
   },
   render() {
-    <span class="hljs-keyword">const</span> loop = (data) =&gt; {
-      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
-        <span class="hljs-keyword">if</span> (item.children) {
-          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
-        }
-        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">isLeaf</span>=<span class="hljs-value">{item.isLeaf}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>' ? <span class="hljs-attribute">true</span> <span class="hljs-attribute">:</span> <span class="hljs-attribute">false</span>} /&gt;</span>;</span>
-      });
-    };
+    <span class="hljs-keyword">const</span> loop = data =&gt; data.map((item) =&gt; {
+      <span class="hljs-keyword">if</span> (item.children) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
+      }
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">isLeaf</span>=<span class="hljs-value">{item.isLeaf}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>'} /&gt;</span>;</span>
+    });
     <span class="hljs-keyword">const</span> treeNodes = loop(<span class="hljs-keyword">this</span>.state.treeData);
     <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>dynamic render<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">loadData</span>=<span class="hljs-value">{this.onLoadData}</span>&gt;</span>
-          {treeNodes}
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">loadData</span>=<span class="hljs-value">{this.onLoadData}</span>&gt;</span>
+        {treeNodes}
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
     )</span>;
   },
 });
@@ -222,7 +205,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#demo-dynamic">异步数据加载</a>
     </div>
-    <p>异步加载数据</p>
+    <p>点击展开节点，动态加载数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -7,7 +7,6 @@
 var _antd = require('antd');
 
 var TreeNode = _antd.Tree.TreeNode;
-var PropTypes = React.PropTypes;
 
 var x = 3;
 var y = 2;
@@ -72,10 +71,6 @@ function getFilterExpandedKeys(data, expandedKeys) {
 
 var Demo = React.createClass({
   displayName: 'Demo',
-
-  propTypes: {
-    multiple: PropTypes.bool
-  },
   getDefaultProps: function getDefaultProps() {
     return {
       multiple: true
@@ -100,9 +95,7 @@ var Demo = React.createClass({
         expandedKeys.push(treeNode.props.eventKey);
       }
     }
-    this.setState({
-      expandedKeys: expandedKeys
-    });
+    this.setState({ expandedKeys: expandedKeys });
   },
   onCheck: function onCheck(checkedKeys) {
     this.setState({
@@ -112,9 +105,7 @@ var Demo = React.createClass({
   },
   onSelect: function onSelect(selectedKeys, info) {
     console.log('onSelect', info);
-    this.setState({
-      selectedKeys: selectedKeys
-    });
+    this.setState({ selectedKeys: selectedKeys });
   },
   render: function render() {
     var loop = function loop(data) {
@@ -122,7 +113,7 @@ var Demo = React.createClass({
         if (item.children) {
           return React.createElement(
             TreeNode,
-            { key: item.key, title: item.key, disableCheckbox: item.key === '0-0-0' ? true : false },
+            { key: item.key, title: item.key, disableCheckbox: item.key === '0-0-0' },
             loop(item.children)
           );
         }
@@ -130,28 +121,18 @@ var Demo = React.createClass({
       });
     };
     return React.createElement(
-      'div',
-      null,
-      React.createElement(
-        'h2',
-        null,
-        'controlled'
-      ),
-      React.createElement(
-        _antd.Tree,
-        { checkable: true, multiple: this.props.multiple, defaultExpandAll: true,
-          onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
-          onCheck: this.onCheck, checkedKeys: this.state.checkedKeys,
-          onSelect: this.onSelect, selectedKeys: this.state.selectedKeys },
-        loop(gData)
-      )
+      _antd.Tree,
+      { checkable: true, multiple: this.props.multiple, defaultExpandAll: true,
+        onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
+        onCheck: this.onCheck, checkedKeys: this.state.checkedKeys,
+        onSelect: this.onSelect, selectedKeys: this.state.selectedKeys },
+      loop(gData)
     );
   }
 });
 
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-<span class="hljs-keyword">const</span> PropTypes = React.PropTypes;
 
 <span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
@@ -215,9 +196,6 @@ generateData(z);
 }
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({
-  propTypes: {
-    multiple: PropTypes.bool,
-  },
   getDefaultProps() {
     <span class="hljs-keyword">return</span> {
       multiple: <span class="hljs-literal">true</span>,
@@ -242,9 +220,7 @@ generateData(z);
         expandedKeys.push(treeNode.props.eventKey);
       }
     }
-    <span class="hljs-keyword">this</span>.setState({
-      expandedKeys: expandedKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ expandedKeys });
   },
   onCheck(checkedKeys) {
     <span class="hljs-keyword">this</span>.setState({
@@ -254,30 +230,27 @@ generateData(z);
   },
   onSelect(selectedKeys, info) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onSelect'</span>, info);
-    <span class="hljs-keyword">this</span>.setState({
-      selectedKeys,
-    });
+    <span class="hljs-keyword">this</span>.setState({ selectedKeys });
   },
   render() {
-    <span class="hljs-keyword">const</span> loop = data =&gt; {
-      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
-        <span class="hljs-keyword">if</span> (item.children) {
-          <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">disableCheckbox</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>' ? <span class="hljs-attribute">true</span> <span class="hljs-attribute">:</span> <span class="hljs-attribute">false</span>}&gt;</span>
+    <span class="hljs-keyword">const</span> loop = data =&gt; data.map((item) =&gt; {
+      <span class="hljs-keyword">if</span> (item.children) {
+        <span class="hljs-keyword">return</span> (
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">disableCheckbox</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>'}&gt;</span>
             {loop(item.children)}
-          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>)</span>;
-        }
-        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span>/&gt;</span>;</span>
-      });
-    };
-    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>controlled<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">checkable</span> <span class="hljs-attribute">multiple</span>=<span class="hljs-value">{this.props.multiple}</span> <span class="hljs-attribute">defaultExpandAll</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+        )</span>;
+      }
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span>/&gt;</span>;</span>
+    });
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">checkable</span> <span class="hljs-attribute">multiple</span>=<span class="hljs-value">{this.props.multiple}</span> <span class="hljs-attribute">defaultExpandAll</span>
         <span class="hljs-attribute">onExpand</span>=<span class="hljs-value">{this.onExpand}</span> <span class="hljs-attribute">expandedKeys</span>=<span class="hljs-value">{this.state.expandedKeys}</span>
         <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{this.onCheck}</span> <span class="hljs-attribute">checkedKeys</span>=<span class="hljs-value">{this.state.checkedKeys}</span>
         <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{this.state.selectedKeys}</span>&gt;</span>
         {loop(gData)}
       <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
+    )</span>;
   },
 });
 
