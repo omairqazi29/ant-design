@@ -8544,9 +8544,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-user-drag: element;
 }
 .ant-tree li.drag-over > a[draggable] {
-  background-color: #316ac5;
+  background-color: #2db7f5;
   color: white;
-  border: 1px #316ac5 solid;
   opacity: 0.8;
 }
 .ant-tree li.drag-over-gap-top > a[draggable] {
@@ -8565,7 +8564,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree li a {
   display: inline-block;
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
   margin: 0;
   cursor: pointer;
@@ -8621,39 +8620,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 4px;
-  color: #666;
-  transition: transform .3s ease;
-}
-:root .ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
-  filter: none;
-}
-:root .ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
-  font-size: 12px;
-}
-.ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-center_open:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after {
-  font-size: 12px;
-  font-size: 6px \9;
-  transform: scale(0.5) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  content: '\E611';
-  display: inline-block;
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 4px;
+  right: 3px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8692,39 +8659,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 4px;
-  color: #666;
-  transition: transform .3s ease;
-}
-:root .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-  filter: none;
-}
-:root .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
-:root .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-  font-size: 12px;
-}
-.ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-center_close:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
-.ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
-  font-size: 12px;
-  font-size: 6px \9;
-  transform: scale(0.5) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  content: '\E611';
-  display: inline-block;
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 4px;
+  right: 3px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8910,7 +8845,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   outline: 0;
 }
 .ant-tree-select-tree li.filter-node > a {
-  color: #a60000!important;
+  color: #f50 !important;
   font-weight: bold!important;
 }
 .ant-tree-select-tree li ul {
@@ -8919,7 +8854,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-select-tree li a {
   display: inline-block;
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
   margin: 0;
   cursor: pointer;
@@ -8975,39 +8910,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 4px;
-  color: #666;
-  transition: transform .3s ease;
-}
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_open:after {
-  filter: none;
-}
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_open:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_open:after {
-  font-size: 12px;
-}
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_open:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_open:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_open:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_open:after {
-  font-size: 12px;
-  font-size: 6px \9;
-  transform: scale(0.5) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  content: '\E611';
-  display: inline-block;
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 4px;
+  right: 3px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -9046,39 +8949,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 4px;
-  color: #666;
-  transition: transform .3s ease;
-}
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_close:after {
-  filter: none;
-}
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_close:after,
-:root .ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_close:after {
-  font-size: 12px;
-}
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-roots_close:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-center_close:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-bottom_close:after,
-.ant-tree-select-tree li span.ant-tree-select-tree-switcher.ant-tree-select-tree-noline_close:after {
-  font-size: 12px;
-  font-size: 6px \9;
-  transform: scale(0.5) rotate(0deg);
-  /* IE6-IE8 */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
-  zoom: 1;
-  content: '\E611';
-  display: inline-block;
-  font-family: 'anticon';
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 4px;
+  right: 3px;
   color: #666;
   transition: transform .3s ease;
 }
