@@ -42,15 +42,17 @@ ReactDOM.render(React.createElement(
     React.createElement(_antd.Icon, { type: 'down' })
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> onClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{key}</span>) </span>{
+<span class="hljs-keyword">const</span> onClick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{ key }</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'点击了菜单'</span> + key);
 };
 
-<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{onClick}</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{onClick}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
+)</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>

@@ -24,8 +24,8 @@ Switch 开关 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Switch 开关 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Switch 开关 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Switch 开关 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Switch 开关 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Switch 开关 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Switch 开关 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -651,12 +662,14 @@ function onChange(checked) {
 
 ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checked</span>)</span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checked</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch to '</span> + checked);
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>,
-  mountNode);</span></code></pre></div>
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span>=<span class="hljs-value">{false}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>,
+  mountNode
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -744,18 +757,20 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
       disabled: <span class="hljs-literal">true</span>
     };
   },
-  toggle(){
+  toggle() {
     <span class="hljs-keyword">this</span>.setState({
       disabled: !<span class="hljs-keyword">this</span>.state.disabled
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

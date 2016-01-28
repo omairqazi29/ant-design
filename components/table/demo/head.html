@@ -15,6 +15,16 @@ var columns = [{
   }, {
     text: '姓胡的',
     value: '胡'
+  }, {
+    text: '子菜单',
+    value: '子菜单',
+    children: [{
+      text: '姓陈的',
+      value: '陈'
+    }, {
+      text: '姓王的',
+      value: '王'
+    }]
   }],
   // 指定确定筛选的条件函数
   // 这里是名字中第一个字是 value
@@ -83,23 +93,33 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   dataIndex: <span class="hljs-string">'name'</span>,
   filters: [{
     text: <span class="hljs-string">'姓李的'</span>,
-    value: <span class="hljs-string">'李'</span>
+    value: <span class="hljs-string">'李'</span>,
   }, {
     text: <span class="hljs-string">'姓胡的'</span>,
-    value: <span class="hljs-string">'胡'</span>
+    value: <span class="hljs-string">'胡'</span>,
+  }, {
+    text: <span class="hljs-string">'子菜单'</span>,
+    value: <span class="hljs-string">'子菜单'</span>,
+    children: [{
+      text: <span class="hljs-string">'姓陈的'</span>,
+      value: <span class="hljs-string">'陈'</span>,
+    }, {
+      text: <span class="hljs-string">'姓王的'</span>,
+      value: <span class="hljs-string">'王'</span>,
+    }]
   }],
   <span class="hljs-comment">// 指定确定筛选的条件函数</span>
   <span class="hljs-comment">// 这里是名字中第一个字是 value</span>
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, record</span>) </span>{
     <span class="hljs-keyword">return</span> record.name.indexOf(value) === <span class="hljs-number">0</span>;
   },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.name.length - b.name.length;
   }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.age - b.age;
   }
 }, {
@@ -113,10 +133,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
     value: <span class="hljs-string">'西湖'</span>
   }],
   filterMultiple: <span class="hljs-literal">false</span>,
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, record</span>) </span>{
     <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
   },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.address.length - b.address.length;
   }
 }];

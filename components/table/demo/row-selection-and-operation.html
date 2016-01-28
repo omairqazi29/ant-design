@@ -135,14 +135,16 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
       onChange: <span class="hljs-keyword">this</span>.onSelectChange,
     };
     <span class="hljs-keyword">const</span> hasSelected = selectedRowKeys.length &gt; <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
-           <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> <span class="hljs-attribute">8</span>}}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginBottom:</span> <span class="hljs-attribute">16</span> }}&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
+             <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginLeft:</span> <span class="hljs-attribute">8</span> }}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    )</span>;
   }
 });
 

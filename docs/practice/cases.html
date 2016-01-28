@@ -24,8 +24,8 @@
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -262,19 +266,19 @@
 <p>从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 40 个以上。定位于中后台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。</p>
 <p>Ant Design 目前在外部也有 <a href="https://github.com/ant-design/ant-design/issues/477">许多产品实践</a>，如果你的公司和产品从中受益，欢迎留言。</p>
 <h2 id="最佳实践">最佳实践<a href="#最佳实践" class="anchor">#</a> </h2><hr>
-<h3 id="金融云">金融云<a href="#金融云" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/kBgLUfEwxlBdwUr.png">
+<h3 id="金融云">金融云<a href="#金融云" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/UkUJgmsRKhxwvSR.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/SeXqPPyixccDJBY.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/IRjHVNFWRlCMdnb.png"></p>
 <p>金融云是面向金融机构深度定制的行业云计算服务；助力金融机构向新金融转型升级，推动平台、数据和技术方面的能力全面对外开放。</p>
 <p><a class="outside-link" href="https://www.cloud.alipay.com/" target="_blank">立即访问</a></p>
 <hr>
-<h3 id="oceanbase-cloud-platform">OceanBase Cloud Platform<a href="#oceanbase-cloud-platform" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/JUAXPZYtVyUQfGu.png">
+<h3 id="oceanbase-cloud-platform">OceanBase Cloud Platform<a href="#oceanbase-cloud-platform" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/StdoWgtFplToSgd.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/lpzTKvgLpJgKGpq.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/GVJGaWbqfBFedWN.png"></p>
 <p>OceanBase 是一款真正意义上的云端分布式关系型数据库，而 OceanBase Cloud Platform（云平台）是以 OceanBase 数据库为基础的云服务，可以帮助用户快速创建、使用 OB 服务。</p>
 <p><a class="outside-link internal" href="http://oceanbase.alipay.com/" target="_blank">立即访问</a></p>
 <hr>
-<h3 id="服务宝体验平台">服务宝体验平台<a href="#服务宝体验平台" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/PiSveQClPzmxPTy.png">
+<h3 id="服务宝体验平台">服务宝体验平台<a href="#服务宝体验平台" class="anchor">#</a> </h3><p><img as-cover class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/khisYONMFbBTOdh.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/vsoYArBwcPRZnVE.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/TMyfsUGQSjOdGIm.png">
 <img class="preview-img" width="420" align="right" src="https://os.alipayobjects.com/rmsportal/sBlmIcJXZdJTJbC.png">

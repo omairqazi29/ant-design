@@ -24,8 +24,8 @@ Table 表格 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Table 表格 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Table 表格 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Table 表格 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Table 表格 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Table 表格 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Table 表格 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -693,6 +704,27 @@ Table 表格 - Ant Design
 <td></td>
 <td><a href="https://github.com/ant-design/ant-design/issues/575#issuecomment-159169511">默认值</a></td>
 </tr>
+<tr>
+<td>indentSize</td>
+<td>展示树形数据时，每层缩进的宽度，以 px 为单位</td>
+<td>Number</td>
+<td></td>
+<td>15</td>
+</tr>
+<tr>
+<td>onRowClick</td>
+<td>处理行点击事件</td>
+<td>Function(record, index)</td>
+<td></td>
+<td>无</td>
+</tr>
+<tr>
+<td>useFixedHeader</td>
+<td>是否固定表头</td>
+<td>Boolean</td>
+<td></td>
+<td>false</td>
+</tr>
 </tbody>
 </table>
 <h3 id="column">Column<a href="#column" class="anchor">#</a> </h3><p>列描述数据对象，是 columns 中的一项。</p>
@@ -769,13 +801,6 @@ Table 表格 - Ant Design
 <td>Number</td>
 <td></td>
 <td></td>
-</tr>
-<tr>
-<td>indentSize</td>
-<td>展示树形数据时，每层缩进的宽度，以 px 为单位</td>
-<td>Number</td>
-<td></td>
-<td>15</td>
 </tr>
 <tr>
 <td>width</td>
@@ -935,7 +960,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
   key: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -949,16 +974,18 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }, {
   title: <span class="hljs-string">'操作'</span>,
   key: <span class="hljs-string">'operation'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, record</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一{record.name}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作二<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span>&gt;</span>
-        更多 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>;</span>
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text, record</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一{record.name}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作二<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-dropdown-link"</span>&gt;</span>
+          更多 <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"down"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    )</span>;
   }
 }];
 <span class="hljs-keyword">const</span> data = [{
@@ -1049,7 +1076,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -1081,10 +1108,10 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   onChange(selectedRowKeys) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
   },
-  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">record, selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(selected, selectedRows);
   }
 };
@@ -1236,14 +1263,16 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
       onChange: <span class="hljs-keyword">this</span>.onSelectChange,
     };
     <span class="hljs-keyword">const</span> hasSelected = selectedRowKeys.length &gt; <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginBottom:</span> <span class="hljs-attribute">16</span>}}&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
-           <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginLeft:</span> <span class="hljs-attribute">8</span>}}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginBottom:</span> <span class="hljs-attribute">16</span> }}&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.start}</span>
+             <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{!hasSelected}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{loading}</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginLeft:</span> <span class="hljs-attribute">8</span> }}&gt;</span>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    )</span>;
   }
 });
 
@@ -1324,7 +1353,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -1353,7 +1382,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 
 <span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="hljs-keyword">const</span> rowSelection = {
-  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record</span>) </span>{
+  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">record</span>) </span>{
     <span class="hljs-keyword">return</span> {
       defaultChecked: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
       disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
@@ -1362,10 +1391,10 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   onChange(selectedRowKeys) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
   },
-  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">record, selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(selected, selectedRows);
   },
 };
@@ -1433,7 +1462,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -1458,10 +1487,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   total: data.length,
   current: <span class="hljs-number">1</span>,
   showSizeChanger: <span class="hljs-literal">true</span>,
-  onShowSizeChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current, pageSize</span>) </span>{
+  onShowSizeChange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current, pageSize</span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Current: '</span>, current, <span class="hljs-string">'; PageSize: '</span>, pageSize);
   },
-  onChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current</span>) </span>{
+  onChange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current</span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Current: '</span>, current);
   }
 };
@@ -1493,6 +1522,16 @@ var columns = [{
   }, {
     text: '姓胡的',
     value: '胡'
+  }, {
+    text: '子菜单',
+    value: '子菜单',
+    children: [{
+      text: '姓陈的',
+      value: '陈'
+    }, {
+      text: '姓王的',
+      value: '王'
+    }]
   }],
   // 指定确定筛选的条件函数
   // 这里是名字中第一个字是 value
@@ -1561,23 +1600,33 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   dataIndex: <span class="hljs-string">'name'</span>,
   filters: [{
     text: <span class="hljs-string">'姓李的'</span>,
-    value: <span class="hljs-string">'李'</span>
+    value: <span class="hljs-string">'李'</span>,
   }, {
     text: <span class="hljs-string">'姓胡的'</span>,
-    value: <span class="hljs-string">'胡'</span>
+    value: <span class="hljs-string">'胡'</span>,
+  }, {
+    text: <span class="hljs-string">'子菜单'</span>,
+    value: <span class="hljs-string">'子菜单'</span>,
+    children: [{
+      text: <span class="hljs-string">'姓陈的'</span>,
+      value: <span class="hljs-string">'陈'</span>,
+    }, {
+      text: <span class="hljs-string">'姓王的'</span>,
+      value: <span class="hljs-string">'王'</span>,
+    }]
   }],
   <span class="hljs-comment">// 指定确定筛选的条件函数</span>
   <span class="hljs-comment">// 这里是名字中第一个字是 value</span>
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, record</span>) </span>{
     <span class="hljs-keyword">return</span> record.name.indexOf(value) === <span class="hljs-number">0</span>;
   },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.name.length - b.name.length;
   }
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.age - b.age;
   }
 }, {
@@ -1591,10 +1640,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
     value: <span class="hljs-string">'西湖'</span>
   }],
   filterMultiple: <span class="hljs-literal">false</span>,
-  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, record</span>) </span>{
+  onFilter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, record</span>) </span>{
     <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
   },
-  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  sorter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
     <span class="hljs-keyword">return</span> a.address.length - b.address.length;
   }
 }];
@@ -1692,7 +1741,9 @@ var Test = React.createClass({
       sortOrder: sorter.order
     };
     for (var key in filters) {
-      params[key] = filters[key];
+      if (filters.hasOwnProperty(key)) {
+        params[key] = filters[key];
+      }
     }
     this.fetch(params);
   },
@@ -1774,7 +1825,9 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
       sortOrder: sorter.order
     };
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> filters) {
-      params[key] = filters[key];
+      <span class="hljs-keyword">if</span> (filters.hasOwnProperty(key)) {
+        params[key] = filters[key];
+      }
     }
     <span class="hljs-keyword">this</span>.fetch(params);
   },
@@ -1803,10 +1856,10 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
   render() {
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span>
-             <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span>
-             <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span>
-             <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span>
-             <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleTableChange}</span> /&gt;</span>
+        <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.data}</span>
+        <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{this.state.pagination}</span>
+        <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span>
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleTableChange}</span> /&gt;</span>
     )</span>;
   }
 });
@@ -2042,7 +2095,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -2127,16 +2180,16 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns,
 }
 
 <span class="hljs-keyword">const</span> columns = [
-  {title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span>},
-  {title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span>},
-  {title: <span class="hljs-string">'住址'</span>, dataIndex: <span class="hljs-string">'address'</span>, key: <span class="hljs-string">'address'</span>},
-  {title: <span class="hljs-string">'操作'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'x'</span>, render: renderAction}
+  { title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span> },
+  { title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span> },
+  { title: <span class="hljs-string">'住址'</span>, dataIndex: <span class="hljs-string">'address'</span>, key: <span class="hljs-string">'address'</span> },
+  { title: <span class="hljs-string">'操作'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'x'</span>, render: renderAction }
 ];
 
 <span class="hljs-keyword">const</span> data = [
-  {key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'胡彦斌'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园1号'</span>, description: <span class="hljs-string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span>},
-  {key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'吴彦祖'</span>, age: <span class="hljs-number">42</span>, address: <span class="hljs-string">'西湖区湖底公园2号'</span>, description: <span class="hljs-string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span>},
-  {key: <span class="hljs-number">3</span>, name: <span class="hljs-string">'李大嘴'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园3号'</span>, description: <span class="hljs-string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span>}
+  { key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'胡彦斌'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园1号'</span>, description: <span class="hljs-string">'我是胡彦斌，今年32岁，住在西湖区湖底公园1号。'</span> },
+  { key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'吴彦祖'</span>, age: <span class="hljs-number">42</span>, address: <span class="hljs-string">'西湖区湖底公园2号'</span>, description: <span class="hljs-string">'我是吴彦祖，今年42岁，住在西湖区湖底公园2号。'</span> },
+  { key: <span class="hljs-number">3</span>, name: <span class="hljs-string">'李大嘴'</span>, age: <span class="hljs-number">32</span>, address: <span class="hljs-string">'西湖区湖底公园3号'</span>, description: <span class="hljs-string">'我是李大嘴，今年32岁，住在西湖区湖底公园3号。'</span> }
 ];
 
 ReactDOM.render(
@@ -2184,18 +2237,17 @@ var columns = [{
         { href: '#' },
         text
       );
-    } else {
-      return {
-        children: React.createElement(
-          'a',
-          { href: '#' },
-          text
-        ),
-        props: {
-          colSpan: 5
-        }
-      };
     }
+    return {
+      children: React.createElement(
+        'a',
+        { href: '#' },
+        text
+      ),
+      props: {
+        colSpan: 5
+      }
+    };
   }
 }, {
   title: '年龄',
@@ -2277,7 +2329,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 
 <span class="hljs-comment">// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外</span>
 <span class="hljs-comment">// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)</span>
-<span class="hljs-keyword">const</span> renderContent = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, row, index</span>) </span>{
+<span class="hljs-keyword">const</span> renderContent = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, row, index</span>) </span>{
   <span class="hljs-keyword">let</span> obj = {
     children: value,
     props: {}
@@ -2291,17 +2343,16 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, row, index</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text, row, index</span>) </span>{
     <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">4</span>) {
       <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
-    } <span class="hljs-keyword">else</span> {
-      <span class="hljs-keyword">return</span> {
-        children: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>,
-        props: {
-          colSpan: 5
-        }
-      };
     }
+    <span class="hljs-keyword">return</span> {
+      children: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>,
+      props: {
+        colSpan: 5
+      }
+    };
   }
 }, {
   title: '年龄',
@@ -2311,10 +2362,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   title: '家庭电话',
   colSpan: 2,
   dataIndex: 'tel',
-  render: function(value, row, index) {
+  render: function (value, row, index) {
     let obj = {
       children: value,
-      props:{}
+      props: {}
     };
     // 第三列的第三行行合并
     if (index === 2) {
@@ -2492,10 +2543,12 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggleLoading}</span>&gt;</span>切换 loading 状态<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -2666,6 +2719,155 @@ ReactDOM.render(
     <p>表格支持树形数据的展示，可以通过设置 <code>indentSize</code> 以控制每一层的缩进宽度。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
+</div><div class="code-box" id="demo-paging-columns">
+  <div class="code-box-demo">
+    <div id="components-table-demo-paging-columns"></div>
+    <script>mountNode = document.getElementById('components-table-demo-paging-columns');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{ title: '姓名', dataIndex: 'name', key: 'name' }, { title: '年龄', dataIndex: 'age', key: 'age' }, { title: '列1', dataIndex: 'age', key: '1' }, { title: '列2', dataIndex: 'age', key: '2' }, { title: '列3', dataIndex: 'age', key: '3' }, { title: '列4', dataIndex: 'age', key: '4' }, { title: '列5', dataIndex: 'age', key: '5' }, { title: '列6', dataIndex: 'age', key: '6' }, { title: '列7', dataIndex: 'age', key: '7' }, { title: '列8', dataIndex: 'age', key: '8' }, {
+  title: '操作',
+  key: 'operation',
+  render: function render() {
+    return React.createElement(
+      'a',
+      { href: '#' },
+      '操作'
+    );
+  }
+}];
+var data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42
+}];
+
+var App = React.createClass({
+  displayName: 'App',
+  render: function render() {
+    return React.createElement(_antd.Table, { columns: columns, dataSource: data, columnsPageRange: [2, 9], columnsPageSize: 4 });
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [
+  { title: <span class="hljs-string">'姓名'</span>, dataIndex: <span class="hljs-string">'name'</span>, key: <span class="hljs-string">'name'</span> },
+  { title: <span class="hljs-string">'年龄'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'age'</span> },
+  { title: <span class="hljs-string">'列1'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'1'</span> },
+  { title: <span class="hljs-string">'列2'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'2'</span> },
+  { title: <span class="hljs-string">'列3'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'3'</span> },
+  { title: <span class="hljs-string">'列4'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'4'</span> },
+  { title: <span class="hljs-string">'列5'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'5'</span> },
+  { title: <span class="hljs-string">'列6'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'6'</span> },
+  { title: <span class="hljs-string">'列7'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'7'</span> },
+  { title: <span class="hljs-string">'列8'</span>, dataIndex: <span class="hljs-string">'age'</span>, key: <span class="hljs-string">'8'</span> },
+  {
+    title: <span class="hljs-string">'操作'</span>,
+    key: <span class="hljs-string">'operation'</span>,
+    render() {
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
+    }
+  },
+];
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-string">'1'</span>,
+  name: <span class="hljs-string">'胡彦斌'</span>,
+  age: <span class="hljs-number">32</span>,
+}, {
+  key: <span class="hljs-string">'2'</span>,
+  name: <span class="hljs-string">'胡彦祖'</span>,
+  age: <span class="hljs-number">42</span>,
+}];
+
+<span class="hljs-keyword">const</span> App = React.createClass({
+  render() {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">columnsPageRange</span>=<span class="hljs-value">{[2,</span> <span class="hljs-attribute">9</span>]} <span class="hljs-attribute">columnsPageSize</span>=<span class="hljs-value">{4}</span> /&gt;</span>;</span>
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-paging-columns">滚屏分页的列</a>
+    </div>
+    <p>对于列数很多的数据，可以进行横向的分页，通过切换符切换当前展现的列。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-fixed-header">
+  <div class="code-box-demo">
+    <div id="components-table-demo-fixed-header"></div>
+    <script>mountNode = document.getElementById('components-table-demo-fixed-header');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  width: 150
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  width: 150
+}, {
+  title: '住址',
+  dataIndex: 'address'
+}];
+
+var data = [];
+for (var i = 0; i < 100; i++) {
+  data.push({
+    key: i,
+    name: '李大嘴' + i,
+    age: 32,
+    address: '西湖区湖底公园' + i + '号'
+  });
+}
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: { pageSize: 50 }, useFixedHeader: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">const</span> columns = [{
+  title: <span class="hljs-string">'姓名'</span>,
+  dataIndex: <span class="hljs-string">'name'</span>,
+  width: <span class="hljs-number">150</span>,
+}, {
+  title: <span class="hljs-string">'年龄'</span>,
+  dataIndex: <span class="hljs-string">'age'</span>,
+  width: <span class="hljs-number">150</span>,
+}, {
+  title: <span class="hljs-string">'住址'</span>,
+  dataIndex: <span class="hljs-string">'address'</span>,
+}];
+
+<span class="hljs-keyword">const</span> data = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+  data.push({
+    key: i,
+    name: <span class="hljs-string">'李大嘴'</span> + i,
+    age: <span class="hljs-number">32</span>,
+    address: <span class="hljs-string">'西湖区湖底公园'</span> + i + <span class="hljs-string">'号'</span>
+  });
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">pageSize:</span> <span class="hljs-attribute">50</span> }} <span class="hljs-attribute">useFixedHeader</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-fixed-header">固定表头</a>
+    </div>
+    <p>方便一页内展示大量数据。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
 </div>
     </div>
 </div>
@@ -2738,6 +2940,16 @@ ReactDOM.render(
   <li>
     <a title="树形数据展示" href="#demo-indent-size">
       <span>树形数据展示</span>
+    </a>
+  </li>
+  <li>
+    <a title="滚屏分页的列" href="#demo-paging-columns">
+      <span>滚屏分页的列</span>
+    </a>
+  </li>
+  <li>
+    <a title="固定表头" href="#demo-fixed-header">
+      <span>固定表头</span>
     </a>
   </li>
 </ul>

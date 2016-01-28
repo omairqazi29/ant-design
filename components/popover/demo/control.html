@@ -61,13 +61,17 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">this</span>.setState({ visible });
   },
   render() {
-    <span class="hljs-keyword">const</span> content = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.hide}</span>&gt;</span>关闭卡片<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span>
-      <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onVisibleChange</span>=<span class="hljs-value">{this.handleVisibleChange}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>点击弹出卡片<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>;</span>
+    <span class="hljs-keyword">const</span> content = (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.hide}</span>&gt;</span>关闭卡片<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Popover</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{content}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"标题"</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span>
+        <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onVisibleChange</span>=<span class="hljs-value">{this.handleVisibleChange}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>点击弹出卡片<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Popover</span>&gt;</span>
+    )</span>;
   }
 });
 

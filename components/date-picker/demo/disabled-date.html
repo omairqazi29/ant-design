@@ -13,7 +13,7 @@ var disabledDate = function disabledDate(current) {
 
 ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current</span>) </span>{
+<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current</span>) </span>{
   <span class="hljs-comment">// can not select days after today</span>
   <span class="hljs-keyword">return</span> current &amp;&amp; current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
 };

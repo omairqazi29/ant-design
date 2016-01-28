@@ -148,7 +148,7 @@ ReactDOM.render(React.createElement(
       )
     )
   )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Select, Checkbox, Radio} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Select, Checkbox, Radio } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
@@ -162,25 +162,25 @@ ReactDOM.render(
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"输入框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-input"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Please enter..."</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"文本域："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"control-textarea"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"3"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"Select 选择器："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">14</span>}}&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleSelectChange}</span>&gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleSelectChange}</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -190,8 +190,8 @@ ReactDOM.render(
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">18</span> }} &gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-vertical"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
         <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -205,8 +205,8 @@ ReactDOM.render(
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"Checkbox 多选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">18</span> }} &gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> /&gt;</span>选项一
         <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -220,8 +220,8 @@ ReactDOM.render(
 
     <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
       <span class="hljs-attribute">label</span>=<span class="hljs-value">"Radio 单选框："</span>
-      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">6</span>}}
-      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{span:</span> <span class="hljs-attribute">18</span>}} &gt;</span>
+      <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
+      <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">18</span> }} &gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>

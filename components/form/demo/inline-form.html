@@ -24,12 +24,7 @@ var Demo = React.createClass({
   },
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
-    _antd.message.success('收到表单值~~~ ：' + JSON.stringify(this.state.formData, function (k, v) {
-      if (typeof v === 'undefined') {
-        return '';
-      }
-      return v;
-    }));
+    console.log('收到表单值：', this.state.formData);
   },
   render: function render() {
     var formData = this.state.formData;
@@ -57,7 +52,7 @@ var Demo = React.createClass({
           'label',
           { className: 'ant-checkbox-inline' },
           React.createElement(_antd.Checkbox, { name: 'agreement', value: formData.agreement, onChange: this.setValue.bind(this, 'agreement') }),
-          ' 记住我'
+          '记住我'
         )
       ),
       React.createElement(
@@ -69,7 +64,7 @@ var Demo = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> {Form, Input, Button, Checkbox, message} <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Button, Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({
@@ -87,12 +82,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
 
   handleSubmit(e) {
     e.preventDefault();
-    message.success(<span class="hljs-string">'收到表单值~~~ ：'</span> + <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.state.formData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k, v</span>) </span>{
-      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'undefined'</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
-      }
-      <span class="hljs-keyword">return</span> v;
-    }));
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'收到表单值：'</span>, <span class="hljs-keyword">this</span>.state.formData);
   },
 
   render() {
@@ -111,7 +101,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-checkbox-inline"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"agreement"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.agreement}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">agreement</span>')} /&gt;</span> 记住我
+            <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"agreement"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{formData.agreement}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.setValue.bind(this,</span> '<span class="hljs-attribute">agreement</span>')} /&gt;</span>记住我
           <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>登录<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>

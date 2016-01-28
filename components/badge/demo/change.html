@@ -117,30 +117,32 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Badge</span> <span class="hljs-attribute">count</span>=<span class="hljs-value">{this.state.count}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Badge</span> <span class="hljs-attribute">dot</span>=<span class="hljs-value">{this.state.show}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">10</span> }}&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onNumberClick}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginRight:</span> <span class="hljs-attribute">6</span>}}&gt;</span>
-          切换数字显隐
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onClick}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginRight:</span> <span class="hljs-attribute">6</span>}}&gt;</span>
-          切换红点显隐
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Badge</span> <span class="hljs-attribute">count</span>=<span class="hljs-value">{this.state.count}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Badge</span> <span class="hljs-attribute">dot</span>=<span class="hljs-value">{this.state.show}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"head-example"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">10</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onNumberClick}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginRight:</span> <span class="hljs-attribute">6</span> }}&gt;</span>
+            切换数字显隐
           <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.onClick}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginRight:</span> <span class="hljs-attribute">6</span> }}&gt;</span>
+            切换红点显隐
           <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    )</span>;
   }
 });
 

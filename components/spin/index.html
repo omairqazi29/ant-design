@@ -24,8 +24,8 @@ Spin 加载中 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Spin 加载中 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Spin 加载中 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Spin 加载中 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Spin 加载中 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Spin 加载中 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Spin 加载中 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -754,13 +765,17 @@ ReactDOM.render(React.createElement(Card, null), mountNode);})()</script><div cl
     });
   },
   render() {
-    <span class="hljs-keyword">const</span> container = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"消息提示的文案"</span>
-      <span class="hljs-attribute">description</span>=<span class="hljs-value">"消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍"</span>
-      <span class="hljs-attribute">type</span>=<span class="hljs-value">"info"</span> /&gt;</span>;</span>
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> <span class="hljs-attribute">spining</span>=<span class="hljs-value">{this.state.loading}</span>&gt;</span>{container}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span>
-      切换加载状态：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.toggle}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">const</span> container = (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Alert</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"消息提示的文案"</span>
+        <span class="hljs-attribute">description</span>=<span class="hljs-value">"消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍"</span>
+        <span class="hljs-attribute">type</span>=<span class="hljs-value">"info"</span> /&gt;</span>
+    )</span>;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Spin</span> <span class="hljs-attribute">spining</span>=<span class="hljs-value">{this.state.loading}</span>&gt;</span>{container}<span class="hljs-tag">&lt;/<span class="hljs-title">Spin</span>&gt;</span>
+        切换加载状态：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.toggle}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

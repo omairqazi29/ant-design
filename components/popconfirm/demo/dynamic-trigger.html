@@ -95,16 +95,18 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     }
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Popconfirm</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"确定要删除这个任务吗？"</span>
-        <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onVisibleChange</span>=<span class="hljs-value">{this.handleVisibleChange}</span>
-        <span class="hljs-attribute">onConfirm</span>=<span class="hljs-value">{this.confirm}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.cancel}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除某任务<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Popconfirm</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      点击是否直接执行：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.changeCondition}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Popconfirm</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"确定要删除这个任务吗？"</span>
+          <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onVisibleChange</span>=<span class="hljs-value">{this.handleVisibleChange}</span>
+          <span class="hljs-attribute">onConfirm</span>=<span class="hljs-value">{this.confirm}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.cancel}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>删除某任务<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Popconfirm</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        点击是否直接执行：<span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">defaultChecked</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.changeCondition}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

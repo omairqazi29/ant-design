@@ -30,7 +30,7 @@ ReactDOM.render(React.createElement(
 
 <span class="hljs-keyword">const</span> props = {
   action: <span class="hljs-string">'/upload.do'</span>,
-  beforeUpload: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file</span>) </span>{
+  beforeUpload: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">file</span>) </span>{
     <span class="hljs-keyword">const</span> isJPG = file.type === <span class="hljs-string">'image/jpeg'</span>;
     <span class="hljs-keyword">if</span> (!isJPG) {
       message.error(<span class="hljs-string">'只能上传 JPG 文件哦！'</span>);

@@ -99,8 +99,12 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     <span class="hljs-keyword">this</span>.setState({ targetKeys });
   },
   renderFooter() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">float:</span> '<span class="hljs-attribute">right</span>', <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">5</span>' }}
-                   <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.getMock}</span>&gt;</span>刷新<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">float:</span> '<span class="hljs-attribute">right</span>', <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">5</span>' }}
+        <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.getMock}</span>&gt;</span>
+        刷新
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    )</span>;
   },
   render() {
     <span class="hljs-keyword">return</span> (

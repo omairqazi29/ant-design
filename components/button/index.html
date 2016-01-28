@@ -24,8 +24,8 @@ Button 按钮 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Button 按钮 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Button 按钮 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Button 按钮 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Button 按钮 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Button 按钮 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Button 按钮 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -818,24 +829,26 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">this</span>.setState({ iconLoading: <span class="hljs-literal">true</span> });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterLoading}</span>&gt;</span>
-        点击变加载
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.iconLoading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterIconLoading}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"poweroff"</span> /&gt;</span>点击变加载
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterLoading}</span>&gt;</span>
+          点击变加载
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.iconLoading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterIconLoading}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"poweroff"</span> /&gt;</span>点击变加载
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -1157,12 +1170,12 @@ ReactDOM.render(React.createElement(
     null,
     React.createElement(
       _antd.Button,
-      { type: "primary" },
+      { type: "primary", disabled: true },
       "确定"
     ),
     React.createElement(
       _antd.Button,
-      { type: "primary" },
+      { type: "primary", disabled: true },
       "取消"
     )
   ),
@@ -1171,17 +1184,17 @@ ReactDOM.render(React.createElement(
     null,
     React.createElement(
       _antd.Button,
-      null,
+      { disabled: true },
       "左"
     ),
     React.createElement(
       _antd.Button,
-      null,
+      { disabled: true },
       "中"
     ),
     React.createElement(
       _antd.Button,
-      null,
+      { disabled: true },
       "右"
     )
   ),
@@ -1355,13 +1368,13 @@ ReactDOM.render(React.createElement(
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>基本组合<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>取消<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">disabled</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">disabled</span>&gt;</span>取消<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>中<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span>&gt;</span>右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">disabled</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">disabled</span>&gt;</span>中<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">disabled</span>&gt;</span>右<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>左<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>

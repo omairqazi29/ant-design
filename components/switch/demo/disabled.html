@@ -42,18 +42,20 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
       disabled: <span class="hljs-literal">true</span>
     };
   },
-  toggle(){
+  toggle() {
     <span class="hljs-keyword">this</span>.setState({
       disabled: !<span class="hljs-keyword">this</span>.state.disabled
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Switch</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{this.state.disabled}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.toggle}</span>&gt;</span>Toggle disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

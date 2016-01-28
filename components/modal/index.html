@@ -24,8 +24,8 @@ Modal 对话框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Modal 对话框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Modal 对话框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Modal 对话框 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Modal 对话框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Modal 对话框 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Modal 对话框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -602,6 +613,12 @@ Modal 对话框 - Ant Design
 <td>无</td>
 </tr>
 <tr>
+<td>closable</td>
+<td>是否显示右上角的关闭按钮</td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
 <td>onOk</td>
 <td>点击确定回调</td>
 <td>function</td>
@@ -798,15 +815,17 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"第一个 Modal"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
-        <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"第一个 Modal"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+          <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -908,7 +927,7 @@ var Test = React.createClass({
 ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
-  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">return</span> {
       loading: <span class="hljs-literal">false</span>,
       visible: <span class="hljs-literal">false</span>
@@ -929,26 +948,28 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">false</span> });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>
-        显示对话框
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">ref</span>=<span class="hljs-value">"modal"</span>
-       <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
-       <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span> <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>
-        <span class="hljs-attribute">footer</span>=<span class="hljs-value">{[</span>
-          &lt;<span class="hljs-attribute">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"back"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>返 回<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>,
-          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleOk}</span>&gt;</span>
-            提 交
-          <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        ]</span>}&gt;
-        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>
+          显示对话框
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">ref</span>=<span class="hljs-value">"modal"</span>
+          <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+          <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span> <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>
+          <span class="hljs-attribute">footer</span>=<span class="hljs-value">{[</span>
+            &lt;<span class="hljs-attribute">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"back"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>返 回<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>,
+            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleOk}</span>&gt;</span>
+              提 交
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          ]</span>}&gt;
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>对话框的内容<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -991,16 +1012,16 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>) </span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
     content: <span class="hljs-string">'点确认 1 秒后关闭'</span>,
-    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve</span>) </span>{
+    onOk() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
         setTimeout(resolve, <span class="hljs-number">1000</span>);
       });
     },
-    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+    onCancel() {}
   });
 }
 
@@ -1119,16 +1140,18 @@ ReactDOM.render(React.createElement(
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Modal"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
-             <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>
-             <span class="hljs-attribute">okText</span>=<span class="hljs-value">"OK"</span> <span class="hljs-attribute">cancelText</span>=<span class="hljs-value">"Cancel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Modal"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+          <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>
+          <span class="hljs-attribute">okText</span>=<span class="hljs-value">"OK"</span> <span class="hljs-attribute">cancelText</span>=<span class="hljs-value">"Cancel"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bla bla ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -1256,16 +1279,18 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span>
-        <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
-        <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span>
-        <span class="hljs-attribute">confirmLoading</span>=<span class="hljs-value">{this.state.confirmLoading}</span>
-        <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{this.state.ModalText}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span>
+          <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+          <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span>
+          <span class="hljs-attribute">confirmLoading</span>=<span class="hljs-value">{this.state.confirmLoading}</span>
+          <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{this.state.ModalText}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -1306,14 +1331,14 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>) </span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
     content: <span class="hljs-string">'一些解释'</span>,
-    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'确定'</span>);
     },
-    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
   });
 }
 
@@ -1383,7 +1408,7 @@ ReactDOM.render(React.createElement(
   Modal.info({
     title: <span class="hljs-string">'这是一条通知信息'</span>,
     content: <span class="hljs-string">'一些附加信息一些附加信息一些附加信息'</span>,
-    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
   });
 }
 

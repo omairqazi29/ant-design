@@ -49,14 +49,16 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> SubMenu = Menu.SubMenu;
 
-<span class="hljs-keyword">const</span> menu = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">SubMenu</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"子菜单"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第四个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>;</span>
+<span class="hljs-keyword">const</span> menu = (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SubMenu</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"子菜单"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>第四个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">SubMenu</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
+)</span>;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Dropdown</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span>&gt;</span>

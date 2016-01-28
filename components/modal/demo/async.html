@@ -98,16 +98,18 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span>
-        <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
-        <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span>
-        <span class="hljs-attribute">confirmLoading</span>=<span class="hljs-value">{this.state.confirmLoading}</span>
-        <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{this.state.ModalText}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>显示对话框<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"对话框标题"</span>
+          <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span>
+          <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleOk}</span>
+          <span class="hljs-attribute">confirmLoading</span>=<span class="hljs-value">{this.state.confirmLoading}</span>
+          <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.handleCancel}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{this.state.ModalText}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

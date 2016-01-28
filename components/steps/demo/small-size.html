@@ -43,11 +43,7 @@ ReactDOM.render(React.createElement(
 }, {
   status: <span class="hljs-string">'wait'</span>,
   title: <span class="hljs-string">'待运行'</span>
-}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
-  )</span>;
-});
+}].map((s, i) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>)</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">current</span>=<span class="hljs-value">{1}</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>

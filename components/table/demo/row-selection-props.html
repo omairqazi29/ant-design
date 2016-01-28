@@ -65,7 +65,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text</span>) </span>{
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -94,7 +94,7 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 
 <span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="hljs-keyword">const</span> rowSelection = {
-  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record</span>) </span>{
+  getCheckboxProps: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">record</span>) </span>{
     <span class="hljs-keyword">return</span> {
       defaultChecked: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
       disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
@@ -103,10 +103,10 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   onChange(selectedRowKeys) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selectedRowKeys changed: '</span> + selectedRowKeys);
   },
-  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">record, selected, selectedRows</span>) </span>{
+  onSelect: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">record, selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selected, selectedRows</span>) </span>{
+  onSelectAll: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">selected, selectedRows</span>) </span>{
     <span class="hljs-built_in">console</span>.log(selected, selectedRows);
   },
 };

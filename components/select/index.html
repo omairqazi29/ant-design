@@ -24,8 +24,8 @@ Select 选择器 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Select 选择器 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Select 选择器 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Select 选择器 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Select 选择器 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Select 选择器 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Select 选择器 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -812,17 +823,19 @@ ReactDOM.render(React.createElement(
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:120}}</span> <span class="hljs-attribute">disabled</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">120</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">120</span> }} <span class="hljs-attribute">disabled</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -879,10 +892,10 @@ ReactDOM.render(React.createElement(
 }
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">showSearch</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span>
-  <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">"找不到呐！"</span>
-  <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"输入"</span>
-  <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">showSearch</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }}
+    <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">"找不到呐！"</span>
+    <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"输入"</span>
+    <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -941,8 +954,8 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">tags</span>
-   <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> '<span class="hljs-attribute">100</span>%'}}
-   <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"标签模式"</span>
+    <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> '<span class="hljs-attribute">100</span>%' }}
+    <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"标签模式"</span>
     <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     {children}
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
@@ -1009,7 +1022,7 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span>
-    <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span>
+    <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }}
     <span class="hljs-attribute">showSearch</span>=<span class="hljs-value">{false}</span>
     <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">OptGroup</span> <span class="hljs-attribute">label</span>=<span class="hljs-value">"Manager"</span>&gt;</span>
@@ -1026,7 +1039,7 @@ ReactDOM.render(
     <div class="code-box-title">
       <a href="#demo-optgroup">分组</a>
     </div>
-    <p>option分组</p>
+    <p>用 <code>OptGroup</code> 进行选项分组。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -1129,19 +1142,19 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>Jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>Lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -1204,8 +1217,8 @@ ReactDOM.render(React.createElement(
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">multiple</span>
-  <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:400}}</span>
-  <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{['a10',</span> '<span class="hljs-attribute">c12</span>']} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
+    <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">400</span> }}
+    <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{['a10',</span> '<span class="hljs-attribute">c12</span>']} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
     {children}
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
 , mountNode);</span></code></pre></div>
@@ -1248,9 +1261,7 @@ var Test = React.createClass({
         );
       });
     }
-    this.setState({
-      options: options
-    });
+    this.setState({ options: options });
   },
   render: function render() {
     // filterOption 需要设置为 false，数据是动态设置的
@@ -1280,24 +1291,24 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     <span class="hljs-keyword">if</span> (!value || value.indexOf(<span class="hljs-string">'@'</span>) &gt;= <span class="hljs-number">0</span>) {
       options = [];
     } <span class="hljs-keyword">else</span> {
-      options = [<span class="hljs-string">'gmail.com'</span>, <span class="hljs-string">'163.com'</span>, <span class="hljs-string">'qq.com'</span>].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">domain</span>) </span>{
+      options = [<span class="hljs-string">'gmail.com'</span>, <span class="hljs-string">'163.com'</span>, <span class="hljs-string">'qq.com'</span>].map((domain) =&gt; {
         <span class="hljs-keyword">const</span> email = value + <span class="hljs-string">'@'</span> + domain;
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{email}</span>&gt;</span>{email}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
       });
     }
-    <span class="hljs-keyword">this</span>.setState({
-      options: options
-    });
+    <span class="hljs-keyword">this</span>.setState({ options });
   },
   render() {
     <span class="hljs-comment">// filterOption 需要设置为 false，数据是动态设置的</span>
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">combobox</span>
-      <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:200}}</span>
-      <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
-      <span class="hljs-attribute">filterOption</span>=<span class="hljs-value">{false}</span>
-      <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"请输入账户名"</span>&gt;</span>
-      {this.state.options}
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">combobox</span>
+        <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }}
+        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
+        <span class="hljs-attribute">filterOption</span>=<span class="hljs-value">{false}</span>
+        <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"请输入账户名"</span>&gt;</span>
+        {this.state.options}
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -1390,13 +1401,13 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
   getInitialState() {
     <span class="hljs-keyword">return</span> {
       cities: cityData[provinceData[<span class="hljs-number">0</span>]],
-      secondCity:cityData[provinceData[<span class="hljs-number">0</span>]][<span class="hljs-number">0</span>]
+      secondCity: cityData[provinceData[<span class="hljs-number">0</span>]][<span class="hljs-number">0</span>]
     };
   },
   handleProvinceChange(value) {
     <span class="hljs-keyword">this</span>.setState({
       cities: cityData[value],
-      secondCity:cityData[value][<span class="hljs-number">0</span>]
+      secondCity: cityData[value][<span class="hljs-number">0</span>]
     });
   },
   onSecondCityChange(value) {
@@ -1405,20 +1416,18 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     });
   },
   render() {
-    <span class="hljs-keyword">const</span> provinceOptions = provinceData.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">province</span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{province}</span>&gt;</span>{province}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
-    });
-    <span class="hljs-keyword">const</span> cityOptions = <span class="hljs-keyword">this</span>.state.cities.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">city</span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{city}</span>&gt;</span>{city}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
-    });
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{provinceData[0]}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">90</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleProvinceChange}</span>&gt;</span>
-        {provinceOptions}
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.secondCity}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">90</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onSecondCityChange}</span>&gt;</span>
-        {cityOptions}
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">const</span> provinceOptions = provinceData.map(province =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{province}</span>&gt;</span>{province}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>)</span>;
+    <span class="hljs-keyword">const</span> cityOptions = <span class="hljs-keyword">this</span>.state.cities.map(city =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{city}</span>&gt;</span>{city}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>)</span>;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{provinceData[0]}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">90</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleProvinceChange}</span>&gt;</span>
+          {provinceOptions}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.secondCity}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">90</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onSecondCityChange}</span>&gt;</span>
+          {cityOptions}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
@@ -1428,6 +1437,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-coordinate">联动</a>
     </div>
     <p>省市联动是典型的例子。</p>
+<p>推荐使用 <a href="/components/cascader/">cascader</a> 组件。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

@@ -76,16 +76,18 @@ ReactDOM.render(React.createElement(DateRange, null), mountNode);})()</script><d
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
-        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
-        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
-        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
-        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
+          <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
+          <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
+          <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
+          <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
+          <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
+          <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

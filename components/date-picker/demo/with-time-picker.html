@@ -76,10 +76,12 @@ ReactDOM.render(React.createElement(DateTimePicker, { onSelect: onSelect }), mou
     }
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">date</span>')} /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">time</span>')} /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">date</span>')} /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange.bind(null,</span> '<span class="hljs-attribute">time</span>')} /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

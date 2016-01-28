@@ -78,17 +78,19 @@ ReactDOM.render(React.createElement(MyProgress, null), mountNode);})()</script><
     <span class="hljs-keyword">this</span>.setState({ percent });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{this.state.percent}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ProgressLine</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{this.state.percent}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ButtonGroup</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.decline}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"minus"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"ghost"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.increase}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"plus"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ButtonGroup</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

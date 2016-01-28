@@ -24,8 +24,8 @@ TimePicker 时间选择框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ TimePicker 时间选择框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ TimePicker 时间选择框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ TimePicker 时间选择框 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ TimePicker 时间选择框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ TimePicker 时间选择框 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ TimePicker 时间选择框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -588,13 +599,13 @@ TimePicker 时间选择框 - Ant Design
 <tr>
 <td>defaultValue</td>
 <td>初始默认时间</td>
-<td>string</td>
+<td>string or Date</td>
 <td>无</td>
 </tr>
 <tr>
 <td>value</td>
 <td>默认时间</td>
-<td>string</td>
+<td>string or Date</td>
 <td>无</td>
 </tr>
 <tr>
@@ -670,17 +681,13 @@ TimePicker 时间选择框 - Ant Design
 var _antd = require('antd');
 
 function onChange(time) {
-  if (time) {
-    console.log(time.toLocaleTimeString('zh-CN', { hour12: false }));
-  }
+  console.log(time);
 }
 
 ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">time</span>) </span>{
-  <span class="hljs-keyword">if</span> (time) {
-    <span class="hljs-built_in">console</span>.log(time.toLocaleTimeString(<span class="hljs-string">'zh-CN'</span>, { hour12: <span class="hljs-literal">false</span> }));
-  }
+  <span class="hljs-built_in">console</span>.log(time);
 }
 
 ReactDOM.render(
@@ -821,11 +828,8 @@ var Test = React.createClass({
     };
   },
   onChange: function onChange(time) {
-    time = time && time.toLocaleTimeString('zh-CN', {
-      hour12: false
-    });
     console.log(time);
-    this.setState({ time: time });
+    this.setState({ value: time });
   },
   render: function render() {
     return React.createElement(_antd.TimePicker, { value: this.state.value, onChange: this.onChange });
@@ -841,11 +845,8 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     };
   },
   onChange(time) {
-    time = time &amp;&amp; time.toLocaleTimeString(<span class="hljs-string">'zh-CN'</span>, {
-      hour12: <span class="hljs-literal">false</span>
-    });
     <span class="hljs-built_in">console</span>.log(time);
-    <span class="hljs-keyword">this</span>.setState({ time });
+    <span class="hljs-keyword">this</span>.setState({ value: time });
   },
   render() {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> /&gt;</span>;</span>
@@ -909,9 +910,8 @@ function disabledMinutes(h) {
     return newArray(0, 31);
   } else if (h === 23) {
     return newArray(30, 60);
-  } else {
-    return [];
   }
+  return [];
 }
 
 ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledHours, disabledMinutes: disabledMinutes }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -935,9 +935,8 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledH
     <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">0</span>, <span class="hljs-number">31</span>);
   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (h === <span class="hljs-number">23</span>) {
     <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">30</span>, <span class="hljs-number">60</span>);
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">return</span> [];
   }
+  <span class="hljs-keyword">return</span> [];
 }
 
 ReactDOM.render(

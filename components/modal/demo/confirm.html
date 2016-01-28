@@ -26,14 +26,14 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>) </span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
     content: <span class="hljs-string">'一些解释'</span>,
-    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'确定'</span>);
     },
-    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
   });
 }
 

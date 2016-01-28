@@ -71,24 +71,26 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">this</span>.setState({ iconLoading: <span class="hljs-literal">true</span> });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">loading</span>&gt;</span>
-        加载中
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterLoading}</span>&gt;</span>
-        点击变加载
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.iconLoading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterIconLoading}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"poweroff"</span> /&gt;</span>点击变加载
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">loading</span>&gt;</span>
+          加载中
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.loading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterLoading}</span>&gt;</span>
+          点击变加载
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">loading</span>=<span class="hljs-value">{this.state.iconLoading}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.enterIconLoading}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"poweroff"</span> /&gt;</span>点击变加载
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 

@@ -24,8 +24,8 @@ Tree 树形控件 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Tree 树形控件 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Tree 树形控件 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Tree 树形控件 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Tree 树形控件 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Tree 树形控件 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Tree 树形控件 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -595,7 +606,7 @@ Tree 树形控件 - Ant Design
 </tr>
 <tr>
 <td>defaultExpandAll</td>
-<td>设置展开所有树节点</td>
+<td>默认展开所有树节点</td>
 <td>bool</td>
 <td>false</td>
 </tr>
@@ -606,10 +617,28 @@ Tree 树形控件 - Ant Design
 <td>[]</td>
 </tr>
 <tr>
+<td>expandedKeys</td>
+<td>（受控）展开指定的树节点</td>
+<td>String[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>checkedKeys</td>
+<td>（受控）选中复选框的树节点</td>
+<td>String[]</td>
+<td>[]</td>
+</tr>
+<tr>
 <td>defaultCheckedKeys</td>
 <td>默认选中复选框的树节点</td>
 <td>String[]</td>
 <td>[]</td>
+</tr>
+<tr>
+<td>selectedKeys</td>
+<td>（受控）设置选中的树节点</td>
+<td>String[]</td>
+<td>-</td>
 </tr>
 <tr>
 <td>defaultSelectedKeys</td>
@@ -618,21 +647,15 @@ Tree 树形控件 - Ant Design
 <td>[]</td>
 </tr>
 <tr>
-<td>checkedKeys</td>
-<td>设置选中复选框的树节点</td>
-<td>String[]</td>
-<td>-</td>
-</tr>
-<tr>
-<td>selectedKeys</td>
-<td>设置选中的树节点</td>
-<td>String[]</td>
+<td>onExpand</td>
+<td>展开/收起节点时触发</td>
+<td>function(node, expanded, expandedKeys)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>onCheck</td>
-<td>点击树节点或复选框触发</td>
-<td>function(e:{checked:bool,node,checkedKeys,event})</td>
+<td>点击复选框触发</td>
+<td>function(e:{checked:bool, node, checkedKeys, event})</td>
 <td>-</td>
 </tr>
 <tr>
@@ -642,9 +665,57 @@ Tree 树形控件 - Ant Design
 <td>-</td>
 </tr>
 <tr>
-<td>onDataLoaded</td>
+<td>filterTreeNode</td>
+<td>filter some treeNodes as you need. it should return true</td>
+<td>function(node)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>loadData</td>
 <td>异步加载数据</td>
 <td>function(node)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onRightClick</td>
+<td>显示右键菜单</td>
+<td>function({event,node})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>draggable</td>
+<td>设置节点可拖拽（IE&gt;8）</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onDragStart</td>
+<td>开始拖拽时调用</td>
+<td>function({event,node})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onDragEnter</td>
+<td>dragenter 触发时调用</td>
+<td>function({event,node,expandedKeys})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onDragOver</td>
+<td>dragover 触发时调用</td>
+<td>function({event,node})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onDragLeave</td>
+<td>dragleave 触发时调用</td>
+<td>function({event,node})</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onDrop</td>
+<td>drop 触发时调用</td>
+<td>function({event, node, dragNode, dragNodesKeys})</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -666,6 +737,12 @@ Tree 树形控件 - Ant Design
 <td>false</td>
 </tr>
 <tr>
+<td>disableCheckbox</td>
+<td>禁掉 checkbox</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
 <td>title</td>
 <td>标题</td>
 <td>String</td>
@@ -673,9 +750,15 @@ Tree 树形控件 - Ant Design
 </tr>
 <tr>
 <td>key</td>
-<td>被树的defaultCheckedKeys/defaultSelectedKeys/defaultExpandedKeys所用</td>
+<td>被树的 (default)ExpandedKeys / (default)CheckedKeys / (default)SelectedKeys 属性所用。注意：整个树范围内的所有节点的 key 值不能重复！</td>
 <td>String</td>
 <td>内部计算出的节点位置</td>
+</tr>
+<tr>
+<td>isLeaf</td>
+<td>设置为叶子节点</td>
+<td>bool</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
@@ -690,48 +773,182 @@ Tree 树形控件 - Ant Design
   <div class="code-box-demo">
     <div id="components-tree-demo-basic"></div>
     <script>mountNode = document.getElementById('components-tree-demo-basic');</script>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var _antd = require("antd");
+var _antd = require('antd');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TreeNode = _antd.Tree.TreeNode;
 
-ReactDOM.render(React.createElement(
-  _antd.Tree,
-  { defaultExpandAll: false },
-  React.createElement(
-    TreeNode,
-    { title: "parent 1" },
-    React.createElement(TreeNode, { title: "leaf" }),
-    React.createElement(
-      TreeNode,
-      { title: "parent 1-1" },
-      React.createElement(
-        TreeNode,
-        { title: "parent 2-1" },
-        React.createElement(TreeNode, { title: "leaf" }),
-        React.createElement(TreeNode, { title: "leaf" })
-      ),
-      React.createElement(TreeNode, { title: "leaf" })
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
 
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandAll</span>=<span class="hljs-value">{false}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+  propTypes: {
+    keys: _react.PropTypes.array
+  },
+  getDefaultProps: function getDefaultProps() {
+    return {
+      keys: ['0-0-0', '0-0-1']
+    };
+  },
+  getInitialState: function getInitialState() {
+    var keys = this.props.keys;
+    return {
+      defaultExpandedKeys: keys,
+      defaultSelectedKeys: keys,
+      defaultCheckedKeys: keys,
+      switchIt: true
+    };
+  },
+  onExpand: function onExpand(treeNode, expand, expandedKeys) {
+    console.log('onExpand', expand, expandedKeys);
+  },
+  onSelect: function onSelect(info) {
+    console.log('selected', info);
+  },
+  onCheck: function onCheck(info) {
+    console.log('onCheck', info);
+  },
+  change: function change() {
+    var keys = this.props.keys;
+    this.setState({
+      defaultExpandedKeys: ['0-0', keys[this.state.switchIt ? 0 : 1]],
+      defaultSelectedKeys: [keys[this.state.switchIt ? 0 : 1]],
+      defaultCheckedKeys: [keys[this.state.switchIt ? 1 : 0]],
+      switchIt: !this.state.switchIt
+    });
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { style: { margin: '0 20px' } },
+      _react2.default.createElement(
+        'h2',
+        null,
+        'simple'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { className: 'myCls', showLine: true, multiple: true, checkable: true,
+          defaultExpandedKeys: this.state.defaultExpandedKeys,
+          onExpand: this.onExpand,
+          defaultSelectedKeys: this.state.defaultSelectedKeys,
+          defaultCheckedKeys: this.state.defaultCheckedKeys,
+          onSelect: this.onSelect, onCheck: this.onCheck },
+        _react2.default.createElement(
+          TreeNode,
+          { title: 'parent 1', key: '0-0' },
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-0', key: '0-0-0', disabled: true },
+            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-0', disableCheckbox: true }),
+            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-1' })
+          ),
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-1', key: '0-0-1' },
+            _react2.default.createElement(TreeNode, { title: _react2.default.createElement(
+                'span',
+                { style: { color: 'red' } },
+                'sss'
+              ), key: '0-0-1-0' })
+          )
+        )
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'button',
+          { onClick: this.change },
+          'change state'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'defaultXX 的初始化状态不会改变'
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React, { PropTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  propTypes: {
+    keys: PropTypes.array,
+  },
+  getDefaultProps() {
+    <span class="hljs-keyword">return</span> {
+      keys: [<span class="hljs-string">'0-0-0'</span>, <span class="hljs-string">'0-0-1'</span>],
+    };
+  },
+  getInitialState() {
+    <span class="hljs-keyword">const</span> keys = <span class="hljs-keyword">this</span>.props.keys;
+    <span class="hljs-keyword">return</span> {
+      defaultExpandedKeys: keys,
+      defaultSelectedKeys: keys,
+      defaultCheckedKeys: keys,
+      switchIt: <span class="hljs-literal">true</span>,
+    };
+  },
+  onExpand(treeNode, expand, expandedKeys) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onExpand'</span>, expand, expandedKeys);
+  },
+  onSelect(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected'</span>, info);
+  },
+  onCheck(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onCheck'</span>, info);
+  },
+  change() {
+    <span class="hljs-keyword">const</span> keys = <span class="hljs-keyword">this</span>.props.keys;
+    <span class="hljs-keyword">this</span>.setState({
+      defaultExpandedKeys: [<span class="hljs-string">'0-0'</span>, keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>]],
+      defaultSelectedKeys: [keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>]],
+      defaultCheckedKeys: [keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>]],
+      switchIt: !<span class="hljs-keyword">this</span>.state.switchIt,
+    });
+  },
+  render() {
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">0</span> <span class="hljs-attribute">20px</span>' }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>simple<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"myCls"</span> <span class="hljs-attribute">showLine</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">checkable</span>
+        <span class="hljs-attribute">defaultExpandedKeys</span>=<span class="hljs-value">{this.state.defaultExpandedKeys}</span>
+        <span class="hljs-attribute">onExpand</span>=<span class="hljs-value">{this.onExpand}</span>
+        <span class="hljs-attribute">defaultSelectedKeys</span>=<span class="hljs-value">{this.state.defaultSelectedKeys}</span>
+        <span class="hljs-attribute">defaultCheckedKeys</span>=<span class="hljs-value">{this.state.defaultCheckedKeys}</span>
+        <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{this.onCheck}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-0"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0"</span> <span class="hljs-attribute">disabled</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0-0"</span> <span class="hljs-attribute">disableCheckbox</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0-1"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">color:</span> '<span class="hljs-attribute">red</span>' }}&gt;</span>sss<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>} key="0-0-1-0" /&gt;
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-, mountNode);</span></code></pre></div>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.change}</span>&gt;</span>change state<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>defaultXX 的初始化状态不会改变<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
+  },
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
@@ -740,245 +957,301 @@ ReactDOM.render(
     <p>最简单的用法。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-special">
+</div><div class="code-box" id="demo-basic-controlled">
   <div class="code-box-demo">
-    <div id="components-tree-demo-special"></div>
-    <script>mountNode = document.getElementById('components-tree-demo-special');</script>
+    <div id="components-tree-demo-basic-controlled"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-basic-controlled');</script>
     <script>(function(){'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _antd = require('antd');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _react = require('react');
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var _react2 = _interopRequireDefault(_react);
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TreeNode = _antd.Tree.TreeNode;
 
-var TreeDemo = function (_React$Component) {
-  _inherits(TreeDemo, _React$Component);
+var x = 3;
+var y = 2;
+var z = 1;
+var gData = [];
 
-  function TreeDemo(props) {
-    _classCallCheck(this, TreeDemo);
+var generateData = function generateData(_level, _preKey, _tns) {
+  var preKey = _preKey || '0';
+  var tns = _tns || gData;
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TreeDemo).call(this, props));
+  var children = [];
+  for (var i = 0; i < x; i++) {
+    var key = preKey + '-' + i;
+    tns.push({ title: key, key: key });
+    if (i < y) {
+      children.push(key);
+    }
+  }
+  if (_level < 0) {
+    return tns;
+  }
+  var __level = _level - 1;
+  children.forEach(function (key, index) {
+    tns[index].children = [];
+    return generateData(__level, key, tns[index].children);
+  });
+};
+generateData(z);
 
-    ['handleClick', 'handleCheck', 'handleSelect'].forEach(function (m) {
-      _this[m] = _this[m].bind(_this);
+function loopData(data, callback) {
+  var loop = function loop(d) {
+    var level = arguments.length <= 1 || arguments[1] === undefined ? 0 : arguments[1];
+
+    d.forEach(function (item, index) {
+      var pos = level + '-' + index;
+      if (item.children) {
+        loop(item.children, pos);
+      }
+      callback(item, index, pos);
     });
-    _this.state = {
-      checkedKeys: [],
+  };
+  loop(data);
+}
+
+function getFilterExpandedKeys(data, expandedKeys) {
+  var expandedPosArr = [];
+  loopData(data, function (item, index, pos) {
+    if (expandedKeys.indexOf(item.key) > -1) {
+      expandedPosArr.push(pos);
+    }
+  });
+  var filterExpandedKeys = [];
+  loopData(data, function (item, index, pos) {
+    expandedPosArr.forEach(function (p) {
+      if ((pos.split('-').length < p.split('-').length && p.indexOf(pos) === 0 || pos === p) && filterExpandedKeys.indexOf(item.key) === -1) {
+        filterExpandedKeys.push(item.key);
+      }
+    });
+  });
+  return filterExpandedKeys;
+}
+
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
+
+  propTypes: {
+    multiple: _react.PropTypes.bool
+  },
+  getDefaultProps: function getDefaultProps() {
+    return {
+      multiple: true
+    };
+  },
+  getInitialState: function getInitialState() {
+    return {
+      expandedKeys: getFilterExpandedKeys(gData, ['0-0-0', '0-0-1']),
+      checkedKeys: ['0-0-0'],
       selectedKeys: []
     };
-    return _this;
-  }
-
-  _createClass(TreeDemo, [{
-    key: 'handleClick',
-    value: function handleClick() {
-      this.setState({
-        checkedKeys: ['p11'],
-        selectedKeys: ['p21', 'p11']
-      });
+  },
+  onExpand: function onExpand(treeNode, expand, expandedKeys) {
+    console.log('onExpand', expand, expandedKeys);
+    var index = expandedKeys.indexOf(treeNode.props.eventKey);
+    if (expand) {
+      if (index > -1) {
+        expandedKeys.splice(index, 1);
+      }
+    } else {
+      if (index === -1) {
+        expandedKeys.push(treeNode.props.eventKey);
+      }
     }
-  }, {
-    key: 'handleCheck',
-    value: function handleCheck(info) {
-      console.log('check: ', info);
-      this.setState({
-        checkedKeys: ['p21'],
-        selectedKeys: ['p1', 'p21']
-      });
-    }
-  }, {
-    key: 'handleSelect',
-    value: function handleSelect(info) {
-      console.log('selected: ', info);
-      this.setState({
-        checkedKeys: ['p21'],
-        selectedKeys: ['p21']
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return React.createElement(
-        'div',
-        null,
-        React.createElement(
-          _antd.Tree,
-          { defaultExpandAll: true, checkable: true,
-            onCheck: this.handleCheck, checkedKeys: this.state.checkedKeys,
-            onSelect: this.handleSelect, selectedKeys: this.state.selectedKeys, multiple: true },
-          React.createElement(
+    this.setState({
+      expandedKeys: expandedKeys
+    });
+  },
+  onCheck: function onCheck(checkedKeys) {
+    this.setState({
+      checkedKeys: checkedKeys,
+      selectedKeys: ['0-3', '0-4']
+    });
+  },
+  onSelect: function onSelect(selectedKeys, info) {
+    console.log('onSelect', info);
+    this.setState({
+      selectedKeys: selectedKeys
+    });
+  },
+  render: function render() {
+    var loop = function loop(data) {
+      return data.map(function (item) {
+        if (item.children) {
+          return _react2.default.createElement(
             TreeNode,
-            { title: 'parent 1', key: 'p1' },
-            React.createElement(TreeNode, { key: 'p10', title: 'leaf' }),
-            React.createElement(
-              TreeNode,
-              { title: 'parent 1-1', key: 'p11' },
-              React.createElement(
-                TreeNode,
-                { title: 'parent 2-1', key: 'p21' },
-                React.createElement(TreeNode, { title: 'test' }),
-                React.createElement(TreeNode, { title: React.createElement(
-                    'span',
-                    null,
-                    'sss'
-                  ) })
-              ),
-              React.createElement(TreeNode, { key: 'p22', title: 'leaf' })
-            )
-          ),
-          React.createElement(TreeNode, { key: 'p12', title: 'leaf' })
-        ),
-        React.createElement(
-          _antd.Button,
-          { type: 'primary', size: 'small', onClick: this.handleClick },
-          '点此控制树节点'
-        )
-      );
-    }
-  }]);
-
-  return TreeDemo;
-}(React.Component);
-
-ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeDemo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  constructor(props) {
-    <span class="hljs-keyword">super</span>(props);
-    [<span class="hljs-string">'handleClick'</span>, <span class="hljs-string">'handleCheck'</span>, <span class="hljs-string">'handleSelect'</span>].forEach((m)=&gt; {
-      <span class="hljs-keyword">this</span>[m] = <span class="hljs-keyword">this</span>[m].bind(<span class="hljs-keyword">this</span>);
-    });
-    <span class="hljs-keyword">this</span>.state = {
-      checkedKeys: [],
-      selectedKeys: []
+            { key: item.key, title: item.key, disableCheckbox: item.key === '0-0-0' ? true : false },
+            loop(item.children)
+          );
+        }
+        return _react2.default.createElement(TreeNode, { key: item.key, title: item.key });
+      });
     };
-  }
-  handleClick() {
-    <span class="hljs-keyword">this</span>.setState({
-      checkedKeys: [<span class="hljs-string">'p11'</span>],
-      selectedKeys: [<span class="hljs-string">'p21'</span>, <span class="hljs-string">'p11'</span>]
-    });
-  }
-  handleCheck(info) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'check: '</span>, info);
-    <span class="hljs-keyword">this</span>.setState({
-      checkedKeys: [<span class="hljs-string">'p21'</span>],
-      selectedKeys: [<span class="hljs-string">'p1'</span>, <span class="hljs-string">'p21'</span>]
-    });
-  }
-  handleSelect(info) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected: '</span>, info);
-    <span class="hljs-keyword">this</span>.setState({
-      checkedKeys: [<span class="hljs-string">'p21'</span>],
-      selectedKeys: [<span class="hljs-string">'p21'</span>]
-    });
-  }
-  render() {
-    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandAll</span> <span class="hljs-attribute">checkable</span>
-            <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{this.handleCheck}</span> <span class="hljs-attribute">checkedKeys</span>=<span class="hljs-value">{this.state.checkedKeys}</span>
-            <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.handleSelect}</span> <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{this.state.selectedKeys}</span> <span class="hljs-attribute">multiple</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p1"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p10"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p11"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p21"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"test"</span> /&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span>&gt;</span>sss<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}/&gt;
-            <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p22"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"p12"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span>/&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick}</span>&gt;</span>点此控制树节点<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
-  }
-}
-
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, mountNode);</span></code></pre></div>
-  </div>
-  <div class="code-box-meta markdown">
-    <div class="code-box-title">
-      <a href="#demo-special">接收外部传参</a>
-    </div>
-    <p>受控组件，外部传入参数，控制树对象节点。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
-  </div>
-</div>
-  </div>
-  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-checkbox">
-  <div class="code-box-demo">
-    <div id="components-tree-demo-checkbox"></div>
-    <script>mountNode = document.getElementById('components-tree-demo-checkbox');</script>
-    <script>(function(){'use strict';
-
-var _antd = require('antd');
-
-var TreeNode = _antd.Tree.TreeNode;
-
-function handleCheck(info) {
-  console.log('check: ', info);
-}
-
-ReactDOM.render(React.createElement(
-  'div',
-  null,
-  React.createElement(
-    _antd.Tree,
-    { defaultExpandAll: true, checkable: true, onCheck: handleCheck },
-    React.createElement(
-      TreeNode,
-      { title: 'parent 1' },
-      React.createElement(TreeNode, { title: 'leaf' }),
-      React.createElement(
-        TreeNode,
-        { title: 'parent 1-1' },
-        React.createElement(
-          TreeNode,
-          { title: 'parent 2-1' },
-          React.createElement(TreeNode, { title: 'leaf' }),
-          React.createElement(TreeNode, { title: 'leaf' })
-        ),
-        React.createElement(TreeNode, { title: 'leaf' })
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'h2',
+        null,
+        'controlled'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { checkable: true, multiple: this.props.multiple, defaultExpandAll: true,
+          onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
+          onCheck: this.onCheck, checkedKeys: this.state.checkedKeys,
+          onSelect: this.onSelect, selectedKeys: this.state.selectedKeys },
+        loop(gData)
       )
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+    );
+  }
+});
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleCheck</span>(<span class="hljs-params">info</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'check: '</span>, info);
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React, { PropTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">const</span> z = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">const</span> gData = [];
+
+<span class="hljs-keyword">const</span> generateData = (_level, _preKey, _tns) =&gt; {
+  <span class="hljs-keyword">const</span> preKey = _preKey || <span class="hljs-string">'0'</span>;
+  <span class="hljs-keyword">const</span> tns = _tns || gData;
+
+  <span class="hljs-keyword">const</span> children = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; x; i++) {
+    <span class="hljs-keyword">const</span> key = <span class="hljs-string">`<span class="hljs-subst">${preKey}</span>-<span class="hljs-subst">${i}</span>`</span>;
+    tns.push({ title: key, key: key });
+    <span class="hljs-keyword">if</span> (i &lt; y) {
+      children.push(key);
+    }
+  }
+  <span class="hljs-keyword">if</span> (_level &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> tns;
+  }
+  <span class="hljs-keyword">const</span> __level = _level - <span class="hljs-number">1</span>;
+  children.forEach((key, index) =&gt; {
+    tns[index].children = [];
+    <span class="hljs-keyword">return</span> generateData(__level, key, tns[index].children);
+  });
+};
+generateData(z);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loopData</span>(<span class="hljs-params">data, callback</span>) </span>{
+  <span class="hljs-keyword">const</span> loop = (d, level = <span class="hljs-number">0</span>) =&gt; {
+    d.forEach((item, index) =&gt; {
+      <span class="hljs-keyword">const</span> pos = <span class="hljs-string">`<span class="hljs-subst">${level}</span>-<span class="hljs-subst">${index}</span>`</span>;
+      <span class="hljs-keyword">if</span> (item.children) {
+        loop(item.children, pos);
+      }
+      callback(item, index, pos);
+    });
+  };
+  loop(data);
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandAll</span> <span class="hljs-attribute">checkable</span> <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{handleCheck}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, mountNode);</span></code></pre></div>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFilterExpandedKeys</span>(<span class="hljs-params">data, expandedKeys</span>) </span>{
+  <span class="hljs-keyword">const</span> expandedPosArr = [];
+  loopData(data, (item, index, pos) =&gt; {
+    <span class="hljs-keyword">if</span> (expandedKeys.indexOf(item.key) &gt; -<span class="hljs-number">1</span>) {
+      expandedPosArr.push(pos);
+    }
+  });
+  <span class="hljs-keyword">const</span> filterExpandedKeys = [];
+  loopData(data, (item, index, pos) =&gt; {
+    expandedPosArr.forEach(p =&gt; {
+      <span class="hljs-keyword">if</span> ((pos.split(<span class="hljs-string">'-'</span>).length &lt; p.split(<span class="hljs-string">'-'</span>).length
+        &amp;&amp; p.indexOf(pos) === <span class="hljs-number">0</span> || pos === p)
+        &amp;&amp; filterExpandedKeys.indexOf(item.key) === -<span class="hljs-number">1</span>) {
+        filterExpandedKeys.push(item.key);
+      }
+    });
+  });
+  <span class="hljs-keyword">return</span> filterExpandedKeys;
+}
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  propTypes: {
+    multiple: PropTypes.bool,
+  },
+  getDefaultProps() {
+    <span class="hljs-keyword">return</span> {
+      multiple: <span class="hljs-literal">true</span>,
+    };
+  },
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      expandedKeys: getFilterExpandedKeys(gData, [<span class="hljs-string">'0-0-0'</span>, <span class="hljs-string">'0-0-1'</span>]),
+      checkedKeys: [<span class="hljs-string">'0-0-0'</span>],
+      selectedKeys: [],
+    };
+  },
+  onExpand(treeNode, expand, expandedKeys) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onExpand'</span>, expand, expandedKeys);
+    <span class="hljs-keyword">const</span> index = expandedKeys.indexOf(treeNode.props.eventKey);
+    <span class="hljs-keyword">if</span> (expand) {
+      <span class="hljs-keyword">if</span> (index &gt; -<span class="hljs-number">1</span>) {
+        expandedKeys.splice(index, <span class="hljs-number">1</span>);
+      }
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span> (index === -<span class="hljs-number">1</span>) {
+        expandedKeys.push(treeNode.props.eventKey);
+      }
+    }
+    <span class="hljs-keyword">this</span>.setState({
+      expandedKeys: expandedKeys,
+    });
+  },
+  onCheck(checkedKeys) {
+    <span class="hljs-keyword">this</span>.setState({
+      checkedKeys,
+      selectedKeys: [<span class="hljs-string">'0-3'</span>, <span class="hljs-string">'0-4'</span>],
+    });
+  },
+  onSelect(selectedKeys, info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onSelect'</span>, info);
+    <span class="hljs-keyword">this</span>.setState({
+      selectedKeys,
+    });
+  },
+  render() {
+    <span class="hljs-keyword">const</span> loop = data =&gt; {
+      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
+        <span class="hljs-keyword">if</span> (item.children) {
+          <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">disableCheckbox</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>' ? <span class="hljs-attribute">true</span> <span class="hljs-attribute">:</span> <span class="hljs-attribute">false</span>}&gt;</span>
+            {loop(item.children)}
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>)</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span>/&gt;</span>;</span>
+      });
+    };
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>controlled<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">checkable</span> <span class="hljs-attribute">multiple</span>=<span class="hljs-value">{this.props.multiple}</span> <span class="hljs-attribute">defaultExpandAll</span>
+        <span class="hljs-attribute">onExpand</span>=<span class="hljs-value">{this.onExpand}</span> <span class="hljs-attribute">expandedKeys</span>=<span class="hljs-value">{this.state.expandedKeys}</span>
+        <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{this.onCheck}</span> <span class="hljs-attribute">checkedKeys</span>=<span class="hljs-value">{this.state.checkedKeys}</span>
+        <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{this.state.selectedKeys}</span>&gt;</span>
+        {loop(gData)}
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
+  },
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-checkbox">可选择</a>
+      <a href="#demo-basic-controlled">受控操作示例</a>
     </div>
-    <p>提供复选框操作功能。</p>
+    <p>受控操作示例</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-dynamic">
@@ -989,140 +1262,200 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
 var _antd = require('antd');
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var TreeNode = _antd.Tree.TreeNode;
 
-var asyncTree = [{
-  name: 'pNode 01',
-  key: '0-0'
-}];
+function generateTreeNodes(treeNode) {
+  var arr = [];
+  var key = treeNode.props.eventKey;
+  for (var i = 0; i < 3; i++) {
+    arr.push({ name: 'leaf ' + key + '-' + i, key: key + '-' + i });
+  }
+  return arr;
+}
 
-var generateTreeNodes = function generateTreeNodes() {
-  return [{
-    name: '伯约',
-    key: '0-0-0'
-  }];
-};
-
-var TreeDemo = React.createClass({
-  displayName: 'TreeDemo',
-  timeout: function timeout() {
-    var _this = this;
-
-    var duration = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
-
-    return new Promise(function (resolve) {
-      setTimeout(resolve.bind(_this), duration);
+function setLeaf(treeData, curKey, level) {
+  var loopLeaf = function loopLeaf(data, lev) {
+    var l = lev - 1;
+    data.forEach(function (item) {
+      if (item.key.length > curKey.length ? item.key.indexOf(curKey) !== 0 : curKey.indexOf(item.key) !== 0) {
+        return;
+      }
+      if (item.children) {
+        loopLeaf(item.children, l);
+      } else if (l < 1) {
+        item.isLeaf = true;
+      }
     });
-  },
+  };
+  loopLeaf(treeData, level + 1);
+}
+
+function getNewTreeData(treeData, curKey, child, level) {
+  var loop = function loop(data) {
+    if (level < 1 || curKey.length - 3 > level * 2) return;
+    data.forEach(function (item) {
+      if (curKey.indexOf(item.key) === 0) {
+        if (item.children) {
+          loop(item.children);
+        } else {
+          item.children = child;
+        }
+      }
+    });
+  };
+  loop(treeData);
+  setLeaf(treeData, curKey, level);
+}
+
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
+
+  propTypes: {},
   getInitialState: function getInitialState() {
     return {
       treeData: []
     };
   },
   componentDidMount: function componentDidMount() {
-    var _this2 = this;
+    var _this = this;
 
-    this.timeout(1000).then(function () {
-      _this2.setState({
-        treeData: asyncTree
+    setTimeout(function () {
+      _this.setState({
+        treeData: [{ name: 'pNode 01', key: '0-0' }, { name: 'pNode 02', key: '0-1' }, { name: 'pNode 03', key: '0-2', isLeaf: true }]
       });
-      return asyncTree;
-    });
+    }, 100);
   },
-  handleSelect: function handleSelect(info) {
+  onSelect: function onSelect(info) {
     console.log('selected', info);
   },
-  handleDataLoaded: function handleDataLoaded(treeNode) {
-    var _this3 = this;
+  onLoadData: function onLoadData(treeNode) {
+    var _this2 = this;
 
-    return this.timeout(1000).then(function () {
-      var child = generateTreeNodes();
-      var treeData = [].concat(_toConsumableArray(_this3.state.treeData));
-      treeData.forEach(function (item) {
-        if (item.key === treeNode.props.eventKey) {
-          item.children = child;
-        }
-      });
-      _this3.setState({ treeData: treeData });
-      return child;
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        var treeData = [].concat(_toConsumableArray(_this2.state.treeData));
+        getNewTreeData(treeData, treeNode.props.eventKey, generateTreeNodes(treeNode), 2);
+        _this2.setState({ treeData: treeData });
+        resolve();
+      }, 500);
     });
   },
   render: function render() {
     var loop = function loop(data) {
       return data.map(function (item) {
         if (item.children) {
-          return React.createElement(
+          return _react2.default.createElement(
             TreeNode,
             { title: item.name, key: item.key },
             loop(item.children)
           );
-        } else {
-          return React.createElement(TreeNode, { title: item.name, key: item.key });
         }
+        return _react2.default.createElement(TreeNode, { title: item.name, key: item.key, isLeaf: item.isLeaf, disabled: item.key === '0-0-0' ? true : false });
       });
     };
-    var parseTreeNode = function parseTreeNode(data) {
-      return loop(data);
-    };
-    var treeNodes = parseTreeNode(this.state.treeData);
-    return React.createElement(
-      _antd.Tree,
-      { onSelect: this.handleSelect, onDataLoaded: this.handleDataLoaded, showLine: false },
-      treeNodes
+    var treeNodes = loop(this.state.treeData);
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'h2',
+        null,
+        'dynamic render'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { onSelect: this.onSelect, loadData: this.onLoadData },
+        treeNodes
+      )
     );
   }
 });
 
-ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
-<span class="hljs-keyword">const</span> asyncTree = [{
-  name: <span class="hljs-string">'pNode 01'</span>,
-  key: <span class="hljs-string">'0-0'</span>
-}];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateTreeNodes</span>(<span class="hljs-params">treeNode</span>) </span>{
+  <span class="hljs-keyword">const</span> arr = [];
+  <span class="hljs-keyword">const</span> key = treeNode.props.eventKey;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+    arr.push({ name: <span class="hljs-string">`leaf <span class="hljs-subst">${key}</span>-<span class="hljs-subst">${i}</span>`</span>, key: <span class="hljs-string">`<span class="hljs-subst">${key}</span>-<span class="hljs-subst">${i}</span>`</span> });
+  }
+  <span class="hljs-keyword">return</span> arr;
+}
 
-<span class="hljs-keyword">const</span> generateTreeNodes = () =&gt; {
-  <span class="hljs-keyword">return</span> [{
-    name: <span class="hljs-string">'伯约'</span>,
-    key: <span class="hljs-string">'0-0-0'</span>
-  }];
-};
-
-<span class="hljs-keyword">const</span> TreeDemo = React.createClass({
-  timeout(duration = <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
-      setTimeout(resolve.bind(<span class="hljs-keyword">this</span>), duration);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setLeaf</span>(<span class="hljs-params">treeData, curKey, level</span>) </span>{
+  <span class="hljs-keyword">const</span> loopLeaf = (data, lev) =&gt; {
+    <span class="hljs-keyword">const</span> l = lev - <span class="hljs-number">1</span>;
+    data.forEach((item) =&gt; {
+      <span class="hljs-keyword">if</span> ((item.key.length &gt; curKey.length) ? item.key.indexOf(curKey) !== <span class="hljs-number">0</span> :
+        curKey.indexOf(item.key) !== <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span>;
+      }
+      <span class="hljs-keyword">if</span> (item.children) {
+        loopLeaf(item.children, l);
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (l &lt; <span class="hljs-number">1</span>) {
+        item.isLeaf = <span class="hljs-literal">true</span>;
+      }
     });
-  },
+  };
+  loopLeaf(treeData, level + <span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getNewTreeData</span>(<span class="hljs-params">treeData, curKey, child, level</span>) </span>{
+  <span class="hljs-keyword">const</span> loop = (data) =&gt; {
+    <span class="hljs-keyword">if</span> (level &lt; <span class="hljs-number">1</span> || curKey.length - <span class="hljs-number">3</span> &gt; level * <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span>;
+    data.forEach((item) =&gt; {
+      <span class="hljs-keyword">if</span> (curKey.indexOf(item.key) === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">if</span> (item.children) {
+          loop(item.children);
+        } <span class="hljs-keyword">else</span> {
+          item.children = child;
+        }
+      }
+    });
+  };
+  loop(treeData);
+  setLeaf(treeData, curKey, level);
+}
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  propTypes: {},
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      treeData: []
+      treeData: [],
     };
   },
   componentDidMount() {
-    <span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">1000</span>).then(() =&gt; {
+    setTimeout(() =&gt; {
       <span class="hljs-keyword">this</span>.setState({
-        treeData: asyncTree
+        treeData: [
+          { name: <span class="hljs-string">'pNode 01'</span>, key: <span class="hljs-string">'0-0'</span> },
+          { name: <span class="hljs-string">'pNode 02'</span>, key: <span class="hljs-string">'0-1'</span> },
+          { name: <span class="hljs-string">'pNode 03'</span>, key: <span class="hljs-string">'0-2'</span>, isLeaf: <span class="hljs-literal">true</span> },
+        ],
       });
-      <span class="hljs-keyword">return</span> asyncTree;
-    });
+    }, <span class="hljs-number">100</span>);
   },
-  handleSelect(info) {
+  onSelect(info) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected'</span>, info);
   },
-  handleDataLoaded(treeNode) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">1000</span>).then(() =&gt; {
-      <span class="hljs-keyword">const</span> child = generateTreeNodes();
-      <span class="hljs-keyword">const</span> treeData = [...this.state.treeData];
-      treeData.forEach((item) =&gt; {
-        <span class="hljs-keyword">if</span> (item.key === treeNode.props.eventKey) {
-          item.children = child;
-        }
-      });
-      <span class="hljs-keyword">this</span>.setState({treeData});
-      <span class="hljs-keyword">return</span> child;
+  onLoadData(treeNode) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+      setTimeout(() =&gt; {
+        <span class="hljs-keyword">const</span> treeData = [...this.state.treeData];
+        getNewTreeData(treeData, treeNode.props.eventKey, generateTreeNodes(treeNode), <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">this</span>.setState({ treeData });
+        resolve();
+      }, <span class="hljs-number">500</span>);
     });
   },
   render() {
@@ -1130,28 +1463,560 @@ ReactDOM.render(React.createElement(TreeDemo, null), mountNode);})()</script><di
       <span class="hljs-keyword">return</span> data.map((item) =&gt; {
         <span class="hljs-keyword">if</span> (item.children) {
           <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
-        } <span class="hljs-keyword">else</span> {
-          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> /&gt;</span>;</span>
         }
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.name}</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">isLeaf</span>=<span class="hljs-value">{item.isLeaf}</span> <span class="hljs-attribute">disabled</span>=<span class="hljs-value">{item.key</span> =<span class="hljs-value">==</span> '<span class="hljs-attribute">0-0-0</span>' ? <span class="hljs-attribute">true</span> <span class="hljs-attribute">:</span> <span class="hljs-attribute">false</span>} /&gt;</span>;</span>
       });
     };
-    <span class="hljs-keyword">const</span> parseTreeNode = data =&gt; loop(data);
-    <span class="hljs-keyword">let</span> treeNodes = parseTreeNode(<span class="hljs-keyword">this</span>.state.treeData);
+    <span class="hljs-keyword">const</span> treeNodes = loop(<span class="hljs-keyword">this</span>.state.treeData);
     <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.handleSelect}</span> <span class="hljs-attribute">onDataLoaded</span>=<span class="hljs-value">{this.handleDataLoaded}</span> <span class="hljs-attribute">showLine</span>=<span class="hljs-value">{false}</span>&gt;</span>
-        {treeNodes}
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>dynamic render<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">loadData</span>=<span class="hljs-value">{this.onLoadData}</span>&gt;</span>
+          {treeNodes}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
-  }
+  },
 });
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeDemo</span> /&gt;</span>, mountNode);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
       <a href="#demo-dynamic">异步数据加载</a>
     </div>
     <p>异步加载数据</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>
+  </div>
+  <div class="code-boxes-col-2-1"><div class="code-box" id="demo-contextmenu">
+  <div class="code-box-demo">
+    <div id="components-tree-demo-contextmenu"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-contextmenu');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var _objectAssign = require('object-assign');
+
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TreeNode = _antd.Tree.TreeNode;
+
+function contains(root, n) {
+  var node = n;
+  while (node) {
+    if (node === root) {
+      return true;
+    }
+    node = node.parentNode;
+  }
+  return false;
+}
+
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
+
+  propTypes: {},
+  componentDidMount: function componentDidMount() {
+    this.getContainer();
+    // console.log(ReactDOM.findDOMNode(this), this.cmContainer);
+    console.log(contains(ReactDOM.findDOMNode(this), this.cmContainer));
+  },
+  componentWillUnmount: function componentWillUnmount() {
+    if (this.cmContainer) {
+      ReactDOM.unmountComponentAtNode(this.cmContainer);
+      document.body.removeChild(this.cmContainer);
+      this.cmContainer = null;
+    }
+  },
+  onSelect: function onSelect(info) {
+    console.log('selected', info);
+  },
+  onRightClick: function onRightClick(info) {
+    console.log('right click', info);
+    this.renderCm(info);
+  },
+  onMouseEnter: function onMouseEnter(info) {
+    console.log('enter', info);
+    this.renderCm(info);
+  },
+  onMouseLeave: function onMouseLeave(info) {
+    console.log('leave', info);
+  },
+  getContainer: function getContainer() {
+    if (!this.cmContainer) {
+      this.cmContainer = document.createElement('div');
+      document.body.appendChild(this.cmContainer);
+    }
+    return this.cmContainer;
+  },
+  renderCm: function renderCm(info) {
+    if (this.toolTip) {
+      ReactDOM.unmountComponentAtNode(this.cmContainer);
+      this.toolTip = null;
+    }
+    this.toolTip = _react2.default.createElement(
+      _antd.Tooltip,
+      { trigger: 'click', placement: 'bottomRight', prefixCls: 'rc-tree-contextmenu', defaultVisible: true, overlay: _react2.default.createElement(
+          'h4',
+          null,
+          info.node.props.title
+        ) },
+      _react2.default.createElement('span', null)
+    );
+
+    var container = this.getContainer();
+    (0, _objectAssign2.default)(this.cmContainer.style, {
+      position: 'absolute',
+      left: info.event.pageX + 'px',
+      top: info.event.pageY + 'px'
+    });
+
+    ReactDOM.render(this.toolTip, container);
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'h2',
+        null,
+        'right click contextmenu'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { onRightClick: this.onRightClick, onSelect: this.onSelect,
+          defaultSelectedKeys: ['0-1', '0-1-1'],
+          multiple: true, defaultExpandAll: true, showLine: true },
+        _react2.default.createElement(
+          TreeNode,
+          { title: 'parent 1', key: '0-1' },
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-0', key: '0-1-1' },
+            _react2.default.createElement(TreeNode, { title: 'leaf0' }),
+            _react2.default.createElement(TreeNode, { title: 'leaf1' }),
+            _react2.default.createElement(TreeNode, { title: 'leaf2' })
+          ),
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-1' },
+            _react2.default.createElement(TreeNode, { title: 'leaf' })
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'hover popup contextmenu'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { onMouseEnter: this.onMouseEnter, onMouseLeave: this.onMouseLeave, onSelect: this.onSelect, multiple: true, defaultExpandAll: true, showLine: true },
+        _react2.default.createElement(
+          TreeNode,
+          { title: 'parent 1', key: '0-1' },
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-0', key: '0-1-1' },
+            _react2.default.createElement(TreeNode, { title: 'leaf' }),
+            _react2.default.createElement(TreeNode, { title: 'leaf' })
+          ),
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-1' },
+            _react2.default.createElement(TreeNode, { title: 'leaf' })
+          )
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree, Tooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> assign <span class="hljs-keyword">from</span> <span class="hljs-string">'object-assign'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">contains</span>(<span class="hljs-params">root, n</span>) </span>{
+  <span class="hljs-keyword">let</span> node = n;
+  <span class="hljs-keyword">while</span> (node) {
+    <span class="hljs-keyword">if</span> (node === root) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+    node = node.parentNode;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  propTypes: {},
+  componentDidMount() {
+    <span class="hljs-keyword">this</span>.getContainer();
+    <span class="hljs-comment">// console.log(ReactDOM.findDOMNode(this), this.cmContainer);</span>
+    <span class="hljs-built_in">console</span>.log(contains(ReactDOM.findDOMNode(<span class="hljs-keyword">this</span>), <span class="hljs-keyword">this</span>.cmContainer));
+  },
+  componentWillUnmount() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.cmContainer) {
+      ReactDOM.unmountComponentAtNode(<span class="hljs-keyword">this</span>.cmContainer);
+      <span class="hljs-built_in">document</span>.body.removeChild(<span class="hljs-keyword">this</span>.cmContainer);
+      <span class="hljs-keyword">this</span>.cmContainer = <span class="hljs-literal">null</span>;
+    }
+  },
+  onSelect(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected'</span>, info);
+  },
+  onRightClick(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'right click'</span>, info);
+    <span class="hljs-keyword">this</span>.renderCm(info);
+  },
+  onMouseEnter(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'enter'</span>, info);
+    <span class="hljs-keyword">this</span>.renderCm(info);
+  },
+  onMouseLeave(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'leave'</span>, info);
+  },
+  getContainer() {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.cmContainer) {
+      <span class="hljs-keyword">this</span>.cmContainer = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+      <span class="hljs-built_in">document</span>.body.appendChild(<span class="hljs-keyword">this</span>.cmContainer);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.cmContainer;
+  },
+  renderCm(info) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.toolTip) {
+      ReactDOM.unmountComponentAtNode(<span class="hljs-keyword">this</span>.cmContainer);
+      <span class="hljs-keyword">this</span>.toolTip = <span class="hljs-literal">null</span>;
+    }
+    <span class="hljs-keyword">this</span>.toolTip = (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">trigger</span>=<span class="hljs-value">"click"</span> <span class="hljs-attribute">placement</span>=<span class="hljs-value">"bottomRight"</span> <span class="hljs-attribute">prefixCls</span>=<span class="hljs-value">"rc-tree-contextmenu"</span> <span class="hljs-attribute">defaultVisible</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{&lt;h4</span>&gt;</span>{info.node.props.title}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>}&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span>)</span>;
+
+    <span class="hljs-keyword">const</span> container = <span class="hljs-keyword">this</span>.getContainer();
+    assign(<span class="hljs-keyword">this</span>.cmContainer.style, {
+      position: <span class="hljs-string">'absolute'</span>,
+      left: info.event.pageX + <span class="hljs-string">'px'</span>,
+      top: info.event.pageY + <span class="hljs-string">'px'</span>,
+    });
+
+    ReactDOM.render(<span class="hljs-keyword">this</span>.toolTip, container);
+  },
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>right click contextmenu<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onRightClick</span>=<span class="hljs-value">{this.onRightClick}</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span>
+          <span class="hljs-attribute">defaultSelectedKeys</span>=<span class="hljs-value">{['0-1',</span> '<span class="hljs-attribute">0-1-1</span>']}
+          <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">defaultExpandAll</span> <span class="hljs-attribute">showLine</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-0"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1-1"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf0"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf1"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf2"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>hover popup contextmenu<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">onMouseEnter</span>=<span class="hljs-value">{this.onMouseEnter}</span> <span class="hljs-attribute">onMouseLeave</span>=<span class="hljs-value">{this.onMouseLeave}</span> <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">defaultExpandAll</span> <span class="hljs-attribute">showLine</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-0"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1-1"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  },
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-contextmenu">右键菜单</a>
+    </div>
+    <p>右键菜单示例</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-draggable">
+  <div class="code-box-demo">
+    <div id="components-tree-demo-draggable"></div>
+    <script>mountNode = document.getElementById('components-tree-demo-draggable');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var TreeNode = _antd.Tree.TreeNode;
+
+var x = 3;
+var y = 2;
+var z = 1;
+var gData = [];
+
+var generateData = function generateData(_level, _preKey, _tns) {
+  var preKey = _preKey || '0';
+  var tns = _tns || gData;
+
+  var children = [];
+  for (var i = 0; i < x; i++) {
+    var key = preKey + '-' + i;
+    tns.push({ title: key, key: key });
+    if (i < y) {
+      children.push(key);
+    }
+  }
+  if (_level < 0) {
+    return tns;
+  }
+  var __level = _level - 1;
+  children.forEach(function (key, index) {
+    tns[index].children = [];
+    return generateData(__level, key, tns[index].children);
+  });
+};
+generateData(z);
+
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
+  getInitialState: function getInitialState() {
+    return {
+      gData: gData,
+      expandedKeys: ['0-0', '0-0-0', '0-0-0-0']
+    };
+  },
+  onDragStart: function onDragStart() {},
+  onDragEnter: function onDragEnter(info) {
+    // console.log(info);
+    this.setState({
+      expandedKeys: info.expandedKeys
+    });
+  },
+  onDrop: function onDrop(info) {
+    console.log(info);
+    var dropKey = info.node.props.eventKey;
+    var dragKey = info.dragNode.props.eventKey;
+    // const dragNodesKeys = info.dragNodesKeys;
+    var loop = function loop(data, key, callback) {
+      data.forEach(function (item, index, arr) {
+        if (item.key === key) {
+          return callback(item, index, arr);
+        }
+        if (item.children) {
+          return loop(item.children, key, callback);
+        }
+      });
+    };
+    var data = [].concat(_toConsumableArray(this.state.gData));
+    var dragObj = undefined;
+    loop(data, dragKey, function (item, index, arr) {
+      arr.splice(index, 1);
+      dragObj = item;
+    });
+    if (info.dropToGap) {
+      var ar = undefined;
+      var i = undefined;
+      loop(data, dropKey, function (item, index, arr) {
+        ar = arr;
+        i = index;
+      });
+      ar.splice(i, 0, dragObj);
+    } else {
+      loop(data, dropKey, function (item) {
+        item.children = item.children || [];
+        // where to insert 示例添加到尾部，可以是随意位置
+        item.children.push(dragObj);
+      });
+    }
+    this.setState({
+      gData: data,
+      expandedKeys: info.originExpandedKeys
+    });
+  },
+  render: function render() {
+    var loop = function loop(data) {
+      return data.map(function (item) {
+        if (item.children) {
+          return _react2.default.createElement(
+            TreeNode,
+            { key: item.key, title: item.key },
+            loop(item.children)
+          );
+        }
+        return _react2.default.createElement(TreeNode, { key: item.key, title: item.key });
+      });
+    };
+    return _react2.default.createElement(
+      'div',
+      { className: 'draggable-demo' },
+      _react2.default.createElement(
+        'h2',
+        null,
+        'draggable '
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'drag a node into another node'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'draggable-container' },
+        _react2.default.createElement(
+          _antd.Tree,
+          { defaultExpandedKeys: this.state.expandedKeys, openAnimation: {}, draggable: true,
+            onDragStart: this.onDragStart,
+            onDragEnter: this.onDragEnter,
+            onDrop: this.onDrop },
+          loop(this.state.gData)
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">const</span> z = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">const</span> gData = [];
+
+<span class="hljs-keyword">const</span> generateData = (_level, _preKey, _tns) =&gt; {
+  <span class="hljs-keyword">const</span> preKey = _preKey || <span class="hljs-string">'0'</span>;
+  <span class="hljs-keyword">const</span> tns = _tns || gData;
+
+  <span class="hljs-keyword">const</span> children = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; x; i++) {
+    <span class="hljs-keyword">const</span> key = <span class="hljs-string">`<span class="hljs-subst">${preKey}</span>-<span class="hljs-subst">${i}</span>`</span>;
+    tns.push({ title: key, key: key });
+    <span class="hljs-keyword">if</span> (i &lt; y) {
+      children.push(key);
+    }
+  }
+  <span class="hljs-keyword">if</span> (_level &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> tns;
+  }
+  <span class="hljs-keyword">const</span> __level = _level - <span class="hljs-number">1</span>;
+  children.forEach((key, index) =&gt; {
+    tns[index].children = [];
+    <span class="hljs-keyword">return</span> generateData(__level, key, tns[index].children);
+  });
+};
+generateData(z);
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      gData: gData,
+      expandedKeys: [<span class="hljs-string">'0-0'</span>, <span class="hljs-string">'0-0-0'</span>, <span class="hljs-string">'0-0-0-0'</span>],
+    };
+  },
+  onDragStart() {
+  },
+  onDragEnter(info) {
+    <span class="hljs-comment">// console.log(info);</span>
+    <span class="hljs-keyword">this</span>.setState({
+      expandedKeys: info.expandedKeys,
+    });
+  },
+  onDrop(info) {
+    <span class="hljs-built_in">console</span>.log(info);
+    <span class="hljs-keyword">const</span> dropKey = info.node.props.eventKey;
+    <span class="hljs-keyword">const</span> dragKey = info.dragNode.props.eventKey;
+    <span class="hljs-comment">// const dragNodesKeys = info.dragNodesKeys;</span>
+    <span class="hljs-keyword">const</span> loop = (data, key, callback) =&gt; {
+      data.forEach((item, index, arr) =&gt; {
+        <span class="hljs-keyword">if</span> (item.key === key) {
+          <span class="hljs-keyword">return</span> callback(item, index, arr);
+        }
+        <span class="hljs-keyword">if</span> (item.children) {
+          <span class="hljs-keyword">return</span> loop(item.children, key, callback);
+        }
+      });
+    };
+    <span class="hljs-keyword">const</span> data = [...this.state.gData];
+    <span class="hljs-keyword">let</span> dragObj;
+    loop(data, dragKey, (item, index, arr) =&gt; {
+      arr.splice(index, <span class="hljs-number">1</span>);
+      dragObj = item;
+    });
+    <span class="hljs-keyword">if</span> (info.dropToGap) {
+      <span class="hljs-keyword">let</span> ar;
+      <span class="hljs-keyword">let</span> i;
+      loop(data, dropKey, (item, index, arr) =&gt; {
+        ar = arr;
+        i = index;
+      });
+      ar.splice(i, <span class="hljs-number">0</span>, dragObj);
+    } <span class="hljs-keyword">else</span> {
+      loop(data, dropKey, (item) =&gt; {
+        item.children = item.children || [];
+        <span class="hljs-comment">// where to insert 示例添加到尾部，可以是随意位置</span>
+        item.children.push(dragObj);
+      });
+    }
+    <span class="hljs-keyword">this</span>.setState({
+      gData: data,
+      expandedKeys: info.originExpandedKeys,
+    });
+  },
+  render() {
+    <span class="hljs-keyword">const</span> loop = data =&gt; {
+      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
+        <span class="hljs-keyword">if</span> (item.children) {
+          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
+        }
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span> /&gt;</span>;</span>
+      });
+    };
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"draggable-demo"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>draggable <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>drag a node into another node<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"draggable-container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandedKeys</span>=<span class="hljs-value">{this.state.expandedKeys}</span> <span class="hljs-attribute">openAnimation</span>=<span class="hljs-value">{{}}</span> <span class="hljs-attribute">draggable</span>
+          <span class="hljs-attribute">onDragStart</span>=<span class="hljs-value">{this.onDragStart}</span>
+          <span class="hljs-attribute">onDragEnter</span>=<span class="hljs-value">{this.onDragEnter}</span>
+          <span class="hljs-attribute">onDrop</span>=<span class="hljs-value">{this.onDrop}</span>&gt;</span>
+          {loop(this.state.gData)}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
+  },
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-draggable">拖动示例</a>
+    </div>
+    <p>拖动示例</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -1164,13 +2029,18 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     </a>
   </li>
   <li>
-    <a title="可选择" href="#demo-checkbox">
-      <span>可选择</span>
+    <a title="右键菜单" href="#demo-contextmenu">
+      <span>右键菜单</span>
     </a>
   </li>
   <li>
-    <a title="接收外部传参" href="#demo-special">
-      <span>接收外部传参</span>
+    <a title="受控操作示例" href="#demo-basic-controlled">
+      <span>受控操作示例</span>
+    </a>
+  </li>
+  <li>
+    <a title="拖动示例" href="#demo-draggable">
+      <span>拖动示例</span>
     </a>
   </li>
   <li>

@@ -101,20 +101,22 @@ ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search te
       <span class="hljs-string">'ant-search-input'</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-string">'ant-search-input-focus'</span>: <span class="hljs-keyword">this</span>.state.focus,
     });
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">InputGroup</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{searchCls}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{this.props.style}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...this.props</span>} <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleInputChange}</span>
-        <span class="hljs-attribute">onFocus</span>=<span class="hljs-value">{this.handleFocusBlur}</span> <span class="hljs-attribute">onBlur</span>=<span class="hljs-value">{this.handleFocusBlur}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-input-group-wrap"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{btnCls}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleSearch}</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">InputGroup</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">InputGroup</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{searchCls}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{this.props.style}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...this.props</span>} <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleInputChange}</span>
+          <span class="hljs-attribute">onFocus</span>=<span class="hljs-value">{this.handleFocusBlur}</span> <span class="hljs-attribute">onBlur</span>=<span class="hljs-value">{this.handleFocusBlur}</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-input-group-wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{btnCls}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleSearch}</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">InputGroup</span>&gt;</span>
+    )</span>;
   }
 });
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">SearchInput</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"input search text"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">200</span>}} /&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">SearchInput</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"input search text"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} /&gt;</span>
 , mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

@@ -25,9 +25,8 @@ function disabledMinutes(h) {
     return newArray(0, 31);
   } else if (h === 23) {
     return newArray(30, 60);
-  } else {
-    return [];
   }
+  return [];
 }
 
 ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledHours, disabledMinutes: disabledMinutes }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -51,9 +50,8 @@ ReactDOM.render(React.createElement(_antd.TimePicker, { disabledHours: disabledH
     <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">0</span>, <span class="hljs-number">31</span>);
   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (h === <span class="hljs-number">23</span>) {
     <span class="hljs-keyword">return</span> newArray(<span class="hljs-number">30</span>, <span class="hljs-number">60</span>);
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">return</span> [];
   }
+  <span class="hljs-keyword">return</span> [];
 }
 
 ReactDOM.render(

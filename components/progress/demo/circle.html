@@ -11,16 +11,16 @@ var ProgressCircle = _antd.Progress.Circle;
 ReactDOM.render(React.createElement(
   "div",
   null,
-  React.createElement(ProgressCircle, { percent: 30 }),
-  React.createElement(ProgressCircle, { percent: 70, status: "exception", format: React.createElement(_antd.Icon, { type: "exclamation" }) }),
+  React.createElement(ProgressCircle, { percent: 75 }),
+  React.createElement(ProgressCircle, { percent: 70, status: "exception" }),
   React.createElement(ProgressCircle, { percent: 100 })
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Progress } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> ProgressCircle = Progress.Circle;
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{30}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">{&lt;Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"exclamation"</span> /&gt;</span>} /&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{75}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{70}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">"exception"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ProgressCircle</span> <span class="hljs-attribute">percent</span>=<span class="hljs-value">{100}</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   , mountNode);</span></code></pre></div><style>

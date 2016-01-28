@@ -24,8 +24,8 @@ Notification 通知提醒框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Notification 通知提醒框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Notification 通知提醒框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Notification 通知提醒框 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Notification 通知提醒框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Notification 通知提醒框 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Notification 通知提醒框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -582,8 +593,8 @@ Notification 通知提醒框 - Ant Design
 <li><code>notification.error(config)</code></li>
 <li><code>notification.info(config)</code></li>
 <li><code>notification.warn(config)</code></li>
-<li><code>notification.open(config)</code></li>
 <li><code>notification.close(key: String)</code></li>
+<li><code>notification.destroy()</code></li>
 </ul>
 <p>config 参数如下：</p>
 <table>
@@ -686,7 +697,7 @@ ReactDOM.render(React.createElement(
   '打开通知提醒框'
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   notification.open({
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案'</span>
@@ -746,8 +757,8 @@ ReactDOM.render(React.createElement(
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> openNotificationWithIcon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-keyword">const</span> openNotificationWithIcon = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">type</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     notification[type]({
       message: <span class="hljs-string">'这是标题'</span>,
       description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>
@@ -755,11 +766,12 @@ ReactDOM.render(React.createElement(
   };
 };
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('success')}</span>&gt;</span>成功<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('info')}</span>&gt;</span>消息<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('warn')}</span>&gt;</span>警告<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{openNotificationWithIcon('error')}</span>&gt;</span>错误<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 , mountNode);</span></code></pre></div><style>
 .code-box-demo .ant-btn {
@@ -817,19 +829,21 @@ ReactDOM.render(React.createElement(
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'我被默认的关闭按钮关闭了！'</span>);
 };
 
-<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> key = <span class="hljs-string">'open'</span> + <span class="hljs-built_in">Date</span>.now();
-  <span class="hljs-keyword">const</span> btnClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> btnClick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-comment">// 隐藏提醒框</span>
     notification.close(key);
   };
-  <span class="hljs-keyword">const</span> btn = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{btnClick}</span>&gt;</span>
-    自定义关闭按钮并触发回调函数
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>;</span>
+  <span class="hljs-keyword">const</span> btn = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{btnClick}</span>&gt;</span>
+      自定义关闭按钮并触发回调函数
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  )</span>;
   notification.open({
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>,
@@ -877,7 +891,7 @@ ReactDOM.render(React.createElement(
   '打开通知提醒框'
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭'</span>,
@@ -928,11 +942,11 @@ ReactDOM.render(React.createElement(
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'我被默认的关闭按钮关闭了！'</span>);
 };
 
-<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> args = {
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>,

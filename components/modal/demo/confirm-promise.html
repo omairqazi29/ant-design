@@ -28,16 +28,16 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> confirm = Modal.confirm;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConfirm</span>(<span class="hljs-params"></span>) </span>{
   confirm({
     title: <span class="hljs-string">'您是否确认要删除这项内容'</span>,
     content: <span class="hljs-string">'点确认 1 秒后关闭'</span>,
-    onOk: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve</span>) </span>{
+    onOk() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
         setTimeout(resolve, <span class="hljs-number">1000</span>);
       });
     },
-    onCancel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+    onCancel() {}
   });
 }
 

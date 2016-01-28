@@ -40,19 +40,21 @@ ReactDOM.render(React.createElement(
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, notification } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> close = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'我被默认的关闭按钮关闭了！'</span>);
 };
 
-<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> key = <span class="hljs-string">'open'</span> + <span class="hljs-built_in">Date</span>.now();
-  <span class="hljs-keyword">const</span> btnClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> btnClick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-comment">// 隐藏提醒框</span>
     notification.close(key);
   };
-  <span class="hljs-keyword">const</span> btn = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{btnClick}</span>&gt;</span>
-    自定义关闭按钮并触发回调函数
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>;</span>
+  <span class="hljs-keyword">const</span> btn = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{btnClick}</span>&gt;</span>
+      自定义关闭按钮并触发回调函数
+    <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+  )</span>;
   notification.open({
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>,

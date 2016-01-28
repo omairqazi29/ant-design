@@ -25,7 +25,7 @@ var steps = [{
   title: '待运行',
   description: '这里是多信息的描述啊'
 }].map(function (s, i) {
-  return React.createElement(Step, { key: i, title: s.title, status: s.status, description: s.description });
+  return React.createElement(Step, { key: i, title: s.title, description: s.description });
 });
 
 ReactDOM.render(React.createElement(
@@ -51,11 +51,7 @@ ReactDOM.render(React.createElement(
   status: <span class="hljs-string">'wait'</span>,
   title: <span class="hljs-string">'待运行'</span>,
   description: <span class="hljs-string">'这里是多信息的描述啊'</span>
-}].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s, i</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">status</span>=<span class="hljs-value">{s.status}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>
-  )</span>;
-});
+}].map((s, i) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Step</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{i}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{s.title}</span> <span class="hljs-attribute">description</span>=<span class="hljs-value">{s.description}</span> /&gt;</span>)</span>;
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Steps</span>&gt;</span>{steps}<span class="hljs-tag">&lt;/<span class="hljs-title">Steps</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>

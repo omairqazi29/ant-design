@@ -75,15 +75,17 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{marginTop:</span> <span class="hljs-attribute">20</span>}}&gt;</span>你选中的: {this.state.value}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">20</span> }}&gt;</span>你选中的: {this.state.value}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>

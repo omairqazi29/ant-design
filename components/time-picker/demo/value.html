@@ -14,11 +14,8 @@ var Test = React.createClass({
     };
   },
   onChange: function onChange(time) {
-    time = time && time.toLocaleTimeString('zh-CN', {
-      hour12: false
-    });
     console.log(time);
-    this.setState({ time: time });
+    this.setState({ value: time });
   },
   render: function render() {
     return React.createElement(_antd.TimePicker, { value: this.state.value, onChange: this.onChange });
@@ -34,11 +31,8 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     };
   },
   onChange(time) {
-    time = time &amp;&amp; time.toLocaleTimeString(<span class="hljs-string">'zh-CN'</span>, {
-      hour12: <span class="hljs-literal">false</span>
-    });
     <span class="hljs-built_in">console</span>.log(time);
-    <span class="hljs-keyword">this</span>.setState({ time });
+    <span class="hljs-keyword">this</span>.setState({ value: time });
   },
   render() {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TimePicker</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> /&gt;</span>;</span>

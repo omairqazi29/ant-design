@@ -24,8 +24,8 @@ Tag 标签 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Tag 标签 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Tag 标签 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Tag 标签 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Tag 标签 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Tag 标签 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Tag 标签 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -587,13 +598,6 @@ Tag 标签 - Ant Design
 </thead>
 <tbody>
 <tr>
-<td>href</td>
-<td>链接的地址，会传给 a 标签</td>
-<td>string</td>
-<td></td>
-<td>false</td>
-</tr>
-<tr>
 <td>closable</td>
 <td>标签是否可以关闭</td>
 <td>boolean</td>
@@ -602,7 +606,14 @@ Tag 标签 - Ant Design
 </tr>
 <tr>
 <td>onClose</td>
-<td>组合时根据此项判定checked</td>
+<td>关闭时的回调</td>
+<td>function</td>
+<td></td>
+<td>无</td>
+</tr>
+<tr>
+<td>afterClose</td>
+<td>动画关闭后的回调</td>
 <td>function</td>
 <td></td>
 <td>无</td>
@@ -655,8 +666,12 @@ ReactDOM.render(React.createElement(
   ),
   React.createElement(
     _antd.Tag,
-    { href: "http://www.baidu.com" },
-    "标签四（链接）"
+    null,
+    React.createElement(
+      "a",
+      { href: "https://www.alipay.com/", target: "_blank" },
+      "标签四（链接）"
+    )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tag } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
@@ -668,7 +683,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span>&gt;</span>标签一<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span>&gt;</span>标签二<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span> <span class="hljs-attribute">closable</span> <span class="hljs-attribute">onClose</span>=<span class="hljs-value">{onClose}</span>&gt;</span>标签三<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.baidu.com"</span>&gt;</span>标签四（链接）<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://www.alipay.com/"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>标签四（链接）<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -676,6 +691,110 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-basic">基本</a>
     </div>
     <p>简单的标签展示，添加 closable 表示可关闭。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div><div class="code-box" id="demo-control">
+  <div class="code-box-demo">
+    <div id="components-tag-demo-control"></div>
+    <script>mountNode = document.getElementById('components-tag-demo-control');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var index = 2;
+var App = React.createClass({
+  displayName: 'App',
+  getInitialState: function getInitialState() {
+    return {
+      tags: [{ key: 1, name: '标签一' }, { key: 2, name: '标签二' }]
+    };
+  },
+  handleClose: function handleClose(key) {
+    var tags = [].concat(_toConsumableArray(this.state.tags)).filter(function (tag) {
+      return tag.key !== key && tag;
+    });
+    console.log(tags);
+    this.setState({ tags: tags });
+  },
+  addTag: function addTag() {
+    var tags = [].concat(_toConsumableArray(this.state.tags));
+    index += 1;
+    tags.push({ key: index, name: '新标签' + index });
+    this.setState({ tags: tags });
+  },
+  render: function render() {
+    var _this = this;
+
+    return React.createElement(
+      'div',
+      null,
+      this.state.tags.map(function (tag) {
+        return React.createElement(
+          _antd.Tag,
+          { key: tag.key, closable: true, afterClose: _this.handleClose.bind(_this, tag.key) },
+          tag.name
+        );
+      }),
+      React.createElement(
+        'div',
+        null,
+        React.createElement(
+          _antd.Button,
+          { onClick: this.addTag },
+          '添加标签'
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tag, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+
+<span class="hljs-keyword">let</span> index = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">const</span> App = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {
+      tags: [
+        { key: <span class="hljs-number">1</span>, name: <span class="hljs-string">'标签一'</span> },
+        { key: <span class="hljs-number">2</span>, name: <span class="hljs-string">'标签二'</span> },
+      ],
+    };
+  },
+  handleClose(key) {
+    <span class="hljs-keyword">const</span> tags = [...this.state.tags].filter(tag =&gt; (tag.key !== key) &amp;&amp; tag);
+    <span class="hljs-built_in">console</span>.log(tags);
+    <span class="hljs-keyword">this</span>.setState({ tags });
+  },
+  addTag() {
+    <span class="hljs-keyword">const</span> tags = [...this.state.tags];
+    index += <span class="hljs-number">1</span>;
+    tags.push({ key: index, name: <span class="hljs-string">'新标签'</span> + index });
+    <span class="hljs-keyword">this</span>.setState({ tags });
+  },
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        {this.state.tags.map(tag =&gt;
+          <span class="hljs-tag">&lt;<span class="hljs-title">Tag</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{tag.key}</span> <span class="hljs-attribute">closable</span> <span class="hljs-attribute">afterClose</span>=<span class="hljs-value">{this.handleClose.bind(this,</span> <span class="hljs-attribute">tag.key</span>)}&gt;</span>{tag.name}<span class="hljs-tag">&lt;/<span class="hljs-title">Tag</span>&gt;</span>
+        )</span>}
+        &lt;div&gt;
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.addTag}</span>&gt;</span>添加标签<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">App</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-control">数据生成标签</a>
+    </div>
+    <p>用数组生成一组标签。</p>
+<p>使用 <code>afterClose</code> 而不是 <code>onClose</code>，删除时有动画效果。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -739,6 +858,11 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <li>
     <a title="各种类型" href="#demo-colorful">
       <span>各种类型</span>
+    </a>
+  </li>
+  <li>
+    <a title="数据生成标签" href="#demo-control">
+      <span>数据生成标签</span>
     </a>
   </li>
 </ul>

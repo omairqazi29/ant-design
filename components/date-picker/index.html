@@ -24,8 +24,8 @@ DatePicker 日期选择框 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ DatePicker 日期选择框 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ DatePicker 日期选择框 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ DatePicker 日期选择框 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ DatePicker 日期选择框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ DatePicker 日期选择框 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ DatePicker 日期选择框 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -588,18 +599,18 @@ DatePicker 日期选择框 - Ant Design
 <tr>
 <td>value</td>
 <td>日期</td>
-<td>string</td>
+<td>string or Date</td>
 <td>无</td>
 </tr>
 <tr>
 <td>defaultValue</td>
 <td>默认日期</td>
-<td>string</td>
+<td>string or Date</td>
 <td>无</td>
 </tr>
 <tr>
 <td>format</td>
-<td>展示的日期格式</td>
+<td>展示的日期格式，配置参考 <a href="https://github.com/yiminghe/gregorian-calendar-format">GregorianCalendarFormat</a></td>
 <td>string</td>
 <td>&quot;yyyy-MM-dd&quot;</td>
 </tr>
@@ -672,13 +683,17 @@ DatePicker 日期选择框 - Ant Design
 <tr>
 <td>value</td>
 <td>日期</td>
-<td>[string, string]</td>
+<td>[string</td>
+<td>Date, string</td>
+<td>Date]</td>
 <td>无</td>
 </tr>
 <tr>
 <td>defaultValue</td>
 <td>默认日期</td>
-<td>[string, string]</td>
+<td>[string</td>
+<td>Date, string</td>
+<td>Date]</td>
 <td>无</td>
 </tr>
 <tr>
@@ -865,16 +880,18 @@ ReactDOM.render(React.createElement(DateRange, null), mountNode);})()</script><d
     });
   },
   render() {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
-        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
-        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
-        <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
-        <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
-        <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledStartDate}</span>
+          <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.startValue}</span>
+          <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"开始日期"</span>
+          <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">startValue</span>')} /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">disabledDate</span>=<span class="hljs-value">{this.disabledEndDate}</span>
+          <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.endValue}</span>
+          <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"结束日期"</span>
+          <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange.bind(this,</span> '<span class="hljs-attribute">endValue</span>')} /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
   }
 });
 
@@ -953,7 +970,7 @@ ReactDOM.render(React.createElement(_antd.DatePicker, { showTime: true, format: 
 }
 
 ReactDOM.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">160</span>}} /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">160</span> }} /&gt;</span>
 , mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -978,7 +995,7 @@ var disabledDate = function disabledDate(current) {
 
 ReactDOM.render(React.createElement(_antd.DatePicker, { disabledDate: disabledDate }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
-<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">current</span>) </span>{
+<span class="hljs-keyword">const</span> disabledDate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current</span>) </span>{
   <span class="hljs-comment">// can not select days after today</span>
   <span class="hljs-keyword">return</span> current &amp;&amp; current.getTime() &gt; <span class="hljs-built_in">Date</span>.now();
 };
@@ -1013,7 +1030,7 @@ ReactDOM.render(React.createElement(
   null,
   React.createElement(RangePicker, { style: { width: 184 }, onChange: onChange }),
   React.createElement('br', null),
-  React.createElement(RangePicker, { showTime: true, format: 'yyyy-MM-dd HH:mm:ss', onChange: onChange })
+  React.createElement(RangePicker, { showTime: true, format: 'yyyy/MM/dd HH:mm:ss', onChange: onChange })
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> RangePicker = DatePicker.RangePicker;
 
@@ -1021,9 +1038,9 @@ ReactDOM.render(React.createElement(
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'From: '</span>, value[<span class="hljs-number">0</span>], <span class="hljs-string">', to: '</span>, value[<span class="hljs-number">1</span>]);
 }
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{width:</span> <span class="hljs-attribute">184</span>}} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">184</span> }} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy-MM-dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">RangePicker</span> <span class="hljs-attribute">showTime</span> <span class="hljs-attribute">format</span>=<span class="hljs-value">"yyyy/MM/dd HH:mm:ss"</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

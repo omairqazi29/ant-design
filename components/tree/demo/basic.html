@@ -2,48 +2,182 @@
   <div class="code-box-demo">
     <div id="components-tree-demo-basic"></div>
     <script>mountNode = document.getElementById('components-tree-demo-basic');</script>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var _antd = require("antd");
+var _antd = require('antd');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TreeNode = _antd.Tree.TreeNode;
 
-ReactDOM.render(React.createElement(
-  _antd.Tree,
-  { defaultExpandAll: false },
-  React.createElement(
-    TreeNode,
-    { title: "parent 1" },
-    React.createElement(TreeNode, { title: "leaf" }),
-    React.createElement(
-      TreeNode,
-      { title: "parent 1-1" },
-      React.createElement(
-        TreeNode,
-        { title: "parent 2-1" },
-        React.createElement(TreeNode, { title: "leaf" }),
-        React.createElement(TreeNode, { title: "leaf" })
-      ),
-      React.createElement(TreeNode, { title: "leaf" })
-    )
-  )
-), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+var Demo = _react2.default.createClass({
+  displayName: 'Demo',
 
-ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">defaultExpandAll</span>=<span class="hljs-value">{false}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 2-1"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
+  propTypes: {
+    keys: _react.PropTypes.array
+  },
+  getDefaultProps: function getDefaultProps() {
+    return {
+      keys: ['0-0-0', '0-0-1']
+    };
+  },
+  getInitialState: function getInitialState() {
+    var keys = this.props.keys;
+    return {
+      defaultExpandedKeys: keys,
+      defaultSelectedKeys: keys,
+      defaultCheckedKeys: keys,
+      switchIt: true
+    };
+  },
+  onExpand: function onExpand(treeNode, expand, expandedKeys) {
+    console.log('onExpand', expand, expandedKeys);
+  },
+  onSelect: function onSelect(info) {
+    console.log('selected', info);
+  },
+  onCheck: function onCheck(info) {
+    console.log('onCheck', info);
+  },
+  change: function change() {
+    var keys = this.props.keys;
+    this.setState({
+      defaultExpandedKeys: ['0-0', keys[this.state.switchIt ? 0 : 1]],
+      defaultSelectedKeys: [keys[this.state.switchIt ? 0 : 1]],
+      defaultCheckedKeys: [keys[this.state.switchIt ? 1 : 0]],
+      switchIt: !this.state.switchIt
+    });
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { style: { margin: '0 20px' } },
+      _react2.default.createElement(
+        'h2',
+        null,
+        'simple'
+      ),
+      _react2.default.createElement(
+        _antd.Tree,
+        { className: 'myCls', showLine: true, multiple: true, checkable: true,
+          defaultExpandedKeys: this.state.defaultExpandedKeys,
+          onExpand: this.onExpand,
+          defaultSelectedKeys: this.state.defaultSelectedKeys,
+          defaultCheckedKeys: this.state.defaultCheckedKeys,
+          onSelect: this.onSelect, onCheck: this.onCheck },
+        _react2.default.createElement(
+          TreeNode,
+          { title: 'parent 1', key: '0-0' },
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-0', key: '0-0-0', disabled: true },
+            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-0', disableCheckbox: true }),
+            _react2.default.createElement(TreeNode, { title: 'leaf', key: '0-0-0-1' })
+          ),
+          _react2.default.createElement(
+            TreeNode,
+            { title: 'parent 1-1', key: '0-0-1' },
+            _react2.default.createElement(TreeNode, { title: _react2.default.createElement(
+                'span',
+                { style: { color: 'red' } },
+                'sss'
+              ), key: '0-0-1-0' })
+          )
+        )
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'button',
+          { onClick: this.change },
+          'change state'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'defaultXX 的初始化状态不会改变'
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(_react2.default.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Tree } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> TreeNode = Tree.TreeNode;
+<span class="hljs-keyword">import</span> React, { PropTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> Demo = React.createClass({
+  propTypes: {
+    keys: PropTypes.array,
+  },
+  getDefaultProps() {
+    <span class="hljs-keyword">return</span> {
+      keys: [<span class="hljs-string">'0-0-0'</span>, <span class="hljs-string">'0-0-1'</span>],
+    };
+  },
+  getInitialState() {
+    <span class="hljs-keyword">const</span> keys = <span class="hljs-keyword">this</span>.props.keys;
+    <span class="hljs-keyword">return</span> {
+      defaultExpandedKeys: keys,
+      defaultSelectedKeys: keys,
+      defaultCheckedKeys: keys,
+      switchIt: <span class="hljs-literal">true</span>,
+    };
+  },
+  onExpand(treeNode, expand, expandedKeys) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onExpand'</span>, expand, expandedKeys);
+  },
+  onSelect(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected'</span>, info);
+  },
+  onCheck(info) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onCheck'</span>, info);
+  },
+  change() {
+    <span class="hljs-keyword">const</span> keys = <span class="hljs-keyword">this</span>.props.keys;
+    <span class="hljs-keyword">this</span>.setState({
+      defaultExpandedKeys: [<span class="hljs-string">'0-0'</span>, keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>]],
+      defaultSelectedKeys: [keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>]],
+      defaultCheckedKeys: [keys[<span class="hljs-keyword">this</span>.state.switchIt ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>]],
+      switchIt: !<span class="hljs-keyword">this</span>.state.switchIt,
+    });
+  },
+  render() {
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">margin:</span> '<span class="hljs-attribute">0</span> <span class="hljs-attribute">20px</span>' }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>simple<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Tree</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"myCls"</span> <span class="hljs-attribute">showLine</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">checkable</span>
+        <span class="hljs-attribute">defaultExpandedKeys</span>=<span class="hljs-value">{this.state.defaultExpandedKeys}</span>
+        <span class="hljs-attribute">onExpand</span>=<span class="hljs-value">{this.onExpand}</span>
+        <span class="hljs-attribute">defaultSelectedKeys</span>=<span class="hljs-value">{this.state.defaultSelectedKeys}</span>
+        <span class="hljs-attribute">defaultCheckedKeys</span>=<span class="hljs-value">{this.state.defaultCheckedKeys}</span>
+        <span class="hljs-attribute">onSelect</span>=<span class="hljs-value">{this.onSelect}</span> <span class="hljs-attribute">onCheck</span>=<span class="hljs-value">{this.onCheck}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-0"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0"</span> <span class="hljs-attribute">disabled</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0-0"</span> <span class="hljs-attribute">disableCheckbox</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-0-1"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1-1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-0-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{&lt;span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">color:</span> '<span class="hljs-attribute">red</span>' }}&gt;</span>sss<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>} key="0-0-1-0" /&gt;
+          <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"leaf"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
-, mountNode);</span></code></pre></div>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Tree</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.change}</span>&gt;</span>change state<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>defaultXX 的初始化状态不会改变<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>)</span>;
+  },
+});
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

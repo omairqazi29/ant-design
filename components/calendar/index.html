@@ -24,8 +24,8 @@ Calendar 日历 - Ant Design
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@ Calendar 日历 - Ant Design
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@ Calendar 日历 - Ant Design
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@ Calendar 日历 - Ant Design
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@ Calendar 日历 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@ Calendar 日历 - Ant Design
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@ Calendar 日历 - Ant Design
             </a>
           </li>
           <li class="">
+            <a href="../tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -711,7 +722,7 @@ ReactDOM.render(React.createElement(_antd.Calendar, { defaultValue: new Date('20
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Calendar</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{new</span> <span class="hljs-attribute">Date</span>('<span class="hljs-attribute">2010-10-10</span>')}
-  <span class="hljs-attribute">dateCellRender</span>=<span class="hljs-value">{dateCellRender}</span> <span class="hljs-attribute">monthCellRender</span>=<span class="hljs-value">{monthCellRender}</span> /&gt;</span>
+    <span class="hljs-attribute">dateCellRender</span>=<span class="hljs-value">{dateCellRender}</span> <span class="hljs-attribute">monthCellRender</span>=<span class="hljs-value">{monthCellRender}</span> /&gt;</span>
 , mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
@@ -792,41 +803,45 @@ ReactDOM.render(React.createElement(_antd.Calendar, { dateCellRender: dateCellRe
 function getListData(value) {
   let listData;
   switch (value.getDayOfMonth()) {
-  case 8:
-    listData = [
-      { type: 'warn', content: '这里是警告事项.' },
-      { type: 'normal', content: '这里是普通事项.' }
-    ]; break;
-  case 10:
-    listData = [
-      { type: 'warn', content: '这里是警告事项.' },
-      { type: 'normal', content: '这里是普通事项.' },
-      { type: 'error', content: '这里是错误事项.' }
-    ]; break;
-  case 15:
-    listData = [
-      { type: 'warn', content: '这里是警告事项.' },
-      { type: 'normal', content: '这里是普通事项好长啊。。....' },
-      { type: 'error', content: '这里是错误事项.' },
-      { type: 'error', content: '这里是错误事项.' },
-      { type: 'error', content: '这里是错误事项.' },
-      { type: 'error', content: '这里是错误事项.' }
-    ]; break;
-  default:
+    case 8:
+      listData = [
+        { type: 'warn', content: '这里是警告事项.' },
+        { type: 'normal', content: '这里是普通事项.' }
+      ]; break;
+    case 10:
+      listData = [
+        { type: 'warn', content: '这里是警告事项.' },
+        { type: 'normal', content: '这里是普通事项.' },
+        { type: 'error', content: '这里是错误事项.' }
+      ]; break;
+    case 15:
+      listData = [
+        { type: 'warn', content: '这里是警告事项.' },
+        { type: 'normal', content: '这里是普通事项好长啊。。....' },
+        { type: 'error', content: '这里是错误事项.' },
+        { type: 'error', content: '这里是错误事项.' },
+        { type: 'error', content: '这里是错误事项.' },
+        { type: 'error', content: '这里是错误事项.' }
+      ]; break;
+    default:
   }
   return listData || [];
 }
 
 function dateCellRender(value) {
   let listData = getListData(value);
-  return &lt;ul className="events"&gt;
-    {listData.map((item, index) =&gt;
-      &lt;li key={index}&gt;
-        &lt;span className={`event-${item.type}`}&gt;●&lt;/span&gt;
-        {item.content}
-      &lt;/li&gt;
-    )}
-  &lt;/ul&gt;;
+  return (
+    &lt;ul className="events"&gt;
+      {
+        listData.map((item, index) =&gt;
+          &lt;li key={index}&gt;
+            &lt;span className={`event-${item.type}`}&gt;●&lt;/span&gt;
+            {item.content}
+          &lt;/li&gt;
+        )
+      }
+    &lt;/ul&gt;
+  );
 }
 
 

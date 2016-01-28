@@ -24,8 +24,8 @@
       window.ANT_COMPONENTS = [];
       window.InstantClickChangeFns = [];
       ANT_COMPONENTS.push({
-        title: 'Popconfirm',
-        desc: '气泡确认框'
+        title: 'Pagination',
+        desc: '分页'
       });
       ANT_COMPONENTS.push({
         title: 'Affix',
@@ -50,6 +50,10 @@
       ANT_COMPONENTS.push({
         title: 'Carousel',
         desc: '走马灯'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Cascader',
+        desc: '级联选择'
       });
       ANT_COMPONENTS.push({
         title: 'Checkbox',
@@ -100,12 +104,12 @@
         desc: '通知提醒框'
       });
       ANT_COMPONENTS.push({
-        title: 'Pagination',
-        desc: '分页'
-      });
-      ANT_COMPONENTS.push({
         title: 'Alert',
         desc: '警告提示'
+      });
+      ANT_COMPONENTS.push({
+        title: 'Popconfirm',
+        desc: '气泡确认框'
       });
       ANT_COMPONENTS.push({
         title: 'Popover',
@@ -176,12 +180,12 @@
         desc: '树形控件'
       });
       ANT_COMPONENTS.push({
-        title: 'Upload',
-        desc: '文件上传'
+        title: 'TreeSelect',
+        desc: '树选择'
       });
       ANT_COMPONENTS.push({
-        title: 'Validation',
-        desc: '表单校验'
+        title: 'Upload',
+        desc: '文件上传'
       });
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
@@ -193,7 +197,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.11.3'
+        latest: '0.12.0-beta.29'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -299,6 +303,13 @@
           </li>
           <li class="type-divider">表单</li>
           <li class="">
+            <a href="../../components/cascader/"
+               class="">
+              Cascader
+              <span class="chinese">级联选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../../components/checkbox/"
                class="">
               Checkbox
@@ -369,17 +380,17 @@
             </a>
           </li>
           <li class="">
+            <a href="../../components/tree-select/"
+               class="">
+              TreeSelect
+              <span class="chinese">树选择</span>
+            </a>
+          </li>
+          <li class="">
             <a href="../../components/upload/"
                class="">
               Upload
               <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../../components/validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
@@ -609,7 +620,7 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
 });
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;</code></pre></div><p>你可以在 <a href="/components/button">这里</a> 选用更多组件。</p>
-<h3 id="4-开发调试">4. 开发调试<a href="#4-开发调试" class="anchor">#</a> </h3><p>一键启动调试，访问 <a href="http://127.0.0.1:8001">http://127.0.0.1:8001</a> 查看效果。</p>
+<h3 id="4-开发调试">4. 开发调试<a href="#4-开发调试" class="anchor">#</a> </h3><p>一键启动调试，访问 <a href="http://127.0.0.1:8989">http://127.0.0.1:8989</a> 查看效果。</p>
 <div class="highlight"><pre><code class="bash">$ npm run dev</code></pre></div><h3 id="5-构建和部署">5. 构建和部署<a href="#5-构建和部署" class="anchor">#</a> </h3><div class="highlight"><pre><code class="bash">$ npm run build</code></pre></div><p>入口文件会构建到 <code>dist</code> 目录中，你可以自由部署到不同环境中进行引用。</p>
 <blockquote>
 <p>上述例子用于帮助你理解 Ant Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。</p>
