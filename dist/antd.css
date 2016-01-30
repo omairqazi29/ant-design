@@ -11056,7 +11056,6 @@ ul li.ant-transfer-list-highlight-enter {
   color: #999;
   position: absolute;
   right: 15px;
-  line-height: 32px;
 }
 :root .ant-cascader-menu-item-expand:after {
   filter: none;
