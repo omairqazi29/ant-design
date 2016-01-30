@@ -24,9 +24,9 @@ var Demo = React.createClass({
       null,
       React.createElement(
         _antd.TreeSelect,
-        { size: 'large', style: { width: 180 }, showSearch: true,
+        { size: 'large', style: { width: 360 }, showSearch: true,
           value: this.state.value, optionLabelProp: 'title',
-          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
+          dropdownMenuStyle: { maxHeight: 400, overflow: 'auto' },
           treeDefaultExpandAll: true,
           onChange: this.onChange },
         React.createElement(
@@ -49,9 +49,9 @@ var Demo = React.createClass({
       React.createElement('br', null),
       React.createElement(
         _antd.TreeSelect,
-        { style: { width: 180 }, showSearch: true,
+        { style: { width: 360 }, showSearch: true,
           value: this.state.value, optionLabelProp: 'title',
-          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
+          dropdownMenuStyle: { maxHeight: 400, overflow: 'auto' },
           treeDefaultExpandAll: true,
           onChange: this.onChange },
         React.createElement(
@@ -74,9 +74,9 @@ var Demo = React.createClass({
       React.createElement('br', null),
       React.createElement(
         _antd.TreeSelect,
-        { size: 'small', style: { width: 180 }, showSearch: true,
+        { size: 'small', style: { width: 360 }, showSearch: true,
           value: this.state.value, optionLabelProp: 'title',
-          dropdownMenuStyle: { maxHeight: 200, overflow: 'auto' },
+          dropdownMenuStyle: { maxHeight: 400, overflow: 'auto' },
           treeDefaultExpandAll: true,
           onChange: this.onChange },
         React.createElement(
@@ -114,9 +114,9 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
   render() {
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">180</span> }} <span class="hljs-attribute">showSearch</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"large"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">360</span> }} <span class="hljs-attribute">showSearch</span>
           <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">optionLabelProp</span>=<span class="hljs-value">"title"</span>
-          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">200</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
+          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">400</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
           <span class="hljs-attribute">treeDefaultExpandAll</span>
           <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>
@@ -130,9 +130,9 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
           <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">TreeSelect</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">180</span> }} <span class="hljs-attribute">showSearch</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">360</span> }} <span class="hljs-attribute">showSearch</span>
           <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">optionLabelProp</span>=<span class="hljs-value">"title"</span>
-          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">200</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
+          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">400</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
           <span class="hljs-attribute">treeDefaultExpandAll</span>
           <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>
@@ -146,9 +146,9 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
           <span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">TreeSelect</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">180</span> }} <span class="hljs-attribute">showSearch</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"small"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">360</span> }} <span class="hljs-attribute">showSearch</span>
           <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span> <span class="hljs-attribute">optionLabelProp</span>=<span class="hljs-value">"title"</span>
-          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">200</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
+          <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">400</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
           <span class="hljs-attribute">treeDefaultExpandAll</span>
           <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>

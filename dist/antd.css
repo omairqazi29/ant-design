@@ -6978,6 +6978,9 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   display: inline-block;
   padding-right: 10px;
 }
+.ant-steps .ant-steps-title > a:first-child:last-child {
+  color: #666;
+}
 .ant-steps .ant-steps-item-last .ant-steps-title {
   padding-right: 0;
 }
@@ -8528,7 +8531,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree li {
   padding: 0;
-  margin: 0;
+  margin: 7px 0;
   list-style: none;
   white-space: nowrap;
   outline: 0;
@@ -8568,20 +8571,26 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   border-radius: 2px;
   margin: 0;
   cursor: pointer;
-  height: 20px;
   text-decoration: none;
   vertical-align: top;
   color: #666;
+  transition: all 0.3s ease;
+}
+.ant-tree li a:hover {
+  background-color: #eaf8fe;
+}
+.ant-tree li a.ant-tree-node-selected {
+  background-color: #d5f1fd;
 }
 .ant-tree li span.ant-tree-checkbox {
-  margin: 3px 4px 0 0;
+  margin: 2px 4px 0 0;
 }
 .ant-tree li span.ant-tree-switcher,
 .ant-tree li span.ant-tree-iconEle {
-  line-height: 0;
   margin: 0;
   width: 16px;
-  height: 18px;
+  height: 16px;
+  line-height: 16px;
   display: inline-block;
   vertical-align: middle;
   border: 0 none;
@@ -8619,8 +8628,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 0;
+  right: 4px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8658,8 +8667,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 0;
+  right: 4px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8692,9 +8701,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree-treenode-disabled > a span {
   color: #ccc;
   cursor: not-allowed;
-}
-.ant-tree-node-selected {
-  background-color: #eaf8fe;
 }
 .ant-tree-icon__open {
   margin-right: 2px;
@@ -8834,12 +8840,12 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-select-tree {
   margin: 0;
-  padding: 5px;
+  padding: 8px;
   font-size: 12px;
 }
 .ant-tree-select-tree li {
   padding: 0;
-  margin: 0;
+  margin: 8px 0;
   list-style: none;
   white-space: nowrap;
   outline: 0;
@@ -8858,20 +8864,26 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   border-radius: 2px;
   margin: 0;
   cursor: pointer;
-  height: 20px;
   text-decoration: none;
   vertical-align: top;
   color: #666;
+  transition: all 0.3s ease;
+}
+.ant-tree-select-tree li a:hover {
+  background-color: #eaf8fe;
+}
+.ant-tree-select-tree li a.ant-tree-select-tree-node-selected {
+  background-color: #d5f1fd;
 }
 .ant-tree-select-tree li span.ant-tree-select-tree-checkbox {
-  margin: 3px 4px 0 0;
+  margin: 2px 4px 0 0;
 }
 .ant-tree-select-tree li span.ant-tree-select-tree-switcher,
 .ant-tree-select-tree li span.ant-tree-select-tree-iconEle {
-  line-height: 0;
   margin: 0;
   width: 16px;
-  height: 18px;
+  height: 16px;
+  line-height: 16px;
   display: inline-block;
   vertical-align: middle;
   border: 0 none;
@@ -8909,8 +8921,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 0;
+  right: 4px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8948,8 +8960,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-family: 'anticon';
   font-weight: bold;
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 0;
+  right: 4px;
   color: #666;
   transition: transform .3s ease;
 }
@@ -8982,9 +8994,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree-select-tree-treenode-disabled > a span {
   color: #ccc;
   cursor: not-allowed;
-}
-.ant-tree-select-tree-node-selected {
-  background-color: #eaf8fe;
 }
 .ant-tree-select-tree-icon__open {
   margin-right: 2px;

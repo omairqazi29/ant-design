@@ -4,6 +4,8 @@
     <script>mountNode = document.getElementById('components-form-demo-validate-other');</script>
     <script>(function(){'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _antd = require('antd');
 
 var Option = _antd.Select.Option;
@@ -51,6 +53,8 @@ var Demo = React.createClass({
         label: '杭州'
       }]
     }];
+    var getFieldProps = this.props.form.getFieldProps;
+
     return React.createElement(
       _antd.Form,
       { horizontal: true, form: this.props.form },
@@ -59,14 +63,13 @@ var Demo = React.createClass({
         {
           label: '国籍：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'select',
-          fieldOption: {
-            rules: [{ required: true, message: '请选择您的国籍' }]
-          } },
+          wrapperCol: { span: 12 } },
         React.createElement(
           _antd.Select,
-          { placeholder: '请选择国家', style: { width: '100%' } },
+          _extends({ placeholder: '请选择国家', style: { width: '100%' }
+          }, getFieldProps('select', {
+            rules: [{ required: true, message: '请选择您的国籍' }]
+          })),
           React.createElement(
             Option,
             { value: 'china' },
@@ -99,14 +102,13 @@ var Demo = React.createClass({
         {
           label: '喜欢的颜色：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'multiSelect',
-          fieldOption: {
-            rules: [{ required: true, message: '请选择您喜欢的颜色', type: 'array' }]
-          } },
+          wrapperCol: { span: 12 } },
         React.createElement(
           _antd.Select,
-          { multiple: true, placeholder: '请选择颜色', style: { width: '100%' } },
+          _extends({ multiple: true, placeholder: '请选择颜色', style: { width: '100%' }
+          }, getFieldProps('multiSelect', {
+            rules: [{ required: true, message: '请选择您喜欢的颜色', type: 'array' }]
+          })),
           React.createElement(
             Option,
             { value: 'red' },
@@ -139,14 +141,12 @@ var Demo = React.createClass({
         {
           label: '性别：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'radio',
-          fieldOption: {
-            rules: [{ required: true, message: '请选择您的性别' }]
-          } },
+          wrapperCol: { span: 12 } },
         React.createElement(
           RadioGroup,
-          null,
+          getFieldProps('radio', {
+            rules: [{ required: true, message: '请选择您的性别' }]
+          }),
           React.createElement(
             _antd.Radio,
             { value: 'male' },
@@ -164,42 +164,38 @@ var Demo = React.createClass({
         {
           label: '生日：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'birthday',
-          fieldOption: {
-            rules: [{
-              required: true,
-              type: 'date',
-              message: '你的生日是什么呢?'
-            }, {
-              validator: this.checkBirthday
-            }]
-          } },
-        React.createElement(_antd.DatePicker, null)
+          wrapperCol: { span: 12 } },
+        React.createElement(_antd.DatePicker, getFieldProps('birthday', {
+          rules: [{
+            required: true,
+            type: 'date',
+            message: '你的生日是什么呢?'
+          }, {
+            validator: this.checkBirthday
+          }]
+        }))
       ),
       React.createElement(
         FormItem,
         {
           label: '8~12间的质数：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'primeNumber',
-          fieldOption: {
-            rules: [{ validator: this.checkPrime }]
-          } },
-        React.createElement(_antd.InputNumber, { min: 8, max: 12 })
+          wrapperCol: { span: 12 } },
+        React.createElement(_antd.InputNumber, _extends({ min: 8, max: 12
+        }, getFieldProps('primeNumber', {
+          rules: [{ validator: this.checkPrime }]
+        })))
       ),
       React.createElement(
         FormItem,
         {
           label: '选择地址：',
           labelCol: { span: 7 },
-          wrapperCol: { span: 12 },
-          id: 'address',
-          fieldOption: {
-            rules: [{ required: true, type: 'array' }]
-          } },
-        React.createElement(_antd.Cascader, { options: address })
+          wrapperCol: { span: 12 } },
+        React.createElement(_antd.Cascader, _extends({ options: address
+        }, getFieldProps('address', {
+          rules: [{ required: true, type: 'array' }]
+        })))
       ),
       React.createElement(
         FormItem,
@@ -271,19 +267,20 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         label: <span class="hljs-string">'杭州'</span>,
       }],
     }];
+    <span class="hljs-keyword">const</span> { getFieldProps } = <span class="hljs-keyword">this</span>.props.form;
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">form</span>=<span class="hljs-value">{this.props.form}</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"国籍："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"select"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [
-              { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的国籍' }
-            ],
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择国家"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> '<span class="hljs-attribute">100</span>%' }}&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择国家"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> '<span class="hljs-attribute">100</span>%' }}
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">select</span>', {
+              <span class="hljs-attribute">rules:</span> [
+                { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的国籍' }
+              ],
+            })}
+          &gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"china"</span>&gt;</span>中国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"use"</span>&gt;</span>美国<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"japan"</span>&gt;</span>日本<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -295,14 +292,14 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"喜欢的颜色："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"multiSelect"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [
-              { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您喜欢的颜色', <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">array</span>' },
-            ]
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择颜色"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> '<span class="hljs-attribute">100</span>%' }}&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择颜色"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> '<span class="hljs-attribute">100</span>%' }}
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">multiSelect</span>', {
+              <span class="hljs-attribute">rules:</span> [
+                { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您喜欢的颜色', <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">array</span>' },
+              ]
+            })}
+          &gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"red"</span>&gt;</span>红色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"orange"</span>&gt;</span>橙色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yellow"</span>&gt;</span>黄色<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
@@ -314,14 +311,14 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"性别："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [
-              { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的性别' }
-            ]
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span>&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span>
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">radio</span>', {
+              <span class="hljs-attribute">rules:</span> [
+                { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">message:</span> '请选择您的性别' }
+              ]
+            })}
+          &gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
@@ -330,42 +327,42 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"生日："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"birthday"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [
-              {
-                <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>,
-                <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">date</span>',
-                <span class="hljs-attribute">message:</span> '你的生日是什么呢?',
-              }, {
-                <span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkBirthday</span>,
-              }
-            ]
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span> /&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">DatePicker</span>
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">birthday</span>', {
+              <span class="hljs-attribute">rules:</span> [
+                {
+                  <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>,
+                  <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">date</span>',
+                  <span class="hljs-attribute">message:</span> '你的生日是什么呢?',
+                }, {
+                  <span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkBirthday</span>,
+                }
+              ]
+            })}
+          /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"8~12间的质数："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"primeNumber"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [{ <span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPrime</span> }],
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{8}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{12}</span> /&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">InputNumber</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{8}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{12}</span>
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">primeNumber</span>', {
+              <span class="hljs-attribute">rules:</span> [{ <span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.checkPrime</span> }],
+            })}
+          /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"选择地址："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">id</span>=<span class="hljs-value">"address"</span>
-          <span class="hljs-attribute">fieldOption</span>=<span class="hljs-value">{{</span>
-            <span class="hljs-attribute">rules:</span> [{ <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">array</span>' }],
-          }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Cascader</span> <span class="hljs-attribute">options</span>=<span class="hljs-value">{address}</span> /&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Cascader</span> <span class="hljs-attribute">options</span>=<span class="hljs-value">{address}</span>
+            {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">address</span>', {
+              <span class="hljs-attribute">rules:</span> [{ <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">type:</span> '<span class="hljs-attribute">array</span>' }],
+            })}
+          /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>

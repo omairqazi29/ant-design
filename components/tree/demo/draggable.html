@@ -47,9 +47,11 @@ var Demo = React.createClass({
     };
   },
   onDragEnter: function onDragEnter(info) {
-    this.setState({
-      expandedKeys: info.expandedKeys
-    });
+    console.log(info);
+    // expandedKeys 需要受控时设置
+    // this.setState({
+    //   expandedKeys: info.expandedKeys,
+    // });
   },
   onDrop: function onDrop(info) {
     console.log(info);
@@ -88,8 +90,7 @@ var Demo = React.createClass({
       });
     }
     this.setState({
-      gData: data,
-      expandedKeys: info.originExpandedKeys
+      gData: data
     });
   },
   render: function render() {
@@ -154,9 +155,11 @@ generateData(z);
     };
   },
   onDragEnter(info) {
-    <span class="hljs-keyword">this</span>.setState({
-      expandedKeys: info.expandedKeys,
-    });
+    <span class="hljs-built_in">console</span>.log(info);
+    <span class="hljs-comment">// expandedKeys 需要受控时设置</span>
+    <span class="hljs-comment">// this.setState({</span>
+    <span class="hljs-comment">//   expandedKeys: info.expandedKeys,</span>
+    <span class="hljs-comment">// });</span>
   },
   onDrop(info) {
     <span class="hljs-built_in">console</span>.log(info);
@@ -196,7 +199,6 @@ generateData(z);
     }
     <span class="hljs-keyword">this</span>.setState({
       gData: data,
-      expandedKeys: info.originExpandedKeys,
     });
   },
   render() {
