@@ -587,7 +587,8 @@
   <article class="markdown">
     <h1>升级指南 </h1>
     <div class="toc"><ul><li><a href="#0-11-gt-0-12">0.11 =&gt; 0.12</a><ul><li><a href="#使用-form-提供的校验功能代替-validation">使用 Form 提供的校验功能代替 Validation</a></li><li><a href="#progress-format-属性的值改为函数">Progress <code>format</code> 属性的值改为函数</a></li><li><a href="#tree">Tree</a></li></ul></li><li><a href="#0-10-gt-0-11">0.10 =&gt; 0.11</a><ul><li><a href="#默认加载样式">默认加载样式</a></li><li><a href="#表格远程模式">表格远程模式</a></li><li><a href="#timepicker、datepicker-重命名">Timepicker、Datepicker 重命名</a></li><li><a href="#受控的-datepicker">受控的 DatePicker</a></li><li><a href="#其他">其他</a></li></ul></li><li><a href="#0-9-gt-0-10">0.9 =&gt; 0.10</a><ul><li><a href="#升级-react">升级 React</a></li><li><a href="#组件化改造">组件化改造</a></li><li><a href="#size-属性统一">size 属性统一</a></li><li><a href="#其他">其他</a></li></ul></ul></div>
-    <h2 id="0-11-gt-0-12">0.11 =&gt; 0.12<a href="#0-11-gt-0-12" class="anchor">#</a> </h2><h3 id="使用-form-提供的校验功能代替-validation">使用 Form 提供的校验功能代替 Validation<a href="#使用-form-提供的校验功能代替-validation" class="anchor">#</a> </h3><p>Validation 已经被废弃，并会在以后的版本完全移除，所以建议尽快使用 Form 自带的校验功能替换 Validation。具体使用方式可以查阅文档和例子(<a href="http://ant.design/components/form/#demo-validate-basic">#1</a> <a href="http://ant.design/components/form/#demo-validate-other">#2</a> <a href="http://ant.design/components/form/#demo-validate-customized">#3</a>)。</p>
+    <h2 id="0-11-gt-0-12">0.11 =&gt; 0.12<a href="#0-11-gt-0-12" class="anchor">#</a> </h2><hr>
+<h3 id="使用-form-提供的校验功能代替-validation">使用 Form 提供的校验功能代替 Validation<a href="#使用-form-提供的校验功能代替-validation" class="anchor">#</a> </h3><p>Validation 已经被废弃，并会在以后的版本完全移除，所以建议尽快使用 Form 自带的校验功能替换 Validation。具体使用方式可以查阅文档和例子(<a href="http://ant.design/components/form/#demo-validate-basic">#1</a> <a href="http://ant.design/components/form/#demo-validate-other">#2</a> <a href="http://ant.design/components/form/#demo-validate-customized">#3</a>)。</p>
 <h3 id="progress-format-属性的值改为函数">Progress <code>format</code> 属性的值改为函数<a href="#progress-format-属性的值改为函数" class="anchor">#</a> </h3><p>把使用了 <code>format</code> 属性的代码，如：</p>
 <div class="highlight"><pre><code class="javascript">&lt;Progress.Circle percent={<span class="hljs-number">100</span>} format={<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"check"</span> /&gt;</span>} /&gt;</span></code></pre></div><p>改为：</p>
 <div class="highlight"><pre><code class="javascript">&lt;Progress.Circle percent={<span class="hljs-number">100</span>} format={(_) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"check"</span> /&gt;</span>} /&gt;</span></code></pre></div><h3 id="tree">Tree<a href="#tree" class="anchor">#</a> </h3><ul>
@@ -595,7 +596,8 @@
 <li><code>onCheck</code> 回调函数，由原来的<code>一个</code>参数，变为<code>两个</code>，第一个为<code>checkedKeys</code>，第二个参数为原来第一个参数里的其余信息。另外<code>checkedKeys</code>里包含了当前选中的节点key，而原来的不包含（这样免去业务里自己组装key的工作）。</li>
 <li>异步API中<code>onDataLoaded</code>重命名为<code>loadData</code>，其他不用改。</li>
 </ul>
-<h2 id="0-10-gt-0-11">0.10 =&gt; 0.11<a href="#0-10-gt-0-11" class="anchor">#</a> </h2><p><code>0.11.x</code> 版本有大量更新，其中部分为不兼容更新。以下列表为其中不兼容的更新及对应升级方案。如果您在升级过程中遇到下面没有提到的情况，可以到 Github 上面咨询。</p>
+<h2 id="0-10-gt-0-11">0.10 =&gt; 0.11<a href="#0-10-gt-0-11" class="anchor">#</a> </h2><hr>
+<p><code>0.11.x</code> 版本有大量更新，其中部分为不兼容更新。以下列表为其中不兼容的更新及对应升级方案。如果您在升级过程中遇到下面没有提到的情况，可以到 Github 上面咨询。</p>
 <ul>
 <li><code>0.11.x</code> 文档：<a href="http://ant.design">http://ant.design</a></li>
 <li><code>0.10.x</code> 文档：<a href="http://010x.ant.design">http://010x.ant.design</a></li>
@@ -613,7 +615,8 @@
 <li>在 <code>0.10.x</code> 中 Datepicker 已废弃的 <code>onSelect</code> 属性被删除，请使用 <code>onChange</code> 属性。。</li>
 <li>TimePicker 的 <code>hourOptions</code> <code>minuteOptions</code> <code>secondOptions</code> 属性已移除，可使用 <code>disabledHours</code> <code>disabledMinutes</code> <code>disabledSeconds</code> 配和 <code>hideDisabled</code> 属性来完成原有功能。<a href="http://ant.design/components/time-picker/#picker-demo-disable-options">演示</a></li>
 </ul>
-<h2 id="0-9-gt-0-10">0.9 =&gt; 0.10<a href="#0-9-gt-0-10" class="anchor">#</a> </h2><p><code>0.10.x</code> 版本有大量改动，是一个不完全向下兼容的版本。以下文档尽力列出了 <code>0.9.x</code> 到 <code>0.10.x</code> 的不兼容变动，以帮助开发者升级。</p>
+<h2 id="0-9-gt-0-10">0.9 =&gt; 0.10<a href="#0-9-gt-0-10" class="anchor">#</a> </h2><hr>
+<p><code>0.10.x</code> 版本有大量改动，是一个不完全向下兼容的版本。以下文档尽力列出了 <code>0.9.x</code> 到 <code>0.10.x</code> 的不兼容变动，以帮助开发者升级。</p>
 <ul>
 <li><code>0.10.x</code> 文档：<a href="http://010x.ant.design">http://010x.ant.design</a></li>
 <li><code>0.9.x</code> 文档：<a href="http://09x.ant.design">http://09x.ant.design</a></li>
