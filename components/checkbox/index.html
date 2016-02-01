@@ -187,6 +187,13 @@ Checkbox 多选框 - Ant Design
         title: 'Upload',
         desc: '文件上传'
       });
+      // fix ie location origin
+      // http://stackoverflow.com/questions/22564167/window-location-origin-gives-wrong-value-when-using-ie
+      if (!window.location.origin) {
+        window.location.origin = window.location.protocol + "//"
+          + window.location.hostname
+          + (window.location.port ? ':' + window.location.port : '');
+      }
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
         window.rootUrl = location.origin + location.pathname.split('/').slice(0, 2+1).join('/');
@@ -197,7 +204,7 @@ Checkbox 多选框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.0-beta.34'
+        latest: '0.12.0'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>

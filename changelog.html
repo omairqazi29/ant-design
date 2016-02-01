@@ -187,6 +187,13 @@
         title: 'Upload',
         desc: '文件上传'
       });
+      // fix ie location origin
+      // http://stackoverflow.com/questions/22564167/window-location-origin-gives-wrong-value-when-using-ie
+      if (!window.location.origin) {
+        window.location.origin = window.location.protocol + "//"
+          + window.location.hostname
+          + (window.location.port ? ':' + window.location.port : '');
+      }
       var i = location.pathname.split('/').lastIndexOf('ant-design');
       if (i > 0) {
         window.rootUrl = location.origin + location.pathname.split('/').slice(0, 2+1).join('/');
@@ -197,7 +204,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.0-beta.34'
+        latest: '0.12.0'
       };
     </script>
     <script src="./dist/demo.js?20160114"></script>
@@ -579,8 +586,85 @@
 <section class="main-container">
   <article class="markdown">
     <h1>更新日志 </h1>
-    <div class="toc"><ul><li><a href="#0-11-3">0.11.3</a></li><li><a href="#0-11-2">0.11.2</a></li><li><a href="#0-11-1">0.11.1</a></li><li><a href="#0-11-0">0.11.0</a></li><li><a href="#0-10-5">0.10.5</a></li><li><a href="#0-10-4">0.10.4</a></li><li><a href="#0-10-3">0.10.3</a></li><li><a href="#0-10-2">0.10.2</a></li><li><a href="#0-10-1">0.10.1</a></li><li><a href="#0-10-0">0.10.0</a></li><li><a href="#0-9-3-0-9-5">0.9.3 ~ 0.9.5</a></li><li><a href="#0-9-2">0.9.2</a></li><li><a href="#0-9-1">0.9.1</a></li><li><a href="#0-9-0">0.9.0</a></li><li><a href="#0-8-0">0.8.0</a></li><li><a href="#0-7-3">0.7.3</a></li><li><a href="#0-7-2">0.7.2</a></li><li><a href="#0-7-1">0.7.1</a></li><li><a href="#0-7-0">0.7.0</a></li></ul></div>
-    <h2 id="0-11-3">0.11.3<a href="#0-11-3" class="anchor">#</a> </h2><p><code>2016-01-19</code></p>
+    <div class="toc"><ul><li><a href="#0-12-0">0.12.0</a></li><li><a href="#0-11-3">0.11.3</a></li><li><a href="#0-11-2">0.11.2</a></li><li><a href="#0-11-1">0.11.1</a></li><li><a href="#0-11-0">0.11.0</a></li><li><a href="#0-10-5">0.10.5</a></li><li><a href="#0-10-4">0.10.4</a></li><li><a href="#0-10-3">0.10.3</a></li><li><a href="#0-10-2">0.10.2</a></li><li><a href="#0-10-1">0.10.1</a></li><li><a href="#0-10-0">0.10.0</a></li><li><a href="#0-9-3-0-9-5">0.9.3 ~ 0.9.5</a></li><li><a href="#0-9-2">0.9.2</a></li><li><a href="#0-9-1">0.9.1</a></li><li><a href="#0-9-0">0.9.0</a></li><li><a href="#0-8-0">0.8.0</a></li><li><a href="#0-7-3">0.7.3</a></li><li><a href="#0-7-2">0.7.2</a></li><li><a href="#0-7-1">0.7.1</a></li><li><a href="#0-7-0">0.7.0</a></li></ul></div>
+    <h2 id="0-12-0">0.12.0<a href="#0-12-0" class="anchor">#</a> </h2><ul>
+<li>新增 <a href="http://ant.design/components/cascader/">级联选择(Cascader)</a> 组件。</li>
+<li>新增 <a href="http://ant.design/components/tree-select/">树选择控件(TreeSelect)</a> 组件。</li>
+<li>Form 自身支持校验功能，废弃 Validation。<a href="http://ant.design/components/form/#demo-validate-basic">演示</a></li>
+<li>Tabs<ul>
+<li><code>activeKey</code> 修正为受控属性。</li>
+<li>当前项现在会始终显示。<a href="https://github.com/ant-design/ant-design/issues/815">#815</a></li>
+</ul>
+</li>
+<li>Modal 可以配置右上关闭按钮是否显示。</li>
+<li>Select<ul>
+<li>打开选项菜单时，自动滚动到选中项。</li>
+<li><code>combobox</code> 模式时，可配置是否默认选中第一项。<a href="https://github.com/react-component/select/issues/38">rc-select#38</a></li>
+</ul>
+</li>
+<li>Table<ul>
+<li>filter 支持层级选择。</li>
+<li>支持行点击事件 <code>onRowClick</code>。</li>
+<li>支持多列的横向切换。<a href="http://ant.design/components/table/#demo-paging-columns">演示</a></li>
+<li>更换 <code>dataSource</code> 和变换页面时不再默认清除选择数据，你可以用 <code>selectedRowKeys</code> 手动控制。<code>原来默认清除的行为会触发一个数据更新的死循环，而且难以实现跨页选择。</code></li>
+<li>支持固定表头。<a href="http://ant.design/components/table/#demo-fixed-header">演示</a></li>
+</ul>
+</li>
+<li>Tag 去除 <code>href</code> 属性，默认标签名从 <code>a</code> 改为 <code>span</code>。</li>
+<li>Timeline 支持指定 pending 节点的内容。</li>
+<li>Tree<ul>
+<li>节点支持拖拽。</li>
+<li>支持动态控制节点展开与否。<a href="http://ant.design/components/tree/#demo-basic-controlled">演示</a></li>
+<li>可以监听节点展开/关闭事件 <code>onExpand</code>。</li>
+<li><code>onCheck</code> <code>onSelect</code> 参数调整。</li>
+<li><code>onDataLoaded</code> 改为 <code>loadData</code>。</li>
+<li>新增 drag&amp;drop 相关属性：</li>
+<li><code>onDragStart</code></li>
+<li><code>onDragEnter</code></li>
+<li><code>onDragOver</code></li>
+<li><code>onDragLeave</code></li>
+<li><code>onDrop</code></li>
+<li>新增 TreeNode 节点属性：</li>
+<li><code>disableCheckbox</code></li>
+<li><code>isLeaf</code></li>
+</ul>
+</li>
+<li>Transfer 给 <code>onChange</code> 增加参数。<a href="https://github.com/ant-design/ant-design/issues/972">#972</a></li>
+<li>DatePicker<ul>
+<li>修复 RangePicker 开始结束日期相同的 bug。<a href="https://github.com/ant-design/ant-design/issues/822">#822</a></li>
+<li>修复 <code>format</code> 对浮层不生效问题。<a href="https://github.com/ant-design/ant-design/issues/917">#917</a></li>
+</ul>
+</li>
+<li>TimePicker 修复一个 <code>value</code> 为 <code>null</code> 时没有进入受控模式的问题。</li>
+<li>Upload<ul>
+<li>可以用 <code>headers</code> 设置上传头部。</li>
+<li>新增上传图片卡片样式。<a href="http://ant.design/components/upload/#demo-picture-card">演示</a></li>
+</ul>
+</li>
+<li>Radio<ul>
+<li>更换 Radio.Button 的展现样式。</li>
+<li>可以设置 Radio.Button 的大小。</li>
+</ul>
+</li>
+<li>Progress<ul>
+<li><code>format</code> 属性现在支持自定义 function 的方式进行定义。<a href="https://github.com/ant-design/ant-design/issues/893">#893</a></li>
+<li><code>format</code> 指定 string 和 React.Node 的方式被废弃。</li>
+<li>支持 <code>style</code> 属性。<a href="https://github.com/ant-design/ant-design/issues/895">#895</a></li>
+</ul>
+</li>
+<li>message &amp;&amp; notification 现在可以销毁。</li>
+<li>Button<ul>
+<li>小号 Button 的圆角调整为 <code>4px</code>。</li>
+<li>修复 Button.Group disabled 后的样式问题。<a href="https://github.com/ant-design/ant-design/issues/926">#926</a></li>
+</ul>
+</li>
+<li>BreadCrumb<ul>
+<li>移除 <code>router</code> 属性，无需设置。</li>
+<li>修复一个链接参数不对的问题。</li>
+</ul>
+</li>
+</ul>
+<h2 id="0-11-3">0.11.3<a href="#0-11-3" class="anchor">#</a> </h2><p><code>2016-01-19</code></p>
 <ul>
 <li>修复 TimePicker 受控模式点选即关闭面板的问题。<a href="https://github.com/ant-design/ant-design/issues/818">#818</a></li>
 <li>修复一个两栏的 TimePicker 点击右边空白处无法关闭面板的问题。<a href="https://github.com/ant-design/ant-design/issues/826">#826</a></li>
