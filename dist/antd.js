@@ -19079,13 +19079,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _Divider2 = _interopRequireDefault(_Divider);
 	
-	_Menu2['default'].SubMenu = _SubMenu2['default'];
-	_Menu2['default'].Item = _MenuItem2['default'];
-	_Menu2['default'].ItemGroup = _MenuItemGroup2['default'];
-	_Menu2['default'].Divider = _Divider2['default'];
-	
+	exports.SubMenu = _SubMenu2['default'];
+	exports.Item = _MenuItem2['default'];
+	exports.MenuItem = _MenuItem2['default'];
+	exports.MenuItemGroup = _MenuItemGroup2['default'];
+	exports.ItemGroup = _MenuItemGroup2['default'];
+	exports.Divider = _Divider2['default'];
 	exports['default'] = _Menu2['default'];
-	module.exports = exports['default'];
 
 /***/ },
 /* 245 */
@@ -19391,13 +19391,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _DOMWrap2 = _interopRequireDefault(_DOMWrap);
 	
+	function allDisabled(arr) {
+	  if (!arr.length) {
+	    return true;
+	  }
+	  return arr.every(function (c) {
+	    return !!c.props.disabled;
+	  });
+	}
+	
 	function getActiveKey(props, originalActiveKey) {
 	  var activeKey = originalActiveKey;
 	  var children = props.children;
 	  var eventKey = props.eventKey;
 	  if (activeKey) {
 	    var found = undefined;
-	    _react2['default'].Children.forEach(children, function (c, i) {
+	    (0, _util.loopMenuItem)(children, function (c, i) {
 	      if (!c.props.disabled && activeKey === (0, _util.getKeyFromChildrenIndex)(c, eventKey, i)) {
 	        found = true;
 	      }
@@ -19408,7 +19417,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	  activeKey = null;
 	  if (props.defaultActiveFirst) {
-	    _react2['default'].Children.forEach(children, function (c, i) {
+	    (0, _util.loopMenuItem)(children, function (c, i) {
 	      if (!activeKey && !c.props.disabled) {
 	        activeKey = (0, _util.getKeyFromChildrenIndex)(c, eventKey, i);
 	      }
@@ -19507,15 +19516,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (handled) {
 	      return 1;
 	    }
-	    var activeItem = undefined;
-	    switch (keyCode) {
-	      case _rcUtil.KeyCode.UP:
-	        activeItem = this.step(-1);
-	        break;
-	      case _rcUtil.KeyCode.DOWN:
-	        activeItem = this.step(1);
-	        break;
-	      default:
+	    var activeItem = null;
+	    if (keyCode === _rcUtil.KeyCode.UP || keyCode === _rcUtil.KeyCode.DOWN) {
+	      activeItem = this.step(keyCode === _rcUtil.KeyCode.UP ? -1 : 1);
 	    }
 	    if (activeItem) {
 	      e.preventDefault();
@@ -19525,6 +19528,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        (0, _domScrollIntoView2['default'])(_reactDom2['default'].findDOMNode(activeItem), _reactDom2['default'].findDOMNode(_this), {
 	          onlyScrollIfNeeded: true
 	        });
+	      });
+	      return 1;
+	    } else if (activeItem === undefined) {
+	      e.preventDefault();
+	      this.setState({
+	        activeKey: null
 	      });
 	      return 1;
 	    }
@@ -19662,6 +19671,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return true;
 	    });
+	    if (!this.props.defaultActiveFirst && activeIndex !== -1) {
+	      if (allDisabled(children.slice(activeIndex, len - 1))) {
+	        return undefined;
+	      }
+	    }
 	    var start = (activeIndex + 1) % len;
 	    var i = start;
 	    for (;;) {
@@ -20256,7 +20270,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 250 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -20265,6 +20279,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.noop = noop;
 	exports.getKeyFromChildrenIndex = getKeyFromChildrenIndex;
+	exports.loopMenuItem = loopMenuItem;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(86);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
 	var now = Date.now();
 	
 	function noop() {}
@@ -20272,6 +20294,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	function getKeyFromChildrenIndex(child, menuEventKey, index) {
 	  var prefix = menuEventKey || '';
 	  return child.key || prefix + 'item_' + now + '_' + index;
+	}
+	
+	function loopMenuItem(children, cb) {
+	  var index = -1;
+	  _react2['default'].Children.forEach(children, function (c) {
+	    index++;
+	    if (c && c.type.isMenuItemGroup) {
+	      _react2['default'].Children.forEach(c.props.children, function (c2) {
+	        index++;
+	        cb(c2, index);
+	      });
+	    } else {
+	      cb(c, index);
+	    }
+	  });
 	}
 
 /***/ },
@@ -21096,6 +21133,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    );
 	  }
 	});
+	
+	MenuItemGroup.isMenuItemGroup = true;
 	
 	exports['default'] = MenuItemGroup;
 	module.exports = exports['default'];
@@ -22311,10 +22350,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	
+	      var totalText = null;
+	
+	      if (props.showTotal) {
+	        totalText = React.createElement(
+	          'span',
+	          { className: prefixCls + '-total-text' },
+	          props.showTotal(props.total)
+	        );
+	      }
+	
 	      return React.createElement(
 	        'ul',
 	        { className: prefixCls + ' ' + props.className,
 	          unselectable: 'unselectable' },
+	        totalText,
 	        React.createElement(
 	          'li',
 	          { title: locale.prev_page, onClick: this._prev, className: (this._hasPrev() ? '' : prefixCls + '-disabled ') + (prefixCls + '-prev') },
@@ -22354,7 +22404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  selectComponentClass: React.PropTypes.func,
 	  showQuickJumper: React.PropTypes.bool,
 	  pageSizeOptions: React.PropTypes.arrayOf(React.PropTypes.string),
-	
+	  showTotal: React.PropTypes.func,
 	  locale: React.PropTypes.object
 	};
 	
@@ -36089,7 +36139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          value: item.value,
 	          key: item.key || item.value || pos
 	        };
-	        if (item.children) {
+	        if (item.children && item.children.length) {
 	          return _react2['default'].createElement(
 	            _TreeNode3['default'],
 	            props,
@@ -38215,10 +38265,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 	
-	AntMenu.Divider = _rcMenu2["default"].Divider;
-	AntMenu.Item = _rcMenu2["default"].Item;
-	AntMenu.SubMenu = _rcMenu2["default"].SubMenu;
-	AntMenu.ItemGroup = _rcMenu2["default"].ItemGroup;
+	AntMenu.Divider = _rcMenu.Divider;
+	AntMenu.Item = _rcMenu.Item;
+	AntMenu.SubMenu = _rcMenu.SubMenu;
+	AntMenu.ItemGroup = _rcMenu.ItemGroup;
 	
 	exports["default"] = AntMenu;
 	module.exports = exports['default'];
@@ -39150,8 +39200,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _asyncValidator2 = _interopRequireDefault(_asyncValidator);
 	
-	// avoid concurrency problems
-	var gid = 0;
 	var defaultValidateTrigger = 'onChange';
 	var defaultTrigger = defaultValidateTrigger;
 	
@@ -39243,8 +39291,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var field = this.getField(name, true);
 	          this.setFields(_defineProperty({}, name, _extends({}, field, {
 	            value: value,
-	            dirty: this.hasRules(validate),
-	            sid: ++gid
+	            dirty: this.hasRules(validate)
 	          })));
 	        }
 	      }, {
@@ -39377,7 +39424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }, {
 	        key: 'getFieldError',
 	        value: function getFieldError(name) {
-	          return this.getFieldMember(name, 'errors');
+	          return (0, _utils.getErrorStrs)(this.getFieldMember(name, 'errors'));
 	        }
 	      }, {
 	        key: 'getValidFieldsName',
@@ -39532,8 +39579,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var _ref$options = _ref.options;
 	          var options = _ref$options === undefined ? {} : _ref$options;
 	
-	          var currentGlobalId = gid;
-	          ++gid;
 	          var allRules = {};
 	          var allValues = {};
 	          var allFields = {};
@@ -39550,7 +39595,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            field.errors = undefined;
 	            field.validating = true;
 	            field.dirty = true;
-	            field.sid = currentGlobalId;
 	            allRules[name] = _this5.getRules(fieldMeta, action);
 	            allValues[name] = field.value;
 	            allFields[name] = field;
@@ -39575,23 +39619,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                errorsGroup[fieldName] = fieldErrors;
 	              });
 	            }
-	            var expired = false;
+	            var expired = [];
 	            var nowAllFields = {};
 	            Object.keys(allRules).forEach(function (name) {
 	              var fieldErrors = errorsGroup[name];
 	              var nowField = _this5.getField(name, true);
-	              if (nowField.sid !== currentGlobalId) {
-	                expired = true;
+	              // avoid concurrency problems
+	              if (nowField.value !== allValues[name]) {
+	                expired.push(name);
 	              } else {
-	                nowField.errors = fieldErrors && (0, _utils.getErrorStrs)(fieldErrors);
+	                nowField.errors = fieldErrors;
+	                nowField.value = allValues[name];
 	                nowField.validating = false;
 	                nowField.dirty = false;
-	                nowField.value = allValues[name];
 	                nowAllFields[name] = nowField;
 	              }
 	            });
 	            _this5.setFields(nowAllFields);
-	            if (callback && !expired) {
+	            if (callback) {
+	              if (expired.length) {
+	                expired.forEach(function (name) {
+	                  errorsGroup[name] = [new Error(name + ' need to revalidate')];
+	                  errorsGroup[name].expired = true;
+	                });
+	              }
 	              callback((0, _utils.isEmptyObject)(errorsGroup) ? null : errorsGroup, _this5.getFieldsValue(fieldNames));
 	            }
 	          });
