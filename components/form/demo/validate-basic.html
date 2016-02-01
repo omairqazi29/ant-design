@@ -106,7 +106,10 @@ var BasicDemo = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var getFieldProps = this.props.form.getFieldProps;
+      var _props$form2 = this.props.form;
+      var getFieldProps = _props$form2.getFieldProps;
+      var getFieldError = _props$form2.getFieldError;
+      var isFieldValidating = _props$form2.isFieldValidating;
 
       return React.createElement(
         _antd.Form,
@@ -117,7 +120,8 @@ var BasicDemo = function (_React$Component) {
             label: '用户名：',
             labelCol: { span: 7 },
             wrapperCol: { span: 12 },
-            hasFeedback: true },
+            hasFeedback: true,
+            help: isFieldValidating('name') ? '校验中...' : (getFieldError('name') || []).join(', ') },
           React.createElement(_antd.Input, _extends({ placeholder: '实时校验，输入 JasonWood 看看'
           }, getFieldProps('name', {
             rules: [{ required: true, min: 5, message: '用户名至少为 5 个字符' }, { validator: this.userExists }]
@@ -278,7 +282,7 @@ ReactDOM.render(React.createElement(BasicDemo, null), mountNode);})()</script><d
   }
 
   render() {
-    <span class="hljs-keyword">const</span> { getFieldProps } = <span class="hljs-keyword">this</span>.props.form;
+    <span class="hljs-keyword">const</span> { getFieldProps, getFieldError, isFieldValidating } = <span class="hljs-keyword">this</span>.props.form;
 
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">form</span>=<span class="hljs-value">{this.props.form}</span>&gt;</span>
@@ -286,14 +290,15 @@ ReactDOM.render(React.createElement(BasicDemo, null), mountNode);})()</script><d
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"用户名："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">7</span> }}
           <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">12</span> }}
-          <span class="hljs-attribute">hasFeedback</span>&gt;</span>
+          <span class="hljs-attribute">hasFeedback</span>
+          <span class="hljs-attribute">help</span>=<span class="hljs-value">{isFieldValidating('name')</span> ? '校验中<span class="hljs-attribute">...</span>' <span class="hljs-attribute">:</span> (<span class="hljs-attribute">getFieldError</span>('<span class="hljs-attribute">name</span>') || [])<span class="hljs-attribute">.join</span>(', ')}&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"实时校验，输入 JasonWood 看看"</span>
             {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">name</span>', {
               <span class="hljs-attribute">rules:</span> [
                 { <span class="hljs-attribute">required:</span> <span class="hljs-attribute">true</span>, <span class="hljs-attribute">min:</span> <span class="hljs-attribute">5</span>, <span class="hljs-attribute">message:</span> '用户名至少为 <span class="hljs-attribute">5</span> 个字符' },
                 { <span class="hljs-attribute">validator:</span> <span class="hljs-attribute">this.userExists</span> },
               ],
-            })}/&gt;</span>
+            })} /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>

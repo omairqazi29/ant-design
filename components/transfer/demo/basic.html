@@ -34,7 +34,8 @@ var App = React.createClass({
     }
     this.setState({ mockData: mockData, targetKeys: targetKeys });
   },
-  handleChange: function handleChange(targetKeys) {
+  handleChange: function handleChange(targetKeys, direction, moveKeys) {
+    console.log(targetKeys, direction, moveKeys);
     this.setState({ targetKeys: targetKeys });
   },
   renderFooter: function renderFooter() {
@@ -85,7 +86,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     }
     <span class="hljs-keyword">this</span>.setState({ mockData, targetKeys });
   },
-  handleChange(targetKeys) {
+  handleChange(targetKeys, direction, moveKeys) {
+    <span class="hljs-built_in">console</span>.log(targetKeys, direction, moveKeys);
     <span class="hljs-keyword">this</span>.setState({ targetKeys });
   },
   renderFooter() {

@@ -21716,11 +21716,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          });
 	
 	          var link = undefined;
-	          var path = route.path.indexOf('/') === 0 ? route.path : '/' + route.path;
+	          var path = route.path.replace(/^\//, '');
 	          Object.keys(params).forEach(function (key) {
 	            path = path.replace(':' + key, params[key]);
 	          });
-	          paths.push(path);
+	          if (path) {
+	            paths.push(path);
+	          }
 	
 	          if (i === routes.length - 1) {
 	            link = _react2["default"].createElement(
@@ -21731,7 +21733,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          } else {
 	            link = _react2["default"].createElement(
 	              'a',
-	              { href: '#' + paths.join('/') },
+	              { href: '#/' + paths.join('/') },
 	              name
 	            );
 	          }
@@ -35509,6 +35511,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
+	var _objectAssign = __webpack_require__(107);
+	
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
 	var _rcAnimate = __webpack_require__(156);
 	
 	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
@@ -35778,7 +35784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setOpenState(false);
 	      }
 	
-	    this.fireChange(value, label);
+	    this.fireChange(value, label, { triggerValue: selectedValue, triggerNode: item, checked: info.checked });
 	    this.setState({
 	      inputValue: ''
 	    });
@@ -35959,7 +35965,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (index !== -1) {
 	      label.splice(index, 1);
 	    }
-	    this.fireChange(value, label);
+	    this.fireChange(value, label, { triggerValue: selectedValue, clear: true });
 	  },
 	
 	  openIfHasChildren: function openIfHasChildren() {
@@ -35981,7 +35987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	
-	  fireChange: function fireChange(value, label) {
+	  fireChange: function fireChange(value, label, extraInfo) {
 	    var props = this.props;
 	    if (!('value' in props)) {
 	      this.setState({
@@ -35989,7 +35995,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    }
 	    if (this.isValueChange(value)) {
-	      props.onChange(this.getVLForOnChange(value), this.getVLForOnChange(label), [].concat(_toConsumableArray(this.state.value)));
+	      var ex = { preValue: [].concat(_toConsumableArray(this.state.value)) };
+	      if (extraInfo) {
+	        (0, _objectAssign2['default'])(ex, extraInfo);
+	      }
+	      props.onChange(this.getVLForOnChange(value), this.getVLForOnChange(label), ex);
 	    }
 	  },
 	  renderTopControlNode: function renderTopControlNode() {
@@ -38778,7 +38788,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function isRequired() {
 	      if (this.context.form) {
 	        var meta = this.getMeta() || {};
-	        return (meta.validate || []).some(function (item) {
+	        var validate = meta.validate || [];
+	
+	        return validate.filter(function (item) {
+	          return !!item.rules;
+	        }).some(function (item) {
 	          return item.rules.some(function (rule) {
 	            return rule.required;
 	          });
@@ -38807,6 +38821,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (typeof child.type === 'function' && !child.props.size) {
 	          return _react2["default"].cloneElement(child, { size: 'large' });
 	        }
+	
 	        return child;
 	      });
 	      return [this.renderLabel(), this.renderWrapper(this.renderValidateWrapper(children, this.renderHelp(), props.extra))];
@@ -42287,10 +42302,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _state = this.state;
 	      var leftCheckedKeys = _state.leftCheckedKeys;
 	      var rightCheckedKeys = _state.rightCheckedKeys;
-	      // move items to target box
 	
-	      var newTargetKeys = direction === 'right' ? leftCheckedKeys.concat(targetKeys) : targetKeys.filter(function (targetKey) {
-	        return !rightCheckedKeys.some(function (checkedKey) {
+	      var moveKeys = direction === 'right' ? leftCheckedKeys : rightCheckedKeys;
+	      // move items to target box
+	      var newTargetKeys = direction === 'right' ? moveKeys.concat(targetKeys) : targetKeys.filter(function (targetKey) {
+	        return !moveKeys.some(function (checkedKey) {
 	          return targetKey === checkedKey;
 	        });
 	      });
@@ -42298,7 +42314,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // empty checked keys
 	      this.setState(_defineProperty({}, direction === 'right' ? 'leftCheckedKeys' : 'rightCheckedKeys', []));
 	
-	      this.props.onChange(newTargetKeys);
+	      this.props.onChange(newTargetKeys, direction, moveKeys);
 	    }
 	  }, {
 	    key: 'getGlobalCheckStatus',
