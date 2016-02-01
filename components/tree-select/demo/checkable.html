@@ -4,22 +4,25 @@
     <script>mountNode = document.getElementById('components-tree-select-demo-checkable');</script>
     <script>(function(){'use strict';
 
-var _antd = require('antd');
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var TreeNode = _antd.TreeSelect.TreeNode;
+var _antd = require('antd');
 
 var x = 3;
 var y = 2;
 var z = 1;
-var gData = [];
+var gData = []; // 手工构造数据
 var generateData = function generateData(_level, _preKey, _tns) {
   var preKey = _preKey || '0';
   var tns = _tns || gData;
-
   var children = [];
   for (var i = 0; i < x; i++) {
     var key = preKey + '-' + i;
-    tns.push({ title: key, key: key });
+    tns.push({
+      label: key + '-label',
+      value: key + '-value',
+      key: key
+    });
     if (i < y) {
       children.push(key);
     }
@@ -39,56 +42,43 @@ var Demo = React.createClass({
   displayName: 'Demo',
   getInitialState: function getInitialState() {
     return {
-      value: ['0-0']
+      value: ['0-0-0-value']
     };
   },
   onChange: function onChange(value) {
-    console.log('onChange ' + value);
+    console.log('onChange ', value, arguments);
     this.setState({ value: value });
   },
   render: function render() {
-    var loop = function loop(data) {
-      return data.map(function (item) {
-        if (item.children) {
-          return React.createElement(
-            TreeNode,
-            { key: item.key, value: item.key, title: item.key },
-            loop(item.children)
-          );
-        }
-        return React.createElement(TreeNode, { key: item.key, value: item.key, title: item.key });
-      });
-    };
     var tProps = {
+      treeData: gData,
       value: this.state.value,
       onChange: this.onChange,
       multiple: true,
       treeCheckable: true,
       treeDefaultExpandAll: true
     };
-    return React.createElement(
-      _antd.TreeSelect,
-      tProps,
-      loop(gData)
-    );
+    return React.createElement(_antd.TreeSelect, _extends({ style: { width: 360 } }, tProps));
   }
 });
 
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TreeSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-<span class="hljs-keyword">const</span> TreeNode = TreeSelect.TreeNode;
 
 <span class="hljs-keyword">const</span> x = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;
 <span class="hljs-keyword">const</span> z = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">const</span> gData = [];
+<span class="hljs-keyword">const</span> gData = []; <span class="hljs-comment">// 手工构造数据</span>
 <span class="hljs-keyword">const</span> generateData = (_level, _preKey, _tns) =&gt; {
   <span class="hljs-keyword">const</span> preKey = _preKey || <span class="hljs-string">'0'</span>;
   <span class="hljs-keyword">const</span> tns = _tns || gData;
-
   <span class="hljs-keyword">const</span> children = [];
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; x; i++) {
     <span class="hljs-keyword">const</span> key = <span class="hljs-string">`<span class="hljs-subst">${preKey}</span>-<span class="hljs-subst">${i}</span>`</span>;
-    tns.push({ title: key, key: key });
+    tns.push({
+      label: key + <span class="hljs-string">'-label'</span>,
+      value: key + <span class="hljs-string">'-value'</span>,
+      key: key,
+    });
     <span class="hljs-keyword">if</span> (i &lt; y) {
       children.push(key);
     }
@@ -107,23 +97,16 @@ generateData(z);
 <span class="hljs-keyword">const</span> Demo = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      value: [<span class="hljs-string">'0-0'</span>],
+      value: [<span class="hljs-string">'0-0-0-value'</span>],
     };
   },
   onChange(value) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onChange '</span> + value);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onChange '</span>, value, <span class="hljs-built_in">arguments</span>);
     <span class="hljs-keyword">this</span>.setState({ value });
   },
   render() {
-    <span class="hljs-keyword">const</span> loop = data =&gt; {
-      <span class="hljs-keyword">return</span> data.map((item) =&gt; {
-        <span class="hljs-keyword">if</span> (item.children) {
-          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span>&gt;</span>{loop(item.children)}<span class="hljs-tag">&lt;/<span class="hljs-title">TreeNode</span>&gt;</span>;</span>
-        }
-        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{item.key}</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{item.key}</span> /&gt;</span>;</span>
-      });
-    };
     <span class="hljs-keyword">const</span> tProps = {
+      treeData: gData,
       value: <span class="hljs-keyword">this</span>.state.value,
       onChange: <span class="hljs-keyword">this</span>.onChange,
       multiple: <span class="hljs-literal">true</span>,
@@ -131,9 +114,7 @@ generateData(z);
       treeDefaultExpandAll: <span class="hljs-literal">true</span>,
     };
     <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> {<span class="hljs-attribute">...tProps</span>}&gt;</span>
-        {loop(gData)}
-      <span class="hljs-tag">&lt;/<span class="hljs-title">TreeSelect</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">360</span> }} {<span class="hljs-attribute">...tProps</span>} /&gt;</span>
     )</span>;
   },
 });

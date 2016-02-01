@@ -35415,7 +35415,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      prefixCls: 'ant-tree-select',
 	      transitionName: 'slide-up',
-	      optionLabelProp: 'value',
 	      choiceTransitionName: 'zoom',
 	      showSearch: false
 	    };

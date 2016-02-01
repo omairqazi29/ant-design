@@ -655,7 +655,12 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/common.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- 引入入口文件 --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试，可以参考我们所使用的 <a href="https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js">webpack 配置</a>。</p>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><p>另外，由于 babel 对 IE8 的支持不佳，你可能会遇到类似 <a href="https://github.com/ant-tool/atool-build/issues/28">#28</a> 和 <a href="https://github.com/ant-design/ant-design/issues/858">#858</a> 的 default 报错的问题。</p>
+<p><a href="http://github.com/ant-design/antd-init">antd-init</a> 脚手架已经解决了这个问题，你也可以参照这个 <a href="https://github.com/ant-design/antd-init/blob/8c4a55d205c82a6ad87814bbf997696051713d58/boilerplate/webpack.config.js#L10-L14">webpack 配置</a>。</p>
+<blockquote>
+<p>更多 IE8 下使用 React 的相关问题可以参考：<a href="https://github.com/xcatliu/react-ie8">https://github.com/xcatliu/react-ie8</a></p>
+</blockquote>
+<h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试，可以参考我们所使用的 <a href="https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js">webpack 配置</a>。</p>
 <h3 id="改变主色系">改变主色系<a href="#改变主色系" class="anchor">#</a> </h3><ul>
 <li><a href="https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme">配置代码示例</a></li>
 </ul>
