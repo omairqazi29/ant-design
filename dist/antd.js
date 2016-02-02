@@ -25233,8 +25233,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var SubMenu = _rcMenu2["default"].SubMenu;
-	
 	var FilterMenu = _react2["default"].createClass({
 	  displayName: 'FilterMenu',
 	  getInitialState: function getInitialState() {
@@ -25282,7 +25280,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  renderMenuItem: function renderMenuItem(item) {
 	    return _react2["default"].createElement(
-	      _rcMenu2["default"].Item,
+	      _rcMenu.Item,
 	      { key: item.value },
 	      _react2["default"].createElement(_checkbox2["default"], { checked: this.state.selectedKeys.indexOf(item.value) >= 0 }),
 	      item.text
@@ -25304,7 +25302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var subMenuCls = containSelected ? 'ant-dropdown-submenu-contain-selected' : '';
 	          return {
 	            v: _react2["default"].createElement(
-	              SubMenu,
+	              _rcMenu.SubMenu,
 	              { title: item.text, className: subMenuCls, key: item.value },
 	              item.children.map(function (child) {
 	                return _this.renderMenuItem(child);
