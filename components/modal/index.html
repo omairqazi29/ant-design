@@ -634,7 +634,7 @@ Modal 对话框 - Ant Design
 <tr>
 <td>onCancel</td>
 <td>点击遮罩层或右上角叉或取消按钮的回调</td>
-<td>function</td>
+<td>function(e)</td>
 <td>无</td>
 </tr>
 <tr>
@@ -761,7 +761,8 @@ var App = React.createClass({
       visible: false
     });
   },
-  handleCancel: function handleCancel() {
+  handleCancel: function handleCancel(e) {
+    console.log(e);
     this.setState({
       visible: false
     });
@@ -816,7 +817,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
       visible: <span class="hljs-literal">false</span>
     });
   },
-  handleCancel() {
+  handleCancel(e) {
+    <span class="hljs-built_in">console</span>.log(e);
     <span class="hljs-keyword">this</span>.setState({
       visible: <span class="hljs-literal">false</span>
     });

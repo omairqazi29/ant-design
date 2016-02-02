@@ -12258,7 +12258,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        if (originalValue && value) {
 	          if (originalValue.getHourOfDay() !== value.getHourOfDay() || originalValue.getMinutes() !== value.getMinutes() || originalValue.getSeconds() !== value.getSeconds()) {
-	            onChange(value);
+	            // keep other fields for rc-calendar
+	            var changedValue = originalValue.clone();
+	            changedValue.setHourOfDay(value.getHourOfDay());
+	            changedValue.setMinutes(value.getMinutes());
+	            changedValue.setSeconds(value.getSeconds());
+	            onChange(changedValue);
 	          }
 	        } else if (originalValue !== value) {
 	          onChange(value);
@@ -16387,8 +16392,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      visible: false
 	    };
 	  },
-	  handleCancel: function handleCancel() {
-	    this.props.onCancel();
+	  handleCancel: function handleCancel(e) {
+	    this.props.onCancel(e);
 	  },
 	  handleOk: function handleOk() {
 	    this.props.onOk();
@@ -21809,6 +21814,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -21830,6 +21837,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _button2 = _interopRequireDefault(_button);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
 	var prefixCls = 'ant-popover';
 	var noop = function noop() {};
@@ -21899,6 +21908,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var overlayStyle = _props.overlayStyle;
 	    var trigger = _props.trigger;
 	
+	    var restProps = _objectWithoutProperties(_props, ['title', 'okText', 'cancelText', 'placement', 'overlayStyle', 'trigger']);
+	
 	    var overlay = _react2["default"].createElement(
 	      'div',
 	      null,
@@ -21932,14 +21943,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return _react2["default"].createElement(
 	      _rcTooltip2["default"],
-	      { placement: placement,
+	      _extends({}, restProps, { placement: placement,
 	        overlayStyle: overlayStyle,
 	        prefixCls: prefixCls,
 	        onVisibleChange: this.onVisibleChange,
 	        transitionName: transitionName,
 	        visible: this.state.visible,
 	        trigger: trigger,
-	        overlay: overlay },
+	        overlay: overlay }),
 	      this.props.children
 	    );
 	  }

@@ -3099,6 +3099,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 100%;
   background: transparent;
   outline: 0;
+  border-radius: 6px;
 }
 .ant-select-search--inline > i {
   float: right;
@@ -3231,10 +3232,15 @@ fieldset[disabled] .ant-btn-dashed.active {
   height: 100%;
   position: relative;
   z-index: 1;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-select-combobox .ant-select-search__field:focus {
+  box-shadow: 0 0 0 1px #57c5f7, 0 0 0 3px #d5f1fd;
 }
 .ant-select-combobox .ant-select-selection__rendered {
   padding: 0;
   height: 100%;
+  overflow: visible;
 }
 .ant-select-dropdown {
   background-color: white;
@@ -4571,7 +4577,6 @@ textarea.ant-time-picker-input {
   left: -9999px;
   top: -9999px;
   z-index: 1000;
-  min-height: 240px;
 }
 .ant-modal-wrap * {
   box-sizing: border-box;
@@ -9080,6 +9085,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   border-color: #d9d9d9;
 }
 .ant-tree-select-disabled .ant-tree-select-selection--single {
+  background: #f4f4f4;
   cursor: not-allowed;
 }
 .ant-tree-select-selection--single {
