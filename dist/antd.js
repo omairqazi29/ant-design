@@ -2589,7 +2589,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        transitionName: 'slide-up',
 	        popupStyle: {},
 	        onChange: function onChange() {},
-	        // onChange 可用于 Validator
+	        onOk: function onOk() {},
+	
 	        locale: {},
 	        align: {
 	          offset: [0, -9]
@@ -2650,6 +2651,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        prefixCls: 'ant-calendar',
 	        className: calendarClassName,
 	        showOk: this.props.showTime,
+	        onOk: this.props.onOk,
 	        showClear: true });
 	
 	      var sizeClass = '';
@@ -11045,7 +11047,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      transitionName: 'slide-up',
 	      popupStyle: {},
 	      onChange: function onChange() {},
-	      // onChange 可用于 Validator
+	      onOk: function onOk() {},
+	
 	      locale: {},
 	      align: {
 	        offset: [0, -9]
@@ -11105,6 +11108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var popupStyle = _props2.popupStyle;
 	    var align = _props2.align;
 	    var style = _props2.style;
+	    var onOk = _props2.onOk;
 	
 	    var state = this.state;
 	
@@ -11121,6 +11125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      disabledDate: disabledDate,
 	      dateInputPlaceholder: [startPlaceholder, endPlaceholder],
 	      locale: locale.lang,
+	      onOk: onOk,
 	      defaultValue: [defaultCalendarValue, defaultCalendarValue],
 	      showClear: true });
 	
@@ -38070,8 +38075,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function componentWillReceiveProps(nextProps) {
 	      var _this2 = this;
 	
-	      if ('count' in nextProps && nextProps.count) {
-	        if (this.lastCount === this.state.count) {
+	      if ('count' in nextProps) {
+	        if (this.state.count === nextProps.count) {
 	          return;
 	        }
 	        this.lastCount = this.state.count;

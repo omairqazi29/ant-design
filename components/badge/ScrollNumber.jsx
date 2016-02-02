@@ -36,8 +36,8 @@ class AntScrollNumber extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if ('count' in nextProps && nextProps.count) {
-      if (this.lastCount === this.state.count) {
+    if ('count' in nextProps) {
+      if (this.state.count === nextProps.count) {
         return;
       }
       this.lastCount = this.state.count;
