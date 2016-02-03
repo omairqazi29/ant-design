@@ -204,7 +204,7 @@ Form 表单 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.0'
+        latest: '0.12.1'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -1185,7 +1185,7 @@ var Demo = React.createClass({
         {
           label: '您的性别：',
           labelCol: { span: 6 },
-          wrapperCol: { span: 14 }, d: true },
+          wrapperCol: { span: 14 } },
         React.createElement(
           RadioGroup,
           getFieldProps('gender', { initialValue: 'female' }),
@@ -1269,7 +1269,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"您的性别："</span>
           <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}<span class="hljs-attribute">d</span>&gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">gender</span>', { <span class="hljs-attribute">initialValue:</span> '<span class="hljs-attribute">female</span>' })}&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
@@ -1283,7 +1283,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"随便写"</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">remark</span>')} /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span>, <span class="hljs-attribute">offset:</span> <span class="hljs-attribute">6</span> }} &gt;</span>
+          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span>, <span class="hljs-attribute">offset:</span> <span class="hljs-attribute">6</span> }}&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">agreement</span>')} /&gt;</span>同意
           <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>

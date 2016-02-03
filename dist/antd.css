@@ -1319,7 +1319,7 @@ samp {
 }
 .fade-enter,
 .fade-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1347,7 +1347,7 @@ samp {
 }
 .ant-modal-fade-enter,
 .ant-modal-fade-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1391,7 +1391,7 @@ samp {
 }
 .move-up-enter,
 .move-up-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1419,7 +1419,7 @@ samp {
 }
 .move-down-enter,
 .move-down-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1447,7 +1447,7 @@ samp {
 }
 .move-left-enter,
 .move-left-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1475,7 +1475,7 @@ samp {
 }
 .move-right-enter,
 .move-right-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1609,7 +1609,7 @@ samp {
 }
 .slide-up-enter,
 .slide-up-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1637,7 +1637,7 @@ samp {
 }
 .slide-down-enter,
 .slide-down-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1665,7 +1665,7 @@ samp {
 }
 .slide-left-enter,
 .slide-left-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1693,7 +1693,7 @@ samp {
 }
 .slide-right-enter,
 .slide-right-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1817,7 +1817,7 @@ samp {
 }
 .swing-enter,
 .swing-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1846,7 +1846,7 @@ samp {
 }
 .zoom-enter,
 .zoom-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1874,7 +1874,7 @@ samp {
 }
 .zoom-big-enter,
 .zoom-big-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1902,7 +1902,7 @@ samp {
 }
 .zoom-up-enter,
 .zoom-up-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1930,7 +1930,7 @@ samp {
 }
 .zoom-down-enter,
 .zoom-down-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1958,7 +1958,7 @@ samp {
 }
 .zoom-left-enter,
 .zoom-left-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -1986,7 +1986,7 @@ samp {
 }
 .zoom-right-enter,
 .zoom-right-appear {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -2576,7 +2576,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   height: 22px;
   line-height: 20px;
   vertical-align: middle;
-  border-radius: 20px 20px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   background-color: #ccc;
   cursor: pointer;
@@ -3405,7 +3405,8 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-calendar-picker > input {
   outline: none;
 }
-.ant-calendar-picker-open {
+.ant-calendar-picker-open > span:first-child {
+  transition: opacity 0.3s ease;
   opacity: 0;
 }
 .ant-calendar-picker-icon {
@@ -4639,7 +4640,7 @@ textarea.ant-time-picker-input {
 }
 .ant-modal-header {
   padding: 13px 20px 14px 20px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 6px 6px 0 0;
   background: #fff;
   color: #666;
   border-bottom: 1px solid #e9e9e9;
@@ -4653,7 +4654,7 @@ textarea.ant-time-picker-input {
   border-top: 1px solid #e9e9e9;
   padding: 8px 20px 16px 10px;
   text-align: right;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 6px 6px;
 }
 .ant-modal-mask {
   position: fixed;
@@ -4701,7 +4702,8 @@ textarea.ant-time-picker-input {
 }
 .ant-confirm .ant-confirm-body .anticon {
   font-size: 24px;
-  margin-right: 12px;
+  margin-right: 10px;
+  padding: 0 1px;
   position: relative;
   top: 5px;
 }
@@ -4959,7 +4961,7 @@ textarea.ant-time-picker-input {
   width: 100%;
 }
 .ant-tabs-slide-horizontal-backward-enter {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
   animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -4975,7 +4977,7 @@ textarea.ant-time-picker-input {
   left: 0;
   right: 0;
   bottom: 0;
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
   animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -4985,7 +4987,7 @@ textarea.ant-time-picker-input {
   animation-play-state: running;
 }
 .ant-tabs-slide-horizontal-forward-enter {
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
   animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -5001,7 +5003,7 @@ textarea.ant-time-picker-input {
   right: 0;
   left: 0;
   bottom: 0;
-  animation-duration: .24s;
+  animation-duration: .2s;
   animation-fill-mode: both;
   animation-play-state: paused;
   animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -6230,17 +6232,17 @@ output {
 label {
   position: relative;
 }
-label[required]:before {
+label > .anticon {
+  vertical-align: top;
+  font-size: 12px;
+}
+.ant-form-item-required:before {
   display: inline-block;
   margin-right: 4px;
   content: "*";
   font-family: SimSun;
   font-size: 12px;
   color: #f60;
-}
-label > .anticon {
-  vertical-align: top;
-  font-size: 12px;
 }
 .ant-input {
   position: relative;

@@ -204,7 +204,7 @@ DatePicker 日期选择框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.0'
+        latest: '0.12.1'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -675,6 +675,12 @@ DatePicker 日期选择框 - Ant Design
 <td>function(Date value)</td>
 <td>无</td>
 </tr>
+<tr>
+<td>getCalendarContainer</td>
+<td>定义浮层的容器，默认为 body 上新建 div</td>
+<td>function(trigger)</td>
+<td>无</td>
+</tr>
 </tbody>
 </table>
 <h3 id="rangepicker">RangePicker<a href="#rangepicker" class="anchor">#</a> </h3><table>
@@ -690,17 +696,13 @@ DatePicker 日期选择框 - Ant Design
 <tr>
 <td>value</td>
 <td>日期</td>
-<td>[string</td>
-<td>Date, string</td>
-<td>Date]</td>
+<td>[string/Date, string/Date]</td>
 <td>无</td>
 </tr>
 <tr>
 <td>defaultValue</td>
 <td>默认日期</td>
-<td>[string</td>
-<td>Date, string</td>
-<td>Date]</td>
+<td>[string/Date, string/Date]</td>
 <td>无</td>
 </tr>
 <tr>
@@ -717,7 +719,7 @@ DatePicker 日期选择框 - Ant Design
 </tr>
 </tbody>
 </table>
-<p><code>disabled</code> <code>style</code> <code>popupStyle</code> <code>size</code> <code>locale</code> <code>showTime</code> <code>onOk</code> 属性与 DatePicker 的一致。</p>
+<p><code>disabled</code> <code>style</code> <code>popupStyle</code> <code>size</code> <code>locale</code> <code>showTime</code> <code>onOk</code> <code>getCalendarContainer</code> 属性与 DatePicker 的一致。</p>
 <style>
 .code-box-demo .ant-calendar-picker {
   margin: 0 8px 12px 0;
