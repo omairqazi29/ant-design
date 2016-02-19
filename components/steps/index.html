@@ -204,7 +204,7 @@ Steps 步骤条 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -902,7 +902,7 @@ const Step = Steps.Step;
 const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 const steps = array.map((item, i) =&gt; {
   return {
-    title: '步骤' + (i + 1)
+    title: `步骤${i + 1}`
   };
 });
 

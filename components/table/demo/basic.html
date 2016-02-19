@@ -77,7 +77,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
   key: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
+  render(text) {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -91,7 +91,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }, {
   title: <span class="hljs-string">'操作'</span>,
   key: <span class="hljs-string">'operation'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text, record</span>) </span>{
+  render(text, record) {
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>操作一{record.name}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>

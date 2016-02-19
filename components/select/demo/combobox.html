@@ -60,7 +60,7 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
       options = [];
     } <span class="hljs-keyword">else</span> {
       options = [<span class="hljs-string">'gmail.com'</span>, <span class="hljs-string">'163.com'</span>, <span class="hljs-string">'qq.com'</span>].map((domain) =&gt; {
-        <span class="hljs-keyword">const</span> email = value + <span class="hljs-string">'@'</span> + domain;
+        <span class="hljs-keyword">const</span> email = <span class="hljs-string">`<span class="hljs-subst">${value}</span>@<span class="hljs-subst">${domain}</span>`</span>;
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{email}</span>&gt;</span>{email}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
       });
     }

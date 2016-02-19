@@ -2,16 +2,16 @@
   <div class="code-box-demo">
     <div id="components-form-demo-form-controls"></div>
     <script>mountNode = document.getElementById('components-form-demo-form-controls');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var FormItem = _antd.Form.Item;
 var Option = _antd.Select.Option;
 var RadioGroup = _antd.Radio.Group;
 
 function handleSelectChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
@@ -20,131 +20,131 @@ ReactDOM.render(React.createElement(
   React.createElement(
     FormItem,
     {
-      id: 'control-input',
-      label: '输入框：',
+      id: "control-input",
+      label: "输入框：",
       labelCol: { span: 6 },
       wrapperCol: { span: 14 } },
-    React.createElement(_antd.Input, { id: 'control-input', placeholder: 'Please enter...' })
+    React.createElement(_antd.Input, { id: "control-input", placeholder: "Please enter..." })
   ),
   React.createElement(
     FormItem,
     {
-      id: 'control-textarea',
-      label: '文本域：',
+      id: "control-textarea",
+      label: "文本域：",
       labelCol: { span: 6 },
       wrapperCol: { span: 14 } },
-    React.createElement(_antd.Input, { type: 'textarea', id: 'control-textarea', rows: '3' })
+    React.createElement(_antd.Input, { type: "textarea", id: "control-textarea", rows: "3" })
   ),
   React.createElement(
     FormItem,
     {
-      id: 'select',
-      label: 'Select 选择器：',
+      id: "select",
+      label: "Select 选择器：",
       labelCol: { span: 6 },
       wrapperCol: { span: 14 } },
     React.createElement(
       _antd.Select,
-      { id: 'select', size: 'large', defaultValue: 'lucy', style: { width: 200 }, onChange: handleSelectChange },
+      { id: "select", size: "large", defaultValue: "lucy", style: { width: 200 }, onChange: handleSelectChange },
       React.createElement(
         Option,
-        { value: 'jack' },
-        'jack'
+        { value: "jack" },
+        "jack"
       ),
       React.createElement(
         Option,
-        { value: 'lucy' },
-        'lucy'
+        { value: "lucy" },
+        "lucy"
       ),
       React.createElement(
         Option,
-        { value: 'disabled', disabled: true },
-        'disabled'
+        { value: "disabled", disabled: true },
+        "disabled"
       ),
       React.createElement(
         Option,
-        { value: 'yiminghe' },
-        'yiminghe'
+        { value: "yiminghe" },
+        "yiminghe"
       )
     )
   ),
   React.createElement(
     FormItem,
     {
-      label: 'Checkbox 多选框：',
+      label: "Checkbox 多选框：",
       labelCol: { span: 6 },
       wrapperCol: { span: 18 } },
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
+      "label",
+      { className: "ant-checkbox-vertical" },
       React.createElement(_antd.Checkbox, null),
-      '选项一'
+      "选项一"
     ),
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
+      "label",
+      { className: "ant-checkbox-vertical" },
       React.createElement(_antd.Checkbox, null),
-      '选项二'
+      "选项二"
     ),
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-vertical' },
+      "label",
+      { className: "ant-checkbox-vertical" },
       React.createElement(_antd.Checkbox, { disabled: true }),
-      '选项三（不可选）'
+      "选项三（不可选）"
     )
   ),
   React.createElement(
     FormItem,
     {
-      label: 'Checkbox 多选框：',
+      label: "Checkbox 多选框：",
       labelCol: { span: 6 },
       wrapperCol: { span: 18 } },
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
+      "label",
+      { className: "ant-checkbox-inline" },
       React.createElement(_antd.Checkbox, null),
-      '选项一'
+      "选项一"
     ),
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
+      "label",
+      { className: "ant-checkbox-inline" },
       React.createElement(_antd.Checkbox, null),
-      '选项二'
+      "选项二"
     ),
     React.createElement(
-      'label',
-      { className: 'ant-checkbox-inline' },
+      "label",
+      { className: "ant-checkbox-inline" },
       React.createElement(_antd.Checkbox, null),
-      '选项三'
+      "选项三"
     )
   ),
   React.createElement(
     FormItem,
     {
-      label: 'Radio 单选框：',
+      label: "Radio 单选框：",
       labelCol: { span: 6 },
       wrapperCol: { span: 18 } },
     React.createElement(
       RadioGroup,
-      { value: 'b' },
+      { value: "b" },
       React.createElement(
         _antd.Radio,
-        { value: 'a' },
-        'A'
+        { value: "a" },
+        "A"
       ),
       React.createElement(
         _antd.Radio,
-        { value: 'b' },
-        'B'
+        { value: "b" },
+        "B"
       ),
       React.createElement(
         _antd.Radio,
-        { value: 'c' },
-        'C'
+        { value: "c" },
+        "C"
       ),
       React.createElement(
         _antd.Radio,
-        { value: 'd' },
-        'D'
+        { value: "d" },
+        "D"
       )
     )
   )
@@ -154,7 +154,7 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSelectChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(

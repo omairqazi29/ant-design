@@ -18,7 +18,7 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span> + e.target.checked);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`checked = <span class="hljs-subst">${e.target.checked}</span>`</span>);
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>

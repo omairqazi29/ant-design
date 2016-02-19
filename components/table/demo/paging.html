@@ -51,7 +51,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
+  render(text) {
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
   }
 }, {
@@ -66,9 +66,9 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">46</span>; i++) {
   data.push({
     key: i,
-    name: <span class="hljs-string">'李大嘴'</span> + i,
+    name: <span class="hljs-string">`李大嘴<span class="hljs-subst">${i}</span>`</span>,
     age: <span class="hljs-number">32</span>,
-    address: <span class="hljs-string">'西湖区湖底公园'</span> + i + <span class="hljs-string">'号'</span>
+    address: <span class="hljs-string">`西湖区湖底公园<span class="hljs-subst">${i}</span>号`</span>
   });
 }
 
@@ -76,10 +76,10 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   total: data.length,
   current: <span class="hljs-number">1</span>,
   showSizeChanger: <span class="hljs-literal">true</span>,
-  onShowSizeChange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current, pageSize</span>) </span>{
+  onShowSizeChange(current, pageSize) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Current: '</span>, current, <span class="hljs-string">'; PageSize: '</span>, pageSize);
   },
-  onChange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">current</span>) </span>{
+  onChange(current) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Current: '</span>, current);
   }
 };

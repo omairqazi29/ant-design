@@ -204,7 +204,7 @@ Switch 开关 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -670,7 +670,7 @@ function onChange(checked) {
 ReactDOM.render(React.createElement(_antd.Switch, { defaultChecked: false, onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">checked</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch to '</span> + checked);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`switch to <span class="hljs-subst">${checked}</span>`</span>);
 }
 
 ReactDOM.render(

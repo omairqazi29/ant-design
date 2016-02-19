@@ -204,7 +204,7 @@ Select 选择器 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -777,57 +777,57 @@ Select 选择器 - Ant Design
   <div class="code-box-demo">
     <div id="components-select-demo-basic"></div>
     <script>mountNode = document.getElementById('components-select-demo-basic');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(
     _antd.Select,
-    { defaultValue: 'lucy', style: { width: 120 }, onChange: handleChange },
+    { defaultValue: "lucy", style: { width: 120 }, onChange: handleChange },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'Jack'
+      { value: "jack" },
+      "Jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     ),
     React.createElement(
       Option,
-      { value: 'disabled', disabled: true },
-      'Disabled'
+      { value: "disabled", disabled: true },
+      "Disabled"
     ),
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   ),
   React.createElement(
     _antd.Select,
-    { defaultValue: 'lucy', style: { width: 120 }, disabled: true },
+    { defaultValue: "lucy", style: { width: 120 }, disabled: true },
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -855,47 +855,47 @@ ReactDOM.render(
   <div class="code-box-demo">
     <div id="components-select-demo-search"></div>
     <script>mountNode = document.getElementById('components-select-demo-search');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
   _antd.Select,
-  { defaultValue: 'lucy', showSearch: true, style: { width: 200 },
-    notFoundContent: '找不到呐！',
-    searchPlaceholder: '输入',
+  { defaultValue: "lucy", showSearch: true, style: { width: 200 },
+    notFoundContent: "找不到呐！",
+    searchPlaceholder: "输入",
     onChange: handleChange },
   React.createElement(
     Option,
-    { value: 'jack' },
-    'jack'
+    { value: "jack" },
+    "jack"
   ),
   React.createElement(
     Option,
-    { value: 'lucy' },
-    'lucy'
+    { value: "lucy" },
+    "lucy"
   ),
   React.createElement(
     Option,
-    { value: 'disabled', disabled: true },
-    'disabled'
+    { value: "disabled", disabled: true },
+    "disabled"
   ),
   React.createElement(
     Option,
-    { value: 'yiminghe' },
-    'yiminghe'
+    { value: "yiminghe" },
+    "yiminghe"
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -956,7 +956,7 @@ ReactDOM.render(React.createElement(
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -979,44 +979,44 @@ ReactDOM.render(
   <div class="code-box-demo">
     <div id="components-select-demo-optgroup"></div>
     <script>mountNode = document.getElementById('components-select-demo-optgroup');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 var OptGroup = _antd.Select.OptGroup;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
   _antd.Select,
-  { defaultValue: 'lucy',
+  { defaultValue: "lucy",
     style: { width: 200 },
     showSearch: false,
     onChange: handleChange },
   React.createElement(
     OptGroup,
-    { label: 'Manager' },
+    { label: "Manager" },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'jack'
+      { value: "jack" },
+      "jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'lucy'
+      { value: "lucy" },
+      "lucy"
     )
   ),
   React.createElement(
     OptGroup,
-    { label: 'Engineer' },
+    { label: "Engineer" },
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -1024,7 +1024,7 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> OptGroup = Select.OptGroup;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -1055,96 +1055,96 @@ ReactDOM.render(
   <div class="code-box-demo">
     <div id="components-select-demo-size"></div>
     <script>mountNode = document.getElementById('components-select-demo-size');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(
     _antd.Select,
-    { size: 'large', defaultValue: 'lucy', style: { width: 200 }, onChange: handleChange },
+    { size: "large", defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'Jack'
+      { value: "jack" },
+      "Jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     ),
     React.createElement(
       Option,
-      { value: 'disabled', disabled: true },
-      'Disabled'
+      { value: "disabled", disabled: true },
+      "Disabled"
     ),
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   ),
   React.createElement(
     _antd.Select,
-    { defaultValue: 'lucy', style: { width: 200 }, onChange: handleChange },
+    { defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'Jack'
+      { value: "jack" },
+      "Jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     ),
     React.createElement(
       Option,
-      { value: 'disabled', disabled: true },
-      'Disabled'
+      { value: "disabled", disabled: true },
+      "Disabled"
     ),
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   ),
   React.createElement(
     _antd.Select,
-    { size: 'small', defaultValue: 'lucy', style: { width: 200 }, onChange: handleChange },
+    { size: "small", defaultValue: "lucy", style: { width: 200 }, onChange: handleChange },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'Jack'
+      { value: "jack" },
+      "Jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     ),
     React.createElement(
       Option,
-      { value: 'disabled', disabled: true },
-      'Disabled'
+      { value: "disabled", disabled: true },
+      "Disabled"
     ),
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -1219,7 +1219,7 @@ ReactDOM.render(React.createElement(
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(
@@ -1299,7 +1299,7 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
       options = [];
     } <span class="hljs-keyword">else</span> {
       options = [<span class="hljs-string">'gmail.com'</span>, <span class="hljs-string">'163.com'</span>, <span class="hljs-string">'qq.com'</span>].map((domain) =&gt; {
-        <span class="hljs-keyword">const</span> email = value + <span class="hljs-string">'@'</span> + domain;
+        <span class="hljs-keyword">const</span> email = <span class="hljs-string">`<span class="hljs-subst">${value}</span>@<span class="hljs-subst">${domain}</span>`</span>;
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{email}</span>&gt;</span>{email}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>;</span>
       });
     }
@@ -1340,8 +1340,8 @@ var Option = _antd.Select.Option;
 
 var provinceData = ['浙江', '江苏'];
 var cityData = {
-  '浙江': ['杭州', '宁波', '温州'],
-  '江苏': ['南京', '苏州', '镇江']
+  浙江: ['杭州', '宁波', '温州'],
+  江苏: ['南京', '苏州', '镇江']
 };
 
 var App = React.createClass({
@@ -1399,8 +1399,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 
 <span class="hljs-keyword">const</span> provinceData = [<span class="hljs-string">'浙江'</span>, <span class="hljs-string">'江苏'</span>];
 <span class="hljs-keyword">const</span> cityData = {
-  <span class="hljs-string">'浙江'</span>: [<span class="hljs-string">'杭州'</span>, <span class="hljs-string">'宁波'</span>, <span class="hljs-string">'温州'</span>],
-  <span class="hljs-string">'江苏'</span>: [<span class="hljs-string">'南京'</span>, <span class="hljs-string">'苏州'</span>, <span class="hljs-string">'镇江'</span>]
+  浙江: [<span class="hljs-string">'杭州'</span>, <span class="hljs-string">'宁波'</span>, <span class="hljs-string">'温州'</span>],
+  江苏: [<span class="hljs-string">'南京'</span>, <span class="hljs-string">'苏州'</span>, <span class="hljs-string">'镇江'</span>]
 };
 
 

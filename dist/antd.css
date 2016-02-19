@@ -2195,7 +2195,8 @@ samp {
   font-size: 12px;
   border-radius: 4px;
 }
-.ant-btn:hover {
+.ant-btn:hover,
+.ant-btn:focus {
   color: #858585;
   background-color: #f6f6f6;
   border-color: #e1e1e1;
@@ -2206,16 +2207,15 @@ samp {
   background-color: #e8e8e8;
   border-color: #e8e8e8;
 }
-.ant-btn:active,
-.ant-btn.active {
-  background-image: none;
-}
 .ant-btn.disabled,
 .ant-btn[disabled],
 fieldset[disabled] .ant-btn,
 .ant-btn.disabled:hover,
 .ant-btn[disabled]:hover,
 fieldset[disabled] .ant-btn:hover,
+.ant-btn.disabled:focus,
+.ant-btn[disabled]:focus,
+fieldset[disabled] .ant-btn:focus,
 .ant-btn.disabled:active,
 .ant-btn[disabled]:active,
 fieldset[disabled] .ant-btn:active,
@@ -2226,7 +2226,8 @@ fieldset[disabled] .ant-btn.active {
   background-color: #f3f5f7;
   border-color: #d9d9d9;
 }
-.ant-btn:hover {
+.ant-btn:hover,
+.ant-btn:focus {
   color: #57c5f7;
   background-color: white;
   border-color: #57c5f7;
@@ -2242,7 +2243,8 @@ fieldset[disabled] .ant-btn.active {
   background-color: #2db7f5;
   border-color: #2db7f5;
 }
-.ant-btn-primary:hover {
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
   color: #ffffff;
   background-color: #57c5f7;
   border-color: #57c5f7;
@@ -2253,16 +2255,15 @@ fieldset[disabled] .ant-btn.active {
   background-color: #2baee9;
   border-color: #2baee9;
 }
-.ant-btn-primary:active,
-.ant-btn-primary.active {
-  background-image: none;
-}
 .ant-btn-primary.disabled,
 .ant-btn-primary[disabled],
 fieldset[disabled] .ant-btn-primary,
 .ant-btn-primary.disabled:hover,
 .ant-btn-primary[disabled]:hover,
 fieldset[disabled] .ant-btn-primary:hover,
+.ant-btn-primary.disabled:focus,
+.ant-btn-primary[disabled]:focus,
+fieldset[disabled] .ant-btn-primary:focus,
 .ant-btn-primary.disabled:active,
 .ant-btn-primary[disabled]:active,
 fieldset[disabled] .ant-btn-primary:active,
@@ -2274,6 +2275,7 @@ fieldset[disabled] .ant-btn-primary.active {
   border-color: #d9d9d9;
 }
 .ant-btn-primary:hover,
+.ant-btn-primary:focus,
 .ant-btn-primary:active,
 .ant-btn-primary.active {
   color: #fff;
@@ -2301,7 +2303,8 @@ fieldset[disabled] .ant-btn-primary.active {
   background-color: #fff;
   border-color: #d9d9d9;
 }
-.ant-btn-ghost:hover {
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
   color: #858585;
   background-color: #ffffff;
   border-color: #e1e1e1;
@@ -2312,16 +2315,15 @@ fieldset[disabled] .ant-btn-primary.active {
   background-color: #f2f2f2;
   border-color: #f2f2f2;
 }
-.ant-btn-ghost:active,
-.ant-btn-ghost.active {
-  background-image: none;
-}
 .ant-btn-ghost.disabled,
 .ant-btn-ghost[disabled],
 fieldset[disabled] .ant-btn-ghost,
 .ant-btn-ghost.disabled:hover,
 .ant-btn-ghost[disabled]:hover,
 fieldset[disabled] .ant-btn-ghost:hover,
+.ant-btn-ghost.disabled:focus,
+.ant-btn-ghost[disabled]:focus,
+fieldset[disabled] .ant-btn-ghost:focus,
 .ant-btn-ghost.disabled:active,
 .ant-btn-ghost[disabled]:active,
 fieldset[disabled] .ant-btn-ghost:active,
@@ -2332,7 +2334,8 @@ fieldset[disabled] .ant-btn-ghost.active {
   background-color: #f3f5f7;
   border-color: #d9d9d9;
 }
-.ant-btn-ghost:hover {
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
   color: #57c5f7;
   background-color: white;
   border-color: #57c5f7;
@@ -2349,7 +2352,8 @@ fieldset[disabled] .ant-btn-ghost.active {
   border-color: #d9d9d9;
   border-style: dashed;
 }
-.ant-btn-dashed:hover {
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
   color: #858585;
   background-color: #ffffff;
   border-color: #e1e1e1;
@@ -2360,16 +2364,15 @@ fieldset[disabled] .ant-btn-ghost.active {
   background-color: #f2f2f2;
   border-color: #f2f2f2;
 }
-.ant-btn-dashed:active,
-.ant-btn-dashed.active {
-  background-image: none;
-}
 .ant-btn-dashed.disabled,
 .ant-btn-dashed[disabled],
 fieldset[disabled] .ant-btn-dashed,
 .ant-btn-dashed.disabled:hover,
 .ant-btn-dashed[disabled]:hover,
 fieldset[disabled] .ant-btn-dashed:hover,
+.ant-btn-dashed.disabled:focus,
+.ant-btn-dashed[disabled]:focus,
+fieldset[disabled] .ant-btn-dashed:focus,
 .ant-btn-dashed.disabled:active,
 .ant-btn-dashed[disabled]:active,
 fieldset[disabled] .ant-btn-dashed:active,
@@ -2380,7 +2383,8 @@ fieldset[disabled] .ant-btn-dashed.active {
   background-color: #f3f5f7;
   border-color: #d9d9d9;
 }
-.ant-btn-dashed:hover {
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
   color: #57c5f7;
   background-color: white;
   border-color: #57c5f7;
@@ -2440,12 +2444,14 @@ fieldset[disabled] .ant-btn-dashed.active {
   background-color: #2db7f5;
 }
 .ant-btn-circle-outline:not([disabled]):hover > .anticon,
+.ant-btn-circle-outline:not([disabled]):focus > .anticon,
 .ant-btn-circle-outline:not([disabled]):active > .anticon,
 .ant-btn-circle-outline:not([disabled]).active > .anticon {
   color: #fff;
   position: relative;
 }
 .ant-btn-circle-outline:not([disabled]):hover:before,
+.ant-btn-circle-outline:not([disabled]):focus:before,
 .ant-btn-circle-outline:not([disabled]):active:before,
 .ant-btn-circle-outline:not([disabled]).active:before {
   opacity: 1;
@@ -3700,7 +3706,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   border-radius: 4px;
   position: absolute;
-  bottom: 9px;
+  bottom: 8px;
   right: 9px;
 }
 .ant-calendar .ant-calendar-ok-btn > .anticon {
@@ -3734,7 +3740,8 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   border-radius: 4px;
 }
-.ant-calendar .ant-calendar-ok-btn:hover {
+.ant-calendar .ant-calendar-ok-btn:hover,
+.ant-calendar .ant-calendar-ok-btn:focus {
   color: #ffffff;
   background-color: #57c5f7;
   border-color: #57c5f7;
@@ -3745,16 +3752,15 @@ fieldset[disabled] .ant-btn-dashed.active {
   background-color: #2baee9;
   border-color: #2baee9;
 }
-.ant-calendar .ant-calendar-ok-btn:active,
-.ant-calendar .ant-calendar-ok-btn.active {
-  background-image: none;
-}
 .ant-calendar .ant-calendar-ok-btn.disabled,
 .ant-calendar .ant-calendar-ok-btn[disabled],
 fieldset[disabled] .ant-calendar .ant-calendar-ok-btn,
 .ant-calendar .ant-calendar-ok-btn.disabled:hover,
 .ant-calendar .ant-calendar-ok-btn[disabled]:hover,
 fieldset[disabled] .ant-calendar .ant-calendar-ok-btn:hover,
+.ant-calendar .ant-calendar-ok-btn.disabled:focus,
+.ant-calendar .ant-calendar-ok-btn[disabled]:focus,
+fieldset[disabled] .ant-calendar .ant-calendar-ok-btn:focus,
 .ant-calendar .ant-calendar-ok-btn.disabled:active,
 .ant-calendar .ant-calendar-ok-btn[disabled]:active,
 fieldset[disabled] .ant-calendar .ant-calendar-ok-btn:active,
@@ -3766,6 +3772,7 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   border-color: #d9d9d9;
 }
 .ant-calendar .ant-calendar-ok-btn:hover,
+.ant-calendar .ant-calendar-ok-btn:focus,
 .ant-calendar .ant-calendar-ok-btn:active,
 .ant-calendar .ant-calendar-ok-btn.active {
   color: #fff;
@@ -6238,6 +6245,9 @@ label > .anticon {
   font-size: 12px;
   color: #f60;
 }
+.ant-input-wrapper {
+  display: block;
+}
 .ant-input {
   position: relative;
   display: inline-block;
@@ -6533,7 +6543,8 @@ form .ant-select {
   padding-left: 8px;
   padding-right: 8px;
 }
-.ant-search-input .ant-search-btn:hover {
+.ant-search-input .ant-search-btn:hover,
+.ant-search-input .ant-search-btn:focus {
   color: #858585;
   background-color: #f6f6f6;
   border-color: #e1e1e1;
@@ -6544,16 +6555,15 @@ form .ant-select {
   background-color: #e8e8e8;
   border-color: #e8e8e8;
 }
-.ant-search-input .ant-search-btn:active,
-.ant-search-input .ant-search-btn.active {
-  background-image: none;
-}
 .ant-search-input .ant-search-btn.disabled,
 .ant-search-input .ant-search-btn[disabled],
 fieldset[disabled] .ant-search-input .ant-search-btn,
 .ant-search-input .ant-search-btn.disabled:hover,
 .ant-search-input .ant-search-btn[disabled]:hover,
 fieldset[disabled] .ant-search-input .ant-search-btn:hover,
+.ant-search-input .ant-search-btn.disabled:focus,
+.ant-search-input .ant-search-btn[disabled]:focus,
+fieldset[disabled] .ant-search-input .ant-search-btn:focus,
 .ant-search-input .ant-search-btn.disabled:active,
 .ant-search-input .ant-search-btn[disabled]:active,
 fieldset[disabled] .ant-search-input .ant-search-btn:active,
@@ -6564,7 +6574,8 @@ fieldset[disabled] .ant-search-input .ant-search-btn.active {
   background-color: #f3f5f7;
   border-color: #d9d9d9;
 }
-.ant-search-input .ant-search-btn:hover {
+.ant-search-input .ant-search-btn:hover,
+.ant-search-input .ant-search-btn:focus {
   color: #57c5f7;
   background-color: white;
   border-color: #57c5f7;
@@ -6589,7 +6600,9 @@ form .ant-search-input .ant-search-btn {
   border-color: #2db7f5;
 }
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:hover,
-.ant-search-input:hover .ant-search-btn-noempty:hover {
+.ant-search-input:hover .ant-search-btn-noempty:hover,
+.ant-search-input.ant-search-input-focus .ant-search-btn-noempty:focus,
+.ant-search-input:hover .ant-search-btn-noempty:focus {
   color: #ffffff;
   background-color: #57c5f7;
   border-color: #57c5f7;
@@ -6601,12 +6614,6 @@ form .ant-search-input .ant-search-btn {
   color: #f2f2f2;
   background-color: #2baee9;
   border-color: #2baee9;
-}
-.ant-search-input.ant-search-input-focus .ant-search-btn-noempty:active,
-.ant-search-input:hover .ant-search-btn-noempty:active,
-.ant-search-input.ant-search-input-focus .ant-search-btn-noempty.active,
-.ant-search-input:hover .ant-search-btn-noempty.active {
-  background-image: none;
 }
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty.disabled,
 .ant-search-input:hover .ant-search-btn-noempty.disabled,
@@ -6620,6 +6627,12 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty,
 .ant-search-input:hover .ant-search-btn-noempty[disabled]:hover,
 fieldset[disabled] .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:hover,
 fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty:hover,
+.ant-search-input.ant-search-input-focus .ant-search-btn-noempty.disabled:focus,
+.ant-search-input:hover .ant-search-btn-noempty.disabled:focus,
+.ant-search-input.ant-search-input-focus .ant-search-btn-noempty[disabled]:focus,
+.ant-search-input:hover .ant-search-btn-noempty[disabled]:focus,
+fieldset[disabled] .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:focus,
+fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty:focus,
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty.disabled:active,
 .ant-search-input:hover .ant-search-btn-noempty.disabled:active,
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty[disabled]:active,
@@ -6638,6 +6651,8 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 }
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:hover,
 .ant-search-input:hover .ant-search-btn-noempty:hover,
+.ant-search-input.ant-search-input-focus .ant-search-btn-noempty:focus,
+.ant-search-input:hover .ant-search-btn-noempty:focus,
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:active,
 .ant-search-input:hover .ant-search-btn-noempty:active,
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty.active,

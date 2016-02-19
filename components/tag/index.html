@@ -204,7 +204,7 @@ Tag 标签 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -777,7 +777,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
   addTag() {
     <span class="hljs-keyword">const</span> tags = [...this.state.tags];
     index += <span class="hljs-number">1</span>;
-    tags.push({ key: index, name: <span class="hljs-string">'新标签'</span> + index });
+    tags.push({ key: index, name: <span class="hljs-string">`新标签<span class="hljs-subst">${index}</span>`</span> });
     <span class="hljs-keyword">this</span>.setState({ tags });
   },
   render() {

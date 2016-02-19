@@ -8,7 +8,6 @@ var _antd = require("antd");
 
 var Test = React.createClass({
   displayName: "Test",
-
   getInitialState: function getInitialState() {
     return {
       loading: false,
@@ -87,7 +86,7 @@ var Test = React.createClass({
 ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Modal, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
-  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  getInitialState() {
     <span class="hljs-keyword">return</span> {
       loading: <span class="hljs-literal">false</span>,
       visible: <span class="hljs-literal">false</span>

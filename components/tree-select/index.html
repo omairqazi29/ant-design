@@ -204,7 +204,7 @@ TreeSelect 树选择 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -892,30 +892,30 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 var _antd = require('antd');
 
 var treeData = [{
-  'label': '节点一',
-  'value': '0-0',
-  'key': '0-0',
-  'children': [{
-    'label': '子节点一',
-    'value': '0-0-0',
-    'key': '0-0-0'
+  label: '节点一',
+  value: '0-0',
+  key: '0-0',
+  children: [{
+    label: '子节点一',
+    value: '0-0-0',
+    key: '0-0-0'
   }, {
-    'label': '子节点二',
-    'value': '0-0-1',
-    'key': '0-0-1'
+    label: '子节点二',
+    value: '0-0-1',
+    key: '0-0-1'
   }]
 }, {
-  'label': '节点二',
-  'value': '0-1',
-  'key': '0-1',
-  'children': [{
-    'label': '子节点三',
-    'value': '0-1-0',
-    'key': '0-1-0'
+  label: '节点二',
+  value: '0-1',
+  key: '0-1',
+  children: [{
+    label: '子节点三',
+    value: '0-1-0',
+    key: '0-1-0'
   }, {
-    'label': '子节点四',
-    'value': '0-1-1',
-    'key': '0-1-1'
+    label: '子节点四',
+    value: '0-1-1',
+    key: '0-1-1'
   }]
 }];
 
@@ -949,30 +949,30 @@ var Demo = React.createClass({
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TreeSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> treeData = [{
-  <span class="hljs-string">'label'</span>: <span class="hljs-string">'节点一'</span>,
-  <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0'</span>,
-  <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0'</span>,
-  <span class="hljs-string">'children'</span>: [{
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点一'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0-0'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0-0'</span>,
+  label: <span class="hljs-string">'节点一'</span>,
+  value: <span class="hljs-string">'0-0'</span>,
+  key: <span class="hljs-string">'0-0'</span>,
+  children: [{
+    label: <span class="hljs-string">'子节点一'</span>,
+    value: <span class="hljs-string">'0-0-0'</span>,
+    key: <span class="hljs-string">'0-0-0'</span>,
   }, {
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点二'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0-1'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0-1'</span>,
+    label: <span class="hljs-string">'子节点二'</span>,
+    value: <span class="hljs-string">'0-0-1'</span>,
+    key: <span class="hljs-string">'0-0-1'</span>,
   }],
 }, {
-  <span class="hljs-string">'label'</span>: <span class="hljs-string">'节点二'</span>,
-  <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-1'</span>,
-  <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-1'</span>,
-  <span class="hljs-string">'children'</span>: [{
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点三'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-1-0'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-1-0'</span>,
+  label: <span class="hljs-string">'节点二'</span>,
+  value: <span class="hljs-string">'0-1'</span>,
+  key: <span class="hljs-string">'0-1'</span>,
+  children: [{
+    label: <span class="hljs-string">'子节点三'</span>,
+    value: <span class="hljs-string">'0-1-0'</span>,
+    key: <span class="hljs-string">'0-1-0'</span>,
   }, {
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点四'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-1-1'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-1-1'</span>,
+    label: <span class="hljs-string">'子节点四'</span>,
+    value: <span class="hljs-string">'0-1-1'</span>,
+    key: <span class="hljs-string">'0-1-1'</span>,
   }],
 }];
 
@@ -1022,22 +1022,22 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 var _antd = require('antd');
 
 var treeData = [{
-  'label': '节点一',
-  'value': '0-0',
-  'key': '0-0',
-  'children': [{
-    'label': '子节点一',
-    'value': '0-0-1',
-    'key': '0-0-1'
+  label: '节点一',
+  value: '0-0',
+  key: '0-0',
+  children: [{
+    label: '子节点一',
+    value: '0-0-1',
+    key: '0-0-1'
   }, {
-    'label': '子节点二',
-    'value': '0-0-2',
-    'key': '0-0-2'
+    label: '子节点二',
+    value: '0-0-2',
+    key: '0-0-2'
   }]
 }, {
-  'label': '节点二',
-  'value': '0-1',
-  'key': '0-1'
+  label: '节点二',
+  value: '0-1',
+  key: '0-1'
 }];
 
 var Demo = React.createClass({
@@ -1065,22 +1065,22 @@ var Demo = React.createClass({
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TreeSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> treeData = [{
-  <span class="hljs-string">'label'</span>: <span class="hljs-string">'节点一'</span>,
-  <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0'</span>,
-  <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0'</span>,
-  <span class="hljs-string">'children'</span>: [{
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点一'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0-1'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0-1'</span>,
+  label: <span class="hljs-string">'节点一'</span>,
+  value: <span class="hljs-string">'0-0'</span>,
+  key: <span class="hljs-string">'0-0'</span>,
+  children: [{
+    label: <span class="hljs-string">'子节点一'</span>,
+    value: <span class="hljs-string">'0-0-1'</span>,
+    key: <span class="hljs-string">'0-0-1'</span>,
   }, {
-    <span class="hljs-string">'label'</span>: <span class="hljs-string">'子节点二'</span>,
-    <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-0-2'</span>,
-    <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-0-2'</span>,
+    label: <span class="hljs-string">'子节点二'</span>,
+    value: <span class="hljs-string">'0-0-2'</span>,
+    key: <span class="hljs-string">'0-0-2'</span>,
   }],
 }, {
-  <span class="hljs-string">'label'</span>: <span class="hljs-string">'节点二'</span>,
-  <span class="hljs-string">'value'</span>: <span class="hljs-string">'0-1'</span>,
-  <span class="hljs-string">'key'</span>: <span class="hljs-string">'0-1'</span>,
+  label: <span class="hljs-string">'节点二'</span>,
+  value: <span class="hljs-string">'0-1'</span>,
+  key: <span class="hljs-string">'0-1'</span>,
 }];
 
 <span class="hljs-keyword">const</span> Demo = React.createClass({

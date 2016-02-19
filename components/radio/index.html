@@ -204,7 +204,7 @@ Radio 单选框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -712,7 +712,6 @@ var RadioGroup = _antd.Radio.Group;
 
 var App = React.createClass({
   displayName: 'App',
-
   getInitialState: function getInitialState() {
     return {
       value: 'a'
@@ -765,13 +764,13 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
-  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  getInitialState() {
     <span class="hljs-keyword">return</span> {
       value: <span class="hljs-string">'a'</span>
     };
   },
   onChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked:'</span> + e.target.value);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`radio checked:<span class="hljs-subst">${e.target.value}</span>`</span>);
     <span class="hljs-keyword">this</span>.setState({
       value: e.target.value
     });
@@ -1027,101 +1026,101 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-box-demo">
     <div id="components-radio-demo-radiobutton"></div>
     <script>mountNode = document.getElementById('components-radio-demo-radiobutton');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var RadioButton = _antd.Radio.Button;
 var RadioGroup = _antd.Radio.Group;
 
 function onChange(e) {
-  console.log('radio checked:' + e.target.value);
+  console.log("radio checked:" + e.target.value);
 }
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
       RadioGroup,
-      { onChange: onChange, defaultValue: 'a' },
+      { onChange: onChange, defaultValue: "a" },
       React.createElement(
         RadioButton,
-        { value: 'a' },
-        '杭州'
+        { value: "a" },
+        "杭州"
       ),
       React.createElement(
         RadioButton,
-        { value: 'b' },
-        '上海'
+        { value: "b" },
+        "上海"
       ),
       React.createElement(
         RadioButton,
-        { value: 'c' },
-        '北京'
+        { value: "c" },
+        "北京"
       ),
       React.createElement(
         RadioButton,
-        { value: 'd' },
-        '成都'
+        { value: "d" },
+        "成都"
       )
     )
   ),
   React.createElement(
-    'div',
+    "div",
     { style: { marginTop: 16 } },
     React.createElement(
       RadioGroup,
-      { onChange: onChange, defaultValue: 'a' },
+      { onChange: onChange, defaultValue: "a" },
       React.createElement(
         RadioButton,
-        { value: 'a' },
-        '杭州'
+        { value: "a" },
+        "杭州"
       ),
       React.createElement(
         RadioButton,
-        { value: 'b', disabled: true },
-        '上海'
+        { value: "b", disabled: true },
+        "上海"
       ),
       React.createElement(
         RadioButton,
-        { value: 'c' },
-        '北京'
+        { value: "c" },
+        "北京"
       ),
       React.createElement(
         RadioButton,
-        { value: 'd' },
-        '成都'
+        { value: "d" },
+        "成都"
       )
     )
   ),
   React.createElement(
-    'div',
+    "div",
     { style: { marginTop: 16 } },
     React.createElement(
       RadioGroup,
-      { disabled: true, onChange: onChange, defaultValue: 'a' },
+      { disabled: true, onChange: onChange, defaultValue: "a" },
       React.createElement(
         RadioButton,
-        { value: 'a' },
-        '杭州'
+        { value: "a" },
+        "杭州"
       ),
       React.createElement(
         RadioButton,
-        { value: 'b' },
-        '上海'
+        { value: "b" },
+        "上海"
       ),
       React.createElement(
         RadioButton,
-        { value: 'c' },
-        '北京'
+        { value: "c" },
+        "北京"
       ),
       React.createElement(
         RadioButton,
-        { value: 'd' },
-        '成都'
+        { value: "d" },
+        "成都"
       )
     )
   )
@@ -1130,7 +1129,7 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked:'</span> + e.target.value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`radio checked:<span class="hljs-subst">${e.target.value}</span>`</span>);
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>

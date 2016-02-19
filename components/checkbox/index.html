@@ -204,7 +204,7 @@ Checkbox 多选框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -695,7 +695,7 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checked = '</span> + e.target.checked);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`checked = <span class="hljs-subst">${e.target.checked}</span>`</span>);
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
@@ -786,8 +786,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     };
   },
   render() {
-    <span class="hljs-keyword">const</span> label = (<span class="hljs-keyword">this</span>.state.checked ? <span class="hljs-string">'选中'</span> : <span class="hljs-string">'取消'</span>) + <span class="hljs-string">'-'</span> +
-      (<span class="hljs-keyword">this</span>.state.disabled ? <span class="hljs-string">'不可用'</span> : <span class="hljs-string">'可用'</span>);
+    <span class="hljs-keyword">const</span> label = <span class="hljs-string">`<span class="hljs-subst">${this.state.checked ? '选中' : '取消'}</span>-<span class="hljs-subst">${this.state.disabled ? '不可用' : '可用'}</span>`</span>;
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginBottom:</span> '<span class="hljs-attribute">20px</span>' }}&gt;</span>

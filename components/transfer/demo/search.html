@@ -67,8 +67,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
       <span class="hljs-keyword">const</span> data = {
         key: i,
-        title: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>),
-        description: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">'的描述'</span>,
+        title: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>`</span>,
+        description: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>的描述`</span>,
         chosen: <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
       };
       <span class="hljs-keyword">if</span> (data.chosen) {

@@ -204,7 +204,7 @@ Tabs 标签页 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -1022,7 +1022,7 @@ var Demo = React.createClass({
   },
   add: function add() {
     var panes = this.state.panes;
-    var activeKey = 'newTab' + this.newTabIndex++;
+    var activeKey = "newTab" + this.newTabIndex++;
     panes.push(React.createElement(
       TabPane,
       { tab: "新建页签", key: activeKey },
@@ -1065,7 +1065,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
     ];
     return {
       activeKey: panes[0].key,
-      panes: panes,
+      panes,
     };
   },
   onChange(activeKey) {
@@ -1076,7 +1076,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
   },
   add() {
     const panes = this.state.panes;
-    const activeKey = 'newTab' + this.newTabIndex++;
+    const activeKey = `newTab${this.newTabIndex++}`;
     panes.push(<span class="hljs-tag">&lt;<span class="hljs-title">TabPane</span> <span class="hljs-attribute">tab</span>=<span class="hljs-value">"新建页签"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{activeKey}</span>&gt;</span>新页面<span class="hljs-tag">&lt;/<span class="hljs-title">TabPane</span>&gt;</span>)</span>;
     <span class="hljs-keyword">this</span>.setState({ panes, activeKey });
   },

@@ -40,9 +40,9 @@ ReactDOM.render(React.createElement(
       <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
     }
     <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'done'</span>) {
-      message.success(info.file.name + <span class="hljs-string">' 上传成功。'</span>);
+      message.success(<span class="hljs-string">`<span class="hljs-subst">${info.file.name}</span> 上传成功。`</span>);
     } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info.file.status === <span class="hljs-string">'error'</span>) {
-      message.error(info.file.name + <span class="hljs-string">' 上传失败。'</span>);
+      message.error(<span class="hljs-string">`<span class="hljs-subst">${info.file.name}</span> 上传失败。`</span>);
     }
   }
 };

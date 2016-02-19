@@ -131,7 +131,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
   <span class="hljs-keyword">const</span> children = [];
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; x; i++) {
     <span class="hljs-keyword">const</span> key = <span class="hljs-string">`<span class="hljs-subst">${preKey}</span>-<span class="hljs-subst">${i}</span>`</span>;
-    tns.push({ title: key, key: key });
+    tns.push({ title: key, key });
     <span class="hljs-keyword">if</span> (i &lt; y) {
       children.push(key);
     }

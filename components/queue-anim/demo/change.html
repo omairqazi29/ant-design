@@ -103,7 +103,7 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     items.push(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{Date.now()}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>)</span>;
     <span class="hljs-keyword">this</span>.setState({
       show: <span class="hljs-literal">true</span>,
-      items: items,
+      items,
     });
   },
   onRemove() {
@@ -111,7 +111,7 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     items.splice(items.length - <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
     <span class="hljs-keyword">this</span>.setState({
       show: <span class="hljs-literal">true</span>,
-      items: items,
+      items,
     });
   },
   render() {

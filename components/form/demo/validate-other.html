@@ -21,7 +21,7 @@ var Demo = React.createClass({
   },
   handleSubmit: function handleSubmit(e) {
     e.preventDefault();
-    this.props.form.validateFields(function (errors, values) {
+    this.props.form.validateFieldsAndScroll(function (errors, values) {
       if (!!errors) {
         console.log('Errors in form!!!');
         return;
@@ -232,7 +232,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
 
   handleSubmit(e) {
     e.preventDefault();
-    <span class="hljs-keyword">this</span>.props.form.validateFields((errors, values) =&gt; {
+    <span class="hljs-keyword">this</span>.props.form.validateFieldsAndScroll((errors, values) =&gt; {
       <span class="hljs-keyword">if</span> (!!errors) {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Errors in form!!!'</span>);
         <span class="hljs-keyword">return</span>;
@@ -383,8 +383,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#demo-validate-other">校验其他组件</a>
     </div>
-    <p>提供以下组件表单域的校验。</p>
-<p><code>Select</code> <code>Radio</code> <code>DatePicker</code> <code>InputNumber</code> <code>Cascader</code>。</p>
+    <p>提供以下组件表单域的校验：<code>Select</code> <code>Radio</code> <code>DatePicker</code> <code>InputNumber</code> <code>Cascader</code>。在 submit 时使用 <code>validateFieldsAndScroll</code>，进行校验，可以自动把不在可见范围内的校验不通过的菜单域滚动进可见范围。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>

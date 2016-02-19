@@ -51,7 +51,7 @@ ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, ico
     <span class="hljs-keyword">return</span> {
       preIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">''</span> : <span class="hljs-string">'anticon-highlight'</span>,
       nextIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">'anticon-highlight'</span> : <span class="hljs-string">''</span>,
-      mid: mid,
+      mid,
       sliderValue: <span class="hljs-keyword">this</span>.props.value
     };
   },

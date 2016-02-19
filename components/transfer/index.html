@@ -204,7 +204,7 @@ Transfer 穿梭框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -679,12 +679,12 @@ Transfer 穿梭框 - Ant Design
   <div class="code-box-demo">
     <div id="components-transfer-demo-basic"></div>
     <script>mountNode = document.getElementById('components-transfer-demo-basic');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       mockData: [],
@@ -700,8 +700,8 @@ var App = React.createClass({
     for (var i = 0; i < 20; i++) {
       var data = {
         key: i,
-        title: '内容' + (i + 1),
-        description: '内容' + (i + 1) + '的描述',
+        title: "内容" + (i + 1),
+        description: "内容" + (i + 1) + "的描述",
         chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
@@ -718,9 +718,9 @@ var App = React.createClass({
   renderFooter: function renderFooter() {
     return React.createElement(
       _antd.Button,
-      { type: 'primary', size: 'small', style: { float: 'right', margin: '5' },
+      { type: "primary", size: "small", style: { float: 'right', margin: '5' },
         onClick: this.getMock },
-      '刷新'
+      "刷新"
     );
   },
   render: function render() {
@@ -752,8 +752,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
       <span class="hljs-keyword">const</span> data = {
         key: i,
-        title: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>),
-        description: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">'的描述'</span>,
+        title: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>`</span>,
+        description: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>的描述`</span>,
         chosen: <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
       };
       <span class="hljs-keyword">if</span> (data.chosen) {
@@ -864,8 +864,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
       <span class="hljs-keyword">const</span> data = {
         key: i,
-        title: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>),
-        description: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">'的描述'</span>,
+        title: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>`</span>,
+        description: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>的描述`</span>,
         chosen: <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
       };
       <span class="hljs-keyword">if</span> (data.chosen) {
@@ -903,14 +903,14 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <div class="code-box-demo">
     <div id="components-transfer-demo-advanced"></div>
     <script>mountNode = document.getElementById('components-transfer-demo-advanced');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var container = mountNode;
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       mockData: [],
@@ -926,8 +926,8 @@ var App = React.createClass({
     for (var i = 0; i < 20; i++) {
       var data = {
         key: i,
-        title: '内容' + (i + 1),
-        description: '内容' + (i + 1) + '的描述',
+        title: "内容" + (i + 1),
+        description: "内容" + (i + 1) + "的描述",
         chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
@@ -943,9 +943,9 @@ var App = React.createClass({
   renderFooter: function renderFooter() {
     return React.createElement(
       _antd.Button,
-      { type: 'ghost', size: 'small', style: { float: 'right', margin: '5' },
+      { type: "ghost", size: "small", style: { float: 'right', margin: '5' },
         onClick: this.getMock },
-      '刷新'
+      "刷新"
     );
   },
   render: function render() {
@@ -960,7 +960,7 @@ var App = React.createClass({
       targetKeys: this.state.targetKeys,
       onChange: this.handleChange,
       render: function render(item) {
-        return item.title + '-' + item.description;
+        return item.title + "-" + item.description;
       },
       footer: this.renderFooter });
   }
@@ -985,8 +985,8 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
       <span class="hljs-keyword">const</span> data = {
         key: i,
-        title: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>),
-        description: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">'的描述'</span>,
+        title: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>`</span>,
+        description: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>的描述`</span>,
         chosen: <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
       };
       <span class="hljs-keyword">if</span> (data.chosen) {
@@ -1019,7 +1019,7 @@ ReactDOM.render(React.createElement(App, null), container);})()</script><div cla
         <span class="hljs-attribute">operations</span>=<span class="hljs-value">{['向右操作文案',</span> '向左操作文案']}
         <span class="hljs-attribute">targetKeys</span>=<span class="hljs-value">{this.state.targetKeys}</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
-        <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> item.title + '-' + item.description}
+        <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> `${item.title}-${item.description}`}
         footer={this.renderFooter} /&gt;
     )</span>;
   }

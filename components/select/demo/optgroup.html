@@ -2,44 +2,44 @@
   <div class="code-box-demo">
     <div id="components-select-demo-optgroup"></div>
     <script>mountNode = document.getElementById('components-select-demo-optgroup');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 var OptGroup = _antd.Select.OptGroup;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
   _antd.Select,
-  { defaultValue: 'lucy',
+  { defaultValue: "lucy",
     style: { width: 200 },
     showSearch: false,
     onChange: handleChange },
   React.createElement(
     OptGroup,
-    { label: 'Manager' },
+    { label: "Manager" },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'jack'
+      { value: "jack" },
+      "jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'lucy'
+      { value: "lucy" },
+      "lucy"
     )
   ),
   React.createElement(
     OptGroup,
-    { label: 'Engineer' },
+    { label: "Engineer" },
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
@@ -47,7 +47,7 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> OptGroup = Select.OptGroup;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(

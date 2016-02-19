@@ -204,7 +204,7 @@ Notification 通知提醒框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.1'
+        latest: '0.12.2'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -841,7 +841,7 @@ ReactDOM.render(React.createElement(
 };
 
 <span class="hljs-keyword">const</span> openNotification = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> key = <span class="hljs-string">'open'</span> + <span class="hljs-built_in">Date</span>.now();
+  <span class="hljs-keyword">const</span> key = <span class="hljs-string">`open<span class="hljs-subst">${Date.now()}</span>`</span>;
   <span class="hljs-keyword">const</span> btnClick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-comment">// 隐藏提醒框</span>
     notification.close(key);
@@ -854,8 +854,8 @@ ReactDOM.render(React.createElement(
   notification.open({
     message: <span class="hljs-string">'这是标题'</span>,
     description: <span class="hljs-string">'这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案'</span>,
-    btn: btn,
-    key: key,
+    btn,
+    key,
     onClose: close
   });
 };

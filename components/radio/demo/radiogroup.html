@@ -10,7 +10,6 @@ var RadioGroup = _antd.Radio.Group;
 
 var App = React.createClass({
   displayName: 'App',
-
   getInitialState: function getInitialState() {
     return {
       value: 'a'
@@ -63,13 +62,13 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
 <span class="hljs-keyword">const</span> App = React.createClass({
-  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  getInitialState() {
     <span class="hljs-keyword">return</span> {
       value: <span class="hljs-string">'a'</span>
     };
   },
   onChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked:'</span> + e.target.value);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`radio checked:<span class="hljs-subst">${e.target.value}</span>`</span>);
     <span class="hljs-keyword">this</span>.setState({
       value: e.target.value
     });

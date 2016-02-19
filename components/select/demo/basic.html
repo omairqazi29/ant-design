@@ -2,57 +2,57 @@
   <div class="code-box-demo">
     <div id="components-select-demo-basic"></div>
     <script>mountNode = document.getElementById('components-select-demo-basic');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var Option = _antd.Select.Option;
 
 function handleChange(value) {
-  console.log('selected ' + value);
+  console.log("selected " + value);
 }
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(
     _antd.Select,
-    { defaultValue: 'lucy', style: { width: 120 }, onChange: handleChange },
+    { defaultValue: "lucy", style: { width: 120 }, onChange: handleChange },
     React.createElement(
       Option,
-      { value: 'jack' },
-      'Jack'
+      { value: "jack" },
+      "Jack"
     ),
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     ),
     React.createElement(
       Option,
-      { value: 'disabled', disabled: true },
-      'Disabled'
+      { value: "disabled", disabled: true },
+      "Disabled"
     ),
     React.createElement(
       Option,
-      { value: 'yiminghe' },
-      'yiminghe'
+      { value: "yiminghe" },
+      "yiminghe"
     )
   ),
   React.createElement(
     _antd.Select,
-    { defaultValue: 'lucy', style: { width: 120 }, disabled: true },
+    { defaultValue: "lucy", style: { width: 120 }, disabled: true },
     React.createElement(
       Option,
-      { value: 'lucy' },
-      'Lucy'
+      { value: "lucy" },
+      "Lucy"
     )
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleChange</span>(<span class="hljs-params">value</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected '</span> + value);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selected <span class="hljs-subst">${value}</span>`</span>);
 }
 
 ReactDOM.render(

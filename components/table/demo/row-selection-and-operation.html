@@ -101,9 +101,9 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">46</span>; i++) {
   data.push({
     key: i,
-    name: <span class="hljs-string">'李大嘴'</span> + i,
+    name: <span class="hljs-string">`李大嘴<span class="hljs-subst">${i}</span>`</span>,
     age: <span class="hljs-number">32</span>,
-    address: <span class="hljs-string">'西湖区湖底公园'</span> + i + <span class="hljs-string">'号'</span>
+    address: <span class="hljs-string">`西湖区湖底公园<span class="hljs-subst">${i}</span>号`</span>
   });
 }
 

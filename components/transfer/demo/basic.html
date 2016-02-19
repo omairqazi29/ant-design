@@ -2,12 +2,12 @@
   <div class="code-box-demo">
     <div id="components-transfer-demo-basic"></div>
     <script>mountNode = document.getElementById('components-transfer-demo-basic');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       mockData: [],
@@ -23,8 +23,8 @@ var App = React.createClass({
     for (var i = 0; i < 20; i++) {
       var data = {
         key: i,
-        title: '内容' + (i + 1),
-        description: '内容' + (i + 1) + '的描述',
+        title: "内容" + (i + 1),
+        description: "内容" + (i + 1) + "的描述",
         chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
@@ -41,9 +41,9 @@ var App = React.createClass({
   renderFooter: function renderFooter() {
     return React.createElement(
       _antd.Button,
-      { type: 'primary', size: 'small', style: { float: 'right', margin: '5' },
+      { type: "primary", size: "small", style: { float: 'right', margin: '5' },
         onClick: this.getMock },
-      '刷新'
+      "刷新"
     );
   },
   render: function render() {
@@ -75,8 +75,8 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
       <span class="hljs-keyword">const</span> data = {
         key: i,
-        title: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>),
-        description: <span class="hljs-string">'内容'</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">'的描述'</span>,
+        title: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>`</span>,
+        description: <span class="hljs-string">`内容<span class="hljs-subst">${i + 1}</span>的描述`</span>,
         chosen: <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
       };
       <span class="hljs-keyword">if</span> (data.chosen) {
