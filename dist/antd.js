@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f368fb7592936f4e16d0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "85c4fa3bef73e18fd3c9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22203,9 +22203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  handleChange: function handleChange(value) {
 	    if (!('value' in this.props)) {
-	      this.setState({
-	        value: value
-	      });
+	      this.setState({ value: value });
 	    }
 	    var startTime = value[0] ? new Date(value[0].getTime()) : null;
 	    var endTime = value[1] ? new Date(value[1].getTime()) : null;
@@ -22257,7 +22255,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	
 	    if (timePicker) {
-	      pickerChangeHandler = {};
+	      pickerChangeHandler.onChange = function (value) {
+	        // Click clear button
+	        if (value === null || value.length === 0) {
+	          _this.handleChange(value);
+	        }
+	      };
 	    } else {
 	      calendarHandler = {};
 	    }
@@ -22270,8 +22273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      dateInputPlaceholder: [startPlaceholder, endPlaceholder],
 	      locale: locale.lang,
 	      onOk: onOk,
-	      defaultValue: [defaultCalendarValue, defaultCalendarValue],
-	      showClear: true
+	      defaultValue: [defaultCalendarValue, defaultCalendarValue]
 	    }, calendarHandler));
 	
 	    var pickerClass = (0, _classnames2["default"])({
@@ -22466,9 +22468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    handleChange: function handleChange(value) {
 	      if (!('value' in this.props)) {
-	        this.setState({
-	          value: value
-	        });
+	        this.setState({ value: value });
 	      }
 	      var timeValue = value ? new Date(value.getTime()) : null;
 	      this.props.onChange(timeValue);
@@ -22504,7 +22504,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      };
 	
 	      if (this.props.showTime) {
-	        pickerChangeHandler = {};
+	        pickerChangeHandler.onChange = function (value) {
+	          // Click clear button
+	          if (value === null) {
+	            _this.handleChange(value);
+	          }
+	        };
 	      } else {
 	        calendarHandler = {};
 	      }
@@ -22518,8 +22523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        dateInputPlaceholder: placeholder,
 	        prefixCls: 'ant-calendar',
 	        className: calendarClassName
-	      }, calendarHandler, {
-	        showClear: true }));
+	      }, calendarHandler));
 	
 	      var sizeClass = '';
 	      if (this.props.size === 'large') {
@@ -41901,7 +41905,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this4 = this;
 	
 	      elements.forEach(function (elem) {
-	        elem.className += ' ' + _this4.props.animatingClassName[0];
+	        var animatingClassName = _this4.props.animatingClassName;
+	        if (elem.className.indexOf(animatingClassName[1]) >= 0) {
+	          elem.className = elem.className.replace(animatingClassName[1], '');
+	        }
+	        if (elem.className.indexOf(' ' + animatingClassName[0]) === -1) {
+	          elem.className += ' ' + animatingClassName[0];
+	        }
 	      });
 	    }
 	  }, {
@@ -41922,7 +41932,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this6 = this;
 	
 	      elements.forEach(function (elem) {
-	        elem.className += ' ' + _this6.props.animatingClassName[1];
+	        var animatingClassName = _this6.props.animatingClassName;
+	        if (elem.className.indexOf(animatingClassName[0]) >= 0) {
+	          elem.className = elem.className.replace(animatingClassName[0], '');
+	        }
+	        if (elem.className.indexOf(animatingClassName[1]) === -1) {
+	          elem.className += ' ' + animatingClassName[1];
+	        }
 	      });
 	    }
 	  }, {
@@ -45091,7 +45107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (render) {
 	        text = render(text, record, index);
 	
-	        if (text && typeof text === 'object' && !_react2['default'].isValidElement(text)) {
+	        if (text && Object.prototype.toString.call(text) === '[object Object]' && !_react2['default'].isValidElement(text)) {
 	          tdProps = text.props || {};
 	          rowSpan = tdProps.rowSpan;
 	          colSpan = tdProps.colSpan;
