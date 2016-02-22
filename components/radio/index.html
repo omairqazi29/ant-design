@@ -204,7 +204,7 @@ Radio 单选框 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.3'
+        latest: '0.12.4'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -714,11 +714,11 @@ var App = React.createClass({
   displayName: 'App',
   getInitialState: function getInitialState() {
     return {
-      value: 'a'
+      value: 1
     };
   },
   onChange: function onChange(e) {
-    console.log('radio checked:' + e.target.value);
+    console.log('radio checked', e.target.value);
     this.setState({
       value: e.target.value
     });
@@ -732,30 +732,24 @@ var App = React.createClass({
         { onChange: this.onChange, value: this.state.value },
         React.createElement(
           _antd.Radio,
-          { value: 'a' },
+          { key: 'a', value: 1 },
           'A'
         ),
         React.createElement(
           _antd.Radio,
-          { value: 'b' },
+          { key: 'b', value: 2 },
           'B'
         ),
         React.createElement(
           _antd.Radio,
-          { value: 'c' },
+          { key: 'c', value: 3 },
           'C'
         ),
         React.createElement(
           _antd.Radio,
-          { value: 'd' },
+          { key: 'd', value: null },
           'D'
         )
-      ),
-      React.createElement(
-        'div',
-        { style: { marginTop: 20 } },
-        '你选中的: ',
-        this.state.value
       )
     );
   }
@@ -766,11 +760,11 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      value: <span class="hljs-string">'a'</span>
+      value: <span class="hljs-number">1</span>
     };
   },
   onChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`radio checked:<span class="hljs-subst">${e.target.value}</span>`</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'radio checked'</span>, e.target.value);
     <span class="hljs-keyword">this</span>.setState({
       value: e.target.value
     });
@@ -779,12 +773,11 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"b"</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"d"</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"a"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{1}</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"b"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{2}</span>&gt;</span>B<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"c"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{3}</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"d"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{null}</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">20</span> }}&gt;</span>你选中的: {this.state.value}<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }

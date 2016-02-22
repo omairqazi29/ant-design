@@ -52,9 +52,10 @@ var Demo = React.createClass({
       onChange: this.onChange,
       multiple: true,
       treeCheckable: true,
+      searchPlaceholder: '请选择',
       treeDefaultExpandAll: true,
       style: {
-        width: 360
+        width: 300
       }
     };
     return React.createElement(_antd.TreeSelect, tProps);
@@ -108,9 +109,10 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
       onChange: <span class="hljs-keyword">this</span>.onChange,
       multiple: <span class="hljs-literal">true</span>,
       treeCheckable: <span class="hljs-literal">true</span>,
+      searchPlaceholder: <span class="hljs-string">'请选择'</span>,
       treeDefaultExpandAll: <span class="hljs-literal">true</span>,
       style: {
-        width: <span class="hljs-number">360</span>,
+        width: <span class="hljs-number">300</span>,
       },
     };
     <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TreeSelect</span> {<span class="hljs-attribute">...tProps</span>} /&gt;</span>;</span>

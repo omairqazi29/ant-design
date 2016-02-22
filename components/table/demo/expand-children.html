@@ -1,7 +1,7 @@
-<div class="code-box" id="demo-indent-size">
+<div class="code-box" id="demo-expand-children">
   <div class="code-box-demo">
-    <div id="components-table-demo-indent-size"></div>
-    <script>mountNode = document.getElementById('components-table-demo-indent-size');</script>
+    <div id="components-table-demo-expand-children"></div>
+    <script>mountNode = document.getElementById('components-table-demo-expand-children');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -74,7 +74,7 @@ var data = [{
   address: '我是b'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 30 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 20 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -145,13 +145,13 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
 }];
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{30}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{20}</span> /&gt;</span>,
   mountNode
 );</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-indent-size">树形数据展示</a>
+      <a href="#demo-expand-children">树形数据展示</a>
     </div>
     <p>表格支持树形数据的展示，可以通过设置 <code>indentSize</code> 以控制每一层的缩进宽度。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>

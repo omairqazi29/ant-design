@@ -898,7 +898,6 @@ samp {
 }
 .row {
   position: relative;
-  width: 100%;
   margin-left: 0;
   margin-right: 0;
   height: auto;
@@ -2148,7 +2147,7 @@ samp {
   border: 1px solid transparent;
   white-space: nowrap;
   line-height: 1.5;
-  padding: 4px 11px;
+  padding: 4px 15px;
   font-size: 12px;
   border-radius: 6px;
   -webkit-user-select: none;
@@ -2186,7 +2185,7 @@ samp {
   cursor: not-allowed;
 }
 .ant-btn-lg {
-  padding: 4px 11px 5px 11px;
+  padding: 4px 15px 5px 15px;
   font-size: 14px;
   border-radius: 6px;
 }
@@ -2223,7 +2222,7 @@ fieldset[disabled] .ant-btn:active,
 .ant-btn[disabled].active,
 fieldset[disabled] .ant-btn.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-btn:hover,
@@ -2271,7 +2270,7 @@ fieldset[disabled] .ant-btn-primary:active,
 .ant-btn-primary[disabled].active,
 fieldset[disabled] .ant-btn-primary.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-btn-primary:hover,
@@ -2331,7 +2330,7 @@ fieldset[disabled] .ant-btn-ghost:active,
 .ant-btn-ghost[disabled].active,
 fieldset[disabled] .ant-btn-ghost.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-btn-ghost:hover,
@@ -2380,7 +2379,7 @@ fieldset[disabled] .ant-btn-dashed:active,
 .ant-btn-dashed[disabled].active,
 fieldset[disabled] .ant-btn-dashed.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-btn-dashed:hover,
@@ -2518,7 +2517,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   z-index: 2;
 }
 .ant-btn-group-lg > .ant-btn {
-  padding: 4px 11px 5px 11px;
+  padding: 4px 15px 5px 15px;
   font-size: 14px;
   border-radius: 6px;
 }
@@ -2538,8 +2537,8 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-btn-group .ant-btn:not(:first-child):not(:last-child) {
   border-radius: 0;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .ant-btn-group > .ant-btn:first-child {
   margin-left: 0;
@@ -2547,12 +2546,12 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-btn-group > .ant-btn:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  padding-right: 7px;
+  padding-right: 8px;
 }
 .ant-btn-group > .ant-btn:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  padding-left: 7px;
+  padding-left: 8px;
 }
 .ant-btn-group > .ant-btn-group {
   float: left;
@@ -2563,16 +2562,36 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-btn-group > .ant-btn-group:first-child:not(:last-child) > .ant-btn:last-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  padding-right: 7px;
+  padding-right: 8px;
 }
 .ant-btn-group > .ant-btn-group:last-child:not(:first-child) > .ant-btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  padding-left: 7px;
+  padding-left: 8px;
 }
 .ant-btn > .anticon + span,
 .ant-btn > span + .anticon {
   margin-left: 0.5em;
+}
+.ant-btn-clicked:before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: inherit;
+  z-index: -1;
+  background: inherit;
+  opacity: 1;
+  transform: scale3d(0.5, 0.5, 1);
+  animation: buttonEffect 0.48s ease forwards;
+}
+@keyframes buttonEffect {
+  to {
+    opacity: 0;
+    transform: scale3d(1, 1, 1);
+  }
 }
 .ant-switch {
   position: relative;
@@ -3709,7 +3728,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   border: 1px solid transparent;
   white-space: nowrap;
   line-height: 1.5;
-  padding: 4px 11px;
+  padding: 4px 15px;
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3752,7 +3771,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   cursor: not-allowed;
 }
 .ant-calendar .ant-calendar-ok-btn-lg {
-  padding: 4px 11px 5px 11px;
+  padding: 4px 15px 5px 15px;
   font-size: 14px;
   border-radius: 6px;
 }
@@ -3789,7 +3808,7 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn:active,
 .ant-calendar .ant-calendar-ok-btn[disabled].active,
 fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-calendar .ant-calendar-ok-btn:hover,
@@ -3800,7 +3819,7 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 }
 .ant-calendar .ant-calendar-ok-btn-disabled {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
   cursor: not-allowed;
 }
@@ -3974,9 +3993,10 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 .ant-calendar-time .ant-time-picker-input[disabled],
 fieldset[disabled] .ant-calendar-time .ant-calendar-input,
 fieldset[disabled] .ant-calendar-time .ant-time-picker-input {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-calendar-time .ant-calendar-input[disabled]:hover,
 .ant-calendar-time .ant-time-picker-input[disabled]:hover,
@@ -4430,9 +4450,10 @@ textarea.ant-calendar-time .ant-time-picker-input {
 }
 .ant-time-picker-input[disabled],
 fieldset[disabled] .ant-time-picker-input {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-time-picker-input[disabled]:hover,
 fieldset[disabled] .ant-time-picker-input:hover {
@@ -5505,6 +5526,12 @@ textarea.ant-time-picker-input {
 .ant-table-row-spaced:after {
   content: '.';
 }
+.ant-table-row[class*="ant-table-row-level-"] .ant-table-selection-column > span {
+  display: none;
+}
+.ant-table-row[class*="ant-table-row-level-0"] .ant-table-selection-column > span {
+  display: inline-block;
+}
 tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {
   background: #fbfbfb;
@@ -6116,9 +6143,10 @@ td.ant-table-column-has-prev {
 }
 .ant-pagination-options-quick-jumper input[disabled],
 fieldset[disabled] .ant-pagination-options-quick-jumper input {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-pagination-options-quick-jumper input[disabled]:hover,
 fieldset[disabled] .ant-pagination-options-quick-jumper input:hover {
@@ -6313,9 +6341,10 @@ label > .anticon {
 }
 .ant-input[disabled],
 fieldset[disabled] .ant-input {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-input[disabled]:hover,
 fieldset[disabled] .ant-input:hover {
@@ -6598,7 +6627,7 @@ fieldset[disabled] .ant-search-input .ant-search-btn:active,
 .ant-search-input .ant-search-btn[disabled].active,
 fieldset[disabled] .ant-search-input .ant-search-btn.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-search-input .ant-search-btn:hover,
@@ -6673,7 +6702,7 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty:active,
 fieldset[disabled] .ant-search-input.ant-search-input-focus .ant-search-btn-noempty.active,
 fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   color: #ccc;
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   border-color: #d9d9d9;
 }
 .ant-search-input.ant-search-input-focus .ant-search-btn-noempty:hover,
@@ -6688,7 +6717,6 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 }
 .ant-form-horizontal .ant-form-item {
   position: relative;
-  width: 100%;
   margin-left: 0;
   margin-right: 0;
   height: auto;
@@ -6717,6 +6745,9 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 }
 .ant-form-inline .has-feedback {
   display: inline-block;
+}
+.ant-form-inline .ant-form-explain {
+  position: absolute;
 }
 .ant-form-horizontal label > input[type="radio"],
 .ant-form-inline label > input[type="radio"],
@@ -7229,9 +7260,10 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 }
 .ant-input-number[disabled],
 fieldset[disabled] .ant-input-number {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-input-number[disabled]:hover,
 fieldset[disabled] .ant-input-number:hover {
@@ -7315,9 +7347,10 @@ textarea.ant-input-number {
   box-shadow: 0 0 0 2px #d5f1fd;
 }
 .ant-input-number-disabled {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-input-number-disabled:hover {
   border-color: #e1e1e1;
@@ -7340,9 +7373,10 @@ textarea.ant-input-number {
   padding: 0 7px;
 }
 .ant-input-number-input[disabled] {
-  background-color: #f3f5f7;
+  background-color: #f4f4f4;
   opacity: 1;
   cursor: not-allowed;
+  color: #ccc;
 }
 .ant-input-number-input[disabled]:hover {
   border-color: #e1e1e1;
@@ -7706,6 +7740,7 @@ textarea.ant-input-number {
   z-index: 1050;
   width: 100%;
   top: 16px;
+  left: 0;
 }
 .ant-message-notice {
   width: auto;
@@ -9164,12 +9199,19 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree-select-lg .ant-tree-select-selection--multiple {
   min-height: 32px;
 }
-.ant-tree-select-lg .ant-tree-select-selection--multiple .ant-tree-select-selection__rendered li {
+.ant-tree-select-lg .ant-tree-select-selection--multiple .ant-tree-select-search__field__placeholder {
+  left: 10px;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 24px;
   height: 24px;
+}
+.ant-tree-select-lg .ant-tree-select-selection--multiple .ant-tree-select-selection__rendered li {
+  height: 22px;
 }
 .ant-tree-select-lg .ant-tree-select-selection--multiple .ant-tree-select-selection__rendered li .ant-tree-select-selection__choice__content {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
 }
 .ant-tree-select-sm .ant-tree-select-selection {
   border-radius: 4px;
@@ -9187,7 +9229,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   height: 14px;
 }
 .ant-tree-select-sm .ant-tree-select-selection--multiple .ant-tree-select-selection__rendered li .ant-tree-select-selection__choice__content {
-  line-height: 14px;
+  line-height: 10px;
+  font-size: 8px;
   position: relative;
   top: -3px;
 }
@@ -9232,8 +9275,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   cursor: text;
 }
 .ant-tree-select-selection--multiple .ant-tree-select-search__field__placeholder {
-  top: 6px;
   left: 10px;
+  margin-top: 4px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tree-select-selection--multiple .ant-tree-select-search--inline {
   width: auto;
@@ -10435,12 +10480,13 @@ a -count:active {
 .ant-spin {
   color: #2db7f5;
   display: inline-block;
-  font-size: 8px;
+  vertical-align: middle;
   text-align: center;
   opacity: 0;
   position: absolute;
   visibility: hidden;
   transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  font-size: 12px;
 }
 .ant-spin-spining {
   opacity: 1;
@@ -10453,16 +10499,19 @@ a -count:active {
 .ant-spin-nested-loading .ant-spin {
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin-top: -0.75em;
-  margin-left: -2.5em;
+  height: 20px;
+  line-height: 20px;
+  margin-top: -10px;
   z-index: 4;
+  text-align: center;
+  width: 100%;
 }
 .ant-spin-container {
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-spin-nested-loading > .ant-spin-container {
   opacity: 0.7;
+  -webkit-filter: blur(1px);
   filter: blur(1px);
   filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
   /* IE6~IE9 */
@@ -10472,8 +10521,8 @@ a -count:active {
   -webkit-animation: antSpinPulse 1.2s infinite cubic-bezier(0.78, 0.14, 0.15, 0.86);
   -o-animation: antSpinPulse 1.2s infinite cubic-bezier(0.78, 0.14, 0.15, 0.86);
   animation: antSpinPulse 1.2s infinite cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  width: 1em;
-  height: 1em;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   display: inline-block;
   background-color: #2db7f5;
@@ -10481,18 +10530,27 @@ a -count:active {
 .ant-spin-dot-second {
   -webkit-animation-delay: 200ms;
   animation-delay: 200ms;
-  margin-left: 1em;
 }
 .ant-spin-dot-third {
   -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
-  margin-left: 1em;
 }
-.ant-spin-sm {
-  font-size: 4px;
+.ant-spin-dot + .ant-spin-dot {
+  margin-left: 8px;
 }
-.ant-spin-lg {
-  font-size: 16px;
+.ant-spin-sm .ant-spin-dot {
+  width: 4px;
+  height: 4px;
+}
+ + .ant-spin-sm .ant-spin-dot {
+  margin-left: 4px;
+}
+.ant-spin-lg .ant-spin-dot {
+  width: 16px;
+  height: 16px;
+}
+ + .ant-spin-lg .ant-spin-dot {
+  margin-left: 16px;
 }
 @keyframes antSpinPulse {
   0%,

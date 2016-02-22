@@ -204,7 +204,7 @@ Table 表格 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.3'
+        latest: '0.12.4'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -2566,10 +2566,10 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>用属性 <code>loading</code> 控制表格加载中状态。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-indent-size">
+</div><div class="code-box" id="demo-fixed-header">
   <div class="code-box-demo">
-    <div id="components-table-demo-indent-size"></div>
-    <script>mountNode = document.getElementById('components-table-demo-indent-size');</script>
+    <div id="components-table-demo-fixed-header"></div>
+    <script>mountNode = document.getElementById('components-table-demo-fixed-header');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2577,151 +2577,60 @@ var _antd = require('antd');
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
-  key: 'name',
-  width: '40%'
+  width: 150
 }, {
   title: '年龄',
   dataIndex: 'age',
-  key: 'age',
-  width: '30%'
+  width: 150
 }, {
   title: '住址',
-  dataIndex: 'address',
-  key: 'address',
-  width: '30%'
+  dataIndex: 'address'
 }];
 
-var data = [{
-  key: 1,
-  name: 'a',
-  age: 32,
-  address: '我是a',
-  children: [{
-    key: 11,
-    name: 'aa',
-    age: 33,
-    address: '我是aa'
-  }, {
-    key: 12,
-    name: 'ab',
-    age: 33,
-    address: '我是ab',
-    children: [{
-      key: 121,
-      name: 'aba',
-      age: 33,
-      address: '我是aba'
-    }]
-  }, {
-    key: 13,
-    name: 'ac',
-    age: 33,
-    address: '我是ac',
-    children: [{
-      key: 131,
-      name: 'aca',
-      age: 33,
-      address: '我是aca',
-      children: [{
-        key: 1311,
-        name: 'acaa',
-        age: 33,
-        address: '我是acaa'
-      }, {
-        key: 1312,
-        name: 'acab',
-        age: 33,
-        address: '我是acab'
-      }]
-    }]
-  }]
-}, {
-  key: 2,
-  name: 'b',
-  age: 32,
-  address: '我是b'
-}];
+var data = [];
+for (var i = 0; i < 100; i++) {
+  data.push({
+    key: i,
+    name: '李大嘴' + i,
+    age: 32,
+    address: '西湖区湖底公园' + i + '号'
+  });
+}
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 30 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: { pageSize: 50 }, useFixedHeader: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  key: <span class="hljs-string">'name'</span>,
-  width: <span class="hljs-string">'40%'</span>,
+  width: <span class="hljs-number">150</span>,
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  key: <span class="hljs-string">'age'</span>,
-  width: <span class="hljs-string">'30%'</span>,
+  width: <span class="hljs-number">150</span>,
 }, {
   title: <span class="hljs-string">'住址'</span>,
   dataIndex: <span class="hljs-string">'address'</span>,
-  key: <span class="hljs-string">'address'</span>,
-  width: <span class="hljs-string">'30%'</span>,
 }];
 
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-number">1</span>,
-  name: <span class="hljs-string">'a'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'我是a'</span>,
-  children: [{
-    key: <span class="hljs-number">11</span>,
-    name: <span class="hljs-string">'aa'</span>,
-    age: <span class="hljs-number">33</span>,
-    address: <span class="hljs-string">'我是aa'</span>,
-  }, {
-    key: <span class="hljs-number">12</span>,
-    name: <span class="hljs-string">'ab'</span>,
-    age: <span class="hljs-number">33</span>,
-    address: <span class="hljs-string">'我是ab'</span>,
-    children: [{
-      key: <span class="hljs-number">121</span>,
-      name: <span class="hljs-string">'aba'</span>,
-      age: <span class="hljs-number">33</span>,
-      address: <span class="hljs-string">'我是aba'</span>,
-    }],
-  }, {
-    key: <span class="hljs-number">13</span>,
-    name: <span class="hljs-string">'ac'</span>,
-    age: <span class="hljs-number">33</span>,
-    address: <span class="hljs-string">'我是ac'</span>,
-    children: [{
-      key: <span class="hljs-number">131</span>,
-      name: <span class="hljs-string">'aca'</span>,
-      age: <span class="hljs-number">33</span>,
-      address: <span class="hljs-string">'我是aca'</span>,
-      children: [{
-        key: <span class="hljs-number">1311</span>,
-        name: <span class="hljs-string">'acaa'</span>,
-        age: <span class="hljs-number">33</span>,
-        address: <span class="hljs-string">'我是acaa'</span>,
-      }, {
-        key: <span class="hljs-number">1312</span>,
-        name: <span class="hljs-string">'acab'</span>,
-        age: <span class="hljs-number">33</span>,
-        address: <span class="hljs-string">'我是acab'</span>,
-      }],
-    }],
-  }],
-}, {
-  key: <span class="hljs-number">2</span>,
-  name: <span class="hljs-string">'b'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'我是b'</span>,
-}];
+<span class="hljs-keyword">const</span> data = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+  data.push({
+    key: i,
+    name: <span class="hljs-string">`李大嘴<span class="hljs-subst">${i}</span>`</span>,
+    age: <span class="hljs-number">32</span>,
+    address: <span class="hljs-string">`西湖区湖底公园<span class="hljs-subst">${i}</span>号`</span>
+  });
+}
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{30}</span> /&gt;</span>,
-  mountNode
-);</span></code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">pageSize:</span> <span class="hljs-attribute">50</span> }} <span class="hljs-attribute">useFixedHeader</span> /&gt;</span>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-indent-size">树形数据展示</a>
+      <a href="#demo-fixed-header">固定表头</a>
     </div>
-    <p>表格支持树形数据的展示，可以通过设置 <code>indentSize</code> 以控制每一层的缩进宽度。</p>
+    <p>方便一页内展示大量数据。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-paging-columns">
@@ -2806,10 +2715,10 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <p>对于列数很多的数据，可以进行横向的分页，通过切换符切换当前展现的列。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
-</div><div class="code-box" id="demo-fixed-header">
+</div><div class="code-box" id="demo-expand-children">
   <div class="code-box-demo">
-    <div id="components-table-demo-fixed-header"></div>
-    <script>mountNode = document.getElementById('components-table-demo-fixed-header');</script>
+    <div id="components-table-demo-expand-children"></div>
+    <script>mountNode = document.getElementById('components-table-demo-expand-children');</script>
     <script>(function(){'use strict';
 
 var _antd = require('antd');
@@ -2817,60 +2726,151 @@ var _antd = require('antd');
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
-  width: 150
+  key: 'name',
+  width: '40%'
 }, {
   title: '年龄',
   dataIndex: 'age',
-  width: 150
+  key: 'age',
+  width: '30%'
 }, {
   title: '住址',
-  dataIndex: 'address'
+  dataIndex: 'address',
+  key: 'address',
+  width: '30%'
 }];
 
-var data = [];
-for (var i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    name: '李大嘴' + i,
-    age: 32,
-    address: '西湖区湖底公园' + i + '号'
-  });
-}
+var data = [{
+  key: 1,
+  name: 'a',
+  age: 32,
+  address: '我是a',
+  children: [{
+    key: 11,
+    name: 'aa',
+    age: 33,
+    address: '我是aa'
+  }, {
+    key: 12,
+    name: 'ab',
+    age: 33,
+    address: '我是ab',
+    children: [{
+      key: 121,
+      name: 'aba',
+      age: 33,
+      address: '我是aba'
+    }]
+  }, {
+    key: 13,
+    name: 'ac',
+    age: 33,
+    address: '我是ac',
+    children: [{
+      key: 131,
+      name: 'aca',
+      age: 33,
+      address: '我是aca',
+      children: [{
+        key: 1311,
+        name: 'acaa',
+        age: 33,
+        address: '我是acaa'
+      }, {
+        key: 1312,
+        name: 'acab',
+        age: 33,
+        address: '我是acab'
+      }]
+    }]
+  }]
+}, {
+  key: 2,
+  name: 'b',
+  age: 32,
+  address: '我是b'
+}];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: { pageSize: 50 }, useFixedHeader: true }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 20 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  width: <span class="hljs-number">150</span>,
+  key: <span class="hljs-string">'name'</span>,
+  width: <span class="hljs-string">'40%'</span>,
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  width: <span class="hljs-number">150</span>,
+  key: <span class="hljs-string">'age'</span>,
+  width: <span class="hljs-string">'30%'</span>,
 }, {
   title: <span class="hljs-string">'住址'</span>,
   dataIndex: <span class="hljs-string">'address'</span>,
+  key: <span class="hljs-string">'address'</span>,
+  width: <span class="hljs-string">'30%'</span>,
 }];
 
-<span class="hljs-keyword">const</span> data = [];
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
-  data.push({
-    key: i,
-    name: <span class="hljs-string">`李大嘴<span class="hljs-subst">${i}</span>`</span>,
-    age: <span class="hljs-number">32</span>,
-    address: <span class="hljs-string">`西湖区湖底公园<span class="hljs-subst">${i}</span>号`</span>
-  });
-}
+<span class="hljs-keyword">const</span> data = [{
+  key: <span class="hljs-number">1</span>,
+  name: <span class="hljs-string">'a'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'我是a'</span>,
+  children: [{
+    key: <span class="hljs-number">11</span>,
+    name: <span class="hljs-string">'aa'</span>,
+    age: <span class="hljs-number">33</span>,
+    address: <span class="hljs-string">'我是aa'</span>,
+  }, {
+    key: <span class="hljs-number">12</span>,
+    name: <span class="hljs-string">'ab'</span>,
+    age: <span class="hljs-number">33</span>,
+    address: <span class="hljs-string">'我是ab'</span>,
+    children: [{
+      key: <span class="hljs-number">121</span>,
+      name: <span class="hljs-string">'aba'</span>,
+      age: <span class="hljs-number">33</span>,
+      address: <span class="hljs-string">'我是aba'</span>,
+    }],
+  }, {
+    key: <span class="hljs-number">13</span>,
+    name: <span class="hljs-string">'ac'</span>,
+    age: <span class="hljs-number">33</span>,
+    address: <span class="hljs-string">'我是ac'</span>,
+    children: [{
+      key: <span class="hljs-number">131</span>,
+      name: <span class="hljs-string">'aca'</span>,
+      age: <span class="hljs-number">33</span>,
+      address: <span class="hljs-string">'我是aca'</span>,
+      children: [{
+        key: <span class="hljs-number">1311</span>,
+        name: <span class="hljs-string">'acaa'</span>,
+        age: <span class="hljs-number">33</span>,
+        address: <span class="hljs-string">'我是acaa'</span>,
+      }, {
+        key: <span class="hljs-number">1312</span>,
+        name: <span class="hljs-string">'acab'</span>,
+        age: <span class="hljs-number">33</span>,
+        address: <span class="hljs-string">'我是acab'</span>,
+      }],
+    }],
+  }],
+}, {
+  key: <span class="hljs-number">2</span>,
+  name: <span class="hljs-string">'b'</span>,
+  age: <span class="hljs-number">32</span>,
+  address: <span class="hljs-string">'我是b'</span>,
+}];
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">pagination</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">pageSize:</span> <span class="hljs-attribute">50</span> }} <span class="hljs-attribute">useFixedHeader</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{20}</span> /&gt;</span>,
+  mountNode
+);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-fixed-header">固定表头</a>
+      <a href="#demo-expand-children">树形数据展示</a>
     </div>
-    <p>方便一页内展示大量数据。</p>
+    <p>表格支持树形数据的展示，可以通过设置 <code>indentSize</code> 以控制每一层的缩进宽度。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div>
@@ -2943,8 +2943,8 @@ ReactDOM.render(
     </a>
   </li>
   <li>
-    <a title="树形数据展示" href="#demo-indent-size">
-      <span>树形数据展示</span>
+    <a title="固定表头" href="#demo-fixed-header">
+      <span>固定表头</span>
     </a>
   </li>
   <li>
@@ -2953,8 +2953,8 @@ ReactDOM.render(
     </a>
   </li>
   <li>
-    <a title="固定表头" href="#demo-fixed-header">
-      <span>固定表头</span>
+    <a title="树形数据展示" href="#demo-expand-children">
+      <span>树形数据展示</span>
     </a>
   </li>
 </ul>

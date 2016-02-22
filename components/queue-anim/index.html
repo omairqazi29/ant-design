@@ -204,7 +204,7 @@ QueueAnim 进出场动画 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.3'
+        latest: '0.12.4'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -1218,7 +1218,7 @@ const Test = React.createClass({
             &lt;div className="ant-form-item" key="password"&gt;
               &lt;label htmlFor="password" className="col-6" required&gt;密码：&lt;/label&gt;
               &lt;div className="col-14"&gt;
-                &lt;input className="ant-input" type="password" id="password" placeholder="请输入密码"/&gt;
+                &lt;input className="ant-input" type="password" id="password" placeholder="请输入密码" /&gt;
               &lt;/div&gt;
             &lt;/div&gt;,
             &lt;div className="ant-form-item ant-form-item-compact" key="sex"&gt;
@@ -2064,7 +2064,7 @@ ReactDOM.render(React.createElement(
           <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">QueueAnim</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{['right',</span> '<span class="hljs-attribute">left</span>']} <span class="hljs-attribute">className</span>=<span class="hljs-value">"demo-router-wrap"</span>&gt;</span>
-          {React.cloneElement(this.props.children || <span class="hljs-tag">&lt;<span class="hljs-title">Home</span>/&gt;</span>, { key })}
+          {React.cloneElement(this.props.children || <span class="hljs-tag">&lt;<span class="hljs-title">Home</span> /&gt;</span>, { key })}
         <span class="hljs-tag">&lt;/<span class="hljs-title">QueueAnim</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
