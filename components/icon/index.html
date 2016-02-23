@@ -685,7 +685,7 @@ var CopyableIcon = React.createClass({
     });
   },
   render: function render() {
-    var text = '&lt;Icon type="' + this.props.type + '" /&gt;';
+    var text = '<Icon type="' + this.props.type + '" />';
     return React.createElement(
       CopyToClipboard,
       { text: text, onCopy: this.onCopied },
