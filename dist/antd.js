@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "242a4f82a9c621edb51d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "682b7a2127d3a0f83121"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -20682,13 +20682,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  _createClass(Button, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      if (window && window.PIE) {
-	        window.PIE.attach((0, _reactDom.findDOMNode)(this));
-	      }
-	    }
-	  }, {
 	    key: 'handleClick',
 	    value: function handleClick() {
 	      var _props;
@@ -26503,6 +26496,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -26562,7 +26557,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var dataSource = _props.dataSource;
 	
 	
-	      var leftDataSource = Object.assign([], dataSource);
+	      var leftDataSource = [].concat(_toConsumableArray(dataSource));
 	      var rightDataSource = [];
 	
 	      if (targetKeys.length > 0) {
@@ -39530,6 +39525,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -39553,6 +39550,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  propTypes: {
 	    onChange: _react2['default'].PropTypes.func,
+	    onKeyDown: _react2['default'].PropTypes.func,
+	    onFocus: _react2['default'].PropTypes.func,
+	    onBlur: _react2['default'].PropTypes.func,
 	    step: _react2['default'].PropTypes.number
 	  },
 	
@@ -39564,7 +39564,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      step: 1,
 	      style: {},
 	      defaultValue: '',
-	      onChange: noop
+	      onChange: noop,
+	      onKeyDown: noop,
+	      onFocus: noop,
+	      onBlur: noop
 	    };
 	  },
 	
@@ -39599,17 +39602,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onKeyDown: function onKeyDown(e) {
+	    var _props;
+	
 	    if (e.keyCode === 38) {
 	      this.up(e);
 	    } else if (e.keyCode === 40) {
 	      this.down(e);
 	    }
+	
+	    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	      args[_key - 1] = arguments[_key];
+	    }
+	
+	    (_props = this.props).onKeyDown.apply(_props, [e].concat(args));
 	  },
 	
 	  onFocus: function onFocus() {
+	    var _props2;
+	
 	    this.setState({
 	      focused: true
 	    });
+	    (_props2 = this.props).onFocus.apply(_props2, arguments);
 	  },
 	
 	  onBlur: function onBlur(event) {
@@ -39632,6 +39646,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      val = this.state.value;
 	    }
 	    this.setValue(val);
+	
+	    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+	      args[_key2 - 1] = arguments[_key2];
+	    }
+	
+	    props.onBlur.apply(props, [event].concat(args));
 	  },
 	
 	  setValue: function setValue(v) {
@@ -39778,7 +39798,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react2['default'].createElement(
 	        'div',
 	        { className: prefixCls + '-input-wrap' },
-	        _react2['default'].createElement('input', { className: prefixCls + '-input',
+	        _react2['default'].createElement('input', _extends({}, props, {
+	          className: prefixCls + '-input',
 	          autoComplete: 'off',
 	          onFocus: this.onFocus,
 	          onBlur: this.onBlur,
@@ -39791,7 +39812,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          name: props.name,
 	          onChange: this.onChange,
 	          ref: 'input',
-	          value: inputDisplayValue })
+	          value: inputDisplayValue }))
 	      )
 	    );
 	  }
