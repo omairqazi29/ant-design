@@ -688,7 +688,7 @@ Select 选择器 - Ant Design
 </tr>
 <tr>
 <td>optionFilterProp</td>
-<td>输入项过滤对应的 option 属性</td>
+<td>搜索时过滤对应的 option 属性，如设置为 children 表示对内嵌内容进行搜索</td>
 <td>string</td>
 <td>value</td>
 </tr>
@@ -873,29 +873,27 @@ function handleChange(value) {
 
 ReactDOM.render(React.createElement(
   _antd.Select,
-  { defaultValue: "lucy", showSearch: true, style: { width: 200 },
-    notFoundContent: "找不到呐！",
-    searchPlaceholder: "输入",
+  { showSearch: true,
+    style: { width: 200 },
+    placeholder: "请选择人员",
+    optionFilterProp: "children",
+    notFoundContent: "无法找到",
+    searchPlaceholder: "输入关键词",
     onChange: handleChange },
   React.createElement(
     Option,
     { value: "jack" },
-    "jack"
+    "杰克"
   ),
   React.createElement(
     Option,
     { value: "lucy" },
-    "lucy"
+    "露西"
   ),
   React.createElement(
     Option,
-    { value: "disabled", disabled: true },
-    "disabled"
-  ),
-  React.createElement(
-    Option,
-    { value: "yiminghe" },
-    "yiminghe"
+    { value: "tom" },
+    "汤姆"
   )
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> Option = Select.Option;
@@ -905,14 +903,16 @@ ReactDOM.render(React.createElement(
 }
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">"lucy"</span> <span class="hljs-attribute">showSearch</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }}
-    <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">"找不到呐！"</span>
-    <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"输入"</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">showSearch</span>
+    <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }}
+    <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择人员"</span>
+    <span class="hljs-attribute">optionFilterProp</span>=<span class="hljs-value">"children"</span>
+    <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">"无法找到"</span>
+    <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">"输入关键词"</span>
     <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{handleChange}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>jack<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>lucy<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"disabled"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yiminghe"</span>&gt;</span>yiminghe<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"jack"</span>&gt;</span>杰克<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"lucy"</span>&gt;</span>露西<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"tom"</span>&gt;</span>汤姆<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
 , mountNode);</span></code></pre></div>
   </div>
