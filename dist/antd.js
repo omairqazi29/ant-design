@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "682b7a2127d3a0f83121"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d9a22634b519c40ecd45"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -13266,6 +13266,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        return this.getValueFromFields(name, fields);
 	      },
+	      getFieldInstance: function getFieldInstance(name) {
+	        var fields = this.fields;
+	
+	        return fields[name] && fields[name].instance;
+	      },
 	      getValueFromFields: function getValueFromFields(name, fields) {
 	        var fieldsMeta = this.fieldsMeta;
 	
@@ -13531,7 +13536,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var field = fields[name];
 	          if (field && 'value' in field) {
 	            changed = true;
-	            newFields[name] = { instance: field.instance };
+	            newFields[name] = {
+	              instance: field.instance
+	            };
 	          }
 	        });
 	        if (changed) {
@@ -39498,6 +39505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      getFieldsValue: this.getFieldsValue,
 	      getFieldValue: this.getFieldValue,
+	      getFieldInstance: this.getFieldInstance,
 	      setFieldsValue: this.setFieldsValue,
 	      setFields: this.setFields,
 	      setFieldsInitialValue: this.setFieldsInitialValue,
