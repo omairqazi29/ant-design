@@ -1,0 +1,235 @@
+<div class="code-box" id="demo-search-box">
+  <div class="code-box-demo">
+    <div id="components-select-demo-search-box"></div>
+    <script>mountNode = document.getElementById('components-select-demo-search-box');</script>
+    <script>(function(){'use strict';
+
+var _antd = require('antd');
+
+var _jsonp = require('jsonp');
+
+var _jsonp2 = _interopRequireDefault(_jsonp);
+
+var _querystring = require('querystring');
+
+var _querystring2 = _interopRequireDefault(_querystring);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Option = _antd.Select.Option;
+
+var timeout = undefined;
+var currentValue = undefined;
+
+function fetch(value, callback) {
+  if (timeout) {
+    clearTimeout(timeout);
+    timeout = null;
+  }
+  currentValue = value;
+
+  function fake() {
+    var str = _querystring2.default.encode({
+      code: 'utf-8',
+      q: value
+    });
+    (0, _jsonp2.default)('http://suggest.taobao.com/sug?' + str, function (err, d) {
+      if (currentValue === value) {
+        (function () {
+          var result = d.result;
+          var data = [];
+          result.forEach(function (r) {
+            data.push({
+              value: r[0],
+              text: r[0]
+            });
+          });
+          callback(data);
+        })();
+      }
+    });
+  }
+
+  timeout = setTimeout(fake, 300);
+}
+
+var SearchInput = React.createClass({
+  displayName: 'SearchInput',
+  getInitialState: function getInitialState() {
+    return {
+      data: [],
+      value: '',
+      focus: false
+    };
+  },
+  handleChange: function handleChange(value) {
+    var _this = this;
+
+    this.setState({ value: value });
+    fetch(value, function (data) {
+      return _this.setState({ data: data });
+    });
+  },
+  handleSubmit: function handleSubmit() {
+    console.log('输入框内容是: ', this.state.value);
+  },
+  handleFocusBlur: function handleFocusBlur(e) {
+    this.setState({
+      focus: e.target === document.activeElement
+    });
+  },
+  render: function render() {
+    var btnCls = (0, _classnames2.default)({
+      'ant-search-btn': true,
+      'ant-search-btn-noempty': !!this.state.value.trim()
+    });
+    var searchCls = (0, _classnames2.default)({
+      'ant-search-input': true,
+      'ant-search-input-focus': this.state.focus
+    });
+    return React.createElement(
+      _antd.Input.Group,
+      { className: searchCls, style: this.props.style },
+      React.createElement(
+        _antd.Select,
+        {
+          combobox: true,
+          value: this.state.value,
+          searchPlaceholder: this.props.placeholder,
+          notFoundContent: '',
+          defaultActiveFirstOption: false,
+          showArrow: false,
+          filterOption: false,
+          onChange: this.handleChange,
+          onFocus: this.handleFocusBlur,
+          onBlur: this.handleFocusBlur },
+        this.state.data.map(function (d) {
+          return React.createElement(
+            Option,
+            { key: d.value },
+            d.text
+          );
+        })
+      ),
+      React.createElement(
+        'div',
+        { className: 'ant-input-group-wrap' },
+        React.createElement(
+          _antd.Button,
+          { className: btnCls, onClick: this.handleSubmit },
+          React.createElement(_antd.Icon, { type: 'search' })
+        )
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { Input, Select, Button, Icon } from 'antd';
+import jsonp from 'jsonp';
+import querystring from 'querystring';
+import classNames from 'classnames';
+const Option = Select.Option;
+
+let timeout;
+let currentValue;
+
+function fetch(value, callback) {
+  if (timeout) {
+    clearTimeout(timeout);
+    timeout = null;
+  }
+  currentValue = value;
+
+  function fake() {
+    const str = querystring.encode({
+      code: 'utf-8',
+      q: value,
+    });
+    jsonp(`http://suggest.taobao.com/sug?${str}`, (err, d) =&gt; {
+      if (currentValue === value) {
+        const result = d.result;
+        const data = [];
+        result.forEach((r) =&gt; {
+          data.push({
+            value: r[0],
+            text: r[0],
+          });
+        });
+        callback(data);
+      }
+    });
+  }
+
+  timeout = setTimeout(fake, 300);
+}
+
+const SearchInput = React.createClass({
+  getInitialState() {
+    return {
+      data: [],
+      value: '',
+      focus: false,
+    };
+  },
+  handleChange(value) {
+    this.setState({ value });
+    fetch(value, (data) =&gt; this.setState({ data }));
+  },
+  handleSubmit() {
+    console.log('输入框内容是: ', this.state.value);
+  },
+  handleFocusBlur(e) {
+    this.setState({
+      focus: e.target === document.activeElement,
+    });
+  },
+  render() {
+    const btnCls = classNames({
+      'ant-search-btn': true,
+      'ant-search-btn-noempty': !!this.state.value.trim(),
+    });
+    const searchCls = classNames({
+      'ant-search-input': true,
+      'ant-search-input-focus': this.state.focus,
+    });
+    return (
+      &lt;Input.Group className={searchCls} style={this.props.style}&gt;
+        &lt;Select
+          combobox
+          value={this.state.value}
+          searchPlaceholder={this.props.placeholder}
+          notFoundContent=""
+          defaultActiveFirstOption={false}
+          showArrow={false}
+          filterOption={false}
+          onChange={this.handleChange}
+          onFocus={this.handleFocusBlur}
+          onBlur={this.handleFocusBlur}&gt;
+          {this.state.data.map(d =&gt; &lt;Option key={d.value}&gt;{d.text}&lt;/Option&gt;)}
+        &lt;/Select&gt;
+        &lt;div className="ant-input-group-wrap"&gt;
+          &lt;Button className={btnCls} onClick={this.handleSubmit}&gt;
+            &lt;Icon type="search" /&gt;
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/Input.Group&gt;
+    );
+  },
+});
+
+ReactDOM.render(
+  &lt;SearchInput placeholder="input search text" style={{ width: 200 }} /&gt;
+, mountNode);</code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-search-box">搜索框</a>
+    </div>
+    <p>带有搜索按钮的自动补全输入框。</p>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+  </div>
+</div>

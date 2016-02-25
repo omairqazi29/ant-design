@@ -143,6 +143,10 @@ var Demo = React.createClass({
         validator: this.checkPass2
       }]
     });
+    var formItemLayout = {
+      labelCol: { span: 6 },
+      wrapperCol: { span: 18 }
+    };
     return React.createElement(
       'div',
       null,
@@ -165,10 +169,8 @@ var Demo = React.createClass({
               { span: '18' },
               React.createElement(
                 FormItem,
-                {
-                  label: '密码：',
-                  labelCol: { span: 6 },
-                  wrapperCol: { span: 18 } },
+                _extends({}, formItemLayout, {
+                  label: '密码：' }),
                 React.createElement(_antd.Input, _extends({}, passProps, { type: 'password',
                   onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
                   autoComplete: 'off', id: 'pass' }))
@@ -188,10 +190,8 @@ var Demo = React.createClass({
               { span: '18' },
               React.createElement(
                 FormItem,
-                {
-                  label: '确认密码：',
-                  labelCol: { span: 6 },
-                  wrapperCol: { span: 18 } },
+                _extends({}, formItemLayout, {
+                  label: '确认密码：' }),
                 React.createElement(_antd.Input, _extends({}, rePassProps, { type: 'password',
                   onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
                   autoComplete: 'off', id: 'rePass' }))
@@ -345,6 +345,10 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         validator: <span class="hljs-keyword">this</span>.checkPass2,
       }],
     });
+    <span class="hljs-keyword">const</span> formItemLayout = {
+      labelCol: { span: <span class="hljs-number">6</span> },
+      wrapperCol: { span: <span class="hljs-number">18</span> },
+    };
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>修改密码<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
@@ -353,9 +357,8 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
             <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>
-                  <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-                  <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">18</span> }}&gt;</span>
+                  {<span class="hljs-attribute">...formItemLayout</span>}
+                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...passProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
                     <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
                     <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pass"</span> /&gt;</span>
@@ -369,9 +372,8 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
             <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"确认密码："</span>
-                  <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-                  <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">18</span> }}&gt;</span>
+                  {<span class="hljs-attribute">...formItemLayout</span>}
+                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"确认密码："</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...rePassProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
                     <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
                     <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"rePass"</span> /&gt;</span>
