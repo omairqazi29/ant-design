@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "43f10df23945dd0ee630"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "01f086edd5b047a50ddd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -13078,7 +13078,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (mapPropsToFields) {
 	          var fields = mapPropsToFields(nextProps);
 	          if (fields) {
-	            this.fields = _extends({}, this.fields, fields);
+	            var instanceFields = this.fields = _extends({}, this.fields);
+	            for (var fieldName in fields) {
+	              if (fields.hasOwnProperty(fieldName)) {
+	                instanceFields[fieldName] = _extends({}, fields[fieldName], {
+	                  // keep instance
+	                  instance: instanceFields[fieldName] && instanceFields[fieldName].instance
+	                });
+	              }
+	            }
 	          }
 	        }
 	      },
@@ -24269,7 +24277,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
+	var _classnames = __webpack_require__(2);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	var _components = {
 	  _component: {}
@@ -24353,7 +24367,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.onChange(ev);
 	  },
 	  render: function render() {
-	    var _this = this;
+	    var _this = this,
+	        _classNames;
 	
 	    var props = this.props;
 	    var children = _react3["default"].Children.map(props.children, function (radio) {
@@ -24370,9 +24385,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return radio;
 	    });
+	    var classString = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, props.prefixCls, true), _defineProperty(_classNames, props.prefixCls + '-' + props.size, props.size), _classNames));
 	    return _react3["default"].createElement(
 	      'div',
-	      { className: props.prefixCls + ' ' + props.prefixCls + '-' + props.size },
+	      { className: classString },
 	      children
 	    );
 	  }
@@ -25193,17 +25209,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	    if (typeof column.sorter === 'function') {
-	      sorter = function sorter() {
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	          args[_key] = arguments[_key];
+	      sorter = function sorter(a, b) {
+	        var result = column.sorter(a, b);
+	        if (result !== 0) {
+	          return sortOrder === 'descend' ? -result : result;
 	        }
-	
-	        var result = column.sorter.apply(this, args);
-	        if (sortOrder === 'ascend') {
-	          return result;
-	        } else if (sortOrder === 'descend') {
-	          return -result;
-	        }
+	        return a.index - b.index;
 	      };
 	    }
 	    var newState = {
@@ -25570,6 +25581,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var data = dataSource || this.props.dataSource;
 	    // 排序
 	    if (state.sortOrder && state.sorter) {
+	      data = data.slice(0);
+	      for (var i = 0; i < data.length; i++) {
+	        data[i].index = i;
+	      }
 	      data = data.sort(state.sorter);
 	    }
 	    // 筛选
@@ -27337,32 +27352,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	}
 	
-	// import animation from '../common/openAnimation';
-	
 	var AntTreeSelect = _wrapComponent('_component')(_react3["default"].createClass({
 	  displayName: 'AntTreeSelect',
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      prefixCls: 'ant-tree-select',
+	      prefixCls: 'ant-select',
 	      transitionName: 'slide-up',
 	      choiceTransitionName: 'zoom',
 	      showSearch: false
 	    };
 	  },
-	  // openAnimation: animation,
 	  render: function render() {
+	    var _classNames;
+	
 	    var props = this.props;
 	    var _props = this.props;
 	    var size = _props.size;
 	    var className = _props.className;
 	    var combobox = _props.combobox;
 	    var notFoundContent = _props.notFoundContent;
+	    var prefixCls = _props.prefixCls;
 	
 	
-	    var cls = (0, _classnames2["default"])(_defineProperty({
-	      'ant-tree-select-lg': size === 'large',
-	      'ant-tree-select-sm': size === 'small'
-	    }, className, !!className));
+	    var cls = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, prefixCls + '-sm', size === 'small'), _defineProperty(_classNames, className, !!className), _classNames));
 	
 	    if (combobox) {
 	      notFoundContent = null;
@@ -27370,7 +27382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    var checkable = props.treeCheckable;
 	    if (checkable) {
-	      checkable = _react3["default"].createElement('span', { className: props.prefixCls + '-tree-checkbox-inner' });
+	      checkable = _react3["default"].createElement('span', { className: prefixCls + '-tree-checkbox-inner' });
 	    }
 	
 	    return _react3["default"].createElement(_rcTreeSelect2["default"], _extends({}, this.props, {
@@ -44530,7 +44542,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    status: _react2['default'].PropTypes.string,
 	    iconPrefix: _react2['default'].PropTypes.string,
 	    icon: _react2['default'].PropTypes.string,
-	    maxDescriptionWidth: _react2['default'].PropTypes.number,
+	    maxDescriptionWidth: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
 	    stepLast: _react2['default'].PropTypes.bool,
 	    stepNumber: _react2['default'].PropTypes.string,
 	    description: _react2['default'].PropTypes.any,

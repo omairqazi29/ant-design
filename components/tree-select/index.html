@@ -811,6 +811,7 @@ var Demo = React.createClass({
         value: this.state.value,
         dropdownMenuStyle: { maxHeight: 400, overflow: 'auto' },
         placeholder: '请选择',
+        allowClear: true,
         treeDefaultExpandAll: true,
         onChange: this.onChange },
       React.createElement(
@@ -855,6 +856,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span>
         <span class="hljs-attribute">dropdownMenuStyle</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">maxHeight:</span> <span class="hljs-attribute">400</span>, <span class="hljs-attribute">overflow:</span> '<span class="hljs-attribute">auto</span>' }}
         <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请选择"</span>
+        <span class="hljs-attribute">allowClear</span>
         <span class="hljs-attribute">treeDefaultExpandAll</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.onChange}</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">TreeNode</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"parent 1"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"0-1"</span>&gt;</span>
