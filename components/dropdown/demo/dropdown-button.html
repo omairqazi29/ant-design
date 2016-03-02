@@ -2,67 +2,65 @@
   <div class="code-box-demo">
     <div id="components-dropdown-demo-dropdown-button"></div>
     <script>mountNode = document.getElementById('components-dropdown-demo-dropdown-button');</script>
-    <script>(function(){"use strict";
+    <script>(function(){'use strict';
 
-var _antd = require("antd");
+var _antd = require('antd');
 
 var DropdownButton = _antd.Dropdown.Button;
 
+function handleButtonClick() {
+  console.log('click button');
+}
+
+function handleMenuClick(e) {
+  console.log('click', e);
+}
+
 var menu = React.createElement(
   _antd.Menu,
-  null,
+  { onClick: handleMenuClick },
   React.createElement(
     _antd.Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.alipay.com/" },
-      "第一个菜单项"
-    )
+    { key: '1' },
+    '第一个菜单项'
   ),
   React.createElement(
     _antd.Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.taobao.com/" },
-      "第二个菜单项"
-    )
+    { key: '2' },
+    '第二个菜单项'
   ),
   React.createElement(
     _antd.Menu.Item,
-    null,
-    React.createElement(
-      "a",
-      { target: "_blank", href: "http://www.tmall.com/" },
-      "第三个菜单项"
-    )
+    { key: '3' },
+    '第三个菜单项'
   )
 );
 
 ReactDOM.render(React.createElement(
   DropdownButton,
-  { overlay: menu, type: "primary" },
-  "某功能按钮"
+  { onClick: handleButtonClick, overlay: menu, type: 'primary' },
+  '某功能按钮'
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> DropdownButton = Dropdown.Button;
 
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleButtonClick</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click button'</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleMenuClick</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click'</span>, e);
+}
+
 <span class="hljs-keyword">const</span> menu = (
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.alipay.com/"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.taobao.com/"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.tmall.com/"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{handleMenuClick}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"1"</span>&gt;</span>第一个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"2"</span>&gt;</span>第二个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"3"</span>&gt;</span>第三个菜单项<span class="hljs-tag">&lt;/<span class="hljs-title">Menu.Item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">Menu</span>&gt;</span>
 )</span>;
 
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DropdownButton</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">DropdownButton</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{handleButtonClick}</span> <span class="hljs-attribute">overlay</span>=<span class="hljs-value">{menu}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span>&gt;</span>
     某功能按钮
   <span class="hljs-tag">&lt;/<span class="hljs-title">DropdownButton</span>&gt;</span>
 , mountNode);</span></code></pre></div>
