@@ -6823,9 +6823,6 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   width: auto;
   vertical-align: middle;
 }
-.ant-form-inline .ant-calendar-picker-input {
-  width: 100%!important;
-}
 .ant-form-inline .ant-form-text {
   display: inline-block;
 }
