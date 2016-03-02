@@ -201,7 +201,7 @@ Table 表格 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.6'
+        latest: '0.12.7'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -866,7 +866,7 @@ Table 表格 - Ant Design
 <tr>
 <td>onSelectAll</td>
 <td>用户手动选择/取消选择所有列的回调</td>
-<td>Function(selected, selectedRows, deselectedRows)</td>
+<td>Function(selected, selectedRows, changeRows)</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -1069,8 +1069,8 @@ var rowSelection = {
   onSelect: function onSelect(record, selected, selectedRows) {
     console.log(record, selected, selectedRows);
   },
-  onSelectAll: function onSelectAll(selected, selectedRows, deselectedRowKeys) {
-    console.log(selected, selectedRows, deselectedRowKeys);
+  onSelectAll: function onSelectAll(selected, selectedRows, changeRows) {
+    console.log(selected, selectedRows, changeRows);
   }
 };
 
@@ -1114,8 +1114,8 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
   onSelect(record, selected, selectedRows) {
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll(selected, selectedRows, deselectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows, deselectedRowKeys);
+  onSelectAll(selected, selectedRows, changeRows) {
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows, changeRows);
   }
 };
 

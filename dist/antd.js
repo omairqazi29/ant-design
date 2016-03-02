@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0c25a5c351f436a4f64b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d55469ae2d1e87c5d1f4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -25432,16 +25432,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }).map(function (item, i) {
 	      return _this5.getRecordKey(item, i);
 	    });
+	
+	    // 记录变化的列
+	    var changeRowKeys = [];
 	    if (checked) {
 	      changableRowKeys.forEach(function (key) {
 	        if (selectedRowKeys.indexOf(key) < 0) {
 	          selectedRowKeys.push(key);
+	          changeRowKeys.push(key);
 	        }
 	      });
 	    } else {
 	      changableRowKeys.forEach(function (key) {
 	        if (selectedRowKeys.indexOf(key) >= 0) {
 	          selectedRowKeys.splice(selectedRowKeys.indexOf(key), 1);
+	          changeRowKeys.push(key);
 	        }
 	      });
 	    }
@@ -25453,10 +25458,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var selectedRows = data.filter(function (row, i) {
 	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
-	      var deselectedRows = checked ? [] : data.filter(function (row, i) {
-	        return changableRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
+	      var changeRows = data.filter(function (row, i) {
+	        return changeRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
-	      this.props.rowSelection.onSelectAll(checked, selectedRows, deselectedRows);
+	      this.props.rowSelection.onSelectAll(checked, selectedRows, changeRows);
 	    }
 	  },
 	  handlePageChange: function handlePageChange(current) {
