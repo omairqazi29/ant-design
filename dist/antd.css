@@ -6387,9 +6387,6 @@ label > .anticon {
   font-size: 12px;
   color: #f60;
 }
-.ant-input-wrapper {
-  display: block;
-}
 .ant-input {
   position: relative;
   display: inline-block;

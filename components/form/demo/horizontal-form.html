@@ -20,15 +20,17 @@ var Demo = React.createClass({
   render: function render() {
     var getFieldProps = this.props.form.getFieldProps;
 
+    var formItemLayout = {
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 }
+    };
     return React.createElement(
       _antd.Form,
       { horizontal: true, onSubmit: this.handleSubmit },
       React.createElement(
         FormItem,
-        {
-          label: '用户名：',
-          labelCol: { span: 6 },
-          wrapperCol: { span: 14 } },
+        _extends({}, formItemLayout, {
+          label: '用户名：' }),
         React.createElement(
           'p',
           { className: 'ant-form-text', id: 'userName', name: 'userName' },
@@ -37,18 +39,14 @@ var Demo = React.createClass({
       ),
       React.createElement(
         FormItem,
-        {
-          label: '密码：',
-          labelCol: { span: 6 },
-          wrapperCol: { span: 14 } },
+        _extends({}, formItemLayout, {
+          label: '密码：' }),
         React.createElement(_antd.Input, _extends({ type: 'password' }, getFieldProps('pass'), { placeholder: '请输入密码' }))
       ),
       React.createElement(
         FormItem,
-        {
-          label: '您的性别：',
-          labelCol: { span: 6 },
-          wrapperCol: { span: 14 } },
+        _extends({}, formItemLayout, {
+          label: '您的性别：' }),
         React.createElement(
           RadioGroup,
           getFieldProps('gender', { initialValue: 'female' }),
@@ -66,17 +64,24 @@ var Demo = React.createClass({
       ),
       React.createElement(
         FormItem,
-        {
+        _extends({}, formItemLayout, {
           label: '备注：',
-          labelCol: { span: 6 },
-          wrapperCol: { span: 14 },
-          help: '随便写点什么' },
+          help: '随便写点什么' }),
         React.createElement(_antd.Input, _extends({ type: 'textarea', placeholder: '随便写' }, getFieldProps('remark')))
       ),
       React.createElement(
         FormItem,
-        {
-          wrapperCol: { span: 14, offset: 6 } },
+        _extends({}, formItemLayout, {
+          label: React.createElement(
+            'span',
+            null,
+            '卖身华府',
+            React.createElement(
+              _antd.Tooltip,
+              { title: '我为秋香' },
+              React.createElement(_antd.Icon, { type: 'question' })
+            )
+          ) }),
         React.createElement(
           'label',
           null,
@@ -103,7 +108,7 @@ var Demo = React.createClass({
 
 Demo = _antd.Form.create()(Demo);
 
-ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Button, Checkbox, Radio, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Input, Button, Checkbox, Radio, Row, Col, Tooltip, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> RadioGroup = Radio.Group;
 
@@ -115,38 +120,39 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
 
   render() {
     <span class="hljs-keyword">const</span> { getFieldProps } = <span class="hljs-keyword">this</span>.props.form;
+    <span class="hljs-keyword">const</span> formItemLayout = {
+      labelCol: { span: <span class="hljs-number">6</span> },
+      wrapperCol: { span: <span class="hljs-number">14</span> },
+    };
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">onSubmit</span>=<span class="hljs-value">{this.handleSubmit}</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"用户名："</span>
-          <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
+          {<span class="hljs-attribute">...formItemLayout</span>}
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"用户名："</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-form-text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"userName"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"userName"</span>&gt;</span>大眼萌 minion<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>
-          <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
+          {<span class="hljs-attribute">...formItemLayout</span>}
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">pass</span>')} <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"请输入密码"</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">label</span>=<span class="hljs-value">"您的性别："</span>
-          <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">gender</span>', { <span class="hljs-attribute">initialValue:</span> '<span class="hljs-attribute">female</span>' })}&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
+          {<span class="hljs-attribute">...formItemLayout</span>}
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">"您的性别："</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">RadioGroup</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">gender</span>', { <span class="hljs-attribute">initialValue:</span> '<span class="hljs-attribute">female</span>' })}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>男的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Radio</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>女的<span class="hljs-tag">&lt;/<span class="hljs-title">Radio</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">RadioGroup</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+          {<span class="hljs-attribute">...formItemLayout</span>}
           <span class="hljs-attribute">label</span>=<span class="hljs-value">"备注："</span>
-          <span class="hljs-attribute">labelCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">6</span> }}
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span> }}
           <span class="hljs-attribute">help</span>=<span class="hljs-value">"随便写点什么"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"textarea"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"随便写"</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">remark</span>')} /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-          <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">14</span>, <span class="hljs-attribute">offset:</span> <span class="hljs-attribute">6</span> }}&gt;</span>
+          {<span class="hljs-attribute">...formItemLayout</span>}
+          <span class="hljs-attribute">label</span>=<span class="hljs-value">{&lt;span</span>&gt;</span>卖身华府<span class="hljs-tag">&lt;<span class="hljs-title">Tooltip</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"我为秋香"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"question"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">Tooltip</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>}&gt;
           <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">Checkbox</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">agreement</span>')} /&gt;</span>同意
           <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -167,7 +173,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-horizontal-form">水平排列的表单</a>
+      <a href="#demo-horizontal-form">典型表单</a>
     </div>
     <p>示例展示了如何通过使用 <code>Form.create</code> 来获取和更新表单提交的数值。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
