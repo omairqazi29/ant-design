@@ -686,12 +686,18 @@ var _antd = require('antd');
 
 function onChange(time) {
   console.log(time);
+  if (time) {
+    console.log(time.toLocaleTimeString('zh-CN', { hour12: false })); // Get time string
+  }
 }
 
 ReactDOM.render(React.createElement(_antd.TimePicker, { onChange: onChange }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TimePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">time</span>) </span>{
   <span class="hljs-built_in">console</span>.log(time);
+  <span class="hljs-keyword">if</span> (time) {
+    <span class="hljs-built_in">console</span>.log(time.toLocaleTimeString(<span class="hljs-string">'zh-CN'</span>, { hour12: <span class="hljs-literal">false</span> })); <span class="hljs-comment">// Get time string</span>
+  }
 }
 
 ReactDOM.render(
