@@ -42,14 +42,14 @@ var data = [{
 
 // 通过 rowSelection 对象表明需要行选择
 var rowSelection = {
-  onChange: function onChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
+  onChange: function onChange(selectedRowKeys, selectedRows) {
+    console.log('selectedRowKeys: ' + selectedRowKeys, 'selectedRows: ', selectedRows);
   },
   onSelect: function onSelect(record, selected, selectedRows) {
     console.log(record, selected, selectedRows);
   },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
+  onSelectAll: function onSelectAll(selected, selectedRows, deselectedRowKeys) {
+    console.log(selected, selectedRows, deselectedRowKeys);
   }
 };
 
@@ -87,14 +87,14 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 
 <span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="hljs-keyword">const</span> rowSelection = {
-  onChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys changed: <span class="hljs-subst">${selectedRowKeys}</span>`</span>);
+  onChange(selectedRowKeys, selectedRows) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys: <span class="hljs-subst">${selectedRowKeys}</span>`</span>, <span class="hljs-string">'selectedRows: '</span>, selectedRows);
   },
   onSelect(record, selected, selectedRows) {
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll(selected, selectedRows) {
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
+  onSelectAll(selected, selectedRows, deselectedRowKeys) {
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows, deselectedRowKeys);
   }
 };
 

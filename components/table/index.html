@@ -201,7 +201,7 @@ Table 表格 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.5'
+        latest: '0.12.6'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -847,8 +847,8 @@ Table 表格 - Ant Design
 </tr>
 <tr>
 <td>onChange</td>
-<td>选中项发生变化的时的回调，用户手动点选、换页、更新数据均会触发</td>
-<td>Function(selectedRowKeys)</td>
+<td>选中项发生变化的时的回调</td>
+<td>Function(selectedRowKeys, selectedRows)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -866,7 +866,7 @@ Table 表格 - Ant Design
 <tr>
 <td>onSelectAll</td>
 <td>用户手动选择/取消选择所有列的回调</td>
-<td>Function(selected, selectedRows)</td>
+<td>Function(selected, selectedRows, deselectedRows)</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -1063,14 +1063,14 @@ var data = [{
 
 // 通过 rowSelection 对象表明需要行选择
 var rowSelection = {
-  onChange: function onChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
+  onChange: function onChange(selectedRowKeys, selectedRows) {
+    console.log('selectedRowKeys: ' + selectedRowKeys, 'selectedRows: ', selectedRows);
   },
   onSelect: function onSelect(record, selected, selectedRows) {
     console.log(record, selected, selectedRows);
   },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
+  onSelectAll: function onSelectAll(selected, selectedRows, deselectedRowKeys) {
+    console.log(selected, selectedRows, deselectedRowKeys);
   }
 };
 
@@ -1108,14 +1108,14 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 
 <span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
 <span class="hljs-keyword">const</span> rowSelection = {
-  onChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys changed: <span class="hljs-subst">${selectedRowKeys}</span>`</span>);
+  onChange(selectedRowKeys, selectedRows) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys: <span class="hljs-subst">${selectedRowKeys}</span>`</span>, <span class="hljs-string">'selectedRows: '</span>, selectedRows);
   },
   onSelect(record, selected, selectedRows) {
     <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
   },
-  onSelectAll(selected, selectedRows) {
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
+  onSelectAll(selected, selectedRows, deselectedRowKeys) {
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows, deselectedRowKeys);
   }
 };
 
@@ -1286,7 +1286,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-row-selection-and-operation">选择和操作</a>
     </div>
     <p>选择后进行操作，完成后清空选择，通过 <code>rowSelection.selectedRowKeys</code> 来控制选中项。</p>
-<p>此版本换页后将会清空选中。</p>
     <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
   </div>
 </div><div class="code-box" id="demo-row-selection-props">

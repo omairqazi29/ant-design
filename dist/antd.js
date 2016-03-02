@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "da3c27871f6a7093bbe9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0c25a5c351f436a4f64b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21512,6 +21512,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -21626,7 +21628,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var size = _props2.size;
 	      var disabled = _props2.disabled;
 	      var className = _props2.className;
+	      var style = _props2.style;
 	      var allowClear = _props2.allowClear;
+	
+	      var otherProps = _objectWithoutProperties(_props2, ['prefixCls', 'children', 'placeholder', 'size', 'disabled', 'className', 'style', 'allowClear']);
 	
 	      var sizeCls = (0, _classnames2["default"])({
 	        'ant-input-lg': size === 'large',
@@ -21646,14 +21651,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	          onChange: this.handleChange }),
 	        children || _react3["default"].createElement(
 	          'span',
-	          _extends({}, this.props, {
-	            className: pickerCls }),
-	          _react3["default"].createElement(_input2["default"], { placeholder: placeholder,
+	          {
+	            style: style,
+	            className: pickerCls },
+	          _react3["default"].createElement(_input2["default"], _extends({}, otherProps, {
+	            placeholder: placeholder,
 	            className: prefixCls + '-input ant-input ' + sizeCls,
 	            style: { width: '100%' },
 	            value: this.getLabel(),
 	            disabled: disabled,
-	            readOnly: true }),
+	            readOnly: true })),
 	          clearIcon,
 	          _react3["default"].createElement(_icon2["default"], { type: 'down', className: arrowCls })
 	        )
@@ -25297,7 +25304,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.setState({ selectedRowKeys: selectedRowKeys });
 	    }
 	    if (this.props.rowSelection && this.props.rowSelection.onChange) {
-	      this.props.rowSelection.onChange(selectedRowKeys);
+	      var data = this.getCurrentPageData();
+	      var selectedRows = data.filter(function (row) {
+	        return selectedRowKeys.indexOf(row.key) >= 0;
+	      });
+	      this.props.rowSelection.onChange(selectedRowKeys, selectedRows);
 	    }
 	  },
 	  hasPagination: function hasPagination() {
@@ -25442,7 +25453,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var selectedRows = data.filter(function (row, i) {
 	        return selectedRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
 	      });
-	      this.props.rowSelection.onSelectAll(checked, selectedRows);
+	      var deselectedRows = checked ? [] : data.filter(function (row, i) {
+	        return changableRowKeys.indexOf(_this5.getRecordKey(row, i)) >= 0;
+	      });
+	      this.props.rowSelection.onSelectAll(checked, selectedRows, deselectedRows);
 	    }
 	  },
 	  handlePageChange: function handlePageChange(current) {
@@ -25681,7 +25695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    // 分页
 	    // ---
-	    // 当数据量少于每页数量时，直接设置数据
+	    // 当数据量少于等于每页数量时，直接设置数据
 	    // 否则进行读取分页数据
 	    if (data.length > pageSize || pageSize === Number.MAX_VALUE) {
 	      data = data.filter(function (item, i) {
@@ -25912,25 +25926,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var children = _props.children;
 	      var tabBarExtraContent = _props.tabBarExtraContent;
 	
-	      var className = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, this.props.className, !!this.props.className), _defineProperty(_classNames, prefixCls + '-mini', size === 'small' || size === 'mini'), _defineProperty(_classNames, prefixCls + '-vertical', tabPosition === 'left' || tabPosition === 'right'), _defineProperty(_classNames, prefixCls + '-card', type.indexOf('card') >= 0), _classNames));
+	      var className = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, this.props.className, !!this.props.className), _defineProperty(_classNames, prefixCls + '-mini', size === 'small' || size === 'mini'), _defineProperty(_classNames, prefixCls + '-vertical', tabPosition === 'left' || tabPosition === 'right'), _defineProperty(_classNames, prefixCls + '-card', type.indexOf('card') >= 0), _defineProperty(_classNames, prefixCls + '-' + type, true), _classNames));
 	      if (tabPosition === 'left' || tabPosition === 'right' || type.indexOf('card') >= 0) {
 	        animation = null;
 	      }
 	      // only card type tabs can be added and closed
 	      if (type === 'editable-card') {
-	        if (children.length > 1) {
-	          children = children.map(function (child, index) {
-	            return (0, _react2.cloneElement)(child, {
-	              tab: _react3["default"].createElement(
-	                'div',
-	                null,
-	                child.props.tab,
-	                _react3["default"].createElement(_icon2["default"], { type: 'cross', onClick: _this2.removeTab.bind(_this2, child.key) })
-	              ),
-	              key: child.key || index
-	            });
+	        children = children.map(function (child, index) {
+	          return (0, _react2.cloneElement)(child, {
+	            tab: _react3["default"].createElement(
+	              'div',
+	              null,
+	              child.props.tab,
+	              _react3["default"].createElement(_icon2["default"], { type: 'cross', onClick: _this2.removeTab.bind(_this2, child.key) })
+	            ),
+	            key: child.key || index
 	          });
-	        }
+	        });
 	        // Add new tab handler
 	        tabBarExtraContent = _react3["default"].createElement(
 	          'span',
@@ -25939,17 +25951,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	          tabBarExtraContent
 	        );
 	      }
-	      // Wrap the extra content
-	      tabBarExtraContent = _react3["default"].createElement(
-	        'div',
-	        { className: prefixCls + '-extra-content' },
-	        tabBarExtraContent
-	      );
+	
 	      return _react3["default"].createElement(
 	        _rcTabs2["default"],
 	        _extends({}, this.props, {
 	          className: className,
-	          tabBarExtraContent: tabBarExtraContent,
+	          tabBarExtraContent: _react3["default"].createElement(
+	            'div',
+	            { className: prefixCls + '-extra-content' },
+	            tabBarExtraContent
+	          ),
 	          onChange: this.handleChange,
 	          animation: animation }),
 	        children

@@ -4894,6 +4894,7 @@ textarea.ant-time-picker-input {
   overflow: hidden;
   font-size: 14px;
   line-height: 1.5;
+  height: 36px;
   box-sizing: border-box;
   position: relative;
   white-space: nowrap;
@@ -5269,7 +5270,7 @@ textarea.ant-time-picker-input {
   color: #404040;
   font-weight: bold;
 }
-.ant-tabs.ant-tabs-card .ant-tabs-tab:not(.ant-tabs-tab-active):hover .ant-tabs-tab-inner {
+.ant-tabs.ant-tabs-editable-card .ant-tabs-tab:not(.ant-tabs-tab-active):hover .ant-tabs-tab-inner {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -7519,11 +7520,13 @@ textarea.ant-input-number {
   bottom: 4px;
 }
 .ant-input-number-handler-wrap {
-  float: right;
   border-left: 1px solid #d9d9d9;
   width: 22px;
   height: 28px;
-  position: relative;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
   opacity: 0;
   transition: opacity 0.24s linear 0.1s;
 }

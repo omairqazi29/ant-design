@@ -201,7 +201,7 @@ Tabs 标签页 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.5'
+        latest: '0.12.6'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -1029,14 +1029,17 @@ var Demo = React.createClass({
   },
   remove: function remove(targetKey) {
     var activeKey = this.state.activeKey;
-    var lastIndex = this.state.panes.findIndex(function (pane) {
-      return pane.key === targetKey;
-    }) - 1;
+    var lastIndex = undefined;
+    this.state.panes.forEach(function (pane, i) {
+      if (pane.key === targetKey) {
+        lastIndex = i - 1;
+      }
+    });
     var panes = this.state.panes.filter(function (pane) {
       return pane.key !== targetKey;
     });
-    if (activeKey === targetKey) {
-      activeKey = panes[lastIndex >= 0 ? lastIndex : 0].key;
+    if (lastIndex >= 0 && activeKey === targetKey) {
+      activeKey = panes[lastIndex].key;
     }
     this.setState({ panes: panes, activeKey: activeKey });
   },
@@ -1079,10 +1082,15 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
   },
   remove(targetKey) {
     <span class="hljs-keyword">let</span> activeKey = <span class="hljs-keyword">this</span>.state.activeKey;
-    <span class="hljs-keyword">let</span> lastIndex = <span class="hljs-keyword">this</span>.state.panes.findIndex(pane =&gt; pane.key === targetKey) - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> lastIndex;
+    <span class="hljs-keyword">this</span>.state.panes.forEach((pane, i) =&gt; {
+      <span class="hljs-keyword">if</span> (pane.key === targetKey) {
+        lastIndex = i - <span class="hljs-number">1</span>;
+      }
+    });
     <span class="hljs-keyword">const</span> panes = <span class="hljs-keyword">this</span>.state.panes.filter(pane =&gt; pane.key !== targetKey);
-    <span class="hljs-keyword">if</span> (activeKey === targetKey) {
-      activeKey = panes[lastIndex &gt;= <span class="hljs-number">0</span> ? lastIndex : <span class="hljs-number">0</span>].key;
+    <span class="hljs-keyword">if</span> (lastIndex &gt;= <span class="hljs-number">0</span> &amp;&amp; activeKey === targetKey) {
+      activeKey = panes[lastIndex].key;
     }
     <span class="hljs-keyword">this</span>.setState({ panes, activeKey });
   },
