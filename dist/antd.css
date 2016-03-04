@@ -8096,7 +8096,7 @@ textarea.ant-input-number {
 .ant-radio-disabled .ant-radio-inner-input {
   cursor: default;
 }
-.ant-radio + span {
+span.ant-radio + * {
   margin-left: 8px;
 }
 label.ant-radio-button {
@@ -8111,6 +8111,9 @@ label.ant-radio-button {
   cursor: pointer;
   border: 1px solid #d9d9d9;
   border-left: 0;
+}
+label.ant-radio-button a {
+  color: #666;
 }
 label.ant-radio-button > span.ant-radio-button {
   margin-left: 0;
