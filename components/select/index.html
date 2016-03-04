@@ -625,8 +625,8 @@ Select 选择器 - Ant Design
 </tr>
 <tr>
 <td>filterOption</td>
-<td>是否根据输入项进行筛选</td>
-<td>boolean</td>
+<td>是否根据输入项进行筛选，可为一个函数，返回满足要求的 option 即可</td>
+<td>boolean or function(inputValue, option)</td>
 <td>true</td>
 </tr>
 <tr>
@@ -1145,6 +1145,13 @@ var SearchInput = React.createClass({
       'ant-search-input': true,
       'ant-search-input-focus': this.state.focus
     });
+    var options = this.state.data.map(function (d) {
+      return React.createElement(
+        Option,
+        { key: d.value },
+        d.text
+      );
+    });
     return React.createElement(
       _antd.Input.Group,
       { className: searchCls, style: this.props.style },
@@ -1161,13 +1168,7 @@ var SearchInput = React.createClass({
           onChange: this.handleChange,
           onFocus: this.handleFocusBlur,
           onBlur: this.handleFocusBlur },
-        this.state.data.map(function (d) {
-          return React.createElement(
-            Option,
-            { key: d.value },
-            d.text
-          );
-        })
+        options
       ),
       React.createElement(
         'div',
@@ -1182,35 +1183,35 @@ var SearchInput = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript">import { Input, Select, Button, Icon } from 'antd';
-import jsonp from 'jsonp';
-import querystring from 'querystring';
-import classNames from 'classnames';
-const Option = Select.Option;
+ReactDOM.render(React.createElement(SearchInput, { placeholder: 'input search text', style: { width: 200 } }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Input, Select, Button, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">import</span> jsonp <span class="hljs-keyword">from</span> <span class="hljs-string">'jsonp'</span>;
+<span class="hljs-keyword">import</span> querystring <span class="hljs-keyword">from</span> <span class="hljs-string">'querystring'</span>;
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">const</span> Option = Select.Option;
 
-let timeout;
-let currentValue;
+<span class="hljs-keyword">let</span> timeout;
+<span class="hljs-keyword">let</span> currentValue;
 
-function fetch(value, callback) {
-  if (timeout) {
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetch</span>(<span class="hljs-params">value, callback</span>) </span>{
+  <span class="hljs-keyword">if</span> (timeout) {
     clearTimeout(timeout);
-    timeout = null;
+    timeout = <span class="hljs-literal">null</span>;
   }
   currentValue = value;
 
-  function fake() {
-    const str = querystring.encode({
-      code: 'utf-8',
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fake</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> str = querystring.encode({
+      code: <span class="hljs-string">'utf-8'</span>,
       q: value,
     });
-    jsonp(`http://suggest.taobao.com/sug?${str}`, (err, d) =&gt; {
-      if (currentValue === value) {
-        const result = d.result;
-        const data = [];
+    jsonp(<span class="hljs-string">`http://suggest.taobao.com/sug?<span class="hljs-subst">${str}</span>`</span>, (err, d) =&gt; {
+      <span class="hljs-keyword">if</span> (currentValue === value) {
+        <span class="hljs-keyword">const</span> result = d.result;
+        <span class="hljs-keyword">const</span> data = [];
         result.forEach((r) =&gt; {
           data.push({
-            value: r[0],
-            text: r[0],
+            value: r[<span class="hljs-number">0</span>],
+            text: r[<span class="hljs-number">0</span>],
           });
         });
         callback(data);
@@ -1218,66 +1219,67 @@ function fetch(value, callback) {
     });
   }
 
-  timeout = setTimeout(fake, 300);
+  timeout = setTimeout(fake, <span class="hljs-number">300</span>);
 }
 
-const SearchInput = React.createClass({
+<span class="hljs-keyword">const</span> SearchInput = React.createClass({
   getInitialState() {
-    return {
+    <span class="hljs-keyword">return</span> {
       data: [],
-      value: '',
-      focus: false,
+      value: <span class="hljs-string">''</span>,
+      focus: <span class="hljs-literal">false</span>,
     };
   },
   handleChange(value) {
-    this.setState({ value });
-    fetch(value, (data) =&gt; this.setState({ data }));
+    <span class="hljs-keyword">this</span>.setState({ value });
+    fetch(value, (data) =&gt; <span class="hljs-keyword">this</span>.setState({ data }));
   },
   handleSubmit() {
-    console.log('输入框内容是: ', this.state.value);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'输入框内容是: '</span>, <span class="hljs-keyword">this</span>.state.value);
   },
   handleFocusBlur(e) {
-    this.setState({
-      focus: e.target === document.activeElement,
+    <span class="hljs-keyword">this</span>.setState({
+      focus: e.target === <span class="hljs-built_in">document</span>.activeElement,
     });
   },
   render() {
-    const btnCls = classNames({
-      'ant-search-btn': true,
-      'ant-search-btn-noempty': !!this.state.value.trim(),
+    <span class="hljs-keyword">const</span> btnCls = classNames({
+      <span class="hljs-string">'ant-search-btn'</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">'ant-search-btn-noempty'</span>: !!<span class="hljs-keyword">this</span>.state.value.trim(),
     });
-    const searchCls = classNames({
-      'ant-search-input': true,
-      'ant-search-input-focus': this.state.focus,
+    <span class="hljs-keyword">const</span> searchCls = classNames({
+      <span class="hljs-string">'ant-search-input'</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">'ant-search-input-focus'</span>: <span class="hljs-keyword">this</span>.state.focus,
     });
-    return (
-      &lt;Input.Group className={searchCls} style={this.props.style}&gt;
-        &lt;Select
-          combobox
-          value={this.state.value}
-          searchPlaceholder={this.props.placeholder}
-          notFoundContent=""
-          defaultActiveFirstOption={false}
-          showArrow={false}
-          filterOption={false}
-          onChange={this.handleChange}
-          onFocus={this.handleFocusBlur}
-          onBlur={this.handleFocusBlur}&gt;
-          {this.state.data.map(d =&gt; &lt;Option key={d.value}&gt;{d.text}&lt;/Option&gt;)}
-        &lt;/Select&gt;
-        &lt;div className="ant-input-group-wrap"&gt;
-          &lt;Button className={btnCls} onClick={this.handleSubmit}&gt;
-            &lt;Icon type="search" /&gt;
-          &lt;/Button&gt;
-        &lt;/div&gt;
-      &lt;/Input.Group&gt;
-    );
+    <span class="hljs-keyword">const</span> options = <span class="hljs-keyword">this</span>.state.data.map(d =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Option</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">{d.value}</span>&gt;</span>{d.text}<span class="hljs-tag">&lt;/<span class="hljs-title">Option</span>&gt;</span>)</span>;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Input.Group</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{searchCls}</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{this.props.style}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Select</span>
+          <span class="hljs-attribute">combobox</span>
+          <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.value}</span>
+          <span class="hljs-attribute">searchPlaceholder</span>=<span class="hljs-value">{this.props.placeholder}</span>
+          <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">""</span>
+          <span class="hljs-attribute">defaultActiveFirstOption</span>=<span class="hljs-value">{false}</span>
+          <span class="hljs-attribute">showArrow</span>=<span class="hljs-value">{false}</span>
+          <span class="hljs-attribute">filterOption</span>=<span class="hljs-value">{false}</span>
+          <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
+          <span class="hljs-attribute">onFocus</span>=<span class="hljs-value">{this.handleFocusBlur}</span>
+          <span class="hljs-attribute">onBlur</span>=<span class="hljs-value">{this.handleFocusBlur}</span>&gt;</span>
+          {options}
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Select</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ant-input-group-wrap"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{btnCls}</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleSubmit}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">Input.Group</span>&gt;</span>
+    )</span>;
   },
 });
 
 ReactDOM.render(
-  &lt;SearchInput placeholder="input search text" style={{ width: 200 }} /&gt;
-, mountNode);</code></pre></div>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">SearchInput</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"input search text"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">width:</span> <span class="hljs-attribute">200</span> }} /&gt;</span>
+, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

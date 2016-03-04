@@ -2872,7 +2872,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-progress-line-inner {
   display: inline-block;
   width: 100%;
-  background-color: #e9e9e9;
+  background-color: #f3f3f3;
   border-radius: 100px;
 }
 .ant-progress-line-bg {
@@ -4894,7 +4894,6 @@ textarea.ant-time-picker-input {
   overflow: hidden;
   font-size: 14px;
   line-height: 1.5;
-  height: 36px;
   box-sizing: border-box;
   position: relative;
   white-space: nowrap;
@@ -5215,6 +5214,9 @@ textarea.ant-time-picker-input {
 .ant-tabs-bottom .ant-tabs-tabs-bar {
   margin-bottom: 0;
   margin-top: 16px;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-nav-container {
+  height: 36px;
 }
 .ant-tabs.ant-tabs-card .ant-tabs-ink-bar {
   visibility: hidden;
@@ -7319,7 +7321,7 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   overflow: hidden;
-  width: 90px;
+  width: 80px;
 }
 .ant-input-number::-moz-placeholder {
   color: #ccc;
@@ -7495,8 +7497,6 @@ textarea.ant-input-number {
 }
 .ant-input-number-sm .ant-input-number-input-wrap {
   height: 22px;
-  overflow: hidden;
-  position: relative;
 }
 .ant-input-number-sm .ant-input-number-handler {
   height: 11px;
@@ -7504,8 +7504,8 @@ textarea.ant-input-number {
 .ant-input-number-sm input {
   height: 22px;
   line-height: 22px;
-  position: absolute;
-  top: 0;
+  margin-top: -1px;
+  vertical-align: top;
 }
 .ant-input-number-sm .ant-input-number-handler-up-inner {
   top: -1px;
@@ -8134,22 +8134,9 @@ label.ant-radio-button > span.ant-radio-button {
 .ant-radio-group-small label.ant-radio-button:last-child {
   border-radius: 0 4px 4px 0;
 }
-label.ant-radio-button:before {
-  transition: all 0.3s ease;
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  left: -1px;
-  background: #d9d9d9;
-  content: '';
-  visibility: hidden;
-}
 label.ant-radio-button:first-child {
   border-radius: 6px 0 0 6px;
   border-left: 1px solid #d9d9d9;
-}
-label.ant-radio-button:first-child:before {
-  display: none;
 }
 label.ant-radio-button:last-child {
   border-radius: 0 6px 6px 0;
@@ -8173,9 +8160,6 @@ label.ant-radio-button-checked {
   border-color: #2db7f5;
   color: #2db7f5;
   box-shadow: -1px 0 0 0 #2db7f5;
-}
-label.ant-radio-button-checked:before {
-  display: none;
 }
 label.ant-radio-button-checked:first-child {
   border-color: #2db7f5;
@@ -8202,10 +8186,6 @@ label.ant-radio-button-disabled:hover {
   border-color: #d9d9d9;
   background-color: #f4f4f4;
   color: #ccc;
-}
-label.ant-radio-button-disabled:first-child:before,
-label.ant-radio-button-disabled:hover:before {
-  display: none;
 }
 label.ant-radio-button-disabled:first-child {
   border-left-color: #d9d9d9;
@@ -9438,7 +9418,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-upload.ant-upload-drag .anticon-plus {
   font-size: 30px;
   transition: all 0.3s ease;
-  color: #d9d9d9;
+  color: #ccc;
 }
 .ant-upload.ant-upload-drag .anticon-plus:hover {
   color: #999;
