@@ -201,7 +201,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.7'
+        latest: '0.12.8'
       };
     </script>
     <script src="./dist/demo.js?20160114"></script>
@@ -583,8 +583,19 @@
 <section class="main-container">
   <article class="markdown">
     <h1>更新日志 </h1>
-    <div class="toc"><ul><li><a href="#0-12-7">0.12.7</a></li><li><a href="#0-12-6">0.12.6</a></li><li><a href="#0-12-5">0.12.5</a></li><li><a href="#0-12-4">0.12.4</a></li><li><a href="#0-12-3">0.12.3</a></li><li><a href="#0-12-2">0.12.2</a></li><li><a href="#0-12-1">0.12.1</a></li><li><a href="#0-12-0">0.12.0</a></li><li><a href="#0-11-3">0.11.3</a></li><li><a href="#0-11-2">0.11.2</a></li><li><a href="#0-11-1">0.11.1</a></li><li><a href="#0-11-0">0.11.0</a></li><li><a href="#0-10-5">0.10.5</a></li><li><a href="#0-10-4">0.10.4</a></li><li><a href="#0-10-3">0.10.3</a></li><li><a href="#0-10-2">0.10.2</a></li><li><a href="#0-10-1">0.10.1</a></li><li><a href="#0-10-0">0.10.0</a></li><li><a href="#0-9-3-0-9-5">0.9.3 ~ 0.9.5</a></li><li><a href="#0-9-2">0.9.2</a></li><li><a href="#0-9-1">0.9.1</a></li><li><a href="#0-9-0">0.9.0</a></li><li><a href="#0-8-0">0.8.0</a></li><li><a href="#0-7-3">0.7.3</a></li><li><a href="#0-7-2">0.7.2</a></li><li><a href="#0-7-1">0.7.1</a></li><li><a href="#0-7-0">0.7.0</a></li></ul></div>
-    <h2 id="0-12-7">0.12.7<a href="#0-12-7" class="anchor">#</a> </h2><p><code>2016-03-03</code></p>
+    <div class="toc"><ul><li><a href="#0-12-8">0.12.8</a></li><li><a href="#0-12-7">0.12.7</a></li><li><a href="#0-12-6">0.12.6</a></li><li><a href="#0-12-5">0.12.5</a></li><li><a href="#0-12-4">0.12.4</a></li><li><a href="#0-12-3">0.12.3</a></li><li><a href="#0-12-2">0.12.2</a></li><li><a href="#0-12-1">0.12.1</a></li><li><a href="#0-12-0">0.12.0</a></li><li><a href="#0-11-3">0.11.3</a></li><li><a href="#0-11-2">0.11.2</a></li><li><a href="#0-11-1">0.11.1</a></li><li><a href="#0-11-0">0.11.0</a></li><li><a href="#0-10-5">0.10.5</a></li><li><a href="#0-10-4">0.10.4</a></li><li><a href="#0-10-3">0.10.3</a></li><li><a href="#0-10-2">0.10.2</a></li><li><a href="#0-10-1">0.10.1</a></li><li><a href="#0-10-0">0.10.0</a></li><li><a href="#0-9-3-0-9-5">0.9.3 ~ 0.9.5</a></li><li><a href="#0-9-2">0.9.2</a></li><li><a href="#0-9-1">0.9.1</a></li><li><a href="#0-9-0">0.9.0</a></li><li><a href="#0-8-0">0.8.0</a></li><li><a href="#0-7-3">0.7.3</a></li><li><a href="#0-7-2">0.7.2</a></li><li><a href="#0-7-1">0.7.1</a></li><li><a href="#0-7-0">0.7.0</a></li></ul></div>
+    <h2 id="0-12-8">0.12.8<a href="#0-12-8" class="anchor">#</a> </h2><p><code>2016-03-06</code></p>
+<ul>
+<li>新增 <code>heart</code> <code>calculator</code> 图标。</li>
+<li>Table 补充了 <code>showHeader</code> 和 <code>footer</code> 属性。</li>
+<li>Modal 补充了 <code>maskClosable</code> 属性。</li>
+<li>修正一个 Tag 和 Popover 配合使用的问题。<a href="https://github.com/ant-design/ant-design/issues/1111">#1111</a></li>
+<li>将 TreeSelect 的 <code>treeDefaultExpandAll</code> 默认属性设为 false，并优化了性能。</li>
+<li>修复 RadioGroup 无法垂直布局的问题。<a href="https://github.com/ant-design/ant-design/issues/1119">#1119</a></li>
+<li>统一了 less 文件的部分变量。</li>
+<li>修正部分组件的样式。</li>
+</ul>
+<h2 id="0-12-7">0.12.7<a href="#0-12-7" class="anchor">#</a> </h2><p><code>2016-03-03</code></p>
 <ul>
 <li>修正 Table 的 <code>rowSelect.onSelectAll</code> 的第三个参数 <code>deselectedRows</code> 为 <code>changeRows</code>，记录每次变化的列。</li>
 </ul>
@@ -603,7 +614,7 @@
 <li>增加了一个搜索框和提示功能结合的 <a href="http://ant.design/components/select/#demo-search-box">例子</a>。</li>
 <li>允许可编辑的 Tabs 删除最后一个页签。<a href="https://github.com/ant-design/ant-design/issues/1071">#1071</a></li>
 <li>Table 的 <code>rowSelect.onSelectAll</code> 补充了第三个参数 <code>deselectedRows</code>, <code>rowSelect.onChange</code> 补充了第二个参数 <code>selectedRows</code>。<a href="https://github.com/ant-design/ant-design/issues/1105">#1105</a></li>
-<li>修复了部分组件样式的小问题。</li>
+<li>修正部分组件的样式。</li>
 </ul>
 <h2 id="0-12-5">0.12.5<a href="#0-12-5" class="anchor">#</a> </h2><p><code>2016-02-25</code></p>
 <ul>

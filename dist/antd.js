@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "84dcfd48aeb0340f71d7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ead7161dc8491ba1e8e9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -52961,7 +52961,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onKeyDown: _react2['default'].PropTypes.func,
 	    onFocus: _react2['default'].PropTypes.func,
 	    onBlur: _react2['default'].PropTypes.func,
-	    step: _react2['default'].PropTypes.number
+	    step: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string])
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
@@ -53069,7 +53069,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        inputValue: v
 	      });
 	    }
-	    this.props.onChange(typeof v === 'number' ? v : undefined);
+	    this.props.onChange(isNaN(v) ? undefined : v);
 	  },
 	
 	  setInputValue: function setInputValue(v) {
@@ -53101,7 +53101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return num;
 	    }
 	    var precision = this.getPrecision();
-	    return Number(Number(num).toFixed(precision));
+	    return Number(num).toFixed(precision);
 	  },
 	
 	  upStep: function upStep(val) {
