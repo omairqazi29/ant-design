@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ead7161dc8491ba1e8e9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f563ce1c8b2b76a858ce"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -53101,7 +53101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return num;
 	    }
 	    var precision = this.getPrecision();
-	    return Number(num).toFixed(precision);
+	    return Number(Number(num).toFixed(precision));
 	  },
 	
 	  upStep: function upStep(val) {
