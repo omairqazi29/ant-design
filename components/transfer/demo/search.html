@@ -2,12 +2,12 @@
   <div class="code-box-demo">
     <div id="components-transfer-demo-search"></div>
     <script>mountNode = document.getElementById('components-transfer-demo-search');</script>
-    <script>(function(){'use strict';
+    <script>(function(){"use strict";
 
-var _antd = require('antd');
+var _antd = require("antd");
 
 var App = React.createClass({
-  displayName: 'App',
+  displayName: "App",
   getInitialState: function getInitialState() {
     return {
       mockData: [],
@@ -23,8 +23,8 @@ var App = React.createClass({
     for (var i = 0; i < 20; i++) {
       var data = {
         key: i,
-        title: '内容' + (i + 1),
-        description: '内容' + (i + 1) + '的描述',
+        title: "内容" + (i + 1),
+        description: "内容" + (i + 1) + "的描述",
         chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
@@ -41,6 +41,7 @@ var App = React.createClass({
     return React.createElement(_antd.Transfer, {
       dataSource: this.state.mockData,
       showSearch: true,
+      notFoundContent: "xxxxxx",
       targetKeys: this.state.targetKeys,
       onChange: this.handleChange,
       render: function render(item) {
@@ -86,6 +87,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Transfer</span>
         <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{this.state.mockData}</span>
         <span class="hljs-attribute">showSearch</span>
+        <span class="hljs-attribute">notFoundContent</span>=<span class="hljs-value">"xxxxxx"</span>
         <span class="hljs-attribute">targetKeys</span>=<span class="hljs-value">{this.state.targetKeys}</span>
         <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span>
         <span class="hljs-attribute">render</span>=<span class="hljs-value">{item</span> =&gt;</span> item.title} /&gt;
@@ -100,6 +102,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-search">带搜索框</a>
     </div>
     <p>带搜索框的穿梭框。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>

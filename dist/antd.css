@@ -5054,7 +5054,7 @@ textarea.ant-time-picker-input {
 .ant-tabs-nav .ant-tabs-tab {
   float: left;
   height: 100%;
-  margin-right: 28px;
+  margin-right: 24px;
   box-sizing: border-box;
   position: relative;
 }
@@ -5083,7 +5083,7 @@ textarea.ant-time-picker-input {
   font-size: 12px;
 }
 .ant-tabs-mini .ant-tabs-tab {
-  margin-right: 24px;
+  margin-right: 0;
 }
 .ant-tabs-mini .ant-tabs-tab .ant-tabs-tab-inner {
   padding: 8px 16px;
@@ -10592,9 +10592,10 @@ a -count:active {
   width: 100%;
 }
 .ant-transfer-list-body-not-found {
-  margin-top: 24px;
+  padding-top: 24px;
   color: #ccc;
   text-align: center;
+  height: 100%;
 }
 .ant-transfer-list-body ul {
   height: 100%;

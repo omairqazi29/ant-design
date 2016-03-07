@@ -44,7 +44,7 @@ var Demo = React.createClass({
   },
   remove: function remove(targetKey) {
     var activeKey = this.state.activeKey;
-    var lastIndex = undefined;
+    var lastIndex = void 0;
     this.state.panes.forEach(function (pane, i) {
       if (pane.key === targetKey) {
         lastIndex = i - 1;
@@ -126,6 +126,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-editable-card">新增和关闭页签</a>
     </div>
     <p>只有卡片样式的页签支持新增和关闭选项。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>

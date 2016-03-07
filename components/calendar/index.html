@@ -685,7 +685,7 @@ ReactDOM.render(
       <a href="#demo-basic">基本</a>
     </div>
     <p>一个通用的日历面板，支持年/月切换。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div><div class="code-box" id="demo-custom-render">
   <div class="code-box-demo">
@@ -734,7 +734,7 @@ ReactDOM.render(
       <a href="#demo-custom-render">自定义渲染</a>
     </div>
     <p>用 <code>dateCellRender</code> 和 <code>monthCellRender</code> 函数来自定义需要渲染的数据。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div><div class="code-box" id="demo-notice-calendar">
   <div class="code-box-demo">
@@ -745,7 +745,7 @@ ReactDOM.render(
 var _antd = require('antd');
 
 function getListData(value) {
-  var listData = undefined;
+  var listData = void 0;
   switch (value.getDayOfMonth()) {
     case 8:
       listData = [{ type: 'warn', content: '这里是警告事项.' }, { type: 'normal', content: '这里是普通事项.' }];break;
@@ -952,7 +952,7 @@ ReactDOM.render(
       <a href="#demo-notice-calendar">通知事项日历演示</a>
     </div>
     <p>一个复杂的应用实例。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div><div class="code-box" id="demo-locale">
   <div class="code-box-demo">
@@ -988,7 +988,7 @@ ReactDOM.render(
       <a href="#demo-locale">国际化</a>
     </div>
     <p>通过 <code>locale</code> 配置时区、语言等, 默认支持 en_US, zh_CN</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div><div class="code-box" id="demo-card">
   <div class="code-box-demo">
@@ -1023,7 +1023,7 @@ ReactDOM.render(
       <a href="#demo-card">卡片模式</a>
     </div>
     <p>用于嵌套在空间有限的容器中。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>
     </div>

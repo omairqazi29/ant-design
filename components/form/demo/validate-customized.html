@@ -47,7 +47,7 @@ var Demo = React.createClass({
   },
   getPassStrenth: function getPassStrenth(value, type) {
     if (value) {
-      var strength = undefined;
+      var strength = void 0;
       // 密码强度的校验规则自定义，这里只是做个简单的示例
       if (value.length < 6) {
         strength = 'L';
@@ -492,6 +492,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     </div>
     <p>密码校验实例。</p>
 <p>这里使用了 <code>this.props.form.validateFields</code> 方法，在对第一次输入的密码进行校验时会触发二次密码的校验。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>

@@ -69,14 +69,14 @@ var Demo = React.createClass({
       });
     };
     var data = [].concat(_toConsumableArray(this.state.gData));
-    var dragObj = undefined;
+    var dragObj = void 0;
     loop(data, dragKey, function (item, index, arr) {
       arr.splice(index, 1);
       dragObj = item;
     });
     if (info.dropToGap) {
-      var ar = undefined;
-      var i = undefined;
+      var ar = void 0;
+      var i = void 0;
       loop(data, dropKey, function (item, index, arr) {
         ar = arr;
         i = index;
@@ -225,6 +225,6 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
       <a href="#demo-draggable">拖动示例</a>
     </div>
     <p>将节点拖拽到其他节点内部或前后。</p>
-    <span class="collapse anticon anticon-circle-o-right" unselectable="none" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"></span>
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>
