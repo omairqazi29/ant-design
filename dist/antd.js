@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53e9d3891d8936cb7d28"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3ef519c624de64230c7f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -15960,18 +15960,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return uniqueArray(a);
 	}
 	
-	function containsPath(path1, path2) {
-	  if (path2.length > path1.length) {
-	    return false;
-	  }
-	  for (var i = 0; i < path2.length; i++) {
-	    if (path1[i] !== path2[i]) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
-	
 	var stripTail = function stripTail(str) {
 	  var arr = str.match(/(.+)(-[^-]+)$/);
 	  var st = '';
@@ -15991,7 +15979,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // 设置子节点，全选或全不选
 	    Object.keys(obj).forEach(function (i) {
 	      var iPath = splitPos(i);
-	      if (iPath.length > posPath.length && containsPath(iPath, posPath)) {
+	      if (iPath.length > posPath.length && isInclude(posPath, iPath)) {
 	        obj[i].checkPart = false;
 	        obj[i].checked = checkIt;
 	      }
@@ -16009,7 +15997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var parentPosPath = splitPos(parentPos);
 	      Object.keys(obj).forEach(function (i) {
 	        var iPath = splitPos(i);
-	        if (iPath.length === _posLen && containsPath(iPath, parentPosPath)) {
+	        if (iPath.length === _posLen && isInclude(parentPosPath, iPath)) {
 	          sibling++;
 	          if (obj[i].checked) {
 	            siblingChecked++;
