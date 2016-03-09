@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "83a6dfa92e91833037b5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4235ee952dd339048be7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -19647,6 +19647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        className: this.props.prefixCls + '-only',
 	        style: {
 	          transition: removeTransition && 'none',
+	          webkitTransform: 'translate3d(0, ' + -position * height + 'px, 0)',
 	          transform: 'translate3d(0, ' + -position * height + 'px, 0)',
 	          height: height
 	        },
