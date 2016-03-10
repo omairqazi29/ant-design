@@ -1179,7 +1179,7 @@ var App = React.createClass({
   displayName: 'App',
   getInitialState: function getInitialState() {
     return {
-      selectedRowKeys: [],
+      selectedRowKeys: [], // 这里配置默认勾选列
       loading: false
     };
   },
@@ -1258,7 +1258,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      selectedRowKeys: [],
+      selectedRowKeys: [],  <span class="hljs-comment">// 这里配置默认勾选列</span>
       loading: <span class="hljs-literal">false</span>,
     };
   },
@@ -1351,18 +1351,8 @@ var data = [{
 var rowSelection = {
   getCheckboxProps: function getCheckboxProps(record) {
     return {
-      defaultChecked: record.name === '李大嘴', // 配置默认勾选的列
       disabled: record.name === '胡彦祖' // 配置无法勾选的列
     };
-  },
-  onChange: function onChange(selectedRowKeys) {
-    console.log('selectedRowKeys changed: ' + selectedRowKeys);
-  },
-  onSelect: function onSelect(record, selected, selectedRows) {
-    console.log(record, selected, selectedRows);
-  },
-  onSelectAll: function onSelectAll(selected, selectedRows) {
-    console.log(selected, selectedRows);
   }
 };
 
@@ -1371,53 +1361,41 @@ ReactDOM.render(React.createElement(_antd.Table, { rowSelection: rowSelection, c
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  render(text) {
-    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
-  }
+  render: text =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>{text}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>,
 }, {
-  title: <span class="hljs-string">'年龄'</span>,
-  dataIndex: <span class="hljs-string">'age'</span>
+  title: '年龄',
+  dataIndex: 'age'
 }, {
-  title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
+  title: '住址',
+  dataIndex: 'address'
 }];
-<span class="hljs-keyword">const</span> data = [{
-  key: <span class="hljs-string">'1'</span>,
-  name: <span class="hljs-string">'胡彦斌'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+const data = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
 }, {
-  key: <span class="hljs-string">'2'</span>,
-  name: <span class="hljs-string">'胡彦祖'</span>,
-  age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
 }, {
-  key: <span class="hljs-string">'3'</span>,
-  name: <span class="hljs-string">'李大嘴'</span>,
-  age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园1号'</span>
+  key: '3',
+  name: '李大嘴',
+  age: 32,
+  address: '西湖区湖底公园1号'
 }];
 
-<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
-<span class="hljs-keyword">const</span> rowSelection = {
+// 通过 rowSelection 对象表明需要行选择
+const rowSelection = {
   getCheckboxProps(record) {
-    <span class="hljs-keyword">return</span> {
-      defaultChecked: record.name === <span class="hljs-string">'李大嘴'</span>, <span class="hljs-comment">// 配置默认勾选的列</span>
-      disabled: record.name === <span class="hljs-string">'胡彦祖'</span>    <span class="hljs-comment">// 配置无法勾选的列</span>
+    return {
+      disabled: record.name === '胡彦祖'    // 配置无法勾选的列
     };
-  },
-  onChange(selectedRowKeys) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys changed: <span class="hljs-subst">${selectedRowKeys}</span>`</span>);
-  },
-  onSelect(record, selected, selectedRows) {
-    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
-  },
-  onSelectAll(selected, selectedRows) {
-    <span class="hljs-built_in">console</span>.log(selected, selectedRows);
   },
 };
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
+ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>
 , mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">

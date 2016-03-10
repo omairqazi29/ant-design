@@ -3487,31 +3487,35 @@ fieldset[disabled] .ant-btn-dashed.active {
 .ant-btn-clicked:before {
   content: '';
   position: absolute;
-  top: -6px;
-  left: -6px;
-  bottom: -6px;
-  right: -6px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   border-radius: inherit;
   z-index: -1;
-  background: inherit;
-  opacity: 1;
-  -webkit-transform: scale3d(0.5, 0.5, 1);
-          transform: scale3d(0.5, 0.5, 1);
-  -webkit-animation: buttonEffect 0.48s ease forwards;
-          animation: buttonEffect 0.48s ease forwards;
+  border: 0 solid #2db7f5;
+  opacity: 0.44;
+  -webkit-animation: buttonEffect 0.36s ease forwards;
+          animation: buttonEffect 0.36s ease forwards;
 }
 @-webkit-keyframes buttonEffect {
   to {
     opacity: 0;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-width: 6px;
   }
 }
 @keyframes buttonEffect {
   to {
     opacity: 0;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-width: 6px;
   }
 }
 .ant-switch {
@@ -6966,9 +6970,13 @@ td.ant-table-column-has-prev {
   font-size: 12px;
   color: #666;
 }
-.ant-popover-message .anticon {
-  margin-right: 8px;
+.ant-popover-message > .anticon {
   color: #f50;
+  line-height: 17px;
+  position: absolute;
+}
+.ant-popover-message-title {
+  padding-left: 20px;
 }
 .ant-popover-buttons {
   text-align: right;

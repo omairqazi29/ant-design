@@ -31,7 +31,7 @@ var App = React.createClass({
   displayName: 'App',
   getInitialState: function getInitialState() {
     return {
-      selectedRowKeys: [],
+      selectedRowKeys: [], // 这里配置默认勾选列
       loading: false
     };
   },
@@ -110,7 +110,7 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
 <span class="hljs-keyword">const</span> App = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">return</span> {
-      selectedRowKeys: [],
+      selectedRowKeys: [],  <span class="hljs-comment">// 这里配置默认勾选列</span>
       loading: <span class="hljs-literal">false</span>,
     };
   },
