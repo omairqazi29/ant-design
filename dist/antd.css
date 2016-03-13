@@ -7522,7 +7522,7 @@ label > .anticon {
   content: "*";
   font-family: SimSun;
   font-size: 12px;
-  color: #f60;
+  color: #f50;
 }
 .ant-input {
   position: relative;
@@ -11079,6 +11079,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   position: absolute;
   min-width: 100%;
   margin-top: 7px;
+  z-index: 1070;
 }
 .ant-menu-submenu-vertical > .ant-menu {
   top: 0;
@@ -11086,6 +11087,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   position: absolute;
   min-width: 160px;
   margin-left: 4px;
+  z-index: 1070;
 }
 .ant-menu-item,
 .ant-menu-submenu-title {
@@ -11188,6 +11190,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   top: 1px;
   float: left;
   border-bottom: 2px solid transparent;
+  z-index: 1;
 }
 .ant-menu-horizontal > .ant-menu-item-active,
 .ant-menu-horizontal > .ant-menu-submenu-active,

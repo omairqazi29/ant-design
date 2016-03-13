@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "76e4ad512cf6f3de3e3d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "28e382eba96ddc89f675"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -23672,12 +23672,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  onVisibleChange: function onVisibleChange(visible) {
 	    this.setVisible(visible);
-	    this.props.onVisibleChange(visible);
 	  },
 	  setVisible: function setVisible(visible) {
 	    if (!('visible' in this.props)) {
 	      this.setState({ visible: visible });
 	    }
+	    this.props.onVisibleChange(visible);
 	  },
 	  render: function render() {
 	    var _props = this.props;
@@ -43655,6 +43655,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
+	  componentDidMount: function componentDidMount() {
+	    this.componentDidUpdate();
+	  },
+	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    if ('value' in nextProps) {
 	      var value = this.toPrecisionAsStep(nextProps.value);
@@ -43662,6 +43666,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        inputValue: value,
 	        value: value
 	      });
+	    }
+	  },
+	
+	  componentDidUpdate: function componentDidUpdate() {
+	    if (this.state.focused && document.activeElement !== this.refs.input) {
+	      this.refs.input.focus();
 	    }
 	  },
 	
@@ -43795,7 +43805,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return;
 	    }
 	    this.setValue(val);
-	    this.refs.input.focus();
+	    this.setState({
+	      focused: true
+	    });
 	  },
 	
 	  down: function down(e) {
@@ -43804,6 +43816,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  up: function up(e) {
 	    this.step('up', e);
+	  },
+	
+	  focus: function focus() {
+	    this.refs.input.focus();
 	  },
 	
 	  render: function render() {
