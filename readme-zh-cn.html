@@ -201,7 +201,7 @@ Ant Design <a href="https://travis-ci.org/ant-design/ant-design"><img src="https
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.10'
+        latest: '0.12.11-beta'
       };
     </script>
     <script src="./dist/demo.js?20160114"></script>
@@ -250,7 +250,40 @@ Ant Design <a href="https://travis-ci.org/ant-design/ant-design"><img src="https
  
 <section class="main-container">
   <article class="markdown">
-    <h1>Ant Design <a href="https://travis-ci.org/ant-design/ant-design"><img src="https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.org/package/antd"><img src="https://img.shields.io/npm/v/antd.svg?style=flat-square" alt="npm package"></a> <a href="https://npmjs.org/package/antd"><img src="http://img.shields.io/npm/dm/antd.svg?style=flat-square" alt="NPM downloads"></a> <a href="https://david-dm.org/ant-design/ant-design"><img src="https://david-dm.org/ant-design/ant-design.svg?style=flat-square" alt="Dependency Status"></a> <a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/ant-design/ant-design"></a> </h1>
+    <h1>Ant Design <a href="https://travis-ci.org/ant-design/ant-design"><img src="https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.org/package/antd"><img src="https://img.shields.io/npm/v/antd.svg?style=flat-square" alt="npm package"></a> <a href="https://npmjs.org/package/antd"><img src="http://img.shields.io/npm/dm/antd.svg?style=flat-square" alt="NPM downloads"></a> <a href="https://david-dm.org/ant-design/ant-design"><img src="https://david-dm.org/ant-design/ant-design.svg?style=flat-square" alt="Dependency Status"></a> <a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/ant-design/ant-design"></a> <span class="subtitle"></span></h1>
+    
+<h2 id="-">安装</h2>
+<p><code>bash
+npm install antd</code></p>
+<h2 id="-">示例</h2>
+<p><code>jsx
+import { DatePicker } from &#39;antd&#39;;
+ReactDOM.render(&lt;DatePicker /&gt;, mountNode);</code></p>
+<p>引入样式：</p>
+<p><code>jsx
+import &#39;antd/lib/index.css&#39;;  // or &#39;antd/style/index.less&#39;</code></p>
+<p>按需加载可通过此写法 <code>import DatePicker from &#39;antd/lib/date-picker&#39;</code> 或使用插件 <a href="https://github.com/ant-design/babel-plugin-antd">babel-plugin-antd</a>。</p>
+<h2 id="-">浏览器支持</h2>
+<p>现代浏览器和 IE8 及以上。</p>
+<blockquote>
+<p><a href="https://github.com/xcatliu/react-ie8">IE8 issues</a></p>
+</blockquote>
+<h2 id="-">链接</h2>
+<ul>
+<li><a href="http://ant.design/">首页</a></li>
+<li><a href="http://ant.design/docs/react/introduce">React UI 库</a></li>
+<li><a href="CHANGELOG.md">修改记录</a></li>
+<li><a href="https://github.com/ant-design/antd-init/">开发脚手架</a></li>
+<li><a href="http://ant-tool.github.io/">开发工具文档</a></li>
+<li><a href="http://react-component.github.io/">React 组件</a></li>
+<li><a href="https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md">React 代码规范</a></li>
+<li><a href="https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md">组件设计原则</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/%E7%BD%91%E7%AB%99%E5%92%8C%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E">网站和组件开发说明</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B">版本发布手册</a></li>
+</ul>
+<h2 id="-">如何贡献</h2>
+<p>我们欢迎任何形式的贡献，有任何建议或意见您可以进行 <a href="https://github.com/ant-design/ant-design/pulls">Pull Request</a>，或者给我们 <a href="https://github.com/ant-design/ant-design/issues">提问</a>。</p>
+
     <div class="toc"></div>
     
   </article>

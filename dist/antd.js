@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "343124aa9e63a6ca827a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2e1f589aa06c13427521"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27023,6 +27023,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}));
 	
 	AntTreeSelect.TreeNode = _rcTreeSelect.TreeNode;
+	AntTreeSelect.SHOW_ALL = _rcTreeSelect.SHOW_ALL;
+	AntTreeSelect.SHOW_PARENT = _rcTreeSelect.SHOW_PARENT;
+	AntTreeSelect.SHOW_CHILD = _rcTreeSelect.SHOW_CHILD;
 	exports.default = AntTreeSelect;
 	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))

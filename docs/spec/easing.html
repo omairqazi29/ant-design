@@ -201,7 +201,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.10'
+        latest: '0.12.11-beta'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -252,8 +252,97 @@
           <span class="chinese"></span>
         </a>
       </li>
+      <li class="">
+        <a href="feature"
+           class="">
+          三大特性
+          <span class="chinese"></span>
+        </a>
+      </li>
     <li open="open">
-      <h4>基础</h4>
+      <h4>十大原则</h4>
+      <ul class="">
+          <li class="">
+            <a href="principle"
+               class="">
+              引言
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="proximity"
+               class="">
+              亲密性
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="alignment"
+               class="">
+              对齐
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="contrast"
+               class="">
+              对比
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="repetition"
+               class="">
+              重复
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="direct"
+               class="">
+              直截了当
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="lightweight"
+               class="">
+              简化交互
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="stay"
+               class="">
+              足不出户
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="invitation"
+               class="">
+              提供邀请
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="transition"
+               class="">
+              巧用过渡
+              <span class="chinese"></span>
+            </a>
+          </li>
+          <li class="">
+            <a href="reaction"
+               class="">
+              即时反应
+              <span class="chinese"></span>
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li open="open">
+      <h4>设计基础</h4>
       <ul class="">
           <li class="">
             <a href="font"
@@ -296,13 +385,6 @@
             </a>
           </li>
           <li class="">
-            <a href="page-transition"
-               class="">
-              互动转换
-              <span class="chinese"></span>
-            </a>
-          </li>
-          <li class="">
             <a href="motion"
                class="">
               组件动画
@@ -316,13 +398,15 @@
  
 <section class="main-container">
   <article class="markdown">
-    <h1>自然运动 </h1>
-    <div class="toc"><ul><li><a href="#质量和重量">质量和重量</a></li></ul></div>
+    <h1>自然运动 <span class="subtitle"></span></h1>
+    
+
+    <div class="toc"><ul><li><a href="#质量和重量">质量和重量</a></li><li><a href="#缓动函数">缓动函数</a></li></ul></div>
     <p>现实物体照着一定节奏移动，并不是一开始就移动很快的。</p>
 <p>当我们打开现代家具的门或抽屉时，首先会让它加速，然后慢下来。</p>
 <p>当电梯开关门时，它在打开或关闭时都有一段缓冲带，是先加速，然后慢下来。</p>
 <p>当某个东西往下掉时，首先是越掉越快，撞到地上后回弹，最终才又碰触地板。</p>
-<h3 id="质量和重量">质量和重量<a href="#质量和重量" class="anchor">#</a> </h3><p>在物理世界里，是以力量附加到物体对象里，加上自身的质量才完成一段动画。力量的持续时间决定物体的加速，减速与改变方向。</p>
+<h2 id="质量和重量">质量和重量<a href="#质量和重量" class="anchor">#</a> </h2><p>在物理世界里，是以力量附加到物体对象里，加上自身的质量才完成一段动画。力量的持续时间决定物体的加速，减速与改变方向。</p>
 <p>动画停止与启动都不是瞬间完成的，因它需要一段缓冲的时间来加速或减速，因此，当动画有突然启动，停止或改变方向，都会显得很不自然。</p>
 <blockquote>
 <p>以下图形，红色线与圆环为不推荐示例，蓝色为推荐示例。</p>

@@ -201,7 +201,7 @@ TreeSelect 树选择 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.10'
+        latest: '0.12.11-beta'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -694,6 +694,12 @@ TreeSelect 树选择 - Ant Design
 <td>false</td>
 </tr>
 <tr>
+<td>showCheckedStrategy</td>
+<td><code>TreeSelect.SHOW_ALL</code>: 显示所有选中节点(包括父节点). <code>TreeSelect.SHOW_PARENT</code>: 只显示父节点(当父节点下所有子节点都选中时). 默认只显示子节点.</td>
+<td>enum{TreeSelect.SHOW_ALL, TreeSelect.SHOW_PARENT, TreeSelect.SHOW_CHILD }</td>
+<td>TreeSelect.SHOW_CHILD</td>
+</tr>
+<tr>
 <td>treeDefaultExpandAll</td>
 <td>默认展开所有树节点</td>
 <td>bool</td>
@@ -885,7 +891,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#select-demo-basic">基本</a>
     </div>
-    <p>最简单的用法。</p>
+    
+<p>最简单的用法。</p>
+
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div><div class="code-box" id="select-demo-checkable">
@@ -895,6 +903,8 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <script>(function(){'use strict';
 
 var _antd = require('antd');
+
+var SHOW_PARENT = _antd.TreeSelect.SHOW_PARENT;
 
 var treeData = [{
   label: '节点一',
@@ -942,6 +952,7 @@ var Demo = React.createClass({
       onChange: this.onChange,
       multiple: true,
       treeCheckable: true,
+      showCheckedStrategy: SHOW_PARENT,
       searchPlaceholder: '请选择',
       style: {
         width: 300
@@ -952,6 +963,7 @@ var Demo = React.createClass({
 });
 
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TreeSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
 <span class="hljs-keyword">const</span> treeData = [{
   label: <span class="hljs-string">'节点一'</span>,
@@ -998,6 +1010,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
       onChange: <span class="hljs-keyword">this</span>.onChange,
       multiple: <span class="hljs-literal">true</span>,
       treeCheckable: <span class="hljs-literal">true</span>,
+      showCheckedStrategy: SHOW_PARENT,
       searchPlaceholder: <span class="hljs-string">'请选择'</span>,
       style: {
         width: <span class="hljs-number">300</span>,
@@ -1013,7 +1026,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#select-demo-checkable">多选</a>
     </div>
-    <p>多选和勾选框功能。</p>
+    
+<p>多选和勾选框功能。</p>
+
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>
@@ -1117,7 +1132,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#select-demo-treedata">从数据直接生成</a>
     </div>
-    <p>使用 <code>treeData</code> 把 JSON 数据直接生成树结构。</p>
+    
+<p>使用 <code>treeData</code> 把 JSON 数据直接生成树结构。</p>
+
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>

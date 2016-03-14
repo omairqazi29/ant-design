@@ -6,6 +6,8 @@
 
 var _antd = require('antd');
 
+var SHOW_PARENT = _antd.TreeSelect.SHOW_PARENT;
+
 var treeData = [{
   label: '节点一',
   value: '0-0',
@@ -52,6 +54,7 @@ var Demo = React.createClass({
       onChange: this.onChange,
       multiple: true,
       treeCheckable: true,
+      showCheckedStrategy: SHOW_PARENT,
       searchPlaceholder: '请选择',
       style: {
         width: 300
@@ -62,6 +65,7 @@ var Demo = React.createClass({
 });
 
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { TreeSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
 <span class="hljs-keyword">const</span> treeData = [{
   label: <span class="hljs-string">'节点一'</span>,
@@ -108,6 +112,7 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
       onChange: <span class="hljs-keyword">this</span>.onChange,
       multiple: <span class="hljs-literal">true</span>,
       treeCheckable: <span class="hljs-literal">true</span>,
+      showCheckedStrategy: SHOW_PARENT,
       searchPlaceholder: <span class="hljs-string">'请选择'</span>,
       style: {
         width: <span class="hljs-number">300</span>,
@@ -123,7 +128,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <div class="code-box-title">
       <a href="#select-demo-checkable">多选</a>
     </div>
-    <p>多选和勾选框功能。</p>
+    
+<p>多选和勾选框功能。</p>
+
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>

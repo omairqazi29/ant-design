@@ -201,7 +201,7 @@ style  - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.10'
+        latest: '0.12.11-beta'
       };
     </script>
     <script src="../dist/demo.js?20160114"></script>
@@ -250,7 +250,19 @@ style  - Ant Design
  
 <section class="main-container">
   <article class="markdown">
-    <h1>style </h1>
+    <h1>style <span class="subtitle"></span></h1>
+    <h1 id="style">style</h1>
+<p>ant-design 样式库</p>
+<h2 id="-">目录说明</h2>
+<p>|-- components  (定义所有组件样式)</p>
+<p>|-- core  (定义全局样式)</p>
+<p>|-- mixins  (less mixins)</p>
+<p>|-- themes  (皮肤)</p>
+<h2 id="-">约定</h2>
+<p>@css-prefix 变量定义整个样式库的类名前缀，默认为 <code>ant-</code>，</p>
+<p>各个组件中如要自定义类名前缀，请误重名变量，可参照如下定义：</p>
+<p><code>@btn-prefix-cls: ~&quot;@{css-prefix}btn&quot;;</code></p>
+
     <div class="toc"></div>
     
   </article>
