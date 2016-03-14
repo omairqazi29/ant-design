@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "28e382eba96ddc89f675"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "343124aa9e63a6ca827a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -10885,6 +10885,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	      visible: false
 	    };
 	  },
+	
+	
+	  propTypes: {
+	    prefixCls: _react2.PropTypes.string,
+	    onOk: _react2.PropTypes.func,
+	    onCancel: _react2.PropTypes.func,
+	    okText: _react2.PropTypes.node,
+	    cancelText: _react2.PropTypes.node,
+	    width: _react2.PropTypes.oneOfType([_react2.PropTypes.number, _react2.PropTypes.string]),
+	    confirmLoading: _react2.PropTypes.bool,
+	    visible: _react2.PropTypes.bool,
+	    align: _react2.PropTypes.object,
+	    footer: _react2.PropTypes.node,
+	    title: _react2.PropTypes.node,
+	    closable: _react2.PropTypes.bool
+	  },
+	
 	  handleCancel: function handleCancel(e) {
 	    this.props.onCancel(e);
 	  },
@@ -25168,7 +25185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this9 = this;
 	
 	    var state = this.state;
-	    var data = dataSource || this.props.dataSource;
+	    var data = dataSource || this.props.dataSource || [];
 	    // 排序
 	    if (state.sortOrder && state.sorter) {
 	      data = data.slice(0);
