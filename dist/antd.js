@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9948265263f329c03f0a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2121e5d49430db733147"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -19405,7 +19405,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      prefixCls: 'ant-alert',
 	      showIcon: false,
-	      onClose: function onClose() {}
+	      onClose: function onClose() {},
+	
+	      type: 'info'
 	    };
 	  },
 	  getInitialState: function getInitialState() {
@@ -51734,6 +51736,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    drodownPopupAlign: _react.PropTypes.object,
 	    maxTagTextLength: _react.PropTypes.number,
 	    showCheckedStrategy: _react.PropTypes.oneOf([SHOW_ALL, SHOW_PARENT, SHOW_CHILD]),
+	    skipHandleInitValue: _react.PropTypes.bool,
 	    treeIcon: _react.PropTypes.bool,
 	    treeLine: _react.PropTypes.bool,
 	    treeDefaultExpandAll: _react.PropTypes.bool,
@@ -51762,6 +51765,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      dropdownStyle: {},
 	      notFoundContent: 'Not Found',
 	      showCheckedStrategy: SHOW_CHILD,
+	      skipHandleInitValue: false,
 	      treeIcon: false,
 	      treeLine: false,
 	      treeDefaultExpandAll: false,
@@ -51779,8 +51783,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      value = (0, _util.toArray)(props.defaultValue);
 	    }
-	    if (this.props.treeCheckable) {
-	      value = this.getValue((0, _util.getTreeNodesStates)(this.renderTreeData() || this.props.children, value).checkedTreeNodes);
+	    if (props.treeCheckable && !props.skipHandleInitValue) {
+	      value = this.getValue((0, _util.getTreeNodesStates)(this.renderTreeData() || props.children, value).checkedTreeNodes);
 	    }
 	    var label = this.getLabelFromProps(props, value, 1);
 	    var inputValue = '';
@@ -51794,7 +51798,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    if ('value' in nextProps) {
 	      var value = (0, _util.toArray)(nextProps.value);
-	      if (nextProps.treeCheckable) {
+	      if (nextProps.treeCheckable && !nextProps.skipHandleInitValue) {
 	        value = this.getValue((0, _util.getTreeNodesStates)(this.renderTreeData(nextProps) || nextProps.children, value).checkedTreeNodes);
 	      }
 	      var label = this.getLabelFromProps(nextProps, value);
@@ -52211,7 +52215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (e) {
 	      e.stopPropagation();
 	    }
-	    if (props.showCheckedStrategy === SHOW_ALL || props.showCheckedStrategy === SHOW_PARENT) {
+	    if ((props.showCheckedStrategy === SHOW_ALL || props.showCheckedStrategy === SHOW_PARENT) && !props.skipHandleInitValue) {
 	      this.getDeselectedValue(selectedValue);
 	      return;
 	    }
