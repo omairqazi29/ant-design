@@ -201,7 +201,7 @@
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.11-beta'
+        latest: '0.12.11'
       };
     </script>
     <script src="./dist/demo.js?20160114"></script>
@@ -586,15 +586,19 @@
     
 
     <div class="toc"><ul><li><a href="#0-12-11">0.12.11</a></li><li><a href="#0-12-10">0.12.10</a></li><li><a href="#0-12-9">0.12.9</a></li><li><a href="#0-12-8">0.12.8</a></li><li><a href="#0-12-7">0.12.7</a></li><li><a href="#0-12-6">0.12.6</a></li><li><a href="#0-12-5">0.12.5</a></li><li><a href="#0-12-4">0.12.4</a></li><li><a href="#0-12-3">0.12.3</a></li><li><a href="#0-12-2">0.12.2</a></li><li><a href="#0-12-1">0.12.1</a></li><li><a href="#0-12-0">0.12.0</a></li><li><a href="#0-11-3">0.11.3</a></li><li><a href="#0-11-2">0.11.2</a></li><li><a href="#0-11-1">0.11.1</a></li><li><a href="#0-11-0">0.11.0</a></li><li><a href="#0-10-5">0.10.5</a></li><li><a href="#0-10-4">0.10.4</a></li><li><a href="#0-10-3">0.10.3</a></li><li><a href="#0-10-2">0.10.2</a></li><li><a href="#0-10-1">0.10.1</a></li><li><a href="#0-10-0">0.10.0</a></li><li><a href="#0-9-3-0-9-5">0.9.3 ~ 0.9.5</a></li><li><a href="#0-9-2">0.9.2</a></li><li><a href="#0-9-1">0.9.1</a></li><li><a href="#0-9-0">0.9.0</a></li><li><a href="#0-8-0">0.8.0</a></li><li><a href="#0-7-3">0.7.3</a></li><li><a href="#0-7-2">0.7.2</a></li><li><a href="#0-7-1">0.7.1</a></li><li><a href="#0-7-0">0.7.0</a></li></ul></div>
-    <h2 id="0-12-11">0.12.11<a href="#0-12-11" class="anchor">#</a> </h2><p><code>fixing</code></p>
+    <h2 id="0-12-11">0.12.11<a href="#0-12-11" class="anchor">#</a> </h2><p><code>2016-03-16</code></p>
 <ul>
 <li>全新的设计文档 <code>语言</code> 部分。</li>
 <li>修复 Popconfirm <code>onConfirm</code> 和 <code>onCancel</code> 时没有触发 <code>onVisibleChange</code> 的问题。</li>
 <li>TreeSelect 组件补充 <code>showCheckedStrategy</code> 属性，支持回填数据的不同展示方式。</li>
 <li>补充 Modal <code>align</code> 属性的文档。</li>
-<li>修复 Menu 菜单 z-index 丢失的问题。</li>
+<li>修复 Menu 弹出菜单 <code>z-index</code> 丢失的问题。</li>
 <li>Progress 的默认颜色固定，不再随着主色变化。</li>
 <li>优化 Button 点击动画在 Chrome 下的效果。</li>
+<li>修复一个 Affix 的 <code>z-index</code> 太低的问题。</li>
+<li>修复 Table 树形数据的二级节点前无法选择的问题。<a href="https://github.com/ant-design/ant-design/issues/1212">#1212</a></li>
+<li>修复 Table 修改 <code>pageSize</code> 没有触发 <code>onChange</code> 的问题。<a href="https://github.com/ant-design/ant-design/issues/1206">#1206</a></li>
+<li>修复 Table 指定 <code>rowKey 时导致</code>rowSelection.onChange<code>的</code>selectedRows` 参数为空的问题。</li>
 <li>修复一个 Affix 的 <code>z-index</code> 太低的问题。</li>
 </ul>
 <h2 id="0-12-10">0.12.10<a href="#0-12-10" class="anchor">#</a> </h2><ul>

@@ -201,7 +201,7 @@ Table 表格 - Ant Design
     </script>
     <script>
       window.antdVersion = {
-        latest: '0.12.11-beta'
+        latest: '0.12.11'
       };
     </script>
     <script src="../../dist/demo.js?20160114"></script>
@@ -2801,7 +2801,20 @@ var data = [{
   address: '我是b'
 }];
 
-ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource: data, indentSize: 20 }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+// 通过 rowSelection 对象表明需要行选择
+var rowSelection = {
+  onChange: function onChange(selectedRowKeys, selectedRows) {
+    console.log('selectedRowKeys: ' + selectedRowKeys, 'selectedRows: ', selectedRows);
+  },
+  onSelect: function onSelect(record, selected, selectedRows) {
+    console.log(record, selected, selectedRows);
+  },
+  onSelectAll: function onSelectAll(selected, selectedRows, changeRows) {
+    console.log(selected, selectedRows, changeRows);
+  }
+};
+
+ReactDOM.render(React.createElement(_antd.Table, { columns: columns, rowSelection: rowSelection, dataSource: data }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
@@ -2871,8 +2884,21 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   address: <span class="hljs-string">'我是b'</span>,
 }];
 
+<span class="hljs-comment">// 通过 rowSelection 对象表明需要行选择</span>
+<span class="hljs-keyword">const</span> rowSelection = {
+  onChange(selectedRowKeys, selectedRows) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`selectedRowKeys: <span class="hljs-subst">${selectedRowKeys}</span>`</span>, <span class="hljs-string">'selectedRows: '</span>, selectedRows);
+  },
+  onSelect(record, selected, selectedRows) {
+    <span class="hljs-built_in">console</span>.log(record, selected, selectedRows);
+  },
+  onSelectAll(selected, selectedRows, changeRows) {
+    <span class="hljs-built_in">console</span>.log(selected, selectedRows, changeRows);
+  }
+};
+
 ReactDOM.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">indentSize</span>=<span class="hljs-value">{20}</span> /&gt;</span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">rowSelection</span>=<span class="hljs-value">{rowSelection}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> /&gt;</span>,
   mountNode
 );</span></code></pre></div>
   </div>
@@ -2882,6 +2908,9 @@ ReactDOM.render(
     </div>
     
 <p>表格支持树形数据的展示，可以通过设置 <code>indentSize</code> 以控制每一层的缩进宽度。</p>
+<blockquote>
+<p>注：暂不支持父子数据递归关联选择。</p>
+</blockquote>
 
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
