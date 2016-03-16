@@ -598,6 +598,12 @@ Slider 滑动输入条 - Ant Design
 </thead>
 <tbody>
 <tr>
+<td>range</td>
+<td>Boolean</td>
+<td>false</td>
+<td>双滑块模式</td>
+</tr>
+<tr>
 <td>min</td>
 <td>Number</td>
 <td>0</td>
@@ -619,7 +625,13 @@ Slider 滑动输入条 - Ant Design
 <td>marks</td>
 <td>Object {Number: String}</td>
 <td>{}</td>
-<td>分段标记，key 的类型必须为 <code>Number</code> 且取值在闭区间 [min, max] 内</td>
+<td>刻度标记，key 的类型必须为 <code>Number</code> 且取值在闭区间 [min, max] 内</td>
+</tr>
+<tr>
+<td>dots</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否只能拖拽到刻度上</td>
 </tr>
 <tr>
 <td>value</td>
@@ -644,12 +656,6 @@ Slider 滑动输入条 - Ant Design
 <td>Boolean</td>
 <td>false</td>
 <td>值为 <code>true</code> 时，滑块为禁用状态</td>
-</tr>
-<tr>
-<td>allowCross</td>
-<td>Boolean</td>
-<td>true</td>
-<td>当 <code>range</code> 为 <code>true</code> 时，该属性可以设置是否允许两个滑块交换位置。</td>
 </tr>
 <tr>
 <td>onChange</td>
