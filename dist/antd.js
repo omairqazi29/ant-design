@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2121e5d49430db733147"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3f3c727282712f0d799d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -53725,11 +53725,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return nextProps.visible;
 	  },
 	  render: function render() {
-	    return _react2["default"].createElement(
-	      'div',
-	      null,
-	      this.props.children
-	    );
+	    return _react2["default"].Children.only(this.props.children);
 	  }
 	});
 	
