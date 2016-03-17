@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3f3c727282712f0d799d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7df3b06d9f92803a17a2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -23708,7 +23708,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      null,
 	      _react3.default.createElement(
 	        'div',
-	        { className: prefixCls + '-content' },
+	        { className: prefixCls + '-inner-content' },
 	        _react3.default.createElement(
 	          'div',
 	          { className: prefixCls + '-message' },
@@ -23874,7 +23874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      ),
 	      _react3.default.createElement(
 	        'div',
-	        { className: prefixCls + '-content' },
+	        { className: prefixCls + '-inner-content' },
 	        this.props.overlay
 	      )
 	    );
@@ -25125,7 +25125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    var pagination = this.state.pagination;
 	    pagination.onShowSizeChange(current, pageSize);
-	    var nextPagination = _extends({}, pagination, { pageSize: pageSize });
+	    var nextPagination = _extends({}, pagination, { pageSize: pageSize, current: current });
 	    this.setState({ pagination: nextPagination });
 	    (_props4 = this.props).onChange.apply(_props4, _toConsumableArray(this.prepareParamsArguments(_extends({}, this.state, {
 	      pagination: nextPagination
@@ -45653,14 +45653,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function componentWillReceiveProps(nextProps) {
 	      if ('current' in nextProps) {
 	        this.setState({
-	          current: nextProps.current
+	          current: nextProps.current,
+	          _current: nextProps.current
 	        });
 	      }
 	
 	      if ('pageSize' in nextProps) {
-	        this.setState({
-	          pageSize: nextProps.pageSize
-	        });
+	        var newState = {};
+	        var current = this.state.current;
+	        var newCurrent = this._calcPage(nextProps.pageSize);
+	        current = current > newCurrent ? newCurrent : current;
+	        if (!('current' in nextProps)) {
+	          newState.current = current;
+	          newState._current = current;
+	        }
+	        newState.pageSize = nextProps.pageSize;
+	        this.setState(newState);
 	      }
 	    }
 	
@@ -45717,20 +45725,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: '_changePageSize',
 	    value: function _changePageSize(size) {
 	      var current = this.state.current;
-	
+	      var newCurrent = this._calcPage(size);
+	      current = current > newCurrent ? newCurrent : current;
 	      if (typeof size === 'number') {
 	        if (!('pageSize' in this.props)) {
 	          this.setState({
 	            pageSize: size
 	          });
-	
-	          if (this.state.current > this._calcPage(size)) {
-	            current = this._calcPage(size);
-	            this.setState({
-	              current: current,
-	              _current: current
-	            });
-	          }
+	        }
+	        if (!('current' in this.props)) {
+	          this.setState({
+	            current: current,
+	            _current: current
+	          });
 	        }
 	      }
 	      this.props.onShowSizeChange(current, size);
@@ -53719,12 +53726,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  propTypes: {
 	    children: _react.PropTypes.any,
-	    visible: _react.PropTypes.bool
+	    visible: _react.PropTypes.bool,
+	    prefixCls: _react.PropTypes.string
 	  },
 	  shouldComponentUpdate: function shouldComponentUpdate(nextProps) {
 	    return nextProps.visible;
 	  },
 	  render: function render() {
+	    if (_react2["default"].Children.count(this.props.children) > 1) {
+	      return _react2["default"].createElement(
+	        'div',
+	        { className: this.props.prefixCls + '-content' },
+	        this.props.children
+	      );
+	    }
 	    return _react2["default"].Children.only(this.props.children);
 	  }
 	});
@@ -53844,6 +53859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _PopupInner2["default"],
 	            {
 	              className: className,
+	              prefixCls: prefixCls,
 	              visible: true,
 	              onMouseEnter: props.onMouseEnter,
 	              onMouseLeave: props.onMouseLeave,
@@ -53880,6 +53896,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          {
 	            className: className,
 	            hiddenClassName: hiddenClassName,
+	            prefixCls: prefixCls,
 	            onMouseEnter: props.onMouseEnter,
 	            onMouseLeave: props.onMouseLeave,
 	            style: style
@@ -53920,6 +53937,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  propTypes: {
 	    hiddenClassName: _react.PropTypes.string,
 	    className: _react.PropTypes.string,
+	    prefixCls: _react.PropTypes.string,
 	    onMouseEnter: _react.PropTypes.func,
 	    onMouseLeave: _react.PropTypes.func,
 	    children: _react.PropTypes.any
@@ -53940,7 +53958,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      },
 	      _react2["default"].createElement(
 	        _LazyRenderBox2["default"],
-	        { visible: props.visible },
+	        { prefixCls: props.prefixCls, visible: props.visible },
 	        props.children
 	      )
 	    );

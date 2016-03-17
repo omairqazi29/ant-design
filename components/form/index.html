@@ -761,7 +761,8 @@ CustomizedForm = Form.create({})(CustomizedForm);</code></pre></div><p><code>opt
 </tr>
 </tbody>
 </table>
-<h4 id="this-props-form-getfieldprops-id-options">this.props.form.getFieldProps(id, options)<a href="#this-props-form-getfieldprops-id-options" class="anchor">#</a> </h4><table>
+<h4 id="this-props-form-getfieldprops-id-options">this.props.form.getFieldProps(id, options)<a href="#this-props-form-getfieldprops-id-options" class="anchor">#</a> </h4><p><code>getFieldProps</code> 返回的属性包括 <code>id</code>、<code>value</code>(或你设置的其它 <code>valuePropName</code>)、<code>ref</code>、<code>onChange</code>(或者你设置的其它 <code>trigger</code> <code>validateTrigger</code>)，所以不应再设置同样的属性，以免冲突。如果对其返回值的细节有兴趣，可以 <code>console.log</code> 出来查看。</p>
+<table>
 <thead>
 <tr>
 <th>参数</th>
