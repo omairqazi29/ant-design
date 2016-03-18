@@ -9,7 +9,20 @@ var _antd = require('antd');
 function info() {
   _antd.Modal.info({
     title: '这是一条通知信息',
-    content: '一些附加信息一些附加信息一些附加信息',
+    content: React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'p',
+        null,
+        '一些附加信息一些附加信息一些附加信息'
+      ),
+      React.createElement(
+        'p',
+        null,
+        '一些附加信息一些附加信息一些附加信息'
+      )
+    ),
     onOk: function onOk() {}
   });
 }
@@ -51,8 +64,13 @@ ReactDOM.render(React.createElement(
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">info</span>(<span class="hljs-params"></span>) </span>{
   Modal.info({
     title: <span class="hljs-string">'这是一条通知信息'</span>,
-    content: <span class="hljs-string">'一些附加信息一些附加信息一些附加信息'</span>,
-    onOk() {}
+    content: (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>一些附加信息一些附加信息一些附加信息<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>一些附加信息一些附加信息一些附加信息<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>,
+    onOk() {},
   });
 }
 
