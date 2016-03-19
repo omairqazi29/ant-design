@@ -637,12 +637,13 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
 
 <style>
 .code-line-highlight {
-  box-shadow: 0px 184px 0px rgba(255, 207, 0, 0.16);
+  box-shadow: 0px 184px 0px rgba(255, 207, 0, 0.1);
   height: 42px;
   margin-top: -42px;
   position: relative;
   z-index: 1;
   width: 80%;
+  pointer-events: none;
 }
 </style>
 
@@ -661,7 +662,9 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/common.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- 引入入口文件 --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><blockquote>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><p>另外，由于 <code>babel@6.x</code> 对 IE8 的支持不佳，你可能会遇到类似 <a href="https://github.com/ant-tool/atool-build/issues/28">#28</a> 和 <a href="https://github.com/ant-design/ant-design/issues/858">#858</a> 的 default 报错的问题。</p>
+<p><a href="http://github.com/ant-design/antd-init">antd-init</a> 脚手架已经解决了这个问题，你也可以参照这个 <a href="https://github.com/ant-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8">webpack 配置</a>。</p>
+<blockquote>
 <p>更多 IE8 下使用 React 的相关问题可以参考：<a href="https://github.com/xcatliu/react-ie8">https://github.com/xcatliu/react-ie8</a></p>
 </blockquote>
 <h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试。理论上你可以利用 React 生态圈中的 <a href="https://github.com/enaqx/awesome-react#boilerplates">各种脚手架</a> 进行开发，如果遇到问题可参考我们所使用的 <a href="https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js">webpack 配置</a> 进行 <a href="http://ant-tool.github.io/webpack-config.htm">定制</a>。</p>
