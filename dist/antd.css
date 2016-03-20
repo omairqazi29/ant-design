@@ -8072,6 +8072,9 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 .has-error .ant-select-arrow {
   color: #f50;
 }
+.has-error .ant-select-combobox .ant-select-search__field:focus {
+  box-shadow: none;
+}
 .has-error .ant-calendar-picker-icon:after {
   color: #f50;
 }
