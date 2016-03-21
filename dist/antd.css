@@ -9215,8 +9215,8 @@ textarea.ant-input-number {
   border-radius: 14px;
   border-color: #d9d9d9;
   background-color: #fff;
-  -webkit-transition: border-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: border-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-radio-inner:after {
   position: absolute;
@@ -9231,10 +9231,10 @@ textarea.ant-input-number {
   content: ' ';
   background-color: #2db7f5;
   opacity: 0;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-radio-input {
   position: absolute;
@@ -9253,10 +9253,8 @@ textarea.ant-input-number {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-  transition: transform 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), background-color 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-radio-disabled:hover .ant-radio-inner {
   border-color: #d9d9d9;
