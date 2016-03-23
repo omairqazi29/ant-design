@@ -253,12 +253,23 @@ input::-ms-clear,
 input::-ms-reveal {
   display: none;
 }
+::-moz-selection {
+  background: #2db7f5;
+}
+::selection {
+  background: #2db7f5;
+}
+::-moz-selection {
+  background: #2db7f5;
+}
 a {
   color: #2db7f5;
   background: transparent;
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
 }
 a:hover {
   color: #57c5f7;
@@ -4379,11 +4390,6 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-calendar-picker > input {
   outline: none;
-}
-.ant-calendar-picker-open > span:first-child {
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-  opacity: 0;
 }
 .ant-calendar-picker-icon {
   position: absolute;
@@ -10988,6 +10994,9 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.ant-menu-submenu .ant-menu-sub {
+  cursor: initial;
+}
 .ant-menu-item > a {
   display: block;
   color: #666;
@@ -12112,14 +12121,12 @@ ul li.ant-transfer-list-highlight-enter {
 }
 .ant-cascader-menus {
   font-size: 12px;
-  overflow: hidden;
   background: #fff;
   position: absolute;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   white-space: nowrap;
-  height: 180px;
 }
 .ant-cascader-menus-empty,
 .ant-cascader-menus-hidden {

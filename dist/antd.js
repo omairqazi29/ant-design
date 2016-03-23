@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f807a428f680e808e60"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f4b4be66941c8ffac306"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -19786,6 +19786,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var onlyScrollIfNeeded = config.onlyScrollIfNeeded;
 	  var alignWithTop = config.alignWithTop;
 	  var alignWithLeft = config.alignWithLeft;
+	  var offsetTop = config.offsetTop || 0;
+	  var offsetLeft = config.offsetLeft || 0;
+	  var offsetBottom = config.offsetBottom || 0;
+	  var offsetRight = config.offsetRight || 0;
 
 	  allowHorizontalScroll = allowHorizontalScroll === undefined ? true : allowHorizontalScroll;
 
@@ -19814,12 +19818,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    // elem 相对 container 可视视窗的距离
 	    diffTop = {
-	      left: elemOffset.left - winScroll.left,
-	      top: elemOffset.top - winScroll.top
+	      left: elemOffset.left - winScroll.left - offsetLeft,
+	      top: elemOffset.top - winScroll.top - offsetTop
 	    };
 	    diffBottom = {
-	      left: elemOffset.left + ew - (winScroll.left + ww),
-	      top: elemOffset.top + eh - (winScroll.top + wh)
+	      left: elemOffset.left + ew - (winScroll.left + ww) + offsetRight,
+	      top: elemOffset.top + eh - (winScroll.top + wh) + offsetBottom
 	    };
 	    containerScroll = winScroll;
 	  } else {
@@ -19833,12 +19837,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // elem 相对 container 可视视窗的距离
 	    // 注意边框, offset 是边框到根节点
 	    diffTop = {
-	      left: elemOffset.left - (containerOffset.left + (parseFloat(util.css(container, 'borderLeftWidth')) || 0)),
-	      top: elemOffset.top - (containerOffset.top + (parseFloat(util.css(container, 'borderTopWidth')) || 0))
+	      left: elemOffset.left - (containerOffset.left + (parseFloat(util.css(container, 'borderLeftWidth')) || 0)) - offsetLeft,
+	      top: elemOffset.top - (containerOffset.top + (parseFloat(util.css(container, 'borderTopWidth')) || 0)) - offsetTop
 	    };
 	    diffBottom = {
-	      left: elemOffset.left + ew - (containerOffset.left + cw + (parseFloat(util.css(container, 'borderRightWidth')) || 0)),
-	      top: elemOffset.top + eh - (containerOffset.top + ch + (parseFloat(util.css(container, 'borderBottomWidth')) || 0))
+	      left: elemOffset.left + ew - (containerOffset.left + cw + (parseFloat(util.css(container, 'borderRightWidth')) || 0)) + offsetRight,
+	      top: elemOffset.top + eh - (containerOffset.top + ch + (parseFloat(util.css(container, 'borderBottomWidth')) || 0)) + offsetBottom
 	    };
 	  }
 
@@ -21646,14 +21650,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      (function () {
 	        var paths = [];
 	        crumbs = routes.map(function (route, i) {
-	          if (!route.breadcrumbName) {
-	            return null;
-	          }
-	          var name = route.breadcrumbName.replace(/\:(.*)/g, function (replacement, key) {
-	            return params[key] || replacement;
-	          });
-
-	          var link = void 0;
 	          var path = route.path.replace(/^\//, '');
 	          Object.keys(params).forEach(function (key) {
 	            path = path.replace(':' + key, params[key]);
@@ -21662,6 +21658,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	            paths.push(path);
 	          }
 
+	          if (!route.breadcrumbName) {
+	            return null;
+	          }
+	          var name = route.breadcrumbName.replace(/\:(.*)/g, function (replacement, key) {
+	            return params[key] || replacement;
+	          });
+
+	          var link = void 0;
 	          if (i === routes.length - 1) {
 	            link = _react3["default"].createElement(
 	              'span',
@@ -23539,9 +23543,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (this.state.open) {
 	        pickerClass += ' ant-calendar-picker-open';
 	      }
+
+	      // default width for showTime
+	      var pickerStyle = {};
+	      if (this.props.showTime) {
+	        pickerStyle.width = 180;
+	      }
+
 	      return _react3["default"].createElement(
 	        'span',
-	        { className: pickerClass, style: this.props.style },
+	        { className: pickerClass, style: _extends({}, pickerStyle, this.props.style) },
 	        _react3["default"].createElement(
 	          _Picker2["default"],
 	          _extends({
@@ -37947,7 +37958,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = Animate;
 	module.exports = exports['default'];
 
-
 /***/ },
 /* 335 */
 /***/ function(module, exports, __webpack_require__) {
@@ -40578,7 +40588,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.props.onChange({
 	        target: _extends({}, this.props, {
 	          checked: checked
-	        })
+	        }),
+	        stopPropagation: function stopPropagation() {
+	          e.stopPropagation();
+	        },
+	        preventDefault: function preventDefault() {
+	          e.preventDefault();
+	        }
 	      });
 	    }
 	  }, {
@@ -47747,7 +47763,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports['default'] = Select;
 	module.exports = exports['default'];
-
 
 /***/ },
 /* 418 */
