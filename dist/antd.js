@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f4b4be66941c8ffac306"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "421b6f0a57bc70d4ca08"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27490,7 +27490,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (props.value) {
 	      props.value = this.parseTimeFromValue(props.value);
 	    }
-	    var className = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, props.className, !!props.className), _defineProperty(_classNames, props.prefixCls + '-' + props.size, true), _classNames));
+	    var className = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, props.className, !!props.className), _defineProperty(_classNames, props.prefixCls + '-' + props.size, !!props.size), _classNames));
 	    if (props.format.indexOf('ss') < 0) {
 	      props.showSecond = false;
 	    }
@@ -29023,16 +29023,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  onSuccess: function onSuccess(response, file) {
 	    this.clearProgressTimer();
-	    // 服务器端需要返回标准 json 字符串
-	    // 否则视为失败
 	    try {
 	      if (typeof response === 'string') {
-	        JSON.parse(response);
+	        response = JSON.parse(response);
 	      }
-	    } catch (e) {
-	      this.onError(new Error('No response'), response, file);
-	      return;
-	    }
+	    } catch (e) {/* do nothing */}
 	    var fileList = this.state.fileList;
 	    var targetItem = (0, _getFileItem2["default"])(file, fileList);
 	    // 之前已经删除
@@ -43830,7 +43825,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      val = this.state.value;
 	    }
-	    return val;
+	    return this.toPrecisionAsStep(val);
 	  },
 
 	  setValue: function setValue(v) {
@@ -44000,7 +43995,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          name: props.name,
 	          onChange: this.onChange,
 	          ref: 'input',
-	          value: inputDisplayValue }))
+	          value: inputDisplayValue
+	        }))
 	      )
 	    );
 	  }

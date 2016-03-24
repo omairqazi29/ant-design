@@ -255,12 +255,11 @@ input::-ms-reveal {
 }
 ::-moz-selection {
   background: #2db7f5;
+  color: #fff;
 }
 ::selection {
   background: #2db7f5;
-}
-::-moz-selection {
-  background: #2db7f5;
+  color: #fff;
 }
 a {
   color: #2db7f5;
@@ -6393,6 +6392,7 @@ textarea.ant-time-picker-input {
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
   position: relative;
+  text-align: left;
 }
 .ant-table th .anticon-filter {
   margin-left: 4px;
