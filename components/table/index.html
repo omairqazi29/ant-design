@@ -626,30 +626,26 @@ Table 表格 - Ant Design
 <th>参数</th>
 <th>说明</th>
 <th>类型</th>
-<th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>rowSelection</td>
-<td>列表项是否可选择</td>
+<td>列表项是否可选择，<a href="#rowSelection">配置项</a></td>
 <td>Object</td>
-<td><a href="#rowSelection">配置项</a></td>
 <td>null</td>
 </tr>
 <tr>
 <td>pagination</td>
-<td>分页器</td>
+<td>分页器，配置项参考 <a href="/components/pagination">pagination</a>，设为 false 时不显示分页</td>
 <td>Object</td>
-<td>配置项参考 <a href="/components/pagination">pagination</a>，设为 false 时不显示分页</td>
 <td></td>
 </tr>
 <tr>
 <td>size</td>
-<td>正常或迷你类型</td>
+<td>正常或迷你类型，<code>default</code> or <code>small</code></td>
 <td>String</td>
-<td><code>default</code> or <code>small</code></td>
 <td>default</td>
 </tr>
 <tr>
@@ -657,34 +653,29 @@ Table 表格 - Ant Design
 <td>数据数组</td>
 <td>Array</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>columns</td>
 <td>表格列的配置描述，具体项见下表</td>
 <td>Array</td>
-<td></td>
-<td>无</td>
+<td>-</td>
 </tr>
 <tr>
 <td>rowKey</td>
 <td>表格行 key 的取值</td>
 <td>Function(record, index):string</td>
-<td></td>
 <td>record.key</td>
 </tr>
 <tr>
 <td>expandedRowRender</td>
 <td>额外的展开行</td>
 <td>Function</td>
-<td></td>
 <td>-</td>
 </tr>
 <tr>
 <td>defaultExpandedRowKeys</td>
 <td>默认展开的行</td>
 <td>Array</td>
-<td></td>
 <td>-</td>
 </tr>
 <tr>
@@ -692,62 +683,53 @@ Table 表格 - Ant Design
 <td>分页、排序、筛选变化时触发</td>
 <td>Function(pagination, filters, sorter)</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>loading</td>
 <td>页面是否加载中</td>
 <td>Boolean</td>
-<td></td>
 <td>false</td>
 </tr>
 <tr>
 <td>locale</td>
 <td>默认文案设置，目前包括排序、过滤、空数据文案</td>
 <td>Object</td>
-<td></td>
-<td><code>{ filterConfirm: &#39;确定&#39;, filterReset: &#39;重置&#39;, emptyText: &#39;暂无数据&#39; }</code> <a href="https://github.com/ant-design/ant-design/issues/575#issuecomment-159169511">默认值</a></td>
+<td>filterConfirm: &#39;确定&#39; <br> filterReset: &#39;重置&#39; <br> emptyText: &#39;暂无数据&#39; <br> <a href="https://github.com/ant-design/ant-design/issues/575#issuecomment-159169511">默认值</a></td>
 </tr>
 <tr>
 <td>indentSize</td>
 <td>展示树形数据时，每层缩进的宽度，以 px 为单位</td>
 <td>Number</td>
-<td></td>
 <td>15</td>
 </tr>
 <tr>
 <td>onRowClick</td>
 <td>处理行点击事件</td>
 <td>Function(record, index)</td>
-<td></td>
-<td>无</td>
+<td>-</td>
 </tr>
 <tr>
 <td>useFixedHeader</td>
 <td>是否固定表头</td>
 <td>Boolean</td>
-<td></td>
 <td>false</td>
 </tr>
 <tr>
 <td>bordered</td>
 <td>是否展示外边框和列边框</td>
 <td>Boolean</td>
-<td></td>
 <td>false</td>
 </tr>
 <tr>
 <td>showHeader</td>
 <td>是否显示表头</td>
 <td>Boolean</td>
-<td></td>
 <td>true</td>
 </tr>
 <tr>
 <td>footer</td>
 <td>表格底部自定义渲染函数</td>
 <td>Function(currentPageData)</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -758,7 +740,6 @@ Table 表格 - Ant Design
 <th>参数</th>
 <th>说明</th>
 <th>类型</th>
-<th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
@@ -768,13 +749,11 @@ Table 表格 - Ant Design
 <td>列头显示文字</td>
 <td>String or React.Element</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>key</td>
 <td>React 需要的 key，建议设置</td>
 <td>String</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
@@ -782,13 +761,11 @@ Table 表格 - Ant Design
 <td>列数据在数据项中对应的 key</td>
 <td>String</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>render</td>
 <td>生成复杂数据的渲染函数，参数分别为当前列的值，当前列数据，列索引，@return里面可以设置表格<a href="#demo-colspan-rowspan">行/列合并</a></td>
 <td>Function(text, record, index) {}</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
@@ -796,49 +773,42 @@ Table 表格 - Ant Design
 <td>表头的筛选菜单项</td>
 <td>Array</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>onFilter</td>
 <td>本地模式下，确定筛选的运行函数</td>
 <td>Function</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>filterMultiple</td>
 <td>是否多选</td>
 <td>Boolean</td>
-<td></td>
 <td>true</td>
 </tr>
 <tr>
 <td>sorter</td>
 <td>排序函数，本地排序使用一个函数，需要服务端排序可设为 true</td>
 <td>Function or Boolean</td>
-<td></td>
-<td>无</td>
+<td>-</td>
 </tr>
 <tr>
 <td>colSpan</td>
 <td>表头列合并,设置为 0 时，不渲染</td>
 <td>Number</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>width</td>
 <td>列宽度</td>
 <td>String or Number</td>
-<td></td>
-<td>无</td>
+<td>-</td>
 </tr>
 <tr>
 <td>className</td>
 <td>列的 className</td>
 <td>String</td>
-<td></td>
-<td>无</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
