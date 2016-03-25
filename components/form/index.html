@@ -754,8 +754,8 @@ CustomizedForm = Form.create({})(CustomizedForm);</code></pre></div><p><code>opt
 <td></td>
 </tr>
 <tr>
-<td>getFieldProps 详见下面描述</td>
-<td></td>
+<td>getFieldProps</td>
+<td>用于和表单进行双向绑定，详见下方描述</td>
 <td></td>
 <td></td>
 </tr>
@@ -972,8 +972,9 @@ CustomizedForm = Form.create({})(CustomizedForm);</code></pre></div><p><code>opt
 <blockquote>
 <p>如果 <code>Input</code> 在 <code>Form.Item</code> 内，并且 <code>Form.Item</code> 设置了 <code>id</code> 和 <code>options</code> 属性，则 <code>value</code> <code>defaultValue</code> 和 <code>id</code> 属性会被自动设置。</p>
 </blockquote>
-<h4 id="input-group">Input.Group<a href="#input-group" class="anchor">#</a> </h4><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Input.Group</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{string}</span>&gt;</span>      // 样式类名前缀，默认是 ant-input-group，通常您不需要设置。
-  {children}
+<h4 id="input-group">Input.Group<a href="#input-group" class="anchor">#</a> </h4><div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Input.Group</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{string}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Input.Group</span>&gt;</span></code></pre></div><style>
 .code-box-demo .ant-form-horizontal {
   max-width: 540px;
