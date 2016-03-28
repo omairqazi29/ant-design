@@ -6097,6 +6097,8 @@ textarea.ant-time-picker-input {
   -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
           animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   opacity: 0;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
 }
 .ant-tabs-slide-horizontal-backward-enter.ant-tabs-slide-horizontal-backward-enter-active {
   -webkit-animation-name: antMoveLeftIn;
@@ -6120,6 +6122,8 @@ textarea.ant-time-picker-input {
           animation-play-state: paused;
   -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
           animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
 }
 .ant-tabs-slide-horizontal-backward-leave.ant-tabs-slide-horizontal-backward-leave-active {
   -webkit-animation-name: antMoveRightOut;
@@ -6139,6 +6143,8 @@ textarea.ant-time-picker-input {
   -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
           animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   opacity: 0;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
 }
 .ant-tabs-slide-horizontal-forward-enter.ant-tabs-slide-horizontal-forward-enter-active {
   -webkit-animation-name: antMoveRightIn;
@@ -6158,6 +6164,8 @@ textarea.ant-time-picker-input {
           animation-duration: .2s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -6373,6 +6381,8 @@ textarea.ant-time-picker-input {
 .ant-table {
   font-size: 12px;
   color: #666;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
 }
 .ant-table-body {
   -webkit-transition: opacity 0.3s ease;
@@ -6383,15 +6393,12 @@ textarea.ant-time-picker-input {
   max-width: 100%;
   border-collapse: separate;
   text-align: left;
-  border-radius: 6px;
-  overflow: hidden;
 }
 .ant-table th {
   background: #f4f4f4;
   font-weight: bold;
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
-  position: relative;
   text-align: left;
 }
 .ant-table th .anticon-filter {
@@ -6699,6 +6706,9 @@ tr.ant-table-expanded-row:hover {
 }
 .ant-table-column-hidden {
   display: none;
+}
+th.ant-table-column-has-prev {
+  position: relative;
 }
 th.ant-table-column-has-prev,
 td.ant-table-column-has-prev {
@@ -7777,7 +7787,8 @@ form .ant-select {
   background-color: #f4f4f4;
   border-color: #d9d9d9;
   border-radius: 0 5px 5px 0;
-  margin-left: -30px;
+  margin-left: -100%;
+  left: -1px;
   position: relative;
   border-width: 0 0 0 1px;
   z-index: 2;

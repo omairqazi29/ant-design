@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "421b6f0a57bc70d4ca08"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7674facd3a276e6b3342"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -15802,6 +15802,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.isMultipleOrTagsOrCombobox = isMultipleOrTagsOrCombobox;
 	exports.isSingleMode = isSingleMode;
 	exports.toArray = toArray;
+	exports.labelCompatible = labelCompatible;
 	exports.isInclude = isInclude;
 	exports.getCheckedKeys = getCheckedKeys;
 	exports.loopAllChildren = loopAllChildren;
@@ -15859,6 +15860,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ret = [value];
 	  }
 	  return ret;
+	}
+
+	function labelCompatible(prop) {
+	  var newProp = prop;
+	  if (newProp === 'label') {
+	    newProp = 'title';
+	  }
+	  return newProp;
 	}
 
 	function isInclude(smallArray, bigArray) {
@@ -51695,7 +51704,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function noop() {}
 
 	function filterFn(input, child) {
-	  return String((0, _util.getPropValue)(child, this.props.treeNodeFilterProp)).indexOf(input) > -1;
+	  return String((0, _util.getPropValue)(child, (0, _util.labelCompatible)(this.props.treeNodeFilterProp))).indexOf(input) > -1;
 	}
 
 	function saveRef(name, component) {
@@ -52551,7 +52560,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  filterTree: function filterTree(treeNode) {
 	    var props = this.props;
-	    return props.inputValue && treeNode.props[props.treeNodeFilterProp].indexOf(props.inputValue) > -1;
+	    return props.inputValue && treeNode.props[(0, _util.labelCompatible)(props.treeNodeFilterProp)].indexOf(props.inputValue) > -1;
 	  },
 
 	  filterTreeNode: function filterTreeNode(input, child) {

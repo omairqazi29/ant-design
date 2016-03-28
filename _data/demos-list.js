@@ -37,7 +37,6 @@ module.exports = {
     require('antd-md?demo!../components/button/demo/disabled.md'),
     require('antd-md?demo!../components/button/demo/icon.md'),
     require('antd-md?demo!../components/button/demo/loading.md'),
-    require('antd-md?demo!../components/button/demo/shape.md'),
     require('antd-md?demo!../components/button/demo/size.md'),
   ],
   'components/calendar/index.md': [
