@@ -3564,7 +3564,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   position: absolute;
   left: -9999px;
   top: -9999px;
-  z-index: 1070;
+  z-index: 1050;
   display: block;
   font-size: 12px;
   font-weight: normal;
@@ -3777,16 +3777,21 @@ fieldset[disabled] .ant-btn-dashed.active {
   position: relative;
 }
 .ant-progress-line-outer {
-  margin-right: 45px;
+  padding-right: 45px;
+  display: inline-block;
+  width: 100%;
+  margin-right: -45px;
 }
 .ant-progress-line-wrap-full .ant-progress-line-outer {
   margin-right: 0;
+  padding-right: 0;
 }
 .ant-progress-line-inner {
   display: inline-block;
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 100px;
+  vertical-align: middle;
 }
 .ant-progress-line-bg {
   border-radius: 100px;
@@ -3796,13 +3801,13 @@ fieldset[disabled] .ant-btn-dashed.active {
   position: relative;
 }
 .ant-progress-line-text {
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 35px;
   text-align: left;
   font-size: 1em;
   margin-left: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: tahoma;
 }
 .ant-progress-line-text .anticon {
   font-weight: bold;
@@ -3847,6 +3852,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
+  font-family: tahoma;
 }
 .ant-progress-circle-text .anticon {
   font-size: 1.16666667em;
@@ -4221,7 +4227,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   border-radius: 6px;
   box-sizing: border-box;
-  z-index: 1070;
+  z-index: 1050;
   left: -9999px;
   top: -9999px;
   position: absolute;
@@ -4353,7 +4359,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-calendar-picker-container {
   position: absolute;
-  z-index: 1070;
+  z-index: 1050;
 }
 .ant-calendar-picker-container.slide-up-enter.slide-up-enter-active.ant-calendar-picker-container-placement-topLeft,
 .ant-calendar-picker-container.slide-up-enter.slide-up-enter-active.ant-calendar-picker-container-placement-topRight,
@@ -5411,7 +5417,7 @@ textarea.ant-calendar-time .ant-time-picker-input {
 }
 .ant-time-picker-panel {
   max-width: 168px;
-  z-index: 1070;
+  z-index: 1050;
   position: absolute;
 }
 .ant-time-picker-panel.slide-up-enter.slide-up-enter-active.ant-time-picker-panel-placement-topLeft,
@@ -5763,7 +5769,7 @@ textarea.ant-time-picker-input {
   background-color: #373737;
   background-color: rgba(55, 55, 55, 0.6);
   height: 100%;
-  z-index: 1000;
+  z-index: 990;
   filter: alpha(opacity=50);
 }
 .ant-modal-mask-hidden {
@@ -6783,7 +6789,7 @@ td.ant-table-column-has-prev {
 }
 .ant-tooltip {
   position: absolute;
-  z-index: 1070;
+  z-index: 1060;
   display: block;
   visibility: visible;
   font-size: 12px;
@@ -6903,7 +6909,7 @@ td.ant-table-column-has-prev {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1080;
+  z-index: 1030;
   cursor: auto;
   -webkit-user-select: text;
      -moz-user-select: text;
@@ -6969,7 +6975,7 @@ td.ant-table-column-has-prev {
   color: #666;
 }
 .ant-popover-message > .anticon {
-  color: #f50;
+  color: #fa0;
   line-height: 17px;
   position: absolute;
 }
@@ -9000,7 +9006,7 @@ textarea.ant-input-number {
 .ant-message {
   font-size: 12px;
   position: fixed;
-  z-index: 1050;
+  z-index: 1010;
   width: 100%;
   top: 16px;
   left: 0;
@@ -9388,7 +9394,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-notification {
   position: fixed;
-  z-index: 1000;
+  z-index: 1010;
   width: 335px;
   margin-right: 24px;
 }
@@ -10979,7 +10985,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-  z-index: 999;
+  z-index: 1050;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
   color: #666;
   background: #fff;
@@ -11060,7 +11066,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   position: absolute;
   min-width: 100%;
   margin-top: 7px;
-  z-index: 1070;
+  z-index: 1050;
 }
 .ant-menu-submenu-vertical > .ant-menu {
   top: 0;
@@ -11068,7 +11074,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   position: absolute;
   min-width: 160px;
   margin-left: 4px;
-  z-index: 1070;
+  z-index: 1050;
 }
 .ant-menu-item,
 .ant-menu-submenu-title {

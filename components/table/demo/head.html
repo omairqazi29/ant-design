@@ -106,61 +106,51 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
     }, {
       text: <span class="hljs-string">'姓王的'</span>,
       value: <span class="hljs-string">'王'</span>,
-    }]
+    }],
   }],
   <span class="hljs-comment">// 指定确定筛选的条件函数</span>
   <span class="hljs-comment">// 这里是名字中第一个字是 value</span>
-  onFilter(value, record) {
-    <span class="hljs-keyword">return</span> record.name.indexOf(value) === <span class="hljs-number">0</span>;
-  },
-  sorter(a, b) {
-    <span class="hljs-keyword">return</span> a.name.length - b.name.length;
-  }
+  onFilter: (value, record) =&gt; record.name.indexOf(value) === <span class="hljs-number">0</span>,
+  sorter: (a, b) =&gt; a.name.length - b.name.length,
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  sorter(a, b) {
-    <span class="hljs-keyword">return</span> a.age - b.age;
-  }
+  sorter: (a, b) =&gt; a.age - b.age,
 }, {
   title: <span class="hljs-string">'地址'</span>,
   dataIndex: <span class="hljs-string">'address'</span>,
   filters: [{
     text: <span class="hljs-string">'南湖'</span>,
-    value: <span class="hljs-string">'南湖'</span>
+    value: <span class="hljs-string">'南湖'</span>,
   }, {
     text: <span class="hljs-string">'西湖'</span>,
-    value: <span class="hljs-string">'西湖'</span>
+    value: <span class="hljs-string">'西湖'</span>,
   }],
   filterMultiple: <span class="hljs-literal">false</span>,
-  onFilter(value, record) {
-    <span class="hljs-keyword">return</span> record.address.indexOf(value) === <span class="hljs-number">0</span>;
-  },
-  sorter(a, b) {
-    <span class="hljs-keyword">return</span> a.address.length - b.address.length;
-  }
+  onFilter: (value, record) =&gt; record.address.indexOf(value) === <span class="hljs-number">0</span>,
+  sorter: (a, b) =&gt; a.address.length - b.address.length,
 }];
 
 <span class="hljs-keyword">const</span> data = [{
   key: <span class="hljs-string">'1'</span>,
   name: <span class="hljs-string">'胡斌'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'南湖区湖底公园1号'</span>
+  address: <span class="hljs-string">'南湖区湖底公园1号'</span>,
 }, {
   key: <span class="hljs-string">'2'</span>,
   name: <span class="hljs-string">'胡彦祖'</span>,
   age: <span class="hljs-number">42</span>,
-  address: <span class="hljs-string">'西湖区湖底公园12号'</span>
+  address: <span class="hljs-string">'西湖区湖底公园12号'</span>,
 }, {
   key: <span class="hljs-string">'3'</span>,
   name: <span class="hljs-string">'李大嘴'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'南湖区湖底公园123号'</span>
+  address: <span class="hljs-string">'南湖区湖底公园123号'</span>,
 }, {
   key: <span class="hljs-string">'4'</span>,
   name: <span class="hljs-string">'李秀莲大嘴哥'</span>,
   age: <span class="hljs-number">32</span>,
-  address: <span class="hljs-string">'西湖区湖底公园123号'</span>
+  address: <span class="hljs-string">'西湖区湖底公园123号'</span>,
 }];
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">pagination, filters, sorter</span>) </span>{
@@ -168,8 +158,7 @@ ReactDOM.render(React.createElement(_antd.Table, { columns: columns, dataSource:
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'各类参数是'</span>, pagination, filters, sorter);
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>
-, mountNode);</span></code></pre></div>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Table</span> <span class="hljs-attribute">columns</span>=<span class="hljs-value">{columns}</span> <span class="hljs-attribute">dataSource</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span> /&gt;</span>, mountNode);</span></code></pre></div>
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">

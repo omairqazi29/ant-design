@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7674facd3a276e6b3342"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "dd4c871836e7a679879b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -11270,18 +11270,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      text = props.format(props.percent);
 	    }
 
-	    if (props.showInfo === true) {
+	    if (props.showInfo) {
 	      if (props.status === 'exception') {
 	        progressInfo = _react3["default"].createElement(
 	          'span',
 	          { className: prefixCls + '-line-text' },
-	          props.format ? text : _react3["default"].createElement(_icon2["default"], { type: 'exclamation' })
+	          props.format ? text : _react3["default"].createElement(_icon2["default"], { type: 'cross-circle' })
 	        );
 	      } else if (props.status === 'success') {
 	        progressInfo = _react3["default"].createElement(
 	          'span',
 	          { className: prefixCls + '-line-text' },
-	          props.format ? text : _react3["default"].createElement(_icon2["default"], { type: 'check' })
+	          props.format ? text : _react3["default"].createElement(_icon2["default"], { type: 'check-circle' })
 	        );
 	      } else {
 	        progressInfo = _react3["default"].createElement(
@@ -11301,7 +11301,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react3["default"].createElement(
 	      'div',
 	      { className: prefixCls + '-line-wrap clearfix status-' + props.status + fullCls, style: props.style },
-	      progressInfo,
 	      _react3["default"].createElement(
 	        'div',
 	        { className: prefixCls + '-line-outer' },
@@ -11310,7 +11309,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { className: prefixCls + '-line-inner' },
 	          _react3["default"].createElement('div', { className: prefixCls + '-line-bg', style: percentStyle })
 	        )
-	      )
+	      ),
+	      progressInfo
 	    );
 	  }
 	}));
@@ -21111,7 +21111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        iconType = 'info-circle';
 	        break;
 	      case 'error':
-	        iconType = 'exclamation-circle';
+	        iconType = 'cross-circle';
 	        break;
 	      case 'warn':
 	        iconType = 'exclamation-circle';
@@ -24741,7 +24741,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var iconType = {
 	    info: 'info-circle',
 	    success: 'check-circle',
-	    error: 'exclamation-circle',
+	    error: 'cross-circle',
 	    warn: 'exclamation-circle',
 	    loading: 'loading'
 	  }[type];
@@ -25016,7 +25016,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	_Modal2["default"].error = function (props) {
 	  var config = (0, _objectAssign2["default"])({}, props, {
-	    iconClassName: 'exclamation-circle',
+	    iconClassName: 'cross-circle',
 	    okCancel: false
 	  });
 	  return (0, _confirm2["default"])(config);
@@ -25096,10 +25096,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        iconType = 'info-circle-o';
 	        break;
 	      case 'error':
-	        iconType = 'exclamation-circle-o';
+	        iconType = 'cross-circle-o';
 	        break;
 	      case 'warn':
-	        iconType = 'question-circle-o';
+	        iconType = 'exclamation-circle-o';
 	        break;
 	      default:
 	        iconType = 'info-circle';
@@ -25373,7 +25373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react3["default"].createElement(
 	          'div',
 	          { className: prefixCls + '-message' },
-	          _react3["default"].createElement(_icon2["default"], { type: 'exclamation-circle' }),
+	          _react3["default"].createElement(_icon2["default"], { type: 'question-circle' }),
 	          _react3["default"].createElement(
 	            'div',
 	            { className: prefixCls + '-message-title' },
