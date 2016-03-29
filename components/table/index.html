@@ -1665,6 +1665,8 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
     <script>mountNode = document.getElementById('components-table-demo-ajax');</script>
     <script>(function(){'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _antd = require('antd');
 
 var _reqwest = require('reqwest');
@@ -1676,13 +1678,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var columns = [{
   title: '姓名',
   dataIndex: 'name',
-  filters: [{
-    text: '姓李的',
-    value: '李'
-  }, {
-    text: '姓胡的',
-    value: '胡'
-  }]
+  filters: [{ text: '姓李的', value: '李' }, { text: '姓胡的', value: '胡' }]
 }, {
   title: '年龄',
   dataIndex: 'age',
@@ -1707,18 +1703,12 @@ var Test = React.createClass({
     this.setState({
       pagination: pager
     });
-    var params = {
+    this.fetch(_extends({
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
       sortField: sorter.field,
       sortOrder: sorter.order
-    };
-    for (var key in filters) {
-      if (filters.hasOwnProperty(key)) {
-        params[key] = filters[key];
-      }
-    }
-    this.fetch(params);
+    }, filters));
   },
   fetch: function fetch() {
     var _this = this;
@@ -1761,20 +1751,17 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
 <span class="hljs-keyword">const</span> columns = [{
   title: <span class="hljs-string">'姓名'</span>,
   dataIndex: <span class="hljs-string">'name'</span>,
-  filters: [{
-    text: <span class="hljs-string">'姓李的'</span>,
-    value: <span class="hljs-string">'李'</span>
-  }, {
-    text: <span class="hljs-string">'姓胡的'</span>,
-    value: <span class="hljs-string">'胡'</span>
-  }]
+  filters: [
+    { text: <span class="hljs-string">'姓李的'</span>, value: <span class="hljs-string">'李'</span> },
+    { text: <span class="hljs-string">'姓胡的'</span>, value: <span class="hljs-string">'胡'</span> },
+  ],
 }, {
   title: <span class="hljs-string">'年龄'</span>,
   dataIndex: <span class="hljs-string">'age'</span>,
-  sorter: <span class="hljs-literal">true</span>
+  sorter: <span class="hljs-literal">true</span>,
 }, {
   title: <span class="hljs-string">'住址'</span>,
-  dataIndex: <span class="hljs-string">'address'</span>
+  dataIndex: <span class="hljs-string">'address'</span>,
 }];
 
 <span class="hljs-keyword">const</span> Test = React.createClass({
@@ -1789,20 +1776,15 @@ ReactDOM.render(React.createElement(Test, null), mountNode);})()</script><div cl
     <span class="hljs-keyword">const</span> pager = <span class="hljs-keyword">this</span>.state.pagination;
     pager.current = pagination.current;
     <span class="hljs-keyword">this</span>.setState({
-      pagination: pager
+      pagination: pager,
     });
-    <span class="hljs-keyword">const</span> params = {
+    <span class="hljs-keyword">this</span>.fetch({
       pageSize: pagination.pageSize,
       currentPage: pagination.current,
       sortField: sorter.field,
-      sortOrder: sorter.order
-    };
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> filters) {
-      <span class="hljs-keyword">if</span> (filters.hasOwnProperty(key)) {
-        params[key] = filters[key];
-      }
-    }
-    <span class="hljs-keyword">this</span>.fetch(params);
+      sortOrder: sorter.order,
+      ...filters,
+    });
   },
   fetch(params = {}) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'请求参数：'</span>, params);

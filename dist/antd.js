@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a6ebf30fef33a0098652"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9c19f975ba7ee9b800f7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28084,7 +28084,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var leftCheckStatus = this.getGlobalCheckStatus('left');
 	      var rightCheckStatus = this.getGlobalCheckStatus('right');
 
-	      var cls = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, 'prefixCls', true), _classNames));
+	      var cls = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, prefixCls, true), _classNames));
 
 	      return _react3["default"].createElement(
 	        'div',
@@ -47536,10 +47536,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.clearDelayTimer();
 	    var props = this.props;
 	    var refs = this.refs;
-
-	    if (this.state.open === open) {
-	      return;
-	    }
+	    
 	    this.setState({
 	      open: open
 	    }, function () {
