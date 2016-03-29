@@ -3083,9 +3083,6 @@ samp {
   user-select: none;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  position: relative\0;
   color: #666;
   background-color: #f4f4f4;
   border-color: #d9d9d9;
@@ -4680,9 +4677,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   user-select: none;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  position: relative\0;
   color: #fff;
   background-color: #2db7f5;
   border-color: #2db7f5;
