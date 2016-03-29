@@ -265,6 +265,7 @@ module.exports = {
     require('antd-md?demo!../components/table/demo/loading.md'),
     require('antd-md?demo!../components/table/demo/nopagination.md'),
     require('antd-md?demo!../components/table/demo/paging.md'),
+    require('antd-md?demo!../components/table/demo/reset-filter.md'),
     require('antd-md?demo!../components/table/demo/row-selection-and-operation.md'),
     require('antd-md?demo!../components/table/demo/row-selection-props.md'),
     require('antd-md?demo!../components/table/demo/row-selection.md'),

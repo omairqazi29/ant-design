@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "dd4c871836e7a679879b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a6ebf30fef33a0098652"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -47363,12 +47363,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      label = label.concat([selectedLabel]);
 	    } else {
 	      if (value[0] === selectedValue) {
-	        this.setOpenState(false);
+	        this.setOpenState(false, true);
 	        return;
 	      }
 	      value = [selectedValue];
 	      label = [selectedLabel];
-	      this.setOpenState(false);
+	      this.setOpenState(false, true);
 	    }
 	    this.fireChange(value, label);
 	    this.setState({
@@ -47530,7 +47530,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return this.refs.trigger.getInnerMenu();
 	  },
 
-	  setOpenState: function setOpenState(open) {
+	  setOpenState: function setOpenState(open, needFocus) {
 	    var _this4 = this;
 
 	    this.clearDelayTimer();
@@ -47543,13 +47543,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.setState({
 	      open: open
 	    }, function () {
-	      if (open || (0, _util.isMultipleOrTagsOrCombobox)(props)) {
-	        var input = _this4.getInputDOMNode();
-	        if (input && document.activeElement !== input) {
-	          input.focus();
+	      if(open || needFocus){
+	        if (open || (0, _util.isMultipleOrTagsOrCombobox)(props)) {
+	          var input = _this4.getInputDOMNode();
+	          if (input && document.activeElement !== input) {
+	            input.focus();
+	          }
+	        } else if (refs.selection) {
+	          refs.selection.focus();
 	        }
-	      } else if (refs.selection) {
-	        refs.selection.focus();
 	      }
 	    });
 	  },
