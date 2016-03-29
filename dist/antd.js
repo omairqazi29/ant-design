@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0067bdd21994bfa32a9d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3f3735af2935b30eb9a8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -46484,12 +46484,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var numberOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.array]);
 	var stringOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.array]);
 	var objectOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.object, _react2['default'].PropTypes.array]);
+	var funcOrString = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.func, _react2['default'].PropTypes.string]);
 	var funcOrStringOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.func, stringOrArray]);
 	var funcOrObjectOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.func, objectOrArray]);
 	var funcOrNumberOrArray = _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.func, numberOrArray]);
 
 	QueueAnim.propTypes = {
-	  component: _react2['default'].PropTypes.string,
+	  component: funcOrString,
 	  interval: numberOrArray,
 	  duration: funcOrNumberOrArray,
 	  delay: funcOrNumberOrArray,
