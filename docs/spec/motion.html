@@ -403,9 +403,12 @@
 
     <div class="toc"></div>
     <p>Ant Design 提供了一些预设的组件动画样式。</p>
+<p>可以使用 <a href="https://github.com/react-component/animate">rc-animate</a> 的 <a href="http://react-component.github.io/animate/examples/simple.html">transitionName</a> 属性来给任意元素指定动画。</p>
+<blockquote>
+<p>示例延长了动画时长以便展示。</p>
+</blockquote>
 <div id="components-motion-demo-basic"></div>
 
-<p>通过设置组件的 <code>transitionName</code> 指定组件动画。</p>
 <table>
 <thead>
 <tr>
@@ -416,28 +419,28 @@
 </thead>
 <tbody>
 <tr>
-<td>popover</td>
+<td>Popover</td>
 <td>气泡浮出</td>
 <td><code>zoom-up</code> <code>zoom-down</code> <code>zoom-left</code> <code>zoom-right</code></td>
 </tr>
 <tr>
-<td>popconfirm</td>
+<td>Popconfirm</td>
 <td>气泡确认</td>
 <td><code>zoom-up</code> <code>zoom-down</code> <code>zoom-left</code> <code>zoom-right</code></td>
 </tr>
 <tr>
-<td>tooltip</td>
+<td>Tooltip</td>
 <td>文字提示</td>
 <td><code>zoom-up</code> <code>zoom-down</code> <code>zoom-left</code> <code>zoom-right</code></td>
 </tr>
 <tr>
-<td>modal</td>
+<td>Modal</td>
 <td>弹出框</td>
 <td><code>zoom</code></td>
 </tr>
 <tr>
-<td>confirm</td>
-<td>弹出确认框</td>
+<td>Badge</td>
+<td>徽标数</td>
 <td><code>zoom</code></td>
 </tr>
 <tr>
@@ -451,33 +454,43 @@
 <td><code>move-right</code> &amp; <code>slide-up</code></td>
 </tr>
 <tr>
-<td>dropdown</td>
+<td>Dropdown</td>
 <td>下拉菜单</td>
 <td><code>slide-up</code></td>
 </tr>
 <tr>
-<td>select</td>
+<td>Select</td>
 <td>选择框</td>
 <td><code>slide-up</code></td>
 </tr>
 <tr>
-<td>datepicker</td>
+<td>Cascader</td>
+<td>级联选择框</td>
+<td><code>slide-up</code></td>
+</tr>
+<tr>
+<td>TreeSelect</td>
+<td>树选择框</td>
+<td><code>slide-up</code></td>
+</tr>
+<tr>
+<td>DatePicker</td>
 <td>日期选择框</td>
 <td><code>slide-up</code></td>
 </tr>
 <tr>
-<td>alert</td>
+<td>TatePicker</td>
+<td>日期选择框</td>
+<td><code>slide-up</code></td>
+</tr>
+<tr>
+<td>Alert</td>
 <td>警告提示</td>
 <td><code>slide-up</code></td>
 </tr>
 <tr>
-<td>menu</td>
+<td>Menu</td>
 <td>导航菜单</td>
-<td><code>slide-up</code></td>
-</tr>
-<tr>
-<td>datepicker</td>
-<td>日期选择框</td>
 <td><code>slide-up</code></td>
 </tr>
 </tbody>
@@ -700,6 +713,11 @@ var Test = React.createClass({
 });
 
 ReactDOM.render(React.createElement(Test, null), document.getElementById('components-motion-demo-basic'));})()</script><style>
+#components-motion-demo-basic {
+  margin: 40px 0;
+  width: 80%;
+}
+
 .motion-container {
   height: 190px;
   line-height: 190px;
@@ -716,6 +734,7 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
   display: inline-block !important;
   border-radius: 8px;
   font-weight: bold;
+  animation-duration: 0.5s!important;
   background: url(https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg) center/230px;
 }
 .motion-select-wrapper{

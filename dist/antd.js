@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3f3735af2935b30eb9a8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f70be74e907e2d894566"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -23837,12 +23837,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _props = this.props;
 	      var prefixCls = _props.prefixCls;
 	      var className = _props.className;
+	      var style = _props.style;
 
-	      var formClassName = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, prefixCls + '-horizontal', this.props.horizontal), _defineProperty(_classNames, prefixCls + '-inline', this.props.inline), _classNames));
+	      var formClassName = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, prefixCls + '-horizontal', this.props.horizontal), _defineProperty(_classNames, prefixCls + '-inline', this.props.inline), _defineProperty(_classNames, className, !!className), _classNames));
 
 	      return _react3["default"].createElement(
 	        'form',
-	        _extends({}, this.props, { className: formClassName }),
+	        _extends({}, this.props, { className: formClassName, style: style }),
 	        this.props.children
 	      );
 	    }
@@ -24111,11 +24112,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var props = this.props;
 	      var prefixCls = props.prefixCls;
+	      var style = props.style;
 	      var itemClassName = (_itemClassName = {}, _defineProperty(_itemClassName, prefixCls + '-item', true), _defineProperty(_itemClassName, prefixCls + '-item-with-help', !!this.getHelpMsg()), _defineProperty(_itemClassName, '' + props.className, !!props.className), _itemClassName);
 
 	      return _react3["default"].createElement(
 	        'div',
-	        { className: (0, _classnames2["default"])(itemClassName) },
+	        { className: (0, _classnames2["default"])(itemClassName), style: style },
 	        children
 	      );
 	    }
@@ -24321,16 +24323,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  render: function render() {
+	    var _classNames;
+
 	    var _props = this.props;
 	    var className = _props.className;
 	    var size = _props.size;
 
 	    var other = _objectWithoutProperties(_props, ['className', 'size']);
 
-	    var inputNumberClass = (0, _classnames2["default"])(_defineProperty({
-	      'ant-input-number-lg': size === 'large',
-	      'ant-input-number-sm': size === 'small'
-	    }, className, !!className));
+	    var inputNumberClass = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, this.props.prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, this.props.prefixCls + '-sm', size === 'small'), _defineProperty(_classNames, className, !!className), _classNames));
 
 	    return _react3["default"].createElement(_rcInputNumber2["default"], _extends({ className: inputNumberClass }, other));
 	  }
