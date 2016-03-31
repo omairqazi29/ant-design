@@ -211,6 +211,12 @@ module.exports = {
     require('antd-md?demo!../components/radio/demo/radiogroup.md'),
     require('antd-md?demo!../components/radio/demo/size.md'),
   ],
+  'components/rate/index.md': [
+    require('antd-md?demo!../components/rate/demo/basic.md'),
+    require('antd-md?demo!../components/rate/demo/disabled.md'),
+    require('antd-md?demo!../components/rate/demo/half.md'),
+    require('antd-md?demo!../components/rate/demo/text.md'),
+  ],
   'components/select/index.md': [
     require('antd-md?demo!../components/select/demo/basic.md'),
     require('antd-md?demo!../components/select/demo/combobox.md'),
@@ -265,6 +271,7 @@ module.exports = {
     require('antd-md?demo!../components/table/demo/loading.md'),
     require('antd-md?demo!../components/table/demo/nopagination.md'),
     require('antd-md?demo!../components/table/demo/paging.md'),
+    require('antd-md?demo!../components/table/demo/reset-filter.md'),
     require('antd-md?demo!../components/table/demo/row-selection-and-operation.md'),
     require('antd-md?demo!../components/table/demo/row-selection-props.md'),
     require('antd-md?demo!../components/table/demo/row-selection.md'),

@@ -27,6 +27,7 @@ module.exports = {
   'components/progress/index.md': require('antd-md!../components/progress/index.md'),
   'components/queue-anim/index.md': require('antd-md!../components/queue-anim/index.md'),
   'components/radio/index.md': require('antd-md!../components/radio/index.md'),
+  'components/rate/index.md': require('antd-md!../components/rate/index.md'),
   'components/select/index.md': require('antd-md!../components/select/index.md'),
   'components/slider/index.md': require('antd-md!../components/slider/index.md'),
   'components/spin/index.md': require('antd-md!../components/spin/index.md'),

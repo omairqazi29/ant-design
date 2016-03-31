@@ -3,7 +3,6 @@ module.exports = {
   'docs/spec/colors.md': require('antd-md!../docs/spec/colors.md'),
   'docs/spec/contrast.md': require('antd-md!../docs/spec/contrast.md'),
   'docs/spec/direct.md': require('antd-md!../docs/spec/direct.md'),
-  'docs/spec/easing.md': require('antd-md!../docs/spec/easing.md'),
   'docs/spec/feature.md': require('antd-md!../docs/spec/feature.md'),
   'docs/spec/font.md': require('antd-md!../docs/spec/font.md'),
   'docs/spec/introduce.md': require('antd-md!../docs/spec/introduce.md'),

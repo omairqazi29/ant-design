@@ -2520,6 +2520,7 @@ samp {
 .zoom-enter,
 .zoom-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2561,6 +2562,7 @@ samp {
 .zoom-big-enter,
 .zoom-big-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2602,6 +2604,7 @@ samp {
 .zoom-up-enter,
 .zoom-up-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2643,6 +2646,7 @@ samp {
 .zoom-down-enter,
 .zoom-down-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2684,6 +2688,7 @@ samp {
 .zoom-left-enter,
 .zoom-left-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -2725,6 +2730,7 @@ samp {
 .zoom-right-enter,
 .zoom-right-appear {
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
           animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -3577,6 +3583,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -3597,6 +3604,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-dropdown-wrap-open .anticon-down:before {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .ant-dropdown-hidden,
@@ -3677,6 +3685,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -3699,6 +3708,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   min-width: 100%;
   margin-left: 4px;
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-dropdown-menu-submenu:first-child .ant-dropdown-menu-submenu-title {
@@ -3733,6 +3743,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -3754,6 +3765,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -3849,6 +3861,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   line-height: 1;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
   font-family: tahoma;
@@ -3910,6 +3923,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -4154,6 +4168,7 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -4185,6 +4200,7 @@ fieldset[disabled] .ant-btn-dashed.active {
 }
 .ant-select-open .ant-select-arrow:before {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .ant-select-open .ant-select-selection {
@@ -5871,8 +5887,10 @@ textarea.ant-time-picker-input {
   height: 2px;
   background-color: #2db7f5;
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-tabs-ink-bar-transition-forward {
@@ -5967,6 +5985,7 @@ textarea.ant-time-picker-input {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -6316,11 +6335,13 @@ textarea.ant-time-picker-input {
   font-size: 12px;
   font-size: 9px \9;
   -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
           transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
   -webkit-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
   width: 0;
   text-align: right;
@@ -6364,6 +6385,7 @@ textarea.ant-time-picker-input {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -6411,6 +6433,7 @@ textarea.ant-time-picker-input {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -6553,6 +6576,7 @@ textarea.ant-time-picker-input {
   font-size: 12px;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -6747,6 +6771,7 @@ td.ant-table-column-has-prev {
   font-size: 12px;
   font-size: 9px \9;
   -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
           transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -6771,6 +6796,7 @@ td.ant-table-column-has-prev {
   font-size: 12px;
   font-size: 9px \9;
   -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
           transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -7180,6 +7206,7 @@ td.ant-table-column-has-prev {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -7239,6 +7266,7 @@ td.ant-table-column-has-prev {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -8345,6 +8373,7 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   font-size: 12px;
   font-size: 9px \9;
   -webkit-transform: scale(0.75) rotate(0deg);
+      -ms-transform: scale(0.75) rotate(0deg);
           transform: scale(0.75) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -8568,6 +8597,7 @@ textarea.ant-input-number {
   font-size: 12px;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(0deg);
+      -ms-transform: scale(0.58333333) rotate(0deg);
           transform: scale(0.58333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -8797,6 +8827,7 @@ textarea.ant-input-number {
 }
 .ant-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -8831,6 +8862,7 @@ textarea.ant-input-number {
 .ant-checkbox-indeterminate .ant-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -8850,6 +8882,7 @@ textarea.ant-input-number {
 }
 .ant-checkbox-checked .ant-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -8927,6 +8960,7 @@ textarea.ant-input-number {
   font-size: 12px;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(270deg);
+      -ms-transform: scale(0.58333333) rotate(270deg);
           transform: scale(0.58333333) rotate(270deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=-0.0000000000000001837, M12=1, M21=-1, M22=-0.0000000000000001837)";
@@ -8989,6 +9023,7 @@ textarea.ant-input-number {
   font-size: 12px;
   font-size: 7px \9;
   -webkit-transform: scale(0.58333333) rotate(360deg);
+      -ms-transform: scale(0.58333333) rotate(360deg);
           transform: scale(0.58333333) rotate(360deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0.00000000000000024493, M21=-0.00000000000000024493, M22=1)";
@@ -9253,6 +9288,7 @@ textarea.ant-input-number {
   background-color: #2db7f5;
   opacity: 0;
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -9272,6 +9308,7 @@ textarea.ant-input-number {
 }
 .ant-radio-checked .ant-radio-inner:after {
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
   -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -9597,6 +9634,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -9785,6 +9823,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
           transform-origin: 50% 0;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -9818,6 +9857,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -9852,6 +9892,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -9871,6 +9912,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-tree-checkbox-checked .ant-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -10021,6 +10063,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -10065,6 +10108,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -10100,6 +10144,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after,
 .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after {
   -webkit-transform: rotate(270deg) scale(0.5);
+      -ms-transform: rotate(270deg) scale(0.5);
           transform: rotate(270deg) scale(0.5);
 }
 .ant-tree-child-tree {
@@ -10151,6 +10196,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-select-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -10185,6 +10231,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -10204,6 +10251,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -10333,6 +10381,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -10377,6 +10426,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 6px \9;
   -webkit-transform: scale(0.5) rotate(0deg);
+      -ms-transform: scale(0.5) rotate(0deg);
           transform: scale(0.5) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -10412,6 +10462,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-select-tree li span.ant-select-tree-switcher.ant-select-tree-bottom_close:after,
 .ant-select-tree li span.ant-select-tree-switcher.ant-select-tree-noline_close:after {
   -webkit-transform: rotate(270deg) scale(0.5);
+      -ms-transform: rotate(270deg) scale(0.5);
           transform: rotate(270deg) scale(0.5);
 }
 .ant-select-tree-child-tree {
@@ -10742,6 +10793,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -11119,6 +11171,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   right: 16px;
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg) scale(0.75);
+      -ms-transform: rotate(270deg) scale(0.75);
           transform: rotate(270deg) scale(0.75);
 }
 .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
@@ -11140,6 +11193,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -11155,6 +11209,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-submenu-open.ant-menu-submenu-inline > .ant-menu-submenu-title:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(180deg) scale(0.75);
+      -ms-transform: rotate(180deg) scale(0.75);
           transform: rotate(180deg) scale(0.75);
 }
 .ant-menu-item .anticon,
@@ -11229,11 +11284,13 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-vertical.ant-menu-sub {
   padding: 0;
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-menu-vertical.ant-menu-sub > .ant-menu-item,
 .ant-menu-vertical.ant-menu-sub > .ant-menu-submenu {
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 .ant-menu-root.ant-menu-vertical,
@@ -11323,6 +11380,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-badge-count {
   position: absolute;
   -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -10px;
   height: 20px;
@@ -11337,6 +11395,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   font-size: 12px;
   white-space: nowrap;
   -webkit-transform-origin: -10% center;
+      -ms-transform-origin: -10% center;
           transform-origin: -10% center;
   z-index: 10;
   font-family: tahoma;
@@ -11349,8 +11408,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-badge-dot {
   position: absolute;
   -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transform-origin: 0px center;
+      -ms-transform-origin: 0px center;
           transform-origin: 0px center;
   top: -4px;
   height: 8px;
@@ -11378,6 +11439,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   display: block;
   position: relative;
   -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
           transform: translateX(0);
 }
 a -count:hover {
@@ -11807,6 +11869,7 @@ a -count:active {
 }
 .ant-transfer-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
   left: 4px;
@@ -11841,6 +11904,7 @@ a -count:active {
 .ant-transfer-checkbox-indeterminate .ant-transfer-checkbox-inner:after {
   content: ' ';
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
   position: absolute;
   left: 2px;
@@ -11860,6 +11924,7 @@ a -count:active {
 }
 .ant-transfer-checkbox-checked .ant-transfer-checkbox-inner:after {
   -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
   left: 4px;
@@ -12028,6 +12093,7 @@ ul li.ant-transfer-list-highlight-enter {
   font-size: 12px;
   font-size: 10px \9;
   -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
           transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -12109,6 +12175,7 @@ ul li.ant-transfer-list-highlight-enter {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
@@ -12132,6 +12199,7 @@ ul li.ant-transfer-list-highlight-enter {
 }
 .ant-cascader-picker-arrow.ant-cascader-picker-arrow-expand:before {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .ant-cascader-menus {
@@ -12215,6 +12283,7 @@ ul li.ant-transfer-list-highlight-enter {
   font-size: 12px;
   font-size: 8px \9;
   -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
           transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
