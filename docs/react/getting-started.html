@@ -586,7 +586,7 @@
     
 <p>Ant Design React 致力于提供给程序员<strong>愉悦</strong>的开发体验。</p>
 
-    <div class="toc"><ul><li><a href="#第一个例子">第一个例子</a></li><li><a href="#标准开发">标准开发</a><ul><li><a href="#1-安装脚手架工具">1. 安装脚手架工具</a></li><li><a href="#2-创建一个项目">2. 创建一个项目</a></li><li><a href="#3-使用组件">3. 使用组件</a></li><li><a href="#4-开发调试">4. 开发调试</a></li><li><a href="#5-构建和部署">5. 构建和部署</a></li></ul></li><li><a href="#兼容性">兼容性</a></li><li><a href="#自行构建">自行构建</a><ul><li><a href="#改变主色系">改变主色系</a></li></ul></li><li><a href="#小甜点">小甜点</a></li></ul></div>
+    <div class="toc"><ul><li><a href="#第一个例子">第一个例子</a></li><li><a href="#标准开发">标准开发</a><ul><li><a href="#1-安装脚手架工具">1. 安装脚手架工具</a></li><li><a href="#2-创建一个项目">2. 创建一个项目</a></li><li><a href="#3-使用组件">3. 使用组件</a></li><li><a href="#4-开发调试">4. 开发调试</a></li><li><a href="#5-构建和部署">5. 构建和部署</a></li></ul></li><li><a href="#兼容性">兼容性</a></li><li><a href="#自行构建">自行构建</a></li><li><a href="#配置案例">配置案例</a></li><li><a href="#小甜点">小甜点</a></li></ul></div>
     <h2 id="第一个例子">第一个例子<a href="#第一个例子" class="anchor">#</a> </h2><p>最简单的试用方式参照以下 CodePen 演示，也推荐 Fork 本例来进行 <code>Bug Report</code>，注意不要在实际项目中这样使用。</p>
 <ul>
 <li><a href="http://codepen.io/anon/pen/pgdXYp?editors=001">antd CodePen</a></li>
@@ -669,12 +669,14 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
 </blockquote>
 <h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试。理论上你可以利用 React 生态圈中的 <a href="https://github.com/enaqx/awesome-react#boilerplates">各种脚手架</a> 进行开发，如果遇到问题可参考我们所使用的 <a href="https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js">webpack 配置</a> 进行 <a href="http://ant-tool.github.io/webpack-config.html">定制</a>。</p>
 <p>目前社区也有很多基于 antd 定制的 <a href="https://github.com/ant-design/ant-design/issues/129">脚手架</a>，欢迎进行试用和贡献。</p>
-<h3 id="改变主色系">改变主色系<a href="#改变主色系" class="anchor">#</a> </h3><ul>
-<li><a href="https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme">配置代码示例</a></li>
+<h2 id="配置案例">配置案例<a href="#配置案例" class="anchor">#</a> </h2><ul>
+<li><a href="https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme">改变主色系</a></li>
+<li><a href="https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont">使用本地字体</a></li>
+<li><a href="https://github.com/ant-design/antd-init/tree/master/examples/build-antd-standalone">构建独立文件</a></li>
 </ul>
 <h2 id="小甜点">小甜点<a href="#小甜点" class="anchor">#</a> </h2><ul>
 <li>你可以享用 <code>npm</code> 生态圈里的所有模块。</li>
-<li>我们使用了 <code>babel</code>，试试用 <a href="http://babeljs.io/blog/2015/06/07/react-on-es6-plus/">ES6</a> 的写法来提升编码的愉悦感。</li>
+<li>我们使用了 <code>babel</code>，试试用 <a href="http://babeljs.io/blog/2015/06/07/react-on-es6-plus/">ES2015</a> 的写法来提升编码的愉悦感。</li>
 </ul>
 
   </article>

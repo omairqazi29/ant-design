@@ -3821,7 +3821,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   font-family: tahoma;
 }
 .ant-progress-line-text .anticon {
-  font-weight: bold;
   font-size: 12px;
 }
 .ant-progress-line-wrap.status-active .ant-progress-line-bg:before {
