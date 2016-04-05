@@ -11071,6 +11071,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   color: #666;
 }
 .ant-menu-item-active,
+.ant-menu-submenu-active,
 .ant-menu-submenu-title:hover {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -11149,6 +11150,7 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-menu-submenu {
   position: relative;
+  z-index: 1;
 }
 .ant-menu-submenu > .ant-menu {
   background-color: #fff;

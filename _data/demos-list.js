@@ -1,7 +1,5 @@
 const React  = require("react");
 const ReactDOM = require("react-dom");
-const antd  = require("../");
-const BrowserDemo = require("../site/component/BrowserDemo");
 module.exports = {
   'components/affix/index.md': [
     require('antd-md?demo!../components/affix/demo/basic.md'),
@@ -349,6 +347,6 @@ Object.keys(module.exports).map((key) => module.exports[key])
   .forEach((demos) => {
     demos.forEach((demo) => {
       if (typeof demo.preview !== "function") return;
-      demo.preview = demo.preview(React, ReactDOM, antd, BrowserDemo);
+      demo.preview = demo.preview(React, ReactDOM);
     });
   });
