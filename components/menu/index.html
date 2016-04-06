@@ -773,7 +773,6 @@ var App = React.createClass({
       _antd.Menu,
       { onClick: this.handleClick,
         selectedKeys: [this.state.current],
-        theme: this.state.theme,
         mode: 'horizontal' },
       React.createElement(
         _antd.Menu.Item,
@@ -857,7 +856,6 @@ ReactDOM.render(React.createElement(App, null), mountNode);})()</script><div cla
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Menu</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleClick}</span>
         <span class="hljs-attribute">selectedKeys</span>=<span class="hljs-value">{[this.state.current]}</span>
-        <span class="hljs-attribute">theme</span>=<span class="hljs-value">{this.state.theme}</span>
         <span class="hljs-attribute">mode</span>=<span class="hljs-value">"horizontal"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Menu.Item</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"mail"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"mail"</span> /&gt;</span>导航一

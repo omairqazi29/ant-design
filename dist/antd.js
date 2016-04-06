@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "756ba1c2c153b6b33853"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "711bac17ceb70b427073"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26732,7 +26732,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      sortColumn: '',
 	      sortOrder: '',
 	      sorter: null,
-	      radioIndex: null,
 	      pagination: this.hasPagination() ? (0, _objectAssign3["default"])({
 	        size: this.props.size
 	      }, defaultPagination, this.props.pagination) : {}
@@ -26912,7 +26911,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var key = this.getRecordKey(record, rowIndex);
 	    selectedRowKeys = [key];
 	    this.setState({
-	      radioIndex: key,
 	      selectionDirty: true
 	    });
 	    this.setSelectedRowKeys(selectedRowKeys);
@@ -26997,11 +26995,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      pagination: pagination
 	    }))));
 	  },
-	  onRadioChange: function onRadioChange(ev) {
-	    this.setState({
-	      radioIndex: ev.target.value
-	    });
-	  },
 	  renderSelectionRadio: function renderSelectionRadio(value, record, index) {
 	    var rowIndex = this.getRecordKey(record, index); // 从 1 开始
 	    var props = {};
@@ -27010,9 +27003,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    var checked = void 0;
 	    if (this.state.selectionDirty) {
-	      checked = this.state.radioIndex === rowIndex;
+	      checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0;
 	    } else {
-	      checked = this.state.radioIndex === rowIndex || this.getDefaultSelection().indexOf(rowIndex) >= 0;
+	      checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0 || this.getDefaultSelection().indexOf(rowIndex) >= 0;
 	    }
 	    return _react3["default"].createElement(_radio2["default"], { disabled: props.disabled,
 	      onChange: this.handleRadioSelect.bind(this, record, rowIndex),
