@@ -200,16 +200,12 @@ var Demo = React.createClass({
         )
       ),
       React.createElement(
-        _antd.Row,
-        { style: { marginTop: 24 } },
+        FormItem,
+        { wrapperCol: { span: 16, offset: 8 }, style: { marginTop: 24 } },
         React.createElement(
-          _antd.Col,
-          { span: '16', offset: '8' },
-          React.createElement(
-            _antd.Button,
-            { type: 'primary', htmlType: 'submit' },
-            '确定'
-          )
+          _antd.Button,
+          { type: 'primary', htmlType: 'submit' },
+          '确定'
         )
       )
     );
@@ -219,7 +215,7 @@ var Demo = React.createClass({
 Demo = _antd.Form.create()(Demo);
 
 ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Form, Select, InputNumber, DatePicker, TimePicker, Switch, Radio,
-         Slider, Button, Row, Col, Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+         Slider, Button, Col, Upload, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
 <span class="hljs-keyword">const</span> Option = Select.Option;
 <span class="hljs-keyword">const</span> RadioButton = Radio.Button;
@@ -340,11 +336,10 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
             <span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">Upload</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Row</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">24</span> }}&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"16"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"8"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span> <span class="hljs-attribute">wrapperCol</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">span:</span> <span class="hljs-attribute">16</span>, <span class="hljs-attribute">offset:</span> <span class="hljs-attribute">8</span> }} <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">24</span> }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">htmlType</span>=<span class="hljs-value">"submit"</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
     )</span>;
   }

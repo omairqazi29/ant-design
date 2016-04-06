@@ -242,6 +242,7 @@ module.exports = {
     require('antd-md?demo!../components/spin/demo/tip.md'),
   ],
   'components/steps/index.md': [
+    require('antd-md?demo!../components/steps/demo/error.md'),
     require('antd-md?demo!../components/steps/demo/icon.md'),
     require('antd-md?demo!../components/steps/demo/simple.md'),
     require('antd-md?demo!../components/steps/demo/small-size.md'),

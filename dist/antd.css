@@ -4840,6 +4840,7 @@ fieldset[disabled] .ant-calendar .ant-calendar-ok-btn.active {
 .ant-calendar-range .ant-time-picker-input {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   padding: 4px 7px;
   width: 100%;
   height: 28px;
@@ -4976,6 +4977,7 @@ textarea.ant-calendar-range .ant-time-picker-input {
 .ant-calendar-time .ant-time-picker-input {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   padding: 4px 7px;
   width: 100%;
   height: 28px;
@@ -5471,6 +5473,7 @@ textarea.ant-calendar-time .ant-time-picker-input {
 .ant-time-picker-input {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   padding: 4px 7px;
   width: 100%;
   height: 28px;
@@ -7334,6 +7337,7 @@ td.ant-table-column-has-prev {
 .ant-pagination-options-quick-jumper input {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   padding: 4px 7px;
   width: 100%;
   height: 28px;
@@ -7534,6 +7538,7 @@ label > .anticon {
 .ant-input {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   padding: 4px 7px;
   width: 100%;
   height: 28px;
@@ -7949,7 +7954,8 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
   height: auto;
 }
 .ant-form-horizontal .ant-radio-inline,
-.ant-form-horizontal .ant-checkbox-inline {
+.ant-form-horizontal .ant-checkbox-inline,
+.ant-form-horizontal .ant-input {
   vertical-align: top;
 }
 .ant-form-inline .ant-form-item {
