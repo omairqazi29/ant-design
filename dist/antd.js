@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a043e441260b8279ca7f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "be26e30466d410be5fb8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -46677,7 +46677,75 @@ return /******/ (function(modules) { // webpackBootstrap
 	  easeOutBack: [0.175, 0.885, 0.32, 1.275],
 	  easeInOutBack: [0.68, -0.55, 0.265, 1.55]
 	};
+	var _ease = {
+	  easeInElastic: function easeInElastic(_p, o, t) {
+	    var p = _p;
+	    var _p1 = o >= 1 ? o : 1;
+	    var _p2 = (t || 1) / (o < 1 ? o : 1);
+	    var _p3 = _p2 / Math.PI * 2 * (Math.asin(1 / _p1) || 0);
+	    return -(_p1 * Math.pow(2, 10 * (p -= 1)) * Math.sin((p - _p3) * _p2));
+	  },
+	  easeOutElastic: function easeOutElastic(p, o, t) {
+	    var _p1 = o >= 1 ? o : 1;
+	    var _p2 = (t || 1) / (o < 1 ? o : 1);
+	    var _p3 = _p2 / Math.PI * 2 * (Math.asin(1 / _p1) || 0);
+	    return _p1 * Math.pow(2, -10 * p) * Math.sin((p - _p3) * _p2) + 1;
+	  },
+	  easeInOutElastic: function easeInOutElastic(_p, o, t) {
+	    var p = _p;
+	    var _p1 = o >= 1 ? o : 1;
+	    var _p2 = (t || 1) / (o < 1 ? o : 1);
+	    var _p3 = _p2 / Math.PI * 2 * (Math.asin(1 / _p1) || 0);
+	    p *= 2;
+	    return p < 1 ? -0.5 * (_p1 * Math.pow(2, 10 * (p -= 1)) * Math.sin((p - _p3) * _p2)) : _p1 * Math.pow(2, -10 * (p -= 1)) * Math.sin((p - _p3) * _p2) * 0.5 + 1;
+	  },
+	  easeInBounce: function easeInBounce(_p) {
+	    var p = _p;
+	    var __p = 1 - p;
+	    if (__p < 1 / 2.75) {
+	      return 1 - 7.5625 * p * p;
+	    } else if (p < 2 / 2.75) {
+	      return 1 - (7.5625 * (p -= 1.5 / 2.75) * p + 0.75);
+	    } else if (p < 2.5 / 2.75) {
+	      return 1 - (7.5625 * (p -= 2.25 / 2.75) * p + 0.9375);
+	    }
+	    return 1 - (7.5625 * (p -= 2.625 / 2.75) * p + 0.984375);
+	  },
+	  easeOutBounce: function easeOutBounce(_p) {
+	    var p = _p;
+	    if (p < 1 / 2.75) {
+	      return 7.5625 * p * p;
+	    } else if (p < 2 / 2.75) {
+	      return 7.5625 * (p -= 1.5 / 2.75) * p + 0.75;
+	    } else if (p < 2.5 / 2.75) {
+	      return 7.5625 * (p -= 2.25 / 2.75) * p + 0.9375;
+	    }
+	    return 7.5625 * (p -= 2.625 / 2.75) * p + 0.984375;
+	  },
+	  easeInOutBounce: function easeInOutBounce(_p) {
+	    var p = _p;
+	    var invert = p < 0.5;
+	    if (invert) {
+	      p = 1 - p * 2;
+	    } else {
+	      p = p * 2 - 1;
+	    }
+	    if (p < 1 / 2.75) {
+	      p = 7.5625 * p * p;
+	    } else if (p < 2 / 2.75) {
+	      p = 7.5625 * (p -= 1.5 / 2.75) * p + 0.75;
+	    } else if (p < 2.5 / 2.75) {
+	      p = 7.5625 * (p -= 2.25 / 2.75) * p + 0.9375;
+	    } else {
+	      p = 7.5625 * (p -= 2.625 / 2.75) * p + 0.984375;
+	    }
+	    return invert ? (1 - p) * 0.5 : p * 0.5 + 0.5;
+	  }
+	};
 
+	Object.keys(_ease).forEach(function (key) {
+	  velocity.Easings[key] = _ease[key];
+	});
 	var placeholderKeyPrefix = 'ant-queue-anim-placeholder-';
 
 	var QueueAnim = (function (_React$Component) {
