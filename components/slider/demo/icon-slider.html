@@ -33,8 +33,8 @@ var IconSlider = React.createClass({
       'div',
       { className: 'iconWrapper' },
       React.createElement(_antd.Icon, { className: this.state.preIconClass, type: this.props.icon[0] }),
-      React.createElement(_antd.Icon, { className: this.state.nextIconClass, type: this.props.icon[1] }),
-      React.createElement(_antd.Slider, _extends({}, this.props, { onChange: this.handleChange, value: this.state.sliderValue }))
+      React.createElement(_antd.Slider, _extends({}, this.props, { onChange: this.handleChange, value: this.state.sliderValue })),
+      React.createElement(_antd.Icon, { className: this.state.nextIconClass, type: this.props.icon[1] })
     );
   }
 });
@@ -66,8 +66,8 @@ ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, ico
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"iconWrapper"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{this.state.preIconClass}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{this.props.icon[0]}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{this.state.nextIconClass}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{this.props.icon[1]}</span> /&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Slider</span> {<span class="hljs-attribute">...this.props</span>} <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.sliderValue}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">{this.state.nextIconClass}</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">{this.props.icon[1]}</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }
@@ -90,10 +90,11 @@ ReactDOM.render(
   color: #ccc;
 }
 
-.iconWrapper .anticon-lock {
+.iconWrapper .anticon:first-child {
   left: 0;
 }
-.iconWrapper .anticon-unlock{
+
+.iconWrapper .anticon:last-child {
   right: 0;
 }
 
@@ -114,10 +115,11 @@ ReactDOM.render(
   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ccc</span></span></span>;
 }</span>
 
-<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon-lock</span> <span class="hljs-rules">{
+<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon</span><span class="hljs-pseudo">:first-child</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
 }</span>
-<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon-unlock</span><span class="hljs-rules">{
+
+<span class="hljs-class">.iconWrapper</span> <span class="hljs-class">.anticon</span><span class="hljs-pseudo">:last-child</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
 }</span>
 
