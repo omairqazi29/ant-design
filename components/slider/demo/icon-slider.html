@@ -14,7 +14,6 @@ var IconSlider = React.createClass({
     var max = this.props.max;
     var min = this.props.min;
     var mid = ((max - min) / 2).toFixed(5);
-
     return {
       preIconClass: this.props.value >= mid ? '' : 'anticon-highlight',
       nextIconClass: this.props.value >= mid ? 'anticon-highlight' : '',
@@ -40,14 +39,13 @@ var IconSlider = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['lock', 'unlock'] }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['frown', 'smile'] }), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Slider, Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 
 <span class="hljs-keyword">const</span> IconSlider = React.createClass({
   getInitialState() {
     <span class="hljs-keyword">const</span> max = <span class="hljs-keyword">this</span>.props.max;
     <span class="hljs-keyword">const</span> min = <span class="hljs-keyword">this</span>.props.min;
     <span class="hljs-keyword">const</span> mid = ((max - min) / <span class="hljs-number">2</span>).toFixed(<span class="hljs-number">5</span>);
-
     <span class="hljs-keyword">return</span> {
       preIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">''</span> : <span class="hljs-string">'anticon-highlight'</span>,
       nextIconClass: <span class="hljs-keyword">this</span>.props.value &gt;= mid ? <span class="hljs-string">'anticon-highlight'</span> : <span class="hljs-string">''</span>,
@@ -76,7 +74,7 @@ ReactDOM.render(React.createElement(IconSlider, { min: 0, max: 20, value: 0, ico
 });
 
 ReactDOM.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">IconSlider</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">{['lock',</span> '<span class="hljs-attribute">unlock</span>']} /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">IconSlider</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">max</span>=<span class="hljs-value">{20}</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">{0}</span> <span class="hljs-attribute">icon</span>=<span class="hljs-value">{['frown',</span> '<span class="hljs-attribute">smile</span>']} /&gt;</span>
 , mountNode);</span></code></pre></div><style type="text/css">.iconWrapper {
   position: relative;
   padding: 0px 30px;
