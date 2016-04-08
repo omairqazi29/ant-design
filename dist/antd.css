@@ -4303,14 +4303,6 @@ fieldset[disabled] .ant-btn-dashed.active {
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-.ant-select-dropdown-menu-item:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-.ant-select-dropdown-menu-item:last-child {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
 .ant-select-dropdown-menu-item:hover,
 .ant-select-dropdown-menu-item-active {
   background-color: #eaf8fe;
