@@ -11334,6 +11334,8 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item,
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
   border-color: #404040;
+  border-bottom: 0;
+  top: 0;
 }
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item-active,
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item-selected,
