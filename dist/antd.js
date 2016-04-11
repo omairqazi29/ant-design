@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9d5915162a4c249474e3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ea8940ee2b0cec266eeb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22034,6 +22034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      (function () {
 	        var paths = [];
 	        crumbs = routes.map(function (route, i) {
+	          route.path = route.path || '';
 	          var path = route.path.replace(/^\//, '');
 	          Object.keys(params).forEach(function (key) {
 	            path = path.replace(':' + key, params[key]);

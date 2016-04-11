@@ -2,13 +2,18 @@
   <div class="code-box-demo">
     <div id="components-upload-demo-basic"></div>
     <script>mountNode = document.getElementById('components-upload-demo-basic');</script>
-    <script>(function(){'use strict';
+    <p>order: 0</p>
+<h2 id="title-点击上传">title: 点击上传</h2><p>经典款式，用户点击按钮弹出文件选择框。</p>
+<script>(function(){'use strict';
 
 var _antd = require('antd');
 
 var props = {
   name: 'file',
   action: '/upload.do',
+  headers: {
+    authorization: 'authorization-text'
+  },
   onChange: function onChange(info) {
     if (info.file.status !== 'uploading') {
       console.log(info.file, info.fileList);
@@ -35,6 +40,9 @@ ReactDOM.render(React.createElement(
 <span class="hljs-keyword">const</span> props = {
   name: <span class="hljs-string">'file'</span>,
   action: <span class="hljs-string">'/upload.do'</span>,
+  headers: {
+    authorization: <span class="hljs-string">'authorization-text'</span>,
+  },
   onChange(info) {
     <span class="hljs-keyword">if</span> (info.file.status !== <span class="hljs-string">'uploading'</span>) {
       <span class="hljs-built_in">console</span>.log(info.file, info.fileList);
@@ -57,11 +65,9 @@ ReactDOM.render(
   </div>
   <div class="code-box-meta markdown">
     <div class="code-box-title">
-      <a href="#demo-basic">点击上传</a>
+      <a href="#demo-basic">null</a>
     </div>
     
-<p>经典款式，用户点击按钮弹出文件选择框。</p>
-
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
 </div>
