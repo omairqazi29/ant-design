@@ -3667,13 +3667,10 @@ var Demo = React.createClass({
       passBarShow: false, // 是否显示密码强度提示条
       rePassBarShow: false,
       passStrength: 'L', // 密码强度
-      rePassStrength: 'L',
-      visible: false
+      rePassStrength: 'L'
     };
   },
   handleSubmit: function handleSubmit() {
-    var _this = this;
-
     this.props.form.validateFields(function (errors, values) {
       if (!!errors) {
         console.log('Errors in form!!!');
@@ -3681,7 +3678,6 @@ var Demo = React.createClass({
       }
       console.log('Submit!!!');
       console.log(values);
-      _this.setState({ visible: false });
     });
   },
   getPassStrenth: function getPassStrenth(value, type) {
@@ -3707,12 +3703,6 @@ var Demo = React.createClass({
         this.setState({ rePassBarShow: false });
       }
     }
-  },
-  showModal: function showModal() {
-    this.setState({ visible: true });
-  },
-  hideModal: function hideModal() {
-    this.setState({ visible: false });
   },
   checkPass: function checkPass(rule, value, callback) {
     var form = this.props.form;
@@ -3768,7 +3758,6 @@ var Demo = React.createClass({
   render: function render() {
     var getFieldProps = this.props.form.getFieldProps;
 
-    // 如果觉得在 JSX 中写 `getFieldProps` 会影响阅读，可以先用变量保存 `getFieldProps` 的返回值。
 
     var passProps = getFieldProps('pass', {
       rules: [{ required: true, whitespace: true, message: '请填写密码' }, { validator: this.checkPass }]
@@ -3790,56 +3779,66 @@ var Demo = React.createClass({
       'div',
       null,
       React.createElement(
-        _antd.Button,
-        { type: 'primary', onClick: this.showModal },
-        '修改密码'
-      ),
-      React.createElement(
-        _antd.Modal,
-        { title: '修改密码', visible: this.state.visible, onOk: this.handleSubmit, onCancel: this.hideModal },
+        _antd.Form,
+        { horizontal: true, form: this.props.form },
         React.createElement(
-          _antd.Form,
-          { horizontal: true, form: this.props.form },
+          _antd.Row,
+          null,
           React.createElement(
-            _antd.Row,
-            null,
+            _antd.Col,
+            { span: '18' },
             React.createElement(
-              _antd.Col,
-              { span: '18' },
-              React.createElement(
-                FormItem,
-                _extends({}, formItemLayout, {
-                  label: '密码：' }),
-                React.createElement(_antd.Input, _extends({}, passProps, { type: 'password',
-                  onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
-                  autoComplete: 'off', id: 'pass' }))
-              )
-            ),
-            React.createElement(
-              _antd.Col,
-              { span: '6' },
-              this.state.passBarShow ? this.renderPassStrengthBar('pass') : null
+              FormItem,
+              _extends({}, formItemLayout, {
+                label: '密码：' }),
+              React.createElement(_antd.Input, _extends({}, passProps, { type: 'password',
+                onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
+                autoComplete: 'off', id: 'pass'
+              }))
             )
           ),
           React.createElement(
-            _antd.Row,
-            null,
+            _antd.Col,
+            { span: '6' },
+            this.state.passBarShow ? this.renderPassStrengthBar('pass') : null
+          )
+        ),
+        React.createElement(
+          _antd.Row,
+          null,
+          React.createElement(
+            _antd.Col,
+            { span: '18' },
+            React.createElement(
+              FormItem,
+              _extends({}, formItemLayout, {
+                label: '确认密码：' }),
+              React.createElement(_antd.Input, _extends({}, rePassProps, { type: 'password',
+                onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
+                autoComplete: 'off', id: 'rePass'
+              }))
+            )
+          ),
+          React.createElement(
+            _antd.Col,
+            { span: '6' },
+            this.state.rePassBarShow ? this.renderPassStrengthBar('rePass') : null
+          )
+        ),
+        React.createElement(
+          _antd.Row,
+          null,
+          React.createElement(
+            _antd.Col,
+            { span: '18' },
             React.createElement(
               _antd.Col,
-              { span: '18' },
+              { span: '18', offset: '6' },
               React.createElement(
-                FormItem,
-                _extends({}, formItemLayout, {
-                  label: '确认密码：' }),
-                React.createElement(_antd.Input, _extends({}, rePassProps, { type: 'password',
-                  onContextMenu: noop, onPaste: noop, onCopy: noop, onCut: noop,
-                  autoComplete: 'off', id: 'rePass' }))
+                _antd.Button,
+                { type: 'primary', onClick: this.handleSubmit },
+                '提交'
               )
-            ),
-            React.createElement(
-              _antd.Col,
-              { span: '6' },
-              this.state.rePassBarShow ? this.renderPassStrengthBar('rePass') : null
             )
           )
         )
@@ -3850,7 +3849,7 @@ var Demo = React.createClass({
 
 Demo = createForm()(Demo);
 
-ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Form, Input, Row, Col, Modal } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Form, Input, Row, Col } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
 <span class="hljs-keyword">const</span> createForm = Form.create;
 <span class="hljs-keyword">const</span> FormItem = Form.Item;
@@ -3866,7 +3865,6 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
       rePassBarShow: <span class="hljs-literal">false</span>,
       passStrength: <span class="hljs-string">'L'</span>, <span class="hljs-comment">// 密码强度</span>
       rePassStrength: <span class="hljs-string">'L'</span>,
-      visible: <span class="hljs-literal">false</span>,
     };
   },
 
@@ -3878,7 +3876,6 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
       }
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Submit!!!'</span>);
       <span class="hljs-built_in">console</span>.log(values);
-      <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">false</span> });
     });
   },
 
@@ -3905,14 +3902,6 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
         <span class="hljs-keyword">this</span>.setState({ rePassBarShow: <span class="hljs-literal">false</span> });
       }
     }
-  },
-
-  showModal() {
-    <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">true</span> });
-  },
-
-  hideModal() {
-    <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">false</span> });
   },
 
   checkPass(rule, value, callback) {
@@ -3968,7 +3957,6 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
   render() {
     <span class="hljs-keyword">const</span> { getFieldProps } = <span class="hljs-keyword">this</span>.props.form;
 
-    <span class="hljs-comment">// 如果觉得在 JSX 中写 `getFieldProps` 会影响阅读，可以先用变量保存 `getFieldProps` 的返回值。</span>
     <span class="hljs-keyword">const</span> passProps = getFieldProps(<span class="hljs-string">'pass'</span>, {
       rules: [
         { required: <span class="hljs-literal">true</span>, whitespace: <span class="hljs-literal">true</span>, message: <span class="hljs-string">'请填写密码'</span> },
@@ -3990,40 +3978,46 @@ ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div cl
     };
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>修改密码<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"修改密码"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleSubmit}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.hideModal}</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">form</span>=<span class="hljs-value">{this.props.form}</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-                  {<span class="hljs-attribute">...formItemLayout</span>}
-                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...passProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
-                    <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
-                    <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pass"</span> /&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-                {this.state.passBarShow ? this.renderPassStrengthBar('pass') : null}
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">form</span>=<span class="hljs-value">{this.props.form}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+                {<span class="hljs-attribute">...formItemLayout</span>}
+                <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...passProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
+                  <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
+                  <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pass"</span>
+                /&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
+              {this.state.passBarShow ? this.renderPassStrengthBar('pass') : null}
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
-                  {<span class="hljs-attribute">...formItemLayout</span>}
-                  <span class="hljs-attribute">label</span>=<span class="hljs-value">"确认密码："</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...rePassProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
-                    <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
-                    <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"rePass"</span> /&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+                {<span class="hljs-attribute">...formItemLayout</span>}
+                <span class="hljs-attribute">label</span>=<span class="hljs-value">"确认密码："</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...rePassProps</span>} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>
+                  <span class="hljs-attribute">onContextMenu</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onPaste</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCopy</span>=<span class="hljs-value">{noop}</span> <span class="hljs-attribute">onCut</span>=<span class="hljs-value">{noop}</span>
+                  <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"rePass"</span>
+                /&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
+              {this.state.rePassBarShow ? this.renderPassStrengthBar('rePass') : null}
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Row</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"18"</span> <span class="hljs-attribute">offset</span>=<span class="hljs-value">"6"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.handleSubmit}</span>&gt;</span>提交<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">Col</span> <span class="hljs-attribute">span</span>=<span class="hljs-value">"6"</span>&gt;</span>
-                {this.state.rePassBarShow ? this.renderPassStrengthBar('rePass') : null}
-              <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">Col</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Row</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }
@@ -4135,6 +4129,140 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
 
     <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
   </div>
+</div><div class="code-box" id="demo-form-in-modal">
+  <div class="code-box-demo">
+    <div id="components-form-demo-form-in-modal"></div>
+    <script>mountNode = document.getElementById('components-form-demo-form-in-modal');</script>
+    <script>(function(){"use strict";
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _antd = require("antd");
+
+var createForm = _antd.Form.create;
+var FormItem = _antd.Form.Item;
+
+var Demo = React.createClass({
+  displayName: "Demo",
+  getInitialState: function getInitialState() {
+    return { visible: false };
+  },
+  handleSubmit: function handleSubmit() {
+    console.log(this.props.form.getFieldsValue());
+    this.hideModal();
+  },
+  showModal: function showModal() {
+    this.setState({ visible: true });
+  },
+  hideModal: function hideModal() {
+    this.setState({ visible: false });
+  },
+  render: function render() {
+    var getFieldProps = this.props.form.getFieldProps;
+
+
+    var formItemLayout = {
+      labelCol: { span: 4 },
+      wrapperCol: { span: 20 }
+    };
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        _antd.Button,
+        { type: "primary", onClick: this.showModal },
+        "点击有惊喜"
+      ),
+      React.createElement(
+        _antd.Modal,
+        { title: "登录", visible: this.state.visible, onOk: this.handleSubmit, onCancel: this.hideModal },
+        React.createElement(
+          _antd.Form,
+          { horizontal: true, form: this.props.form },
+          React.createElement(
+            FormItem,
+            _extends({}, formItemLayout, {
+              label: "用户名：" }),
+            React.createElement(_antd.Input, _extends({}, getFieldProps('username', {}), { type: "text", autoComplete: "off" }))
+          ),
+          React.createElement(
+            FormItem,
+            _extends({}, formItemLayout, {
+              label: "密码：" }),
+            React.createElement(_antd.Input, _extends({}, getFieldProps('password', {}), { type: "password", autoComplete: "off" }))
+          )
+        )
+      )
+    );
+  }
+});
+
+Demo = createForm()(Demo);
+
+ReactDOM.render(React.createElement(Demo, null), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Button, Form, Input, Modal } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+<span class="hljs-keyword">const</span> createForm = Form.create;
+<span class="hljs-keyword">const</span> FormItem = Form.Item;
+
+<span class="hljs-keyword">let</span> Demo = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> { visible: <span class="hljs-literal">false</span> };
+  },
+
+  handleSubmit() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.props.form.getFieldsValue());
+    <span class="hljs-keyword">this</span>.hideModal();
+  },
+
+  showModal() {
+    <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">true</span> });
+  },
+
+  hideModal() {
+    <span class="hljs-keyword">this</span>.setState({ visible: <span class="hljs-literal">false</span> });
+  },
+
+  render() {
+    <span class="hljs-keyword">const</span> { getFieldProps } = <span class="hljs-keyword">this</span>.props.form;
+
+    <span class="hljs-keyword">const</span> formItemLayout = {
+      labelCol: { span: <span class="hljs-number">4</span> },
+      wrapperCol: { span: <span class="hljs-number">20</span> },
+    };
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"primary"</span> <span class="hljs-attribute">onClick</span>=<span class="hljs-value">{this.showModal}</span>&gt;</span>点击有惊喜<span class="hljs-tag">&lt;/<span class="hljs-title">Button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Modal</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"登录"</span> <span class="hljs-attribute">visible</span>=<span class="hljs-value">{this.state.visible}</span> <span class="hljs-attribute">onOk</span>=<span class="hljs-value">{this.handleSubmit}</span> <span class="hljs-attribute">onCancel</span>=<span class="hljs-value">{this.hideModal}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">Form</span> <span class="hljs-attribute">horizontal</span> <span class="hljs-attribute">form</span>=<span class="hljs-value">{this.props.form}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+              {<span class="hljs-attribute">...formItemLayout</span>}
+              <span class="hljs-attribute">label</span>=<span class="hljs-value">"用户名："</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">username</span>', {})} <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">FormItem</span>
+              {<span class="hljs-attribute">...formItemLayout</span>}
+              <span class="hljs-attribute">label</span>=<span class="hljs-value">"密码："</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> {<span class="hljs-attribute">...getFieldProps</span>('<span class="hljs-attribute">password</span>', {})} <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">autoComplete</span>=<span class="hljs-value">"off"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">FormItem</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">Form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Modal</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+});
+
+Demo = createForm()(Demo);
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, mountNode);</span></code></pre></div>
+  </div>
+  <div class="code-box-meta markdown">
+    <div class="code-box-title">
+      <a href="#demo-form-in-modal">与 Modal 配合使用</a>
+    </div>
+    
+<p>在 Modal 中使用 Form，当点击 Modal 的确定时，调用 <code>this.props.form.getFieldsValue</code> 获取表单内的值。</p>
+
+    <span class="collapse anticon anticon-circle-o-right" unselectable="none"></span>
+  </div>
 </div>
     </div>
 </div>
@@ -4197,6 +4325,11 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   <li>
     <a title="自定义校验规则" href="#demo-validate-customized">
       <span>自定义校验规则</span>
+    </a>
+  </li>
+  <li>
+    <a title="与 Modal 配合使用" href="#demo-form-in-modal">
+      <span>与 Modal 配合使用</span>
     </a>
   </li>
 </ul>

@@ -7129,10 +7129,6 @@ td.ant-table-column-has-prev {
   bottom: 12px;
 }
 .ant-pagination {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   font-size: 12px;
 }
 .ant-pagination:after {
@@ -7152,6 +7148,10 @@ td.ant-table-column-has-prev {
 .ant-pagination-item {
   cursor: pointer;
   border-radius: 6px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   min-width: 28px;
   height: 28px;
   line-height: 28px;
@@ -7746,6 +7746,9 @@ form .has-feedback .anticon {
   width: 32px;
   height: 32px;
   line-height: 32px;
+}
+form .has-feedback .ant-input {
+  padding-right: 24px;
 }
 form .ant-input,
 form .ant-input-group .ant-input,

@@ -101,7 +101,9 @@ module.exports = {
   ],
   'components/form/index.md': [
     require('../components/form/demo/advanced-search-form.md'),
+    require('../components/form/demo/dynamic-form-item.md'),
     require('../components/form/demo/form-controls.md'),
+    require('../components/form/demo/form-in-modal.md'),
     require('../components/form/demo/horizontal-form.md'),
     require('../components/form/demo/inline-form.md'),
     require('../components/form/demo/input-group.md'),
