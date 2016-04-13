@@ -5043,6 +5043,9 @@ textarea.ant-calendar-time .ant-time-picker-input {
   height: 22px;
   border-radius: 4px;
 }
+.ant-calendar-time .ant-calendar-input {
+  padding-right: 21px;
+}
 .ant-calendar-time .ant-time-picker-icon {
   display: none;
 }
@@ -11163,7 +11166,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 }
 .ant-menu-submenu {
   position: relative;
-  z-index: 1;
 }
 .ant-menu-submenu > .ant-menu {
   background-color: #fff;
@@ -12230,6 +12232,7 @@ ul li.ant-transfer-list-highlight-enter {
   font-size: 12px;
   background: #fff;
   position: absolute;
+  z-index: 1050;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
@@ -12268,9 +12271,16 @@ ul li.ant-transfer-list-highlight-enter {
   border-right: 1px solid #e9e9e9;
   overflow: auto;
 }
+.ant-cascader-menu:first-child {
+  border-radius: 6px 0 0 6px;
+}
 .ant-cascader-menu:last-child {
   border-right-color: transparent;
   margin-right: -1px;
+  border-radius: 0 6px 6px 0;
+}
+.ant-cascader-menu:only-child {
+  border-radius: 6px;
 }
 .ant-cascader-menu-item {
   padding: 7px 16px;
