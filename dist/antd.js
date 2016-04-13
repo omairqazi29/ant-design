@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e873b1dacc6da9958936"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4fd4a77ee7a44f5a5023"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -23687,6 +23687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react3["default"].createElement(
 	        _Picker2["default"],
 	        _extends({
+	          formatter: this.getFormatter(),
 	          transitionName: transitionName,
 	          disabled: disabled,
 	          calendar: calendar,
@@ -23909,6 +23910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      var calendar = _react3["default"].createElement(TheCalendar, _extends({
+	        formatter: this.getFormatter(),
 	        disabledDate: this.props.disabledDate,
 	        disabledTime: disabledTime,
 	        locale: locale.lang,
@@ -26514,7 +26516,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react3["default"].createElement(
 	      _rcMenu.Item,
 	      { key: item.value },
-	      _react3["default"].createElement(_checkbox2["default"], { checked: this.state.selectedKeys.indexOf(item.value) >= 0 }),
+	      _react3["default"].createElement(_checkbox2["default"], { checked: this.state.selectedKeys.indexOf(item.value.toString()) >= 0 }),
 	      item.text
 	    );
 	  },
@@ -26533,7 +26535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return {
 	            v: _react3["default"].createElement(
 	              _rcMenu.SubMenu,
-	              { title: item.text, className: subMenuCls, key: item.value },
+	              { title: item.text, className: subMenuCls, key: item.value.toString() },
 	              item.children.map(function (child) {
 	                return _this.renderMenuItem(child);
 	              })

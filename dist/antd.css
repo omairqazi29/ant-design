@@ -11094,6 +11094,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
 }
+.ant-menu-item-selected > a,
+.ant-menu-item-selected > a:hover {
+  color: #2db7f5;
+}
 .ant-menu-inline,
 .ant-menu-vertical {
   border-right: 1px solid #e9e9e9;
@@ -11374,6 +11378,10 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   color: #fff;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+}
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected > a,
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected > a:hover {
+  color: #fff;
 }
 .ant-menu-dark .ant-menu-item-active,
 .ant-menu-dark .ant-menu-submenu-active,
