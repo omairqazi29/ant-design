@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d328afb460c1fbee3ac2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f82493b698cdb66abe09"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -44256,6 +44256,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onKeyDown: _react2['default'].PropTypes.func,
 	    onFocus: _react2['default'].PropTypes.func,
 	    onBlur: _react2['default'].PropTypes.func,
+	    max: _react2['default'].PropTypes.number,
+	    min: _react2['default'].PropTypes.number,
 	    step: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string])
 	  },
 
@@ -44423,16 +44425,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  upStep: function upStep(val) {
-	    var stepNum = this.props.step;
+	    var _props4 = this.props;
+	    var step = _props4.step;
+	    var min = _props4.min;
+
 	    var precisionFactor = this.getPrecisionFactor();
-	    var result = (precisionFactor * val + precisionFactor * stepNum) / precisionFactor;
+	    var result = undefined;
+	    if (typeof val === 'number') {
+	      result = (precisionFactor * val + precisionFactor * step) / precisionFactor;
+	    } else {
+	      result = min === -Infinity ? step : min;
+	    }
 	    return this.toPrecisionAsStep(result);
 	  },
 
 	  downStep: function downStep(val) {
-	    var stepNum = this.props.step;
+	    var _props5 = this.props;
+	    var step = _props5.step;
+	    var min = _props5.min;
+
 	    var precisionFactor = this.getPrecisionFactor();
-	    var result = (precisionFactor * val - precisionFactor * stepNum) / precisionFactor;
+	    var result = undefined;
+	    if (typeof val === 'number') {
+	      result = (precisionFactor * val - precisionFactor * step) / precisionFactor;
+	    } else {
+	      result = min === -Infinity ? -step : min;
+	    }
 	    return this.toPrecisionAsStep(result);
 	  },
 
