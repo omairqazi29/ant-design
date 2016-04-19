@@ -839,8 +839,8 @@ var _antd = require('antd');
 
 var DropdownButton = _antd.Dropdown.Button;
 
-function handleButtonClick() {
-  console.log('click button');
+function handleButtonClick(e) {
+  console.log('click left button', e);
 }
 
 function handleMenuClick(e) {
@@ -874,8 +874,8 @@ ReactDOM.render(React.createElement(
 ), mountNode);})()</script><div class="highlight"><pre><code class="javascript"><span class="hljs-keyword">import</span> { Menu, Dropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
 <span class="hljs-keyword">const</span> DropdownButton = Dropdown.Button;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleButtonClick</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click button'</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleButtonClick</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'click left button'</span>, e);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleMenuClick</span>(<span class="hljs-params">e</span>) </span>{

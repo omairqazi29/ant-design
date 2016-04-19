@@ -117,6 +117,7 @@ module.exports = {
   ],
   'components/input-number/index.md': [
     require('../components/input-number/demo/basic.md'),
+    require('../components/input-number/demo/digit.md'),
     require('../components/input-number/demo/disabled.md'),
     require('../components/input-number/demo/size.md'),
   ],

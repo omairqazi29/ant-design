@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f82493b698cdb66abe09"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e88c4b1baa9e7d81f55d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -15559,17 +15559,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	var _Notification = __webpack_require__(409);
 
 	var _Notification2 = _interopRequireDefault(_Notification);
 
-	exports['default'] = _Notification2['default'];
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	exports["default"] = _Notification2["default"];
 	module.exports = exports['default'];
 
 /***/ },
@@ -22310,7 +22310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function clearButton(button) {
-	  button.className = button.className.replace(prefix + 'clicked', '');
+	  button.className = button.className.replace(' ' + prefix + 'clicked', '');
 	}
 
 	var Button = _wrapComponent('Button')(function (_React$Component) {
@@ -24097,8 +24097,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var align = _props.align;
 	    var children = _props.children;
 	    var className = _props.className;
+	    var onClick = _props.onClick;
 
-	    var restProps = _objectWithoutProperties(_props, ['type', 'overlay', 'trigger', 'align', 'children', 'className']);
+	    var restProps = _objectWithoutProperties(_props, ['type', 'overlay', 'trigger', 'align', 'children', 'className', 'onClick']);
 
 	    var cls = (0, _classnames2["default"])({
 	      'ant-dropdown-button': true,
@@ -24109,7 +24110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _extends({}, restProps, { className: cls }),
 	      _react3["default"].createElement(
 	        _button2["default"],
-	        { type: type },
+	        { type: type, onClick: onClick },
 	        children
 	      ),
 	      _react3["default"].createElement(
@@ -26797,8 +26798,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    if ('pagination' in nextProps && nextProps.pagination !== false) {
-	      this.setState({
-	        pagination: (0, _objectAssign3["default"])({}, defaultPagination, this.state.pagination, nextProps.pagination)
+	      this.setState(function (previousState) {
+	        return {
+	          pagination: (0, _objectAssign3["default"])({}, defaultPagination, previousState.pagination, nextProps.pagination)
+	        };
 	      });
 	    }
 	    // dataSource 的变化会清空选中项
@@ -27520,15 +27523,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	      }
 
+	      tabBarExtraContent = tabBarExtraContent ? _react3["default"].createElement(
+	        'div',
+	        { className: prefixCls + '-extra-content' },
+	        tabBarExtraContent
+	      ) : null;
+
 	      return _react3["default"].createElement(
 	        _rcTabs2["default"],
 	        _extends({}, this.props, {
 	          className: className,
-	          tabBarExtraContent: _react3["default"].createElement(
-	            'div',
-	            { className: prefixCls + '-extra-content' },
-	            tabBarExtraContent
-	          ),
+	          tabBarExtraContent: tabBarExtraContent,
 	          onChange: this.handleChange,
 	          animation: animation }),
 	        children
@@ -27667,7 +27672,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'animationEnd',
 	    value: function animationEnd(key, existed) {
-	      if (!existed) {
+	      if (!existed && !this.state.closed) {
 	        this.setState({
 	          closed: true,
 	          closing: false
@@ -45719,13 +45724,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	var _react = __webpack_require__(1);
 
@@ -45735,80 +45736,76 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var Notice = _react2['default'].createClass({
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var Notice = _react2["default"].createClass({
 	  displayName: 'Notice',
 
 	  propTypes: {
-	    duration: _react2['default'].PropTypes.number,
-	    onClose: _react2['default'].PropTypes.func,
-	    children: _react2['default'].PropTypes.any
+	    duration: _react.PropTypes.number,
+	    onClose: _react.PropTypes.func,
+	    children: _react.PropTypes.any
 	  },
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      onEnd: function onEnd() {},
+	      onClose: function onClose() {},
+
 	      duration: 1.5,
 	      style: {
 	        right: '50%'
 	      }
 	    };
 	  },
-
 	  componentDidMount: function componentDidMount() {
 	    var _this = this;
 
-	    this.clearCloseTimer();
 	    if (this.props.duration) {
 	      this.closeTimer = setTimeout(function () {
 	        _this.close();
 	      }, this.props.duration * 1000);
 	    }
 	  },
-
-	  componentDidUpdate: function componentDidUpdate() {
-	    this.componentDidMount();
-	  },
-
 	  componentWillUnmount: function componentWillUnmount() {
 	    this.clearCloseTimer();
 	  },
-
 	  clearCloseTimer: function clearCloseTimer() {
 	    if (this.closeTimer) {
 	      clearTimeout(this.closeTimer);
 	      this.closeTimer = null;
 	    }
 	  },
-
 	  close: function close() {
 	    this.clearCloseTimer();
 	    this.props.onClose();
 	  },
-
 	  render: function render() {
 	    var _className;
 
 	    var props = this.props;
 	    var componentClass = props.prefixCls + '-notice';
 	    var className = (_className = {}, _defineProperty(_className, '' + componentClass, 1), _defineProperty(_className, componentClass + '-closable', props.closable), _defineProperty(_className, props.className, !!props.className), _className);
-	    return _react2['default'].createElement(
+	    return _react2["default"].createElement(
 	      'div',
-	      { className: (0, _classnames2['default'])(className), style: props.style },
-	      _react2['default'].createElement(
+	      { className: (0, _classnames2["default"])(className), style: props.style },
+	      _react2["default"].createElement(
 	        'div',
 	        { className: componentClass + '-content' },
-	        this.props.children
+	        props.children
 	      ),
-	      props.closable ? _react2['default'].createElement(
+	      props.closable ? _react2["default"].createElement(
 	        'a',
 	        { tabIndex: '0', onClick: this.close, className: componentClass + '-close' },
-	        _react2['default'].createElement('span', { className: componentClass + '-close-x' })
+	        _react2["default"].createElement('span', { className: componentClass + '-close-x' })
 	      ) : null
 	    );
 	  }
 	});
 
-	exports['default'] = Notice;
+	exports["default"] = Notice;
 	module.exports = exports['default'];
 
 /***/ },
@@ -45817,15 +45814,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	var _react = __webpack_require__(1);
 
@@ -45849,6 +45842,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Notice2 = _interopRequireDefault(_Notice);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var seed = 0;
 	var now = Date.now();
 
@@ -45856,26 +45853,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return 'rcNotification_' + now + '_' + seed++;
 	}
 
-	var Notification = _react2['default'].createClass({
+	var Notification = _react2["default"].createClass({
 	  displayName: 'Notification',
+
+	  propTypes: {
+	    prefixCls: _react.PropTypes.string,
+	    transitionName: _react.PropTypes.string,
+	    animation: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]),
+	    style: _react.PropTypes.object
+	  },
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      prefixCls: 'rc-notification',
 	      animation: 'fade',
 	      style: {
-	        'top': 65,
+	        top: 65,
 	        left: '50%'
 	      }
 	    };
 	  },
-
 	  getInitialState: function getInitialState() {
 	    return {
 	      notices: []
 	    };
 	  },
-
 	  getTransitionName: function getTransitionName() {
 	    var props = this.props;
 	    var transitionName = props.transitionName;
@@ -45884,47 +45886,51 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    return transitionName;
 	  },
-
 	  add: function add(notice) {
 	    var key = notice.key = notice.key || getUuid();
-	    var notices = this.state.notices;
-	    if (!notices.filter(function (v) {
-	      return v.key === key;
-	    }).length) {
-	      this.setState({
-	        notices: notices.concat(notice)
-	      });
-	    }
+	    this.setState(function (previousState) {
+	      var notices = previousState.notices;
+	      if (!notices.filter(function (v) {
+	        return v.key === key;
+	      }).length) {
+	        return {
+	          notices: notices.concat(notice)
+	        };
+	      }
+	    });
 	  },
-
 	  remove: function remove(key) {
-	    var notices = this.state.notices.filter(function (notice) {
-	      return notice.key !== key;
-	    });
-	    this.setState({
-	      notices: notices
+	    this.setState(function (previousState) {
+	      return {
+	        notices: previousState.notices.filter(function (notice) {
+	          return notice.key !== key;
+	        })
+	      };
 	    });
 	  },
-
 	  render: function render() {
-	    var _className,
-	        _this = this;
+	    var _this = this,
+	        _className;
 
 	    var props = this.props;
 	    var noticeNodes = this.state.notices.map(function (notice) {
 	      var onClose = (0, _rcUtil.createChainedFunction)(_this.remove.bind(_this, notice.key), notice.onClose);
-	      return _react2['default'].createElement(
-	        _Notice2['default'],
-	        _extends({ prefixCls: props.prefixCls }, notice, { onClose: onClose }),
+	      return _react2["default"].createElement(
+	        _Notice2["default"],
+	        _extends({
+	          prefixCls: props.prefixCls
+	        }, notice, {
+	          onClose: onClose
+	        }),
 	        notice.content
 	      );
 	    });
 	    var className = (_className = {}, _defineProperty(_className, props.prefixCls, 1), _defineProperty(_className, props.className, !!props.className), _className);
-	    return _react2['default'].createElement(
+	    return _react2["default"].createElement(
 	      'div',
-	      { className: (0, _classnames2['default'])(className), style: props.style },
-	      _react2['default'].createElement(
-	        _rcAnimate2['default'],
+	      { className: (0, _classnames2["default"])(className), style: props.style },
+	      _react2["default"].createElement(
+	        _rcAnimate2["default"],
 	        { transitionName: this.getTransitionName() },
 	        noticeNodes
 	      )
@@ -45936,7 +45942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var props = properties || {};
 	  var div = document.createElement('div');
 	  document.body.appendChild(div);
-	  var notification = _reactDom2['default'].render(_react2['default'].createElement(Notification, props), div);
+	  var notification = _reactDom2["default"].render(_react2["default"].createElement(Notification, props), div);
 	  return {
 	    notice: function notice(noticeProps) {
 	      notification.add(noticeProps);
@@ -45944,15 +45950,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    removeNotice: function removeNotice(key) {
 	      notification.remove(key);
 	    },
+
 	    component: notification,
 	    destroy: function destroy() {
-	      _reactDom2['default'].unmountComponentAtNode(div);
+	      _reactDom2["default"].unmountComponentAtNode(div);
 	      document.body.removeChild(div);
 	    }
 	  };
 	};
 
-	exports['default'] = Notification;
+	exports["default"] = Notification;
 	module.exports = exports['default'];
 
 /***/ },
