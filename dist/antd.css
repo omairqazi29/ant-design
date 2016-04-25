@@ -344,9 +344,9 @@ samp {
 }
 @font-face {
   font-family: 'anticon';
-  src: url('//at.alicdn.com/t/font_1457169990_5499172.eot');
+  src: url('//at.alicdn.com/t/font_1461567603_8950496.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1457169990_5499172.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1457169990_5499172.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1457169990_5499172.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1457169990_5499172.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1461567603_8950496.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1461567603_8950496.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1461567603_8950496.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1461567603_8950496.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .anticon {

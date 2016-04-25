@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c5a76cf74dc0346f4011"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "73f97e0275eaef928e20"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27087,7 +27087,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  getInitialState: function getInitialState() {
 	    return {
 	      // 减少状态
-	      selectedRowKeys: this.props.selectedRowKeys || [],
+	      selectedRowKeys: (this.props.rowSelection || {}).selectedRowKeys || [],
 	      filters: {},
 	      selectionDirty: false,
 	      sortColumn: '',
