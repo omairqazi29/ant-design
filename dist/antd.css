@@ -7734,6 +7734,10 @@ fieldset[disabled] .ant-checkbox label {
   line-height: 1.5;
   margin-top: 3px;
 }
+.ant-form-explain,
+.ant-form-extra {
+  color: #999;
+}
 .ant-form-text {
   display: inline-block;
   padding-right: 8px;

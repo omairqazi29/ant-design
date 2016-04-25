@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "73f97e0275eaef928e20"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5d1d26e05897b83ec00c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -24730,6 +24730,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      );
 	    }
 	  }, {
+	    key: 'renderExtra',
+	    value: function renderExtra() {
+	      var _props = this.props;
+	      var prefixCls = _props.prefixCls;
+	      var extra = _props.extra;
+
+	      return _react3["default"].createElement(
+	        'div',
+	        { className: prefixClsFn(prefixCls, 'extra') },
+	        extra
+	      );
+	    }
+	  }, {
 	    key: 'getValidateStatus',
 	    value: function getValidateStatus() {
 	      var _context$form = this.context.form;
@@ -24828,7 +24841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	        return child;
 	      });
-	      return [this.renderLabel(), this.renderWrapper(this.renderValidateWrapper(children, this.renderHelp(), props.extra))];
+	      return [this.renderLabel(), this.renderWrapper(this.renderValidateWrapper(children, this.renderHelp(), this.renderExtra()))];
 	    }
 	  }, {
 	    key: 'renderFormItem',
@@ -27068,6 +27081,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function noop() {}
 
+	function stopPropagation(e) {
+	  e.stopPropagation();
+	  e.nativeEvent.stopImmediatePropagation();
+	}
+
 	var defaultLocale = {
 	  filterTitle: '筛选',
 	  filterConfirm: '确定',
@@ -27370,7 +27388,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      checked = this.state.selectedRowKeys.indexOf(rowIndex) >= 0 || this.getDefaultSelection().indexOf(rowIndex) >= 0;
 	    }
-	    return _react3["default"].createElement(_radio2["default"], { disabled: props.disabled,
+	    return _react3["default"].createElement(_radio2["default"], { disabled: props.disabled, onClick: stopPropagation,
 	      onChange: this.handleRadioSelect.bind(this, record, rowIndex),
 	      value: rowIndex, checked: checked });
 	  },
@@ -27386,7 +27404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this.props.rowSelection.getCheckboxProps) {
 	      props = this.props.rowSelection.getCheckboxProps.call(this, record);
 	    }
-	    return _react3["default"].createElement(_checkbox2["default"], { checked: checked, disabled: props.disabled,
+	    return _react3["default"].createElement(_checkbox2["default"], { checked: checked, disabled: props.disabled, onClick: stopPropagation,
 	      onChange: this.handleSelect.bind(this, record, rowIndex) });
 	  },
 	  getRecordKey: function getRecordKey(record, index) {
@@ -41004,7 +41022,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, Cascader);
 
-	    _get(Object.getPrototypeOf(Cascader.prototype), 'constructor', this).call(this);
+	    _get(Object.getPrototypeOf(Cascader.prototype), 'constructor', this).call(this, props);
 	    var initialValue = [];
 	    if ('value' in props) {
 	      initialValue = props.value || [];
@@ -41088,6 +41106,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var popupClassName = props.popupClassName;
 	      var popupPlacement = props.popupPlacement;
 
+	      var restProps = _objectWithoutProperties(props, ['prefixCls', 'transitionName', 'popupClassName', 'popupPlacement']);
+
 	      // Did not show popup when there is no options
 	      var menus = _react2['default'].createElement('div', null);
 	      var emptyMenuClassName = '';
@@ -41103,7 +41123,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return _react2['default'].createElement(
 	        _rcTrigger2['default'],
-	        { ref: 'trigger',
+	        _extends({ ref: 'trigger'
+	        }, restProps, {
 	          popupPlacement: popupPlacement,
 	          builtinPlacements: BUILT_IN_PLACEMENTS,
 	          popupTransitionName: transitionName,
@@ -41112,7 +41133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          onPopupVisibleChange: this.handlePopupVisibleChange,
 	          prefixCls: prefixCls + '-menus',
 	          popupClassName: popupClassName + emptyMenuClassName,
-	          popup: menus },
+	          popup: menus }),
 	        props.children
 	      );
 	    }
@@ -41187,7 +41208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Menus() {
 	    _classCallCheck(this, Menus);
 
-	    _get(Object.getPrototypeOf(Menus.prototype), 'constructor', this).call(this);
+	    _get(Object.getPrototypeOf(Menus.prototype), 'constructor', this).apply(this, arguments);
 	  }
 
 	  _createClass(Menus, [{
@@ -41421,9 +41442,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames2 = __webpack_require__(2);
+	var _classnames = __webpack_require__(2);
 
-	var _classnames3 = _interopRequireDefault(_classnames2);
+	var _classnames2 = _interopRequireDefault(_classnames);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -41443,7 +41464,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Checkbox).call(this, props));
 
-	    _this.handleChange = _this.handleChange.bind(_this);
+	    _initialiseProps.call(_this);
+
 	    var checked = false;
 	    if ('checked' in props) {
 	      checked = props.checked;
@@ -41451,7 +41473,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      checked = props.defaultChecked;
 	    }
 	    _this.state = {
-	      checked: checked
+	      checked: checked,
+	      focus: false
 	    };
 	    return _this;
 	  }
@@ -41466,30 +41489,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: 'handleChange',
-	    value: function handleChange(e) {
-	      var checked = e.target.checked;
-	      if (!('checked' in this.props)) {
-	        this.setState({
-	          checked: checked ? 1 : 0
-	        });
-	      }
-	      this.props.onChange({
-	        target: _extends({}, this.props, {
-	          checked: checked
-	        }),
-	        stopPropagation: function stopPropagation() {
-	          e.stopPropagation();
-	        },
-	        preventDefault: function preventDefault() {
-	          e.preventDefault();
-	        }
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _classnames;
+	      var _classNames;
 
 	      var props = _extends({}, this.props);
 	      // Remove React warning.
@@ -41497,12 +41499,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // (specify either the value prop, or the defaultValue prop, but not both).
 	      delete props.defaultChecked;
 
+	      var state = this.state;
 	      var prefixCls = props.prefixCls;
-	      var checked = this.state.checked;
+	      var checked = state.checked;
 	      if (typeof checked === 'boolean') {
 	        checked = checked ? 1 : 0;
 	      }
-	      var className = (0, _classnames3["default"])((_classnames = {}, _defineProperty(_classnames, props.className, !!props.className), _defineProperty(_classnames, prefixCls, 1), _defineProperty(_classnames, prefixCls + '-checked', checked), _defineProperty(_classnames, prefixCls + '-checked-' + checked, !!checked), _defineProperty(_classnames, prefixCls + '-disabled', props.disabled), _classnames));
+	      var className = (0, _classnames2["default"])((_classNames = {}, _defineProperty(_classNames, props.className, !!props.className), _defineProperty(_classNames, prefixCls, 1), _defineProperty(_classNames, prefixCls + '-checked', checked), _defineProperty(_classNames, prefixCls + '-checked-' + checked, !!checked), _defineProperty(_classNames, prefixCls + '-focused', state.focus), _defineProperty(_classNames, prefixCls + '-disabled', props.disabled), _classNames));
 	      return _react2["default"].createElement(
 	        'span',
 	        {
@@ -41513,6 +41516,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2["default"].createElement('input', _extends({}, props, {
 	          className: prefixCls + '-input',
 	          checked: !!checked,
+	          onFocus: this.handleFocus,
+	          onBlur: this.handleBlur,
 	          onChange: this.handleChange
 	        }))
 	      );
@@ -41521,6 +41526,40 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  return Checkbox;
 	}(_react2["default"].Component);
+
+	var _initialiseProps = function _initialiseProps() {
+	  var _this2 = this;
+
+	  this.handleFocus = function (e) {
+	    _this2.setState({ focus: true });
+	    _this2.props.onFocus(e);
+	  };
+
+	  this.handleBlur = function (e) {
+	    _this2.setState({ focus: false });
+	    _this2.props.onBlur(e);
+	  };
+
+	  this.handleChange = function (e) {
+	    var checked = e.target.checked;
+	    if (!('checked' in _this2.props)) {
+	      _this2.setState({
+	        checked: checked ? 1 : 0
+	      });
+	    }
+	    _this2.props.onChange({
+	      target: _extends({}, _this2.props, {
+	        checked: checked
+	      }),
+	      stopPropagation: function stopPropagation() {
+	        e.stopPropagation();
+	      },
+	      preventDefault: function preventDefault() {
+	        e.preventDefault();
+	      }
+	    });
+	  };
+	};
 
 	exports["default"] = Checkbox;
 
@@ -41532,6 +41571,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  className: _react2["default"].PropTypes.string,
 	  defaultChecked: _react2["default"].PropTypes.oneOfType([_react2["default"].PropTypes.number, _react2["default"].PropTypes.bool]),
 	  checked: _react2["default"].PropTypes.oneOfType([_react2["default"].PropTypes.number, _react2["default"].PropTypes.bool]),
+	  onFocus: _react2["default"].PropTypes.func,
+	  onBlur: _react2["default"].PropTypes.func,
 	  onChange: _react2["default"].PropTypes.func
 	};
 
@@ -41541,6 +41582,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  type: 'checkbox',
 	  className: '',
 	  defaultChecked: false,
+	  onFocus: function onFocus() {},
+	  onBlur: function onBlur() {},
 	  onChange: function onChange() {}
 	};
 	module.exports = exports['default'];
