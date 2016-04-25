@@ -9002,13 +9002,15 @@ textarea.ant-input-number {
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow:before {
   content: "\E611";
 }
+.ant-collapse-anim-active {
+  -webkit-transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 .ant-collapse-content {
   overflow: hidden;
   color: #666;
   padding: 0 16px;
   background-color: #fff;
-  -webkit-transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .ant-collapse-content > .ant-collapse-content-box {
   padding-top: 16px;
