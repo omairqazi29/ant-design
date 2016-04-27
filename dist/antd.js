@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5d1d26e05897b83ec00c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0f0cf902dfa4bb03833c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6872,6 +6872,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function complete() {
 	    if (!ok) {
 	      ok = true;
+	      node.style.display = '';
 	      done();
 	    }
 	  }
@@ -22734,7 +22735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Button.propTypes = {
 	  type: _react3["default"].PropTypes.oneOf(['primary', 'ghost', 'dashed']),
 	  shape: _react3["default"].PropTypes.oneOf(['circle', 'circle-outline']),
-	  size: _react3["default"].PropTypes.oneOf(['large', 'small']),
+	  size: _react3["default"].PropTypes.oneOf(['large', 'default', 'small']),
 	  htmlType: _react3["default"].PropTypes.oneOf(['submit', 'button', 'reset']),
 	  onClick: _react3["default"].PropTypes.func,
 	  loading: _react3["default"].PropTypes.bool,
@@ -22816,6 +22817,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _UsersAfc163ProjectsAntDesignNode_modulesReactTransformHmrLibIndexJs2(_UsersAfc163ProjectsAntDesignNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
 	  };
 	}
+
+	var Option = _select2["default"].Option;
 
 	function noop() {}
 
@@ -24723,11 +24726,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var props = this.props;
 	      var prefixCls = props.prefixCls;
 	      var help = this.getHelpMsg();
-	      return _react3["default"].createElement(
+	      return help ? _react3["default"].createElement(
 	        'div',
-	        { className: !!help ? prefixClsFn(prefixCls, 'explain') : '', key: 'help' },
+	        { className: prefixClsFn(prefixCls, 'explain'), key: 'help' },
 	        help
-	      );
+	      ) : null;
 	    }
 	  }, {
 	    key: 'renderExtra',
@@ -24737,7 +24740,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var extra = _props.extra;
 
 	      return _react3["default"].createElement(
-	        'div',
+	        'span',
 	        { className: prefixClsFn(prefixCls, 'extra') },
 	        extra
 	      );
@@ -25356,6 +25359,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      openKeys: []
 	    };
 	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if (this.props.mode === 'inline' && nextProps.mode !== 'inline') {
+	      this.switchModeFromInline = true;
+	    }
+	  },
 	  handleClick: function handleClick(e) {
 	    this.setState({
 	      openKeys: []
@@ -25382,7 +25390,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	          openAnimation = 'slide-up';
 	          break;
 	        case 'vertical':
-	          openAnimation = 'zoom-big';
+	          // When mode switch from inline
+	          // submenu should hide without animation
+	          if (this.switchModeFromInline) {
+	            openAnimation = '';
+	            this.switchModeFromInline = false;
+	          } else {
+	            openAnimation = 'zoom-big';
+	          }
 	          break;
 	        case 'inline':
 	          openAnimation = _openAnimation2["default"];
@@ -53357,7 +53372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        (0, _objectAssign2['default'])(ex, extraInfo);
 	      }
 	      if (ex.clear) {
-	        var treeData = this.renderTreeData() || props.chilren;
+	        var treeData = this.renderTreeData() || props.children;
 	        ex.allCheckedNodes = (0, _util.flatToHierarchy)((0, _util.filterAllCheckedData)(value, treeData));
 	      }
 	      props.onChange(this.getVLForOnChange(value), this.getVLForOnChange(label), ex);

@@ -8083,7 +8083,7 @@ fieldset[disabled] .ant-search-input:hover .ant-search-btn-noempty.active {
 .has-warning .ant-calendar-picker-icon:after {
   color: #fa0;
 }
-.has-warning .ant-time-picker-picker-icon:after {
+.has-warning .ant-time-picker-icon:after {
   color: #fa0;
 }
 .has-warning .ant-input-number {
@@ -11118,6 +11118,12 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
   left: 1px;
   position: relative;
   z-index: 1;
+}
+.ant-menu-vertical .ant-menu-sub {
+  border-right: 0;
+}
+.ant-menu-vertical .ant-menu-sub .ant-menu-item {
+  border-right: 0;
 }
 .ant-menu-inline .ant-menu-selected,
 .ant-menu-inline .ant-menu-item-selected {
