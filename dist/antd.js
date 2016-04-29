@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f0cf902dfa4bb03833c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b455736a01c1f9f8d368"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -46537,6 +46537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              prefixCls: props.selectPrefixCls, showSearch: false,
 	              className: prefixCls + '-size-changer',
 	              optionLabelProp: 'children',
+	              dropdownMatchSelectWidth: false,
 	              value: pageSize + '', onChange: _this2._changeSize },
 	            options
 	          );
@@ -46546,7 +46547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (quickGo) {
 	        goInput = React.createElement(
 	          'div',
-	          { title: 'Quick jump to page', className: prefixCls + '-quick-jumper' },
+	          { className: prefixCls + '-quick-jumper' },
 	          locale.jump_to,
 	          React.createElement('input', { type: 'text', value: state._current, onChange: this._handleChange.bind(this), onKeyUp: this._go.bind(this) }),
 	          locale.page
