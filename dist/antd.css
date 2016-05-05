@@ -6413,6 +6413,8 @@ textarea.ant-time-picker-input {
   max-width: 100%;
   border-collapse: separate;
   text-align: left;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .ant-table th {
   background: #f4f4f4;
@@ -6474,6 +6476,9 @@ textarea.ant-time-picker-input {
 .ant-table tfoot tr td {
   border-radius: 0 0 6px 6px;
   border: 0;
+}
+.ant-table.ant-table-bordered tfoot tr {
+  top: 0;
 }
 .ant-table tr.ant-table-row-selected {
   background: #fafafa;

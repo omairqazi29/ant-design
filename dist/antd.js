@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "55a8ae1da8accefb70b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "eda13865be926d33a40a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -50735,7 +50735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                { colSpan: '0' },
+	                { colSpan: '100' },
 	                props.footer(this.state.data)
 	              )
 	            )

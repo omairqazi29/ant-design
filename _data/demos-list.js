@@ -159,6 +159,7 @@ module.exports = {
     require('../components/modal/demo/footer.md'),
     require('../components/modal/demo/info.md'),
     require('../components/modal/demo/locale.md'),
+    require('../components/modal/demo/position.md'),
   ],
   'components/notification/index.md': [
     require('../components/notification/demo/basic.md'),
