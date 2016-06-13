@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="../index.css" />
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        background: none;
+      }
+      #components-breadcrumb-demo-router iframe {
+  height: 180px;
+}
+.demo-nav {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  background: #f8f8f8;
+}
+.demo-nav a {
+  line-height: 30px;
+  padding: 0 10px;
+}
+.app-list {
+  margin-top: 15px;
+}
+    </style>
+    <script src="https://npmcdn.com/react"></script>
+    <script src="https://npmcdn.com/react-dom"></script>
+  </head>
+  <body>
+    <div id="components-breadcrumb-demo-router" class="code-box-demo"></div>
+    <script>
+      function require(module) {
+        if (module === 'react-router') {
+          return window.ReactRouter;
+        }
+        return window.parent[module];
+      }
+      var mountNode = document.getElementById('components-breadcrumb-demo-router');
+    </script>
+    <script>
+      "use strict";
+
+var _reactRouter = require("react-router");
+
+ReactDOM.render(React.createElement("div", { xx: "1111" }), mountNode);
+    </script>
+  </body>
+</html>
