@@ -1,13 +1,13 @@
 webpackJsonp([45,200],{
 
-/***/ 646:
+/***/ 635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(305);
+	var _style2 = __webpack_require__(286);
 
-	var _backTop = __webpack_require__(304);
+	var _backTop = __webpack_require__(285);
 
 	var _backTop2 = _interopRequireDefault(_backTop);
 
@@ -62,14 +62,14 @@ webpackJsonp([45,200],{
 
 /***/ },
 
-/***/ 647:
+/***/ 636:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(305);
+	var _style2 = __webpack_require__(286);
 
-	var _backTop = __webpack_require__(304);
+	var _backTop = __webpack_require__(285);
 
 	var _backTop2 = _interopRequireDefault(_backTop);
 
@@ -134,12 +134,12 @@ webpackJsonp([45,200],{
 
 /***/ },
 
-/***/ 1179:
+/***/ 1149:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(646),
-	    'custom': __webpack_require__(647),
+	    'basic': __webpack_require__(635),
+	    'custom': __webpack_require__(636),
 	}
 
 /***/ }

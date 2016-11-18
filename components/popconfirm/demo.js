@@ -1,19 +1,19 @@
 webpackJsonp([35,200],{
 
-/***/ 837:
+/***/ 826:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(183);
+	var _style3 = __webpack_require__(175);
 
-	var _popconfirm = __webpack_require__(182);
+	var _popconfirm = __webpack_require__(174);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
-	var _style2 = __webpack_require__(57);
+	var _style4 = __webpack_require__(53);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(52);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -69,26 +69,26 @@ webpackJsonp([35,200],{
 
 /***/ },
 
-/***/ 838:
+/***/ 827:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(85);
+	var _style4 = __webpack_require__(81);
 
-	var _switch = __webpack_require__(84);
+	var _switch = __webpack_require__(80);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style2 = __webpack_require__(183);
+	var _style5 = __webpack_require__(175);
 
-	var _popconfirm = __webpack_require__(182);
+	var _popconfirm = __webpack_require__(174);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
-	var _style3 = __webpack_require__(57);
+	var _style6 = __webpack_require__(53);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(52);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -177,14 +177,14 @@ webpackJsonp([35,200],{
 
 /***/ },
 
-/***/ 839:
+/***/ 828:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(183);
+	var _style2 = __webpack_require__(175);
 
-	var _popconfirm = __webpack_require__(182);
+	var _popconfirm = __webpack_require__(174);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -236,26 +236,26 @@ webpackJsonp([35,200],{
 
 /***/ },
 
-/***/ 840:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(183);
+	var _style4 = __webpack_require__(175);
 
-	var _popconfirm = __webpack_require__(182);
+	var _popconfirm = __webpack_require__(174);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
-	var _style2 = __webpack_require__(10);
+	var _style5 = __webpack_require__(10);
 
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style3 = __webpack_require__(57);
+	var _style6 = __webpack_require__(53);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(52);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -429,14 +429,14 @@ webpackJsonp([35,200],{
 
 /***/ },
 
-/***/ 1202:
+/***/ 1172:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(837),
-	    'dynamic-trigger': __webpack_require__(838),
-	    'locale': __webpack_require__(839),
-	    'placement': __webpack_require__(840),
+	    'basic': __webpack_require__(826),
+	    'dynamic-trigger': __webpack_require__(827),
+	    'locale': __webpack_require__(828),
+	    'placement': __webpack_require__(829),
 	}
 
 /***/ }

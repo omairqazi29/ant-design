@@ -1,13 +1,13 @@
 webpackJsonp([26,200],{
 
-/***/ 951:
+/***/ 940:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(185);
+	var _style2 = __webpack_require__(177);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(176);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -80,7 +80,7 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 952:
+/***/ 941:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -89,21 +89,21 @@ webpackJsonp([26,200],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style = __webpack_require__(185);
+	var _style2 = __webpack_require__(177);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(176);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -146,7 +146,7 @@ webpackJsonp([26,200],{
 	      (0, _inherits3.default)(UncontrolledCheckableTag, _React$Component);
 
 	      function UncontrolledCheckableTag() {
-	        var _temp2, _this, _ret;
+	        var _temp, _this, _ret;
 
 	        (0, _classCallCheck3.default)(this, UncontrolledCheckableTag);
 
@@ -154,9 +154,9 @@ webpackJsonp([26,200],{
 	          args[_key] = arguments[_key];
 	        }
 
-	        return _ret = (_temp2 = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { checked: false }, _this.handleChange = function (checked) {
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { checked: false }, _this.handleChange = function (checked) {
 	          _this.setState({ checked: checked });
-	        }, _temp2), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
 	      }
 
 	      UncontrolledCheckableTag.prototype.render = function render() {
@@ -190,14 +190,14 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 953:
+/***/ 942:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(185);
+	var _style2 = __webpack_require__(177);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(176);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -259,36 +259,36 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 954:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style = __webpack_require__(10);
+	var _style3 = __webpack_require__(10);
 
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style2 = __webpack_require__(185);
+	var _style4 = __webpack_require__(177);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(176);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
-	var _toConsumableArray2 = __webpack_require__(88);
+	var _toConsumableArray2 = __webpack_require__(83);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -382,30 +382,30 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 955:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _toConsumableArray2 = __webpack_require__(88);
+	var _toConsumableArray2 = __webpack_require__(83);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style = __webpack_require__(185);
+	var _style2 = __webpack_require__(177);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(176);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -448,7 +448,7 @@ webpackJsonp([26,200],{
 	      (0, _inherits3.default)(HotTags, _React$Component);
 
 	      function HotTags() {
-	        var _temp2, _this, _ret;
+	        var _temp, _this, _ret;
 
 	        (0, _classCallCheck3.default)(this, HotTags);
 
@@ -456,7 +456,7 @@ webpackJsonp([26,200],{
 	          args[_key] = arguments[_key];
 	        }
 
-	        return _ret = (_temp2 = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { selectedTags: [] }, _temp2), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { selectedTags: [] }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
 	      }
 
 	      HotTags.prototype.handleChange = function handleChange(tag, checked) {
@@ -500,15 +500,15 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 1214:
+/***/ 1184:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(951),
-	    'checkable': __webpack_require__(952),
-	    'colorful': __webpack_require__(953),
-	    'control': __webpack_require__(954),
-	    'hot-tags': __webpack_require__(955),
+	    'basic': __webpack_require__(940),
+	    'checkable': __webpack_require__(941),
+	    'colorful': __webpack_require__(942),
+	    'control': __webpack_require__(943),
+	    'hot-tags': __webpack_require__(944),
 	}
 
 /***/ }
