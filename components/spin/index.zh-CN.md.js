@@ -1,1 +1,37 @@
-webpackJsonp([126,200],{888:function(t,e,n){"use strict";function d(t){return t&&t.__esModule?t:{"default":t}}var i=n(1),a=(d(i),n(2));d(a);t.exports={content:["section",["p","\u7528\u4e8e\u9875\u9762\u548c\u533a\u5757\u7684\u52a0\u8f7d\u4e2d\u72b6\u6001\u3002"],["h2","\u4f55\u65f6\u4f7f\u7528"],["p","\u9875\u9762\u5c40\u90e8\u5904\u4e8e\u7b49\u5f85\u5f02\u6b65\u6570\u636e\u6216\u6b63\u5728\u6e32\u67d3\u8fc7\u7a0b\u65f6\uff0c\u5408\u9002\u7684\u52a0\u8f7d\u52a8\u6548\u4f1a\u6709\u6548\u7f13\u89e3\u7528\u6237\u7684\u7126\u8651\u3002"]],meta:{category:"Components",type:"Feedback",title:"Spin",subtitle:"\u52a0\u8f7d\u4e2d",filename:"components/spin/index.zh-CN.md"},toc:["ul",["li",["a",{href:"#\u4f55\u65f6\u4f7f\u7528"},"\u4f55\u65f6\u4f7f\u7528"]],["li",["a",{href:"#API"},"API"]]],api:["section",["h2","API"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"],["th","\u8bf4\u660e"]]],["tbody",["tr",["td","size"],["td","enum"],["td","default"],["td","spin\u7ec4\u4ef6\u4e2d\u70b9\u7684\u5927\u5c0f\uff0c\u53ef\u9009\u503c\u4e3a small default large"]],["tr",["td","spinning"],["td","boolean"],["td","true"],["td","\u7528\u4e8e\u5185\u5d4c\u5176\u4ed6\u7ec4\u4ef6\u7684\u6a21\u5f0f\uff0c\u53ef\u4ee5\u5173\u95ed loading \u6548\u679c"]],["tr",["td","tip"],["td","string"],["td","\u65e0"],["td","\u81ea\u5b9a\u4e49\u63cf\u8ff0\u6587\u6848"]]]]]}}});
+webpackJsonp([126,200],{
+
+/***/ 900:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": ["section", ["p", "用于页面和区块的加载中状态。"], ["h2", "何时使用"], ["p", "页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。"]],
+	  "meta": {
+	    "category": "Components",
+	    "type": "Feedback",
+	    "title": "Spin",
+	    "subtitle": "加载中",
+	    "filename": "components/spin/index.zh-CN.md"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#何时使用"
+	  }, "何时使用"]], ["li", ["a", {
+	    "href": "#API"
+	  }, "API"]]],
+	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "类型"], ["th", "默认值"], ["th", "说明"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "spin组件中点的大小，可选值为 small default large"]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "用于内嵌其他组件的模式，可以关闭 loading 效果"]], ["tr", ["td", "tip"], ["td", "string"], ["td", "无"], ["td", "自定义描述文案"]]]]]
+	};
+
+/***/ }
+
+});

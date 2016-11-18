@@ -1,1 +1,79 @@
-webpackJsonp([168,200],{717:function(t,n,e){"use strict";function a(t){return t&&t.__esModule?t:{"default":t}}var o=e(1),s=(a(o),e(2));a(s);t.exports={content:["section",["p","\u8f93\u5165\u6216\u9009\u62e9\u65e5\u671f\u7684\u63a7\u4ef6\uff0c\u5305\u62ec\u4ee5\u4e0b\u4e09\u79cd\u5f62\u5f0f\u3002"],["ul",["li",["p","DatePicker"]],["li",["p","MonthPicker"]],["li",["p","RangePicker"]]],["h2","\u4f55\u65f6\u4f7f\u7528"],["p","\u5f53\u7528\u6237\u9700\u8981\u8f93\u5165\u4e00\u4e2a\u65e5\u671f\uff0c\u53ef\u4ee5\u70b9\u51fb\u6807\u51c6\u8f93\u5165\u6846\uff0c\u5f39\u51fa\u65e5\u671f\u9762\u677f\u8fdb\u884c\u9009\u62e9\u3002"]],meta:{category:"Components",type:"Data Entry",title:"DatePicker",subtitle:"\u65e5\u671f\u9009\u62e9\u6846",filename:"components/date-picker/index.zh-CN.md"},toc:["ul",["li",["a",{href:"#\u4f55\u65f6\u4f7f\u7528"},"\u4f55\u65f6\u4f7f\u7528"]],["li",["a",{href:"#API"},"API"]]],api:["section",["h2","API"],["p",["strong","\u6ce8\u610f\uff1a"],"DatePicker\u3001MonthPicker\u3001RangePicker \u90e8\u5206 locale \u662f\u4ece value \u4e2d\u8bfb\u53d6\uff0c\u6240\u4ee5\u8bf7\u5148\u6b63\u786e\u8bbe\u7f6e moment \u7684 locale\u3002"],["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> moment <span class="token keyword" >from</span> <span class="token string" >\'moment\'</span><span class="token punctuation" >;</span>\n\n<span class="token comment" spellcheck="true">// \u63a8\u8350\u5728\u5165\u53e3\u6587\u4ef6\u5168\u5c40\u8bbe\u7f6e locale</span>\n<span class="token keyword" >import</span> <span class="token string" >\'moment/locale/zh-cn\'</span><span class="token punctuation" >;</span>\nmoment<span class="token punctuation" >.</span><span class="token function" >locale</span><span class="token punctuation" >(</span><span class="token string" >\'zh-cn\'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n\n<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DatePicker</span> <span class="token attr-name" >defaultValue</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token function" >moment</span><span class="token punctuation" >(</span><span class="token string" >\'2015-01-01\'</span><span class="token punctuation" >,</span> <span class="token string" >\'YYYY-MM-DD\'</span><span class="token punctuation" >)</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>'},["code","import moment from 'moment';\n\n// \u63a8\u8350\u5728\u5165\u53e3\u6587\u4ef6\u5168\u5c40\u8bbe\u7f6e locale\nimport 'moment/locale/zh-cn';\nmoment.locale('zh-cn');\n\n<DatePicker defaultValue={moment('2015-01-01', 'YYYY-MM-DD')} />"]],["h3","\u5171\u540c\u7684 API"],["p","\u4ee5\u4e0b API \u4e3a DatePicker\u3001MonthPicker\u3001RangePicker \u5171\u4eab\u7684 API\u3002"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","allowClear"],["td","\u662f\u5426\u663e\u793a\u6e05\u9664\u6309\u94ae"],["td","bool"],["td","true"]],["tr",["td","disabled"],["td","\u7981\u7528"],["td","bool"],["td","false"]],["tr",["td","style"],["td","\u81ea\u5b9a\u4e49\u8f93\u5165\u6846\u6837\u5f0f"],["td","object"],["td","{}"]],["tr",["td","popupStyle"],["td","\u683c\u5916\u7684\u5f39\u51fa\u65e5\u5386\u6837\u5f0f"],["td","object"],["td","{}"]],["tr",["td","size"],["td","\u8f93\u5165\u6846\u5927\u5c0f\uff0c",["code","large"]," \u9ad8\u5ea6\u4e3a 32px\uff0c",["code","small"]," \u4e3a 22px\uff0c\u9ed8\u8ba4\u662f 28px"],["td","string"],["td","\u65e0"]],["tr",["td","locale"],["td","\u56fd\u9645\u5316\u914d\u7f6e"],["td","object"],["td",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/424"},"\u9ed8\u8ba4\u914d\u7f6e"]]],["tr",["td","disabledDate"],["td","\u4e0d\u53ef\u9009\u62e9\u7684\u65e5\u671f"],["td","function"],["td","\u65e0"]],["tr",["td","getCalendarContainer"],["td","\u5b9a\u4e49\u6d6e\u5c42\u7684\u5bb9\u5668\uff0c\u9ed8\u8ba4\u4e3a body \u4e0a\u65b0\u5efa div"],["td","function(trigger)"],["td","\u65e0"]]]],["h3","DatePicker"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","value"],["td","\u65e5\u671f"],["td",["a",{title:null,href:"http://momentjs.com/"},"moment"]],["td","\u65e0"]],["tr",["td","defaultValue"],["td","\u9ed8\u8ba4\u65e5\u671f"],["td",["a",{title:null,href:"http://momentjs.com/"},"moment"]],["td","\u65e0"]],["tr",["td","format"],["td","\u5c55\u793a\u7684\u65e5\u671f\u683c\u5f0f\uff0c\u914d\u7f6e\u53c2\u8003 ",["a",{title:null,href:"http://momentjs.com/"},"moment.js"]],["td","string"],["td",'"YYYY-MM-DD"']],["tr",["td","onChange"],["td","\u65f6\u95f4\u53d1\u751f\u53d8\u5316\u7684\u56de\u8c03"],["td","function(date: moment, dateString: string)"],["td","\u65e0"]],["tr",["td","open"],["td","\u63a7\u5236\u5f39\u5c42\u662f\u5426\u5c55\u5f00"],["td","bool"],["td","-"]],["tr",["td","onOpenChange"],["td","\u5f39\u51fa\u65e5\u5386\u548c\u5173\u95ed\u65e5\u5386\u7684\u56de\u8c03"],["td","function(status)"],["td","\u65e0"]],["tr",["td","showTime"],["td","\u589e\u52a0\u65f6\u95f4\u9009\u62e9\u529f\u80fd"],["td","Object or Boolean"],["td",["a",{title:null,href:"/components/time-picker/#api"},"TimePicker Options"]]],["tr",["td","disabledTime"],["td","\u4e0d\u53ef\u9009\u62e9\u7684\u65f6\u95f4"],["td","function(date)"],["td","\u65e0"]]]],["h3","MonthPicker"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","value"],["td","\u65e5\u671f"],["td",["a",{title:null,href:"http://momentjs.com/"},"moment"]],["td","\u65e0"]],["tr",["td","defaultValue"],["td","\u9ed8\u8ba4\u65e5\u671f"],["td",["a",{title:null,href:"http://momentjs.com/"},"moment"]],["td","\u65e0"]],["tr",["td","format"],["td","\u5c55\u793a\u7684\u65e5\u671f\u683c\u5f0f\uff0c\u914d\u7f6e\u53c2\u8003 ",["a",{title:null,href:"http://momentjs.com/"},"moment.js"]],["td","string"],["td",'"YYYY-MM"']],["tr",["td","onChange"],["td","\u65f6\u95f4\u53d1\u751f\u53d8\u5316\u7684\u56de\u8c03\uff0c\u53d1\u751f\u5728\u7528\u6237\u9009\u62e9\u65f6\u95f4\u65f6"],["td","function(date: moment, dateString: string)"],["td","\u65e0"]],["tr",["td","monthCellContentRender"],["td","\u81ea\u5b9a\u4e49\u7684\u6708\u4efd\u6e32\u67d3\u65b9\u6cd5"],["td","function"],["td","\u65e0"]],["tr",["td","cellContentRender"],["td","\u81ea\u5b9a\u4e49\u7684\u6708\u4efd\u6e32\u67d3\u65b9\u6cd5\uff0c\u5185\u5bb9\u4f1a\u88ab\u9644\u52a0\u5728\u6708\u4efd\u540e\u9762"],["td","function"],["td","\u65e0"]]]],["h3","RangePicker"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","value"],["td","\u65e5\u671f"],["td","[",["a",{title:null,href:"http://momentjs.com/"},"moment"],", ",["a",{title:null,href:"http://momentjs.com/"},"moment"],"]"],["td","\u65e0"]],["tr",["td","defaultValue"],["td","\u9ed8\u8ba4\u65e5\u671f"],["td","[",["a",{title:null,href:"http://momentjs.com/"},"moment"],", ",["a",{title:null,href:"http://momentjs.com/"},"moment"],"]"],["td","\u65e0"]],["tr",["td","format"],["td","\u5c55\u793a\u7684\u65e5\u671f\u683c\u5f0f"],["td","string"],["td",'"YYYY-MM-DD HH:mm:ss"']],["tr",["td","onChange"],["td","\u65f6\u95f4\u53d1\u751f\u53d8\u5316\u7684\u56de\u8c03\uff0c\u53d1\u751f\u5728\u7528\u6237\u9009\u62e9\u65f6\u95f4\u65f6"],["td","function(dates: ","[moment, moment]",", dateStrings: ","[string, string]",")"],["td","\u65e0"]],["tr",["td","showTime"],["td","\u589e\u52a0\u65f6\u95f4\u9009\u62e9\u529f\u80fd"],["td","Object or Boolean"],["td",["a",{title:null,href:"/components/time-picker/#api"},"TimePicker Options"]]],["tr",["td","disabledTime"],["td","\u4e0d\u53ef\u9009\u62e9\u7684\u65f6\u95f4"],["td","function(dates: ","[moment, moment]",", partial: ",["code","'start'|'end'"],")"],["td","\u65e0"]]]],["style","\n.code-box-demo .ant-calendar-picker {\n  margin: 0 8px 12px 0;\n}\n"]]}}});
+webpackJsonp([168,200],{
+
+/***/ 729:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": ["section", ["p", "输入或选择日期的控件。"], ["h2", "何时使用"], ["p", "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。"]],
+	  "meta": {
+	    "category": "Components",
+	    "type": "Data Entry",
+	    "title": "DatePicker",
+	    "subtitle": "日期选择框",
+	    "filename": "components/date-picker/index.zh-CN.md"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#何时使用"
+	  }, "何时使用"]], ["li", ["a", {
+	    "href": "#API"
+	  }, "API"]]],
+	  "api": ["section", ["h2", "API"], ["p", "日期类组件包括以下三种形式。"], ["ul", ["li", ["p", "DatePicker"]], ["li", ["p", "MonthPicker"]], ["li", ["p", "RangePicker"]]], ["p", ["strong", "注意："], "DatePicker、MonthPicker、RangePicker 部分 locale 是从 value 中读取，所以请先正确设置 moment 的 locale。"], ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> moment <span class=\"token keyword\" >from</span> <span class=\"token string\" >'moment'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token comment\" spellcheck=\"true\">// 推荐在入口文件全局设置 locale</span>\n<span class=\"token keyword\" >import</span> <span class=\"token string\" >'moment/locale/zh-cn'</span><span class=\"token punctuation\" >;</span>\nmoment<span class=\"token punctuation\" >.</span><span class=\"token function\" >locale</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'zh-cn'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DatePicker</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'2015-01-01'</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >'YYYY-MM-DD'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>"
+	  }, ["code", "import moment from 'moment';\n\n// 推荐在入口文件全局设置 locale\nimport 'moment/locale/zh-cn';\nmoment.locale('zh-cn');\n\n<DatePicker defaultValue={moment('2015-01-01', 'YYYY-MM-DD')} />"]], ["h3", "共同的 API"], ["p", "以下 API 为 DatePicker、MonthPicker、RangePicker 共享的 API。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "allowClear"], ["td", "是否显示清除按钮"], ["td", "bool"], ["td", "true"]], ["tr", ["td", "disabled"], ["td", "禁用"], ["td", "bool"], ["td", "false"]], ["tr", ["td", "style"], ["td", "自定义输入框样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "popupStyle"], ["td", "格外的弹出日历样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "size"], ["td", "输入框大小，", ["code", "large"], " 高度为 32px，", ["code", "small"], " 为 22px，默认是 28px"], ["td", "string"], ["td", "无"]], ["tr", ["td", "locale"], ["td", "国际化配置"], ["td", "object"], ["td", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/424"
+	  }, "默认配置"]]], ["tr", ["td", "disabledDate"], ["td", "不可选择的日期"], ["td", "function"], ["td", "无"]], ["tr", ["td", "getCalendarContainer"], ["td", "定义浮层的容器，默认为 body 上新建 div"], ["td", "function(trigger)"], ["td", "无"]]]], ["h3", "DatePicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"]], ["td", "无"]], ["tr", ["td", "defaultValue"], ["td", "默认日期"], ["td", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"]], ["td", "无"]], ["tr", ["td", "format"], ["td", "展示的日期格式，配置参考 ", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment.js"]], ["td", "string"], ["td", "\"YYYY-MM-DD\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调"], ["td", "function(date: moment, dateString: string)"], ["td", "无"]], ["tr", ["td", "open"], ["td", "控制弹层是否展开"], ["td", "bool"], ["td", "-"]], ["tr", ["td", "onOpenChange"], ["td", "弹出日历和关闭日历的回调"], ["td", "function(status)"], ["td", "无"]], ["tr", ["td", "showTime"], ["td", "增加时间选择功能"], ["td", "Object or Boolean"], ["td", ["a", {
+	    "title": null,
+	    "href": "/components/time-picker/#api"
+	  }, "TimePicker Options"]]], ["tr", ["td", "showToday"], ["td", "是否展示“今天”按钮"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "disabledTime"], ["td", "不可选择的时间"], ["td", "function(date)"], ["td", "无"]]]], ["h3", "MonthPicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"]], ["td", "无"]], ["tr", ["td", "defaultValue"], ["td", "默认日期"], ["td", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"]], ["td", "无"]], ["tr", ["td", "format"], ["td", "展示的日期格式，配置参考 ", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment.js"]], ["td", "string"], ["td", "\"YYYY-MM\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调，发生在用户选择时间时"], ["td", "function(date: moment, dateString: string)"], ["td", "无"]], ["tr", ["td", "monthCellContentRender"], ["td", "自定义的月份渲染方法"], ["td", "function"], ["td", "无"]], ["tr", ["td", "cellContentRender"], ["td", "自定义的月份渲染方法，内容会被附加在月份后面"], ["td", "function"], ["td", "无"]]]], ["h3", "RangePicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", "[", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"], ", ", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"], "]"], ["td", "无"]], ["tr", ["td", "defaultValue"], ["td", "默认日期"], ["td", "[", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"], ", ", ["a", {
+	    "title": null,
+	    "href": "http://momentjs.com/"
+	  }, "moment"], "]"], ["td", "无"]], ["tr", ["td", "format"], ["td", "展示的日期格式"], ["td", "string"], ["td", "\"YYYY-MM-DD HH:mm:ss\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调，发生在用户选择时间时"], ["td", "function(dates: ", "[moment, moment]", ", dateStrings: ", "[string, string]", ")"], ["td", "无"]], ["tr", ["td", "showTime"], ["td", "增加时间选择功能"], ["td", "Object or Boolean"], ["td", ["a", {
+	    "title": null,
+	    "href": "/components/time-picker/#api"
+	  }, "TimePicker Options"]]], ["tr", ["td", "disabledTime"], ["td", "不可选择的时间"], ["td", "function(dates: ", "[moment, moment]", ", partial: ", ["code", "'start'|'end'"], ")"], ["td", "无"]]]], ["style", "\n.code-box-demo .ant-calendar-picker {\n  margin: 0 8px 12px 0;\n}\n"]]
+	};
+
+/***/ }
+
+});
