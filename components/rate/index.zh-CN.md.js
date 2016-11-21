@@ -1,6 +1,6 @@
 webpackJsonp([134,202],{
 
-/***/ 873:
+/***/ 862:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29,7 +29,7 @@ webpackJsonp([134,202],{
 	  }, "何时使用"]], ["li", ["a", {
 	    "href": "#API"
 	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "属性"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "count"], ["td", "star 总数"], ["td", "Number"], ["td", "5"]], ["tr", ["td", "value"], ["td", "当前数，受控值"], ["td", "Number"], ["td", "-"]], ["tr", ["td", "defaultValue"], ["td", "默认值"], ["td", "Number"], ["td", "0"]], ["tr", ["td", "onChange(value: Number)"], ["td", "回调"], ["td", "Function"], ["td", "-"]], ["tr", ["td", "allowHalf"], ["td", "是否允许半选"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "disabled"], ["td", "只读，无法进行交互"], ["td", "Boolean"], ["td", "false"]]]]]
+	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "属性"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "count"], ["td", "star 总数"], ["td", "Number"], ["td", "5"]], ["tr", ["td", "value"], ["td", "当前数，受控值"], ["td", "Number"], ["td", "-"]], ["tr", ["td", "defaultValue"], ["td", "默认值"], ["td", "Number"], ["td", "0"]], ["tr", ["td", "onChange"], ["td", "回调"], ["td", "Function(value: Number)"], ["td", "-"]], ["tr", ["td", "allowHalf"], ["td", "是否允许半选"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "disabled"], ["td", "只读，无法进行交互"], ["td", "Boolean"], ["td", "false"]]]]]
 	};
 
 /***/ }

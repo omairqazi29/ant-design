@@ -1,6 +1,6 @@
 webpackJsonp([0,202],{
 
-/***/ 917:
+/***/ 906:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,7 +23,7 @@ webpackJsonp([0,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reqwest = __webpack_require__(1896);
+	var _reqwest = __webpack_require__(1867);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -96,7 +96,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 918:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -184,7 +184,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 919:
+/***/ 908:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -249,7 +249,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 920:
+/***/ 909:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -332,7 +332,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 921:
+/***/ 910:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -449,7 +449,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 922:
+/***/ 911:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -464,15 +464,15 @@ webpackJsonp([0,202],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style7 = __webpack_require__(59);
+	var _style7 = __webpack_require__(55);
 
-	var _radio = __webpack_require__(55);
+	var _radio = __webpack_require__(51);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _style8 = __webpack_require__(86);
+	var _style8 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(85);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -480,15 +480,15 @@ webpackJsonp([0,202],{
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -498,9 +498,9 @@ webpackJsonp([0,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style10 = __webpack_require__(54);
+	var _style10 = __webpack_require__(50);
 
-	var _form = __webpack_require__(53);
+	var _form = __webpack_require__(49);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -701,7 +701,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 923:
+/***/ 912:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -718,13 +718,13 @@ webpackJsonp([0,202],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style8 = __webpack_require__(134);
+	var _style8 = __webpack_require__(129);
 
-	var _popconfirm = __webpack_require__(133);
+	var _popconfirm = __webpack_require__(128);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
-	var _toConsumableArray2 = __webpack_require__(79);
+	var _toConsumableArray2 = __webpack_require__(74);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -740,15 +740,15 @@ webpackJsonp([0,202],{
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -901,7 +901,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 924:
+/***/ 913:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -912,9 +912,9 @@ webpackJsonp([0,202],{
 
 	var _table2 = _interopRequireDefault(_table);
 
-	var _style5 = __webpack_require__(134);
+	var _style5 = __webpack_require__(129);
 
-	var _popconfirm = __webpack_require__(133);
+	var _popconfirm = __webpack_require__(128);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -924,15 +924,15 @@ webpackJsonp([0,202],{
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _classCallCheck2 = __webpack_require__(5);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(7);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(6);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -1153,7 +1153,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 925:
+/***/ 914:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1215,7 +1215,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 926:
+/***/ 915:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1283,7 +1283,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 927:
+/***/ 916:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1349,7 +1349,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 928:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1414,7 +1414,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 929:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1471,7 +1471,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 930:
+/***/ 919:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1534,7 +1534,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 931:
+/***/ 920:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1609,7 +1609,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 932:
+/***/ 921:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1660,7 +1660,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 933:
+/***/ 922:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1725,7 +1725,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 934:
+/***/ 923:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1841,7 +1841,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 935:
+/***/ 924:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1942,7 +1942,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 936:
+/***/ 925:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2004,7 +2004,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 937:
+/***/ 926:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2068,7 +2068,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 938:
+/***/ 927:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2137,37 +2137,37 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 1217:
+/***/ 1187:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'ajax': __webpack_require__(917),
-	    'basic': __webpack_require__(918),
-	    'bordered': __webpack_require__(919),
-	    'colspan-rowspan': __webpack_require__(920),
-	    'custom-filter-panel': __webpack_require__(921),
-	    'dynamic-settings': __webpack_require__(922),
-	    'edit-cell': __webpack_require__(923),
-	    'edit-row': __webpack_require__(924),
-	    'expand-children': __webpack_require__(925),
-	    'expand': __webpack_require__(926),
-	    'fixed-columns-header': __webpack_require__(927),
-	    'fixed-columns': __webpack_require__(928),
-	    'fixed-header': __webpack_require__(929),
-	    'grouping-columns': __webpack_require__(930),
-	    'head': __webpack_require__(931),
-	    'nopagination': __webpack_require__(932),
-	    'paging': __webpack_require__(933),
-	    'reset-filter': __webpack_require__(934),
-	    'row-selection-and-operation': __webpack_require__(935),
-	    'row-selection-props': __webpack_require__(936),
-	    'row-selection': __webpack_require__(937),
-	    'size': __webpack_require__(938),
+	    'ajax': __webpack_require__(906),
+	    'basic': __webpack_require__(907),
+	    'bordered': __webpack_require__(908),
+	    'colspan-rowspan': __webpack_require__(909),
+	    'custom-filter-panel': __webpack_require__(910),
+	    'dynamic-settings': __webpack_require__(911),
+	    'edit-cell': __webpack_require__(912),
+	    'edit-row': __webpack_require__(913),
+	    'expand-children': __webpack_require__(914),
+	    'expand': __webpack_require__(915),
+	    'fixed-columns-header': __webpack_require__(916),
+	    'fixed-columns': __webpack_require__(917),
+	    'fixed-header': __webpack_require__(918),
+	    'grouping-columns': __webpack_require__(919),
+	    'head': __webpack_require__(920),
+	    'nopagination': __webpack_require__(921),
+	    'paging': __webpack_require__(922),
+	    'reset-filter': __webpack_require__(923),
+	    'row-selection-and-operation': __webpack_require__(924),
+	    'row-selection-props': __webpack_require__(925),
+	    'row-selection': __webpack_require__(926),
+	    'size': __webpack_require__(927),
 	}
 
 /***/ },
 
-/***/ 1896:
+/***/ 1867:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2191,7 +2191,7 @@ webpackJsonp([0,202],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1908)
+	      XHR2 = __webpack_require__(1879)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -2804,7 +2804,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 1908:
+/***/ 1879:
 /***/ function(module, exports) {
 
 	/* (ignored) */

@@ -1,6 +1,6 @@
 webpackJsonp([75,202],{
 
-/***/ 1039:
+/***/ 1028:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29,7 +29,7 @@ webpackJsonp([75,202],{
 	    "description": "标题和正文使用了两个视觉起点，不推荐该种对齐方式，除非刻意强调两者区别。",
 	    "src": "https://os.alipayobjects.com/rmsportal/qvycImsTiDGVgLJ.png"
 	  }]], ["p", "如果页面的字段或段落较短、较散时，需要确定一个统一的视觉起点。"], ["hr"], ["h2", "表单类对齐"], ["p", ["img", {
-	    "class": "preview-img no-padding",
+	    "class": "preview-img",
 	    "align": "right",
 	    "alt": "冒号对齐示例",
 	    "src": "https://os.alipayobjects.com/rmsportal/DmEbaUsrpJkRyUh.png"

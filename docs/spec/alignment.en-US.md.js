@@ -1,6 +1,6 @@
 webpackJsonp([76,202],{
 
-/***/ 1038:
+/***/ 1027:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29,7 +29,7 @@ webpackJsonp([76,202],{
 	    "description": "The tile and the text start in different visual point. This is not recommended except the differences between title and text are emphasized. ",
 	    "src": "https://os.alipayobjects.com/rmsportal/qvycImsTiDGVgLJ.png"
 	  }]], ["p", "If the paragraphs or the length of the words are too short or too loose, then a unified visual starting point is needed."], ["hr"], ["h2", "Form Alignment"], ["p", ["img", {
-	    "class": "preview-img no-padding",
+	    "class": "preview-img",
 	    "align": "right",
 	    "alt": "example of colon alignment",
 	    "src": "https://os.alipayobjects.com/rmsportal/DmEbaUsrpJkRyUh.png"

@@ -1,13 +1,13 @@
 webpackJsonp([28,202],{
 
-/***/ 844:
+/***/ 833:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(118);
+	var _style3 = __webpack_require__(112);
 
-	var _popover = __webpack_require__(135);
+	var _popover = __webpack_require__(130);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -95,14 +95,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 845:
+/***/ 834:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(118);
+	var _style3 = __webpack_require__(112);
 
-	var _popover = __webpack_require__(135);
+	var _popover = __webpack_require__(130);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -173,14 +173,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 846:
+/***/ 835:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(118);
+	var _style3 = __webpack_require__(112);
 
-	var _popover = __webpack_require__(135);
+	var _popover = __webpack_require__(130);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -256,14 +256,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 847:
+/***/ 836:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(118);
+	var _style3 = __webpack_require__(112);
 
-	var _popover = __webpack_require__(135);
+	var _popover = __webpack_require__(130);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -459,14 +459,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 848:
+/***/ 837:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(118);
+	var _style3 = __webpack_require__(112);
 
-	var _popover = __webpack_require__(135);
+	var _popover = __webpack_require__(130);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -559,15 +559,15 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 1208:
+/***/ 1178:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(844),
-	    'basic': __webpack_require__(845),
-	    'control': __webpack_require__(846),
-	    'placement': __webpack_require__(847),
-	    'triggerType': __webpack_require__(848),
+	    'arrow-point-at-center': __webpack_require__(833),
+	    'basic': __webpack_require__(834),
+	    'control': __webpack_require__(835),
+	    'placement': __webpack_require__(836),
+	    'triggerType': __webpack_require__(837),
 	}
 
 /***/ }
