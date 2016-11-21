@@ -1,13 +1,13 @@
 webpackJsonp([39,202],{
 
-/***/ 690:
+/***/ 675:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(214);
+	var _style2 = __webpack_require__(205);
 
-	var _carousel = __webpack_require__(181);
+	var _carousel = __webpack_require__(173);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -90,14 +90,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 691:
+/***/ 676:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(214);
+	var _style2 = __webpack_require__(205);
 
-	var _carousel = __webpack_require__(181);
+	var _carousel = __webpack_require__(173);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -182,14 +182,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 692:
+/***/ 677:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(214);
+	var _style2 = __webpack_require__(205);
 
-	var _carousel = __webpack_require__(181);
+	var _carousel = __webpack_require__(173);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -272,14 +272,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 693:
+/***/ 678:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(214);
+	var _style2 = __webpack_require__(205);
 
-	var _carousel = __webpack_require__(181);
+	var _carousel = __webpack_require__(173);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -362,14 +362,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 1190:
+/***/ 1156:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'autoplay': __webpack_require__(690),
-	    'basic': __webpack_require__(691),
-	    'fade': __webpack_require__(692),
-	    'vertical': __webpack_require__(693),
+	    'autoplay': __webpack_require__(675),
+	    'basic': __webpack_require__(676),
+	    'fade': __webpack_require__(677),
+	    'vertical': __webpack_require__(678),
 	}
 
 /***/ }

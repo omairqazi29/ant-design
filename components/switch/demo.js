@@ -1,13 +1,13 @@
 webpackJsonp([33,202],{
 
-/***/ 911:
+/***/ 896:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(85);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -54,7 +54,7 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 912:
+/***/ 897:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -65,9 +65,9 @@ webpackJsonp([33,202],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(86);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(85);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -132,14 +132,14 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 913:
+/***/ 898:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(85);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -189,7 +189,7 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 914:
+/***/ 899:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -200,9 +200,9 @@ webpackJsonp([33,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(86);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(85);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -254,14 +254,14 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 1216:
+/***/ 1182:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(911),
-	    'disabled': __webpack_require__(912),
-	    'size': __webpack_require__(913),
-	    'text': __webpack_require__(914),
+	    'basic': __webpack_require__(896),
+	    'disabled': __webpack_require__(897),
+	    'size': __webpack_require__(898),
+	    'text': __webpack_require__(899),
 	}
 
 /***/ }

@@ -1,13 +1,13 @@
 webpackJsonp([25,202],{
 
-/***/ 981:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(189);
+	var _style3 = __webpack_require__(181);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(180);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -89,18 +89,18 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 982:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(181);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(180);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
-	var _toConsumableArray2 = __webpack_require__(79);
+	var _toConsumableArray2 = __webpack_require__(74);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -169,14 +169,14 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 983:
+/***/ 968:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(181);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(180);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -253,7 +253,7 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 984:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -274,14 +274,14 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 985:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(181);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(180);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -351,15 +351,15 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 1223:
+/***/ 1189:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced': __webpack_require__(981),
-	    'basic': __webpack_require__(982),
-	    'custom-item': __webpack_require__(983),
-	    'large-data': __webpack_require__(984),
-	    'search': __webpack_require__(985),
+	    'advanced': __webpack_require__(966),
+	    'basic': __webpack_require__(967),
+	    'custom-item': __webpack_require__(968),
+	    'large-data': __webpack_require__(969),
+	    'search': __webpack_require__(970),
 	}
 
 /***/ }
