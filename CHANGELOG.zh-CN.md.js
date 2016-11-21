@@ -1,6 +1,6 @@
 webpackJsonp([200,202],{
 
-/***/ 612:
+/***/ 623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,13 @@ webpackJsonp([200,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.4.2"], ["p", ["code", "2016-11-13"]], ["ul", ["li", ["p", "修复 ", ["code", "Dropdown.Button"], " 不弹出的问题。", ["a", {
+	  "content": ["article", {}, ["h2", "2.4.3"], ["p", ["code", "2016-11-17"]], ["ul", ["li", ["p", "修复 ", ["code", "Anchor"], " 内部 querySelector 报错，并做了一些体验优化 。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3832"
+	  }, "#3832"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3844"
+	  }, "#3844"]]]], ["h2", "2.4.2"], ["p", ["code", "2016-11-13"]], ["ul", ["li", ["p", "修复 ", ["code", "Dropdown.Button"], " 不弹出的问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3815"
 	  }, "#3815"]]]], ["h2", "2.4.1"], ["p", ["code", "2016-11-11"]], ["ul", ["li", ["p", "修复 ", ["code", "2.4.0"], " 组件 index 文件丢失的问题。"]]], ["h2", "2.4.0"], ["p", ["code", "2016-11-11"]], ["ul", ["li", ["p", "调整了组件的导航结构。"]], ["li", ["p", "新增 ", ["a", {
@@ -1067,6 +1073,8 @@ webpackJsonp([200,202],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=1.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "href": "#2.4.3"
+	  }, "2.4.3"]], ["li", ["a", {
 	    "href": "#2.4.2"
 	  }, "2.4.2"]], ["li", ["a", {
 	    "href": "#2.4.1"

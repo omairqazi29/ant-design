@@ -1,6 +1,6 @@
 webpackJsonp([201,202],{
 
-/***/ 611:
+/***/ 622:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,13 @@ webpackJsonp([201,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.4.2"], ["p", ["code", "2016-11-13"]], ["ul", ["li", ["p", "Fix ", ["code", "Dropdown.Button"], " cannot popup menu.", ["a", {
+	  "content": ["article", {}, ["h2", "2.4.3"], ["p", ["code", "2016-11-17"]], ["ul", ["li", ["p", "Fix errors in ", ["code", "Anchor"], " about querySelector, and make some experience Optimization .", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3832"
+	  }, "#3832"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3844"
+	  }, "#3844"]]]], ["h2", "2.4.2"], ["p", ["code", "2016-11-13"]], ["ul", ["li", ["p", "Fix ", ["code", "Dropdown.Button"], " cannot popup menu.", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3815"
 	  }, "#3815"]]]], ["h2", "2.4.1"], ["p", ["code", "2016-11-11"]], ["ul", ["li", ["p", "Fix ", ["code", "2.4.0"], " missing index files."]]], ["h2", "2.4.0"], ["p", ["code", "2016-11-11"]], ["ul", ["li", ["p", "Adjust components structure."]], ["li", ["p", "New ", ["a", {
@@ -452,6 +458,8 @@ webpackJsonp([201,202],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "href": "#2.4.3"
+	  }, "2.4.3"]], ["li", ["a", {
 	    "href": "#2.4.2"
 	  }, "2.4.2"]], ["li", ["a", {
 	    "href": "#2.4.1"

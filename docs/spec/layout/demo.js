@@ -1,13 +1,13 @@
 webpackJsonp([23,202],{
 
-/***/ 1039:
+/***/ 1050:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(109);
+	var _style4 = __webpack_require__(115);
 
-	var _breadcrumb = __webpack_require__(108);
+	var _breadcrumb = __webpack_require__(114);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -17,9 +17,9 @@ webpackJsonp([23,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(34);
+	var _style6 = __webpack_require__(35);
 
-	var _menu = __webpack_require__(33);
+	var _menu = __webpack_require__(34);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -31,7 +31,7 @@ webpackJsonp([23,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(148);
+	var _BrowserDemo = __webpack_require__(141);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -188,14 +188,14 @@ webpackJsonp([23,202],{
 
 /***/ },
 
-/***/ 1040:
+/***/ 1051:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(109);
+	var _style4 = __webpack_require__(115);
 
-	var _breadcrumb = __webpack_require__(108);
+	var _breadcrumb = __webpack_require__(114);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -205,9 +205,9 @@ webpackJsonp([23,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(34);
+	var _style6 = __webpack_require__(35);
 
-	var _menu = __webpack_require__(33);
+	var _menu = __webpack_require__(34);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -219,7 +219,7 @@ webpackJsonp([23,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(148);
+	var _BrowserDemo = __webpack_require__(141);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -396,7 +396,7 @@ webpackJsonp([23,202],{
 
 /***/ },
 
-/***/ 1041:
+/***/ 1052:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -409,7 +409,7 @@ webpackJsonp([23,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(148);
+	var _BrowserDemo = __webpack_require__(141);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -490,7 +490,7 @@ webpackJsonp([23,202],{
 
 /***/ },
 
-/***/ 1042:
+/***/ 1053:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -501,15 +501,15 @@ webpackJsonp([23,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(109);
+	var _style5 = __webpack_require__(115);
 
-	var _breadcrumb = __webpack_require__(108);
+	var _breadcrumb = __webpack_require__(114);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style6 = __webpack_require__(34);
+	var _style6 = __webpack_require__(35);
 
-	var _menu = __webpack_require__(33);
+	var _menu = __webpack_require__(34);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -521,7 +521,7 @@ webpackJsonp([23,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(148);
+	var _BrowserDemo = __webpack_require__(141);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -755,20 +755,20 @@ webpackJsonp([23,202],{
 
 /***/ },
 
-/***/ 1043:
+/***/ 1054:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(109);
+	var _style3 = __webpack_require__(115);
 
-	var _breadcrumb = __webpack_require__(108);
+	var _breadcrumb = __webpack_require__(114);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style4 = __webpack_require__(34);
+	var _style4 = __webpack_require__(35);
 
-	var _menu = __webpack_require__(33);
+	var _menu = __webpack_require__(34);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -780,7 +780,7 @@ webpackJsonp([23,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(148);
+	var _BrowserDemo = __webpack_require__(141);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -907,15 +907,15 @@ webpackJsonp([23,202],{
 
 /***/ },
 
-/***/ 1197:
+/***/ 1227:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'aside-collapse': __webpack_require__(1039),
-	    'aside': __webpack_require__(1040),
-	    'ceiling': __webpack_require__(1041),
-	    'top-aside': __webpack_require__(1042),
-	    'top': __webpack_require__(1043),
+	    'aside-collapse': __webpack_require__(1050),
+	    'aside': __webpack_require__(1051),
+	    'ceiling': __webpack_require__(1052),
+	    'top-aside': __webpack_require__(1053),
+	    'top': __webpack_require__(1054),
 	}
 
 /***/ }
