@@ -1,6 +1,6 @@
-webpackJsonp([168,200],{
+webpackJsonp([170,202],{
 
-/***/ 718:
+/***/ 730:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35,7 +35,7 @@ webpackJsonp([168,200],{
 	  }, ["code", "import moment from 'moment';\n\n// 推荐在入口文件全局设置 locale\nimport 'moment/locale/zh-cn';\nmoment.locale('zh-cn');\n\n<DatePicker defaultValue={moment('2015-01-01', 'YYYY-MM-DD')} />"]], ["h3", "共同的 API"], ["p", "以下 API 为 DatePicker、MonthPicker、RangePicker 共享的 API。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "allowClear"], ["td", "是否显示清除按钮"], ["td", "bool"], ["td", "true"]], ["tr", ["td", "disabled"], ["td", "禁用"], ["td", "bool"], ["td", "false"]], ["tr", ["td", "style"], ["td", "自定义输入框样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "popupStyle"], ["td", "格外的弹出日历样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "size"], ["td", "输入框大小，", ["code", "large"], " 高度为 32px，", ["code", "small"], " 为 22px，默认是 28px"], ["td", "string"], ["td", "无"]], ["tr", ["td", "locale"], ["td", "国际化配置"], ["td", "object"], ["td", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/424"
-	  }, "默认配置"]]], ["tr", ["td", "disabledDate"], ["td", "不可选择的日期"], ["td", "function"], ["td", "无"]], ["tr", ["td", "getCalendarContainer"], ["td", "定义浮层的容器，默认为 body 上新建 div"], ["td", "function(trigger)"], ["td", "无"]]]], ["h3", "DatePicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
+	  }, "默认配置"]]], ["tr", ["td", "disabledDate"], ["td", "不可选择的日期"], ["td", "function"], ["td", "无"]], ["tr", ["td", "getCalendarContainer"], ["td", "定义浮层的容器，默认为 body 上新建 div"], ["td", "function(trigger)"], ["td", "无"]], ["tr", ["td", "open"], ["td", "控制弹层是否展开"], ["td", "bool"], ["td", "-"]], ["tr", ["td", "onOpenChange"], ["td", "弹出日历和关闭日历的回调"], ["td", "function(status)"], ["td", "无"]]]], ["h3", "DatePicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
 	  }, "moment"]], ["td", "无"]], ["tr", ["td", "defaultValue"], ["td", "默认日期"], ["td", ["a", {
@@ -44,7 +44,7 @@ webpackJsonp([168,200],{
 	  }, "moment"]], ["td", "无"]], ["tr", ["td", "format"], ["td", "展示的日期格式，配置参考 ", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
-	  }, "moment.js"]], ["td", "string"], ["td", "\"YYYY-MM-DD\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调"], ["td", "function(date: moment, dateString: string)"], ["td", "无"]], ["tr", ["td", "open"], ["td", "控制弹层是否展开"], ["td", "bool"], ["td", "-"]], ["tr", ["td", "onOpenChange"], ["td", "弹出日历和关闭日历的回调"], ["td", "function(status)"], ["td", "无"]], ["tr", ["td", "showTime"], ["td", "增加时间选择功能"], ["td", "Object or Boolean"], ["td", ["a", {
+	  }, "moment.js"]], ["td", "string"], ["td", "\"YYYY-MM-DD\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调"], ["td", "function(date: moment, dateString: string)"], ["td", "无"]], ["tr", ["td", "showTime"], ["td", "增加时间选择功能"], ["td", "Object or Boolean"], ["td", ["a", {
 	    "title": null,
 	    "href": "/components/time-picker/#api"
 	  }, "TimePicker Options"]]], ["tr", ["td", "showToday"], ["td", "是否展示“今天”按钮"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "disabledTime"], ["td", "不可选择的时间"], ["td", "function(date)"], ["td", "无"]]]], ["h3", "MonthPicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
@@ -71,7 +71,7 @@ webpackJsonp([168,200],{
 	  }, "moment"], "]"], ["td", "无"]], ["tr", ["td", "format"], ["td", "展示的日期格式"], ["td", "string"], ["td", "\"YYYY-MM-DD HH:mm:ss\""]], ["tr", ["td", "onChange"], ["td", "时间发生变化的回调，发生在用户选择时间时"], ["td", "function(dates: ", "[moment, moment]", ", dateStrings: ", "[string, string]", ")"], ["td", "无"]], ["tr", ["td", "showTime"], ["td", "增加时间选择功能"], ["td", "Object or Boolean"], ["td", ["a", {
 	    "title": null,
 	    "href": "/components/time-picker/#api"
-	  }, "TimePicker Options"]]], ["tr", ["td", "disabledTime"], ["td", "不可选择的时间"], ["td", "function(dates: ", "[moment, moment]", ", partial: ", ["code", "'start'|'end'"], ")"], ["td", "无"]]]], ["style", "\n.code-box-demo .ant-calendar-picker {\n  margin: 0 8px 12px 0;\n}\n"]]
+	  }, "TimePicker Options"]]], ["tr", ["td", "disabledTime"], ["td", "不可选择的时间"], ["td", "function(dates: ", "[moment, moment]", ", partial: ", ["code", "'start'|'end'"], ")"], ["td", "无"]], ["tr", ["td", "ranges"], ["td", "预设事件范围快捷选择"], ["td", "Object { ", "[range: string]", ": ", "[moment, moment]", " }"], ["td", "无"]]]], ["style", "\n.code-box-demo .ant-calendar-picker {\n  margin: 0 8px 12px 0;\n}\n"]]
 	};
 
 /***/ }

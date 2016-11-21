@@ -1,6 +1,6 @@
-webpackJsonp([198,200],{
+webpackJsonp([200,202],{
 
-/***/ 612:
+/***/ 623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1056,7 +1056,7 @@ webpackJsonp([198,200],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=1.0.0"
 	  }, "GitHub"], " 查看 ", ["code", "0.12.x"], " 及之前的更新日志。"]],
 	  "meta": {
-	    "order": 3,
+	    "order": 5,
 	    "title": "更新日志",
 	    "toc": false,
 	    "timeline": true,

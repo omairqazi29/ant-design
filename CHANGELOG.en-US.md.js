@@ -1,6 +1,6 @@
-webpackJsonp([199,200],{
+webpackJsonp([201,202],{
 
-/***/ 611:
+/***/ 622:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -441,7 +441,7 @@ webpackJsonp([199,200],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
 	  "meta": {
-	    "order": 3,
+	    "order": 5,
 	    "title": "Change Log",
 	    "toc": false,
 	    "timeline": true,

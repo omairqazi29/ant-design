@@ -1,6 +1,6 @@
-webpackJsonp([161,200],{
+webpackJsonp([163,202],{
 
-/***/ 753:
+/***/ 765:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([161,200],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _IconSet = __webpack_require__(240);
+	var _IconSet = __webpack_require__(231);
 
 	var _IconSet2 = _interopRequireDefault(_IconSet);
 
@@ -38,7 +38,7 @@ webpackJsonp([161,200],{
 	    return _react2.default.createElement(_IconSet2.default, { className: 'icons', catigory: 'suggestion' });
 	  }, ["h3", "Other Icons"], function jsonmlReactLoader() {
 	    return _react2.default.createElement(_IconSet2.default, { className: 'icons', catigory: 'other' });
-	  }, ["h2", "Props"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "type"], ["td", "Type of ant design icons"], ["td", "string"], ["td", "-"]], ["tr", ["td", "spin"], ["td", "Rotate icon with animation"], ["td", "boolean"], ["td", "false"]]]], ["style", "\n.markdown .icons {\n  width: 100%;\n}\nul.anticons-list {\n  margin: 40px 0;\n  list-style: none;\n  overflow: hidden;\n}\nul.anticons-list li {\n  float: left;\n  width: 16.66%;\n  text-align: center;\n  list-style: none;\n  cursor: pointer;\n  height: 100px;\n  color: #555;\n  transition: all 0.2s ease;\n  position: relative;\n  margin: 3px 0;\n  border-radius: 4px;\n  background-color: #fff;\n  overflow: hidden;\n  padding: 10px 0 0 0;\n}\nul.anticons-list li:hover {\n  background-color: #eaf8fe;\n}\nul.anticons-list li.copied:hover {\n  color: rgba(255,255,255,0.2);\n}\nul.anticons-list li:after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  content: \"Copied!\";\n  text-align: center;\n  line-height: 110px;\n  color: #2db7f5;\n  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  opacity: 0;\n}\nul.anticons-list li.copied:after {\n  opacity: 1;\n  top: -10px;\n}\n.anticon {\n  font-size: 24px;\n  margin: 12px 0 16px;\n  transition: all .3s;\n}\nul.anticons-list li:hover .anticon {\n  transform: scale(1.4);\n}\n.anticon-class {\n  display: block;\n  text-align: center;\n  transform: scale(0.83);\n  font-family: Consolas;\n  white-space: nowrap;\n}\n"]],
+	  }, ["h2", "Props"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "type"], ["td", "Type of ant design icons"], ["td", "string"], ["td", "-"]], ["tr", ["td", "spin"], ["td", "Rotate icon with animation"], ["td", "boolean"], ["td", "false"]]]], ["style", "\n.markdown .icons {\n  width: 100%;\n}\nul.anticons-list {\n  margin: 40px 0;\n  list-style: none;\n  overflow: hidden;\n}\nul.anticons-list li {\n  float: left;\n  width: 16.66%;\n  text-align: center;\n  list-style: none;\n  cursor: pointer;\n  height: 100px;\n  color: #555;\n  transition: all 0.2s ease;\n  position: relative;\n  margin: 3px 0;\n  border-radius: 4px;\n  background-color: #fff;\n  overflow: hidden;\n  padding: 10px 0 0 0;\n}\nul.anticons-list li:hover {\n  background-color: #eaf8fe;\n}\nul.anticons-list li.copied:hover {\n  color: rgba(255,255,255,0.2);\n}\nul.anticons-list li:after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  content: \"Copied!\";\n  text-align: center;\n  line-height: 110px;\n  color: #108ee9;\n  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  opacity: 0;\n}\nul.anticons-list li.copied:after {\n  opacity: 1;\n  top: -10px;\n}\n.anticon {\n  font-size: 24px;\n  margin: 12px 0 16px;\n  transition: all .3s;\n}\nul.anticons-list li:hover .anticon {\n  transform: scale(1.4);\n}\n.anticon-class {\n  display: block;\n  text-align: center;\n  transform: scale(0.83);\n  font-family: \"Lucida Console\", Consolas;\n  white-space: nowrap;\n}\n"]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "General",

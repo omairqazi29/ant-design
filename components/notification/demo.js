@@ -1,6 +1,6 @@
-webpackJsonp([29,200],{
+webpackJsonp([29,202],{
 
-/***/ 809:
+/***/ 821:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11,9 +11,9 @@ webpackJsonp([29,200],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(173);
+	var _style4 = __webpack_require__(183);
 
-	var _notification = __webpack_require__(172);
+	var _notification = __webpack_require__(182);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -64,7 +64,7 @@ webpackJsonp([29,200],{
 
 /***/ },
 
-/***/ 810:
+/***/ 822:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -81,9 +81,9 @@ webpackJsonp([29,200],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(173);
+	var _style6 = __webpack_require__(183);
 
-	var _notification = __webpack_require__(172);
+	var _notification = __webpack_require__(182);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -118,11 +118,11 @@ webpackJsonp([29,200],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Button<span class=\"token punctuation\" >,</span> notification<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> openNotification <span class=\"token operator\" >=</span> <span class=\"token keyword\" >function</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  notification<span class=\"token punctuation\" >.</span><span class=\"token function\" >open</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n    message<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Notification Title'</span><span class=\"token punctuation\" >,</span>\n    description<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'This is the content of the notification. This is the content of the notification. This is the content of the notification.'</span><span class=\"token punctuation\" >,</span>\n    icon<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>smile-circle<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#2db7f5'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >onClick</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>openNotification<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Open the notification box<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Button<span class=\"token punctuation\" >,</span> notification<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> openNotification <span class=\"token operator\" >=</span> <span class=\"token keyword\" >function</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  notification<span class=\"token punctuation\" >.</span><span class=\"token function\" >open</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n    message<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Notification Title'</span><span class=\"token punctuation\" >,</span>\n    description<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'This is the content of the notification. This is the content of the notification. This is the content of the notification.'</span><span class=\"token punctuation\" >,</span>\n    icon<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>smile-circle<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#108ee9'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >onClick</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>openNotification<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Open the notification box<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    var openNotification = function openNotification() {
-	      _notification2.default.open({ message: 'Notification Title', description: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.', icon: _react2.default.createElement(_icon2.default, { type: 'smile-circle', style: { color: '#2db7f5' } }) });
+	      _notification2.default.open({ message: 'Notification Title', description: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.', icon: _react2.default.createElement(_icon2.default, { type: 'smile-circle', style: { color: '#108ee9' } }) });
 	    };return _react2.default.createElement(
 	      _button2.default,
 	      { type: 'primary', onClick: openNotification },
@@ -133,7 +133,7 @@ webpackJsonp([29,200],{
 
 /***/ },
 
-/***/ 811:
+/***/ 823:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -144,9 +144,9 @@ webpackJsonp([29,200],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(173);
+	var _style4 = __webpack_require__(183);
 
-	var _notification = __webpack_require__(172);
+	var _notification = __webpack_require__(182);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -197,7 +197,7 @@ webpackJsonp([29,200],{
 
 /***/ },
 
-/***/ 812:
+/***/ 824:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -208,9 +208,9 @@ webpackJsonp([29,200],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(173);
+	var _style4 = __webpack_require__(183);
 
-	var _notification = __webpack_require__(172);
+	var _notification = __webpack_require__(182);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -273,7 +273,7 @@ webpackJsonp([29,200],{
 
 /***/ },
 
-/***/ 813:
+/***/ 825:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -284,9 +284,9 @@ webpackJsonp([29,200],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(173);
+	var _style4 = __webpack_require__(183);
 
-	var _notification = __webpack_require__(172);
+	var _notification = __webpack_require__(182);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -358,15 +358,15 @@ webpackJsonp([29,200],{
 
 /***/ },
 
-/***/ 1170:
+/***/ 1205:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(809),
-	    'custom-icon': __webpack_require__(810),
-	    'duration': __webpack_require__(811),
-	    'with-btn': __webpack_require__(812),
-	    'with-icon': __webpack_require__(813),
+	    'basic': __webpack_require__(821),
+	    'custom-icon': __webpack_require__(822),
+	    'duration': __webpack_require__(823),
+	    'with-btn': __webpack_require__(824),
+	    'with-icon': __webpack_require__(825),
 	}
 
 /***/ }

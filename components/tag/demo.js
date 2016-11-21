@@ -1,13 +1,13 @@
-webpackJsonp([26,200],{
+webpackJsonp([26,202],{
 
-/***/ 940:
+/***/ 954:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(185);
 
-	var _tag = __webpack_require__(176);
+	var _tag = __webpack_require__(184);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -80,7 +80,7 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 941:
+/***/ 955:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -89,21 +89,21 @@ webpackJsonp([26,200],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(5);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(7);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(6);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(185);
 
-	var _tag = __webpack_require__(176);
+	var _tag = __webpack_require__(184);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -190,14 +190,14 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 942:
+/***/ 956:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(185);
 
-	var _tag = __webpack_require__(176);
+	var _tag = __webpack_require__(184);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -232,7 +232,7 @@ webpackJsonp([26,200],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Tag <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#f50<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#f50<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#87d068<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#87d068<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#2db7f5<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#2db7f5<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  mountNode\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Tag <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#f50<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#f50<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#87d068<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#87d068<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tag</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#108ee9<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>#108ee9<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tag</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  mountNode\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    return _react2.default.createElement(
@@ -250,8 +250,8 @@ webpackJsonp([26,200],{
 	      ),
 	      _react2.default.createElement(
 	        _tag2.default,
-	        { color: '#2db7f5' },
-	        '#2db7f5'
+	        { color: '#108ee9' },
+	        '#108ee9'
 	      )
 	    );
 	  }
@@ -259,7 +259,7 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 943:
+/***/ 957:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -270,25 +270,25 @@ webpackJsonp([26,200],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(177);
+	var _style4 = __webpack_require__(185);
 
-	var _tag = __webpack_require__(176);
+	var _tag = __webpack_require__(184);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
-	var _toConsumableArray2 = __webpack_require__(83);
+	var _toConsumableArray2 = __webpack_require__(79);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(5);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(7);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(6);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -382,30 +382,30 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 944:
+/***/ 958:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _toConsumableArray2 = __webpack_require__(83);
+	var _toConsumableArray2 = __webpack_require__(79);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(5);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(7);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(6);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(185);
 
-	var _tag = __webpack_require__(176);
+	var _tag = __webpack_require__(184);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -500,15 +500,15 @@ webpackJsonp([26,200],{
 
 /***/ },
 
-/***/ 1184:
+/***/ 1219:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(940),
-	    'checkable': __webpack_require__(941),
-	    'colorful': __webpack_require__(942),
-	    'control': __webpack_require__(943),
-	    'hot-tags': __webpack_require__(944),
+	    'basic': __webpack_require__(954),
+	    'checkable': __webpack_require__(955),
+	    'colorful': __webpack_require__(956),
+	    'control': __webpack_require__(957),
+	    'hot-tags': __webpack_require__(958),
 	}
 
 /***/ }

@@ -1,13 +1,13 @@
-webpackJsonp([7,200],{
+webpackJsonp([4,202],{
 
-/***/ 709:
+/***/ 720:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -63,14 +63,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 710:
+/***/ 721:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -154,14 +154,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 711:
+/***/ 722:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -173,7 +173,7 @@ webpackJsonp([7,200],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(30);
+	var _moment = __webpack_require__(32);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -219,14 +219,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 712:
+/***/ 723:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -238,7 +238,7 @@ webpackJsonp([7,200],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(30);
+	var _moment = __webpack_require__(32);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -286,14 +286,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 713:
+/***/ 724:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -305,11 +305,11 @@ webpackJsonp([7,200],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _momentTimezone = __webpack_require__(1607);
+	var _momentTimezone = __webpack_require__(1628);
 
 	var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
 
-	var _en_US = __webpack_require__(287);
+	var _en_US = __webpack_require__(306);
 
 	var _en_US2 = _interopRequireDefault(_en_US);
 
@@ -350,32 +350,95 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 714:
+/***/ 725:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(55);
+	var _style2 = __webpack_require__(67);
 
-	var _radio = __webpack_require__(51);
+	var _datePicker = __webpack_require__(66);
+
+	var _datePicker2 = _interopRequireDefault(_datePicker);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _moment = __webpack_require__(32);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "RangePicker 可以设置常用的 预设范围 提高用户体验。"]],
+	    "en-US": [["p", "We can set presetted ranges to RangePicker to improve user experience."]]
+	  },
+	  "meta": {
+	    "order": 8,
+	    "title": {
+	      "zh-CN": "预设范围",
+	      "en-US": "Presetted Ranges"
+	    },
+	    "filename": "components/date-picker/demo/presetted-ranges.md",
+	    "id": "components-date-picker-demo-presetted-ranges"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> DatePicker <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >import</span> moment <span class=\"token keyword\" >from</span> <span class=\"token string\" >'moment'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> RangePicker <span class=\"token operator\" >=</span> DatePicker<span class=\"token punctuation\" >.</span>RangePicker<span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>dates<span class=\"token punctuation\" >,</span> dateStrings<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'From: '</span><span class=\"token punctuation\" >,</span> dates<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >', to: '</span><span class=\"token punctuation\" >,</span> dates<span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'From: '</span><span class=\"token punctuation\" >,</span> dateStrings<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >', to: '</span><span class=\"token punctuation\" >,</span> dateStrings<span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\" >ranges</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> Today<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >,</span> <span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >'This Month'</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >,</span> <span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >endOf</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'month'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >]</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n      <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onChange<span class=\"token punctuation\" >}</span></span>\n    <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\" >ranges</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> Today<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >,</span> <span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >'This Month'</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >,</span> <span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >endOf</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'month'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >]</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n      <span class=\"token attr-name\" >showTime</span> <span class=\"token attr-name\" >format</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>YYYY/MM/DD</span> <span class=\"token attr-name\" ><span class=\"token namespace\" >HH:</span><span class=\"token namespace\" >mm:</span>ss\"</span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onChange<span class=\"token punctuation\" >}</span></span>\n    <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  mountNode\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var RangePicker = _datePicker2.default.RangePicker;function onChange(dates, dateStrings) {
+	      console.log('From: ', dates[0], ', to: ', dates[1]);console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
+	    }return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(RangePicker, { ranges: { Today: [(0, _moment2.default)(), (0, _moment2.default)()], 'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')] }, onChange: onChange }),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement(RangePicker, { ranges: { Today: [(0, _moment2.default)(), (0, _moment2.default)()], 'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')] }, showTime: true, format: 'YYYY/MM/DD HH:mm:ss', onChange: onChange })
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 726:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(59);
+
+	var _radio = __webpack_require__(55);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(5);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(7);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(6);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style4 = __webpack_require__(69);
+	var _style4 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -477,14 +540,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 715:
+/***/ 727:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -492,15 +555,15 @@ webpackJsonp([7,200],{
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(5);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(7);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(6);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -597,14 +660,14 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 716:
+/***/ 728:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(69);
+	var _style2 = __webpack_require__(67);
 
-	var _datePicker = __webpack_require__(68);
+	var _datePicker = __webpack_require__(66);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
@@ -658,23 +721,24 @@ webpackJsonp([7,200],{
 
 /***/ },
 
-/***/ 1159:
+/***/ 1194:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(709),
-	    'disabled-date': __webpack_require__(710),
-	    'disabled': __webpack_require__(711),
-	    'format': __webpack_require__(712),
-	    'locale': __webpack_require__(713),
-	    'size': __webpack_require__(714),
-	    'start-end': __webpack_require__(715),
-	    'time': __webpack_require__(716),
+	    'basic': __webpack_require__(720),
+	    'disabled-date': __webpack_require__(721),
+	    'disabled': __webpack_require__(722),
+	    'format': __webpack_require__(723),
+	    'locale': __webpack_require__(724),
+	    'presetted-ranges': __webpack_require__(725),
+	    'size': __webpack_require__(726),
+	    'start-end': __webpack_require__(727),
+	    'time': __webpack_require__(728),
 	}
 
 /***/ },
 
-/***/ 1607:
+/***/ 1628:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//! moment-timezone.js
@@ -688,7 +752,7 @@ webpackJsonp([7,200],{
 
 		/*global define*/
 		if (true) {
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(30)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));                 // AMD
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(32)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));                 // AMD
 		} else if (typeof module === 'object' && module.exports) {
 			module.exports = factory(require('moment')); // Node
 		} else {

@@ -1,6 +1,6 @@
-webpackJsonp([81,200],{
+webpackJsonp([81,202],{
 
-/***/ 1017:
+/***/ 1033:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,14 +23,26 @@ webpackJsonp([81,200],{
 	    "href": "http://library.ant.design",
 	    "class": "resource-card"
 	  }, ["img", {
-	    "src": "https://os.alipayobjects.com/rmsportal/cnmjGfbBWUZPFiO.png"
+	    "src": "https://zos.alipayobjects.com/rmsportal/qXrCHrsuyrINSeerFOerLcTTFZiEzHAJ.png"
 	  }], ["span", {
 	    "class": "resource-card-content"
 	  }, ["span", {
 	    "class": "resource-card-title"
 	  }, "Ant Design Library v2.0.1"], ["span", {
 	    "class": "resource-card-description"
-	  }, "A powerful Axure library of Ant Design."]]], ["a", {
+	  }, "A powerful Axure library of Ant Design"]]], ["a", {
+	    "target": "_blank",
+	    "href": "https://github.com/ant-design/ant-design/releases/download/resource/Ant.Design.Template.v1.1.sketch",
+	    "class": "resource-card"
+	  }, ["img", {
+	    "src": "https://www.sketchapp.com/images/app-icon@2x.png"
+	  }], ["span", {
+	    "class": "resource-card-content"
+	  }, ["span", {
+	    "class": "resource-card-title"
+	  }, "Sketch Template"], ["span", {
+	    "class": "resource-card-description"
+	  }, "Make your design document like real"]]], ["a", {
 	    "target": "_blank",
 	    "href": "http://ux.ant.design",
 	    "class": "resource-card"
@@ -42,7 +54,7 @@ webpackJsonp([81,200],{
 	    "class": "resource-card-title"
 	  }, "Ant UX"], ["span", {
 	    "class": "resource-card-description"
-	  }, "A series prototypes that help creating application structure and user flow."]]], ["a", {
+	  }, "A series prototypes that help creating application structure and user flow"]]], ["a", {
 	    "target": "_blank",
 	    "href": "https://github.com/ant-design/ant-design/releases/download/resource/iconfont-2.x.zip",
 	    "class": "resource-card"
@@ -54,18 +66,7 @@ webpackJsonp([81,200],{
 	    "class": "resource-card-title"
 	  }, "Web Font"], ["span", {
 	    "class": "resource-card-description"
-	  }, "Icon font package for your local reference."]]], ["a", {
-	    "target": "_blank",
-	    "class": "resource-card disabled"
-	  }, ["img", {
-	    "src": "https://os.alipayobjects.com/rmsportal/CxXbSpIXckHOtWl.png"
-	  }], ["span", {
-	    "class": "resource-card-content"
-	  }, ["span", {
-	    "class": "resource-card-title"
-	  }, "Ant Cool"], ["span", {
-	    "class": "resource-card-description"
-	  }, "An Agile tool for sharing design resources."]]]]],
+	  }, "Icon font package for your local reference"]]]]],
 	  "meta": {
 	    "order": 0,
 	    "title": "Download",

@@ -1,6 +1,6 @@
-webpackJsonp([80,200],{
+webpackJsonp([80,202],{
 
-/***/ 1018:
+/***/ 1034:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,7 +23,7 @@ webpackJsonp([80,200],{
 	    "href": "http://library.ant.design",
 	    "class": "resource-card"
 	  }, ["img", {
-	    "src": "https://os.alipayobjects.com/rmsportal/cnmjGfbBWUZPFiO.png"
+	    "src": "https://zos.alipayobjects.com/rmsportal/qXrCHrsuyrINSeerFOerLcTTFZiEzHAJ.png"
 	  }], ["span", {
 	    "class": "resource-card-content"
 	  }, ["span", {
@@ -31,6 +31,18 @@ webpackJsonp([80,200],{
 	  }, "Ant Design Library v2.0.1"], ["span", {
 	    "class": "resource-card-description"
 	  }, "一套强大的 Ant Design 的 Axure 部件库"]]], ["a", {
+	    "target": "_blank",
+	    "href": "https://github.com/ant-design/ant-design/releases/download/resource/Ant.Design.Template.v1.1.sketch",
+	    "class": "resource-card"
+	  }, ["img", {
+	    "src": "https://www.sketchapp.com/images/app-icon@2x.png"
+	  }], ["span", {
+	    "class": "resource-card-content"
+	  }, ["span", {
+	    "class": "resource-card-title"
+	  }, "Sketch Template"], ["span", {
+	    "class": "resource-card-description"
+	  }, "精心整理的组件设计素材"]]], ["a", {
 	    "target": "_blank",
 	    "href": "http://ux.ant.design",
 	    "class": "resource-card"
@@ -54,18 +66,7 @@ webpackJsonp([80,200],{
 	    "class": "resource-card-title"
 	  }, "Web Font"], ["span", {
 	    "class": "resource-card-description"
-	  }, "网络字体图标的本地文件包"]]], ["a", {
-	    "target": "_blank",
-	    "class": "resource-card disabled"
-	  }, ["img", {
-	    "src": "https://os.alipayobjects.com/rmsportal/CxXbSpIXckHOtWl.png"
-	  }], ["span", {
-	    "class": "resource-card-content"
-	  }, ["span", {
-	    "class": "resource-card-title"
-	  }, "Ant Cool"], ["span", {
-	    "class": "resource-card-description"
-	  }, "一个机智的设计资源共享工具"]]]]],
+	  }, "网络字体图标的本地文件包"]]]]],
 	  "meta": {
 	    "order": 0,
 	    "title": "资源下载",

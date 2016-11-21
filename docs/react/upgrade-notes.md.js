@@ -1,6 +1,6 @@
-webpackJsonp([82,200],{
+webpackJsonp([82,202],{
 
-/***/ 1016:
+/***/ 1032:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -120,7 +120,7 @@ webpackJsonp([82,200],{
 	    "href": "https://github.com/ant-design/ant-design/issues/new"
 	  }, "报告"], " 给我们。"]],
 	  "meta": {
-	    "order": 4,
+	    "order": 6,
 	    "title": {
 	      "zh-CN": "升级指南",
 	      "en-US": "Upgrade Notes"
