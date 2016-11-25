@@ -23,7 +23,7 @@ webpackJsonp([0,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reqwest = __webpack_require__(1899);
+	var _reqwest = __webpack_require__(1897);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -109,7 +109,7 @@ webpackJsonp([0,202],{
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -476,7 +476,7 @@ webpackJsonp([0,202],{
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _defineProperty2 = __webpack_require__(11);
+	var _defineProperty2 = __webpack_require__(10);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -494,7 +494,7 @@ webpackJsonp([0,202],{
 
 	var _style9 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -730,7 +730,7 @@ webpackJsonp([0,202],{
 
 	var _style9 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -1616,7 +1616,7 @@ webpackJsonp([0,202],{
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -2234,7 +2234,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 1223:
+/***/ 1221:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2265,7 +2265,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 1899:
+/***/ 1897:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2289,7 +2289,7 @@ webpackJsonp([0,202],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1911)
+	      XHR2 = __webpack_require__(1909)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -2902,7 +2902,7 @@ webpackJsonp([0,202],{
 
 /***/ },
 
-/***/ 1911:
+/***/ 1909:
 /***/ function(module, exports) {
 
 	/* (ignored) */

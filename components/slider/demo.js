@@ -178,7 +178,7 @@ webpackJsonp([19,202],{
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -400,7 +400,7 @@ webpackJsonp([19,202],{
 	    "en-US": [["p", "Using ", ["code", "marks"], " property to mark a graduated slider, use ", ["code", "value"], " or ", ["code", "defaultValue"], " to specify the position of thumb.\nWhen ", ["code", "included"], " is false, means that different thumbs are coordinative.\nwhen ", ["code", "step"], " is null, users can only slide the thumbs onto marks."]]
 	  },
 	  "meta": {
-	    "order": 3,
+	    "order": 5,
 	    "title": {
 	      "zh-CN": "带标签的滑块",
 	      "en-US": "Graduated slider"
@@ -499,7 +499,7 @@ webpackJsonp([19,202],{
 	    "en-US": [["p", "Use ", ["code", "tipFormatter"], " to format content of ", ["code", "Toolip"], ". If ", ["code", "tipFormatter"], " is null, hide it."]]
 	  },
 	  "meta": {
-	    "order": 5,
+	    "order": 3,
 	    "title": {
 	      "zh-CN": "自定义提示",
 	      "en-US": "Customerize tooltip"
@@ -531,7 +531,7 @@ webpackJsonp([19,202],{
 
 /***/ },
 
-/***/ 1219:
+/***/ 1217:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

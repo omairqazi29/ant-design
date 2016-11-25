@@ -571,7 +571,7 @@ webpackJsonp([3,202],{
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -931,7 +931,7 @@ webpackJsonp([3,202],{
 
 /***/ },
 
-/***/ 1224:
+/***/ 1222:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

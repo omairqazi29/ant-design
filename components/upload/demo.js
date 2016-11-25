@@ -1,13 +1,140 @@
-webpackJsonp([5,202],{
+webpackJsonp([12,202],{
 
 /***/ 1006:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(103);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
+
+	var _upload2 = _interopRequireDefault(_upload);
+
+	var _style5 = __webpack_require__(14);
+
+	var _icon = __webpack_require__(11);
+
+	var _icon2 = _interopRequireDefault(_icon);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _style6 = __webpack_require__(57);
+
+	var _message = __webpack_require__(56);
+
+	var _message2 = _interopRequireDefault(_message);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "点击上传用户头像，并使用 ", ["code", "beforeUpload"], " 限制用户上传的图片格式和大小。"], ["blockquote", ["p", ["code", "beforeUpload"], " 的返回值可以是一个 Promise 以支持也支持异步检查：", ["a", {
+	      "title": null,
+	      "href": "http://react-component.github.io/upload/examples/beforeUpload.html"
+	    }, "示例"], "。"]]],
+	    "en-US": [["p", "Click to upload user's avatar, and validate size and format of picture with ", ["code", "beforeUpload"], "."], ["blockquote", ["p", "The return value of function ", ["code", "beforeUpload"], " can be a Promise to check asynchronously. ", ["a", {
+	      "title": null,
+	      "href": "http://react-component.github.io/upload/examples/beforeUpload.html"
+	    }, "demo"]]]]
+	  },
+	  "meta": {
+	    "order": 1,
+	    "title": {
+	      "zh-CN": "用户头像",
+	      "en-US": "Avatar"
+	    },
+	    "filename": "components/upload/demo/avatar.md",
+	    "id": "components-upload-demo-avatar"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> message <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >getBase64</span><span class=\"token punctuation\" >(</span>img<span class=\"token punctuation\" >,</span> callback<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >const</span> reader <span class=\"token operator\" >=</span> <span class=\"token keyword\" >new</span> <span class=\"token class-name\" >FileReader</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  reader<span class=\"token punctuation\" >.</span><span class=\"token function\" >addEventListener</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'load'</span><span class=\"token punctuation\" >,</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token function\" >callback</span><span class=\"token punctuation\" >(</span>reader<span class=\"token punctuation\" >.</span>result<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  reader<span class=\"token punctuation\" >.</span><span class=\"token function\" >readAsDataURL</span><span class=\"token punctuation\" >(</span>img<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >beforeUpload</span><span class=\"token punctuation\" >(</span>file<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >const</span> isJPG <span class=\"token operator\" >=</span> file<span class=\"token punctuation\" >.</span>type <span class=\"token operator\" >===</span> <span class=\"token string\" >'image/jpeg'</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span><span class=\"token operator\" >!</span>isJPG<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    message<span class=\"token punctuation\" >.</span><span class=\"token function\" >error</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'You can only upload JPG file!'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token keyword\" >const</span> isLt2M <span class=\"token operator\" >=</span> file<span class=\"token punctuation\" >.</span>size <span class=\"token operator\" >/</span> <span class=\"token number\" >1024</span> <span class=\"token operator\" >/</span> <span class=\"token number\" >1024</span> <span class=\"token operator\" >&lt;</span> <span class=\"token number\" >2</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span><span class=\"token operator\" >!</span>isLt2M<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    message<span class=\"token punctuation\" >.</span><span class=\"token function\" >error</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'Image must smaller than 2MB!'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token keyword\" >return</span> isJPG <span class=\"token operator\" >&amp;&amp;</span> isLt2M<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Avatar</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\n  handleChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      <span class=\"token comment\" spellcheck=\"true\">// Get this url from response in real world.</span>\n      <span class=\"token function\" >getBase64</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>originFileObj<span class=\"token punctuation\" >,</span> imageUrl <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> imageUrl <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> imageUrl <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>imageUrl<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Upload</span>\n        <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar-uploader<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >showUploadList</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token boolean\" >false</span><span class=\"token punctuation\" >}</span></span>\n        <span class=\"token attr-name\" >action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>/upload.do<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >beforeUpload</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>beforeUpload<span class=\"token punctuation\" >}</span></span>\n        <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleChange<span class=\"token punctuation\" >}</span></span>\n      <span class=\"token punctuation\" >></span></span>\n        <span class=\"token punctuation\" >{</span>\n          imageUrl <span class=\"token operator\" >?</span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >src</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>imageUrl<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >role</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>presentation<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span> <span class=\"token punctuation\" >:</span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar-uploader-trigger<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token punctuation\" >}</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Upload</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Avatar</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    function getBase64(img, callback) {
+	      var reader = new FileReader();reader.addEventListener('load', function () {
+	        return callback(reader.result);
+	      });reader.readAsDataURL(img);
+	    }function beforeUpload(file) {
+	      var isJPG = file.type === 'image/jpeg';if (!isJPG) {
+	        _message2.default.error('You can only upload JPG file!');
+	      }var isLt2M = file.size / 1024 / 1024 < 2;if (!isLt2M) {
+	        _message2.default.error('Image must smaller than 2MB!');
+	      }return isJPG && isLt2M;
+	    }
+	    var Avatar = function (_React$Component) {
+	      (0, _inherits3.default)(Avatar, _React$Component);
+
+	      function Avatar() {
+	        var _temp, _this, _ret;
+
+	        (0, _classCallCheck3.default)(this, Avatar);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	          args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {}, _this.handleChange = function (info) {
+	          if (info.file.status === 'done') {
+	            // Get this url from response in real world.
+	            getBase64(info.file.originFileObj, function (imageUrl) {
+	              return _this.setState({ imageUrl: imageUrl });
+	            });
+	          }
+	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	      }
+
+	      Avatar.prototype.render = function render() {
+	        var imageUrl = this.state.imageUrl;return _react2.default.createElement(
+	          _upload2.default,
+	          { className: 'avatar-uploader', name: 'avatar', showUploadList: false, action: '/upload.do', beforeUpload: beforeUpload, onChange: this.handleChange },
+	          imageUrl ? _react2.default.createElement('img', { src: imageUrl, role: 'presentation', className: 'avatar' }) : _react2.default.createElement(_icon2.default, { type: 'plus', className: 'avatar-uploader-trigger' })
+	        );
+	      };
+
+	      return Avatar;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(Avatar, null);
+	  },
+	  "style": ".avatar-uploader,\n.avatar-uploader-trigger,\n.avatar {\n  width: 150px;\n  height: 150px;\n}\n.avatar-uploader {\n  display: block;\n  border: 1px dashed #d9d9d9;\n  border-radius: 6px;\n  cursor: pointer;\n}\n.avatar-uploader-trigger {\n  display: table-cell;\n  vertical-align: middle;\n  font-size: 28px;\n  color: #999;\n}",
+	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader</span>,\n<span class=\"token class\" >.avatar-uploader-trigger</span>,\n<span class=\"token class\" >.avatar</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >150</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >150</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> block<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >1</span>px dashed <span class=\"token hexcode\" >#d9d9d9</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border-radius</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >cursor</span><span class=\"token punctuation\" >:</span> pointer<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader-trigger</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> table-cell<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >vertical-align</span><span class=\"token punctuation\" >:</span> middle<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >28</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#999</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
+	};
+
+/***/ },
+
+/***/ 1007:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style5 = __webpack_require__(121);
+
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -19,7 +146,7 @@ webpackJsonp([5,202],{
 
 	var _style7 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -87,100 +214,14 @@ webpackJsonp([5,202],{
 
 /***/ },
 
-/***/ 1007:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style5 = __webpack_require__(103);
-
-	var _upload = __webpack_require__(102);
-
-	var _upload2 = _interopRequireDefault(_upload);
-
-	var _style6 = __webpack_require__(12);
-
-	var _button = __webpack_require__(9);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _style7 = __webpack_require__(14);
-
-	var _icon = __webpack_require__(10);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _style8 = __webpack_require__(57);
-
-	var _message = __webpack_require__(56);
-
-	var _message2 = _interopRequireDefault(_message);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "可以通过 ", ["code", "beforeUpload"], " 在文件上传之前进行干预，如限制用户只能上传 JPG 文件。"], ["p", "也支持异步检查，", ["code", "beforeUpload"], " 的返回值可以是一个 Promise：", ["a", {
-	      "title": null,
-	      "href": "http://react-component.github.io/upload/examples/beforeUpload.html"
-	    }, "示例"], "。"]],
-	    "en-US": [["p", "You can use ", ["code", "beforeUpload"], " to check whether user can upload, for example, limit file type only to be JPG. Checking can also be asynchronous. The return value can also be a Promise for function ", ["code", "beforeUpload"]]]
-	  },
-	  "meta": {
-	    "order": 7,
-	    "title": {
-	      "zh-CN": "限制用户上传的文件",
-	      "en-US": "Filter uploads files"
-	    },
-	    "filename": "components/upload/demo/beforeUpload.md",
-	    "id": "components-upload-demo-beforeUpload"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Button<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> message <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> props <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n  action<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'/upload.do'</span><span class=\"token punctuation\" >,</span>\n  multiple<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >beforeUpload</span><span class=\"token punctuation\" >(</span>file<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> isJPG <span class=\"token operator\" >=</span> file<span class=\"token punctuation\" >.</span>type <span class=\"token operator\" >===</span> <span class=\"token string\" >'image/jpeg'</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span><span class=\"token operator\" >!</span>isJPG<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      message<span class=\"token punctuation\" >.</span><span class=\"token function\" >error</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'you can only upload JPG file~'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n    <span class=\"token keyword\" >return</span> isJPG<span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token operator\" >&lt;</span>Upload <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>upload<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span> upload\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Upload</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var props = { action: '/upload.do', multiple: true, beforeUpload: function beforeUpload(file) {
-	        var isJPG = file.type === 'image/jpeg';if (!isJPG) {
-	          _message2.default.error('you can only upload JPG file~');
-	        }return isJPG;
-	      }
-	    };return _react2.default.createElement(
-	      _upload2.default,
-	      props,
-	      _react2.default.createElement(
-	        _button2.default,
-	        { type: 'ghost' },
-	        _react2.default.createElement(_icon2.default, { type: 'upload' }),
-	        ' upload'
-	      )
-	    );
-	  }
-	};
-
-/***/ },
-
 /***/ 1008:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(103);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -192,7 +233,7 @@ webpackJsonp([5,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -212,7 +253,7 @@ webpackJsonp([5,202],{
 	    "en-US": [["p", "Edit uploaded files"]]
 	  },
 	  "meta": {
-	    "order": 1,
+	    "order": 2,
 	    "title": {
 	      "zh-CN": "传入已上传的文件",
 	      "en-US": "Set files that have been uploaded"
@@ -257,7 +298,7 @@ webpackJsonp([5,202],{
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -267,9 +308,9 @@ webpackJsonp([5,202],{
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style6 = __webpack_require__(103);
+	var _style6 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -285,14 +326,14 @@ webpackJsonp([5,202],{
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "可以把文件拖入指定区域，完成上传，同样支持点击上传。"]],
-	    "en-US": [["p", "You can drag files to a specific area, to upload. Meanwhile you can also upload by selecting."]]
+	    "zh-CN": [["p", "把文件拖入指定区域，完成上传，同样支持点击上传。"], ["p", "设置 ", ["code", "multiple"], " 后，在 ", ["code", "IE10+"], " 可以一次上传多个文件。"]],
+	    "en-US": [["p", "You can drag files to a specific area, to upload. Meanwhile you can also upload by selecting."], ["p", "We can upload serveral files at one in modern browser by setting ", ["code", "multiple"], "."]]
 	  },
 	  "meta": {
-	    "order": 3,
+	    "order": 5,
 	    "title": {
 	      "zh-CN": "拖拽上传",
-	      "en-US": "Upload files by dragging and dropping"
+	      "en-US": "Drag and Drop"
 	    },
 	    "filename": "components/upload/demo/drag.md",
 	    "id": "components-upload-demo-drag"
@@ -304,53 +345,39 @@ webpackJsonp([5,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> message <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Dragger <span class=\"token operator\" >=</span> Upload<span class=\"token punctuation\" >.</span>Dragger<span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> props <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n  name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'file'</span><span class=\"token punctuation\" >,</span>\n  showUploadList<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n  action<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'/upload.do'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status <span class=\"token operator\" >!==</span> <span class=\"token string\" >'uploading'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >,</span> info<span class=\"token punctuation\" >.</span>fileList<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      message<span class=\"token punctuation\" >.</span><span class=\"token function\" >success</span><span class=\"token punctuation\" >(</span><span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>name<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > file uploaded successfully.`</span></span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >else</span> <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'error'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      message<span class=\"token punctuation\" >.</span><span class=\"token function\" >error</span><span class=\"token punctuation\" >(</span><span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>name<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > file upload failed.`</span></span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> width<span class=\"token punctuation\" >:</span> <span class=\"token number\" >246</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token number\" >140</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token operator\" >&lt;</span>Dragger <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Dragger</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> marginTop<span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token number\" >180</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token operator\" >&lt;</span>Dragger <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-drag-icon<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>inbox<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-text<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Click or drag file to <span class=\"token keyword\" >this</span> area to upload<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-hint<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Support <span class=\"token keyword\" >for</span> a single or bulk upload<span class=\"token punctuation\" >.</span> Strictly prohibit <span class=\"token keyword\" >from</span> uploading company data or other band files<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Dragger</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> message <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Dragger <span class=\"token operator\" >=</span> Upload<span class=\"token punctuation\" >.</span>Dragger<span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> props <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n  name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'file'</span><span class=\"token punctuation\" >,</span>\n  multiple<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n  showUploadList<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n  action<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'/upload.do'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> status <span class=\"token operator\" >=</span> info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>status <span class=\"token operator\" >!==</span> <span class=\"token string\" >'uploading'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >,</span> info<span class=\"token punctuation\" >.</span>fileList<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      message<span class=\"token punctuation\" >.</span><span class=\"token function\" >success</span><span class=\"token punctuation\" >(</span><span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>name<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > file uploaded successfully.`</span></span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >else</span> <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'error'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      message<span class=\"token punctuation\" >.</span><span class=\"token function\" >error</span><span class=\"token punctuation\" >(</span><span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>name<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > file upload failed.`</span></span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> marginTop<span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token number\" >180</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token operator\" >&lt;</span>Dragger <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-drag-icon<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>inbox<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-text<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Click or drag file to <span class=\"token keyword\" >this</span> area to upload<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-hint<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Support <span class=\"token keyword\" >for</span> a single or bulk upload<span class=\"token punctuation\" >.</span> Strictly prohibit <span class=\"token keyword\" >from</span> uploading company data or other band files<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Dragger</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
-	    var Dragger = _upload2.default.Dragger;var props = { name: 'file',
-	      showUploadList: false, action: '/upload.do', onChange: function onChange(info) {
-	        if (info.file.status !== 'uploading') {
+	    var Dragger = _upload2.default.Dragger;var props = { name: 'file', multiple: true, showUploadList: false, action: '/upload.do',
+	      onChange: function onChange(info) {
+	        var status = info.file.status;if (status !== 'uploading') {
 	          console.log(info.file, info.fileList);
-	        }if (info.file.status === 'done') {
+	        }if (status === 'done') {
 	          _message2.default.success(info.file.name + ' file uploaded successfully.');
-	        } else if (info.file.status === 'error') {
+	        } else if (status === 'error') {
 	          _message2.default.error(info.file.name + ' file upload failed.');
 	        }
 	      }
 	    };return _react2.default.createElement(
 	      'div',
-	      null,
+	      { style: { marginTop: 16, height: 180 } },
 	      _react2.default.createElement(
-	        'div',
-	        { style: { width: 246,
-	            height: 140 } },
+	        Dragger,
+	        props,
 	        _react2.default.createElement(
-	          Dragger,
-	          props,
-	          _react2.default.createElement(_icon2.default, { type: 'plus' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginTop: 16, height: 180 } },
+	          'p',
+	          { className: 'ant-upload-drag-icon' },
+	          _react2.default.createElement(_icon2.default, { type: 'inbox' })
+	        ),
 	        _react2.default.createElement(
-	          Dragger,
-	          props,
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'ant-upload-drag-icon' },
-	            _react2.default.createElement(_icon2.default, { type: 'inbox' })
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'ant-upload-text' },
-	            'Click or drag file to this area to upload'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'ant-upload-hint' },
-	            'Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files'
-	          )
+	          'p',
+	          { className: 'ant-upload-text' },
+	          'Click or drag file to this area to upload'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'ant-upload-hint' },
+	          'Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files'
 	        )
 	      )
 	    );
@@ -364,9 +391,9 @@ webpackJsonp([5,202],{
 
 	'use strict';
 
-	var _style4 = __webpack_require__(103);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -382,7 +409,7 @@ webpackJsonp([5,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -402,7 +429,7 @@ webpackJsonp([5,202],{
 	    "en-US": [["p", "You can gain full control over filelist by configuring ", ["code", "fileList"], ". You can accomplish all kinds of customed functions. The following shows three circumstances:"], ["p", "1) limit the number of uploaded files."], ["p", "2) read from response and show file link."], ["p", "3) filter successfully uploaded files according to response from server."]]
 	  },
 	  "meta": {
-	    "order": 2,
+	    "order": 4,
 	    "title": {
 	      "zh-CN": "完全控制的上传列表",
 	      "en-US": "Complete control over file list"
@@ -464,121 +491,35 @@ webpackJsonp([5,202],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(103);
-
-	var _upload = __webpack_require__(102);
-
-	var _upload2 = _interopRequireDefault(_upload);
-
-	var _style4 = __webpack_require__(14);
-
-	var _icon = __webpack_require__(10);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "上传图片原位显示。"]],
-	    "en-US": [["p", "Show uploaded image in-place."]]
-	  },
-	  "meta": {
-	    "order": 9,
-	    "title": {
-	      "zh-CN": "上传图片原位显示",
-	      "en-US": "Show uploaded image in-place"
-	    },
-	    "filename": "components/upload/demo/inplace.md",
-	    "id": "components-upload-demo-inplace"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> Demo <span class=\"token operator\" >=</span> React<span class=\"token punctuation\" >.</span><span class=\"token function\" >createClass</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >getInitialState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >handleChange</span><span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>info<span class=\"token punctuation\" >.</span>file<span class=\"token punctuation\" >.</span>status <span class=\"token operator\" >===</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n        <span class=\"token comment\" spellcheck=\"true\">// Get this url from response in real world.</span>\n        imageUrl<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'</span><span class=\"token punctuation\" >,</span>\n      <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> imageUrl <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>imageUrl<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Upload</span>\n        <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar-uploader<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >showUploadList</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token boolean\" >false</span><span class=\"token punctuation\" >}</span></span>\n        <span class=\"token attr-name\" >action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>/upload.do<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleChange<span class=\"token punctuation\" >}</span></span>\n      <span class=\"token punctuation\" >></span></span>\n        <span class=\"token punctuation\" >{</span>\n          imageUrl <span class=\"token operator\" >?</span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >src</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>imageUrl<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >role</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>presentation<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span> <span class=\"token punctuation\" >:</span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>avatar-uploader-trigger<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token punctuation\" >}</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Upload</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Demo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Demo = _react2.default.createClass({
-	      displayName: 'Demo',
-	      getInitialState: function getInitialState() {
-	        return {};
-	      },
-	      handleChange: function handleChange(info) {
-	        if (info.file.status === 'done') {
-	          this.setState({ // Get this url from response in real world.
-	            imageUrl: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' });
-	        }
-	      },
-	      render: function render() {
-	        var imageUrl = this.state.imageUrl;return _react2.default.createElement(
-	          _upload2.default,
-	          { className: 'avatar-uploader', name: 'avatar', showUploadList: false, action: '/upload.do', onChange: this.handleChange },
-	          imageUrl ? _react2.default.createElement('img', { src: imageUrl, role: 'presentation', className: 'avatar' }) : _react2.default.createElement(_icon2.default, { type: 'plus', className: 'avatar-uploader-trigger' })
-	        );
-	      }
-	    });return _react2.default.createElement(Demo, null);
-	  },
-	  "style": ".avatar-uploader,\n.avatar-uploader-trigger,\n.avatar {\n  width: 150px;\n  height: 150px;\n}\n.avatar-uploader {\n  display: block;\n  border: 1px dashed #d9d9d9;\n  border-radius: 6px;\n  cursor: pointer;\n}\n.avatar-uploader-trigger {\n  display: table-cell;\n  vertical-align: middle;\n  font-size: 28px;\n  color: #999;\n}",
-	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader</span>,\n<span class=\"token class\" >.avatar-uploader-trigger</span>,\n<span class=\"token class\" >.avatar</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >150</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >150</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> block<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >1</span>px dashed <span class=\"token hexcode\" >#d9d9d9</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border-radius</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >cursor</span><span class=\"token punctuation\" >:</span> pointer<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.avatar-uploader-trigger</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> table-cell<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >vertical-align</span><span class=\"token punctuation\" >:</span> middle<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >28</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#999</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
-	};
-
-/***/ },
-
-/***/ 1012:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "meta": {}
-	};
-
-/***/ },
-
-/***/ 1013:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
 	var _style4 = __webpack_require__(68);
 
 	var _modal = __webpack_require__(58);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _style5 = __webpack_require__(103);
+	var _style5 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
 
 	var _react = __webpack_require__(1);
 
@@ -592,14 +533,14 @@ webpackJsonp([5,202],{
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "上传文件为图片，可展示本地缩略图。"]],
-	    "en-US": [["p", "If uploade file is picture, a thumbnail can be shown."]]
+	    "zh-CN": [["p", "用户可以上传图片并在列表中显示缩略图。当上传照片数到达限制后，上传按钮消失。"]],
+	    "en-US": [["p", "After users upload picture, the thumbnail will be shown in list. The upload button will disappear when count meets limitation."]]
 	  },
 	  "meta": {
-	    "order": 8,
+	    "order": 3,
 	    "title": {
-	      "zh-CN": "图片卡片样式",
-	      "en-US": "Pictures with card tyle"
+	      "zh-CN": "照片墙",
+	      "en-US": "Pictures Wall"
 	    },
 	    "filename": "components/upload/demo/picture-card.md",
 	    "id": "components-upload-demo-picture-card"
@@ -611,61 +552,74 @@ webpackJsonp([5,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> Modal <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> ImageUploadList <span class=\"token operator\" >=</span> React<span class=\"token punctuation\" >.</span><span class=\"token function\" >createClass</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >getInitialState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >{</span>\n      previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n      previewImage<span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >handleCancel</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> props <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n      action<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'/upload.do'</span><span class=\"token punctuation\" >,</span>\n      listType<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'picture-card'</span><span class=\"token punctuation\" >,</span>\n      defaultFileList<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token punctuation\" >{</span>\n        uid<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >-</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >,</span>\n        name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'xxx.png'</span><span class=\"token punctuation\" >,</span>\n        status<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >,</span>\n        url<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'</span><span class=\"token punctuation\" >,</span>\n      <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span>\n      onPreview<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >(</span>file<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n          previewImage<span class=\"token punctuation\" >:</span> file<span class=\"token punctuation\" >.</span>url <span class=\"token operator\" >||</span> file<span class=\"token punctuation\" >.</span>thumbUrl<span class=\"token punctuation\" >,</span>\n          previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n      <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>clearfix<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token operator\" >&lt;</span>Upload <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-text<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Upload<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Upload</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span>\n          <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png<span class=\"token punctuation\" >\"</span></span>\n          <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_blank<span class=\"token punctuation\" >\"</span></span>\n          <span class=\"token attr-name\" >rel</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>noopener</span> <span class=\"token attr-name\" >noreferrer\"</span>\n          <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>upload-example<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >alt</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>example<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >src</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>sample<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Modal</span> <span class=\"token attr-name\" >visible</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>previewVisible<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >footer</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >null</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onCancel</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCancel<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >alt</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>example<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'100%'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >src</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>previewImage<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Modal</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ImageUploadList</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Upload<span class=\"token punctuation\" >,</span> Icon<span class=\"token punctuation\" >,</span> Modal <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >PicturesWall</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n    previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n    previewImage<span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >,</span>\n    fileList<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token punctuation\" >{</span>\n      uid<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >-</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >,</span>\n      name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'xxx.png'</span><span class=\"token punctuation\" >,</span>\n      status<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'done'</span><span class=\"token punctuation\" >,</span>\n      url<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\n  handleCancel <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span>\n\n  handlePreview <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>file<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      previewImage<span class=\"token punctuation\" >:</span> file<span class=\"token punctuation\" >.</span>url <span class=\"token operator\" >||</span> file<span class=\"token punctuation\" >.</span>thumbUrl<span class=\"token punctuation\" >,</span>\n      previewVisible<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  handleChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> fileList <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> fileList <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> previewVisible<span class=\"token punctuation\" >,</span> previewImage<span class=\"token punctuation\" >,</span> fileList <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >const</span> uploadButton <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-text<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Upload<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>clearfix<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Upload</span>\n          <span class=\"token attr-name\" >action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>/upload.do<span class=\"token punctuation\" >\"</span></span>\n          <span class=\"token attr-name\" >listType</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>picture-card<span class=\"token punctuation\" >\"</span></span>\n          <span class=\"token attr-name\" >fileList</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>fileList<span class=\"token punctuation\" >}</span></span>\n          <span class=\"token attr-name\" >onPreview</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handlePreview<span class=\"token punctuation\" >}</span></span>\n          <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleChange<span class=\"token punctuation\" >}</span></span>\n        <span class=\"token punctuation\" >></span></span>\n          <span class=\"token punctuation\" >{</span>fileList<span class=\"token punctuation\" >.</span>length <span class=\"token operator\" >>=</span> <span class=\"token number\" >3</span> <span class=\"token operator\" >?</span> <span class=\"token keyword\" >null</span> <span class=\"token punctuation\" >:</span> uploadButton<span class=\"token punctuation\" >}</span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Upload</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Modal</span> <span class=\"token attr-name\" >visible</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>previewVisible<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >footer</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >null</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onCancel</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCancel<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >alt</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>example<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'100%'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >src</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>previewImage<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Modal</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>PicturesWall</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
-	    var ImageUploadList = _react2.default.createClass({
-	      displayName: 'ImageUploadList',
-	      getInitialState: function getInitialState() {
-	        return { previewVisible: false, previewImage: '' };
-	      },
-	      handleCancel: function handleCancel() {
-	        this.setState({ previewVisible: false });
-	      },
-	      render: function render() {
-	        var _this = this;
+	    var PicturesWall = function (_React$Component) {
+	      (0, _inherits3.default)(PicturesWall, _React$Component);
 
-	        var props = { action: '/upload.do', listType: 'picture-card', defaultFileList: [{ uid: -1, name: 'xxx.png', status: 'done', url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' }], onPreview: function onPreview(file) {
-	            _this.setState({ previewImage: file.url || file.thumbUrl, previewVisible: true });
-	          } };return _react2.default.createElement(
+	      function PicturesWall() {
+	        var _temp, _this, _ret;
+
+	        (0, _classCallCheck3.default)(this, PicturesWall);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	          args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { previewVisible: false, previewImage: '',
+	          fileList: [{ uid: -1, name: 'xxx.png', status: 'done', url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' }] }, _this.handleCancel = function () {
+	          return _this.setState({ previewVisible: false });
+	        }, _this.handlePreview = function (file) {
+	          _this.setState({ previewImage: file.url || file.thumbUrl, previewVisible: true });
+	        }, _this.handleChange = function (_ref) {
+	          var fileList = _ref.fileList;
+	          return _this.setState({ fileList: fileList });
+	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	      }
+
+	      PicturesWall.prototype.render = function render() {
+	        var _state = this.state,
+	            previewVisible = _state.previewVisible,
+	            previewImage = _state.previewImage,
+	            fileList = _state.fileList;
+	        var uploadButton = _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(_icon2.default, { type: 'plus' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'ant-upload-text' },
+	            'Upload'
+	          )
+	        );return _react2.default.createElement(
 	          'div',
 	          { className: 'clearfix' },
 	          _react2.default.createElement(
 	            _upload2.default,
-	            props,
-	            _react2.default.createElement(_icon2.default, { type: 'plus' }),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'ant-upload-text' },
-	              'Upload'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png', target: '_blank', rel: 'noopener noreferrer', className: 'upload-example' },
-	            _react2.default.createElement('img', { alt: 'example', src: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' }),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'sample'
-	            )
+	            { action: '/upload.do', listType: 'picture-card', fileList: fileList, onPreview: this.handlePreview, onChange: this.handleChange },
+	            fileList.length >= 3 ? null : uploadButton
 	          ),
 	          _react2.default.createElement(
 	            _modal2.default,
-	            { visible: this.state.previewVisible, footer: null, onCancel: this.handleCancel },
-	            _react2.default.createElement('img', { alt: 'example', style: { width: '100%' }, src: this.state.previewImage })
+	            { visible: previewVisible, footer: null, onCancel: this.handleCancel },
+	            _react2.default.createElement('img', { alt: 'example', style: { width: '100%' }, src: previewImage })
 	          )
 	        );
-	      }
-	    });return _react2.default.createElement(ImageUploadList, null);
+	      };
+
+	      return PicturesWall;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(PicturesWall, null);
 	  },
-	  "style": "/* you can make up upload button and sample style by using stylesheets */\n.ant-upload-select-picture-card i {\n  font-size: 28px;\n  color: #999;\n}\n\n.ant-upload-select-picture-card .ant-upload-text {\n  margin-top: 8px;\n  font-size: 12px;\n  color: #666;\n}\n\n.upload-example {\n  position: relative;\n  display: inline-block;\n  height: 96px;\n  width: 96px;\n  padding: 8px;\n  border: 1px solid #d9d9d9;\n  border-radius: 6px;\n  vertical-align: top;\n}\n\n.upload-example img {\n  height: 78px;\n  width: 78px;\n}\n\n.upload-example:before {\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n  content: ' ';\n  width: 78px;\n  height: 24px;\n  background-color: #808080;\n  opacity: .8;\n}\n\n.upload-example span {\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n  width: 78px;\n  height: 24px;\n  color: #fff;\n  line-height: 24px;\n  text-align: center;\n}",
-	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* you can make up upload button and sample style by using stylesheets */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.ant-upload-select-picture-card</span> i </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >28</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#999</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.ant-upload-select-picture-card</span> <span class=\"token class\" >.ant-upload-text</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >12</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#666</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.upload-example</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >position</span><span class=\"token punctuation\" >:</span> relative<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> inline-block<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >96</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >96</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >1</span>px solid <span class=\"token hexcode\" >#d9d9d9</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border-radius</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >vertical-align</span><span class=\"token punctuation\" >:</span> top<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.upload-example</span> img </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >78</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >78</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.upload-example</span><span class=\"token pseudo-element\" >:before</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >position</span><span class=\"token punctuation\" >:</span> absolute<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >bottom</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >left</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >content</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >' '</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >78</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >24</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background-color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#808080</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >opacity</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >.8</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.upload-example</span> span </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >position</span><span class=\"token punctuation\" >:</span> absolute<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >bottom</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >left</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >78</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >24</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#fff</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >24</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
+	  "style": "/* you can make up upload button and sample style by using stylesheets */\n.ant-upload-select-picture-card i {\n  font-size: 28px;\n  color: #999;\n}\n\n.ant-upload-select-picture-card .ant-upload-text {\n  margin-top: 8px;\n  font-size: 12px;\n  color: #666;\n}",
+	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* you can make up upload button and sample style by using stylesheets */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.ant-upload-select-picture-card</span> i </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >28</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#999</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.ant-upload-select-picture-card</span> <span class=\"token class\" >.ant-upload-text</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >12</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#666</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
 
 /***/ },
 
-/***/ 1014:
+/***/ 1012:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -674,9 +628,9 @@ webpackJsonp([5,202],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(103);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(102);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -688,7 +642,7 @@ webpackJsonp([5,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -764,19 +718,17 @@ webpackJsonp([5,202],{
 
 /***/ },
 
-/***/ 1232:
+/***/ 1230:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1006),
-	    'beforeUpload': __webpack_require__(1007),
+	    'avatar': __webpack_require__(1006),
+	    'basic': __webpack_require__(1007),
 	    'defaultFileList': __webpack_require__(1008),
 	    'drag': __webpack_require__(1009),
 	    'fileList': __webpack_require__(1010),
-	    'inplace': __webpack_require__(1011),
-	    'multiple': __webpack_require__(1012),
-	    'picture-card': __webpack_require__(1013),
-	    'picture-style': __webpack_require__(1014),
+	    'picture-card': __webpack_require__(1011),
+	    'picture-style': __webpack_require__(1012),
 	}
 
 /***/ }
