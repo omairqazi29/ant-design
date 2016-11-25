@@ -1,1 +1,37 @@
-webpackJsonp([134,200],{854:function(t,d,e){"use strict";function a(t){return t&&t.__esModule?t:{"default":t}}var o=e(1),l=(a(o),e(2));a(l);t.exports={content:["section",["p","\u5355\u9009\u6846\u3002"],["h2","\u4f55\u65f6\u4f7f\u7528"],["ul",["li",["p","\u7528\u4e8e\u5728\u591a\u4e2a\u5907\u9009\u9879\u4e2d\u9009\u4e2d\u5355\u4e2a\u72b6\u6001\u3002"]],["li",["p","\u548c Select \u7684\u533a\u522b\u662f\uff0cRadio \u6240\u6709\u9009\u9879\u9ed8\u8ba4\u53ef\u89c1\uff0c\u65b9\u4fbf\u7528\u6237\u5728\u6bd4\u8f83\u4e2d\u9009\u62e9\uff0c\u56e0\u6b64\u9009\u9879\u4e0d\u5b9c\u8fc7\u591a\u3002"]]]],meta:{category:"Components",subtitle:"\u5355\u9009\u6846",type:"Data Entry",title:"Radio",filename:"components/radio/index.zh-CN.md"},toc:["ul",["li",["a",{href:"#\u4f55\u65f6\u4f7f\u7528"},"\u4f55\u65f6\u4f7f\u7528"]],["li",["a",{href:"#API"},"API"]]],api:["section",["h2","API"],["h3","Radio"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u53ef\u9009\u503c"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","checked"],["td","\u6307\u5b9a\u5f53\u524d\u662f\u5426\u9009\u4e2d"],["td","Boolean"],["td"],["td","false"]],["tr",["td","defaultChecked"],["td","\u521d\u59cb\u662f\u5426\u9009\u4e2d"],["td","Boolean"],["td"],["td","false"]],["tr",["td","value"],["td","\u6839\u636e value \u8fdb\u884c\u6bd4\u8f83\uff0c\u5224\u65ad\u662f\u5426\u9009\u4e2d"],["td","String"],["td"],["td","\u65e0"]]]],["h3","RadioGroup"],["p","\u5355\u9009\u6846\u7ec4\u5408\uff0c\u7528\u4e8e\u5305\u88f9\u4e00\u7ec4 ",["code","Radio"],"\u3002"],["table",["thead",["tr",["th","\u53c2\u6570"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u53ef\u9009\u503c"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","onChange"],["td","\u9009\u9879\u53d8\u5316\u65f6\u7684\u56de\u8c03\u51fd\u6570"],["td","Function(e:Event)"],["td","\u65e0"],["td","\u65e0"]],["tr",["td","value"],["td","\u7528\u4e8e\u8bbe\u7f6e\u5f53\u524d\u9009\u4e2d\u7684\u503c"],["td","String"],["td","\u65e0"],["td","\u65e0"]],["tr",["td","defaultValue"],["td","\u9ed8\u8ba4\u9009\u4e2d\u7684\u503c"],["td","String"],["td","\u65e0"],["td","\u65e0"]],["tr",["td","size"],["td","\u5927\u5c0f\uff0c\u53ea\u5bf9\u6309\u94ae\u6837\u5f0f\u751f\u6548"],["td","String"],["td",["code","large"]," ",["code","default"]," ",["code","small"]],["td",["code","default"]]]]]]}}});
+webpackJsonp([136,202],{
+
+/***/ 872:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": ["section", ["p", "单选框。"], ["h2", "何时使用"], ["ul", ["li", ["p", "用于在多个备选项中选中单个状态。"]], ["li", ["p", "和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。"]]]],
+	  "meta": {
+	    "category": "Components",
+	    "subtitle": "单选框",
+	    "type": "Data Entry",
+	    "title": "Radio",
+	    "filename": "components/radio/index.zh-CN.md"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#何时使用"
+	  }, "何时使用"]], ["li", ["a", {
+	    "href": "#API"
+	  }, "API"]]],
+	  "api": ["section", ["h2", "API"], ["h3", "Radio"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "可选值"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "checked"], ["td", "指定当前是否选中"], ["td", "Boolean"], ["td"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "初始是否选中"], ["td", "Boolean"], ["td"], ["td", "false"]], ["tr", ["td", "value"], ["td", "根据 value 进行比较，判断是否选中"], ["td", "String"], ["td"], ["td", "无"]]]], ["h3", "RadioGroup"], ["p", "单选框组合，用于包裹一组 ", ["code", "Radio"], "。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "可选值"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "onChange"], ["td", "选项变化时的回调函数"], ["td", "Function(e:Event)"], ["td", "无"], ["td", "无"]], ["tr", ["td", "value"], ["td", "用于设置当前选中的值"], ["td", "String"], ["td", "无"], ["td", "无"]], ["tr", ["td", "defaultValue"], ["td", "默认选中的值"], ["td", "String"], ["td", "无"], ["td", "无"]], ["tr", ["td", "size"], ["td", "大小，只对按钮样式生效"], ["td", "String"], ["td", ["code", "large"], " ", ["code", "default"], " ", ["code", "small"]], ["td", ["code", "default"]]]]]]
+	};
+
+/***/ }
+
+});
