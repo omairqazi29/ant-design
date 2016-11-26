@@ -1,1 +1,464 @@
-webpackJsonp([9,200],{816:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u57fa\u7840\u5206\u9875\u3002"]],"en-US":[["p","Basic pagination."]]},meta:{order:0,title:{"zh-CN":"\u57fa\u672c","en-US":"Basic"},filename:"components/pagination/demo/basic.md",id:"components-pagination-demo-basic"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >1</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\n mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{defaultCurrent:1,total:50})}}},817:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u6539\u53d8\u6bcf\u9875\u663e\u793a\u6761\u76ee\u6570\u3002"]],"en-US":[["p","Change ",["code","pageSize"],"."]]},meta:{order:2,title:{"zh-CN":"\u6539\u53d8","en-US":"Changer"},filename:"components/pagination/demo/changer.md",id:"components-pagination-demo-changer"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\n<span class="token keyword" >function</span> <span class="token function" >onShowSizeChange</span><span class="token punctuation" >(</span>current<span class="token punctuation" >,</span> pageSize<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n  console<span class="token punctuation" >.</span><span class="token function" >log</span><span class="token punctuation" >(</span>current<span class="token punctuation" >,</span> pageSize<span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n<span class="token punctuation" >}</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >showSizeChanger</span> <span class="token attr-name" >onShowSizeChange</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>onShowSizeChange<span class="token punctuation" >}</span></span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >3</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >500</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\n mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){function n(n,a){console.log(n,a)}return c["default"].createElement(e["default"],{showSizeChanger:!0,onShowSizeChange:n,defaultCurrent:3,total:500})}}},818:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u53d7\u63a7\u5236\u7684\u9875\u7801\u3002"]],"en-US":[["p","Controlled page number."]]},meta:{order:8,title:{"zh-CN":"\u53d7\u63a7","en-US":"Controlled"},filename:"components/pagination/demo/controlled.md",id:"components-pagination-demo-controlled"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\n<span class="token keyword" >const</span> Container <span class="token operator" >=</span> React<span class="token punctuation" >.</span><span class="token function" >createClass</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n  <span class="token function" >getInitialState</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >return</span> <span class="token punctuation" >{</span>\n      current<span class="token punctuation" >:</span> <span class="token number" >3</span><span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >onChange</span><span class="token punctuation" >(</span>page<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    console<span class="token punctuation" >.</span><span class="token function" >log</span><span class="token punctuation" >(</span>page<span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n      current<span class="token punctuation" >:</span> page<span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >return</span> <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >current</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>current<span class="token punctuation" >}</span></span> <span class="token attr-name" >onChange</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>onChange<span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n<span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Container</span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){var n=c["default"].createClass({displayName:"Container",getInitialState:function(){return{current:3}},onChange:function(n){console.log(n),this.setState({current:n})},render:function(){return c["default"].createElement(e["default"],{current:this.state.current,onChange:this.onChange,total:50})}});return c["default"].createElement(n,null)}}},819:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u5feb\u901f\u8df3\u8f6c\u5230\u67d0\u4e00\u9875\u3002"]],"en-US":[["p","Jump to a page directly."]]},meta:{order:3,title:{"zh-CN":"\u8df3\u8f6c","en-US":"Jumper"},filename:"components/pagination/demo/jump.md",id:"components-pagination-demo-jump"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >showQuickJumper</span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >2</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >500</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\n mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{showQuickJumper:!0,defaultCurrent:2,total:500})}}},820:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u8ff7\u4f60\u7248\u672c\u3002"]],"en-US":[["p","Mini size pagination."]]},meta:{order:4,title:{"zh-CN":"\u8ff7\u4f60","en-US":"Mini size"},filename:"components/pagination/demo/mini.md",id:"components-pagination-demo-mini"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\n<span class="token keyword" >function</span> <span class="token function" >showTotal</span><span class="token punctuation" >(</span>total<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n  <span class="token keyword" >return</span> <span class="token template-string" ><span class="token string" >`Total </span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span>total<span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" > items`</span></span><span class="token punctuation" >;</span>\n<span class="token punctuation" >}</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>small<span class="token punctuation" >"</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>br</span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>small<span class="token punctuation" >"</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >showSizeChanger</span> <span class="token attr-name" >showQuickJumper</span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>br</span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>small<span class="token punctuation" >"</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >showTotal</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>showTotal<span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>\n<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span><span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){function n(n){return"Total "+n+" items"}return c["default"].createElement("div",null,c["default"].createElement(e["default"],{size:"small",total:50}),c["default"].createElement("br",null),c["default"].createElement(e["default"],{size:"small",total:50,showSizeChanger:!0,showQuickJumper:!0}),c["default"].createElement("br",null),c["default"].createElement(e["default"],{size:"small",total:50,showTotal:n}))}}},821:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u66f4\u591a\u5206\u9875\u3002"]],"en-US":[["p","More pages."]]},meta:{order:1,title:{"zh-CN":"\u66f4\u591a","en-US":"More"},filename:"components/pagination/demo/more.md",id:"components-pagination-demo-more"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >1</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >500</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\n mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{defaultCurrent:1,total:500})}}},822:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(71),s(70)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u7b80\u5355\u7684\u7ffb\u9875\u3002"]],"en-US":[["p","Simple mode."]]},meta:{order:6,title:{"zh-CN":"\u7b80\u6d01","en-US":"Simple mode"},filename:"components/pagination/demo/simple.md",id:"components-pagination-demo-simple"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span> <span class="token attr-name" >simple</span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >2</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >50</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\nmountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{simple:!0,defaultCurrent:2,total:50})}}},823:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(27),s(26)),e=t(p),o=(s(71),s(70)),c=t(o),u=s(1),l=t(u),i=s(2);t(i);n.exports={content:{"zh-CN":[["p","\u901a\u8fc7\u8bbe\u7f6e ",["code","showTotal"]," \u5c55\u793a\u603b\u5171\u6709\u591a\u5c11\u6570\u636e\u3002"]],"en-US":[["p","You can show the total number of data by setting ",["code","showTotal"],"."]]},meta:{order:9,title:{"zh-CN":"\u603b\u6570","en-US":"Total number"},filename:"components/pagination/demo/total.md",id:"components-pagination-demo-total"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Pagination<span class="token punctuation" >,</span> Select <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Pagination</span>\n    <span class="token attr-name" >selectComponentClass</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>Select<span class="token punctuation" >}</span></span>\n    <span class="token attr-name" >total</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >80</span><span class="token punctuation" >}</span></span>\n    <span class="token attr-name" >showTotal</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>total <span class="token operator" >=</span><span class="token operator" >></span> <span class="token template-string" ><span class="token string" >`Total </span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span>total<span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" > items`</span></span><span class="token punctuation" >}</span></span>\n    <span class="token attr-name" >pageSize</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >20</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >defaultCurrent</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >1</span><span class="token punctuation" >}</span></span>\n  <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span>\n  mountNode\n<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return l["default"].createElement(c["default"],{selectComponentClass:e["default"],total:80,showTotal:function(n){return"Total "+n+" items"},pageSize:20,defaultCurrent:1})}}},1170:function(n,a,s){n.exports={basic:s(816),changer:s(817),controlled:s(818),jump:s(819),mini:s(820),more:s(821),simple:s(822),total:s(823)}}});
+webpackJsonp([8,202],{
+
+/***/ 832:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "基础分页。"]],
+	    "en-US": [["p", "Basic pagination."]]
+	  },
+	  "meta": {
+	    "order": 0,
+	    "title": {
+	      "zh-CN": "基本",
+	      "en-US": "Basic"
+	    },
+	    "filename": "components/pagination/demo/basic.md",
+	    "id": "components-pagination-demo-basic"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(_pagination2.default, { defaultCurrent: 1, total: 50 });
+	  }
+	};
+
+/***/ },
+
+/***/ 833:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "改变每页显示条目数。"]],
+	    "en-US": [["p", "Change ", ["code", "pageSize"], "."]]
+	  },
+	  "meta": {
+	    "order": 2,
+	    "title": {
+	      "zh-CN": "改变",
+	      "en-US": "Changer"
+	    },
+	    "filename": "components/pagination/demo/changer.md",
+	    "id": "components-pagination-demo-changer"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >onShowSizeChange</span><span class=\"token punctuation\" >(</span>current<span class=\"token punctuation\" >,</span> pageSize<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span>current<span class=\"token punctuation\" >,</span> pageSize<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >showSizeChanger</span> <span class=\"token attr-name\" >onShowSizeChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onShowSizeChange<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >3</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >500</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    function onShowSizeChange(current, pageSize) {
+	      console.log(current, pageSize);
+	    }return _react2.default.createElement(_pagination2.default, { showSizeChanger: true, onShowSizeChange: onShowSizeChange, defaultCurrent: 3, total: 500 });
+	  }
+	};
+
+/***/ },
+
+/***/ 834:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "受控制的页码。"]],
+	    "en-US": [["p", "Controlled page number."]]
+	  },
+	  "meta": {
+	    "order": 8,
+	    "title": {
+	      "zh-CN": "受控",
+	      "en-US": "Controlled"
+	    },
+	    "filename": "components/pagination/demo/controlled.md",
+	    "id": "components-pagination-demo-controlled"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> Container <span class=\"token operator\" >=</span> React<span class=\"token punctuation\" >.</span><span class=\"token function\" >createClass</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >getInitialState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >{</span>\n      current<span class=\"token punctuation\" >:</span> <span class=\"token number\" >3</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>page<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span>page<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      current<span class=\"token punctuation\" >:</span> page<span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >current</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>current<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChange<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Container</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var Container = _react2.default.createClass({
+	      displayName: 'Container',
+	      getInitialState: function getInitialState() {
+	        return { current: 3
+	        };
+	      },
+	      onChange: function onChange(page) {
+	        console.log(page);
+	        this.setState({ current: page });
+	      },
+	      render: function render() {
+	        return _react2.default.createElement(_pagination2.default, { current: this.state.current, onChange: this.onChange, total: 50 });
+	      }
+	    });return _react2.default.createElement(Container, null);
+	  }
+	};
+
+/***/ },
+
+/***/ 835:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "快速跳转到某一页。"]],
+	    "en-US": [["p", "Jump to a page directly."]]
+	  },
+	  "meta": {
+	    "order": 3,
+	    "title": {
+	      "zh-CN": "跳转",
+	      "en-US": "Jumper"
+	    },
+	    "filename": "components/pagination/demo/jump.md",
+	    "id": "components-pagination-demo-jump"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>pageNumber<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'Page: '</span><span class=\"token punctuation\" >,</span> pageNumber<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >showQuickJumper</span> <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >500</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span>\n  mountNode\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    function onChange(pageNumber) {
+	      console.log('Page: ', pageNumber);
+	    }return _react2.default.createElement(_pagination2.default, { showQuickJumper: true, defaultCurrent: 2, total: 500, onChange: onChange });
+	  }
+	};
+
+/***/ },
+
+/***/ 836:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "迷你版本。"]],
+	    "en-US": [["p", "Mini size pagination."]]
+	  },
+	  "meta": {
+	    "order": 4,
+	    "title": {
+	      "zh-CN": "迷你",
+	      "en-US": "Mini size"
+	    },
+	    "filename": "components/pagination/demo/mini.md",
+	    "id": "components-pagination-demo-mini"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >showTotal</span><span class=\"token punctuation\" >(</span>total<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >return</span> <span class=\"token template-string\" ><span class=\"token string\" >`Total </span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>total<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > items`</span></span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >showSizeChanger</span> <span class=\"token attr-name\" >showQuickJumper</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >showTotal</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>showTotal<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    function showTotal(total) {
+	      return 'Total ' + total + ' items';
+	    }return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_pagination2.default, { size: 'small', total: 50 }),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement(_pagination2.default, { size: 'small', total: 50, showSizeChanger: true, showQuickJumper: true }),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement(_pagination2.default, { size: 'small', total: 50, showTotal: showTotal })
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 837:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "更多分页。"]],
+	    "en-US": [["p", "More pages."]]
+	  },
+	  "meta": {
+	    "order": 1,
+	    "title": {
+	      "zh-CN": "更多",
+	      "en-US": "More"
+	    },
+	    "filename": "components/pagination/demo/more.md",
+	    "id": "components-pagination-demo-more"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >500</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(_pagination2.default, { defaultCurrent: 1, total: 500 });
+	  }
+	};
+
+/***/ },
+
+/***/ 838:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "简单的翻页。"]],
+	    "en-US": [["p", "Simple mode."]]
+	  },
+	  "meta": {
+	    "order": 6,
+	    "title": {
+	      "zh-CN": "简洁",
+	      "en-US": "Simple mode"
+	    },
+	    "filename": "components/pagination/demo/simple.md",
+	    "id": "components-pagination-demo-simple"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span> <span class=\"token attr-name\" >simple</span> <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >50</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(_pagination2.default, { simple: true, defaultCurrent: 2, total: 50 });
+	  }
+	};
+
+/***/ },
+
+/***/ 839:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(76);
+
+	var _pagination = __webpack_require__(75);
+
+	var _pagination2 = _interopRequireDefault(_pagination);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "通过设置 ", ["code", "showTotal"], " 展示总共有多少数据。"]],
+	    "en-US": [["p", "You can show the total number of data by setting ", ["code", "showTotal"], "."]]
+	  },
+	  "meta": {
+	    "order": 9,
+	    "title": {
+	      "zh-CN": "总数",
+	      "en-US": "Total number"
+	    },
+	    "filename": "components/pagination/demo/total.md",
+	    "id": "components-pagination-demo-total"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Pagination <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span>\n    <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >85</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >showTotal</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>total <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token template-string\" ><span class=\"token string\" >`Total </span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>total<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > items`</span></span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pageSize</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >20</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span>\n  <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Pagination</span>\n    <span class=\"token attr-name\" >total</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >85</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >showTotal</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>total<span class=\"token punctuation\" >,</span> range<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>range<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >-</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>range<span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > of </span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>total<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" > items`</span></span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pageSize</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >20</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >defaultCurrent</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span>\n  <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_pagination2.default, { total: 85, showTotal: function showTotal(total) {
+	          return 'Total ' + total + ' items';
+	        }, pageSize: 20, defaultCurrent: 1 }),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement(_pagination2.default, { total: 85, showTotal: function showTotal(total, range) {
+	          return range[0] + '-' + range[1] + ' of ' + total + ' items';
+	        }, pageSize: 20, defaultCurrent: 1 })
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 1209:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(832),
+	    'changer': __webpack_require__(833),
+	    'controlled': __webpack_require__(834),
+	    'jump': __webpack_require__(835),
+	    'mini': __webpack_require__(836),
+	    'more': __webpack_require__(837),
+	    'simple': __webpack_require__(838),
+	    'total': __webpack_require__(839),
+	}
+
+/***/ }
+
+});

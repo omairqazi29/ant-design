@@ -1,1 +1,37 @@
-webpackJsonp([158,200],{760:function(t,d,e){"use strict";function n(t){return t&&t.__esModule?t:{"default":t}}var r=e(1),i=(n(r),e(2));n(i);t.exports={content:["section",["p","\u901a\u8fc7\u9f20\u6807\u6216\u952e\u76d8\uff0c\u8f93\u5165\u8303\u56f4\u5185\u7684\u6570\u503c\u3002"],["h2","\u4f55\u65f6\u4f7f\u7528"],["p","\u5f53\u9700\u8981\u83b7\u53d6\u6807\u51c6\u6570\u503c\u65f6\u3002"]],meta:{category:"Components",subtitle:"\u6570\u5b57\u8f93\u5165\u6846",type:"Data Entry",title:"InputNumber",filename:"components/input-number/index.zh-CN.md"},toc:["ul",["li",["a",{href:"#\u4f55\u65f6\u4f7f\u7528"},"\u4f55\u65f6\u4f7f\u7528"]],["li",["a",{href:"#API"},"API"]]],api:["section",["h2","API"],["p","\u5c5e\u6027\u5982\u4e0b"],["table",["thead",["tr",["th","\u6210\u5458"],["th","\u8bf4\u660e"],["th","\u7c7b\u578b"],["th","\u9ed8\u8ba4\u503c"]]],["tbody",["tr",["td","min"],["td","\u6700\u5c0f\u503c"],["td","Number"],["td","-Infinity"]],["tr",["td","max"],["td","\u6700\u5927\u503c"],["td","Number"],["td","Infinity"]],["tr",["td","value"],["td","\u5f53\u524d\u503c"],["td","Number"],["td"]],["tr",["td","step"],["td","\u6bcf\u6b21\u6539\u53d8\u6b65\u6570\uff0c\u53ef\u4ee5\u4e3a\u5c0f\u6570"],["td","Number or String"],["td","1"]],["tr",["td","defaultValue"],["td","\u521d\u59cb\u503c"],["td","Number"],["td"]],["tr",["td","onChange"],["td","\u53d8\u5316\u56de\u8c03"],["td","Function"],["td"]],["tr",["td","disabled"],["td","\u7981\u7528"],["td","Boolean"],["td","false"]],["tr",["td","size"],["td","\u8f93\u5165\u6846\u5927\u5c0f"],["td","String"],["td","\u65e0"]]]]]}}});
+webpackJsonp([160,202],{
+
+/***/ 775:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": ["section", ["p", "通过鼠标或键盘，输入范围内的数值。"], ["h2", "何时使用"], ["p", "当需要获取标准数值时。"]],
+	  "meta": {
+	    "category": "Components",
+	    "subtitle": "数字输入框",
+	    "type": "Data Entry",
+	    "title": "InputNumber",
+	    "filename": "components/input-number/index.zh-CN.md"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#何时使用"
+	  }, "何时使用"]], ["li", ["a", {
+	    "href": "#API"
+	  }, "API"]]],
+	  "api": ["section", ["h2", "API"], ["p", "属性如下"], ["table", ["thead", ["tr", ["th", "成员"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "min"], ["td", "最小值"], ["td", "Number"], ["td", "-Infinity"]], ["tr", ["td", "max"], ["td", "最大值"], ["td", "Number"], ["td", "Infinity"]], ["tr", ["td", "value"], ["td", "当前值"], ["td", "Number"], ["td"]], ["tr", ["td", "step"], ["td", "每次改变步数，可以为小数"], ["td", "Number or String"], ["td", "1"]], ["tr", ["td", "defaultValue"], ["td", "初始值"], ["td", "Number"], ["td"]], ["tr", ["td", "onChange"], ["td", "变化回调"], ["td", "Function"], ["td"]], ["tr", ["td", "disabled"], ["td", "禁用"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "size"], ["td", "输入框大小"], ["td", "String"], ["td", "无"]]]]]
+	};
+
+/***/ }
+
+});

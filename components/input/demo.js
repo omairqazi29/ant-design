@@ -1,2 +1,645 @@
-webpackJsonp([15,200],{761:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(14),s(12)),e=t(p),o=(s(23),s(30)),c=t(o),u=(s(27),s(26)),l=t(u),i=s(1),k=t(i),r=s(2);t(r);n.exports={content:{"zh-CN":[["p","\u7528\u4e8e\u914d\u7f6e\u4e00\u4e9b\u56fa\u5b9a\u7ec4\u5408\u3002"]],"en-US":[["p","Using pre & post tabs example."]]},meta:{order:2,title:{"zh-CN":"\u524d\u7f6e/\u540e\u7f6e\u6807\u7b7e","en-US":"Pre / Post tab"},filename:"components/input/demo/addon.md",id:"components-input-demo-addon"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input<span class="token punctuation" >,</span> Select<span class="token punctuation" >,</span> Icon <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n<span class="token keyword" >const</span> Option <span class="token operator" >=</span> Select<span class="token punctuation" >.</span>Option<span class="token punctuation" >;</span>\n\n<span class="token keyword" >const</span> selectBefore <span class="token operator" >=</span> <span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Select</span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Http://<span class="token punctuation" >"</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> width<span class="token punctuation" >:</span> <span class="token number" >80</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Http://<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>Http<span class="token punctuation" >:</span><span class="token operator" >/</span><span class="token operator" >/</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Https://<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>Https<span class="token punctuation" >:</span><span class="token operator" >/</span><span class="token operator" >/</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Select</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n<span class="token keyword" >const</span> selectAfter <span class="token operator" >=</span> <span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Select</span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.com<span class="token punctuation" >"</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> width<span class="token punctuation" >:</span> <span class="token number" >70</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.com<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token punctuation" >.</span>com<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.jp<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token punctuation" >.</span>jp<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.cn<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token punctuation" >.</span>cn<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Option</span> <span class="token attr-name" >value</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.org<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token punctuation" >.</span>org<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Option</span><span class="token punctuation" >></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Select</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> marginBottom<span class="token punctuation" >:</span> <span class="token number" >16</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >addonBefore</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Http://<span class="token punctuation" >"</span></span> <span class="token attr-name" >addonAfter</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>.com<span class="token punctuation" >"</span></span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>mysite<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> marginBottom<span class="token punctuation" >:</span> <span class="token number" >16</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >addonBefore</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>selectBefore<span class="token punctuation" >}</span></span> <span class="token attr-name" >addonAfter</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>selectAfter<span class="token punctuation" >}</span></span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>mysite<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> marginBottom<span class="token punctuation" >:</span> <span class="token number" >16</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >addonAfter={&lt;Icon</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>setting<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >}</span> defaultValue<span class="token operator" >=</span><span class="token string" >"mysite"</span> <span class="token operator" >/</span><span class="token operator" >></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){var n=l["default"].Option,a=k["default"].createElement(l["default"],{defaultValue:"Http://",style:{width:80}},k["default"].createElement(n,{value:"Http://"},"Http://"),k["default"].createElement(n,{value:"Https://"},"Https://")),s=k["default"].createElement(l["default"],{defaultValue:".com",style:{width:70}},k["default"].createElement(n,{value:".com"},".com"),k["default"].createElement(n,{value:".jp"},".jp"),k["default"].createElement(n,{value:".cn"},".cn"),k["default"].createElement(n,{value:".org"},".org"));return k["default"].createElement("div",null,k["default"].createElement("div",{style:{marginBottom:16}},k["default"].createElement(c["default"],{addonBefore:"Http://",addonAfter:".com",defaultValue:"mysite"})),k["default"].createElement("div",{style:{marginBottom:16}},k["default"].createElement(c["default"],{addonBefore:a,addonAfter:s,defaultValue:"mysite"})),k["default"].createElement("div",{style:{marginBottom:16}},k["default"].createElement(c["default"],{addonAfter:k["default"].createElement(e["default"],{type:"setting"}),defaultValue:"mysite"})))}}},762:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(23),s(30)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p",["code","autosize"]," \u5c5e\u6027\u9002\u7528\u4e8e ",["code","textarea"]," \u8282\u70b9\uff0c\u5e76\u4e14\u53ea\u6709\u9ad8\u5ea6\u4f1a\u81ea\u52a8\u53d8\u5316\u3002\u53e6\u5916 ",["code","autosize"]," \u53ef\u4ee5\u8bbe\u5b9a\u4e3a\u4e00\u4e2a\u5bf9\u8c61\uff0c\u6307\u5b9a\u6700\u5c0f\u884c\u6570\u548c\u6700\u5927\u884c\u6570\u3002"]],"en-US":[["p",["code","autosize"]," prop for a ",["code","textarea"]," type of ",["code","Input"]," makes the height to automatically adjust based on the content.\nAn options object can be provided to ",["code","autosize"]," to specify the minimum and maximum number of lines the textarea will automatically adjust."]]},meta:{order:6,title:{"zh-CN":"\u9002\u5e94\u6587\u672c\u9ad8\u5ea6\u7684\u6587\u672c\u57df","en-US":"Autosizing the height to fit the content"},filename:"components/input/demo/autosize-textarea.md",id:"components-input-demo-autosize-textarea"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>textarea<span class="token punctuation" >"</span></span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Autosize</span> <span class="token attr-name" >height</span> <span class="token attr-name" >based</span> <span class="token attr-name" >on</span> <span class="token attr-name" >content</span> <span class="token attr-name" >lines"</span> <span class="token attr-name" >autosize</span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> margin<span class="token punctuation" >:</span> <span class="token string" >\'24px 0\'</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>textarea<span class="token punctuation" >"</span></span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Autosize</span> <span class="token attr-name" >height</span> <span class="token attr-name" >with</span> <span class="token attr-name" >minimum</span> <span class="token attr-name" >and</span> <span class="token attr-name" >maximum</span> <span class="token attr-name" >number</span> <span class="token attr-name" >of</span> <span class="token attr-name" >lines"</span> <span class="token attr-name" >autosize</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> minRows<span class="token punctuation" >:</span> <span class="token number" >2</span><span class="token punctuation" >,</span> maxRows<span class="token punctuation" >:</span> <span class="token number" >6</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement("div",null,c["default"].createElement(e["default"],{type:"textarea",placeholder:"Autosize height based on content lines",autosize:!0}),c["default"].createElement("div",{style:{margin:"24px 0"}}),c["default"].createElement(e["default"],{type:"textarea",placeholder:"Autosize height with minimum and maximum number of lines",autosize:{minRows:2,maxRows:6}}))}}},763:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(23),s(30)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u57fa\u672c\u4f7f\u7528\u3002"]],"en-US":[["p","Basic usage example"]]},meta:{order:0,title:{"zh-CN":"\u57fa\u672c\u4f7f\u7528","en-US":"Basic usage"},filename:"components/input/demo/basic.md",id:"components-input-demo-basic"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Basic</span> <span class="token attr-name" >usage"</span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{placeholder:"Basic usage"})}}},764:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(42),s(38)),e=t(p),o=(s(23),s(30)),c=t(o),u=s(1),l=t(u),i=s(2);t(i);n.exports={content:{"zh-CN":[["p","\u8f93\u5165\u6846\u7684\u7ec4\u5408\u5c55\u73b0\u3002"]],"en-US":[["p","Input.Group example"]]},meta:{order:3,title:{"zh-CN":"\u8f93\u5165\u6846\u7ec4\u5408","en-US":"Input Group"},filename:"components/input/demo/group.md",id:"components-input-demo-group"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input<span class="token punctuation" >,</span> Col <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n<span class="token keyword" >const</span> InputGroup <span class="token operator" >=</span> Input<span class="token punctuation" >.</span>Group<span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>InputGroup</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>large<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Col</span> <span class="token attr-name" >span</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>4<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>\n        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>0571<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Col</span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Col</span> <span class="token attr-name" >span</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>8<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>\n        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >defaultValue</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>26888888<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Col</span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>InputGroup</span><span class="token punctuation" >></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){var n=c["default"].Group;return l["default"].createElement("div",null,l["default"].createElement(n,{size:"large"},l["default"].createElement(e["default"],{span:"4"},l["default"].createElement(c["default"],{defaultValue:"0571"})),l["default"].createElement(e["default"],{span:"8"},l["default"].createElement(c["default"],{defaultValue:"26888888"}))))}}},765:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(10),s(9)),e=t(p),o=(s(23),s(30)),c=t(o),u=s(1),l=t(u),i=s(2),k=(t(i),s(7)),r=t(k);n.exports={content:{"zh-CN":[["p","\u5e26\u6709\u641c\u7d22\u6309\u94ae\u7684\u8f93\u5165\u6846\u3002"]],"en-US":[["p","Example of creating a search box by grouping a standard input with a search button."]]},meta:{order:4,title:{"zh-CN":"\u641c\u7d22\u6846","en-US":"Search box"},filename:"components/input/demo/search-input.md",id:"components-input-demo-search-input"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input<span class="token punctuation" >,</span> Button <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n<span class="token keyword" >import</span> classNames <span class="token keyword" >from</span> <span class="token string" >\'classnames\'</span><span class="token punctuation" >;</span>\n<span class="token keyword" >const</span> InputGroup <span class="token operator" >=</span> Input<span class="token punctuation" >.</span>Group<span class="token punctuation" >;</span>\n\n<span class="token keyword" >const</span> SearchInput <span class="token operator" >=</span> React<span class="token punctuation" >.</span><span class="token function" >createClass</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n  <span class="token function" >getInitialState</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >return</span> <span class="token punctuation" >{</span>\n      value<span class="token punctuation" >:</span> <span class="token string" >\'\'</span><span class="token punctuation" >,</span>\n      focus<span class="token punctuation" >:</span> <span class="token boolean" >false</span><span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >handleInputChange</span><span class="token punctuation" >(</span>e<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n      value<span class="token punctuation" >:</span> e<span class="token punctuation" >.</span>target<span class="token punctuation" >.</span>value<span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >handleFocusBlur</span><span class="token punctuation" >(</span>e<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n      focus<span class="token punctuation" >:</span> e<span class="token punctuation" >.</span>target <span class="token operator" >===</span> document<span class="token punctuation" >.</span>activeElement<span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >handleSearch</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >if</span> <span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>props<span class="token punctuation" >.</span>onSearch<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n      <span class="token keyword" >this</span><span class="token punctuation" >.</span>props<span class="token punctuation" >.</span><span class="token function" >onSearch</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>value<span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n    <span class="token punctuation" >}</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>\n    <span class="token keyword" >const</span> <span class="token punctuation" >{</span> style<span class="token punctuation" >,</span> size<span class="token punctuation" >,</span> placeholder <span class="token punctuation" >}</span> <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>props<span class="token punctuation" >;</span>\n    <span class="token keyword" >const</span> btnCls <span class="token operator" >=</span> <span class="token function" >classNames</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n      <span class="token string" >\'ant-search-btn\'</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>\n      <span class="token string" >\'ant-search-btn-noempty\'</span><span class="token punctuation" >:</span> <span class="token operator" >!</span><span class="token operator" >!</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>value<span class="token punctuation" >.</span><span class="token function" >trim</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span><span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n    <span class="token keyword" >const</span> searchCls <span class="token operator" >=</span> <span class="token function" >classNames</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>\n      <span class="token string" >\'ant-search-input\'</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>\n      <span class="token string" >\'ant-search-input-focus\'</span><span class="token punctuation" >:</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>focus<span class="token punctuation" >,</span>\n    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >className</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>ant-search-input-wrapper<span class="token punctuation" >"</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>style<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>InputGroup</span> <span class="token attr-name" >className</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>searchCls<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>\n          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >placeholder</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>placeholder<span class="token punctuation" >}</span></span> <span class="token attr-name" >value</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>value<span class="token punctuation" >}</span></span> <span class="token attr-name" >onChange</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleInputChange<span class="token punctuation" >}</span></span>\n            <span class="token attr-name" >onFocus</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleFocusBlur<span class="token punctuation" >}</span></span> <span class="token attr-name" >onBlur</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleFocusBlur<span class="token punctuation" >}</span></span> <span class="token attr-name" >onPressEnter</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleSearch<span class="token punctuation" >}</span></span>\n          <span class="token punctuation" >/></span></span>\n          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >className</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>ant-input-group-wrap<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>\n            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >icon</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>search<span class="token punctuation" >"</span></span> <span class="token attr-name" >className</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>btnCls<span class="token punctuation" >}</span></span> <span class="token attr-name" >size</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>size<span class="token punctuation" >}</span></span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleSearch<span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span>\n          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>InputGroup</span><span class="token punctuation" >></span></span>\n      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>\n<span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>SearchInput</span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>input</span> <span class="token attr-name" >search</span> <span class="token attr-name" >text"</span>\n    <span class="token attr-name" >onSearch</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>value <span class="token operator" >=</span><span class="token operator" >></span> console<span class="token punctuation" >.</span><span class="token function" >log</span><span class="token punctuation" >(</span>value<span class="token punctuation" >)</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> width<span class="token punctuation" >:</span> <span class="token number" >200</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span></span>\n  <span class="token punctuation" >/></span></span>\n<span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'
-}],preview:function(){var n=c["default"].Group,a=l["default"].createClass({displayName:"SearchInput",getInitialState:function(){return{value:"",focus:!1}},handleInputChange:function(n){this.setState({value:n.target.value})},handleFocusBlur:function(n){this.setState({focus:n.target===document.activeElement})},handleSearch:function(){this.props.onSearch&&this.props.onSearch(this.state.value)},render:function(){var a=this.props,s=a.style,t=a.size,p=a.placeholder,o=(0,r["default"])({"ant-search-btn":!0,"ant-search-btn-noempty":!!this.state.value.trim()}),u=(0,r["default"])({"ant-search-input":!0,"ant-search-input-focus":this.state.focus});return l["default"].createElement("div",{className:"ant-search-input-wrapper",style:s},l["default"].createElement(n,{className:u},l["default"].createElement(c["default"],{placeholder:p,value:this.state.value,onChange:this.handleInputChange,onFocus:this.handleFocusBlur,onBlur:this.handleFocusBlur,onPressEnter:this.handleSearch}),l["default"].createElement("div",{className:"ant-input-group-wrap"},l["default"].createElement(e["default"],{icon:"search",className:o,size:t,onClick:this.handleSearch}))))}});return l["default"].createElement(a,{placeholder:"input search text",onSearch:function(n){return console.log(n)},style:{width:200}})}}},766:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(23),s(30)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u6211\u4eec\u4e3a ",["code","<Input />"]," \u8f93\u5165\u6846\u5b9a\u4e49\u4e86\u4e09\u79cd\u5c3a\u5bf8\uff08\u5927\u3001\u9ed8\u8ba4\u3001\u5c0f\uff09\uff0c\u9ad8\u5ea6\u5206\u522b\u4e3a ",["code","32px"],"\u3001",["code","28px"]," \u548c ",["code","22px"],"\u3002"],["p","\u6ce8\u610f\uff1a \u5728\u8868\u5355\u91cc\u9762\uff0c\u6211\u4eec\u53ea\u4f7f\u7528\u5927\u5c3a\u5bf8\u7684\u8f93\u5165\u6846\u3002"]],"en-US":[["p","There are three sizes of an Input box: ",["code","large"]," (32px)\u3001",["code","default"]," (28px) and ",["code","small"]," (22px). "],["p","Note: Inside of forms, only the large size is used."]]},meta:{order:1,title:{"zh-CN":"\u4e09\u79cd\u5927\u5c0f","en-US":"Three sizes of Input"},filename:"components/input/demo/size.md",id:"components-input-demo-size"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >className</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>example-input<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>large<span class="token punctuation" >"</span></span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>large</span> <span class="token attr-name" >size"</span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>default</span> <span class="token attr-name" >size"</span> <span class="token punctuation" >/></span></span>\n    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >size</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>small<span class="token punctuation" >"</span></span> <span class="token attr-name" >placeholder</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>small</span> <span class="token attr-name" >size"</span> <span class="token punctuation" >/></span></span>\n  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>\n<span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement("div",{className:"example-input"},c["default"].createElement(e["default"],{size:"large",placeholder:"large size"}),c["default"].createElement(e["default"],{placeholder:"default size"}),c["default"].createElement(e["default"],{size:"small",placeholder:"small size"}))},style:".example-input .ant-input {\n  width: 200px;\n  margin: 0 8px 8px 0;\n}",highlightedStyle:'<span class="token selector" ><span class="token class" >.example-input</span> <span class="token class" >.ant-input</span> </span><span class="token punctuation" >{</span>\n  <span class="token property" >width</span><span class="token punctuation" >:</span> <span class="token number" >200</span>px<span class="token punctuation" >;</span>\n  <span class="token property" >margin</span><span class="token punctuation" >:</span> <span class="token number" >0</span> <span class="token number" >8</span>px <span class="token number" >8</span>px <span class="token number" >0</span><span class="token punctuation" >;</span>\n<span class="token punctuation" >}</span>'}},767:function(n,a,s){"use strict";function t(n){return n&&n.__esModule?n:{"default":n}}var p=(s(23),s(30)),e=t(p),o=s(1),c=t(o),u=s(2);t(u);n.exports={content:{"zh-CN":[["p","\u7528\u4e8e\u591a\u884c\u8f93\u5165\uff0c\u6307\u5b9a ",["code","type"]," \u4e3a\u4e00\u4e2a\u7279\u6b8a\u7684 ",["code","textarea"],"\u3002"]],"en-US":[["p","For multi-line user input cases, an input whose ",["code","type"]," prop has the value of ",["code",'"textarea"']," can be used."]]},meta:{order:5,title:{"zh-CN":"\u6587\u672c\u57df","en-US":"Textarea"},filename:"components/input/demo/textarea.md",id:"components-input-demo-textarea"},toc:["ul",["li",["a",{href:"#zh-CN"},"zh-CN"]],["li",["a",{href:"#en-US"},"en-US"]]],highlightedCode:["pre",{lang:"jsx",highlighted:'<span class="token keyword" >import</span> <span class="token punctuation" >{</span> Input <span class="token punctuation" >}</span> <span class="token keyword" >from</span> <span class="token string" >\'antd\'</span><span class="token punctuation" >;</span>\n\nReactDOM<span class="token punctuation" >.</span><span class="token function" >render</span><span class="token punctuation" >(</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Input</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>textarea<span class="token punctuation" >"</span></span> <span class="token attr-name" >rows</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >4</span><span class="token punctuation" >}</span></span> <span class="token punctuation" >/></span></span><span class="token punctuation" >,</span> mountNode<span class="token punctuation" >)</span><span class="token punctuation" >;</span>'}],preview:function(){return c["default"].createElement(e["default"],{type:"textarea",rows:4})}}},1162:function(n,a,s){n.exports={addon:s(761),"autosize-textarea":s(762),basic:s(763),group:s(764),"search-input":s(765),size:s(766),textarea:s(767)}}});
+webpackJsonp([10,202],{
+
+/***/ 776:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style4 = __webpack_require__(14);
+
+	var _icon = __webpack_require__(11);
+
+	var _icon2 = _interopRequireDefault(_icon);
+
+	var _style5 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _style6 = __webpack_require__(30);
+
+	var _select = __webpack_require__(29);
+
+	var _select2 = _interopRequireDefault(_select);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "用于配置一些固定组合。"]],
+	    "en-US": [["p", "Using pre & post tabs example."]]
+	  },
+	  "meta": {
+	    "order": 2,
+	    "title": {
+	      "zh-CN": "前置/后置标签",
+	      "en-US": "Pre / Post tab"
+	    },
+	    "filename": "components/input/demo/addon.md",
+	    "id": "components-input-demo-addon"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input<span class=\"token punctuation\" >,</span> Select<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Option <span class=\"token operator\" >=</span> Select<span class=\"token punctuation\" >.</span>Option<span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> selectBefore <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Select</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Http://<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> width<span class=\"token punctuation\" >:</span> <span class=\"token number\" >80</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Http://<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Http<span class=\"token punctuation\" >:</span><span class=\"token operator\" >/</span><span class=\"token operator\" >/</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Https://<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Https<span class=\"token punctuation\" >:</span><span class=\"token operator\" >/</span><span class=\"token operator\" >/</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Select</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> selectAfter <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Select</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.com<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> width<span class=\"token punctuation\" >:</span> <span class=\"token number\" >70</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.com<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >.</span>com<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.jp<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >.</span>jp<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.cn<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >.</span>cn<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.org<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >.</span>org<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Option</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Select</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> marginBottom<span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >addonBefore</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Http://<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >addonAfter</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>.com<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mysite<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> marginBottom<span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >addonBefore</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>selectBefore<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >addonAfter</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>selectAfter<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mysite<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> marginBottom<span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >addonAfter={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>setting<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> defaultValue<span class=\"token operator\" >=</span><span class=\"token string\" >\"mysite\"</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var Option = _select2.default.Option;var selectBefore = _react2.default.createElement(
+	      _select2.default,
+	      { defaultValue: 'Http://', style: { width: 80 } },
+	      _react2.default.createElement(
+	        Option,
+	        { value: 'Http://' },
+	        'Http://'
+	      ),
+	      _react2.default.createElement(
+	        Option,
+	        { value: 'Https://' },
+	        'Https://'
+	      )
+	    );var selectAfter = _react2.default.createElement(
+	      _select2.default,
+	      { defaultValue: '.com', style: { width: 70 } },
+	      _react2.default.createElement(
+	        Option,
+	        { value: '.com' },
+	        '.com'
+	      ),
+	      _react2.default.createElement(
+	        Option,
+	        { value: '.jp' },
+	        '.jp'
+	      ),
+	      _react2.default.createElement(
+	        Option,
+	        { value: '.cn' },
+	        '.cn'
+	      ),
+	      _react2.default.createElement(
+	        Option,
+	        { value: '.org' },
+	        '.org'
+	      )
+	    );return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { style: { marginBottom: 16 } },
+	        _react2.default.createElement(_input2.default, { addonBefore: 'Http://', addonAfter: '.com', defaultValue: 'mysite' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { style: { marginBottom: 16 } },
+	        _react2.default.createElement(_input2.default, { addonBefore: selectBefore, addonAfter: selectAfter, defaultValue: 'mysite' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { style: { marginBottom: 16 } },
+	        _react2.default.createElement(_input2.default, { addonAfter: _react2.default.createElement(_icon2.default, { type: 'setting' }), defaultValue: 'mysite' })
+	      )
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 777:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", ["code", "autosize"], " 属性适用于 ", ["code", "textarea"], " 节点，并且只有高度会自动变化。另外 ", ["code", "autosize"], " 可以设定为一个对象，指定最小行数和最大行数。"]],
+	    "en-US": [["p", ["code", "autosize"], " prop for a ", ["code", "textarea"], " type of ", ["code", "Input"], " makes the height to automatically adjust based on the content.\nAn options object can be provided to ", ["code", "autosize"], " to specify the minimum and maximum number of lines the textarea will automatically adjust."]]
+	  },
+	  "meta": {
+	    "order": 6,
+	    "title": {
+	      "zh-CN": "适应文本高度的文本域",
+	      "en-US": "Autosizing the height to fit the content"
+	    },
+	    "filename": "components/input/demo/autosize-textarea.md",
+	    "id": "components-input-demo-autosize-textarea"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>textarea<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Autosize</span> <span class=\"token attr-name\" >height</span> <span class=\"token attr-name\" >based</span> <span class=\"token attr-name\" >on</span> <span class=\"token attr-name\" >content</span> <span class=\"token attr-name\" >lines\"</span> <span class=\"token attr-name\" >autosize</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'24px 0'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>textarea<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Autosize</span> <span class=\"token attr-name\" >height</span> <span class=\"token attr-name\" >with</span> <span class=\"token attr-name\" >minimum</span> <span class=\"token attr-name\" >and</span> <span class=\"token attr-name\" >maximum</span> <span class=\"token attr-name\" >number</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >lines\"</span> <span class=\"token attr-name\" >autosize</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> minRows<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2</span><span class=\"token punctuation\" >,</span> maxRows<span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_input2.default, { type: 'textarea', placeholder: 'Autosize height based on content lines', autosize: true }),
+	      _react2.default.createElement('div', { style: { margin: '24px 0' } }),
+	      _react2.default.createElement(_input2.default, { type: 'textarea', placeholder: 'Autosize height with minimum and maximum number of lines', autosize: { minRows: 2, maxRows: 6 } })
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 778:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "基本使用。"]],
+	    "en-US": [["p", "Basic usage example"]]
+	  },
+	  "meta": {
+	    "order": 0,
+	    "title": {
+	      "zh-CN": "基本使用",
+	      "en-US": "Basic usage"
+	    },
+	    "filename": "components/input/demo/basic.md",
+	    "id": "components-input-demo-basic"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Basic</span> <span class=\"token attr-name\" >usage\"</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(_input2.default, { placeholder: 'Basic usage' });
+	  }
+	};
+
+/***/ },
+
+/***/ 779:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(43);
+
+	var _col = __webpack_require__(41);
+
+	var _col2 = _interopRequireDefault(_col);
+
+	var _style4 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "输入框的组合展现。"]],
+	    "en-US": [["p", "Input.Group example"]]
+	  },
+	  "meta": {
+	    "order": 3,
+	    "title": {
+	      "zh-CN": "输入框组合",
+	      "en-US": "Input Group"
+	    },
+	    "filename": "components/input/demo/group.md",
+	    "id": "components-input-demo-group"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input<span class=\"token punctuation\" >,</span> Col <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> InputGroup <span class=\"token operator\" >=</span> Input<span class=\"token punctuation\" >.</span>Group<span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>InputGroup</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>large<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Col</span> <span class=\"token attr-name\" >span</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>4<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>0571<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Col</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Col</span> <span class=\"token attr-name\" >span</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>8<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>26888888<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Col</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>InputGroup</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var InputGroup = _input2.default.Group;return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        InputGroup,
+	        { size: 'large' },
+	        _react2.default.createElement(
+	          _col2.default,
+	          { span: '4' },
+	          _react2.default.createElement(_input2.default, { defaultValue: '0571' })
+	        ),
+	        _react2.default.createElement(
+	          _col2.default,
+	          { span: '8' },
+	          _react2.default.createElement(_input2.default, { defaultValue: '26888888' })
+	        )
+	      )
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 780:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "带有搜索按钮的输入框。"]],
+	    "en-US": [["p", "Example of creating a search box by grouping a standard input with a search button."]]
+	  },
+	  "meta": {
+	    "order": 4,
+	    "title": {
+	      "zh-CN": "搜索框",
+	      "en-US": "Search box"
+	    },
+	    "filename": "components/input/demo/search-input.md",
+	    "id": "components-input-demo-search-input"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Search <span class=\"token operator\" >=</span> Input<span class=\"token punctuation\" >.</span>Search<span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Search</span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>input</span> <span class=\"token attr-name\" >search</span> <span class=\"token attr-name\" >text\"</span> <span class=\"token attr-name\" >onSearch</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>value <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var Search = _input2.default.Search;return _react2.default.createElement(Search, { placeholder: 'input search text', onSearch: function onSearch(value) {
+	        return console.log(value);
+	      } });
+	  }
+	};
+
+/***/ },
+
+/***/ 781:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "我们为 ", ["code", "<Input />"], " 输入框定义了三种尺寸（大、默认、小），高度分别为 ", ["code", "32px"], "、", ["code", "28px"], " 和 ", ["code", "22px"], "。"], ["p", "注意： 在表单里面，我们只使用大尺寸的输入框。"]],
+	    "en-US": [["p", "There are three sizes of an Input box: ", ["code", "large"], " (32px)、", ["code", "default"], " (28px) and ", ["code", "small"], " (22px). "], ["p", "Note: Inside of forms, only the large size is used."]]
+	  },
+	  "meta": {
+	    "order": 1,
+	    "title": {
+	      "zh-CN": "三种大小",
+	      "en-US": "Three sizes of Input"
+	    },
+	    "filename": "components/input/demo/size.md",
+	    "id": "components-input-demo-size"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>example-input<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>large<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>large</span> <span class=\"token attr-name\" >size\"</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>default</span> <span class=\"token attr-name\" >size\"</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small</span> <span class=\"token attr-name\" >size\"</span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'example-input' },
+	      _react2.default.createElement(_input2.default, { size: 'large', placeholder: 'large size' }),
+	      _react2.default.createElement(_input2.default, { placeholder: 'default size' }),
+	      _react2.default.createElement(_input2.default, { size: 'small', placeholder: 'small size' })
+	    );
+	  },
+	  "style": ".example-input .ant-input {\n  width: 200px;\n  margin: 0 8px 8px 0;\n}",
+	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.example-input</span> <span class=\"token class\" >.ant-input</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >200</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >0</span> <span class=\"token number\" >8</span>px <span class=\"token number\" >8</span>px <span class=\"token number\" >0</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
+	};
+
+/***/ },
+
+/***/ 782:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "用于多行输入，指定 ", ["code", "type"], " 为一个特殊的 ", ["code", "textarea"], "。"]],
+	    "en-US": [["p", "For multi-line user input cases, an input whose ", ["code", "type"], " prop has the value of ", ["code", "\"textarea\""], " can be used."]]
+	  },
+	  "meta": {
+	    "order": 5,
+	    "title": {
+	      "zh-CN": "文本域",
+	      "en-US": "Textarea"
+	    },
+	    "filename": "components/input/demo/textarea.md",
+	    "id": "components-input-demo-textarea"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>textarea<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    return _react2.default.createElement(_input2.default, { type: 'textarea', rows: 4 });
+	  }
+	};
+
+/***/ },
+
+/***/ 783:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(141);
+
+	var _tooltip = __webpack_require__(119);
+
+	var _tooltip2 = _interopRequireDefault(_tooltip);
+
+	var _style4 = __webpack_require__(20);
+
+	var _input = __webpack_require__(24);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _extends2 = __webpack_require__(8);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "结合 ", ["a", {
+	      "title": null,
+	      "href": "/components/tooltip"
+	    }, "Tooltip"], " 组件，实现一个数值输入框，方便内容超长时的全量展现。"]],
+	    "en-US": [["p", "You can use the Input in conjunction with ", ["a", {
+	      "title": null,
+	      "href": "/components/tooltip"
+	    }, "Tooltip"], " component to create a Numeric Input, which can provide a good experience for extra-long content display."]]
+	  },
+	  "meta": {
+	    "order": 7,
+	    "title": {
+	      "zh-CN": "数值输入框",
+	      "en-US": "Numeric Input"
+	    },
+	    "filename": "components/input/demo/tooltip.md",
+	    "id": "components-input-demo-tooltip"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Input<span class=\"token punctuation\" >,</span> Tooltip <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >formatNumber</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  value <span class=\"token operator\" >+</span><span class=\"token operator\" >=</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >const</span> list <span class=\"token operator\" >=</span> value<span class=\"token punctuation\" >.</span><span class=\"token function\" >split</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'.'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >const</span> prefix <span class=\"token operator\" >=</span> list<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >charAt</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >===</span> <span class=\"token string\" >'-'</span> <span class=\"token operator\" >?</span> <span class=\"token string\" >'-'</span> <span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >let</span> num <span class=\"token operator\" >=</span> prefix <span class=\"token operator\" >?</span> list<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >slice</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >:</span> list<span class=\"token punctuation\" >[</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >let</span> result <span class=\"token operator\" >=</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token keyword\" >while</span> <span class=\"token punctuation\" >(</span>num<span class=\"token punctuation\" >.</span>length <span class=\"token operator\" >></span> <span class=\"token number\" >3</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    result <span class=\"token operator\" >=</span> <span class=\"token template-string\" ><span class=\"token string\" >`,</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>num<span class=\"token punctuation\" >.</span><span class=\"token function\" >slice</span><span class=\"token punctuation\" >(</span><span class=\"token operator\" >-</span><span class=\"token number\" >3</span><span class=\"token punctuation\" >)</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>result<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >`</span></span><span class=\"token punctuation\" >;</span>\n    num <span class=\"token operator\" >=</span> num<span class=\"token punctuation\" >.</span><span class=\"token function\" >slice</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >,</span> num<span class=\"token punctuation\" >.</span>length <span class=\"token operator\" >-</span> <span class=\"token number\" >3</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>num<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    result <span class=\"token operator\" >=</span> num <span class=\"token operator\" >+</span> result<span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token keyword\" >return</span> <span class=\"token template-string\" ><span class=\"token string\" >`</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>prefix<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>result<span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >${list[1] ? `</span></span><span class=\"token punctuation\" >.</span>$<span class=\"token punctuation\" >{</span>list<span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span><span class=\"token template-string\" ><span class=\"token string\" >` : ''}`</span></span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >NumericInput</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  onChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>e<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> value <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> e<span class=\"token punctuation\" >.</span>target<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >const</span> reg <span class=\"token operator\" >=</span> <span class=\"token regex\" >/^-?(0|[1-9][0-9]*)(\\.[0-9]*)?$/</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >(</span><span class=\"token operator\" >!</span><span class=\"token function\" >isNaN</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >&amp;&amp;</span> reg<span class=\"token punctuation\" >.</span><span class=\"token function\" >test</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >||</span> value <span class=\"token operator\" >===</span> <span class=\"token string\" >''</span> <span class=\"token operator\" >||</span> value <span class=\"token operator\" >===</span> <span class=\"token string\" >'-'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span><span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token comment\" spellcheck=\"true\">// '.' at the end or only '-' in the input box.</span>\n  onBlur <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> value <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >.</span><span class=\"token function\" >charAt</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >.</span>length <span class=\"token operator\" >-</span> <span class=\"token number\" >1</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >===</span> <span class=\"token string\" >'.'</span> <span class=\"token operator\" >||</span> value <span class=\"token operator\" >===</span> <span class=\"token string\" >'-'</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span><span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> value<span class=\"token punctuation\" >:</span> value<span class=\"token punctuation\" >.</span><span class=\"token function\" >slice</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >,</span> <span class=\"token operator\" >-</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n    <span class=\"token keyword\" >if</span> <span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span>onBlur<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n      <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span><span class=\"token function\" >onBlur</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> value <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >const</span> title <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>value <span class=\"token operator\" >?</span>\n      <span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>numeric-input-title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token punctuation\" >{</span>value <span class=\"token operator\" >!==</span> <span class=\"token string\" >'-'</span> <span class=\"token operator\" >?</span> <span class=\"token function\" >formatNumber</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >:</span> <span class=\"token string\" >'-'</span><span class=\"token punctuation\" >}</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span>\n          <span class=\"token attr-name\" >trigger</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span><span class=\"token string\" >'focus'</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n          <span class=\"token attr-name\" >title</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>title<span class=\"token punctuation\" >}</span></span>\n          <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>topLeft<span class=\"token punctuation\" >\"</span></span>\n          <span class=\"token attr-name\" >overlayClassName</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>numeric-input<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token punctuation\" >></span></span>\n          <span class=\"token operator\" >&lt;</span>Input\n            <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span>\n            onChange<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChange<span class=\"token punctuation\" >}</span>\n            onBlur<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onBlur<span class=\"token punctuation\" >}</span>\n            placeholder<span class=\"token operator\" >=</span><span class=\"token string\" >\"input a number\"</span>\n            maxLength<span class=\"token operator\" >=</span><span class=\"token string\" >\"25\"</span>\n          <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >NumericInputDemo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> value<span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  onChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> value <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> value <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>numeric-input-demo<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>NumericInput</span> <span class=\"token attr-name\" >value</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>value<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>NumericInputDemo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    function formatNumber(value) {
+	      value += '';var list = value.split('.');var prefix = list[0].charAt(0) === '-' ? '-' : '';var num = prefix ? list[0].slice(1) : list[0];var result = '';while (num.length > 3) {
+	        result = ',' + num.slice(-3) + result;num = num.slice(0, num.length - 3);
+	      }if (num) {
+	        result = num + result;
+	      }return '' + prefix + result + (list[1] ? '.' + list[1] : '');
+	    }
+	    var NumericInput = function (_React$Component) {
+	      (0, _inherits3.default)(NumericInput, _React$Component);
+
+	      function NumericInput() {
+	        var _temp, _this, _ret;
+
+	        (0, _classCallCheck3.default)(this, NumericInput);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	          args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.onChange = function (e) {
+	          var value = e.target.value;
+	          var reg = /^-?(0|[1-9][0-9]*)(\.[0-9]*)?$/;if (!isNaN(value) && reg.test(value) || value === '' || value === '-') {
+	            _this.props.onChange(value);
+	          }
+	        }, _this.onBlur = function () {
+	          var value = _this.props.value;
+	          if (value.charAt(value.length - 1) === '.' || value === '-') {
+	            _this.props.onChange({ value: value.slice(0, -1) });
+	          }if (_this.props.onBlur) {
+	            _this.props.onBlur();
+	          }
+	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	      } // '.' at the end or only '-' in the input box.
+
+
+	      NumericInput.prototype.render = function render() {
+	        var value = this.props.value;
+	        var title = value ? _react2.default.createElement(
+	          'span',
+	          { className: 'numeric-input-title' },
+	          value !== '-' ? formatNumber(value) : '-'
+	        ) : '';return _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _tooltip2.default,
+	            { trigger: ['focus'], title: title, placement: 'topLeft', overlayClassName: 'numeric-input' },
+	            _react2.default.createElement(_input2.default, (0, _extends3.default)({}, this.props, { onChange: this.onChange, onBlur: this.onBlur, placeholder: 'input a number', maxLength: '25' }))
+	          )
+	        );
+	      };
+
+	      return NumericInput;
+	    }(_react2.default.Component);
+
+	    var NumericInputDemo = function (_React$Component2) {
+	      (0, _inherits3.default)(NumericInputDemo, _React$Component2);
+
+	      function NumericInputDemo(props) {
+	        (0, _classCallCheck3.default)(this, NumericInputDemo);
+
+	        var _this2 = (0, _possibleConstructorReturn3.default)(this, _React$Component2.call(this, props));
+
+	        _this2.onChange = function (value) {
+	          _this2.setState({ value: value });
+	        };
+
+	        _this2.state = { value: '' };
+	        return _this2;
+	      }
+
+	      NumericInputDemo.prototype.render = function render() {
+	        var value = this.state.value;
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'numeric-input-demo' },
+	          _react2.default.createElement(NumericInput, { value: value, onChange: this.onChange })
+	        );
+	      };
+
+	      return NumericInputDemo;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(NumericInputDemo, null);
+	  },
+	  "style": "/* to prevent the arrow overflow the popup container, \nor the height is not enough when content is empty */\n.numeric-input .ant-tooltip-inner {\n  min-width: 32px;\n  min-height: 37px;\n}\n\n.numeric-input .numeric-input-title {\n  font-size: 14px;\n}\n\n.numeric-input-demo {\n  width: 120px;\n}",
+	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* to prevent the arrow overflow the popup container, \nor the height is not enough when content is empty */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input</span> <span class=\"token class\" >.ant-tooltip-inner</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >min-width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >32</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >min-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >37</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input</span> <span class=\"token class\" >.numeric-input-title</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >14</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input-demo</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >120</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
+	};
+
+/***/ },
+
+/***/ 1201:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'addon': __webpack_require__(776),
+	    'autosize-textarea': __webpack_require__(777),
+	    'basic': __webpack_require__(778),
+	    'group': __webpack_require__(779),
+	    'search-input': __webpack_require__(780),
+	    'size': __webpack_require__(781),
+	    'textarea': __webpack_require__(782),
+	    'tooltip': __webpack_require__(783),
+	}
+
+/***/ }
+
+});
