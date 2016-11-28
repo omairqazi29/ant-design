@@ -18,7 +18,7 @@ webpackJsonp([69,202],{
 	module.exports = {
 	  "content": ["article", {}, ["h2", "Guideline and Resouce"], ["p", "We supply a series of design principles, practical patterns and high qulitiy design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently."], ["ul", ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "/docs/pattern/principle"
+	    "href": "/docs/spec/principle"
 	  }, "Principle"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/pattern/navigation"

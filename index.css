@@ -1325,7 +1325,7 @@ samp {
 .anticon-dingding-o:before {
   content: "\E925";
 }
-.anticon-spin {
+.anticon-spin:before {
   display: inline-block;
   -webkit-animation: loadingCircle 0.8s infinite linear;
           animation: loadingCircle 0.8s infinite linear;
@@ -18155,7 +18155,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #690;
-  background: rgba(255, 255, 255, 0.5);
 }
 .token.atrule,
 .token.attr-value,

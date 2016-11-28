@@ -18,7 +18,7 @@ webpackJsonp([68,202],{
 	module.exports = {
 	  "content": ["article", {}, ["h2", "设计资源"], ["p", "我们提供完善的设计原则、最佳实践和设计资源文件（Sketch 和 Axure），来帮助业务快速设计出高质量的产品原型。"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "/docs/pattern/principle"
+	    "href": "/docs/spec/principle"
 	  }, "设计原则"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/pattern/navigation"

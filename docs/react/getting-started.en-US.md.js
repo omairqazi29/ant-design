@@ -123,7 +123,7 @@ webpackJsonp([90,202],{
 	    "href": "https://github.com/ant-design/babel-plugin-import#usage"
 	  }, "usage"], " for further details."], ["h2", "Customization"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
+	    "href": "/docs/react/customize-theme"
 	  }, "Customize Theme"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont"

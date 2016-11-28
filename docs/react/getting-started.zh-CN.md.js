@@ -126,7 +126,7 @@ webpackJsonp([89,202],{
 	    "href": "https://github.com/ant-design/babel-plugin-import#usage"
 	  }, "style"], " 属性可以做到模块样式的按需自动加载。"], ["h2", "配置主题和字体"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
+	    "href": "/docs/react/customize-theme"
 	  }, "改变主题"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont"
