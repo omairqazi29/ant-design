@@ -17752,9 +17752,6 @@ footer ul li > div {
   #search-box {
     display: none;
   }
-  #header {
-    position: absolute!important;
-  }
   a#logo {
     width: 150px;
     margin-left: auto;
