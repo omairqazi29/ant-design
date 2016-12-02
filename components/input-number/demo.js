@@ -1,13 +1,25 @@
 webpackJsonp([37,202],{
 
-/***/ 770:
+/***/ 651:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1497),
+	    'digit': __webpack_require__(1498),
+	    'disabled': __webpack_require__(1499),
+	    'size': __webpack_require__(1500),
+	}
+
+/***/ },
+
+/***/ 1497:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(133);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(132);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -53,14 +65,14 @@ webpackJsonp([37,202],{
 
 /***/ },
 
-/***/ 771:
+/***/ 1498:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(133);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(132);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -106,20 +118,20 @@ webpackJsonp([37,202],{
 
 /***/ },
 
-/***/ 772:
+/***/ 1499:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(133);
+	var _style4 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(132);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -187,14 +199,14 @@ webpackJsonp([37,202],{
 
 /***/ },
 
-/***/ 773:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(133);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(132);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -245,18 +257,6 @@ webpackJsonp([37,202],{
 	  "style": ".ant-input-number {\n  margin-right: 10px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.ant-input-number</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-right</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
-
-/***/ },
-
-/***/ 1202:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(770),
-	    'digit': __webpack_require__(771),
-	    'disabled': __webpack_require__(772),
-	    'size': __webpack_require__(773),
-	}
 
 /***/ }
 

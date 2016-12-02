@@ -1,6 +1,6 @@
 webpackJsonp([137,202],{
 
-/***/ 870:
+/***/ 1597:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([137,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Radio."], ["h2", "When To Use"], ["ul", ["li", ["p", "Used to select a single state in multiple options."]], ["li", ["p", "The different between Select, Radio is visible to user, it can facilitate users in the comparison of choice. So, when you want to use Radio, option should not be too much."]]]],
+	  "content": ["section", ["p", "Radio."], ["h2", "When To Use"], ["ul", ["li", ["p", "Used to select a single state in multiple options."]], ["li", ["p", "The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Entry",

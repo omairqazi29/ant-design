@@ -1,6 +1,6 @@
 webpackJsonp([109,202],{
 
-/***/ 996:
+/***/ 1723:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([109,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Tree selection control."], ["h2", "When To Use"], ["p", ["code", "TreeSelect"], " is similar with ", ["code", "Select"], ", but the values are provided in a tree like structure.\nAny data whose entries are defined in a hierarchical manner is fit to use this control. Examples of such case may include a corporate hierarchy, a directory structure, and so on."]],
+	  "content": ["section", ["p", "Tree selection control."], ["h2", "When To Use"], ["p", ["code", "TreeSelect"], " is similar to ", ["code", "Select"], ", but the values are provided in a tree like structure.\nAny data whose entries are defined in a hierarchical manner is fit to use this control. Examples of such case may include a corporate hierarchy, a directory structure, and so on."]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Entry",

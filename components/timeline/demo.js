@@ -1,13 +1,25 @@
 webpackJsonp([32,202],{
 
-/***/ 975:
+/***/ 673:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1702),
+	    'color': __webpack_require__(1703),
+	    'custom': __webpack_require__(1704),
+	    'pending': __webpack_require__(1705),
+	}
+
+/***/ },
+
+/***/ 1702:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(187);
+	var _style2 = __webpack_require__(208);
 
-	var _timeline = __webpack_require__(186);
+	var _timeline = __webpack_require__(207);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -74,14 +86,14 @@ webpackJsonp([32,202],{
 
 /***/ },
 
-/***/ 976:
+/***/ 1703:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(187);
+	var _style2 = __webpack_require__(208);
 
-	var _timeline = __webpack_require__(186);
+	var _timeline = __webpack_require__(207);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -176,20 +188,20 @@ webpackJsonp([32,202],{
 
 /***/ },
 
-/***/ 977:
+/***/ 1704:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(187);
+	var _style4 = __webpack_require__(208);
 
-	var _timeline = __webpack_require__(186);
+	var _timeline = __webpack_require__(207);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -256,14 +268,14 @@ webpackJsonp([32,202],{
 
 /***/ },
 
-/***/ 978:
+/***/ 1705:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(187);
+	var _style2 = __webpack_require__(208);
 
-	var _timeline = __webpack_require__(186);
+	var _timeline = __webpack_require__(207);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -326,18 +338,6 @@ webpackJsonp([32,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1224:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(975),
-	    'color': __webpack_require__(976),
-	    'custom': __webpack_require__(977),
-	    'pending': __webpack_require__(978),
-	}
 
 /***/ }
 

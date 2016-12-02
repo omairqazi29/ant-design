@@ -1,13 +1,26 @@
 webpackJsonp([26,202],{
 
-/***/ 959:
+/***/ 671:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1686),
+	    'checkable': __webpack_require__(1687),
+	    'colorful': __webpack_require__(1688),
+	    'control': __webpack_require__(1689),
+	    'hot-tags': __webpack_require__(1690),
+	}
+
+/***/ },
+
+/***/ 1686:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(185);
+	var _style2 = __webpack_require__(206);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(205);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -87,7 +100,7 @@ webpackJsonp([26,202],{
 
 /***/ },
 
-/***/ 960:
+/***/ 1687:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -108,9 +121,9 @@ webpackJsonp([26,202],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(185);
+	var _style2 = __webpack_require__(206);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(205);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -197,14 +210,14 @@ webpackJsonp([26,202],{
 
 /***/ },
 
-/***/ 961:
+/***/ 1688:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(185);
+	var _style2 = __webpack_require__(206);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(205);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -266,24 +279,24 @@ webpackJsonp([26,202],{
 
 /***/ },
 
-/***/ 962:
+/***/ 1689:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(185);
+	var _style4 = __webpack_require__(206);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(205);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
-	var _toConsumableArray2 = __webpack_require__(81);
+	var _toConsumableArray2 = __webpack_require__(77);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -389,12 +402,12 @@ webpackJsonp([26,202],{
 
 /***/ },
 
-/***/ 963:
+/***/ 1690:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _toConsumableArray2 = __webpack_require__(81);
+	var _toConsumableArray2 = __webpack_require__(77);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -410,9 +423,9 @@ webpackJsonp([26,202],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(185);
+	var _style2 = __webpack_require__(206);
 
-	var _tag = __webpack_require__(184);
+	var _tag = __webpack_require__(205);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -504,19 +517,6 @@ webpackJsonp([26,202],{
 	    return _react2.default.createElement(HotTags, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1222:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(959),
-	    'checkable': __webpack_require__(960),
-	    'colorful': __webpack_require__(961),
-	    'control': __webpack_require__(962),
-	    'hot-tags': __webpack_require__(963),
-	}
 
 /***/ }
 

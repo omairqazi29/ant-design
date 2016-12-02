@@ -1,17 +1,32 @@
 webpackJsonp([13,202],{
 
-/***/ 966:
+/***/ 672:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'addon': __webpack_require__(1693),
+	    'basic': __webpack_require__(1694),
+	    'disable-options': __webpack_require__(1695),
+	    'disabled': __webpack_require__(1696),
+	    'hide-column': __webpack_require__(1697),
+	    'size': __webpack_require__(1698),
+	    'value': __webpack_require__(1699),
+	}
+
+/***/ },
+
+/***/ 1693:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(87);
+	var _style3 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -65,14 +80,14 @@ webpackJsonp([13,202],{
 
 /***/ },
 
-/***/ 967:
+/***/ 1694:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -118,14 +133,14 @@ webpackJsonp([13,202],{
 
 /***/ },
 
-/***/ 968:
+/***/ 1695:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -183,19 +198,19 @@ webpackJsonp([13,202],{
 	      _react2.default.createElement(_timePicker2.default, { disabledHours: disabledHours, disabledMinutes: disabledMinutes, hideDisabledOptions: true, placeholder: 'Hide Directly' })
 	    );
 	  },
-	  "style": "\n#components-time-picker-demo-disable-options .ant-time-picker {\n  width: 120px;\n}\n#components-time-picker-demo-disable-options .ant-time-picker .ant-time-picker-input {\n  width: 120px;\n  margin-right: 8px;\n}\n"
+	  "style": "\n#components-time-picker-demo-disable-options .ant-time-picker {\n  width: 120px;\n}\n"
 	};
 
 /***/ },
 
-/***/ 969:
+/***/ 1696:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -207,7 +222,7 @@ webpackJsonp([13,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(32);
+	var _moment = __webpack_require__(45);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -243,14 +258,14 @@ webpackJsonp([13,202],{
 
 /***/ },
 
-/***/ 970:
+/***/ 1697:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -262,7 +277,7 @@ webpackJsonp([13,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(32);
+	var _moment = __webpack_require__(45);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -298,14 +313,14 @@ webpackJsonp([13,202],{
 
 /***/ },
 
-/***/ 971:
+/***/ 1698:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -317,7 +332,7 @@ webpackJsonp([13,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(32);
+	var _moment = __webpack_require__(45);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -359,14 +374,14 @@ webpackJsonp([13,202],{
 
 /***/ },
 
-/***/ 972:
+/***/ 1699:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(87);
+	var _style2 = __webpack_require__(94);
 
-	var _timePicker = __webpack_require__(100);
+	var _timePicker = __webpack_require__(109);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -445,21 +460,6 @@ webpackJsonp([13,202],{
 	    return _react2.default.createElement(Demo, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1223:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'addon': __webpack_require__(966),
-	    'basic': __webpack_require__(967),
-	    'disable-options': __webpack_require__(968),
-	    'disabled': __webpack_require__(969),
-	    'hide-column': __webpack_require__(970),
-	    'size': __webpack_require__(971),
-	    'value': __webpack_require__(972),
-	}
 
 /***/ }
 

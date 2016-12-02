@@ -1,6 +1,6 @@
 webpackJsonp([86,202],{
 
-/***/ 1031:
+/***/ 1758:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -68,7 +68,7 @@ webpackJsonp([86,202],{
 	    "href": "CHANGELOG.en-US.md"
 	  }, "Change Log"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/"
+	    "href": "https://github.com/dvajs/dva-cli/"
 	  }, "Scaffold tool"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://ant-tool.github.io/"
@@ -119,7 +119,7 @@ webpackJsonp([86,202],{
 	    "href": "http://www.xiaojukeji.com/"
 	  }, "Didi"]]]], ["blockquote", ["p", "If your company or product uses Ant Design, you are welcome to comment in ", ["a", {
 	    "title": null,
-	    "href": "(https://github.com/ant-design/ant-design/issues/477)"
+	    "href": "https://github.com/ant-design/ant-design/issues/477"
 	  }, "this issue"], ". Thank you!"]], ["h2", "Contributing"], ["p", "Please read our ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md"

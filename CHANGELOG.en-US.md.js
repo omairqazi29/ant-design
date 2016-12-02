@@ -1,6 +1,6 @@
 webpackJsonp([201,202],{
 
-/***/ 625:
+/***/ 1352:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -432,7 +432,7 @@ webpackJsonp([201,202],{
 	    "href": "http://momentjs.com/docs/"
 	  }, "APIs of moment"], ", and update your code accordingly. And you can consult this ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/commit/5a4ebe535f0353089b30ac331bc4fb7877963371"
+	    "href": "https://github.com/ant-design/ant-design/commit/4026221d451b246956983bb42140142d4a48b7d7"
 	  }, "commit"], " to see how to update."], ["p", "Because the return value of ", ["code", "JSON.stringy(date: moment)"], " will lost time zone, we should use ", ["code", ".format"], " to convert date to string first, see related issue ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3082"
@@ -544,7 +544,7 @@ webpackJsonp([201,202],{
 	  }, "in real world"], "."]], ["li", ["p", "The officially recommended scaffold is ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva-cli"
-	  }, "dva-cli"], " now, the old ", ["code", "antd-init"], " is just for studying and demo."]]], ["h2", "1.11.2"], ["p", "Visit ", ["a", {
+	  }, "dva-cli"], " now, the old ", ["code", "antd-init"], " is just for studying and demo."]]], ["h2", "1.11.4"], ["p", "Visit ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
@@ -586,8 +586,8 @@ webpackJsonp([201,202],{
 	  }, "2.0.1"]], ["li", ["a", {
 	    "href": "#2.0.0"
 	  }, "2.0.0"]], ["li", ["a", {
-	    "href": "#1.11.2"
-	  }, "1.11.2"]]]
+	    "href": "#1.11.4"
+	  }, "1.11.4"]]]
 	};
 
 /***/ }

@@ -1,13 +1,28 @@
 webpackJsonp([14,202],{
 
-/***/ 906:
+/***/ 667:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'error': __webpack_require__(1633),
+	    'icon': __webpack_require__(1634),
+	    'simple': __webpack_require__(1635),
+	    'small-size': __webpack_require__(1636),
+	    'step-next': __webpack_require__(1637),
+	    'vertical-small': __webpack_require__(1638),
+	    'vertical': __webpack_require__(1639),
+	}
+
+/***/ },
+
+/***/ 1633:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(140);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -57,20 +72,20 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 907:
+/***/ 1634:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(140);
+	var _style4 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -121,14 +136,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 908:
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(140);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -178,14 +193,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 909:
+/***/ 1636:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(140);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -235,18 +250,18 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 910:
+/***/ 1637:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(57);
+	var _style4 = __webpack_require__(63);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(62);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -264,9 +279,9 @@ webpackJsonp([14,202],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(140);
+	var _style6 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -384,14 +399,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 911:
+/***/ 1638:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(140);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -441,14 +456,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 912:
+/***/ 1639:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(140);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(139);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -495,21 +510,6 @@ webpackJsonp([14,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1218:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'error': __webpack_require__(906),
-	    'icon': __webpack_require__(907),
-	    'simple': __webpack_require__(908),
-	    'small-size': __webpack_require__(909),
-	    'step-next': __webpack_require__(910),
-	    'vertical-small': __webpack_require__(911),
-	    'vertical': __webpack_require__(912),
-	}
 
 /***/ }
 

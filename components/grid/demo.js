@@ -1,17 +1,34 @@
 webpackJsonp([6,202],{
 
-/***/ 757:
+/***/ 649:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1484),
+	    'flex-align': __webpack_require__(1485),
+	    'flex-order': __webpack_require__(1486),
+	    'flex': __webpack_require__(1487),
+	    'gutter': __webpack_require__(1488),
+	    'offset': __webpack_require__(1489),
+	    'reponsive-more': __webpack_require__(1490),
+	    'reponsive': __webpack_require__(1491),
+	    'sort': __webpack_require__(1492),
+	}
+
+/***/ },
+
+/***/ 1484:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -117,18 +134,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 758:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -318,18 +335,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 759:
+/***/ 1486:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -402,18 +419,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 760:
+/***/ 1487:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -607,18 +624,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 761:
+/***/ 1488:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -709,18 +726,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 762:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -806,18 +823,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 763:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -836,7 +853,7 @@ webpackJsonp([6,202],{
 	module.exports = {
 	  "content": {
 	    "zh-CN": [["p", ["code", "span"], " ", ["code", "pull"], " ", ["code", "push"], " ", ["code", "offset"], " ", ["code", "order"], " 属性可以通过内嵌到 ", ["code", "xs"], " ", ["code", "sm"], " ", ["code", "md"], " ", ["code", "lg"], " 属性中来使用。"], ["p", "其中 ", ["code", "xs={6}"], " 相当于 ", ["code", "xs={{ span: 6 }}"], "。"]],
-	    "en-US": [["p", ["code", "Span"], " pull", ["code", ""], "push", ["code", "offset"], " ", ["code", "order"], " property can be embedded into", ["code", "xs"], " ", ["code", "sm"], " ", ["code", "md"], " ", ["code", "lg"], " properties to use,\nwhere ", ["code", "xs = {6}"], " is equivalent to ", ["code", "xs = {{span: 6}}"], "."]]
+	    "en-US": [["p", ["code", "Span"], " ", ["code", "pull"], " ", ["code", "push"], " ", ["code", "offset"], " ", ["code", "order"], " property can be embedded into ", ["code", "xs"], " ", ["code", "sm"], " ", ["code", "md"], " ", ["code", "lg"], " properties to use,\nwhere ", ["code", "xs = {6}"], " is equivalent to ", ["code", "xs = {{span: 6}}"], "."]]
 	  },
 	  "meta": {
 	    "order": 8,
@@ -882,18 +899,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 764:
+/***/ 1491:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -963,18 +980,18 @@ webpackJsonp([6,202],{
 
 /***/ },
 
-/***/ 765:
+/***/ 1492:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(46);
+	var _style3 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style4 = __webpack_require__(43);
+	var _style4 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
@@ -1034,23 +1051,6 @@ webpackJsonp([6,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1200:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(757),
-	    'flex-align': __webpack_require__(758),
-	    'flex-order': __webpack_require__(759),
-	    'flex': __webpack_require__(760),
-	    'gutter': __webpack_require__(761),
-	    'offset': __webpack_require__(762),
-	    'reponsive-more': __webpack_require__(763),
-	    'reponsive': __webpack_require__(764),
-	    'sort': __webpack_require__(765),
-	}
 
 /***/ }
 

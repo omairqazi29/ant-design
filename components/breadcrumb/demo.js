@@ -1,13 +1,25 @@
 webpackJsonp([40,202],{
 
-/***/ 663:
+/***/ 638:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1390),
+	    'router': __webpack_require__(1391),
+	    'separator': __webpack_require__(1392),
+	    'withIcon': __webpack_require__(1393),
+	}
+
+/***/ },
+
+/***/ 1390:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(113);
+	var _style2 = __webpack_require__(123);
 
-	var _breadcrumb = __webpack_require__(112);
+	var _breadcrumb = __webpack_require__(122);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -82,14 +94,14 @@ webpackJsonp([40,202],{
 
 /***/ },
 
-/***/ 664:
+/***/ 1391:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(113);
+	var _style2 = __webpack_require__(123);
 
-	var _breadcrumb = __webpack_require__(112);
+	var _breadcrumb = __webpack_require__(122);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -101,7 +113,7 @@ webpackJsonp([40,202],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactRouter = __webpack_require__(49);
+	var _reactRouter = __webpack_require__(47);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -212,19 +224,19 @@ webpackJsonp([40,202],{
 	  },
 	  "style": "#components-breadcrumb-demo-router iframe {\n  height: 180px;\n}\n.demo-nav {\n  height: 30px;\n  line-height: 30px;\n  margin-bottom: 15px;\n  background: #f8f8f8;\n}\n.demo-nav a {\n  line-height: 30px;\n  padding: 0 10px;\n}\n.app-list {\n  margin-top: 15px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token id\" >#components-breadcrumb-demo-router</span> iframe </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >180</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#f8f8f8</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> a </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >0</span> <span class=\"token number\" >10</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.app-list</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>",
-	  "src": "/demo-0.8564463105050448.html"
+	  "src": "/demo-0.6054326110601316.html"
 	};
 
 /***/ },
 
-/***/ 665:
+/***/ 1392:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(113);
+	var _style2 = __webpack_require__(123);
 
-	var _breadcrumb = __webpack_require__(112);
+	var _breadcrumb = __webpack_require__(122);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -291,20 +303,20 @@ webpackJsonp([40,202],{
 
 /***/ },
 
-/***/ 666:
+/***/ 1393:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(113);
+	var _style3 = __webpack_require__(123);
 
-	var _breadcrumb = __webpack_require__(112);
+	var _breadcrumb = __webpack_require__(122);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -368,18 +380,6 @@ webpackJsonp([40,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1189:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(663),
-	    'router': __webpack_require__(664),
-	    'separator': __webpack_require__(665),
-	    'withIcon': __webpack_require__(666),
-	}
 
 /***/ }
 

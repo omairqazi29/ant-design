@@ -1,6 +1,6 @@
 webpackJsonp([189,202],{
 
-/***/ 661:
+/***/ 1388:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34,7 +34,7 @@ webpackJsonp([189,202],{
 	  }, ["code", "<Badge count={5}>\n  <a href=\"#\" className=\"head-example\" />\n</Badge>"]], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >count</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >5</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>"
-	  }, ["code", "<Badge count={5} />"]], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "count"], ["td", "Number to show in badge"], ["td", "Number"], ["td"]], ["tr", ["td", "overflowCount"], ["td", "Max count to show"], ["td", "Number"], ["td", "99"]], ["tr", ["td", "dot"], ["td", "whether to show red dot without number"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "status"], ["td", "Set Badge as a status dot"], ["td", "Enum{ 'success', 'processing, 'default', 'error', 'warning' }"], ["td", "''"]], ["tr", ["td", "text"], ["td", "If ", ["code", "status"], " is set, ", ["code", "text"], " is to set the text of status dot"], ["td", "String"], ["td", "''"]]]]]
+	  }, ["code", "<Badge count={5} />"]], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "count"], ["td", "Number to show in badge"], ["td", "Number"], ["td"]], ["tr", ["td", "overflowCount"], ["td", "Max count to show"], ["td", "Number"], ["td", "99"]], ["tr", ["td", "dot"], ["td", "Whether to show red dot without number"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "status"], ["td", "Set Badge as a status dot"], ["td", "Enum{ 'success', 'processing, 'default', 'error', 'warning' }"], ["td", "''"]], ["tr", ["td", "text"], ["td", "If ", ["code", "status"], " is set, ", ["code", "text"], " is to set the text of status dot"], ["td", "String"], ["td", "''"]]]]]
 	};
 
 /***/ }

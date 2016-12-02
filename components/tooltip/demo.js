@@ -1,17 +1,28 @@
 webpackJsonp([42,202],{
 
-/***/ 981:
+/***/ 674:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'arrow-point-at-center': __webpack_require__(1708),
+	    'basic': __webpack_require__(1709),
+	    'placement': __webpack_require__(1710),
+	}
+
+/***/ },
+
+/***/ 1708:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(141);
+	var _style3 = __webpack_require__(153);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -79,14 +90,14 @@ webpackJsonp([42,202],{
 
 /***/ },
 
-/***/ 982:
+/***/ 1709:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(153);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -121,7 +132,7 @@ webpackJsonp([42,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Tooltip <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>prompt</span> <span class=\"token attr-name\" >text\"</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>Text will show when mouse enter<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Tooltip <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>prompt</span> <span class=\"token attr-name\" >text\"</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>Tooltip will show when mouse enter<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    return _react2.default.createElement(
@@ -130,7 +141,7 @@ webpackJsonp([42,202],{
 	      _react2.default.createElement(
 	        'span',
 	        null,
-	        'Text will show when mouse enter.'
+	        'Tooltip will show when mouse enter.'
 	      )
 	    );
 	  }
@@ -138,14 +149,14 @@ webpackJsonp([42,202],{
 
 /***/ },
 
-/***/ 983:
+/***/ 1710:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(153);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -320,17 +331,6 @@ webpackJsonp([42,202],{
 	  },
 	  "style": "\n#components-tooltip-demo-placement .code-box-demo a {\n  display: inline-block;\n  line-height: 32px;\n  height: 32px;\n  width: 60px;\n  font-size: 14px;\n  text-align: center;\n  background: #f5f5f5;\n  margin-right: 1em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n}\n"
 	};
-
-/***/ },
-
-/***/ 1225:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(981),
-	    'basic': __webpack_require__(982),
-	    'placement': __webpack_require__(983),
-	}
 
 /***/ }
 

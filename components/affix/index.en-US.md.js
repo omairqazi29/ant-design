@@ -1,6 +1,6 @@
 webpackJsonp([199,202],{
 
-/***/ 630:
+/***/ 1357:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([199,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Make an element sticky to viewport."], ["h2", "When To Use"], ["p", "When user browses a long web page, some content need to sticky to viewport. It is common for menus and actions."], ["p", "Please note that Affix should not cover other content in page, especially when the size of viewport is small."]],
+	  "content": ["section", ["p", "Make an element sticky to viewport."], ["h2", "When To Use"], ["p", "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions."], ["p", "Please note that Affix should not cover other content on the page, especially when the size of the viewport is small."]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Navigation",

@@ -1,6 +1,6 @@
 webpackJsonp([177,202],{
 
-/***/ 708:
+/***/ 1435:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([177,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Cascade selection box."], ["h2", "When To Use"], ["ul", ["li", ["p", "When you need to select from a set of associated data set. Such as province/city/district, company level, things classification."]], ["li", ["p", "When selecting from a large data set, with multi-stage classification separated for easy selection."]], ["li", ["p", "chooses cascade items in one float layer for better user experience."]]]],
+	  "content": ["section", ["p", "Cascade selection box."], ["h2", "When To Use"], ["ul", ["li", ["p", "When you need to select from a set of associated data set. Such as province/city/district, company level, things classification."]], ["li", ["p", "When selecting from a large data set, with multi-stage classification separated for easy selection."]], ["li", ["p", "Chooses cascade items in one float layer for better user experience."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Entry",

@@ -1,6 +1,6 @@
 webpackJsonp([129,202],{
 
-/***/ 904:
+/***/ 1631:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([129,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "A Spin is used for displaying loading state of a page or a block."], ["h2", "When To Use"], ["p", "When partial of page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude."]],
+	  "content": ["section", ["p", "A Spin is used for displaying loading state of a page or a block."], ["h2", "When To Use"], ["p", "When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude."]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Feedback",

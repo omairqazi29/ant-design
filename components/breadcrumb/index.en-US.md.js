@@ -1,6 +1,6 @@
 webpackJsonp([187,202],{
 
-/***/ 667:
+/***/ 1394:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([187,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up within the hierarchy."], ["h2", "When To Use"], ["ul", ["li", ["p", "When the system has more than two layers in a hierarchy."]], ["li", ["p", "When you need to inform the user of where they are."]], ["li", ["p", "When the user may need to navigate back to a higher level When the application has multi-layer architecture."]]]],
+	  "content": ["section", ["p", "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."], ["h2", "When To Use"], ["ul", ["li", ["p", "When the system has more than two layers in a hierarchy."]], ["li", ["p", "When you need to inform the user of where they are."]], ["li", ["p", "When the user may need to navigate back to a higher level."]], ["li", ["p", "When the application has multi-layer architecture."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Navigation",

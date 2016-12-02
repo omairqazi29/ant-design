@@ -1,21 +1,35 @@
 webpackJsonp([19,202],{
 
-/***/ 891:
+/***/ 665:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1618),
+	    'event': __webpack_require__(1619),
+	    'icon-slider': __webpack_require__(1620),
+	    'input-number': __webpack_require__(1621),
+	    'mark': __webpack_require__(1622),
+	    'tip-formatter': __webpack_require__(1623),
+	}
+
+/***/ },
+
+/***/ 1618:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(138);
+	var _style3 = __webpack_require__(82);
 
-	var _slider = __webpack_require__(137);
-
-	var _slider2 = _interopRequireDefault(_slider);
-
-	var _style4 = __webpack_require__(78);
-
-	var _switch = __webpack_require__(77);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
+
+	var _style4 = __webpack_require__(150);
+
+	var _slider = __webpack_require__(149);
+
+	var _slider2 = _interopRequireDefault(_slider);
 
 	var _classCallCheck2 = __webpack_require__(4);
 
@@ -60,7 +74,7 @@ webpackJsonp([19,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Slider<span class=\"token punctuation\" >,</span> Switch <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n    disabled<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\n  handleDisabledChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>disabled<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> disabled <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> disabled <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n        Disabled<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >checked</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleDisabledChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >30</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >disabled</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >range</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >20</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >disabled</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Demo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Slider<span class=\"token punctuation\" >,</span> Switch <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n    disabled<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  handleDisabledChange <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span>disabled<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> disabled <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> disabled <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >30</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >disabled</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >range</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >20</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >disabled</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n        Disabled<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >checked</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>disabled<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleDisabledChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Demo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    var Demo = function (_React$Component) {
@@ -85,10 +99,10 @@ webpackJsonp([19,202],{
 	        return _react2.default.createElement(
 	          'div',
 	          null,
-	          'Disabled: ',
-	          _react2.default.createElement(_switch2.default, { checked: disabled, onChange: this.handleDisabledChange }),
 	          _react2.default.createElement(_slider2.default, { defaultValue: 30, disabled: disabled }),
-	          _react2.default.createElement(_slider2.default, { range: true, defaultValue: [20, 50], disabled: disabled })
+	          _react2.default.createElement(_slider2.default, { range: true, defaultValue: [20, 50], disabled: disabled }),
+	          'Disabled: ',
+	          _react2.default.createElement(_switch2.default, { size: 'small', checked: disabled, onChange: this.handleDisabledChange })
 	        );
 	      };
 
@@ -96,19 +110,20 @@ webpackJsonp([19,202],{
 	    }(_react2.default.Component);
 
 	    return _react2.default.createElement(Demo, null);
-	  }
+	  },
+	  "style": "\n.code-box-demo .ant-slider {\n  margin-bottom: 16px;\n}\n"
 	};
 
 /***/ },
 
-/***/ 892:
+/***/ 1619:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(138);
+	var _style2 = __webpack_require__(150);
 
-	var _slider = __webpack_require__(137);
+	var _slider = __webpack_require__(149);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -161,14 +176,14 @@ webpackJsonp([19,202],{
 
 /***/ },
 
-/***/ 893:
+/***/ 1620:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(138);
+	var _style3 = __webpack_require__(150);
 
-	var _slider = __webpack_require__(137);
+	var _slider = __webpack_require__(149);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -178,7 +193,7 @@ webpackJsonp([19,202],{
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -242,32 +257,32 @@ webpackJsonp([19,202],{
 
 /***/ },
 
-/***/ 894:
+/***/ 1621:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(46);
+	var _style5 = __webpack_require__(48);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(44);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style6 = __webpack_require__(133);
+	var _style6 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(132);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
-	var _style7 = __webpack_require__(43);
+	var _style7 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style8 = __webpack_require__(138);
+	var _style8 = __webpack_require__(150);
 
-	var _slider = __webpack_require__(137);
+	var _slider = __webpack_require__(149);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -373,14 +388,14 @@ webpackJsonp([19,202],{
 
 /***/ },
 
-/***/ 895:
+/***/ 1622:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(138);
+	var _style2 = __webpack_require__(150);
 
-	var _slider = __webpack_require__(137);
+	var _slider = __webpack_require__(149);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -415,10 +430,10 @@ webpackJsonp([19,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Slider <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> marks <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token number\" >0</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'0°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >26</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'26°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >37</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'37°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >100</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span>\n    style<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span>\n      color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'red'</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n    label<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >100</span>°C<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>code</span><span class=\"token punctuation\" >></span></span>included<span class=\"token operator\" >=</span><span class=\"token boolean\" >true</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>code</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >range</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >26</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >37</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>code</span><span class=\"token punctuation\" >></span></span>included<span class=\"token operator\" >=</span><span class=\"token boolean\" >false</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>code</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >included</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token boolean\" >false</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>code</span><span class=\"token punctuation\" >></span></span>marks <span class=\"token operator\" >&amp;&amp;</span> step<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>code</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >10</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>code</span><span class=\"token punctuation\" >></span></span>step<span class=\"token operator\" >=</span><span class=\"token keyword\" >null</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>code</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >null</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  mountNode\n<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Slider <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> marks <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token number\" >0</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'0°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >26</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'26°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >37</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'37°C'</span><span class=\"token punctuation\" >,</span>\n  <span class=\"token number\" >100</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span>\n    style<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span>\n      color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#f50'</span><span class=\"token punctuation\" >,</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n    label<span class=\"token punctuation\" >:</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >100</span>°C<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >,</span>\n  <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span><span class=\"token punctuation\" >></span></span>included<span class=\"token operator\" >=</span><span class=\"token boolean\" >true</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >range</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >26</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >37</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span><span class=\"token punctuation\" >></span></span>included<span class=\"token operator\" >=</span><span class=\"token boolean\" >false</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >included</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token boolean\" >false</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span><span class=\"token punctuation\" >></span></span>marks <span class=\"token operator\" >&amp;</span> step<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >10</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span><span class=\"token punctuation\" >></span></span>step<span class=\"token operator\" >=</span><span class=\"token keyword\" >null</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >marks</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>marks<span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >null</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >37</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
-	    var marks = { 0: '0°C', 26: '26°C', 37: '37°C', 100: { style: { color: 'red' }, label: _react2.default.createElement(
+	    var marks = { 0: '0°C', 26: '26°C', 37: '37°C', 100: { style: { color: '#f50' }, label: _react2.default.createElement(
 	          'strong',
 	          null,
 	          '100\xB0C'
@@ -426,60 +441,45 @@ webpackJsonp([19,202],{
 	      'div',
 	      null,
 	      _react2.default.createElement(
-	        'p',
+	        'h4',
 	        null,
-	        _react2.default.createElement(
-	          'code',
-	          null,
-	          'included=true'
-	        )
+	        'included=true'
 	      ),
 	      _react2.default.createElement(_slider2.default, { marks: marks, defaultValue: 37 }),
 	      _react2.default.createElement(_slider2.default, { range: true, marks: marks, defaultValue: [26, 37] }),
 	      _react2.default.createElement(
-	        'p',
+	        'h4',
 	        null,
-	        _react2.default.createElement(
-	          'code',
-	          null,
-	          'included=false'
-	        )
+	        'included=false'
 	      ),
 	      _react2.default.createElement(_slider2.default, { marks: marks, included: false, defaultValue: 37 }),
 	      _react2.default.createElement(
-	        'p',
+	        'h4',
 	        null,
-	        _react2.default.createElement(
-	          'code',
-	          null,
-	          'marks && step'
-	        )
+	        'marks & step'
 	      ),
 	      _react2.default.createElement(_slider2.default, { marks: marks, step: 10, defaultValue: 37 }),
 	      _react2.default.createElement(
-	        'p',
+	        'h4',
 	        null,
-	        _react2.default.createElement(
-	          'code',
-	          null,
-	          'step=null'
-	        )
+	        'step=null'
 	      ),
 	      _react2.default.createElement(_slider2.default, { marks: marks, step: null, defaultValue: 37 })
 	    );
-	  }
+	  },
+	  "style": "\n#components-slider-demo-mark h4 {\n  margin: 0 0 16px;\n}\n#components-slider-demo-mark .ant-slider-with-marks {\n  margin-bottom: 44px;\n}\n"
 	};
 
 /***/ },
 
-/***/ 896:
+/***/ 1623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(138);
+	var _style2 = __webpack_require__(150);
 
-	var _slider = __webpack_require__(137);
+	var _slider = __webpack_require__(149);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -528,20 +528,6 @@ webpackJsonp([19,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1216:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(891),
-	    'event': __webpack_require__(892),
-	    'icon-slider': __webpack_require__(893),
-	    'input-number': __webpack_require__(894),
-	    'mark': __webpack_require__(895),
-	    'tip-formatter': __webpack_require__(896),
-	}
 
 /***/ }
 

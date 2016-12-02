@@ -1,6 +1,6 @@
 webpackJsonp([115,202],{
 
-/***/ 979:
+/***/ 1706:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([115,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Vertical display timeline."], ["h2", "When To Use"], ["ul", ["li", ["p", "When a series of information need to be lined from top to bottom by time."]], ["li", ["p", "When need a timeline to make a visual connection."]]]],
+	  "content": ["section", ["p", "Vertical display timeline."], ["h2", "When To Use"], ["ul", ["li", ["p", "When a series of information need to be ordered from top to bottom by time."]], ["li", ["p", "When you need a timeline to make a visual connection."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Display",

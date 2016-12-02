@@ -1,6 +1,6 @@
 webpackJsonp([183,202],{
 
-/***/ 683:
+/***/ 1410:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([183,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "When To Use container for displaying data in calendar form."], ["h2", "When To Use"], ["p", "When data is in the form of date, such as schedule, timetable, prices calendar, Lunar calendar. This component also supports Year/Month switch."]],
+	  "content": ["section", ["p", "Container for displaying data in calendar form."], ["h2", "When To Use"], ["p", "When data is in the form of date, such as schedule, timetable, prices calendar, Lunar calendar. This component also supports Year/Month switch."]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Display",

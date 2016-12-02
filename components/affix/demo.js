@@ -1,17 +1,28 @@
 webpackJsonp([43,202],{
 
-/***/ 627:
+/***/ 632:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1354),
+	    'on-change': __webpack_require__(1355),
+	    'target': __webpack_require__(1356),
+	}
+
+/***/ },
+
+/***/ 1354:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(235);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(201);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -79,18 +90,18 @@ webpackJsonp([43,202],{
 
 /***/ },
 
-/***/ 628:
+/***/ 1355:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(235);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(201);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -146,18 +157,18 @@ webpackJsonp([43,202],{
 
 /***/ },
 
-/***/ 629:
+/***/ 1356:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(235);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(201);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -228,17 +239,6 @@ webpackJsonp([43,202],{
 	  },
 	  "style": "\n#components-affix-demo-target .view-port {\n  height: 100px;\n  overflow: hidden;\n}\n#components-affix-demo-target #scrollable-container {\n  height: 100%;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
 	};
-
-/***/ },
-
-/***/ 1183:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(627),
-	    'on-change': __webpack_require__(628),
-	    'target': __webpack_require__(629),
-	}
 
 /***/ }
 

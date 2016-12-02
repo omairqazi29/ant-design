@@ -1,6 +1,6 @@
 webpackJsonp([69,202],{
 
-/***/ 1049:
+/***/ 1776:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,13 +16,13 @@ webpackJsonp([69,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "Guideline and Resouce"], ["p", "We supply a series of design principles, practical patterns and high qulitiy design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently."], ["ul", ["li", ["p", ["a", {
+	  "content": ["article", {}, ["h2", "Guidelines and Resources"], ["p", "We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently."], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/spec/principle"
-	  }, "Principle"]]], ["li", ["p", ["a", {
+	  }, "Principles"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/pattern/navigation"
-	  }, "Pattern"]]], ["li", ["p", ["a", {
+	  }, "Patterns"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/resource/download"
 	  }, "Resource Download"]]]], ["h2", "Front-end Implementation"], ["p", ["a", {
@@ -56,7 +56,7 @@ webpackJsonp([69,202],{
 	  }, ["a", {
 	    "href": "https://github.com/idcos/antd-ember",
 	    "target": "_blank"
-	  }, "antd-ember"]]]], ["h2", "Who are using Ant Design"], ["ul", ["li", ["p", ["a", {
+	  }, "antd-ember"]]]], ["h2", "Who's using Ant Design"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://www.antgroup.com/index.htm?locale=en_US"
 	  }, "Ant Financial"]]], ["li", ["p", ["a", {
@@ -90,12 +90,12 @@ webpackJsonp([69,202],{
 	    "src": "https://os.alipayobjects.com/rmsportal/mgesTPFxodmIwpi.png"
 	  }]], ["p", "In the development process of middleware products, many different design specs and implementations would be involved, which might cause designers and developers difficulties and duplication and reduce the efficiency of development. After massive project practice and summaries, Ant Design, a design language for middleware, is refined by Experience Technology Department of Ant Financial, which aims to uniform the user interface specs for middleware projects, reduce the unnecessary cost of design differences and implementation and liberate the resources of design and front-end development."], ["p", "Ant Design, created specially for middleware design, is committed to improving the experience of users and product designers. User interface designers and user experience designers, collectively, are considered as product designers, and the boundaries of product managers, interaction designers, visual designers, front-end developers and develop engineers are blurred. Taking advantage of unitary specifications, Ant Design makes design and prototype more simple and accessible for all project members, which comprehensively  promotes experience and development efficiency of middleware products."]],
 	  "toc": ["ul", ["li", ["a", {
-	    "href": "#Guideline-and-Resouce"
-	  }, "Guideline and Resouce"]], ["li", ["a", {
+	    "href": "#Guidelines-and-Resources"
+	  }, "Guidelines and Resources"]], ["li", ["a", {
 	    "href": "#Front-end-Implementation"
 	  }, "Front-end Implementation"]], ["li", ["a", {
-	    "href": "#Who-are-using-Ant-Design"
-	  }, "Who are using Ant Design"]], ["li", ["a", {
+	    "href": "#Who's-using-Ant-Design"
+	  }, "Who's using Ant Design"]], ["li", ["a", {
 	    "href": "#How-to-Contribute"
 	  }, "How to Contribute"]]]
 	};

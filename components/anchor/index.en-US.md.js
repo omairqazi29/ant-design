@@ -1,6 +1,6 @@
 webpackJsonp([195,202],{
 
-/***/ 643:
+/***/ 1370:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([195,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Hyperlinks to scroll on one page."], ["h2", "When To Use"], ["p", "For displaying anchor hyperlinks on page, and jump between them."]],
+	  "content": ["section", ["p", "Hyperlinks to scroll on one page."], ["h2", "When To Use"], ["p", "For displaying anchor hyperlinks on page and jumping between them."]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Other",

@@ -1,13 +1,25 @@
 webpackJsonp([33,202],{
 
-/***/ 915:
+/***/ 668:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1642),
+	    'disabled': __webpack_require__(1643),
+	    'size': __webpack_require__(1644),
+	    'text': __webpack_require__(1645),
+	}
+
+/***/ },
+
+/***/ 1642:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(77);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -54,20 +66,20 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 916:
+/***/ 1643:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(78);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(77);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -132,14 +144,14 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 917:
+/***/ 1644:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(77);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -189,20 +201,20 @@ webpackJsonp([33,202],{
 
 /***/ },
 
-/***/ 918:
+/***/ 1645:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(78);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(77);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -251,18 +263,6 @@ webpackJsonp([33,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1219:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(915),
-	    'disabled': __webpack_require__(916),
-	    'size': __webpack_require__(917),
-	    'text': __webpack_require__(918),
-	}
 
 /***/ }
 

@@ -1,6 +1,6 @@
 webpackJsonp([113,202],{
 
-/***/ 984:
+/***/ 1711:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([113,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "A simple text popup tip."], ["h2", "When To Use"], ["ul", ["li", ["p", "The tip shows while mouse enter, and hides while mouse leave, the ToolTip doesn't support complex text and operation."]], ["li", ["p", "It can provide a explain of ", ["code", "button/text/opration"], ", that can cover the usage of the default system ", ["code", "title"], "."]]]],
+	  "content": ["section", ["p", "A simple text popup tip."], ["h2", "When To Use"], ["ul", ["li", ["p", "The tip shows while mouse enter, and hides while mouse leave. The ToolTip doesn't support complex text and operation."]], ["li", ["p", "It can provide an explanation of ", ["code", "button/text/operation"], " that can cover the usage of the default system ", ["code", "title"], "."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Data Display",

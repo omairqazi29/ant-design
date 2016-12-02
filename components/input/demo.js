@@ -1,25 +1,41 @@
 webpackJsonp([10,202],{
 
-/***/ 776:
+/***/ 650:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'addon': __webpack_require__(1503),
+	    'autosize-textarea': __webpack_require__(1504),
+	    'basic': __webpack_require__(1505),
+	    'group': __webpack_require__(1506),
+	    'search-input': __webpack_require__(1507),
+	    'size': __webpack_require__(1508),
+	    'textarea': __webpack_require__(1509),
+	    'tooltip': __webpack_require__(1510),
+	}
+
+/***/ },
+
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(20);
+	var _style5 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style6 = __webpack_require__(30);
+	var _style6 = __webpack_require__(32);
 
-	var _select = __webpack_require__(29);
+	var _select = __webpack_require__(31);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -117,14 +133,14 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 777:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(20);
+	var _style2 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -174,14 +190,14 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 778:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(20);
+	var _style2 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -225,20 +241,20 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 779:
+/***/ 1506:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(43);
+	var _style3 = __webpack_require__(42);
 
 	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style4 = __webpack_require__(20);
+	var _style4 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -299,14 +315,14 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 780:
+/***/ 1507:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(20);
+	var _style2 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -322,8 +338,8 @@ webpackJsonp([10,202],{
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "带有搜索按钮的输入框。"]],
-	    "en-US": [["p", "Example of creating a search box by grouping a standard input with a search button."]]
+	    "zh-CN": [["p", "带有搜索按钮的输入框，", ["code", "2.5.0"], " 时新增。"]],
+	    "en-US": [["p", "Example of creating a search box by grouping a standard input with a search button, added in ", ["code", "2.5.0"], "."]]
 	  },
 	  "meta": {
 	    "order": 4,
@@ -352,14 +368,14 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 781:
+/***/ 1508:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(20);
+	var _style2 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -411,14 +427,14 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 782:
+/***/ 1509:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(20);
+	var _style2 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -462,20 +478,20 @@ webpackJsonp([10,202],{
 
 /***/ },
 
-/***/ 783:
+/***/ 1510:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(141);
+	var _style3 = __webpack_require__(153);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style4 = __webpack_require__(20);
+	var _style4 = __webpack_require__(21);
 
-	var _input = __webpack_require__(24);
+	var _input = __webpack_require__(25);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -623,22 +639,6 @@ webpackJsonp([10,202],{
 	  "style": "/* to prevent the arrow overflow the popup container, \nor the height is not enough when content is empty */\n.numeric-input .ant-tooltip-inner {\n  min-width: 32px;\n  min-height: 37px;\n}\n\n.numeric-input .numeric-input-title {\n  font-size: 14px;\n}\n\n.numeric-input-demo {\n  width: 120px;\n}",
 	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* to prevent the arrow overflow the popup container, \nor the height is not enough when content is empty */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input</span> <span class=\"token class\" >.ant-tooltip-inner</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >min-width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >32</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >min-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >37</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input</span> <span class=\"token class\" >.numeric-input-title</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >font-size</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >14</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.numeric-input-demo</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >120</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
-
-/***/ },
-
-/***/ 1201:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'addon': __webpack_require__(776),
-	    'autosize-textarea': __webpack_require__(777),
-	    'basic': __webpack_require__(778),
-	    'group': __webpack_require__(779),
-	    'search-input': __webpack_require__(780),
-	    'size': __webpack_require__(781),
-	    'textarea': __webpack_require__(782),
-	    'tooltip': __webpack_require__(783),
-	}
 
 /***/ }
 

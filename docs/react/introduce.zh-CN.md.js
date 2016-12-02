@@ -1,6 +1,6 @@
 webpackJsonp([85,202],{
 
-/***/ 1032:
+/***/ 1759:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59,7 +59,7 @@ webpackJsonp([85,202],{
 	    "href": "CHANGELOG.en-US.md"
 	  }, "更新日志"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dva/dva-cli"
+	    "href": "https://github.com/dvajs/dva-cli/"
 	  }, "开发脚手架"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://ant-tool.github.io/"

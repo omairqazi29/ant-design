@@ -1,6 +1,6 @@
 webpackJsonp([197,202],{
 
-/***/ 639:
+/***/ 1366:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([197,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", "Alert component for feedback."], ["h2", "When To Use"], ["ul", ["li", ["p", "When you need to show alert messages for users."]], ["li", ["p", "When you need a persist static container, and closable by user actions."]]]],
+	  "content": ["section", ["p", "Alert component for feedback."], ["h2", "When To Use"], ["ul", ["li", ["p", "When you need to show alert messages for users."]], ["li", ["p", "When you need a persistent static container which is closable by user actions."]]]],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Feedback",

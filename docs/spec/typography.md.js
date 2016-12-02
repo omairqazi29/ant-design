@@ -1,6 +1,6 @@
 webpackJsonp([49,202],{
 
-/***/ 1074:
+/***/ 1801:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([49,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "行高和段落"], ["p", "考虑到阅读的舒适度和节奏感，句子和段落间需要合适的间距。行距決定了段落中各行文字的垂直距离，通过字体本身行高来控制，我们行高默认为字号的 1.5 倍。段落间距決定了段落上下的间距，一般为字号的一倍宽。"], ["div", {
+	  "content": ["article", {}, ["h2", "行高和段落"], ["p", "考虑到阅读的舒适度和节奏感，句子和段落间需要合适的间距。行距决定了段落中各行文字的垂直距离，通过字体本身行高来控制，我们行高默认为字号的 1.5 倍。段落间距决定了段落上下的间距，一般为字号的一倍宽。"], ["div", {
 	    "class": "row",
 	    "style": "width: 80%;"
 	  }, ["div", {

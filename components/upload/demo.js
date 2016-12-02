@@ -1,19 +1,34 @@
 webpackJsonp([12,202],{
 
-/***/ 1005:
+/***/ 678:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'avatar': __webpack_require__(1732),
+	    'basic': __webpack_require__(1733),
+	    'defaultFileList': __webpack_require__(1734),
+	    'drag': __webpack_require__(1735),
+	    'fileList': __webpack_require__(1736),
+	    'picture-card': __webpack_require__(1737),
+	    'picture-style': __webpack_require__(1738),
+	}
+
+/***/ },
+
+/***/ 1732:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(121);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
 	var _style5 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -29,9 +44,9 @@ webpackJsonp([12,202],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(57);
+	var _style6 = __webpack_require__(63);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(62);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -127,18 +142,18 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1006:
+/***/ 1733:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(121);
+	var _style5 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style6 = __webpack_require__(12);
+	var _style6 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -146,13 +161,13 @@ webpackJsonp([12,202],{
 
 	var _style7 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(57);
+	var _style8 = __webpack_require__(63);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(62);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -214,18 +229,18 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1007:
+/***/ 1734:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(121);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -233,7 +248,7 @@ webpackJsonp([12,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -291,26 +306,26 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1008:
+/***/ 1735:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(57);
+	var _style5 = __webpack_require__(63);
 
-	var _message = __webpack_require__(56);
+	var _message = __webpack_require__(62);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style6 = __webpack_require__(121);
+	var _style6 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -327,7 +342,7 @@ webpackJsonp([12,202],{
 	module.exports = {
 	  "content": {
 	    "zh-CN": [["p", "把文件拖入指定区域，完成上传，同样支持点击上传。"], ["p", "设置 ", ["code", "multiple"], " 后，在 ", ["code", "IE10+"], " 可以一次上传多个文件。"]],
-	    "en-US": [["p", "You can drag files to a specific area, to upload. Meanwhile you can also upload by selecting."], ["p", "We can upload serveral files at one in modern browser by setting ", ["code", "multiple"], "."]]
+	    "en-US": [["p", "You can drag files to a specific area, to upload. Alternatively, you can also upload by selecting."], ["p", "We can upload serveral files at once in modern browsers by giving the input the ", ["code", "multiple"], " attribute."]]
 	  },
 	  "meta": {
 	    "order": 5,
@@ -386,14 +401,14 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1009:
+/***/ 1736:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(121);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -401,7 +416,7 @@ webpackJsonp([12,202],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -409,7 +424,7 @@ webpackJsonp([12,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -486,26 +501,26 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1010:
+/***/ 1737:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(68);
+	var _style4 = __webpack_require__(73);
 
-	var _modal = __webpack_require__(58);
+	var _modal = __webpack_require__(64);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _style5 = __webpack_require__(121);
+	var _style5 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -619,7 +634,7 @@ webpackJsonp([12,202],{
 
 /***/ },
 
-/***/ 1011:
+/***/ 1738:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -628,13 +643,13 @@ webpackJsonp([12,202],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(121);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(120);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -642,7 +657,7 @@ webpackJsonp([12,202],{
 
 	var _style6 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -715,21 +730,6 @@ webpackJsonp([12,202],{
 	  "style": "/* tile uploaded pictures */\n.upload-list-inline .ant-upload-list-item {\n  display: inline-block;\n  width: 200px;\n  margin-right: 8px;\n}",
 	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* tile uploaded pictures */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.upload-list-inline</span> <span class=\"token class\" >.ant-upload-list-item</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> inline-block<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >200</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin-right</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
-
-/***/ },
-
-/***/ 1229:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'avatar': __webpack_require__(1005),
-	    'basic': __webpack_require__(1006),
-	    'defaultFileList': __webpack_require__(1007),
-	    'drag': __webpack_require__(1008),
-	    'fileList': __webpack_require__(1009),
-	    'picture-card': __webpack_require__(1010),
-	    'picture-style': __webpack_require__(1011),
-	}
 
 /***/ }
 

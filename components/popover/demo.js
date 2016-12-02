@@ -1,17 +1,30 @@
 webpackJsonp([28,202],{
 
-/***/ 848:
+/***/ 660:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'arrow-point-at-center': __webpack_require__(1575),
+	    'basic': __webpack_require__(1576),
+	    'control': __webpack_require__(1577),
+	    'placement': __webpack_require__(1578),
+	    'triggerType': __webpack_require__(1579),
+	}
+
+/***/ },
+
+/***/ 1575:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(116);
+	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(136);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -95,18 +108,18 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 849:
+/***/ 1576:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(116);
+	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(136);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -173,18 +186,18 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 850:
+/***/ 1577:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(116);
+	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(136);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -256,18 +269,18 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 851:
+/***/ 1578:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(116);
+	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(136);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -459,18 +472,18 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 852:
+/***/ 1579:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(116);
+	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(136);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(9);
 
@@ -556,19 +569,6 @@ webpackJsonp([28,202],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1211:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(848),
-	    'basic': __webpack_require__(849),
-	    'control': __webpack_require__(850),
-	    'placement': __webpack_require__(851),
-	    'triggerType': __webpack_require__(852),
-	}
 
 /***/ }
 
