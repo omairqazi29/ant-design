@@ -588,8 +588,7 @@ a[disabled] {
   pointer-events: none;
 }
 .ant-divider {
-  margin: 0 4px;
-  color: #999;
+  margin: 0 6px;
   display: inline-block;
   height: 8px;
   width: 1px;
@@ -14243,6 +14242,9 @@ textarea.ant-pagination-options-quick-jumper input {
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
   text-align: left;
+}
+.ant-table-thead > tr > th[colspan] {
+  text-align: center;
 }
 .ant-table-thead > tr > th .anticon-filter {
   margin-left: 4px;
