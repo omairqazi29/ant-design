@@ -56,7 +56,7 @@ webpackJsonp([90,201],{
 	  }, "atool-build 中 less-loader 的 webpack 相关配置 "], "，利用 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/webpack/less-loader#less-options"
-	  }, "less-loader"], " 的 ", ["code", "modifyVars"], " 配置来覆盖原来的样式变量。"], ["p", "注意，样式必须加载 less 格式。如果您使用了 ", ["code", "babel-plugin-import"], "，请将 style 属性配置为 ", ["code", "true"], " 或 ", ["code", "less"], "。"], ["h3", "2) less"], ["p", "用 less 文件进行变量覆盖。"], ["p", "建立一个单独的 ", ["code", "less"], " 文件如下，再引入这个文件。"], ["pre", {
+	  }, "less-loader"], " 的 ", ["code", "modifyVars"], " 配置来覆盖原来的样式变量。"], ["p", "注意，样式必须加载 less 格式。如果您使用了 ", ["code", "babel-plugin-import"], "，请将 style 属性配置为 ", ["code", "true"], "。"], ["h3", "2) less"], ["p", "用 less 文件进行变量覆盖。"], ["p", "建立一个单独的 ", ["code", "less"], " 文件如下，再引入这个文件。"], ["pre", {
 	    "lang": "css",
 	    "highlighted": "<span class=\"token atrule\" ><span class=\"token rule\" >@import</span> <span class=\"token string\" >\"~antd/dist/antd.less\"</span><span class=\"token punctuation\" >;</span></span>   // 引入官方提供的 less 样式入口文件\n<span class=\"token atrule\" ><span class=\"token rule\" >@import</span> <span class=\"token string\" >\"your-theme-file.less\"</span><span class=\"token punctuation\" >;</span></span>   // 用于覆盖上面定义的变量"
 	  }, ["code", "@import \"~antd/dist/antd.less\";   // 引入官方提供的 less 样式入口文件\n@import \"your-theme-file.less\";   // 用于覆盖上面定义的变量"]], ["p", "注意：这种方式会载入所有组件的样式，无法和按需加载插件 ", ["code", "babel-plugin-import"], " 的 ", ["code", "style"], " 属性一起使用。"]],
