@@ -1,6 +1,6 @@
-webpackJsonp([156,202],{
+webpackJsonp([155,201],{
 
-/***/ 1516:
+/***/ 1517:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39,7 +39,7 @@ webpackJsonp([156,202],{
 	    "category": "Components",
 	    "subtitle": "国际化",
 	    "cols": 1,
-	    "type": "Localization",
+	    "type": "Other",
 	    "title": "LocaleProvider",
 	    "filename": "components/locale-provider/index.zh-CN.md"
 	  },

@@ -1,24 +1,4 @@
 
-.ant-table-bordered.ant-table-fixed-header .ant-table-header > table {
-  border-bottom: 0;
-}
-.ant-table-bordered.ant-table-fixed-header .ant-table-body > table {
-  border-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.ant-table-bordered.ant-table-fixed-header .ant-table-body-inner > table {
-  border-top: 0;
-}
-.ant-table-bordered.ant-table-fixed-header .ant-table-placeholder {
-  border-bottom: 0;
-}
-.ant-table-bordered .ant-table-thead > tr > th {
-  border-bottom: 1px solid #e9e9e9;
-}
-.ant-table-bordered.ant-table-empty .ant-table-thead > tr > th {
-  border-bottom: 0;
-}
 .ant-table-bordered .ant-table-thead > tr > th,
 .ant-table-bordered .ant-table-tbody > tr > td {
   border-right: 1px solid #e9e9e9;
@@ -46,8 +26,6 @@
   background: #fff;
   border-bottom: 1px solid #e9e9e9;
   text-align: center;
-  position: relative;
-  z-index: 2;
   font-size: 12px;
   color: #999;
 }
@@ -1031,11 +1009,11 @@ tr.ant-table-expanded-row:hover {
 .ant-transfer-list-search-action {
   color: #ccc;
   position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  width: 28px;
+  line-height: 26px;
   text-align: center;
   font-size: 14px;
 }
@@ -1047,6 +1025,9 @@ tr.ant-table-expanded-row:hover {
 }
 .ant-transfer-list-search-action .anticon:hover {
   color: #999;
+}
+span.ant-transfer-list-search-action {
+  pointer-events: none;
 }
 .ant-transfer-list-header {
   padding: 7px 15px;
@@ -1073,7 +1054,6 @@ tr.ant-table-expanded-row:hover {
   position: absolute;
   top: 0;
   left: 0;
-  height: 28px;
   padding: 4px;
   width: 100%;
 }

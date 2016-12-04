@@ -1,28 +1,28 @@
-webpackJsonp([14,202],{
+webpackJsonp([14,201],{
 
-/***/ 667:
+/***/ 664:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'error': __webpack_require__(1633),
-	    'icon': __webpack_require__(1634),
-	    'simple': __webpack_require__(1635),
-	    'small-size': __webpack_require__(1636),
-	    'step-next': __webpack_require__(1637),
-	    'vertical-small': __webpack_require__(1638),
-	    'vertical': __webpack_require__(1639),
+	    'error': __webpack_require__(1634),
+	    'icon': __webpack_require__(1635),
+	    'simple': __webpack_require__(1636),
+	    'small-size': __webpack_require__(1637),
+	    'step-next': __webpack_require__(1638),
+	    'vertical-small': __webpack_require__(1639),
+	    'vertical': __webpack_require__(1640),
 	}
 
 /***/ },
 
-/***/ 1633:
+/***/ 1634:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(152);
+	var _style2 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -72,7 +72,7 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 1634:
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83,9 +83,9 @@ webpackJsonp([14,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(152);
+	var _style4 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -120,15 +120,15 @@ webpackJsonp([14,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Steps<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Step <span class=\"token operator\" >=</span> Steps<span class=\"token punctuation\" >.</span>Step<span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Steps</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Login<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>user<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Verification<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>solution<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>process<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Pay<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>credit-card<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Done<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>smile-o<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Steps</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Steps<span class=\"token punctuation\" >,</span> Icon <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token keyword\" >const</span> Step <span class=\"token operator\" >=</span> Steps<span class=\"token punctuation\" >.</span>Step<span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Steps</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Login<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>user<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Verification<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>solution<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>process<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Pay<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>credit-card<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Step</span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Done<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon={&lt;Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>smile-o<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Steps</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    var Step = _steps2.default.Step;return _react2.default.createElement(
 	      _steps2.default,
 	      null,
-	      _react2.default.createElement(Step, { status: 'finish', title: 'Login', icon: 'user' }),
-	      _react2.default.createElement(Step, { status: 'finish', title: 'Verification', icon: 'solution' }),
-	      _react2.default.createElement(Step, { status: 'process', title: 'Pay', icon: 'credit-card' }),
+	      _react2.default.createElement(Step, { status: 'finish', title: 'Login', icon: _react2.default.createElement(_icon2.default, { type: 'user' }) }),
+	      _react2.default.createElement(Step, { status: 'finish', title: 'Verification', icon: _react2.default.createElement(_icon2.default, { type: 'solution' }) }),
+	      _react2.default.createElement(Step, { status: 'process', title: 'Pay', icon: _react2.default.createElement(_icon2.default, { type: 'credit-card' }) }),
 	      _react2.default.createElement(Step, { status: 'wait', title: 'Done', icon: _react2.default.createElement(_icon2.default, { type: 'smile-o' }) })
 	    );
 	  }
@@ -136,14 +136,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 1635:
+/***/ 1636:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(152);
+	var _style2 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -193,14 +193,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 1636:
+/***/ 1637:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(152);
+	var _style2 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -250,7 +250,7 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 1637:
+/***/ 1638:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -279,9 +279,9 @@ webpackJsonp([14,202],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(152);
+	var _style6 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -393,20 +393,20 @@ webpackJsonp([14,202],{
 
 	    return _react2.default.createElement(App, null);
 	  },
-	  "style": ".steps-content {\n  margin-top: 16px;\n  border: 1px dashed #e9e9e9;\n  border-radius: 6px;\n  background-color: #fafafa;\n  min-height: 200px;\n  text-align: center;\n  padding-top: 80px;\n}\n\n.steps-action {\n  margin-top: 40px;\n}",
-	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.steps-content</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >1</span>px dashed <span class=\"token hexcode\" >#e9e9e9</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border-radius</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background-color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#fafafa</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >min-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >200</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >80</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.steps-action</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >40</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
+	  "style": ".steps-content {\n  margin-top: 16px;\n  border: 1px dashed #e9e9e9;\n  border-radius: 6px;\n  background-color: #fafafa;\n  min-height: 200px;\n  text-align: center;\n  padding-top: 80px;\n}\n\n.steps-action {\n  margin-top: 24px;\n}",
+	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.steps-content</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >16</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >1</span>px dashed <span class=\"token hexcode\" >#e9e9e9</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >border-radius</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >6</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background-color</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#fafafa</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >min-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >200</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >80</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\n<span class=\"token selector\" ><span class=\"token class\" >.steps-action</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >24</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
 
 /***/ },
 
-/***/ 1638:
+/***/ 1639:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(152);
+	var _style2 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -456,14 +456,14 @@ webpackJsonp([14,202],{
 
 /***/ },
 
-/***/ 1639:
+/***/ 1640:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(152);
+	var _style2 = __webpack_require__(151);
 
-	var _steps = __webpack_require__(151);
+	var _steps = __webpack_require__(150);
 
 	var _steps2 = _interopRequireDefault(_steps);
 

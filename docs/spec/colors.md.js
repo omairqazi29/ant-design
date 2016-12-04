@@ -1,6 +1,6 @@
-webpackJsonp([48,202],{
+webpackJsonp([48,201],{
 
-/***/ 876:
+/***/ 873:
 /***/ function(module, exports) {
 
 	/**
@@ -326,7 +326,7 @@ webpackJsonp([48,202],{
 
 /***/ },
 
-/***/ 1770:
+/***/ 1768:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -398,7 +398,7 @@ webpackJsonp([48,202],{
 	    "src": "https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png",
 	    "width": "100%"
 	  }]], ["h2", "色彩换算工具"], ["blockquote", ["p", "正数为变淡 ", ["code", "tint"], " ，负数为加深 ", ["code", "shade"], "。"]], function jsonmlReactLoader() {
-	    var Values = __webpack_require__(876);var CopyToClipboard = __webpack_require__(390);var classNames = __webpack_require__(7);var antd = __webpack_require__(49);var Button = antd.Button;var InputNumber = antd.InputNumber;var Slider = antd.Slider;var Tooltip = antd.Tooltip;var TintShadeTool = _react2.default.createClass({
+	    var Values = __webpack_require__(873);var CopyToClipboard = __webpack_require__(390);var classNames = __webpack_require__(7);var antd = __webpack_require__(49);var Button = antd.Button;var InputNumber = antd.InputNumber;var Slider = antd.Slider;var Tooltip = antd.Tooltip;var TintShadeTool = _react2.default.createClass({
 	      displayName: 'TintShadeTool',
 	      getInitialState: function getInitialState() {
 	        return { result: '#2db7f5', color: '#2db7f5', justCopied: false, darkBackground: false, value: 80 };

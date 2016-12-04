@@ -1,26 +1,26 @@
-webpackJsonp([28,202],{
+webpackJsonp([28,201],{
 
-/***/ 660:
+/***/ 657:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(1575),
-	    'basic': __webpack_require__(1576),
-	    'control': __webpack_require__(1577),
-	    'placement': __webpack_require__(1578),
-	    'triggerType': __webpack_require__(1579),
+	    'arrow-point-at-center': __webpack_require__(1576),
+	    'basic': __webpack_require__(1577),
+	    'control': __webpack_require__(1578),
+	    'placement': __webpack_require__(1579),
+	    'triggerType': __webpack_require__(1580),
 	}
 
 /***/ },
 
-/***/ 1575:
+/***/ 1576:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(148);
+	var _popover = __webpack_require__(147);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -108,14 +108,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 1576:
+/***/ 1577:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(148);
+	var _popover = __webpack_require__(147);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -186,14 +186,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 1577:
+/***/ 1578:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(148);
+	var _popover = __webpack_require__(147);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -269,14 +269,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 1578:
+/***/ 1579:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(148);
+	var _popover = __webpack_require__(147);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -472,14 +472,14 @@ webpackJsonp([28,202],{
 
 /***/ },
 
-/***/ 1579:
+/***/ 1580:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(148);
+	var _popover = __webpack_require__(147);
 
 	var _popover2 = _interopRequireDefault(_popover);
 

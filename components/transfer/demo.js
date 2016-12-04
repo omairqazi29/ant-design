@@ -1,26 +1,26 @@
-webpackJsonp([25,202],{
+webpackJsonp([25,201],{
 
-/***/ 675:
+/***/ 672:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced': __webpack_require__(1713),
-	    'basic': __webpack_require__(1714),
-	    'custom-item': __webpack_require__(1715),
-	    'large-data': __webpack_require__(1716),
-	    'search': __webpack_require__(1717),
+	    'advanced': __webpack_require__(1712),
+	    'basic': __webpack_require__(1713),
+	    'custom-item': __webpack_require__(1714),
+	    'large-data': __webpack_require__(1715),
+	    'search': __webpack_require__(1716),
 	}
 
 /***/ },
 
-/***/ 1713:
+/***/ 1712:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(210);
+	var _style3 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(209);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -102,14 +102,14 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 1714:
+/***/ 1713:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(210);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(209);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -183,14 +183,14 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 1715:
+/***/ 1714:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(210);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(209);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -267,7 +267,7 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 1716:
+/***/ 1715:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -288,14 +288,14 @@ webpackJsonp([25,202],{
 
 /***/ },
 
-/***/ 1717:
+/***/ 1716:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(210);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(209);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 

@@ -1,25 +1,25 @@
-webpackJsonp([38,202],{
+webpackJsonp([38,201],{
 
-/***/ 645:
+/***/ 642:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'accordion': __webpack_require__(1444),
-	    'basic': __webpack_require__(1445),
-	    'borderless': __webpack_require__(1446),
-	    'mix': __webpack_require__(1447),
+	    'accordion': __webpack_require__(1445),
+	    'basic': __webpack_require__(1446),
+	    'borderless': __webpack_require__(1447),
+	    'mix': __webpack_require__(1448),
 	}
 
 /***/ },
 
-/***/ 1444:
+/***/ 1445:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(238);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(237);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -93,14 +93,14 @@ webpackJsonp([38,202],{
 
 /***/ },
 
-/***/ 1445:
+/***/ 1446:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(238);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(237);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -176,14 +176,14 @@ webpackJsonp([38,202],{
 
 /***/ },
 
-/***/ 1446:
+/***/ 1447:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(238);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(237);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -257,14 +257,14 @@ webpackJsonp([38,202],{
 
 /***/ },
 
-/***/ 1447:
+/***/ 1448:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(238);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(237);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 

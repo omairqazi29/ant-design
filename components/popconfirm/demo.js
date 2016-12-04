@@ -1,25 +1,25 @@
-webpackJsonp([35,202],{
+webpackJsonp([35,201],{
 
-/***/ 659:
+/***/ 656:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1569),
-	    'dynamic-trigger': __webpack_require__(1570),
-	    'locale': __webpack_require__(1571),
-	    'placement': __webpack_require__(1572),
+	    'basic': __webpack_require__(1570),
+	    'dynamic-trigger': __webpack_require__(1571),
+	    'locale': __webpack_require__(1572),
+	    'placement': __webpack_require__(1573),
 	}
 
 /***/ },
 
-/***/ 1569:
+/***/ 1570:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(147);
+	var _style3 = __webpack_require__(146);
 
-	var _popconfirm = __webpack_require__(146);
+	var _popconfirm = __webpack_require__(145);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -81,7 +81,7 @@ webpackJsonp([35,202],{
 
 /***/ },
 
-/***/ 1570:
+/***/ 1571:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92,9 +92,9 @@ webpackJsonp([35,202],{
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style5 = __webpack_require__(147);
+	var _style5 = __webpack_require__(146);
 
-	var _popconfirm = __webpack_require__(146);
+	var _popconfirm = __webpack_require__(145);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -189,14 +189,14 @@ webpackJsonp([35,202],{
 
 /***/ },
 
-/***/ 1571:
+/***/ 1572:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(147);
+	var _style2 = __webpack_require__(146);
 
-	var _popconfirm = __webpack_require__(146);
+	var _popconfirm = __webpack_require__(145);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -248,14 +248,14 @@ webpackJsonp([35,202],{
 
 /***/ },
 
-/***/ 1572:
+/***/ 1573:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(147);
+	var _style4 = __webpack_require__(146);
 
-	var _popconfirm = __webpack_require__(146);
+	var _popconfirm = __webpack_require__(145);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 

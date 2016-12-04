@@ -1,26 +1,26 @@
-webpackJsonp([27,202],{
+webpackJsonp([27,201],{
 
-/***/ 666:
+/***/ 663:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1626),
-	    'inside': __webpack_require__(1627),
-	    'nested': __webpack_require__(1628),
-	    'size': __webpack_require__(1629),
-	    'tip': __webpack_require__(1630),
+	    'basic': __webpack_require__(1627),
+	    'inside': __webpack_require__(1628),
+	    'nested': __webpack_require__(1629),
+	    'size': __webpack_require__(1630),
+	    'tip': __webpack_require__(1631),
 	}
 
 /***/ },
 
-/***/ 1626:
+/***/ 1627:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(179);
+	var _style2 = __webpack_require__(178);
 
-	var _spin = __webpack_require__(178);
+	var _spin = __webpack_require__(177);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -64,14 +64,14 @@ webpackJsonp([27,202],{
 
 /***/ },
 
-/***/ 1627:
+/***/ 1628:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(179);
+	var _style2 = __webpack_require__(178);
 
-	var _spin = __webpack_require__(178);
+	var _spin = __webpack_require__(177);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -121,7 +121,7 @@ webpackJsonp([27,202],{
 
 /***/ },
 
-/***/ 1628:
+/***/ 1629:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -132,15 +132,15 @@ webpackJsonp([27,202],{
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style5 = __webpack_require__(179);
+	var _style5 = __webpack_require__(178);
 
-	var _spin = __webpack_require__(178);
+	var _spin = __webpack_require__(177);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style6 = __webpack_require__(106);
+	var _style6 = __webpack_require__(93);
 
-	var _alert = __webpack_require__(105);
+	var _alert = __webpack_require__(92);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -206,14 +206,14 @@ webpackJsonp([27,202],{
 
 /***/ },
 
-/***/ 1629:
+/***/ 1630:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(179);
+	var _style2 = __webpack_require__(178);
 
-	var _spin = __webpack_require__(178);
+	var _spin = __webpack_require__(177);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -264,20 +264,20 @@ webpackJsonp([27,202],{
 
 /***/ },
 
-/***/ 1630:
+/***/ 1631:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(179);
+	var _style3 = __webpack_require__(178);
 
-	var _spin = __webpack_require__(178);
+	var _spin = __webpack_require__(177);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style4 = __webpack_require__(106);
+	var _style4 = __webpack_require__(93);
 
-	var _alert = __webpack_require__(105);
+	var _alert = __webpack_require__(92);
 
 	var _alert2 = _interopRequireDefault(_alert);
 

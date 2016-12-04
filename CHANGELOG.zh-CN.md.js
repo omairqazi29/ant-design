@@ -1,6 +1,6 @@
-webpackJsonp([200,202],{
+webpackJsonp([199,201],{
 
-/***/ 1353:
+/***/ 1354:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,34 @@ webpackJsonp([200,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.0"], ["p", ["code", "2016-11-25"]], ["ul", ["li", ["p", "默认主题风格修改为支付宝钱包风格，及大量样式优化。"]], ["li", ["p", "支持服务端渲染。（Mention 会因为 ", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "提升网站首页在移动端访问的体验。"]], ["li", ["p", "补充从 ", ["code", "1.x"], " 升级到 ", ["code", "2.x"], " 时的组件改动警告提示。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4028"
+	  }, "#4028"]]], ["li", ["p", "现在 ToolTip、Popover、Popconfirm 支持直接包裹文本节点和多个节点。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3924"
+	  }, "#3924"]]], ["li", ["p", "Anchor"], ["ul", ["li", ["p", "修复快速滚动时的定位问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4053"
+	  }, "#4053"]]], ["li", ["p", "修复 target 指定父元素 ref 时无效的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4037"
+	  }, "#4037"]]]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "修复设置 defaultChecked 时的一个选中问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4020"
+	  }, "#4020"]]], ["li", ["p", "修复分组表头中筛选功能无法使用的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4099"
+	  }, "#4099"]]]]], ["li", ["p", "修复在 ", ["code", "Input[type=\"textarea\"]"], " 上使用 Popover 定位错误问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4092"
+	  }, "#4092"]]], ["li", ["p", "修复 Popconfirm 的 ", ["code", "visible"], " 属性失效的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4068"
+	  }, "#4068"]]], ["li", ["p", "修复 TimePicker 无法设置 ", ["code", "style.width"], " 的问题。"]], ["li", ["p", "修复 Steps 自定义图标和默认图标大小不一致的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3817"
+	  }, "#3817"]]], ["li", ["p", "修复 Form、Button、Slider、Table 等组件的一些样式细节。"]]], ["h2", "2.5.0"], ["p", ["code", "2016-11-25"]], ["ul", ["li", ["p", "默认主题风格修改为支付宝钱包风格，及大量样式优化。"]], ["li", ["p", "支持服务端渲染。（Mention 会因为 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/facebook/draft-js/issues/385"
 	  }, "draft-js"], " 的问题有 warning）"]], ["li", ["p", "引入 ", ["a", {
@@ -418,7 +445,7 @@ webpackJsonp([200,202],{
 	  }, "#1533"], "。"]], ["li", ["p", "Table 支持 ", ["a", {
 	    "title": null,
 	    "href": "http://ant.design/components/table/#components-table-demo-grouping-columns"
-	  }, "表头分组"], "。@yesmeck"]], ["li", ["p", "完全移除 ", ["code", "antd@1.x"], " 中已经废弃的 QueueAnim、Validation、Form.ValueMixin、Progress.Line、Progress.Circle、Popover", "[overlay]", " 及 Slider", "[marks]", " 对数组的支持。"]]], ["h3", "2.x 不兼容改动"], ["p", "此版本有部分不兼容的改动，升级时确保修改相应的使用代码。"], ["ul", ["li", ["p", "时间类组件的 ", ["code", "value"], " 和 ", ["code", "defaultValue"], " 不再支持 ", ["code", "String/Date"], " 类型，请使用 ", ["a", {
+	  }, "表头分组"], "。@yesmeck"]], ["li", ["p", "完全移除 ", ["code", "antd@1.x"], " 中已经废弃的 QueueAnim、Validation、Form.ValueMixin、Progress.Line、Progress.Circle、Popover", "[overlay]", " 及 Slider", "[marks]", " 对数组的支持。"]]], ["h3", "2.x 不兼容改动"], ["blockquote", ["p", "建议从 ", ["code", "1.x"], " 升级时，直接升级到 ", ["code", "2.x"], " 的最新版本。"]], ["p", "此版本有部分不兼容的改动，升级时确保修改相应的使用代码。"], ["ul", ["li", ["p", "时间类组件的 ", ["code", "value"], " 和 ", ["code", "defaultValue"], " 不再支持 ", ["code", "String/Date"], " 类型，请使用 ", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
 	  }, "moment"], "。"], ["pre", {
@@ -560,6 +587,8 @@ webpackJsonp([200,202],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "href": "#2.5.1"
+	  }, "2.5.1"]], ["li", ["a", {
 	    "href": "#2.5.0"
 	  }, "2.5.0"]], ["li", ["a", {
 	    "href": "#2.4.3"

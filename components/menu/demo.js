@@ -1,20 +1,20 @@
-webpackJsonp([21,202],{
+webpackJsonp([21,201],{
 
-/***/ 654:
+/***/ 651:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'horizontal': __webpack_require__(1527),
-	    'sider-current': __webpack_require__(1528),
-	    'sider': __webpack_require__(1529),
-	    'switch-mode': __webpack_require__(1530),
-	    'theme': __webpack_require__(1531),
-	    'vertical': __webpack_require__(1532),
+	    'horizontal': __webpack_require__(1528),
+	    'sider-current': __webpack_require__(1529),
+	    'sider': __webpack_require__(1530),
+	    'switch-mode': __webpack_require__(1531),
+	    'theme': __webpack_require__(1532),
+	    'vertical': __webpack_require__(1533),
 	}
 
 /***/ },
 
-/***/ 1527:
+/***/ 1528:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,9 +25,9 @@ webpackJsonp([21,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(37);
+	var _style4 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -144,7 +144,7 @@ webpackJsonp([21,202],{
 
 /***/ },
 
-/***/ 1528:
+/***/ 1529:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -155,9 +155,9 @@ webpackJsonp([21,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(37);
+	var _style4 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -333,7 +333,7 @@ webpackJsonp([21,202],{
 
 /***/ },
 
-/***/ 1529:
+/***/ 1530:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -344,9 +344,9 @@ webpackJsonp([21,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(37);
+	var _style4 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -516,7 +516,7 @@ webpackJsonp([21,202],{
 
 /***/ },
 
-/***/ 1530:
+/***/ 1531:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -533,9 +533,9 @@ webpackJsonp([21,202],{
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style6 = __webpack_require__(37);
+	var _style6 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -711,7 +711,7 @@ webpackJsonp([21,202],{
 
 /***/ },
 
-/***/ 1531:
+/***/ 1532:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -728,9 +728,9 @@ webpackJsonp([21,202],{
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style6 = __webpack_require__(37);
+	var _style6 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -902,7 +902,7 @@ webpackJsonp([21,202],{
 
 /***/ },
 
-/***/ 1532:
+/***/ 1533:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -913,9 +913,9 @@ webpackJsonp([21,202],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(37);
+	var _style4 = __webpack_require__(38);
 
-	var _menu = __webpack_require__(36);
+	var _menu = __webpack_require__(37);
 
 	var _menu2 = _interopRequireDefault(_menu);
 

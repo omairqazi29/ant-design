@@ -1,24 +1,24 @@
-webpackJsonp([43,202],{
+webpackJsonp([43,201],{
 
-/***/ 632:
+/***/ 629:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1354),
-	    'on-change': __webpack_require__(1355),
-	    'target': __webpack_require__(1356),
+	    'basic': __webpack_require__(1355),
+	    'on-change': __webpack_require__(1356),
+	    'target': __webpack_require__(1357),
 	}
 
 /***/ },
 
-/***/ 1354:
+/***/ 1355:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(235);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(201);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -90,14 +90,14 @@ webpackJsonp([43,202],{
 
 /***/ },
 
-/***/ 1355:
+/***/ 1356:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(235);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(201);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -157,14 +157,14 @@ webpackJsonp([43,202],{
 
 /***/ },
 
-/***/ 1356:
+/***/ 1357:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(235);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(201);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -173,6 +173,18 @@ webpackJsonp([43,202],{
 	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
 
 	var _react = __webpack_require__(1);
 
@@ -205,27 +217,33 @@ webpackJsonp([43,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Affix<span class=\"token punctuation\" >,</span> Button <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >const</span> Demo <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>view-port<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>scrollable-container<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>background<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Affix</span> <span class=\"token attr-name\" >target</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> document<span class=\"token punctuation\" >.</span><span class=\"token function\" >getElementById</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'scrollable-container'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >offsetTop</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >20</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Fixed at the top <span class=\"token keyword\" >of</span> container<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Affix</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Demo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> Affix<span class=\"token punctuation\" >,</span> Button <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>scrollable-container<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >ref</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>node<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>container <span class=\"token operator\" >=</span> node<span class=\"token punctuation\" >;</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>background<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Affix</span> <span class=\"token attr-name\" >target</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>container<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n              Fixed at the top <span class=\"token keyword\" >of</span> container\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n          <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Affix</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Demo</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
-	    var Demo = function Demo() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'view-port' },
-	        _react2.default.createElement(
+	    var Demo = function (_React$Component) {
+	      (0, _inherits3.default)(Demo, _React$Component);
+
+	      function Demo() {
+	        (0, _classCallCheck3.default)(this, Demo);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	      }
+
+	      Demo.prototype.render = function render() {
+	        var _this2 = this;
+
+	        return _react2.default.createElement(
 	          'div',
-	          { id: 'scrollable-container' },
+	          { className: 'scrollable-container', ref: function ref(node) {
+	              _this2.container = node;
+	            } },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'background' },
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              _affix2.default,
 	              { target: function target() {
-	                  return document.getElementById('scrollable-container');
-	                }, offsetTop: 20 },
+	                  return _this2.container;
+	                } },
 	              _react2.default.createElement(
 	                _button2.default,
 	                { type: 'primary' },
@@ -233,11 +251,15 @@ webpackJsonp([43,202],{
 	              )
 	            )
 	          )
-	        )
-	      );
-	    };return _react2.default.createElement(Demo, null);
+	        );
+	      };
+
+	      return Demo;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(Demo, null);
 	  },
-	  "style": "\n#components-affix-demo-target .view-port {\n  height: 100px;\n  overflow: hidden;\n}\n#components-affix-demo-target #scrollable-container {\n  height: 100%;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
+	  "style": "\n#components-affix-demo-target .scrollable-container {\n  height: 100px;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  padding-top: 60px;\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
 	};
 
 /***/ }

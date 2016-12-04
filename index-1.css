@@ -1299,6 +1299,9 @@ samp {
   content: "\E6CF";
 }
 .anticon-loading:before {
+  content: "\E64D";
+}
+.anticon-loading-3-quarters:before {
   content: "\E6AE";
 }
 .anticon-bulb:before {
@@ -1327,8 +1330,8 @@ samp {
 }
 .anticon-spin:before {
   display: inline-block;
-  -webkit-animation: loadingCircle 0.8s infinite linear;
-          animation: loadingCircle 0.8s infinite linear;
+  -webkit-animation: loadingCircle 1s infinite linear;
+          animation: loadingCircle 1s infinite linear;
 }
 .fade-enter,
 .fade-appear {
@@ -2986,9 +2989,6 @@ samp {
   border-color: #d9d9d9;
 }
 .ant-btn > .anticon {
-  font-size: 14px;
-}
-.ant-btn > .anticon {
   line-height: 1;
 }
 .ant-btn,
@@ -3017,16 +3017,10 @@ samp {
   font-size: 14px;
   border-radius: 4px;
 }
-.ant-btn-lg > .anticon {
-  font-size: 16px;
-}
 .ant-btn-sm {
   padding: 1px 7px;
   font-size: 12px;
   border-radius: 2px;
-}
-.ant-btn-sm > .anticon {
-  font-size: 12px;
 }
 .ant-btn > a:only-child {
   color: currentColor;
@@ -3514,7 +3508,6 @@ samp {
 .ant-btn-group {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
 }
 .ant-btn-group > .ant-btn {
   position: relative;
@@ -3530,16 +3523,10 @@ samp {
   font-size: 14px;
   border-radius: 4px;
 }
-.ant-btn-group-lg > .ant-btn > .anticon {
-  font-size: 16px;
-}
 .ant-btn-group-sm > .ant-btn {
   padding: 1px 7px;
   font-size: 12px;
   border-radius: 2px;
-}
-.ant-btn-group-sm > .ant-btn > .anticon {
-  font-size: 12px;
 }
 .ant-btn-group-sm > .ant-btn > .anticon {
   font-size: 12px;
@@ -5159,10 +5146,10 @@ textarea.ant-input {
 .ant-dropdown-wrap .ant-btn > .anticon-down {
   display: inline-block;
   font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
@@ -5264,10 +5251,10 @@ textarea.ant-input {
   color: #999;
   display: inline-block;
   font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
@@ -5316,24 +5303,28 @@ textarea.ant-input {
   -webkit-animation-name: antSlideDownOut;
           animation-name: antSlideDownOut;
 }
+.ant-dropdown-trigger,
 .ant-dropdown-link {
   font-size: 12px;
 }
+.ant-dropdown-trigger .anticon-down,
 .ant-dropdown-link .anticon-down {
   display: inline-block;
   font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
 }
+:root .ant-dropdown-trigger .anticon-down,
 :root .ant-dropdown-link .anticon-down {
   -webkit-filter: none;
           filter: none;
 }
+:root .ant-dropdown-trigger .anticon-down,
 :root .ant-dropdown-link .anticon-down {
   font-size: 12px;
 }
@@ -5343,10 +5334,10 @@ textarea.ant-input {
 .ant-dropdown-button .anticon-down {
   display: inline-block;
   font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
+  font-size: 10px \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
@@ -5356,24 +5347,6 @@ textarea.ant-input {
           filter: none;
 }
 :root .ant-dropdown-button .anticon-down {
-  font-size: 12px;
-}
-.ant-btn .anticon-down {
-  display: inline-block;
-  font-size: 12px;
-  font-size: 9px \9;
-  -webkit-transform: scale(0.75) rotate(0deg);
-      -ms-transform: scale(0.75) rotate(0deg);
-          transform: scale(0.75) rotate(0deg);
-  /* IE6-IE8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
-  zoom: 1;
-}
-:root .ant-btn .anticon-down {
-  -webkit-filter: none;
-          filter: none;
-}
-:root .ant-btn .anticon-down {
   font-size: 12px;
 }
 .ant-menu {
@@ -9701,9 +9674,6 @@ span.ant-radio + * {
   right: 9px;
 }
 .ant-calendar .ant-calendar-ok-btn > .anticon {
-  font-size: 14px;
-}
-.ant-calendar .ant-calendar-ok-btn > .anticon {
   line-height: 1;
 }
 .ant-calendar .ant-calendar-ok-btn,
@@ -9732,16 +9702,10 @@ span.ant-radio + * {
   font-size: 14px;
   border-radius: 4px;
 }
-.ant-calendar .ant-calendar-ok-btn-lg > .anticon {
-  font-size: 16px;
-}
 .ant-calendar .ant-calendar-ok-btn-sm {
   padding: 1px 7px;
   font-size: 12px;
   border-radius: 2px;
-}
-.ant-calendar .ant-calendar-ok-btn-sm > .anticon {
-  font-size: 12px;
 }
 .ant-calendar .ant-calendar-ok-btn > a:only-child {
   color: currentColor;
@@ -12449,6 +12413,7 @@ form .ant-cascader-picker {
   border-color: #ccc !important;
   background-color: #fff;
   cursor: not-allowed;
+  box-shadow: none;
 }
 .ant-slider-disabled .ant-slider-mark-text,
 .ant-slider-disabled .ant-slider-dot {
@@ -14009,8 +13974,8 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-tail > i:after {
   width: 100%;
   background: #108ee9;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
   opacity: 1;
 }
 .ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-title {
@@ -14046,10 +14011,9 @@ textarea.ant-pagination-options-quick-jumper input {
   height: auto;
 }
 .ant-steps .ant-steps-item.ant-steps-custom .ant-steps-head-inner > .ant-steps-icon {
-  font-size: 20px;
-  top: 2px;
-  width: 20px;
-  height: 20px;
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
 }
 .ant-steps .ant-steps-item.ant-steps-custom.ant-steps-status-process .ant-steps-head-inner > .ant-steps-icon {
   color: #108ee9;
@@ -14187,14 +14151,10 @@ textarea.ant-pagination-options-quick-jumper input {
   border-radius: 1px;
   width: 100%;
 }
-.ant-steps.ant-steps-small .ant-steps-item.ant-steps-custom .ant-steps-head-inner,
-.ant-steps .ant-steps-item.ant-steps-custom .ant-steps-head-inner {
-  width: inherit;
-  height: inherit;
-  line-height: inherit;
-  border-radius: 0;
-  border: 0;
-  background: none;
+.ant-steps.ant-steps-small .ant-steps-custom .ant-steps-head-inner > .ant-steps-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
 }
 .ant-steps-vertical .ant-steps-item {
   display: block;
@@ -14251,7 +14211,7 @@ textarea.ant-pagination-options-quick-jumper input {
   visibility: hidden;
 }
 .ant-steps-horizontal .ant-steps-description {
-  max-width: 100px;
+  max-width: 120px;
 }
 .ant-steps-horizontal .ant-steps-item:not(:first-child) .ant-steps-head {
   padding-left: 10px;
@@ -14502,5 +14462,25 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-table-bordered .ant-table-fixed-right table {
   border: 1px solid #e9e9e9;
   border-right: 0;
+  border-bottom: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-header > table {
+  border-bottom: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-body > table {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-body-inner > table {
+  border-top: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-placeholder {
+  border-bottom: 0;
+}
+.ant-table-bordered .ant-table-thead > tr > th {
+  border-bottom: 1px solid #e9e9e9;
+}
+.ant-table-bordered.ant-table-empty .ant-table-thead > tr > th {
   border-bottom: 0;
 }

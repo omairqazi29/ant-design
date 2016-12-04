@@ -1,25 +1,25 @@
-webpackJsonp([37,202],{
+webpackJsonp([37,201],{
 
-/***/ 651:
+/***/ 648:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1497),
-	    'digit': __webpack_require__(1498),
-	    'disabled': __webpack_require__(1499),
-	    'size': __webpack_require__(1500),
+	    'basic': __webpack_require__(1498),
+	    'digit': __webpack_require__(1499),
+	    'disabled': __webpack_require__(1500),
+	    'size': __webpack_require__(1501),
 	}
 
 /***/ },
 
-/***/ 1497:
+/***/ 1498:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -65,14 +65,14 @@ webpackJsonp([37,202],{
 
 /***/ },
 
-/***/ 1498:
+/***/ 1499:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -107,18 +107,18 @@ webpackJsonp([37,202],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> InputNumber <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'changed'</span><span class=\"token punctuation\" >,</span> value<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>InputNumber</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >10</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0.1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> InputNumber <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token keyword\" >function</span> <span class=\"token function\" >onChange</span><span class=\"token punctuation\" >(</span>value<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  console<span class=\"token punctuation\" >.</span><span class=\"token function\" >log</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'changed'</span><span class=\"token punctuation\" >,</span> value<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>InputNumber</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >10</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >step</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0.1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>onChange<span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    function onChange(value) {
 	      console.log('changed', value);
-	    }return _react2.default.createElement(_inputNumber2.default, { min: 1, max: 10, step: 0.1, onChange: onChange });
+	    }return _react2.default.createElement(_inputNumber2.default, { min: 0, max: 10, step: 0.1, onChange: onChange });
 	  }
 	};
 
 /***/ },
 
-/***/ 1499:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -129,9 +129,9 @@ webpackJsonp([37,202],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(145);
+	var _style4 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -199,14 +199,14 @@ webpackJsonp([37,202],{
 
 /***/ },
 
-/***/ 1500:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 

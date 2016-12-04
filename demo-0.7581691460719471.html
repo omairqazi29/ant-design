@@ -87,7 +87,10 @@ var Apps = function Apps() {
   );
 };
 
-var Home = function Home(props) {
+var Home = function Home(_ref) {
+  var routes = _ref.routes,
+      params = _ref.params,
+      children = _ref.children;
   return React.createElement(
     'div',
     null,
@@ -105,20 +108,9 @@ var Home = function Home(props) {
         'Application List'
       )
     ),
-    props.children || 'Home',
-    React.createElement(
-      'div',
-      {
-        style: {
-          marginBottom: 15,
-          marginTop: 15,
-          paddingBottom: 15,
-          borderBottom: '1px dashed #ccc'
-        }
-      },
-      'Click the navigation above to switch:'
-    ),
-    React.createElement(_antd.Breadcrumb, props)
+    children || 'Home Page',
+    React.createElement(_antd.Alert, { style: { margin: '16px 0' }, message: 'Click the navigation above to switch:' }),
+    React.createElement(_antd.Breadcrumb, { routes: routes, params: params })
   );
 };
 

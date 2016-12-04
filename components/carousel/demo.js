@@ -1,25 +1,25 @@
-webpackJsonp([39,202],{
+webpackJsonp([39,201],{
 
-/***/ 642:
+/***/ 639:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'autoplay': __webpack_require__(1420),
-	    'basic': __webpack_require__(1421),
-	    'fade': __webpack_require__(1422),
-	    'vertical': __webpack_require__(1423),
+	    'autoplay': __webpack_require__(1421),
+	    'basic': __webpack_require__(1422),
+	    'fade': __webpack_require__(1423),
+	    'vertical': __webpack_require__(1424),
 	}
 
 /***/ },
 
-/***/ 1420:
+/***/ 1421:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(236);
+	var _style2 = __webpack_require__(235);
 
-	var _carousel = __webpack_require__(202);
+	var _carousel = __webpack_require__(201);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -102,14 +102,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 1421:
+/***/ 1422:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(236);
+	var _style2 = __webpack_require__(235);
 
-	var _carousel = __webpack_require__(202);
+	var _carousel = __webpack_require__(201);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -194,14 +194,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 1422:
+/***/ 1423:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(236);
+	var _style2 = __webpack_require__(235);
 
-	var _carousel = __webpack_require__(202);
+	var _carousel = __webpack_require__(201);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -284,14 +284,14 @@ webpackJsonp([39,202],{
 
 /***/ },
 
-/***/ 1423:
+/***/ 1424:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(236);
+	var _style2 = __webpack_require__(235);
 
-	var _carousel = __webpack_require__(202);
+	var _carousel = __webpack_require__(201);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 

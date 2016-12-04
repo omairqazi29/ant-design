@@ -1,6 +1,6 @@
-webpackJsonp([157,202],{
+webpackJsonp([156,201],{
 
-/***/ 1515:
+/***/ 1516:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([157,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["section", ["p", ["code", "LocaleProvider"], " provides a uniform localization support for built-in text of components. "], ["h2", "Usage"], ["p", ["code", "LocaleProvider"], " takes use of ", ["a", {
+	  "content": ["section", ["p", ["code", "LocaleProvider"], " provides a uniform localization support for built-in text of components."], ["h2", "Usage"], ["p", ["code", "LocaleProvider"], " takes use of ", ["a", {
 	    "title": null,
 	    "href": "https://facebook.github.io/react/docs/context.html"
 	  }, "context"], ", a feature of React, to accomplish global effectiveness by wrapping the app only once."], ["pre", {
@@ -37,7 +37,7 @@ webpackJsonp([157,202],{
 	  }, "Intl demo 2"], "."]],
 	  "meta": {
 	    "category": "Components",
-	    "type": "Localization",
+	    "type": "Other",
 	    "cols": 1,
 	    "title": "LocaleProvider",
 	    "filename": "components/locale-provider/index.en-US.md"

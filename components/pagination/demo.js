@@ -1,22 +1,22 @@
-webpackJsonp([8,202],{
+webpackJsonp([8,201],{
 
-/***/ 658:
+/***/ 655:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1559),
-	    'changer': __webpack_require__(1560),
-	    'controlled': __webpack_require__(1561),
-	    'jump': __webpack_require__(1562),
-	    'mini': __webpack_require__(1563),
-	    'more': __webpack_require__(1564),
-	    'simple': __webpack_require__(1565),
-	    'total': __webpack_require__(1566),
+	    'basic': __webpack_require__(1560),
+	    'changer': __webpack_require__(1561),
+	    'controlled': __webpack_require__(1562),
+	    'jump': __webpack_require__(1563),
+	    'mini': __webpack_require__(1564),
+	    'more': __webpack_require__(1565),
+	    'simple': __webpack_require__(1566),
+	    'total': __webpack_require__(1567),
 	}
 
 /***/ },
 
-/***/ 1559:
+/***/ 1560:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67,7 +67,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1560:
+/***/ 1561:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -120,7 +120,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1561:
+/***/ 1562:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -184,7 +184,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1562:
+/***/ 1563:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -237,7 +237,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1563:
+/***/ 1564:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -298,7 +298,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1564:
+/***/ 1565:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -349,7 +349,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1565:
+/***/ 1566:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -400,7 +400,7 @@ webpackJsonp([8,202],{
 
 /***/ },
 
-/***/ 1566:
+/***/ 1567:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

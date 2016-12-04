@@ -1,6 +1,6 @@
-webpackJsonp([201,202],{
+webpackJsonp([200,201],{
 
-/***/ 1352:
+/***/ 1353:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,31 @@ webpackJsonp([201,202],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.0"], ["p", ["code", "2016-11-25"]], ["ul", ["li", ["p", "Change the default theme to Alipay style and improve lots of style details."]], ["li", ["p", "Supports server-side rendering. (", ["code", "Mention"], " will throw warning for ", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "Improve website experience on mobile devices."]], ["li", ["p", "Add some migrate warnings for ", ["code", "1.x"], " to ", ["code", "2.x"], "."]], ["li", ["p", "ToolTip, Popover, Popconfirm support to wrap text node and multiple node directly now. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3924"
+	  }, "#3924"]]], ["li", ["p", "Anchor"], ["ul", ["li", ["p", "Fix current position bug when scroll fastly. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4053"
+	  }, "#4053"]]], ["li", ["p", "Fix a bug of parent component ref node is undefined. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4037"
+	  }, "#4037"]]]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "Fix a selection problem when setting defaultChecked in rowSelection. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4020"
+	  }, "#4020"]]], ["li", ["p", "Fix grouping column title cannot work with filters. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4099"
+	  }, "#4099"]]]]], ["li", ["p", "Fix a misplace bug when using Popover over ", ["code", "Input[type=\"textarea\"]"], ". ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4092"
+	  }, "#4092"]]], ["li", ["p", "Fix Popconfirm ", ["code", "visible"], " is not-working problem. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4068"
+	  }, "#4068"]]], ["li", ["p", "Fix TimePicker can not override width by ", ["code", "style.width"], "."]], ["li", ["p", "Unify Steps icon size. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3817"
+	  }, "#3817"]]], ["li", ["p", "Fix style details of Form, Button, Slider, Table."]]], ["h2", "2.5.0"], ["p", ["code", "2016-11-25"]], ["ul", ["li", ["p", "Change the default theme to Alipay style and improve lots of style details."]], ["li", ["p", "Supports server-side rendering. (", ["code", "Mention"], " will throw warning for ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/facebook/draft-js/issues/385"
 	  }, "draft-js"], "' issue)"]], ["li", ["p", "Introduce ", ["a", {
@@ -418,7 +442,7 @@ webpackJsonp([201,202],{
 	  }, "#1533"], "."]], ["li", ["p", "Table supports ", ["a", {
 	    "title": null,
 	    "href": "http://ant.design/components/table/#components-table-demo-grouping-columns"
-	  }, "grouping columns"], ". @yesmeck"]], ["li", ["p", "Removed components and features which are deprecated in ", ["code", "antd@1.x"], ", such as QueueAnim, Validation, Form.ValueMixin, Progress.Line, Progress.Circle, Popover", "[overlay]", " and Slider", "[marks]", " will not support array any more."]]], ["h3", "2.x Breaking changes"], ["p", "There are some breaking changes in ", ["code", "antd@2.0.0"], ", and you need to modify your code to work with it."], ["ul", ["li", ["p", ["code", "value"], " and ", ["code", "defaultValue"], " of all the time-related components will not support type ", ["code", "String/Date"], ", please use ", ["a", {
+	  }, "grouping columns"], ". @yesmeck"]], ["li", ["p", "Removed components and features which are deprecated in ", ["code", "antd@1.x"], ", such as QueueAnim, Validation, Form.ValueMixin, Progress.Line, Progress.Circle, Popover", "[overlay]", " and Slider", "[marks]", " will not support array any more."]]], ["h3", "2.x Breaking changes"], ["blockquote", ["p", "We suggest you upgrade to lastest version of ", ["code", "2.x"], "."]], ["p", "There are some breaking changes in ", ["code", "antd@2.0.0"], ", and you need to modify your code to work with it."], ["ul", ["li", ["p", ["code", "value"], " and ", ["code", "defaultValue"], " of all the time-related components will not support type ", ["code", "String/Date"], ", please use ", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
 	  }, "moment"], ":"], ["pre", {
@@ -560,6 +584,8 @@ webpackJsonp([201,202],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "href": "#2.5.1"
+	  }, "2.5.1"]], ["li", ["a", {
 	    "href": "#2.5.0"
 	  }, "2.5.0"]], ["li", ["a", {
 	    "href": "#2.4.3"
