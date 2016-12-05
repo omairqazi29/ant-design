@@ -1,25 +1,13 @@
 webpackJsonp([37,201],{
 
-/***/ 648:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1498),
-	    'digit': __webpack_require__(1499),
-	    'disabled': __webpack_require__(1500),
-	    'size': __webpack_require__(1501),
-	}
-
-/***/ },
-
-/***/ 1498:
+/***/ 768:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(144);
+	var _style2 = __webpack_require__(133);
 
-	var _inputNumber = __webpack_require__(143);
+	var _inputNumber = __webpack_require__(132);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -65,14 +53,14 @@ webpackJsonp([37,201],{
 
 /***/ },
 
-/***/ 1499:
+/***/ 769:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(144);
+	var _style2 = __webpack_require__(133);
 
-	var _inputNumber = __webpack_require__(143);
+	var _inputNumber = __webpack_require__(132);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -118,7 +106,7 @@ webpackJsonp([37,201],{
 
 /***/ },
 
-/***/ 1500:
+/***/ 770:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -129,9 +117,9 @@ webpackJsonp([37,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(144);
+	var _style4 = __webpack_require__(133);
 
-	var _inputNumber = __webpack_require__(143);
+	var _inputNumber = __webpack_require__(132);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -199,14 +187,14 @@ webpackJsonp([37,201],{
 
 /***/ },
 
-/***/ 1501:
+/***/ 771:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(144);
+	var _style2 = __webpack_require__(133);
 
-	var _inputNumber = __webpack_require__(143);
+	var _inputNumber = __webpack_require__(132);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -257,6 +245,18 @@ webpackJsonp([37,201],{
 	  "style": ".ant-input-number {\n  margin-right: 10px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token class\" >.ant-input-number</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-right</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
+
+/***/ },
+
+/***/ 1198:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(768),
+	    'digit': __webpack_require__(769),
+	    'disabled': __webpack_require__(770),
+	    'size': __webpack_require__(771),
+	}
 
 /***/ }
 

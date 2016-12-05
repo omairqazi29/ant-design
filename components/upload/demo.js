@@ -1,28 +1,13 @@
 webpackJsonp([12,201],{
 
-/***/ 675:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'avatar': __webpack_require__(1731),
-	    'basic': __webpack_require__(1732),
-	    'defaultFileList': __webpack_require__(1733),
-	    'drag': __webpack_require__(1734),
-	    'fileList': __webpack_require__(1735),
-	    'picture-card': __webpack_require__(1736),
-	    'picture-style': __webpack_require__(1737),
-	}
-
-/***/ },
-
-/***/ 1731:
+/***/ 1001:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(131);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -44,9 +29,9 @@ webpackJsonp([12,201],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(63);
+	var _style6 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -142,14 +127,14 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1732:
+/***/ 1002:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(131);
+	var _style5 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -165,9 +150,9 @@ webpackJsonp([12,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(63);
+	var _style8 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -229,14 +214,14 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1733:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(131);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -306,7 +291,7 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1734:
+/***/ 1004:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -317,15 +302,15 @@ webpackJsonp([12,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(63);
+	var _style5 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style6 = __webpack_require__(131);
+	var _style6 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -401,14 +386,14 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1735:
+/***/ 1005:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(131);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -501,20 +486,20 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1736:
+/***/ 1006:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(73);
+	var _style4 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(64);
+	var _modal = __webpack_require__(60);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _style5 = __webpack_require__(131);
+	var _style5 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -634,7 +619,7 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1737:
+/***/ 1007:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -643,9 +628,9 @@ webpackJsonp([12,201],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(131);
+	var _style4 = __webpack_require__(121);
 
-	var _upload = __webpack_require__(130);
+	var _upload = __webpack_require__(120);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -730,6 +715,21 @@ webpackJsonp([12,201],{
 	  "style": "/* tile uploaded pictures */\n.upload-list-inline .ant-upload-list-item {\n  display: inline-block;\n  width: 200px;\n  margin-right: 8px;\n}",
 	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* tile uploaded pictures */</span>\n<span class=\"token selector\" ><span class=\"token class\" >.upload-list-inline</span> <span class=\"token class\" >.ant-upload-list-item</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >display</span><span class=\"token punctuation\" >:</span> inline-block<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >200</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin-right</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >8</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>"
 	};
+
+/***/ },
+
+/***/ 1225:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'avatar': __webpack_require__(1001),
+	    'basic': __webpack_require__(1002),
+	    'defaultFileList': __webpack_require__(1003),
+	    'drag': __webpack_require__(1004),
+	    'fileList': __webpack_require__(1005),
+	    'picture-card': __webpack_require__(1006),
+	    'picture-style': __webpack_require__(1007),
+	}
 
 /***/ }
 

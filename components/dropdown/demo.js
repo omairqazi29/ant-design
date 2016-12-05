@@ -1,28 +1,13 @@
 webpackJsonp([16,201],{
 
-/***/ 644:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1462),
-	    'dropdown-button': __webpack_require__(1463),
-	    'event': __webpack_require__(1464),
-	    'item': __webpack_require__(1465),
-	    'overlay-visible': __webpack_require__(1466),
-	    'sub-menu': __webpack_require__(1467),
-	    'trigger': __webpack_require__(1468),
-	}
-
-/***/ },
-
-/***/ 1462:
+/***/ 732:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(108);
+	var _style4 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -32,9 +17,9 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -117,7 +102,7 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1463:
+/***/ 733:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -134,21 +119,21 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(108);
+	var _style8 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
-	var _style9 = __webpack_require__(38);
+	var _style9 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	var _style10 = __webpack_require__(63);
+	var _style10 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -237,14 +222,14 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1464:
+/***/ 734:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(108);
+	var _style5 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -254,15 +239,15 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style7 = __webpack_require__(38);
+	var _style7 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	var _style8 = __webpack_require__(63);
+	var _style8 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -337,14 +322,14 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1465:
+/***/ 735:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(108);
+	var _style4 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -354,9 +339,9 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -436,14 +421,14 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1466:
+/***/ 736:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(108);
+	var _style4 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -453,9 +438,9 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -543,14 +528,14 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1467:
+/***/ 737:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(108);
+	var _style4 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -560,9 +545,9 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -642,14 +627,14 @@ webpackJsonp([16,201],{
 
 /***/ },
 
-/***/ 1468:
+/***/ 738:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(108);
+	var _style4 = __webpack_require__(99);
 
-	var _dropdown = __webpack_require__(107);
+	var _dropdown = __webpack_require__(98);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -659,9 +644,9 @@ webpackJsonp([16,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(36);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(35);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -742,6 +727,21 @@ webpackJsonp([16,201],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1194:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(732),
+	    'dropdown-button': __webpack_require__(733),
+	    'event': __webpack_require__(734),
+	    'item': __webpack_require__(735),
+	    'overlay-visible': __webpack_require__(736),
+	    'sub-menu': __webpack_require__(737),
+	    'trigger': __webpack_require__(738),
+	}
 
 /***/ }
 

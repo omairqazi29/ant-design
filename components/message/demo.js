@@ -1,18 +1,6 @@
 webpackJsonp([36,201],{
 
-/***/ 652:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'duration': __webpack_require__(1536),
-	    'info': __webpack_require__(1537),
-	    'loading': __webpack_require__(1538),
-	    'other': __webpack_require__(1539),
-	}
-
-/***/ },
-
-/***/ 1536:
+/***/ 806:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,9 +11,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -75,7 +63,7 @@ webpackJsonp([36,201],{
 
 /***/ },
 
-/***/ 1537:
+/***/ 807:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -86,9 +74,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -138,7 +126,7 @@ webpackJsonp([36,201],{
 
 /***/ },
 
-/***/ 1538:
+/***/ 808:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -149,9 +137,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -202,7 +190,7 @@ webpackJsonp([36,201],{
 
 /***/ },
 
-/***/ 1539:
+/***/ 809:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -213,9 +201,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(59);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(58);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -282,6 +270,18 @@ webpackJsonp([36,201],{
 	  },
 	  "style": "\n#components-message-demo-other .ant-btn {\n  margin-right: 8px;\n}\n"
 	};
+
+/***/ },
+
+/***/ 1202:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'duration': __webpack_require__(806),
+	    'info': __webpack_require__(807),
+	    'loading': __webpack_require__(808),
+	    'other': __webpack_require__(809),
+	}
 
 /***/ }
 
