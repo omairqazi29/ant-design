@@ -29,9 +29,9 @@ webpackJsonp([12,201],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(59);
+	var _style6 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -150,9 +150,9 @@ webpackJsonp([12,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(59);
+	var _style8 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -302,9 +302,9 @@ webpackJsonp([12,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(59);
+	var _style5 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -491,9 +491,9 @@ webpackJsonp([12,201],{
 
 	'use strict';
 
-	var _style4 = __webpack_require__(69);
+	var _style4 = __webpack_require__(68);
 
-	var _modal = __webpack_require__(60);
+	var _modal = __webpack_require__(59);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -718,7 +718,7 @@ webpackJsonp([12,201],{
 
 /***/ },
 
-/***/ 1225:
+/***/ 1224:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

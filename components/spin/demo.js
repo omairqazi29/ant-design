@@ -113,9 +113,9 @@ webpackJsonp([27,201],{
 
 	'use strict';
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -125,9 +125,9 @@ webpackJsonp([27,201],{
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style6 = __webpack_require__(87);
+	var _style6 = __webpack_require__(86);
 
-	var _alert = __webpack_require__(86);
+	var _alert = __webpack_require__(85);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -262,9 +262,9 @@ webpackJsonp([27,201],{
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style4 = __webpack_require__(87);
+	var _style4 = __webpack_require__(86);
 
-	var _alert = __webpack_require__(86);
+	var _alert = __webpack_require__(85);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -312,7 +312,7 @@ webpackJsonp([27,201],{
 
 /***/ },
 
-/***/ 1213:
+/***/ 1212:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

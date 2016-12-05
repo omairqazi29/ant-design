@@ -93,9 +93,9 @@ webpackJsonp([40,201],{
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style4 = __webpack_require__(87);
+	var _style4 = __webpack_require__(86);
 
-	var _alert = __webpack_require__(86);
+	var _alert = __webpack_require__(85);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -107,7 +107,7 @@ webpackJsonp([40,201],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactRouter = __webpack_require__(50);
+	var _reactRouter = __webpack_require__(49);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -216,7 +216,7 @@ webpackJsonp([40,201],{
 	  },
 	  "style": "#components-breadcrumb-demo-router iframe {\n  height: 180px;\n}\n.demo-nav {\n  height: 30px;\n  line-height: 30px;\n  margin-bottom: 15px;\n  background: #f8f8f8;\n}\n.demo-nav a {\n  line-height: 30px;\n  padding: 0 10px;\n}\n.app-list {\n  margin-top: 15px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token id\" >#components-breadcrumb-demo-router</span> iframe </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >180</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#f8f8f8</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> a </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >0</span> <span class=\"token number\" >10</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.app-list</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>",
-	  "src": "/demo-0.9027481815091283.html"
+	  "src": "/demo-0.40326951071239736.html"
 	};
 
 /***/ },
@@ -375,7 +375,7 @@ webpackJsonp([40,201],{
 
 /***/ },
 
-/***/ 1185:
+/***/ 1184:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

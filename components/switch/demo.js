@@ -5,9 +5,9 @@ webpackJsonp([33,201],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(79);
+	var _style2 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -65,9 +65,9 @@ webpackJsonp([33,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -137,9 +137,9 @@ webpackJsonp([33,201],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(79);
+	var _style2 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -200,9 +200,9 @@ webpackJsonp([33,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -254,7 +254,7 @@ webpackJsonp([33,201],{
 
 /***/ },
 
-/***/ 1215:
+/***/ 1214:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

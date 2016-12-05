@@ -23,7 +23,7 @@ webpackJsonp([0,201],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reqwest = __webpack_require__(1893);
+	var _reqwest = __webpack_require__(1892);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -464,15 +464,15 @@ webpackJsonp([0,201],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style7 = __webpack_require__(57);
+	var _style7 = __webpack_require__(56);
 
-	var _radio = __webpack_require__(51);
+	var _radio = __webpack_require__(50);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _style8 = __webpack_require__(79);
+	var _style8 = __webpack_require__(78);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(77);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -498,9 +498,9 @@ webpackJsonp([0,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style10 = __webpack_require__(56);
+	var _style10 = __webpack_require__(55);
 
-	var _form = __webpack_require__(55);
+	var _form = __webpack_require__(54);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -724,7 +724,7 @@ webpackJsonp([0,201],{
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
-	var _toConsumableArray2 = __webpack_require__(82);
+	var _toConsumableArray2 = __webpack_require__(81);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -2124,7 +2124,7 @@ webpackJsonp([0,201],{
 
 /***/ },
 
-/***/ 1216:
+/***/ 1215:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2153,7 +2153,7 @@ webpackJsonp([0,201],{
 
 /***/ },
 
-/***/ 1893:
+/***/ 1892:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2177,7 +2177,7 @@ webpackJsonp([0,201],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1905)
+	      XHR2 = __webpack_require__(1904)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -2790,7 +2790,7 @@ webpackJsonp([0,201],{
 
 /***/ },
 
-/***/ 1905:
+/***/ 1904:
 /***/ function(module, exports) {
 
 	/* (ignored) */

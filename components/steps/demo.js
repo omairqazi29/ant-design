@@ -240,9 +240,9 @@ webpackJsonp([14,201],{
 
 	'use strict';
 
-	var _style4 = __webpack_require__(59);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -498,7 +498,7 @@ webpackJsonp([14,201],{
 
 /***/ },
 
-/***/ 1214:
+/***/ 1213:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

@@ -230,9 +230,9 @@ webpackJsonp([10,201],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(44);
+	var _style3 = __webpack_require__(43);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -626,7 +626,7 @@ webpackJsonp([10,201],{
 
 /***/ },
 
-/***/ 1197:
+/***/ 1196:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

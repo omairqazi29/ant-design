@@ -11,9 +11,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(59);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -74,9 +74,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(59);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -137,9 +137,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(59);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -201,9 +201,9 @@ webpackJsonp([36,201],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(59);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(58);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -273,7 +273,7 @@ webpackJsonp([36,201],{
 
 /***/ },
 
-/***/ 1202:
+/***/ 1201:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
