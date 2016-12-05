@@ -1,6 +1,6 @@
 webpackJsonp([193,201],{
 
-/***/ 1372:
+/***/ 642:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,7 +21,7 @@ webpackJsonp([193,201],{
 	    "category": "Components",
 	    "subtitle": "锚点",
 	    "cols": 2,
-	    "type": "Other",
+	    "type": "Navigation",
 	    "title": "Anchor",
 	    "filename": "components/anchor/index.zh-CN.md"
 	  },

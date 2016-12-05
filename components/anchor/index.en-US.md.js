@@ -1,6 +1,6 @@
 webpackJsonp([194,201],{
 
-/***/ 1371:
+/***/ 641:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19,7 +19,7 @@ webpackJsonp([194,201],{
 	  "content": ["section", ["p", "Hyperlinks to scroll on one page."], ["h2", "When To Use"], ["p", "For displaying anchor hyperlinks on page and jumping between them."]],
 	  "meta": {
 	    "category": "Components",
-	    "type": "Other",
+	    "type": "Navigation",
 	    "cols": 2,
 	    "title": "Anchor",
 	    "filename": "components/anchor/index.en-US.md"

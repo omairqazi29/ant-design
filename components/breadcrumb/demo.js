@@ -1,25 +1,13 @@
 webpackJsonp([40,201],{
 
-/***/ 635:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1391),
-	    'router': __webpack_require__(1392),
-	    'separator': __webpack_require__(1393),
-	    'withIcon': __webpack_require__(1394),
-	}
-
-/***/ },
-
-/***/ 1391:
+/***/ 661:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(123);
+	var _style2 = __webpack_require__(113);
 
-	var _breadcrumb = __webpack_require__(122);
+	var _breadcrumb = __webpack_require__(112);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -94,20 +82,20 @@ webpackJsonp([40,201],{
 
 /***/ },
 
-/***/ 1392:
+/***/ 662:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(123);
+	var _style3 = __webpack_require__(113);
 
-	var _breadcrumb = __webpack_require__(122);
+	var _breadcrumb = __webpack_require__(112);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style4 = __webpack_require__(93);
+	var _style4 = __webpack_require__(87);
 
-	var _alert = __webpack_require__(92);
+	var _alert = __webpack_require__(86);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -119,7 +107,7 @@ webpackJsonp([40,201],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactRouter = __webpack_require__(47);
+	var _reactRouter = __webpack_require__(50);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -228,19 +216,19 @@ webpackJsonp([40,201],{
 	  },
 	  "style": "#components-breadcrumb-demo-router iframe {\n  height: 180px;\n}\n.demo-nav {\n  height: 30px;\n  line-height: 30px;\n  margin-bottom: 15px;\n  background: #f8f8f8;\n}\n.demo-nav a {\n  line-height: 30px;\n  padding: 0 10px;\n}\n.app-list {\n  margin-top: 15px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\" ><span class=\"token id\" >#components-breadcrumb-demo-router</span> iframe </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >180</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >background</span><span class=\"token punctuation\" >:</span> <span class=\"token hexcode\" >#f8f8f8</span><span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.demo-nav</span> a </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >line-height</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >30</span>px<span class=\"token punctuation\" >;</span>\n  <span class=\"token property\" >padding</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >0</span> <span class=\"token number\" >10</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>\n<span class=\"token selector\" ><span class=\"token class\" >.app-list</span> </span><span class=\"token punctuation\" >{</span>\n  <span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> <span class=\"token number\" >15</span>px<span class=\"token punctuation\" >;</span>\n<span class=\"token punctuation\" >}</span>",
-	  "src": "/demo-0.40323669257624717.html"
+	  "src": "/demo-0.6761774468385142.html"
 	};
 
 /***/ },
 
-/***/ 1393:
+/***/ 663:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(123);
+	var _style2 = __webpack_require__(113);
 
-	var _breadcrumb = __webpack_require__(122);
+	var _breadcrumb = __webpack_require__(112);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -307,14 +295,14 @@ webpackJsonp([40,201],{
 
 /***/ },
 
-/***/ 1394:
+/***/ 664:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(123);
+	var _style3 = __webpack_require__(113);
 
-	var _breadcrumb = __webpack_require__(122);
+	var _breadcrumb = __webpack_require__(112);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -384,6 +372,18 @@ webpackJsonp([40,201],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1185:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(661),
+	    'router': __webpack_require__(662),
+	    'separator': __webpack_require__(663),
+	    'withIcon': __webpack_require__(664),
+	}
 
 /***/ }
 

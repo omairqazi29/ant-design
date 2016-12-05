@@ -1,24 +1,13 @@
 webpackJsonp([41,201],{
 
-/***/ 674:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1719),
-	    'checkable': __webpack_require__(1720),
-	    'treeData': __webpack_require__(1721),
-	}
-
-/***/ },
-
-/***/ 1719:
+/***/ 989:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(292);
+	var _style2 = __webpack_require__(259);
 
-	var _treeSelect = __webpack_require__(291);
+	var _treeSelect = __webpack_require__(258);
 
 	var _treeSelect2 = _interopRequireDefault(_treeSelect);
 
@@ -95,14 +84,14 @@ webpackJsonp([41,201],{
 
 /***/ },
 
-/***/ 1720:
+/***/ 990:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(292);
+	var _style2 = __webpack_require__(259);
 
-	var _treeSelect = __webpack_require__(291);
+	var _treeSelect = __webpack_require__(258);
 
 	var _treeSelect2 = _interopRequireDefault(_treeSelect);
 
@@ -162,14 +151,14 @@ webpackJsonp([41,201],{
 
 /***/ },
 
-/***/ 1721:
+/***/ 991:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(292);
+	var _style2 = __webpack_require__(259);
 
-	var _treeSelect = __webpack_require__(291);
+	var _treeSelect = __webpack_require__(258);
 
 	var _treeSelect2 = _interopRequireDefault(_treeSelect);
 
@@ -225,6 +214,17 @@ webpackJsonp([41,201],{
 	    });return _react2.default.createElement(Demo, null);
 	  }
 	};
+
+/***/ },
+
+/***/ 1224:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(989),
+	    'checkable': __webpack_require__(990),
+	    'treeData': __webpack_require__(991),
+	}
 
 /***/ }
 

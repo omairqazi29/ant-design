@@ -1,6 +1,6 @@
 webpackJsonp([88,201],{
 
-/***/ 1754:
+/***/ 1024:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39,8 +39,14 @@ webpackJsonp([88,201],{
 	    "href": "http://ant-tool.github.io/"
 	  }, "开发工具文档"], "。"], ["blockquote", ["p", "除了官方提供的脚手架，您也可以使用社区提供的脚手架和范例："], ["ul", ["li", ["p", ["a", {
 	    "title": null,
+	    "href": "https://github.com/JasonBai007/reactSPA"
+	  }, "reactSPA"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://github.com/Justin-lu/react-redux-antd"
+	  }, "react-redux-antd by Justin-lu"]]], ["li", ["p", ["a", {
+	    "title": null,
 	    "href": "https://github.com/okoala/react-redux-antd"
-	  }, "react-redux-antd"]]], ["li", ["p", ["a", {
+	  }, "react-redux-antd by okoala"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/fireyy/react-antd-admin"
 	  }, "react-antd-admin"]]], ["li", ["p", ["a", {

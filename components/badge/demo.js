@@ -1,29 +1,13 @@
 webpackJsonp([11,201],{
 
-/***/ 634:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    '99plus': __webpack_require__(1381),
-	    'basic': __webpack_require__(1382),
-	    'change': __webpack_require__(1383),
-	    'dot': __webpack_require__(1384),
-	    'link': __webpack_require__(1385),
-	    'no-wrapper': __webpack_require__(1386),
-	    'overflow': __webpack_require__(1387),
-	    'status': __webpack_require__(1388),
-	}
-
-/***/ },
-
-/***/ 1381:
+/***/ 651:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -80,14 +64,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1382:
+/***/ 652:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -137,7 +121,7 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1383:
+/***/ 653:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -148,9 +132,9 @@ webpackJsonp([11,201],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(121);
+	var _style5 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -255,14 +239,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1384:
+/***/ 654:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(121);
+	var _style3 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -330,14 +314,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1385:
+/***/ 655:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -389,14 +373,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1386:
+/***/ 656:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -447,14 +431,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1387:
+/***/ 657:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -511,14 +495,14 @@ webpackJsonp([11,201],{
 
 /***/ },
 
-/***/ 1388:
+/***/ 658:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(121);
+	var _style2 = __webpack_require__(111);
 
-	var _badge = __webpack_require__(120);
+	var _badge = __webpack_require__(110);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -577,6 +561,22 @@ webpackJsonp([11,201],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1184:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    '99plus': __webpack_require__(651),
+	    'basic': __webpack_require__(652),
+	    'change': __webpack_require__(653),
+	    'dot': __webpack_require__(654),
+	    'link': __webpack_require__(655),
+	    'no-wrapper': __webpack_require__(656),
+	    'overflow': __webpack_require__(657),
+	    'status': __webpack_require__(658),
+	}
 
 /***/ }
 
