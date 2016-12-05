@@ -1,13 +1,24 @@
 webpackJsonp([42,201],{
 
-/***/ 977:
+/***/ 671:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'arrow-point-at-center': __webpack_require__(1707),
+	    'basic': __webpack_require__(1708),
+	    'placement': __webpack_require__(1709),
+	}
+
+/***/ },
+
+/***/ 1707:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(141);
+	var _style3 = __webpack_require__(152);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -79,14 +90,14 @@ webpackJsonp([42,201],{
 
 /***/ },
 
-/***/ 978:
+/***/ 1708:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -138,14 +149,14 @@ webpackJsonp([42,201],{
 
 /***/ },
 
-/***/ 979:
+/***/ 1709:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _tooltip = __webpack_require__(119);
+	var _tooltip = __webpack_require__(129);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -320,17 +331,6 @@ webpackJsonp([42,201],{
 	  },
 	  "style": "\n#components-tooltip-demo-placement .code-box-demo a {\n  display: inline-block;\n  line-height: 32px;\n  height: 32px;\n  width: 60px;\n  font-size: 14px;\n  text-align: center;\n  background: #f5f5f5;\n  margin-right: 1em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n}\n"
 	};
-
-/***/ },
-
-/***/ 1221:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(977),
-	    'basic': __webpack_require__(978),
-	    'placement': __webpack_require__(979),
-	}
 
 /***/ }
 
