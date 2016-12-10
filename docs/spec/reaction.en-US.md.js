@@ -1,6 +1,6 @@
-webpackJsonp([57,201],{
+webpackJsonp([57,204],{
 
-/***/ 1791:
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -86,8 +86,10 @@ webpackJsonp([57,201],{
 	  },
 	  "description": ["section", ["p", "Invitations are powerful because they directly address discoverability and provide feedback before an interaction happens. Transitions are useful because they provide visual feedback during an interaction. But another class of feedback exists. It is the feedback that happens immediately after each interaction with the system, an immediate reaction paired with the user’s action."], ["p", "While we can’t literally extend Newton’s law to the world of user interfaces, we certainly can apply this principle to the way we should interact with users. When users click on a button, they expect the button to depress. When they type in a field, they expect to see characters show up in the text box. When they make a mistake, they want the application to tell them where they goofed."], ["p", "While there is a possibility of too much feedback (or, more accurately, too much of the wrong feedback—a concept we will discuss in the upcoming chapters), a system with little or no feedback feels sluggish and thickheaded."], ["blockquote", ["p", ["strong", " Newton’s Third Law of Motion "], ": For every action, there is an equal and opposite reaction, from Wikipedia."]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Lookup-Patterns"
 	  }, "Lookup Patterns"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Live-Suggest"
 	  }, "Live Suggest"]]]
 	};

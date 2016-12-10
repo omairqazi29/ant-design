@@ -1,6 +1,6 @@
-webpackJsonp([74,201],{
+webpackJsonp([75,204],{
 
-/***/ 1769:
+/***/ 1041:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63,10 +63,13 @@ webpackJsonp([74,201],{
 	  },
 	  "description": ["section", ["p", "Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different element that aid user in finding the information quickly."], ["blockquote", ["p", "Note: The important rule for contrast to be effective, it must be strong. Don't be wimp."]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#The-Contrast-of-major-and-minor-relationship"
 	  }, "The Contrast of major and minor relationship"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Contrast-of-whole-and-part"
 	  }, "Contrast of whole and part"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Contrast-of-the-state-relation"
 	  }, "Contrast of the state relation"]]]
 	};

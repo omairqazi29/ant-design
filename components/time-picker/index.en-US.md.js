@@ -1,6 +1,6 @@
-webpackJsonp([116,201],{
+webpackJsonp([119,204],{
 
-/***/ 1699:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,11 +25,12 @@ webpackJsonp([116,201],{
 	  },
 	  "description": ["section", ["p", "To select/input a time."], ["h2", "When To Use"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["hr"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> moment <span class=\"token keyword\" >from</span> <span class=\"token string\" >'moment'</span><span class=\"token punctuation\" >;</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TimePicker</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'13:30:56'</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >'HH:mm:ss'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>TimePicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'13:30:56'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'HH:mm:ss'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>"
 	  }, ["code", "import moment from 'moment';\n<TimePicker defaultValue={moment('13:30:56', 'HH:mm:ss')} />"]], ["blockquote", ["p", "Note: ", ["code", "TimePicker"], " is renamed to ", ["code", "TimePicker"], " after 0.11."]], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "defaultValue"], ["td", "to set default time"], ["td", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"

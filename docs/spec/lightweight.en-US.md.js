@@ -1,6 +1,6 @@
-webpackJsonp([64,201],{
+webpackJsonp([64,204],{
 
-/***/ 1784:
+/***/ 1057:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -82,14 +82,19 @@ webpackJsonp([64,201],{
 	    "width": "150"
 	  }], "\n", ["strong", " Fitts's Law "], ": The time to acquire a target is a function of the distance to and size of the target. It is proportional to the distance to the target and inversely proportional to the width of the target."]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Always-Visible-Tools"
 	  }, "Always-Visible Tools"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Hover-Reveal-Tools"
 	  }, "Hover-Reveal Tools"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Toggle-Reveal-Tools"
 	  }, "Toggle-Reveal Tools"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Interaction-in-Context"
 	  }, "Interaction in Context"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Visible-Area-≠-Clickable-Area"
 	  }, "Visible Area ≠ Clickable Area"]]]
 	};

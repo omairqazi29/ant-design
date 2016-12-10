@@ -1,6 +1,6 @@
-webpackJsonp([180,201],{
+webpackJsonp([183,204],{
 
-/***/ 1419:
+/***/ 689:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,13 +25,15 @@ webpackJsonp([180,201],{
 	    "filename": "components/card/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Card title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Card content<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Card</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Card title<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Card content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Card</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<Card title=\"Card title\">Card content</Card>"]], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "title"], ["td", "Card title"], ["td", "React.Element"], ["td", "-"]], ["tr", ["td", "extra"], ["td", "Content to render in the top-right corner of the card"], ["td", "React.Element"], ["td", "-"]], ["tr", ["td", "bordered"], ["td", "Toggles rendering of the border around the card"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "bodyStyle"], ["td", "Inline style to apply to the card content"], ["td", "Object"], ["td", "-"]]]]]
 	};
 

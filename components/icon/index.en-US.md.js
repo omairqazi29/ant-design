@@ -1,6 +1,6 @@
-webpackJsonp([162,201],{
+webpackJsonp([165,204],{
 
-/***/ 1496:
+/***/ 766:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([162,201],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _IconSet = __webpack_require__(252);
+	var _IconSet = __webpack_require__(230);
 
 	var _IconSet2 = _interopRequireDefault(_IconSet);
 
@@ -22,10 +22,10 @@ webpackJsonp([162,201],{
 	module.exports = {
 	  "content": ["article", ["p", "Meaningful vector graphics."], ["h2", "Icons naming convention"], ["p", "We provide semantic name for every icon, and naming rules are as follows:"], ["ul", ["li", ["p", "Scanning line icon has the similar name with its solid one，but it's distinguished by ", ["code", "-o"], ", for example, ", ["code", "question-circle"], "(a full circle) and ", ["code", "question-circle-o"], "(an empty circle);"]], ["li", ["p", "Naming sequence：", ["code", "[icon's name]-[shape, optional]-[Scanning line or not]-[direction, optional]"], "."]]], ["h2", "How To Use"], ["p", "Use tag ", ["icon"], " to create an icon and set its type in the type prop, for example:"], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>link<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>link<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>"
 	  }, ["code", "<Icon type=\"link\" />"]], ["p", "Finally, it will be rendered as follow:"], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>i</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>anticon anticon-${type}<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>i</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>i</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>anticon anticon-${type}<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>i</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<i class=\"anticon anticon-${type}\"></i>"]], ["h2", "Local deployment of icons font"], ["p", "By default, icon components uses ", ["a", {
 	    "title": null,
 	    "href": "http://iconfont.cn"
@@ -47,14 +47,19 @@ webpackJsonp([162,201],{
 	    "filename": "components/icon/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Icons-naming-convention"
 	  }, "Icons naming convention"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#How-To-Use"
 	  }, "How To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Local-deployment-of-icons-font"
 	  }, "Local deployment of icons font"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#List-of-icons"
 	  }, "List of icons"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Props"
 	  }, "Props"]]]
 	};

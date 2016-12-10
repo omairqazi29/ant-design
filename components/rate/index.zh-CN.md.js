@@ -1,6 +1,6 @@
-webpackJsonp([133,201],{
+webpackJsonp([136,204],{
 
-/***/ 1605:
+/***/ 875:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([133,201],{
 	    "filename": "components/rate/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "属性"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "count"], ["td", "star 总数"], ["td", "Number"], ["td", "5"]], ["tr", ["td", "value"], ["td", "当前数，受控值"], ["td", "Number"], ["td", "-"]], ["tr", ["td", "defaultValue"], ["td", "默认值"], ["td", "Number"], ["td", "0"]], ["tr", ["td", "onChange"], ["td", "回调"], ["td", "Function(value: Number)"], ["td", "-"]], ["tr", ["td", "allowHalf"], ["td", "是否允许半选"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "disabled"], ["td", "只读，无法进行交互"], ["td", "Boolean"], ["td", "false"]]]]]

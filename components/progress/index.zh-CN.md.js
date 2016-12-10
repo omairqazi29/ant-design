@@ -1,6 +1,6 @@
-webpackJsonp([137,201],{
+webpackJsonp([140,204],{
 
-/***/ 1591:
+/***/ 861:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([137,201],{
 	    "filename": "components/progress/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "属性"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "type"], ["td", "类型，可选 ", ["code", "line"], " ", ["code", "circle"]], ["td", "String"], ["td", "line"]], ["tr", ["td", "percent"], ["td", "百分比"], ["td", "Number"], ["td", "0"]], ["tr", ["td", "format"], ["td", "内容的模板函数"], ["td", "function(percent)"], ["td", ["code", "percent => percent + '%'"]]], ["tr", ["td", "status"], ["td", "状态，可选：", ["code", "success"], " ", ["code", "exception"], " ", ["code", "active"]], ["td", "String"], ["td", "-"]], ["tr", ["td", "showInfo"], ["td", "是否显示进度数值或状态图标"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "strokeWidth ", ["code", "(type=line)"]], ["td", "进度条线的宽度，单位 px"], ["td", "Number"], ["td", "10"]], ["tr", ["td", "strokeWidth ", ["code", "(type=circle)"]], ["td", "圆形进度条线的宽度，单位是进度条画布宽度的百分比"], ["td", "Number"], ["td", "6"]], ["tr", ["td", "width ", ["code", "(type=circle)"]], ["td", "圆形进度条画布宽度，单位 px"], ["td", "Number"], ["td", "132"]]]]]

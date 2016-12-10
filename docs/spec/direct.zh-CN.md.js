@@ -1,6 +1,6 @@
-webpackJsonp([72,201],{
+webpackJsonp([72,204],{
 
-/***/ 1771:
+/***/ 1044:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59,23 +59,20 @@ webpackJsonp([72,201],{
 	    "class": "waiting"
 	  }, "直接选择（敬请期待）"]]],
 	  "meta": {
-	    "category": {
-	      "zh-CN": "十大原则",
-	      "en-US": "Principles"
-	    },
+	    "category": "十大原则",
 	    "order": 5,
-	    "title": {
-	      "zh-CN": "直截了当",
-	      "en-US": "Make it Direct"
-	    },
-	    "filename": "docs/spec/direct.md"
+	    "title": "直截了当",
+	    "filename": "docs/spec/direct.zh-CN.md"
 	  },
 	  "description": ["section", ["p", "正如 Alan Cooper 所言：『需要在哪里输出，就要允许在哪里输入』。这就是直接操作的原理。eg：不要为了编辑内容而打开另一个页面，应该直接在上下文中实现编辑。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#页内编辑"
 	  }, "页内编辑"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#利用拖放"
 	  }, "利用拖放"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#直接选择（敬请期待）"
 	  }, ["span", {
 	    "class": "waiting"

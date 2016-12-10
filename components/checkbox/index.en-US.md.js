@@ -1,6 +1,6 @@
-webpackJsonp([174,201],{
+webpackJsonp([177,204],{
 
-/***/ 1443:
+/***/ 713:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([174,201],{
 	    "filename": "components/checkbox/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Checkbox"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "checked"], ["td", "Specifies whether the checkbox is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "Specifies the initial state: whether or not the checkbox is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "onChange"], ["td", "The callback function that is triggered when the state changes."], ["td", "Function(e:Event)"], ["td", "-"]]]], ["h3", "Checkbox Group"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "defaultValue"], ["td", "Default selected value"], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "value"], ["td", "Used for setting the currently selected value."], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "options"], ["td", "Specifies options"], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "onChange"], ["td", "The callback function that is triggered when the state changes."], ["td", "Function(checkedValue)"], ["td", "-"]]]]]

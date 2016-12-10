@@ -1,6 +1,6 @@
-webpackJsonp([183,201],{
+webpackJsonp([186,204],{
 
-/***/ 1405:
+/***/ 675:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([183,201],{
 	    "filename": "components/button/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["p", "通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：", ["code", "type"], " -> ", ["code", "shape"], " -> ", ["code", "size"], " -> ", ["code", "loading"], " -> ", ["code", "disabled"]], ["p", "按钮的属性说明如下："], ["table", ["thead", ["tr", ["th", "属性"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "type"], ["td", "设置按钮类型，可选值为 ", ["code", "primary"], " ", ["code", "ghost"], " ", ["code", "dashed"], " 或者不设"], ["td", "string"], ["td", "-"]], ["tr", ["td", "htmlType"], ["td", "设置 ", ["code", "button"], " 原生的 ", ["code", "type"], " 值，可选值请参考 ", ["a", {

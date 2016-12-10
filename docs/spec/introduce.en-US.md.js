@@ -1,6 +1,6 @@
-webpackJsonp([69,201],{
+webpackJsonp([69,204],{
 
-/***/ 1774:
+/***/ 1047:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -90,12 +90,16 @@ webpackJsonp([69,201],{
 	    "src": "https://os.alipayobjects.com/rmsportal/mgesTPFxodmIwpi.png"
 	  }]], ["p", "In the development process of background applications, many different design specs and implementations would be involved, which might cause designers and developers difficulties and duplication and reduce the efficiency of development. After massive project practice and summaries, Ant Design, a design language for background applications, is refined by Ant UED Team, which aims to uniform the user interface specs for internal background projects, lower the unnecessary cost of design differences and implementation and liberate the resources of design and front-end development."], ["p", "Ant Design, created specially for internal product design, is committed to improving the experience of users and product designers. User interface designers and user experience designers, collectively, are considered as product designers, and the boundaries of product managers, interaction designers, visual designers, front-end developers and develop engineers are blurred. Taking advantage of unitary specifications, Ant Design makes design and prototype more simple and accessible for all project members, which comprehensively  promotes experience and development efficiency of background applications and products."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Guidelines-and-Resources"
 	  }, "Guidelines and Resources"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Front-end-Implementation"
 	  }, "Front-end Implementation"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Who's-using-Ant-Design"
 	  }, "Who's using Ant Design"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#How-to-Contribute"
 	  }, "How to Contribute"]]]
 	};

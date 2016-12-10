@@ -1,6 +1,6 @@
-webpackJsonp([196,201],{
+webpackJsonp([199,204],{
 
-/***/ 1367:
+/***/ 637:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([196,201],{
 	    "filename": "components/alert/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "type"], ["td", "Type of Alert styles, options:", ["code", "success"], ", ", ["code", "info"], ", ", ["code", "warning"], ", ", ["code", "error"]], ["td", "String"], ["td", ["code", "info"]]], ["tr", ["td", "closable"], ["td", "Whether Alert can be closed"], ["td", "Boolean"], ["td", "-"]], ["tr", ["td", "closeText"], ["td", "Close text to show"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "message"], ["td", "Content of Alert"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "description"], ["td", "Additional content of Alert"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "onClose"], ["td", "Callback when close Alert"], ["td", "Function"], ["td", "-"]], ["tr", ["td", "showIcon"], ["td", "Whether to show icon"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "banner"], ["td", "Whether to show as banner"], ["td", "Boolean"], ["td", "false"]]]]]

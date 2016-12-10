@@ -1,6 +1,6 @@
-webpackJsonp([173,201],{
+webpackJsonp([176,204],{
 
-/***/ 1444:
+/***/ 714:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([173,201],{
 	    "filename": "components/checkbox/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Checkbox"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "checked"], ["td", "指定当前是否选中"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "初始是否选中"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "onChange"], ["td", "变化时回调函数"], ["td", "Function(e:Event)"], ["td", "-"]], ["tr", ["td", "indeterminate"], ["td", "设置 indeterminate 状态，只负责样式控制"], ["td", "Boolean"], ["td", "false"]]]], ["h3", "Checkbox Group"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "defaultValue"], ["td", "默认选中的选项"], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "value"], ["td", "指定选中的选项"], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "options"], ["td", "指定可选项"], ["td", "Array"], ["td", "[]"]], ["tr", ["td", "onChange"], ["td", "变化时回调函数"], ["td", "Function(checkedValue)"], ["td", "-"]]]]]

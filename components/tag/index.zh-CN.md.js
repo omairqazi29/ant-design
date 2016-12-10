@@ -1,6 +1,6 @@
-webpackJsonp([117,201],{
+webpackJsonp([120,204],{
 
-/***/ 1691:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([117,201],{
 	    "filename": "components/tag/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Tag"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "color"], ["td", "标签背景色"], ["td", "string"], ["td", "-"]], ["tr", ["td", "closable"], ["td", "标签是否可以关闭"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "onClose"], ["td", "关闭时的回调"], ["td", "(e) => void"], ["td", "-"]], ["tr", ["td", "afterClose"], ["td", "关闭动画完成后的回调"], ["td", "() => void"], ["td", "-"]]]], ["h3", "Tag.CheckableTag"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "checked"], ["td", "设置标签的选中状态"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "onChange"], ["td", "点击标签时触发的回调"], ["td", "(checked) => void"], ["td", "-"]]]]]

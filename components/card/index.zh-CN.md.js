@@ -1,6 +1,6 @@
-webpackJsonp([179,201],{
+webpackJsonp([182,204],{
 
-/***/ 1420:
+/***/ 690:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26,13 +26,15 @@ webpackJsonp([179,201],{
 	    "filename": "components/card/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>卡片标题<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>卡片内容<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Card</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>卡片标题<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>卡片内容<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Card</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<Card title=\"卡片标题\">卡片内容</Card>"]], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "title"], ["td", "卡片标题"], ["td", "React.Element"], ["td", "-"]], ["tr", ["td", "extra"], ["td", "卡片右上角的操作区域"], ["td", "React.Element"], ["td", "-"]], ["tr", ["td", "bordered"], ["td", "是否有边框"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "bodyStyle"], ["td", "内容区域自定义样式"], ["td", "Object"], ["td", "-"]]]]]
 	};
 

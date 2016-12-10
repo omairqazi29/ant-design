@@ -1,6 +1,6 @@
-webpackJsonp([49,201],{
+webpackJsonp([49,204],{
 
-/***/ 1799:
+/***/ 1072:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -73,16 +73,22 @@ webpackJsonp([49,201],{
 	  },
 	  "description": ["section", ["p", "良好的排版规范能大大提升用户的视觉体验。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#行高和段落"
 	  }, "行高和段落"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#标点和空格"
 	  }, "标点和空格"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#文字背景"
 	  }, "文字背景"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#对齐"
 	  }, "对齐"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#文案长度"
 	  }, "文案长度"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#层级引导"
 	  }, "层级引导"]]]
 	};

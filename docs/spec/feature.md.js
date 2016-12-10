@@ -1,6 +1,6 @@
-webpackJsonp([71,201],{
+webpackJsonp([71,204],{
 
-/***/ 1772:
+/***/ 1045:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -110,10 +110,13 @@ webpackJsonp([71,201],{
 	    "src": "https://os.alipayobjects.com/rmsportal/uSOjjlCRjRIhtIY.png"
 	  }], ["h5", "幸福"], ["div", "不苛求简单，但是力求让『用户』和『设计者』流畅的完成目标，并带着成功和满足离开。"]]], ["style", "\n.features {\n  padding: 0 40px;\n  font-size: 12px;\n}\n.features h5 {\n  font-size: 14px;\n  margin-top: 16px;\n}\n@media only screen and (min-width: 320px) and (max-width: 767px) {\n  .features {\n    width: 100%;\n    text-align: center;\n    margin-bottom: 20px;;\n  }\n  .features img {\n    width: 80%;\n  }\n}\n"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#微小"
 	  }, "微小"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#确定"
 	  }, "确定"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#幸福"
 	  }, "幸福"]]]
 	};

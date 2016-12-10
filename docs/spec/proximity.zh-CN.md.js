@@ -1,6 +1,6 @@
-webpackJsonp([58,201],{
+webpackJsonp([58,204],{
 
-/***/ 1790:
+/***/ 1063:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47,8 +47,10 @@ webpackJsonp([58,201],{
 	  },
 	  "description": ["section", ["p", "如果信息之间关联性越高，它们之间的距离就应该越接近，也越像一个视觉单元；反之，则它们的距离就应该越远，也越像多个视觉单元。亲密性的根本目的是实现组织性，让用户对页面结构和信息层次一目了然。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#纵向间距关系"
 	  }, "纵向间距关系"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#横向间距关系"
 	  }, "横向间距关系"]]]
 	};

@@ -1,6 +1,6 @@
-webpackJsonp([168,201],{
+webpackJsonp([171,204],{
 
-/***/ 1469:
+/***/ 739:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([168,201],{
 	    "filename": "components/dropdown/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Dropdown"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "trigger"], ["td", "the trigger mode which can execute the drop-down action"], ["td", "['click']", " or ", "['hover']"], ["td", "['hover']"]], ["tr", ["td", "overlay"], ["td", "the dropdown menu"], ["td", ["a", {

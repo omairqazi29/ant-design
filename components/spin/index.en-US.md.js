@@ -1,6 +1,6 @@
-webpackJsonp([128,201],{
+webpackJsonp([131,204],{
 
-/***/ 1632:
+/***/ 902:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([128,201],{
 	    "filename": "components/spin/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Type"], ["th", "Default"], ["th", "Description"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "Size of dot in spin component, available in ", ["code", "small"], ", ", ["code", "default"], " and ", ["code", "large"], "."]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "Use in embedded mode, to modify loading state."]], ["tr", ["td", "tip"], ["td", "string"], ["td", "None"], ["td", "Customize description content"]]]]]

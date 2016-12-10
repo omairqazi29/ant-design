@@ -1,6 +1,6 @@
-webpackJsonp([91,201],{
+webpackJsonp([94,204],{
 
-/***/ 1751:
+/***/ 1021:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34,13 +34,13 @@ webpackJsonp([91,201],{
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
 	  }, "example"], " as a playground."], ["h3", "1) Using 'theme' property in package.theme (recommended way)"], ["p", "Specify the ", ["code", "theme"], " property in ", ["code", "package.json"], " file, whose value can be either an object or the path to a JS file that contains the custom values of specific variables:"], ["ul", ["li", ["p", "example of directly specifying the custom values as an object:"]]], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token string\" >\"theme\"</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token string\" >\"@primary-color\"</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >\"#1DA57A\"</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>"
+	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"@primary-color\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"#1DA57A\"</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>"
 	  }, ["code", "\"theme\": {\n  \"@primary-color\": \"#1DA57A\",\n},"]], ["ul", ["li", ["p", "example of specifying a ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/blob/master/examples/customize-antd-theme/theme.js"
 	  }, "file path"], " to a JS file:"]]], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token string\" >\"theme\"</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >\"./theme.js\"</span><span class=\"token punctuation\" >,</span>"
+	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"./theme.js\"</span><span class=\"token punctuation\">,</span>"
 	  }, ["code", "\"theme\": \"./theme.js\","]], ["p", "This approach is working only when using ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-tool/atool-build"
@@ -58,16 +58,18 @@ webpackJsonp([91,201],{
 	    "href": "https://github.com/ant-tool/atool-build/blob/a4b3e3eec4ffc09b0e2352d7f9d279c4c28fdb99/src/getWebpackCommonConfig.js#L131-L138"
 	  }, "atool-build "], " does."], ["p", "Note: Importing less style is necessary. Please specify ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " to be ", ["code", "true"], "."], ["h3", "2) Overriding Less variables (alternative way)"], ["p", "Override variables via less definition files."], ["p", "Create a standalone less file like the one below, and import it in your project."], ["pre", {
 	    "lang": "css",
-	    "highlighted": "<span class=\"token atrule\" ><span class=\"token rule\" >@import</span> <span class=\"token string\" >\"~antd/dist/antd.less\"</span><span class=\"token punctuation\" >;</span></span>   // import official less entry file\n<span class=\"token atrule\" ><span class=\"token rule\" >@import</span> <span class=\"token string\" >\"your-theme-file.less\"</span><span class=\"token punctuation\" >;</span></span>   // override variables here"
+	    "highlighted": "<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"~antd/dist/antd.less\"</span><span class=\"token punctuation\">;</span></span>   // import official less entry file\n<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"your-theme-file.less\"</span><span class=\"token punctuation\">;</span></span>   // override variables here"
 	  }, ["code", "@import \"~antd/dist/antd.less\";   // import official less entry file\n@import \"your-theme-file.less\";   // override variables here"]], ["p", "Note: This way will load the styles of all components, regardless of your demand, which cause ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " not working."]],
 	  "meta": {
 	    "order": 4,
-	    "title": "Customize theme",
+	    "title": "Customize Theme",
 	    "filename": "docs/react/customize-theme.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Less-variables"
 	  }, "Less variables"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#How-to-use-it"
 	  }, "How to use it"]]]
 	};

@@ -1,6 +1,6 @@
-webpackJsonp([165,201],{
+webpackJsonp([168,204],{
 
-/***/ 1484:
+/***/ 754:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18,7 +18,7 @@ webpackJsonp([165,201],{
 	module.exports = {
 	  "content": ["section", ["p", "具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。"], ["h2", "表单"], ["p", "我们为 ", ["code", "form"], " 提供了以下两种排列方式："], ["ul", ["li", ["p", "水平排列：可以实现 ", ["code", "label"], " 标签和表单控件的水平排列；"]], ["li", ["p", "行内排列：使其表现为 ", ["code", "inline-block"], " 级别的控件。"]]], ["h2", "表单域"], ["p", "表单一定会包含表单域，表单域可以是输入控件，标准表单域，标签，下拉菜单，文本域等。"], ["p", "这里我们封装了表单域 ", ["code", "<Form.Item />"], " 。"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token operator\" >&lt;</span>Form<span class=\"token punctuation\" >.</span>Item <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n  <span class=\"token punctuation\" >{</span>children<span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Form.Item</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token operator\">&lt;</span>Form<span class=\"token punctuation\">.</span>Item <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>props<span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n  <span class=\"token punctuation\">{</span>children<span class=\"token punctuation\">}</span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Form.Item</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<Form.Item {...props}>\n  {children}\n</Form.Item>"]], ["blockquote", ["p", "注：标准表单中一律使用大号控件。"]]],
 	  "meta": {
 	    "category": "Components",
@@ -29,10 +29,13 @@ webpackJsonp([165,201],{
 	    "filename": "components/form/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#表单"
 	  }, "表单"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#表单域"
 	  }, "表单域"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Form"], ["p", ["strong", "更多示例参考 ", ["a", {
@@ -40,7 +43,7 @@ webpackJsonp([165,201],{
 	    "href": "http://react-component.github.io/form/"
 	  }, "rc-form"]], "。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "form"], ["td", "经 ", ["code", "Form.create()"], " 包装过的组件会自带 ", ["code", "this.props.form"], " 属性，直接传给 Form 即可。1.7.0 之后无需设置"], ["td", "object"], ["td", "无"]], ["tr", ["td", "vertical"], ["td", "垂直排列布局"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "horizontal"], ["td", "水平排列布局"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "inline"], ["td", "行内排列布局"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "onSubmit"], ["td", "数据验证成功后回调事件"], ["td", "Function(e:Event)"], ["td"]]]], ["h3", "Form.create(options)"], ["p", "使用方式如下："], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >CustomizedForm</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span>\n\nCustomizedForm <span class=\"token operator\" >=</span> Form<span class=\"token punctuation\" >.</span><span class=\"token function\" >create</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >(</span>CustomizedForm<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\">class</span> <span class=\"token class-name\">CustomizedForm</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span>\n\nCustomizedForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>CustomizedForm<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "class CustomizedForm extends React.Component {}\n\nCustomizedForm = Form.create({})(CustomizedForm);"]], ["p", ["code", "options"], " 的配置项如下。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"]]], ["tbody", ["tr", ["td", "onFieldsChange"], ["td", "当 ", ["code", "Form.Item"], " 子节点的值发生改变时触发，可以把对应的值转存到 Redux store"], ["td", "Function(props, fields)"]], ["tr", ["td", "mapPropsToFields"], ["td", "把 props 转为对应的值，可用于把 Redux store 中的值读出"], ["td", "Function(props): Object{ fieldName: Object{ value } }"]]]], ["p", "经过 ", ["code", "Form.create"], " 包装的组件将会自带 ", ["code", "this.props.form"], " 属性，", ["code", "this.props.form"], " 提供的 API 如下："], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"]]], ["tbody", ["tr", ["td", "getFieldsValue"], ["td", "获取一组输入控件的值，如不传入参数，则获取全部组件的值"], ["td", "Function([fieldNames: string[]])"]], ["tr", ["td", "getFieldValue"], ["td", "获取一个输入控件的值"], ["td", "Function(fieldName: string)"]], ["tr", ["td", "setFieldsValue"], ["td", "设置一组输入控件的值（注意：不要在 ", ["code", "componentWillReceiveProps"], " 内使用，否则会导致死循环，", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/2985"

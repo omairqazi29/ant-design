@@ -1,6 +1,6 @@
-webpackJsonp([84,201],{
+webpackJsonp([85,204],{
 
-/***/ 1758:
+/***/ 1030:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,13 +21,13 @@ webpackJsonp([84,201],{
 	    "href": "http://react-component.github.io/badgeboard/"
 	  }, "React Component"], " 基础上精心封装的高质量 UI 组件。"]], ["li", ["p", "基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。"]]], ["h2", "安装"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd"
 	  }, ["code", "$ npm install antd"]], ["h2", "示例"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> DatePicker <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DatePicker</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "引入样式："], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token string\" >'antd/dist/antd.css'</span><span class=\"token punctuation\" >;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/dist/antd.css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
 	  }, ["code", "import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'"]], ["p", "以下两种方法都可以达到按需加载的目的："], ["ul", ["li", ["p", ["code", "import DatePicker from 'antd/lib/date-picker'"]]], ["li", ["p", "配合插件 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import"
@@ -161,22 +161,31 @@ webpackJsonp([84,201],{
 	    "src": "https://t.alipayobjects.com/images/rmsweb/T16xRhXkxbXXXXXXXX.svg"
 	  }]], ["style", "\n.pic-plus > * {\n  display: inline-block!important;\n  vertical-align: middle;\n}\n.pic-plus span {\n  font-size: 30px;\n  color: #aaa;\n  margin: 0 20px;\n}\n"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#特性"
 	  }, "特性"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#安装"
 	  }, "安装"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#示例"
 	  }, "示例"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#版本"
 	  }, "版本"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#浏览器支持"
 	  }, "浏览器支持"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#链接"
 	  }, "链接"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#谁在使用"
 	  }, "谁在使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#如何贡献"
 	  }, "如何贡献"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#社区互助"
 	  }, "社区互助"]]]
 	};

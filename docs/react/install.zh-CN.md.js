@@ -1,6 +1,6 @@
-webpackJsonp([86,201],{
+webpackJsonp([87,204],{
 
-/***/ 1756:
+/***/ 1028:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,7 +25,7 @@ webpackJsonp([86,201],{
 	    "alt": "npm package"
 	  }]]], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd --save"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
 	  }, ["code", "$ npm install antd --save"]], ["p", "你可以订阅：", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/releases.atom"
@@ -38,7 +38,7 @@ webpackJsonp([86,201],{
 	    "alt": null
 	  }]]], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd@beta --save"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd@beta --save"
 	  }, ["code", "$ npm install antd@beta --save"]], ["h2", "浏览器引入"], ["p", ["a", {
 	    "title": null,
 	    "href": "https://cdnjs.com/libraries/antd"
@@ -81,7 +81,7 @@ webpackJsonp([86,201],{
 	    "href": "https://github.com/ant-design/antd-init"
 	  }, "脚手架工具"], "，可以安装到全局直接使用。"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd-init -g"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd-init -g"
 	  }, ["code", "$ npm install antd-init -g"]], ["p", "在空目录运行 ", ["code", "antd-init"], " 可以初始化一个 antd 的前端应用。"], ["p", "最新的脚手架结构可以到这里 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/tree/master/boilerplates"
@@ -95,10 +95,13 @@ webpackJsonp([86,201],{
 	    "filename": "docs/react/install.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#使用-npm-安装"
 	  }, "使用 npm 安装"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#浏览器引入"
 	  }, "浏览器引入"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#开发工具"
 	  }, "开发工具"]]]
 	};

@@ -1,6 +1,6 @@
-webpackJsonp([161,201],{
+webpackJsonp([164,204],{
 
-/***/ 1497:
+/***/ 767:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([161,201],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _IconSet = __webpack_require__(252);
+	var _IconSet = __webpack_require__(230);
 
 	var _IconSet2 = _interopRequireDefault(_IconSet);
 
@@ -22,10 +22,10 @@ webpackJsonp([161,201],{
 	module.exports = {
 	  "content": ["article", ["p", "语义化的矢量图形。"], ["h2", "图标的命名规范"], ["p", "我们为每个图标赋予了语义化的命名，命名规则如下:"], ["ul", ["li", ["p", "实心和描线图标保持同名，用 ", ["code", "-o"], " 来区分，比如 ", ["code", "question-circle"], "(实心) 和 ", ["code", "question-circle-o"], "(描线)；"]], ["li", ["p", "命名顺序：", ["code", "[icon名]-[形状可选]-[描线与否]-[方向可选]"], "。"]]], ["h2", "如何使用"], ["p", "使用 ", ["code", "<Icon />"], " 标签声明组件，指定图标对应的 type 属性，示例代码如下:"], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>link<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>link<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>"
 	  }, ["code", "<Icon type=\"link\" />"]], ["p", "最终会渲染为："], ["pre", {
 	    "lang": "html",
-	    "highlighted": "<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>i</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>anticon anticon-${type}<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>i</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>i</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>anticon anticon-${type}<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>i</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<i class=\"anticon anticon-${type}\"></i>"]], ["h2", "本地部署"], ["p", "图标组件使用 ", ["a", {
 	    "title": null,
 	    "href": "http://iconfont.cn"
@@ -48,14 +48,19 @@ webpackJsonp([161,201],{
 	    "filename": "components/icon/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#图标的命名规范"
 	  }, "图标的命名规范"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#如何使用"
 	  }, "如何使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#本地部署"
 	  }, "本地部署"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#图标列表"
 	  }, "图标列表"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Props"
 	  }, "Props"]]]
 	};

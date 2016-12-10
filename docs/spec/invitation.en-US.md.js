@@ -1,6 +1,6 @@
-webpackJsonp([67,201],{
+webpackJsonp([67,204],{
 
-/***/ 1776:
+/***/ 1049:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -73,8 +73,10 @@ webpackJsonp([67,201],{
 	  },
 	  "description": ["section", ["p", "A common problem with many of these rich interactions (e.g. Drag and Drop, Inline Editing, and Contextual Tools) is their lack of discoverability. Providing an invitation to the user is one of the keys to successful interactive interfaces."], ["p", "Invitations are the prompts and cues that lead users through an interaction. They often include just-in-time tips or visual affordances that hint at what will happen next in the interface."], ["blockquote", ["p", ["strong", " Signifiers "], " are signals, communication devices. These signs tell you about the possible actions; what to do, and where to do it. Signifiers are often visible, audible or tangible, from the Design of Everyday Things."], ["p", ["strong", " Affordances "], " are the relationships (read: possible actions) between an object and an entity (most often a person). The presence of an affordance is determined by the properties of the object and of the abilities of the entity who's interacting with the object, from the Design of Everyday Things."]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Static-Invitations"
 	  }, "Static Invitations"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Dynamic-Invitations"
 	  }, "Dynamic Invitations"]]]
 	};

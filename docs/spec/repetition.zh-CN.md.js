@@ -1,6 +1,6 @@
-webpackJsonp([54,201],{
+webpackJsonp([54,204],{
 
-/***/ 1794:
+/***/ 1067:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40,6 +40,7 @@ webpackJsonp([54,201],{
 	  },
 	  "description": ["section", ["p", "相同的元素在整个界面中不断重复，不仅可以有效降低用户的学习成本，也可以帮助用户识别出这些元素之间的关联性。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#重复元素"
 	  }, "重复元素"]]]
 	};

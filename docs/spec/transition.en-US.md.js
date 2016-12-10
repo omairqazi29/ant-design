@@ -1,6 +1,6 @@
-webpackJsonp([51,201],{
+webpackJsonp([51,204],{
 
-/***/ 1797:
+/***/ 1070:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62,12 +62,16 @@ webpackJsonp([51,201],{
 	  },
 	  "description": ["section", ["p", "Our Gray Matter are wired to react to dynamic things like movement,shape change and colour change. Transitions smooth out the jarring world of the Web, making changes appear more natural. The main purpose for Transitions is to provide an engaging interface and reinforce communication."], ["ul", ["li", ["p", "Adding: The added elements should inform the users how to use, and the modified elements should be recognized."]], ["li", ["p", "Receding: The irrelevant page elements should be removed properly."]], ["li", ["p", "Normal: The elements without any change on the page can be safely ignored."]]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Maintain-Context-While-Changing-Views"
 	  }, "Maintain Context While Changing Views"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Explain-What-Just-Happened"
 	  }, "Explain What Just Happened"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Improve-Perceived-Performance"
 	  }, "Improve Perceived Performance"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Natural-Motion"
 	  }, "Natural Motion"]]]
 	};

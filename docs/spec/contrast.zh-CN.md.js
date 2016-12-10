@@ -1,6 +1,6 @@
-webpackJsonp([73,201],{
+webpackJsonp([74,204],{
 
-/***/ 1770:
+/***/ 1042:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63,10 +63,13 @@ webpackJsonp([73,201],{
 	  },
 	  "description": ["section", ["p", "对比是增加视觉效果最有效方法之一，同时也能在不同元素之间建立一种有组织的层次结构，让用户快速识别关键信息。"], ["blockquote", ["p", "注：要实现有效的对比，对比就必须强烈，切不可畏畏缩缩。"]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#主次关系对比"
 	  }, "主次关系对比"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#总分关系对比"
 	  }, "总分关系对比"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#状态关系对比"
 	  }, "状态关系对比"]]]
 	};

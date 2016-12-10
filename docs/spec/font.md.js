@@ -1,6 +1,6 @@
-webpackJsonp([70,201],{
+webpackJsonp([70,204],{
 
-/***/ 1773:
+/***/ 1046:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,7 +24,7 @@ webpackJsonp([70,201],{
 	    "width": "100%"
 	  }]]]], ["p", "字体家族 css 代码如下："], ["pre", {
 	    "lang": "css",
-	    "highlighted": "<span class=\"token property\" >font-family</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >\"Helvetica Neue\"</span>,Helvetica,<span class=\"token string\" >\"PingFang SC\"</span>,<span class=\"token string\" >\"Hiragino Sans GB\"</span>,<span class=\"token string\" >\"Microsoft YaHei\"</span>,<span class=\"token string\" >\"微软雅黑\"</span>,Arial,sans-serif<span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token property\">font-family</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"Helvetica Neue\"</span>,Helvetica,<span class=\"token string\">\"PingFang SC\"</span>,<span class=\"token string\">\"Hiragino Sans GB\"</span>,<span class=\"token string\">\"Microsoft YaHei\"</span>,<span class=\"token string\">\"微软雅黑\"</span>,Arial,sans-serif<span class=\"token punctuation\">;</span>"
 	  }, ["code", "font-family: \"Helvetica Neue\",Helvetica,\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"微软雅黑\",Arial,sans-serif;"]], ["h2", "字体使用规范"], ["div", {
 	    "class": "ant-row"
 	  }, ["div", {
@@ -122,8 +122,10 @@ webpackJsonp([70,201],{
 	  },
 	  "description": ["section", ["p", "跨平台的字体设定，力求在各个操作系统下都有最佳展示效果。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#字体家族"
 	  }, "字体家族"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#字体使用规范"
 	  }, "字体使用规范"]]]
 	};

@@ -1,6 +1,6 @@
-webpackJsonp([199,201],{
+webpackJsonp([202,204],{
 
-/***/ 1354:
+/***/ 624:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,28 @@ webpackJsonp([199,201],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "提升网站首页在移动端访问的体验。"]], ["li", ["p", "补充从 ", ["code", "1.x"], " 升级到 ", ["code", "2.x"], " 时的组件改动警告提示。", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "优化 Menu 已选择项的样式。"]], ["li", ["p", "修复 Mention 不能响应 ", ["code", "onFocus"], " 和 ", ["code", "onBlur"], " 的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4163"
+	  }, "#4163"]]], ["li", ["p", "修复 ", ["code", "disabled"], " 和 ", ["code", "checked"], " 的 Radio 之间会多一条阴影的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4114"
+	  }, "#4114"], " @jdz321"]], ["li", ["p", "修复 RangePicker、TimePicker、Calendar 设置 Moment 的 ", ["code", "defaultValue"], " 和 ", ["code", "value"], " 时也会报错的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4147"
+	  }, "#4147"]]], ["li", ["p", "修复 Affix 在开启动画的 Tabs 里使用时会消失的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3943"
+	  }, "#3943"]]], ["li", ["p", "修复 Cascader 手动选择和搜索选择时 ", ["code", "onChange"], " 接收到的 ", ["code", "selectedOptions"], " 不同的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4096"
+	  }, "#4096"]]], ["li", ["p", "修复 Tabs 页增加到一定数量时会产生偏移的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3637"
+	  }, "#3637"]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "居中对齐表头分组的父表头。"]], ["li", ["p", "修正设置 filterDropdownVisible 时不生效的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4162"
+	  }, "#4162"]]]]]], ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "提升网站首页在移动端访问的体验。"]], ["li", ["p", "补充从 ", ["code", "1.x"], " 升级到 ", ["code", "2.x"], " 时的组件改动警告提示。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/pull/4028"
 	  }, "#4028"]]], ["li", ["p", "现在 ToolTip、Popover、Popconfirm 支持直接包裹文本节点和多个节点。", ["a", {
@@ -450,7 +471,7 @@ webpackJsonp([199,201],{
 	    "href": "http://momentjs.com/"
 	  }, "moment"], "。"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >- &lt;TimePicker defaultValue=\"12:08:23\" /></span>\n<span class=\"token inserted\" >+ &lt;TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} /></span>\n\n<span class=\"token deleted\" >- &lt;DatePicker defaultValue=\"2015/01/01\" /></span>\n<span class=\"token inserted\" >+ &lt;DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} /></span>\n\n<span class=\"token deleted\" >- &lt;Calendar defaultValue={new Date('2010-10-10')} /></span>\n<span class=\"token inserted\" >+ &lt;Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} /></span>"
+	    "highlighted": "<span class=\"token deleted\">- &lt;TimePicker defaultValue=\"12:08:23\" /></span>\n<span class=\"token inserted\">+ &lt;TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} /></span>\n\n<span class=\"token deleted\">- &lt;DatePicker defaultValue=\"2015/01/01\" /></span>\n<span class=\"token inserted\">+ &lt;DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} /></span>\n\n<span class=\"token deleted\">- &lt;Calendar defaultValue={new Date('2010-10-10')} /></span>\n<span class=\"token inserted\">+ &lt;Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} /></span>"
 	  }, ["code", "- <TimePicker defaultValue=\"12:08:23\" />\n+ <TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} />\n\n- <DatePicker defaultValue=\"2015/01/01\" />\n+ <DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} />\n\n- <Calendar defaultValue={new Date('2010-10-10')} />\n+ <Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} />"]]], ["li", ["p", "时间类组件的 ", ["code", "onChange"], " 和 ", ["code", "onPanelChange"], " 及其他回调函数中为 ", ["code", "Date/GregorianCalendar"], " 类型的参数，均修改为 moment 类型，两者 API 有所不同，但功能基本一致，请对照 ", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/docs/"
@@ -465,7 +486,7 @@ webpackJsonp([199,201],{
 	    "href": "https://github.com/ant-design/ant-design/issues/3082"
 	  }, "#3082"], "："], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token function\" >handleSubmit</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >const</span> values <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span>form<span class=\"token punctuation\" >.</span><span class=\"token function\" >getFieldsValue</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  values<span class=\"token punctuation\" >.</span>date <span class=\"token operator\" >=</span> values<span class=\"token punctuation\" >.</span>date<span class=\"token punctuation\" >.</span><span class=\"token function\" >format</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'YYYY-MM-DD HH:mm:ss'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span> <span class=\"token comment\" spellcheck=\"true\">// 或其它格式</span>\n  <span class=\"token keyword\" >const</span> data <span class=\"token operator\" >=</span> JSON<span class=\"token punctuation\" >.</span><span class=\"token function\" >stringify</span><span class=\"token punctuation\" >(</span>values<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token comment\" spellcheck=\"true\">// 发送 data 到服务器</span>\n<span class=\"token punctuation\" >}</span>"
+	    "highlighted": "<span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">const</span> values <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">getFieldsValue</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  values<span class=\"token punctuation\">.</span>date <span class=\"token operator\">=</span> values<span class=\"token punctuation\">.</span>date<span class=\"token punctuation\">.</span><span class=\"token function\">format</span><span class=\"token punctuation\">(</span><span class=\"token string\">'YYYY-MM-DD HH:mm:ss'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// 或其它格式</span>\n  <span class=\"token keyword\">const</span> data <span class=\"token operator\">=</span> JSON<span class=\"token punctuation\">.</span><span class=\"token function\">stringify</span><span class=\"token punctuation\">(</span>values<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token comment\" spellcheck=\"true\">// 发送 data 到服务器</span>\n<span class=\"token punctuation\">}</span>"
 	  }, ["code", "handleSubmit() {\n  const values = this.props.form.getFieldsValue();\n  values.date = values.date.format('YYYY-MM-DD HH:mm:ss'); // 或其它格式\n  const data = JSON.stringify(values);\n  // 发送 data 到服务器\n}"]]], ["li", ["p", "时间类组件与表单校验一起使用时，", ["code", "type: 'date'"], " 改为 ", ["code", "type: 'object'"], "。"]], ["li", ["p", "时间类组件的 ", ["code", "format"], " 属性也发生了变化，从 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/yiminghe/gregorian-calendar-format#api"
@@ -480,13 +501,13 @@ webpackJsonp([199,201],{
 	    "href": "http://ant.design/components/table/#components-table-demo-fixed-columns"
 	  }, "固定列"], "。"]], ["li", ["p", "Popover 移除 ", ["code", "overlay"], " ，请使用 ", ["code", "content"], "。"]]], ["p", "以下变化升级后旧代码仍然能正常运行，但是控制台会出现警告提示，建议按提示进行修改。"], ["ul", ["li", ["p", "Form 废弃 ", ["code", "getFieldProps"], "，请使用 ", ["code", "getFieldDecorator"], "："], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >-  &lt;Input placeholder=\"text\" {...getFieldProps('userName', { ... })} /></span>\n<span class=\"token inserted\" >+  {getFieldDecorator('userName', { ... })(</span>\n<span class=\"token inserted\" >+    &lt;Input placeholder=\"text\" /></span>\n<span class=\"token inserted\" >+  )}</span>"
+	    "highlighted": "<span class=\"token deleted\">-  &lt;Input placeholder=\"text\" {...getFieldProps('userName', { ... })} /></span>\n<span class=\"token inserted\">+  {getFieldDecorator('userName', { ... })(</span>\n<span class=\"token inserted\">+    &lt;Input placeholder=\"text\" /></span>\n<span class=\"token inserted\">+  )}</span>"
 	  }, ["code", "-  <Input placeholder=\"text\" {...getFieldProps('userName', { ... })} />\n+  {getFieldDecorator('userName', { ... })(\n+    <Input placeholder=\"text\" />\n+  )}"]], ["p", "相关讨论可以看 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/1533"
 	  }, "#1533"], "。"]], ["li", ["p", "DatePicker 废弃 ", ["code", "toggleOpen"], "，请使用 ", ["code", "onOpenChange"], "："], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >- handleToggleOpen({ open }) {</span>\n<span class=\"token inserted\" >+ handleOpenChange(open) {</span>\n  ...\n}"
+	    "highlighted": "<span class=\"token deleted\">- handleToggleOpen({ open }) {</span>\n<span class=\"token inserted\">+ handleOpenChange(open) {</span>\n  ...\n}"
 	  }, ["code", "- handleToggleOpen({ open }) {\n+ handleOpenChange(open) {\n  ...\n}"]]]], ["h3", "2.x Bug 修复"], ["ul", ["li", ["p", "修复 Dropdown.Button ", ["code", "disabled"], " 属性无效的问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3070"
@@ -558,10 +579,10 @@ webpackJsonp([199,201],{
 	    "href": "https://github.com/ant-design/babel-plugin-import"
 	  }, "babel-plugin-import"], "，标志着该插件将作为一个通用的按需加载方案存在，而不再是 ", ["code", "antd"], " 专有。"], ["p", "请更新 ", ["code", "package.json"], "："], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "{\n  \"devDependencies\": {\n<span class=\"token deleted\" >-   \"babel-plugin-antd\": \"^0.x.x\",</span>\n<span class=\"token inserted\" >+   \"babel-plugin-import\": \"^1.0.0\",</span>\n  }\n}"
+	    "highlighted": "{\n  \"devDependencies\": {\n<span class=\"token deleted\">-   \"babel-plugin-antd\": \"^0.x.x\",</span>\n<span class=\"token inserted\">+   \"babel-plugin-import\": \"^1.0.0\",</span>\n  }\n}"
 	  }, ["code", "{\n  \"devDependencies\": {\n-   \"babel-plugin-antd\": \"^0.x.x\",\n+   \"babel-plugin-import\": \"^1.0.0\",\n  }\n}"]], ["p", "同时更新 ", ["code", ".babelrc"], " 或你在其它地方对其的配置："], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "{\n<span class=\"token deleted\" >-  \"plugins\": [[\"antd\", { style: \"css\" }]]</span>\n<span class=\"token inserted\" >+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]</span>\n}"
+	    "highlighted": "{\n<span class=\"token deleted\">-  \"plugins\": [[\"antd\", { style: \"css\" }]]</span>\n<span class=\"token inserted\">+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]</span>\n}"
 	  }, ["code", "{\n-  \"plugins\": [[\"antd\", { style: \"css\" }]]\n+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]\n}"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
@@ -576,7 +597,7 @@ webpackJsonp([199,201],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], " 查看 ", ["code", "0.x"], " 到 ", ["code", "1.x"], " 的 Change Log。"]],
 	  "meta": {
-	    "order": 5,
+	    "order": 6,
 	    "title": "更新日志",
 	    "toc": false,
 	    "timeline": true,
@@ -587,34 +608,52 @@ webpackJsonp([199,201],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.5.2"
+	  }, "2.5.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.1"
 	  }, "2.5.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.0"
 	  }, "2.5.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.3"
 	  }, "2.4.3"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.2"
 	  }, "2.4.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.1"
 	  }, "2.4.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.0"
 	  }, "2.4.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.2"
 	  }, "2.3.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.1"
 	  }, "2.3.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.0"
 	  }, "2.3.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.2.1"
 	  }, "2.2.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.2.0"
 	  }, "2.2.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.1.0"
 	  }, "2.1.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.0.1"
 	  }, "2.0.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.0.0"
 	  }, "2.0.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#1.11.4"
 	  }, "1.11.4"]]]
 	};

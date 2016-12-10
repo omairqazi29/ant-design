@@ -4276,7 +4276,7 @@ samp {
   box-shadow: none;
 }
 .ant-select-dropdown {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-sizing: border-box;
@@ -4784,6 +4784,7 @@ textarea.ant-input {
   position: relative;
   display: table;
   border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
 }
 .ant-input-group[class*="col-"] {

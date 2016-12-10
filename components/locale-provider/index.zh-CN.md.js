@@ -1,6 +1,6 @@
-webpackJsonp([155,201],{
+webpackJsonp([158,204],{
 
-/***/ 1517:
+/***/ 787:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,7 +21,7 @@ webpackJsonp([155,201],{
 	    "href": "https://facebook.github.io/react/docs/context.html"
 	  }, "context"], " 特性，只需在应用外围包裹一次即可全局生效。"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> enUS <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd/lib/locale-provider/en_US'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>\n\n<span class=\"token keyword\" >return</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>LocaleProvider</span> <span class=\"token attr-name\" >locale</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span>enUS<span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>App</span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>LocaleProvider</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> enUS <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/locale-provider/en_US'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token operator\">...</span>\n\n<span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LocaleProvider</span> <span class=\"token attr-name\">locale</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>enUS<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>LocaleProvider</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import enUS from 'antd/lib/locale-provider/en_US';\n\n...\n\nreturn <LocaleProvider locale={enUS}><App /></LocaleProvider>;"]], ["h3", "Add a language"], ["p", "We supply an English locale package. Other language users can create a locale package based on ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/blob/26b1f37392a278285aec6c573b99c6feea09e218/components/locale-provider/en_US.js"
@@ -44,8 +44,10 @@ webpackJsonp([155,201],{
 	    "filename": "components/locale-provider/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#使用"
 	  }, "使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "locale"], ["td", "语言包配置，语言包可到 ", ["code", "antd/lib/locale-provider/"], " 目录下寻找"], ["td", "Object"], ["td", "-"]]]]]

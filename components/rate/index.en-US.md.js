@@ -1,6 +1,6 @@
-webpackJsonp([134,201],{
+webpackJsonp([137,204],{
 
-/***/ 1604:
+/***/ 874:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([134,201],{
 	    "filename": "components/rate/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "count"], ["td", "star count"], ["td", "Number"], ["td", "5"]], ["tr", ["td", "value"], ["td", "current value"], ["td", "Number"], ["td", "-"]], ["tr", ["td", "defaultValue"], ["td", "default value"], ["td", "Number"], ["td", "0"]], ["tr", ["td", "onChange"], ["td", "callback"], ["td", "Function(value: Number)"], ["td", "-"]], ["tr", ["td", "allowHalf"], ["td", "whether to allow semi selection"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "disabled"], ["td", "read only, unable to interact"], ["td", "Boolean"], ["td", "false"]]]]]

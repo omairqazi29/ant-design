@@ -1,6 +1,6 @@
-webpackJsonp([85,201],{
+webpackJsonp([86,204],{
 
-/***/ 1757:
+/***/ 1029:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,25 +21,25 @@ webpackJsonp([85,201],{
 	    "href": "http://react-component.github.io/badgeboard/"
 	  }, "React Component"], "."]], ["li", ["p", "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."]]], ["h2", "Installation"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd"
 	  }, ["code", "$ npm install antd"]], ["h2", "Usage"], ["h3", "Use prebuilt bundle"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> DatePicker <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>\nReactDOM<span class=\"token punctuation\" >.</span><span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DatePicker</span> <span class=\"token punctuation\" >/></span></span><span class=\"token punctuation\" >,</span> mountNode<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "And import style manually:"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> <span class=\"token string\" >'antd/dist/antd.css'</span><span class=\"token punctuation\" >;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/dist/antd.css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
 	  }, ["code", "import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'"]], ["h3", "Use modularized antd"], ["ul", ["li", ["p", "Use ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import"
 	  }, "babel-plugin-import"], " (Recommended)"], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token comment\" spellcheck=\"true\">// .babelrc</span>\n<span class=\"token punctuation\" >{</span>\n  <span class=\"token string\" >\"plugins\"</span><span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >[</span><span class=\"token punctuation\" >[</span><span class=\"token string\" >\"import\"</span><span class=\"token punctuation\" >,</span> <span class=\"token punctuation\" >{</span> libraryName<span class=\"token punctuation\" >:</span> <span class=\"token string\" >\"antd\"</span><span class=\"token punctuation\" >,</span> style<span class=\"token punctuation\" >:</span> <span class=\"token string\" >\"css\"</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >]</span>\n<span class=\"token punctuation\" >}</span>"
+	    "highlighted": "<span class=\"token comment\" spellcheck=\"true\">// .babelrc</span>\n<span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"plugins\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">[</span><span class=\"token string\">\"import\"</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span> libraryName<span class=\"token punctuation\">:</span> <span class=\"token string\">\"antd\"</span><span class=\"token punctuation\">,</span> style<span class=\"token punctuation\">:</span> <span class=\"token string\">\"css\"</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">]</span>\n<span class=\"token punctuation\">}</span>"
 	  }, ["code", "// .babelrc\n{\n  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]\n}"]], ["p", " Then you can import components from antd directly."], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token comment\" spellcheck=\"true\">// import js and css modularly, parsed by babel-plugin-import</span>\n<span class=\"token keyword\" >import</span> <span class=\"token punctuation\" >{</span> DatePicker <span class=\"token punctuation\" >}</span> <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd'</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token comment\" spellcheck=\"true\">// import js and css modularly, parsed by babel-plugin-import</span>\n<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "// import js and css modularly, parsed by babel-plugin-import\nimport { DatePicker } from 'antd';"]]], ["li", ["p", "Manually import"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> DatePicker <span class=\"token keyword\" >from</span> <span class=\"token string\" >'antd/lib/date-picker'</span><span class=\"token punctuation\" >;</span>  <span class=\"token comment\" spellcheck=\"true\">// just for js</span>\n<span class=\"token keyword\" >import</span> <span class=\"token string\" >'antd/lib/date-picker/style/css'</span><span class=\"token punctuation\" >;</span>  <span class=\"token comment\" spellcheck=\"true\">// with style</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> DatePicker <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/date-picker'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// just for js</span>\n<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/lib/date-picker/style/css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// with style</span>"
 	  }, ["code", "import DatePicker from 'antd/lib/date-picker';  // just for js\nimport 'antd/lib/date-picker/style/css';  // with style"]]]], ["h2", "Version"], ["ul", ["li", ["p", "Stable: ", ["a", {
 	    "title": null,
 	    "href": "https://www.npmjs.org/package/antd"
@@ -65,7 +65,7 @@ webpackJsonp([85,201],{
 	    "href": "http://ant.design/docs/react/introduce"
 	  }, "UI library"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "CHANGELOG.en-US.md"
+	    "href": "https://ant.design/changelog"
 	  }, "Change Log"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva-cli/"
@@ -154,7 +154,7 @@ webpackJsonp([85,201],{
 	    "title": "Ant Design of React",
 	    "filename": "docs/react/introduce.en-US.md"
 	  },
-	  "description": ["section", ["p", "We supply a react implementation ", ["code", "antd"], " following Ant Design specification, which designed to help developing RIA such as dashboards or other enterprise-like complex UI needs."], ["div", {
+	  "description": ["section", ["p", "We supply a react implementation ", ["code", "antd"], " following Ant Design specification, which is designed to help in developing RIA such as dashboards or other enterprise-like complex UI needs."], ["div", {
 	    "class": "pic-plus"
 	  }, ["img", {
 	    "width": "150",
@@ -164,22 +164,31 @@ webpackJsonp([85,201],{
 	    "src": "https://t.alipayobjects.com/images/rmsweb/T16xRhXkxbXXXXXXXX.svg"
 	  }]], ["style", "\n.pic-plus > * {\n  display: inline-block!important;\n  vertical-align: middle;\n}\n.pic-plus span {\n  font-size: 30px;\n  color: #aaa;\n  margin: 0 20px;\n}\n"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Features"
 	  }, "Features"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Installation"
 	  }, "Installation"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Usage"
 	  }, "Usage"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Version"
 	  }, "Version"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Compatibility"
 	  }, "Compatibility"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Useful-Links"
 	  }, "Useful Links"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Who-are-using-antd"
 	  }, "Who are using antd"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Contributing"
 	  }, "Contributing"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Need-Help?"
 	  }, "Need Help?"]]]
 	};

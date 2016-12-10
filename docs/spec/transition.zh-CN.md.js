@@ -1,6 +1,6 @@
-webpackJsonp([50,201],{
+webpackJsonp([50,204],{
 
-/***/ 1798:
+/***/ 1071:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62,12 +62,16 @@ webpackJsonp([50,201],{
 	  },
 	  "description": ["section", ["p", "人脑灰质（Gray Matter）会对动态的事物（eg：移动、形变、色变等）保持敏感。在界面中，适当的加入一些过渡效果，能让界面保持生动，同时也能增强用户和界面的沟通。"], ["ul", ["li", ["p", "Adding: 新加入的信息元素应被告知如何使用，从页面转变的信息元素需被重新识别。"]], ["li", ["p", "Receding: 与当前页无关的信息元素应采用适当方式移除。"]], ["li", ["p", "Normal: 指那些从转场开始到结束都没有发生变化的信息元素。"]]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#在视图变化时保持上下文"
 	  }, "在视图变化时保持上下文"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#解释刚刚发生了什么"
 	  }, "解释刚刚发生了什么"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#改善感知性能"
 	  }, "改善感知性能"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#自然运动"
 	  }, "自然运动"]]]
 	};

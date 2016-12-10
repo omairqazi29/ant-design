@@ -1,6 +1,6 @@
-webpackJsonp([145,201],{
+webpackJsonp([148,204],{
 
-/***/ 1559:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26,13 +26,15 @@ webpackJsonp([145,201],{
 	    "filename": "components/notification/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["ul", ["li", ["p", ["code", "notification.success(config)"]]], ["li", ["p", ["code", "notification.error(config)"]]], ["li", ["p", ["code", "notification.info(config)"]]], ["li", ["p", ["code", "notification.warning(config)"]]], ["li", ["p", ["code", "notification.warn(config)"]]], ["li", ["p", ["code", "notification.close(key: String)"]]], ["li", ["p", ["code", "notification.destroy()"]]]], ["p", "config 参数如下："], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "message"], ["td", "通知提醒标题，必选"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "description"], ["td", "通知提醒内容，必选"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "btn"], ["td", "自定义关闭按钮"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "icon"], ["td", "自定义图标"], ["td", "React.Node"], ["td", "-"]], ["tr", ["td", "key"], ["td", "当前通知唯一标志"], ["td", "String"], ["td", "-"]], ["tr", ["td", "onClose"], ["td", "点击默认关闭按钮时触发的回调函数"], ["td", "Function"], ["td", "-"]], ["tr", ["td", "duration"], ["td", "默认 4.5 秒后自动关闭，配置为 null 则不自动关闭"], ["td", "Number"], ["td", "4.5"]]]], ["p", "还提供了一个全局配置方法，在调用前提前配置，全局一次生效。"], ["ul", ["li", ["p", ["code", "notification.config(options)"]]]], ["pre", {
 	    "lang": "js",
-	    "highlighted": "notification<span class=\"token punctuation\" >.</span><span class=\"token function\" >config</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n  top<span class=\"token punctuation\" >:</span> <span class=\"token number\" >100</span><span class=\"token punctuation\" >,</span>\n  duration<span class=\"token punctuation\" >:</span> <span class=\"token number\" >3</span><span class=\"token punctuation\" >,</span>\n<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  top<span class=\"token punctuation\">:</span> <span class=\"token number\">100</span><span class=\"token punctuation\">,</span>\n  duration<span class=\"token punctuation\">:</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "notification.config({\n  top: 100,\n  duration: 3,\n});"]], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "top"], ["td", "消息距离顶部的位置"], ["td", "Number"], ["td", "24px"]], ["tr", ["td", "duration"], ["td", "默认自动关闭延时，单位秒"], ["td", "Number"], ["td", "4.5"]]]]]
 	};
 

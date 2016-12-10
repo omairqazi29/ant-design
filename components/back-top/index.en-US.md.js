@@ -1,6 +1,6 @@
-webpackJsonp([190,201],{
+webpackJsonp([193,204],{
 
-/***/ 1379:
+/***/ 649:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([190,201],{
 	    "filename": "components/back-top/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["blockquote", ["p", "The distance to the bottom is set to ", ["code", "50px"], " by default, which is overridable."], ["p", "If you decide to use custom styles, please note the size limit: no more than ", ["code", "40px * 40px"], "."]], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "visibilityHeight"], ["td", "the ", ["code", "BackTop"], " button will not show until the scroll height reaches this value"], ["td", "Number"], ["td", "400"]], ["tr", ["td", "onClick"], ["td", "a callback function, which can be executed when you click the button"], ["td", "Function"], ["td", "-"]]]]]

@@ -1,6 +1,6 @@
-webpackJsonp([68,201],{
+webpackJsonp([68,204],{
 
-/***/ 1775:
+/***/ 1048:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -90,12 +90,16 @@ webpackJsonp([68,201],{
 	    "src": "https://os.alipayobjects.com/rmsportal/mgesTPFxodmIwpi.png"
 	  }]], ["p", "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，给设计师和工程师带来很多困扰和重复建设，大大降低了产品的研发效率。我们（蚂蚁金服体验技术部）经过大量的项目实践和总结，沉淀出一个中台设计语言 Ant Design。旨在统一中台项目的前端 UI 设计，屏蔽不必要的设计差异和实现成本，解放设计和前端的研发资源。"], ["p", "Ant Design 是一个致力于提升『用户』和『设计者』使用体验的中台设计语言。它模糊了产品经理、交互设计师、视觉设计师、前端工程师、开发工程师等角色边界，将进行 UE 设计和 UI 设计人员统称为『设计者』，利用统一的规范进行设计赋能，全面提高中台产品体验和研发效率。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#设计资源"
 	  }, "设计资源"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#前端实现"
 	  }, "前端实现"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#谁在使用"
 	  }, "谁在使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#如何贡献"
 	  }, "如何贡献"]]]
 	};

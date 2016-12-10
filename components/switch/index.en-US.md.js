@@ -1,6 +1,6 @@
-webpackJsonp([124,201],{
+webpackJsonp([127,204],{
 
-/***/ 1647:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([124,201],{
 	    "filename": "components/switch/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Switch"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "checked"], ["td", "determine whether the ", ["code", "Switch"], " is checked"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "to set the initial state"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "onChange"], ["td", "a callback function, can be executed when the checked state is changing"], ["td", "Function(checked:Boolean)"], ["td"]], ["tr", ["td", "checkedChildren"], ["td", "content to be shown when the state is checked"], ["td", "React Node"], ["td"]], ["tr", ["td", "unCheckedChildren"], ["td", "content to be shown when the state is unchecked"], ["td", "React Node"], ["td"]], ["tr", ["td", "size"], ["td", "the size of the ", ["code", "Switch"], ", options: ", ["code", "default"], " ", ["code", "small"]], ["td", "String"], ["td", "default"]]]]]

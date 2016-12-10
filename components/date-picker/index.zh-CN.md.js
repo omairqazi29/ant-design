@@ -1,6 +1,6 @@
-webpackJsonp([169,201],{
+webpackJsonp([172,204],{
 
-/***/ 1461:
+/***/ 731:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,16 +25,18 @@ webpackJsonp([169,201],{
 	    "filename": "components/date-picker/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["p", "日期类组件包括以下三种形式。"], ["ul", ["li", ["p", "DatePicker"]], ["li", ["p", "MonthPicker"]], ["li", ["p", "RangePicker"]]], ["p", ["strong", "注意："], "DatePicker、MonthPicker、RangePicker 部分 locale 是从 value 中读取，所以请先正确设置 moment 的 locale。"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >import</span> moment <span class=\"token keyword\" >from</span> <span class=\"token string\" >'moment'</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token comment\" spellcheck=\"true\">// 推荐在入口文件全局设置 locale</span>\n<span class=\"token keyword\" >import</span> <span class=\"token string\" >'moment/locale/zh-cn'</span><span class=\"token punctuation\" >;</span>\nmoment<span class=\"token punctuation\" >.</span><span class=\"token function\" >locale</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'zh-cn'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DatePicker</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token function\" >moment</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'2015-01-01'</span><span class=\"token punctuation\" >,</span> <span class=\"token string\" >'YYYY-MM-DD'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token comment\" spellcheck=\"true\">// 推荐在入口文件全局设置 locale</span>\n<span class=\"token keyword\">import</span> <span class=\"token string\">'moment/locale/zh-cn'</span><span class=\"token punctuation\">;</span>\nmoment<span class=\"token punctuation\">.</span><span class=\"token function\">locale</span><span class=\"token punctuation\">(</span><span class=\"token string\">'zh-cn'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-01-01'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'YYYY-MM-DD'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>"
 	  }, ["code", "import moment from 'moment';\n\n// 推荐在入口文件全局设置 locale\nimport 'moment/locale/zh-cn';\nmoment.locale('zh-cn');\n\n<DatePicker defaultValue={moment('2015-01-01', 'YYYY-MM-DD')} />"]], ["h3", "共同的 API"], ["p", "以下 API 为 DatePicker、MonthPicker、RangePicker 共享的 API。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "allowClear"], ["td", "是否显示清除按钮"], ["td", "bool"], ["td", "true"]], ["tr", ["td", "disabled"], ["td", "禁用"], ["td", "bool"], ["td", "false"]], ["tr", ["td", "style"], ["td", "自定义输入框样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "popupStyle"], ["td", "格外的弹出日历样式"], ["td", "object"], ["td", "{}"]], ["tr", ["td", "size"], ["td", "输入框大小，", ["code", "large"], " 高度为 32px，", ["code", "small"], " 为 22px，默认是 28px"], ["td", "string"], ["td", "无"]], ["tr", ["td", "locale"], ["td", "国际化配置"], ["td", "object"], ["td", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/issues/424"
+	    "href": "https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json"
 	  }, "默认配置"]]], ["tr", ["td", "disabledDate"], ["td", "不可选择的日期"], ["td", "function"], ["td", "无"]], ["tr", ["td", "getCalendarContainer"], ["td", "定义浮层的容器，默认为 body 上新建 div"], ["td", "function(trigger)"], ["td", "无"]], ["tr", ["td", "open"], ["td", "控制弹层是否展开"], ["td", "bool"], ["td", "-"]], ["tr", ["td", "onOpenChange"], ["td", "弹出日历和关闭日历的回调"], ["td", "function(status)"], ["td", "无"]], ["tr", ["td", "placeholder"], ["td", "输入框提示文字"], ["td", "string or array (RangePicker)"], ["td", "-"]]]], ["h3", "DatePicker"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "value"], ["td", "日期"], ["td", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"

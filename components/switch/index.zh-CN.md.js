@@ -1,6 +1,6 @@
-webpackJsonp([123,201],{
+webpackJsonp([126,204],{
 
-/***/ 1648:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([123,201],{
 	    "filename": "components/switch/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Switch"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "checked"], ["td", "指定当前是否选中"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "初始是否选中"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "onChange"], ["td", "变化时回调函数"], ["td", "Function(checked:Boolean)"], ["td"]], ["tr", ["td", "checkedChildren"], ["td", "选中时的内容"], ["td", "React Node"], ["td"]], ["tr", ["td", "unCheckedChildren"], ["td", "非选中时的内容"], ["td", "React Node"], ["td"]], ["tr", ["td", "size"], ["td", "开关大小，可选值：", ["code", "default"], " ", ["code", "small"]], ["td", "String"], ["td", "default"]]]]]

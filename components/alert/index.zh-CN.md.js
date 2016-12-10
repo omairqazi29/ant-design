@@ -1,6 +1,6 @@
-webpackJsonp([195,201],{
+webpackJsonp([198,204],{
 
-/***/ 1368:
+/***/ 638:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,8 +25,10 @@ webpackJsonp([195,201],{
 	    "filename": "components/alert/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "type"], ["td", "指定警告提示的样式，有四种选择 ", ["code", "success"], "、", ["code", "info"], "、", ["code", "warning"], "、", ["code", "error"]], ["td", "String"], ["td", ["code", "info"]]], ["tr", ["td", "closable"], ["td", "默认不显示关闭按钮"], ["td", "Boolean"], ["td", "无"]], ["tr", ["td", "closeText"], ["td", "自定义关闭按钮"], ["td", "React.Node"], ["td", "无"]], ["tr", ["td", "message"], ["td", "警告提示内容"], ["td", "React.Node"], ["td", "无"]], ["tr", ["td", "description"], ["td", "警告提示的辅助性文字介绍"], ["td", "React.Node"], ["td", "无"]], ["tr", ["td", "onClose"], ["td", "关闭时触发的回调函数"], ["td", "Function"], ["td", "无"]], ["tr", ["td", "showIcon"], ["td", "是否显示辅助图标"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "banner"], ["td", "是否用作顶部公告"], ["td", "Boolean"], ["td", "false"]]]]]

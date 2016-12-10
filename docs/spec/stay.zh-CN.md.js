@@ -1,6 +1,6 @@
-webpackJsonp([52,201],{
+webpackJsonp([52,204],{
 
-/***/ 1796:
+/***/ 1069:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -93,12 +93,16 @@ webpackJsonp([52,201],{
 	  },
 	  "description": ["section", ["p", "能在这个页面解决的问题，就不要去其它页面解决，因为任何页面刷新和跳转都会引起变化盲视（Change Blindness），导致用户心流（Flow）被打断。频繁的页面刷新和跳转，就像在看戏时，演员说完一行台词就安排一次谢幕一样。"], ["blockquote", ["p", ["strong", " 变换盲视（Change Blindness）"], " ：指视觉场景中的某些变化并未被观察者注意到的心理现象。产生这种现象的原因包括场景中的障碍物，眼球运动、地点的变化，或者是缺乏注意力等。——摘自《维基百科》"], ["p", ["strong", " 心流（Flow）"], " ：也有别名以化境 (Zone) 表示，亦有人翻译为神驰状态，定义是一种将个人精神力完全投注在某种活动上的感觉；心流产生时同时会有高度的兴奋及充实感。——摘自《维基百科》"]]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#覆盖层"
 	  }, "覆盖层"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#嵌入层"
 	  }, "嵌入层"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#虚拟页面"
 	  }, "虚拟页面"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#流程处理"
 	  }, "流程处理"]]]
 	};

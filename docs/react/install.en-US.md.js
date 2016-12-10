@@ -1,6 +1,6 @@
-webpackJsonp([87,201],{
+webpackJsonp([88,204],{
 
-/***/ 1755:
+/***/ 1027:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25,7 +25,7 @@ webpackJsonp([87,201],{
 	    "alt": "npm package"
 	  }]]], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd --save"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
 	  }, ["code", "$ npm install antd --save"]], ["p", "You can subscribe to this feed for new version notification: ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/releases.atom"
@@ -38,7 +38,7 @@ webpackJsonp([87,201],{
 	    "alt": null
 	  }]]], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd@beta --save"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd@beta --save"
 	  }, ["code", "$ npm install antd@beta --save"]], ["h2", "Import in Browser"], ["p", ["a", {
 	    "title": null,
 	    "href": "https://cdnjs.com/libraries/antd"
@@ -81,7 +81,7 @@ webpackJsonp([87,201],{
 	    "href": "https://github.com/ant-design/antd-init"
 	  }, "Scaffold tool"], "."], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ npm <span class=\"token function\" >install</span> antd-init -g"
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd-init -g"
 	  }, ["code", "$ npm install antd-init -g"]], ["p", "Inside an empty folder run ", ["code", "antd-init"], " to init."], ["p", "You can explore the latest structure of scaffold ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/tree/master/boilerplates"
@@ -95,10 +95,13 @@ webpackJsonp([87,201],{
 	    "filename": "docs/react/install.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Using-npm-to-install"
 	  }, "Using npm to install"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Import-in-Browser"
 	  }, "Import in Browser"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Development-tool"
 	  }, "Development tool"]]]
 	};

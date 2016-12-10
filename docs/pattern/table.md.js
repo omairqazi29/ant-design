@@ -1,6 +1,6 @@
-webpackJsonp([96,201],{
+webpackJsonp([99,204],{
 
-/***/ 1746:
+/***/ 1016:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -166,12 +166,16 @@ webpackJsonp([96,201],{
 	  },
 	  "description": ["section", ["p", "表格可被视为一种列表。它经常和其他界面元素一起协同，用于展示和操作结构化数据，并经常用于详情信息的入口。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#内容"
 	  }, "内容"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#交互"
 	  }, "交互"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#规格"
 	  }, "规格"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#案例（敬请期待）"
 	  }, ["span", {
 	    "class": "waiting"

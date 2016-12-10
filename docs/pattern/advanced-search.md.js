@@ -1,6 +1,6 @@
-webpackJsonp([102,201],{
+webpackJsonp([105,204],{
 
-/***/ 1740:
+/***/ 1010:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61,10 +61,13 @@ webpackJsonp([102,201],{
 	  },
 	  "description": ["section", ["p", "借助『高级搜索』，用户可以缩小复杂列表／表格等的展示范围。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#常规型"
 	  }, "常规型"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#字段型"
 	  }, "字段型"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#案例（敬请期待）"
 	  }, ["span", {
 	    "class": "waiting"

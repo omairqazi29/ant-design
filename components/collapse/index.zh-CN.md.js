@@ -1,6 +1,6 @@
-webpackJsonp([171,201],{
+webpackJsonp([174,204],{
 
-/***/ 1450:
+/***/ 720:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26,8 +26,10 @@ webpackJsonp([171,201],{
 	    "filename": "components/collapse/index.zh-CN.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#何时使用"
 	  }, "何时使用"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Collapse"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "activeKey"], ["td", "当前激活 tab 面板的 key"], ["td", "Array or String"], ["td", "默认无，accordion模式下默认第一个元素"]], ["tr", ["td", "defaultActiveKey"], ["td", "初始化选中面板的 key"], ["td", "String"], ["td", "无"]], ["tr", ["td", "onChange"], ["td", "切换面板的回调"], ["td", "Function"], ["td", "无"]]]], ["h3", "Collapse.Panel"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "key"], ["td", "对应 activeKey"], ["td", "String"], ["td", "无"]], ["tr", ["td", "header"], ["td", "面板头内容"], ["td", "React.Element or String"], ["td", "无"]]]]]

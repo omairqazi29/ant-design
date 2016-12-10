@@ -1,6 +1,6 @@
-webpackJsonp([200,201],{
+webpackJsonp([203,204],{
 
-/***/ 1353:
+/***/ 623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,28 @@ webpackJsonp([200,201],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "Improve website experience on mobile devices."]], ["li", ["p", "Add some migrate warnings for ", ["code", "1.x"], " to ", ["code", "2.x"], "."]], ["li", ["p", "ToolTip, Popover, Popconfirm support to wrap text node and multiple node directly now. ", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "Improve selected item style of Menu."]], ["li", ["p", "Fix issue resulting in Mention not responses ", ["code", "onFocus"], " and ", ["code", "onBlur"], ". ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4163"
+	  }, "#4163"]]], ["li", ["p", "Fix issue resulting in there is a redundant shadow between ", ["code", "disabled"], " and ", ["code", "checked"], " Radio. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4114"
+	  }, "#4114"], " @jdz321"]], ["li", ["p", "Fix error when setting Momment ", ["code", "defaultValue"], " or ", ["code", "value"], " on RangePicker, TimePicker, Calendar. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4147"
+	  }, "#4147"]]], ["li", ["p", "Fix issue resulting in Affix disappears when it's uesed in animated Tabs. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3943"
+	  }, "#3943"]]], ["li", ["p", "Fix issue resulting in Cascader passes different ", ["code", "selectedOptions"], " to ", ["code", "onChange"], " when manually selecting and selecting by search. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4096"
+	  }, "#4096"]]], ["li", ["p", "Fix issue resulting in Tabs get offset, when too many tabs are opening. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3637"
+	  }, "#3637"]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "Align text of grouped parent header to center."]], ["li", ["p", "Fix issue resulting in ", ["code", "filterDropdownVisible"], " can't be set correctly. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4162"
+	  }, "#4162"]]]]]], ["h2", "2.5.1"], ["p", ["code", "2016-12-03"]], ["ul", ["li", ["p", "Improve website experience on mobile devices."]], ["li", ["p", "Add some migrate warnings for ", ["code", "1.x"], " to ", ["code", "2.x"], "."]], ["li", ["p", "ToolTip, Popover, Popconfirm support to wrap text node and multiple node directly now. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3924"
 	  }, "#3924"]]], ["li", ["p", "Anchor"], ["ul", ["li", ["p", "Fix current position bug when scroll fastly. ", ["a", {
@@ -447,7 +468,7 @@ webpackJsonp([200,201],{
 	    "href": "http://momentjs.com/"
 	  }, "moment"], ":"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >- &lt;TimePicker defaultValue=\"12:08:23\" /></span>\n<span class=\"token inserted\" >+ &lt;TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} /></span>\n\n<span class=\"token deleted\" >- &lt;DatePicker defaultValue=\"2015/01/01\" /></span>\n<span class=\"token inserted\" >+ &lt;DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} /></span>\n\n<span class=\"token deleted\" >- &lt;Calendar defaultValue={new Date('2010-10-10')} /></span>\n<span class=\"token inserted\" >+ &lt;Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} /></span>"
+	    "highlighted": "<span class=\"token deleted\">- &lt;TimePicker defaultValue=\"12:08:23\" /></span>\n<span class=\"token inserted\">+ &lt;TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} /></span>\n\n<span class=\"token deleted\">- &lt;DatePicker defaultValue=\"2015/01/01\" /></span>\n<span class=\"token inserted\">+ &lt;DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} /></span>\n\n<span class=\"token deleted\">- &lt;Calendar defaultValue={new Date('2010-10-10')} /></span>\n<span class=\"token inserted\">+ &lt;Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} /></span>"
 	  }, ["code", "- <TimePicker defaultValue=\"12:08:23\" />\n+ <TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} />\n\n- <DatePicker defaultValue=\"2015/01/01\" />\n+ <DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} />\n\n- <Calendar defaultValue={new Date('2010-10-10')} />\n+ <Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} />"]]], ["li", ["p", "Parameters of type ", ["code", "Date/GregorianCalendar"], " of functions such as ", ["code", "onChange"], " and ", ["code", "onPanelChange"], ", plus other callback functions had been changed to type moment. Please consult ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/yiminghe/gregorian-calendar"
@@ -462,7 +483,7 @@ webpackJsonp([200,201],{
 	    "href": "https://github.com/ant-design/ant-design/issues/3082"
 	  }, "#3082"], " for details:"], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token function\" >handleSubmit</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token keyword\" >const</span> values <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >.</span>form<span class=\"token punctuation\" >.</span><span class=\"token function\" >getFieldsValue</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  values<span class=\"token punctuation\" >.</span>date <span class=\"token operator\" >=</span> values<span class=\"token punctuation\" >.</span>date<span class=\"token punctuation\" >.</span><span class=\"token function\" >format</span><span class=\"token punctuation\" >(</span><span class=\"token string\" >'YYYY-MM-DD HH:mm:ss'</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span> <span class=\"token comment\" spellcheck=\"true\">// or other format</span>\n  <span class=\"token keyword\" >const</span> data <span class=\"token operator\" >=</span> JSON<span class=\"token punctuation\" >.</span><span class=\"token function\" >stringify</span><span class=\"token punctuation\" >(</span>values<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token comment\" spellcheck=\"true\">// send data to server</span>\n<span class=\"token punctuation\" >}</span>"
+	    "highlighted": "<span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">const</span> values <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">getFieldsValue</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  values<span class=\"token punctuation\">.</span>date <span class=\"token operator\">=</span> values<span class=\"token punctuation\">.</span>date<span class=\"token punctuation\">.</span><span class=\"token function\">format</span><span class=\"token punctuation\">(</span><span class=\"token string\">'YYYY-MM-DD HH:mm:ss'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// or other format</span>\n  <span class=\"token keyword\">const</span> data <span class=\"token operator\">=</span> JSON<span class=\"token punctuation\">.</span><span class=\"token function\">stringify</span><span class=\"token punctuation\">(</span>values<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token comment\" spellcheck=\"true\">// send data to server</span>\n<span class=\"token punctuation\">}</span>"
 	  }, ["code", "handleSubmit() {\n  const values = this.props.form.getFieldsValue();\n  values.date = values.date.format('YYYY-MM-DD HH:mm:ss'); // or other format\n  const data = JSON.stringify(values);\n  // send data to server\n}"]]], ["li", ["p", "For the value of time-related components becomes an instance of ", ["code", "moment"], ", you should replace ", ["code", "type: 'date'"], " with ", ["code", "type: 'object'"], " in form validation."]], ["li", ["p", "The ", ["code", "format"], " of time-related components is changed from ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/yiminghe/gregorian-calendar-format#api"
@@ -477,13 +498,13 @@ webpackJsonp([200,201],{
 	    "href": "http://ant.design/components/table/#components-table-demo-fixed-columns"
 	  }, "fixed columns"], "."]], ["li", ["p", ["code", "Popover[overlay]"], " is removed, please use ", ["code", "Popover[content]"], " instead."]]], ["p", "The following change will throw some warnings in the console and it will still work, but we recommend to update your code."], ["ul", ["li", ["p", ["code", "getFieldProps"], " of Form is deprecated, please use ", ["code", "getFieldDecorator"], ":"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >-  &lt;Input placeholder=\"text\" {...getFieldProps('userName', { ... })} /></span>\n<span class=\"token inserted\" >+  {getFieldDecorator('userName', { ... })(</span>\n<span class=\"token inserted\" >+    &lt;Input placeholder=\"text\" /></span>\n<span class=\"token inserted\" >+  )}</span>"
+	    "highlighted": "<span class=\"token deleted\">-  &lt;Input placeholder=\"text\" {...getFieldProps('userName', { ... })} /></span>\n<span class=\"token inserted\">+  {getFieldDecorator('userName', { ... })(</span>\n<span class=\"token inserted\">+    &lt;Input placeholder=\"text\" /></span>\n<span class=\"token inserted\">+  )}</span>"
 	  }, ["code", "-  <Input placeholder=\"text\" {...getFieldProps('userName', { ... })} />\n+  {getFieldDecorator('userName', { ... })(\n+    <Input placeholder=\"text\" />\n+  )}"]], ["p", "Look up to ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/1533"
 	  }, "#1533"], " for related discussion."]], ["li", ["p", ["code", "toggleOpen"], " of DatePicker is deprecated, please use ", ["code", "onOpenChange"], ":"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token deleted\" >- handleToggleOpen({ open }) {</span>\n<span class=\"token inserted\" >+ handleOpenChange(open) {</span>\n  ...\n}"
+	    "highlighted": "<span class=\"token deleted\">- handleToggleOpen({ open }) {</span>\n<span class=\"token inserted\">+ handleOpenChange(open) {</span>\n  ...\n}"
 	  }, ["code", "- handleToggleOpen({ open }) {\n+ handleOpenChange(open) {\n  ...\n}"]]]], ["h3", "2.x Bug fixes"], ["ul", ["li", ["p", "Dropdown.Button", "[disabled]", " should work. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3070"
@@ -555,10 +576,10 @@ webpackJsonp([200,201],{
 	    "href": "https://github.com/ant-design/babel-plugin-import"
 	  }, ["code", "babel-plugin-import"]], ", and this means that ", ["code", "babel-plugin-import"], " becomes an common load-on-demand solution and not just for ", ["code", "antd"], "."], ["p", "Please update ", ["code", "package.json"], ":"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "{\n  \"devDependencies\": {\n<span class=\"token deleted\" >-   \"babel-plugin-antd\": \"^0.x.x\",</span>\n<span class=\"token inserted\" >+   \"babel-plugin-import\": \"^1.0.0\",</span>\n  }\n}"
+	    "highlighted": "{\n  \"devDependencies\": {\n<span class=\"token deleted\">-   \"babel-plugin-antd\": \"^0.x.x\",</span>\n<span class=\"token inserted\">+   \"babel-plugin-import\": \"^1.0.0\",</span>\n  }\n}"
 	  }, ["code", "{\n  \"devDependencies\": {\n-   \"babel-plugin-antd\": \"^0.x.x\",\n+   \"babel-plugin-import\": \"^1.0.0\",\n  }\n}"]], ["p", "And update your babel config in ", ["code", ".babelrc"], " or other place:"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "{\n<span class=\"token deleted\" >-  \"plugins\": [[\"antd\", { style: \"css\" }]]</span>\n<span class=\"token inserted\" >+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]</span>\n}"
+	    "highlighted": "{\n<span class=\"token deleted\">-  \"plugins\": [[\"antd\", { style: \"css\" }]]</span>\n<span class=\"token inserted\">+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]</span>\n}"
 	  }, ["code", "{\n-  \"plugins\": [[\"antd\", { style: \"css\" }]]\n+  \"plugins\": [[\"import\", { libraryName: \"antd\", style: \"css\" }]]\n}"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
@@ -573,7 +594,7 @@ webpackJsonp([200,201],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
 	  "meta": {
-	    "order": 5,
+	    "order": 6,
 	    "title": "Change Log",
 	    "toc": false,
 	    "timeline": true,
@@ -584,34 +605,52 @@ webpackJsonp([200,201],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.5.2"
+	  }, "2.5.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.1"
 	  }, "2.5.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.0"
 	  }, "2.5.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.3"
 	  }, "2.4.3"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.2"
 	  }, "2.4.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.1"
 	  }, "2.4.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.4.0"
 	  }, "2.4.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.2"
 	  }, "2.3.2"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.1"
 	  }, "2.3.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.3.0"
 	  }, "2.3.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.2.1"
 	  }, "2.2.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.2.0"
 	  }, "2.2.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.1.0"
 	  }, "2.1.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.0.1"
 	  }, "2.0.1"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#2.0.0"
 	  }, "2.0.0"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#1.11.4"
 	  }, "1.11.4"]]]
 	};

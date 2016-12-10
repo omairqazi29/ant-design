@@ -1,6 +1,6 @@
-webpackJsonp([178,201],{
+webpackJsonp([181,204],{
 
-/***/ 1425:
+/***/ 695:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24,8 +24,10 @@ webpackJsonp([178,201],{
 	    "filename": "components/carousel/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#When-To-Use"
 	  }, "When To Use"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "effect"], ["td", "Animation effect, either ", ["code", "scrollx"], " or ", ["code", "fade"]], ["td", "String"], ["td", "scrollx"]], ["tr", ["td", "dots"], ["td", "Whether to show the dots at the bottom of the gallery"], ["td", "Boolean"], ["td", "true"]], ["tr", ["td", "vertical"], ["td", "Whether to use a vertical display"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "autoplay"], ["td", "Whether to scroll automatically"], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "easing"], ["td", "Transition name"], ["td", "String"], ["td", "linear"]], ["tr", ["td", "beforeChange"], ["td", "Callback function called before the current index changes"], ["td", "function(from, to)"]], ["tr", ["td", "afterChange"], ["td", "Callback function called after the current index changes"], ["td", "function(current)"]]]], ["p", "For more info on the parameters, refer to the ", ["a", {

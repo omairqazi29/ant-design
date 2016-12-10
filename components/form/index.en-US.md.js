@@ -1,6 +1,6 @@
-webpackJsonp([166,201],{
+webpackJsonp([169,204],{
 
-/***/ 1483:
+/***/ 753:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18,7 +18,7 @@ webpackJsonp([166,201],{
 	module.exports = {
 	  "content": ["section", ["p", "Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc."], ["h2", "Form"], ["p", "You can align the controls of a ", ["code", "form"], " using one of the following attributes："], ["ul", ["li", ["p", ["code", "horizontal"], "：to horizontally align the ", ["code", "label"], "s and controls of the fields."]], ["li", ["p", ["code", "inline"], "：to render the labels and controls of the fields in one line (by setting the display property of form controls to ", ["code", "inline-block"], ")."]]], ["h2", "Form fields"], ["p", "A form consists of one or more form fields whose type includes input, textarea, checkbox, radio, select, tag, and more.\nA form field is defined using ", ["code", "<Form.Item />"], "."], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token operator\" >&lt;</span>Form<span class=\"token punctuation\" >.</span>Item <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>props<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n  <span class=\"token punctuation\" >{</span>children<span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Form.Item</span><span class=\"token punctuation\" >></span></span>"
+	    "highlighted": "<span class=\"token operator\">&lt;</span>Form<span class=\"token punctuation\">.</span>Item <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>props<span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n  <span class=\"token punctuation\">{</span>children<span class=\"token punctuation\">}</span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Form.Item</span><span class=\"token punctuation\">></span></span>"
 	  }, ["code", "<Form.Item {...props}>\n  {children}\n</Form.Item>"]], ["blockquote", ["p", "PS：By default, large size controls are used within a form."]]],
 	  "meta": {
 	    "category": "Components",
@@ -28,10 +28,13 @@ webpackJsonp([166,201],{
 	    "filename": "components/form/index.en-US.md"
 	  },
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Form"
 	  }, "Form"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Form-fields"
 	  }, "Form fields"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["h3", "Form"], ["p", ["strong", "more example ", ["a", {
@@ -39,7 +42,7 @@ webpackJsonp([166,201],{
 	    "href": "http://react-component.github.io/form/"
 	  }, "rc-form"]], "。"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default Value"]]], ["tbody", ["tr", ["td", "form"], ["td", "Decorated by ", ["code", "Form.create()"], " will be automatically set ", ["code", "this.props.form"], " property, so just pass to form, you don't need to set it by yourself after 1.7.0."], ["td", "object"], ["td", "n/a"]], ["tr", ["td", "vertical"], ["td", "Use vertical layout."], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "horizontal"], ["td", "Use horizontal layout."], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "inline"], ["td", "Use inline alignment."], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "onSubmit"], ["td", "Defines a function will be called if form data validation is successful."], ["td", "Function(e:Event)"], ["td"]]]], ["h3", "Form.create(options)"], ["p", "How to use："], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >CustomizedForm</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span>\n\nCustomizedForm <span class=\"token operator\" >=</span> Form<span class=\"token punctuation\" >.</span><span class=\"token function\" >create</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >(</span>CustomizedForm<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>"
+	    "highlighted": "<span class=\"token keyword\">class</span> <span class=\"token class-name\">CustomizedForm</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span>\n\nCustomizedForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>CustomizedForm<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "class CustomizedForm extends React.Component {}\n\nCustomizedForm = Form.create({})(CustomizedForm);"]], ["p", "The following ", ["code", "options"], " are available:"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"]]], ["tbody", ["tr", ["td", "onFieldsChange"], ["td", "Specify a function that will be called when the value a ", ["code", "Form.Item"], " gets changed. Usage example: saving the field's value to Redux store."], ["td", "Function(props, fields)"]], ["tr", ["td", "mapPropsToFields"], ["td", "Convert props to corresponding field value. Usage example: reading the values from Redux store."], ["td", "Function(props): Object{ fieldName: Object{ value } }"]]]], ["p", "If the form has been decorated by ", ["code", "Form.create"], " then it has ", ["code", "this.props.form"], " property. ", ["code", "this.props.form"], " provides some APIs as follows:"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"]]], ["tbody", ["tr", ["td", "getFieldsValue"], ["td", "Get the specified fields' values. If you don't specify a parameter, you will get all fields' values."], ["td", "Function([fieldNames: string[]])"]], ["tr", ["td", "getFieldValue"], ["td", "Get the value of a field."], ["td", "Function(fieldName: string)"]], ["tr", ["td", "setFieldsValue"], ["td", "Set the value of a field.(Note: please don't use it in ", ["code", "componentWillReceiveProps"], ", otherwise, it will cause an endless loop, ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/2985"
