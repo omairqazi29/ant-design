@@ -1,6 +1,6 @@
 webpackJsonp([85,204],{
 
-/***/ 1030:
+/***/ 1752:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,8 +21,8 @@ webpackJsonp([85,204],{
 	    "href": "http://react-component.github.io/badgeboard/"
 	  }, "React Component"], " 基础上精心封装的高质量 UI 组件。"]], ["li", ["p", "基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。"]]], ["h2", "安装"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd"
-	  }, ["code", "$ npm install antd"]], ["h2", "示例"], ["pre", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
+	  }, ["code", "$ npm install antd --save"]], ["h2", "示例"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "引入样式："], ["pre", {
@@ -53,10 +53,10 @@ webpackJsonp([85,204],{
 	    "href": "http://ant.design/"
 	  }, "首页"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "http://ant.design/docs/react/introduce"
+	    "href": "/docs/react/introduce"
 	  }, "组件文档"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "CHANGELOG.en-US.md"
+	    "href": "/changelog"
 	  }, "更新日志"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva-cli/"
@@ -95,7 +95,7 @@ webpackJsonp([85,204],{
 	    "href": "https://github.com/websemantics/awesome-ant-design"
 	  }, "Awesome Ant Design"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
+	    "href": "/docs/react/customize-theme"
 	  }, "定制主题"]]]], ["h2", "谁在使用"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://www.antgroup.com/"

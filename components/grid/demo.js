@@ -1,11 +1,28 @@
 webpackJsonp([6,204],{
 
-/***/ 755:
+/***/ 648:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1477),
+	    'flex-align': __webpack_require__(1478),
+	    'flex-order': __webpack_require__(1479),
+	    'flex': __webpack_require__(1480),
+	    'gutter': __webpack_require__(1481),
+	    'offset': __webpack_require__(1482),
+	    'reponsive-more': __webpack_require__(1483),
+	    'reponsive': __webpack_require__(1484),
+	    'sort': __webpack_require__(1485),
+	}
+
+/***/ },
+
+/***/ 1477:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -13,7 +30,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -119,12 +136,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 756:
+/***/ 1478:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -132,7 +149,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -322,12 +339,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 757:
+/***/ 1479:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -335,7 +352,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -408,12 +425,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 758:
+/***/ 1480:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -421,7 +438,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -615,12 +632,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 759:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -628,7 +645,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -719,12 +736,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 760:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -732,7 +749,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -818,12 +835,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 761:
+/***/ 1483:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -831,7 +848,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -896,12 +913,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 762:
+/***/ 1484:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -909,7 +926,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -979,12 +996,12 @@ webpackJsonp([6,204],{
 
 /***/ },
 
-/***/ 763:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(49);
 
 	var _row = __webpack_require__(45);
 
@@ -992,7 +1009,7 @@ webpackJsonp([6,204],{
 
 	var _style4 = __webpack_require__(44);
 
-	var _col = __webpack_require__(42);
+	var _col = __webpack_require__(43);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -1052,23 +1069,6 @@ webpackJsonp([6,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1199:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(755),
-	    'flex-align': __webpack_require__(756),
-	    'flex-order': __webpack_require__(757),
-	    'flex': __webpack_require__(758),
-	    'gutter': __webpack_require__(759),
-	    'offset': __webpack_require__(760),
-	    'reponsive-more': __webpack_require__(761),
-	    'reponsive': __webpack_require__(762),
-	    'sort': __webpack_require__(763),
-	}
 
 /***/ }
 

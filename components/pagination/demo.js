@@ -1,13 +1,29 @@
 webpackJsonp([8,204],{
 
-/***/ 830:
+/***/ 657:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1552),
+	    'changer': __webpack_require__(1553),
+	    'controlled': __webpack_require__(1554),
+	    'jump': __webpack_require__(1555),
+	    'mini': __webpack_require__(1556),
+	    'more': __webpack_require__(1557),
+	    'simple': __webpack_require__(1558),
+	    'total': __webpack_require__(1559),
+	}
+
+/***/ },
+
+/***/ 1552:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -53,14 +69,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 831:
+/***/ 1553:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -108,14 +124,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 832:
+/***/ 1554:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -174,14 +190,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 833:
+/***/ 1555:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -229,14 +245,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 834:
+/***/ 1556:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -292,14 +308,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 835:
+/***/ 1557:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -345,14 +361,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 836:
+/***/ 1558:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -398,14 +414,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 837:
+/***/ 1559:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -458,22 +474,6 @@ webpackJsonp([8,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1208:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(830),
-	    'changer': __webpack_require__(831),
-	    'controlled': __webpack_require__(832),
-	    'jump': __webpack_require__(833),
-	    'mini': __webpack_require__(834),
-	    'more': __webpack_require__(835),
-	    'simple': __webpack_require__(836),
-	    'total': __webpack_require__(837),
-	}
 
 /***/ }
 

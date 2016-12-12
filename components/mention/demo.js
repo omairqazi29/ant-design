@@ -1,13 +1,29 @@
 webpackJsonp([9,204],{
 
-/***/ 788:
+/***/ 652:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'async': __webpack_require__(1510),
+	    'avatar': __webpack_require__(1511),
+	    'basic': __webpack_require__(1512),
+	    'controllder-simple': __webpack_require__(1513),
+	    'controlled': __webpack_require__(1514),
+	    'custom-tag': __webpack_require__(1515),
+	    'multilines': __webpack_require__(1516),
+	    'popupContainer': __webpack_require__(1517),
+	}
+
+/***/ },
+
+/***/ 1510:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -79,14 +95,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 789:
+/***/ 1511:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -162,14 +178,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 790:
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -222,14 +238,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 791:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -287,7 +303,7 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 792:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -304,9 +320,9 @@ webpackJsonp([9,204],{
 
 	var _form2 = _interopRequireDefault(_form);
 
-	var _style6 = __webpack_require__(116);
+	var _style6 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -408,14 +424,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 793:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -493,14 +509,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 794:
+/***/ 1516:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(116);
+	var _style2 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -549,14 +565,14 @@ webpackJsonp([9,204],{
 
 /***/ },
 
-/***/ 795:
+/***/ 1517:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(117);
+	var _style4 = __webpack_require__(126);
 
-	var _popover = __webpack_require__(137);
+	var _popover = __webpack_require__(148);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
@@ -566,9 +582,9 @@ webpackJsonp([9,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(116);
+	var _style6 = __webpack_require__(125);
 
-	var _mention = __webpack_require__(115);
+	var _mention = __webpack_require__(124);
 
 	var _mention2 = _interopRequireDefault(_mention);
 
@@ -637,22 +653,6 @@ webpackJsonp([9,204],{
 	    });return _react2.default.createElement(PopoverContainer, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1203:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'async': __webpack_require__(788),
-	    'avatar': __webpack_require__(789),
-	    'basic': __webpack_require__(790),
-	    'controllder-simple': __webpack_require__(791),
-	    'controlled': __webpack_require__(792),
-	    'custom-tag': __webpack_require__(793),
-	    'multilines': __webpack_require__(794),
-	    'popupContainer': __webpack_require__(795),
-	}
 
 /***/ }
 

@@ -1,13 +1,25 @@
 webpackJsonp([33,204],{
 
-/***/ 913:
+/***/ 667:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1635),
+	    'disabled': __webpack_require__(1636),
+	    'size': __webpack_require__(1637),
+	    'text': __webpack_require__(1638),
+	}
+
+/***/ },
+
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(79);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -56,7 +68,7 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 914:
+/***/ 1636:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67,9 +79,9 @@ webpackJsonp([33,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -136,14 +148,14 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 915:
+/***/ 1637:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(79);
+	var _style2 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -195,7 +207,7 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 916:
+/***/ 1638:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -206,9 +218,9 @@ webpackJsonp([33,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(82);
 
-	var _switch = __webpack_require__(78);
+	var _switch = __webpack_require__(81);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -259,18 +271,6 @@ webpackJsonp([33,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1218:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(913),
-	    'disabled': __webpack_require__(914),
-	    'size': __webpack_require__(915),
-	    'text': __webpack_require__(916),
-	}
 
 /***/ }
 

@@ -1,6 +1,6 @@
 webpackJsonp([86,204],{
 
-/***/ 1029:
+/***/ 1751:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,8 +21,8 @@ webpackJsonp([86,204],{
 	    "href": "http://react-component.github.io/badgeboard/"
 	  }, "React Component"], "."]], ["li", ["p", "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."]]], ["h2", "Installation"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd"
-	  }, ["code", "$ npm install antd"]], ["h2", "Usage"], ["h3", "Use prebuilt bundle"], ["pre", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
+	  }, ["code", "$ npm install antd --save"]], ["h2", "Usage"], ["h3", "Use prebuilt bundle"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "And import style manually:"], ["pre", {
@@ -62,10 +62,10 @@ webpackJsonp([86,204],{
 	    "href": "http://ant.design/"
 	  }, "Home page"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "http://ant.design/docs/react/introduce"
+	    "href": "/docs/react/introduce"
 	  }, "UI library"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://ant.design/changelog"
+	    "href": "/changelog"
 	  }, "Change Log"]]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva-cli/"
@@ -101,7 +101,7 @@ webpackJsonp([86,204],{
 	    "href": "https://github.com/websemantics/awesome-ant-design"
 	  }, "Awesome Ant Design"]]], ["li", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
+	    "href": "/docs/react/customize-theme"
 	  }, "Customize Theme"]]]], ["h2", "Who are using antd"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://www.antgroup.com/index.htm?locale=en_US"

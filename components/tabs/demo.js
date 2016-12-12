@@ -1,13 +1,32 @@
 webpackJsonp([3,204],{
 
-/***/ 942:
+/***/ 669:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1664),
+	    'card-top': __webpack_require__(1665),
+	    'card': __webpack_require__(1666),
+	    'custom-add-trigger': __webpack_require__(1667),
+	    'disabled': __webpack_require__(1668),
+	    'editable-card': __webpack_require__(1669),
+	    'extra': __webpack_require__(1670),
+	    'icon': __webpack_require__(1671),
+	    'position': __webpack_require__(1672),
+	    'size': __webpack_require__(1673),
+	    'slide': __webpack_require__(1674),
+	}
+
+/***/ },
+
+/***/ 1664:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -73,14 +92,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 943:
+/***/ 1665:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -150,14 +169,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 944:
+/***/ 1666:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -223,7 +242,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 945:
+/***/ 1667:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -234,9 +253,9 @@ webpackJsonp([3,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(81);
+	var _style4 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -335,14 +354,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 946:
+/***/ 1668:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -406,14 +425,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 947:
+/***/ 1669:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -497,7 +516,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 948:
+/***/ 1670:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -508,9 +527,9 @@ webpackJsonp([3,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(81);
+	var _style4 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -578,7 +597,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 949:
+/***/ 1671:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -589,9 +608,9 @@ webpackJsonp([3,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(81);
+	var _style4 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -660,20 +679,20 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 950:
+/***/ 1672:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(29);
+	var _style3 = __webpack_require__(31);
 
-	var _select = __webpack_require__(28);
+	var _select = __webpack_require__(30);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style4 = __webpack_require__(81);
+	var _style4 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -781,14 +800,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 951:
+/***/ 1673:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -852,14 +871,14 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 952:
+/***/ 1674:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(81);
+	var _style2 = __webpack_require__(84);
 
-	var _tabs = __webpack_require__(80);
+	var _tabs = __webpack_require__(83);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -950,25 +969,6 @@ webpackJsonp([3,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1220:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(942),
-	    'card-top': __webpack_require__(943),
-	    'card': __webpack_require__(944),
-	    'custom-add-trigger': __webpack_require__(945),
-	    'disabled': __webpack_require__(946),
-	    'editable-card': __webpack_require__(947),
-	    'extra': __webpack_require__(948),
-	    'icon': __webpack_require__(949),
-	    'position': __webpack_require__(950),
-	    'size': __webpack_require__(951),
-	    'slide': __webpack_require__(952),
-	}
 
 /***/ }
 

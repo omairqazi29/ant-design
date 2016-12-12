@@ -1,13 +1,26 @@
 webpackJsonp([25,204],{
 
-/***/ 982:
+/***/ 674:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'advanced': __webpack_require__(1704),
+	    'basic': __webpack_require__(1705),
+	    'custom-item': __webpack_require__(1706),
+	    'large-data': __webpack_require__(1707),
+	    'search': __webpack_require__(1708),
+	}
+
+/***/ },
+
+/***/ 1704:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(189);
+	var _style3 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -91,18 +104,18 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 983:
+/***/ 1705:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
-	var _toConsumableArray2 = __webpack_require__(82);
+	var _toConsumableArray2 = __webpack_require__(85);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -173,14 +186,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 984:
+/***/ 1706:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -258,7 +271,7 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 985:
+/***/ 1707:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -279,14 +292,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 986:
+/***/ 1708:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(189);
+	var _style2 = __webpack_require__(209);
 
-	var _transfer = __webpack_require__(188);
+	var _transfer = __webpack_require__(208);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -355,19 +368,6 @@ webpackJsonp([25,204],{
 	    });return _react2.default.createElement(App, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1225:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'advanced': __webpack_require__(982),
-	    'basic': __webpack_require__(983),
-	    'custom-item': __webpack_require__(984),
-	    'large-data': __webpack_require__(985),
-	    'search': __webpack_require__(986),
-	}
 
 /***/ }
 

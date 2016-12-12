@@ -1,13 +1,24 @@
 webpackJsonp([43,204],{
 
-/***/ 625:
+/***/ 631:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1347),
+	    'on-change': __webpack_require__(1348),
+	    'target': __webpack_require__(1349),
+	}
+
+/***/ },
+
+/***/ 1347:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -81,14 +92,14 @@ webpackJsonp([43,204],{
 
 /***/ },
 
-/***/ 626:
+/***/ 1348:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -150,14 +161,14 @@ webpackJsonp([43,204],{
 
 /***/ },
 
-/***/ 627:
+/***/ 1349:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(180);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -256,17 +267,6 @@ webpackJsonp([43,204],{
 	  },
 	  "style": "\n#components-affix-demo-target .scrollable-container {\n  height: 100px;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  padding-top: 60px;\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
 	};
-
-/***/ },
-
-/***/ 1182:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(625),
-	    'on-change': __webpack_require__(626),
-	    'target': __webpack_require__(627),
-	}
 
 /***/ }
 
