@@ -1,27 +1,173 @@
-webpackJsonp([22,204],{
+webpackJsonp([33,204],{
 
-/***/ 640:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1405),
-	    'border-less': __webpack_require__(1406),
-	    'grid': __webpack_require__(1407),
-	    'loading': __webpack_require__(1408),
-	    'no-padding': __webpack_require__(1409),
-	    'simple': __webpack_require__(1410),
-	}
-
-/***/ },
-
-/***/ 1405:
+/***/ 235:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	var _card = __webpack_require__(176);
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _slicedToArray2 = __webpack_require__(15);
+
+	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _splitObject3 = __webpack_require__(18);
+
+	var _splitObject4 = _interopRequireDefault(_splitObject3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function (props) {
+	    var _classNames;
+
+	    var _splitObject = (0, _splitObject4.default)(props, ['prefixCls', 'className', 'children', 'extra', 'bodyStyle', 'title', 'loading', 'bordered']),
+	        _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
+	        _splitObject2$ = _splitObject2[0],
+	        _splitObject2$$prefix = _splitObject2$.prefixCls,
+	        prefixCls = _splitObject2$$prefix === undefined ? 'ant-card' : _splitObject2$$prefix,
+	        className = _splitObject2$.className,
+	        extra = _splitObject2$.extra,
+	        bodyStyle = _splitObject2$.bodyStyle,
+	        title = _splitObject2$.title,
+	        loading = _splitObject2$.loading,
+	        _splitObject2$$border = _splitObject2$.bordered,
+	        bordered = _splitObject2$$border === undefined ? true : _splitObject2$$border,
+	        others = _splitObject2[1];
+
+	    var children = props.children;
+	    var classString = (0, _classnames2.default)(prefixCls, className, (_classNames = {}, (0, _defineProperty3.default)(_classNames, prefixCls + '-loading', loading), (0, _defineProperty3.default)(_classNames, prefixCls + '-bordered', bordered), _classNames));
+	    if (loading) {
+	        children = _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                '\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                '\u2588\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                '\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                '\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                '\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u3000\u2588\u2588\u2588'
+	            )
+	        );
+	    }
+	    var head = void 0;
+	    if (!title) {
+	        head = null;
+	    } else {
+	        head = typeof title === 'string' ? _react2.default.createElement(
+	            'div',
+	            { className: prefixCls + '-head' },
+	            _react2.default.createElement(
+	                'h3',
+	                { className: prefixCls + '-head-title' },
+	                title
+	            )
+	        ) : _react2.default.createElement(
+	            'div',
+	            { className: prefixCls + '-head' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: prefixCls + '-head-title' },
+	                title
+	            )
+	        );
+	    }
+	    return _react2.default.createElement(
+	        'div',
+	        (0, _extends3.default)({}, others, { className: classString }),
+	        head,
+	        extra ? _react2.default.createElement(
+	            'div',
+	            { className: prefixCls + '-extra' },
+	            extra
+	        ) : null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: prefixCls + '-body', style: bodyStyle },
+	            children
+	        )
+	    );
+	};
+
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 236:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(938);
+
+/***/ },
+
+/***/ 751:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1480),
+	    'border-less': __webpack_require__(1481),
+	    'grid': __webpack_require__(1482),
+	    'loading': __webpack_require__(1483),
+	    'no-padding': __webpack_require__(1484),
+	    'simple': __webpack_require__(1485),
+	}
+
+/***/ },
+
+/***/ 938:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 1480:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(236);
+
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -89,14 +235,14 @@ webpackJsonp([22,204],{
 
 /***/ },
 
-/***/ 1406:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(236);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -164,26 +310,26 @@ webpackJsonp([22,204],{
 
 /***/ },
 
-/***/ 1407:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(49);
+	var _style4 = __webpack_require__(74);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(60);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style5 = __webpack_require__(44);
+	var _style5 = __webpack_require__(62);
 
-	var _col = __webpack_require__(43);
+	var _col = __webpack_require__(49);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style6 = __webpack_require__(177);
+	var _style6 = __webpack_require__(236);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -265,14 +411,14 @@ webpackJsonp([22,204],{
 
 /***/ },
 
-/***/ 1408:
+/***/ 1483:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(236);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -322,14 +468,14 @@ webpackJsonp([22,204],{
 
 /***/ },
 
-/***/ 1409:
+/***/ 1484:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(236);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -399,14 +545,14 @@ webpackJsonp([22,204],{
 
 /***/ },
 
-/***/ 1410:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(236);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(235);
 
 	var _card2 = _interopRequireDefault(_card);
 

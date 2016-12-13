@@ -1,25 +1,43 @@
-webpackJsonp([39,204],{
+webpackJsonp([41,204],{
 
-/***/ 641:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'autoplay': __webpack_require__(1413),
-	    'basic': __webpack_require__(1414),
-	    'fade': __webpack_require__(1415),
-	    'vertical': __webpack_require__(1416),
-	}
-
-/***/ },
-
-/***/ 1413:
+/***/ 352:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(235);
+	__webpack_require__(12);
 
-	var _carousel = __webpack_require__(201);
+	__webpack_require__(939);
+
+/***/ },
+
+/***/ 752:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'autoplay': __webpack_require__(1488),
+	    'basic': __webpack_require__(1489),
+	    'fade': __webpack_require__(1490),
+	    'vertical': __webpack_require__(1491),
+	}
+
+/***/ },
+
+/***/ 939:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 1488:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(352);
+
+	var _carousel = __webpack_require__(275);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -104,14 +122,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 1414:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(235);
+	var _style2 = __webpack_require__(352);
 
-	var _carousel = __webpack_require__(201);
+	var _carousel = __webpack_require__(275);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -198,14 +216,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 1415:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(235);
+	var _style2 = __webpack_require__(352);
 
-	var _carousel = __webpack_require__(201);
+	var _carousel = __webpack_require__(275);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -290,14 +308,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 1416:
+/***/ 1491:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(235);
+	var _style2 = __webpack_require__(352);
 
-	var _carousel = __webpack_require__(201);
+	var _carousel = __webpack_require__(275);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 

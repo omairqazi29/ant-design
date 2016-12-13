@@ -1,29 +1,246 @@
-webpackJsonp([8,204],{
+webpackJsonp([18,204],{
 
-/***/ 657:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1552),
-	    'changer': __webpack_require__(1553),
-	    'controlled': __webpack_require__(1554),
-	    'jump': __webpack_require__(1555),
-	    'mini': __webpack_require__(1556),
-	    'more': __webpack_require__(1557),
-	    'simple': __webpack_require__(1558),
-	    'total': __webpack_require__(1559),
-	}
-
-/***/ },
-
-/***/ 1552:
+/***/ 84:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.PaginationProps = undefined;
 
-	var _pagination = __webpack_require__(79);
+	var _Pagination = __webpack_require__(286);
+
+	Object.defineProperty(exports, 'PaginationProps', {
+	  enumerable: true,
+	  get: function get() {
+	    return _Pagination.PaginationProps;
+	  }
+	});
+
+	var _Pagination2 = _interopRequireDefault(_Pagination);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Pagination2.default;
+
+/***/ },
+
+/***/ 85:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(252);
+
+	__webpack_require__(34);
+
+	__webpack_require__(21);
+
+/***/ },
+
+/***/ 252:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 285:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _select = __webpack_require__(31);
+
+	var _select2 = _interopRequireDefault(_select);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MiniSelect = function (_React$Component) {
+	    (0, _inherits3.default)(MiniSelect, _React$Component);
+
+	    function MiniSelect() {
+	        (0, _classCallCheck3.default)(this, MiniSelect);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    MiniSelect.prototype.render = function render() {
+	        return _react2.default.createElement(_select2.default, (0, _extends3.default)({ size: 'small' }, this.props));
+	    };
+
+	    return MiniSelect;
+	}(_react2.default.Component);
+
+	exports.default = MiniSelect;
+
+	MiniSelect.Option = _select2.default.Option;
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 286:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcPagination = __webpack_require__(324);
+
+	var _rcPagination2 = _interopRequireDefault(_rcPagination);
+
+	var _select = __webpack_require__(31);
+
+	var _select2 = _interopRequireDefault(_select);
+
+	var _MiniSelect = __webpack_require__(285);
+
+	var _MiniSelect2 = _interopRequireDefault(_MiniSelect);
+
+	var _zh_CN = __webpack_require__(287);
+
+	var _zh_CN2 = _interopRequireDefault(_zh_CN);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Pagination = function (_React$Component) {
+	    (0, _inherits3.default)(Pagination, _React$Component);
+
+	    function Pagination() {
+	        (0, _classCallCheck3.default)(this, Pagination);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Pagination.prototype.render = function render() {
+	        var className = this.props.className;
+	        var selectComponentClass = _select2.default;
+	        var locale = void 0;
+	        if (this.context.antLocale && this.context.antLocale.Pagination) {
+	            locale = this.context.antLocale.Pagination;
+	        } else {
+	            locale = this.props.locale;
+	        }
+	        if (this.props.size === 'small') {
+	            className += ' mini';
+	            selectComponentClass = _MiniSelect2.default;
+	        }
+	        return _react2.default.createElement(_rcPagination2.default, (0, _extends3.default)({ selectComponentClass: selectComponentClass, selectPrefixCls: this.props.selectPrefixCls }, this.props, { locale: locale, className: className }));
+	    };
+
+	    return Pagination;
+	}(_react2.default.Component);
+
+	exports.default = Pagination;
+
+	Pagination.defaultProps = {
+	    locale: _zh_CN2.default,
+	    className: '',
+	    prefixCls: 'ant-pagination',
+	    selectPrefixCls: 'ant-select'
+	};
+	Pagination.contextTypes = {
+	    antLocale: _react2.default.PropTypes.object
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 287:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _zh_CN = __webpack_require__(258);
+
+	var _zh_CN2 = _interopRequireDefault(_zh_CN);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _zh_CN2.default;
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 768:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1628),
+	    'changer': __webpack_require__(1629),
+	    'controlled': __webpack_require__(1630),
+	    'jump': __webpack_require__(1631),
+	    'mini': __webpack_require__(1632),
+	    'more': __webpack_require__(1633),
+	    'simple': __webpack_require__(1634),
+	    'total': __webpack_require__(1635),
+	}
+
+/***/ },
+
+/***/ 1628:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(85);
+
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -69,14 +286,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1553:
+/***/ 1629:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -124,14 +341,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1554:
+/***/ 1630:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -190,14 +407,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1555:
+/***/ 1631:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -245,14 +462,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1556:
+/***/ 1632:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -308,14 +525,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1557:
+/***/ 1633:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -361,14 +578,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1558:
+/***/ 1634:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -414,14 +631,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1559:
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(80);
+	var _style2 = __webpack_require__(85);
 
-	var _pagination = __webpack_require__(79);
+	var _pagination = __webpack_require__(84);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 

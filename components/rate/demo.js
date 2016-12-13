@@ -1,25 +1,102 @@
-webpackJsonp([34,204],{
+webpackJsonp([37,204],{
 
-/***/ 662:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1592),
-	    'disabled': __webpack_require__(1593),
-	    'half': __webpack_require__(1594),
-	    'text': __webpack_require__(1595),
-	}
-
-/***/ },
-
-/***/ 1592:
+/***/ 356:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(239);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _rate = __webpack_require__(238);
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcRate = __webpack_require__(565);
+
+	var _rcRate2 = _interopRequireDefault(_rcRate);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Rate = function (_React$Component) {
+	    (0, _inherits3.default)(Rate, _React$Component);
+
+	    function Rate() {
+	        (0, _classCallCheck3.default)(this, Rate);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Rate.prototype.render = function render() {
+	        return _react2.default.createElement(_rcRate2.default, this.props);
+	    };
+
+	    return Rate;
+	}(_react2.default.Component);
+
+	exports.default = Rate;
+
+	Rate.propTypes = {
+	    prefixCls: _react.PropTypes.string
+	};
+	Rate.defaultProps = {
+	    prefixCls: 'ant-rate'
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 357:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(948);
+
+/***/ },
+
+/***/ 773:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1668),
+	    'disabled': __webpack_require__(1669),
+	    'half': __webpack_require__(1670),
+	    'text': __webpack_require__(1671),
+	}
+
+/***/ },
+
+/***/ 948:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 1668:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(357);
+
+	var _rate = __webpack_require__(356);
 
 	var _rate2 = _interopRequireDefault(_rate);
 
@@ -65,14 +142,14 @@ webpackJsonp([34,204],{
 
 /***/ },
 
-/***/ 1593:
+/***/ 1669:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(239);
+	var _style2 = __webpack_require__(357);
 
-	var _rate = __webpack_require__(238);
+	var _rate = __webpack_require__(356);
 
 	var _rate2 = _interopRequireDefault(_rate);
 
@@ -118,14 +195,14 @@ webpackJsonp([34,204],{
 
 /***/ },
 
-/***/ 1594:
+/***/ 1670:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(239);
+	var _style2 = __webpack_require__(357);
 
-	var _rate = __webpack_require__(238);
+	var _rate = __webpack_require__(356);
 
 	var _rate2 = _interopRequireDefault(_rate);
 
@@ -171,14 +248,14 @@ webpackJsonp([34,204],{
 
 /***/ },
 
-/***/ 1595:
+/***/ 1671:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(239);
+	var _style2 = __webpack_require__(357);
 
-	var _rate = __webpack_require__(238);
+	var _rate = __webpack_require__(356);
 
 	var _rate2 = _interopRequireDefault(_rate);
 

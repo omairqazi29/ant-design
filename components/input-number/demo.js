@@ -1,25 +1,130 @@
-webpackJsonp([37,204],{
+webpackJsonp([39,204],{
 
-/***/ 650:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1490),
-	    'digit': __webpack_require__(1491),
-	    'disabled': __webpack_require__(1492),
-	    'size': __webpack_require__(1493),
-	}
-
-/***/ },
-
-/***/ 1490:
+/***/ 143:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _inputNumber = __webpack_require__(144);
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _slicedToArray2 = __webpack_require__(15);
+
+	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _rcInputNumber = __webpack_require__(346);
+
+	var _rcInputNumber2 = _interopRequireDefault(_rcInputNumber);
+
+	var _splitObject3 = __webpack_require__(18);
+
+	var _splitObject4 = _interopRequireDefault(_splitObject3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var InputNumber = function (_React$Component) {
+	    (0, _inherits3.default)(InputNumber, _React$Component);
+
+	    function InputNumber() {
+	        (0, _classCallCheck3.default)(this, InputNumber);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    InputNumber.prototype.render = function render() {
+	        var _classNames;
+
+	        var _splitObject = (0, _splitObject4.default)(this.props, ['size', 'className']),
+	            _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
+	            _splitObject2$ = _splitObject2[0],
+	            className = _splitObject2$.className,
+	            size = _splitObject2$.size,
+	            others = _splitObject2[1];
+
+	        var inputNumberClass = (0, _classnames2.default)((_classNames = {}, (0, _defineProperty3.default)(_classNames, this.props.prefixCls + '-lg', size === 'large'), (0, _defineProperty3.default)(_classNames, this.props.prefixCls + '-sm', size === 'small'), _classNames), className);
+	        return _react2.default.createElement(_rcInputNumber2.default, (0, _extends3.default)({ className: inputNumberClass }, others));
+	    };
+
+	    return InputNumber;
+	}(_react2.default.Component);
+
+	exports.default = InputNumber;
+
+	InputNumber.defaultProps = {
+	    prefixCls: 'ant-input-number',
+	    step: 1
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 144:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(251);
+
+/***/ },
+
+/***/ 251:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 761:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1566),
+	    'digit': __webpack_require__(1567),
+	    'disabled': __webpack_require__(1568),
+	    'size': __webpack_require__(1569),
+	}
+
+/***/ },
+
+/***/ 1566:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(144);
+
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -67,14 +172,14 @@ webpackJsonp([37,204],{
 
 /***/ },
 
-/***/ 1491:
+/***/ 1567:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -122,20 +227,20 @@ webpackJsonp([37,204],{
 
 /***/ },
 
-/***/ 1492:
+/***/ 1568:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(145);
+	var _style4 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -205,14 +310,14 @@ webpackJsonp([37,204],{
 
 /***/ },
 
-/***/ 1493:
+/***/ 1569:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 

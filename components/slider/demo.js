@@ -1,45 +1,331 @@
-webpackJsonp([19,204],{
+webpackJsonp([14,204],{
 
-/***/ 664:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1611),
-	    'event': __webpack_require__(1612),
-	    'icon-slider': __webpack_require__(1613),
-	    'input-number': __webpack_require__(1614),
-	    'mark': __webpack_require__(1615),
-	    'tip-formatter': __webpack_require__(1616),
-	}
-
-/***/ },
-
-/***/ 1611:
+/***/ 70:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(82);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _switch = __webpack_require__(81);
+	var _extends2 = __webpack_require__(7);
 
-	var _switch2 = _interopRequireDefault(_switch);
+	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(150);
+	var _defineProperty2 = __webpack_require__(8);
 
-	var _slider = __webpack_require__(149);
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-	var _slider2 = _interopRequireDefault(_slider);
-
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(3);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(5);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcSwitch = __webpack_require__(159);
+
+	var _rcSwitch2 = _interopRequireDefault(_rcSwitch);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Switch = function (_React$Component) {
+	    (0, _inherits3.default)(Switch, _React$Component);
+
+	    function Switch() {
+	        (0, _classCallCheck3.default)(this, Switch);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Switch.prototype.render = function render() {
+	        var _props = this.props,
+	            prefixCls = _props.prefixCls,
+	            size = _props.size,
+	            _props$className = _props.className,
+	            className = _props$className === undefined ? '' : _props$className;
+
+	        var classes = (0, _classnames2.default)(className, (0, _defineProperty3.default)({}, prefixCls + '-small', size === 'small'));
+	        return _react2.default.createElement(_rcSwitch2.default, (0, _extends3.default)({}, this.props, { className: classes }));
+	    };
+
+	    return Switch;
+	}(_react2.default.Component);
+
+	exports.default = Switch;
+
+	Switch.defaultProps = {
+	    prefixCls: 'ant-switch',
+	    size: 'default'
+	};
+	Switch.propTypes = {
+	    prefixCls: _react.PropTypes.string,
+	    size: _react.PropTypes.oneOf(['small', 'default']),
+	    className: _react.PropTypes.string
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 71:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(88);
+
+/***/ },
+
+/***/ 88:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 143:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _slicedToArray2 = __webpack_require__(15);
+
+	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _rcInputNumber = __webpack_require__(346);
+
+	var _rcInputNumber2 = _interopRequireDefault(_rcInputNumber);
+
+	var _splitObject3 = __webpack_require__(18);
+
+	var _splitObject4 = _interopRequireDefault(_splitObject3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var InputNumber = function (_React$Component) {
+	    (0, _inherits3.default)(InputNumber, _React$Component);
+
+	    function InputNumber() {
+	        (0, _classCallCheck3.default)(this, InputNumber);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    InputNumber.prototype.render = function render() {
+	        var _classNames;
+
+	        var _splitObject = (0, _splitObject4.default)(this.props, ['size', 'className']),
+	            _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
+	            _splitObject2$ = _splitObject2[0],
+	            className = _splitObject2$.className,
+	            size = _splitObject2$.size,
+	            others = _splitObject2[1];
+
+	        var inputNumberClass = (0, _classnames2.default)((_classNames = {}, (0, _defineProperty3.default)(_classNames, this.props.prefixCls + '-lg', size === 'large'), (0, _defineProperty3.default)(_classNames, this.props.prefixCls + '-sm', size === 'small'), _classNames), className);
+	        return _react2.default.createElement(_rcInputNumber2.default, (0, _extends3.default)({ className: inputNumberClass }, others));
+	    };
+
+	    return InputNumber;
+	}(_react2.default.Component);
+
+	exports.default = InputNumber;
+
+	InputNumber.defaultProps = {
+	    prefixCls: 'ant-input-number',
+	    step: 1
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 144:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(251);
+
+/***/ },
+
+/***/ 177:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcSlider = __webpack_require__(471);
+
+	var _rcSlider2 = _interopRequireDefault(_rcSlider);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Slider = function (_React$Component) {
+	    (0, _inherits3.default)(Slider, _React$Component);
+
+	    function Slider() {
+	        (0, _classCallCheck3.default)(this, Slider);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Slider.prototype.render = function render() {
+	        return _react2.default.createElement(_rcSlider2.default, this.props);
+	    };
+
+	    return Slider;
+	}(_react2.default.Component);
+
+	exports.default = Slider;
+
+	Slider.defaultProps = {
+	    prefixCls: 'ant-slider',
+	    tooltipPrefixCls: 'ant-tooltip',
+	    tipTransitionName: 'zoom-down'
+	};
+	Slider.propTypes = {
+	    prefixCls: _react.PropTypes.string,
+	    tipTransitionName: _react.PropTypes.string
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 178:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(392);
+
+	__webpack_require__(149);
+
+/***/ },
+
+/***/ 251:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 392:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 775:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1687),
+	    'event': __webpack_require__(1688),
+	    'icon-slider': __webpack_require__(1689),
+	    'input-number': __webpack_require__(1690),
+	    'mark': __webpack_require__(1691),
+	    'tip-formatter': __webpack_require__(1692),
+	}
+
+/***/ },
+
+/***/ 1687:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(71);
+
+	var _switch = __webpack_require__(70);
+
+	var _switch2 = _interopRequireDefault(_switch);
+
+	var _style4 = __webpack_require__(178);
+
+	var _slider = __webpack_require__(177);
+
+	var _slider2 = _interopRequireDefault(_slider);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -118,14 +404,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1612:
+/***/ 1688:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(178);
 
-	var _slider = __webpack_require__(149);
+	var _slider = __webpack_require__(177);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -180,24 +466,24 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1613:
+/***/ 1689:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(150);
+	var _style3 = __webpack_require__(178);
 
-	var _slider = __webpack_require__(149);
+	var _slider = __webpack_require__(177);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
-	var _extends2 = __webpack_require__(8);
+	var _extends2 = __webpack_require__(7);
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -263,32 +549,32 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1614:
+/***/ 1690:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(49);
+	var _style5 = __webpack_require__(74);
 
-	var _row = __webpack_require__(45);
+	var _row = __webpack_require__(60);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style6 = __webpack_require__(145);
+	var _style6 = __webpack_require__(144);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(143);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
-	var _style7 = __webpack_require__(44);
+	var _style7 = __webpack_require__(62);
 
-	var _col = __webpack_require__(43);
+	var _col = __webpack_require__(49);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style8 = __webpack_require__(150);
+	var _style8 = __webpack_require__(178);
 
-	var _slider = __webpack_require__(149);
+	var _slider = __webpack_require__(177);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -395,14 +681,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1615:
+/***/ 1691:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(178);
 
-	var _slider = __webpack_require__(149);
+	var _slider = __webpack_require__(177);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -481,14 +767,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1616:
+/***/ 1692:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(178);
 
-	var _slider = __webpack_require__(149);
+	var _slider = __webpack_require__(177);
 
 	var _slider2 = _interopRequireDefault(_slider);
 

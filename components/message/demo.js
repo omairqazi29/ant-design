@@ -1,31 +1,164 @@
-webpackJsonp([36,204],{
+webpackJsonp([38,204],{
 
-/***/ 654:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'duration': __webpack_require__(1528),
-	    'info': __webpack_require__(1529),
-	    'loading': __webpack_require__(1530),
-	    'other': __webpack_require__(1531),
-	}
-
-/***/ },
-
-/***/ 1528:
+/***/ 68:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	var _button = __webpack_require__(9);
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcNotification = __webpack_require__(158);
+
+	var _rcNotification2 = _interopRequireDefault(_rcNotification);
+
+	var _icon = __webpack_require__(11);
+
+	var _icon2 = _interopRequireDefault(_icon);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var defaultDuration = 1.5;
+	var defaultTop = void 0;
+	var messageInstance = void 0;
+	var key = 1;
+	var prefixCls = 'ant-message';
+	function getMessageInstance() {
+	    messageInstance = messageInstance || _rcNotification2.default.newInstance({
+	        prefixCls: prefixCls,
+	        transitionName: 'move-up',
+	        style: { top: defaultTop }
+	    });
+	    return messageInstance;
+	}
+	function notice(content) {
+	    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultDuration;
+	    var type = arguments[2];
+	    var onClose = arguments[3];
+
+	    var iconType = {
+	        info: 'info-circle',
+	        success: 'check-circle',
+	        error: 'cross-circle',
+	        warning: 'exclamation-circle',
+	        loading: 'loading'
+	    }[type];
+	    var instance = getMessageInstance();
+	    instance.notice({
+	        key: key,
+	        duration: duration,
+	        style: {},
+	        content: _react2.default.createElement(
+	            'div',
+	            { className: prefixCls + '-custom-content ' + prefixCls + '-' + type },
+	            _react2.default.createElement(_icon2.default, { type: iconType }),
+	            _react2.default.createElement(
+	                'span',
+	                null,
+	                content
+	            )
+	        ),
+	        onClose: onClose
+	    });
+	    return function () {
+	        var target = key++;
+	        return function () {
+	            instance.removeNotice(target);
+	        };
+	    }();
+	}
+	exports.default = {
+	    info: function info(content, duration, onClose) {
+	        return notice(content, duration, 'info', onClose);
+	    },
+	    success: function success(content, duration, onClose) {
+	        return notice(content, duration, 'success', onClose);
+	    },
+	    error: function error(content, duration, onClose) {
+	        return notice(content, duration, 'error', onClose);
+	    },
+
+	    // Departed usage, please use warning()
+	    warn: function warn(content, duration, onClose) {
+	        return notice(content, duration, 'warning', onClose);
+	    },
+	    warning: function warning(content, duration, onClose) {
+	        return notice(content, duration, 'warning', onClose);
+	    },
+	    loading: function loading(content, duration, onClose) {
+	        return notice(content, duration, 'loading', onClose);
+	    },
+	    config: function config(options) {
+	        if (options.top !== undefined) {
+	            defaultTop = options.top;
+	        }
+	        if (options.duration !== undefined) {
+	            defaultDuration = options.duration;
+	        }
+	        if (options.prefixCls !== undefined) {
+	            prefixCls = options.prefixCls;
+	        }
+	    },
+	    destroy: function destroy() {
+	        if (messageInstance) {
+	            messageInstance.destroy();
+	            messageInstance = null;
+	        }
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 69:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(130);
+
+/***/ },
+
+/***/ 130:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 765:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'duration': __webpack_require__(1604),
+	    'info': __webpack_require__(1605),
+	    'loading': __webpack_require__(1606),
+	    'other': __webpack_require__(1607),
+	}
+
+/***/ },
+
+/***/ 1604:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(14);
+
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(64);
+	var _style4 = __webpack_require__(69);
 
-	var _message = __webpack_require__(63);
+	var _message = __webpack_require__(68);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -77,20 +210,20 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 1529:
+/***/ 1605:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(64);
+	var _style4 = __webpack_require__(69);
 
-	var _message = __webpack_require__(63);
+	var _message = __webpack_require__(68);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -142,20 +275,20 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 1530:
+/***/ 1606:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(64);
+	var _style4 = __webpack_require__(69);
 
-	var _message = __webpack_require__(63);
+	var _message = __webpack_require__(68);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -208,20 +341,20 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 1531:
+/***/ 1607:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(64);
+	var _style4 = __webpack_require__(69);
 
-	var _message = __webpack_require__(63);
+	var _message = __webpack_require__(68);
 
 	var _message2 = _interopRequireDefault(_message);
 

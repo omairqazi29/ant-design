@@ -1,26 +1,302 @@
-webpackJsonp([30,204],{
+webpackJsonp([32,204],{
 
-/***/ 643:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1430),
-	    'check-all': __webpack_require__(1431),
-	    'controller': __webpack_require__(1432),
-	    'disabled': __webpack_require__(1433),
-	    'group': __webpack_require__(1434),
-	}
-
-/***/ },
-
-/***/ 1430:
+/***/ 40:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _checkbox = __webpack_require__(71);
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _slicedToArray2 = __webpack_require__(15);
+
+	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _rcCheckbox = __webpack_require__(190);
+
+	var _rcCheckbox2 = _interopRequireDefault(_rcCheckbox);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Group = __webpack_require__(142);
+
+	var _Group2 = _interopRequireDefault(_Group);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _PureRenderMixin = __webpack_require__(19);
+
+	var _PureRenderMixin2 = _interopRequireDefault(_PureRenderMixin);
+
+	var _splitObject3 = __webpack_require__(18);
+
+	var _splitObject4 = _interopRequireDefault(_splitObject3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Checkbox = function (_React$Component) {
+	    (0, _inherits3.default)(Checkbox, _React$Component);
+
+	    function Checkbox() {
+	        (0, _classCallCheck3.default)(this, Checkbox);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Checkbox.prototype.shouldComponentUpdate = function shouldComponentUpdate() {
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _PureRenderMixin2.default.shouldComponentUpdate.apply(this, args);
+	    };
+
+	    Checkbox.prototype.render = function render() {
+	        var _splitObject = (0, _splitObject4.default)(this.props, ['prefixCls', 'style', 'children', 'className', 'indeterminate', 'onMouseEnter', 'onMouseLeave']),
+	            _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
+	            _splitObject2$ = _splitObject2[0],
+	            prefixCls = _splitObject2$.prefixCls,
+	            style = _splitObject2$.style,
+	            children = _splitObject2$.children,
+	            className = _splitObject2$.className,
+	            indeterminate = _splitObject2$.indeterminate,
+	            onMouseEnter = _splitObject2$.onMouseEnter,
+	            onMouseLeave = _splitObject2$.onMouseLeave,
+	            restProps = _splitObject2[1];
+
+	        var classString = (0, _classnames2.default)(className, (0, _defineProperty3.default)({}, prefixCls + '-wrapper', true));
+	        var checkboxClass = (0, _classnames2.default)((0, _defineProperty3.default)({}, prefixCls + '-indeterminate', indeterminate));
+	        return _react2.default.createElement(
+	            'label',
+	            { className: classString, style: style, onMouseEnter: onMouseEnter, onMouseLeave: onMouseLeave },
+	            _react2.default.createElement(_rcCheckbox2.default, (0, _extends3.default)({}, restProps, { prefixCls: prefixCls, className: checkboxClass, children: null })),
+	            children !== undefined ? _react2.default.createElement(
+	                'span',
+	                null,
+	                children
+	            ) : null
+	        );
+	    };
+
+	    return Checkbox;
+	}(_react2.default.Component);
+
+	exports.default = Checkbox;
+
+	Checkbox.Group = _Group2.default;
+	Checkbox.defaultProps = {
+	    prefixCls: 'ant-checkbox',
+	    indeterminate: false
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 56:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(86);
+
+/***/ },
+
+/***/ 86:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 142:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _toConsumableArray2 = __webpack_require__(61);
+
+	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _index = __webpack_require__(40);
+
+	var _index2 = _interopRequireDefault(_index);
+
+	var _PureRenderMixin = __webpack_require__(19);
+
+	var _PureRenderMixin2 = _interopRequireDefault(_PureRenderMixin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CheckboxGroup = function (_React$Component) {
+	    (0, _inherits3.default)(CheckboxGroup, _React$Component);
+
+	    function CheckboxGroup(props) {
+	        (0, _classCallCheck3.default)(this, CheckboxGroup);
+
+	        var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this, props));
+
+	        _this.toggleOption = function (option) {
+	            var optionIndex = _this.state.value.indexOf(option.value);
+	            var value = [].concat((0, _toConsumableArray3.default)(_this.state.value));
+	            if (optionIndex === -1) {
+	                value.push(option.value);
+	            } else {
+	                value.splice(optionIndex, 1);
+	            }
+	            if (!('value' in _this.props)) {
+	                _this.setState({ value: value });
+	            }
+	            var onChange = _this.props.onChange;
+	            if (onChange) {
+	                onChange(value);
+	            }
+	        };
+	        _this.state = {
+	            value: props.value || props.defaultValue || []
+	        };
+	        return _this;
+	    }
+
+	    CheckboxGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        if ('value' in nextProps) {
+	            this.setState({
+	                value: nextProps.value || []
+	            });
+	        }
+	    };
+
+	    CheckboxGroup.prototype.shouldComponentUpdate = function shouldComponentUpdate() {
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _PureRenderMixin2.default.shouldComponentUpdate.apply(this, args);
+	    };
+
+	    CheckboxGroup.prototype.getOptions = function getOptions() {
+	        var options = this.props.options;
+	        // https://github.com/Microsoft/TypeScript/issues/7960
+
+	        return options.map(function (option) {
+	            if (typeof option === 'string') {
+	                return {
+	                    label: option,
+	                    value: option
+	                };
+	            }
+	            return option;
+	        });
+	    };
+
+	    CheckboxGroup.prototype.render = function render() {
+	        var _this2 = this;
+
+	        var prefixCls = this.props.prefixCls;
+
+	        var options = this.getOptions().map(function (option) {
+	            return _react2.default.createElement(
+	                _index2.default,
+	                { disabled: 'disabled' in option ? option.disabled : _this2.props.disabled, checked: _this2.state.value.indexOf(option.value) !== -1, onChange: function onChange() {
+	                        return _this2.toggleOption(option);
+	                    }, className: prefixCls + '-item', key: option.value },
+	                option.label
+	            );
+	        });
+	        return _react2.default.createElement(
+	            'div',
+	            { className: prefixCls },
+	            options
+	        );
+	    };
+
+	    return CheckboxGroup;
+	}(_react2.default.Component);
+
+	exports.default = CheckboxGroup;
+
+	CheckboxGroup.defaultProps = {
+	    options: [],
+	    prefixCls: 'ant-checkbox-group'
+	};
+	CheckboxGroup.propTypes = {
+	    defaultValue: _react2.default.PropTypes.array,
+	    value: _react2.default.PropTypes.array,
+	    options: _react2.default.PropTypes.array.isRequired,
+	    onChange: _react2.default.PropTypes.func
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 754:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1505),
+	    'check-all': __webpack_require__(1506),
+	    'controller': __webpack_require__(1507),
+	    'disabled': __webpack_require__(1508),
+	    'group': __webpack_require__(1509),
+	}
+
+/***/ },
+
+/***/ 1505:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(56);
+
+	var _checkbox = __webpack_require__(40);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -72,14 +348,14 @@ webpackJsonp([30,204],{
 
 /***/ },
 
-/***/ 1431:
+/***/ 1506:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	var _style2 = __webpack_require__(56);
 
-	var _checkbox = __webpack_require__(71);
+	var _checkbox = __webpack_require__(40);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -155,20 +431,20 @@ webpackJsonp([30,204],{
 
 /***/ },
 
-/***/ 1432:
+/***/ 1507:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(78);
+	var _style4 = __webpack_require__(56);
 
-	var _checkbox = __webpack_require__(71);
+	var _checkbox = __webpack_require__(40);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -257,14 +533,14 @@ webpackJsonp([30,204],{
 
 /***/ },
 
-/***/ 1433:
+/***/ 1508:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	var _style2 = __webpack_require__(56);
 
-	var _checkbox = __webpack_require__(71);
+	var _checkbox = __webpack_require__(40);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -316,14 +592,14 @@ webpackJsonp([30,204],{
 
 /***/ },
 
-/***/ 1434:
+/***/ 1509:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(78);
+	var _style2 = __webpack_require__(56);
 
-	var _checkbox = __webpack_require__(71);
+	var _checkbox = __webpack_require__(40);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 

@@ -1,33 +1,132 @@
-webpackJsonp([21,204],{
+webpackJsonp([30,204],{
 
-/***/ 653:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'horizontal': __webpack_require__(1520),
-	    'sider-current': __webpack_require__(1521),
-	    'sider': __webpack_require__(1522),
-	    'switch-mode': __webpack_require__(1523),
-	    'theme': __webpack_require__(1524),
-	    'vertical': __webpack_require__(1525),
-	}
-
-/***/ },
-
-/***/ 1520:
+/***/ 70:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(14);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _icon = __webpack_require__(10);
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcSwitch = __webpack_require__(159);
+
+	var _rcSwitch2 = _interopRequireDefault(_rcSwitch);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Switch = function (_React$Component) {
+	    (0, _inherits3.default)(Switch, _React$Component);
+
+	    function Switch() {
+	        (0, _classCallCheck3.default)(this, Switch);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Switch.prototype.render = function render() {
+	        var _props = this.props,
+	            prefixCls = _props.prefixCls,
+	            size = _props.size,
+	            _props$className = _props.className,
+	            className = _props$className === undefined ? '' : _props$className;
+
+	        var classes = (0, _classnames2.default)(className, (0, _defineProperty3.default)({}, prefixCls + '-small', size === 'small'));
+	        return _react2.default.createElement(_rcSwitch2.default, (0, _extends3.default)({}, this.props, { className: classes }));
+	    };
+
+	    return Switch;
+	}(_react2.default.Component);
+
+	exports.default = Switch;
+
+	Switch.defaultProps = {
+	    prefixCls: 'ant-switch',
+	    size: 'default'
+	};
+	Switch.propTypes = {
+	    prefixCls: _react.PropTypes.string,
+	    size: _react.PropTypes.oneOf(['small', 'default']),
+	    className: _react.PropTypes.string
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 71:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(88);
+
+/***/ },
+
+/***/ 88:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 764:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'horizontal': __webpack_require__(1596),
+	    'sider-current': __webpack_require__(1597),
+	    'sider': __webpack_require__(1598),
+	    'switch-mode': __webpack_require__(1599),
+	    'theme': __webpack_require__(1600),
+	    'vertical': __webpack_require__(1601),
+	}
+
+/***/ },
+
+/***/ 1596:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(16);
+
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(38);
+	var _style4 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -146,20 +245,20 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1521:
+/***/ 1597:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(14);
+	var _style3 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(38);
+	var _style4 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -337,20 +436,20 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1522:
+/***/ 1598:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(14);
+	var _style3 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(38);
+	var _style4 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -522,26 +621,26 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1523:
+/***/ 1599:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(82);
+	var _style5 = __webpack_require__(71);
 
-	var _switch = __webpack_require__(81);
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -719,26 +818,26 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1524:
+/***/ 1600:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(82);
+	var _style5 = __webpack_require__(71);
 
-	var _switch = __webpack_require__(81);
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style6 = __webpack_require__(38);
+	var _style6 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -912,20 +1011,20 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1525:
+/***/ 1601:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(14);
+	var _style3 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(38);
+	var _style4 = __webpack_require__(53);
 
-	var _menu = __webpack_require__(37);
+	var _menu = __webpack_require__(52);
 
 	var _menu2 = _interopRequireDefault(_menu);
 

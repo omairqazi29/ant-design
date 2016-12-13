@@ -1,25 +1,124 @@
-webpackJsonp([33,204],{
+webpackJsonp([36,204],{
 
-/***/ 667:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1635),
-	    'disabled': __webpack_require__(1636),
-	    'size': __webpack_require__(1637),
-	    'text': __webpack_require__(1638),
-	}
-
-/***/ },
-
-/***/ 1635:
+/***/ 70:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
 
-	var _switch = __webpack_require__(81);
+	var _extends2 = __webpack_require__(7);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	var _defineProperty2 = __webpack_require__(8);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _classCallCheck2 = __webpack_require__(3);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(5);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(4);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rcSwitch = __webpack_require__(159);
+
+	var _rcSwitch2 = _interopRequireDefault(_rcSwitch);
+
+	var _classnames = __webpack_require__(6);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Switch = function (_React$Component) {
+	    (0, _inherits3.default)(Switch, _React$Component);
+
+	    function Switch() {
+	        (0, _classCallCheck3.default)(this, Switch);
+	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+	    }
+
+	    Switch.prototype.render = function render() {
+	        var _props = this.props,
+	            prefixCls = _props.prefixCls,
+	            size = _props.size,
+	            _props$className = _props.className,
+	            className = _props$className === undefined ? '' : _props$className;
+
+	        var classes = (0, _classnames2.default)(className, (0, _defineProperty3.default)({}, prefixCls + '-small', size === 'small'));
+	        return _react2.default.createElement(_rcSwitch2.default, (0, _extends3.default)({}, this.props, { className: classes }));
+	    };
+
+	    return Switch;
+	}(_react2.default.Component);
+
+	exports.default = Switch;
+
+	Switch.defaultProps = {
+	    prefixCls: 'ant-switch',
+	    size: 'default'
+	};
+	Switch.propTypes = {
+	    prefixCls: _react.PropTypes.string,
+	    size: _react.PropTypes.oneOf(['small', 'default']),
+	    className: _react.PropTypes.string
+	};
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 71:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(12);
+
+	__webpack_require__(88);
+
+/***/ },
+
+/***/ 88:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 778:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1711),
+	    'disabled': __webpack_require__(1712),
+	    'size': __webpack_require__(1713),
+	    'text': __webpack_require__(1714),
+	}
+
+/***/ },
+
+/***/ 1711:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(71);
+
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -68,20 +167,20 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 1636:
+/***/ 1712:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(14);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(13);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(71);
 
-	var _switch = __webpack_require__(81);
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -148,14 +247,14 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 1637:
+/***/ 1713:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(71);
 
-	var _switch = __webpack_require__(81);
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -207,20 +306,20 @@ webpackJsonp([33,204],{
 
 /***/ },
 
-/***/ 1638:
+/***/ 1714:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(14);
+	var _style3 = __webpack_require__(16);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(11);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(71);
 
-	var _switch = __webpack_require__(81);
+	var _switch = __webpack_require__(70);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
