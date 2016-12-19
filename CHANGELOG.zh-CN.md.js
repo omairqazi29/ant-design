@@ -1,6 +1,6 @@
 webpackJsonp([202,204],{
 
-/***/ 1421:
+/***/ 622:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -481,7 +481,7 @@ webpackJsonp([202,204],{
 	  }, "gregorian-calendar 的文档"], " 进行修改。你也可以参考这个 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/commit/4026221d451b246956983bb42140142d4a48b7d7"
-	  }, "commit"], " 来进行修改。"], ["p", "由于 ", ["code", "JSON.stringy(date: moment)"], " 返回的值会丢失时区设置，所以要先使用 ", ["code", ".format"], " 把日期转成字符串，相关 issue 见 ", ["a", {
+	  }, "commit"], " 来进行修改。"], ["p", "由于 ", ["code", "JSON.stringify(date: moment)"], " 返回的值会丢失时区设置，所以要先使用 ", ["code", ".format"], " 把日期转成字符串，相关 issue 见 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3082"
 	  }, "#3082"], "："], ["pre", {
@@ -594,7 +594,7 @@ webpackJsonp([202,204],{
 	    "href": "https://github.com/dvajs/dva-cli"
 	  }, "dva-cli"], "，原来的 ", ["code", "antd-init"], " 以后仅会用于学习以及 demo。"]]], ["h2", "1.11.4"], ["p", "去 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
+	    "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	  }, "GitHub"], " 查看 ", ["code", "0.x"], " 到 ", ["code", "1.x"], " 的 Change Log。"]],
 	  "meta": {
 	    "order": 6,

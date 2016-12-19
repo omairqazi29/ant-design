@@ -1,243 +1,13 @@
-webpackJsonp([19,204],{
+webpackJsonp([14,204],{
 
-/***/ 68:
+/***/ 903:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	var _style2 = __webpack_require__(139);
 
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _rcNotification = __webpack_require__(158);
-
-	var _rcNotification2 = _interopRequireDefault(_rcNotification);
-
-	var _icon = __webpack_require__(11);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var defaultDuration = 1.5;
-	var defaultTop = void 0;
-	var messageInstance = void 0;
-	var key = 1;
-	var prefixCls = 'ant-message';
-	function getMessageInstance() {
-	    messageInstance = messageInstance || _rcNotification2.default.newInstance({
-	        prefixCls: prefixCls,
-	        transitionName: 'move-up',
-	        style: { top: defaultTop }
-	    });
-	    return messageInstance;
-	}
-	function notice(content) {
-	    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultDuration;
-	    var type = arguments[2];
-	    var onClose = arguments[3];
-
-	    var iconType = {
-	        info: 'info-circle',
-	        success: 'check-circle',
-	        error: 'cross-circle',
-	        warning: 'exclamation-circle',
-	        loading: 'loading'
-	    }[type];
-	    var instance = getMessageInstance();
-	    instance.notice({
-	        key: key,
-	        duration: duration,
-	        style: {},
-	        content: _react2.default.createElement(
-	            'div',
-	            { className: prefixCls + '-custom-content ' + prefixCls + '-' + type },
-	            _react2.default.createElement(_icon2.default, { type: iconType }),
-	            _react2.default.createElement(
-	                'span',
-	                null,
-	                content
-	            )
-	        ),
-	        onClose: onClose
-	    });
-	    return function () {
-	        var target = key++;
-	        return function () {
-	            instance.removeNotice(target);
-	        };
-	    }();
-	}
-	exports.default = {
-	    info: function info(content, duration, onClose) {
-	        return notice(content, duration, 'info', onClose);
-	    },
-	    success: function success(content, duration, onClose) {
-	        return notice(content, duration, 'success', onClose);
-	    },
-	    error: function error(content, duration, onClose) {
-	        return notice(content, duration, 'error', onClose);
-	    },
-
-	    // Departed usage, please use warning()
-	    warn: function warn(content, duration, onClose) {
-	        return notice(content, duration, 'warning', onClose);
-	    },
-	    warning: function warning(content, duration, onClose) {
-	        return notice(content, duration, 'warning', onClose);
-	    },
-	    loading: function loading(content, duration, onClose) {
-	        return notice(content, duration, 'loading', onClose);
-	    },
-	    config: function config(options) {
-	        if (options.top !== undefined) {
-	            defaultTop = options.top;
-	        }
-	        if (options.duration !== undefined) {
-	            defaultDuration = options.duration;
-	        }
-	        if (options.prefixCls !== undefined) {
-	            prefixCls = options.prefixCls;
-	        }
-	    },
-	    destroy: function destroy() {
-	        if (messageInstance) {
-	            messageInstance.destroy();
-	            messageInstance = null;
-	        }
-	    }
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 69:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(130);
-
-/***/ },
-
-/***/ 130:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 211:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _rcSteps = __webpack_require__(605);
-
-	var _rcSteps2 = _interopRequireDefault(_rcSteps);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Steps = function (_React$Component) {
-	    (0, _inherits3.default)(Steps, _React$Component);
-
-	    function Steps() {
-	        (0, _classCallCheck3.default)(this, Steps);
-	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-	    }
-
-	    Steps.prototype.render = function render() {
-	        return _react2.default.createElement(_rcSteps2.default, this.props);
-	    };
-
-	    return Steps;
-	}(_react2.default.Component);
-
-	exports.default = Steps;
-
-	Steps.Step = _rcSteps2.default.Step;
-	Steps.defaultProps = {
-	    prefixCls: 'ant-steps',
-	    iconPrefix: 'ant',
-	    current: 0
-	};
-	Steps.propTypes = {
-	    prefixCls: _react.PropTypes.string,
-	    iconPrefix: _react.PropTypes.string,
-	    current: _react.PropTypes.number
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 212:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(950);
-
-/***/ },
-
-/***/ 777:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'error': __webpack_require__(1702),
-	    'icon': __webpack_require__(1703),
-	    'simple': __webpack_require__(1704),
-	    'small-size': __webpack_require__(1705),
-	    'step-next': __webpack_require__(1706),
-	    'vertical-small': __webpack_require__(1707),
-	    'vertical': __webpack_require__(1708),
-	}
-
-/***/ },
-
-/***/ 950:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 1702:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(212);
-
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -289,20 +59,20 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1703:
+/***/ 904:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(16);
+	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(212);
+	var _style4 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -355,14 +125,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1704:
+/***/ 905:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(212);
+	var _style2 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -414,14 +184,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1705:
+/***/ 906:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(212);
+	var _style2 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -473,38 +243,38 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1706:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(69);
+	var _style4 = __webpack_require__(58);
 
-	var _message = __webpack_require__(68);
+	var _message = __webpack_require__(57);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style5 = __webpack_require__(14);
+	var _style5 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _classCallCheck2 = __webpack_require__(3);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(5);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(4);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(212);
+	var _style6 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -624,14 +394,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1707:
+/***/ 908:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(212);
+	var _style2 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -683,14 +453,14 @@ webpackJsonp([19,204],{
 
 /***/ },
 
-/***/ 1708:
+/***/ 909:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(212);
+	var _style2 = __webpack_require__(139);
 
-	var _steps = __webpack_require__(211);
+	var _steps = __webpack_require__(138);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -739,6 +509,21 @@ webpackJsonp([19,204],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1218:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'error': __webpack_require__(903),
+	    'icon': __webpack_require__(904),
+	    'simple': __webpack_require__(905),
+	    'small-size': __webpack_require__(906),
+	    'step-next': __webpack_require__(907),
+	    'vertical-small': __webpack_require__(908),
+	    'vertical': __webpack_require__(909),
+	}
 
 /***/ }
 

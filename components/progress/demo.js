@@ -1,248 +1,19 @@
-webpackJsonp([25,204],{
+webpackJsonp([15,204],{
 
-/***/ 114:
+/***/ 852:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	var _style3 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(288);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _style4 = __webpack_require__(11);
 
-	exports.default = _progress2.default;
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 115:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(253);
-
-/***/ },
-
-/***/ 253:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 288:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
-
-	var _extends2 = __webpack_require__(7);
-
-	var _extends3 = _interopRequireDefault(_extends2);
-
-	var _defineProperty2 = __webpack_require__(8);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _slicedToArray2 = __webpack_require__(15);
-
-	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _icon = __webpack_require__(11);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _rcProgress = __webpack_require__(330);
-
-	var _classnames = __webpack_require__(6);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _splitObject3 = __webpack_require__(18);
-
-	var _splitObject4 = _interopRequireDefault(_splitObject3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var statusColorMap = {
-	    normal: '#108ee9',
-	    exception: '#ff5500',
-	    success: '#87d068'
-	};
-
-	var Progress = function (_React$Component) {
-	    (0, _inherits3.default)(Progress, _React$Component);
-
-	    function Progress() {
-	        (0, _classCallCheck3.default)(this, Progress);
-	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-	    }
-
-	    Progress.prototype.render = function render() {
-	        var _classNames;
-
-	        var _splitObject = (0, _splitObject4.default)(this.props, ['prefixCls', 'status', 'format', 'percent', 'trailColor', 'type', 'strokeWidth', 'width', 'className', 'showInfo']),
-	            _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
-	            _splitObject2$ = _splitObject2[0],
-	            prefixCls = _splitObject2$.prefixCls,
-	            status = _splitObject2$.status,
-	            format = _splitObject2$.format,
-	            percent = _splitObject2$.percent,
-	            trailColor = _splitObject2$.trailColor,
-	            type = _splitObject2$.type,
-	            strokeWidth = _splitObject2$.strokeWidth,
-	            width = _splitObject2$.width,
-	            className = _splitObject2$.className,
-	            showInfo = _splitObject2$.showInfo,
-	            restProps = _splitObject2[1];
-
-	        var progressStatus = parseInt(percent, 10) >= 100 && !('status' in this.props) ? 'success' : status || 'normal';
-	        var progressInfo = void 0;
-	        var progress = void 0;
-	        var textFormatter = format || function (percentNumber) {
-	            return percentNumber + '%';
-	        };
-	        if (showInfo) {
-	            var text = void 0;
-	            var iconType = type === 'circle' ? '' : '-circle';
-	            if (progressStatus === 'exception') {
-	                text = format ? textFormatter(percent) : _react2.default.createElement(_icon2.default, { type: 'cross' + iconType });
-	            } else if (progressStatus === 'success') {
-	                text = format ? textFormatter(percent) : _react2.default.createElement(_icon2.default, { type: 'check' + iconType });
-	            } else {
-	                text = textFormatter(percent);
-	            }
-	            progressInfo = _react2.default.createElement(
-	                'span',
-	                { className: prefixCls + '-text' },
-	                text
-	            );
-	        }
-	        if (type === 'line') {
-	            var percentStyle = {
-	                width: percent + '%',
-	                height: strokeWidth || 10
-	            };
-	            progress = _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: prefixCls + '-outer' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: prefixCls + '-inner' },
-	                        _react2.default.createElement('div', { className: prefixCls + '-bg', style: percentStyle })
-	                    )
-	                ),
-	                progressInfo
-	            );
-	        } else if (type === 'circle') {
-	            var circleSize = width || 132;
-	            var circleStyle = {
-	                width: circleSize,
-	                height: circleSize,
-	                fontSize: circleSize * 0.16 + 6
-	            };
-	            var circleWidth = strokeWidth || 6;
-	            progress = _react2.default.createElement(
-	                'div',
-	                { className: prefixCls + '-inner', style: circleStyle },
-	                _react2.default.createElement(_rcProgress.Circle, { percent: percent, strokeWidth: circleWidth, trailWidth: circleWidth, strokeColor: statusColorMap[progressStatus], trailColor: trailColor }),
-	                progressInfo
-	            );
-	        }
-	        var classString = (0, _classnames2.default)(prefixCls, (_classNames = {}, (0, _defineProperty3.default)(_classNames, prefixCls + '-' + type, true), (0, _defineProperty3.default)(_classNames, prefixCls + '-status-' + progressStatus, true), (0, _defineProperty3.default)(_classNames, prefixCls + '-show-info', showInfo), _classNames), className);
-	        return _react2.default.createElement(
-	            'div',
-	            (0, _extends3.default)({}, restProps, { className: classString }),
-	            progress
-	        );
-	    };
-
-	    return Progress;
-	}(_react2.default.Component);
-
-	exports.default = Progress;
-
-	Progress.defaultProps = {
-	    type: 'line',
-	    percent: 0,
-	    showInfo: true,
-	    trailColor: '#f3f3f3',
-	    prefixCls: 'ant-progress'
-	};
-	Progress.propTypes = {
-	    status: _react.PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
-	    type: _react.PropTypes.oneOf(['line', 'circle']),
-	    showInfo: _react.PropTypes.bool,
-	    percent: _react.PropTypes.number,
-	    width: _react.PropTypes.number,
-	    strokeWidth: _react.PropTypes.number,
-	    trailColor: _react.PropTypes.string,
-	    format: _react.PropTypes.func
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 771:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'circle-dynamic': __webpack_require__(1651),
-	    'circle-mini': __webpack_require__(1652),
-	    'circle': __webpack_require__(1653),
-	    'dynamic': __webpack_require__(1654),
-	    'format': __webpack_require__(1655),
-	    'line-mini': __webpack_require__(1656),
-	    'line': __webpack_require__(1657),
-	}
-
-/***/ },
-
-/***/ 1651:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(115);
-
-	var _progress = __webpack_require__(114);
-
-	var _progress2 = _interopRequireDefault(_progress);
-
-	var _style4 = __webpack_require__(14);
-
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -316,14 +87,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1652:
+/***/ 853:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(115);
+	var _style2 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
@@ -375,14 +146,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1653:
+/***/ 854:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(115);
+	var _style2 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
@@ -435,20 +206,20 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1654:
+/***/ 855:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -523,14 +294,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1655:
+/***/ 856:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(115);
+	var _style2 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
@@ -586,14 +357,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1656:
+/***/ 857:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(115);
+	var _style2 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
@@ -646,14 +417,14 @@ webpackJsonp([25,204],{
 
 /***/ },
 
-/***/ 1657:
+/***/ 858:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(115);
+	var _style2 = __webpack_require__(117);
 
-	var _progress = __webpack_require__(114);
+	var _progress = __webpack_require__(116);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
@@ -704,6 +475,21 @@ webpackJsonp([25,204],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1212:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'circle-dynamic': __webpack_require__(852),
+	    'circle-mini': __webpack_require__(853),
+	    'circle': __webpack_require__(854),
+	    'dynamic': __webpack_require__(855),
+	    'format': __webpack_require__(856),
+	    'line-mini': __webpack_require__(857),
+	    'line': __webpack_require__(858),
+	}
 
 /***/ }
 

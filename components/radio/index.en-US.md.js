@@ -1,6 +1,6 @@
 webpackJsonp([139,204],{
 
-/***/ 1666:
+/***/ 867:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30,7 +30,7 @@ webpackJsonp([139,204],{
 	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["h3", "Radio"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "optional"], ["th", "Default"]]], ["tbody", ["tr", ["td", "checked"], ["td", "Specifies whether the radio is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "Specifies the initial state: whether or not the radio is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "value"], ["td", "According to value for comparison, to determine whether the selected"], ["td", "String"], ["td"], ["td", "none"]]]], ["h3", "RadioGroup"], ["p", "radio group，wrap a group of ", ["code", "Radio"], "。"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "optional"], ["th", "Default"]]], ["tbody", ["tr", ["td", "onChange"], ["td", "The callback function that is triggered when the state changes."], ["td", "Function(e:Event)"], ["td", "none"], ["td", "none"]], ["tr", ["td", "value"], ["td", "Used for setting the currently selected value."], ["td", "String"], ["td", "none"], ["td", "none"]], ["tr", ["td", "defaultValue"], ["td", "Default selected value"], ["td", "String"], ["td", "none"], ["td", "none"]], ["tr", ["td", "size"], ["td", "Size, only on radio style"], ["td", "String"], ["td", ["code", "large"], " ", ["code", "default"], " ", ["code", "small"]], ["td", ["code", "default"]]]]]]
+	  "api": ["section", ["h2", "API"], ["h3", "Radio"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "optional"], ["th", "Default"]]], ["tbody", ["tr", ["td", "checked"], ["td", "Specifies whether the radio is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "defaultChecked"], ["td", "Specifies the initial state: whether or not the radio is selected."], ["td", "Boolean"], ["td", "false"]], ["tr", ["td", "value"], ["td", "According to value for comparison, to determine whether the selected"], ["td", "any"], ["td"], ["td", "none"]]]], ["h3", "RadioGroup"], ["p", "radio group，wrap a group of ", ["code", "Radio"], "。"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "optional"], ["th", "Default"]]], ["tbody", ["tr", ["td", "onChange"], ["td", "The callback function that is triggered when the state changes."], ["td", "Function(e:Event)"], ["td", "none"], ["td", "none"]], ["tr", ["td", "value"], ["td", "Used for setting the currently selected value."], ["td", "any"], ["td", "none"], ["td", "none"]], ["tr", ["td", "defaultValue"], ["td", "Default selected value"], ["td", "any"], ["td", "none"], ["td", "none"]], ["tr", ["td", "size"], ["td", "Size, only on radio style"], ["td", "String"], ["td", ["code", "large"], " ", ["code", "default"], " ", ["code", "small"]], ["td", ["code", "default"]]]]]]
 	};
 
 /***/ }

@@ -1,208 +1,19 @@
-webpackJsonp([24,204],{
+webpackJsonp([13,204],{
 
-/***/ 76:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(12);
+	var _style3 = __webpack_require__(88);
 
-	__webpack_require__(189);
-
-	__webpack_require__(21);
-
-/***/ },
-
-/***/ 118:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
-
-	var _extends2 = __webpack_require__(7);
-
-	var _extends3 = _interopRequireDefault(_extends2);
-
-	var _defineProperty2 = __webpack_require__(8);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _moment = __webpack_require__(20);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	var _TimePicker = __webpack_require__(331);
-
-	var _TimePicker2 = _interopRequireDefault(_TimePicker);
-
-	var _classnames = __webpack_require__(6);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _objectAssign = __webpack_require__(9);
-
-	var _objectAssign2 = _interopRequireDefault(_objectAssign);
-
-	var _zh_CN = __webpack_require__(119);
-
-	var _zh_CN2 = _interopRequireDefault(_zh_CN);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var TimePicker = function (_React$Component) {
-	    (0, _inherits3.default)(TimePicker, _React$Component);
-
-	    function TimePicker(props) {
-	        (0, _classCallCheck3.default)(this, TimePicker);
-
-	        var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this, props));
-
-	        _this.handleChange = function (value) {
-	            if (!('value' in _this.props)) {
-	                _this.setState({ value: value });
-	            }
-	            var _this$props = _this.props,
-	                onChange = _this$props.onChange,
-	                _this$props$format = _this$props.format,
-	                format = _this$props$format === undefined ? 'HH:mm:ss' : _this$props$format;
-
-	            if (onChange) {
-	                onChange(value, value && value.format(format) || '');
-	            }
-	        };
-	        var value = props.value || props.defaultValue;
-	        if (value && !_moment2.default.isMoment(value)) {
-	            throw new Error('The value/defaultValue of TimePicker must be a moment object after `antd@2.0`, ' + 'see: http://u.ant.design/time-picker-value');
-	        }
-	        _this.state = {
-	            value: value
-	        };
-	        return _this;
-	    }
-
-	    TimePicker.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	        if ('value' in nextProps) {
-	            this.setState({ value: nextProps.value });
-	        }
-	    };
-
-	    TimePicker.prototype.getLocale = function getLocale() {
-	        var antLocale = this.context.antLocale;
-	        var timePickerLocale = antLocale && antLocale.TimePicker || _zh_CN2.default;
-	        return timePickerLocale;
-	    };
-
-	    TimePicker.prototype.render = function render() {
-	        var props = (0, _objectAssign2.default)({ format: 'HH:mm:ss' }, this.props);
-	        delete props.defaultValue;
-	        var className = (0, _classnames2.default)(props.className, (0, _defineProperty3.default)({}, props.prefixCls + '-' + props.size, !!props.size));
-	        var addon = function addon(panel) {
-	            return props.addon ? _react2.default.createElement(
-	                'div',
-	                { className: props.prefixCls + '-panel-addon' },
-	                props.addon(panel)
-	            ) : null;
-	        };
-	        return _react2.default.createElement(_TimePicker2.default, (0, _extends3.default)({}, props, { className: className, value: this.state.value, placeholder: props.placeholder || this.getLocale().placeholder, showHour: props.format.indexOf('HH') > -1, showMinute: props.format.indexOf('mm') > -1, showSecond: props.format.indexOf('ss') > -1, onChange: this.handleChange, addon: addon }));
-	    };
-
-	    return TimePicker;
-	}(_react2.default.Component);
-
-	exports.default = TimePicker;
-
-	TimePicker.defaultProps = {
-	    prefixCls: 'ant-time-picker',
-	    align: {
-	        offset: [0, -2]
-	    },
-	    disabled: false,
-	    disabledHours: undefined,
-	    disabledMinutes: undefined,
-	    disabledSeconds: undefined,
-	    hideDisabledOptions: false,
-	    placement: 'bottomLeft',
-	    transitionName: 'slide-up'
-	};
-	TimePicker.contextTypes = {
-	    antLocale: _react2.default.PropTypes.object
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 119:
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var locale = {
-	    placeholder: '请选择时间'
-	};
-	exports.default = locale;
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 189:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 782:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'addon': __webpack_require__(1760),
-	    'basic': __webpack_require__(1761),
-	    'disable-options': __webpack_require__(1762),
-	    'disabled': __webpack_require__(1763),
-	    'hide-column': __webpack_require__(1764),
-	    'size': __webpack_require__(1765),
-	    'value': __webpack_require__(1766),
-	}
-
-/***/ },
-
-/***/ 1760:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(76);
-
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -256,14 +67,14 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1761:
+/***/ 962:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -311,14 +122,14 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1762:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -383,14 +194,14 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1763:
+/***/ 964:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -402,7 +213,7 @@ webpackJsonp([24,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(20);
+	var _moment = __webpack_require__(30);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -440,14 +251,14 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1764:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -459,7 +270,7 @@ webpackJsonp([24,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(20);
+	var _moment = __webpack_require__(30);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -497,14 +308,14 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1765:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -516,7 +327,7 @@ webpackJsonp([24,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(20);
+	var _moment = __webpack_require__(30);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -560,26 +371,26 @@ webpackJsonp([24,204],{
 
 /***/ },
 
-/***/ 1766:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(76);
+	var _style2 = __webpack_require__(88);
 
-	var _timePicker = __webpack_require__(118);
+	var _timePicker = __webpack_require__(99);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
-	var _classCallCheck2 = __webpack_require__(3);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(5);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(4);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -648,6 +459,21 @@ webpackJsonp([24,204],{
 	    return _react2.default.createElement(Demo, null);
 	  }
 	};
+
+/***/ },
+
+/***/ 1223:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'addon': __webpack_require__(961),
+	    'basic': __webpack_require__(962),
+	    'disable-options': __webpack_require__(963),
+	    'disabled': __webpack_require__(964),
+	    'hide-column': __webpack_require__(965),
+	    'size': __webpack_require__(966),
+	    'value': __webpack_require__(967),
+	}
 
 /***/ }
 

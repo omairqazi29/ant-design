@@ -1,30 +1,19 @@
-webpackJsonp([47,204],{
+webpackJsonp([43,204],{
 
-/***/ 742:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1422),
-	    'on-change': __webpack_require__(1423),
-	    'target': __webpack_require__(1424),
-	}
-
-/***/ },
-
-/***/ 1422:
+/***/ 623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(351);
+	var _style3 = __webpack_require__(210);
 
-	var _affix = __webpack_require__(272);
+	var _affix = __webpack_require__(177);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -92,20 +81,20 @@ webpackJsonp([47,204],{
 
 /***/ },
 
-/***/ 1423:
+/***/ 624:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(351);
+	var _style3 = __webpack_require__(210);
 
-	var _affix = __webpack_require__(272);
+	var _affix = __webpack_require__(177);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -161,32 +150,32 @@ webpackJsonp([47,204],{
 
 /***/ },
 
-/***/ 1424:
+/***/ 625:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(351);
+	var _style3 = __webpack_require__(210);
 
-	var _affix = __webpack_require__(272);
+	var _affix = __webpack_require__(177);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(14);
+	var _style4 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _classCallCheck2 = __webpack_require__(3);
+	var _classCallCheck2 = __webpack_require__(4);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(5);
+	var _possibleConstructorReturn2 = __webpack_require__(6);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(4);
+	var _inherits2 = __webpack_require__(5);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -267,6 +256,17 @@ webpackJsonp([47,204],{
 	  },
 	  "style": "\n#components-affix-demo-target .scrollable-container {\n  height: 100px;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  padding-top: 60px;\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
 	};
+
+/***/ },
+
+/***/ 1183:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(623),
+	    'on-change': __webpack_require__(624),
+	    'target': __webpack_require__(625),
+	}
 
 /***/ }
 

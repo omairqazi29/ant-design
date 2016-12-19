@@ -1,215 +1,13 @@
-webpackJsonp([27,204],{
+webpackJsonp([18,204],{
 
-/***/ 102:
+/***/ 628:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
+	var _style2 = __webpack_require__(85);
 
-	var _defineProperty2 = __webpack_require__(8);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _rcAnimate = __webpack_require__(29);
-
-	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
-
-	var _icon = __webpack_require__(11);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _classnames = __webpack_require__(6);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function noop() {}
-
-	var Alert = function (_React$Component) {
-	    (0, _inherits3.default)(Alert, _React$Component);
-
-	    function Alert(props) {
-	        (0, _classCallCheck3.default)(this, Alert);
-
-	        var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this, props));
-
-	        _this.handleClose = function (e) {
-	            e.preventDefault();
-	            var dom = _reactDom2.default.findDOMNode(_this);
-	            dom.style.height = dom.offsetHeight + 'px';
-	            // Magic code
-	            // 重复一次后才能正确设置 height
-	            dom.style.height = dom.offsetHeight + 'px';
-	            _this.setState({
-	                closing: false
-	            });
-	            (_this.props.onClose || noop)(e);
-	        };
-	        _this.animationEnd = function () {
-	            _this.setState({
-	                closed: true,
-	                closing: true
-	            });
-	        };
-	        _this.state = {
-	            closing: true,
-	            closed: false
-	        };
-	        return _this;
-	    }
-
-	    Alert.prototype.render = function render() {
-	        var _classNames;
-
-	        var _props = this.props,
-	            closable = _props.closable,
-	            description = _props.description,
-	            type = _props.type,
-	            _props$prefixCls = _props.prefixCls,
-	            prefixCls = _props$prefixCls === undefined ? 'ant-alert' : _props$prefixCls,
-	            message = _props.message,
-	            closeText = _props.closeText,
-	            showIcon = _props.showIcon,
-	            banner = _props.banner,
-	            _props$className = _props.className,
-	            className = _props$className === undefined ? '' : _props$className,
-	            style = _props.style;
-	        // banner模式默认有 Icon
-
-	        showIcon = showIcon || banner;
-	        // banner模式默认为警告
-	        type = banner ? 'warning' : type;
-	        var iconType = '';
-	        switch (type) {
-	            case 'success':
-	                iconType = 'check-circle';
-	                break;
-	            case 'info':
-	                iconType = 'info-circle';
-	                break;
-	            case 'error':
-	                iconType = 'cross-circle';
-	                break;
-	            case 'warning':
-	                iconType = 'exclamation-circle';
-	                break;
-	            default:
-	                iconType = 'default';
-	        }
-	        // use outline icon in alert with description
-	        if (!!description) {
-	            iconType += '-o';
-	        }
-	        var alertCls = (0, _classnames2.default)(prefixCls, (_classNames = {}, (0, _defineProperty3.default)(_classNames, prefixCls + '-' + type, true), (0, _defineProperty3.default)(_classNames, prefixCls + '-close', !this.state.closing), (0, _defineProperty3.default)(_classNames, prefixCls + '-with-description', !!description), (0, _defineProperty3.default)(_classNames, prefixCls + '-no-icon', !showIcon), (0, _defineProperty3.default)(_classNames, prefixCls + '-banner', !!banner), _classNames), className);
-	        // closeable when closeText is assigned
-	        if (closeText) {
-	            closable = true;
-	        }
-	        var closeIcon = closable ? _react2.default.createElement(
-	            'a',
-	            { onClick: this.handleClose, className: prefixCls + '-close-icon' },
-	            closeText || _react2.default.createElement(_icon2.default, { type: 'cross' })
-	        ) : null;
-	        return this.state.closed ? null : _react2.default.createElement(
-	            _rcAnimate2.default,
-	            { component: '', showProp: 'data-show', transitionName: prefixCls + '-slide-up', onEnd: this.animationEnd },
-	            _react2.default.createElement(
-	                'div',
-	                { 'data-show': this.state.closing, className: alertCls, style: style },
-	                showIcon ? _react2.default.createElement(_icon2.default, { className: prefixCls + '-icon', type: iconType }) : null,
-	                _react2.default.createElement(
-	                    'span',
-	                    { className: prefixCls + '-message' },
-	                    message
-	                ),
-	                _react2.default.createElement(
-	                    'span',
-	                    { className: prefixCls + '-description' },
-	                    description
-	                ),
-	                closeIcon
-	            )
-	        );
-	    };
-
-	    return Alert;
-	}(_react2.default.Component);
-
-	exports.default = Alert;
-
-	Alert.defaultProps = {
-	    type: 'info'
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 103:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(247);
-
-/***/ },
-
-/***/ 247:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 743:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'banner': __webpack_require__(1427),
-	    'basic': __webpack_require__(1428),
-	    'closable': __webpack_require__(1429),
-	    'close-text': __webpack_require__(1430),
-	    'description': __webpack_require__(1431),
-	    'icon': __webpack_require__(1432),
-	    'style': __webpack_require__(1433),
-	}
-
-/***/ },
-
-/***/ 1427:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(103);
-
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -261,14 +59,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1428:
+/***/ 629:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -314,14 +112,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1429:
+/***/ 630:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -374,14 +172,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1430:
+/***/ 631:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -427,14 +225,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1431:
+/***/ 632:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -487,14 +285,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1432:
+/***/ 633:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -551,14 +349,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1433:
+/***/ 634:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(103);
+	var _style2 = __webpack_require__(85);
 
-	var _alert = __webpack_require__(102);
+	var _alert = __webpack_require__(84);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -608,6 +406,21 @@ webpackJsonp([27,204],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1184:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'banner': __webpack_require__(628),
+	    'basic': __webpack_require__(629),
+	    'closable': __webpack_require__(630),
+	    'close-text': __webpack_require__(631),
+	    'description': __webpack_require__(632),
+	    'icon': __webpack_require__(633),
+	    'style': __webpack_require__(634),
+	}
 
 /***/ }
 

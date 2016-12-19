@@ -1,233 +1,13 @@
-webpackJsonp([21,204],{
+webpackJsonp([11,204],{
 
-/***/ 171:
+/***/ 649:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
+	var _style2 = __webpack_require__(110);
 
-	var _extends2 = __webpack_require__(7);
-
-	var _extends3 = _interopRequireDefault(_extends2);
-
-	var _defineProperty2 = __webpack_require__(8);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _slicedToArray2 = __webpack_require__(15);
-
-	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _rcAnimate = __webpack_require__(29);
-
-	var _rcAnimate2 = _interopRequireDefault(_rcAnimate);
-
-	var _ScrollNumber = __webpack_require__(1872);
-
-	var _ScrollNumber2 = _interopRequireDefault(_ScrollNumber);
-
-	var _classnames = __webpack_require__(6);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _warning = __webpack_require__(65);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	var _splitObject3 = __webpack_require__(18);
-
-	var _splitObject4 = _interopRequireDefault(_splitObject3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Badge = function (_React$Component) {
-	    (0, _inherits3.default)(Badge, _React$Component);
-
-	    function Badge() {
-	        (0, _classCallCheck3.default)(this, Badge);
-	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-	    }
-
-	    Badge.prototype.render = function render() {
-	        var _classNames, _classNames2;
-
-	        var _splitObject = (0, _splitObject4.default)(this.props, ['count', 'prefixCls', 'overflowCount', 'className', 'style', 'children', 'dot', 'status', 'text']),
-	            _splitObject2 = (0, _slicedToArray3.default)(_splitObject, 2),
-	            _splitObject2$ = _splitObject2[0],
-	            count = _splitObject2$.count,
-	            prefixCls = _splitObject2$.prefixCls,
-	            overflowCount = _splitObject2$.overflowCount,
-	            className = _splitObject2$.className,
-	            style = _splitObject2$.style,
-	            children = _splitObject2$.children,
-	            dot = _splitObject2$.dot,
-	            status = _splitObject2$.status,
-	            text = _splitObject2$.text,
-	            restProps = _splitObject2[1];
-
-	        var isDot = dot || status;
-	        var realCount = count;
-	        count = count > overflowCount ? overflowCount + '+' : count;
-	        // dot mode don't need count
-	        if (isDot) {
-	            count = '';
-	        }
-	        // null undefined "" "0" 0
-	        var hidden = (!count || count === '0') && !isDot;
-	        var scrollNumberCls = (0, _classnames2.default)((_classNames = {}, (0, _defineProperty3.default)(_classNames, prefixCls + '-dot', isDot), (0, _defineProperty3.default)(_classNames, prefixCls + '-count', !isDot), _classNames));
-	        var badgeCls = (0, _classnames2.default)(className, prefixCls, (_classNames2 = {}, (0, _defineProperty3.default)(_classNames2, prefixCls + '-status', !!status), (0, _defineProperty3.default)(_classNames2, prefixCls + '-not-a-wrapper', !children), _classNames2));
-	        (0, _warning2.default)(!(children && status), '`Badge[children]` and `Badge[status]` cannot be used at the same time.');
-	        // <Badge status="success" />
-	        if (!children && status) {
-	            var _classNames3;
-
-	            var statusCls = (0, _classnames2.default)((_classNames3 = {}, (0, _defineProperty3.default)(_classNames3, prefixCls + '-status-dot', !!status), (0, _defineProperty3.default)(_classNames3, prefixCls + '-status-' + status, true), _classNames3));
-	            return _react2.default.createElement(
-	                'span',
-	                { className: badgeCls },
-	                _react2.default.createElement('span', { className: statusCls }),
-	                _react2.default.createElement(
-	                    'span',
-	                    { className: prefixCls + '-status-text' },
-	                    text
-	                )
-	            );
-	        }
-	        var scrollNumber = hidden ? null : _react2.default.createElement(_ScrollNumber2.default, { 'data-show': !hidden, className: scrollNumberCls, count: count, style: style });
-	        var statusText = hidden || !text ? null : _react2.default.createElement(
-	            'span',
-	            { className: prefixCls + '-status-text' },
-	            text
-	        );
-	        return _react2.default.createElement(
-	            'span',
-	            (0, _extends3.default)({}, restProps, { className: badgeCls, title: realCount }),
-	            children,
-	            _react2.default.createElement(
-	                _rcAnimate2.default,
-	                { component: '', showProp: 'data-show', transitionName: children ? prefixCls + '-zoom' : '', transitionAppear: true },
-	                scrollNumber
-	            ),
-	            statusText
-	        );
-	    };
-
-	    return Badge;
-	}(_react2.default.Component);
-
-	exports.default = Badge;
-
-	Badge.defaultProps = {
-	    prefixCls: 'ant-badge',
-	    count: null,
-	    dot: false,
-	    overflowCount: 99
-	};
-	Badge.propTypes = {
-	    count: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.number]),
-	    dot: _react2.default.PropTypes.bool,
-	    overflowCount: _react2.default.PropTypes.number
-	};
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 172:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(936);
-
-/***/ },
-
-/***/ 206:
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var animation = void 0;
-	function isCssAnimationSupported() {
-	    if (animation !== undefined) {
-	        return animation;
-	    }
-	    var domPrefixes = 'Webkit Moz O ms Khtml'.split(' ');
-	    var elm = document.createElement('div');
-	    if (elm.style.animationName !== undefined) {
-	        animation = true;
-	    }
-	    if (animation !== undefined) {
-	        for (var i = 0; i < domPrefixes.length; i++) {
-	            if (elm.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
-	                animation = true;
-	                break;
-	            }
-	        }
-	    }
-	    animation = animation || false;
-	    return animation;
-	}
-	exports.default = isCssAnimationSupported;
-	module.exports = exports['default'];
-
-/***/ },
-
-/***/ 747:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    '99plus': __webpack_require__(1448),
-	    'basic': __webpack_require__(1449),
-	    'change': __webpack_require__(1450),
-	    'dot': __webpack_require__(1451),
-	    'link': __webpack_require__(1452),
-	    'no-wrapper': __webpack_require__(1453),
-	    'overflow': __webpack_require__(1454),
-	    'status': __webpack_require__(1455),
-	}
-
-/***/ },
-
-/***/ 936:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 1448:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(172);
-
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -286,14 +66,14 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1449:
+/***/ 650:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(172);
+	var _style2 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -345,26 +125,26 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1450:
+/***/ 651:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(16);
+	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(172);
+	var _style5 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
-	var _style6 = __webpack_require__(14);
+	var _style6 = __webpack_require__(11);
 
-	var _button = __webpack_require__(13);
+	var _button = __webpack_require__(9);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -465,20 +245,20 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1451:
+/***/ 652:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(172);
+	var _style3 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
-	var _style4 = __webpack_require__(16);
+	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(11);
+	var _icon = __webpack_require__(10);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -542,14 +322,14 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1452:
+/***/ 653:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(172);
+	var _style2 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -603,14 +383,14 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1453:
+/***/ 654:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(172);
+	var _style2 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -663,14 +443,14 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1454:
+/***/ 655:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(172);
+	var _style2 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -729,14 +509,14 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1455:
+/***/ 656:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(172);
+	var _style2 = __webpack_require__(110);
 
-	var _badge = __webpack_require__(171);
+	var _badge = __webpack_require__(109);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -800,185 +580,19 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1872:
+/***/ 1188:
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _isCssAnimationSupported = __webpack_require__(206);
-
-	var _isCssAnimationSupported2 = _interopRequireDefault(_isCssAnimationSupported);
-
-	var _objectAssign = __webpack_require__(9);
-
-	var _objectAssign2 = _interopRequireDefault(_objectAssign);
-
-	var _omit = __webpack_require__(23);
-
-	var _omit2 = _interopRequireDefault(_omit);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function getNumberArray(num) {
-	    return num ? num.toString().split('').reverse().map(function (i) {
-	        return Number(i);
-	    }) : [];
+	module.exports = {
+	    '99plus': __webpack_require__(649),
+	    'basic': __webpack_require__(650),
+	    'change': __webpack_require__(651),
+	    'dot': __webpack_require__(652),
+	    'link': __webpack_require__(653),
+	    'no-wrapper': __webpack_require__(654),
+	    'overflow': __webpack_require__(655),
+	    'status': __webpack_require__(656),
 	}
-
-	var ScrollNumber = function (_Component) {
-	    (0, _inherits3.default)(ScrollNumber, _Component);
-
-	    function ScrollNumber(props) {
-	        (0, _classCallCheck3.default)(this, ScrollNumber);
-
-	        var _this = (0, _possibleConstructorReturn3.default)(this, _Component.call(this, props));
-
-	        _this.state = {
-	            animateStarted: true,
-	            count: props.count
-	        };
-	        return _this;
-	    }
-
-	    ScrollNumber.prototype.componentDidMount = function componentDidMount() {
-	        if (!(0, _isCssAnimationSupported2.default)()) {
-	            (0, _reactDom.findDOMNode)(this).className += ' not-support-css-animation';
-	        }
-	    };
-
-	    ScrollNumber.prototype.getPositionByNum = function getPositionByNum(num, i) {
-	        if (this.state.animateStarted) {
-	            return 10 + num;
-	        }
-	        var currentDigit = getNumberArray(this.state.count)[i];
-	        var lastDigit = getNumberArray(this.lastCount)[i];
-	        // 同方向则在同一侧切换数字
-	        if (this.state.count > this.lastCount) {
-	            if (currentDigit >= lastDigit) {
-	                return 10 + num;
-	            }
-	            return 20 + num;
-	        }
-	        if (currentDigit <= lastDigit) {
-	            return 10 + num;
-	        }
-	        return num;
-	    };
-
-	    ScrollNumber.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	        var _this2 = this;
-
-	        if ('count' in nextProps) {
-	            if (this.state.count === nextProps.count) {
-	                return;
-	            }
-	            this.lastCount = this.state.count;
-	            // 复原数字初始位置
-	            this.setState({
-	                animateStarted: true
-	            }, function () {
-	                // 等待数字位置复原完毕
-	                // 开始设置完整的数字
-	                setTimeout(function () {
-	                    _this2.setState({
-	                        animateStarted: false,
-	                        count: nextProps.count
-	                    }, function () {
-	                        var onAnimated = _this2.props.onAnimated;
-	                        if (onAnimated) {
-	                            onAnimated();
-	                        }
-	                    });
-	                }, 5);
-	            });
-	        }
-	    };
-
-	    ScrollNumber.prototype.renderNumberList = function renderNumberList(position) {
-	        var childrenToReturn = [];
-	        for (var i = 0; i < 30; i++) {
-	            var currentClassName = position === i ? 'current' : '';
-	            childrenToReturn.push(_react2.default.createElement(
-	                'p',
-	                { key: i.toString(), className: currentClassName },
-	                i % 10
-	            ));
-	        }
-	        return childrenToReturn;
-	    };
-
-	    ScrollNumber.prototype.renderCurrentNumber = function renderCurrentNumber(num, i) {
-	        var position = this.getPositionByNum(num, i);
-	        var height = this.props.height;
-	        var removeTransition = this.state.animateStarted || getNumberArray(this.lastCount)[i] === undefined;
-	        return (0, _react.createElement)('span', {
-	            className: this.props.prefixCls + '-only',
-	            style: {
-	                transition: removeTransition && 'none',
-	                WebkitTransform: 'translateY(' + -position * height + 'px)',
-	                transform: 'translateY(' + -position * height + 'px)',
-	                height: height
-	            },
-	            key: i
-	        }, this.renderNumberList(position));
-	    };
-
-	    ScrollNumber.prototype.renderNumberElement = function renderNumberElement() {
-	        var _this3 = this;
-
-	        var state = this.state;
-	        if (!state.count || isNaN(state.count)) {
-	            return state.count;
-	        }
-	        return getNumberArray(state.count).map(function (num, i) {
-	            return _this3.renderCurrentNumber(num, i);
-	        }).reverse();
-	    };
-
-	    ScrollNumber.prototype.render = function render() {
-	        // fix https://fb.me/react-unknown-prop
-	        var props = (0, _objectAssign2.default)({}, (0, _omit2.default)(this.props, ['count', 'onAnimated', 'component', 'prefixCls']), {
-	            className: this.props.prefixCls + ' ' + this.props.className
-	        });
-	        return (0, _react.createElement)(this.props.component || 'sup', props, this.renderNumberElement());
-	    };
-
-	    return ScrollNumber;
-	}(_react.Component);
-
-	exports.default = ScrollNumber;
-
-	ScrollNumber.defaultProps = {
-	    prefixCls: 'ant-scroll-number',
-	    count: null,
-	    onAnimated: function onAnimated() {},
-
-	    height: 18
-	};
-	module.exports = exports['default'];
 
 /***/ }
 

@@ -1,6 +1,6 @@
 webpackJsonp([203,204],{
 
-/***/ 1420:
+/***/ 621:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -591,7 +591,7 @@ webpackJsonp([203,204],{
 	    "href": "https://github.com/dvajs/dva-cli"
 	  }, "dva-cli"], " now, the old ", ["code", "antd-init"], " is just for studying and demo."]]], ["h2", "1.11.4"], ["p", "Visit ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
+	    "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
 	  "meta": {
 	    "order": 6,

@@ -1,6 +1,6 @@
 webpackJsonp([86,204],{
 
-/***/ 1827:
+/***/ 1028:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([86,204],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "Features"], ["ul", ["li", ["p", "Following Ant Design, a design language for creating user friendly and beautiful websites."]], ["li", ["p", "It is a set of high quality UI components and based on ", ["a", {
+	  "content": ["article", {}, ["h2", "Features"], ["ul", ["li", ["p", "Following Ant Design desktop specification."]], ["li", ["p", "It is a set of high quality UI components and based on ", ["a", {
 	    "title": null,
 	    "href": "http://react-component.github.io/badgeboard/"
 	  }, "React Component"], "."]], ["li", ["p", "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."]]], ["h2", "Installation"], ["pre", {
@@ -154,7 +154,7 @@ webpackJsonp([86,204],{
 	    "title": "Ant Design of React",
 	    "filename": "docs/react/introduce.en-US.md"
 	  },
-	  "description": ["section", ["p", "We supply a react implementation ", ["code", "antd"], " following Ant Design specification, which is designed to help in developing RIA such as dashboards or other enterprise-like complex UI needs."], ["div", {
+	  "description": ["section", ["p", "Following Ant Design specification, We develop a React UI library called ", ["code", "antd"], ", containing a set of high quality components and demos, to help building rich interactive desktop applicafions."], ["div", {
 	    "class": "pic-plus"
 	  }, ["img", {
 	    "width": "150",

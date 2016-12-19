@@ -1,6 +1,6 @@
 webpackJsonp([164,204],{
 
-/***/ 1565:
+/***/ 766:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([164,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _IconSet = __webpack_require__(311);
+	var _IconSet = __webpack_require__(228);
 
 	var _IconSet2 = _interopRequireDefault(_IconSet);
 

@@ -1,130 +1,13 @@
-webpackJsonp([40,204],{
+webpackJsonp([38,204],{
 
-/***/ 353:
+/***/ 713:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = exports.CollapsePanel = undefined;
+	var _style2 = __webpack_require__(213);
 
-	var _extends2 = __webpack_require__(7);
-
-	var _extends3 = _interopRequireDefault(_extends2);
-
-	var _defineProperty2 = __webpack_require__(8);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _rcCollapse = __webpack_require__(571);
-
-	var _rcCollapse2 = _interopRequireDefault(_rcCollapse);
-
-	var _classnames = __webpack_require__(6);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var CollapsePanel = exports.CollapsePanel = function (_React$Component) {
-	    (0, _inherits3.default)(CollapsePanel, _React$Component);
-
-	    function CollapsePanel() {
-	        (0, _classCallCheck3.default)(this, CollapsePanel);
-	        return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-	    }
-
-	    return CollapsePanel;
-	}(_react2.default.Component);
-
-	var Collapse = function (_React$Component2) {
-	    (0, _inherits3.default)(Collapse, _React$Component2);
-
-	    function Collapse() {
-	        (0, _classCallCheck3.default)(this, Collapse);
-	        return (0, _possibleConstructorReturn3.default)(this, _React$Component2.apply(this, arguments));
-	    }
-
-	    Collapse.prototype.render = function render() {
-	        var _props = this.props,
-	            prefixCls = _props.prefixCls,
-	            _props$className = _props.className,
-	            className = _props$className === undefined ? '' : _props$className,
-	            bordered = _props.bordered;
-
-	        var collapseClassName = (0, _classnames2.default)((0, _defineProperty3.default)({}, prefixCls + '-borderless', !bordered), className);
-	        return _react2.default.createElement(_rcCollapse2.default, (0, _extends3.default)({}, this.props, { className: collapseClassName }));
-	    };
-
-	    return Collapse;
-	}(_react2.default.Component);
-
-	exports.default = Collapse;
-
-	Collapse.Panel = _rcCollapse2.default.Panel;
-	Collapse.defaultProps = {
-	    prefixCls: 'ant-collapse',
-	    bordered: true
-	};
-
-/***/ },
-
-/***/ 354:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(12);
-
-	__webpack_require__(940);
-
-/***/ },
-
-/***/ 755:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'accordion': __webpack_require__(1512),
-	    'basic': __webpack_require__(1513),
-	    'borderless': __webpack_require__(1514),
-	    'mix': __webpack_require__(1515),
-	}
-
-/***/ },
-
-/***/ 940:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 1512:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(354);
-
-	var _collapse = __webpack_require__(353);
+	var _collapse = __webpack_require__(212);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -200,14 +83,14 @@ webpackJsonp([40,204],{
 
 /***/ },
 
-/***/ 1513:
+/***/ 714:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(354);
+	var _style2 = __webpack_require__(213);
 
-	var _collapse = __webpack_require__(353);
+	var _collapse = __webpack_require__(212);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -285,14 +168,14 @@ webpackJsonp([40,204],{
 
 /***/ },
 
-/***/ 1514:
+/***/ 715:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(354);
+	var _style2 = __webpack_require__(213);
 
-	var _collapse = __webpack_require__(353);
+	var _collapse = __webpack_require__(212);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -368,14 +251,14 @@ webpackJsonp([40,204],{
 
 /***/ },
 
-/***/ 1515:
+/***/ 716:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(354);
+	var _style2 = __webpack_require__(213);
 
-	var _collapse = __webpack_require__(353);
+	var _collapse = __webpack_require__(212);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -458,6 +341,18 @@ webpackJsonp([40,204],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1196:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'accordion': __webpack_require__(713),
+	    'basic': __webpack_require__(714),
+	    'borderless': __webpack_require__(715),
+	    'mix': __webpack_require__(716),
+	}
 
 /***/ }
 
