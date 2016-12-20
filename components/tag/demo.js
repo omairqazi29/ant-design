@@ -1,6 +1,6 @@
 webpackJsonp([26,204],{
 
-/***/ 954:
+/***/ 953:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -89,7 +89,7 @@ webpackJsonp([26,204],{
 
 /***/ },
 
-/***/ 955:
+/***/ 954:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -201,7 +201,7 @@ webpackJsonp([26,204],{
 
 /***/ },
 
-/***/ 956:
+/***/ 955:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -272,7 +272,7 @@ webpackJsonp([26,204],{
 
 /***/ },
 
-/***/ 957:
+/***/ 956:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -289,7 +289,7 @@ webpackJsonp([26,204],{
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style7 = __webpack_require__(118);
+	var _style7 = __webpack_require__(116);
 
 	var _tooltip = __webpack_require__(100);
 
@@ -425,7 +425,7 @@ webpackJsonp([26,204],{
 
 /***/ },
 
-/***/ 958:
+/***/ 957:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -544,15 +544,15 @@ webpackJsonp([26,204],{
 
 /***/ },
 
-/***/ 1222:
+/***/ 1221:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(954),
-	    'checkable': __webpack_require__(955),
-	    'colorful': __webpack_require__(956),
-	    'control': __webpack_require__(957),
-	    'hot-tags': __webpack_require__(958),
+	    'basic': __webpack_require__(953),
+	    'checkable': __webpack_require__(954),
+	    'colorful': __webpack_require__(955),
+	    'control': __webpack_require__(956),
+	    'hot-tags': __webpack_require__(957),
 	}
 
 /***/ }

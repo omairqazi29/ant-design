@@ -1,6 +1,6 @@
 webpackJsonp([27,204],{
 
-/***/ 896:
+/***/ 895:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53,7 +53,7 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 897:
+/***/ 896:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -112,14 +112,14 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 898:
+/***/ 897:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(77);
+	var _style4 = __webpack_require__(69);
 
-	var _switch = __webpack_require__(76);
+	var _switch = __webpack_require__(68);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -199,7 +199,7 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 899:
+/***/ 898:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -259,7 +259,7 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 900:
+/***/ 899:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -322,15 +322,15 @@ webpackJsonp([27,204],{
 
 /***/ },
 
-/***/ 1217:
+/***/ 1216:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(896),
-	    'inside': __webpack_require__(897),
-	    'nested': __webpack_require__(898),
-	    'size': __webpack_require__(899),
-	    'tip': __webpack_require__(900),
+	    'basic': __webpack_require__(895),
+	    'inside': __webpack_require__(896),
+	    'nested': __webpack_require__(897),
+	    'size': __webpack_require__(898),
+	    'tip': __webpack_require__(899),
 	}
 
 /***/ }

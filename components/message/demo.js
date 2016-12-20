@@ -1,6 +1,6 @@
 webpackJsonp([36,204],{
 
-/***/ 805:
+/***/ 804:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -65,7 +65,7 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 806:
+/***/ 805:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -130,7 +130,7 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 807:
+/***/ 806:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -196,7 +196,7 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 808:
+/***/ 807:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -281,14 +281,14 @@ webpackJsonp([36,204],{
 
 /***/ },
 
-/***/ 1206:
+/***/ 1205:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'duration': __webpack_require__(805),
-	    'info': __webpack_require__(806),
-	    'loading': __webpack_require__(807),
-	    'other': __webpack_require__(808),
+	    'duration': __webpack_require__(804),
+	    'info': __webpack_require__(805),
+	    'loading': __webpack_require__(806),
+	    'other': __webpack_require__(807),
 	}
 
 /***/ }

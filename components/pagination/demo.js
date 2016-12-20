@@ -1,13 +1,13 @@
 webpackJsonp([8,204],{
 
-/***/ 829:
+/***/ 828:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -53,14 +53,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 830:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -108,14 +108,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 831:
+/***/ 830:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -174,14 +174,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 832:
+/***/ 831:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -229,14 +229,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 833:
+/***/ 832:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -292,14 +292,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 834:
+/***/ 833:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -345,14 +345,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 835:
+/***/ 834:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -398,14 +398,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 836:
+/***/ 835:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(75);
+	var _style2 = __webpack_require__(77);
 
-	var _pagination = __webpack_require__(74);
+	var _pagination = __webpack_require__(76);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -461,18 +461,18 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 1209:
+/***/ 1208:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(829),
-	    'changer': __webpack_require__(830),
-	    'controlled': __webpack_require__(831),
-	    'jump': __webpack_require__(832),
-	    'mini': __webpack_require__(833),
-	    'more': __webpack_require__(834),
-	    'simple': __webpack_require__(835),
-	    'total': __webpack_require__(836),
+	    'basic': __webpack_require__(828),
+	    'changer': __webpack_require__(829),
+	    'controlled': __webpack_require__(830),
+	    'jump': __webpack_require__(831),
+	    'mini': __webpack_require__(832),
+	    'more': __webpack_require__(833),
+	    'simple': __webpack_require__(834),
+	    'total': __webpack_require__(835),
 	}
 
 /***/ }

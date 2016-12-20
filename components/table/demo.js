@@ -1,6 +1,6 @@
 webpackJsonp([0,204],{
 
-/***/ 918:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,7 +23,7 @@ webpackJsonp([0,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reqwest = __webpack_require__(1894);
+	var _reqwest = __webpack_require__(1893);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -98,7 +98,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 919:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -189,7 +189,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 920:
+/***/ 919:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -254,7 +254,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 921:
+/***/ 920:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -339,7 +339,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 922:
+/***/ 921:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -458,7 +458,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 923:
+/***/ 922:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -479,9 +479,9 @@ webpackJsonp([0,204],{
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _style8 = __webpack_require__(77);
+	var _style8 = __webpack_require__(69);
 
-	var _switch = __webpack_require__(76);
+	var _switch = __webpack_require__(68);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -713,7 +713,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 924:
+/***/ 923:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -915,7 +915,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 925:
+/***/ 924:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1168,7 +1168,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 926:
+/***/ 925:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1234,7 +1234,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 927:
+/***/ 926:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1304,7 +1304,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 928:
+/***/ 927:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1372,7 +1372,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 929:
+/***/ 928:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1439,7 +1439,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 930:
+/***/ 929:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1498,7 +1498,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 931:
+/***/ 930:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1563,7 +1563,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 932:
+/***/ 931:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1640,7 +1640,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 933:
+/***/ 932:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1739,7 +1739,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 934:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1805,7 +1805,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 935:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1923,7 +1923,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 936:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2028,7 +2028,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 937:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2097,7 +2097,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 938:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2168,36 +2168,36 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 1220:
+/***/ 1219:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'ajax': __webpack_require__(918),
-	    'basic': __webpack_require__(919),
-	    'bordered': __webpack_require__(920),
-	    'colspan-rowspan': __webpack_require__(921),
-	    'custom-filter-panel': __webpack_require__(922),
-	    'dynamic-settings': __webpack_require__(923),
-	    'edit-cell': __webpack_require__(924),
-	    'edit-row': __webpack_require__(925),
-	    'expand-children': __webpack_require__(926),
-	    'expand': __webpack_require__(927),
-	    'fixed-columns-header': __webpack_require__(928),
-	    'fixed-columns': __webpack_require__(929),
-	    'fixed-header': __webpack_require__(930),
-	    'grouping-columns': __webpack_require__(931),
-	    'head': __webpack_require__(932),
-	    'jsx': __webpack_require__(933),
-	    'paging': __webpack_require__(934),
-	    'reset-filter': __webpack_require__(935),
-	    'row-selection-and-operation': __webpack_require__(936),
-	    'row-selection': __webpack_require__(937),
-	    'size': __webpack_require__(938),
+	    'ajax': __webpack_require__(917),
+	    'basic': __webpack_require__(918),
+	    'bordered': __webpack_require__(919),
+	    'colspan-rowspan': __webpack_require__(920),
+	    'custom-filter-panel': __webpack_require__(921),
+	    'dynamic-settings': __webpack_require__(922),
+	    'edit-cell': __webpack_require__(923),
+	    'edit-row': __webpack_require__(924),
+	    'expand-children': __webpack_require__(925),
+	    'expand': __webpack_require__(926),
+	    'fixed-columns-header': __webpack_require__(927),
+	    'fixed-columns': __webpack_require__(928),
+	    'fixed-header': __webpack_require__(929),
+	    'grouping-columns': __webpack_require__(930),
+	    'head': __webpack_require__(931),
+	    'jsx': __webpack_require__(932),
+	    'paging': __webpack_require__(933),
+	    'reset-filter': __webpack_require__(934),
+	    'row-selection-and-operation': __webpack_require__(935),
+	    'row-selection': __webpack_require__(936),
+	    'size': __webpack_require__(937),
 	}
 
 /***/ },
 
-/***/ 1894:
+/***/ 1893:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2221,7 +2221,7 @@ webpackJsonp([0,204],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1906)
+	      XHR2 = __webpack_require__(1905)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -2834,7 +2834,7 @@ webpackJsonp([0,204],{
 
 /***/ },
 
-/***/ 1906:
+/***/ 1905:
 /***/ function(module, exports) {
 
 	/* (ignored) */

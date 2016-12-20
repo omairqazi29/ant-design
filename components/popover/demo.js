@@ -1,11 +1,11 @@
 webpackJsonp([28,204],{
 
-/***/ 845:
+/***/ 844:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(113);
 
 	var _popover = __webpack_require__(135);
 
@@ -97,12 +97,12 @@ webpackJsonp([28,204],{
 
 /***/ },
 
-/***/ 846:
+/***/ 845:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(113);
 
 	var _popover = __webpack_require__(135);
 
@@ -177,12 +177,12 @@ webpackJsonp([28,204],{
 
 /***/ },
 
-/***/ 847:
+/***/ 846:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(113);
 
 	var _popover = __webpack_require__(135);
 
@@ -262,12 +262,12 @@ webpackJsonp([28,204],{
 
 /***/ },
 
-/***/ 848:
+/***/ 847:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(113);
 
 	var _popover = __webpack_require__(135);
 
@@ -466,12 +466,12 @@ webpackJsonp([28,204],{
 
 /***/ },
 
-/***/ 849:
+/***/ 848:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(115);
+	var _style3 = __webpack_require__(113);
 
 	var _popover = __webpack_require__(135);
 
@@ -568,15 +568,15 @@ webpackJsonp([28,204],{
 
 /***/ },
 
-/***/ 1211:
+/***/ 1210:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(845),
-	    'basic': __webpack_require__(846),
-	    'control': __webpack_require__(847),
-	    'placement': __webpack_require__(848),
-	    'triggerType': __webpack_require__(849),
+	    'arrow-point-at-center': __webpack_require__(844),
+	    'basic': __webpack_require__(845),
+	    'control': __webpack_require__(846),
+	    'placement': __webpack_require__(847),
+	    'triggerType': __webpack_require__(848),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
 webpackJsonp([35,204],{
 
-/***/ 839:
+/***/ 838:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -71,14 +71,14 @@ webpackJsonp([35,204],{
 
 /***/ },
 
-/***/ 840:
+/***/ 839:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(77);
+	var _style4 = __webpack_require__(69);
 
-	var _switch = __webpack_require__(76);
+	var _switch = __webpack_require__(68);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -180,7 +180,7 @@ webpackJsonp([35,204],{
 
 /***/ },
 
-/***/ 841:
+/***/ 840:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -241,7 +241,7 @@ webpackJsonp([35,204],{
 
 /***/ },
 
-/***/ 842:
+/***/ 841:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -436,14 +436,14 @@ webpackJsonp([35,204],{
 
 /***/ },
 
-/***/ 1210:
+/***/ 1209:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(839),
-	    'dynamic-trigger': __webpack_require__(840),
-	    'locale': __webpack_require__(841),
-	    'placement': __webpack_require__(842),
+	    'basic': __webpack_require__(838),
+	    'dynamic-trigger': __webpack_require__(839),
+	    'locale': __webpack_require__(840),
+	    'placement': __webpack_require__(841),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
 webpackJsonp([21,204],{
 
-/***/ 797:
+/***/ 796:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -132,7 +132,7 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 798:
+/***/ 797:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -323,7 +323,7 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 799:
+/***/ 798:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -508,7 +508,7 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 800:
+/***/ 799:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -519,9 +519,9 @@ webpackJsonp([21,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(77);
+	var _style5 = __webpack_require__(69);
 
-	var _switch = __webpack_require__(76);
+	var _switch = __webpack_require__(68);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -705,7 +705,7 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 801:
+/***/ 800:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -716,9 +716,9 @@ webpackJsonp([21,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(77);
+	var _style5 = __webpack_require__(69);
 
-	var _switch = __webpack_require__(76);
+	var _switch = __webpack_require__(68);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -898,7 +898,7 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 802:
+/***/ 801:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1074,16 +1074,16 @@ webpackJsonp([21,204],{
 
 /***/ },
 
-/***/ 1205:
+/***/ 1204:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'horizontal': __webpack_require__(797),
-	    'sider-current': __webpack_require__(798),
-	    'sider': __webpack_require__(799),
-	    'switch-mode': __webpack_require__(800),
-	    'theme': __webpack_require__(801),
-	    'vertical': __webpack_require__(802),
+	    'horizontal': __webpack_require__(796),
+	    'sider-current': __webpack_require__(797),
+	    'sider': __webpack_require__(798),
+	    'switch-mode': __webpack_require__(799),
+	    'theme': __webpack_require__(800),
+	    'vertical': __webpack_require__(801),
 	}
 
 /***/ }

@@ -1,13 +1,13 @@
-webpackJsonp([12,204],{
+webpackJsonp([11,204],{
 
-/***/ 1000:
+/***/ 999:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(120);
+	var _style4 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -129,14 +129,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1001:
+/***/ 1000:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(120);
+	var _style5 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -218,14 +218,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1002:
+/***/ 1001:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(120);
+	var _style4 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -297,7 +297,7 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1003:
+/***/ 1002:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -314,9 +314,9 @@ webpackJsonp([12,204],{
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style6 = __webpack_require__(120);
+	var _style6 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -394,14 +394,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1004:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(120);
+	var _style4 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -496,7 +496,7 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1005:
+/***/ 1004:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -507,9 +507,9 @@ webpackJsonp([12,204],{
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _style5 = __webpack_require__(120);
+	var _style5 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -631,7 +631,7 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1006:
+/***/ 1005:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -640,9 +640,9 @@ webpackJsonp([12,204],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(120);
+	var _style4 = __webpack_require__(118);
 
-	var _upload = __webpack_require__(119);
+	var _upload = __webpack_require__(117);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -732,17 +732,17 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 1229:
+/***/ 1228:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'avatar': __webpack_require__(1000),
-	    'basic': __webpack_require__(1001),
-	    'defaultFileList': __webpack_require__(1002),
-	    'drag': __webpack_require__(1003),
-	    'fileList': __webpack_require__(1004),
-	    'picture-card': __webpack_require__(1005),
-	    'picture-style': __webpack_require__(1006),
+	    'avatar': __webpack_require__(999),
+	    'basic': __webpack_require__(1000),
+	    'defaultFileList': __webpack_require__(1001),
+	    'drag': __webpack_require__(1002),
+	    'fileList': __webpack_require__(1003),
+	    'picture-card': __webpack_require__(1004),
+	    'picture-style': __webpack_require__(1005),
 	}
 
 /***/ }

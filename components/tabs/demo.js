@@ -1,6 +1,6 @@
 webpackJsonp([3,204],{
 
-/***/ 941:
+/***/ 940:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -73,7 +73,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 942:
+/***/ 941:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -150,7 +150,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 943:
+/***/ 942:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -223,7 +223,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 944:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -335,7 +335,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 945:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -406,7 +406,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 946:
+/***/ 945:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -497,7 +497,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 947:
+/***/ 946:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -578,7 +578,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 948:
+/***/ 947:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -660,7 +660,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 949:
+/***/ 948:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -781,7 +781,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 950:
+/***/ 949:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -852,7 +852,7 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 951:
+/***/ 950:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -953,21 +953,21 @@ webpackJsonp([3,204],{
 
 /***/ },
 
-/***/ 1221:
+/***/ 1220:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(941),
-	    'card-top': __webpack_require__(942),
-	    'card': __webpack_require__(943),
-	    'custom-add-trigger': __webpack_require__(944),
-	    'disabled': __webpack_require__(945),
-	    'editable-card': __webpack_require__(946),
-	    'extra': __webpack_require__(947),
-	    'icon': __webpack_require__(948),
-	    'position': __webpack_require__(949),
-	    'size': __webpack_require__(950),
-	    'slide': __webpack_require__(951),
+	    'basic': __webpack_require__(940),
+	    'card-top': __webpack_require__(941),
+	    'card': __webpack_require__(942),
+	    'custom-add-trigger': __webpack_require__(943),
+	    'disabled': __webpack_require__(944),
+	    'editable-card': __webpack_require__(945),
+	    'extra': __webpack_require__(946),
+	    'icon': __webpack_require__(947),
+	    'position': __webpack_require__(948),
+	    'size': __webpack_require__(949),
+	    'slide': __webpack_require__(950),
 	}
 
 /***/ }

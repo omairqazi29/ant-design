@@ -1,6 +1,6 @@
 webpackJsonp([32,204],{
 
-/***/ 970:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -76,7 +76,7 @@ webpackJsonp([32,204],{
 
 /***/ },
 
-/***/ 971:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -180,7 +180,7 @@ webpackJsonp([32,204],{
 
 /***/ },
 
-/***/ 972:
+/***/ 971:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -262,7 +262,7 @@ webpackJsonp([32,204],{
 
 /***/ },
 
-/***/ 973:
+/***/ 972:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -337,14 +337,14 @@ webpackJsonp([32,204],{
 
 /***/ },
 
-/***/ 1224:
+/***/ 1223:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(970),
-	    'color': __webpack_require__(971),
-	    'custom': __webpack_require__(972),
-	    'pending': __webpack_require__(973),
+	    'basic': __webpack_require__(969),
+	    'color': __webpack_require__(970),
+	    'custom': __webpack_require__(971),
+	    'pending': __webpack_require__(972),
 	}
 
 /***/ }
