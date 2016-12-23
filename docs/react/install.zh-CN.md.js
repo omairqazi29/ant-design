@@ -1,6 +1,6 @@
-webpackJsonp([87,204],{
+webpackJsonp([89,206],{
 
-/***/ 1026:
+/***/ 1745:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -78,17 +78,17 @@ webpackJsonp([87,204],{
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/build-antd-standalone"
 	  }, "自行构建的例子"], " 以供参考。"]], ["h2", "开发工具"], ["p", "我们提供了 React 前端应用开发的 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init"
+	    "href": "https://github.com/dvajs/dva-cli"
 	  }, "脚手架工具"], "，可以安装到全局直接使用。"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd-init -g"
-	  }, ["code", "$ npm install antd-init -g"]], ["p", "在空目录运行 ", ["code", "antd-init"], " 可以初始化一个 antd 的前端应用。"], ["p", "最新的脚手架结构可以到这里 ", ["a", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g"
+	  }, ["code", "$ npm install dva-cli -g"]], ["p", "运行 ", ["code", "dva new myapp"], " 可以初始化一个 React 的前端应用。"], ["p", "最新的脚手架结构可以到这里 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/boilerplates"
-	  }, "查看"], "，建议持续关注更新以便获得最新的开发工程特性。"], ["blockquote", ["p", "更多开发工具 ", ["a", {
+	    "href": "https://github.com/dvajs/dva-cli/tree/master/boilerplates"
+	  }, "查看"], "，建议持续关注更新以便获得最新的开发工程特性。"], ["blockquote", ["p", "更多开发工具的", ["a", {
 	    "title": null,
-	    "href": "http://ant-tool.github.io/"
-	  }, "使用方式"], "。"]]],
+	    "href": "https://github.com/sorrycc/roadhog"
+	  }, "特性"], "。"]]],
 	  "meta": {
 	    "order": 2,
 	    "title": "安装",

@@ -1,6 +1,6 @@
-webpackJsonp([84,204],{
+webpackJsonp([86,206],{
 
-/***/ 1029:
+/***/ 1748:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,10 +16,10 @@ webpackJsonp([84,204],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "Install dva"], ["p", "Install dva with npm."], ["pre", {
+	  "content": ["article", {}, ["h2", "Install dva-cli"], ["p", "Install dva-cli with npm, and make sure the version is larger then ", ["code", "0.7.0"], "."], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g"
-	  }, ["code", "$ npm install dva-cli -g"]], ["h2", "Create New App"], ["p", "After installed dva-cli, you can have access to the ", ["code", "dva"], " command in terminal. Now, create a new application with ", ["code", "dva new"], "."], ["pre", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g\n$ dva -v\n0.7.0"
+	  }, ["code", "$ npm install dva-cli -g\n$ dva -v\n0.7.0"]], ["h2", "Create New App"], ["p", "After installed dva-cli, you can have access to the ", ["code", "dva"], " command in terminal. Now, create a new application with ", ["code", "dva new"], "."], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ dva new dva-quickstart"
 	  }, ["code", "$ dva new dva-quickstart"]], ["p", "This creates ", ["code", "dva-quickstart"], " directory, that contains the project directories and files, and provides development server, build script, mock service, proxy server and so on."], ["p", "Then ", ["code", "cd"], " the ", ["code", "dva-quickstart"], " directory, and start the development server."], ["pre", {
@@ -27,8 +27,8 @@ webpackJsonp([84,204],{
 	    "highlighted": "$ <span class=\"token function\">cd</span> dva-quickstart\n$ <span class=\"token function\">npm</span> start"
 	  }, ["code", "$ cd dva-quickstart\n$ npm start"]], ["p", "After a few seconds, you will see the following output:"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "          proxy: load rule from proxy.config.js\n          proxy: listened on 8989\n📦  411/411 build modules\nwebpack: bundle build is now finished."
-	  }, ["code", "          proxy: load rule from proxy.config.js\n          proxy: listened on 8989\n📦  411/411 build modules\nwebpack: bundle build is now finished."]], ["p", "Open ", ["a", {
+	    "highlighted": "Compiled successfully<span class=\"token operator\">!</span>\n\nThe app is running at:\n\n  http://localhost:8000/\n\nNote that the development build is not optimized.\nTo create a production build, use <span class=\"token function\">npm</span> run build."
+	  }, ["code", "Compiled successfully!\n\nThe app is running at:\n\n  http://localhost:8000/\n\nNote that the development build is not optimized.\nTo create a production build, use npm run build."]], ["p", "Open ", ["a", {
 	    "title": null,
 	    "href": "http://localhost:8989"
 	  }, "http://localhost:8989"], " in your browser, you will see dva welcome page."], ["h2", "Integrate antd"], ["p", "Install ", ["code", "antd"], " and ", ["code", "babel-plugin-import"], " with npm. ", ["code", "babel-plugin-import"], " is used to automatically import scripts and stylesheets from antd in demand. See ", ["a", {
@@ -37,10 +37,13 @@ webpackJsonp([84,204],{
 	  }, "repo"], " 。"], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd babel-plugin-import --save"
-	  }, ["code", "$ npm install antd babel-plugin-import --save"]], ["p", "Edit ", ["code", "webpack.config.js"], " to integrate ", ["code", "babel-plugin-import"], "."], ["pre", {
+	  }, ["code", "$ npm install antd babel-plugin-import --save"]], ["p", "Edit ", ["code", ".roadhogrc"], " to integrate ", ["code", "babel-plugin-import"], "."], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token inserted\">+ webpackConfig.babel.plugins.push(['import', {</span>\n<span class=\"token inserted\">+   libraryName: 'antd',</span>\n<span class=\"token inserted\">+   style: 'css',</span>\n<span class=\"token inserted\">+ }]);</span>"
-	  }, ["code", "+ webpackConfig.babel.plugins.push(['import', {\n+   libraryName: 'antd',\n+   style: 'css',\n+ }]);"]], ["blockquote", ["p", "Notice: No need to manually restart the server, it will restart automatically after you save the ", ["code", "webpack.config.js"], "."]], ["h2", "Define Router"], ["p", "We need to write an application displaying the list of products. The first step is to create a route."], ["p", "Create a route component ", ["code", "routes/Products.js"], ":"], ["pre", {
+	    "highlighted": "  \"extraBabelPlugins\": [\n<span class=\"token deleted\">-    \"transform-runtime\"</span>\n<span class=\"token inserted\">+    \"transform-runtime\",</span>\n<span class=\"token inserted\">+    [\"import\", { \"libraryName\": \"antd\", \"style\": \"css\" }]</span>\n  ],"
+	  }, ["code", "  \"extraBabelPlugins\": [\n-    \"transform-runtime\"\n+    \"transform-runtime\",\n+    [\"import\", { \"libraryName\": \"antd\", \"style\": \"css\" }]\n  ],"]], ["blockquote", ["p", "Notice: dva-cli's build and server is bases on roadhog, view ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/sorrycc/roadhog/blob/master/README_en-us.md#configuration"
+	  }, "roadhog#Configuration"], " for more ", ["code", ".roadhogrc"], " Configuration."]], ["h2", "Define Router"], ["p", "We need to write an application displaying the list of products. The first step is to create a route."], ["p", "Create a route component ", ["code", "routes/Products.js"], ":"], ["pre", {
 	    "lang": "javascript",
 	    "highlighted": "<span class=\"token keyword\">import</span> React <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> Products <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>h2<span class=\"token operator\">></span>List <span class=\"token keyword\">of</span> Products<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h2<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">export</span> <span class=\"token keyword\">default</span> Products<span class=\"token punctuation\">;</span>"
 	  }, ["code", "import React from 'react';\n\nconst Products = (props) => (\n  <h2>List of Products</h2>\n);\n\nexport default Products;"]], ["p", "Add routing information to router, edit ", ["code", "router.js"], ":"], ["pre", {
@@ -73,8 +76,8 @@ webpackJsonp([84,204],{
 	    "highlighted": "$ <span class=\"token function\">npm</span> run build"
 	  }, ["code", "$ npm run build"]], ["p", "After a few seconds, the output should be as follows:"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "Child\n    Time: 14008ms\n         Asset       Size  Chunks             Chunk Names\n    index.html  255 bytes          <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>\n     common.js    1.18 kB       0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  common\n      index.js     504 kB    1, 0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  index\n     index.css     127 kB    1, 0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  index"
-	  }, ["code", "Child\n    Time: 14008ms\n         Asset       Size  Chunks             Chunk Names\n    index.html  255 bytes          [emitted]\n     common.js    1.18 kB       0  [emitted]  common\n      index.js     504 kB    1, 0  [emitted]  index\n     index.css     127 kB    1, 0  [emitted]  index"]], ["p", "The ", ["code", "build"], " command packages up all of the assets that make up your application —— JavaScript, templates, CSS, web fonts, images, and more. Then you can find these files in the ", ["code", "dist /"], " directory."], ["h2", "What's Next"], ["p", "We have completed a simple application, but you may still have lots of questions, such as:"], ["ul", ["li", ["p", "How to dealing with async logic"]], ["li", ["p", "How to load initial data elegantly"]], ["li", ["p", "How to handle onError globally and locally"]], ["li", ["p", "How to load Routes and Models on demand"]], ["li", ["p", "How to implement HMR"]], ["li", ["p", "How to mock data"]], ["li", ["p", "and so on..."]]], ["p", "You can:"], ["ul", ["li", ["p", "Visit ", ["a", {
+	    "highlighted": "<span class=\"token operator\">></span> @ build /private/tmp/myapp\n<span class=\"token operator\">></span> roadhog build\n\nCreating an optimized production build<span class=\"token punctuation\">..</span>.\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"
+	  }, ["code", "> @ build /private/tmp/myapp\n> roadhog build\n\nCreating an optimized production build...\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"]], ["p", "The ", ["code", "build"], " command packages up all of the assets that make up your application —— JavaScript, templates, CSS, web fonts, images, and more. Then you can find these files in the ", ["code", "dist /"], " directory."], ["h2", "What's Next"], ["p", "We have completed a simple application, but you may still have lots of questions, such as:"], ["ul", ["li", ["p", "How to dealing with async logic"]], ["li", ["p", "How to load initial data elegantly"]], ["li", ["p", "How to handle onError globally and locally"]], ["li", ["p", "How to load Routes and Models on demand"]], ["li", ["p", "How to implement HMR"]], ["li", ["p", "How to mock data"]], ["li", ["p", "and so on..."]]], ["p", "You can:"], ["ul", ["li", ["p", "Visit ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
 	  }, "dva official website"], "."]], ["li", ["p", "View all the ", ["a", {
@@ -89,7 +92,7 @@ webpackJsonp([84,204],{
 	  }, "dva version of hackernews"], "."]]]],
 	  "meta": {
 	    "order": 3,
-	    "title": "Practical Projects",
+	    "title": "Real world Example with dva",
 	    "filename": "docs/react/practical-projects.en-US.md"
 	  },
 	  "description": ["section", ["p", ["a", {
@@ -98,8 +101,8 @@ webpackJsonp([84,204],{
 	  }, "dva"], " is a React and redux based, lightweight and elm-style framework, which supports side effects, hot module replacement, dynamic on demand, react-native, SSR. And it has been widely used in production environment."], ["p", "This article will guide you to create a simple application from zero using dva and antd."], ["p", "Include the following:"]],
 	  "toc": ["ul", ["li", ["a", {
 	    "className": "bisheng-toc-h2",
-	    "href": "#Install-dva"
-	  }, "Install dva"]], ["li", ["a", {
+	    "href": "#Install-dva-cli"
+	  }, "Install dva-cli"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#Create-New-App"
 	  }, "Create New App"]], ["li", ["a", {

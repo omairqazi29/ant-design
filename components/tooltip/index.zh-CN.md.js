@@ -1,6 +1,6 @@
-webpackJsonp([114,204],{
+webpackJsonp([116,206],{
 
-/***/ 979:
+/***/ 1698:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31,10 +31,7 @@ webpackJsonp([114,204],{
 	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "placement"], ["td", "气泡框位置，可选 ", ["code", "top"], " ", ["code", "left"], " ", ["code", "right"], " ", ["code", "bottom"], " ", ["code", "topLeft"], " ", ["code", "topRight"], " ", ["code", "bottomLeft"], " ", ["code", "bottomRight"], " ", ["code", "leftTop"], " ", ["code", "leftBottom"], " ", ["code", "rightTop"], " ", ["code", "rightBottom"]], ["td", "string"], ["td", "top"]], ["tr", ["td", "title"], ["td", "提示文字"], ["td", "string/React.Element"], ["td", "无"]], ["tr", ["td", "getTooltipContainer"], ["td", "浮层渲染父节点。默认渲染到 body 上"], ["td", "Function(triggerNode)"], ["td", "() => document.body"]], ["tr", ["td", "arrowPointAtCenter"], ["td", "箭头是否指向目标元素中心，", ["code", "antd@1.11+"], " 支持"], ["td", "Boolean"], ["td", ["code", "false"]]]]], ["p", "更多 API 可参考：", ["a", {
-	    "title": null,
-	    "href": "https://github.com/react-component/tooltip"
-	  }, "https://github.com/react-component/tooltip"]]]
+	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "title"], ["td", "提示文字"], ["td", "React.ReactNode"], ["td", "无"]]]], ["h3", "共同的 API"], ["p", "以下 API 为 Tooltip、Popconfirm、Popover 共享的 API。"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "placement"], ["td", "气泡框位置，可选 ", ["code", "top"], " ", ["code", "left"], " ", ["code", "right"], " ", ["code", "bottom"], " ", ["code", "topLeft"], " ", ["code", "topRight"], " ", ["code", "bottomLeft"], " ", ["code", "bottomRight"], " ", ["code", "leftTop"], " ", ["code", "leftBottom"], " ", ["code", "rightTop"], " ", ["code", "rightBottom"]], ["td", "string"], ["td", "top"]], ["tr", ["td", "getPopupContainer"], ["td", "浮层渲染父节点，默认渲染到 body 上。", ["code", "2.5.2"], " 之前请使用 ", ["code", "getTooltipContainer"]], ["td", "Function(triggerNode)"], ["td", "() => document.body"]], ["tr", ["td", "arrowPointAtCenter"], ["td", "箭头是否指向目标元素中心，", ["code", "antd@1.11+"], " 支持"], ["td", "Boolean"], ["td", ["code", "false"]]], ["tr", ["td", "visible"], ["td", "用于手动控制浮层显隐"], ["td", "boolean"], ["td", "false"]], ["tr", ["td", "onVisibleChange"], ["td", "显示隐藏的回调"], ["td", "(visible) => void"], ["td", "无"]], ["tr", ["td", "trigger"], ["td", "触发行为，可选 ", ["code", "hover/focus/click"]], ["td", "string"], ["td", "hover"]], ["tr", ["td", "overlayClassName"], ["td", "卡片类名"], ["td", "string"], ["td", "无"]], ["tr", ["td", "overlayStyle"], ["td", "卡片样式"], ["td", "object"], ["td", "无"]]]]]
 	};
 
 /***/ }

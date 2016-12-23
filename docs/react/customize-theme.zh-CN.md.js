@@ -1,6 +1,6 @@
-webpackJsonp([93,204],{
+webpackJsonp([95,206],{
 
-/***/ 1020:
+/***/ 1739:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61,7 +61,7 @@ webpackJsonp([93,204],{
 	    "highlighted": "<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"~antd/dist/antd.less\"</span><span class=\"token punctuation\">;</span></span>   // 引入官方提供的 less 样式入口文件\n<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"your-theme-file.less\"</span><span class=\"token punctuation\">;</span></span>   // 用于覆盖上面定义的变量"
 	  }, ["code", "@import \"~antd/dist/antd.less\";   // 引入官方提供的 less 样式入口文件\n@import \"your-theme-file.less\";   // 用于覆盖上面定义的变量"]], ["p", "注意：这种方式会载入所有组件的样式，无法和按需加载插件 ", ["code", "babel-plugin-import"], " 的 ", ["code", "style"], " 属性一起使用。"]],
 	  "meta": {
-	    "order": 4,
+	    "order": 5,
 	    "title": "定制主题",
 	    "filename": "docs/react/customize-theme.zh-CN.md"
 	  },

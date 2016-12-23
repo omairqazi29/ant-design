@@ -1,13 +1,25 @@
-webpackJsonp([39,204],{
+webpackJsonp([39,206],{
 
-/***/ 688:
+/***/ 639:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'autoplay': __webpack_require__(1407),
+	    'basic': __webpack_require__(1408),
+	    'fade': __webpack_require__(1409),
+	    'vertical': __webpack_require__(1410),
+	}
+
+/***/ },
+
+/***/ 1407:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(233);
 
-	var _carousel = __webpack_require__(178);
+	var _carousel = __webpack_require__(200);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -92,14 +104,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 689:
+/***/ 1408:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(233);
 
-	var _carousel = __webpack_require__(178);
+	var _carousel = __webpack_require__(200);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -186,14 +198,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 690:
+/***/ 1409:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(233);
 
-	var _carousel = __webpack_require__(178);
+	var _carousel = __webpack_require__(200);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -278,14 +290,14 @@ webpackJsonp([39,204],{
 
 /***/ },
 
-/***/ 691:
+/***/ 1410:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(233);
 
-	var _carousel = __webpack_require__(178);
+	var _carousel = __webpack_require__(200);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -367,18 +379,6 @@ webpackJsonp([39,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1192:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'autoplay': __webpack_require__(688),
-	    'basic': __webpack_require__(689),
-	    'fade': __webpack_require__(690),
-	    'vertical': __webpack_require__(691),
-	}
 
 /***/ }
 

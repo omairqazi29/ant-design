@@ -1,13 +1,29 @@
-webpackJsonp([8,204],{
+webpackJsonp([8,206],{
 
-/***/ 828:
+/***/ 655:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1547),
+	    'changer': __webpack_require__(1548),
+	    'controlled': __webpack_require__(1549),
+	    'jump': __webpack_require__(1550),
+	    'mini': __webpack_require__(1551),
+	    'more': __webpack_require__(1552),
+	    'simple': __webpack_require__(1553),
+	    'total': __webpack_require__(1554),
+	}
+
+/***/ },
+
+/***/ 1547:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -53,14 +69,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 829:
+/***/ 1548:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -108,14 +124,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 830:
+/***/ 1549:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -174,14 +190,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 831:
+/***/ 1550:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -229,14 +245,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 832:
+/***/ 1551:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -292,14 +308,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 833:
+/***/ 1552:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -345,14 +361,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 834:
+/***/ 1553:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -398,14 +414,14 @@ webpackJsonp([8,204],{
 
 /***/ },
 
-/***/ 835:
+/***/ 1554:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(77);
+	var _style2 = __webpack_require__(80);
 
-	var _pagination = __webpack_require__(76);
+	var _pagination = __webpack_require__(79);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -458,22 +474,6 @@ webpackJsonp([8,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1208:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(828),
-	    'changer': __webpack_require__(829),
-	    'controlled': __webpack_require__(830),
-	    'jump': __webpack_require__(831),
-	    'mini': __webpack_require__(832),
-	    'more': __webpack_require__(833),
-	    'simple': __webpack_require__(834),
-	    'total': __webpack_require__(835),
-	}
 
 /***/ }
 

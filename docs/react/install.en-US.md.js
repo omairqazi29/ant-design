@@ -1,6 +1,6 @@
-webpackJsonp([88,204],{
+webpackJsonp([90,206],{
 
-/***/ 1025:
+/***/ 1744:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -78,17 +78,17 @@ webpackJsonp([88,204],{
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/build-antd-standalone"
 	  }, "example"], " of how to build your own antd.js if you are using antd@<1.0.0."]], ["h2", "Development tool"], ["p", "We provide React components ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init"
+	    "href": "https://github.com/dvajs/dva-cli"
 	  }, "Scaffold tool"], "."], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd-init -g"
-	  }, ["code", "$ npm install antd-init -g"]], ["p", "Inside an empty folder run ", ["code", "antd-init"], " to init."], ["p", "You can explore the latest structure of scaffold ", ["a", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g"
+	  }, ["code", "$ npm install dva-cli -g"]], ["p", "Run ", ["code", "dva new myapp"], " to init a React application."], ["p", "You can explore the latest structure of scaffold ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/antd-init/tree/master/boilerplates"
+	    "href": "https://github.com/dvajs/dva-cli/tree/master/boilerplates"
 	  }, "here"], ", it is a good habit to watch this repo to get the latest features."], ["blockquote", ["p", ["a", {
 	    "title": null,
-	    "href": "http://ant-tool.github.io/"
-	  }, "More development tools"], "。"]]],
+	    "href": "https://github.com/sorrycc/roadhog"
+	  }, "More development tool features"], "。"]]],
 	  "meta": {
 	    "order": 2,
 	    "title": "Installation",

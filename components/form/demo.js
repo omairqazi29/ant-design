@@ -1,6 +1,27 @@
-webpackJsonp([2,204],{
+webpackJsonp([2,206],{
 
-/***/ 738:
+/***/ 645:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'advanced-search': __webpack_require__(1457),
+	    'coordinated': __webpack_require__(1458),
+	    'customized-form-controls': __webpack_require__(1459),
+	    'dynamic-form-item': __webpack_require__(1460),
+	    'form-in-modal': __webpack_require__(1461),
+	    'global-state': __webpack_require__(1462),
+	    'horizontal-login': __webpack_require__(1463),
+	    'normal-login': __webpack_require__(1464),
+	    'register': __webpack_require__(1465),
+	    'time-related-controls': __webpack_require__(1466),
+	    'validate-other': __webpack_require__(1467),
+	    'validate-static': __webpack_require__(1468),
+	    'without-form-create': __webpack_require__(1469),
+	}
+
+/***/ },
+
+/***/ 1457:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17,7 +38,7 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style9 = __webpack_require__(45);
+	var _style9 = __webpack_require__(47);
 
 	var _row = __webpack_require__(43);
 
@@ -25,7 +46,7 @@ webpackJsonp([2,204],{
 
 	var _style10 = __webpack_require__(42);
 
-	var _col = __webpack_require__(40);
+	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -33,7 +54,7 @@ webpackJsonp([2,204],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style11 = __webpack_require__(18);
+	var _style11 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
@@ -51,9 +72,9 @@ webpackJsonp([2,204],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style12 = __webpack_require__(50);
+	var _style12 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -186,7 +207,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 739:
+/***/ 1458:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -197,21 +218,21 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(18);
+	var _style6 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style7 = __webpack_require__(27);
+	var _style7 = __webpack_require__(29);
 
-	var _select = __webpack_require__(26);
+	var _select = __webpack_require__(28);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -308,7 +329,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 740:
+/***/ 1459:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -319,21 +340,21 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(18);
+	var _style6 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style7 = __webpack_require__(27);
+	var _style7 = __webpack_require__(29);
 
-	var _select = __webpack_require__(26);
+	var _select = __webpack_require__(28);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -482,7 +503,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 741:
+/***/ 1460:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -503,7 +524,7 @@ webpackJsonp([2,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style7 = __webpack_require__(18);
+	var _style7 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
@@ -521,9 +542,9 @@ webpackJsonp([2,204],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -642,7 +663,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 742:
+/***/ 1461:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -653,27 +674,27 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style7 = __webpack_require__(67);
+	var _style7 = __webpack_require__(72);
 
-	var _modal = __webpack_require__(59);
+	var _modal = __webpack_require__(64);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
 	var _style8 = __webpack_require__(55);
 
-	var _radio = __webpack_require__(51);
+	var _radio = __webpack_require__(53);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _style9 = __webpack_require__(18);
+	var _style9 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style10 = __webpack_require__(50);
+	var _style10 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -799,12 +820,12 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 743:
+/***/ 1462:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(18);
+	var _style3 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
@@ -814,9 +835,9 @@ webpackJsonp([2,204],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(50);
+	var _style4 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -916,7 +937,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 744:
+/***/ 1463:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -927,7 +948,7 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(18);
+	var _style6 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
@@ -939,9 +960,9 @@ webpackJsonp([2,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1022,7 +1043,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 745:
+/***/ 1464:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1033,13 +1054,13 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style7 = __webpack_require__(75);
+	var _style7 = __webpack_require__(78);
 
-	var _checkbox = __webpack_require__(56);
+	var _checkbox = __webpack_require__(61);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
-	var _style8 = __webpack_require__(18);
+	var _style8 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
@@ -1051,9 +1072,9 @@ webpackJsonp([2,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style10 = __webpack_require__(50);
+	var _style10 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1152,18 +1173,18 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 746:
+/***/ 1465:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style11 = __webpack_require__(75);
+	var _style11 = __webpack_require__(78);
 
-	var _checkbox = __webpack_require__(56);
+	var _checkbox = __webpack_require__(61);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
-	var _style12 = __webpack_require__(45);
+	var _style12 = __webpack_require__(47);
 
 	var _row = __webpack_require__(43);
 
@@ -1177,19 +1198,19 @@ webpackJsonp([2,204],{
 
 	var _style14 = __webpack_require__(42);
 
-	var _col = __webpack_require__(40);
+	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style15 = __webpack_require__(87);
+	var _style15 = __webpack_require__(94);
 
-	var _cascader = __webpack_require__(86);
+	var _cascader = __webpack_require__(93);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
-	var _style16 = __webpack_require__(116);
+	var _style16 = __webpack_require__(125);
 
-	var _tooltip = __webpack_require__(100);
+	var _tooltip = __webpack_require__(108);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -1203,21 +1224,21 @@ webpackJsonp([2,204],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style18 = __webpack_require__(18);
+	var _style18 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style19 = __webpack_require__(27);
+	var _style19 = __webpack_require__(29);
 
-	var _select = __webpack_require__(26);
+	var _select = __webpack_require__(28);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style20 = __webpack_require__(50);
+	var _style20 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1254,7 +1275,7 @@ webpackJsonp([2,204],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Form<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Tooltip<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Cascader<span class=\"token punctuation\">,</span> Select<span class=\"token punctuation\">,</span> Row<span class=\"token punctuation\">,</span> Col<span class=\"token punctuation\">,</span> Checkbox<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Option <span class=\"token operator\">=</span> Select<span class=\"token punctuation\">.</span>Option<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> residences <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'zhejiang'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Zhejiang'</span><span class=\"token punctuation\">,</span>\n  children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n    value<span class=\"token punctuation\">:</span> <span class=\"token string\">'hangzhou'</span><span class=\"token punctuation\">,</span>\n    label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Hangzhou'</span><span class=\"token punctuation\">,</span>\n    children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n      value<span class=\"token punctuation\">:</span> <span class=\"token string\">'xihu'</span><span class=\"token punctuation\">,</span>\n      label<span class=\"token punctuation\">:</span> <span class=\"token string\">'West Lake'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'jiangsu'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Jiangsu'</span><span class=\"token punctuation\">,</span>\n  children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n    value<span class=\"token punctuation\">:</span> <span class=\"token string\">'nanjing'</span><span class=\"token punctuation\">,</span>\n    label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Nanjing'</span><span class=\"token punctuation\">,</span>\n    children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n      value<span class=\"token punctuation\">:</span> <span class=\"token string\">'zhonghuamen'</span><span class=\"token punctuation\">,</span>\n      label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Zhong Hua Men'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> RegistrationForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n      passwordDirty<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFieldsAndScroll</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>err<span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>err<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Received values of form: '</span><span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n      <span class=\"token punctuation\">}</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handlePasswordBlur</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> value <span class=\"token operator\">=</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> passwordDirty<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>passwordDirty <span class=\"token operator\">||</span> <span class=\"token operator\">!</span><span class=\"token operator\">!</span>value <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">checkPassowrd</span><span class=\"token punctuation\">(</span>rule<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> form <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>value <span class=\"token operator\">&amp;&amp;</span> value <span class=\"token operator\">!==</span> form<span class=\"token punctuation\">.</span><span class=\"token function\">getFieldValue</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Two passwords that you enter is inconsistent!'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span> <span class=\"token keyword\">else</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">checkConfirm</span><span class=\"token punctuation\">(</span>rule<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> form <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>value <span class=\"token operator\">&amp;&amp;</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>passwordDirty<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFields</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">[</span><span class=\"token string\">'confirm'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span> force<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> getFieldDecorator <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> formItemLayout <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      labelCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span> span<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n      wrapperCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span> span<span class=\"token punctuation\">:</span> <span class=\"token number\">14</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> tailFormItemLayout <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      wrapperCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        span<span class=\"token punctuation\">:</span> <span class=\"token number\">14</span><span class=\"token punctuation\">,</span>\n        offset<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span><span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> prefixSelector <span class=\"token operator\">=</span> <span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'prefix'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n      initialValue<span class=\"token punctuation\">:</span> <span class=\"token string\">'86'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Select</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>icp-selector<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Option</span> <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>86<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span><span class=\"token operator\">+</span><span class=\"token number\">86</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Option</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Select</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Form</span> <span class=\"token attr-name\">horizontal</span> <span class=\"token attr-name\">onSubmit</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleSubmit<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"E-mail\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'email'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              type<span class=\"token punctuation\">:</span> <span class=\"token string\">'email'</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'The input is not valid E-mail!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your E-mail!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Password\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your password!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              validator<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>checkConfirm<span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>password<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">onBlur</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handlePasswordBlur<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Confirm Password\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'confirm'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please confirm your password!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              validator<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>checkPassowrd<span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>password<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span><span class=\"token punctuation\">></span></span>\n              Nickname<span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Tooltip</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>What</span> <span class=\"token attr-name\">do</span> <span class=\"token attr-name\">you</span> <span class=\"token attr-name\">want</span> <span class=\"token attr-name\">other</span> <span class=\"token attr-name\">to</span> <span class=\"token attr-name\">call</span> <span class=\"token attr-name\">you?\"</span><span class=\"token punctuation\">></span></span>\n                <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>question-circle-o<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Tooltip</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'nickname'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your nickname!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Habitual Residence\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'residence'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            initialValue<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token string\">'zhejiang'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'hangzhou'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'xihu'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> type<span class=\"token punctuation\">:</span> <span class=\"token string\">'array'</span><span class=\"token punctuation\">,</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please select your habitual residence!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Cascader</span> <span class=\"token attr-name\">options</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>residences<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Phone Number\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'phone'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your phone number!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">addonBefore</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>prefixSelector<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Captcha\"</span>\n          extra<span class=\"token operator\">=</span><span class=\"token string\">\"We must make sure that your are a human.\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Row</span> <span class=\"token attr-name\">gutter</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">8</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Col</span> <span class=\"token attr-name\">span</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">12</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n              <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'captcha'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n                rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input the captcha you got!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n              <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n                <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n              <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Col</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Col</span> <span class=\"token attr-name\">span</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">12</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Get captcha<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Col</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Row</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>tailFormItemLayout<span class=\"token punctuation\">}</span> style<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'agreement'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            valuePropName<span class=\"token punctuation\">:</span> <span class=\"token string\">'checked'</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Checkbox</span><span class=\"token punctuation\">></span></span>I had read the <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span><span class=\"token punctuation\">></span></span>agreement<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Checkbox</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>tailFormItemLayout<span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">htmlType</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>submit<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Register<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Form</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RegistrationForm</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Form<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Tooltip<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Cascader<span class=\"token punctuation\">,</span> Select<span class=\"token punctuation\">,</span> Row<span class=\"token punctuation\">,</span> Col<span class=\"token punctuation\">,</span> Checkbox<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Option <span class=\"token operator\">=</span> Select<span class=\"token punctuation\">.</span>Option<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> residences <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'zhejiang'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Zhejiang'</span><span class=\"token punctuation\">,</span>\n  children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n    value<span class=\"token punctuation\">:</span> <span class=\"token string\">'hangzhou'</span><span class=\"token punctuation\">,</span>\n    label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Hangzhou'</span><span class=\"token punctuation\">,</span>\n    children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n      value<span class=\"token punctuation\">:</span> <span class=\"token string\">'xihu'</span><span class=\"token punctuation\">,</span>\n      label<span class=\"token punctuation\">:</span> <span class=\"token string\">'West Lake'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'jiangsu'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Jiangsu'</span><span class=\"token punctuation\">,</span>\n  children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n    value<span class=\"token punctuation\">:</span> <span class=\"token string\">'nanjing'</span><span class=\"token punctuation\">,</span>\n    label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Nanjing'</span><span class=\"token punctuation\">,</span>\n    children<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n      value<span class=\"token punctuation\">:</span> <span class=\"token string\">'zhonghuamen'</span><span class=\"token punctuation\">,</span>\n      label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Zhong Hua Men'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> RegistrationForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n      passwordDirty<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFieldsAndScroll</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>err<span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>err<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n        console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Received values of form: '</span><span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n      <span class=\"token punctuation\">}</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handlePasswordBlur</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> value <span class=\"token operator\">=</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> passwordDirty<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>passwordDirty <span class=\"token operator\">||</span> <span class=\"token operator\">!</span><span class=\"token operator\">!</span>value <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">checkPassword</span><span class=\"token punctuation\">(</span>rule<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> form <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>value <span class=\"token operator\">&amp;&amp;</span> value <span class=\"token operator\">!==</span> form<span class=\"token punctuation\">.</span><span class=\"token function\">getFieldValue</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Two passwords that you enter is inconsistent!'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span> <span class=\"token keyword\">else</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">checkConfirm</span><span class=\"token punctuation\">(</span>rule<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> form <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>value <span class=\"token operator\">&amp;&amp;</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>passwordDirty<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFields</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">[</span><span class=\"token string\">'confirm'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span> force<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> getFieldDecorator <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> formItemLayout <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      labelCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span> span<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n      wrapperCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span> span<span class=\"token punctuation\">:</span> <span class=\"token number\">14</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> tailFormItemLayout <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      wrapperCol<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        span<span class=\"token punctuation\">:</span> <span class=\"token number\">14</span><span class=\"token punctuation\">,</span>\n        offset<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span><span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> prefixSelector <span class=\"token operator\">=</span> <span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'prefix'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n      initialValue<span class=\"token punctuation\">:</span> <span class=\"token string\">'86'</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Select</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>icp-selector<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Option</span> <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>86<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span><span class=\"token operator\">+</span><span class=\"token number\">86</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Option</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Select</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Form</span> <span class=\"token attr-name\">horizontal</span> <span class=\"token attr-name\">onSubmit</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleSubmit<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"E-mail\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'email'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              type<span class=\"token punctuation\">:</span> <span class=\"token string\">'email'</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'The input is not valid E-mail!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your E-mail!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Password\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your password!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              validator<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>checkConfirm<span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>password<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">onBlur</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handlePasswordBlur<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Confirm Password\"</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'confirm'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n              required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please confirm your password!'</span><span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n              validator<span class=\"token punctuation\">:</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>checkPassword<span class=\"token punctuation\">,</span>\n            <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>password<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span><span class=\"token punctuation\">></span></span>\n              Nickname<span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Tooltip</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>What</span> <span class=\"token attr-name\">do</span> <span class=\"token attr-name\">you</span> <span class=\"token attr-name\">want</span> <span class=\"token attr-name\">other</span> <span class=\"token attr-name\">to</span> <span class=\"token attr-name\">call</span> <span class=\"token attr-name\">you?\"</span><span class=\"token punctuation\">></span></span>\n                <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>question-circle-o<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Tooltip</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n          hasFeedback\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'nickname'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your nickname!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Habitual Residence\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'residence'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            initialValue<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token string\">'zhejiang'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'hangzhou'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'xihu'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> type<span class=\"token punctuation\">:</span> <span class=\"token string\">'array'</span><span class=\"token punctuation\">,</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please select your habitual residence!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Cascader</span> <span class=\"token attr-name\">options</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>residences<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Phone Number\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'phone'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your phone number!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">addonBefore</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>prefixSelector<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>formItemLayout<span class=\"token punctuation\">}</span>\n          label<span class=\"token operator\">=</span><span class=\"token string\">\"Captcha\"</span>\n          extra<span class=\"token operator\">=</span><span class=\"token string\">\"We must make sure that your are a human.\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Row</span> <span class=\"token attr-name\">gutter</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">8</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Col</span> <span class=\"token attr-name\">span</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">12</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n              <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'captcha'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n                rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span> required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input the captcha you got!'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n              <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n                <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Input</span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n              <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Col</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Col</span> <span class=\"token attr-name\">span</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">12</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n              <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Get captcha<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Col</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Row</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>tailFormItemLayout<span class=\"token punctuation\">}</span> style<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">{</span><span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'agreement'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n            valuePropName<span class=\"token punctuation\">:</span> <span class=\"token string\">'checked'</span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Checkbox</span><span class=\"token punctuation\">></span></span>I had read the <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span><span class=\"token punctuation\">></span></span>agreement<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Checkbox</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token operator\">&lt;</span>FormItem <span class=\"token punctuation\">{</span><span class=\"token operator\">...</span>tailFormItemLayout<span class=\"token punctuation\">}</span><span class=\"token operator\">></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">htmlType</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>submit<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Register<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FormItem</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Form</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RegistrationForm</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
 	    var FormItem = _form2.default.Item;var Option = _select2.default.Option;
@@ -1274,7 +1295,7 @@ webpackJsonp([2,204],{
 	      handlePasswordBlur: function handlePasswordBlur(e) {
 	        var value = e.target.value;this.setState({ passwordDirty: this.state.passwordDirty || !!value });
 	      },
-	      checkPassowrd: function checkPassowrd(rule, value, callback) {
+	      checkPassword: function checkPassword(rule, value, callback) {
 	        var form = this.props.form;if (value && value !== form.getFieldValue('password')) {
 	          callback('Two passwords that you enter is inconsistent!');
 	        } else {
@@ -1312,7 +1333,7 @@ webpackJsonp([2,204],{
 	          _react2.default.createElement(
 	            FormItem,
 	            (0, _extends3.default)({}, formItemLayout, { label: 'Confirm Password', hasFeedback: true }),
-	            getFieldDecorator('confirm', { rules: [{ required: true, message: 'Please confirm your password!' }, { validator: this.checkPassowrd }] })(_react2.default.createElement(_input2.default, { type: 'password' }))
+	            getFieldDecorator('confirm', { rules: [{ required: true, message: 'Please confirm your password!' }, { validator: this.checkPassword }] })(_react2.default.createElement(_input2.default, { type: 'password' }))
 	          ),
 	          _react2.default.createElement(
 	            FormItem,
@@ -1393,7 +1414,7 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 747:
+/***/ 1466:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1404,9 +1425,9 @@ webpackJsonp([2,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(88);
+	var _style6 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -1414,15 +1435,15 @@ webpackJsonp([2,204],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style7 = __webpack_require__(66);
+	var _style7 = __webpack_require__(71);
 
-	var _datePicker = __webpack_require__(65);
+	var _datePicker = __webpack_require__(70);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1526,14 +1547,14 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 748:
+/***/ 1467:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style10 = __webpack_require__(118);
+	var _style10 = __webpack_require__(127);
 
-	var _upload = __webpack_require__(117);
+	var _upload = __webpack_require__(126);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -1549,21 +1570,21 @@ webpackJsonp([2,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style13 = __webpack_require__(137);
+	var _style13 = __webpack_require__(148);
 
-	var _slider = __webpack_require__(136);
+	var _slider = __webpack_require__(147);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
-	var _style14 = __webpack_require__(69);
+	var _style14 = __webpack_require__(74);
 
-	var _switch = __webpack_require__(68);
+	var _switch = __webpack_require__(73);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style15 = __webpack_require__(132);
+	var _style15 = __webpack_require__(143);
 
-	var _inputNumber = __webpack_require__(131);
+	var _inputNumber = __webpack_require__(142);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -1573,19 +1594,19 @@ webpackJsonp([2,204],{
 
 	var _style16 = __webpack_require__(55);
 
-	var _radio = __webpack_require__(51);
+	var _radio = __webpack_require__(53);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	var _style17 = __webpack_require__(27);
+	var _style17 = __webpack_require__(29);
 
-	var _select = __webpack_require__(26);
+	var _select = __webpack_require__(28);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style18 = __webpack_require__(50);
+	var _style18 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1784,32 +1805,32 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 749:
+/***/ 1468:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style5 = __webpack_require__(42);
 
-	var _col = __webpack_require__(40);
+	var _col = __webpack_require__(41);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style6 = __webpack_require__(66);
+	var _style6 = __webpack_require__(71);
 
-	var _datePicker = __webpack_require__(65);
+	var _datePicker = __webpack_require__(70);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
-	var _style7 = __webpack_require__(18);
+	var _style7 = __webpack_require__(20);
 
 	var _input = __webpack_require__(23);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style8 = __webpack_require__(50);
+	var _style8 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -1921,14 +1942,14 @@ webpackJsonp([2,204],{
 
 /***/ },
 
-/***/ 750:
+/***/ 1469:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(132);
+	var _style3 = __webpack_require__(143);
 
-	var _inputNumber = __webpack_require__(131);
+	var _inputNumber = __webpack_require__(142);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -1948,9 +1969,9 @@ webpackJsonp([2,204],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style4 = __webpack_require__(50);
+	var _style4 = __webpack_require__(52);
 
-	var _form = __webpack_require__(49);
+	var _form = __webpack_require__(51);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -2032,27 +2053,6 @@ webpackJsonp([2,204],{
 	    return _react2.default.createElement(RawForm, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1198:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'advanced-search': __webpack_require__(738),
-	    'coordinated': __webpack_require__(739),
-	    'customized-form-controls': __webpack_require__(740),
-	    'dynamic-form-item': __webpack_require__(741),
-	    'form-in-modal': __webpack_require__(742),
-	    'global-state': __webpack_require__(743),
-	    'horizontal-login': __webpack_require__(744),
-	    'normal-login': __webpack_require__(745),
-	    'register': __webpack_require__(746),
-	    'time-related-controls': __webpack_require__(747),
-	    'validate-other': __webpack_require__(748),
-	    'validate-static': __webpack_require__(749),
-	    'without-form-create': __webpack_require__(750),
-	}
 
 /***/ }
 

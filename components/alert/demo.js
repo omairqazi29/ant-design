@@ -1,13 +1,28 @@
-webpackJsonp([18,204],{
+webpackJsonp([18,206],{
 
-/***/ 628:
+/***/ 630:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'banner': __webpack_require__(1347),
+	    'basic': __webpack_require__(1348),
+	    'closable': __webpack_require__(1349),
+	    'close-text': __webpack_require__(1350),
+	    'description': __webpack_require__(1351),
+	    'icon': __webpack_require__(1352),
+	    'style': __webpack_require__(1353),
+	}
+
+/***/ },
+
+/***/ 1347:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -59,14 +74,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 629:
+/***/ 1348:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -112,14 +127,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 630:
+/***/ 1349:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -172,14 +187,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 631:
+/***/ 1350:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -225,14 +240,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 632:
+/***/ 1351:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -285,14 +300,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 633:
+/***/ 1352:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -349,14 +364,14 @@ webpackJsonp([18,204],{
 
 /***/ },
 
-/***/ 634:
+/***/ 1353:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(85);
+	var _style2 = __webpack_require__(92);
 
-	var _alert = __webpack_require__(84);
+	var _alert = __webpack_require__(91);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -406,21 +421,6 @@ webpackJsonp([18,204],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1183:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'banner': __webpack_require__(628),
-	    'basic': __webpack_require__(629),
-	    'closable': __webpack_require__(630),
-	    'close-text': __webpack_require__(631),
-	    'description': __webpack_require__(632),
-	    'icon': __webpack_require__(633),
-	    'style': __webpack_require__(634),
-	}
 
 /***/ }
 

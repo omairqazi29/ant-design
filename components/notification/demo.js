@@ -1,6 +1,19 @@
-webpackJsonp([29,204],{
+webpackJsonp([29,206],{
 
-/***/ 821:
+/***/ 654:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1540),
+	    'custom-icon': __webpack_require__(1541),
+	    'duration': __webpack_require__(1542),
+	    'with-btn': __webpack_require__(1543),
+	    'with-icon': __webpack_require__(1544),
+	}
+
+/***/ },
+
+/***/ 1540:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11,9 +24,9 @@ webpackJsonp([29,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(180);
+	var _style4 = __webpack_require__(202);
 
-	var _notification = __webpack_require__(179);
+	var _notification = __webpack_require__(201);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -66,7 +79,7 @@ webpackJsonp([29,204],{
 
 /***/ },
 
-/***/ 822:
+/***/ 1541:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83,9 +96,9 @@ webpackJsonp([29,204],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(180);
+	var _style6 = __webpack_require__(202);
 
-	var _notification = __webpack_require__(179);
+	var _notification = __webpack_require__(201);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -138,7 +151,7 @@ webpackJsonp([29,204],{
 
 /***/ },
 
-/***/ 823:
+/***/ 1542:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -149,9 +162,9 @@ webpackJsonp([29,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(180);
+	var _style4 = __webpack_require__(202);
 
-	var _notification = __webpack_require__(179);
+	var _notification = __webpack_require__(201);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -204,7 +217,7 @@ webpackJsonp([29,204],{
 
 /***/ },
 
-/***/ 824:
+/***/ 1543:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -215,9 +228,9 @@ webpackJsonp([29,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(180);
+	var _style4 = __webpack_require__(202);
 
-	var _notification = __webpack_require__(179);
+	var _notification = __webpack_require__(201);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -278,7 +291,7 @@ webpackJsonp([29,204],{
 
 /***/ },
 
-/***/ 825:
+/***/ 1544:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -289,9 +302,9 @@ webpackJsonp([29,204],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(180);
+	var _style4 = __webpack_require__(202);
 
-	var _notification = __webpack_require__(179);
+	var _notification = __webpack_require__(201);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -368,19 +381,6 @@ webpackJsonp([29,204],{
 	  },
 	  "style": "\n.code-box-demo .ant-btn {\n  margin-right: 1em;\n}\n"
 	};
-
-/***/ },
-
-/***/ 1207:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(821),
-	    'custom-icon': __webpack_require__(822),
-	    'duration': __webpack_require__(823),
-	    'with-btn': __webpack_require__(824),
-	    'with-icon': __webpack_require__(825),
-	}
 
 /***/ }
 

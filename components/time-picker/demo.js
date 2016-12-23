@@ -1,13 +1,28 @@
-webpackJsonp([12,204],{
+webpackJsonp([12,206],{
 
-/***/ 960:
+/***/ 669:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'addon': __webpack_require__(1679),
+	    'basic': __webpack_require__(1680),
+	    'disable-options': __webpack_require__(1681),
+	    'disabled': __webpack_require__(1682),
+	    'hide-column': __webpack_require__(1683),
+	    'size': __webpack_require__(1684),
+	    'value': __webpack_require__(1685),
+	}
+
+/***/ },
+
+/***/ 1679:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(88);
+	var _style3 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -67,14 +82,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 961:
+/***/ 1680:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -122,14 +137,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 962:
+/***/ 1681:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -194,14 +209,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 963:
+/***/ 1682:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -213,7 +228,7 @@ webpackJsonp([12,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(30);
+	var _moment = __webpack_require__(26);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -251,14 +266,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 964:
+/***/ 1683:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -270,7 +285,7 @@ webpackJsonp([12,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(30);
+	var _moment = __webpack_require__(26);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -308,14 +323,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 965:
+/***/ 1684:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -327,7 +342,7 @@ webpackJsonp([12,204],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(30);
+	var _moment = __webpack_require__(26);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -371,14 +386,14 @@ webpackJsonp([12,204],{
 
 /***/ },
 
-/***/ 966:
+/***/ 1685:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(88);
+	var _style2 = __webpack_require__(95);
 
-	var _timePicker = __webpack_require__(99);
+	var _timePicker = __webpack_require__(107);
 
 	var _timePicker2 = _interopRequireDefault(_timePicker);
 
@@ -459,21 +474,6 @@ webpackJsonp([12,204],{
 	    return _react2.default.createElement(Demo, null);
 	  }
 	};
-
-/***/ },
-
-/***/ 1222:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'addon': __webpack_require__(960),
-	    'basic': __webpack_require__(961),
-	    'disable-options': __webpack_require__(962),
-	    'disabled': __webpack_require__(963),
-	    'hide-column': __webpack_require__(964),
-	    'size': __webpack_require__(965),
-	    'value': __webpack_require__(966),
-	}
 
 /***/ }
 

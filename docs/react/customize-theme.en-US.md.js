@@ -1,6 +1,6 @@
-webpackJsonp([94,204],{
+webpackJsonp([96,206],{
 
-/***/ 1019:
+/***/ 1738:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61,7 +61,7 @@ webpackJsonp([94,204],{
 	    "highlighted": "<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"~antd/dist/antd.less\"</span><span class=\"token punctuation\">;</span></span>   // import official less entry file\n<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"your-theme-file.less\"</span><span class=\"token punctuation\">;</span></span>   // override variables here"
 	  }, ["code", "@import \"~antd/dist/antd.less\";   // import official less entry file\n@import \"your-theme-file.less\";   // override variables here"]], ["p", "Note: This way will load the styles of all components, regardless of your demand, which cause ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " not working."]],
 	  "meta": {
-	    "order": 4,
+	    "order": 5,
 	    "title": "Customize Theme",
 	    "filename": "docs/react/customize-theme.en-US.md"
 	  },

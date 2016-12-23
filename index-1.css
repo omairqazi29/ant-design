@@ -4417,7 +4417,6 @@ samp {
   display: block;
 }
 .ant-input-search-wrapper {
-  display: inline-block;
   position: relative;
 }
 .ant-input-search-wrapper .ant-input-search {
@@ -6264,23 +6263,39 @@ span.ant-radio + * {
   padding: 24px;
 }
 .ant-card-loading .ant-card-body {
-  letter-spacing: -2px;
-  color: #eee;
-  font-size: 0.75rem;
-}
-.ant-card-loading .ant-card-body p {
-  word-break: break-all;
-  line-height: 10px;
-  margin: 5px 0 0;
-  height: 10px;
-  border-radius: 4px;
-  overflow: hidden;
-  display: inline-block;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #f3f5f8;
+}
+.ant-card-loading-block {
+  display: inline-block;
+  margin: 5px 1% 0;
+  height: 14px;
+  border-radius: 2px;
+  background: -webkit-linear-gradient(left, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
+  background: linear-gradient(90deg, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
+  -webkit-animation: card-loading 1.4s ease infinite;
+          animation: card-loading 1.4s ease infinite;
+  background-size: 600% 600%;
+}
+@-webkit-keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 .ant-row {
   position: relative;
@@ -14473,33 +14488,4 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-table-small .ant-table-header {
   background: #fff;
-}
-.ant-table-small .ant-table-header table {
-  border-bottom: 1px solid #e9e9e9;
-}
-.ant-table-small .ant-table-header .ant-table-thead > tr > th {
-  border-bottom: 0;
-}
-.ant-table-small .ant-table-row:last-child td {
-  border-bottom: 0;
-}
-.ant-table-column-sorter {
-  margin-left: 4px;
-  display: inline-block;
-  width: 12px;
-  height: 14px;
-  vertical-align: middle;
-  text-align: center;
-}
-.ant-table-column-sorter-up,
-.ant-table-column-sorter-down {
-  line-height: 4px;
-  height: 5px;
-  display: block;
-  width: 12px;
-  cursor: pointer;
-}
-.ant-table-column-sorter-up:hover .anticon,
-.ant-table-column-sorter-down:hover .anticon {
-  color: #666;
 }

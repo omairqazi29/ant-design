@@ -1,6 +1,6 @@
-webpackJsonp([83,204],{
+webpackJsonp([85,206],{
 
-/***/ 1030:
+/***/ 1749:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,10 +16,10 @@ webpackJsonp([83,204],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "安装 dva"], ["p", "通过 npm 安装 dva 。"], ["pre", {
+	  "content": ["article", {}, ["h2", "安装 dva-cli"], ["p", "通过 npm 安装 dva-cli 并确保版本是 ", ["code", "0.7.0"], " 或以上。"], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g"
-	  }, ["code", "$ npm install dva-cli -g"]], ["h2", "创建新应用"], ["p", "安装完 dva-cli 之后，就可以在 terminal 里访问到 ", ["code", "dva"], " 命令。现在，你可以通过 ", ["code", "dva new"], " 创建新应用。"], ["pre", {
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> dva-cli -g\n$ dva -v\n0.7.0"
+	  }, ["code", "$ npm install dva-cli -g\n$ dva -v\n0.7.0"]], ["h2", "创建新应用"], ["p", "安装完 dva-cli 之后，就可以在 terminal 里访问到 ", ["code", "dva"], " 命令。现在，你可以通过 ", ["code", "dva new"], " 创建新应用。"], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ dva new dva-quickstart"
 	  }, ["code", "$ dva new dva-quickstart"]], ["p", "这会创建 ", ["code", "dva-quickstart"], " 目录，包含项目初始化目录和文件，并提供开发服务器、构建脚本、数据 mock 服务、代理服务器等功能。"], ["p", "然后我们 ", ["code", "cd"], " 进入 ", ["code", "dva-quickstart"], " 目录，并启动开发服务器："], ["pre", {
@@ -27,8 +27,8 @@ webpackJsonp([83,204],{
 	    "highlighted": "$ <span class=\"token function\">cd</span> dva-quickstart\n$ <span class=\"token function\">npm</span> start"
 	  }, ["code", "$ cd dva-quickstart\n$ npm start"]], ["p", "几秒钟后，你会看到以下输出："], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "          proxy: load rule from proxy.config.js\n          proxy: listened on 8989\n📦  411/411 build modules\nwebpack: bundle build is now finished."
-	  }, ["code", "          proxy: load rule from proxy.config.js\n          proxy: listened on 8989\n📦  411/411 build modules\nwebpack: bundle build is now finished."]], ["p", "在浏览器里打开 ", ["a", {
+	    "highlighted": "Compiled successfully<span class=\"token operator\">!</span>\n\nThe app is running at:\n\n  http://localhost:8000/\n\nNote that the development build is not optimized.\nTo create a production build, use <span class=\"token function\">npm</span> run build."
+	  }, ["code", "Compiled successfully!\n\nThe app is running at:\n\n  http://localhost:8000/\n\nNote that the development build is not optimized.\nTo create a production build, use npm run build."]], ["p", "在浏览器里打开 ", ["a", {
 	    "title": null,
 	    "href": "http://localhost:8989"
 	  }, "http://localhost:8989"], " ，你会看到 dva 的欢迎界面。"], ["h2", "使用 antd"], ["p", "通过 npm 安装 ", ["code", "antd"], " 和 ", ["code", "babel-plugin-import"], " 。", ["code", "babel-plugin-import"], " 是用来按需加载 antd 的脚本和样式的，详见 ", ["a", {
@@ -37,10 +37,13 @@ webpackJsonp([83,204],{
 	  }, "repo"], " 。"], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd babel-plugin-import --save"
-	  }, ["code", "$ npm install antd babel-plugin-import --save"]], ["p", "编辑 ", ["code", "webpack.config.js"], "，使 ", ["code", "babel-plugin-import"], " 插件生效。"], ["pre", {
+	  }, ["code", "$ npm install antd babel-plugin-import --save"]], ["p", "编辑 ", ["code", ".roadhogrc"], "，使 ", ["code", "babel-plugin-import"], " 插件生效。"], ["pre", {
 	    "lang": "diff",
-	    "highlighted": "<span class=\"token inserted\">+ webpackConfig.babel.plugins.push(['import', {</span>\n<span class=\"token inserted\">+   libraryName: 'antd',</span>\n<span class=\"token inserted\">+   style: 'css',</span>\n<span class=\"token inserted\">+ }]);</span>"
-	  }, ["code", "+ webpackConfig.babel.plugins.push(['import', {\n+   libraryName: 'antd',\n+   style: 'css',\n+ }]);"]], ["blockquote", ["p", "注：这里不需要手动重启开发服务器，保存 ", ["code", "webpack.config.js"], " 后会自动重启。"]], ["h2", "定义路由"], ["p", "我们要写个应用来先显示产品列表。首先第一步是创建路由，路由可以想象成是组成应用的不同页面。"], ["p", "新建 route component ", ["code", "routes/Products.js"], "，内容如下："], ["pre", {
+	    "highlighted": "  \"extraBabelPlugins\": [\n<span class=\"token deleted\">-    \"transform-runtime\"</span>\n<span class=\"token inserted\">+    \"transform-runtime\",</span>\n<span class=\"token inserted\">+    [\"import\", { \"libraryName\": \"antd\", \"style\": \"css\" }]</span>\n  ],"
+	  }, ["code", "  \"extraBabelPlugins\": [\n-    \"transform-runtime\"\n+    \"transform-runtime\",\n+    [\"import\", { \"libraryName\": \"antd\", \"style\": \"css\" }]\n  ],"]], ["blockquote", ["p", "注：dva-cli 基于 roadhog 实现 build 和 server，更多 ", ["code", ".roadhogrc"], " 的配置详见 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/sorrycc/roadhog#配置"
+	  }, "roadhog#配置"]]], ["h2", "定义路由"], ["p", "我们要写个应用来先显示产品列表。首先第一步是创建路由，路由可以想象成是组成应用的不同页面。"], ["p", "新建 route component ", ["code", "routes/Products.js"], "，内容如下："], ["pre", {
 	    "lang": "javascript",
 	    "highlighted": "<span class=\"token keyword\">import</span> React <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> Products <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>h2<span class=\"token operator\">></span>List <span class=\"token keyword\">of</span> Products<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h2<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">export</span> <span class=\"token keyword\">default</span> Products<span class=\"token punctuation\">;</span>"
 	  }, ["code", "import React from 'react';\n\nconst Products = (props) => (\n  <h2>List of Products</h2>\n);\n\nexport default Products;"]], ["p", "添加路由信息到路由表，编辑 ", ["code", "router.js"], " :"], ["pre", {
@@ -73,8 +76,8 @@ webpackJsonp([83,204],{
 	    "highlighted": "$ <span class=\"token function\">npm</span> run build"
 	  }, ["code", "$ npm run build"]], ["p", "几秒后，输出应该如下："], ["pre", {
 	    "lang": "bash",
-	    "highlighted": "Child\n    Time: 14008ms\n         Asset       Size  Chunks             Chunk Names\n    index.html  255 bytes          <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>\n     common.js    1.18 kB       0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  common\n      index.js     504 kB    1, 0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  index\n     index.css     127 kB    1, 0  <span class=\"token punctuation\">[</span>emitted<span class=\"token punctuation\">]</span>  index"
-	  }, ["code", "Child\n    Time: 14008ms\n         Asset       Size  Chunks             Chunk Names\n    index.html  255 bytes          [emitted]\n     common.js    1.18 kB       0  [emitted]  common\n      index.js     504 kB    1, 0  [emitted]  index\n     index.css     127 kB    1, 0  [emitted]  index"]], ["p", ["code", "build"], " 命令会打包所有的资源，包含 JavaScript, CSS, web fonts, images, html 等。然后你可以在 ", ["code", "dist/"], " 目录下找到这些文件。"], ["h2", "下一步"], ["p", "我们已经完成了一个简单应用，你可能还有很多疑问，比如："], ["ul", ["li", ["p", "如何处理异步请求"]], ["li", ["p", "如何优雅地加载初始数据"]], ["li", ["p", "如何统一处理出错，以及特定操作的出错"]], ["li", ["p", "如何动态加载路由和 Model，以加速页面载入速度"]], ["li", ["p", "如何实现 hmr"]], ["li", ["p", "如何 mock 数据"]], ["li", ["p", "等等"]]], ["p", "你可以："], ["ul", ["li", ["p", "访问 ", ["a", {
+	    "highlighted": "<span class=\"token operator\">></span> @ build /private/tmp/myapp\n<span class=\"token operator\">></span> roadhog build\n\nCreating an optimized production build<span class=\"token punctuation\">..</span>.\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"
+	  }, ["code", "> @ build /private/tmp/myapp\n> roadhog build\n\nCreating an optimized production build...\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"]], ["p", ["code", "build"], " 命令会打包所有的资源，包含 JavaScript, CSS, web fonts, images, html 等。然后你可以在 ", ["code", "dist/"], " 目录下找到这些文件。"], ["h2", "下一步"], ["p", "我们已经完成了一个简单应用，你可能还有很多疑问，比如："], ["ul", ["li", ["p", "如何处理异步请求"]], ["li", ["p", "如何优雅地加载初始数据"]], ["li", ["p", "如何统一处理出错，以及特定操作的出错"]], ["li", ["p", "如何动态加载路由和 Model，以加速页面载入速度"]], ["li", ["p", "如何实现 hmr"]], ["li", ["p", "如何 mock 数据"]], ["li", ["p", "等等"]]], ["p", "你可以："], ["ul", ["li", ["p", "访问 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
 	  }, "dva 官网"], "。"]], ["li", ["p", "查看所有 ", ["a", {
@@ -101,8 +104,8 @@ webpackJsonp([83,204],{
 	  }, "dva"], " 是一个基于 react 和 redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。"], ["p", "本文会引导你使用 dva 和 antd 从 0 开始创建一个简单应用。"], ["p", "会包含以下内容："]],
 	  "toc": ["ul", ["li", ["a", {
 	    "className": "bisheng-toc-h2",
-	    "href": "#安装-dva"
-	  }, "安装 dva"]], ["li", ["a", {
+	    "href": "#安装-dva-cli"
+	  }, "安装 dva-cli"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#创建新应用"
 	  }, "创建新应用"]], ["li", ["a", {
