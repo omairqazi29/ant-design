@@ -16,7 +16,34 @@ webpackJsonp([204,206],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "优化 Menu 已选择项的样式。"]], ["li", ["p", "修复 Mention 不能响应 ", ["code", "onFocus"], " 和 ", ["code", "onBlur"], " 的问题。", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "支持 TypeScript@2.1"]], ["li", ["p", "修正了 Tabs 嵌套时的样式问题。 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4317"
+	  }, "#4317"]]], ["li", ["p", "修正了 Radio 在当前项选中时，再次点击仍会触发 onChange 的问题。 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4242"
+	  }, "4242"]]], ["li", ["p", "修正了 Form 多列栅格式的表单排列方式布局异常。 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4271"
+	  }, "4271"]]], ["li", ["p", "修正了 Menu 竖直方向的当前选择项的背景问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4253"
+	  }, "4253"]]], ["li", ["p", "优化了 Dropdown 的 onVisibleChange 回调的参数。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4236"
+	  }, "4236"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/bang88"
+	  }, "@bang88"]]], ["li", ["p", "优化了 Cascader 的 onChange 回调的第一个参数。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4231"
+	  }, "4231"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/bang88"
+	  }, "@bang88"]]], ["li", ["p", "优化了 Datepicker", "[showtime]", " 的默认宽度 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/b912f1cea6f470c16b8dd90554883460161cef47"
+	  }, "b912f"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "优化 Menu 已选择项的样式。"]], ["li", ["p", "修复 Mention 不能响应 ", ["code", "onFocus"], " 和 ", ["code", "onBlur"], " 的问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4163"
 	  }, "#4163"]]], ["li", ["p", "修复 ", ["code", "disabled"], " 和 ", ["code", "checked"], " 的 Radio 之间会多一条阴影的问题。", ["a", {
@@ -608,6 +635,9 @@ webpackJsonp([204,206],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.5.3"
+	  }, "2.5.3"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.2"
 	  }, "2.5.2"]], ["li", ["a", {

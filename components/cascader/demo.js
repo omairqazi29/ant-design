@@ -1,4 +1,4 @@
-webpackJsonp([7,206],{
+webpackJsonp([5,206],{
 
 /***/ 640:
 /***/ function(module, exports, __webpack_require__) {
@@ -11,8 +11,9 @@ webpackJsonp([7,206],{
 	    'default-value': __webpack_require__(1417),
 	    'disabled-option': __webpack_require__(1418),
 	    'hover': __webpack_require__(1419),
-	    'search': __webpack_require__(1420),
-	    'size': __webpack_require__(1421),
+	    'lazy': __webpack_require__(1420),
+	    'search': __webpack_require__(1421),
+	    'size': __webpack_require__(1422),
 	}
 
 /***/ },
@@ -22,9 +23,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -78,9 +79,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -134,9 +135,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -156,7 +157,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "For instance, add an external link after the selected value."]]
 	  },
 	  "meta": {
-	    "order": 8,
+	    "order": 7,
 	    "title": {
 	      "zh-CN": "自定义已选项",
 	      "en-US": "Custom render"
@@ -214,9 +215,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -236,7 +237,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "Separate trigger button and result."]]
 	  },
 	  "meta": {
-	    "order": 1,
+	    "order": 2,
 	    "title": {
 	      "zh-CN": "可以自定义显示",
 	      "en-US": "Custom trigger"
@@ -297,9 +298,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -319,7 +320,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "Specifies default value by an array."]]
 	  },
 	  "meta": {
-	    "order": 0,
+	    "order": 1,
 	    "title": {
 	      "zh-CN": "默认值",
 	      "en-US": "Default value"
@@ -355,9 +356,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -413,9 +414,9 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -435,7 +436,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "Hover to expand sub menu, click to select option."]]
 	  },
 	  "meta": {
-	    "order": 2,
+	    "order": 3,
 	    "title": {
 	      "zh-CN": "移入展开",
 	      "en-US": "Hover"
@@ -472,9 +473,111 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
+
+	var _cascader2 = _interopRequireDefault(_cascader);
+
+	var _toConsumableArray2 = __webpack_require__(75);
+
+	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "使用 ", ["code", "loadData"], " 实现动态加载选项。"], ["blockquote", ["p", "注意：", ["code", "loadData"], " 与 ", ["code", "showSearch"], " 无法一起使用。"]]],
+	    "en-US": [["p", "Load options lazily with ", ["code", "loadData"], "."], ["blockquote", ["p", "Note: ", ["code", "loadData"], " cannot work with ", ["code", "showSearch"], "."]]]
+	  },
+	  "meta": {
+	    "order": 9,
+	    "title": {
+	      "zh-CN": "动态加载选项",
+	      "en-US": "Load Options Lazily"
+	    },
+	    "filename": "components/cascader/demo/lazy.md",
+	    "id": "components-cascader-demo-lazy"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Cascader <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> options <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'zhejiang'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Zhejiang'</span><span class=\"token punctuation\">,</span>\n  isLeaf<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n  value<span class=\"token punctuation\">:</span> <span class=\"token string\">'jiangsu'</span><span class=\"token punctuation\">,</span>\n  label<span class=\"token punctuation\">:</span> <span class=\"token string\">'Jiangsu'</span><span class=\"token punctuation\">,</span>\n  isLeaf<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">class</span> <span class=\"token class-name\">LazyOptions</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n  state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n    inputValue<span class=\"token punctuation\">:</span> <span class=\"token string\">''</span><span class=\"token punctuation\">,</span>\n    options<span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  onChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> selectedOptions<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> selectedOptions<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n      inputValue<span class=\"token punctuation\">:</span> selectedOptions<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>o <span class=\"token operator\">=</span><span class=\"token operator\">></span> o<span class=\"token punctuation\">.</span>label<span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">join</span><span class=\"token punctuation\">(</span><span class=\"token string\">', '</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  loadData <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>selectedOptions<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> targetOption <span class=\"token operator\">=</span> selectedOptions<span class=\"token punctuation\">[</span>selectedOptions<span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n    targetOption<span class=\"token punctuation\">.</span>loading <span class=\"token operator\">=</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token comment\" spellcheck=\"true\">// load options lazily</span>\n    <span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n      targetOption<span class=\"token punctuation\">.</span>loading <span class=\"token operator\">=</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">;</span>\n      targetOption<span class=\"token punctuation\">.</span>children <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n        label<span class=\"token punctuation\">:</span> <span class=\"token template-string\"><span class=\"token string\">`</span><span class=\"token interpolation\"><span class=\"token interpolation-punctuation punctuation\">${</span>targetOption<span class=\"token punctuation\">.</span>label<span class=\"token interpolation-punctuation punctuation\">}</span></span><span class=\"token string\"> Dynamic 1`</span></span><span class=\"token punctuation\">,</span>\n        value<span class=\"token punctuation\">:</span> <span class=\"token string\">'dynamic1'</span><span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n        label<span class=\"token punctuation\">:</span> <span class=\"token template-string\"><span class=\"token string\">`</span><span class=\"token interpolation\"><span class=\"token interpolation-punctuation punctuation\">${</span>targetOption<span class=\"token punctuation\">.</span>label<span class=\"token interpolation-punctuation punctuation\">}</span></span><span class=\"token string\"> Dynamic 2`</span></span><span class=\"token punctuation\">,</span>\n        value<span class=\"token punctuation\">:</span> <span class=\"token string\">'dynamic2'</span><span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n        options<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token operator\">...</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>options<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token number\">1000</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Cascader</span>\n        <span class=\"token attr-name\">options</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>options<span class=\"token punctuation\">}</span></span>\n        <span class=\"token attr-name\">loadData</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>loadData<span class=\"token punctuation\">}</span></span>\n        <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onChange<span class=\"token punctuation\">}</span></span>\n        <span class=\"token attr-name\">changeOnSelect</span>\n      <span class=\"token punctuation\">/></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LazyOptions</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var options = [{
+	      value: 'zhejiang', label: 'Zhejiang', isLeaf: false }, { value: 'jiangsu', label: 'Jiangsu', isLeaf: false }];
+	    var LazyOptions = function (_React$Component) {
+	      (0, _inherits3.default)(LazyOptions, _React$Component);
+
+	      function LazyOptions() {
+	        var _temp, _this, _ret;
+
+	        (0, _classCallCheck3.default)(this, LazyOptions);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	          args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { inputValue: '', options: options }, _this.onChange = function (value, selectedOptions) {
+	          console.log(value, selectedOptions);_this.setState({ inputValue: selectedOptions.map(function (o) {
+	              return o.label;
+	            }).join(', ') });
+	        }, _this.loadData = function (selectedOptions) {
+	          var targetOption = selectedOptions[selectedOptions.length - 1];targetOption.loading = true; // load options lazily
+	          setTimeout(function () {
+	            targetOption.loading = false;targetOption.children = [{ label: targetOption.label + ' Dynamic 1', value: 'dynamic1' }, { label: targetOption.label + ' Dynamic 2', value: 'dynamic2' }];_this.setState({ options: [].concat((0, _toConsumableArray3.default)(_this.state.options)) });
+	          }, 1000);
+	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+	      }
+
+	      LazyOptions.prototype.render = function render() {
+	        return _react2.default.createElement(_cascader2.default, { options: this.state.options, loadData: this.loadData, onChange: this.onChange, changeOnSelect: true });
+	      };
+
+	      return LazyOptions;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(LazyOptions, null);
+	  }
+	};
+
+/***/ },
+
+/***/ 1421:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(80);
+
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -494,7 +597,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "Search and select options directly."]]
 	  },
 	  "meta": {
-	    "order": 9,
+	    "order": 8,
 	    "title": {
 	      "zh-CN": "搜索",
 	      "en-US": "Search"
@@ -524,14 +627,14 @@ webpackJsonp([7,206],{
 
 /***/ },
 
-/***/ 1421:
+/***/ 1422:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(94);
+	var _style2 = __webpack_require__(80);
 
-	var _cascader = __webpack_require__(93);
+	var _cascader = __webpack_require__(79);
 
 	var _cascader2 = _interopRequireDefault(_cascader);
 
@@ -551,7 +654,7 @@ webpackJsonp([7,206],{
 	    "en-US": [["p", "Cascade selection box of different sizes."]]
 	  },
 	  "meta": {
-	    "order": 7,
+	    "order": 6,
 	    "title": {
 	      "zh-CN": "大小",
 	      "en-US": "Size"

@@ -9229,6 +9229,15 @@ span.ant-radio + * {
 :root .ant-cascader-menu-item-expand:after {
   font-size: 12px;
 }
+.ant-cascader-menu-item-loading:after {
+  font-family: 'anticon';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\E64D";
+  -webkit-animation: loadingCircle 1s infinite linear;
+          animation: loadingCircle 1s infinite linear;
+}
 .ant-cascader-menu-item .ant-cascader-menu-item-keyword {
   color: #f50;
 }

@@ -4,29 +4,29 @@ webpackJsonp([3,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1659),
-	    'card-top': __webpack_require__(1660),
-	    'card': __webpack_require__(1661),
-	    'custom-add-trigger': __webpack_require__(1662),
-	    'disabled': __webpack_require__(1663),
-	    'editable-card': __webpack_require__(1664),
-	    'extra': __webpack_require__(1665),
-	    'icon': __webpack_require__(1666),
-	    'position': __webpack_require__(1667),
-	    'size': __webpack_require__(1668),
-	    'slide': __webpack_require__(1669),
+	    'basic': __webpack_require__(1660),
+	    'card-top': __webpack_require__(1661),
+	    'card': __webpack_require__(1662),
+	    'custom-add-trigger': __webpack_require__(1663),
+	    'disabled': __webpack_require__(1664),
+	    'editable-card': __webpack_require__(1665),
+	    'extra': __webpack_require__(1666),
+	    'icon': __webpack_require__(1667),
+	    'position': __webpack_require__(1668),
+	    'size': __webpack_require__(1669),
+	    'slide': __webpack_require__(1670),
 	}
 
 /***/ },
 
-/***/ 1659:
+/***/ 1660:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -92,14 +92,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1660:
+/***/ 1661:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -169,14 +169,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1661:
+/***/ 1662:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -242,7 +242,7 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1662:
+/***/ 1663:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -253,9 +253,9 @@ webpackJsonp([3,206],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -354,14 +354,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1663:
+/***/ 1664:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -425,14 +425,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1664:
+/***/ 1665:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -516,7 +516,7 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1665:
+/***/ 1666:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -527,9 +527,9 @@ webpackJsonp([3,206],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -597,7 +597,7 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1666:
+/***/ 1667:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -608,9 +608,9 @@ webpackJsonp([3,206],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -679,7 +679,7 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1667:
+/***/ 1668:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -690,9 +690,9 @@ webpackJsonp([3,206],{
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _style4 = __webpack_require__(82);
+	var _style4 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -800,14 +800,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1668:
+/***/ 1669:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -871,14 +871,14 @@ webpackJsonp([3,206],{
 
 /***/ },
 
-/***/ 1669:
+/***/ 1670:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(82);
+	var _style2 = __webpack_require__(85);
 
-	var _tabs = __webpack_require__(81);
+	var _tabs = __webpack_require__(84);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 

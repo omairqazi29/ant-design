@@ -4,16 +4,16 @@ webpackJsonp([29,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1540),
-	    'custom-icon': __webpack_require__(1541),
-	    'duration': __webpack_require__(1542),
-	    'with-btn': __webpack_require__(1543),
-	    'with-icon': __webpack_require__(1544),
+	    'basic': __webpack_require__(1541),
+	    'custom-icon': __webpack_require__(1542),
+	    'duration': __webpack_require__(1543),
+	    'with-btn': __webpack_require__(1544),
+	    'with-icon': __webpack_require__(1545),
 	}
 
 /***/ },
 
-/***/ 1540:
+/***/ 1541:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -79,7 +79,7 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1541:
+/***/ 1542:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -151,7 +151,7 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1542:
+/***/ 1543:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -217,7 +217,7 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1543:
+/***/ 1544:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -291,7 +291,7 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1544:
+/***/ 1545:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

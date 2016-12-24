@@ -4,17 +4,17 @@ webpackJsonp([1,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'automatic-tokenization': __webpack_require__(1593),
-	    'basic': __webpack_require__(1594),
-	    'combobox': __webpack_require__(1595),
-	    'coordinate': __webpack_require__(1596),
-	    'label-in-value': __webpack_require__(1597),
-	    'multiple': __webpack_require__(1598),
-	    'optgroup': __webpack_require__(1599),
-	    'search-box': __webpack_require__(1600),
-	    'search': __webpack_require__(1601),
-	    'size': __webpack_require__(1602),
-	    'tags': __webpack_require__(1603),
+	    'automatic-tokenization': __webpack_require__(1594),
+	    'basic': __webpack_require__(1595),
+	    'combobox': __webpack_require__(1596),
+	    'coordinate': __webpack_require__(1597),
+	    'label-in-value': __webpack_require__(1598),
+	    'multiple': __webpack_require__(1599),
+	    'optgroup': __webpack_require__(1600),
+	    'search-box': __webpack_require__(1601),
+	    'search': __webpack_require__(1602),
+	    'size': __webpack_require__(1603),
+	    'tags': __webpack_require__(1604),
 	}
 
 /***/ },
@@ -188,7 +188,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 869:
+/***/ 870:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -302,7 +302,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1593:
+/***/ 1594:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -368,7 +368,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1594:
+/***/ 1595:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -459,7 +459,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1595:
+/***/ 1596:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -544,7 +544,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1596:
+/***/ 1597:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -644,7 +644,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1597:
+/***/ 1598:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -712,7 +712,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1598:
+/***/ 1599:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -777,7 +777,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1599:
+/***/ 1600:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -858,7 +858,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1600:
+/***/ 1601:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -903,7 +903,7 @@ webpackJsonp([1,206],{
 
 	var _querystring2 = _interopRequireDefault(_querystring);
 
-	var _fetchJsonp = __webpack_require__(869);
+	var _fetchJsonp = __webpack_require__(870);
 
 	var _fetchJsonp2 = _interopRequireDefault(_fetchJsonp);
 
@@ -1010,7 +1010,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1601:
+/***/ 1602:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1084,7 +1084,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1602:
+/***/ 1603:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1217,7 +1217,7 @@ webpackJsonp([1,206],{
 
 /***/ },
 
-/***/ 1603:
+/***/ 1604:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

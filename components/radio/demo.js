@@ -4,17 +4,17 @@ webpackJsonp([20,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1579),
-	    'disable': __webpack_require__(1580),
-	    'radiobutton': __webpack_require__(1581),
-	    'radiogroup-more': __webpack_require__(1582),
-	    'radiogroup': __webpack_require__(1583),
-	    'size': __webpack_require__(1584),
+	    'basic': __webpack_require__(1580),
+	    'disable': __webpack_require__(1581),
+	    'radiobutton': __webpack_require__(1582),
+	    'radiogroup-more': __webpack_require__(1583),
+	    'radiogroup': __webpack_require__(1584),
+	    'size': __webpack_require__(1585),
 	}
 
 /***/ },
 
-/***/ 1579:
+/***/ 1580:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -71,7 +71,7 @@ webpackJsonp([20,206],{
 
 /***/ },
 
-/***/ 1580:
+/***/ 1581:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -164,7 +164,7 @@ webpackJsonp([20,206],{
 
 /***/ },
 
-/***/ 1581:
+/***/ 1582:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -308,7 +308,7 @@ webpackJsonp([20,206],{
 
 /***/ },
 
-/***/ 1582:
+/***/ 1583:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -404,7 +404,7 @@ webpackJsonp([20,206],{
 
 /***/ },
 
-/***/ 1583:
+/***/ 1584:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -492,7 +492,7 @@ webpackJsonp([20,206],{
 
 /***/ },
 
-/***/ 1584:
+/***/ 1585:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

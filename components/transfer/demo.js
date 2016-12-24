@@ -4,16 +4,16 @@ webpackJsonp([25,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced': __webpack_require__(1699),
-	    'basic': __webpack_require__(1700),
-	    'custom-item': __webpack_require__(1701),
-	    'large-data': __webpack_require__(1702),
-	    'search': __webpack_require__(1703),
+	    'advanced': __webpack_require__(1700),
+	    'basic': __webpack_require__(1701),
+	    'custom-item': __webpack_require__(1702),
+	    'large-data': __webpack_require__(1703),
+	    'search': __webpack_require__(1704),
 	}
 
 /***/ },
 
-/***/ 1699:
+/***/ 1700:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -104,7 +104,7 @@ webpackJsonp([25,206],{
 
 /***/ },
 
-/***/ 1700:
+/***/ 1701:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -115,7 +115,7 @@ webpackJsonp([25,206],{
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
-	var _toConsumableArray2 = __webpack_require__(83);
+	var _toConsumableArray2 = __webpack_require__(75);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -186,7 +186,7 @@ webpackJsonp([25,206],{
 
 /***/ },
 
-/***/ 1701:
+/***/ 1702:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -271,7 +271,7 @@ webpackJsonp([25,206],{
 
 /***/ },
 
-/***/ 1702:
+/***/ 1703:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -292,7 +292,7 @@ webpackJsonp([25,206],{
 
 /***/ },
 
-/***/ 1703:
+/***/ 1704:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

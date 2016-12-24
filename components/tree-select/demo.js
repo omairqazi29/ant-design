@@ -4,14 +4,14 @@ webpackJsonp([41,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1706),
-	    'checkable': __webpack_require__(1707),
-	    'treeData': __webpack_require__(1708),
+	    'basic': __webpack_require__(1707),
+	    'checkable': __webpack_require__(1708),
+	    'treeData': __webpack_require__(1709),
 	}
 
 /***/ },
 
-/***/ 1706:
+/***/ 1707:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -97,7 +97,7 @@ webpackJsonp([41,206],{
 
 /***/ },
 
-/***/ 1707:
+/***/ 1708:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -164,7 +164,7 @@ webpackJsonp([41,206],{
 
 /***/ },
 
-/***/ 1708:
+/***/ 1709:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

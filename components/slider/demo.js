@@ -4,17 +4,17 @@ webpackJsonp([19,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1606),
-	    'event': __webpack_require__(1607),
-	    'icon-slider': __webpack_require__(1608),
-	    'input-number': __webpack_require__(1609),
-	    'mark': __webpack_require__(1610),
-	    'tip-formatter': __webpack_require__(1611),
+	    'basic': __webpack_require__(1607),
+	    'event': __webpack_require__(1608),
+	    'icon-slider': __webpack_require__(1609),
+	    'input-number': __webpack_require__(1610),
+	    'mark': __webpack_require__(1611),
+	    'tip-formatter': __webpack_require__(1612),
 	}
 
 /***/ },
 
-/***/ 1606:
+/***/ 1607:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -118,7 +118,7 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1607:
+/***/ 1608:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -180,7 +180,7 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1608:
+/***/ 1609:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -263,7 +263,7 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1609:
+/***/ 1610:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -395,7 +395,7 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1610:
+/***/ 1611:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -481,7 +481,7 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1611:
+/***/ 1612:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

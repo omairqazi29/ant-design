@@ -16,7 +16,34 @@ webpackJsonp([205,206],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "Improve selected item style of Menu."]], ["li", ["p", "Fix issue resulting in Mention not responses ", ["code", "onFocus"], " and ", ["code", "onBlur"], ". ", ["a", {
+	  "content": ["article", {}, ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "Supports TypeScript@2.1"]], ["li", ["p", "Fix style issue resulting in nested Tabs. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4317"
+	  }, "#4317"]]], ["li", ["p", "Fix ", ["code", "onChange"], " callback issue resulting in Radio. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4242"
+	  }, "4242"]]], ["li", ["p", "Fix a FormItem mis-aligin bug。 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4271"
+	  }, "4271"]]], ["li", ["p", "Fix background issue resulting in selected element of veritcal Menu.", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4253"
+	  }, "4253"]]], ["li", ["p", "Improve arguments of ", ["code", "onVisibleChange"], " callback of  Dropdown.", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4236"
+	  }, "4236"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/bang88"
+	  }, "@bang88"]]], ["li", ["p", "Improve first argument of ", ["code", "onChange"], " callback of Cascader.", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4231"
+	  }, "4231"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/bang88"
+	  }, "@bang88"]]], ["li", ["p", "Improve default width of Datepicker", "[showtime]", ". ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/b912f1cea6f470c16b8dd90554883460161cef47"
+	  }, "b912f"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "Improve selected item style of Menu."]], ["li", ["p", "Fix issue resulting in Mention not responses ", ["code", "onFocus"], " and ", ["code", "onBlur"], ". ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4163"
 	  }, "#4163"]]], ["li", ["p", "Fix issue resulting in there is a redundant shadow between ", ["code", "disabled"], " and ", ["code", "checked"], " Radio. ", ["a", {
@@ -605,6 +632,9 @@ webpackJsonp([205,206],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.5.3"
+	  }, "2.5.3"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.2"
 	  }, "2.5.2"]], ["li", ["a", {
