@@ -4,27 +4,27 @@ webpackJsonp([0,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'ajax': __webpack_require__(1637),
-	    'basic': __webpack_require__(1638),
-	    'bordered': __webpack_require__(1639),
-	    'colspan-rowspan': __webpack_require__(1640),
-	    'custom-filter-panel': __webpack_require__(1641),
-	    'dynamic-settings': __webpack_require__(1642),
-	    'edit-cell': __webpack_require__(1643),
-	    'edit-row': __webpack_require__(1644),
-	    'expand-children': __webpack_require__(1645),
-	    'expand': __webpack_require__(1646),
-	    'fixed-columns-header': __webpack_require__(1647),
-	    'fixed-columns': __webpack_require__(1648),
-	    'fixed-header': __webpack_require__(1649),
-	    'grouping-columns': __webpack_require__(1650),
-	    'head': __webpack_require__(1651),
-	    'jsx': __webpack_require__(1652),
-	    'paging': __webpack_require__(1653),
-	    'reset-filter': __webpack_require__(1654),
-	    'row-selection-and-operation': __webpack_require__(1655),
-	    'row-selection': __webpack_require__(1656),
-	    'size': __webpack_require__(1657),
+	    'ajax': __webpack_require__(1638),
+	    'basic': __webpack_require__(1639),
+	    'bordered': __webpack_require__(1640),
+	    'colspan-rowspan': __webpack_require__(1641),
+	    'custom-filter-panel': __webpack_require__(1642),
+	    'dynamic-settings': __webpack_require__(1643),
+	    'edit-cell': __webpack_require__(1644),
+	    'edit-row': __webpack_require__(1645),
+	    'expand-children': __webpack_require__(1646),
+	    'expand': __webpack_require__(1647),
+	    'fixed-columns-header': __webpack_require__(1648),
+	    'fixed-columns': __webpack_require__(1649),
+	    'fixed-header': __webpack_require__(1650),
+	    'grouping-columns': __webpack_require__(1651),
+	    'head': __webpack_require__(1652),
+	    'jsx': __webpack_require__(1653),
+	    'paging': __webpack_require__(1654),
+	    'reset-filter': __webpack_require__(1655),
+	    'row-selection-and-operation': __webpack_require__(1656),
+	    'row-selection': __webpack_require__(1657),
+	    'size': __webpack_require__(1658),
 	}
 
 /***/ },
@@ -53,7 +53,7 @@ webpackJsonp([0,206],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1899)
+	      XHR2 = __webpack_require__(1900)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -666,7 +666,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1637:
+/***/ 1638:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -764,7 +764,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1638:
+/***/ 1639:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -855,7 +855,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1639:
+/***/ 1640:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -920,7 +920,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1640:
+/***/ 1641:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1005,7 +1005,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1641:
+/***/ 1642:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1124,7 +1124,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1642:
+/***/ 1643:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1379,7 +1379,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1643:
+/***/ 1644:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1396,9 +1396,9 @@ webpackJsonp([0,206],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style8 = __webpack_require__(145);
+	var _style8 = __webpack_require__(147);
 
-	var _popconfirm = __webpack_require__(144);
+	var _popconfirm = __webpack_require__(146);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -1581,7 +1581,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1644:
+/***/ 1645:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1592,9 +1592,9 @@ webpackJsonp([0,206],{
 
 	var _table2 = _interopRequireDefault(_table);
 
-	var _style5 = __webpack_require__(145);
+	var _style5 = __webpack_require__(147);
 
-	var _popconfirm = __webpack_require__(144);
+	var _popconfirm = __webpack_require__(146);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -1834,7 +1834,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1645:
+/***/ 1646:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1900,7 +1900,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1646:
+/***/ 1647:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1970,7 +1970,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1647:
+/***/ 1648:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2038,7 +2038,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1648:
+/***/ 1649:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2105,7 +2105,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1649:
+/***/ 1650:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2164,7 +2164,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1650:
+/***/ 1651:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2229,7 +2229,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1651:
+/***/ 1652:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2306,7 +2306,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1652:
+/***/ 1653:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2405,7 +2405,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1653:
+/***/ 1654:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2471,7 +2471,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1654:
+/***/ 1655:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2589,7 +2589,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1655:
+/***/ 1656:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2694,7 +2694,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1656:
+/***/ 1657:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2763,7 +2763,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1657:
+/***/ 1658:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2834,7 +2834,7 @@ webpackJsonp([0,206],{
 
 /***/ },
 
-/***/ 1899:
+/***/ 1900:
 /***/ function(module, exports) {
 
 	/* (ignored) */

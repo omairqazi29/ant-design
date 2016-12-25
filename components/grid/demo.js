@@ -1,4 +1,4 @@
-webpackJsonp([7,206],{
+webpackJsonp([4,206],{
 
 /***/ 646:
 /***/ function(module, exports, __webpack_require__) {
@@ -10,9 +10,10 @@ webpackJsonp([7,206],{
 	    'flex': __webpack_require__(1476),
 	    'gutter': __webpack_require__(1477),
 	    'offset': __webpack_require__(1478),
-	    'reponsive-more': __webpack_require__(1479),
-	    'reponsive': __webpack_require__(1480),
-	    'sort': __webpack_require__(1481),
+	    'playground': __webpack_require__(1479),
+	    'reponsive-more': __webpack_require__(1480),
+	    'reponsive': __webpack_require__(1481),
+	    'sort': __webpack_require__(1482),
 	}
 
 /***/ },
@@ -22,7 +23,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -30,7 +31,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -141,7 +142,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -149,7 +150,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -344,7 +345,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -352,7 +353,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -430,7 +431,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -438,7 +439,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -637,7 +638,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -645,7 +646,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -741,7 +742,7 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -749,7 +750,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -840,7 +841,165 @@ webpackJsonp([7,206],{
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style4 = __webpack_require__(44);
+
+	var _row = __webpack_require__(43);
+
+	var _row2 = _interopRequireDefault(_row);
+
+	var _style5 = __webpack_require__(126);
+
+	var _slider = __webpack_require__(125);
+
+	var _slider2 = _interopRequireDefault(_slider);
+
+	var _style6 = __webpack_require__(42);
+
+	var _col = __webpack_require__(37);
+
+	var _col2 = _interopRequireDefault(_col);
+
+	var _classCallCheck2 = __webpack_require__(4);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(6);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(5);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "可以简单配置几种等分栅格和间距。"]],
+	    "en-US": [["p", "A simple playground for column count and gutter."]]
+	  },
+	  "meta": {
+	    "order": 9,
+	    "title": {
+	      "zh-CN": "栅格配置器",
+	      "en-US": "Playground"
+	    },
+	    "filename": "components/grid/demo/playground.md",
+	    "id": "components-grid-demo-playground"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Row<span class=\"token punctuation\">,</span> Col<span class=\"token punctuation\">,</span> Slider <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">class</span> <span class=\"token class-name\">App</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n  gutters <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  colCounts <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      gutterKey<span class=\"token punctuation\">:</span> <span class=\"token number\">1</span><span class=\"token punctuation\">,</span>\n      colCountKey<span class=\"token punctuation\">:</span> <span class=\"token number\">2</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">[</span><span class=\"token number\">8</span><span class=\"token punctuation\">,</span> <span class=\"token number\">16</span><span class=\"token punctuation\">,</span> <span class=\"token number\">24</span><span class=\"token punctuation\">,</span> <span class=\"token number\">32</span><span class=\"token punctuation\">,</span> <span class=\"token number\">40</span><span class=\"token punctuation\">,</span> <span class=\"token number\">48</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span><span class=\"token function\">forEach</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> i<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>gutters<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> value<span class=\"token punctuation\">;</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">[</span><span class=\"token number\">2</span><span class=\"token punctuation\">,</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span> <span class=\"token number\">4</span><span class=\"token punctuation\">,</span> <span class=\"token number\">6</span><span class=\"token punctuation\">,</span> <span class=\"token number\">8</span><span class=\"token punctuation\">,</span> <span class=\"token number\">12</span><span class=\"token punctuation\">,</span> <span class=\"token number\">24</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span><span class=\"token function\">forEach</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> i<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>colCounts<span class=\"token punctuation\">[</span>i<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> value<span class=\"token punctuation\">;</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  onGutterChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>gutterKey<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> gutterKey <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  onColCountChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>colCountKey<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> colCountKey <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> gutterKey<span class=\"token punctuation\">,</span> colCountKey <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> cols <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">const</span> colCount <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>colCounts<span class=\"token punctuation\">[</span>colCountKey<span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">let</span> i <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span> i <span class=\"token operator\">&lt;</span> colCount<span class=\"token punctuation\">;</span> i<span class=\"token operator\">++</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      cols<span class=\"token punctuation\">.</span><span class=\"token function\">push</span><span class=\"token punctuation\">(</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Col</span> <span class=\"token attr-name\">key</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>i<span class=\"token punctuation\">.</span><span class=\"token function\">toString</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">span</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">24</span> <span class=\"token operator\">/</span> colCount<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>Column<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Col</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">16</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginRight<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>Gutter <span class=\"token punctuation\">(</span>px<span class=\"token punctuation\">)</span><span class=\"token punctuation\">:</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> <span class=\"token string\">'50%'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Slider</span>\n              <span class=\"token attr-name\">min</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">0</span><span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">max</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>Object<span class=\"token punctuation\">.</span><span class=\"token function\">keys</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>gutters<span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>gutterKey<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onGutterChange<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">marks</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>gutters<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">step</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">null</span><span class=\"token punctuation\">}</span></span>\n            <span class=\"token punctuation\">/></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginRight<span class=\"token punctuation\">:</span> <span class=\"token number\">6</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>Column Count<span class=\"token punctuation\">:</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> <span class=\"token string\">'50%'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Slider</span>\n              <span class=\"token attr-name\">min</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">0</span><span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">max</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>Object<span class=\"token punctuation\">.</span><span class=\"token function\">keys</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>colCounts<span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>colCountKey<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onColCountChange<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">marks</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>colCounts<span class=\"token punctuation\">}</span></span>\n              <span class=\"token attr-name\">step</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">null</span><span class=\"token punctuation\">}</span></span>\n            <span class=\"token punctuation\">/></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Row</span> <span class=\"token attr-name\">gutter</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>gutters<span class=\"token punctuation\">[</span>gutterKey<span class=\"token punctuation\">]</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>cols<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Row</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var App = function (_React$Component) {
+	      (0, _inherits3.default)(App, _React$Component);
+
+	      function App() {
+	        (0, _classCallCheck3.default)(this, App);
+
+	        var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this));
+
+	        _this.gutters = {};
+	        _this.colCounts = {};
+
+	        _this.onGutterChange = function (gutterKey) {
+	          _this.setState({ gutterKey: gutterKey });
+	        };
+
+	        _this.onColCountChange = function (colCountKey) {
+	          _this.setState({ colCountKey: colCountKey });
+	        };
+
+	        _this.state = { gutterKey: 1, colCountKey: 2 };[8, 16, 24, 32, 40, 48].forEach(function (value, i) {
+	          _this.gutters[i] = value;
+	        });[2, 3, 4, 6, 8, 12, 24].forEach(function (value, i) {
+	          _this.colCounts[i] = value;
+	        });
+	        return _this;
+	      }
+
+	      App.prototype.render = function render() {
+	        var _state = this.state,
+	            gutterKey = _state.gutterKey,
+	            colCountKey = _state.colCountKey;
+	        var cols = [];var colCount = this.colCounts[colCountKey];for (var i = 0; i < colCount; i++) {
+	          cols.push(_react2.default.createElement(
+	            _col2.default,
+	            { key: i.toString(), span: 24 / colCount },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              'Column'
+	            )
+	          ));
+	        }return _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { style: { marginBottom: 16 } },
+	            _react2.default.createElement(
+	              'span',
+	              { style: { marginRight: 6 } },
+	              'Gutter (px): '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: { width: '50%' } },
+	              _react2.default.createElement(_slider2.default, { min: 0, max: Object.keys(this.gutters).length - 1, value: gutterKey, onChange: this.onGutterChange, marks: this.gutters, step: null })
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { marginRight: 6 } },
+	              'Column Count:'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: { width: '50%' } },
+	              _react2.default.createElement(_slider2.default, { min: 0, max: Object.keys(this.colCounts).length - 1, value: colCountKey, onChange: this.onColCountChange, marks: this.colCounts, step: null })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _row2.default,
+	            { gutter: this.gutters[gutterKey] },
+	            cols
+	          )
+	        );
+	      };
+
+	      return App;
+	    }(_react2.default.Component);
+
+	    return _react2.default.createElement(App, null);
+	  },
+	  "style": "#components-grid-demo-playground [class^=\"ant-col-\"] {\n  background: transparent;\n  border: 0;\n}\n#components-grid-demo-playground [class^=\"ant-col-\"] > div {\n  background: #00A0E9;\n  height: 120px;\n  line-height: 120px;\n  font-size: 13px;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-grid-demo-playground</span> <span class=\"token attribute\">[class^=\"ant-col-\"]</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> transparent<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token id\">#components-grid-demo-playground</span> <span class=\"token attribute\">[class^=\"ant-col-\"]</span> > div </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#00A0E9</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">13</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	};
+
+/***/ },
+
+/***/ 1480:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -848,7 +1007,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -913,12 +1072,12 @@ webpackJsonp([7,206],{
 
 /***/ },
 
-/***/ 1480:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -926,7 +1085,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -996,12 +1155,12 @@ webpackJsonp([7,206],{
 
 /***/ },
 
-/***/ 1481:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(47);
+	var _style3 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -1009,7 +1168,7 @@ webpackJsonp([7,206],{
 
 	var _style4 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 

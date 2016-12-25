@@ -169,7 +169,7 @@ webpackJsonp([22,206],{
 
 	'use strict';
 
-	var _style4 = __webpack_require__(47);
+	var _style4 = __webpack_require__(44);
 
 	var _row = __webpack_require__(43);
 
@@ -177,7 +177,7 @@ webpackJsonp([22,206],{
 
 	var _style5 = __webpack_require__(42);
 
-	var _col = __webpack_require__(41);
+	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 

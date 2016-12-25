@@ -4,13 +4,13 @@ webpackJsonp([44,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'all': __webpack_require__(1502),
-	    'basic': __webpack_require__(1503),
+	    'all': __webpack_require__(1503),
+	    'basic': __webpack_require__(1504),
 	}
 
 /***/ },
 
-/***/ 1502:
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45,9 +45,9 @@ webpackJsonp([44,206],{
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
-	var _style18 = __webpack_require__(145);
+	var _style18 = __webpack_require__(147);
 
-	var _popconfirm = __webpack_require__(144);
+	var _popconfirm = __webpack_require__(146);
 
 	var _popconfirm2 = _interopRequireDefault(_popconfirm);
 
@@ -291,7 +291,7 @@ webpackJsonp([44,206],{
 
 /***/ },
 
-/***/ 1503:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -4,22 +4,22 @@ webpackJsonp([37,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1486),
-	    'digit': __webpack_require__(1487),
-	    'disabled': __webpack_require__(1488),
-	    'size': __webpack_require__(1489),
+	    'basic': __webpack_require__(1487),
+	    'digit': __webpack_require__(1488),
+	    'disabled': __webpack_require__(1489),
+	    'size': __webpack_require__(1490),
 	}
 
 /***/ },
 
-/***/ 1486:
+/***/ 1487:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(143);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(142);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -67,14 +67,14 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1487:
+/***/ 1488:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(143);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(142);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -122,7 +122,7 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1488:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -133,9 +133,9 @@ webpackJsonp([37,206],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(143);
+	var _style4 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(142);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -205,14 +205,14 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1489:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(143);
+	var _style2 = __webpack_require__(145);
 
-	var _inputNumber = __webpack_require__(142);
+	var _inputNumber = __webpack_require__(144);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 

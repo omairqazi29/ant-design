@@ -4,19 +4,19 @@ webpackJsonp([42,206],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(1695),
-	    'basic': __webpack_require__(1696),
-	    'placement': __webpack_require__(1697),
+	    'arrow-point-at-center': __webpack_require__(1696),
+	    'basic': __webpack_require__(1697),
+	    'placement': __webpack_require__(1698),
 	}
 
 /***/ },
 
-/***/ 1695:
+/***/ 1696:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(125);
+	var _style3 = __webpack_require__(127);
 
 	var _tooltip = __webpack_require__(108);
 
@@ -92,12 +92,12 @@ webpackJsonp([42,206],{
 
 /***/ },
 
-/***/ 1696:
+/***/ 1697:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(125);
+	var _style2 = __webpack_require__(127);
 
 	var _tooltip = __webpack_require__(108);
 
@@ -153,12 +153,12 @@ webpackJsonp([42,206],{
 
 /***/ },
 
-/***/ 1697:
+/***/ 1698:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(125);
+	var _style2 = __webpack_require__(127);
 
 	var _tooltip = __webpack_require__(108);
 
