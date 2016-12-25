@@ -1,4 +1,13 @@
 
+.ant-table-small .ant-table-title,
+.ant-table-small .ant-table-footer,
+.ant-table-small .ant-table-thead > tr > th {
+  padding: 10px 8px;
+}
+.ant-table-small .ant-table-title {
+  border-bottom: 1px solid #e9e9e9;
+  top: 0;
+}
 .ant-table-small .ant-table-header {
   background: #fff;
 }
@@ -2779,7 +2788,7 @@ footer ul li > div {
     margin: 10px 0;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 940px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   #list,
   #search-box {
     display: none;

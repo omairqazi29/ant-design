@@ -5432,6 +5432,9 @@ textarea.ant-input {
 :root .ant-dropdown-link .anticon-down {
   font-size: 12px;
 }
+.ant-dropdown-button {
+  white-space: nowrap;
+}
 .ant-dropdown-button.ant-btn-group > .ant-btn:last-child:not(:first-child) {
   padding-right: 7px;
 }
@@ -13567,6 +13570,12 @@ textarea.ant-pagination-options-quick-jumper input {
   border-radius: 2px;
   width: 44px;
 }
+@media only screen and (max-width: 1024px) {
+  .ant-pagination-item-after-jump-prev,
+  .ant-pagination-item-before-jump-next {
+    display: none;
+  }
+}
 .ant-popover {
   position: absolute;
   top: 0;
@@ -17275,7 +17284,7 @@ footer ul li > div {
     margin: 10px 0;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 940px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   #list,
   #search-box {
     display: none;

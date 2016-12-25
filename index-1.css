@@ -5432,6 +5432,9 @@ textarea.ant-input {
 :root .ant-dropdown-link .anticon-down {
   font-size: 12px;
 }
+.ant-dropdown-button {
+  white-space: nowrap;
+}
 .ant-dropdown-button.ant-btn-group > .ant-btn:last-child:not(:first-child) {
   padding-right: 7px;
 }
@@ -13567,6 +13570,12 @@ textarea.ant-pagination-options-quick-jumper input {
   border-radius: 2px;
   width: 44px;
 }
+@media only screen and (max-width: 1024px) {
+  .ant-pagination-item-after-jump-prev,
+  .ant-pagination-item-before-jump-next {
+    display: none;
+  }
+}
 .ant-popover {
   position: absolute;
   top: 0;
@@ -14485,13 +14494,4 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-table-small .ant-table-tbody > tr > td {
   padding: 6px 8px;
-}
-.ant-table-small .ant-table-title,
-.ant-table-small .ant-table-footer,
-.ant-table-small .ant-table-thead > tr > th {
-  padding: 10px 8px;
-}
-.ant-table-small .ant-table-title {
-  border-bottom: 1px solid #e9e9e9;
-  top: 0;
 }
