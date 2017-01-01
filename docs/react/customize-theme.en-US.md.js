@@ -1,6 +1,6 @@
-webpackJsonp([96,206],{
+webpackJsonp([97,209],{
 
-/***/ 1740:
+/***/ 1032:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26,7 +26,7 @@ webpackJsonp([96,206],{
 	  }, "Less"], " as the development language of style. A set of less variables are defined for each design aspect that can be customized to your needs."], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less"
-	  }, "Default Variables"]]]], ["p", "Please report an issue if the existing list of variables is not enough for you."], ["h2", "How to use it"], ["p", "We recommend ", ["a", {
+	  }, "Default Variables"]]]], ["p", "Please report an issue if the existing list of variables is not enough for you."], ["h2", "How to do it"], ["p", "We recommend ", ["a", {
 	    "title": null,
 	    "href": "http://lesscss.org/usage/#using-less-in-the-browser-modify-variables"
 	  }, "modifyVars"], " to override the default values of the variables. There are two ways to achieve it in practice."], ["p", "You can use this ", ["a", {
@@ -56,7 +56,10 @@ webpackJsonp([96,206],{
 	  }, "less-loader modifyVars"], " like ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-tool/atool-build/blob/a4b3e3eec4ffc09b0e2352d7f9d279c4c28fdb99/src/getWebpackCommonConfig.js#L131-L138"
-	  }, "atool-build "], " does."], ["p", "Note: Importing less style is necessary. Please specify ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " to be ", ["code", "true"], "."], ["h3", "2) Overriding Less variables (alternative way)"], ["p", "Override variables via less definition files."], ["p", "Create a standalone less file like the one below, and import it in your project."], ["pre", {
+	  }, "atool-build "], " does."], ["p", "Note:"], ["ul", ["li", ["p", "Importing style from less files is necessary. Please specify ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " to be ", ["code", "true"], "."]], ["li", ["p", "If you want to override ", ["code", "@icon-url"], ", the quotes must be contained in value like ", ["code", "\"@icon-url\": \"'your-icon-font-path'\""], " (", ["a", {
+	    "title": null,
+	    "href": "https://github.com/visvadw/dvajs-user-dashboard/pull/2"
+	  }, "A fix sample"], ")."]]], ["h3", "2) Overriding Less variables (alternative way)"], ["p", "Override variables via less definition files."], ["p", "Create a standalone less file like the one below, and import it in your project."], ["pre", {
 	    "lang": "css",
 	    "highlighted": "<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"~antd/dist/antd.less\"</span><span class=\"token punctuation\">;</span></span>   // import official less entry file\n<span class=\"token atrule\"><span class=\"token rule\">@import</span> <span class=\"token string\">\"your-theme-file.less\"</span><span class=\"token punctuation\">;</span></span>   // override variables here"
 	  }, ["code", "@import \"~antd/dist/antd.less\";   // import official less entry file\n@import \"your-theme-file.less\";   // override variables here"]], ["p", "Note: This way will load the styles of all components, regardless of your demand, which cause ", ["code", "style"], " option of ", ["code", "babel-plugin-import"], " not working."]],
@@ -70,8 +73,8 @@ webpackJsonp([96,206],{
 	    "href": "#Less-variables"
 	  }, "Less variables"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
-	    "href": "#How-to-use-it"
-	  }, "How to use it"]]]
+	    "href": "#How-to-do-it"
+	  }, "How to do it"]]]
 	};
 
 /***/ }

@@ -1,45 +1,31 @@
-webpackJsonp([19,206],{
+webpackJsonp([20,209],{
 
-/***/ 662:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1608),
-	    'event': __webpack_require__(1609),
-	    'icon-slider': __webpack_require__(1610),
-	    'input-number': __webpack_require__(1611),
-	    'mark': __webpack_require__(1612),
-	    'tip-formatter': __webpack_require__(1613),
-	}
-
-/***/ },
-
-/***/ 1608:
+/***/ 899:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(63);
 
-	var _switch = __webpack_require__(73);
+	var _switch = __webpack_require__(62);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style4 = __webpack_require__(126);
+	var _style4 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(3);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(5);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(4);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -118,14 +104,14 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1609:
+/***/ 900:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(126);
+	var _style2 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -180,14 +166,14 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1610:
+/***/ 901:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(126);
+	var _style3 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -197,7 +183,7 @@ webpackJsonp([19,206],{
 
 	var _style4 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(9);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -257,13 +243,13 @@ webpackJsonp([19,206],{
 	      }
 	    });return _react2.default.createElement(IconSlider, { min: 0, max: 20, value: 0, icon: ['frown-o', 'smile-o'] });
 	  },
-	  "style": ".icon-wrapper {\n  position: relative;\n  padding: 0px 30px;\n}\n\n.icon-wrapper .anticon {\n  position: absolute;\n  top: -3px;\n  width: 16px;\n  height: 16px;\n  line-height: 1;\n  font-size: 16px;\n  color: #ccc;\n}\n\n.icon-wrapper .anticon:first-child {\n  left: 0;\n}\n\n.icon-wrapper .anticon:last-child {\n  right: 0;\n}\n\n.anticon.anticon-highlight {\n  color: #666;\n}",
-	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">position</span><span class=\"token punctuation\">:</span> relative<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span>px <span class=\"token number\">30</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">position</span><span class=\"token punctuation\">:</span> absolute<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">top</span><span class=\"token punctuation\">:</span> -<span class=\"token number\">3</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#ccc</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span><span class=\"token pseudo-class\">:first-child</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">left</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span><span class=\"token pseudo-class\">:last-child</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.anticon.anticon-highlight</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#666</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	  "style": ".icon-wrapper {\n  position: relative;\n  padding: 0px 30px;\n}\n\n.icon-wrapper .anticon {\n  position: absolute;\n  top: -3px;\n  width: 16px;\n  height: 16px;\n  line-height: 1;\n  font-size: 16px;\n  color: @disabled-color;\n}\n\n.icon-wrapper .anticon:first-child {\n  left: 0;\n}\n\n.icon-wrapper .anticon:last-child {\n  right: 0;\n}\n\n.anticon.anticon-highlight {\n  color: #666;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">position</span><span class=\"token punctuation\">:</span> relative<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span>px <span class=\"token number\">30</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">position</span><span class=\"token punctuation\">:</span> absolute<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">top</span><span class=\"token punctuation\">:</span> -<span class=\"token number\">3</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token atrule\"><span class=\"token rule\">@disabled-color</span><span class=\"token punctuation\">;</span></span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span><span class=\"token pseudo-class\">:first-child</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">left</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.icon-wrapper</span> <span class=\"token class\">.anticon</span><span class=\"token pseudo-class\">:last-child</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.anticon.anticon-highlight</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#666</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 1611:
+/***/ 902:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -274,21 +260,21 @@ webpackJsonp([19,206],{
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style6 = __webpack_require__(145);
+	var _style6 = __webpack_require__(112);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(111);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
-	var _style7 = __webpack_require__(42);
+	var _style7 = __webpack_require__(41);
 
 	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style8 = __webpack_require__(126);
+	var _style8 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -395,14 +381,14 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1612:
+/***/ 903:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(126);
+	var _style2 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -481,14 +467,14 @@ webpackJsonp([19,206],{
 
 /***/ },
 
-/***/ 1613:
+/***/ 904:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(126);
+	var _style2 = __webpack_require__(119);
 
-	var _slider = __webpack_require__(125);
+	var _slider = __webpack_require__(118);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -539,6 +525,20 @@ webpackJsonp([19,206],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1233:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(899),
+	    'event': __webpack_require__(900),
+	    'icon-slider': __webpack_require__(901),
+	    'input-number': __webpack_require__(902),
+	    'mark': __webpack_require__(903),
+	    'tip-formatter': __webpack_require__(904),
+	}
 
 /***/ }
 

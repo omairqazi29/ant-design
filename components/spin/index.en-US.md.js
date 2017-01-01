@@ -1,6 +1,6 @@
-webpackJsonp([133,206],{
+webpackJsonp([134,209],{
 
-/***/ 1621:
+/***/ 913:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30,7 +30,7 @@ webpackJsonp([133,206],{
 	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Type"], ["th", "Default"], ["th", "Description"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "Size of dot in spin component, available in ", ["code", "small"], ", ", ["code", "default"], " and ", ["code", "large"], "."]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "Use in embedded mode, to modify loading state."]], ["tr", ["td", "tip"], ["td", "string"], ["td", "None"], ["td", "Customize description content"]]]]]
+	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Type"], ["th", "Default"], ["th", "Description"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "Size of dot in spin component, available in ", ["code", "small"], ", ", ["code", "default"], " and ", ["code", "large"], "."]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "Use in embedded mode, to modify loading state."]], ["tr", ["td", "tip"], ["td", "string"], ["td", "None"], ["td", "Customize description content"]], ["tr", ["td", "delay"], ["td", "number (milliseconds)"], ["td", "None"], ["td", "Specifies a delay for loading state"]]]]]
 	};
 
 /***/ }

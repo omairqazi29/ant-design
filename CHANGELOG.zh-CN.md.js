@@ -1,6 +1,6 @@
-webpackJsonp([204,206],{
+webpackJsonp([207,209],{
 
-/***/ 1341:
+/***/ 624:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,34 +16,91 @@ webpackJsonp([204,206],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "支持 TypeScript@2.1"]], ["li", ["p", "修正了 Tabs 嵌套时的样式问题。 ", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.0"], ["p", ["code", "2017-1-2"]], ["ul", ["li", ["p", "采用全新的色彩系统。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4426"
+	  }, "pull/4426"]], ["ul", ["li", ["p", "全新的调色板系统"]], ["li", ["p", "使用新的算法函数代替 shade，tint"]], ["li", ["p", "调整默认文字颜色"]]]], ["li", ["p", "增加 Grid 栅格配置器示例。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/ee17abfa9d0362c6f9baab4a9a09e57574583246"
+	  }, "commit/ee17ab"]]], ["li", ["p", "增加 Layout 布局组件。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3534"
+	  }, "#3534"]]], ["li", ["p", "Input"], ["ul", ["li", ["p", "增加 prefix 和 suffix 属性，支持前后缀配置。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4226"
+	  }, "#4226"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "InputGroup 增加 compact 属性，支持紧凑型展示。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4309"
+	  }, "pull/4309"]]]]], ["li", ["p", "Spin 增加延迟显示属性 delay。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4306"
+	  }, "#4306"]]], ["li", ["p", "修复 Pagination 在低分辨率下的错位问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4349"
+	  }, "#4349"]]], ["li", ["p", "修复 Dropdown.Button 换行的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4355"
+	  }, "pull/4355"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/Morhaus"
+	  }, "@Morhaus"]]], ["li", ["p", "修复 Cascader disabled 状态底色的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4434"
+	  }, "#4434"]]], ["li", ["p", "修复 MonthPicker monthCellContentRender 属性无效的问题，并修正了错误的文档。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4394"
+	  }, "#4394"]]], ["li", ["p", "修复 ButtonGroup 存在多余蓝色边框的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4382"
+	  }, "#4382"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "修复 Menu horizontal 模式子菜单选择项背景色错误的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4414"
+	  }, "#4414"]]], ["li", ["p", "修复配置了 hasFeedback 的 Select/Cascader 下拉箭头被遮盖的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4431"
+	  }, "#4431"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/JesperWe"
+	  }, "@JesperWe"]]], ["li", ["p", "Table 没有 header 时，第一行改为非圆角。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4373"
+	  }, "#4373"]]], ["li", ["p", "优化 Tree 的拖拽效果。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4371"
+	  }, "#4371"]]], ["li", ["p", "进行了一些文档或示例优化、文档错误修正以及网站样式问题修复。"]], ["li", ["p", "升级 rc-form 底层依赖，getFieldDecorator 的 id 支持嵌套式写法。"]]], ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "支持 TypeScript@2.1。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4208"
+	  }, "#4208"]]], ["li", ["p", "修正了 Tabs 嵌套时的样式问题。 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4317"
 	  }, "#4317"]]], ["li", ["p", "修正了 Radio 在当前项选中时，再次点击仍会触发 onChange 的问题。 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4242"
-	  }, "4242"]]], ["li", ["p", "修正了 Form 多列栅格式的表单排列方式布局异常。 ", ["a", {
+	  }, "#4242"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "修正了 Form 多列栅格式的表单排列方式布局异常。 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4271"
-	  }, "4271"]]], ["li", ["p", "修正了 Menu 竖直方向的当前选择项的背景问题。", ["a", {
+	  }, "#4271"]]], ["li", ["p", "修正了 Menu 竖直方向的当前选择项的背景问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4253"
-	  }, "4253"]]], ["li", ["p", "优化了 Dropdown 的 onVisibleChange 回调的参数。", ["a", {
+	  }, "#4253"]]], ["li", ["p", "优化了 Dropdown 的 ", ["code", "onVisibleChange"], " 回调参数 Type 类型。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4236"
-	  }, "4236"], " ", ["a", {
-	    "title": null,
-	    "href": "https://github.com/bang88"
-	  }, "@bang88"]]], ["li", ["p", "优化了 Cascader 的 onChange 回调的第一个参数。", ["a", {
+	  }, "#4236"]]], ["li", ["p", "优化了 Cascader 的 ", ["code", "onChange"], " 回调参数的 Type 类型。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4231"
-	  }, "4231"], " ", ["a", {
-	    "title": null,
-	    "href": "https://github.com/bang88"
-	  }, "@bang88"]]], ["li", ["p", "优化了 Datepicker", "[showtime]", " 的默认宽度 ", ["a", {
+	  }, "#4231"]]], ["li", ["p", "优化了 Datepicker", "[showtime]", " 的默认宽度 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/commit/b912f1cea6f470c16b8dd90554883460161cef47"
-	  }, "b912f"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "优化 Menu 已选择项的样式。"]], ["li", ["p", "修复 Mention 不能响应 ", ["code", "onFocus"], " 和 ", ["code", "onBlur"], " 的问题。", ["a", {
+	  }, "b912f1c"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "优化 Menu 已选择项的样式。"]], ["li", ["p", "修复 Mention 不能响应 ", ["code", "onFocus"], " 和 ", ["code", "onBlur"], " 的问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4163"
 	  }, "#4163"]]], ["li", ["p", "修复 ", ["code", "disabled"], " 和 ", ["code", "checked"], " 的 Radio 之间会多一条阴影的问题。", ["a", {
@@ -259,7 +316,7 @@ webpackJsonp([204,206],{
 	  }, "#3706"], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/denzw"
-	  }, "@denzw"]]], ["li", ["p", "DatePicker"], ["ul", ["li", ["p", "在 ", ["code", "showTime"], " 模式下现在失去焦点也会触发 ", ["code", "onChange"], "。"]], ["li", ["p", ["code", "MonthPicker"], " 增加了 ", ["code", "monthCellContentRender"], " 和 ", ["code", "cellContentRender"], "。"]], ["li", ["p", ["code", "RangePicker"], " 现在可以手动输入时间了。", ["a", {
+	  }, "@denzw"]]], ["li", ["p", "DatePicker"], ["ul", ["li", ["p", "在 ", ["code", "showTime"], " 模式下现在失去焦点也会触发 ", ["code", "onChange"], "。"]], ["li", ["p", ["code", "MonthPicker"], " 增加了 ", ["code", "monthCellContentRender"], "。"]], ["li", ["p", ["code", "RangePicker"], " 现在可以手动输入时间了。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3718"
 	  }, "#3718"]]], ["li", ["p", "新增了捷克语的翻译。"]]]], ["li", ["p", "Badge"], ["ul", ["li", ["p", "优化鼠标停留时超过 99 的数字显示。", ["a", {
@@ -635,6 +692,9 @@ webpackJsonp([204,206],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.0"
+	  }, "2.6.0"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.3"
 	  }, "2.5.3"]], ["li", ["a", {

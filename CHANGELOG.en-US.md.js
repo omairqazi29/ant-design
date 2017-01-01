@@ -1,6 +1,6 @@
-webpackJsonp([205,206],{
+webpackJsonp([208,209],{
 
-/***/ 1340:
+/***/ 623:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,34 +16,97 @@ webpackJsonp([205,206],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "Supports TypeScript@2.1"]], ["li", ["p", "Fix style issue resulting in nested Tabs. ", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.0"], ["p", ["code", "2017-1-2"]], ["ul", ["li", ["p", "Brand new color system. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4426"
+	  }, "pull/4426"]], ["ul", ["li", ["p", "Brand new color palattes."]], ["li", ["p", "Brand new color algorithm replacing the tint/shade system."]], ["li", ["p", "Change default font color."]]]], ["li", ["p", "Add Grid playground demo. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/ee17abfa9d0362c6f9baab4a9a09e57574583246"
+	  }, "commit/ee17ab"]]], ["li", ["p", "Add Layout component. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/3534"
+	  }, "#3534"]]], ["li", ["p", "Input"], ["ul", ["li", ["p", "Support prefix and suffix. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4226"
+	  }, "#4226"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "InputGroup support compact display mode. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4309"
+	  }, "pull/4309"]]]]], ["li", ["p", "Spin support delayed display. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4306"
+	  }, "#4306"]]], ["li", ["p", "Fix the dislocation problem of Pagination in low resolution. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4349"
+	  }, "#4349"]]], ["li", ["p", "Fix wrapping display of Dropdown.Button. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4355"
+	  }, "pull/4355"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/Morhaus"
+	  }, "@Morhaus"]]], ["li", ["p", "Fix wrong background color of Cascader in disabled status. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4434"
+	  }, "#4434"]]], ["li", ["p", "Fix MonthPicker", "[monthcellcontentrender]", " doesn't work, and some documentation errors. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4394"
+	  }, "#4394"]]], ["li", ["p", "Fix the extra border of ButtonGroup. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4382"
+	  }, "#4382"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "Fix wrong background color of the Submenu(horizontal mode). ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4414"
+	  }, "#4414"]]], ["li", ["p", "Fix overlapping graphics with Select/Cascader in Form.Item with hasFeedback. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4431"
+	  }, "#4431"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/JesperWe"
+	  }, "@JesperWe"]]], ["li", ["p", "Reset border-radius of the first row in Table without header. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4373"
+	  }, "#4373"]]], ["li", ["p", "Improve the drag performance of Tree. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4371"
+	  }, "#4371"]]], ["li", ["p", "Improve official website and documentation, fix some bugs."]], ["li", ["p", "Update rc-form to support nested style of getFieldDecorator", "[id]", "."]]], ["h2", "2.5.3"], ["p", ["code", "2016-12-24"], " 🎄🎄🎄"], ["ul", ["li", ["p", "Supports TypeScript@2.1. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4208"
+	  }, "#4208"]]], ["li", ["p", "Fix style issue resulting in nested Tabs. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4317"
 	  }, "#4317"]]], ["li", ["p", "Fix ", ["code", "onChange"], " callback issue resulting in Radio. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4242"
-	  }, "4242"]]], ["li", ["p", "Fix a FormItem mis-aligin bug。 ", ["a", {
+	  }, "#4242"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ystarlongzi"
+	  }, "@ystarlongzi"]]], ["li", ["p", "Fix a FormItem mis-aligin bug。 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4271"
-	  }, "4271"]]], ["li", ["p", "Fix background issue resulting in selected element of veritcal Menu.", ["a", {
+	  }, "#4271"]]], ["li", ["p", "Fix background issue resulting in selected element of veritcal Menu.", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4253"
-	  }, "4253"]]], ["li", ["p", "Improve arguments of ", ["code", "onVisibleChange"], " callback of  Dropdown.", ["a", {
+	  }, "#4253"]]], ["li", ["p", "Improve arguments type of ", ["code", "onVisibleChange"], " callback of  Dropdown.", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4236"
-	  }, "4236"], " ", ["a", {
+	  }, "#4236"], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/bang88"
-	  }, "@bang88"]]], ["li", ["p", "Improve first argument of ", ["code", "onChange"], " callback of Cascader.", ["a", {
+	  }, "@bang88"]]], ["li", ["p", "Improve first argument type of ", ["code", "onChange"], " callback of Cascader.", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4231"
-	  }, "4231"], " ", ["a", {
+	  }, "#4231"], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/bang88"
 	  }, "@bang88"]]], ["li", ["p", "Improve default width of Datepicker", "[showtime]", ". ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/commit/b912f1cea6f470c16b8dd90554883460161cef47"
-	  }, "b912f"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "Improve selected item style of Menu."]], ["li", ["p", "Fix issue resulting in Mention not responses ", ["code", "onFocus"], " and ", ["code", "onBlur"], ". ", ["a", {
+	  }, "b912f1c"]]]], ["h2", "2.5.2"], ["p", ["code", "2016-12-10"]], ["ul", ["li", ["p", "Improve selected item style of Menu."]], ["li", ["p", "Fix issue resulting in Mention not responses ", ["code", "onFocus"], " and ", ["code", "onBlur"], ". ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4163"
 	  }, "#4163"]]], ["li", ["p", "Fix issue resulting in there is a redundant shadow between ", ["code", "disabled"], " and ", ["code", "checked"], " Radio. ", ["a", {
@@ -256,7 +319,7 @@ webpackJsonp([205,206],{
 	  }, "#3706"], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/denzw"
-	  }, "@denzw"]]], ["li", ["p", "DatePicker"], ["ul", ["li", ["p", ["code", "onChange"], " will be triggered when ", ["code", "DatePicker"], " in ", ["code", "showTime"], " mode on blur now."]], ["li", ["p", "Add ", ["code", "monthCellContentRender"], " and ", ["code", "cellContentRender"], " for ", ["code", "MonthPicker"], "."]], ["li", ["p", ["code", "Rangepicker"], " can input time manually now.", ["a", {
+	  }, "@denzw"]]], ["li", ["p", "DatePicker"], ["ul", ["li", ["p", ["code", "onChange"], " will be triggered when ", ["code", "DatePicker"], " in ", ["code", "showTime"], " mode on blur now."]], ["li", ["p", "Add ", ["code", "monthCellContentRender"], " for ", ["code", "MonthPicker"], "."]], ["li", ["p", ["code", "Rangepicker"], " can input time manually now.", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3718"
 	  }, "#3718"]]], ["li", ["p", "Add czech locale/translations."]]]], ["li", ["p", "Badge"], ["ul", ["li", ["p", "Improve number over 99 displaying when mouse hovering. ", ["a", {
@@ -632,6 +695,9 @@ webpackJsonp([205,206],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.0"
+	  }, "2.6.0"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.5.3"
 	  }, "2.5.3"]], ["li", ["a", {

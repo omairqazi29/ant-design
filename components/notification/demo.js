@@ -1,32 +1,19 @@
-webpackJsonp([29,206],{
+webpackJsonp([29,209],{
 
-/***/ 654:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1542),
-	    'custom-icon': __webpack_require__(1543),
-	    'duration': __webpack_require__(1544),
-	    'with-btn': __webpack_require__(1545),
-	    'with-icon': __webpack_require__(1546),
-	}
-
-/***/ },
-
-/***/ 1542:
+/***/ 833:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(202);
+	var _style4 = __webpack_require__(182);
 
-	var _notification = __webpack_require__(201);
+	var _notification = __webpack_require__(181);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -79,26 +66,26 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1543:
+/***/ 834:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(11);
+	var _style4 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
 	var _style5 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(9);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(202);
+	var _style6 = __webpack_require__(182);
 
-	var _notification = __webpack_require__(201);
+	var _notification = __webpack_require__(181);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -151,20 +138,20 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1544:
+/***/ 835:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(202);
+	var _style4 = __webpack_require__(182);
 
-	var _notification = __webpack_require__(201);
+	var _notification = __webpack_require__(181);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -217,20 +204,20 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1545:
+/***/ 836:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(202);
+	var _style4 = __webpack_require__(182);
 
-	var _notification = __webpack_require__(201);
+	var _notification = __webpack_require__(181);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -291,20 +278,20 @@ webpackJsonp([29,206],{
 
 /***/ },
 
-/***/ 1546:
+/***/ 837:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(202);
+	var _style4 = __webpack_require__(182);
 
-	var _notification = __webpack_require__(201);
+	var _notification = __webpack_require__(181);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
@@ -381,6 +368,19 @@ webpackJsonp([29,206],{
 	  },
 	  "style": "\n.code-box-demo .ant-btn {\n  margin-right: 1em;\n}\n"
 	};
+
+/***/ },
+
+/***/ 1225:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(833),
+	    'custom-icon': __webpack_require__(834),
+	    'duration': __webpack_require__(835),
+	    'with-btn': __webpack_require__(836),
+	    'with-icon': __webpack_require__(837),
+	}
 
 /***/ }
 

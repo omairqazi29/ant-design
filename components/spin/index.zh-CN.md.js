@@ -1,6 +1,6 @@
-webpackJsonp([132,206],{
+webpackJsonp([133,209],{
 
-/***/ 1622:
+/***/ 914:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31,7 +31,7 @@ webpackJsonp([132,206],{
 	    "className": "bisheng-toc-h2",
 	    "href": "#API"
 	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "类型"], ["th", "默认值"], ["th", "说明"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "spin组件中点的大小，可选值为 small default large"]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "用于内嵌其他组件的模式，可以关闭 loading 效果"]], ["tr", ["td", "tip"], ["td", "string"], ["td", "无"], ["td", "自定义描述文案"]]]]]
+	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "类型"], ["th", "默认值"], ["th", "说明"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "spin组件中点的大小，可选值为 small default large"]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "用于内嵌其他组件的模式，可以关闭 loading 效果"]], ["tr", ["td", "tip"], ["td", "string"], ["td", "无"], ["td", "自定义描述文案"]], ["tr", ["td", "delay"], ["td", "number (毫秒)"], ["td", "无"], ["td", "延迟显示 loading 效果"]]]]]
 	};
 
 /***/ }

@@ -1,6 +1,6 @@
-webpackJsonp([175,206],{
+webpackJsonp([178,209],{
 
-/***/ 1447:
+/***/ 730:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57,7 +57,7 @@ webpackJsonp([175,206],{
 	  }, "moment"]], ["td", "-"]], ["tr", ["td", "format"], ["td", "to set the date format, refer to ", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
-	  }, "moment.js"]], ["td", "String"], ["td", "\"YYYY-MM\""]], ["tr", ["td", "onChange"], ["td", "a callback function, can be executed when the selected time is changing"], ["td", "function(date: moment, dateString: string)"], ["td", "-"]], ["tr", ["td", "monthCellContentRender"], ["td", "Custom month cell render method"], ["td", "function"], ["td", "无"]], ["tr", ["td", "cellContentRender"], ["td", "Custom month cell content render method,the content will be appended to the cell."], ["td", "function"], ["td", "无"]]]], ["h3", "RangePicker"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "value"], ["td", "to set date"], ["td", "[", ["a", {
+	  }, "moment.js"]], ["td", "String"], ["td", "\"YYYY-MM\""]], ["tr", ["td", "onChange"], ["td", "a callback function, can be executed when the selected time is changing"], ["td", "function(date: moment, dateString: string)"], ["td", "-"]], ["tr", ["td", "monthCellContentRender"], ["td", "Custom month cell content render method"], ["td", "function(date, locale): React.Node"], ["td", "-"]]]], ["h3", "RangePicker"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Description"], ["th", "Type"], ["th", "Default"]]], ["tbody", ["tr", ["td", "value"], ["td", "to set date"], ["td", "[", ["a", {
 	    "title": null,
 	    "href": "http://momentjs.com/"
 	  }, "moment"], ", ", ["a", {

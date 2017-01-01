@@ -1,6 +1,6 @@
-webpackJsonp([84,206],{
+webpackJsonp([85,209],{
 
-/***/ 1752:
+/***/ 1044:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43,23 +43,26 @@ webpackJsonp([84,206],{
 	  }, ["code", "@import '~antd/dist/antd.css';\n\n.App {\n  text-align: center;\n}\n\n..."]], ["p", "Ok, you now see a blue primary button displaying in page now, next you can choose any components of ", ["code", "antd"], " to develop your application. Visit other workflow of ", ["code", "create-react-app"], " at its ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md"
-	  }, "User Guide "], "."], ["h2", "Advanced Guides"], ["p", "We are successd to run antd components now, but in the real world, there are still lots of problems about antd-demo.\nFor instance, we actully import all components in the project which will be a serious network perfermance issue."], ["blockquote", ["p", "You will see a warning in your browser console."]], ["p", ["img", {
+	  }, "User Guide "], "."], ["h2", "Advanced Guides"], ["p", "We are successd to run antd components now, but in the real world, there are still lots of problems about antd-demo.\nFor instance, we actully import all components in the project which will be a serious network perfermance issue."], ["blockquote", ["p", "You will see a warning in your browser console.\n", ["img", {
 	    "title": null,
-	    "src": "https://zos.alipayobjects.com/rmsportal/dBLScZPjiUwunfyQVISX.png",
+	    "src": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png",
 	    "alt": null
-	  }]], ["p", "So it is necessary to customize the default webpack config. We can achieve that by using ", ["code", "eject"], " script command."], ["pre", {
+	  }]]], ["p", "So it is necessary to customize the default webpack config. We can achieve that by using ", ["code", "eject"], " script command."], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ <span class=\"token function\">npm</span> run <span class=\"token function\">eject</span>"
-	  }, ["code", "$ npm run eject"]], ["h3", "Import on demand"], ["p", "After eject all config files to antd-demo, we allowed to install ", ["a", {
+	  }, ["code", "$ npm run eject"]], ["h3", "Import on demand"], ["p", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import"
-	  }, "babel-plugin-import"], " and modify ", ["code", "src/webconfig.dev.js"], " now."], ["pre", {
+	  }, "babel-plugin-import"], " is a babel plugin for importing components on demand (", ["a", {
+	    "title": null,
+	    "href": "/docs/react/getting-started-cn#按需加载"
+	  }, "principle"], "). After eject all config files to antd-demo, we allowed to install it and modify ", ["code", "config/webpack.config.dev.js"], " now."], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> babel-plugin-import --save-dev"
 	  }, ["code", "$ npm install babel-plugin-import --save-dev"]], ["pre", {
 	    "lang": "diff",
 	    "highlighted": "// Process JS with Babel.\n{\n  test: /\\.(js|jsx)$/,\n  include: paths.appSrc,\n  loader: 'babel',\n  query: {\n<span class=\"token inserted\">+   plugins: [</span>\n<span class=\"token inserted\">+     ['import', [{ libraryName: \"antd\", style: 'css' }]],</span>\n<span class=\"token inserted\">+   ],</span>\n    // This is a feature of `babel-loader` for webpack (not Babel itself).\n    // It enables caching results in ./node_modules/.cache/babel-loader/\n    // directory for faster rebuilds.\n    cacheDirectory: true\n  }\n},"
-	  }, ["code", "// Process JS with Babel.\n{\n  test: /\\.(js|jsx)$/,\n  include: paths.appSrc,\n  loader: 'babel',\n  query: {\n+   plugins: [\n+     ['import', [{ libraryName: \"antd\", style: 'css' }]],\n+   ],\n    // This is a feature of `babel-loader` for webpack (not Babel itself).\n    // It enables caching results in ./node_modules/.cache/babel-loader/\n    // directory for faster rebuilds.\n    cacheDirectory: true\n  }\n},"]], ["p", "Remove the ", ["code", "@import '~antd/dist/antd.css';"], " statement added before because ", ["code", "babel-plugin-import"], " will import styles."], ["p", "Then reboot ", ["code", "npm start"], " and visit demo page, you should find that the above warning message would be gone which prove the ", ["code", "import on demand"], " config is effective now."], ["h3", "Customize Theme"], ["p", "According to ", ["a", {
+	  }, ["code", "// Process JS with Babel.\n{\n  test: /\\.(js|jsx)$/,\n  include: paths.appSrc,\n  loader: 'babel',\n  query: {\n+   plugins: [\n+     ['import', [{ libraryName: \"antd\", style: 'css' }]],\n+   ],\n    // This is a feature of `babel-loader` for webpack (not Babel itself).\n    // It enables caching results in ./node_modules/.cache/babel-loader/\n    // directory for faster rebuilds.\n    cacheDirectory: true\n  }\n},"]], ["blockquote", ["p", "Note: because there is no ", ["code", ".babelrc"], " file after config eject, so we have to put the babel option into ", ["code", "webpack.config.js"], " or ", ["code", "babel"], " field of ", ["code", "package.json"], "."]], ["p", "Remove the ", ["code", "@import '~antd/dist/antd.css';"], " statement added before because ", ["code", "babel-plugin-import"], " will import styles."], ["p", "Then reboot ", ["code", "npm start"], " and visit demo page, you should find that the above warning message would be gone which prove the ", ["code", "import on demand"], " config is effective now."], ["h3", "Customize Theme"], ["p", "According to ", ["a", {
 	    "title": null,
 	    "href": "/docs/react/customize-theme"
 	  }, "Customize Theme documentation"], ", we need ", ["code", "less"], " variables modify ability of ", ["a", {
@@ -77,13 +80,16 @@ webpackJsonp([84,206],{
 	  }, "less-loader"], " here, you can see a green button rendered on the page after reboot start server."], ["hr"], ["p", "Finally, we use antd with create-react-app successfully, you can learn these practice for your own webpack workflow too, and find more webpack config in the ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js"
-	  }, "atool-build"], "."], ["p", "Source code about this article：", ["a", {
+	  }, "atool-build"], ". (For instance, add ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-tool/atool-build/blob/e4bd2959689b6a95cb5c1c854a5db8c98676bdb3/src/getWebpackCommonConfig.js#L90"
+	  }, "moment noParse"], " to avoid loading all language files)"], ["p", "Source code about this article：", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/create-react-app-antd"
 	  }, "https://github.com/ant-design/create-react-app-antd"]]],
 	  "meta": {
 	    "order": 4,
-	    "title": "Use with create-react-app",
+	    "title": "Use in create-react-app",
 	    "filename": "docs/react/use-with-create-react-app.en-US.md"
 	  },
 	  "description": ["section", ["p", ["a", {

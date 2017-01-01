@@ -1,25 +1,13 @@
-webpackJsonp([32,206],{
+webpackJsonp([33,209],{
 
-/***/ 670:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1690),
-	    'color': __webpack_require__(1691),
-	    'custom': __webpack_require__(1692),
-	    'pending': __webpack_require__(1693),
-	}
-
-/***/ },
-
-/***/ 1690:
+/***/ 982:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(206);
+	var _style2 = __webpack_require__(186);
 
-	var _timeline = __webpack_require__(205);
+	var _timeline = __webpack_require__(185);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -88,14 +76,14 @@ webpackJsonp([32,206],{
 
 /***/ },
 
-/***/ 1691:
+/***/ 983:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(206);
+	var _style2 = __webpack_require__(186);
 
-	var _timeline = __webpack_require__(205);
+	var _timeline = __webpack_require__(185);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -192,20 +180,20 @@ webpackJsonp([32,206],{
 
 /***/ },
 
-/***/ 1692:
+/***/ 984:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(14);
 
-	var _icon = __webpack_require__(10);
+	var _icon = __webpack_require__(9);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(206);
+	var _style4 = __webpack_require__(186);
 
-	var _timeline = __webpack_require__(205);
+	var _timeline = __webpack_require__(185);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -274,14 +262,14 @@ webpackJsonp([32,206],{
 
 /***/ },
 
-/***/ 1693:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(206);
+	var _style2 = __webpack_require__(186);
 
-	var _timeline = __webpack_require__(205);
+	var _timeline = __webpack_require__(185);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -346,6 +334,18 @@ webpackJsonp([32,206],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1241:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(982),
+	    'color': __webpack_require__(983),
+	    'custom': __webpack_require__(984),
+	    'pending': __webpack_require__(985),
+	}
 
 /***/ }
 

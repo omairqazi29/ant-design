@@ -1,30 +1,19 @@
-webpackJsonp([42,206],{
+webpackJsonp([43,209],{
 
-/***/ 671:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(1696),
-	    'basic': __webpack_require__(1697),
-	    'placement': __webpack_require__(1698),
-	}
-
-/***/ },
-
-/***/ 1696:
+/***/ 988:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(127);
+	var _style3 = __webpack_require__(120);
 
-	var _tooltip = __webpack_require__(108);
+	var _tooltip = __webpack_require__(103);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style4 = __webpack_require__(11);
+	var _style4 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -92,14 +81,14 @@ webpackJsonp([42,206],{
 
 /***/ },
 
-/***/ 1697:
+/***/ 989:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(127);
+	var _style2 = __webpack_require__(120);
 
-	var _tooltip = __webpack_require__(108);
+	var _tooltip = __webpack_require__(103);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -153,14 +142,14 @@ webpackJsonp([42,206],{
 
 /***/ },
 
-/***/ 1698:
+/***/ 990:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(127);
+	var _style2 = __webpack_require__(120);
 
-	var _tooltip = __webpack_require__(108);
+	var _tooltip = __webpack_require__(103);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -337,6 +326,17 @@ webpackJsonp([42,206],{
 	  },
 	  "style": "\n#components-tooltip-demo-placement .code-box-demo a {\n  display: inline-block;\n  line-height: 32px;\n  height: 32px;\n  width: 60px;\n  font-size: 14px;\n  text-align: center;\n  background: #f5f5f5;\n  margin-right: 1em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n}\n"
 	};
+
+/***/ },
+
+/***/ 1242:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'arrow-point-at-center': __webpack_require__(988),
+	    'basic': __webpack_require__(989),
+	    'placement': __webpack_require__(990),
+	}
 
 /***/ }
 

@@ -1,26 +1,13 @@
-webpackJsonp([26,206],{
+webpackJsonp([27,209],{
 
-/***/ 668:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1674),
-	    'checkable': __webpack_require__(1675),
-	    'colorful': __webpack_require__(1676),
-	    'control': __webpack_require__(1677),
-	    'hot-tags': __webpack_require__(1678),
-	}
-
-/***/ },
-
-/***/ 1674:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(204);
+	var _style2 = __webpack_require__(184);
 
-	var _tag = __webpack_require__(203);
+	var _tag = __webpack_require__(183);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -102,7 +89,7 @@ webpackJsonp([26,206],{
 
 /***/ },
 
-/***/ 1675:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -111,21 +98,21 @@ webpackJsonp([26,206],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(3);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(5);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(4);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(204);
+	var _style2 = __webpack_require__(184);
 
-	var _tag = __webpack_require__(203);
+	var _tag = __webpack_require__(183);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -214,14 +201,14 @@ webpackJsonp([26,206],{
 
 /***/ },
 
-/***/ 1676:
+/***/ 968:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(204);
+	var _style2 = __webpack_require__(184);
 
-	var _tag = __webpack_require__(203);
+	var _tag = __webpack_require__(183);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -285,48 +272,48 @@ webpackJsonp([26,206],{
 
 /***/ },
 
-/***/ 1677:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(11);
+	var _style5 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style6 = __webpack_require__(20);
+	var _style6 = __webpack_require__(18);
 
-	var _input = __webpack_require__(23);
+	var _input = __webpack_require__(22);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _style7 = __webpack_require__(127);
+	var _style7 = __webpack_require__(120);
 
-	var _tooltip = __webpack_require__(108);
+	var _tooltip = __webpack_require__(103);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style8 = __webpack_require__(204);
+	var _style8 = __webpack_require__(184);
 
-	var _tag = __webpack_require__(203);
+	var _tag = __webpack_require__(183);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
-	var _toConsumableArray2 = __webpack_require__(75);
+	var _toConsumableArray2 = __webpack_require__(70);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(3);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(5);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(4);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -438,30 +425,30 @@ webpackJsonp([26,206],{
 
 /***/ },
 
-/***/ 1678:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _toConsumableArray2 = __webpack_require__(75);
+	var _toConsumableArray2 = __webpack_require__(70);
 
 	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-	var _classCallCheck2 = __webpack_require__(4);
+	var _classCallCheck2 = __webpack_require__(3);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _possibleConstructorReturn2 = __webpack_require__(6);
+	var _possibleConstructorReturn2 = __webpack_require__(5);
 
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-	var _inherits2 = __webpack_require__(5);
+	var _inherits2 = __webpack_require__(4);
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(204);
+	var _style2 = __webpack_require__(184);
 
-	var _tag = __webpack_require__(203);
+	var _tag = __webpack_require__(183);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -554,6 +541,19 @@ webpackJsonp([26,206],{
 	    return _react2.default.createElement(HotTags, null);
 	  }
 	};
+
+/***/ },
+
+/***/ 1239:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(966),
+	    'checkable': __webpack_require__(967),
+	    'colorful': __webpack_require__(968),
+	    'control': __webpack_require__(969),
+	    'hot-tags': __webpack_require__(970),
+	}
 
 /***/ }
 

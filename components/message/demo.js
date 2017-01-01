@@ -1,31 +1,19 @@
-webpackJsonp([36,206],{
+webpackJsonp([37,209],{
 
-/***/ 652:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'duration': __webpack_require__(1525),
-	    'info': __webpack_require__(1526),
-	    'loading': __webpack_require__(1527),
-	    'other': __webpack_require__(1528),
-	}
-
-/***/ },
-
-/***/ 1525:
+/***/ 816:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(60);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(59);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -77,20 +65,20 @@ webpackJsonp([36,206],{
 
 /***/ },
 
-/***/ 1526:
+/***/ 817:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(60);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(59);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -142,20 +130,20 @@ webpackJsonp([36,206],{
 
 /***/ },
 
-/***/ 1527:
+/***/ 818:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(60);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(59);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -208,20 +196,20 @@ webpackJsonp([36,206],{
 
 /***/ },
 
-/***/ 1528:
+/***/ 819:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(60);
 
-	var _message = __webpack_require__(62);
+	var _message = __webpack_require__(59);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -290,6 +278,18 @@ webpackJsonp([36,206],{
 	  },
 	  "style": "\n#components-message-demo-other .ant-btn {\n  margin-right: 8px;\n}\n"
 	};
+
+/***/ },
+
+/***/ 1223:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'duration': __webpack_require__(816),
+	    'info': __webpack_require__(817),
+	    'loading': __webpack_require__(818),
+	    'other': __webpack_require__(819),
+	}
 
 /***/ }
 

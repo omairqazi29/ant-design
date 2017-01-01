@@ -1,6 +1,6 @@
-webpackJsonp([86,206],{
+webpackJsonp([87,209],{
 
-/***/ 1750:
+/***/ 1042:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92,7 +92,7 @@ webpackJsonp([86,206],{
 	  }, "dva version of hackernews"], "."]]]],
 	  "meta": {
 	    "order": 3,
-	    "title": "Real world Example with dva",
+	    "title": "Real project with dva",
 	    "filename": "docs/react/practical-projects.en-US.md"
 	  },
 	  "description": ["section", ["p", ["a", {

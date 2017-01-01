@@ -1,26 +1,13 @@
-webpackJsonp([27,206],{
+webpackJsonp([19,209],{
 
-/***/ 663:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1616),
-	    'inside': __webpack_require__(1617),
-	    'nested': __webpack_require__(1618),
-	    'size': __webpack_require__(1619),
-	    'tip': __webpack_require__(1620),
-	}
-
-/***/ },
-
-/***/ 1616:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(176);
+	var _style2 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(175);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -66,14 +53,102 @@ webpackJsonp([27,206],{
 
 /***/ },
 
-/***/ 1617:
+/***/ 908:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(176);
+	var _style4 = __webpack_require__(63);
 
-	var _spin = __webpack_require__(175);
+	var _switch = __webpack_require__(62);
+
+	var _switch2 = _interopRequireDefault(_switch);
+
+	var _style5 = __webpack_require__(139);
+
+	var _spin = __webpack_require__(138);
+
+	var _spin2 = _interopRequireDefault(_spin);
+
+	var _style6 = __webpack_require__(77);
+
+	var _alert = __webpack_require__(76);
+
+	var _alert2 = _interopRequireDefault(_alert);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "延迟显示 loading 效果。当 spinning 状态在 ", ["code", "delay"], " 时间内结束，则不显示 loading 状态。"]],
+	    "en-US": [["p", "Specifies a delay for loading state. If ", ["code", "spinning"], " ends during delay, loading status won't appear."]]
+	  },
+	  "meta": {
+	    "order": 5,
+	    "title": {
+	      "zh-CN": "延迟",
+	      "en-US": "delay"
+	    },
+	    "filename": "components/spin/demo/delayAndDebounce.md",
+	    "id": "components-spin-demo-delayAndDebounce"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Spin<span class=\"token punctuation\">,</span> Alert<span class=\"token punctuation\">,</span> Switch <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> Card <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span> loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">toggle</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> loading<span class=\"token punctuation\">:</span> value <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> container <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Alert</span> <span class=\"token attr-name\">message</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Alert</span> <span class=\"token attr-name\">message</span> <span class=\"token attr-name\">title\"</span>\n        <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Further</span> <span class=\"token attr-name\">details</span> <span class=\"token attr-name\">about</span> <span class=\"token attr-name\">the</span> <span class=\"token attr-name\">context</span> <span class=\"token attr-name\">of</span> <span class=\"token attr-name\">this</span> <span class=\"token attr-name\">alert.\"</span>\n        <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>info<span class=\"token punctuation\">\"</span></span>\n      <span class=\"token punctuation\">/></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Spin</span> <span class=\"token attr-name\">spinning</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>loading<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">delay</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">500</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>container<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Spin</span><span class=\"token punctuation\">></span></span>\n        Loading state：<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Switch</span> <span class=\"token attr-name\">checked</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>loading<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>toggle<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Card</span> <span class=\"token punctuation\">/></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var Card = _react2.default.createClass({
+	      displayName: 'Card',
+	      getInitialState: function getInitialState() {
+	        return { loading: false };
+	      },
+	      toggle: function toggle(value) {
+	        this.setState({ loading: value });
+	      },
+	      render: function render() {
+	        var container = _react2.default.createElement(_alert2.default, { message: 'Alert message title', description: 'Further details about the context of this alert.', type: 'info' });return _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _spin2.default,
+	            { spinning: this.state.loading, delay: 500 },
+	            container
+	          ),
+	          'Loading state\uFF1A',
+	          _react2.default.createElement(_switch2.default, { checked: this.state.loading, onChange: this.toggle })
+	        );
+	      }
+	    });return _react2.default.createElement(Card, null);
+	  },
+	  "style": ".example {\n  text-align: center;\n  background: rgba(0,0,0,0.05);\n  border-radius: 4px;\n  margin-bottom: 20px;\n  padding: 30px 50px;\n  margin: 20px 0;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.example</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> center<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span>,<span class=\"token number\">0</span>,<span class=\"token number\">0</span>,<span class=\"token number\">0.05</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">4</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">20</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">30</span>px <span class=\"token number\">50</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">20</span>px <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	};
+
+/***/ },
+
+/***/ 909:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(139);
+
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -125,26 +200,26 @@ webpackJsonp([27,206],{
 
 /***/ },
 
-/***/ 1618:
+/***/ 910:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(74);
+	var _style4 = __webpack_require__(63);
 
-	var _switch = __webpack_require__(73);
+	var _switch = __webpack_require__(62);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style5 = __webpack_require__(176);
+	var _style5 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(175);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style6 = __webpack_require__(94);
+	var _style6 = __webpack_require__(77);
 
-	var _alert = __webpack_require__(93);
+	var _alert = __webpack_require__(76);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -212,14 +287,14 @@ webpackJsonp([27,206],{
 
 /***/ },
 
-/***/ 1619:
+/***/ 911:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(176);
+	var _style2 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(175);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -272,20 +347,20 @@ webpackJsonp([27,206],{
 
 /***/ },
 
-/***/ 1620:
+/***/ 912:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(176);
+	var _style3 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(175);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style4 = __webpack_require__(94);
+	var _style4 = __webpack_require__(77);
 
-	var _alert = __webpack_require__(93);
+	var _alert = __webpack_require__(76);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -332,6 +407,20 @@ webpackJsonp([27,206],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1234:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(907),
+	    'delayAndDebounce': __webpack_require__(908),
+	    'inside': __webpack_require__(909),
+	    'nested': __webpack_require__(910),
+	    'size': __webpack_require__(911),
+	    'tip': __webpack_require__(912),
+	}
 
 /***/ }
 

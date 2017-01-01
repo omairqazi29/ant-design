@@ -1,27 +1,13 @@
-webpackJsonp([22,206],{
+webpackJsonp([23,209],{
 
-/***/ 638:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1399),
-	    'border-less': __webpack_require__(1400),
-	    'grid': __webpack_require__(1401),
-	    'loading': __webpack_require__(1402),
-	    'no-padding': __webpack_require__(1403),
-	    'simple': __webpack_require__(1404),
-	}
-
-/***/ },
-
-/***/ 1399:
+/***/ 682:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(174);
+	var _style2 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -89,14 +75,14 @@ webpackJsonp([22,206],{
 
 /***/ },
 
-/***/ 1400:
+/***/ 683:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(174);
+	var _style2 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -164,7 +150,7 @@ webpackJsonp([22,206],{
 
 /***/ },
 
-/***/ 1401:
+/***/ 684:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -175,15 +161,15 @@ webpackJsonp([22,206],{
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style5 = __webpack_require__(42);
+	var _style5 = __webpack_require__(41);
 
 	var _col = __webpack_require__(37);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style6 = __webpack_require__(174);
+	var _style6 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -265,14 +251,14 @@ webpackJsonp([22,206],{
 
 /***/ },
 
-/***/ 1402:
+/***/ 685:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(174);
+	var _style2 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -322,14 +308,14 @@ webpackJsonp([22,206],{
 
 /***/ },
 
-/***/ 1403:
+/***/ 686:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(174);
+	var _style2 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -399,14 +385,14 @@ webpackJsonp([22,206],{
 
 /***/ },
 
-/***/ 1404:
+/***/ 687:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(174);
+	var _style2 = __webpack_require__(156);
 
-	var _card = __webpack_require__(173);
+	var _card = __webpack_require__(155);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -467,6 +453,20 @@ webpackJsonp([22,206],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1208:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(682),
+	    'border-less': __webpack_require__(683),
+	    'grid': __webpack_require__(684),
+	    'loading': __webpack_require__(685),
+	    'no-padding': __webpack_require__(686),
+	    'simple': __webpack_require__(687),
+	}
 
 /***/ }
 

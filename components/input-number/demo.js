@@ -1,25 +1,13 @@
-webpackJsonp([37,206],{
+webpackJsonp([38,209],{
 
-/***/ 648:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1487),
-	    'digit': __webpack_require__(1488),
-	    'disabled': __webpack_require__(1489),
-	    'size': __webpack_require__(1490),
-	}
-
-/***/ },
-
-/***/ 1487:
+/***/ 770:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(112);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(111);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -67,14 +55,14 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1488:
+/***/ 771:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(112);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(111);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -122,20 +110,20 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1489:
+/***/ 772:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(11);
+	var _style3 = __webpack_require__(12);
 
-	var _button = __webpack_require__(9);
+	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(145);
+	var _style4 = __webpack_require__(112);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(111);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -205,14 +193,14 @@ webpackJsonp([37,206],{
 
 /***/ },
 
-/***/ 1490:
+/***/ 773:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(145);
+	var _style2 = __webpack_require__(112);
 
-	var _inputNumber = __webpack_require__(144);
+	var _inputNumber = __webpack_require__(111);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
@@ -265,6 +253,18 @@ webpackJsonp([37,206],{
 	  "style": ".ant-input-number {\n  margin-right: 10px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.ant-input-number</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">10</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
+
+/***/ },
+
+/***/ 1218:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(770),
+	    'digit': __webpack_require__(771),
+	    'disabled': __webpack_require__(772),
+	    'size': __webpack_require__(773),
+	}
 
 /***/ }
 
