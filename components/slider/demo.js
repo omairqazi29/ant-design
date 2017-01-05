@@ -1,19 +1,33 @@
 webpackJsonp([20,209],{
 
-/***/ 899:
+/***/ 665:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1624),
+	    'event': __webpack_require__(1625),
+	    'icon-slider': __webpack_require__(1626),
+	    'input-number': __webpack_require__(1627),
+	    'mark': __webpack_require__(1628),
+	    'tip-formatter': __webpack_require__(1629),
+	}
+
+/***/ },
+
+/***/ 1624:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(63);
+	var _style3 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style4 = __webpack_require__(119);
+	var _style4 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -104,14 +118,14 @@ webpackJsonp([20,209],{
 
 /***/ },
 
-/***/ 900:
+/***/ 1625:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(119);
+	var _style2 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -166,14 +180,14 @@ webpackJsonp([20,209],{
 
 /***/ },
 
-/***/ 901:
+/***/ 1626:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(119);
+	var _style3 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -249,7 +263,7 @@ webpackJsonp([20,209],{
 
 /***/ },
 
-/***/ 902:
+/***/ 1627:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -260,21 +274,21 @@ webpackJsonp([20,209],{
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _style6 = __webpack_require__(112);
+	var _style6 = __webpack_require__(121);
 
-	var _inputNumber = __webpack_require__(111);
+	var _inputNumber = __webpack_require__(120);
 
 	var _inputNumber2 = _interopRequireDefault(_inputNumber);
 
-	var _style7 = __webpack_require__(41);
+	var _style7 = __webpack_require__(42);
 
-	var _col = __webpack_require__(37);
+	var _col = __webpack_require__(39);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style8 = __webpack_require__(119);
+	var _style8 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -381,14 +395,14 @@ webpackJsonp([20,209],{
 
 /***/ },
 
-/***/ 903:
+/***/ 1628:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(119);
+	var _style2 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -467,14 +481,14 @@ webpackJsonp([20,209],{
 
 /***/ },
 
-/***/ 904:
+/***/ 1629:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(119);
+	var _style2 = __webpack_require__(128);
 
-	var _slider = __webpack_require__(118);
+	var _slider = __webpack_require__(127);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -525,20 +539,6 @@ webpackJsonp([20,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1233:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(899),
-	    'event': __webpack_require__(900),
-	    'icon-slider': __webpack_require__(901),
-	    'input-number': __webpack_require__(902),
-	    'mark': __webpack_require__(903),
-	    'tip-formatter': __webpack_require__(904),
-	}
 
 /***/ }
 

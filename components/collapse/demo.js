@@ -1,13 +1,25 @@
 webpackJsonp([39,209],{
 
-/***/ 715:
+/***/ 644:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'accordion': __webpack_require__(1439),
+	    'basic': __webpack_require__(1440),
+	    'borderless': __webpack_require__(1441),
+	    'mix': __webpack_require__(1442),
+	}
+
+/***/ },
+
+/***/ 1439:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(215);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(214);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -83,14 +95,14 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 716:
+/***/ 1440:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(215);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(214);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -168,14 +180,14 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 717:
+/***/ 1441:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(215);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(214);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -251,14 +263,14 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 718:
+/***/ 1442:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(215);
+	var _style2 = __webpack_require__(237);
 
-	var _collapse = __webpack_require__(214);
+	var _collapse = __webpack_require__(236);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -341,18 +353,6 @@ webpackJsonp([39,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1212:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'accordion': __webpack_require__(715),
-	    'basic': __webpack_require__(716),
-	    'borderless': __webpack_require__(717),
-	    'mix': __webpack_require__(718),
-	}
 
 /***/ }
 

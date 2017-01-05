@@ -1,6 +1,6 @@
 webpackJsonp([63,209],{
 
-/***/ 1072:
+/***/ 1797:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20,7 +20,7 @@ webpackJsonp([63,209],{
 	    "title": null,
 	    "href": "https://motion.ant.design/"
 	  }, "Ant Motion"]], ["blockquote", ["p", "示例延长了动画时长以便展示。"]], function jsonmlReactLoader() {
-	    var cssAnimation = __webpack_require__(279);var antd = __webpack_require__(46);var Select = antd.Select;var Option = Select.Option;
+	    var cssAnimation = __webpack_require__(262);var antd = __webpack_require__(51);var Select = antd.Select;var Option = Select.Option;
 	    var OptGroup = Select.OptGroup;var motions = [];motions = motions.concat([[{ name: '淡入', value: 'fade', direction: 'enter', type: '渐隐'
 	    }, { name: '淡出', value: 'fade', direction: 'leave', type: '渐隐' }]]);motions = motions.concat([[{ name: '中心放大', value: 'zoom', direction: 'enter', type: '缩放' }, { name: '中心缩小', value: 'zoom', direction: 'leave', type: '缩放' }, { name: '上方放大', value: 'zoom-up', direction: 'enter', type: '缩放' }, { name: '上方缩小', value: 'zoom-up', direction: 'leave', type: '缩放' }, { name: '下方放大', value: 'zoom-down', direction: 'enter', type: '缩放' }, { name: '下方缩小', value: 'zoom-down', direction: 'leave', type: '缩放' }, { name: '左方放大', value: 'zoom-left', direction: 'enter', type: '缩放' }, { name: '左方缩小', value: 'zoom-left', direction: 'leave', type: '缩放' }, { name: '右方放大', value: 'zoom-right', direction: 'enter', type: '缩放' }, { name: '右方缩小', value: 'zoom-right', direction: 'leave', type: '缩放' }]]);motions = motions.concat([[{ name: '上方滑入', value: 'move-up', direction: 'enter', type: '移动' }, { name: '上方滑出', value: 'move-up', direction: 'leave', type: '移动' }, { name: '下方滑入', value: 'move-down', direction: 'enter', type: '移动' }, { name: '下方滑出', value: 'move-down', direction: 'leave', type: '移动' }, { name: '左方滑入', value: 'move-left', direction: 'enter', type: '移动' }, { name: '左方滑出', value: 'move-left', direction: 'leave', type: '移动' }, { name: '右方滑入', value: 'move-right', direction: 'enter', type: '移动' }, { name: '右方滑出', value: 'move-right', direction: 'leave', type: '移动' }]]);motions = motions.concat([[{ name: '上方展开', value: 'slide-up', direction: 'enter', type: '伸缩' }, { name: '上方缩回', value: 'slide-up', direction: 'leave', type: '伸缩' }, { name: '下方展开', value: 'slide-down', direction: 'enter', type: '伸缩' }, { name: '下方缩回', value: 'slide-down', direction: 'leave', type: '伸缩' }, { name: '左方展开', value: 'slide-left', direction: 'enter', type: '伸缩' }, { name: '左方缩回', value: 'slide-left', direction: 'leave', type: '伸缩' }, { name: '右方展开', value: 'slide-right', direction: 'enter', type: '伸缩' }, { name: '右方缩回', value: 'slide-right', direction: 'leave', type: '伸缩' }]]);motions = motions.concat([[{ name: '摇摆', value: 'swing', direction: 'enter', type: '其他' }]]);var leave = '-leave';var Test = _react2.default.createClass({
 	      displayName: 'Test',

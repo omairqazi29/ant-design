@@ -1,13 +1,26 @@
 webpackJsonp([32,209],{
 
-/***/ 675:
+/***/ 639:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1399),
+	    'card': __webpack_require__(1400),
+	    'custom-render': __webpack_require__(1401),
+	    'locale': __webpack_require__(1402),
+	    'notice-calendar': __webpack_require__(1403),
+	}
+
+/***/ },
+
+/***/ 1399:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(154);
+	var _style2 = __webpack_require__(175);
 
-	var _calendar = __webpack_require__(153);
+	var _calendar = __webpack_require__(174);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -55,14 +68,14 @@ webpackJsonp([32,209],{
 
 /***/ },
 
-/***/ 676:
+/***/ 1400:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(154);
+	var _style2 = __webpack_require__(175);
 
-	var _calendar = __webpack_require__(153);
+	var _calendar = __webpack_require__(174);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -114,14 +127,14 @@ webpackJsonp([32,209],{
 
 /***/ },
 
-/***/ 677:
+/***/ 1401:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(154);
+	var _style2 = __webpack_require__(175);
 
-	var _calendar = __webpack_require__(153);
+	var _calendar = __webpack_require__(174);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -133,7 +146,7 @@ webpackJsonp([32,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(32);
+	var _moment = __webpack_require__(28);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -186,14 +199,14 @@ webpackJsonp([32,209],{
 
 /***/ },
 
-/***/ 678:
+/***/ 1402:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(154);
+	var _style2 = __webpack_require__(175);
 
-	var _calendar = __webpack_require__(153);
+	var _calendar = __webpack_require__(174);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -205,11 +218,11 @@ webpackJsonp([32,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(32);
+	var _moment = __webpack_require__(28);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
-	var _en_US = __webpack_require__(416);
+	var _en_US = __webpack_require__(564);
 
 	var _en_US2 = _interopRequireDefault(_en_US);
 
@@ -250,14 +263,14 @@ webpackJsonp([32,209],{
 
 /***/ },
 
-/***/ 679:
+/***/ 1403:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(154);
+	var _style2 = __webpack_require__(175);
 
-	var _calendar = __webpack_require__(153);
+	var _calendar = __webpack_require__(174);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -344,19 +357,6 @@ webpackJsonp([32,209],{
 	  "style": ".events {\n  line-height: 24px;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.events li {\n  color: #999;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.events li span {\n  vertical-align: middle;\n}\n\n.events li span:first-child {\n  font-size: 9px;\n  margin-right: 4px;\n}\n\n.event-warning {\n  color: #fac450;\n}\n\n.event-normal {\n  color: #108ee9;\n}\n\n.event-error {\n  color: #f50;\n}\n\n.notes-month {\n  text-align: center;\n}\n.notes-month section {\n  font-size: 28px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.events</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">24</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">list-style</span><span class=\"token punctuation\">:</span> none<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.events</span> li </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#999</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">overflow</span><span class=\"token punctuation\">:</span> hidden<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">text-overflow</span><span class=\"token punctuation\">:</span> ellipsis<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">white-space</span><span class=\"token punctuation\">:</span> nowrap<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.events</span> li span </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">vertical-align</span><span class=\"token punctuation\">:</span> middle<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.events</span> li span<span class=\"token pseudo-class\">:first-child</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">9</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">4</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.event-warning</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#fac450</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.event-normal</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#108ee9</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.event-error</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#f50</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.notes-month</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> center<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.notes-month</span> section </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">28</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
-
-/***/ },
-
-/***/ 1207:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(675),
-	    'card': __webpack_require__(676),
-	    'custom-render': __webpack_require__(677),
-	    'locale': __webpack_require__(678),
-	    'notice-calendar': __webpack_require__(679),
-	}
 
 /***/ }
 

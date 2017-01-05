@@ -1,186 +1,6 @@
 webpackJsonp([49,209],{
 
-/***/ 1053:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": ["article", ["h2", "有意义的色彩"], ["p", "色彩在界面设计中的使用应同时具备品牌识别性以及界面设计功能性。色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。"], ["h2", "Ant Design Colors"], ["p", "Ant Design 的色板由 8 种基本色彩组成，通过一套", ["a", {
-	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/blob/734beb84ffc3f0469fbae1566aa8450f966cb261/components/style/color/colorPalette.less"
-	  }, "精心设计的色彩算法"], "，每种基本色又自动衍生出 10 种渐变色，其中第 6 种为基本色。"], ["blockquote", ["p", "我们结合了色彩加白、加黑、加深，贝塞尔曲线，以及针对冷暖色的不同旋转角度，调教出一套色彩算法。使用者只需指定主色，便可导出一条完整的渐变色板。"]], function jsonmlReactLoader() {
-	    var Palette = _react2.default.createClass({
-	      displayName: 'Palette',
-	      render: function render() {
-	        var _props$color = this.props.color,
-	            name = _props$color.name,
-	            description = _props$color.description,
-	            color = _props$color.color;
-
-	        var colors = [];for (var i = 1; i <= 10; i++) {
-	          colors.push(_react2.default.createElement(
-	            'div',
-	            { key: i, className: 'main-color-item palatte-' + name + '-' + i, style: { color: i > 5 ? '#fff' : 'unset', fontWeight: i === 6 ? 'bold' : 'normal' } },
-	            name,
-	            '-',
-	            i
-	          ));
-	        }return _react2.default.createElement(
-	          'div',
-	          { className: 'color-palette' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'color-title' },
-	            name,
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-description' },
-	              description
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'main-color' },
-	            colors
-	          )
-	        );
-	      }
-	    });var ExtendPalettes = _react2.default.createClass({
-	      displayName: 'ExtendPalettes',
-	      render: function render() {
-	        var colors = [{ name: 'red', description: '热情、警示' }, { name: 'green', description: '成功、通过、安全' }, { name: 'blue', description: '专业、科技' }, { name: 'pink', description: '典雅、明快、女性' }, { name: 'orange', description: '醒目、温暖' }, { name: 'purple', description: '高雅、浪漫' }, { name: 'yellow', description: '活力、提示' }, { name: 'cyan', description: '清新、冷静、结构化' }];return _react2.default.createElement(
-	          'div',
-	          null,
-	          colors.map(function (color, i) {
-	            return _react2.default.createElement(Palette, { key: color.name, color: color });
-	          })
-	        );
-	      }
-	    });return _react2.default.createElement(ExtendPalettes, { key: 'palettes' });
-	  }, ["h2", "色彩和交互"], ["p", "设计元素本身由于交互行为会引发一系列细微的视觉变化，而元素本身的颜色变化有时也能很好的实现这一目的。在进行这类设计的同时，建议采取在颜色上添加黑色或者白色并按照 ", ["code", "n+5%"], " 的规律递增的方式来实现。以下图为例，当鼠标 hover 某个特定元素，就视为浮起，对应颜色就相应增加白色叠加，相反点击的行为可以理解为按下去，在颜色上就相应的增加黑色的叠加。"], ["p", ["img", {
-	    "src": "https://t.alipayobjects.com/images/T1ZHxhXdNmXXXXXXXX.png",
-	    "width": "100%"
-	  }]], ["p", ["img", {
-	    "src": "https://t.alipayobjects.com/images/T1fZJhXahgXXXXXXXX.png",
-	    "width": "100%"
-	  }]], ["h2", "色彩识别"], ["p", "合适的色彩对比为信息传达加分，同时也应放考虑到有颜色识别障碍人群的需求。我们将每种主色衍生出来的颜色进行了打标，在考虑对比颜色的选择时建议两种颜色对应标签数值的差要大于等于 5。"], ["p", ["img", {
-	    "src": "https://t.alipayobjects.com/images/rmsweb/T1hLphXgXcXXXXXXXX.png",
-	    "width": "100%"
-	  }]], ["p", ["img", {
-	    "src": "https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png",
-	    "width": "100%"
-	  }]], ["h2", "色彩换算工具"], ["blockquote", ["p", "正数为变淡 ", ["code", "tint"], " ，负数为加深 ", ["code", "shade"], "。"]], function jsonmlReactLoader() {
-	    var Values = __webpack_require__(1920);var CopyToClipboard = __webpack_require__(385);var classNames = __webpack_require__(7);var antd = __webpack_require__(46);var Button = antd.Button;var InputNumber = antd.InputNumber;var Slider = antd.Slider;var Tooltip = antd.Tooltip;var TintShadeTool = _react2.default.createClass({
-	      displayName: 'TintShadeTool',
-	      getInitialState: function getInitialState() {
-	        return { result: '#2db7f5', color: '#2db7f5', justCopied: false, darkBackground: false, value: 80 };
-	      },
-	      handleChangeColor: function handleChangeColor(e) {
-	        this.setState({ color: e.target.value }, this.calculate);
-	      },
-	      handleChangeValue: function handleChangeValue(value) {
-	        this.setState({
-	          value: value }, this.calculate);
-	      },
-	      componentDidMount: function componentDidMount() {
-	        this.calculate();
-	      },
-	      calculate: function calculate() {
-	        if (this.state.value === 0) {
-	          this.setState({ result: this.state.color });return;
-	        }var tintOrShade = this.state.value > 0 ? 'tint' : 'shade';var c = new Values(this.state.color);var resultColor = c[tintOrShade](Math.abs(this.state.value));this.setState({ result: '#' + resultColor.hex, darkBackground: resultColor.getBrightness() < 50 });
-	      },
-	      copySuccess: function copySuccess(e) {
-	        var _this = this;
-
-	        this.setState({ justCopied: true }, function () {
-	          setTimeout(function () {
-	            _this.setState({ justCopied: false });
-	          }, 1000);
-	        });
-	      },
-	      render: function render() {
-	        var marks = { '-100': '加黑', '0': '原色', '100': '加白' };var className = classNames({ 'color-block': true, copied: this.state.justCopied, dark: this.state.darkBackground });return _react2.default.createElement(
-	          'div',
-	          { style: { margin: '40px 0' } },
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(
-	              Tooltip,
-	              { title: '\u70B9\u51FB\u8272\u5757\u590D\u5236\u8272\u503C' },
-	              _react2.default.createElement(
-	                CopyToClipboard,
-	                { className: className, onCopy: this.copySuccess, text: this.state.result },
-	                _react2.default.createElement('div', { style: { backgroundColor: this.state.result } })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { style: { width: 188, display: 'inline-block', fontFamily: 'Consolas' } },
-	              this.state.result
-	            ),
-	            _react2.default.createElement('input', { className: 'ant-input', style: { width: 80, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
-	            _react2.default.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
-	            _react2.default.createElement(
-	              'span',
-	              { style: { margin: '0 0 0 8px' } },
-	              '%'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { style: { width: 420, margin: '40px 10px 60px' } },
-	            _react2.default.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5, marks: marks })
-	          )
-	        );
-	      }
-	    });return _react2.default.createElement(TintShadeTool, { key: 'tintShadeTool' });
-	  }, ["p", "Ant Design 专用色彩换算工具，用于解析类似 ", ["code", "#2db7f5 tint 80%"], " 的色彩标注。"], ["p", "less 或 scss 语言可以直接使用 ", ["code", "tint(#2db7f5, 80%)"], " 和  ", ["code", "shade(#2db7f5, 80%)"], " 的语法。"]],
-	  "meta": {
-	    "category": {
-	      "zh-CN": "设计基础",
-	      "en-US": "Design Fundamental"
-	    },
-	    "order": 2,
-	    "title": {
-	      "zh-CN": "色彩",
-	      "en-US": "Colors"
-	    },
-	    "filename": "docs/spec/colors.md"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#有意义的色彩"
-	  }, "有意义的色彩"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#Ant-Design-Colors"
-	  }, "Ant Design Colors"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#色彩和交互"
-	  }, "色彩和交互"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#色彩识别"
-	  }, "色彩识别"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#色彩换算工具"
-	  }, "色彩换算工具"]]]
-	};
-
-/***/ },
-
-/***/ 1920:
+/***/ 871:
 /***/ function(module, exports) {
 
 	/**
@@ -503,6 +323,213 @@ webpackJsonp([49,209],{
 	    } else {window.Values = Values;}
 	})();
 
+
+/***/ },
+
+/***/ 1778:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": ["article", ["h2", "有意义的色彩"], ["p", "色彩在界面设计中的使用应同时具备品牌识别性以及界面设计功能性。色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。"], ["h2", "Ant Design Colors"], ["p", "Ant Design 的色板由 8 种基本色彩组成，通过一套", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/blob/734beb84ffc3f0469fbae1566aa8450f966cb261/components/style/color/colorPalette.less"
+	  }, "精心设计的色彩算法"], "，每种基本色又自动衍生出 10 种渐变色，其中第 6 种为基本色。"], ["blockquote", ["p", "我们结合了色彩加白、加黑、加深，贝塞尔曲线，以及针对冷暖色的不同旋转角度，调教出一套色彩算法。使用者只需指定主色，便可导出一条完整的渐变色板。"]], function jsonmlReactLoader() {
+	    var rgbToHex = function rgbToHex(rgbString) {
+	      var hexChars = '0123456789ABCDEF';var rgb = rgbString.match(/\d+/g);var r = parseInt(rgb[0]).toString(16);var g = parseInt(rgb[1]).toString(16);var b = parseInt(rgb[2]).toString(16);r = r.length === 1 ? '0' + r : r;
+	      g = g.length === 1 ? '0' + g : g;b = b.length === 1 ? '0' + b : b;return '#' + r + g + b;
+	    };var Palette = _react2.default.createClass({
+	      displayName: 'Palette',
+	      getInitialState: function getInitialState() {
+	        return { hexColors: null };
+	      },
+	      componentDidMount: function componentDidMount() {
+	        var _this = this;
+
+	        var hexColors = {};Object.keys(this.colorNodes).forEach(function (key) {
+	          hexColors[key] = rgbToHex(getComputedStyle(_this.colorNodes[key])['background-color']);
+	        });this.setState({ hexColors: hexColors });
+	      },
+	      render: function render() {
+	        var _this2 = this;
+
+	        this.colorNodes = this.colorNodes || {};var _props$color = this.props.color,
+	            name = _props$color.name,
+	            description = _props$color.description,
+	            color = _props$color.color;
+	        var hexColors = this.state.hexColors;
+	        var colors = [];
+	        var _loop = function _loop(i) {
+	          colors.push(_react2.default.createElement(
+	            'div',
+	            { key: i, ref: function ref(node) {
+	                _this2.colorNodes[name + '-' + i] = node;
+	              }, className: 'main-color-item palatte-' + name + '-' + i, style: { color: i > 5 ? '#fff' : 'unset', fontWeight: i === 6 ? 'bold' : 'normal' } },
+	            name,
+	            '-',
+	            i,
+	            hexColors ? _react2.default.createElement(
+	              'span',
+	              { className: 'main-color-value' },
+	              hexColors[name + '-' + i]
+	            ) : null
+	          ));
+	        };
+
+	        for (var i = 1; i <= 10; i++) {
+	          _loop(i);
+	        }return _react2.default.createElement(
+	          'div',
+	          { className: 'color-palette' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'color-title' },
+	            name,
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-description' },
+	              description
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'main-color' },
+	            colors
+	          )
+	        );
+	      }
+	    });var ExtendPalettes = _react2.default.createClass({
+	      displayName: 'ExtendPalettes',
+	      render: function render() {
+	        var colors = [{ name: 'red', description: '热情、警示' }, { name: 'green', description: '成功、通过、安全' }, { name: 'blue', description: '专业、科技' }, { name: 'pink', description: '典雅、明快、女性' }, { name: 'orange', description: '醒目、温暖' }, { name: 'purple', description: '高雅、浪漫' }, { name: 'yellow', description: '活力、提示' }, { name: 'cyan', description: '清新、冷静、结构化' }];return _react2.default.createElement(
+	          'div',
+	          null,
+	          colors.map(function (color, i) {
+	            return _react2.default.createElement(Palette, { key: color.name, color: color });
+	          })
+	        );
+	      }
+	    });return _react2.default.createElement(ExtendPalettes, { key: 'palettes' });
+	  }, ["h2", "色彩和交互"], ["p", "设计元素本身由于交互行为会引发一系列细微的视觉变化，而元素本身的颜色变化有时也能很好的实现这一目的。在进行这类设计的同时，建议采取在颜色上添加黑色或者白色并按照 ", ["code", "n+5%"], " 的规律递增的方式来实现。以下图为例，当鼠标 hover 某个特定元素，就视为浮起，对应颜色就相应增加白色叠加，相反点击的行为可以理解为按下去，在颜色上就相应的增加黑色的叠加。"], ["p", ["img", {
+	    "src": "https://t.alipayobjects.com/images/T1ZHxhXdNmXXXXXXXX.png",
+	    "width": "100%"
+	  }]], ["p", ["img", {
+	    "src": "https://t.alipayobjects.com/images/T1fZJhXahgXXXXXXXX.png",
+	    "width": "100%"
+	  }]], ["h2", "色彩识别"], ["p", "合适的色彩对比为信息传达加分，同时也应放考虑到有颜色识别障碍人群的需求。我们将每种主色衍生出来的颜色进行了打标，在考虑对比颜色的选择时建议两种颜色对应标签数值的差要大于等于 5。"], ["p", ["img", {
+	    "src": "https://t.alipayobjects.com/images/rmsweb/T1hLphXgXcXXXXXXXX.png",
+	    "width": "100%"
+	  }]], ["p", ["img", {
+	    "src": "https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png",
+	    "width": "100%"
+	  }]], ["h2", "色彩换算工具"], ["blockquote", ["p", "正数为变淡 ", ["code", "tint"], " ，负数为加深 ", ["code", "shade"], "。"]], function jsonmlReactLoader() {
+	    var Values = __webpack_require__(871);var CopyToClipboard = __webpack_require__(388);var classNames = __webpack_require__(7);var antd = __webpack_require__(51);var Button = antd.Button;var InputNumber = antd.InputNumber;var Slider = antd.Slider;var Tooltip = antd.Tooltip;var TintShadeTool = _react2.default.createClass({
+	      displayName: 'TintShadeTool',
+	      getInitialState: function getInitialState() {
+	        return { result: '#2db7f5', color: '#2db7f5', justCopied: false, darkBackground: false, value: 80 };
+	      },
+	      handleChangeColor: function handleChangeColor(e) {
+	        this.setState({ color: e.target.value }, this.calculate);
+	      },
+	      handleChangeValue: function handleChangeValue(value) {
+	        this.setState({
+	          value: value }, this.calculate);
+	      },
+	      componentDidMount: function componentDidMount() {
+	        this.calculate();
+	      },
+	      calculate: function calculate() {
+	        if (this.state.value === 0) {
+	          this.setState({ result: this.state.color });return;
+	        }var tintOrShade = this.state.value > 0 ? 'tint' : 'shade';var c = new Values(this.state.color);var resultColor = c[tintOrShade](Math.abs(this.state.value));this.setState({ result: '#' + resultColor.hex, darkBackground: resultColor.getBrightness() < 50 });
+	      },
+	      copySuccess: function copySuccess(e) {
+	        var _this3 = this;
+
+	        this.setState({ justCopied: true }, function () {
+	          setTimeout(function () {
+	            _this3.setState({ justCopied: false });
+	          }, 1000);
+	        });
+	      },
+	      render: function render() {
+	        var marks = { '-100': '加黑', '0': '原色', '100': '加白' };var className = classNames({ 'color-block': true, copied: this.state.justCopied, dark: this.state.darkBackground });return _react2.default.createElement(
+	          'div',
+	          { style: { margin: '40px 0' } },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              Tooltip,
+	              { title: '\u70B9\u51FB\u8272\u5757\u590D\u5236\u8272\u503C' },
+	              _react2.default.createElement(
+	                CopyToClipboard,
+	                { className: className, onCopy: this.copySuccess, text: this.state.result },
+	                _react2.default.createElement('div', { style: { backgroundColor: this.state.result } })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { width: 188, display: 'inline-block', fontFamily: 'Consolas' } },
+	              this.state.result
+	            ),
+	            _react2.default.createElement('input', { className: 'ant-input', style: { width: 80, color: this.state.color, marginRight: 8 }, value: this.state.color, onChange: this.handleChangeColor }),
+	            _react2.default.createElement(InputNumber, { style: { width: 70 }, value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5 }),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { margin: '0 0 0 8px' } },
+	              '%'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: { width: 420, margin: '40px 10px 60px' } },
+	            _react2.default.createElement(Slider, { value: this.state.value, onChange: this.handleChangeValue, min: -100, max: 100, step: 5, marks: marks })
+	          )
+	        );
+	      }
+	    });return _react2.default.createElement(TintShadeTool, { key: 'tintShadeTool' });
+	  }, ["p", "Ant Design 专用色彩换算工具，用于解析类似 ", ["code", "#2db7f5 tint 80%"], " 的色彩标注。"], ["p", "less 或 scss 语言可以直接使用 ", ["code", "tint(#2db7f5, 80%)"], " 和  ", ["code", "shade(#2db7f5, 80%)"], " 的语法。"]],
+	  "meta": {
+	    "category": {
+	      "zh-CN": "设计基础",
+	      "en-US": "Design Fundamental"
+	    },
+	    "order": 2,
+	    "title": {
+	      "zh-CN": "色彩",
+	      "en-US": "Colors"
+	    },
+	    "filename": "docs/spec/colors.md"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#有意义的色彩"
+	  }, "有意义的色彩"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#Ant-Design-Colors"
+	  }, "Ant Design Colors"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#色彩和交互"
+	  }, "色彩和交互"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#色彩识别"
+	  }, "色彩识别"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#色彩换算工具"
+	  }, "色彩换算工具"]]]
+	};
 
 /***/ }
 

@@ -1,54 +1,4 @@
 
-.ant-table-thead > tr > th .anticon-filter {
-  margin-left: 4px;
-  font-size: 12px;
-  cursor: pointer;
-  color: #aaa;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.ant-table-thead > tr > th .anticon-filter:hover {
-  color: rgba(0, 0, 0, 0.65);
-}
-.ant-table-thead > tr > th .ant-table-filter-selected.anticon-filter {
-  color: #108ee9;
-}
-.ant-table-tbody > tr > td {
-  border-bottom: 1px solid #e9e9e9;
-  position: relative;
-}
-.ant-table-thead > tr,
-.ant-table-tbody > tr {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-.ant-table-thead > tr.ant-table-row-hover,
-.ant-table-tbody > tr.ant-table-row-hover,
-.ant-table-thead > tr:hover,
-.ant-table-tbody > tr:hover {
-  background: #ecf6fd;
-}
-.ant-table-thead > tr:hover {
-  background: none;
-}
-.ant-table-footer {
-  padding: 16px 8px;
-  background: #f7f7f7;
-  border-radius: 0 0 4px 4px;
-  position: relative;
-}
-.ant-table-footer:before {
-  content: '';
-  height: 1px;
-  background: #f7f7f7;
-  position: absolute;
-  top: -1px;
-  width: 100%;
-  left: 0;
-}
-.ant-table.ant-table-bordered .ant-table-footer {
-  border: 1px solid #e9e9e9;
-}
 .ant-table-title {
   padding: 16px 8px;
   position: relative;
@@ -3485,12 +3435,6 @@ pre[class*="language-"] {
           transform: scale(0.9);
   background: #fff;
   padding-right: 6px;
-  opacity: 0;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-.code-box:hover a.edit-button {
-  opacity: 1;
 }
 .code-box .code-box-demo {
   border-bottom: 1px solid #e9e9e9;
@@ -3902,7 +3846,7 @@ section.code-box-meta p {
 .main-color {
   overflow: hidden;
 }
-.main-color .main-color-item {
+.main-color-item {
   width: 80px;
   height: 60px;
   border-radius: 4px;
@@ -3916,7 +3860,7 @@ section.code-box-meta p {
   font-family: Consolas;
   font-size: 12px;
 }
-.main-color .main-color-item:after {
+.main-color-item .main-color-value {
   font-size: 12px;
   position: absolute;
   bottom: -4px;
@@ -3946,7 +3890,7 @@ section.code-box-meta p {
 .main-color:hover .main-color-item {
   padding-top: 4px;
 }
-.main-color:hover .main-color-item:after {
+.main-color:hover .main-color-value {
   opacity: 0.7;
   bottom: 3px;
 }
@@ -3982,485 +3926,245 @@ section.code-box-meta p {
 .color-block.dark:after {
   color: #fff;
 }
-.palatte-blue-1 {
+.main-color .palatte-blue-1 {
   background: #ecf6fd;
 }
-.palatte-blue-1:after {
-  content: "#ecf6fd";
-}
-.palatte-blue-2 {
+.main-color .palatte-blue-2 {
   background: #d2eafb;
 }
-.palatte-blue-2:after {
-  content: "#d2eafb";
-}
-.palatte-blue-3 {
+.main-color .palatte-blue-3 {
   background: #add8f7;
 }
-.palatte-blue-3:after {
-  content: "#add8f7";
-}
-.palatte-blue-4 {
+.main-color .palatte-blue-4 {
   background: #7ec2f3;
 }
-.palatte-blue-4:after {
-  content: "#7ec2f3";
-}
-.palatte-blue-5 {
+.main-color .palatte-blue-5 {
   background: #49a9ee;
 }
-.palatte-blue-5:after {
-  content: "#49a9ee";
-}
-.palatte-blue-6 {
+.main-color .palatte-blue-6 {
   background: #108ee9;
 }
-.palatte-blue-6:after {
-  content: "#108ee9";
-}
-.palatte-blue-7 {
+.main-color .palatte-blue-7 {
   background: #0e77ca;
 }
-.palatte-blue-7:after {
-  content: "#0e77ca";
-}
-.palatte-blue-8 {
+.main-color .palatte-blue-8 {
   background: #0c60aa;
 }
-.palatte-blue-8:after {
-  content: "#0c60aa";
-}
-.palatte-blue-9 {
+.main-color .palatte-blue-9 {
   background: #09488a;
 }
-.palatte-blue-9:after {
-  content: "#09488a";
-}
-.palatte-blue-10 {
+.main-color .palatte-blue-10 {
   background: #073069;
 }
-.palatte-blue-10:after {
-  content: "#073069";
-}
-.palatte-purple-1 {
+.main-color .palatte-purple-1 {
   background: #f4f3fd;
 }
-.palatte-purple-1:after {
-  content: "#f4f3fd";
-}
-.palatte-purple-2 {
+.main-color .palatte-purple-2 {
   background: #e4e2fa;
 }
-.palatte-purple-2:after {
-  content: "#e4e2fa";
-}
-.palatte-purple-3 {
+.main-color .palatte-purple-3 {
   background: #cfcaf6;
 }
-.palatte-purple-3:after {
-  content: "#cfcaf6";
-}
-.palatte-purple-4 {
+.main-color .palatte-purple-4 {
   background: #b3acf2;
 }
-.palatte-purple-4:after {
-  content: "#b3acf2";
-}
-.palatte-purple-5 {
+.main-color .palatte-purple-5 {
   background: #948aec;
 }
-.palatte-purple-5:after {
-  content: "#948aec";
-}
-.palatte-purple-6 {
+.main-color .palatte-purple-6 {
   background: #7265E6;
 }
-.palatte-purple-6:after {
-  content: "#7265E6";
-}
-.palatte-purple-7 {
+.main-color .palatte-purple-7 {
   background: #6252cd;
 }
-.palatte-purple-7:after {
-  content: "#6252cd";
-}
-.palatte-purple-8 {
+.main-color .palatte-purple-8 {
   background: #533eb4;
 }
-.palatte-purple-8:after {
-  content: "#533eb4";
-}
-.palatte-purple-9 {
+.main-color .palatte-purple-9 {
   background: #42299a;
 }
-.palatte-purple-9:after {
-  content: "#42299a";
-}
-.palatte-purple-10 {
+.main-color .palatte-purple-10 {
   background: #321580;
 }
-.palatte-purple-10:after {
-  content: "#321580";
-}
-.palatte-cyan-1 {
+.main-color .palatte-cyan-1 {
   background: #ebf8f9;
 }
-.palatte-cyan-1:after {
-  content: "#ebf8f9";
-}
-.palatte-cyan-2 {
+.main-color .palatte-cyan-2 {
   background: #cfedf0;
 }
-.palatte-cyan-2:after {
-  content: "#cfedf0";
-}
-.palatte-cyan-3 {
+.main-color .palatte-cyan-3 {
   background: #a7dfe3;
 }
-.palatte-cyan-3:after {
-  content: "#a7dfe3";
-}
-.palatte-cyan-4 {
+.main-color .palatte-cyan-4 {
   background: #76cdd3;
 }
-.palatte-cyan-4:after {
-  content: "#76cdd3";
-}
-.palatte-cyan-5 {
+.main-color .palatte-cyan-5 {
   background: #3db8c1;
 }
-.palatte-cyan-5:after {
-  content: "#3db8c1";
-}
-.palatte-cyan-6 {
+.main-color .palatte-cyan-6 {
   background: #00A2AE;
 }
-.palatte-cyan-6:after {
-  content: "#00A2AE";
-}
-.palatte-cyan-7 {
+.main-color .palatte-cyan-7 {
   background: #008997;
 }
-.palatte-cyan-7:after {
-  content: "#008997";
-}
-.palatte-cyan-8 {
+.main-color .palatte-cyan-8 {
   background: #00707f;
 }
-.palatte-cyan-8:after {
-  content: "#00707f";
-}
-.palatte-cyan-9 {
+.main-color .palatte-cyan-9 {
   background: #005667;
 }
-.palatte-cyan-9:after {
-  content: "#005667";
-}
-.palatte-cyan-10 {
+.main-color .palatte-cyan-10 {
   background: #003c4e;
 }
-.palatte-cyan-10:after {
-  content: "#003c4e";
-}
-.palatte-green-1 {
+.main-color .palatte-green-1 {
   background: #ebf8f2;
 }
-.palatte-green-1:after {
-  content: "#ebf8f2";
-}
-.palatte-green-2 {
+.main-color .palatte-green-2 {
   background: #cfefdf;
 }
-.palatte-green-2:after {
-  content: "#cfefdf";
-}
-.palatte-green-3 {
+.main-color .palatte-green-3 {
   background: #a7e1c4;
 }
-.palatte-green-3:after {
-  content: "#a7e1c4";
-}
-.palatte-green-4 {
+.main-color .palatte-green-4 {
   background: #76d0a3;
 }
-.palatte-green-4:after {
-  content: "#76d0a3";
-}
-.palatte-green-5 {
+.main-color .palatte-green-5 {
   background: #3dbd7d;
 }
-.palatte-green-5:after {
-  content: "#3dbd7d";
-}
-.palatte-green-6 {
+.main-color .palatte-green-6 {
   background: #00A854;
 }
-.palatte-green-6:after {
-  content: "#00A854";
-}
-.palatte-green-7 {
+.main-color .palatte-green-7 {
   background: #00924c;
 }
-.palatte-green-7:after {
-  content: "#00924c";
-}
-.palatte-green-8 {
+.main-color .palatte-green-8 {
   background: #007b43;
 }
-.palatte-green-8:after {
-  content: "#007b43";
-}
-.palatte-green-9 {
+.main-color .palatte-green-9 {
   background: #00643b;
 }
-.palatte-green-9:after {
-  content: "#00643b";
-}
-.palatte-green-10 {
+.main-color .palatte-green-10 {
   background: #004c32;
 }
-.palatte-green-10:after {
-  content: "#004c32";
-}
-.palatte-pink-1 {
+.main-color .palatte-pink-1 {
   background: #feeff5;
 }
-.palatte-pink-1:after {
-  content: "#feeff5";
-}
-.palatte-pink-2 {
+.main-color .palatte-pink-2 {
   background: #fdd8e7;
 }
-.palatte-pink-2:after {
-  content: "#fdd8e7";
-}
-.palatte-pink-3 {
+.main-color .palatte-pink-3 {
   background: #fcb8d3;
 }
-.palatte-pink-3:after {
-  content: "#fcb8d3";
-}
-.palatte-pink-4 {
+.main-color .palatte-pink-4 {
   background: #fa90ba;
 }
-.palatte-pink-4:after {
-  content: "#fa90ba";
-}
-.palatte-pink-5 {
+.main-color .palatte-pink-5 {
   background: #f7629e;
 }
-.palatte-pink-5:after {
-  content: "#f7629e";
-}
-.palatte-pink-6 {
+.main-color .palatte-pink-6 {
   background: #f5317f;
 }
-.palatte-pink-6:after {
-  content: "#f5317f";
-}
-.palatte-pink-7 {
+.main-color .palatte-pink-7 {
   background: #dc277d;
 }
-.palatte-pink-7:after {
-  content: "#dc277d";
-}
-.palatte-pink-8 {
+.main-color .palatte-pink-8 {
   background: #c11c7b;
 }
-.palatte-pink-8:after {
-  content: "#c11c7b";
-}
-.palatte-pink-9 {
+.main-color .palatte-pink-9 {
   background: #a71278;
 }
-.palatte-pink-9:after {
-  content: "#a71278";
-}
-.palatte-pink-10 {
+.main-color .palatte-pink-10 {
   background: #8c0776;
 }
-.palatte-pink-10:after {
-  content: "#8c0776";
-}
-.palatte-red-1 {
+.main-color .palatte-red-1 {
   background: #fef0ef;
 }
-.palatte-red-1:after {
-  content: "#fef0ef";
-}
-.palatte-red-2 {
+.main-color .palatte-red-2 {
   background: #fcdbd9;
 }
-.palatte-red-2:after {
-  content: "#fcdbd9";
-}
-.palatte-red-3 {
+.main-color .palatte-red-3 {
   background: #fabeb9;
 }
-.palatte-red-3:after {
-  content: "#fabeb9";
-}
-.palatte-red-4 {
+.main-color .palatte-red-4 {
   background: #f79992;
 }
-.palatte-red-4:after {
-  content: "#f79992";
-}
-.palatte-red-5 {
+.main-color .palatte-red-5 {
   background: #f46e65;
 }
-.palatte-red-5:after {
-  content: "#f46e65";
-}
-.palatte-red-6 {
+.main-color .palatte-red-6 {
   background: #F04134;
 }
-.palatte-red-6:after {
-  content: "#F04134";
-}
-.palatte-red-7 {
+.main-color .palatte-red-7 {
   background: #d73435;
 }
-.palatte-red-7:after {
-  content: "#d73435";
-}
-.palatte-red-8 {
+.main-color .palatte-red-8 {
   background: #bd2636;
 }
-.palatte-red-8:after {
-  content: "#bd2636";
-}
-.palatte-red-9 {
+.main-color .palatte-red-9 {
   background: #a31837;
 }
-.palatte-red-9:after {
-  content: "#a31837";
-}
-.palatte-red-10 {
+.main-color .palatte-red-10 {
   background: #880a38;
 }
-.palatte-red-10:after {
-  content: "#880a38";
-}
-.palatte-orange-1 {
+.main-color .palatte-orange-1 {
   background: #fef3eb;
 }
-.palatte-orange-1:after {
-  content: "#fef3eb";
-}
-.palatte-orange-2 {
+.main-color .palatte-orange-2 {
   background: #fde3cf;
 }
-.palatte-orange-2:after {
-  content: "#fde3cf";
-}
-.palatte-orange-3 {
+.main-color .palatte-orange-3 {
   background: #fccca7;
 }
-.palatte-orange-3:after {
-  content: "#fccca7";
-}
-.palatte-orange-4 {
+.main-color .palatte-orange-4 {
   background: #faaf76;
 }
-.palatte-orange-4:after {
-  content: "#faaf76";
-}
-.palatte-orange-5 {
+.main-color .palatte-orange-5 {
   background: #f78e3d;
 }
-.palatte-orange-5:after {
-  content: "#f78e3d";
-}
-.palatte-orange-6 {
+.main-color .palatte-orange-6 {
   background: #F56A00;
 }
-.palatte-orange-6:after {
-  content: "#F56A00";
-}
-.palatte-orange-7 {
+.main-color .palatte-orange-7 {
   background: #d75000;
 }
-.palatte-orange-7:after {
-  content: "#d75000";
-}
-.palatte-orange-8 {
+.main-color .palatte-orange-8 {
   background: #b93600;
 }
-.palatte-orange-8:after {
-  content: "#b93600";
-}
-.palatte-orange-9 {
+.main-color .palatte-orange-9 {
   background: #991b00;
 }
-.palatte-orange-9:after {
-  content: "#991b00";
-}
-.palatte-orange-10 {
+.main-color .palatte-orange-10 {
   background: #7a0000;
 }
-.palatte-orange-10:after {
-  content: "#7a0000";
-}
-.palatte-yellow-1 {
+.main-color .palatte-yellow-1 {
   background: #fffaeb;
 }
-.palatte-yellow-1:after {
-  content: "#fffaeb";
-}
-.palatte-yellow-2 {
+.main-color .palatte-yellow-2 {
   background: #fff3cf;
 }
-.palatte-yellow-2:after {
-  content: "#fff3cf";
-}
-.palatte-yellow-3 {
+.main-color .palatte-yellow-3 {
   background: #ffe9a7;
 }
-.palatte-yellow-3:after {
-  content: "#ffe9a7";
-}
-.palatte-yellow-4 {
+.main-color .palatte-yellow-4 {
   background: #ffdd76;
 }
-.palatte-yellow-4:after {
-  content: "#ffdd76";
-}
-.palatte-yellow-5 {
+.main-color .palatte-yellow-5 {
   background: #ffce3d;
 }
-.palatte-yellow-5:after {
-  content: "#ffce3d";
-}
-.palatte-yellow-6 {
+.main-color .palatte-yellow-6 {
   background: #ffbf00;
 }
-.palatte-yellow-6:after {
-  content: "#ffbf00";
-}
-.palatte-yellow-7 {
+.main-color .palatte-yellow-7 {
   background: #e09a00;
 }
-.palatte-yellow-7:after {
-  content: "#e09a00";
-}
-.palatte-yellow-8 {
+.main-color .palatte-yellow-8 {
   background: #c17500;
 }
-.palatte-yellow-8:after {
-  content: "#c17500";
-}
-.palatte-yellow-9 {
+.main-color .palatte-yellow-9 {
   background: #a04f00;
 }
-.palatte-yellow-9:after {
-  content: "#a04f00";
-}
-.palatte-yellow-10 {
+.main-color .palatte-yellow-10 {
   background: #802800;
-}
-.palatte-yellow-10:after {
-  content: "#802800";
 }
 .window-frame {
   position: relative;

@@ -1,6 +1,6 @@
 webpackJsonp([86,209],{
 
-/***/ 1043:
+/***/ 1768:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -80,19 +80,22 @@ webpackJsonp([86,209],{
 	  }, ["code", "> @ build /private/tmp/myapp\n> roadhog build\n\nCreating an optimized production build...\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"]], ["p", ["code", "build"], " 命令会打包所有的资源，包含 JavaScript, CSS, web fonts, images, html 等。然后你可以在 ", ["code", "dist/"], " 目录下找到这些文件。"], ["h2", "下一步"], ["p", "我们已经完成了一个简单应用，你可能还有很多疑问，比如："], ["ul", ["li", ["p", "如何处理异步请求"]], ["li", ["p", "如何优雅地加载初始数据"]], ["li", ["p", "如何统一处理出错，以及特定操作的出错"]], ["li", ["p", "如何动态加载路由和 Model，以加速页面载入速度"]], ["li", ["p", "如何实现 hmr"]], ["li", ["p", "如何 mock 数据"]], ["li", ["p", "等等"]]], ["p", "你可以："], ["ul", ["li", ["p", "访问 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
-	  }, "dva 官网"], "。"]], ["li", ["p", "查看所有 ", ["a", {
+	  }, "dva 官网"]]], ["li", ["p", "理解 dva 的 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva#api"
-	  }, "API"], "。"]], ["li", ["p", ["a", {
+	    "href": "https://github.com/dvajs/dva/blob/master/docs/Concepts_zh-CN.md"
+	  }, "8 个概念"], " ，以及他们是如何串起来的"]], ["li", ["p", "掌握 dva 的", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/tutorial/01-%E6%A6%82%E8%A6%81.md"
-	  }, "教程"], "，一步步完成一个中型应用。"]], ["li", ["p", "看看 ", ["a", {
+	    "href": "https://github.com/dvajs/dva/blob/master/docs/API_zh-CN.md"
+	  }, "所有 API"]]], ["li", ["p", "查看 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva-hackernews"
-	  }, "dva 版 hackernews"], " 是 ", ["a", {
+	    "href": "https://github.com/dvajs/dva-knowledgemap"
+	  }, "dva 知识地图"], " ，包含 ES6, React, dva 等所有基础知识"]], ["li", ["p", "查看 ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/sorrycc/blog/issues/9"
-	  }, "如何实现"], " 的。"]]]],
+	    "href": "https://github.com/dvajs/dva/issues?q=is%3Aissue+is%3Aclosed+label%3Afaq"
+	  }, "更多 FAQ"], "，看看别人通常会遇到什么问题"]], ["li", ["p", "如果你基于 dva-cli 创建项目，最好了解他的 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/sorrycc/roadhog#配置"
+	  }, "配置方式"]]]]],
 	  "meta": {
 	    "order": 3,
 	    "title": "项目实战",

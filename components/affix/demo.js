@@ -1,17 +1,28 @@
 webpackJsonp([44,209],{
 
-/***/ 625:
+/***/ 631:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1349),
+	    'on-change': __webpack_require__(1350),
+	    'target': __webpack_require__(1351),
+	}
+
+/***/ },
+
+/***/ 1349:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(177);
+	var _affix = __webpack_require__(199);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -81,18 +92,18 @@ webpackJsonp([44,209],{
 
 /***/ },
 
-/***/ 626:
+/***/ 1350:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(177);
+	var _affix = __webpack_require__(199);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -150,18 +161,18 @@ webpackJsonp([44,209],{
 
 /***/ },
 
-/***/ 627:
+/***/ 1351:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(212);
+	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(177);
+	var _affix = __webpack_require__(199);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -256,17 +267,6 @@ webpackJsonp([44,209],{
 	  },
 	  "style": "\n#components-affix-demo-target .scrollable-container {\n  height: 100px;\n  overflow-y: scroll;\n}\n#components-affix-demo-target .background {\n  padding-top: 60px;\n  height: 300px;\n  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');\n}\n"
 	};
-
-/***/ },
-
-/***/ 1199:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(625),
-	    'on-change': __webpack_require__(626),
-	    'target': __webpack_require__(627),
-	}
 
 /***/ }
 

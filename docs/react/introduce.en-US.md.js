@@ -1,6 +1,6 @@
 webpackJsonp([89,209],{
 
-/***/ 1040:
+/***/ 1765:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -154,7 +154,7 @@ webpackJsonp([89,209],{
 	    "title": "Ant Design of React",
 	    "filename": "docs/react/introduce.en-US.md"
 	  },
-	  "description": ["section", ["p", "Following Ant Design specification, We develop a React UI library called ", ["code", "antd"], ", containing a set of high quality components and demos, to help building rich interactive desktop applicafions."], ["div", {
+	  "description": ["section", ["p", "Following Ant Design specification, We develop a React UI library ", ["code", "antd"], " that contains a set of high quality components and demos for building rich interactive desktop applications."], ["div", {
 	    "class": "pic-plus"
 	  }, ["img", {
 	    "width": "150",

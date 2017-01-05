@@ -1,13 +1,28 @@
 webpackJsonp([13,209],{
 
-/***/ 915:
+/***/ 667:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'error': __webpack_require__(1640),
+	    'icon': __webpack_require__(1641),
+	    'simple': __webpack_require__(1642),
+	    'small-size': __webpack_require__(1643),
+	    'step-next': __webpack_require__(1644),
+	    'vertical-small': __webpack_require__(1645),
+	    'vertical': __webpack_require__(1646),
+	}
+
+/***/ },
+
+/***/ 1640:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -59,7 +74,7 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 916:
+/***/ 1641:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70,9 +85,9 @@ webpackJsonp([13,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(141);
+	var _style4 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -125,14 +140,14 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 917:
+/***/ 1642:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -184,14 +199,14 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 918:
+/***/ 1643:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -243,18 +258,18 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 919:
+/***/ 1644:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(60);
+	var _style4 = __webpack_require__(65);
 
-	var _message = __webpack_require__(59);
+	var _message = __webpack_require__(64);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -272,9 +287,9 @@ webpackJsonp([13,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(141);
+	var _style6 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -394,14 +409,14 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 920:
+/***/ 1645:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -453,14 +468,14 @@ webpackJsonp([13,209],{
 
 /***/ },
 
-/***/ 921:
+/***/ 1646:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(141);
+	var _style2 = __webpack_require__(152);
 
-	var _steps = __webpack_require__(140);
+	var _steps = __webpack_require__(151);
 
 	var _steps2 = _interopRequireDefault(_steps);
 
@@ -509,21 +524,6 @@ webpackJsonp([13,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1235:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'error': __webpack_require__(915),
-	    'icon': __webpack_require__(916),
-	    'simple': __webpack_require__(917),
-	    'small-size': __webpack_require__(918),
-	    'step-next': __webpack_require__(919),
-	    'vertical-small': __webpack_require__(920),
-	    'vertical': __webpack_require__(921),
-	}
 
 /***/ }
 

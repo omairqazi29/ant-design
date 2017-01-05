@@ -1,13 +1,26 @@
 webpackJsonp([30,209],{
 
-/***/ 787:
+/***/ 651:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1512),
+	    'custom-trigger': __webpack_require__(1513),
+	    'side': __webpack_require__(1514),
+	    'top-side': __webpack_require__(1515),
+	    'top': __webpack_require__(1516),
+	}
+
+/***/ },
+
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(180);
+	var _style2 = __webpack_require__(202);
 
-	var _layout = __webpack_require__(179);
+	var _layout = __webpack_require__(201);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -164,14 +177,14 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 788:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(29);
+	var _style4 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -193,9 +206,9 @@ webpackJsonp([30,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(180);
+	var _style6 = __webpack_require__(202);
 
-	var _layout = __webpack_require__(179);
+	var _layout = __webpack_require__(201);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -328,20 +341,20 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 789:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(79);
+	var _style5 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style6 = __webpack_require__(29);
+	var _style6 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -363,9 +376,9 @@ webpackJsonp([30,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style8 = __webpack_require__(180);
+	var _style8 = __webpack_require__(202);
 
-	var _layout = __webpack_require__(179);
+	var _layout = __webpack_require__(201);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -552,7 +565,7 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 790:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -563,21 +576,21 @@ webpackJsonp([30,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(79);
+	var _style6 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style7 = __webpack_require__(180);
+	var _style7 = __webpack_require__(202);
 
-	var _layout = __webpack_require__(179);
+	var _layout = __webpack_require__(201);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _style8 = __webpack_require__(29);
+	var _style8 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -789,26 +802,26 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 791:
+/***/ 1516:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style5 = __webpack_require__(29);
+	var _style5 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	var _style6 = __webpack_require__(180);
+	var _style6 = __webpack_require__(202);
 
-	var _layout = __webpack_require__(179);
+	var _layout = __webpack_require__(201);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -917,19 +930,6 @@ webpackJsonp([30,209],{
 	  "style": "#components-layout-demo-top .logo {\n  width: 120px;\n  height: 31px;\n  background: #333;\n  border-radius: 6px;\n  margin: 16px 24px 16px 0;\n  float: left;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-top</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">31</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px <span class=\"token number\">24</span>px <span class=\"token number\">16</span>px <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">float</span><span class=\"token punctuation\">:</span> left<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
-
-/***/ },
-
-/***/ 1219:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(787),
-	    'custom-trigger': __webpack_require__(788),
-	    'side': __webpack_require__(789),
-	    'top-side': __webpack_require__(790),
-	    'top': __webpack_require__(791),
-	}
 
 /***/ }
 

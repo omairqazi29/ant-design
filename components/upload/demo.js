@@ -1,13 +1,28 @@
 webpackJsonp([11,209],{
 
-/***/ 1012:
+/***/ 678:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'avatar': __webpack_require__(1737),
+	    'basic': __webpack_require__(1738),
+	    'defaultFileList': __webpack_require__(1739),
+	    'drag': __webpack_require__(1740),
+	    'fileList': __webpack_require__(1741),
+	    'picture-card': __webpack_require__(1742),
+	    'picture-style': __webpack_require__(1743),
+	}
+
+/***/ },
+
+/***/ 1737:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(122);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -29,9 +44,9 @@ webpackJsonp([11,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style6 = __webpack_require__(60);
+	var _style6 = __webpack_require__(65);
 
-	var _message = __webpack_require__(59);
+	var _message = __webpack_require__(64);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -129,18 +144,18 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1013:
+/***/ 1738:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(122);
+	var _style5 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style6 = __webpack_require__(12);
+	var _style6 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -152,9 +167,9 @@ webpackJsonp([11,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style8 = __webpack_require__(60);
+	var _style8 = __webpack_require__(65);
 
-	var _message = __webpack_require__(59);
+	var _message = __webpack_require__(64);
 
 	var _message2 = _interopRequireDefault(_message);
 
@@ -218,18 +233,18 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1014:
+/***/ 1739:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(122);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -297,7 +312,7 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1015:
+/***/ 1740:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -308,15 +323,15 @@ webpackJsonp([11,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(60);
+	var _style5 = __webpack_require__(65);
 
-	var _message = __webpack_require__(59);
+	var _message = __webpack_require__(64);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _style6 = __webpack_require__(122);
+	var _style6 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -394,14 +409,14 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1016:
+/***/ 1741:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(122);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -409,7 +424,7 @@ webpackJsonp([11,209],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -496,20 +511,20 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1017:
+/***/ 1742:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(69);
+	var _style4 = __webpack_require__(74);
 
-	var _modal = __webpack_require__(61);
+	var _modal = __webpack_require__(66);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _style5 = __webpack_require__(122);
+	var _style5 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -631,7 +646,7 @@ webpackJsonp([11,209],{
 
 /***/ },
 
-/***/ 1018:
+/***/ 1743:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -640,13 +655,13 @@ webpackJsonp([11,209],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style4 = __webpack_require__(122);
+	var _style4 = __webpack_require__(131);
 
-	var _upload = __webpack_require__(121);
+	var _upload = __webpack_require__(130);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(12);
+	var _style5 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -729,21 +744,6 @@ webpackJsonp([11,209],{
 	  "style": "/* tile uploaded pictures */\n.upload-list-inline .ant-upload-list-item {\n  display: inline-block;\n  width: 200px;\n  margin-right: 8px;\n}",
 	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* tile uploaded pictures */</span>\n<span class=\"token selector\"><span class=\"token class\">.upload-list-inline</span> <span class=\"token class\">.ant-upload-list-item</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">display</span><span class=\"token punctuation\">:</span> inline-block<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">200</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">8</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
-
-/***/ },
-
-/***/ 1246:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'avatar': __webpack_require__(1012),
-	    'basic': __webpack_require__(1013),
-	    'defaultFileList': __webpack_require__(1014),
-	    'drag': __webpack_require__(1015),
-	    'fileList': __webpack_require__(1016),
-	    'picture-card': __webpack_require__(1017),
-	    'picture-style': __webpack_require__(1018),
-	}
 
 /***/ }
 

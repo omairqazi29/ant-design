@@ -1,6 +1,6 @@
 webpackJsonp([96,209],{
 
-/***/ 1033:
+/***/ 1758:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34,8 +34,8 @@ webpackJsonp([96,209],{
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
 	  }, "例子"], " 查看定制效果。"], ["h3", "1) package.theme（推荐）"], ["p", "配置在 ", ["code", "package.json"], " 下的 ", ["code", "theme"], " 字段。theme 可以为配置为一个对象或文件路径。"], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"@primary-color\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"#1DA57A\"</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>"
-	  }, ["code", "\"theme\": {\n  \"@primary-color\": \"#1DA57A\",\n},"]], ["p", "或者 ", ["a", {
+	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"primary-color\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"#1DA57A\"</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>"
+	  }, ["code", "\"theme\": {\n  \"primary-color\": \"#1DA57A\",\n},"]], ["p", "或者 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/blob/master/examples/customize-antd-theme/theme.js"
 	  }, "一个 js 文件"], "："], ["pre", {

@@ -1,6 +1,6 @@
 webpackJsonp([87,209],{
 
-/***/ 1042:
+/***/ 1767:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -80,16 +80,25 @@ webpackJsonp([87,209],{
 	  }, ["code", "> @ build /private/tmp/myapp\n> roadhog build\n\nCreating an optimized production build...\nCompiled successfully.\n\nFile sizes after gzip:\n\n  82.98 KB  dist/index.js\n  270 B     dist/index.css"]], ["p", "The ", ["code", "build"], " command packages up all of the assets that make up your application —— JavaScript, templates, CSS, web fonts, images, and more. Then you can find these files in the ", ["code", "dist /"], " directory."], ["h2", "What's Next"], ["p", "We have completed a simple application, but you may still have lots of questions, such as:"], ["ul", ["li", ["p", "How to dealing with async logic"]], ["li", ["p", "How to load initial data elegantly"]], ["li", ["p", "How to handle onError globally and locally"]], ["li", ["p", "How to load Routes and Models on demand"]], ["li", ["p", "How to implement HMR"]], ["li", ["p", "How to mock data"]], ["li", ["p", "and so on..."]]], ["p", "You can:"], ["ul", ["li", ["p", "Visit ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/dvajs/dva"
-	  }, "dva official website"], "."]], ["li", ["p", "View all the ", ["a", {
+	  }, "dva official website"], "."]], ["li", ["p", "Be familiar with the ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva#api"
-	  }, "API"], "."]], ["li", ["p", "View ", ["a", {
+	    "href": "https://github.com/dvajs/dva/blob/master/docs/Concepts.md"
+	  }, "8 Conpects"], ", and understand how they are connected together"]], ["li", ["p", "Know all ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/tutorial/01-%E6%A6%82%E8%A6%81.md"
-	  }, "tutorial"], ", complete a medium application step by step."]], ["li", ["p", "View examples, such as ", ["a", {
+	    "href": "https://github.com/dvajs/dva/blob/master/docs/API.md"
+	  }, "dva APIs"]]], ["li", ["p", "Checkout ", ["a", {
 	    "title": null,
-	    "href": "https://github.com/dvajs/dva-hackernews"
-	  }, "dva version of hackernews"], "."]]]],
+	    "href": "https://github.com/dvajs/dva-knowledgemap"
+	  }, "dva knowledgemap"], ", including all the basic knowledge with ES6, React, dva"]], ["li", ["p", "Checkout ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/dvajs/dva/issues?q=is%3Aissue+is%3Aclosed+label%3Afaq"
+	  }, "more FAQ"]]], ["li", ["p", "If your project is created with ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/dvajs/dva-cli"
+	  }, "dva-cli"], " , checkout how to ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/sorrycc/roadhog#配置"
+	  }, "Configure it"]]]]],
 	  "meta": {
 	    "order": 3,
 	    "title": "Real project with dva",

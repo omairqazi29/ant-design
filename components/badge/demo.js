@@ -1,13 +1,28 @@
 webpackJsonp([17,209],{
 
-/***/ 651:
+/***/ 636:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1375),
+	    'change': __webpack_require__(1376),
+	    'dot': __webpack_require__(1377),
+	    'link': __webpack_require__(1378),
+	    'no-wrapper': __webpack_require__(1379),
+	    'overflow': __webpack_require__(1380),
+	    'status': __webpack_require__(1381),
+	}
+
+/***/ },
+
+/***/ 1375:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(134);
+	var _style2 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -58,14 +73,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 652:
+/***/ 1376:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style5 = __webpack_require__(63);
+	var _style5 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -75,13 +90,13 @@ webpackJsonp([17,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style7 = __webpack_require__(134);
+	var _style7 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
-	var _style8 = __webpack_require__(12);
+	var _style8 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -186,14 +201,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 653:
+/***/ 1377:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(134);
+	var _style3 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -263,14 +278,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 654:
+/***/ 1378:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(134);
+	var _style2 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -324,14 +339,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 655:
+/***/ 1379:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(134);
+	var _style2 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -384,14 +399,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 656:
+/***/ 1380:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(134);
+	var _style2 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -460,14 +475,14 @@ webpackJsonp([17,209],{
 
 /***/ },
 
-/***/ 657:
+/***/ 1381:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(134);
+	var _style2 = __webpack_require__(145);
 
-	var _badge = __webpack_require__(133);
+	var _badge = __webpack_require__(144);
 
 	var _badge2 = _interopRequireDefault(_badge);
 
@@ -528,21 +543,6 @@ webpackJsonp([17,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1204:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(651),
-	    'change': __webpack_require__(652),
-	    'dot': __webpack_require__(653),
-	    'link': __webpack_require__(654),
-	    'no-wrapper': __webpack_require__(655),
-	    'overflow': __webpack_require__(656),
-	    'status': __webpack_require__(657),
-	}
 
 /***/ }
 

@@ -1,6 +1,6 @@
 webpackJsonp([97,209],{
 
-/***/ 1032:
+/***/ 1757:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34,8 +34,8 @@ webpackJsonp([97,209],{
 	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme"
 	  }, "example"], " as a playground."], ["h3", "1) Using 'theme' property in package.theme (recommended way)"], ["p", "Specify the ", ["code", "theme"], " property in ", ["code", "package.json"], " file, whose value can be either an object or the path to a JS file that contains the custom values of specific variables:"], ["ul", ["li", ["p", "example of directly specifying the custom values as an object:"]]], ["pre", {
 	    "lang": "js",
-	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"@primary-color\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"#1DA57A\"</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>"
-	  }, ["code", "\"theme\": {\n  \"@primary-color\": \"#1DA57A\",\n},"]], ["ul", ["li", ["p", "example of specifying a ", ["a", {
+	    "highlighted": "<span class=\"token string\">\"theme\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token string\">\"primary-color\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"#1DA57A\"</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>"
+	  }, ["code", "\"theme\": {\n  \"primary-color\": \"#1DA57A\",\n},"]], ["ul", ["li", ["p", "example of specifying a ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/antd-init/blob/master/examples/customize-antd-theme/theme.js"
 	  }, "file path"], " to a JS file:"]]], ["pre", {

@@ -1,13 +1,25 @@
 webpackJsonp([34,209],{
 
-/***/ 924:
+/***/ 668:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(1649),
+	    'disabled': __webpack_require__(1650),
+	    'size': __webpack_require__(1651),
+	    'text': __webpack_require__(1652),
+	}
+
+/***/ },
+
+/***/ 1649:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(63);
+	var _style2 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -56,20 +68,20 @@ webpackJsonp([34,209],{
 
 /***/ },
 
-/***/ 925:
+/***/ 1650:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -136,14 +148,14 @@ webpackJsonp([34,209],{
 
 /***/ },
 
-/***/ 926:
+/***/ 1651:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(63);
+	var _style2 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -195,7 +207,7 @@ webpackJsonp([34,209],{
 
 /***/ },
 
-/***/ 927:
+/***/ 1652:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -206,9 +218,9 @@ webpackJsonp([34,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(63);
+	var _style4 = __webpack_require__(68);
 
-	var _switch = __webpack_require__(62);
+	var _switch = __webpack_require__(67);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -259,18 +271,6 @@ webpackJsonp([34,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1236:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(924),
-	    'disabled': __webpack_require__(925),
-	    'size': __webpack_require__(926),
-	    'text': __webpack_require__(927),
-	}
 
 /***/ }
 
