@@ -1,25 +1,13 @@
 webpackJsonp([33,209],{
 
-/***/ 673:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1707),
-	    'color': __webpack_require__(1708),
-	    'custom': __webpack_require__(1709),
-	    'pending': __webpack_require__(1710),
-	}
-
-/***/ },
-
-/***/ 1707:
+/***/ 984:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(208);
+	var _style2 = __webpack_require__(187);
 
-	var _timeline = __webpack_require__(207);
+	var _timeline = __webpack_require__(186);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -88,14 +76,14 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1708:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(208);
+	var _style2 = __webpack_require__(187);
 
-	var _timeline = __webpack_require__(207);
+	var _timeline = __webpack_require__(186);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -192,7 +180,7 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1709:
+/***/ 986:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -203,9 +191,9 @@ webpackJsonp([33,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(208);
+	var _style4 = __webpack_require__(187);
 
-	var _timeline = __webpack_require__(207);
+	var _timeline = __webpack_require__(186);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -274,14 +262,14 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1710:
+/***/ 987:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(208);
+	var _style2 = __webpack_require__(187);
 
-	var _timeline = __webpack_require__(207);
+	var _timeline = __webpack_require__(186);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -346,6 +334,18 @@ webpackJsonp([33,209],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1243:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(984),
+	    'color': __webpack_require__(985),
+	    'custom': __webpack_require__(986),
+	    'pending': __webpack_require__(987),
+	}
 
 /***/ }
 

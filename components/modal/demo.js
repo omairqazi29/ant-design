@@ -1,30 +1,13 @@
 webpackJsonp([7,209],{
 
-/***/ 656:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'async': __webpack_require__(1547),
-	    'basic': __webpack_require__(1548),
-	    'confirm-promise': __webpack_require__(1549),
-	    'confirm': __webpack_require__(1550),
-	    'footer': __webpack_require__(1551),
-	    'info': __webpack_require__(1552),
-	    'locale': __webpack_require__(1553),
-	    'manual': __webpack_require__(1554),
-	    'position': __webpack_require__(1555),
-	}
-
-/***/ },
-
-/***/ 1547:
+/***/ 824:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -115,14 +98,14 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1548:
+/***/ 825:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -218,7 +201,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1549:
+/***/ 826:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -229,9 +212,9 @@ webpackJsonp([7,209],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(74);
+	var _style4 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -292,7 +275,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1550:
+/***/ 827:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -303,9 +286,9 @@ webpackJsonp([7,209],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(74);
+	var _style4 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -362,14 +345,14 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1551:
+/***/ 828:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -488,7 +471,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1552:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -499,9 +482,9 @@ webpackJsonp([7,209],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(74);
+	var _style4 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -593,14 +576,14 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1553:
+/***/ 830:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -710,7 +693,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1554:
+/***/ 831:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -731,14 +714,14 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1555:
+/***/ 832:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(74);
+	var _style3 = __webpack_require__(69);
 
-	var _modal = __webpack_require__(66);
+	var _modal = __webpack_require__(61);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -870,6 +853,23 @@ webpackJsonp([7,209],{
 	  "style": "/* use css to set position of modal */\n.vertical-center-modal {\n  text-align: center;\n  white-space: nowrap;\n}\n\n.vertical-center-modal:before {\n  content: '';\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n  width: 0;\n}\n\n.vertical-center-modal .ant-modal {\n  display: inline-block;\n  vertical-align: middle;\n  top: 0;\n  text-align: left;\n}\n\n/*\n// Use flex which not working in IE\n.vertical-center-modal {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vertical-center-modal .ant-modal {\n  top: 0;\n}\n*/",
 	  "highlightedStyle": "<span class=\"token comment\" spellcheck=\"true\">/* use css to set position of modal */</span>\n<span class=\"token selector\"><span class=\"token class\">.vertical-center-modal</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> center<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">white-space</span><span class=\"token punctuation\">:</span> nowrap<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.vertical-center-modal</span><span class=\"token pseudo-element\">:before</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">content</span><span class=\"token punctuation\">:</span> <span class=\"token string\">''</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">display</span><span class=\"token punctuation\">:</span> inline-block<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">100%</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">vertical-align</span><span class=\"token punctuation\">:</span> middle<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.vertical-center-modal</span> <span class=\"token class\">.ant-modal</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">display</span><span class=\"token punctuation\">:</span> inline-block<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">vertical-align</span><span class=\"token punctuation\">:</span> middle<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> left<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token comment\" spellcheck=\"true\">/*\n// Use flex which not working in IE\n.vertical-center-modal {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vertical-center-modal .ant-modal {\n  top: 0;\n}\n*/</span>"
 	};
+
+/***/ },
+
+/***/ 1226:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'async': __webpack_require__(824),
+	    'basic': __webpack_require__(825),
+	    'confirm-promise': __webpack_require__(826),
+	    'confirm': __webpack_require__(827),
+	    'footer': __webpack_require__(828),
+	    'info': __webpack_require__(829),
+	    'locale': __webpack_require__(830),
+	    'manual': __webpack_require__(831),
+	    'position': __webpack_require__(832),
+	}
 
 /***/ }
 

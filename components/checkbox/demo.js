@@ -1,26 +1,13 @@
 webpackJsonp([31,209],{
 
-/***/ 643:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1432),
-	    'check-all': __webpack_require__(1433),
-	    'controller': __webpack_require__(1434),
-	    'disabled': __webpack_require__(1435),
-	    'group': __webpack_require__(1436),
-	}
-
-/***/ },
-
-/***/ 1432:
+/***/ 709:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _checkbox = __webpack_require__(61);
+	var _checkbox = __webpack_require__(56);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -72,14 +59,14 @@ webpackJsonp([31,209],{
 
 /***/ },
 
-/***/ 1433:
+/***/ 710:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _checkbox = __webpack_require__(61);
+	var _checkbox = __webpack_require__(56);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -155,7 +142,7 @@ webpackJsonp([31,209],{
 
 /***/ },
 
-/***/ 1434:
+/***/ 711:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -166,9 +153,9 @@ webpackJsonp([31,209],{
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _style4 = __webpack_require__(86);
+	var _style4 = __webpack_require__(82);
 
-	var _checkbox = __webpack_require__(61);
+	var _checkbox = __webpack_require__(56);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -257,14 +244,14 @@ webpackJsonp([31,209],{
 
 /***/ },
 
-/***/ 1435:
+/***/ 712:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _checkbox = __webpack_require__(61);
+	var _checkbox = __webpack_require__(56);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -316,14 +303,14 @@ webpackJsonp([31,209],{
 
 /***/ },
 
-/***/ 1436:
+/***/ 713:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(86);
+	var _style2 = __webpack_require__(82);
 
-	var _checkbox = __webpack_require__(61);
+	var _checkbox = __webpack_require__(56);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -377,6 +364,19 @@ webpackJsonp([31,209],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1213:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(709),
+	    'check-all': __webpack_require__(710),
+	    'controller': __webpack_require__(711),
+	    'disabled': __webpack_require__(712),
+	    'group': __webpack_require__(713),
+	}
 
 /***/ }
 

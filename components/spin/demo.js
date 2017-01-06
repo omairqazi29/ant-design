@@ -1,27 +1,13 @@
 webpackJsonp([19,209],{
 
-/***/ 666:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1632),
-	    'delayAndDebounce': __webpack_require__(1633),
-	    'inside': __webpack_require__(1634),
-	    'nested': __webpack_require__(1635),
-	    'size': __webpack_require__(1636),
-	    'tip': __webpack_require__(1637),
-	}
-
-/***/ },
-
-/***/ 1632:
+/***/ 909:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -67,26 +53,26 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1633:
+/***/ 910:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(68);
+	var _style4 = __webpack_require__(63);
 
-	var _switch = __webpack_require__(67);
+	var _switch = __webpack_require__(62);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style5 = __webpack_require__(150);
+	var _style5 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style6 = __webpack_require__(81);
+	var _style6 = __webpack_require__(77);
 
-	var _alert = __webpack_require__(80);
+	var _alert = __webpack_require__(76);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -155,14 +141,14 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1634:
+/***/ 911:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -214,26 +200,26 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1635:
+/***/ 912:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(68);
+	var _style4 = __webpack_require__(63);
 
-	var _switch = __webpack_require__(67);
+	var _switch = __webpack_require__(62);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _style5 = __webpack_require__(150);
+	var _style5 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style6 = __webpack_require__(81);
+	var _style6 = __webpack_require__(77);
 
-	var _alert = __webpack_require__(80);
+	var _alert = __webpack_require__(76);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -301,14 +287,14 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1636:
+/***/ 913:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(150);
+	var _style2 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
@@ -361,20 +347,20 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1637:
+/***/ 914:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(150);
+	var _style3 = __webpack_require__(139);
 
-	var _spin = __webpack_require__(149);
+	var _spin = __webpack_require__(138);
 
 	var _spin2 = _interopRequireDefault(_spin);
 
-	var _style4 = __webpack_require__(81);
+	var _style4 = __webpack_require__(77);
 
-	var _alert = __webpack_require__(80);
+	var _alert = __webpack_require__(76);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
@@ -421,6 +407,20 @@ webpackJsonp([19,209],{
 	    );
 	  }
 	};
+
+/***/ },
+
+/***/ 1236:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(909),
+	    'delayAndDebounce': __webpack_require__(910),
+	    'inside': __webpack_require__(911),
+	    'nested': __webpack_require__(912),
+	    'size': __webpack_require__(913),
+	    'tip': __webpack_require__(914),
+	}
 
 /***/ }
 
