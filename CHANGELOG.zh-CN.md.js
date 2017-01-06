@@ -16,16 +16,43 @@ webpackJsonp([207,209],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.6.0"], ["p", ["code", "2017-1-2"]], ["ul", ["li", ["p", "采用全新的色彩系统。", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.1"], ["p", ["code", "2017-1-6"]], ["ul", ["li", ["p", "修复 Menu dark theme 样式问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4440"
+	  }, "#4440"]]], ["li", ["p", "修复 ", ["code", "Select[tokenSeparators]"], " ", ["code", "Modal[afterClose]"], " ", ["code", "Input[name]"], " 等的 TypeScript interface 定义。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4441"
+	  }, "#4441"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/eddhannay"
+	  }, "@eddhannay"]]], ["li", ["p", "修复 ", ["code", "TimePicker[placeholder]"], " 无法置空的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4446"
+	  }, "#4446"], " ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/jialeicui"
+	  }, "@jialeicui"]]], ["li", ["p", "修复 DatePicker 等年份选择面板折行问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4415"
+	  }, "#4415"]]], ["li", ["p", "修复 Table loading 状态分页器可操作的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4461"
+	  }, "#4461"]]], ["li", ["p", "修复 ", ["code", "Input[prefix|suffix]"], " 垂直对齐问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/c4ac4d1eca53ae2f6f4a1e15210b43745f283534"
+	  }, "commit"]]], ["li", ["p", "修复 Cascader 对齐问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/1fbebd4ecfff432e1b2261c9dfee4b9f471e7b1f"
+	  }, "commit"]]]], ["h2", "2.6.0"], ["p", ["code", "2017-1-2"]], ["ul", ["li", ["p", "采用全新的色彩系统。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/pull/4426"
-	  }, "pull/4426"]], ["ul", ["li", ["p", "全新的调色板系统"]], ["li", ["p", "使用新的算法函数代替 shade，tint"]], ["li", ["p", "调整默认文字颜色"]]]], ["li", ["p", "增加 Grid 栅格配置器示例。", ["a", {
-	    "title": null,
-	    "href": "https://github.com/ant-design/ant-design/commit/ee17abfa9d0362c6f9baab4a9a09e57574583246"
-	  }, "commit/ee17ab"]]], ["li", ["p", "增加 Layout 布局组件。", ["a", {
+	  }, "pull/4426"]], ["ul", ["li", ["p", "使用新的算法函数代替 shade，tint。"]], ["li", ["p", "利用算法生成的新版色板。"]], ["li", ["p", "调整默认文字颜色。"]]]], ["li", ["p", "增加 Layout 布局组件。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3534"
-	  }, "#3534"]]], ["li", ["p", "Input"], ["ul", ["li", ["p", "增加 prefix 和 suffix 属性，支持前后缀配置。", ["a", {
+	  }, "#3534"]]], ["li", ["p", "增加 Grid 栅格配置器示例。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/commit/ee17abfa9d0362c6f9baab4a9a09e57574583246"
+	  }, "commit/ee17ab"]]], ["li", ["p", "Input"], ["ul", ["li", ["p", "增加 prefix 和 suffix 属性，支持前后缀配置。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4226"
 	  }, "#4226"], " ", ["a", {
@@ -692,6 +719,9 @@ webpackJsonp([207,209],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.1"
+	  }, "2.6.1"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.6.0"
 	  }, "2.6.0"]], ["li", ["a", {

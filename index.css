@@ -5660,21 +5660,6 @@ textarea.ant-input {
   display: block;
   white-space: nowrap;
 }
-.ant-menu-item.ant-menu-item-disabled,
-.ant-menu-submenu-title.ant-menu-item-disabled,
-.ant-menu-item.ant-menu-submenu-disabled,
-.ant-menu-submenu-title.ant-menu-submenu-disabled {
-  color: rgba(0, 0, 0, 0.43) !important;
-  cursor: not-allowed;
-  background: none;
-}
-.ant-menu-item.ant-menu-item-disabled > a,
-.ant-menu-submenu-title.ant-menu-item-disabled > a,
-.ant-menu-item.ant-menu-submenu-disabled > a,
-.ant-menu-submenu-title.ant-menu-submenu-disabled > a {
-  color: rgba(0, 0, 0, 0.43) !important;
-  pointer-events: none;
-}
 .ant-menu-item .anticon,
 .ant-menu-submenu-title .anticon {
   min-width: 14px;
@@ -5842,9 +5827,21 @@ textarea.ant-input {
 .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title {
   padding-left: 32px;
 }
+.ant-menu-item-disabled,
+.ant-menu-submenu-disabled {
+  color: rgba(0, 0, 0, 0.25) !important;
+  cursor: not-allowed;
+  background: none;
+  border-color: transparent !important;
+}
+.ant-menu-item-disabled > a,
+.ant-menu-submenu-disabled > a {
+  color: rgba(0, 0, 0, 0.25) !important;
+  pointer-events: none;
+}
 .ant-menu-dark,
 .ant-menu-dark .ant-menu-sub {
-  color: rgba(255, 255, 255, 0.57);
+  color: rgba(255, 255, 255, 0.67);
   background: #404040;
 }
 .ant-menu-dark .ant-menu-inline.ant-menu-sub {
@@ -5860,8 +5857,9 @@ textarea.ant-input {
   top: 0;
 }
 .ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-item-group-title,
 .ant-menu-dark .ant-menu-item > a {
-  color: rgba(255, 255, 255, 0.57);
+  color: rgba(255, 255, 255, 0.67);
 }
 .ant-menu-dark.ant-menu-inline,
 .ant-menu-dark.ant-menu-vertical {
@@ -5880,7 +5878,7 @@ textarea.ant-input {
 .ant-menu-dark .ant-menu-submenu:hover,
 .ant-menu-dark .ant-menu-submenu-title:hover {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.91);
+  color: #fff;
 }
 .ant-menu-dark .ant-menu-item:hover > a,
 .ant-menu-dark .ant-menu-item-active > a,
@@ -5888,21 +5886,28 @@ textarea.ant-input {
 .ant-menu-dark .ant-menu-submenu-selected > a,
 .ant-menu-dark .ant-menu-submenu:hover > a,
 .ant-menu-dark .ant-menu-submenu-title:hover > a {
-  color: rgba(255, 255, 255, 0.91);
+  color: #fff;
 }
 .ant-menu-dark .ant-menu-item-selected {
   border-right: 0;
-  color: rgba(255, 255, 255, 0.91);
+  color: #fff;
 }
 .ant-menu-dark .ant-menu-item-selected > a,
 .ant-menu-dark .ant-menu-item-selected > a:hover {
-  color: rgba(255, 255, 255, 0.91);
+  color: #fff;
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected {
   background-color: transparent;
 }
 .ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
   background-color: #108ee9;
+}
+.ant-menu-dark .ant-menu-item-disabled,
+.ant-menu-dark .ant-menu-submenu-disabled,
+.ant-menu-dark .ant-menu-item-disabled > a,
+.ant-menu-dark .ant-menu-submenu-disabled > a {
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.35) !important;
 }
 .ant-radio-group {
   display: inline-block;
@@ -9093,7 +9098,6 @@ span.ant-radio + * {
 }
 .ant-cascader-input.ant-input {
   background-color: transparent;
-  display: block;
   cursor: pointer;
   width: 100%;
   z-index: 1;
