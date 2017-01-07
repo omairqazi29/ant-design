@@ -14016,28 +14016,28 @@ textarea.ant-pagination-options-quick-jumper input {
   margin: -7px;
 }
 .ant-spin-nested-loading .ant-spin-lg .ant-spin-dot {
-  margin: -15px;
-}
-.ant-spin-nested-loading .ant-spin-show-text .ant-spin-dot {
   margin: -16px;
 }
+.ant-spin-nested-loading .ant-spin-show-text .ant-spin-dot {
+  margin-top: -20px;
+}
 .ant-spin-nested-loading .ant-spin-show-text.ant-spin-sm .ant-spin-dot {
-  margin: -13px;
+  margin-top: -17px;
 }
 .ant-spin-nested-loading .ant-spin-show-text.ant-spin-lg .ant-spin-dot {
-  margin: -21px;
+  margin-top: -26px;
 }
 .ant-spin-nested-loading .ant-spin-text {
   position: absolute;
   top: 50%;
   width: 100%;
-  padding-top: 4px;
+  padding-top: 6px;
 }
 .ant-spin-nested-loading .ant-spin-sm .ant-spin-text {
-  padding-top: 1px;
+  padding-top: 3px;
 }
 .ant-spin-nested-loading .ant-spin-lg .ant-spin-text {
-  padding-top: 9px;
+  padding-top: 12px;
 }
 .ant-spin-container {
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -14072,13 +14072,13 @@ textarea.ant-pagination-options-quick-jumper input {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-animation: antRotate 3.2s infinite linear;
-          animation: antRotate 3.2s infinite linear;
+  -webkit-animation: antRotate 2s infinite linear;
+          animation: antRotate 2s infinite linear;
 }
 .ant-spin-dot i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
   background-color: #108ee9;
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
@@ -14086,11 +14086,11 @@ textarea.ant-pagination-options-quick-jumper input {
   display: block;
   position: absolute;
   opacity: 0.3;
-  -webkit-animation: antSpinMove .8s infinite linear alternate;
-          animation: antSpinMove .8s infinite linear alternate;
-  -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-          transform-origin: 0 0;
+  -webkit-animation: antSpinMove 1s infinite linear alternate;
+          animation: antSpinMove 1s infinite linear alternate;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 .ant-spin-dot i:nth-child(1) {
   left: 0;
@@ -14123,12 +14123,12 @@ textarea.ant-pagination-options-quick-jumper input {
   height: 6px;
 }
 .ant-spin-lg .ant-spin-dot {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 .ant-spin-lg .ant-spin-dot i {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 .ant-spin.ant-spin-show-text .ant-spin-text {
   display: block;
@@ -14142,15 +14142,15 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 @-webkit-keyframes antSpinMove {
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     opacity: 1;
   }
 }
 @keyframes antSpinMove {
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     opacity: 1;
   }
 }

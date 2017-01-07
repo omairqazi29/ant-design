@@ -1,13 +1,315 @@
 webpackJsonp([1,209],{
 
-/***/ 888:
+/***/ 664:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'automatic-tokenization': __webpack_require__(1610),
+	    'basic': __webpack_require__(1611),
+	    'combobox': __webpack_require__(1612),
+	    'coordinate': __webpack_require__(1613),
+	    'label-in-value': __webpack_require__(1614),
+	    'multiple': __webpack_require__(1615),
+	    'optgroup': __webpack_require__(1616),
+	    'search-box': __webpack_require__(1617),
+	    'search': __webpack_require__(1618),
+	    'size': __webpack_require__(1619),
+	    'tags': __webpack_require__(1620),
+	}
+
+/***/ },
+
+/***/ 681:
+/***/ function(module, exports) {
+
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	// If obj.hasOwnProperty has been overridden, then calling
+	// obj.hasOwnProperty(prop) will break.
+	// See: https://github.com/joyent/node/issues/1707
+	function hasOwnProperty(obj, prop) {
+	  return Object.prototype.hasOwnProperty.call(obj, prop);
+	}
+
+	module.exports = function(qs, sep, eq, options) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  var obj = {};
+
+	  if (typeof qs !== 'string' || qs.length === 0) {
+	    return obj;
+	  }
+
+	  var regexp = /\+/g;
+	  qs = qs.split(sep);
+
+	  var maxKeys = 1000;
+	  if (options && typeof options.maxKeys === 'number') {
+	    maxKeys = options.maxKeys;
+	  }
+
+	  var len = qs.length;
+	  // maxKeys <= 0 means that we should not limit keys count
+	  if (maxKeys > 0 && len > maxKeys) {
+	    len = maxKeys;
+	  }
+
+	  for (var i = 0; i < len; ++i) {
+	    var x = qs[i].replace(regexp, '%20'),
+	        idx = x.indexOf(eq),
+	        kstr, vstr, k, v;
+
+	    if (idx >= 0) {
+	      kstr = x.substr(0, idx);
+	      vstr = x.substr(idx + 1);
+	    } else {
+	      kstr = x;
+	      vstr = '';
+	    }
+
+	    k = decodeURIComponent(kstr);
+	    v = decodeURIComponent(vstr);
+
+	    if (!hasOwnProperty(obj, k)) {
+	      obj[k] = v;
+	    } else if (Array.isArray(obj[k])) {
+	      obj[k].push(v);
+	    } else {
+	      obj[k] = [obj[k], v];
+	    }
+	  }
+
+	  return obj;
+	};
+
+
+/***/ },
+
+/***/ 682:
+/***/ function(module, exports) {
+
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	var stringifyPrimitive = function(v) {
+	  switch (typeof v) {
+	    case 'string':
+	      return v;
+
+	    case 'boolean':
+	      return v ? 'true' : 'false';
+
+	    case 'number':
+	      return isFinite(v) ? v : '';
+
+	    default:
+	      return '';
+	  }
+	};
+
+	module.exports = function(obj, sep, eq, name) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  if (obj === null) {
+	    obj = undefined;
+	  }
+
+	  if (typeof obj === 'object') {
+	    return Object.keys(obj).map(function(k) {
+	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+	      if (Array.isArray(obj[k])) {
+	        return obj[k].map(function(v) {
+	          return ks + encodeURIComponent(stringifyPrimitive(v));
+	        }).join(sep);
+	      } else {
+	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+	      }
+	    }).join(sep);
+
+	  }
+
+	  if (!name) return '';
+	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+	         encodeURIComponent(stringifyPrimitive(obj));
+	};
+
+
+/***/ },
+
+/***/ 683:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	exports.decode = exports.parse = __webpack_require__(681);
+	exports.encode = exports.stringify = __webpack_require__(682);
 
-	var _select = __webpack_require__(25);
+
+/***/ },
+
+/***/ 872:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+	    factory(exports, module);
+	  } else {
+	    var mod = {
+	      exports: {}
+	    };
+	    factory(mod.exports, mod);
+	    global.fetchJsonp = mod.exports;
+	  }
+	})(this, function (exports, module) {
+	  'use strict';
+
+	  var defaultOptions = {
+	    timeout: 5000,
+	    jsonpCallback: 'callback',
+	    jsonpCallbackFunction: null
+	  };
+
+	  function generateCallbackFunction() {
+	    return 'jsonp_' + Date.now() + '_' + Math.ceil(Math.random() * 100000);
+	  }
+
+	  // Known issue: Will throw 'Uncaught ReferenceError: callback_*** is not defined'
+	  // error if request timeout
+	  function clearFunction(functionName) {
+	    // IE8 throws an exception when you try to delete a property on window
+	    // http://stackoverflow.com/a/1824228/751089
+	    try {
+	      delete window[functionName];
+	    } catch (e) {
+	      window[functionName] = undefined;
+	    }
+	  }
+
+	  function removeScript(scriptId) {
+	    var script = document.getElementById(scriptId);
+	    document.getElementsByTagName('head')[0].removeChild(script);
+	  }
+
+	  function fetchJsonp(_url) {
+	    var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+	    // to avoid param reassign
+	    var url = _url;
+	    var timeout = options.timeout || defaultOptions.timeout;
+	    var jsonpCallback = options.jsonpCallback || defaultOptions.jsonpCallback;
+
+	    var timeoutId = undefined;
+
+	    return new Promise(function (resolve, reject) {
+	      var callbackFunction = options.jsonpCallbackFunction || generateCallbackFunction();
+	      var scriptId = jsonpCallback + '_' + callbackFunction;
+
+	      window[callbackFunction] = function (response) {
+	        resolve({
+	          ok: true,
+	          // keep consistent with fetch API
+	          json: function json() {
+	            return Promise.resolve(response);
+	          }
+	        });
+
+	        if (timeoutId) clearTimeout(timeoutId);
+
+	        removeScript(scriptId);
+
+	        clearFunction(callbackFunction);
+	      };
+
+	      // Check if the user set their own params, and if not add a ? to start a list of params
+	      url += url.indexOf('?') === -1 ? '?' : '&';
+
+	      var jsonpScript = document.createElement('script');
+	      jsonpScript.setAttribute('src', '' + url + jsonpCallback + '=' + callbackFunction);
+	      jsonpScript.id = scriptId;
+	      document.getElementsByTagName('head')[0].appendChild(jsonpScript);
+
+	      timeoutId = setTimeout(function () {
+	        reject(new Error('JSONP request to ' + _url + ' timed out'));
+
+	        clearFunction(callbackFunction);
+	        removeScript(scriptId);
+	      }, timeout);
+	    });
+	  }
+
+	  // export as global function
+	  /*
+	  let local;
+	  if (typeof global !== 'undefined') {
+	    local = global;
+	  } else if (typeof self !== 'undefined') {
+	    local = self;
+	  } else {
+	    try {
+	      local = Function('return this')();
+	    } catch (e) {
+	      throw new Error('polyfill failed because global object is unavailable in this environment');
+	    }
+	  }
+	  local.fetchJsonp = fetchJsonp;
+	  */
+
+	  module.exports = fetchJsonp;
+	});
+
+/***/ },
+
+/***/ 1610:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(27);
+
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -66,14 +368,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 889:
+/***/ 1611:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -157,14 +459,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 890:
+/***/ 1612:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -242,14 +544,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 891:
+/***/ 1613:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -342,14 +644,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 892:
+/***/ 1614:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -410,14 +712,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 893:
+/***/ 1615:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -475,14 +777,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 894:
+/***/ 1616:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -556,14 +858,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 895:
+/***/ 1617:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -575,11 +877,11 @@ webpackJsonp([1,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _querystring = __webpack_require__(1651);
+	var _querystring = __webpack_require__(683);
 
 	var _querystring2 = _interopRequireDefault(_querystring);
 
-	var _fetchJsonp = __webpack_require__(1620);
+	var _fetchJsonp = __webpack_require__(872);
 
 	var _fetchJsonp2 = _interopRequireDefault(_fetchJsonp);
 
@@ -659,14 +961,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 896:
+/***/ 1618:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -735,14 +1037,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 897:
+/***/ 1619:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -868,14 +1170,14 @@ webpackJsonp([1,209],{
 
 /***/ },
 
-/***/ 898:
+/***/ 1620:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(26);
+	var _style2 = __webpack_require__(27);
 
-	var _select = __webpack_require__(25);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
 
@@ -930,308 +1232,6 @@ webpackJsonp([1,209],{
 	    );
 	  }
 	};
-
-/***/ },
-
-/***/ 1234:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'automatic-tokenization': __webpack_require__(888),
-	    'basic': __webpack_require__(889),
-	    'combobox': __webpack_require__(890),
-	    'coordinate': __webpack_require__(891),
-	    'label-in-value': __webpack_require__(892),
-	    'multiple': __webpack_require__(893),
-	    'optgroup': __webpack_require__(894),
-	    'search-box': __webpack_require__(895),
-	    'search': __webpack_require__(896),
-	    'size': __webpack_require__(897),
-	    'tags': __webpack_require__(898),
-	}
-
-/***/ },
-
-/***/ 1620:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-	    factory(exports, module);
-	  } else {
-	    var mod = {
-	      exports: {}
-	    };
-	    factory(mod.exports, mod);
-	    global.fetchJsonp = mod.exports;
-	  }
-	})(this, function (exports, module) {
-	  'use strict';
-
-	  var defaultOptions = {
-	    timeout: 5000,
-	    jsonpCallback: 'callback',
-	    jsonpCallbackFunction: null
-	  };
-
-	  function generateCallbackFunction() {
-	    return 'jsonp_' + Date.now() + '_' + Math.ceil(Math.random() * 100000);
-	  }
-
-	  // Known issue: Will throw 'Uncaught ReferenceError: callback_*** is not defined'
-	  // error if request timeout
-	  function clearFunction(functionName) {
-	    // IE8 throws an exception when you try to delete a property on window
-	    // http://stackoverflow.com/a/1824228/751089
-	    try {
-	      delete window[functionName];
-	    } catch (e) {
-	      window[functionName] = undefined;
-	    }
-	  }
-
-	  function removeScript(scriptId) {
-	    var script = document.getElementById(scriptId);
-	    document.getElementsByTagName('head')[0].removeChild(script);
-	  }
-
-	  function fetchJsonp(_url) {
-	    var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-	    // to avoid param reassign
-	    var url = _url;
-	    var timeout = options.timeout || defaultOptions.timeout;
-	    var jsonpCallback = options.jsonpCallback || defaultOptions.jsonpCallback;
-
-	    var timeoutId = undefined;
-
-	    return new Promise(function (resolve, reject) {
-	      var callbackFunction = options.jsonpCallbackFunction || generateCallbackFunction();
-	      var scriptId = jsonpCallback + '_' + callbackFunction;
-
-	      window[callbackFunction] = function (response) {
-	        resolve({
-	          ok: true,
-	          // keep consistent with fetch API
-	          json: function json() {
-	            return Promise.resolve(response);
-	          }
-	        });
-
-	        if (timeoutId) clearTimeout(timeoutId);
-
-	        removeScript(scriptId);
-
-	        clearFunction(callbackFunction);
-	      };
-
-	      // Check if the user set their own params, and if not add a ? to start a list of params
-	      url += url.indexOf('?') === -1 ? '?' : '&';
-
-	      var jsonpScript = document.createElement('script');
-	      jsonpScript.setAttribute('src', '' + url + jsonpCallback + '=' + callbackFunction);
-	      jsonpScript.id = scriptId;
-	      document.getElementsByTagName('head')[0].appendChild(jsonpScript);
-
-	      timeoutId = setTimeout(function () {
-	        reject(new Error('JSONP request to ' + _url + ' timed out'));
-
-	        clearFunction(callbackFunction);
-	        removeScript(scriptId);
-	      }, timeout);
-	    });
-	  }
-
-	  // export as global function
-	  /*
-	  let local;
-	  if (typeof global !== 'undefined') {
-	    local = global;
-	  } else if (typeof self !== 'undefined') {
-	    local = self;
-	  } else {
-	    try {
-	      local = Function('return this')();
-	    } catch (e) {
-	      throw new Error('polyfill failed because global object is unavailable in this environment');
-	    }
-	  }
-	  local.fetchJsonp = fetchJsonp;
-	  */
-
-	  module.exports = fetchJsonp;
-	});
-
-/***/ },
-
-/***/ 1649:
-/***/ function(module, exports) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	// If obj.hasOwnProperty has been overridden, then calling
-	// obj.hasOwnProperty(prop) will break.
-	// See: https://github.com/joyent/node/issues/1707
-	function hasOwnProperty(obj, prop) {
-	  return Object.prototype.hasOwnProperty.call(obj, prop);
-	}
-
-	module.exports = function(qs, sep, eq, options) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  var obj = {};
-
-	  if (typeof qs !== 'string' || qs.length === 0) {
-	    return obj;
-	  }
-
-	  var regexp = /\+/g;
-	  qs = qs.split(sep);
-
-	  var maxKeys = 1000;
-	  if (options && typeof options.maxKeys === 'number') {
-	    maxKeys = options.maxKeys;
-	  }
-
-	  var len = qs.length;
-	  // maxKeys <= 0 means that we should not limit keys count
-	  if (maxKeys > 0 && len > maxKeys) {
-	    len = maxKeys;
-	  }
-
-	  for (var i = 0; i < len; ++i) {
-	    var x = qs[i].replace(regexp, '%20'),
-	        idx = x.indexOf(eq),
-	        kstr, vstr, k, v;
-
-	    if (idx >= 0) {
-	      kstr = x.substr(0, idx);
-	      vstr = x.substr(idx + 1);
-	    } else {
-	      kstr = x;
-	      vstr = '';
-	    }
-
-	    k = decodeURIComponent(kstr);
-	    v = decodeURIComponent(vstr);
-
-	    if (!hasOwnProperty(obj, k)) {
-	      obj[k] = v;
-	    } else if (Array.isArray(obj[k])) {
-	      obj[k].push(v);
-	    } else {
-	      obj[k] = [obj[k], v];
-	    }
-	  }
-
-	  return obj;
-	};
-
-
-/***/ },
-
-/***/ 1650:
-/***/ function(module, exports) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	var stringifyPrimitive = function(v) {
-	  switch (typeof v) {
-	    case 'string':
-	      return v;
-
-	    case 'boolean':
-	      return v ? 'true' : 'false';
-
-	    case 'number':
-	      return isFinite(v) ? v : '';
-
-	    default:
-	      return '';
-	  }
-	};
-
-	module.exports = function(obj, sep, eq, name) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  if (obj === null) {
-	    obj = undefined;
-	  }
-
-	  if (typeof obj === 'object') {
-	    return Object.keys(obj).map(function(k) {
-	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-	      if (Array.isArray(obj[k])) {
-	        return obj[k].map(function(v) {
-	          return ks + encodeURIComponent(stringifyPrimitive(v));
-	        }).join(sep);
-	      } else {
-	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-	      }
-	    }).join(sep);
-
-	  }
-
-	  if (!name) return '';
-	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-	         encodeURIComponent(stringifyPrimitive(obj));
-	};
-
-
-/***/ },
-
-/***/ 1651:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	exports.decode = exports.parse = __webpack_require__(1649);
-	exports.encode = exports.stringify = __webpack_require__(1650);
-
 
 /***/ }
 

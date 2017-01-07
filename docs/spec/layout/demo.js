@@ -1,13 +1,26 @@
 webpackJsonp([24,209],{
 
-/***/ 1066:
+/***/ 679:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'aside-collapse': __webpack_require__(1788),
+	    'aside': __webpack_require__(1789),
+	    'ceiling': __webpack_require__(1790),
+	    'top-aside': __webpack_require__(1791),
+	    'top': __webpack_require__(1792),
+	}
+
+/***/ },
+
+/***/ 1788:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -17,9 +30,9 @@ webpackJsonp([24,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(29);
+	var _style6 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -31,7 +44,7 @@ webpackJsonp([24,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(142);
+	var _BrowserDemo = __webpack_require__(153);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -184,14 +197,14 @@ webpackJsonp([24,209],{
 
 /***/ },
 
-/***/ 1067:
+/***/ 1789:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(79);
+	var _style4 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -201,9 +214,9 @@ webpackJsonp([24,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style6 = __webpack_require__(29);
+	var _style6 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -215,7 +228,7 @@ webpackJsonp([24,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(142);
+	var _BrowserDemo = __webpack_require__(153);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -388,7 +401,7 @@ webpackJsonp([24,209],{
 
 /***/ },
 
-/***/ 1068:
+/***/ 1790:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -401,7 +414,7 @@ webpackJsonp([24,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(142);
+	var _BrowserDemo = __webpack_require__(153);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -482,7 +495,7 @@ webpackJsonp([24,209],{
 
 /***/ },
 
-/***/ 1069:
+/***/ 1791:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -493,15 +506,15 @@ webpackJsonp([24,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style5 = __webpack_require__(79);
+	var _style5 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style6 = __webpack_require__(29);
+	var _style6 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -513,7 +526,7 @@ webpackJsonp([24,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(142);
+	var _BrowserDemo = __webpack_require__(153);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -743,20 +756,20 @@ webpackJsonp([24,209],{
 
 /***/ },
 
-/***/ 1070:
+/***/ 1792:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(79);
+	var _style3 = __webpack_require__(83);
 
-	var _breadcrumb = __webpack_require__(78);
+	var _breadcrumb = __webpack_require__(82);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style4 = __webpack_require__(29);
+	var _style4 = __webpack_require__(31);
 
-	var _menu = __webpack_require__(28);
+	var _menu = __webpack_require__(30);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -768,7 +781,7 @@ webpackJsonp([24,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BrowserDemo = __webpack_require__(142);
+	var _BrowserDemo = __webpack_require__(153);
 
 	var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -888,19 +901,6 @@ webpackJsonp([24,209],{
 	  "style": ".layout-top {\n  height: 100%;\n}\n\n.layout-top .layout-wrapper {\n  padding: 0 50px;\n}\n\n.layout-top .layout-header {\n  background: #404040;\n  height: 64px;\n}\n\n.layout-top .layout-logo {\n  width: 120px;\n  height: 32px;\n  background: #333;\n  border-radius: 4px;\n  margin: 16px 24px 16px 0;\n  float: left;\n}\n\n.layout-top .layout-subheader {\n  height: 48px;\n  border-bottom: 1px solid #e9e9e9;\n  background: #fff;\n  margin-bottom: 12px;\n}\n\n.layout-top .layout-container {\n  background: #fff;\n  margin: 12px 0 0;\n  position: relative;\n  padding-top: 24px;\n  overflow: hidden;\n  border-radius: 4px;\n}\n\n.layout-top .layout-footer {\n  height: 64px;\n  line-height: 64px;\n  text-align: center;\n  font-size: 12px;\n  color: #999;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.layout-top</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">100%</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-wrapper</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span> <span class=\"token number\">50</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-header</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#404040</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">64</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">4</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px <span class=\"token number\">24</span>px <span class=\"token number\">16</span>px <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">float</span><span class=\"token punctuation\">:</span> left<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-subheader</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">48</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">1</span>px solid <span class=\"token hexcode\">#e9e9e9</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#fff</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">12</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-container</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#fff</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">12</span>px <span class=\"token number\">0</span> <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">position</span><span class=\"token punctuation\">:</span> relative<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding-top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">24</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">overflow</span><span class=\"token punctuation\">:</span> hidden<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">4</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.layout-top</span> <span class=\"token class\">.layout-footer</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">64</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">64</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> center<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">12</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#999</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
-
-/***/ },
-
-/***/ 1249:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'aside-collapse': __webpack_require__(1066),
-	    'aside': __webpack_require__(1067),
-	    'ceiling': __webpack_require__(1068),
-	    'top-aside': __webpack_require__(1069),
-	    'top': __webpack_require__(1070),
-	}
 
 /***/ }
 

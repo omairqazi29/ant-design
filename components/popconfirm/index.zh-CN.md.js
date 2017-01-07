@@ -1,6 +1,6 @@
 webpackJsonp([147,209],{
 
-/***/ 857:
+/***/ 1579:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33,7 +33,7 @@ webpackJsonp([147,209],{
 	  }, "API"]]],
 	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "title"], ["td", "确认框的描述"], ["td", "React.Element"], ["td", "无"]], ["tr", ["td", "onConfirm"], ["td", "点击确认的回调"], ["td", "function"], ["td", "无"]], ["tr", ["td", "onCancel"], ["td", "点击取消的回调"], ["td", "function"], ["td", "无"]], ["tr", ["td", "okText"], ["td", "确认按钮文字"], ["td", "String"], ["td", "确定"]], ["tr", ["td", "cancelText"], ["td", "取消按钮文字"], ["td", "String"], ["td", "取消"]]]], ["p", "更多属性请参考 ", ["a", {
 	    "title": null,
-	    "href": "https://ant.design/components/tooltip/#API"
+	    "href": "/components/tooltip-cn/#API"
 	  }, "Tooltip"], "。"]]
 	};
 
