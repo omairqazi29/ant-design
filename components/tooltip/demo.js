@@ -22,7 +22,7 @@ webpackJsonp([43,209],{
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style4 = __webpack_require__(11);
+	var _style4 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 

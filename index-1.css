@@ -12974,9 +12974,11 @@ textarea.ant-input-number {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
   -webkit-flex: auto;
       -ms-flex: auto;
@@ -12984,12 +12986,19 @@ textarea.ant-input-number {
   overflow: auto;
   background: #ececec;
 }
+.ant-layout.ant-layout-has-sider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 .ant-layout-header,
 .ant-layout-footer {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .ant-layout-header {
   background: rgba(0, 0, 0, 0.75);
@@ -14528,13 +14537,4 @@ textarea.ant-pagination-options-quick-jumper input {
   background: #f7f7f7;
   border-radius: 0 0 4px 4px;
   position: relative;
-}
-.ant-table-footer:before {
-  content: '';
-  height: 1px;
-  background: #f7f7f7;
-  position: absolute;
-  top: -1px;
-  width: 100%;
-  left: 0;
 }

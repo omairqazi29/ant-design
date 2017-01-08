@@ -24,7 +24,7 @@ webpackJsonp([26,209],{
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
-	var _style4 = __webpack_require__(11);
+	var _style4 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 

@@ -290,7 +290,7 @@ webpackJsonp([27,209],{
 
 	'use strict';
 
-	var _style5 = __webpack_require__(11);
+	var _style5 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 

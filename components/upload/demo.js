@@ -155,7 +155,7 @@ webpackJsonp([11,209],{
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style6 = __webpack_require__(11);
+	var _style6 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 
@@ -244,7 +244,7 @@ webpackJsonp([11,209],{
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(11);
+	var _style5 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 
@@ -424,7 +424,7 @@ webpackJsonp([11,209],{
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
-	var _style5 = __webpack_require__(11);
+	var _style5 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 
@@ -661,7 +661,7 @@ webpackJsonp([11,209],{
 
 	var _upload2 = _interopRequireDefault(_upload);
 
-	var _style5 = __webpack_require__(11);
+	var _style5 = __webpack_require__(12);
 
 	var _button = __webpack_require__(10);
 
