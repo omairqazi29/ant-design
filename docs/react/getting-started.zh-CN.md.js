@@ -127,10 +127,11 @@ webpackJsonp([94,209],{
 	  }, "定制"], "。"], ["p", "目前社区也有很多基于 antd 定制的 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/129"
-	  }, "脚手架"], "，欢迎进行试用和贡献。"], ["h2", "按需加载"], ["p", "如果你在控制台看到下面的提示，则你可能使用了 ", ["code", "import { Button } from 'antd';"], " 的写法引入了 antd 下所有的模块，这会影响应用的网络性能。"], ["p", "![](", ["a", {
+	  }, "脚手架"], "，欢迎进行试用和贡献。"], ["h2", "按需加载"], ["p", "如果你在控制台看到下面的提示，则你可能使用了 ", ["code", "import { Button } from 'antd';"], " 的写法引入了 antd 下所有的模块，这会影响应用的网络性能。"], ["blockquote", ["p", ["img", {
 	    "title": null,
-	    "href": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"
-	  }, "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"]], ["p", "可以通过以下的写法来按需加载组件。"], ["pre", {
+	    "src": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png",
+	    "alt": null
+	  }]]], ["p", "可以通过以下的写法来按需加载组件。"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button/style/css'</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// 按需引入 css</span>"
 	  }, ["code", "import Button from 'antd/lib/button';\nimport Button from 'antd/lib/button/style/css'; // 按需引入 css"]], ["p", "如果你使用了 babel，那么可以使用 ", ["a", {
