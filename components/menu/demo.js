@@ -1,20 +1,20 @@
 webpackJsonp([22,209],{
 
-/***/ 652:
+/***/ 653:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'horizontal': __webpack_require__(1531),
-	    'sider-current': __webpack_require__(1532),
-	    'sider': __webpack_require__(1533),
-	    'switch-mode': __webpack_require__(1534),
-	    'theme': __webpack_require__(1535),
-	    'vertical': __webpack_require__(1536),
+	    'horizontal': __webpack_require__(1533),
+	    'sider-current': __webpack_require__(1534),
+	    'sider': __webpack_require__(1535),
+	    'switch-mode': __webpack_require__(1536),
+	    'theme': __webpack_require__(1537),
+	    'vertical': __webpack_require__(1538),
 	}
 
 /***/ },
 
-/***/ 1531:
+/***/ 1533:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -146,7 +146,7 @@ webpackJsonp([22,209],{
 
 /***/ },
 
-/***/ 1532:
+/***/ 1534:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -337,7 +337,7 @@ webpackJsonp([22,209],{
 
 /***/ },
 
-/***/ 1533:
+/***/ 1535:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -522,7 +522,7 @@ webpackJsonp([22,209],{
 
 /***/ },
 
-/***/ 1534:
+/***/ 1536:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -719,7 +719,7 @@ webpackJsonp([22,209],{
 
 /***/ },
 
-/***/ 1535:
+/***/ 1537:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -912,7 +912,7 @@ webpackJsonp([22,209],{
 
 /***/ },
 
-/***/ 1536:
+/***/ 1538:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,25 +1,26 @@
-webpackJsonp([39,209],{
+webpackJsonp([31,209],{
 
-/***/ 642:
+/***/ 643:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'accordion': __webpack_require__(1437),
-	    'basic': __webpack_require__(1438),
-	    'borderless': __webpack_require__(1439),
-	    'mix': __webpack_require__(1440),
+	    'accordion': __webpack_require__(1438),
+	    'basic': __webpack_require__(1439),
+	    'borderless': __webpack_require__(1440),
+	    'custom': __webpack_require__(1441),
+	    'mix': __webpack_require__(1442),
 	}
 
 /***/ },
 
-/***/ 1437:
+/***/ 1438:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(237);
+	var _style2 = __webpack_require__(203);
 
-	var _collapse = __webpack_require__(236);
+	var _collapse = __webpack_require__(202);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -95,14 +96,14 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 1438:
+/***/ 1439:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(237);
+	var _style2 = __webpack_require__(203);
 
-	var _collapse = __webpack_require__(236);
+	var _collapse = __webpack_require__(202);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -180,14 +181,14 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 1439:
+/***/ 1440:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(237);
+	var _style2 = __webpack_require__(203);
 
-	var _collapse = __webpack_require__(236);
+	var _collapse = __webpack_require__(202);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
@@ -263,14 +264,97 @@ webpackJsonp([39,209],{
 
 /***/ },
 
-/***/ 1440:
+/***/ 1441:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(237);
+	var _style2 = __webpack_require__(203);
 
-	var _collapse = __webpack_require__(236);
+	var _collapse = __webpack_require__(202);
+
+	var _collapse2 = _interopRequireDefault(_collapse);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [["p", "自定义各个面板的背景色、圆角和边距。"]],
+	    "en-US": [["p", "Customize the background, border and margin styles for each panel."]]
+	  },
+	  "meta": {
+	    "order": 3,
+	    "title": {
+	      "zh-CN": "自定义面板",
+	      "en-US": "Custom Panel"
+	    },
+	    "filename": "components/collapse/demo/custom.md",
+	    "id": "components-collapse-demo-custom"
+	  },
+	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#zh-CN"
+	  }, "zh-CN"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#en-US"
+	  }, "en-US"]]],
+	  "highlightedCode": ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Collapse <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Panel <span class=\"token operator\">=</span> Collapse<span class=\"token punctuation\">.</span>Panel<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token template-string\"><span class=\"token string\">`\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n`</span></span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> customPanelStyle <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n  background<span class=\"token punctuation\">:</span> <span class=\"token string\">'#f7f7f7'</span><span class=\"token punctuation\">,</span>\n  borderRadius<span class=\"token punctuation\">:</span> <span class=\"token number\">4</span><span class=\"token punctuation\">,</span>\n  marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">24</span><span class=\"token punctuation\">,</span>\n  border<span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Collapse</span> <span class=\"token attr-name\">bordered</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">defaultActiveKey</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Panel</span> <span class=\"token attr-name\">header</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">panel</span> <span class=\"token attr-name\">header</span> <span class=\"token attr-name\">1\"</span> <span class=\"token attr-name\">key</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>1<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>customPanelStyle<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Panel</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Panel</span> <span class=\"token attr-name\">header</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">panel</span> <span class=\"token attr-name\">header</span> <span class=\"token attr-name\">2\"</span> <span class=\"token attr-name\">key</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>2<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>customPanelStyle<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Panel</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Panel</span> <span class=\"token attr-name\">header</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">panel</span> <span class=\"token attr-name\">header</span> <span class=\"token attr-name\">3\"</span> <span class=\"token attr-name\">key</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>3<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>customPanelStyle<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Panel</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Collapse</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	  }],
+	  "preview": function jsonmlReactLoader() {
+	    var Panel = _collapse2.default.Panel;var text = '\n  A dog is a type of domesticated animal.\n  Known for its loyalty and faithfulness,\n  it can be found as a welcome guest in many households across the world.\n';var customPanelStyle = { background: '#f7f7f7', borderRadius: 4, marginBottom: 24, border: 0 };return _react2.default.createElement(
+	      _collapse2.default,
+	      { bordered: false, defaultActiveKey: ['1'] },
+	      _react2.default.createElement(
+	        Panel,
+	        { header: 'This is panel header 1', key: '1', style: customPanelStyle },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          text
+	        )
+	      ),
+	      _react2.default.createElement(
+	        Panel,
+	        { header: 'This is panel header 2', key: '2', style: customPanelStyle },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          text
+	        )
+	      ),
+	      _react2.default.createElement(
+	        Panel,
+	        { header: 'This is panel header 3', key: '3', style: customPanelStyle },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          text
+	        )
+	      )
+	    );
+	  }
+	};
+
+/***/ },
+
+/***/ 1442:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _style2 = __webpack_require__(203);
+
+	var _collapse = __webpack_require__(202);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 

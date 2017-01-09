@@ -1,26 +1,26 @@
 webpackJsonp([26,209],{
 
-/***/ 673:
+/***/ 674:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced': __webpack_require__(1716),
-	    'basic': __webpack_require__(1717),
-	    'custom-item': __webpack_require__(1718),
-	    'large-data': __webpack_require__(1719),
-	    'search': __webpack_require__(1720),
+	    'advanced': __webpack_require__(1718),
+	    'basic': __webpack_require__(1719),
+	    'custom-item': __webpack_require__(1720),
+	    'large-data': __webpack_require__(1721),
+	    'search': __webpack_require__(1722),
 	}
 
 /***/ },
 
-/***/ 1716:
+/***/ 1718:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(211);
+	var _style3 = __webpack_require__(213);
 
-	var _transfer = __webpack_require__(210);
+	var _transfer = __webpack_require__(212);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -104,14 +104,14 @@ webpackJsonp([26,209],{
 
 /***/ },
 
-/***/ 1717:
+/***/ 1719:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(213);
 
-	var _transfer = __webpack_require__(210);
+	var _transfer = __webpack_require__(212);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -186,14 +186,14 @@ webpackJsonp([26,209],{
 
 /***/ },
 
-/***/ 1718:
+/***/ 1720:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(213);
 
-	var _transfer = __webpack_require__(210);
+	var _transfer = __webpack_require__(212);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 
@@ -271,7 +271,7 @@ webpackJsonp([26,209],{
 
 /***/ },
 
-/***/ 1719:
+/***/ 1721:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -292,14 +292,14 @@ webpackJsonp([26,209],{
 
 /***/ },
 
-/***/ 1720:
+/***/ 1722:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(211);
+	var _style2 = __webpack_require__(213);
 
-	var _transfer = __webpack_require__(210);
+	var _transfer = __webpack_require__(212);
 
 	var _transfer2 = _interopRequireDefault(_transfer);
 

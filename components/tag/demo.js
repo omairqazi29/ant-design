@@ -1,26 +1,26 @@
 webpackJsonp([27,209],{
 
-/***/ 669:
+/***/ 670:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1689),
-	    'checkable': __webpack_require__(1690),
-	    'colorful': __webpack_require__(1691),
-	    'control': __webpack_require__(1692),
-	    'hot-tags': __webpack_require__(1693),
+	    'basic': __webpack_require__(1691),
+	    'checkable': __webpack_require__(1692),
+	    'colorful': __webpack_require__(1693),
+	    'control': __webpack_require__(1694),
+	    'hot-tags': __webpack_require__(1695),
 	}
 
 /***/ },
 
-/***/ 1689:
+/***/ 1691:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(207);
+	var _style2 = __webpack_require__(209);
 
-	var _tag = __webpack_require__(206);
+	var _tag = __webpack_require__(208);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -102,7 +102,7 @@ webpackJsonp([27,209],{
 
 /***/ },
 
-/***/ 1690:
+/***/ 1692:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -123,9 +123,9 @@ webpackJsonp([27,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(207);
+	var _style2 = __webpack_require__(209);
 
-	var _tag = __webpack_require__(206);
+	var _tag = __webpack_require__(208);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -214,14 +214,14 @@ webpackJsonp([27,209],{
 
 /***/ },
 
-/***/ 1691:
+/***/ 1693:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(207);
+	var _style2 = __webpack_require__(209);
 
-	var _tag = __webpack_require__(206);
+	var _tag = __webpack_require__(208);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -285,7 +285,7 @@ webpackJsonp([27,209],{
 
 /***/ },
 
-/***/ 1692:
+/***/ 1694:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -308,9 +308,9 @@ webpackJsonp([27,209],{
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _style8 = __webpack_require__(207);
+	var _style8 = __webpack_require__(209);
 
-	var _tag = __webpack_require__(206);
+	var _tag = __webpack_require__(208);
 
 	var _tag2 = _interopRequireDefault(_tag);
 
@@ -438,7 +438,7 @@ webpackJsonp([27,209],{
 
 /***/ },
 
-/***/ 1693:
+/***/ 1695:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -459,9 +459,9 @@ webpackJsonp([27,209],{
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
-	var _style2 = __webpack_require__(207);
+	var _style2 = __webpack_require__(209);
 
-	var _tag = __webpack_require__(206);
+	var _tag = __webpack_require__(208);
 
 	var _tag2 = _interopRequireDefault(_tag);
 

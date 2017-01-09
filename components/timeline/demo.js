@@ -1,25 +1,25 @@
-webpackJsonp([33,209],{
+webpackJsonp([34,209],{
 
-/***/ 671:
+/***/ 672:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1705),
-	    'color': __webpack_require__(1706),
-	    'custom': __webpack_require__(1707),
-	    'pending': __webpack_require__(1708),
+	    'basic': __webpack_require__(1707),
+	    'color': __webpack_require__(1708),
+	    'custom': __webpack_require__(1709),
+	    'pending': __webpack_require__(1710),
 	}
 
 /***/ },
 
-/***/ 1705:
+/***/ 1707:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(209);
+	var _style2 = __webpack_require__(211);
 
-	var _timeline = __webpack_require__(208);
+	var _timeline = __webpack_require__(210);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -88,14 +88,14 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1706:
+/***/ 1708:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(209);
+	var _style2 = __webpack_require__(211);
 
-	var _timeline = __webpack_require__(208);
+	var _timeline = __webpack_require__(210);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -192,7 +192,7 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1707:
+/***/ 1709:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -203,9 +203,9 @@ webpackJsonp([33,209],{
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _style4 = __webpack_require__(209);
+	var _style4 = __webpack_require__(211);
 
-	var _timeline = __webpack_require__(208);
+	var _timeline = __webpack_require__(210);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 
@@ -274,14 +274,14 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1708:
+/***/ 1710:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(209);
+	var _style2 = __webpack_require__(211);
 
-	var _timeline = __webpack_require__(208);
+	var _timeline = __webpack_require__(210);
 
 	var _timeline2 = _interopRequireDefault(_timeline);
 

@@ -1,18 +1,18 @@
-webpackJsonp([35,209],{
+webpackJsonp([36,209],{
 
-/***/ 661:
+/***/ 662:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1603),
-	    'disabled': __webpack_require__(1604),
-	    'half': __webpack_require__(1605),
-	    'text': __webpack_require__(1606),
+	    'basic': __webpack_require__(1605),
+	    'disabled': __webpack_require__(1606),
+	    'half': __webpack_require__(1607),
+	    'text': __webpack_require__(1608),
 	}
 
 /***/ },
 
-/***/ 1603:
+/***/ 1605:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -65,7 +65,7 @@ webpackJsonp([35,209],{
 
 /***/ },
 
-/***/ 1604:
+/***/ 1606:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -118,7 +118,7 @@ webpackJsonp([35,209],{
 
 /***/ },
 
-/***/ 1605:
+/***/ 1607:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -171,7 +171,7 @@ webpackJsonp([35,209],{
 
 /***/ },
 
-/***/ 1606:
+/***/ 1608:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
