@@ -1,20 +1,20 @@
 webpackJsonp([19,209],{
 
-/***/ 666:
+/***/ 664:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1631),
-	    'delayAndDebounce': __webpack_require__(1632),
-	    'inside': __webpack_require__(1633),
-	    'nested': __webpack_require__(1634),
-	    'size': __webpack_require__(1635),
-	    'tip': __webpack_require__(1636),
+	    'basic': __webpack_require__(1630),
+	    'delayAndDebounce': __webpack_require__(1631),
+	    'inside': __webpack_require__(1632),
+	    'nested': __webpack_require__(1633),
+	    'size': __webpack_require__(1634),
+	    'tip': __webpack_require__(1635),
 	}
 
 /***/ },
 
-/***/ 1631:
+/***/ 1630:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67,7 +67,7 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1632:
+/***/ 1631:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -155,7 +155,7 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1633:
+/***/ 1632:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -214,7 +214,7 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1634:
+/***/ 1633:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -301,7 +301,7 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1635:
+/***/ 1634:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -361,7 +361,7 @@ webpackJsonp([19,209],{
 
 /***/ },
 
-/***/ 1636:
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,23 +1,23 @@
 webpackJsonp([8,209],{
 
-/***/ 649:
+/***/ 647:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'addon': __webpack_require__(1500),
-	    'autosize-textarea': __webpack_require__(1501),
-	    'basic': __webpack_require__(1502),
-	    'group': __webpack_require__(1503),
-	    'presuffix': __webpack_require__(1504),
-	    'search-input': __webpack_require__(1505),
-	    'size': __webpack_require__(1506),
-	    'textarea': __webpack_require__(1507),
-	    'tooltip': __webpack_require__(1508),
+	    'addon': __webpack_require__(1499),
+	    'autosize-textarea': __webpack_require__(1500),
+	    'basic': __webpack_require__(1501),
+	    'group': __webpack_require__(1502),
+	    'presuffix': __webpack_require__(1503),
+	    'search-input': __webpack_require__(1504),
+	    'size': __webpack_require__(1505),
+	    'textarea': __webpack_require__(1506),
+	    'tooltip': __webpack_require__(1507),
 	}
 
 /***/ },
 
-/***/ 1500:
+/***/ 1499:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -136,7 +136,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1501:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -195,7 +195,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1502:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -248,7 +248,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1503:
+/***/ 1502:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -432,7 +432,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1504:
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -531,13 +531,13 @@ webpackJsonp([8,209],{
 
 	    return _react2.default.createElement(App, null);
 	  },
-	  "style": ".anticon-close-circle {\n  cursor: pointer;\n  color: #ccc;\n  transition: color 0.3s;\n}\n.anticon-close-circle:hover {\n  color: #999;\n}",
-	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.anticon-close-circle</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">cursor</span><span class=\"token punctuation\">:</span> pointer<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#ccc</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">transition</span><span class=\"token punctuation\">:</span> color <span class=\"token number\">0.3</span>s<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.anticon-close-circle</span><span class=\"token pseudo-class\">:hover</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#999</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	  "style": ".anticon-close-circle {\n  cursor: pointer;\n  color: #ccc;\n  transition: color 0.3s;\n  font-size: 12px;\n}\n.anticon-close-circle:hover {\n  color: #999;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.anticon-close-circle</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">cursor</span><span class=\"token punctuation\">:</span> pointer<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#ccc</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">transition</span><span class=\"token punctuation\">:</span> color <span class=\"token number\">0.3</span>s<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">12</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.anticon-close-circle</span><span class=\"token pseudo-class\">:hover</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#999</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 1505:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -592,7 +592,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1506:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -653,7 +653,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1507:
+/***/ 1506:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -706,7 +706,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1508:
+/***/ 1507:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

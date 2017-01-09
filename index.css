@@ -4927,8 +4927,6 @@ textarea.ant-input {
 }
 .ant-input-preSuffix-wrapper {
   position: relative;
-  display: inline-block;
-  width: 100%;
 }
 .ant-input-preSuffix-wrapper .ant-input {
   z-index: 1;
@@ -4939,7 +4937,7 @@ textarea.ant-input {
 .ant-input-preSuffix-wrapper .ant-input-prefix,
 .ant-input-preSuffix-wrapper .ant-input-suffix {
   position: absolute;
-  top: 50%;
+  top: 51%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);

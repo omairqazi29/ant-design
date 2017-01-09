@@ -1,23 +1,23 @@
 webpackJsonp([7,209],{
 
-/***/ 656:
+/***/ 654:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'async': __webpack_require__(1546),
-	    'basic': __webpack_require__(1547),
-	    'confirm-promise': __webpack_require__(1548),
-	    'confirm': __webpack_require__(1549),
-	    'footer': __webpack_require__(1550),
-	    'info': __webpack_require__(1551),
-	    'locale': __webpack_require__(1552),
-	    'manual': __webpack_require__(1553),
-	    'position': __webpack_require__(1554),
+	    'async': __webpack_require__(1545),
+	    'basic': __webpack_require__(1546),
+	    'confirm-promise': __webpack_require__(1547),
+	    'confirm': __webpack_require__(1548),
+	    'footer': __webpack_require__(1549),
+	    'info': __webpack_require__(1550),
+	    'locale': __webpack_require__(1551),
+	    'manual': __webpack_require__(1552),
+	    'position': __webpack_require__(1553),
 	}
 
 /***/ },
 
-/***/ 1546:
+/***/ 1545:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -115,7 +115,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1547:
+/***/ 1546:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -218,7 +218,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1548:
+/***/ 1547:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -292,7 +292,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1549:
+/***/ 1548:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -362,7 +362,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1550:
+/***/ 1549:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -488,7 +488,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1551:
+/***/ 1550:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -593,7 +593,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1552:
+/***/ 1551:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -710,7 +710,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1553:
+/***/ 1552:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -731,7 +731,7 @@ webpackJsonp([7,209],{
 
 /***/ },
 
-/***/ 1554:
+/***/ 1553:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,24 +1,24 @@
 webpackJsonp([44,209],{
 
-/***/ 631:
+/***/ 629:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1348),
-	    'on-change': __webpack_require__(1349),
-	    'target': __webpack_require__(1350),
+	    'basic': __webpack_require__(1347),
+	    'on-change': __webpack_require__(1348),
+	    'target': __webpack_require__(1349),
 	}
 
 /***/ },
 
-/***/ 1348:
+/***/ 1347:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(199);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -92,14 +92,14 @@ webpackJsonp([44,209],{
 
 /***/ },
 
-/***/ 1349:
+/***/ 1348:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(199);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 
@@ -161,14 +161,14 @@ webpackJsonp([44,209],{
 
 /***/ },
 
-/***/ 1350:
+/***/ 1349:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _style3 = __webpack_require__(234);
 
-	var _affix = __webpack_require__(199);
+	var _affix = __webpack_require__(200);
 
 	var _affix2 = _interopRequireDefault(_affix);
 

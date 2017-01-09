@@ -1,16 +1,16 @@
 webpackJsonp([48,209],{
 
-/***/ 633:
+/***/ 631:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1362),
-	    'fixed': __webpack_require__(1363),
+	    'basic': __webpack_require__(1361),
+	    'fixed': __webpack_require__(1362),
 	}
 
 /***/ },
 
-/***/ 1362:
+/***/ 1361:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -76,7 +76,7 @@ webpackJsonp([48,209],{
 
 /***/ },
 
-/***/ 1363:
+/***/ 1362:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,6 +1,6 @@
 webpackJsonp([69,209],{
 
-/***/ 1785:
+/***/ 1784:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47,9 +47,9 @@ webpackJsonp([69,209],{
 	    "href": "http://naza.alibaba.net",
 	    "target": "_blank"
 	  }, "Ant Design of Angular 2.0"]]], ["li", ["div", {
-	    "class": "outside-link internal"
+	    "class": "outside-link"
 	  }, ["a", {
-	    "href": "http://atui.alibaba.net",
+	    "href": "http://aliqin.github.io/",
 	    "target": "_blank"
 	  }, "ATUI (vue)"]]], ["li", ["div", {
 	    "class": "outside-link"

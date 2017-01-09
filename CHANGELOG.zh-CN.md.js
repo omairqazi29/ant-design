@@ -1,6 +1,6 @@
 webpackJsonp([207,209],{
 
-/***/ 1347:
+/***/ 1346:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46,7 +46,10 @@ webpackJsonp([207,209],{
 	  }, "commit"]]]], ["h2", "2.6.0"], ["p", ["code", "2017-1-2"]], ["ul", ["li", ["p", "采用全新的色彩系统。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/pull/4426"
-	  }, "pull/4426"]], ["ul", ["li", ["p", "使用新的算法函数代替 shade，tint。"]], ["li", ["p", "利用算法生成的新版色板。"]], ["li", ["p", "调整默认文字颜色。"]]]], ["li", ["p", "增加 Layout 布局组件。", ["a", {
+	  }, "pull/4426"]], ["ul", ["li", ["p", "使用新的算法函数代替 ", ["code", "tint/shade"], "。"]], ["li", ["p", "利用算法生成的新版色板。", ["a", {
+	    "title": null,
+	    "href": "http://ant.design/docs/spec/colors"
+	  }, "色板演示"]]], ["li", ["p", "调整默认文字颜色。"]]]], ["li", ["p", "增加 Layout 布局组件。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3534"
 	  }, "#3534"]]], ["li", ["p", "增加 Grid 栅格配置器示例。", ["a", {
