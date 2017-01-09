@@ -124,10 +124,10 @@ webpackJsonp([95,209],{
 	  }, "modify it"], "."], ["p", "There are some ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/129"
-	  }, "scaffolds"], " which have already integrated antd, so you can try and start with one of these, and even contribute."], ["h2", "Import on Demand"], ["p", "If you see a log like below screenshot, you might import all components by writing ", ["code", "import { Button } from 'antd';"], ", this will affect your app's network perfermance."], ["blockquote", ["p", "![](", ["a", {
+	  }, "scaffolds"], " which have already integrated antd, so you can try and start with one of these, and even contribute."], ["h2", "Import on Demand"], ["p", "If you see a log like below screenshot, you might import all components by writing ", ["code", "import { Button } from 'antd';"], ", this will affect your app's network perfermance."], ["p", "![](", ["a", {
 	    "title": null,
 	    "href": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"
-	  }, "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"]]], ["p", "But, we can import component on demand:"], ["pre", {
+	  }, "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"]], ["p", "But, we can import component on demand:"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button/style/css'</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// import style</span>"
 	  }, ["code", "import Button from 'antd/lib/button';\nimport Button from 'antd/lib/button/style/css'; // import style"]], ["p", "We strongly recommend to use ", ["a", {
