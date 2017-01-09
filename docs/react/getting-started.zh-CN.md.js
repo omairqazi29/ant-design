@@ -127,16 +127,19 @@ webpackJsonp([94,209],{
 	  }, "定制"], "。"], ["p", "目前社区也有很多基于 antd 定制的 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/129"
-	  }, "脚手架"], "，欢迎进行试用和贡献。"], ["h2", "按需加载"], ["p", "通过 ", ["code", "import { Button } from 'antd';"], " 引入会加载 antd 下所有的模块，如果要按需加载可以通过以下的写法来引用。"], ["pre", {
+	  }, "脚手架"], "，欢迎进行试用和贡献。"], ["h2", "按需加载"], ["p", "如果你在控制台看到下面的提示，则你可能使用了 ", ["code", "import { Button } from 'antd';"], " 的写法引入了 antd 下所有的模块，这会影响应用的网络性能。"], ["blockquote", ["p", "![](", ["a", {
+	    "title": null,
+	    "href": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"
+	  }, "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"]]], ["p", "可以通过以下的写法来按需加载组件。"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>"
-	  }, ["code", "import Button from 'antd/lib/button';"]], ["p", "如果你使用 babel，我们推荐使用 ", ["a", {
+	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button/style/css'</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// 按需引入 css</span>"
+	  }, ["code", "import Button from 'antd/lib/button';\nimport Button from 'antd/lib/button/style/css'; // 按需引入 css"]], ["p", "如果你使用了 babel，那么可以使用 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import"
 	  }, "babel-plugin-import"], " 来进行按需加载，加入这个插件后。你可以仍然这么写："], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>"
-	  }, ["code", "import { Button } from 'antd';"]], ["p", "插件会帮你转换成上面的写法。另外此插件配合 ", ["a", {
+	  }, ["code", "import { Button } from 'antd';"]], ["p", "插件会帮你转换成 ", ["code", "antd/lib/xxx"], " 的写法。另外此插件配合 ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import#usage"
 	  }, "style"], " 属性可以做到模块样式的按需自动加载。"], ["h2", "配置主题和字体"], ["ul", ["li", ["p", ["a", {

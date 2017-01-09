@@ -268,7 +268,7 @@ webpackJsonp([20,209],{
 
 	'use strict';
 
-	var _style5 = __webpack_require__(44);
+	var _style5 = __webpack_require__(45);
 
 	var _row = __webpack_require__(43);
 

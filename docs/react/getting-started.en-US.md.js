@@ -124,13 +124,16 @@ webpackJsonp([95,209],{
 	  }, "modify it"], "."], ["p", "There are some ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/129"
-	  }, "scaffolds"], " which have already integrated antd, so you can try and start with one of these, and even contribute."], ["h2", "Import on Demand"], ["p", "If we import a component like this ", ["code", "import { Button } from 'antd';"], ", then all the components of antd will be imported. But, we can import component on demand:"], ["pre", {
+	  }, "scaffolds"], " which have already integrated antd, so you can try and start with one of these, and even contribute."], ["h2", "Import on Demand"], ["p", "If you see a log like below screenshot, you might import all components by writing ", ["code", "import { Button } from 'antd';"], ", this will affect your app's network perfermance."], ["blockquote", ["p", "![](", ["a", {
+	    "title": null,
+	    "href": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"
+	  }, "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png"]]], ["p", "But, we can import component on demand:"], ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>"
-	  }, ["code", "import Button from 'antd/lib/button';"]], ["p", "If you use ", ["code", "babel"], ", we recommend to use ", ["a", {
+	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button/style/css'</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// import style</span>"
+	  }, ["code", "import Button from 'antd/lib/button';\nimport Button from 'antd/lib/button/style/css'; // import style"]], ["p", "We strongly recommend to use ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import"
-	  }, "babel-plugin-import"], ". This plugin will convert the following code to the above form:"], ["pre", {
+	  }, "babel-plugin-import"], ", which can convert the following code to the 'antd/lib/xxx' way:"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { Button } from 'antd';"]], ["p", "And this plugin can also load styles on demand. See the ", ["a", {

@@ -56,7 +56,7 @@ webpackJsonp([173,209],{
 	  }, "https://github.com/facebook/react/pull/6534"]], ["h4", "getFieldDecorator(id, options) 参数"], ["table", ["thead", ["tr", ["th", "参数"], ["th", "说明"], ["th", "类型"], ["th", "默认值"]]], ["tbody", ["tr", ["td", "id"], ["td", "必填输入控件唯一标志。支持嵌套式的", ["a", {
 	    "title": null,
 	    "href": "https://github.com/react-component/form/pull/48"
-	  }, "写法"], "。"], ["td", "string"], ["td"]], ["tr", ["td", "options.valuePropName"], ["td", "子节点的值的属性，如 Switch 的是 'checked'"], ["td", "string"], ["td", "'value'"]], ["tr", ["td", "options.initialValue"], ["td", "子节点的初始值，类型、可选值均由子节点决定"], ["td"], ["td"]], ["tr", ["td", "options.trigger"], ["td", "收集子节点的值的时机"], ["td", "string"], ["td", "'onChange'"]], ["tr", ["td", "options.getValueFromEvent"], ["td", "可以把 onChange 的参数转化为控件的值，例如 DatePicker 可设为：", ["code", "(date, dateString) => dateString"]], ["td", "function(..args)"], ["td", ["a", {
+	  }, "写法"], "。"], ["td", "string"], ["td"]], ["tr", ["td", "options.valuePropName"], ["td", "子节点的值的属性，如 Switch 的是 'checked'"], ["td", "string"], ["td", "'value'"]], ["tr", ["td", "options.initialValue"], ["td", "子节点的初始值，类型、可选值均由子节点决定"], ["td"], ["td"]], ["tr", ["td", "options.trigger"], ["td", "收集子节点的值的时机"], ["td", "string"], ["td", "'onChange'"]], ["tr", ["td", "options.getValueFromEvent"], ["td", "可以把 onChange 的参数转化为控件的值"], ["td", "function(..args)"], ["td", ["a", {
 	    "title": null,
 	    "href": "https://github.com/react-component/form#optiongetvaluefromevent"
 	  }, "reference"]]], ["tr", ["td", "options.validateTrigger"], ["td", "校验子节点值的时机"], ["td", "string"], ["td", "'onChange'"]], ["tr", ["td", "options.rules"], ["td", "校验规则，参见 ", ["a", {
