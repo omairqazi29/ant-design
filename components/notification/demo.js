@@ -1,24 +1,24 @@
-webpackJsonp([29,209],{
+webpackJsonp([29,210],{
 
-/***/ 656:
+/***/ 655:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1558),
-	    'custom-icon': __webpack_require__(1559),
-	    'duration': __webpack_require__(1560),
-	    'with-btn': __webpack_require__(1561),
-	    'with-icon': __webpack_require__(1562),
+	    'basic': __webpack_require__(1557),
+	    'custom-icon': __webpack_require__(1558),
+	    'duration': __webpack_require__(1559),
+	    'with-btn': __webpack_require__(1560),
+	    'with-icon': __webpack_require__(1561),
 	}
 
 /***/ },
 
-/***/ 1558:
+/***/ 1557:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -79,12 +79,12 @@ webpackJsonp([29,209],{
 
 /***/ },
 
-/***/ 1559:
+/***/ 1558:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(12);
+	var _style4 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -151,12 +151,12 @@ webpackJsonp([29,209],{
 
 /***/ },
 
-/***/ 1560:
+/***/ 1559:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -217,12 +217,12 @@ webpackJsonp([29,209],{
 
 /***/ },
 
-/***/ 1561:
+/***/ 1560:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -291,12 +291,12 @@ webpackJsonp([29,209],{
 
 /***/ },
 
-/***/ 1562:
+/***/ 1561:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 

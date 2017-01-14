@@ -1,6 +1,6 @@
-webpackJsonp([17,209],{
+webpackJsonp([17,210],{
 
-/***/ 635:
+/***/ 634:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -96,7 +96,7 @@ webpackJsonp([17,209],{
 
 	var _badge2 = _interopRequireDefault(_badge);
 
-	var _style8 = __webpack_require__(12);
+	var _style8 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 

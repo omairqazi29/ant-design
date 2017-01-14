@@ -1,18 +1,18 @@
-webpackJsonp([40,209],{
+webpackJsonp([39,210],{
 
-/***/ 640:
+/***/ 639:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'autoplay': __webpack_require__(1413),
-	    'basic': __webpack_require__(1414),
-	    'fade': __webpack_require__(1415),
-	    'vertical': __webpack_require__(1416),
+	    'autoplay': __webpack_require__(1412),
+	    'basic': __webpack_require__(1413),
+	    'fade': __webpack_require__(1414),
+	    'vertical': __webpack_require__(1415),
 	}
 
 /***/ },
 
-/***/ 1413:
+/***/ 1412:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -104,7 +104,7 @@ webpackJsonp([40,209],{
 
 /***/ },
 
-/***/ 1414:
+/***/ 1413:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -198,7 +198,7 @@ webpackJsonp([40,209],{
 
 /***/ },
 
-/***/ 1415:
+/***/ 1414:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -290,7 +290,7 @@ webpackJsonp([40,209],{
 
 /***/ },
 
-/***/ 1416:
+/***/ 1415:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

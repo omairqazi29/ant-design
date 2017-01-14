@@ -1,4 +1,4 @@
-webpackJsonp([208,209],{
+webpackJsonp([209,210],{
 
 /***/ 1346:
 /***/ function(module, exports, __webpack_require__) {
@@ -16,7 +16,37 @@ webpackJsonp([208,209],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.6.1"], ["p", ["code", "2017-1-6"]], ["ul", ["li", ["p", "Fix style problem for Menu dark theme. ", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "Added a Third-Party Library Page for recommending other greet react components. ", ["a", {
+	    "title": null,
+	    "href": "/docs/react/recommendation"
+	  }, "Link"], "。"]], ["li", ["p", "Fixed misplaced Sider of Layout. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4459"
+	  }, "#4459"]]], ["li", ["p", "Fixed Input.Search wrong block layout and misplaced icon. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4540"
+	  }, "#4540"]]], ["li", ["p", "Added a customize Collapse panel demo. ", ["a", {
+	    "title": null,
+	    "href": "/components/collapse/#components-collapse-demo-custom"
+	  }, "Link"]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "Enlarged the width of selection column and expand column."]], ["li", ["p", "Fixed not-available pagination issue when property ", ["code", "pagination"], " is changed. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4532"
+	  }, "#4532"]]], ["li", ["p", "Fixed that three level filter menu is not working. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4541"
+	  }, "#4541"]]], ["li", ["p", "Fixed ", ["code", "column.filteredValue"], " issue of cannot being set to ", ["code", "null"], "."]]]], ["li", ["p", "Now Carousel is undragglble and text-selectable defaultly."]], ["li", ["p", "Added warnings when non-BreadcrumbItem node is nested under Breadcrumb. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4403"
+	  }, "#4403"]]], ["li", ["p", "Fixed Tooltip hidden issue when ", ["code", "onVisibleChange(visible)"], " return ", ["code", "true"], ". ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4579"
+	  }, "#4579"]]], ["li", ["p", "Make TreeSelect panel default height smaller than screen height. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4537"
+	  }, "#4537"]]], ["li", ["p", "Added less variables of TimePicker and Spin."]], ["li", ["p", "Replaced arrows of DatePicker year panel by year text. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4415"
+	  }, "#4415"]]], ["li", ["p", "Fixed TypeScript definites of AutoComplete and Form ", ["code", "[options.validateTrigger]"], "."]], ["li", ["p", "Improved the animation details of Spin and Progress."]]], ["h2", "2.6.1"], ["p", ["code", "2017-1-6"]], ["ul", ["li", ["p", "Fix style problem for Menu dark theme. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4440"
 	  }, "#4440"]]], ["li", ["p", "Fix TypeScript interface definition for ", ["code", "Select[tokenSeparators]"], " ", ["code", "Modal[afterClose]"], " ", ["code", "Input[name]"], " and so on. ", ["a", {
@@ -714,7 +744,7 @@ webpackJsonp([208,209],{
 	    "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
 	  "meta": {
-	    "order": 6,
+	    "order": 9,
 	    "title": "Change Log",
 	    "toc": false,
 	    "timeline": true,
@@ -725,6 +755,9 @@ webpackJsonp([208,209],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.2"
+	  }, "2.6.2"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.6.1"
 	  }, "2.6.1"]], ["li", ["a", {

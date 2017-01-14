@@ -1,14 +1,13 @@
-webpackJsonp([33,209],{
+webpackJsonp([40,210],{
 
-/***/ 638:
+/***/ 637:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
 	    'basic': __webpack_require__(1398),
 	    'card': __webpack_require__(1399),
-	    'custom-render': __webpack_require__(1400),
-	    'locale': __webpack_require__(1401),
-	    'notice-calendar': __webpack_require__(1402),
+	    'locale': __webpack_require__(1400),
+	    'notice-calendar': __webpack_require__(1401),
 	}
 
 /***/ },
@@ -18,9 +17,9 @@ webpackJsonp([33,209],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(175);
+	var _style2 = __webpack_require__(200);
 
-	var _calendar = __webpack_require__(174);
+	var _calendar = __webpack_require__(199);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -73,9 +72,9 @@ webpackJsonp([33,209],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(175);
+	var _style2 = __webpack_require__(200);
 
-	var _calendar = __webpack_require__(174);
+	var _calendar = __webpack_require__(199);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -95,7 +94,7 @@ webpackJsonp([33,209],{
 	    "en-US": [["p", "Nested inside a container element for rendering in limited space."]]
 	  },
 	  "meta": {
-	    "order": 10,
+	    "order": 2,
 	    "title": {
 	      "zh-CN": "卡片模式",
 	      "en-US": "Card"
@@ -132,81 +131,9 @@ webpackJsonp([33,209],{
 
 	'use strict';
 
-	var _style2 = __webpack_require__(175);
+	var _style2 = __webpack_require__(200);
 
-	var _calendar = __webpack_require__(174);
-
-	var _calendar2 = _interopRequireDefault(_calendar);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _moment = __webpack_require__(28);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "用 ", ["code", "dateCellRender"], " 和 ", ["code", "monthCellRender"], " 函数来自定义需要渲染的数据。"]],
-	    "en-US": [["p", "This component can be rendered by using ", ["code", "dateCellRender"], " and ", ["code", "monthCellRender"], " with the data you need."]]
-	  },
-	  "meta": {
-	    "order": 1,
-	    "title": {
-	      "zh-CN": "自定义渲染",
-	      "en-US": "Custom Render"
-	    },
-	    "filename": "components/calendar/demo/custom-render.md",
-	    "id": "components-calendar-demo-custom-render"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Calendar <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">dateCellRender</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>Custom date <span class=\"token punctuation\">{</span>value<span class=\"token punctuation\">.</span><span class=\"token function\">date</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">monthCellRender</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>Custom monthly <span class=\"token punctuation\">{</span>value<span class=\"token punctuation\">.</span><span class=\"token function\">month</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Calendar</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2010-10-10'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'YYYY-MM-DD'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span>\n    <span class=\"token attr-name\">dateCellRender</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>dateCellRender<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">monthCellRender</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>monthCellRender<span class=\"token punctuation\">}</span></span>\n  <span class=\"token punctuation\">/></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    function dateCellRender(value) {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Custom date ',
-	        value.date()
-	      );
-	    }
-	    function monthCellRender(value) {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Custom monthly ',
-	        value.month()
-	      );
-	    }return _react2.default.createElement(_calendar2.default, { defaultValue: (0, _moment2.default)('2010-10-10', 'YYYY-MM-DD'), dateCellRender: dateCellRender, monthCellRender: monthCellRender });
-	  }
-	};
-
-/***/ },
-
-/***/ 1401:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(175);
-
-	var _calendar = __webpack_require__(174);
+	var _calendar = __webpack_require__(199);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -218,7 +145,7 @@ webpackJsonp([33,209],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _moment = __webpack_require__(28);
+	var _moment = __webpack_require__(32);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -234,7 +161,7 @@ webpackJsonp([33,209],{
 	    "en-US": [["p", "To set the language. en_US, zh_CN are supported by default."]]
 	  },
 	  "meta": {
-	    "order": 4,
+	    "order": 3,
 	    "title": {
 	      "zh-CN": "国际化",
 	      "en-US": "locale"
@@ -263,14 +190,14 @@ webpackJsonp([33,209],{
 
 /***/ },
 
-/***/ 1402:
+/***/ 1401:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(175);
+	var _style2 = __webpack_require__(200);
 
-	var _calendar = __webpack_require__(174);
+	var _calendar = __webpack_require__(199);
 
 	var _calendar2 = _interopRequireDefault(_calendar);
 
@@ -286,14 +213,14 @@ webpackJsonp([33,209],{
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "一个复杂的应用示例。"]],
-	    "en-US": [["p", "A complex application."]]
+	    "zh-CN": [["p", "一个复杂的应用示例，用 ", ["code", "dateCellRender"], " 和 ", ["code", "monthCellRender"], " 函数来自定义需要渲染的数据。"]],
+	    "en-US": [["p", "This component can be rendered by using ", ["code", "dateCellRender"], " and ", ["code", "monthCellRender"], " with the data you need."]]
 	  },
 	  "meta": {
-	    "order": 2,
+	    "order": 1,
 	    "title": {
-	      "zh-CN": "通知事项日历演示",
-	      "en-US": "A demo of Notice Calendar"
+	      "zh-CN": "通知事项日历",
+	      "en-US": "Notice Calendar"
 	    },
 	    "filename": "components/calendar/demo/notice-calendar.md",
 	    "id": "components-calendar-demo-notice-calendar"
@@ -313,11 +240,13 @@ webpackJsonp([33,209],{
 	    function getListData(value) {
 	      var listData = void 0;switch (value.date()) {case 8:
 	          listData = [{ type: 'warning', content: 'This is warning event.' }, { type: 'normal', content: 'This is usual event.' }];break;case 10:
-	          listData = [{ type: 'warning', content: 'This is warning event.' }, { type: 'normal', content: 'This is usual event.' }, { type: 'error',
-	            content: 'This is error event.' }];break;case 15:
-	          listData = [{ type: 'warning', content: 'This is warning event' }, { type: 'normal', content: 'This is very long usual event。。....' }, { type: 'error', content: 'This is error event 1.' }, { type: 'error', content: 'This is error event 2.' }, {
-	            type: 'error', content: 'This is error event 3.' }, { type: 'error', content: 'This is error event 4.' }];break;default:}return listData || [];
-	    }function dateCellRender(value) {
+	          listData = [{ type: 'warning', content: 'This is warning event.'
+	          }, { type: 'normal',
+	            content: 'This is usual event.' }, {
+	            type: 'error', content: 'This is error event.' }];break;case 15:
+	          listData = [{ type: 'warning', content: 'This is warning event' }, { type: 'normal', content: 'This is very long usual event。。....' }, { type: 'error', content: 'This is error event 1.' }, { type: 'error', content: 'This is error event 2.' }, { type: 'error', content: 'This is error event 3.' }, { type: 'error', content: 'This is error event 4.' }];break;default:}return listData || [];
+	    }
+	    function dateCellRender(value) {
 	      var listData = getListData(value);return _react2.default.createElement(
 	        'ul',
 	        { className: 'events' },

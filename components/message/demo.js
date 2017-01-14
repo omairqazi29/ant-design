@@ -1,23 +1,23 @@
-webpackJsonp([38,209],{
+webpackJsonp([37,210],{
 
-/***/ 654:
+/***/ 653:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'duration': __webpack_require__(1541),
-	    'info': __webpack_require__(1542),
-	    'loading': __webpack_require__(1543),
-	    'other': __webpack_require__(1544),
+	    'duration': __webpack_require__(1540),
+	    'info': __webpack_require__(1541),
+	    'loading': __webpack_require__(1542),
+	    'other': __webpack_require__(1543),
 	}
 
 /***/ },
 
-/***/ 1541:
+/***/ 1540:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -77,12 +77,12 @@ webpackJsonp([38,209],{
 
 /***/ },
 
-/***/ 1542:
+/***/ 1541:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -142,12 +142,12 @@ webpackJsonp([38,209],{
 
 /***/ },
 
-/***/ 1543:
+/***/ 1542:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 
@@ -208,12 +208,12 @@ webpackJsonp([38,209],{
 
 /***/ },
 
-/***/ 1544:
+/***/ 1543:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style3 = __webpack_require__(12);
+	var _style3 = __webpack_require__(11);
 
 	var _button = __webpack_require__(10);
 

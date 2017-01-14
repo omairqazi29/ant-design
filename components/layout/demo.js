@@ -1,19 +1,19 @@
-webpackJsonp([30,209],{
+webpackJsonp([30,210],{
 
-/***/ 650:
+/***/ 649:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1512),
-	    'custom-trigger': __webpack_require__(1513),
-	    'side': __webpack_require__(1514),
-	    'top-side': __webpack_require__(1515),
-	    'top': __webpack_require__(1516),
+	    'basic': __webpack_require__(1511),
+	    'custom-trigger': __webpack_require__(1512),
+	    'side': __webpack_require__(1513),
+	    'top-side': __webpack_require__(1514),
+	    'top': __webpack_require__(1515),
 	}
 
 /***/ },
 
-/***/ 1512:
+/***/ 1511:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -177,14 +177,14 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 1513:
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style4 = __webpack_require__(31);
+	var _style4 = __webpack_require__(30);
 
-	var _menu = __webpack_require__(30);
+	var _menu = __webpack_require__(29);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -335,13 +335,13 @@ webpackJsonp([30,209],{
 
 	    return _react2.default.createElement(SiderDemo, null);
 	  },
-	  "style": "#components-layout-demo-custom-trigger .trigger {\n  font-size: 18px;\n  line-height: 64px;\n  padding: 0 16px;\n  cursor: pointer;\n  transition: color .3s;\n}\n\n#components-layout-demo-custom-trigger .trigger:hover {\n  color: #108ee9;\n}\n\n#components-layout-demo-custom-trigger .logo {\n  height: 32px;\n  background: #333;\n  border-radius: 6px;\n  margin: 16px;\n}\n\n#components-layout-demo-custom-trigger .ant-layout-sider-collapsed .anticon {\n\tfont-size: 16px;\n}\n\n#components-layout-demo-custom-trigger .ant-layout-sider-collapsed .nav-text {\n\tdisplay: none;\n}",
-	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.trigger</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">18</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">64</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">cursor</span><span class=\"token punctuation\">:</span> pointer<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">transition</span><span class=\"token punctuation\">:</span> color <span class=\"token number\">.3</span>s<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.trigger</span><span class=\"token pseudo-class\">:hover</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#108ee9</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n\t<span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.nav-text</span> </span><span class=\"token punctuation\">{</span>\n\t<span class=\"token property\">display</span><span class=\"token punctuation\">:</span> none<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	  "style": "#components-layout-demo-custom-trigger .trigger {\n  font-size: 18px;\n  line-height: 64px;\n  padding: 0 16px;\n  cursor: pointer;\n  transition: color .3s;\n}\n\n#components-layout-demo-custom-trigger .trigger:hover {\n  color: #108ee9;\n}\n\n#components-layout-demo-custom-trigger .logo {\n  height: 32px;\n  background: #333;\n  border-radius: 6px;\n  margin: 16px;\n}\n\n#components-layout-demo-custom-trigger .ant-layout-sider-collapsed .anticon {\n  font-size: 16px;\n}\n\n#components-layout-demo-custom-trigger .ant-layout-sider-collapsed .nav-text {\n  display: none;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.trigger</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">18</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">64</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">cursor</span><span class=\"token punctuation\">:</span> pointer<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">transition</span><span class=\"token punctuation\">:</span> color <span class=\"token number\">.3</span>s<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.trigger</span><span class=\"token pseudo-class\">:hover</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#108ee9</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-custom-trigger</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.nav-text</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">display</span><span class=\"token punctuation\">:</span> none<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 1514:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -352,9 +352,9 @@ webpackJsonp([30,209],{
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style6 = __webpack_require__(31);
+	var _style6 = __webpack_require__(30);
 
-	var _menu = __webpack_require__(30);
+	var _menu = __webpack_require__(29);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -559,13 +559,13 @@ webpackJsonp([30,209],{
 
 	    return _react2.default.createElement(SiderDemo, null);
 	  },
-	  "style": "#components-layout-demo-side .logo {\n  height: 32px;\n  background: #333;\n  border-radius: 6px;\n  margin: 16px;\n}\n\n#components-layout-demo-side .ant-layout-sider-collapsed .anticon {\n\tfont-size: 16px;\n}\n\n#components-layout-demo-side .ant-layout-sider-collapsed .nav-text {\n\tdisplay: none;\n}",
-	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n\t<span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.nav-text</span> </span><span class=\"token punctuation\">{</span>\n\t<span class=\"token property\">display</span><span class=\"token punctuation\">:</span> none<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	  "style": "#components-layout-demo-side .logo {\n  height: 32px;\n  background: #333;\n  border-radius: 6px;\n  margin: 16px;\n}\n\n#components-layout-demo-side .ant-layout-sider-collapsed .anticon {\n  font-size: 16px;\n}\n\n#components-layout-demo-side .ant-layout-sider-collapsed .nav-text {\n  display: none;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#333</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.anticon</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">font-size</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.ant-layout-sider-collapsed</span> <span class=\"token class\">.nav-text</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">display</span><span class=\"token punctuation\">:</span> none<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 1515:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -588,9 +588,9 @@ webpackJsonp([30,209],{
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _style8 = __webpack_require__(31);
+	var _style8 = __webpack_require__(30);
 
-	var _menu = __webpack_require__(30);
+	var _menu = __webpack_require__(29);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -802,7 +802,7 @@ webpackJsonp([30,209],{
 
 /***/ },
 
-/***/ 1516:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -813,9 +813,9 @@ webpackJsonp([30,209],{
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _style5 = __webpack_require__(31);
+	var _style5 = __webpack_require__(30);
 
-	var _menu = __webpack_require__(30);
+	var _menu = __webpack_require__(29);
 
 	var _menu2 = _interopRequireDefault(_menu);
 

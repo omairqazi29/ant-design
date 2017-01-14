@@ -1,4 +1,4 @@
-webpackJsonp([207,209],{
+webpackJsonp([208,210],{
 
 /***/ 1347:
 /***/ function(module, exports, __webpack_require__) {
@@ -16,7 +16,37 @@ webpackJsonp([207,209],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.6.1"], ["p", ["code", "2017-1-6"]], ["ul", ["li", ["p", "修复 Menu dark theme 样式问题。", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "新增社区精选组件页面。", ["a", {
+	    "title": null,
+	    "href": "/docs/react/recommendation/"
+	  }, "链接"], "。"]], ["li", ["p", "修复一个内容过长导致 Layout 侧边布局错位的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4459"
+	  }, "#4459"]]], ["li", ["p", "修复 Input.Search 输入框和图标错位的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4540"
+	  }, "#4540"]]], ["li", ["p", "补充了一个自定义灰底样式的 Collapse 折叠面板的例子。", ["a", {
+	    "title": null,
+	    "href": "/components/collapse-cn/#components-collapse-demo-custom"
+	  }, "链接"]]], ["li", ["p", "Table"], ["ul", ["li", ["p", "调大了 Table 选择框和展开按钮的列宽度。"]], ["li", ["p", "修复 ", ["code", "pagination"], " 属性切换后分页不可用的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4532"
+	  }, "#4532"]]], ["li", ["p", "修复不支持三级筛选菜单的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4541"
+	  }, "#4541"]]], ["li", ["p", "修复 ", ["code", "column.filteredValue"], " 无法设置为 ", ["code", "null"], " 的问题。"]]]], ["li", ["p", "调整 Carousel 为默认不可拖拽和文字可选择。"]], ["li", ["p", "增加了 Breadcrumb 内嵌非 Breadcrumb.Item 元素时的警告提示。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4403"
+	  }, "#4403"]]], ["li", ["p", "修复 Tooltip 在 ", ["code", "onVisibleChange(visible)"], " 返回 ", ["code", "true"], " 时不展示的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4579"
+	  }, "#4579"]]], ["li", ["p", "优化 TreeSelect 内容过长时的面板高度。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/pull/4537"
+	  }, "#4537"]]], ["li", ["p", "补充了 TimePicker 和 Spin 的组件样式变量。"]], ["li", ["p", "用年份代替了 DatePicker 年份选择面板上的箭头。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4415"
+	  }, "#4415"]]], ["li", ["p", "修复 AutoComplete 和 Form ", ["code", "[options.validateTrigger]"], " 的 TypeScript 定义。"]], ["li", ["p", "优化 Spin、Progress 的动画细节效果。"]]], ["h2", "2.6.1"], ["p", ["code", "2017-1-6"]], ["ul", ["li", ["p", "修复 Menu dark theme 样式问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4440"
 	  }, "#4440"]]], ["li", ["p", "修复 ", ["code", "Select[tokenSeparators]"], " ", ["code", "Modal[afterClose]"], " ", ["code", "Input[name]"], " 等的 TypeScript interface 定义。", ["a", {
@@ -711,7 +741,7 @@ webpackJsonp([207,209],{
 	    "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	  }, "GitHub"], " 查看 ", ["code", "0.x"], " 到 ", ["code", "1.x"], " 的 Change Log。"]],
 	  "meta": {
-	    "order": 6,
+	    "order": 9,
 	    "title": "更新日志",
 	    "toc": false,
 	    "timeline": true,
@@ -722,6 +752,9 @@ webpackJsonp([207,209],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.2"
+	  }, "2.6.2"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.6.1"
 	  }, "2.6.1"]], ["li", ["a", {

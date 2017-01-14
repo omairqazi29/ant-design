@@ -1,6 +1,6 @@
-webpackJsonp([88,209],{
+webpackJsonp([90,210],{
 
-/***/ 1766:
+/***/ 1764:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19,19 +19,10 @@ webpackJsonp([88,209],{
 	  "content": ["article", {}, ["h2", "特性"], ["ul", ["li", ["p", "Designed as Ant Design，提炼和服务企业级中后台产品的交互语言和视觉风格。"]], ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://react-component.github.io/badgeboard/"
-	  }, "React Component"], " 基础上精心封装的高质量 UI 组件。"]], ["li", ["p", "基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。"]]], ["h2", "安装"], ["pre", {
-	    "lang": "bash",
-	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
-	  }, ["code", "$ npm install antd --save"]], ["h2", "示例"], ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "引入样式："], ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/dist/antd.css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
-	  }, ["code", "import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'"]], ["p", "以下两种方法都可以达到按需加载的目的："], ["ul", ["li", ["p", ["code", "import DatePicker from 'antd/lib/date-picker'"]]], ["li", ["p", "配合插件 ", ["a", {
+	  }, "React Component"], " 基础上精心封装的高质量 UI 组件。"]], ["li", ["p", "基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。"]]], ["h2", "浏览器支持"], ["p", "现代浏览器和 IE9 及以上。"], ["blockquote", ["p", ["a", {
 	    "title": null,
-	    "href": "https://github.com/ant-design/babel-plugin-import"
-	  }, "babel-plugin-import"], " 使用 ", ["code", "import { DatePicker } from 'antd';"]]]], ["blockquote", ["p", "babel-plugin-import 支持 js 和 css 同时按需加载。"]], ["h2", "版本"], ["ul", ["li", ["p", "稳定版：", ["a", {
+	    "href": "https://github.com/xcatliu/react-ie8"
+	  }, "IE8 issues"]]], ["h2", "版本"], ["ul", ["li", ["p", "稳定版：", ["a", {
 	    "title": null,
 	    "href": "https://www.npmjs.org/package/antd"
 	  }, ["img", {
@@ -45,10 +36,62 @@ webpackJsonp([88,209],{
 	    "title": null,
 	    "src": "https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm",
 	    "alt": null
-	  }]]]]], ["h2", "浏览器支持"], ["p", "现代浏览器和 IE9 及以上。"], ["blockquote", ["p", ["a", {
+	  }]]]]], ["p", "你可以订阅：", ["a", {
 	    "title": null,
-	    "href": "https://github.com/xcatliu/react-ie8"
-	  }, "IE8 issues"]]], ["h2", "链接"], ["ul", ["li", ["p", ["a", {
+	    "href": "https://github.com/ant-design/ant-design/releases.atom"
+	  }, "https://github.com/ant-design/ant-design/releases.atom"], " 来获得稳定版发布的通知。"], ["h2", "安装"], ["h3", "使用 npm 安装"], ["p", ["strong", "我们推荐使用 npm 的方式进行开发"], "，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。"], ["p", "可以通过 npm 直接安装到项目中，使用 ", ["code", "import"], " 或 ", ["code", "require"], " 进行引用。"], ["p", "稳定版："], ["pre", {
+	    "lang": "bash",
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
+	  }, ["code", "$ npm install antd --save"]], ["p", "开发版本："], ["pre", {
+	    "lang": "bash",
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd@beta --save"
+	  }, ["code", "$ npm install antd@beta --save"]], ["h3", "浏览器引入"], ["p", ["a", {
+	    "title": null,
+	    "href": "https://cdnjs.com/libraries/antd"
+	  }, ["img", {
+	    "title": null,
+	    "src": "https://img.shields.io/cdnjs/v/antd.svg?style=flat-square",
+	    "alt": "CDNJS"
+	  }]]], ["p", "我们在 npm 发布包内的 ", ["code", "antd/dist"], " 目录下提供了 ", ["code", "antd.js"], " ", ["code", "antd.css"], " 以及 ", ["code", "antd.min.js"], " ", ["code", "antd.min.css"], " 用于一次性引入所有的 antd 组件，也可以通过 ", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/"
+	  }, "UNPKG"], " 进行下载。"], ["blockquote", ["p", "不推荐使用构建文件，因为难以获得底层依赖模块的 bug 快速修复支持。"]], ["h4", "stable"], ["ul", ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.js"
+	  }, "https://unpkg.com/antd/dist/antd.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.css"
+	  }, "https://unpkg.com/antd/dist/antd.css"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.min.js"
+	  }, "https://unpkg.com/antd/dist/antd.min.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.min.css"
+	  }, "https://unpkg.com/antd/dist/antd.min.css"]]]], ["h4", "beta"], ["ul", ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.js"
+	  }, "https://unpkg.com/antd@beta/dist/antd.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.css"
+	  }, "https://unpkg.com/antd@beta/dist/antd.css"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.min.js"
+	  }, "https://unpkg.com/antd@beta/dist/antd.min.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.min.css"
+	  }, "https://unpkg.com/antd@beta/dist/antd.min.css"]]]], ["blockquote", ["p", "对于 1.0 之前的版本，这里有一个 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/build-antd-standalone"
+	  }, "自行构建的例子"], " 以供参考。"]], ["h2", "示例"], ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "引入样式："], ["pre", {
+	    "lang": "jsx",
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/dist/antd.css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// or 'antd/dist/antd.less'</span>"
+	  }, ["code", "import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'"]], ["p", "以下两种方法都可以达到按需加载的目的："], ["ul", ["li", ["p", ["code", "import DatePicker from 'antd/lib/date-picker'"]]], ["li", ["p", "配合插件 ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/babel-plugin-import"
+	  }, "babel-plugin-import"], " 使用 ", ["code", "import { DatePicker } from 'antd';"]]]], ["blockquote", ["p", "babel-plugin-import 支持 js 和 css 同时按需加载。"]], ["h2", "链接"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://ant.design/"
 	  }, "首页"]]], ["li", ["p", ["a", {
@@ -165,17 +208,17 @@ webpackJsonp([88,209],{
 	    "href": "#特性"
 	  }, "特性"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
+	    "href": "#浏览器支持"
+	  }, "浏览器支持"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#版本"
+	  }, "版本"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#安装"
 	  }, "安装"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#示例"
 	  }, "示例"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#版本"
-	  }, "版本"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#浏览器支持"
-	  }, "浏览器支持"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#链接"
 	  }, "链接"]], ["li", ["a", {

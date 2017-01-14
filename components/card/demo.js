@@ -1,27 +1,27 @@
-webpackJsonp([23,209],{
+webpackJsonp([23,210],{
 
-/***/ 639:
+/***/ 638:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1405),
-	    'border-less': __webpack_require__(1406),
-	    'grid': __webpack_require__(1407),
-	    'loading': __webpack_require__(1408),
-	    'no-padding': __webpack_require__(1409),
-	    'simple': __webpack_require__(1410),
+	    'basic': __webpack_require__(1404),
+	    'border-less': __webpack_require__(1405),
+	    'grid': __webpack_require__(1406),
+	    'loading': __webpack_require__(1407),
+	    'no-padding': __webpack_require__(1408),
+	    'simple': __webpack_require__(1409),
 	}
 
 /***/ },
 
-/***/ 1405:
+/***/ 1404:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -89,14 +89,14 @@ webpackJsonp([23,209],{
 
 /***/ },
 
-/***/ 1406:
+/***/ 1405:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -164,7 +164,7 @@ webpackJsonp([23,209],{
 
 /***/ },
 
-/***/ 1407:
+/***/ 1406:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -181,9 +181,9 @@ webpackJsonp([23,209],{
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _style6 = __webpack_require__(177);
+	var _style6 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -265,14 +265,14 @@ webpackJsonp([23,209],{
 
 /***/ },
 
-/***/ 1408:
+/***/ 1407:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -322,14 +322,14 @@ webpackJsonp([23,209],{
 
 /***/ },
 
-/***/ 1409:
+/***/ 1408:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 
@@ -399,14 +399,14 @@ webpackJsonp([23,209],{
 
 /***/ },
 
-/***/ 1410:
+/***/ 1409:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _style2 = __webpack_require__(177);
+	var _style2 = __webpack_require__(175);
 
-	var _card = __webpack_require__(176);
+	var _card = __webpack_require__(174);
 
 	var _card2 = _interopRequireDefault(_card);
 

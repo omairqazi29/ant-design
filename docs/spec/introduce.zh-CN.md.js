@@ -1,4 +1,4 @@
-webpackJsonp([69,209],{
+webpackJsonp([68,210],{
 
 /***/ 1786:
 /***/ function(module, exports, __webpack_require__) {
@@ -32,6 +32,11 @@ webpackJsonp([69,209],{
 	    "title": null,
 	    "href": "/docs/react/introduce"
 	  }, "Ant Design of React"], "（官方实现）"]], ["li", ["div", {
+	    "class": "outside-link internal"
+	  }, ["a", {
+	    "href": "http://zorro.alibaba.net",
+	    "target": "_blank"
+	  }, "Ant Design of Angular 2"]]], ["li", ["div", {
 	    "class": "outside-link"
 	  }, ["a", {
 	    "href": "https://github.com/iview/iview/",
@@ -42,11 +47,6 @@ webpackJsonp([69,209],{
 	    "href": "https://github.com/FE-Driver/vue-beauty",
 	    "target": "_blank"
 	  }, "vue-beauty"]]], ["li", ["div", {
-	    "class": "outside-link internal"
-	  }, ["a", {
-	    "href": "http://naza.alibaba.net",
-	    "target": "_blank"
-	  }, "Ant Design of Angular 2.0"]]], ["li", ["div", {
 	    "class": "outside-link"
 	  }, ["a", {
 	    "href": "http://aliqin.github.io/",

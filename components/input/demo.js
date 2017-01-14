@@ -1,23 +1,23 @@
-webpackJsonp([8,209],{
+webpackJsonp([8,210],{
 
-/***/ 648:
+/***/ 647:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'addon': __webpack_require__(1501),
-	    'autosize-textarea': __webpack_require__(1502),
-	    'basic': __webpack_require__(1503),
-	    'group': __webpack_require__(1504),
-	    'presuffix': __webpack_require__(1505),
-	    'search-input': __webpack_require__(1506),
-	    'size': __webpack_require__(1507),
-	    'textarea': __webpack_require__(1508),
-	    'tooltip': __webpack_require__(1509),
+	    'addon': __webpack_require__(1500),
+	    'autosize-textarea': __webpack_require__(1501),
+	    'basic': __webpack_require__(1502),
+	    'group': __webpack_require__(1503),
+	    'presuffix': __webpack_require__(1504),
+	    'search-input': __webpack_require__(1505),
+	    'size': __webpack_require__(1506),
+	    'textarea': __webpack_require__(1507),
+	    'tooltip': __webpack_require__(1508),
 	}
 
 /***/ },
 
-/***/ 1501:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -136,7 +136,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1502:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -195,7 +195,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1503:
+/***/ 1502:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -248,7 +248,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1504:
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -432,7 +432,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1505:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -537,7 +537,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1506:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -581,10 +581,10 @@ webpackJsonp([8,209],{
 	  }, "en-US"]]],
 	  "highlightedCode": ["pre", {
 	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Input <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Search <span class=\"token operator\">=</span> Input<span class=\"token punctuation\">.</span>Search<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Search</span> <span class=\"token attr-name\">placeholder</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>input</span> <span class=\"token attr-name\">search</span> <span class=\"token attr-name\">text\"</span> <span class=\"token attr-name\">onSearch</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>value <span class=\"token operator\">=</span><span class=\"token operator\">></span> console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Input <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Search <span class=\"token operator\">=</span> Input<span class=\"token punctuation\">.</span>Search<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Search</span>\n    <span class=\"token attr-name\">placeholder</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>input</span> <span class=\"token attr-name\">search</span> <span class=\"token attr-name\">text\"</span>\n    <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> <span class=\"token number\">200</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span>\n    <span class=\"token attr-name\">onSearch</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>value <span class=\"token operator\">=</span><span class=\"token operator\">></span> console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span>\n  <span class=\"token punctuation\">/></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }],
 	  "preview": function jsonmlReactLoader() {
-	    var Search = _input2.default.Search;return _react2.default.createElement(Search, { placeholder: 'input search text', onSearch: function onSearch(value) {
+	    var Search = _input2.default.Search;return _react2.default.createElement(Search, { placeholder: 'input search text', style: { width: 200 }, onSearch: function onSearch(value) {
 	        return console.log(value);
 	      } });
 	  }
@@ -592,7 +592,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1507:
+/***/ 1506:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -653,7 +653,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1508:
+/***/ 1507:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -706,7 +706,7 @@ webpackJsonp([8,209],{
 
 /***/ },
 
-/***/ 1509:
+/***/ 1508:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

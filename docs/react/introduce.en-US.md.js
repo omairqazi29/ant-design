@@ -1,6 +1,6 @@
-webpackJsonp([89,209],{
+webpackJsonp([91,210],{
 
-/***/ 1765:
+/***/ 1763:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19,10 +19,70 @@ webpackJsonp([89,209],{
 	  "content": ["article", {}, ["h2", "Features"], ["ul", ["li", ["p", "Following Ant Design desktop specification."]], ["li", ["p", "It is a set of high quality UI components and based on ", ["a", {
 	    "title": null,
 	    "href": "http://react-component.github.io/badgeboard/"
-	  }, "React Component"], "."]], ["li", ["p", "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."]]], ["h2", "Installation"], ["pre", {
+	  }, "React Component"], "."]], ["li", ["p", "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."]]], ["h2", "Compatibility"], ["p", "Modern browsers and IE9+."], ["blockquote", ["p", ["a", {
+	    "title": null,
+	    "href": "https://github.com/xcatliu/react-ie8"
+	  }, "IE8 issues"]]], ["h2", "Version"], ["ul", ["li", ["p", "Stable: ", ["a", {
+	    "title": null,
+	    "href": "https://www.npmjs.org/package/antd"
+	  }, ["img", {
+	    "title": null,
+	    "src": "https://img.shields.io/npm/v/antd.svg?style=flat-square",
+	    "alt": "npm package"
+	  }]]]], ["li", ["p", "Beta: ", ["a", {
+	    "title": null,
+	    "href": "https://www.npmjs.org/package/antd"
+	  }, ["img", {
+	    "title": null,
+	    "src": "https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm",
+	    "alt": null
+	  }]]]]], ["p", "You can subscribe to this feed for new version notification: ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/releases.atom"
+	  }, "https://github.com/ant-design/ant-design/releases.atom"]], ["h2", "Installation"], ["h3", "Using npm to install"], ["p", ["strong", "We recommend using npm to install"], "，it not only makes development easier，but you can also take advantage of the whole ecosystem."], ["p", "If using npm to install, you could use ", ["code", "import"], " or ", ["code", "require"], "."], ["p", "Stable version："], ["pre", {
 	    "lang": "bash",
 	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd --save"
-	  }, ["code", "$ npm install antd --save"]], ["h2", "Usage"], ["h3", "Use prebuilt bundle"], ["pre", {
+	  }, ["code", "$ npm install antd --save"]], ["p", "Beta version："], ["pre", {
+	    "lang": "bash",
+	    "highlighted": "$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> antd@beta --save"
+	  }, ["code", "$ npm install antd@beta --save"]], ["h3", "Import in Browser"], ["p", ["a", {
+	    "title": null,
+	    "href": "https://cdnjs.com/libraries/antd"
+	  }, ["img", {
+	    "title": null,
+	    "src": "https://img.shields.io/cdnjs/v/antd.svg?style=flat-square",
+	    "alt": "CDNJS"
+	  }]]], ["p", "We provide ", ["code", "antd.js"], " ", ["code", "antd.css"], " and ", ["code", "antd.min.js"], " ", ["code", "antd.min.css"], " under ", ["code", "antd/dist"], " in antd's npm package, in order to import all the components of antd directly. Also, you can use ", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/"
+	  }, "unpkg"], "."], ["blockquote", ["p", "It's not recommended to use the already built files, as you cannot get bugfixes from the dependencies of antd."]], ["h4", "stable"], ["ul", ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.js"
+	  }, "https://unpkg.com/antd/dist/antd.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.css"
+	  }, "https://unpkg.com/antd/dist/antd.css"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.min.js"
+	  }, "https://unpkg.com/antd/dist/antd.min.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd/dist/antd.min.css"
+	  }, "https://unpkg.com/antd/dist/antd.min.css"]]]], ["h4", "beta"], ["ul", ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.js"
+	  }, "https://unpkg.com/antd@beta/dist/antd.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.css"
+	  }, "https://unpkg.com/antd@beta/dist/antd.css"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.min.js"
+	  }, "https://unpkg.com/antd@beta/dist/antd.min.js"]]], ["li", ["p", ["a", {
+	    "title": null,
+	    "href": "https://unpkg.com/antd@beta/dist/antd.min.css"
+	  }, "https://unpkg.com/antd@beta/dist/antd.min.css"]]]], ["blockquote", ["p", "Here is an ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/antd-init/tree/master/examples/build-antd-standalone"
+	  }, "example"], " of how to build your own antd.js if you are using antd@<1.0.0."]], ["h2", "Usage"], ["h3", "Use prebuilt bundle"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	  }, ["code", "import { DatePicker } from 'antd';\nReactDOM.render(<DatePicker />, mountNode);"]], ["p", "And import style manually:"], ["pre", {
@@ -40,24 +100,7 @@ webpackJsonp([89,209],{
 	  }, ["code", "// import js and css modularly, parsed by babel-plugin-import\nimport { DatePicker } from 'antd';"]]], ["li", ["p", "Manually import"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> DatePicker <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/date-picker'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// just for js</span>\n<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/lib/date-picker/style/css'</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// with style</span>"
-	  }, ["code", "import DatePicker from 'antd/lib/date-picker';  // just for js\nimport 'antd/lib/date-picker/style/css';  // with style"]]]], ["h2", "Version"], ["ul", ["li", ["p", "Stable: ", ["a", {
-	    "title": null,
-	    "href": "https://www.npmjs.org/package/antd"
-	  }, ["img", {
-	    "title": null,
-	    "src": "https://img.shields.io/npm/v/antd.svg?style=flat-square",
-	    "alt": "npm package"
-	  }]]]], ["li", ["p", "Beta: ", ["a", {
-	    "title": null,
-	    "href": "https://www.npmjs.org/package/antd"
-	  }, ["img", {
-	    "title": null,
-	    "src": "https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm",
-	    "alt": null
-	  }]]]]], ["h2", "Compatibility"], ["p", "Modern browsers and IE9+."], ["blockquote", ["p", ["a", {
-	    "title": null,
-	    "href": "https://github.com/xcatliu/react-ie8"
-	  }, "IE8 issues"]]], ["h2", "Useful Links"], ["ul", ["li", ["p", ["a", {
+	  }, ["code", "import DatePicker from 'antd/lib/date-picker';  // just for js\nimport 'antd/lib/date-picker/style/css';  // with style"]]]], ["h2", "Useful Links"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://ant.design/"
 	  }, "Home page"]]], ["li", ["p", ["a", {
@@ -168,17 +211,17 @@ webpackJsonp([89,209],{
 	    "href": "#Features"
 	  }, "Features"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
+	    "href": "#Compatibility"
+	  }, "Compatibility"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#Version"
+	  }, "Version"]], ["li", ["a", {
+	    "className": "bisheng-toc-h2",
 	    "href": "#Installation"
 	  }, "Installation"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#Usage"
 	  }, "Usage"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#Version"
-	  }, "Version"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#Compatibility"
-	  }, "Compatibility"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#Useful-Links"
 	  }, "Useful Links"]], ["li", ["a", {

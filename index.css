@@ -627,7 +627,6 @@ samp {
   vertical-align: baseline;
   text-align: center;
   text-transform: none;
-  text-rendering: auto;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -3897,7 +3896,6 @@ samp {
   vertical-align: baseline;
   text-align: center;
   text-transform: none;
-  text-rendering: auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4180,7 +4178,6 @@ samp {
   border-radius: 4px;
   cursor: default;
   float: left;
-  padding: 0 16px;
   margin-right: 4px;
   max-width: 99%;
   position: relative;
@@ -4206,7 +4203,6 @@ samp {
   vertical-align: baseline;
   text-align: center;
   text-transform: none;
-  text-rendering: auto;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -4342,8 +4338,8 @@ samp {
   padding: 7px 16px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.65);
-  cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
   overflow: hidden;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -4830,7 +4826,6 @@ textarea.ant-input {
 }
 .ant-input-group-addon .ant-select .ant-select-selection {
   background-color: inherit;
-  border: 0;
   margin: -1px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -4927,6 +4922,8 @@ textarea.ant-input {
 }
 .ant-input-preSuffix-wrapper {
   position: relative;
+  display: inline-block;
+  width: 100%;
 }
 .ant-input-preSuffix-wrapper .ant-input {
   z-index: 1;
@@ -4937,7 +4934,7 @@ textarea.ant-input {
 .ant-input-preSuffix-wrapper .ant-input-prefix,
 .ant-input-preSuffix-wrapper .ant-input-suffix {
   position: absolute;
-  top: 51%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -5412,7 +5409,7 @@ textarea.ant-input {
   font-family: "anticon" !important;
   position: absolute;
   content: "\E61F";
-  right: 16px;
+  right: 12px;
   color: rgba(0, 0, 0, 0.43);
   display: inline-block;
   font-size: 12px;
@@ -8910,12 +8907,7 @@ span.ant-radio + * {
   position: relative;
   display: block;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
@@ -8932,7 +8924,6 @@ span.ant-radio + * {
 }
 .ant-carousel .slick-list.dragging {
   cursor: pointer;
-  cursor: hand;
 }
 .ant-carousel .slick-slider .slick-track,
 .ant-carousel .slick-slider .slick-list {
@@ -9056,6 +9047,7 @@ span.ant-radio + * {
 }
 .ant-carousel .slick-dots li button {
   border: 0;
+  cursor: pointer;
   background: #000;
   opacity: 0.3;
   display: inline-block;
@@ -9065,7 +9057,6 @@ span.ant-radio + * {
   outline: none;
   font-size: 0;
   color: transparent;
-  cursor: pointer;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -9485,7 +9476,6 @@ span.ant-radio + * {
   vertical-align: baseline;
   text-align: center;
   text-transform: none;
-  text-rendering: auto;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -9874,10 +9864,8 @@ span.ant-radio + * {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.ant-calendar-footer {
-  border-top: 1px solid #e9e9e9;
-}
 .ant-calendar-footer-btn {
+  border-top: 1px solid #e9e9e9;
   text-align: center;
   display: block;
   line-height: 38px;
@@ -10315,7 +10303,7 @@ textarea.ant-calendar-range .ant-calendar-time-picker-input {
 div.ant-calendar-range-quick-selector {
   display: block;
   text-align: left;
-  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
   padding: 10.5px 10px;
 }
 div.ant-calendar-range-quick-selector > a {
@@ -10510,7 +10498,6 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   line-height: 34px;
 }
 .ant-calendar-time .ant-calendar-footer {
-  border-top: 1px solid #e9e9e9;
   text-align: right;
   position: relative;
   height: auto;
@@ -10798,14 +10785,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year:before,
-.ant-calendar-year-panel-next-decade-cell .ant-calendar-year-panel-year:before {
-  content: "\E61F";
-  font-family: "anticon" !important;
-}
-.ant-calendar-year-panel-last-decade-cell .ant-calendar-year-panel-year:before {
-  content: "\E620";
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-calendar-decade-panel {
   left: 0;
@@ -10940,14 +10920,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade:before,
-.ant-calendar-decade-panel-next-century-cell .ant-calendar-decade-panel-decade:before {
-  content: "\E61F";
-  font-family: "anticon" !important;
-}
-.ant-calendar-decade-panel-last-century-cell .ant-calendar-decade-panel-decade:before {
-  content: "\E620";
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-calendar-month .ant-calendar-month-panel,
 .ant-calendar-month .ant-calendar-year-panel {
@@ -11021,7 +10994,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   color: rgba(0, 0, 0, 0.43);
 }
 .ant-time-picker-panel-narrow .ant-time-picker-panel-input-wrap {
-  max-width: 111px;
+  max-width: 112px;
 }
 .ant-time-picker-panel-select {
   float: left;
@@ -11703,8 +11676,8 @@ form .ant-cascader-picker {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
           animation: loadingCircle 1s infinite linear;
-  content: "\E6AE";
-  color: rgba(0, 0, 0, 0.43);
+  content: "\E64D";
+  color: #108ee9;
 }
 .ant-advanced-search-form .ant-form-item {
   margin-bottom: 16px;
@@ -11811,7 +11784,7 @@ form .ant-cascader-picker {
   border: 0;
   background: transparent;
   position: absolute;
-  right: 18px;
+  right: 16px;
   top: 16px;
   z-index: 10;
   font-weight: 700;
@@ -12501,8 +12474,8 @@ form .ant-cascader-picker {
   bottom: 0;
   background: #fff;
   border-radius: 10px;
-  -webkit-animation: ant-progress-active 2s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-          animation: ant-progress-active 2s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+  -webkit-animation: ant-progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+          animation: ant-progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
 }
 .ant-progress-status-exception .ant-progress-bg {
   background-color: #F04134;
@@ -12546,7 +12519,11 @@ form .ant-cascader-picker {
 }
 @-webkit-keyframes ant-progress-active {
   0% {
-    opacity: 0.8;
+    opacity: 0.1;
+    width: 0;
+  }
+  20% {
+    opacity: 0.5;
     width: 0;
   }
   100% {
@@ -12556,7 +12533,11 @@ form .ant-cascader-picker {
 }
 @keyframes ant-progress-active {
   0% {
-    opacity: 0.8;
+    opacity: 0.1;
+    width: 0;
+  }
+  20% {
+    opacity: 0.5;
     width: 0;
   }
   100% {
@@ -12777,7 +12758,6 @@ textarea.ant-input-number {
   vertical-align: baseline;
   text-align: center;
   text-transform: none;
-  text-rendering: auto;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13173,8 +13153,8 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   padding: 7px 16px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.65);
-  cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-transition: background 0.3s ease;
@@ -14055,9 +14035,9 @@ textarea.ant-pagination-options-quick-jumper input {
   opacity: 0.7;
   -webkit-filter: blur(1px);
   filter: blur(1px);
+  /* IE6~IE9 */
   -webkit-filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
           filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
-  /* IE6~IE9 */
 }
 .ant-spin-blur:after {
   content: '';
@@ -14582,9 +14562,11 @@ textarea.ant-pagination-options-quick-jumper input {
   word-break: break-all;
 }
 .ant-table-thead > tr > th.ant-table-selection-column,
-.ant-table-tbody > tr > td.ant-table-selection-column {
+.ant-table-tbody > tr > td.ant-table-selection-column,
+.ant-table-expand-icon-th,
+.ant-table-row-expand-icon-cell {
   text-align: center;
-  width: 40px;
+  width: 48px;
 }
 .ant-table-header {
   background: #f7f7f7;
@@ -14792,7 +14774,7 @@ textarea.ant-pagination-options-quick-jumper input {
   border-radius: 4px 4px 0 0;
 }
 .ant-table-filter-dropdown .ant-dropdown-menu-item > label + span {
-  margin-left: 8px;
+  padding: 0;
 }
 .ant-table-filter-dropdown .ant-dropdown-menu-sub {
   border-radius: 4px;
@@ -14829,9 +14811,6 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-table-filter-dropdown-link.clear {
   float: right;
-}
-.ant-table-expand-icon-th {
-  width: 40px;
 }
 .ant-table-row-expand-icon {
   cursor: pointer;
@@ -16618,7 +16597,6 @@ a {
   width: 92%;
   margin: 0 auto;
   border-radius: 4px;
-  overflow: hidden;
   padding: 24px 0 0;
   margin-bottom: 24px;
   position: relative;
