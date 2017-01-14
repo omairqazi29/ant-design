@@ -19,7 +19,7 @@ webpackJsonp([208,210],{
 	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "新增社区精选组件页面。", ["a", {
 	    "title": null,
 	    "href": "/docs/react/recommendation/"
-	  }, "链接"], "。"]], ["li", ["p", "修复一个内容过长导致 Layout 侧边布局错位的问题。", ["a", {
+	  }, "链接"]]], ["li", ["p", "修复一个内容过长导致 Layout 侧边布局错位的问题。", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4459"
 	  }, "#4459"]]], ["li", ["p", "修复 Input.Search 输入框和图标错位的问题。", ["a", {

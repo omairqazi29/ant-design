@@ -19,7 +19,7 @@ webpackJsonp([209,210],{
 	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "Added a Third-Party Library Page for recommending other greet react components. ", ["a", {
 	    "title": null,
 	    "href": "/docs/react/recommendation"
-	  }, "Link"], "。"]], ["li", ["p", "Fixed misplaced Sider of Layout. ", ["a", {
+	  }, "Link"]]], ["li", ["p", "Fixed misplaced Sider of Layout. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4459"
 	  }, "#4459"]]], ["li", ["p", "Fixed Input.Search wrong block layout and misplaced icon. ", ["a", {
@@ -145,7 +145,7 @@ webpackJsonp([209,210],{
 	  }, "#4242"], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ystarlongzi"
-	  }, "@ystarlongzi"]]], ["li", ["p", "Fix a FormItem mis-aligin bug。 ", ["a", {
+	  }, "@ystarlongzi"]]], ["li", ["p", "Fix a FormItem mis-aligin bug. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/4271"
 	  }, "#4271"]]], ["li", ["p", "Fix background issue resulting in selected element of veritcal Menu.", ["a", {
@@ -403,7 +403,7 @@ webpackJsonp([209,210],{
 	  }, "#3560"]]], ["li", ["p", "Add ", ["code", "checkable"], ". ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/3560"
-	  }, "#3560"]]]]], ["li", ["p", "Radio.Group"], ["ul", ["li", ["p", "Add ", ["code", "className"], "。"]], ["li", ["p", ["code", "null"], " or ", ["code", "undefined"], " ", ["code", "children"], " will be ignored."]]]], ["li", ["p", "Select"], ["ul", ["li", ["p", "Add ", ["code", "tokenSeparators"], " to support automatic tokenization。", ["a", {
+	  }, "#3560"]]]]], ["li", ["p", "Radio.Group"], ["ul", ["li", ["p", "Add ", ["code", "className"], "."]], ["li", ["p", ["code", "null"], " or ", ["code", "undefined"], " ", ["code", "children"], " will be ignored."]]]], ["li", ["p", "Select"], ["ul", ["li", ["p", "Add ", ["code", "tokenSeparators"], " to support automatic tokenization. ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/issues/2071"
 	  }, "#2071"]]], ["li", ["p", "Add ", ["code", "onFocus"], " callback. ", ["a", {
@@ -742,7 +742,7 @@ webpackJsonp([209,210],{
 	  }, "dva-cli"], " now, the old ", ["code", "antd-init"], " is just for studying and demo."]]], ["h2", "1.11.4"], ["p", "Visit ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
-	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "。"]],
+	  }, "GitHub"], " to read change logs from ", ["code", "0.x"], " to ", ["code", "1.x"], "."]],
 	  "meta": {
 	    "order": 9,
 	    "title": "Change Log",
