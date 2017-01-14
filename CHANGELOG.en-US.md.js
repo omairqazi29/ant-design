@@ -16,7 +16,10 @@ webpackJsonp([209,210],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "Added a Third-Party Library Page for recommending other greet react components. ", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.3"], ["p", ["code", "2017-01-15"]], ["ul", ["li", ["p", "Fixed issue introduced in ", ["code", "2.6.2"], " that Popconfirm is not working. ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4606"
+	  }, "#4606"]]]], ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "Added a Third-Party Library Page for recommending other greet react components. ", ["a", {
 	    "title": null,
 	    "href": "/docs/react/recommendation"
 	  }, "Link"]]], ["li", ["p", "Fixed misplaced Sider of Layout. ", ["a", {
@@ -755,6 +758,9 @@ webpackJsonp([209,210],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "."]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.3"
+	  }, "2.6.3"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.6.2"
 	  }, "2.6.2"]], ["li", ["a", {

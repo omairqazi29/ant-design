@@ -16,7 +16,10 @@ webpackJsonp([208,210],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", {}, ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "新增社区精选组件页面。", ["a", {
+	  "content": ["article", {}, ["h2", "2.6.3"], ["p", ["code", "2017-01-15"]], ["ul", ["li", ["p", "修复 ", ["code", "2.6.2"], " 中 Popconfirm 不可用的问题。", ["a", {
+	    "title": null,
+	    "href": "https://github.com/ant-design/ant-design/issues/4606"
+	  }, "#4606"]]]], ["h2", "2.6.2"], ["p", ["code", "2017-01-14"]], ["ul", ["li", ["p", "新增社区精选组件页面。", ["a", {
 	    "title": null,
 	    "href": "/docs/react/recommendation/"
 	  }, "链接"]]], ["li", ["p", "修复一个内容过长导致 Layout 侧边布局错位的问题。", ["a", {
@@ -752,6 +755,9 @@ webpackJsonp([208,210],{
 	    "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
 	  }, "GitHub"], "。"]],
 	  "toc": ["ul", ["li", ["a", {
+	    "className": "bisheng-toc-h2",
+	    "href": "#2.6.3"
+	  }, "2.6.3"]], ["li", ["a", {
 	    "className": "bisheng-toc-h2",
 	    "href": "#2.6.2"
 	  }, "2.6.2"]], ["li", ["a", {

@@ -128,7 +128,7 @@ webpackJsonp([95,210],{
 	    "title": null,
 	    "src": "https://zos.alipayobjects.com/rmsportal/vgcHJRVZFmPjAawwVoXK.png",
 	    "alt": null
-	  }]]], ["p", "But, we can import component on demand:"], ["pre", {
+	  }]]], ["p", "But, we can import individual components on demand:"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> Button <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/button/style/css'</span><span class=\"token punctuation\">;</span> <span class=\"token comment\" spellcheck=\"true\">// import style</span>"
 	  }, ["code", "import Button from 'antd/lib/button';\nimport Button from 'antd/lib/button/style/css'; // import style"]], ["p", "We strongly recommend to use ", ["a", {
@@ -137,10 +137,10 @@ webpackJsonp([95,210],{
 	  }, "babel-plugin-import"], ", which can convert the following code to the 'antd/lib/xxx' way:"], ["pre", {
 	    "lang": "jsx",
 	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>"
-	  }, ["code", "import { Button } from 'antd';"]], ["p", "And this plugin can also load styles on demand. See the ", ["a", {
+	  }, ["code", "import { Button } from 'antd';"]], ["p", "And this plugin can load styles too, read ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ant-design/babel-plugin-import#usage"
-	  }, "usage"], " for further details."], ["h2", "Customization"], ["ul", ["li", ["p", ["a", {
+	  }, "usage"], " for more details."], ["h2", "Customization"], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "/docs/react/customize-theme"
 	  }, "Customize Theme"]]], ["li", ["p", ["a", {
