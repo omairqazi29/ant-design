@@ -1,6 +1,6 @@
 webpackJsonp([95,210],{
 
-/***/ 1759:
+/***/ 1757:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22,7 +22,7 @@ webpackJsonp([95,210],{
 	  }, "React"], " and ", ["a", {
 	    "title": null,
 	    "href": "http://babeljs.io/docs/learn-es2015/"
-	  }, "JavaScript ES2015"], " is needed."], ["h2", "First Example"], ["p", "The following CodePen demo is the simplest usage case, and it's also a good habit to fork this demo to provide a re-producible demo while reporting a bug. Please don't use this demo as a scaffold in real world."], ["ul", ["li", ["p", ["a", {
+	  }, "JavaScript ES2015"], " is needed."], ["h2", "First Example"], ["p", "The following CodePen demo is the simplest usage case, and it's also a good habit to fork this demo to provide a re-producible demo while reporting a bug. Please don't use this demo as a scaffold in production."], ["ul", ["li", ["p", ["a", {
 	    "title": null,
 	    "href": "http://codepen.io/anon/pen/wGOWGW?editors=001"
 	  }, "antd CodePen"]]]], ["h2", "Standard Development Flow"], ["p", "During development, you may need to compile and debug JSX and ES2015 code, and even proxy some of the request to mocked data or some external services. And all of these to be done with a quick feedback provided through hot reloading of changes."], ["p", "Such features, together with packaging the production version are covered in this work flow."], ["h3", "1. Installation"], ["blockquote", ["p", "Please make sure that you had installed ", ["a", {

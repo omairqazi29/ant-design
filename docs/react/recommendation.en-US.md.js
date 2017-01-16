@@ -1,6 +1,6 @@
 webpackJsonp([87,210],{
 
-/***/ 1767:
+/***/ 1765:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16,7 +16,7 @@ webpackJsonp([87,210],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  "content": ["article", ["p", ["code", "antd"], " is designed to provide high-quality React UI components which following Ant Design Specification. So, we are not going to implement other functions which are not relative to ", ["code", "antd"], "'s target, and recommend to use excellent third-party library which are provided by React community:"], ["ul", ["li", ["p", ["strong", "Router: "], " ", ["a", {
+	  "content": ["article", ["p", ["code", "antd"], " is designed to provide high-quality React UI components which following Ant Design Specification. So, we are not going to implement other functions which are not relative to ", ["code", "antd"], "'s target, and recommend to use excellent third-party library which came from React community:"], ["ul", ["li", ["p", ["strong", "Router: "], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/ReactTraining/react-router"
 	  }, "react-router"]]], ["li", ["p", ["strong", "Layout: "], " ", ["a", {
@@ -46,7 +46,10 @@ webpackJsonp([87,210],{
 	  }, "react-copy-to-clipboard"]]], ["li", ["p", ["strong", "Document head manager: "], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/nfl/react-helmet"
-	  }, "react-helmet"]]]]],
+	  }, "react-helmet"]]], ["li", ["p", ["strong", "Font Awesome Icons"], ": ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/andreypopp/react-fa"
+	  }, "https://github.com/andreypopp/react-fa"]]]]],
 	  "meta": {
 	    "order": 7,
 	    "title": "Third-Party Library",

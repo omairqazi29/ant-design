@@ -1,18 +1,18 @@
 webpackJsonp([40,210],{
 
-/***/ 637:
+/***/ 634:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1398),
-	    'card': __webpack_require__(1399),
-	    'locale': __webpack_require__(1400),
-	    'notice-calendar': __webpack_require__(1401),
+	    'basic': __webpack_require__(1396),
+	    'card': __webpack_require__(1397),
+	    'locale': __webpack_require__(1398),
+	    'notice-calendar': __webpack_require__(1399),
 	}
 
 /***/ },
 
-/***/ 1398:
+/***/ 1396:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67,7 +67,7 @@ webpackJsonp([40,210],{
 
 /***/ },
 
-/***/ 1399:
+/***/ 1397:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -126,7 +126,7 @@ webpackJsonp([40,210],{
 
 /***/ },
 
-/***/ 1400:
+/***/ 1398:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -149,7 +149,7 @@ webpackJsonp([40,210],{
 
 	var _moment2 = _interopRequireDefault(_moment);
 
-	var _en_US = __webpack_require__(565);
+	var _en_US = __webpack_require__(562);
 
 	var _en_US2 = _interopRequireDefault(_en_US);
 
@@ -190,7 +190,7 @@ webpackJsonp([40,210],{
 
 /***/ },
 
-/***/ 1401:
+/***/ 1399:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

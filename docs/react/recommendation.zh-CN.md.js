@@ -1,6 +1,6 @@
 webpackJsonp([86,210],{
 
-/***/ 1768:
+/***/ 1766:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46,7 +46,10 @@ webpackJsonp([86,210],{
 	  }, "react-copy-to-clipboard"]]], ["li", ["p", ["strong", "管理 document head："], " ", ["a", {
 	    "title": null,
 	    "href": "https://github.com/nfl/react-helmet"
-	  }, "react-helmet"]]]]],
+	  }, "react-helmet"]]], ["li", ["p", ["strong", "Font Awesome 图标"], ": ", ["a", {
+	    "title": null,
+	    "href": "https://github.com/andreypopp/react-fa"
+	  }, "https://github.com/andreypopp/react-fa"]]]]],
 	  "meta": {
 	    "order": 7,
 	    "title": "社区精选组件",

@@ -1,25 +1,25 @@
 webpackJsonp([3,210],{
 
-/***/ 668:
+/***/ 665:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1677),
-	    'card-top': __webpack_require__(1678),
-	    'card': __webpack_require__(1679),
-	    'custom-add-trigger': __webpack_require__(1680),
-	    'disabled': __webpack_require__(1681),
-	    'editable-card': __webpack_require__(1682),
-	    'extra': __webpack_require__(1683),
-	    'icon': __webpack_require__(1684),
-	    'position': __webpack_require__(1685),
-	    'size': __webpack_require__(1686),
-	    'slide': __webpack_require__(1687),
+	    'basic': __webpack_require__(1675),
+	    'card-top': __webpack_require__(1676),
+	    'card': __webpack_require__(1677),
+	    'custom-add-trigger': __webpack_require__(1678),
+	    'disabled': __webpack_require__(1679),
+	    'editable-card': __webpack_require__(1680),
+	    'extra': __webpack_require__(1681),
+	    'icon': __webpack_require__(1682),
+	    'position': __webpack_require__(1683),
+	    'size': __webpack_require__(1684),
+	    'slide': __webpack_require__(1685),
 	}
 
 /***/ },
 
-/***/ 1677:
+/***/ 1675:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92,7 +92,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1678:
+/***/ 1676:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -169,7 +169,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1679:
+/***/ 1677:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -242,7 +242,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1680:
+/***/ 1678:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -354,7 +354,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1681:
+/***/ 1679:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -425,7 +425,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1682:
+/***/ 1680:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -516,7 +516,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1683:
+/***/ 1681:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -597,7 +597,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1684:
+/***/ 1682:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -679,7 +679,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1685:
+/***/ 1683:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -800,7 +800,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1686:
+/***/ 1684:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -871,7 +871,7 @@ webpackJsonp([3,210],{
 
 /***/ },
 
-/***/ 1687:
+/***/ 1685:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

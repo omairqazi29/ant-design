@@ -1,20 +1,20 @@
 webpackJsonp([23,210],{
 
-/***/ 638:
+/***/ 635:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1404),
-	    'border-less': __webpack_require__(1405),
-	    'grid': __webpack_require__(1406),
-	    'loading': __webpack_require__(1407),
-	    'no-padding': __webpack_require__(1408),
-	    'simple': __webpack_require__(1409),
+	    'basic': __webpack_require__(1402),
+	    'border-less': __webpack_require__(1403),
+	    'grid': __webpack_require__(1404),
+	    'loading': __webpack_require__(1405),
+	    'no-padding': __webpack_require__(1406),
+	    'simple': __webpack_require__(1407),
 	}
 
 /***/ },
 
-/***/ 1404:
+/***/ 1402:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -89,7 +89,7 @@ webpackJsonp([23,210],{
 
 /***/ },
 
-/***/ 1405:
+/***/ 1403:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -164,7 +164,7 @@ webpackJsonp([23,210],{
 
 /***/ },
 
-/***/ 1406:
+/***/ 1404:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -265,7 +265,7 @@ webpackJsonp([23,210],{
 
 /***/ },
 
-/***/ 1407:
+/***/ 1405:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -322,7 +322,7 @@ webpackJsonp([23,210],{
 
 /***/ },
 
-/***/ 1408:
+/***/ 1406:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -399,7 +399,7 @@ webpackJsonp([23,210],{
 
 /***/ },
 
-/***/ 1409:
+/***/ 1407:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

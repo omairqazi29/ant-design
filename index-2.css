@@ -1,4 +1,18 @@
 
+.ant-table-title {
+  padding: 16px 8px;
+  position: relative;
+  top: 1px;
+  border-radius: 4px 4px 0 0;
+}
+.ant-table.ant-table-bordered .ant-table-title {
+  border: 1px solid #e9e9e9;
+}
+.ant-table-title + .ant-table-content {
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
 .ant-table-bordered .ant-table-title + .ant-table-content,
 .ant-table-bordered .ant-table-title + .ant-table-content table {
   border-radius: 0;
@@ -2228,30 +2242,6 @@ footer ul li > h2 {
 footer ul li > div {
   margin: 0 8px 5px 0;
 }
-#list {
-  position: fixed;
-  z-index: 9998;
-  top: 50%;
-  right: 20px;
-  width: 6px;
-  margin-top: -35px;
-}
-.list-point {
-  width: 6px;
-  height: 6px;
-  background: #0ae;
-  border-radius: 4px;
-  float: left;
-  margin: 4px auto;
-  opacity: 0.5;
-  cursor: pointer;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-.list-point:hover,
-.list-point.active {
-  opacity: 1;
-}
 .banner-wrapper {
   position: relative;
   width: 100%;
@@ -2315,7 +2305,6 @@ footer ul li > div {
 .banner-text-wrapper .github-btn {
   float: right;
   line-height: 14px;
-  width: 91px;
   text-align: left;
 }
 .banner-text-wrapper .github-btn a:hover {
@@ -2350,7 +2339,7 @@ footer ul li > div {
   float: left;
   position: relative;
   top: 20%;
-  left: 10px;
+  left: -30px;
   font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   z-index: 1;
 }
@@ -2633,13 +2622,12 @@ footer ul li > div {
   font-family: "Lucida Console", Consolas, Menlo, Courier, monospace;
 }
 .markdown.api-container table td:nth-child(3) {
-  width: 20%;
-  word-break: break-all;
+  width: 22%;
   font-size: 12px;
   font-family: "Lucida Console", Consolas, Menlo, Courier, monospace;
 }
 .markdown.api-container table td:last-child {
-  width: 15%;
+  width: 13%;
   font-size: 12px;
   font-family: "Lucida Console", Consolas, Menlo, Courier, monospace;
 }
@@ -2869,7 +2857,6 @@ footer ul li > div {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
-  #list,
   #search-box {
     display: none;
   }

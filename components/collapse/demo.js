@@ -1,19 +1,19 @@
 webpackJsonp([31,210],{
 
-/***/ 642:
+/***/ 639:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'accordion': __webpack_require__(1437),
-	    'basic': __webpack_require__(1438),
-	    'borderless': __webpack_require__(1439),
-	    'custom': __webpack_require__(1440),
-	    'mix': __webpack_require__(1441),
+	    'accordion': __webpack_require__(1435),
+	    'basic': __webpack_require__(1436),
+	    'borderless': __webpack_require__(1437),
+	    'custom': __webpack_require__(1438),
+	    'mix': __webpack_require__(1439),
 	}
 
 /***/ },
 
-/***/ 1437:
+/***/ 1435:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -96,7 +96,7 @@ webpackJsonp([31,210],{
 
 /***/ },
 
-/***/ 1438:
+/***/ 1436:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -181,7 +181,7 @@ webpackJsonp([31,210],{
 
 /***/ },
 
-/***/ 1439:
+/***/ 1437:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -264,7 +264,7 @@ webpackJsonp([31,210],{
 
 /***/ },
 
-/***/ 1440:
+/***/ 1438:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -347,7 +347,7 @@ webpackJsonp([31,210],{
 
 /***/ },
 
-/***/ 1441:
+/***/ 1439:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

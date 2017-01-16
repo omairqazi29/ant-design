@@ -1,19 +1,19 @@
 webpackJsonp([27,210],{
 
-/***/ 669:
+/***/ 666:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1690),
-	    'checkable': __webpack_require__(1691),
-	    'colorful': __webpack_require__(1692),
-	    'control': __webpack_require__(1693),
-	    'hot-tags': __webpack_require__(1694),
+	    'basic': __webpack_require__(1688),
+	    'checkable': __webpack_require__(1689),
+	    'colorful': __webpack_require__(1690),
+	    'control': __webpack_require__(1691),
+	    'hot-tags': __webpack_require__(1692),
 	}
 
 /***/ },
 
-/***/ 1690:
+/***/ 1688:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -102,7 +102,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1691:
+/***/ 1689:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -214,7 +214,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1692:
+/***/ 1690:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -285,7 +285,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1693:
+/***/ 1691:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -438,7 +438,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1694:
+/***/ 1692:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
