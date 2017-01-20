@@ -1,22 +1,16 @@
 webpackJsonp([108,210],{
 
-/***/ 1744:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/***/ 1113:
+/***/ function(module, exports) {
 
 	module.exports = {
-	  "content": ["article", ["p", "敬请期待。"]],
+	  "content": [
+	    "article",
+	    [
+	      "p",
+	      "敬请期待。"
+	    ]
+	  ],
 	  "meta": {
 	    "order": 0,
 	    "disabled": true,
@@ -26,7 +20,9 @@ webpackJsonp([108,210],{
 	    },
 	    "filename": "docs/pattern/classic.md"
 	  },
-	  "toc": ["ul"]
+	  "toc": [
+	    "ul"
+	  ]
 	};
 
 /***/ }

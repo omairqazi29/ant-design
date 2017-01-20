@@ -1,23 +1,1291 @@
 webpackJsonp([5,210],{
 
-/***/ 640:
+/***/ 811:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1442),
-	    'disabled-date': __webpack_require__(1443),
-	    'disabled': __webpack_require__(1444),
-	    'format': __webpack_require__(1445),
-	    'locale': __webpack_require__(1446),
-	    'presetted-ranges': __webpack_require__(1447),
-	    'size': __webpack_require__(1448),
-	    'start-end': __webpack_require__(1449),
-	    'time': __webpack_require__(1450),
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "最简单的用法，在浮层中可以选择或者输入日期。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Basic use case. Users can select or input a date in panel."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 0,
+	    "title": {
+	      "zh-CN": "基本",
+	      "en-US": "Basic"
+	    },
+	    "filename": "components/date-picker/demo/basic.md",
+	    "id": "components-date-picker-demo-basic"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> { MonthPicker<span class=\"token punctuation\">,</span> RangePicker } <span class=\"token operator\">=</span> DatePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>date<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>date<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>DatePicker onChange<span class=\"token operator\">=</span>{onChange} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>MonthPicker onChange<span class=\"token operator\">=</span>{onChange} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker onChange<span class=\"token operator\">=</span>{onChange} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var MonthPicker = _antd.DatePicker.MonthPicker,
+	      RangePicker = _antd.DatePicker.RangePicker;
+
+	  function onChange(date, dateString) {
+	    console.log(date, dateString);
+	  }
+
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(_antd.DatePicker, {
+	      onChange: onChange
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(MonthPicker, {
+	      onChange: onChange
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      onChange: onChange
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 812:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "可用 ",
+	        [
+	          "code",
+	          "disabledDate"
+	        ],
+	        " 和 ",
+	        [
+	          "code",
+	          "disabledTime"
+	        ],
+	        " 分别禁止选择部分日期和时间，其中 ",
+	        [
+	          "code",
+	          "disabledTime"
+	        ],
+	        " 需要和 ",
+	        [
+	          "code",
+	          "showTime"
+	        ],
+	        " 一起使用。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Disabled part of dates and time by ",
+	        [
+	          "code",
+	          "disabledDate"
+	        ],
+	        " and ",
+	        [
+	          "code",
+	          "disabledTime"
+	        ],
+	        " respectively, and ",
+	        [
+	          "code",
+	          "disabledTime"
+	        ],
+	        " only works with ",
+	        [
+	          "code",
+	          "showTime"
+	        ],
+	        "."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 6,
+	    "title": {
+	      "zh-CN": "不可选择日期和时间",
+	      "en-US": "Disabled Date & Time"
+	    },
+	    "filename": "components/date-picker/demo/disabled-date.md",
+	    "id": "components-date-picker-demo-disabled-date"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> RangePicker <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">.</span>RangePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">range</span><span class=\"token punctuation\">(</span>start<span class=\"token punctuation\">,</span> end<span class=\"token punctuation\">)</span> {\n  <span class=\"token keyword\">const</span> result <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span>let i <span class=\"token operator\">=</span> start<span class=\"token comment\" spellcheck=\"true\">; i &lt; end; i++) {</span>\n    result<span class=\"token punctuation\">.</span><span class=\"token function\">push</span><span class=\"token punctuation\">(</span>i<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  return result<span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">disabledDate</span><span class=\"token punctuation\">(</span>current<span class=\"token punctuation\">)</span> {\n  <span class=\"token operator\">/</span><span class=\"token operator\">/</span> can <span class=\"token operator\">not</span> <span class=\"token keyword\">select</span> days before today <span class=\"token operator\">and</span> today\n  return current <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> current<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&lt;</span> Date<span class=\"token punctuation\">.</span><span class=\"token function\">now</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">disabledDateTime</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n  return {\n    disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">24</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">4</span><span class=\"token punctuation\">,</span> <span class=\"token number\">20</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">30</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  }<span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">disabledRangeTime</span><span class=\"token punctuation\">(</span>_<span class=\"token punctuation\">,</span> type<span class=\"token punctuation\">)</span> {\n  <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>type <span class=\"token operator\">==</span><span class=\"token operator\">=</span> <span class=\"token string\">'start'</span><span class=\"token punctuation\">)</span> {\n    return {\n      disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">4</span><span class=\"token punctuation\">,</span> <span class=\"token number\">20</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">30</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  return {\n    disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">20</span><span class=\"token punctuation\">,</span> <span class=\"token number\">4</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">31</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  }<span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>DatePicker\n      format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n      disabledDate<span class=\"token operator\">=</span>{disabledDate}\n      disabledTime<span class=\"token operator\">=</span>{disabledDateTime}\n      showTime\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      disabledDate<span class=\"token operator\">=</span>{disabledDate}\n      disabledTime<span class=\"token operator\">=</span>{disabledRangeTime}\n      showTime<span class=\"token operator\">=</span>{{ hideDisabledOptions<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }}\n      format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var RangePicker = _antd.DatePicker.RangePicker;
+
+	  function range(start, end) {
+	    var result = [];
+
+	    for (var i = start; i < end; i++) {
+	      result.push(i);
+	    }
+
+	    return result;
+	  }
+
+	  function disabledDate(current) {
+	    // can not select days before today and today
+	    return current && current.valueOf() < Date.now();
+	  }
+
+	  function disabledDateTime() {
+	    return {
+	      disabledHours: function disabledHours() {
+	        return range(0, 24).splice(4, 20);
+	      },
+	      disabledMinutes: function disabledMinutes() {
+	        return range(30, 60);
+	      },
+	      disabledSeconds: function disabledSeconds() {
+	        return [55, 56];
+	      }
+	    };
+	  }
+
+	  function disabledRangeTime(_, type) {
+	    if (type === 'start') {
+	      return {
+	        disabledHours: function disabledHours() {
+	          return range(0, 60).splice(4, 20);
+	        },
+	        disabledMinutes: function disabledMinutes() {
+	          return range(30, 60);
+	        },
+	        disabledSeconds: function disabledSeconds() {
+	          return [55, 56];
+	        }
+	      };
+	    }
+
+	    return {
+	      disabledHours: function disabledHours() {
+	        return range(0, 60).splice(20, 4);
+	      },
+	      disabledMinutes: function disabledMinutes() {
+	        return range(0, 31);
+	      },
+	      disabledSeconds: function disabledSeconds() {
+	        return [55, 56];
+	      }
+	    };
+	  }
+
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(_antd.DatePicker, {
+	      format: "YYYY-MM-DD HH:mm:ss",
+	      disabledDate: disabledDate,
+	      disabledTime: disabledDateTime,
+	      showTime: true
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      disabledDate: disabledDate,
+	      disabledTime: disabledRangeTime,
+	      showTime: {
+	        hideDisabledOptions: true
+	      },
+	      format: "YYYY-MM-DD HH:mm:ss"
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 813:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "选择框的不可用状态。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "A disabled state of the ",
+	        [
+	          "code",
+	          "DatePicker"
+	        ],
+	        "."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 4,
+	    "title": {
+	      "zh-CN": "禁用",
+	      "en-US": "Disabled"
+	    },
+	    "filename": "components/date-picker/demo/disabled.md",
+	    "id": "components-date-picker-demo-disabled"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport moment from <span class=\"token string\">'moment'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> { MonthPicker<span class=\"token punctuation\">,</span> RangePicker } <span class=\"token operator\">=</span> DatePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> dateFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY-MM-DD'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>DatePicker defaultValue<span class=\"token operator\">=</span>{<span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span>} disabled <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>MonthPicker defaultValue<span class=\"token operator\">=</span>{<span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'YYYY-MM'</span><span class=\"token punctuation\">)</span>} disabled <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      defaultValue<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span>}\n      disabled\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var _moment = __webpack_require__(25);
+
+	  var _moment2 = _interopRequireDefault(_moment);
+
+	  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	  var MonthPicker = _antd.DatePicker.MonthPicker,
+	      RangePicker = _antd.DatePicker.RangePicker;
+	  var dateFormat = 'YYYY-MM-DD';
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(_antd.DatePicker, {
+	      defaultValue: (0, _moment2.default)('2015-06-06', dateFormat),
+	      disabled: true
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(MonthPicker, {
+	      defaultValue: (0, _moment2.default)('2015-06', 'YYYY-MM'),
+	      disabled: true
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      defaultValue: [(0, _moment2.default)('2015-06-06', dateFormat), (0, _moment2.default)('2015-06-06', dateFormat)],
+	      disabled: true
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 814:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "使用 ",
+	        [
+	          "code",
+	          "format"
+	        ],
+	        " 属性，可以自定义日期显示格式。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "We can set the date format by ",
+	        [
+	          "code",
+	          "format"
+	        ],
+	        "."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 1,
+	    "title": {
+	      "zh-CN": "日期格式",
+	      "en-US": "Date Format"
+	    },
+	    "filename": "components/date-picker/demo/format.md",
+	    "id": "components-date-picker-demo-format"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport moment from <span class=\"token string\">'moment'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> { MonthPicker<span class=\"token punctuation\">,</span> RangePicker } <span class=\"token operator\">=</span> DatePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> dateFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY/MM/DD'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> monthFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY/MM'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>DatePicker defaultValue<span class=\"token operator\">=</span>{<span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span>} format<span class=\"token operator\">=</span>{dateFormat} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>MonthPicker defaultValue<span class=\"token operator\">=</span>{<span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01'</span><span class=\"token punctuation\">,</span> monthFormat<span class=\"token punctuation\">)</span>} format<span class=\"token operator\">=</span>{monthFormat} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      defaultValue<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span>}\n      format<span class=\"token operator\">=</span>{dateFormat}\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var _moment = __webpack_require__(25);
+
+	  var _moment2 = _interopRequireDefault(_moment);
+
+	  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	  var MonthPicker = _antd.DatePicker.MonthPicker,
+	      RangePicker = _antd.DatePicker.RangePicker;
+	  var dateFormat = 'YYYY/MM/DD';
+	  var monthFormat = 'YYYY/MM';
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(_antd.DatePicker, {
+	      defaultValue: (0, _moment2.default)('2015/01/01', dateFormat),
+	      format: dateFormat
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(MonthPicker, {
+	      defaultValue: (0, _moment2.default)('2015/01', monthFormat),
+	      format: monthFormat
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      defaultValue: [(0, _moment2.default)('2015/01/01', dateFormat), (0, _moment2.default)('2015/01/01', dateFormat)],
+	      format: dateFormat
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 815:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "通过 ",
+	        [
+	          "code",
+	          "locale"
+	        ],
+	        " 设置语言, 默认支持 ",
+	        [
+	          "code",
+	          "en_US"
+	        ],
+	        "，",
+	        [
+	          "code",
+	          "zh_CN"
+	        ],
+	        "。"
+	      ],
+	      [
+	        "p",
+	        "moment 会自动使用当前时区，如果需要使用别的时区，则需要自行设置，设置方法请参考示例代码中的注释。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Use locale to set the language. ",
+	        [
+	          "code",
+	          "en_US"
+	        ],
+	        ", ",
+	        [
+	          "code",
+	          "zh_CN"
+	        ],
+	        " are supported by default."
+	      ],
+	      [
+	        "p",
+	        "moment will use your time zone automatically. If you want to set other time zone, please set it by yourself."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 7,
+	    "title": {
+	      "zh-CN": "国际化",
+	      "en-US": "Locale"
+	    },
+	    "filename": "components/date-picker/demo/locale.md",
+	    "id": "components-date-picker-demo-locale"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport enUS from <span class=\"token string\">'antd/lib/date-picker/locale/en_US'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport moment from <span class=\"token string\">'moment-timezone/moment-timezone'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> It's recommended <span class=\"token keyword\">to</span> set moment locale <span class=\"token operator\">and</span> time zone globally <span class=\"token keyword\">in</span> entry file<span class=\"token punctuation\">,</span>\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> otherwise<span class=\"token punctuation\">,</span> you need <span class=\"token keyword\">to</span> set it by `value` <span class=\"token operator\">or</span> `defaultValue`<span class=\"token punctuation\">.</span>\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> moment<span class=\"token punctuation\">.</span><span class=\"token function\">locale</span><span class=\"token punctuation\">(</span><span class=\"token string\">'en'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> The following data is copied from https<span class=\"token punctuation\">:</span><span class=\"token operator\">/</span><span class=\"token operator\">/</span>github<span class=\"token punctuation\">.</span>com<span class=\"token operator\">/</span>moment<span class=\"token operator\">/</span>moment<span class=\"token operator\">-</span>timezone<span class=\"token operator\">/</span>blob<span class=\"token operator\">/</span>develop<span class=\"token operator\">/</span>data<span class=\"token operator\">/</span>packed<span class=\"token operator\">/</span>latest<span class=\"token punctuation\">.</span>json\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> moment<span class=\"token punctuation\">.</span>tz<span class=\"token punctuation\">.</span><span class=\"token function\">add</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Europe/London|GMT BST BDST|0 -10 -20|0101010101010101010101010101010101010101010101010121212121210101210101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-2axa0 Rc0 1fA0 14M0 1fc0 1g00 1co0 1dc0 1co0 1oo0 1400 1dc0 19A0 1io0 1io0 WM0 1o00 14o0 1o00 17c0 1io0 17c0 1fA0 1a00 1lc0 17c0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1cM0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1io0 1qM0 Dc0 2Rz0 Dc0 1zc0 Oo0 1zc0 Rc0 1wo0 17c0 1iM0 FA0 xB0 1fA0 1a00 14o0 bb0 LA0 xB0 Rc0 1wo0 11A0 1o00 17c0 1fA0 1a00 1fA0 1cM0 1fA0 1a00 17c0 1fA0 1a00 1io0 17c0 1lc0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1a00 1qM0 WM0 1qM0 11A0 1o00 WM0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1tA0 IM0 90o0 U00 1tA0 U00 1tA0 U00 1tA0 U00 1tA0 WM0 1qM0 WM0 1qM0 WM0 1tA0 U00 1tA0 U00 1tA0 11z0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 14o0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00|10e6'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token operator\">/</span><span class=\"token operator\">/</span> moment<span class=\"token punctuation\">.</span>tz<span class=\"token punctuation\">.</span><span class=\"token function\">setDefault</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Europe/London'</span><span class=\"token punctuation\">)</span>\n\n<span class=\"token keyword\">const</span> log <span class=\"token operator\">=</span> console<span class=\"token punctuation\">.</span>log<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span>console<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>DatePicker\n    defaultValue<span class=\"token operator\">=</span>{<span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">locale</span><span class=\"token punctuation\">(</span><span class=\"token string\">'en'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">utcOffset</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">)</span>}\n    locale<span class=\"token operator\">=</span>{enUS}\n    showTime\n    onChange<span class=\"token operator\">=</span>{log}\n  <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var _en_US = __webpack_require__(218);
+
+	  var _en_US2 = _interopRequireDefault(_en_US);
+
+	  var _momentTimezone = __webpack_require__(1653);
+
+	  var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
+
+	  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	  // It's recommended to set moment locale and time zone globally in entry file,
+	  // otherwise, you need to set it by `value` or `defaultValue`.
+	  // moment.locale('en');
+	  // The following data is copied from https://github.com/moment/moment-timezone/blob/develop/data/packed/latest.json
+	  // moment.tz.add('Europe/London|GMT BST BDST|0 -10 -20|0101010101010101010101010101010101010101010101010121212121210101210101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-2axa0 Rc0 1fA0 14M0 1fc0 1g00 1co0 1dc0 1co0 1oo0 1400 1dc0 19A0 1io0 1io0 WM0 1o00 14o0 1o00 17c0 1io0 17c0 1fA0 1a00 1lc0 17c0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1cM0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1io0 1qM0 Dc0 2Rz0 Dc0 1zc0 Oo0 1zc0 Rc0 1wo0 17c0 1iM0 FA0 xB0 1fA0 1a00 14o0 bb0 LA0 xB0 Rc0 1wo0 11A0 1o00 17c0 1fA0 1a00 1fA0 1cM0 1fA0 1a00 17c0 1fA0 1a00 1io0 17c0 1lc0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1a00 1qM0 WM0 1qM0 11A0 1o00 WM0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1tA0 IM0 90o0 U00 1tA0 U00 1tA0 U00 1tA0 U00 1tA0 WM0 1qM0 WM0 1qM0 WM0 1tA0 U00 1tA0 U00 1tA0 11z0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 14o0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00|10e6');
+	  // moment.tz.setDefault('Europe/London')
+	  var log = console.log.bind(console);
+	  return React.createElement(_antd.DatePicker, {
+	    defaultValue: (0, _momentTimezone2.default)().locale('en').utcOffset(0),
+	    locale: _en_US2.default,
+	    showTime: true,
+	    onChange: log
+	  });
+	}
+	};
+
+/***/ },
+
+/***/ 816:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "RangePicker 可以设置常用的 预设范围 提高用户体验。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "We can set presetted ranges to RangePicker to improve user experience."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 8,
+	    "title": {
+	      "zh-CN": "预设范围",
+	      "en-US": "Presetted Ranges"
+	    },
+	    "filename": "components/date-picker/demo/presetted-ranges.md",
+	    "id": "components-date-picker-demo-presetted-ranges"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport moment from <span class=\"token string\">'moment'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> RangePicker <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">.</span>RangePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>dates<span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'From: '</span><span class=\"token punctuation\">,</span> dates<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">', to: '</span><span class=\"token punctuation\">,</span> dates<span class=\"token punctuation\">[</span><span class=\"token number\">1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'From: '</span><span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">', to: '</span><span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">[</span><span class=\"token number\">1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      ranges<span class=\"token operator\">=</span>{{ Today<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'This Month'</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">endOf</span><span class=\"token punctuation\">(</span><span class=\"token string\">'month'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span> }}\n      onChange<span class=\"token operator\">=</span>{onChange}\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      ranges<span class=\"token operator\">=</span>{{ Today<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'This Month'</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">endOf</span><span class=\"token punctuation\">(</span><span class=\"token string\">'month'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span> }}\n      showTime format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY/MM/DD HH:mm:ss\"</span> onChange<span class=\"token operator\">=</span>{onChange}\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var _moment = __webpack_require__(25);
+
+	  var _moment2 = _interopRequireDefault(_moment);
+
+	  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	  var RangePicker = _antd.DatePicker.RangePicker;
+
+	  function onChange(dates, dateStrings) {
+	    console.log('From: ', dates[0], ', to: ', dates[1]);
+	    console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
+	  }
+
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(RangePicker, {
+	      ranges: {
+	        Today: [(0, _moment2.default)(), (0, _moment2.default)()],
+	        'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')]
+	      },
+	      onChange: onChange
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      ranges: {
+	        Today: [(0, _moment2.default)(), (0, _moment2.default)()],
+	        'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')]
+	      },
+	      showTime: true,
+	      format: "YYYY/MM/DD HH:mm:ss",
+	      onChange: onChange
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 817:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "三种大小的输入框，若不设置，则为 ",
+	        [
+	          "code",
+	          "default"
+	        ],
+	        "。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The input box comes in three sizes. ",
+	        [
+	          "code",
+	          "default"
+	        ],
+	        " will be used if ",
+	        [
+	          "code",
+	          "size"
+	        ],
+	        " is omitted."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 2,
+	    "title": {
+	      "zh-CN": "三种大小",
+	      "en-US": "Three Sizes"
+	    },
+	    "filename": "components/date-picker/demo/size.md",
+	    "id": "components-date-picker-demo-size"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker<span class=\"token punctuation\">,</span> Radio } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> { MonthPicker<span class=\"token punctuation\">,</span> RangePicker } <span class=\"token operator\">=</span> DatePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nclass PickerSizesDemo extends React<span class=\"token punctuation\">.</span>Component {\n  state <span class=\"token operator\">=</span> {\n    size<span class=\"token punctuation\">:</span> <span class=\"token string\">'default'</span><span class=\"token punctuation\">,</span>\n  }<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n  handleSizeChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ size<span class=\"token punctuation\">:</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { size } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Radio<span class=\"token punctuation\">.</span>Group value<span class=\"token operator\">=</span>{size} onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleSizeChange}<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Radio<span class=\"token punctuation\">.</span>Button value<span class=\"token operator\">=</span><span class=\"token string\">\"large\"</span><span class=\"token operator\">></span>Large<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Radio<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Radio<span class=\"token punctuation\">.</span>Button value<span class=\"token operator\">=</span><span class=\"token string\">\"default\"</span><span class=\"token operator\">></span><span class=\"token keyword\">Default</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Radio<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Radio<span class=\"token punctuation\">.</span>Button value<span class=\"token operator\">=</span><span class=\"token string\">\"small\"</span><span class=\"token operator\">></span>Small<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Radio<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Radio<span class=\"token punctuation\">.</span>Group<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>DatePicker size<span class=\"token operator\">=</span>{size} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>MonthPicker size<span class=\"token operator\">=</span>{size} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>RangePicker size<span class=\"token operator\">=</span>{size} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>PickerSizesDemo <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+	  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+
+	  var MonthPicker = _antd.DatePicker.MonthPicker,
+	      RangePicker = _antd.DatePicker.RangePicker;
+
+	  var PickerSizesDemo = function (_React$Component) {
+	    _inherits(PickerSizesDemo, _React$Component);
+
+	    function PickerSizesDemo() {
+	      var _temp, _this, _ret;
+
+	      _classCallCheck(this, PickerSizesDemo);
+
+	      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	        args[_key] = arguments[_key];
+	      }
+
+	      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+	        size: 'default'
+	      }, _this.handleSizeChange = function (e) {
+	        _this.setState({
+	          size: e.target.value
+	        });
+	      }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    PickerSizesDemo.prototype.render = function render() {
+	      var size = this.state.size;
+	      return React.createElement(
+	        "div",
+	        null,
+	        React.createElement(
+	          _antd.Radio.Group,
+	          {
+	            value: size,
+	            onChange: this.handleSizeChange
+	          },
+	          React.createElement(
+	            _antd.Radio.Button,
+	            {
+	              value: "large"
+	            },
+	            "Large"
+	          ),
+	          React.createElement(
+	            _antd.Radio.Button,
+	            {
+	              value: "default"
+	            },
+	            "Default"
+	          ),
+	          React.createElement(
+	            _antd.Radio.Button,
+	            {
+	              value: "small"
+	            },
+	            "Small"
+	          )
+	        ),
+	        React.createElement("br", null),
+	        React.createElement("br", null),
+	        React.createElement(_antd.DatePicker, {
+	          size: size
+	        }),
+	        React.createElement("br", null),
+	        React.createElement(MonthPicker, {
+	          size: size
+	        }),
+	        React.createElement("br", null),
+	        React.createElement(RangePicker, {
+	          size: size
+	        })
+	      );
+	    };
+
+	    return PickerSizesDemo;
+	  }(React.Component);
+
+	  return React.createElement(PickerSizesDemo, null);
+	}
+	};
+
+/***/ },
+
+/***/ 818:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "当 ",
+	        [
+	          "code",
+	          "RangePicker"
+	        ],
+	        " 无法满足业务需求时，可以使用两个 ",
+	        [
+	          "code",
+	          "DatePicker"
+	        ],
+	        " 实现类似的功能。"
+	      ],
+	      [
+	        "blockquote",
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "通过设置 ",
+	              [
+	                "code",
+	                "disabledDate"
+	              ],
+	              " 方法，来约束开始和结束日期。"
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "通过 ",
+	              [
+	                "code",
+	                "open"
+	              ],
+	              " ",
+	              [
+	                "code",
+	                "onOpenChange"
+	              ],
+	              " 来优化交互。"
+	            ]
+	          ]
+	        ]
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "When ",
+	        [
+	          "code",
+	          "RangePicker"
+	        ],
+	        " is not satisfied your requirements, try to implement similar functionality with two ",
+	        [
+	          "code",
+	          "DatePicker"
+	        ],
+	        "."
+	      ],
+	      [
+	        "blockquote",
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Use the ",
+	              [
+	                "code",
+	                "disabledDate"
+	              ],
+	              " property to limit the start and end dates."
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Imporve user experience with ",
+	              [
+	                "code",
+	                "open"
+	              ],
+	              " ",
+	              [
+	                "code",
+	                "onOpenChange"
+	              ],
+	              "."
+	            ]
+	          ]
+	        ]
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 6,
+	    "title": {
+	      "zh-CN": "自定义日期范围选择",
+	      "en-US": "Customized Range Picker"
+	    },
+	    "filename": "components/date-picker/demo/start-end.md",
+	    "id": "components-date-picker-demo-start-end"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nclass DateRange extends React<span class=\"token punctuation\">.</span>Component {\n  state <span class=\"token operator\">=</span> {\n    startValue<span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span>\n    endValue<span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span>\n    endOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n  }<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n  disabledStartDate <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>startValue<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> endValue <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>endValue<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!startValue || !endValue<span class=\"token punctuation\">)</span> {\n      return <span class=\"token boolean\">false</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n    return startValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">></span> endValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  disabledEndDate <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>endValue<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> startValue <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>startValue<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!endValue || !startValue<span class=\"token punctuation\">)</span> {\n      return <span class=\"token boolean\">false</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n    return endValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&lt;=</span> startValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  onChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>field<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      <span class=\"token punctuation\">[</span>field<span class=\"token punctuation\">]</span><span class=\"token punctuation\">:</span> value<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  onStartChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span><span class=\"token string\">'startValue'</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  onEndChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span><span class=\"token string\">'endValue'</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  handleStartOpenChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>open<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!open<span class=\"token punctuation\">)</span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ endOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n  }\n\n  handleEndOpenChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>open<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ endOpen<span class=\"token punctuation\">:</span> open }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { startValue<span class=\"token punctuation\">,</span> endValue<span class=\"token punctuation\">,</span> endOpen } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>DatePicker\n          disabledDate<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>disabledStartDate}\n          showTime\n          format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n          value<span class=\"token operator\">=</span>{startValue}\n          placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Start\"</span>\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onStartChange}\n          onOpenChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleStartOpenChange}\n        <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>DatePicker\n          disabledDate<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>disabledEndDate}\n          showTime\n          format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n          value<span class=\"token operator\">=</span>{endValue}\n          placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"End\"</span>\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onEndChange}\n          open<span class=\"token operator\">=</span>{endOpen}\n          onOpenChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleEndOpenChange}\n        <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>DateRange <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+	  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+
+	  var DateRange = function (_React$Component) {
+	    _inherits(DateRange, _React$Component);
+
+	    function DateRange() {
+	      var _temp, _this, _ret;
+
+	      _classCallCheck(this, DateRange);
+
+	      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	        args[_key] = arguments[_key];
+	      }
+
+	      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+	        startValue: null,
+	        endValue: null,
+	        endOpen: false
+	      }, _this.disabledStartDate = function (startValue) {
+	        var endValue = _this.state.endValue;
+
+	        if (!startValue || !endValue) {
+	          return false;
+	        }
+
+	        return startValue.valueOf() > endValue.valueOf();
+	      }, _this.disabledEndDate = function (endValue) {
+	        var startValue = _this.state.startValue;
+
+	        if (!endValue || !startValue) {
+	          return false;
+	        }
+
+	        return endValue.valueOf() <= startValue.valueOf();
+	      }, _this.onChange = function (field, value) {
+	        _this.setState(_defineProperty({}, field, value));
+	      }, _this.onStartChange = function (value) {
+	        _this.onChange('startValue', value);
+	      }, _this.onEndChange = function (value) {
+	        _this.onChange('endValue', value);
+	      }, _this.handleStartOpenChange = function (open) {
+	        if (!open) {
+	          _this.setState({
+	            endOpen: true
+	          });
+	        }
+	      }, _this.handleEndOpenChange = function (open) {
+	        _this.setState({
+	          endOpen: open
+	        });
+	      }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    DateRange.prototype.render = function render() {
+	      var _state = this.state,
+	          startValue = _state.startValue,
+	          endValue = _state.endValue,
+	          endOpen = _state.endOpen;
+	      return React.createElement(
+	        "div",
+	        null,
+	        React.createElement(_antd.DatePicker, {
+	          disabledDate: this.disabledStartDate,
+	          showTime: true,
+	          format: "YYYY-MM-DD HH:mm:ss",
+	          value: startValue,
+	          placeholder: "Start",
+	          onChange: this.onStartChange,
+	          onOpenChange: this.handleStartOpenChange
+	        }),
+	        React.createElement(_antd.DatePicker, {
+	          disabledDate: this.disabledEndDate,
+	          showTime: true,
+	          format: "YYYY-MM-DD HH:mm:ss",
+	          value: endValue,
+	          placeholder: "End",
+	          onChange: this.onEndChange,
+	          open: endOpen,
+	          onOpenChange: this.handleEndOpenChange
+	        })
+	      );
+	    };
+
+	    return DateRange;
+	  }(React.Component);
+
+	  return React.createElement(DateRange, null);
+	}
+	};
+
+/***/ },
+
+/***/ 819:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "增加选择时间功能，当 ",
+	        [
+	          "code",
+	          "showTime"
+	        ],
+	        " 为一个对象时，其属性会传递给内建的 ",
+	        [
+	          "code",
+	          "TimePicker"
+	        ],
+	        "。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "This property provide an additional time selection. When ",
+	        [
+	          "code",
+	          "showTime"
+	        ],
+	        " is an Object, its properties will be passed on to built-in ",
+	        [
+	          "code",
+	          "TimePicker"
+	        ],
+	        "."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 3,
+	    "title": {
+	      "zh-CN": "日期时间选择",
+	      "en-US": "Choose Time"
+	    },
+	    "filename": "components/date-picker/demo/time.md",
+	    "id": "components-date-picker-demo-time"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { DatePicker } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> { RangePicker } <span class=\"token operator\">=</span> DatePicker<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Selected Time: '</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Formatted Selected Time: '</span><span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>DatePicker\n      showTime\n      format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n      placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Select Time\"</span>\n      onChange<span class=\"token operator\">=</span>{onChange}\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>RangePicker\n      showTime\n      format<span class=\"token operator\">=</span><span class=\"token string\">\"YYYY-MM-DD HH:mm:ss\"</span>\n      placeholder<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'Start Time'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'End Time'</span><span class=\"token punctuation\">]</span>}\n      onChange<span class=\"token operator\">=</span>{onChange}\n    <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var RangePicker = _antd.DatePicker.RangePicker;
+
+	  function onChange(value, dateString) {
+	    console.log('Selected Time: ', value);
+	    console.log('Formatted Selected Time: ', dateString);
+	  }
+
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(_antd.DatePicker, {
+	      showTime: true,
+	      format: "YYYY-MM-DD HH:mm:ss",
+	      placeholder: "Select Time",
+	      onChange: onChange
+	    }),
+	    React.createElement("br", null),
+	    React.createElement(RangePicker, {
+	      showTime: true,
+	      format: "YYYY-MM-DD HH:mm:ss",
+	      placeholder: ['Start Time', 'End Time'],
+	      onChange: onChange
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 1209:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(811),
+	    'disabled-date': __webpack_require__(812),
+	    'disabled': __webpack_require__(813),
+	    'format': __webpack_require__(814),
+	    'locale': __webpack_require__(815),
+	    'presetted-ranges': __webpack_require__(816),
+	    'size': __webpack_require__(817),
+	    'start-end': __webpack_require__(818),
+	    'time': __webpack_require__(819),
 	}
 
 /***/ },
 
-/***/ 713:
+/***/ 1653:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//! moment-timezone.js
@@ -31,7 +1299,7 @@ webpackJsonp([5,210],{
 
 		/*global define*/
 		if (true) {
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(32)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));                 // AMD
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(25)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));                 // AMD
 		} else if (typeof module === 'object' && module.exports) {
 			module.exports = factory(require('moment')); // Node
 		} else {
@@ -622,745 +1890,6 @@ webpackJsonp([5,210],{
 		return moment;
 	}));
 
-
-/***/ },
-
-/***/ 1442:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "最简单的用法，在浮层中可以选择或者输入日期。"]],
-	    "en-US": [["p", "Basic use case. Users can select or input a date in panel."]]
-	  },
-	  "meta": {
-	    "order": 0,
-	    "title": {
-	      "zh-CN": "基本",
-	      "en-US": "Basic"
-	    },
-	    "filename": "components/date-picker/demo/basic.md",
-	    "id": "components-date-picker-demo-basic"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> MonthPicker<span class=\"token punctuation\">,</span> RangePicker <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>date<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>date<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>MonthPicker</span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var MonthPicker = _datePicker2.default.MonthPicker,
-	        RangePicker = _datePicker2.default.RangePicker;
-	    function onChange(date, dateString) {
-	      console.log(date, dateString);
-	    }return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_datePicker2.default, { onChange: onChange }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(MonthPicker, { onChange: onChange }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { onChange: onChange })
-	    );
-	  }
-	};
-
-/***/ },
-
-/***/ 1443:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "可用 ", ["code", "disabledDate"], " 和 ", ["code", "disabledTime"], " 分别禁止选择部分日期和时间，其中 ", ["code", "disabledTime"], " 需要和 ", ["code", "showTime"], " 一起使用。"]],
-	    "en-US": [["p", "Disabled part of dates and time by ", ["code", "disabledDate"], " and ", ["code", "disabledTime"], " respectively, and ", ["code", "disabledTime"], " only works with ", ["code", "showTime"], "."]]
-	  },
-	  "meta": {
-	    "order": 6,
-	    "title": {
-	      "zh-CN": "不可选择日期和时间",
-	      "en-US": "Disabled Date & Time"
-	    },
-	    "filename": "components/date-picker/demo/disabled-date.md",
-	    "id": "components-date-picker-demo-disabled-date"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> RangePicker <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">.</span>RangePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span>start<span class=\"token punctuation\">,</span> end<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">const</span> result <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n  <span class=\"token keyword\">for</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">let</span> i <span class=\"token operator\">=</span> start<span class=\"token punctuation\">;</span> i <span class=\"token operator\">&lt;</span> end<span class=\"token punctuation\">;</span> i<span class=\"token operator\">++</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    result<span class=\"token punctuation\">.</span><span class=\"token function\">push</span><span class=\"token punctuation\">(</span>i<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token keyword\">return</span> result<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">disabledDate</span><span class=\"token punctuation\">(</span>current<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token comment\" spellcheck=\"true\">// can not select days before today and today</span>\n  <span class=\"token keyword\">return</span> current <span class=\"token operator\">&amp;&amp;</span> current<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&lt;</span> Date<span class=\"token punctuation\">.</span><span class=\"token function\">now</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">disabledDateTime</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n    disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">24</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">4</span><span class=\"token punctuation\">,</span> <span class=\"token number\">20</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">30</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">disabledRangeTime</span><span class=\"token punctuation\">(</span>_<span class=\"token punctuation\">,</span> type<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>type <span class=\"token operator\">===</span> <span class=\"token string\">'start'</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n      disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">4</span><span class=\"token punctuation\">,</span> <span class=\"token number\">20</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">30</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n    disabledHours<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">60</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span><span class=\"token number\">20</span><span class=\"token punctuation\">,</span> <span class=\"token number\">4</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledMinutes<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token function\">range</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token number\">31</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    disabledSeconds<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">[</span><span class=\"token number\">55</span><span class=\"token punctuation\">,</span> <span class=\"token number\">56</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY-MM-DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span> <span class=\"token attr-name\">disabledDate</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>disabledDate<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">disabledTime</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>disabledDateTime<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">showTime</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span> <span class=\"token attr-name\">disabledDate</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>disabledDate<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">disabledTime</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>disabledRangeTime<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">showTime</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> hideDisabledOptions<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var RangePicker = _datePicker2.default.RangePicker;function range(start, end) {
-	      var result = [];for (var i = start; i < end; i++) {
-	        result.push(i);
-	      }
-	      return result;
-	    }function disabledDate(current) {
-	      // can not select days before today and today
-	      return current && current.valueOf() < Date.now();
-	    }function disabledDateTime() {
-	      return { disabledHours: function disabledHours() {
-	          return range(0, 24).splice(4, 20);
-	        }, disabledMinutes: function disabledMinutes() {
-	          return range(30, 60);
-	        }, disabledSeconds: function disabledSeconds() {
-	          return [55, 56];
-	        } };
-	    }function disabledRangeTime(_, type) {
-	      if (type === 'start') {
-	        return { disabledHours: function disabledHours() {
-	            return range(0, 60).splice(4, 20);
-	          },
-	          disabledMinutes: function disabledMinutes() {
-	            return range(30, 60);
-	          }, disabledSeconds: function disabledSeconds() {
-	            return [55, 56];
-	          }
-	        };
-	      }return { disabledHours: function disabledHours() {
-	          return range(0, 60).splice(20, 4);
-	        }, disabledMinutes: function disabledMinutes() {
-	          return range(0, 31);
-	        }, disabledSeconds: function disabledSeconds() {
-	          return [55, 56];
-	        } };
-	    }return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_datePicker2.default, { format: 'YYYY-MM-DD HH:mm:ss', disabledDate: disabledDate, disabledTime: disabledDateTime, showTime: true }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { disabledDate: disabledDate, disabledTime: disabledRangeTime, showTime: { hideDisabledOptions: true } })
-	    );
-	  }
-	};
-
-/***/ },
-
-/***/ 1444:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _moment = __webpack_require__(32);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "选择框的不可用状态。"]],
-	    "en-US": [["p", "A disabled state of the ", ["code", "DatePicker"], "."]]
-	  },
-	  "meta": {
-	    "order": 4,
-	    "title": {
-	      "zh-CN": "禁用",
-	      "en-US": "Disabled"
-	    },
-	    "filename": "components/date-picker/demo/disabled.md",
-	    "id": "components-date-picker-demo-disabled"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> MonthPicker<span class=\"token punctuation\">,</span> RangePicker <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> dateFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY-MM-DD'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">disabled</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>MonthPicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'YYYY-MM'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">disabled</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015-06-06'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">}</span></span>\n      <span class=\"token attr-name\">disabled</span>\n    <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var MonthPicker = _datePicker2.default.MonthPicker,
-	        RangePicker = _datePicker2.default.RangePicker;
-	    var dateFormat = 'YYYY-MM-DD';return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_datePicker2.default, { defaultValue: (0, _moment2.default)('2015-06-06', dateFormat), disabled: true }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(MonthPicker, { defaultValue: (0, _moment2.default)('2015-06', 'YYYY-MM'), disabled: true }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { defaultValue: [(0, _moment2.default)('2015-06-06', dateFormat), (0, _moment2.default)('2015-06-06', dateFormat)], disabled: true })
-	    );
-	  }
-	};
-
-/***/ },
-
-/***/ 1445:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _moment = __webpack_require__(32);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "使用 ", ["code", "format"], " 属性，可以自定义日期显示格式。"]],
-	    "en-US": [["p", "We can set the date format by ", ["code", "format"], "."]]
-	  },
-	  "meta": {
-	    "order": 1,
-	    "title": {
-	      "zh-CN": "日期格式",
-	      "en-US": "Date Format"
-	    },
-	    "filename": "components/date-picker/demo/format.md",
-	    "id": "components-date-picker-demo-format"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> MonthPicker<span class=\"token punctuation\">,</span> RangePicker <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> dateFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY/MM/DD'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> monthFormat <span class=\"token operator\">=</span> <span class=\"token string\">'YYYY/MM'</span><span class=\"token punctuation\">;</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">format</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>dateFormat<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>MonthPicker</span> <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01'</span><span class=\"token punctuation\">,</span> monthFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">format</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>monthFormat<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token string\">'2015/01/01'</span><span class=\"token punctuation\">,</span> dateFormat<span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">}</span></span>\n      <span class=\"token attr-name\">format</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>dateFormat<span class=\"token punctuation\">}</span></span>\n    <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var MonthPicker = _datePicker2.default.MonthPicker,
-	        RangePicker = _datePicker2.default.RangePicker;
-
-	    var dateFormat = 'YYYY/MM/DD';var monthFormat = 'YYYY/MM';
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_datePicker2.default, { defaultValue: (0, _moment2.default)('2015/01/01', dateFormat), format: dateFormat }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(MonthPicker, { defaultValue: (0, _moment2.default)('2015/01', monthFormat), format: monthFormat }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { defaultValue: [(0, _moment2.default)('2015/01/01', dateFormat), (0, _moment2.default)('2015/01/01', dateFormat)], format: dateFormat })
-	    );
-	  }
-	};
-
-/***/ },
-
-/***/ 1446:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _momentTimezone = __webpack_require__(713);
-
-	var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
-
-	var _en_US = __webpack_require__(394);
-
-	var _en_US2 = _interopRequireDefault(_en_US);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "通过 ", ["code", "locale"], " 设置语言, 默认支持 ", ["code", "en_US"], "，", ["code", "zh_CN"], "。"], ["p", "moment 会自动使用当前时区，如果需要使用别的时区，则需要自行设置，设置方法请参考示例代码中的注释。"]],
-	    "en-US": [["p", "Use locale to set the language. ", ["code", "en_US"], ", ", ["code", "zh_CN"], " are supported by default."], ["p", "moment will use your time zone automatically. If you want to set other time zone, please set it by yourself."]]
-	  },
-	  "meta": {
-	    "order": 7,
-	    "title": {
-	      "zh-CN": "国际化",
-	      "en-US": "Locale"
-	    },
-	    "filename": "components/date-picker/demo/locale.md",
-	    "id": "components-date-picker-demo-locale"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> enUS <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/date-picker/locale/en_US'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment-timezone/moment-timezone'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token comment\" spellcheck=\"true\">// It's recommended to set moment locale and time zone globally in entry file,</span>\n<span class=\"token comment\" spellcheck=\"true\">// otherwise, you need to set it by `value` or `defaultValue`.</span>\n<span class=\"token comment\" spellcheck=\"true\">// moment.locale('en');</span>\n\n<span class=\"token comment\" spellcheck=\"true\">// The following data is copied from https://github.com/moment/moment-timezone/blob/develop/data/packed/latest.json</span>\n<span class=\"token comment\" spellcheck=\"true\">// moment.tz.add('Europe/London|GMT BST BDST|0 -10 -20|0101010101010101010101010101010101010101010101010121212121210101210101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-2axa0 Rc0 1fA0 14M0 1fc0 1g00 1co0 1dc0 1co0 1oo0 1400 1dc0 19A0 1io0 1io0 WM0 1o00 14o0 1o00 17c0 1io0 17c0 1fA0 1a00 1lc0 17c0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1cM0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1io0 1qM0 Dc0 2Rz0 Dc0 1zc0 Oo0 1zc0 Rc0 1wo0 17c0 1iM0 FA0 xB0 1fA0 1a00 14o0 bb0 LA0 xB0 Rc0 1wo0 11A0 1o00 17c0 1fA0 1a00 1fA0 1cM0 1fA0 1a00 17c0 1fA0 1a00 1io0 17c0 1lc0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1a00 1qM0 WM0 1qM0 11A0 1o00 WM0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1tA0 IM0 90o0 U00 1tA0 U00 1tA0 U00 1tA0 U00 1tA0 WM0 1qM0 WM0 1qM0 WM0 1tA0 U00 1tA0 U00 1tA0 11z0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 14o0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00|10e6');</span>\n<span class=\"token comment\" spellcheck=\"true\">// moment.tz.setDefault('Europe/London')</span>\n\n<span class=\"token keyword\">const</span> log <span class=\"token operator\">=</span> console<span class=\"token punctuation\">.</span>log<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span>console<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span>\n    <span class=\"token attr-name\">defaultValue</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">locale</span><span class=\"token punctuation\">(</span><span class=\"token string\">'en'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">utcOffset</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span>\n    <span class=\"token attr-name\">locale</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>enUS<span class=\"token punctuation\">}</span></span>\n    <span class=\"token attr-name\">showTime</span>\n    <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>log<span class=\"token punctuation\">}</span></span>\n  <span class=\"token punctuation\">/></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var log = console.log.bind(console);return _react2.default.createElement(_datePicker2.default, { defaultValue: (0, _momentTimezone2.default)().locale('en').utcOffset(0), locale: _en_US2.default, showTime: true, onChange: log });
-	  }
-	}; // It's recommended to set moment locale and time zone globally in entry file,
-	// otherwise, you need to set it by `value` or `defaultValue`.
-	// moment.locale('en');
-	// The following data is copied from https://github.com/moment/moment-timezone/blob/develop/data/packed/latest.json
-	// moment.tz.add('Europe/London|GMT BST BDST|0 -10 -20|0101010101010101010101010101010101010101010101010121212121210101210101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-2axa0 Rc0 1fA0 14M0 1fc0 1g00 1co0 1dc0 1co0 1oo0 1400 1dc0 19A0 1io0 1io0 WM0 1o00 14o0 1o00 17c0 1io0 17c0 1fA0 1a00 1lc0 17c0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1cM0 1io0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1io0 1qM0 Dc0 2Rz0 Dc0 1zc0 Oo0 1zc0 Rc0 1wo0 17c0 1iM0 FA0 xB0 1fA0 1a00 14o0 bb0 LA0 xB0 Rc0 1wo0 11A0 1o00 17c0 1fA0 1a00 1fA0 1cM0 1fA0 1a00 17c0 1fA0 1a00 1io0 17c0 1lc0 17c0 1fA0 1a00 1io0 17c0 1io0 17c0 1fA0 1a00 1a00 1qM0 WM0 1qM0 11A0 1o00 WM0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1tA0 IM0 90o0 U00 1tA0 U00 1tA0 U00 1tA0 U00 1tA0 WM0 1qM0 WM0 1qM0 WM0 1tA0 U00 1tA0 U00 1tA0 11z0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1o00 14o0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00|10e6');
-	// moment.tz.setDefault('Europe/London')
-
-/***/ },
-
-/***/ 1447:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _moment = __webpack_require__(32);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "RangePicker 可以设置常用的 预设范围 提高用户体验。"]],
-	    "en-US": [["p", "We can set presetted ranges to RangePicker to improve user experience."]]
-	  },
-	  "meta": {
-	    "order": 8,
-	    "title": {
-	      "zh-CN": "预设范围",
-	      "en-US": "Presetted Ranges"
-	    },
-	    "filename": "components/date-picker/demo/presetted-ranges.md",
-	    "id": "components-date-picker-demo-presetted-ranges"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> moment <span class=\"token keyword\">from</span> <span class=\"token string\">'moment'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> RangePicker <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">.</span>RangePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>dates<span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'From: '</span><span class=\"token punctuation\">,</span> dates<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">', to: '</span><span class=\"token punctuation\">,</span> dates<span class=\"token punctuation\">[</span><span class=\"token number\">1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'From: '</span><span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">', to: '</span><span class=\"token punctuation\">,</span> dateStrings<span class=\"token punctuation\">[</span><span class=\"token number\">1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\">ranges</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> Today<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'This Month'</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">endOf</span><span class=\"token punctuation\">(</span><span class=\"token string\">'month'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span>\n      <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span>\n    <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\">ranges</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> Today<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'This Month'</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token function\">moment</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">endOf</span><span class=\"token punctuation\">(</span><span class=\"token string\">'month'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">]</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span>\n      <span class=\"token attr-name\">showTime</span> <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY/MM/DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span>\n    <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var RangePicker = _datePicker2.default.RangePicker;function onChange(dates, dateStrings) {
-	      console.log('From: ', dates[0], ', to: ', dates[1]);console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-	    }return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(RangePicker, { ranges: { Today: [(0, _moment2.default)(), (0, _moment2.default)()], 'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')] }, onChange: onChange }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { ranges: { Today: [(0, _moment2.default)(), (0, _moment2.default)()], 'This Month': [(0, _moment2.default)(), (0, _moment2.default)().endOf('month')] }, showTime: true, format: 'YYYY/MM/DD HH:mm:ss', onChange: onChange })
-	    );
-	  }
-	};
-
-/***/ },
-
-/***/ 1448:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(53);
-
-	var _radio = __webpack_require__(50);
-
-	var _radio2 = _interopRequireDefault(_radio);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _style4 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "三种大小的输入框，若不设置，则为 ", ["code", "default"], "。"]],
-	    "en-US": [["p", "The input box comes in three sizes. ", ["code", "default"], " will be used if ", ["code", "size"], " is omitted."]]
-	  },
-	  "meta": {
-	    "order": 2,
-	    "title": {
-	      "zh-CN": "三种大小",
-	      "en-US": "Three Sizes"
-	    },
-	    "filename": "components/date-picker/demo/size.md",
-	    "id": "components-date-picker-demo-size"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker<span class=\"token punctuation\">,</span> Radio <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> MonthPicker<span class=\"token punctuation\">,</span> RangePicker <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">class</span> <span class=\"token class-name\">PickerSizesDemo</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n  state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n    size<span class=\"token punctuation\">:</span> <span class=\"token string\">'default'</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n\n  handleSizeChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> size<span class=\"token punctuation\">:</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> size <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Radio.Group</span> <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>size<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleSizeChange<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Radio.Button</span> <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>large<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Large<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Radio.Button</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Radio.Button</span> <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>default<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Default<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Radio.Button</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Radio.Button</span> <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>small<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Small<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Radio.Button</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Radio.Group</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>size<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>MonthPicker</span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>size<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>size<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>PickerSizesDemo</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var MonthPicker = _datePicker2.default.MonthPicker,
-	        RangePicker = _datePicker2.default.RangePicker;
-
-	    var PickerSizesDemo = function (_React$Component) {
-	      (0, _inherits3.default)(PickerSizesDemo, _React$Component);
-
-	      function PickerSizesDemo() {
-	        var _temp, _this, _ret;
-
-	        (0, _classCallCheck3.default)(this, PickerSizesDemo);
-
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	          args[_key] = arguments[_key];
-	        }
-
-	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { size: 'default' }, _this.handleSizeChange = function (e) {
-	          _this.setState({
-	            size: e.target.value });
-	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-	      }
-
-	      PickerSizesDemo.prototype.render = function render() {
-	        var size = this.state.size;
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            _radio2.default.Group,
-	            { value: size, onChange: this.handleSizeChange },
-	            _react2.default.createElement(
-	              _radio2.default.Button,
-	              { value: 'large' },
-	              'Large'
-	            ),
-	            _react2.default.createElement(
-	              _radio2.default.Button,
-	              { value: 'default' },
-	              'Default'
-	            ),
-	            _react2.default.createElement(
-	              _radio2.default.Button,
-	              { value: 'small' },
-	              'Small'
-	            )
-	          ),
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement(_datePicker2.default, { size: size }),
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement(MonthPicker, { size: size }),
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement(RangePicker, { size: size })
-	        );
-	      };
-
-	      return PickerSizesDemo;
-	    }(_react2.default.Component);
-
-	    return _react2.default.createElement(PickerSizesDemo, null);
-	  }
-	};
-
-/***/ },
-
-/***/ 1449:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _defineProperty2 = __webpack_require__(12);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "当 ", ["code", "RangePicker"], " 无法满足业务需求时，可以使用两个 ", ["code", "DatePicker"], " 实现类似的功能。"], ["blockquote", ["ul", ["li", ["p", "通过设置 ", ["code", "disabledDate"], " 方法，来约束开始和结束日期。"]], ["li", ["p", "通过 ", ["code", "open"], " ", ["code", "onOpenChange"], " 来优化交互。"]]]]],
-	    "en-US": [["p", "When ", ["code", "RangePicker"], " is not satisfied your requirements, try to implement similar functionality with two ", ["code", "DatePicker"], "."], ["blockquote", ["ul", ["li", ["p", "Use the ", ["code", "disabledDate"], " property to limit the start and end dates."]], ["li", ["p", "Imporve user experience with ", ["code", "open"], " ", ["code", "onOpenChange"], "."]]]]]
-	  },
-	  "meta": {
-	    "order": 6,
-	    "title": {
-	      "zh-CN": "自定义日期范围选择",
-	      "en-US": "Customized Range Picker"
-	    },
-	    "filename": "components/date-picker/demo/start-end.md",
-	    "id": "components-date-picker-demo-start-end"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">class</span> <span class=\"token class-name\">DateRange</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n  state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n    startValue<span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span>\n    endValue<span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span>\n    endOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n\n  disabledStartDate <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>startValue<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> endValue <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>endValue<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>startValue <span class=\"token operator\">||</span> <span class=\"token operator\">!</span>endValue<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">return</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token keyword\">return</span> startValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">></span> endValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  disabledEndDate <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>endValue<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> startValue <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>startValue<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>endValue <span class=\"token operator\">||</span> <span class=\"token operator\">!</span>startValue<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">return</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token keyword\">return</span> endValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&lt;=</span> startValue<span class=\"token punctuation\">.</span><span class=\"token function\">valueOf</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  onChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>field<span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n      <span class=\"token punctuation\">[</span>field<span class=\"token punctuation\">]</span><span class=\"token punctuation\">:</span> value<span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  onStartChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span><span class=\"token string\">'startValue'</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  onEndChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span><span class=\"token string\">'endValue'</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  handleStartOpenChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>open<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>open<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> endOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">}</span>\n\n  handleEndOpenChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>open<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> endOpen<span class=\"token punctuation\">:</span> open <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> startValue<span class=\"token punctuation\">,</span> endValue<span class=\"token punctuation\">,</span> endOpen <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span>\n          <span class=\"token attr-name\">disabledDate</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>disabledStartDate<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">showTime</span>\n          <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY-MM-DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span>\n          <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>startValue<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">placeholder</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Start<span class=\"token punctuation\">\"</span></span>\n          <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onStartChange<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">onOpenChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleStartOpenChange<span class=\"token punctuation\">}</span></span>\n        <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span>\n          <span class=\"token attr-name\">disabledDate</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>disabledEndDate<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">showTime</span>\n          <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY-MM-DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span>\n          <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>endValue<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">placeholder</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>End<span class=\"token punctuation\">\"</span></span>\n          <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onEndChange<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">open</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>endOpen<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">onOpenChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleEndOpenChange<span class=\"token punctuation\">}</span></span>\n        <span class=\"token punctuation\">/></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DateRange</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var DateRange = function (_React$Component) {
-	      (0, _inherits3.default)(DateRange, _React$Component);
-
-	      function DateRange() {
-	        var _temp, _this, _ret;
-
-	        (0, _classCallCheck3.default)(this, DateRange);
-
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	          args[_key] = arguments[_key];
-	        }
-
-	        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { startValue: null,
-	          endValue: null, endOpen: false }, _this.disabledStartDate = function (startValue) {
-	          var endValue = _this.state.endValue;if (!startValue || !endValue) {
-	            return false;
-	          }
-	          return startValue.valueOf() > endValue.valueOf();
-	        }, _this.disabledEndDate = function (endValue) {
-	          var startValue = _this.state.startValue;if (!endValue || !startValue) {
-	            return false;
-	          }return endValue.valueOf() <= startValue.valueOf();
-	        }, _this.onChange = function (field, value) {
-	          _this.setState((0, _defineProperty3.default)({}, field, value));
-	        }, _this.onStartChange = function (value) {
-	          _this.onChange('startValue', value);
-	        }, _this.onEndChange = function (value) {
-	          _this.onChange('endValue', value);
-	        }, _this.handleStartOpenChange = function (open) {
-	          if (!open) {
-	            _this.setState({ endOpen: true });
-	          }
-	        }, _this.handleEndOpenChange = function (open) {
-	          _this.setState({ endOpen: open });
-	        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-	      }
-
-	      DateRange.prototype.render = function render() {
-	        var _state = this.state,
-	            startValue = _state.startValue,
-	            endValue = _state.endValue,
-	            endOpen = _state.endOpen;
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(_datePicker2.default, { disabledDate: this.disabledStartDate, showTime: true, format: 'YYYY-MM-DD HH:mm:ss', value: startValue, placeholder: 'Start', onChange: this.onStartChange, onOpenChange: this.handleStartOpenChange }),
-	          _react2.default.createElement(_datePicker2.default, { disabledDate: this.disabledEndDate, showTime: true, format: 'YYYY-MM-DD HH:mm:ss', value: endValue, placeholder: 'End', onChange: this.onEndChange, open: endOpen, onOpenChange: this.handleEndOpenChange })
-	        );
-	      };
-
-	      return DateRange;
-	    }(_react2.default.Component);
-
-	    return _react2.default.createElement(DateRange, null);
-	  }
-	};
-
-/***/ },
-
-/***/ 1450:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(63);
-
-	var _datePicker = __webpack_require__(62);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = {
-	  "content": {
-	    "zh-CN": [["p", "增加选择时间功能，当 ", ["code", "showTime"], " 为一个对象时，其属性会传递给内建的 ", ["code", "TimePicker"], "。"]],
-	    "en-US": [["p", "This property provide an additional time selection. When ", ["code", "showTime"], " is an Object, its properties will be passed on to built-in ", ["code", "TimePicker"], "."]]
-	  },
-	  "meta": {
-	    "order": 3,
-	    "title": {
-	      "zh-CN": "日期时间选择",
-	      "en-US": "Choose Time"
-	    },
-	    "filename": "components/date-picker/demo/time.md",
-	    "id": "components-date-picker-demo-time"
-	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> DatePicker <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> RangePicker <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> DatePicker<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Selected Time: '</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Formatted Selected Time: '</span><span class=\"token punctuation\">,</span> dateString<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>DatePicker</span>\n      <span class=\"token attr-name\">showTime</span>\n      <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY-MM-DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span>\n      <span class=\"token attr-name\">placeholder</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Select</span> <span class=\"token attr-name\">Time\"</span>\n      <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span>\n    <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>RangePicker</span>\n      <span class=\"token attr-name\">showTime</span>\n      <span class=\"token attr-name\">format</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>YYYY-MM-DD</span> <span class=\"token attr-name\"><span class=\"token namespace\">HH:</span><span class=\"token namespace\">mm:</span>ss\"</span>\n      <span class=\"token attr-name\">placeholder</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">[</span><span class=\"token string\">'Start Time'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'End Time'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">}</span></span>\n      <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span>\n    <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var RangePicker = _datePicker2.default.RangePicker;
-	    function onChange(value, dateString) {
-	      console.log('Selected Time: ', value);
-	      console.log('Formatted Selected Time: ', dateString);
-	    }return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_datePicker2.default, { showTime: true, format: 'YYYY-MM-DD HH:mm:ss', placeholder: 'Select Time', onChange: onChange }),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(RangePicker, { showTime: true, format: 'YYYY-MM-DD HH:mm:ss', placeholder: ['Start Time', 'End Time'], onChange: onChange })
-	    );
-	  }
-	};
 
 /***/ }
 

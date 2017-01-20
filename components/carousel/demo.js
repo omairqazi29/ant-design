@@ -1,42 +1,22 @@
 webpackJsonp([39,210],{
 
-/***/ 636:
+/***/ 779:
 /***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'autoplay': __webpack_require__(1410),
-	    'basic': __webpack_require__(1411),
-	    'fade': __webpack_require__(1412),
-	    'vertical': __webpack_require__(1413),
-	}
-
-/***/ },
-
-/***/ 1410:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(237);
-
-	var _carousel = __webpack_require__(201);
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "定时切换下一张。"]],
-	    "en-US": [["p", "Timing of scrolling to the next card/picture."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "定时切换下一张。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Timing of scrolling to the next card/picture."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 3,
@@ -47,88 +27,109 @@ webpackJsonp([39,210],{
 	    "filename": "components/carousel/demo/autoplay.md",
 	    "id": "components-carousel-demo-autoplay"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Carousel <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Carousel</span> <span class=\"token attr-name\">autoplay</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">1</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">2</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">3</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">4</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Carousel</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _carousel2.default,
-	      { autoplay: true },
-	      _react2.default.createElement(
-	        'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Carousel } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Carousel autoplay<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Carousel<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Carousel,
+	    {
+	      autoplay: true
+	    },
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
 	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '1'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '2'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '4'
-	        )
+	        "1"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "2"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "3"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "4"
+	      )
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1411:
+/***/ 780:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(237);
-
-	var _carousel = __webpack_require__(201);
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "最简单的用法。"]],
-	    "en-US": [["p", "Basic usage."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "最简单的用法。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Basic usage."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 0,
@@ -139,90 +140,113 @@ webpackJsonp([39,210],{
 	    "filename": "components/carousel/demo/basic.md",
 	    "id": "components-carousel-demo-basic"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Carousel <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>a<span class=\"token punctuation\">,</span> b<span class=\"token punctuation\">,</span> c<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>a<span class=\"token punctuation\">,</span> b<span class=\"token punctuation\">,</span> c<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Carousel</span> <span class=\"token attr-name\">afterChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>onChange<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">1</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">2</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">3</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">4</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Carousel</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    function onChange(a, b, c) {
-	      console.log(a, b, c);
-	    }return _react2.default.createElement(
-	      _carousel2.default,
-	      { afterChange: onChange },
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '1'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '2'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '4'
-	        )
-	      )
-	    );
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Carousel } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>a<span class=\"token punctuation\">,</span> b<span class=\"token punctuation\">,</span> c<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>a<span class=\"token punctuation\">,</span> b<span class=\"token punctuation\">,</span> c<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Carousel afterChange<span class=\"token operator\">=</span>{onChange}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Carousel<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  function onChange(a, b, c) {
+	    console.log(a, b, c);
 	  }
+
+	  return React.createElement(
+	    _antd.Carousel,
+	    {
+	      afterChange: onChange
+	    },
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "1"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "2"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "3"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "4"
+	      )
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1412:
+/***/ 781:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(237);
-
-	var _carousel = __webpack_require__(201);
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "切换效果为渐显。"]],
-	    "en-US": [["p", "Slides use fade for transition."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "切换效果为渐显。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Slides use fade for transition."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 2,
@@ -233,88 +257,109 @@ webpackJsonp([39,210],{
 	    "filename": "components/carousel/demo/fade.md",
 	    "id": "components-carousel-demo-fade"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Carousel <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Carousel</span> <span class=\"token attr-name\">effect</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>fade<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">1</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">2</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">3</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">4</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Carousel</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _carousel2.default,
-	      { effect: 'fade' },
-	      _react2.default.createElement(
-	        'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Carousel } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Carousel effect<span class=\"token operator\">=</span><span class=\"token string\">\"fade\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Carousel<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Carousel,
+	    {
+	      effect: "fade"
+	    },
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
 	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '1'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '2'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '4'
-	        )
+	        "1"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "2"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "3"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "4"
+	      )
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1413:
+/***/ 782:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(237);
-
-	var _carousel = __webpack_require__(201);
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "垂直显示。"]],
-	    "en-US": [["p", "Vertical pagination."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "垂直显示。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Vertical pagination."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 1,
@@ -325,60 +370,101 @@ webpackJsonp([39,210],{
 	    "filename": "components/carousel/demo/vertical.md",
 	    "id": "components-carousel-demo-vertical"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Carousel <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Carousel</span> <span class=\"token attr-name\">vertical</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>true<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">1</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">2</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">3</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token number\">4</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Carousel</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _carousel2.default,
-	      { vertical: 'true' },
-	      _react2.default.createElement(
-	        'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Carousel } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Carousel vertical<span class=\"token operator\">=</span><span class=\"token string\">\"true\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>h3<span class=\"token operator\">></span><span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>h3<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Carousel<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Carousel,
+	    {
+	      vertical: "true"
+	    },
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
 	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '1'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '2'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '4'
-	        )
+	        "1"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "2"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "3"
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h3",
+	        null,
+	        "4"
+	      )
+	    )
+	  );
+	}
 	};
+
+/***/ },
+
+/***/ 1205:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'autoplay': __webpack_require__(779),
+	    'basic': __webpack_require__(780),
+	    'fade': __webpack_require__(781),
+	    'vertical': __webpack_require__(782),
+	}
 
 /***/ }
 

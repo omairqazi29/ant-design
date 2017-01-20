@@ -1,48 +1,22 @@
 webpackJsonp([36,210],{
 
-/***/ 654:
+/***/ 941:
 /***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1572),
-	    'dynamic-trigger': __webpack_require__(1573),
-	    'locale': __webpack_require__(1574),
-	    'placement': __webpack_require__(1575),
-	}
-
-/***/ },
-
-/***/ 1572:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(147);
-
-	var _popconfirm = __webpack_require__(146);
-
-	var _popconfirm2 = _interopRequireDefault(_popconfirm);
-
-	var _style4 = __webpack_require__(65);
-
-	var _message = __webpack_require__(64);
-
-	var _message2 = _interopRequireDefault(_message);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "最简单的用法。"]],
-	    "en-US": [["p", "The basic example."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "最简单的用法。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The basic example."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 0,
@@ -53,73 +27,92 @@ webpackJsonp([36,210],{
 	    "filename": "components/popconfirm/demo/basic.md",
 	    "id": "components-popconfirm-demo-basic"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popconfirm<span class=\"token punctuation\">,</span> message <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on Yes'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">cancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">error</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on No'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Are</span> <span class=\"token attr-name\">you</span> <span class=\"token attr-name\">sure</span> <span class=\"token attr-name\">delete</span> <span class=\"token attr-name\">this</span> <span class=\"token attr-name\">task?\"</span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onCancel</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>cancel<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>#<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Delete<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    function confirm() {
-	      _message2.default.success('Click on Yes');
-	    }function cancel() {
-	      _message2.default.error('Click on No');
-	    }return _react2.default.createElement(
-	      _popconfirm2.default,
-	      { title: 'Are you sure delete this task?', onConfirm: confirm, onCancel: cancel, okText: 'Yes', cancelText: 'No' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: '#' },
-	        'Delete'
-	      )
-	    );
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popconfirm<span class=\"token punctuation\">,</span> message } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on Yes'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">cancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">error</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on No'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Popconfirm title<span class=\"token operator\">=</span><span class=\"token string\">\"Are you sure delete this task?\"</span> onConfirm<span class=\"token operator\">=</span>{confirm} onCancel<span class=\"token operator\">=</span>{cancel} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"#\"</span><span class=\"token operator\">></span>Delete<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  function confirm() {
+	    _antd.message.success('Click on Yes');
 	  }
+
+	  function cancel() {
+	    _antd.message.error('Click on No');
+	  }
+
+	  return React.createElement(
+	    _antd.Popconfirm,
+	    {
+	      title: "Are you sure delete this task?",
+	      onConfirm: confirm,
+	      onCancel: cancel,
+	      okText: "Yes",
+	      cancelText: "No"
+	    },
+	    React.createElement(
+	      "a",
+	      {
+	        href: "#"
+	      },
+	      "Delete"
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1573:
+/***/ 942:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style4 = __webpack_require__(68);
-
-	var _switch = __webpack_require__(67);
-
-	var _switch2 = _interopRequireDefault(_switch);
-
-	var _style5 = __webpack_require__(147);
-
-	var _popconfirm = __webpack_require__(146);
-
-	var _popconfirm2 = _interopRequireDefault(_popconfirm);
-
-	var _style6 = __webpack_require__(65);
-
-	var _message = __webpack_require__(64);
-
-	var _message2 = _interopRequireDefault(_message);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "可以判断是否需要弹出。"]],
-	    "en-US": [["p", "Make it pop up under some conditions."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "可以判断是否需要弹出。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Make it pop up under some conditions."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 3,
@@ -130,93 +123,167 @@ webpackJsonp([36,210],{
 	    "filename": "components/popconfirm/demo/dynamic-trigger.md",
 	    "id": "components-popconfirm-demo-dynamic-trigger"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popconfirm<span class=\"token punctuation\">,</span> Switch<span class=\"token punctuation\">,</span> message <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> App <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n      condition<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>   <span class=\"token comment\" spellcheck=\"true\">// Whether meet the condition, if not show popconfirm.</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">changeCondition</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> condition<span class=\"token punctuation\">:</span> value <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Next step.'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">cancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    message<span class=\"token punctuation\">.</span><span class=\"token function\">error</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on cancel.'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleVisibleChange</span><span class=\"token punctuation\">(</span>visible<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>visible<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> visible <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n      <span class=\"token keyword\">return</span><span class=\"token punctuation\">;</span>\n    <span class=\"token punctuation\">}</span>\n    <span class=\"token comment\" spellcheck=\"true\">// Determining condition before show the popconfirm.</span>\n    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>condition<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>condition<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// next step</span>\n    <span class=\"token punctuation\">}</span> <span class=\"token keyword\">else</span> <span class=\"token punctuation\">{</span>\n      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> visible <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>  <span class=\"token comment\" spellcheck=\"true\">// show the popconfirm</span>\n    <span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Are</span> <span class=\"token attr-name\">you</span> <span class=\"token attr-name\">sure</span> <span class=\"token attr-name\">delete</span> <span class=\"token attr-name\">this</span> <span class=\"token attr-name\">task?\"</span>\n          <span class=\"token attr-name\">visible</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onVisibleChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleVisibleChange<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onCancel</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>cancel<span class=\"token punctuation\">}</span></span>\n          <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span>\n          <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span>\n        <span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>#<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Delete a task<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>br</span> <span class=\"token punctuation\">/></span></span>\n        Whether directly execute：<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Switch</span> <span class=\"token attr-name\">defaultChecked</span> <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>changeCondition<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var App = _react2.default.createClass({
-	      displayName: 'App',
-	      getInitialState: function getInitialState() {
-	        return { visible: false, condition: true };
-	      },
-	      changeCondition: function changeCondition(value) {
-	        this.setState({ condition: value });
-	      },
-	      confirm: function confirm() {
-	        this.setState({ visible: false });_message2.default.success('Next step.');
-	      },
-	      cancel: function cancel() {
-	        this.setState({ visible: false });_message2.default.error('Click on cancel.');
-	      },
-	      handleVisibleChange: function handleVisibleChange(visible) {
-	        if (!visible) {
-	          this.setState({ visible: visible });return;
-	        } // Determining condition before show the popconfirm.
-	        console.log(this.state.condition);if (this.state.condition) {
-	          this.confirm(); // next step
-	        } else {
-	          this.setState({ visible: visible });
-	          // show the popconfirm
-	        }
-	      },
-	      render: function render() {
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            _popconfirm2.default,
-	            { title: 'Are you sure delete this task?', visible: this.state.visible, onVisibleChange: this.handleVisibleChange, onConfirm: this.confirm, onCancel: this.cancel, okText: 'Yes', cancelText: 'No' },
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              'Delete a task'
-	            )
-	          ),
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('br', null),
-	          'Whether directly execute\uFF1A',
-	          _react2.default.createElement(_switch2.default, { defaultChecked: true, onChange: this.changeCondition })
-	        );
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popconfirm<span class=\"token punctuation\">,</span> <span class=\"token keyword\">Switch</span><span class=\"token punctuation\">,</span> message } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> App <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n      condition<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>   <span class=\"token operator\">/</span><span class=\"token operator\">/</span> Whether meet the condition<span class=\"token punctuation\">,</span> <span class=\"token keyword\">if</span> <span class=\"token operator\">not</span> show popconfirm<span class=\"token punctuation\">.</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">changeCondition</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ condition<span class=\"token punctuation\">:</span> value }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Next step.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">cancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    message<span class=\"token punctuation\">.</span><span class=\"token function\">error</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on cancel.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleVisibleChange</span><span class=\"token punctuation\">(</span>visible<span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!visible<span class=\"token punctuation\">)</span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      return<span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n    <span class=\"token operator\">/</span><span class=\"token operator\">/</span> Determining condition before show the popconfirm<span class=\"token punctuation\">.</span>\n    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>condition<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>condition<span class=\"token punctuation\">)</span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;  // next step</span>\n    } <span class=\"token keyword\">else</span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;  // show the popconfirm</span>\n    }\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Popconfirm title<span class=\"token operator\">=</span><span class=\"token string\">\"Are you sure delete this task?\"</span>\n          visible<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible} onVisibleChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleVisibleChange}\n          onConfirm<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>confirm} onCancel<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>cancel}\n          okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span>\n          cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span>\n        <span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"#\"</span><span class=\"token operator\">></span>Delete a task<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        Whether directly execute：<span class=\"token operator\">&lt;</span><span class=\"token keyword\">Switch</span> defaultChecked onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>changeCondition} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>App <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var App = React.createClass({
+	    displayName: "App",
+	    getInitialState: function getInitialState() {
+	      return {
+	        visible: false,
+	        condition: true
+	      };
+	    },
+	    changeCondition: function changeCondition(value) {
+	      this.setState({
+	        condition: value
+	      });
+	    },
+	    confirm: function confirm() {
+	      this.setState({
+	        visible: false
+	      });
+
+	      _antd.message.success('Next step.');
+	    },
+	    cancel: function cancel() {
+	      this.setState({
+	        visible: false
+	      });
+
+	      _antd.message.error('Click on cancel.');
+	    },
+	    handleVisibleChange: function handleVisibleChange(visible) {
+	      if (!visible) {
+	        this.setState({
+	          visible: visible
+	        });
+	        return;
+	      } // Determining condition before show the popconfirm.
+
+
+	      console.log(this.state.condition);
+
+	      if (this.state.condition) {
+	        this.confirm(); // next step
+	      } else {
+	        this.setState({
+	          visible: visible
+	        }); // show the popconfirm
 	      }
-	    });return _react2.default.createElement(App, null);
-	  }
+	    },
+	    render: function render() {
+	      return React.createElement(
+	        "div",
+	        null,
+	        React.createElement(
+	          _antd.Popconfirm,
+	          {
+	            title: "Are you sure delete this task?",
+	            visible: this.state.visible,
+	            onVisibleChange: this.handleVisibleChange,
+	            onConfirm: this.confirm,
+	            onCancel: this.cancel,
+	            okText: "Yes",
+	            cancelText: "No"
+	          },
+	          React.createElement(
+	            "a",
+	            {
+	              href: "#"
+	            },
+	            "Delete a task"
+	          )
+	        ),
+	        React.createElement("br", null),
+	        React.createElement("br", null),
+	        "Whether directly execute：",
+	        React.createElement(_antd.Switch, {
+	          defaultChecked: true,
+	          onChange: this.changeCondition
+	        })
+	      );
+	    }
+	  });
+	  return React.createElement(App, null);
+	}
 	};
 
 /***/ },
 
-/***/ 1574:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(147);
-
-	var _popconfirm = __webpack_require__(146);
-
-	var _popconfirm2 = _interopRequireDefault(_popconfirm);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "使用 ", ["code", "okText"], " 和 ", ["code", "cancelText"], " 自定义按钮文字。"]],
-	    "en-US": [["p", "Set ", ["code", "okText"], " and ", ["code", "cancelText"], " props to customise the button's labels."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "使用 ",
+	        [
+	          "code",
+	          "okText"
+	        ],
+	        " 和 ",
+	        [
+	          "code",
+	          "cancelText"
+	        ],
+	        " 自定义按钮文字。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Set ",
+	        [
+	          "code",
+	          "okText"
+	        ],
+	        " and ",
+	        [
+	          "code",
+	          "cancelText"
+	        ],
+	        " props to customise the button's labels."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 1,
@@ -227,69 +294,97 @@ webpackJsonp([36,210],{
 	    "filename": "components/popconfirm/demo/locale.md",
 	    "id": "components-popconfirm-demo-locale"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popconfirm <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Are</span> <span class=\"token attr-name\">you</span> <span class=\"token attr-name\">sure？\"</span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>#<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Delete<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _popconfirm2.default,
-	      { title: 'Are you sure\uFF1F', okText: 'Yes', cancelText: 'No' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: '#' },
-	        'Delete'
-	      )
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popconfirm } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Popconfirm title<span class=\"token operator\">=</span><span class=\"token string\">\"Are you sure？\"</span> okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"#\"</span><span class=\"token operator\">></span>Delete<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Popconfirm,
+	    {
+	      title: "Are you sure？",
+	      okText: "Yes",
+	      cancelText: "No"
+	    },
+	    React.createElement(
+	      "a",
+	      {
+	        href: "#"
+	      },
+	      "Delete"
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1575:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style4 = __webpack_require__(147);
-
-	var _popconfirm = __webpack_require__(146);
-
-	var _popconfirm2 = _interopRequireDefault(_popconfirm);
-
-	var _style5 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _style6 = __webpack_require__(65);
-
-	var _message = __webpack_require__(64);
-
-	var _message2 = _interopRequireDefault(_message);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "位置有十二个方向。如需箭头指向目标元素中心，可以设置 ", ["code", "arrowPointAtCenter"], "。"]],
-	    "en-US": [["p", "There are 12 ", ["code", "placement"], " options available. Use ", ["code", "arrowPointAtCenter"], " if you want arrow point at the center of target."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "位置有十二个方向。如需箭头指向目标元素中心，可以设置 ",
+	        [
+	          "code",
+	          "arrowPointAtCenter"
+	        ],
+	        "。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "There are 12 ",
+	        [
+	          "code",
+	          "placement"
+	        ],
+	        " options available. Use ",
+	        [
+	          "code",
+	          "arrowPointAtCenter"
+	        ],
+	        " if you want arrow point at the center of target."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 2,
@@ -300,151 +395,289 @@ webpackJsonp([36,210],{
 	    "filename": "components/popconfirm/demo/placement.md",
 	    "id": "components-popconfirm-demo-placement"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popconfirm<span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token string\">'Are you sure delete this task?'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">function</span> <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on Yes.'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>demo<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>TL<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>top<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Top<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topRight<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>TR<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> float<span class=\"token punctuation\">:</span> <span class=\"token string\">'left'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>leftTop<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>LT<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>left<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Left<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>leftBottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>LB<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">304</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>rightTop<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>RT<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>right<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Right<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>rightBottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>RB<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottomLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>BL<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Bottom<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popconfirm</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottomRight<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">onConfirm</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>confirm<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">okText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Yes<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">cancelText</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>No<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>BR<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popconfirm</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var text = 'Are you sure delete this task?';function confirm() {
-	      _message2.default.info('Click on Yes.');
-	    }return _react2.default.createElement(
-	      'div',
-	      { className: 'demo' },
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginLeft: 70, whiteSpace: 'nowrap' } },
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'topLeft', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'TL'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'top', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Top'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'topRight', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'TR'
-	          )
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popconfirm<span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token string\">'Are you sure delete this task?'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">confirm</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on Yes.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"demo\"</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"topLeft\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>TL<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"top\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Top<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"topRight\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>TR<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> float<span class=\"token punctuation\">:</span> <span class=\"token string\">'left'</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"leftTop\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>LT<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"left\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Left<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"leftBottom\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>LB<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">304</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"rightTop\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>RT<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Right<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"rightBottom\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>RB<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span> clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomLeft\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>BL<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottom\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Bottom<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popconfirm placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomRight\"</span> title<span class=\"token operator\">=</span>{text} onConfirm<span class=\"token operator\">=</span>{confirm} okText<span class=\"token operator\">=</span><span class=\"token string\">\"Yes\"</span> cancelText<span class=\"token operator\">=</span><span class=\"token string\">\"No\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>BR<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var text = 'Are you sure delete this task?';
+
+	  function confirm() {
+	    _antd.message.info('Click on Yes.');
+	  }
+
+	  return React.createElement(
+	    "div",
+	    {
+	      className: "demo"
+	    },
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          marginLeft: 70,
+	          whiteSpace: 'nowrap'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "topLeft",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "TL"
 	        )
 	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { width: 70, float: 'left' } },
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'leftTop', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'LT'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'left', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Left'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'leftBottom', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'LB'
-	          )
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "top",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Top"
 	        )
 	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { width: 70, marginLeft: 304 } },
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'rightTop', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'RT'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'right', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Right'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'rightBottom', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'RB'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginLeft: 70, clear: 'both', whiteSpace: 'nowrap' } },
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'bottomLeft', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'BL'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'bottom', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Bottom'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popconfirm2.default,
-	          { placement: 'bottomRight', title: text, onConfirm: confirm, okText: 'Yes', cancelText: 'No' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'BR'
-	          )
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "topRight",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "TR"
 	        )
 	      )
-	    );
-	  },
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          width: 70,
+	          float: 'left'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "leftTop",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "LT"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "left",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Left"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "leftBottom",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "LB"
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          width: 70,
+	          marginLeft: 304
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "rightTop",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "RT"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "right",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Right"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "rightBottom",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "RB"
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          marginLeft: 70,
+	          clear: 'both',
+	          whiteSpace: 'nowrap'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "bottomLeft",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "BL"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "bottom",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Bottom"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popconfirm,
+	        {
+	          placement: "bottomRight",
+	          title: text,
+	          onConfirm: confirm,
+	          okText: "Yes",
+	          cancelText: "No"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "BR"
+	        )
+	      )
+	    )
+	  );
+	},
 	  "style": "\n.code-box-demo .ant-popover-wrap > a {\n  margin-right: 8px;\n}\n.code-box-demo .ant-btn {\n  margin-right: 8px;\n  margin-bottom: 8px;\n}\n#components-popconfirm-demo-placement .ant-btn {\n  width: 70px;\n}\n"
 	};
+
+/***/ },
+
+/***/ 1223:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(941),
+	    'dynamic-trigger': __webpack_require__(942),
+	    'locale': __webpack_require__(943),
+	    'placement': __webpack_require__(944),
+	}
 
 /***/ }
 

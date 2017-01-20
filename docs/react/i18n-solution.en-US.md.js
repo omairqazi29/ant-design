@@ -1,29 +1,21 @@
 webpackJsonp([93,210],{
 
-/***/ 1759:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/***/ 1128:
+/***/ function(module, exports) {
 
 	module.exports = {
-	  "content": ["article"],
+	  "content": [
+	    "article"
+	  ],
 	  "meta": {
 	    "order": 6,
 	    "title": "i18n Solution",
 	    "link": "//github.com/ant-design/intl-example",
 	    "filename": "docs/react/i18n-solution.en-US.md"
 	  },
-	  "toc": ["ul"]
+	  "toc": [
+	    "ul"
+	  ]
 	};
 
 /***/ }

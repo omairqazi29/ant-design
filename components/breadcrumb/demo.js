@@ -1,42 +1,22 @@
 webpackJsonp([41,210],{
 
-/***/ 632:
+/***/ 750:
 /***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'basic': __webpack_require__(1381),
-	    'router': __webpack_require__(1382),
-	    'separator': __webpack_require__(1383),
-	    'withIcon': __webpack_require__(1384),
-	}
-
-/***/ },
-
-/***/ 1381:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(83);
-
-	var _breadcrumb = __webpack_require__(82);
-
-	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "最简单的用法。"]],
-	    "en-US": [["p", "The simplest use"]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "最简单的用法。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The simplest use"
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 0,
@@ -47,88 +27,113 @@ webpackJsonp([41,210],{
 	    "filename": "components/breadcrumb/demo/basic.md",
 	    "id": "components-breadcrumb-demo-basic"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Breadcrumb <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>Home<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application Center<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>a</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application List<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>An Application<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _breadcrumb2.default,
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>Application Center<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>Application List<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>An Application<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Breadcrumb,
+	    null,
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
 	      null,
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        'Home'
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '' },
-	          'Application Center'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '' },
-	          'Application List'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        'An Application'
+	      "Home"
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      React.createElement(
+	        "a",
+	        {
+	          href: ""
+	        },
+	        "Application Center"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      React.createElement(
+	        "a",
+	        {
+	          href: ""
+	        },
+	        "Application List"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      "An Application"
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1382:
+/***/ 751:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(83);
-
-	var _breadcrumb = __webpack_require__(82);
-
-	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
-
-	var _style4 = __webpack_require__(81);
-
-	var _alert = __webpack_require__(80);
-
-	var _alert2 = _interopRequireDefault(_alert);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _reactRouter = __webpack_require__(47);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "和 ", ["code", "react-router@2+"], " 进行结合使用。"]],
-	    "en-US": [["p", "Used together with ", ["code", "react-router@2+"], "."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "和 ",
+	        [
+	          "code",
+	          "react-router@2+"
+	        ],
+	        " 进行结合使用。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Used together with ",
+	        [
+	          "code",
+	          "react-router@2+"
+	        ],
+	        "."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 2,
@@ -140,129 +145,202 @@ webpackJsonp([41,210],{
 	    "filename": "components/breadcrumb/demo/router.md",
 	    "id": "components-breadcrumb-demo-router"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Router<span class=\"token punctuation\">,</span> Route<span class=\"token punctuation\">,</span> Link<span class=\"token punctuation\">,</span> hashHistory <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'react-router'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Breadcrumb<span class=\"token punctuation\">,</span> Alert <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> Apps <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ul</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>app-list<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/apps/1<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application1<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>：<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/apps/1/detail<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Detail<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/apps/2<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application2<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>：<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/apps/2/detail<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Detail<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ul</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> Home <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> routes<span class=\"token punctuation\">,</span> params<span class=\"token punctuation\">,</span> children <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>demo-nav<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Home<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link</span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/apps<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application List<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">{</span>children <span class=\"token operator\">||</span> <span class=\"token string\">'Home Page'</span><span class=\"token punctuation\">}</span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Alert</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> margin<span class=\"token punctuation\">:</span> <span class=\"token string\">'16px 0'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">message</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Click</span> <span class=\"token attr-name\">the</span> <span class=\"token attr-name\">navigation</span> <span class=\"token attr-name\">above</span> <span class=\"token attr-name\">to</span> <span class=\"token attr-name\"><span class=\"token namespace\">switch:</span>\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb</span> <span class=\"token attr-name\">routes</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>routes<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">params</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>params<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Router</span> <span class=\"token attr-name\">history</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>hashHistory<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Route</span> <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>home<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">breadcrumbName</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Home<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">path</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>/<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">component</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>Home<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Route</span> <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>apps<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">breadcrumbName</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Application</span> <span class=\"token attr-name\">List\"</span> <span class=\"token attr-name\">path</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>apps<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">component</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>Apps<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Route</span> <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>app<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">breadcrumbName</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Application:id<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">path</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>:id<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Route</span> <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>detail<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">breadcrumbName</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Detail<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">path</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>detail<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Route</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Route</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Route</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Router</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Apps = function Apps() {
-	      return _react2.default.createElement(
-	        'ul',
-	        { className: 'app-list' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/apps/1' },
-	            'Application1'
-	          ),
-	          '\uFF1A',
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/apps/1/detail' },
-	            'Detail'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/apps/2' },
-	            'Application2'
-	          ),
-	          '\uFF1A',
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/apps/2/detail' },
-	            'Detail'
-	          )
-	        )
-	      );
-	    };var Home = function Home(_ref) {
-	      var routes = _ref.routes,
-	          params = _ref.params,
-	          children = _ref.children;
-	      return _react2.default.createElement(
-	        'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Router<span class=\"token punctuation\">,</span> Route<span class=\"token punctuation\">,</span> Link<span class=\"token punctuation\">,</span> hashHistory } from <span class=\"token string\">'react-router'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport { Breadcrumb<span class=\"token punctuation\">,</span> Alert } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Apps <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>ul className<span class=\"token operator\">=</span><span class=\"token string\">\"app-list\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/apps/1\"</span><span class=\"token operator\">></span>Application1<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>：<span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/apps/1/detail\"</span><span class=\"token operator\">></span>Detail<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/apps/2\"</span><span class=\"token operator\">></span>Application2<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>：<span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/apps/2/detail\"</span><span class=\"token operator\">></span>Detail<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>ul<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Home <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>{ routes<span class=\"token punctuation\">,</span> params<span class=\"token punctuation\">,</span> children }<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"demo-nav\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/\"</span><span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Link <span class=\"token keyword\">to</span><span class=\"token operator\">=</span><span class=\"token string\">\"/apps\"</span><span class=\"token operator\">></span>Application List<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Link<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    {children || <span class=\"token string\">'Home Page'</span>}\n    <span class=\"token operator\">&lt;</span>Alert style<span class=\"token operator\">=</span>{{ margin<span class=\"token punctuation\">:</span> <span class=\"token string\">'16px 0'</span> }} message<span class=\"token operator\">=</span><span class=\"token string\">\"Click the navigation above to switch:\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb routes<span class=\"token operator\">=</span>{routes} params<span class=\"token operator\">=</span>{params} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Router history<span class=\"token operator\">=</span>{hashHistory}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Route name<span class=\"token operator\">=</span><span class=\"token string\">\"home\"</span> breadcrumbName<span class=\"token operator\">=</span><span class=\"token string\">\"Home\"</span> path<span class=\"token operator\">=</span><span class=\"token string\">\"/\"</span> component<span class=\"token operator\">=</span>{Home}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Route name<span class=\"token operator\">=</span><span class=\"token string\">\"apps\"</span> breadcrumbName<span class=\"token operator\">=</span><span class=\"token string\">\"Application List\"</span> path<span class=\"token operator\">=</span><span class=\"token string\">\"apps\"</span> component<span class=\"token operator\">=</span>{Apps}<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Route name<span class=\"token operator\">=</span><span class=\"token string\">\"app\"</span> breadcrumbName<span class=\"token operator\">=</span><span class=\"token string\">\"Application:id\"</span> path<span class=\"token operator\">=</span><span class=\"token string\">\":id\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Route name<span class=\"token operator\">=</span><span class=\"token string\">\"detail\"</span> breadcrumbName<span class=\"token operator\">=</span><span class=\"token string\">\"Detail\"</span> path<span class=\"token operator\">=</span><span class=\"token string\">\"detail\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Route<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Route<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Route<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Router<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _reactRouter = __webpack_require__(213);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Apps = function Apps() {
+	    return React.createElement(
+	      "ul",
+	      {
+	        className: "app-list"
+	      },
+	      React.createElement(
+	        "li",
 	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'demo-nav' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            'Home'
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/apps' },
-	            'Application List'
-	          )
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/apps/1"
+	          },
+	          "Application1"
 	        ),
-	        children || 'Home Page',
-	        _react2.default.createElement(_alert2.default, { style: { margin: '16px 0' }, message: 'Click the navigation above to switch:' }),
-	        _react2.default.createElement(_breadcrumb2.default, { routes: routes, params: params })
-	      );
-	    };
-	    return _react2.default.createElement(
-	      _reactRouter.Router,
-	      { history: _reactRouter.hashHistory },
-	      _react2.default.createElement(
-	        _reactRouter.Route,
-	        { name: 'home', breadcrumbName: 'Home', path: '/', component: Home },
-	        _react2.default.createElement(
-	          _reactRouter.Route,
-	          { name: 'apps', breadcrumbName: 'Application List', path: 'apps', component: Apps },
-	          _react2.default.createElement(
-	            _reactRouter.Route,
-	            { name: 'app', breadcrumbName: 'Application:id', path: ':id' },
-	            _react2.default.createElement(_reactRouter.Route, { name: 'detail', breadcrumbName: 'Detail', path: 'detail' })
-	          )
+	        "：",
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/apps/1/detail"
+	          },
+	          "Detail"
+	        )
+	      ),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/apps/2"
+	          },
+	          "Application2"
+	        ),
+	        "：",
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/apps/2/detail"
+	          },
+	          "Detail"
 	        )
 	      )
 	    );
-	  },
+	  };
+
+	  var Home = function Home(_ref) {
+	    var routes = _ref.routes,
+	        params = _ref.params,
+	        children = _ref.children;
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "div",
+	        {
+	          className: "demo-nav"
+	        },
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/"
+	          },
+	          "Home"
+	        ),
+	        React.createElement(
+	          _reactRouter.Link,
+	          {
+	            to: "/apps"
+	          },
+	          "Application List"
+	        )
+	      ),
+	      children || 'Home Page',
+	      React.createElement(_antd.Alert, {
+	        style: {
+	          margin: '16px 0'
+	        },
+	        message: "Click the navigation above to switch:"
+	      }),
+	      React.createElement(_antd.Breadcrumb, {
+	        routes: routes,
+	        params: params
+	      })
+	    );
+	  };
+
+	  return React.createElement(
+	    _reactRouter.Router,
+	    {
+	      history: _reactRouter.hashHistory
+	    },
+	    React.createElement(
+	      _reactRouter.Route,
+	      {
+	        name: "home",
+	        breadcrumbName: "Home",
+	        path: "/",
+	        component: Home
+	      },
+	      React.createElement(
+	        _reactRouter.Route,
+	        {
+	          name: "apps",
+	          breadcrumbName: "Application List",
+	          path: "apps",
+	          component: Apps
+	        },
+	        React.createElement(
+	          _reactRouter.Route,
+	          {
+	            name: "app",
+	            breadcrumbName: "Application:id",
+	            path: ":id"
+	          },
+	          React.createElement(_reactRouter.Route, {
+	            name: "detail",
+	            breadcrumbName: "Detail",
+	            path: "detail"
+	          })
+	        )
+	      )
+	    )
+	  );
+	},
 	  "style": "#components-breadcrumb-demo-router iframe {\n  height: 180px;\n}\n.demo-nav {\n  height: 30px;\n  line-height: 30px;\n  margin-bottom: 15px;\n  background: #f8f8f8;\n}\n.demo-nav a {\n  line-height: 30px;\n  padding: 0 10px;\n}\n.app-list {\n  margin-top: 15px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-breadcrumb-demo-router</span> iframe </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">180</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.demo-nav</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">30</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">30</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">15</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#f8f8f8</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.demo-nav</span> a </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">line-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">30</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> <span class=\"token number\">0</span> <span class=\"token number\">10</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token selector\"><span class=\"token class\">.app-list</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">15</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-	  "src": "/demo-0.6219224140735982.html"
+	  "src": "/demo-0.7034844812358612.html"
 	};
 
 /***/ },
 
-/***/ 1383:
+/***/ 752:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(83);
-
-	var _breadcrumb = __webpack_require__(82);
-
-	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "使用 ", ["code", "separator=\">\""], " 可以自定义分隔符。"]],
-	    "en-US": [["p", "The separator can be customized by setting the separator property: separator=\">\""]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "使用 ",
+	        [
+	          "code",
+	          "separator=\">\""
+	        ],
+	        " 可以自定义分隔符。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The separator can be customized by setting the separator property: separator=\">\""
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 3,
@@ -273,78 +351,97 @@ webpackJsonp([41,210],{
 	    "filename": "components/breadcrumb/demo/separator.md",
 	    "id": "components-breadcrumb-demo-separator"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Breadcrumb <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb</span> <span class=\"token attr-name\">separator=\"</span><span class=\"token punctuation\">></span><span class=\"token attr-name\">\"</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>Home<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application Center<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Application List<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>An Application<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _breadcrumb2.default,
-	      { separator: '>' },
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        'Home'
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        { href: '' },
-	        'Application Center'
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        { href: '' },
-	        'Application List'
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        null,
-	        'An Application'
-	      )
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Breadcrumb separator<span class=\"token operator\">=</span><span class=\"token string\">\">\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>Application Center<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>Application List<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>An Application<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Breadcrumb,
+	    {
+	      separator: ">"
+	    },
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      "Home"
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      {
+	        href: ""
+	      },
+	      "Application Center"
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      {
+	        href: ""
+	      },
+	      "Application List"
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      "An Application"
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1384:
+/***/ 753:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(83);
-
-	var _breadcrumb = __webpack_require__(82);
-
-	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
-
-	var _style4 = __webpack_require__(14);
-
-	var _icon = __webpack_require__(9);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "图标放在文字前面。"]],
-	    "en-US": [["p", "The icon should be placed in front of the text."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "图标放在文字前面。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The icon should be placed in front of the text."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 1,
@@ -355,44 +452,91 @@ webpackJsonp([41,210],{
 	    "filename": "components/breadcrumb/demo/withIcon.md",
 	    "id": "components-breadcrumb-demo-withIcon"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>home<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span><span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>user<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span><span class=\"token punctuation\">></span></span>Application List<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n      Application\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb.Item</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Breadcrumb</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    return _react2.default.createElement(
-	      _breadcrumb2.default,
-	      null,
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        { href: '' },
-	        _react2.default.createElement(_icon2.default, { type: 'home' })
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
-	        { href: '' },
-	        _react2.default.createElement(_icon2.default, { type: 'user' }),
-	        _react2.default.createElement(
-	          'span',
-	          null,
-	          'Application List'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _breadcrumb2.default.Item,
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"home\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item href<span class=\"token operator\">=</span><span class=\"token string\">\"\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span>Application List<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n      Application\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    _antd.Breadcrumb,
+	    null,
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      {
+	        href: ""
+	      },
+	      React.createElement(_antd.Icon, {
+	        type: "home"
+	      })
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      {
+	        href: ""
+	      },
+	      React.createElement(_antd.Icon, {
+	        type: "user"
+	      }),
+	      React.createElement(
+	        "span",
 	        null,
-	        'Application'
+	        "Application List"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      _antd.Breadcrumb.Item,
+	      null,
+	      "Application"
+	    )
+	  );
+	}
 	};
+
+/***/ },
+
+/***/ 1201:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'basic': __webpack_require__(750),
+	    'router': __webpack_require__(751),
+	    'separator': __webpack_require__(752),
+	    'withIcon': __webpack_require__(753),
+	}
 
 /***/ }
 

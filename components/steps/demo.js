@@ -1,45 +1,37 @@
 webpackJsonp([13,210],{
 
-/***/ 662:
+/***/ 1006:
 /***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'error': __webpack_require__(1637),
-	    'icon': __webpack_require__(1638),
-	    'simple': __webpack_require__(1639),
-	    'small-size': __webpack_require__(1640),
-	    'step-next': __webpack_require__(1641),
-	    'vertical-small': __webpack_require__(1642),
-	    'vertical': __webpack_require__(1643),
-	}
-
-/***/ },
-
-/***/ 1637:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "使用 Steps 的 ", ["code", "status"], " 属性来指定当前步骤的状态。"]],
-	    "en-US": [["p", "By using ", ["code", "status"], " of ", ["code", "Steps"], ", you can specify the state for current step."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "使用 Steps 的 ",
+	        [
+	          "code",
+	          "status"
+	        ],
+	        " 属性来指定当前步骤的状态。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "By using ",
+	        [
+	          "code",
+	          "status"
+	        ],
+	        " of ",
+	        [
+	          "code",
+	          "Steps"
+	        ],
+	        ", you can specify the state for current step."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 6,
@@ -50,61 +42,107 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/error.md",
 	    "id": "components-steps-demo-error"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">status</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>error<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Finished<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>In</span> <span class=\"token attr-name\">Process\"</span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Waiting<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description\"</span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      { current: 1, status: 'error' },
-	      _react2.default.createElement(Step, { title: 'Finished', description: 'This is a description' }),
-	      _react2.default.createElement(Step, { title: 'In Process', description: 'This is a description' }),
-	      _react2.default.createElement(Step, { title: 'Waiting', description: 'This is a description' })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>} status<span class=\"token operator\">=</span><span class=\"token string\">\"error\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Process\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      current: 1,
+	      status: "error"
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "This is a description"
+	    }),
+	    React.createElement(Step, {
+	      title: "In Process",
+	      description: "This is a description"
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "This is a description"
+	    })
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1638:
+/***/ 1007:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(14);
-
-	var _icon = __webpack_require__(9);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	var _style4 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "通过设置 ", ["code", "Steps.Step"], " 的 ", ["code", "icon"], " 属性，可以启用自定义图标。"]],
-	    "en-US": [["p", "You can use your own custom icons by setting the property ", ["code", "icon"], " for ", ["code", "Steps.Step"], "."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "通过设置 ",
+	        [
+	          "code",
+	          "Steps.Step"
+	        ],
+	        " 的 ",
+	        [
+	          "code",
+	          "icon"
+	        ],
+	        " 属性，可以启用自定义图标。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "You can use your own custom icons by setting the property ",
+	        [
+	          "code",
+	          "icon"
+	        ],
+	        " for ",
+	        [
+	          "code",
+	          "Steps.Step"
+	        ],
+	        "."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 2,
@@ -115,56 +153,100 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/icon.md",
 	    "id": "components-steps-demo-icon"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps<span class=\"token punctuation\">,</span> Icon <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">status</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>finish<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Login<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">icon={&lt;Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>user<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">status</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>finish<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Verification<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">icon={&lt;Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>solution<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">status</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>process<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Pay<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">icon={&lt;Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>credit-card<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">status</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>wait<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Done<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">icon={&lt;Icon</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>smile-o<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      null,
-	      _react2.default.createElement(Step, { status: 'finish', title: 'Login', icon: _react2.default.createElement(_icon2.default, { type: 'user' }) }),
-	      _react2.default.createElement(Step, { status: 'finish', title: 'Verification', icon: _react2.default.createElement(_icon2.default, { type: 'solution' }) }),
-	      _react2.default.createElement(Step, { status: 'process', title: 'Pay', icon: _react2.default.createElement(_icon2.default, { type: 'credit-card' }) }),
-	      _react2.default.createElement(Step, { status: 'wait', title: 'Done', icon: _react2.default.createElement(_icon2.default, { type: 'smile-o' }) })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> status<span class=\"token operator\">=</span><span class=\"token string\">\"finish\"</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Login\"</span> icon<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> status<span class=\"token operator\">=</span><span class=\"token string\">\"finish\"</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Verification\"</span> icon<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"solution\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> status<span class=\"token operator\">=</span><span class=\"token string\">\"process\"</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Pay\"</span> icon<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"credit-card\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> status<span class=\"token operator\">=</span><span class=\"token string\">\"wait\"</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Done\"</span> icon<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"smile-o\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    null,
+	    React.createElement(Step, {
+	      status: "finish",
+	      title: "Login",
+	      icon: React.createElement(_antd.Icon, {
+	        type: "user"
+	      })
+	    }),
+	    React.createElement(Step, {
+	      status: "finish",
+	      title: "Verification",
+	      icon: React.createElement(_antd.Icon, {
+	        type: "solution"
+	      })
+	    }),
+	    React.createElement(Step, {
+	      status: "process",
+	      title: "Pay",
+	      icon: React.createElement(_antd.Icon, {
+	        type: "credit-card"
+	      })
+	    }),
+	    React.createElement(Step, {
+	      status: "wait",
+	      title: "Done",
+	      icon: React.createElement(_antd.Icon, {
+	        type: "smile-o"
+	      })
+	    })
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1639:
+/***/ 1008:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "简单的步骤条。"]],
-	    "en-US": [["p", "The most basic step bar."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "简单的步骤条。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The most basic step bar."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 0,
@@ -175,55 +257,96 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/simple.md",
 	    "id": "components-steps-demo-simple"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Finished<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>In</span> <span class=\"token attr-name\">Progress\"</span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Waiting<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      { current: 1 },
-	      _react2.default.createElement(Step, { title: 'Finished', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'In Progress', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'Waiting', description: 'This is a description.' })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      current: 1
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "This is a description."
+	    })
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1640:
+/***/ 1009:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "迷你版的步骤条，通过设置 ", ["code", "<Steps size=\"small\">"], " 启用."]],
-	    "en-US": [["p", "By setting like this: ", ["code", "<Steps size=\"small\">"], ", you can get a mini version."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "迷你版的步骤条，通过设置 ",
+	        [
+	          "code",
+	          "<Steps size=\"small\">"
+	        ],
+	        " 启用."
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "By setting like this: ",
+	        [
+	          "code",
+	          "<Steps size=\"small\">"
+	        ],
+	        ", you can get a mini version."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 1,
@@ -234,79 +357,84 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/small-size.md",
 	    "id": "components-steps-demo-small-size"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>small<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Finished<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>In</span> <span class=\"token attr-name\">Progress\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Waiting<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      { size: 'small', current: 1 },
-	      _react2.default.createElement(Step, { title: 'Finished' }),
-	      _react2.default.createElement(Step, { title: 'In Progress' }),
-	      _react2.default.createElement(Step, { title: 'Waiting' })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps size<span class=\"token operator\">=</span><span class=\"token string\">\"small\"</span> current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      size: "small",
+	      current: 1
+	    },
+	    React.createElement(Step, {
+	      title: "Finished"
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress"
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting"
+	    })
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1641:
+/***/ 1010:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style4 = __webpack_require__(65);
-
-	var _message = __webpack_require__(64);
-
-	var _message2 = _interopRequireDefault(_message);
-
-	var _style5 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _classCallCheck2 = __webpack_require__(3);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(5);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(4);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _style6 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "通常配合内容及按钮使用，表示一个流程的处理进度。"]],
-	    "en-US": [["p", "Cooperate with the content and buttons, to represent the progress of a process."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "通常配合内容及按钮使用，表示一个流程的处理进度。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Cooperate with the content and buttons, to represent the progress of a process."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 3,
@@ -317,123 +445,189 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/step-next.md",
 	    "id": "components-steps-demo-step-next"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> message <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> steps <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">{</span>\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'First'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'First-content'</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Second'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Second-content'</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Last'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Last-content'</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">class</span> <span class=\"token class-name\">App</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n      current<span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token function\">next</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> current <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">+</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> current <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token function\">prev</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> current <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> current <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span> current <span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">;</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>current<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">{</span>steps<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>item <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">key</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>title<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>title<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>steps-content<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">{</span>steps<span class=\"token punctuation\">[</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current<span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>steps-action<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">{</span>\n            <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">&lt;</span> steps<span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span>\n            <span class=\"token operator\">&amp;&amp;</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">next</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>Next<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">}</span>\n          <span class=\"token punctuation\">{</span>\n            <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">===</span> steps<span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span>\n            <span class=\"token operator\">&amp;&amp;</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Processing complete!'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>Done<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">}</span>\n          <span class=\"token punctuation\">{</span>\n            <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">></span> <span class=\"token number\">0</span>\n            <span class=\"token operator\">&amp;&amp;</span>\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>ghost<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">prev</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n              Previous\n            <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n          <span class=\"token punctuation\">}</span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">}</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;var steps = [{ title: 'First', content: 'First-content'
-	    }, { title: 'Second', content: 'Second-content' }, { title: 'Last', content: 'Last-content' }];
-	    var App = function (_React$Component) {
-	      (0, _inherits3.default)(App, _React$Component);
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> message } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> steps <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span>{\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'First'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'First-content'</span><span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">,</span> {\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Second'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Second-content'</span><span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">,</span> {\n  title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Last'</span><span class=\"token punctuation\">,</span>\n  content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Last-content'</span><span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nclass App extends React<span class=\"token punctuation\">.</span>Component {\n  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> {\n    <span class=\"token function\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> {\n      current<span class=\"token punctuation\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">next</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> current <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">+</span> <span class=\"token number\">1</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ current }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">prev</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> current <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ current }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { current } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Steps current<span class=\"token operator\">=</span>{current}<span class=\"token operator\">></span>\n          {steps<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>item <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> key<span class=\"token operator\">=</span>{item<span class=\"token punctuation\">.</span>title} title<span class=\"token operator\">=</span>{item<span class=\"token punctuation\">.</span>title} <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"steps-content\"</span><span class=\"token operator\">></span>{steps<span class=\"token punctuation\">[</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current<span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>content}<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"steps-action\"</span><span class=\"token operator\">></span>\n          {\n            this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">&lt;</span> steps<span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span>\n            <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span>\n            <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> onClick<span class=\"token operator\">=</span>{<span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> this<span class=\"token punctuation\">.</span><span class=\"token function\">next</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>}<span class=\"token operator\">></span><span class=\"token keyword\">Next</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n          }\n          {\n            this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">==</span><span class=\"token operator\">=</span> steps<span class=\"token punctuation\">.</span>length <span class=\"token operator\">-</span> <span class=\"token number\">1</span>\n            <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span>\n            <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> onClick<span class=\"token operator\">=</span>{<span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> message<span class=\"token punctuation\">.</span><span class=\"token function\">success</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Processing complete!'</span><span class=\"token punctuation\">)</span>}<span class=\"token operator\">></span>Done<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n          }\n          {\n            this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>current <span class=\"token operator\">></span> <span class=\"token number\">0</span>\n            <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span>\n            <span class=\"token operator\">&lt;</span>Button style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> }} type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span> onClick<span class=\"token operator\">=</span>{<span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> this<span class=\"token punctuation\">.</span><span class=\"token function\">prev</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>}<span class=\"token operator\">></span>\n              Previous\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n          }\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>App <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
 
-	      function App(props) {
-	        (0, _classCallCheck3.default)(this, App);
+	  var ReactDOM = __webpack_require__(2);
 
-	        var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this, props));
+	  var _antd = __webpack_require__(3);
 
-	        _this.state = { current: 0 };
-	        return _this;
-	      }
+	  function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
 
-	      App.prototype.next = function next() {
-	        var current = this.state.current + 1;this.setState({ current: current });
+	  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+
+	  var Step = _antd.Steps.Step;
+	  var steps = [{
+	    title: 'First',
+	    content: 'First-content'
+	  }, {
+	    title: 'Second',
+	    content: 'Second-content'
+	  }, {
+	    title: 'Last',
+	    content: 'Last-content'
+	  }];
+
+	  var App = function (_React$Component) {
+	    _inherits(App, _React$Component);
+
+	    function App(props) {
+	      _classCallCheck(this, App);
+
+	      var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
+
+	      _this.state = {
+	        current: 0
 	      };
+	      return _this;
+	    }
 
-	      App.prototype.prev = function prev() {
-	        var current = this.state.current - 1;this.setState({ current: current });
-	      };
+	    App.prototype.next = function next() {
+	      var current = this.state.current + 1;
+	      this.setState({
+	        current: current
+	      });
+	    };
 
-	      App.prototype.render = function render() {
-	        var _this2 = this;
+	    App.prototype.prev = function prev() {
+	      var current = this.state.current - 1;
+	      this.setState({
+	        current: current
+	      });
+	    };
 
-	        var current = this.state.current;
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            _steps2.default,
-	            { current: current },
-	            steps.map(function (item) {
-	              return _react2.default.createElement(Step, { key: item.title, title: item.title });
-	            })
+	    App.prototype.render = function render() {
+	      var _this2 = this;
+
+	      var current = this.state.current;
+	      return React.createElement(
+	        "div",
+	        null,
+	        React.createElement(
+	          _antd.Steps,
+	          {
+	            current: current
+	          },
+	          steps.map(function (item) {
+	            return React.createElement(Step, {
+	              key: item.title,
+	              title: item.title
+	            });
+	          })
+	        ),
+	        React.createElement(
+	          "div",
+	          {
+	            className: "steps-content"
+	          },
+	          steps[this.state.current].content
+	        ),
+	        React.createElement(
+	          "div",
+	          {
+	            className: "steps-action"
+	          },
+	          this.state.current < steps.length - 1 && React.createElement(
+	            _antd.Button,
+	            {
+	              type: "primary",
+	              onClick: function onClick() {
+	                return _this2.next();
+	              }
+	            },
+	            "Next"
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'steps-content' },
-	            steps[this.state.current].content
+	          this.state.current === steps.length - 1 && React.createElement(
+	            _antd.Button,
+	            {
+	              type: "primary",
+	              onClick: function onClick() {
+	                return _antd.message.success('Processing complete!');
+	              }
+	            },
+	            "Done"
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'steps-action' },
-	            this.state.current < steps.length - 1 && _react2.default.createElement(
-	              _button2.default,
-	              { type: 'primary', onClick: function onClick() {
-	                  return _this2.next();
-	                } },
-	              'Next'
-	            ),
-	            this.state.current === steps.length - 1 && _react2.default.createElement(
-	              _button2.default,
-	              { type: 'primary', onClick: function onClick() {
-	                  return _message2.default.success('Processing complete!');
-	                } },
-	              'Done'
-	            ),
-	            this.state.current > 0 && _react2.default.createElement(
-	              _button2.default,
-	              { style: { marginLeft: 8 }, type: 'ghost', onClick: function onClick() {
-	                  return _this2.prev();
-	                } },
-	              'Previous'
-	            )
+	          this.state.current > 0 && React.createElement(
+	            _antd.Button,
+	            {
+	              style: {
+	                marginLeft: 8
+	              },
+	              type: "ghost",
+	              onClick: function onClick() {
+	                return _this2.prev();
+	              }
+	            },
+	            "Previous"
 	          )
-	        );
-	      };
+	        )
+	      );
+	    };
 
-	      return App;
-	    }(_react2.default.Component);
+	    return App;
+	  }(React.Component);
 
-	    return _react2.default.createElement(App, null);
-	  },
+	  return React.createElement(App, null);
+	},
 	  "style": ".steps-content {\n  margin-top: 16px;\n  border: 1px dashed #e9e9e9;\n  border-radius: 6px;\n  background-color: #fafafa;\n  min-height: 200px;\n  text-align: center;\n  padding-top: 80px;\n}\n\n.steps-action {\n  margin-top: 24px;\n}",
 	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.steps-content</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border</span><span class=\"token punctuation\">:</span> <span class=\"token number\">1</span>px dashed <span class=\"token hexcode\">#e9e9e9</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">border-radius</span><span class=\"token punctuation\">:</span> <span class=\"token number\">6</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background-color</span><span class=\"token punctuation\">:</span> <span class=\"token hexcode\">#fafafa</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">min-height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">200</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">text-align</span><span class=\"token punctuation\">:</span> center<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">padding-top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">80</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token selector\"><span class=\"token class\">.steps-action</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-top</span><span class=\"token punctuation\">:</span> <span class=\"token number\">24</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 1642:
+/***/ 1011:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "简单的竖直方向的小型步骤条。"]],
-	    "en-US": [["p", "A simple mini version step bar in the vertical direction."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "简单的竖直方向的小型步骤条。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "A simple mini version step bar in the vertical direction."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 5,
@@ -444,55 +638,88 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/vertical-small.md",
 	    "id": "components-steps-demo-vertical-small"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">direction</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>vertical<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">size</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>small<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Finished<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>In</span> <span class=\"token attr-name\">Progress\"</span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Waiting<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      { direction: 'vertical', size: 'small', current: 1 },
-	      _react2.default.createElement(Step, { title: 'Finished', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'In Progress', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'Waiting', description: 'This is a description.' })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps direction<span class=\"token operator\">=</span><span class=\"token string\">\"vertical\"</span> size<span class=\"token operator\">=</span><span class=\"token string\">\"small\"</span> current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      direction: "vertical",
+	      size: "small",
+	      current: 1
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "This is a description."
+	    })
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1643:
+/***/ 1012:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style2 = __webpack_require__(152);
-
-	var _steps = __webpack_require__(151);
-
-	var _steps2 = _interopRequireDefault(_steps);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "简单的竖直方向的步骤条。"]],
-	    "en-US": [["p", "A simple step bar in the vertical direction."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "简单的竖直方向的步骤条。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "A simple step bar in the vertical direction."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 4,
@@ -503,27 +730,82 @@ webpackJsonp([13,210],{
 	    "filename": "components/steps/demo/vertical.md",
 	    "id": "components-steps-demo-vertical"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Steps <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> Step <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span>Step<span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Steps</span> <span class=\"token attr-name\">direction</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>vertical<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">current</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token number\">1</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Finished<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>In</span> <span class=\"token attr-name\">Progress\"</span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Step</span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Waiting<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">description</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>This</span> <span class=\"token attr-name\">is</span> <span class=\"token attr-name\">a</span> <span class=\"token attr-name\">description.\"</span> <span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Steps</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var Step = _steps2.default.Step;return _react2.default.createElement(
-	      _steps2.default,
-	      { direction: 'vertical', current: 1 },
-	      _react2.default.createElement(Step, { title: 'Finished', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'In Progress', description: 'This is a description.' }),
-	      _react2.default.createElement(Step, { title: 'Waiting', description: 'This is a description.' })
-	    );
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps direction<span class=\"token operator\">=</span><span class=\"token string\">\"vertical\"</span> current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      direction: "vertical",
+	      current: 1
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "This is a description."
+	    })
+	  );
+	}
 	};
+
+/***/ },
+
+/***/ 1231:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'error': __webpack_require__(1006),
+	    'icon': __webpack_require__(1007),
+	    'simple': __webpack_require__(1008),
+	    'small-size': __webpack_require__(1009),
+	    'step-next': __webpack_require__(1010),
+	    'vertical-small': __webpack_require__(1011),
+	    'vertical': __webpack_require__(1012),
+	}
 
 /***/ }
 

@@ -1,36 +1,181 @@
 webpackJsonp([135,210],{
 
-/***/ 1635:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/***/ 1004:
+/***/ function(module, exports) {
 
 	module.exports = {
-	  "content": ["section", ["p", "A spinner for displaying loading state of a page or a section."], ["h2", "When To Use"], ["p", "When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude."]],
+	  "content": [
+	    "section",
+	    [
+	      "p",
+	      "A spinner for displaying loading state of a page or a section."
+	    ],
+	    [
+	      "h2",
+	      "When To Use"
+	    ],
+	    [
+	      "p",
+	      "When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude."
+	    ]
+	  ],
 	  "meta": {
 	    "category": "Components",
 	    "type": "Feedback",
 	    "title": "Spin",
 	    "filename": "components/spin/index.en-US.md"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#When-To-Use"
-	  }, "When To Use"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#API"
-	  }, "API"]]],
-	  "api": ["section", ["h2", "API"], ["table", ["thead", ["tr", ["th", "Property"], ["th", "Type"], ["th", "Default"], ["th", "Description"]]], ["tbody", ["tr", ["td", "size"], ["td", "enum"], ["td", "default"], ["td", "Size of dot in spin component, available in ", ["code", "small"], ", ", ["code", "default"], " and ", ["code", "large"], "."]], ["tr", ["td", "spinning"], ["td", "boolean"], ["td", "true"], ["td", "Use in embedded mode, to modify loading state."]], ["tr", ["td", "tip"], ["td", "string"], ["td", "None"], ["td", "Customize description content"]], ["tr", ["td", "delay"], ["td", "number (milliseconds)"], ["td", "None"], ["td", "Specifies a delay for loading state"]]]]]
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#When-To-Use"
+	        },
+	        "When To Use"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#API"
+	        },
+	        "API"
+	      ]
+	    ]
+	  ],
+	  "api": [
+	    "section",
+	    [
+	      "h2",
+	      "API"
+	    ],
+	    [
+	      "table",
+	      [
+	        "thead",
+	        [
+	          "tr",
+	          [
+	            "th",
+	            "Property"
+	          ],
+	          [
+	            "th",
+	            "Type"
+	          ],
+	          [
+	            "th",
+	            "Default"
+	          ],
+	          [
+	            "th",
+	            "Description"
+	          ]
+	        ]
+	      ],
+	      [
+	        "tbody",
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "size"
+	          ],
+	          [
+	            "td",
+	            "enum"
+	          ],
+	          [
+	            "td",
+	            "default"
+	          ],
+	          [
+	            "td",
+	            "Size of dot in spin component, available in ",
+	            [
+	              "code",
+	              "small"
+	            ],
+	            ", ",
+	            [
+	              "code",
+	              "default"
+	            ],
+	            " and ",
+	            [
+	              "code",
+	              "large"
+	            ],
+	            "."
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "spinning"
+	          ],
+	          [
+	            "td",
+	            "boolean"
+	          ],
+	          [
+	            "td",
+	            "true"
+	          ],
+	          [
+	            "td",
+	            "Use in embedded mode, to modify loading state."
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "tip"
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            "None"
+	          ],
+	          [
+	            "td",
+	            "Customize description content"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "delay"
+	          ],
+	          [
+	            "td",
+	            "number (milliseconds)"
+	          ],
+	          [
+	            "td",
+	            "None"
+	          ],
+	          [
+	            "td",
+	            "Specifies a delay for loading state"
+	          ]
+	        ]
+	      ]
+	    ]
+	  ]
 	};
 
 /***/ }

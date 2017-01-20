@@ -1,49 +1,32 @@
 webpackJsonp([28,210],{
 
-/***/ 655:
+/***/ 947:
 /***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {
-	    'arrow-point-at-center': __webpack_require__(1578),
-	    'basic': __webpack_require__(1579),
-	    'control': __webpack_require__(1580),
-	    'placement': __webpack_require__(1581),
-	    'triggerType': __webpack_require__(1582),
-	}
-
-/***/ },
-
-/***/ 1578:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(124);
-
-	var _popover = __webpack_require__(148);
-
-	var _popover2 = _interopRequireDefault(_popover);
-
-	var _style4 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "设置了 ", ["code", "arrowPointAtCenter"], " 后，箭头将指向目标元素的中心。"]],
-	    "en-US": [["p", "The arrow points to the center of the target element, which set ", ["code", "arrowPointAtCenter"], "."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "设置了 ",
+	        [
+	          "code",
+	          "arrowPointAtCenter"
+	        ],
+	        " 后，箭头将指向目标元素的中心。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The arrow points to the center of the target element, which set ",
+	        [
+	          "code",
+	          "arrowPointAtCenter"
+	        ],
+	        "."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 4,
@@ -54,93 +37,117 @@ webpackJsonp([28,210],{
 	    "filename": "components/popover/demo/arrow-point-at-center.md",
 	    "id": "components-popover-demo-arrow-point-at-center"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popover<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span><span class=\"token punctuation\">></span></span>Title<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Align edge <span class=\"token operator\">/</span> 边缘对齐<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">arrowPointAtCenter</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Arrow points to center <span class=\"token operator\">/</span> 箭头指向中心<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var text = _react2.default.createElement(
-	      'span',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popover<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span>Title<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"topLeft\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Align edge <span class=\"token operator\">/</span> 边缘对齐<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"topLeft\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} arrowPointAtCenter<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Arrow points <span class=\"token keyword\">to</span> center <span class=\"token operator\">/</span> 箭头指向中心<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var text = React.createElement(
+	    "span",
+	    null,
+	    "Title"
+	  );
+	  var content = React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      "p",
 	      null,
-	      'Title'
-	    );var content = _react2.default.createElement(
-	      'div',
+	      "Content"
+	    ),
+	    React.createElement(
+	      "p",
 	      null,
-	      _react2.default.createElement(
-	        'p',
+	      "Content"
+	    )
+	  );
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      _antd.Popover,
+	      {
+	        placement: "topLeft",
+	        title: text,
+	        content: content
+	      },
+	      React.createElement(
+	        _antd.Button,
 	        null,
-	        'Content'
-	      ),
-	      _react2.default.createElement(
-	        'p',
+	        "Align edge / 边缘对齐"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Popover,
+	      {
+	        placement: "topLeft",
+	        title: text,
+	        content: content,
+	        arrowPointAtCenter: true
+	      },
+	      React.createElement(
+	        _antd.Button,
 	        null,
-	        'Content'
+	        "Arrow points to center / 箭头指向中心"
 	      )
-	    );return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        _popover2.default,
-	        { placement: 'topLeft', title: text, content: content },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'Align edge / \u8FB9\u7F18\u5BF9\u9F50'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _popover2.default,
-	        { placement: 'topLeft', title: text, content: content, arrowPointAtCenter: true },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'Arrow points to center / \u7BAD\u5934\u6307\u5411\u4E2D\u5FC3'
-	        )
-	      )
-	    );
-	  }
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1579:
+/***/ 948:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(124);
-
-	var _popover = __webpack_require__(148);
-
-	var _popover2 = _interopRequireDefault(_popover);
-
-	var _style4 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "最简单的用法，浮层的大小由内容区域决定。"]],
-	    "en-US": [["p", "The most basic example. The size of the floating layer depends on the contents region."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "最简单的用法，浮层的大小由内容区域决定。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The most basic example. The size of the floating layer depends on the contents region."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 0,
@@ -151,76 +158,105 @@ webpackJsonp([28,210],{
 	    "filename": "components/popover/demo/basic.md",
 	    "id": "components-popover-demo-basic"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popover<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Title<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Hover me<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var content = _react2.default.createElement(
-	      'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popover<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Popover content<span class=\"token operator\">=</span>{content} title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span><span class=\"token operator\">></span>Hover me<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var content = React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      "p",
 	      null,
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      ),
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      )
-	    );return _react2.default.createElement(
-	      _popover2.default,
-	      { content: content, title: 'Title' },
-	      _react2.default.createElement(
-	        _button2.default,
-	        { type: 'primary' },
-	        'Hover me'
-	      )
-	    );
-	  }
+	      "Content"
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "Content"
+	    )
+	  );
+	  return React.createElement(
+	    _antd.Popover,
+	    {
+	      content: content,
+	      title: "Title"
+	    },
+	    React.createElement(
+	      _antd.Button,
+	      {
+	        type: "primary"
+	      },
+	      "Hover me"
+	    )
+	  );
+	}
 	};
 
 /***/ },
 
-/***/ 1580:
+/***/ 949:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(124);
-
-	var _popover = __webpack_require__(148);
-
-	var _popover2 = _interopRequireDefault(_popover);
-
-	var _style4 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "使用 ", ["code", "visible"], " 属性控制浮层显示。"]],
-	    "en-US": [["p", "Use ", ["code", "visible"], " prop to control the display of the card."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "使用 ",
+	        [
+	          "code",
+	          "visible"
+	        ],
+	        " 属性控制浮层显示。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Use ",
+	        [
+	          "code",
+	          "visible"
+	        ],
+	        " prop to control the display of the card."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 3,
@@ -231,81 +267,116 @@ webpackJsonp([28,210],{
 	    "filename": "components/popover/demo/control.md",
 	    "id": "components-popover-demo-control"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popover<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> App <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">hide</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleVisibleChange</span><span class=\"token punctuation\">(</span>visible<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> visible <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span>\n        <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token operator\">&lt;</span>a onClick<span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>hide<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>Close<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>a</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">}</span>\n        title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span>\n        trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span>\n        visible<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible<span class=\"token punctuation\">}</span>\n        onVisibleChange<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleVisibleChange<span class=\"token punctuation\">}</span>\n      <span class=\"token operator\">></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>primary<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Cilck me<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var App = _react2.default.createClass({
-	      displayName: 'App',
-	      getInitialState: function getInitialState() {
-	        return { visible: false };
-	      },
-	      hide: function hide() {
-	        this.setState({ visible: false });
-	      },
-	      handleVisibleChange: function handleVisibleChange(visible) {
-	        this.setState({ visible: visible });
-	      },
-	      render: function render() {
-	        return _react2.default.createElement(
-	          _popover2.default,
-	          { content: _react2.default.createElement(
-	              'a',
-	              { onClick: this.hide },
-	              'Close'
-	            ), title: 'Title', trigger: 'click', visible: this.state.visible, onVisibleChange: this.handleVisibleChange },
-	          _react2.default.createElement(
-	            _button2.default,
-	            { type: 'primary' },
-	            'Cilck me'
-	          )
-	        );
-	      }
-	    });return _react2.default.createElement(App, null);
-	  }
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popover<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> App <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">hide</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleVisibleChange</span><span class=\"token punctuation\">(</span>visible<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>Popover\n        content<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>a onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>hide}<span class=\"token operator\">></span>Close<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>}\n        title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span>\n        trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span>\n        visible<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible}\n        onVisibleChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleVisibleChange}\n      <span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span><span class=\"token operator\">></span>Cilck me<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>App <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var App = React.createClass({
+	    displayName: "App",
+	    getInitialState: function getInitialState() {
+	      return {
+	        visible: false
+	      };
+	    },
+	    hide: function hide() {
+	      this.setState({
+	        visible: false
+	      });
+	    },
+	    handleVisibleChange: function handleVisibleChange(visible) {
+	      this.setState({
+	        visible: visible
+	      });
+	    },
+	    render: function render() {
+	      return React.createElement(
+	        _antd.Popover,
+	        {
+	          content: React.createElement(
+	            "a",
+	            {
+	              onClick: this.hide
+	            },
+	            "Close"
+	          ),
+	          title: "Title",
+	          trigger: "click",
+	          visible: this.state.visible,
+	          onVisibleChange: this.handleVisibleChange
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          {
+	            type: "primary"
+	          },
+	          "Cilck me"
+	        )
+	      );
+	    }
+	  });
+	  return React.createElement(App, null);
+	}
 	};
 
 /***/ },
 
-/***/ 1581:
+/***/ 950:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(124);
-
-	var _popover = __webpack_require__(148);
-
-	var _popover2 = _interopRequireDefault(_popover);
-
-	var _style4 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "位置有十二个方向。"]],
-	    "en-US": [["p", "There are 12 ", ["code", "placement"], " options available."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "位置有十二个方向。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "There are 12 ",
+	        [
+	          "code",
+	          "placement"
+	        ],
+	        " options available."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 2,
@@ -316,200 +387,299 @@ webpackJsonp([28,210],{
 	    "filename": "components/popover/demo/placement.md",
 	    "id": "components-popover-demo-placement"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popover<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>span</span><span class=\"token punctuation\">></span></span>Title<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>span</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> buttonWidth <span class=\"token operator\">=</span> <span class=\"token number\">70</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>demo<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginLeft<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>TL<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>top<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Top<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>topRight<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>TR<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> float<span class=\"token punctuation\">:</span> <span class=\"token string\">'left'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>leftTop<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>LT<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>left<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Left<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>leftBottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>LB<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> width<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>buttonWidth <span class=\"token operator\">*</span> <span class=\"token number\">4</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">+</span> <span class=\"token number\">24</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>rightTop<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>RT<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>right<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Right<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>rightBottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>RB<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> marginLeft<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottomLeft<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>BL<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottom<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Bottom<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">placement</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>bottomRight<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">title</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>text<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>BR<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var text = _react2.default.createElement(
-	      'span',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popover<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> text <span class=\"token operator\">=</span> <span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span>Title<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> buttonWidth <span class=\"token operator\">=</span> <span class=\"token number\">70</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"demo\"</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"topLeft\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>TL<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"top\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Top<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"topRight\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>TR<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> float<span class=\"token punctuation\">:</span> <span class=\"token string\">'left'</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"leftTop\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>LT<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"left\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Left<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"leftBottom\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>LB<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> marginLeft<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>buttonWidth <span class=\"token operator\">*</span> <span class=\"token number\">4</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">+</span> <span class=\"token number\">24</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"rightTop\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>RT<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Right<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"rightBottom\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>RB<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> buttonWidth<span class=\"token punctuation\">,</span> clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span><span class=\"token punctuation\">,</span> whiteSpace<span class=\"token punctuation\">:</span> <span class=\"token string\">'nowrap'</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomLeft\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>BL<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottom\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Bottom<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Popover placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomRight\"</span> title<span class=\"token operator\">=</span>{text} content<span class=\"token operator\">=</span>{content} trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>BR<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var text = React.createElement(
+	    "span",
+	    null,
+	    "Title"
+	  );
+	  var content = React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      "p",
 	      null,
-	      'Title'
-	    );var content = _react2.default.createElement(
-	      'div',
+	      "Content"
+	    ),
+	    React.createElement(
+	      "p",
 	      null,
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      ),
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      )
-	    );var buttonWidth = 70;return _react2.default.createElement(
-	      'div',
-	      { className: 'demo' },
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginLeft: buttonWidth, whiteSpace: 'nowrap' } },
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'topLeft', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'TL'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'top', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Top'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'topRight', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'TR'
-	          )
+	      "Content"
+	    )
+	  );
+	  var buttonWidth = 70;
+	  return React.createElement(
+	    "div",
+	    {
+	      className: "demo"
+	    },
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          marginLeft: buttonWidth,
+	          whiteSpace: 'nowrap'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "topLeft",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "TL"
 	        )
 	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { width: buttonWidth, float: 'left' } },
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'leftTop', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'LT'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'left', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Left'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'leftBottom', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'LB'
-	          )
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "top",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Top"
 	        )
 	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { width: buttonWidth, marginLeft: buttonWidth * 4 + 24 } },
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'rightTop', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'RT'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'right', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Right'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'rightBottom', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'RB'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginLeft: buttonWidth, clear: 'both', whiteSpace: 'nowrap' } },
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'bottomLeft', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'BL'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'bottom', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'Bottom'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _popover2.default,
-	          { placement: 'bottomRight', title: text, content: content, trigger: 'click' },
-	          _react2.default.createElement(
-	            _button2.default,
-	            null,
-	            'BR'
-	          )
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "topRight",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "TR"
 	        )
 	      )
-	    );
-	  },
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          width: buttonWidth,
+	          float: 'left'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "leftTop",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "LT"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "left",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Left"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "leftBottom",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "LB"
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          width: buttonWidth,
+	          marginLeft: buttonWidth * 4 + 24
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "rightTop",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "RT"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "right",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Right"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "rightBottom",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "RB"
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: {
+	          marginLeft: buttonWidth,
+	          clear: 'both',
+	          whiteSpace: 'nowrap'
+	        }
+	      },
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "bottomLeft",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "BL"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "bottom",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "Bottom"
+	        )
+	      ),
+	      React.createElement(
+	        _antd.Popover,
+	        {
+	          placement: "bottomRight",
+	          title: text,
+	          content: content,
+	          trigger: "click"
+	        },
+	        React.createElement(
+	          _antd.Button,
+	          null,
+	          "BR"
+	        )
+	      )
+	    )
+	  );
+	},
 	  "style": "\n.code-box-demo .ant-btn {\n  margin-right: 8px;\n  margin-bottom: 8px;\n}\n#components-popover-demo-placement .ant-btn {\n  width: 70px;\n}\n"
 	};
 
 /***/ },
 
-/***/ 1582:
+/***/ 951:
 /***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _style3 = __webpack_require__(124);
-
-	var _popover = __webpack_require__(148);
-
-	var _popover2 = _interopRequireDefault(_popover);
-
-	var _style4 = __webpack_require__(11);
-
-	var _button = __webpack_require__(10);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  "content": {
-	    "zh-CN": [["p", "鼠标移入、聚集、点击。"]],
-	    "en-US": [["p", "Mouse to click, focus and move in."]]
+	    "zh-CN": [
+	      [
+	        "p",
+	        "鼠标移入、聚集、点击。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Mouse to click, focus and move in."
+	      ]
+	    ]
 	  },
 	  "meta": {
 	    "order": 1,
@@ -520,64 +690,117 @@ webpackJsonp([28,210],{
 	    "filename": "components/popover/demo/triggerType.md",
 	    "id": "components-popover-demo-triggerType"
 	  },
-	  "toc": ["ul", ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#zh-CN"
-	  }, "zh-CN"]], ["li", ["a", {
-	    "className": "bisheng-toc-h2",
-	    "href": "#en-US"
-	  }, "en-US"]]],
-	  "highlightedCode": ["pre", {
-	    "lang": "jsx",
-	    "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> Popover<span class=\"token punctuation\">,</span> Button <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Content<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Title<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>hover<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Hover me<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Title<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>focus<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Focus me<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Popover</span> <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">title</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Title<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">trigger</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>click<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button</span><span class=\"token punctuation\">></span></span>Click me<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Button</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Popover</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
-	  }],
-	  "preview": function jsonmlReactLoader() {
-	    var content = _react2.default.createElement(
-	      'div',
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Popover<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Content<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popover content<span class=\"token operator\">=</span>{content} title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span> trigger<span class=\"token operator\">=</span><span class=\"token string\">\"hover\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Hover me<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popover content<span class=\"token operator\">=</span>{content} title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span> trigger<span class=\"token operator\">=</span><span class=\"token string\">\"focus\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Focus me<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Popover content<span class=\"token operator\">=</span>{content} title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span> trigger<span class=\"token operator\">=</span><span class=\"token string\">\"click\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>Click me<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var content = React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      "p",
 	      null,
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      ),
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Content'
-	      )
-	    );return _react2.default.createElement(
-	      'div',
+	      "Content"
+	    ),
+	    React.createElement(
+	      "p",
 	      null,
-	      _react2.default.createElement(
-	        _popover2.default,
-	        { content: content, title: 'Title', trigger: 'hover' },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'Hover me'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _popover2.default,
-	        { content: content, title: 'Title', trigger: 'focus' },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'Focus me'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _popover2.default,
-	        { content: content, title: 'Title', trigger: 'click' },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'Click me'
-	        )
+	      "Content"
+	    )
+	  );
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      _antd.Popover,
+	      {
+	        content: content,
+	        title: "Title",
+	        trigger: "hover"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "Hover me"
 	      )
-	    );
-	  }
+	    ),
+	    React.createElement(
+	      _antd.Popover,
+	      {
+	        content: content,
+	        title: "Title",
+	        trigger: "focus"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "Focus me"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Popover,
+	      {
+	        content: content,
+	        title: "Title",
+	        trigger: "click"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "Click me"
+	      )
+	    )
+	  );
+	}
 	};
+
+/***/ },
+
+/***/ 1224:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	    'arrow-point-at-center': __webpack_require__(947),
+	    'basic': __webpack_require__(948),
+	    'control': __webpack_require__(949),
+	    'placement': __webpack_require__(950),
+	    'triggerType': __webpack_require__(951),
+	}
 
 /***/ }
 
