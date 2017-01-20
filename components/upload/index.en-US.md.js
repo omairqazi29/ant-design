@@ -1,6 +1,6 @@
 webpackJsonp([111,210],{
 
-/***/ 1110:
+/***/ 1107:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -167,7 +167,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -186,8 +186,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Array",
-	            "[object]"
+	            "object[]"
 	          ],
 	          [
 	            "td",
@@ -215,8 +214,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Array",
-	            "[object]"
+	            "object[]"
 	          ],
 	          [
 	            "td",
@@ -235,7 +233,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -254,7 +252,9 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Object or function(file)"
+	            "object",
+	            "|",
+	            "function(file)"
 	          ],
 	          [
 	            "td",
@@ -273,7 +273,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -292,7 +292,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -316,7 +316,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -343,7 +343,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -450,7 +450,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -507,7 +507,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -526,7 +526,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -545,7 +545,7 @@ webpackJsonp([111,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",

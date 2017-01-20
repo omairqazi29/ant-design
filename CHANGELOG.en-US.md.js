@@ -1,6 +1,6 @@
 webpackJsonp([209,210],{
 
-/***/ 713:
+/***/ 710:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,189 @@ webpackJsonp([209,210],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.6.4"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-01-20"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Improve RangePicker when selecting a preset date.",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4561"
+	            },
+	            "#4561"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fix DatePicker select time scroll issue.",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4412"
+	            },
+	            "#4412"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fix issue resulting in vertical Menu can't be controlled.",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/3783"
+	            },
+	            "#3783"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fix Cascader's style when it's disabled.",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4648"
+	            },
+	            "#4648"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Table"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Improve Table fixed header's scrollbar style.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4637"
+	                },
+	                "#4637"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix issue resulting in Table's header flashes when ",
+	              [
+	                "code",
+	                "loading"
+	              ],
+	              " is true in Safari.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4622"
+	                },
+	                "#4622"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix multiple border issues. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4647"
+	                },
+	                "#4647"
+	              ],
+	              "、",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4635"
+	                },
+	                "#4635"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix ",
+	              [
+	                "code",
+	                "showHeader"
+	              ],
+	              "'s default value.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4658"
+	                },
+	                "#4658"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix missing ",
+	              [
+	                "code",
+	                "TableColumnConfig"
+	              ],
+	              " type.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4660"
+	                },
+	                "#4660"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.6.3"
@@ -5602,6 +5785,17 @@ webpackJsonp([209,210],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.6.4"
+	        },
+	        "2.6.4"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

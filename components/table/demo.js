@@ -1,6 +1,6 @@
 webpackJsonp([0,210],{
 
-/***/ 1021:
+/***/ 1018:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -114,7 +114,7 @@ webpackJsonp([0,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _reqwest = __webpack_require__(1919);
+	  var _reqwest = __webpack_require__(1916);
 
 	  var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -215,7 +215,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1022:
+/***/ 1019:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -369,7 +369,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1023:
+/***/ 1020:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -489,7 +489,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1024:
+/***/ 1021:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -715,7 +715,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1025:
+/***/ 1022:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -936,7 +936,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1026:
+/***/ 1023:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1332,7 +1332,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1027:
+/***/ 1024:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1620,7 +1620,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1028:
+/***/ 1025:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1965,7 +1965,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1029:
+/***/ 1026:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2142,7 +2142,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1030:
+/***/ 1027:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2269,7 +2269,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1031:
+/***/ 1028:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2472,7 +2472,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1032:
+/***/ 1029:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2662,7 +2662,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1033:
+/***/ 1030:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2782,7 +2782,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1034:
+/***/ 1031:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2961,7 +2961,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1035:
+/***/ 1032:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3178,7 +3178,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1036:
+/***/ 1033:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3388,7 +3388,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1037:
+/***/ 1034:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3514,7 +3514,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1038:
+/***/ 1035:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3825,7 +3825,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1039:
+/***/ 1036:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4004,7 +4004,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1040:
+/***/ 1037:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4137,7 +4137,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1041:
+/***/ 1038:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4274,36 +4274,36 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1233:
+/***/ 1230:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'ajax': __webpack_require__(1021),
-	    'basic': __webpack_require__(1022),
-	    'bordered': __webpack_require__(1023),
-	    'colspan-rowspan': __webpack_require__(1024),
-	    'custom-filter-panel': __webpack_require__(1025),
-	    'dynamic-settings': __webpack_require__(1026),
-	    'edit-cell': __webpack_require__(1027),
-	    'edit-row': __webpack_require__(1028),
-	    'expand-children': __webpack_require__(1029),
-	    'expand': __webpack_require__(1030),
-	    'fixed-columns-header': __webpack_require__(1031),
-	    'fixed-columns': __webpack_require__(1032),
-	    'fixed-header': __webpack_require__(1033),
-	    'grouping-columns': __webpack_require__(1034),
-	    'head': __webpack_require__(1035),
-	    'jsx': __webpack_require__(1036),
-	    'paging': __webpack_require__(1037),
-	    'reset-filter': __webpack_require__(1038),
-	    'row-selection-and-operation': __webpack_require__(1039),
-	    'row-selection': __webpack_require__(1040),
-	    'size': __webpack_require__(1041),
+	    'ajax': __webpack_require__(1018),
+	    'basic': __webpack_require__(1019),
+	    'bordered': __webpack_require__(1020),
+	    'colspan-rowspan': __webpack_require__(1021),
+	    'custom-filter-panel': __webpack_require__(1022),
+	    'dynamic-settings': __webpack_require__(1023),
+	    'edit-cell': __webpack_require__(1024),
+	    'edit-row': __webpack_require__(1025),
+	    'expand-children': __webpack_require__(1026),
+	    'expand': __webpack_require__(1027),
+	    'fixed-columns-header': __webpack_require__(1028),
+	    'fixed-columns': __webpack_require__(1029),
+	    'fixed-header': __webpack_require__(1030),
+	    'grouping-columns': __webpack_require__(1031),
+	    'head': __webpack_require__(1032),
+	    'jsx': __webpack_require__(1033),
+	    'paging': __webpack_require__(1034),
+	    'reset-filter': __webpack_require__(1035),
+	    'row-selection-and-operation': __webpack_require__(1036),
+	    'row-selection': __webpack_require__(1037),
+	    'size': __webpack_require__(1038),
 	}
 
 /***/ },
 
-/***/ 1919:
+/***/ 1916:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4327,7 +4327,7 @@ webpackJsonp([0,210],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1934)
+	      XHR2 = __webpack_require__(1928)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -4940,7 +4940,7 @@ webpackJsonp([0,210],{
 
 /***/ },
 
-/***/ 1934:
+/***/ 1928:
 /***/ function(module, exports) {
 
 	/* (ignored) */

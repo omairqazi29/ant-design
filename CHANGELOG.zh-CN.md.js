@@ -1,6 +1,6 @@
 webpackJsonp([208,210],{
 
-/***/ 714:
+/***/ 711:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,189 @@ webpackJsonp([208,210],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.6.4"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-01-20"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "优化 RangePicker 选择预设时间时的界面显示。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4561"
+	            },
+	            "#4561"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复 DatePicker 选择时间界面的滚动问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4412"
+	            },
+	            "#4412"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复 Menu 在 ",
+	          [
+	            "code",
+	            "vertical"
+	          ],
+	          " 的受控模式下，子菜单不会弹出的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/3783"
+	            },
+	            "#3783"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复 Cascader 禁用时的值显示样式问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4648"
+	            },
+	            "#4648"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Table"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "优化固定表头的滚动条显示。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4637"
+	                },
+	                "#4637"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复在 Safari 下显示 loading 效果时表头会闪烁的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4622"
+	                },
+	                "#4622"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复多处边框问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4647"
+	                },
+	                "#4647"
+	              ],
+	              "、",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4635"
+	                },
+	                "#4635"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复 showHeader 的默认值不为 ",
+	              [
+	                "code",
+	                "false"
+	              ],
+	              " 的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4658"
+	                },
+	                "#4658"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复找不到 ",
+	              [
+	                "code",
+	                "TableColumnConfig"
+	              ],
+	              " 的类型定义的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4660"
+	                },
+	                "#4660"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.6.3"
@@ -5464,6 +5647,17 @@ webpackJsonp([208,210],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.6.4"
+	        },
+	        "2.6.4"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

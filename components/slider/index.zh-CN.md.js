@@ -1,6 +1,6 @@
 webpackJsonp([136,210],{
 
-/***/ 997:
+/***/ 994:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -95,7 +95,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -114,7 +114,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -133,7 +133,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -167,7 +167,9 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Number or null"
+	            "number",
+	            "|",
+	            "null"
 	          ],
 	          [
 	            "td",
@@ -185,7 +187,7 @@ webpackJsonp([136,210],{
 	            "刻度标记，key 的类型必须为 ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            " 且取值在闭区间 ",
 	            "[min, max]",
@@ -193,11 +195,15 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Object{}"
+	            "object"
 	          ],
 	          [
 	            "td",
-	            "Object{Number: String or React.Component} or Object{Number: { style, label}}"
+	            "{ number: string",
+	            "|",
+	            "ReactNode } or { number: { style: object, label: string",
+	            "|",
+	            "ReactNode } }"
 	          ]
 	        ],
 	        [
@@ -212,7 +218,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -240,18 +246,19 @@ webpackJsonp([136,210],{
 	            " 时，使用 ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            "，否则用 ",
 	            [
 	              "code",
-	              "[Number, Number]"
+	              "[number, number]"
 	            ]
 	          ],
 	          [
 	            "td",
-	            "Number or ",
-	            "[number, number]"
+	            "number",
+	            "|",
+	            "number[]"
 	          ]
 	        ],
 	        [
@@ -275,18 +282,19 @@ webpackJsonp([136,210],{
 	            " 时，使用 ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            "，否则用 ",
 	            [
 	              "code",
-	              "[Number, Number]"
+	              "[number, number]"
 	            ]
 	          ],
 	          [
 	            "td",
-	            "Number or ",
-	            "[number, number]"
+	            "number",
+	            "|",
+	            "number[]"
 	          ],
 	          [
 	            "td",
@@ -310,7 +318,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -334,7 +342,7 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -406,7 +414,9 @@ webpackJsonp([136,210],{
 	          ],
 	          [
 	            "td",
-	            "Function or null"
+	            "Function",
+	            "|",
+	            "null"
 	          ],
 	          [
 	            "td",

@@ -1,6 +1,6 @@
 webpackJsonp([116,210],{
 
-/***/ 1090:
+/***/ 1087:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -126,7 +126,15 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "https://git.io/vMM64"
+	              },
+	              "TransferItem"
+	            ],
+	            "[]"
 	          ],
 	          [
 	            "td",
@@ -146,7 +154,7 @@ webpackJsonp([116,210],{
 	              "code",
 	              "dataSource"
 	            ],
-	            " 中的项，返回值为 React element"
+	            " 中的项，返回值为 ReactElement"
 	          ],
 	          [
 	            "td",
@@ -242,7 +250,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td"
@@ -260,7 +268,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td"
@@ -278,7 +286,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            "string[]"
 	          ],
 	          [
 	            "td",
@@ -297,7 +305,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            "string[]"
 	          ],
 	          [
 	            "td",
@@ -316,7 +324,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -397,7 +405,9 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "React.ReactNode"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -416,7 +426,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "(props): React.ReactNode"
+	            "(props): ReactNode"
 	          ],
 	          [
 	            "td"
@@ -443,7 +453,7 @@ webpackJsonp([116,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",

@@ -16674,7 +16674,7 @@ div.main-container {
   border-bottom: 1px solid #eee;
   height: 80px;
   margin-bottom: 24px;
-  padding: 0 4%;
+  padding: 0 48px;
   width: 100%;
 }
 #header.home-nav-bottom {
@@ -17683,6 +17683,10 @@ footer ul li > div {
   border-left: 1px solid #e9e9e9;
   list-style: none;
 }
+.markdown .toc {
+  background: #fbfbfb;
+  border-left: 2px solid #eee;
+}
 .toc > ul {
   padding: 8px 0;
   list-style: none;
@@ -18353,20 +18357,30 @@ section.code-box-meta p {
 }
 .main-color {
   overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main-color-item {
-  width: 80px;
-  height: 60px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 80px;
   border-radius: 4px;
   float: left;
-  margin: 0 5px 5px 0;
+  margin-right: 4px;
   -webkit-transition: all .2s;
   transition: all .2s;
   position: relative;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 28px;
   font-family: Consolas;
   font-size: 12px;
+}
+.main-color-item:last-child {
+  margin-right: 0;
 }
 .main-color-item .main-color-value {
   font-size: 12px;

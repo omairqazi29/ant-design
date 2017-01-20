@@ -1,6 +1,6 @@
 webpackJsonp([137,210],{
 
-/***/ 996:
+/***/ 993:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -94,7 +94,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -113,7 +113,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -132,7 +132,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -166,7 +166,9 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Number or null"
+	            "number",
+	            "|",
+	            "null"
 	          ],
 	          [
 	            "td",
@@ -184,7 +186,7 @@ webpackJsonp([137,210],{
 	            "Tick mark of Slider, type of key must be ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            ", and must in closed interval ",
 	            "[min, max]",
@@ -192,11 +194,15 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Object{}"
+	            "object"
 	          ],
 	          [
 	            "td",
-	            "Object{Number: String or React.Component} or Object{Number: { style, label}}"
+	            "{ number: string",
+	            "|",
+	            "ReactNode } or { number: { style: object, label: string",
+	            "|",
+	            "ReactNode } }"
 	          ]
 	        ],
 	        [
@@ -211,7 +217,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -239,18 +245,19 @@ webpackJsonp([137,210],{
 	            ", use ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            ", otherwise, use ",
 	            [
 	              "code",
-	              "[Number, Number]"
+	              "[number, number]"
 	            ]
 	          ],
 	          [
 	            "td",
-	            "Number or ",
-	            "[number, number]"
+	            "number",
+	            "|",
+	            "number[]"
 	          ]
 	        ],
 	        [
@@ -274,18 +281,19 @@ webpackJsonp([137,210],{
 	            ", use ",
 	            [
 	              "code",
-	              "Number"
+	              "number"
 	            ],
 	            ", otherwise, use ",
 	            [
 	              "code",
-	              "[Number, Number]"
+	              "[number, number]"
 	            ]
 	          ],
 	          [
 	            "td",
-	            "Number or ",
-	            "[number, number]"
+	            "number",
+	            "|",
+	            "number[]"
 	          ],
 	          [
 	            "td",
@@ -320,7 +328,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -339,7 +347,7 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -406,7 +414,9 @@ webpackJsonp([137,210],{
 	          ],
 	          [
 	            "td",
-	            "Function or null"
+	            "Function",
+	            "|",
+	            "null"
 	          ],
 	          [
 	            "td",

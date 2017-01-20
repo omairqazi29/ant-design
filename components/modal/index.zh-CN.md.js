@@ -1,6 +1,6 @@
 webpackJsonp([154,210],{
 
-/***/ 923:
+/***/ 920:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -109,7 +109,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -128,7 +128,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -147,7 +147,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -166,7 +168,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -223,7 +225,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String or Number"
+	            "string",
+	            "|",
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -242,7 +246,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -261,7 +267,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -280,7 +286,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -299,7 +305,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -318,7 +324,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -337,7 +343,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -503,7 +509,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element or String"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -522,7 +530,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element or String"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -579,7 +589,9 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String or Number"
+	            "string",
+	            "|",
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -598,7 +610,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -617,7 +629,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -636,7 +648,7 @@ webpackJsonp([154,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",

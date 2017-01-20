@@ -1,6 +1,6 @@
 webpackJsonp([114,210],{
 
-/***/ 1095:
+/***/ 1092:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -99,11 +99,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "通常: String/Array",
-	            [
-	              "string"
-	            ],
-	            ". 设置 labelInValue: {value: String, label: React.Node}/Array<{value, label}>. 设置 treeCheckStrictly(halfChecked 默认为 false): {value: String, label: React.Node, halfChecked}/Array<{value, label, halfChecked}>."
+	            "通常: string/string[]. 设置 labelInValue: { value: string, label: ReactNode }/Array<{ value: string, label: ReactNode }>. 设置 treeCheckStrictly(halfChecked 默认为 false): { value: string, label: ReactNode, halfChecked: string[] }/Array<{ value: string, label: ReactNode, halfChecked: string[] }>."
 	          ],
 	          [
 	            "td",
@@ -122,7 +118,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -141,10 +137,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String/Array",
-	            [
-	              "string"
-	            ]
+	            "string/string[]"
 	          ],
 	          [
 	            "td",
@@ -163,7 +156,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -220,7 +213,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -239,7 +232,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "function(value: String)"
+	            "function(value: string)"
 	          ],
 	          [
 	            "td",
@@ -258,7 +251,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -277,7 +270,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -296,7 +289,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -315,7 +308,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -343,7 +336,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -362,7 +355,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -381,7 +374,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -428,7 +421,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -447,7 +440,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -466,7 +459,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -485,7 +478,9 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean/Function(inputValue: string, treeNode: TreeNode) (函数需要返回bool值)"
+	            "boolean",
+	            "|",
+	            "Function(inputValue: string, treeNode: TreeNode) (函数需要返回bool值)"
 	          ],
 	          [
 	            "td",
@@ -504,7 +499,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -523,7 +518,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -570,7 +565,9 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean/Object{id: 'id', pId: 'pId', rootPId: null}"
+	            "false",
+	            "|",
+	            "Array<{ id: string, pId: string, rootPId: null }>"
 	          ],
 	          [
 	            "td",
@@ -674,7 +671,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -693,7 +690,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -712,7 +709,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -731,7 +728,9 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "String/element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -750,7 +749,7 @@ webpackJsonp([114,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",

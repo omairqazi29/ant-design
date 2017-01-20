@@ -1,6 +1,6 @@
 webpackJsonp([185,210],{
 
-/***/ 795:
+/***/ 792:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -144,7 +144,15 @@ webpackJsonp([185,210],{
 	          ],
 	          [
 	            "td",
-	            "array"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "https://git.io/vMMoK"
+	              },
+	              "CascaderOptionType"
+	            ],
+	            "[]"
 	          ],
 	          [
 	            "td",
@@ -163,7 +171,15 @@ webpackJsonp([185,210],{
 	          ],
 	          [
 	            "td",
-	            "array"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "https://git.io/vMMoK"
+	              },
+	              "CascaderOptionType"
+	            ],
+	            "[]"
 	          ],
 	          [
 	            "td",
@@ -206,7 +222,7 @@ webpackJsonp([185,210],{
 	            "td",
 	            [
 	              "code",
-	              "(label, selectedOptions) => React.ReactNode"
+	              "(label, selectedOptions) => ReactNode"
 	            ]
 	          ],
 	          [
@@ -458,7 +474,9 @@ webpackJsonp([185,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean or Object"
+	            "boolean",
+	            "|",
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -477,7 +495,7 @@ webpackJsonp([185,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -614,7 +632,7 @@ webpackJsonp([185,210],{
 	            "td",
 	            [
 	              "code",
-	              "function(inputValue, path): React.ReactNode"
+	              "function(inputValue, path): ReactNode"
 	            ]
 	          ],
 	          [

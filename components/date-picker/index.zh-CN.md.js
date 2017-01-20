@@ -1,6 +1,6 @@
 webpackJsonp([178,210],{
 
-/***/ 821:
+/***/ 818:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -150,7 +150,7 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "bool"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -169,7 +169,7 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "bool"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -319,7 +319,7 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "bool"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -357,7 +357,9 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "string or array (RangePicker)"
+	            "string",
+	            "|",
+	            "RangePicker[]"
 	          ],
 	          [
 	            "td",
@@ -506,7 +508,9 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "Object or Boolean"
+	            "Object",
+	            "|",
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -532,7 +536,7 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -700,7 +704,7 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "function(date, locale): React.Node"
+	            "function(date, locale): ReactNode"
 	          ],
 	          [
 	            "td",
@@ -751,7 +755,6 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "[",
 	            [
 	              "a",
 	              {
@@ -760,16 +763,7 @@ webpackJsonp([178,210],{
 	              },
 	              "moment"
 	            ],
-	            ", ",
-	            [
-	              "a",
-	              {
-	                "title": null,
-	                "href": "http://momentjs.com/"
-	              },
-	              "moment"
-	            ],
-	            "]"
+	            "[]"
 	          ],
 	          [
 	            "td",
@@ -788,7 +782,6 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "[",
 	            [
 	              "a",
 	              {
@@ -797,16 +790,7 @@ webpackJsonp([178,210],{
 	              },
 	              "moment"
 	            ],
-	            ", ",
-	            [
-	              "a",
-	              {
-	                "title": null,
-	                "href": "http://momentjs.com/"
-	              },
-	              "moment"
-	            ],
-	            "]"
+	            "[]"
 	          ],
 	          [
 	            "td",
@@ -867,7 +851,9 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "Object or Boolean"
+	            "Object",
+	            "|",
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -919,11 +905,18 @@ webpackJsonp([178,210],{
 	          ],
 	          [
 	            "td",
-	            "Object { ",
+	            "{ ",
 	            "[range: string]",
 	            ": ",
-	            "[moment, moment]",
-	            " }"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "http://momentjs.com/"
+	              },
+	              "moment"
+	            ],
+	            "[] }"
 	          ],
 	          [
 	            "td",

@@ -1,6 +1,6 @@
 webpackJsonp([200,210],{
 
-/***/ 736:
+/***/ 733:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -131,7 +131,15 @@ webpackJsonp([200,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "https://git.io/vMMKF"
+	              },
+	              "DataSourceItemType"
+	            ],
+	            "[]"
 	          ],
 	          [
 	            "td"
@@ -149,11 +157,17 @@ webpackJsonp([200,210],{
 	          ],
 	          [
 	            "td",
-	            "String/Array",
-	            [
-	              "string"
-	            ],
-	            "/{key: String, label: React.Node}/Array<{key, label}>"
+	            "string",
+	            "|",
+	            "string[]",
+	            "|",
+	            "{ key: string, label: string",
+	            "|",
+	            "ReactNode }",
+	            "|",
+	            "Array<{ key: string, label: string",
+	            "|",
+	            "ReactNode }>"
 	          ],
 	          [
 	            "td",
@@ -172,11 +186,17 @@ webpackJsonp([200,210],{
 	          ],
 	          [
 	            "td",
-	            "String/Array",
-	            [
-	              "string"
-	            ],
-	            "/{key: String, label: React.Node}/Array<{key, label}>"
+	            "string",
+	            "|",
+	            "string[]",
+	            "|",
+	            "{ key: string, label: string",
+	            "|",
+	            "ReactNode }",
+	            "|",
+	            "Array<{ key: string, label: string",
+	            "|",
+	            "ReactNode}>"
 	          ],
 	          [
 	            "td",
@@ -276,6 +296,33 @@ webpackJsonp([200,210],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "optionLabelProp"
+	          ],
+	          [
+	            "td",
+	            "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 ",
+	            [
+	              "code",
+	              "value"
+	            ],
+	            "。"
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "children"
+	            ]
 	          ]
 	        ]
 	      ]

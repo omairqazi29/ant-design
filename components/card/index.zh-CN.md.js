@@ -1,6 +1,6 @@
 webpackJsonp([188,210],{
 
-/***/ 778:
+/***/ 775:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -107,7 +107,9 @@ webpackJsonp([188,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -126,7 +128,9 @@ webpackJsonp([188,210],{
 	          ],
 	          [
 	            "td",
-	            "React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -145,7 +149,7 @@ webpackJsonp([188,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -164,7 +168,7 @@ webpackJsonp([188,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",

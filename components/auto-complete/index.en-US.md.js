@@ -1,6 +1,6 @@
 webpackJsonp([201,210],{
 
-/***/ 735:
+/***/ 732:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -130,7 +130,15 @@ webpackJsonp([201,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "https://git.io/vMMKF"
+	              },
+	              "DataSourceItemType"
+	            ],
+	            "[]"
 	          ],
 	          [
 	            "td"
@@ -148,11 +156,17 @@ webpackJsonp([201,210],{
 	          ],
 	          [
 	            "td",
-	            "String/Array",
-	            [
-	              "string"
-	            ],
-	            "/{key: String, label: React.Node}/Array<{key, label}>"
+	            "string",
+	            "|",
+	            "string[]",
+	            "|",
+	            "{ key: string, label: string",
+	            "|",
+	            "ReactNode }",
+	            "|",
+	            "Array<{ key: string, label: string",
+	            "|",
+	            "ReactNode }>"
 	          ],
 	          [
 	            "td",
@@ -171,10 +185,17 @@ webpackJsonp([201,210],{
 	          ],
 	          [
 	            "td",
-	            "string/Array",
-	            [
-	              "string"
-	            ]
+	            "string",
+	            "|",
+	            "string[]",
+	            "|",
+	            "{ key: string, label: string",
+	            "|",
+	            "ReactNode }",
+	            "|",
+	            "Array<{ key: string, label: string",
+	            "|",
+	            "ReactNode }>"
 	          ],
 	          [
 	            "td",
@@ -274,6 +295,28 @@ webpackJsonp([201,210],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "optionLabelProp"
+	          ],
+	          [
+	            "td",
+	            "Which prop value of option will render as content of select."
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "children"
+	            ]
 	          ]
 	        ]
 	      ]

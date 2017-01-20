@@ -1,6 +1,6 @@
 webpackJsonp([141,210],{
 
-/***/ 975:
+/***/ 972:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -107,7 +107,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -126,7 +126,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -145,7 +145,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -164,7 +164,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Function(value: Number)"
+	            "Function(value: number)"
 	          ],
 	          [
 	            "td",
@@ -183,7 +183,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -202,7 +202,7 @@ webpackJsonp([141,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",

@@ -1,6 +1,6 @@
 webpackJsonp([160,210],{
 
-/***/ 898:
+/***/ 895:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -106,7 +106,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Function(editorState: EditorState): String"
+	            "Function(editorState: EditorState): string"
 	          ]
 	        ],
 	        [
@@ -121,7 +121,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Function(string: String): EditorState"
+	            "Function(value: string): EditorState"
 	          ]
 	        ],
 	        [
@@ -136,10 +136,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Function(editorState: EditorState): Array",
-	            [
-	              "string"
-	            ]
+	            "Function(editorState: EditorState): string[]"
 	          ]
 	        ]
 	      ]
@@ -186,11 +183,9 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Array",
-	            [
-	              "string"
-	            ],
-	            " or Array<Mention.Nav>"
+	            "Array<string",
+	            "|",
+	            "Mention.Nav>"
 	          ],
 	          [
 	            "td",
@@ -209,7 +204,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -228,7 +223,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "function(value:String)"
+	            "function(value:string)"
 	          ],
 	          [
 	            "td",
@@ -266,7 +261,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "function(suggestion: String, data?: any)"
+	            "function(suggestion: string, data?: any)"
 	          ],
 	          [
 	            "td",
@@ -526,7 +521,7 @@ webpackJsonp([160,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",

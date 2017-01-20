@@ -1,6 +1,6 @@
 webpackJsonp([115,210],{
 
-/***/ 1094:
+/***/ 1091:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -111,11 +111,9 @@ webpackJsonp([115,210],{
 	              "strong",
 	              "Default:"
 	            ],
-	            " String/Array",
-	            [
-	              "string"
-	            ],
-	            ". ",
+	            " string",
+	            "|",
+	            "string[]. ",
 	            [
 	              "strong",
 	              "With ",
@@ -125,7 +123,7 @@ webpackJsonp([115,210],{
 	              ],
 	              " set:"
 	            ],
-	            " { value: String, label: React.Node }/Array<{ value, label }>. ",
+	            " { value: string, label: ReactNode }/Array<{ value: string, label: ReactNode }>. ",
 	            [
 	              "strong",
 	              "With ",
@@ -145,7 +143,7 @@ webpackJsonp([115,210],{
 	              ],
 	              "):"
 	            ],
-	            " { value: String, label: React.Node, halfChecked }/Array<{ value, label, halfChecked }>."
+	            " { value: string, label: ReactNode, halfChecked: string[] }/Array<{ value: string, label: ReactNode, halfChecked: string[] }>."
 	          ],
 	          [
 	            "td",
@@ -179,7 +177,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -198,10 +196,9 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String/Array",
-	            [
-	              "string"
-	            ]
+	            "string",
+	            "|",
+	            "string[]"
 	          ],
 	          [
 	            "td",
@@ -230,7 +227,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -287,7 +284,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -306,7 +303,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "function(value: String)"
+	            "function(value: string)"
 	          ],
 	          [
 	            "td",
@@ -325,7 +322,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -344,7 +341,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -363,7 +360,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -382,7 +379,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -410,7 +407,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -429,7 +426,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -448,7 +445,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -508,7 +505,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -527,7 +524,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -551,7 +548,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -575,7 +572,9 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean/Function(inputValue: string, treeNode: TreeNode) (should return Boolean)"
+	            "boolean",
+	            "|",
+	            "Function(inputValue: string, treeNode: TreeNode) (should return boolean)"
 	          ],
 	          [
 	            "td",
@@ -599,7 +598,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -618,7 +617,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -660,7 +659,9 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean/Object{ id: 'id', pId: 'pId', rootPId: null }"
+	            "false",
+	            "|",
+	            "Array<{ id: string, pId: string, rootPId: null }>"
 	          ],
 	          [
 	            "td",
@@ -784,7 +785,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -803,7 +804,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -827,7 +828,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -846,7 +847,9 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "String/element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -865,7 +868,7 @@ webpackJsonp([115,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",

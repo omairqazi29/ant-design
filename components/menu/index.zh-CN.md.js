@@ -1,6 +1,6 @@
 webpackJsonp([158,210],{
 
-/***/ 906:
+/***/ 903:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -124,7 +124,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String: ",
+	            "string: ",
 	            [
 	              "code",
 	              "light"
@@ -155,7 +155,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String: ",
+	            "string: ",
 	            [
 	              "code",
 	              "vertical"
@@ -191,7 +191,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            "string[]"
 	          ],
 	          [
 	            "td"
@@ -209,7 +209,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            "string[]"
 	          ],
 	          [
 	            "td"
@@ -227,7 +227,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Array"
+	            "string[]"
 	          ],
 	          [
 	            "td"
@@ -338,7 +338,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td"
@@ -422,7 +422,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -441,7 +441,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td"
@@ -491,7 +491,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -510,7 +510,7 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td"
@@ -528,7 +528,9 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String or React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td"
@@ -546,7 +548,9 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "(MenuItem or SubMenu)[]"
+	            "Array<MenuItem",
+	            "|",
+	            "SubMenu>"
 	          ],
 	          [
 	            "td"
@@ -614,7 +618,9 @@ webpackJsonp([158,210],{
 	          ],
 	          [
 	            "td",
-	            "String or React.Element"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td"

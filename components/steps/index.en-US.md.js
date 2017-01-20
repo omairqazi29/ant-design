@@ -1,6 +1,6 @@
 webpackJsonp([133,210],{
 
-/***/ 1013:
+/***/ 1010:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12,7 +12,7 @@ webpackJsonp([133,210],{
 	        "code",
 	        "Steps"
 	      ],
-	      " is a navigation bar that guides users through the steps of a task. "
+	      " is a navigation bar that guides users through the steps of a task."
 	    ],
 	    [
 	      "h2",
@@ -127,7 +127,7 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "Number"
+	            "number"
 	          ],
 	          [
 	            "td",
@@ -165,7 +165,7 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -197,7 +197,7 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -229,7 +229,7 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -313,7 +313,7 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -332,7 +332,9 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "React.ReactNode"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -351,7 +353,9 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "React.ReactNode"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",
@@ -370,7 +374,9 @@ webpackJsonp([133,210],{
 	          ],
 	          [
 	            "td",
-	            "string or React.ReactNode"
+	            "string",
+	            "|",
+	            "ReactNode"
 	          ],
 	          [
 	            "td",

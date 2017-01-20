@@ -1,6 +1,6 @@
 webpackJsonp([138,210],{
 
-/***/ 989:
+/***/ 986:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -132,10 +132,9 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "string/Array",
-	            [
-	              "string"
-	            ]
+	            "string",
+	            "|",
+	            "string[]"
 	          ],
 	          [
 	            "td",
@@ -154,10 +153,9 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "string/Array",
-	            [
-	              "string"
-	            ]
+	            "string",
+	            "|",
+	            "string[]"
 	          ],
 	          [
 	            "td",
@@ -334,7 +332,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "function(value: String)"
+	            "function(value: string)"
 	          ],
 	          [
 	            "td"
@@ -527,7 +525,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -672,7 +670,7 @@ webpackJsonp([138,210],{
 	            " 变为 ",
 	            [
 	              "code",
-	              "{key: String, label: React.Node}"
+	              "{key: string, label: ReactNode}"
 	            ],
 	            " 的格式"
 	          ],
@@ -697,7 +695,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "string[]?"
+	            "string[]"
 	          ],
 	          [
 	            "td"
@@ -747,7 +745,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -766,7 +764,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -785,7 +783,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td"
@@ -803,7 +801,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -854,7 +852,9 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String/React.Element"
+	            "string",
+	            "|",
+	            "React.Element"
 	          ],
 	          [
 	            "td",
@@ -872,7 +872,7 @@ webpackJsonp([138,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",

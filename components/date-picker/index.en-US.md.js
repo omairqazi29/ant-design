@@ -1,6 +1,6 @@
 webpackJsonp([179,210],{
 
-/***/ 820:
+/***/ 817:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -149,7 +149,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "bool"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -168,7 +168,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -187,7 +187,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -206,7 +206,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -235,7 +235,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -254,7 +254,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object"
+	            "object"
 	          ],
 	          [
 	            "td",
@@ -327,7 +327,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "bool"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -365,7 +365,9 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "string or array (RangePicker)"
+	            "string",
+	            "|",
+	            "RangePicker[]"
 	          ],
 	          [
 	            "td",
@@ -476,7 +478,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -514,7 +516,9 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object/Boolean"
+	            "object",
+	            "|",
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -540,7 +544,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Boolean"
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -670,7 +674,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -708,7 +712,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "function(date, locale): React.Node"
+	            "function(date, locale): ReactNode"
 	          ],
 	          [
 	            "td",
@@ -833,7 +837,7 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "String"
+	            "string"
 	          ],
 	          [
 	            "td",
@@ -875,7 +879,9 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object/Boolean"
+	            "object",
+	            "|",
+	            "boolean"
 	          ],
 	          [
 	            "td",
@@ -927,11 +933,18 @@ webpackJsonp([179,210],{
 	          ],
 	          [
 	            "td",
-	            "Object { ",
+	            "{ ",
 	            "[range: string]",
 	            ": ",
-	            "[moment, moment]",
-	            " }"
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "http://momentjs.com/"
+	              },
+	              "moment"
+	            ],
+	            "[] }"
 	          ],
 	          [
 	            "td",
