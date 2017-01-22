@@ -1,6 +1,6 @@
 webpackJsonp([27,210],{
 
-/***/ 1054:
+/***/ 904:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -86,7 +86,7 @@ webpackJsonp([27,210],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Tag } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">log</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Clicked! But prevent default.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag<span class=\"token operator\">></span>Tag <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable onClose<span class=\"token operator\">=</span>{log}<span class=\"token operator\">></span>Tag <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable afterClose<span class=\"token operator\">=</span>{log}<span class=\"token operator\">></span>Tag <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"https://github.com/ant-design/ant-design/issues/1862\"</span><span class=\"token operator\">></span>Link<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable onClose<span class=\"token operator\">=</span>{preventDefault}<span class=\"token operator\">></span>Prevent <span class=\"token keyword\">Default</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Tag } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">log</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Clicked! But prevent default.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag<span class=\"token operator\">></span>Tag <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"https://github.com/ant-design/ant-design/issues/1862\"</span><span class=\"token operator\">></span>Link<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable onClose<span class=\"token operator\">=</span>{log}<span class=\"token operator\">></span>Tag <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag closable onClose<span class=\"token operator\">=</span>{preventDefault}<span class=\"token operator\">></span>Prevent <span class=\"token keyword\">Default</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -115,25 +115,7 @@ webpackJsonp([27,210],{
 	    ),
 	    React.createElement(
 	      _antd.Tag,
-	      {
-	        closable: true,
-	        onClose: log
-	      },
-	      "Tag 2"
-	    ),
-	    React.createElement(
-	      _antd.Tag,
-	      {
-	        closable: true,
-	        afterClose: log
-	      },
-	      "Tag 3"
-	    ),
-	    React.createElement(
-	      _antd.Tag,
-	      {
-	        closable: true
-	      },
+	      null,
 	      React.createElement(
 	        "a",
 	        {
@@ -141,6 +123,14 @@ webpackJsonp([27,210],{
 	        },
 	        "Link"
 	      )
+	    ),
+	    React.createElement(
+	      _antd.Tag,
+	      {
+	        closable: true,
+	        onClose: log
+	      },
+	      "Tag 2"
 	    ),
 	    React.createElement(
 	      _antd.Tag,
@@ -156,7 +146,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1055:
+/***/ 905:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -291,7 +281,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1056:
+/***/ 906:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -397,7 +387,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1057:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -604,7 +594,7 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1058:
+/***/ 908:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -748,15 +738,15 @@ webpackJsonp([27,210],{
 
 /***/ },
 
-/***/ 1232:
+/***/ 1066:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1054),
-	    'checkable': __webpack_require__(1055),
-	    'colorful': __webpack_require__(1056),
-	    'control': __webpack_require__(1057),
-	    'hot-tags': __webpack_require__(1058),
+	    'basic': __webpack_require__(904),
+	    'checkable': __webpack_require__(905),
+	    'colorful': __webpack_require__(906),
+	    'control': __webpack_require__(907),
+	    'hot-tags': __webpack_require__(908),
 	}
 
 /***/ }

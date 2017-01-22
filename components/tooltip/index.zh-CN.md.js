@@ -1,6 +1,6 @@
 webpackJsonp([118,210],{
 
-/***/ 1080:
+/***/ 930:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -62,6 +62,17 @@ webpackJsonp([118,210],{
 	          "href": "#API"
 	        },
 	        "API"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#注意"
+	        },
+	        "注意"
 	      ]
 	    ]
 	  ],
@@ -385,6 +396,39 @@ webpackJsonp([118,210],{
 	          ]
 	        ]
 	      ]
+	    ],
+	    [
+	      "h2",
+	      "注意"
+	    ],
+	    [
+	      "p",
+	      "请确保 ",
+	      [
+	        "code",
+	        "Tooltip"
+	      ],
+	      " 的子元素能接受 ",
+	      [
+	        "code",
+	        "onMouseEnter"
+	      ],
+	      "、",
+	      [
+	        "code",
+	        "onMouseLeave"
+	      ],
+	      "、",
+	      [
+	        "code",
+	        "onFocus"
+	      ],
+	      "、",
+	      [
+	        "code",
+	        "onClick"
+	      ],
+	      " 事件。"
 	    ]
 	  ]
 	};

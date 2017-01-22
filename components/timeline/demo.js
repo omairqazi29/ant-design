@@ -1,6 +1,6 @@
 webpackJsonp([33,210],{
 
-/***/ 1070:
+/***/ 920:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -95,7 +95,7 @@ webpackJsonp([33,210],{
 
 /***/ },
 
-/***/ 1071:
+/***/ 921:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -239,7 +239,7 @@ webpackJsonp([33,210],{
 
 /***/ },
 
-/***/ 1072:
+/***/ 922:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -342,7 +342,7 @@ webpackJsonp([33,210],{
 
 /***/ },
 
-/***/ 1073:
+/***/ 923:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -460,14 +460,14 @@ webpackJsonp([33,210],{
 
 /***/ },
 
-/***/ 1234:
+/***/ 1068:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1070),
-	    'color': __webpack_require__(1071),
-	    'custom': __webpack_require__(1072),
-	    'pending': __webpack_require__(1073),
+	    'basic': __webpack_require__(920),
+	    'color': __webpack_require__(921),
+	    'custom': __webpack_require__(922),
+	    'pending': __webpack_require__(923),
 	}
 
 /***/ }

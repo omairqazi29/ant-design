@@ -1,6 +1,6 @@
 webpackJsonp([90,210],{
 
-/***/ 1128:
+/***/ 978:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -19,22 +19,21 @@ webpackJsonp([90,210],{
 	        "li",
 	        [
 	          "p",
-	          "Designed as Ant Design，提炼和服务企业级中后台产品的交互语言和视觉风格。"
+	          "提炼自企业级中后台产品的交互语言和视觉风格。"
 	        ]
 	      ],
 	      [
 	        "li",
 	        [
 	          "p",
-	          [
-	            "a",
-	            {
-	              "title": null,
-	              "href": "http://react-component.github.io/badgeboard/"
-	            },
-	            "React Component"
-	          ],
-	          " 基础上精心封装的高质量 UI 组件。"
+	          "开箱即用的高质量 React 组件。"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "使用 TypeScript 构建，提供完整的类型定义文件。"
 	        ]
 	      ],
 	      [

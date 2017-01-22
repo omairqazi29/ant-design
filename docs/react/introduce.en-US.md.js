@@ -1,6 +1,6 @@
 webpackJsonp([91,210],{
 
-/***/ 1127:
+/***/ 977:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -19,30 +19,37 @@ webpackJsonp([91,210],{
 	        "li",
 	        [
 	          "p",
-	          "Following Ant Design desktop specification."
+	          "An enterprise-class UI design language for web applications."
 	        ]
 	      ],
 	      [
 	        "li",
 	        [
 	          "p",
-	          "It is a set of high quality UI components and based on ",
+	          "A set of high-quality React components out of the box."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Written in TypeScript with complete define types."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "A npm + webpack + ",
 	          [
 	            "a",
 	            {
 	              "title": null,
-	              "href": "http://react-component.github.io/badgeboard/"
+	              "href": "https://github.com/dvajs/dva"
 	            },
-	            "React Component"
+	            "dva"
 	          ],
-	          "."
-	        ]
-	      ],
-	      [
-	        "li",
-	        [
-	          "p",
-	          "Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript."
+	          " front-end development workflow."
 	        ]
 	      ]
 	    ],

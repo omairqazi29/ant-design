@@ -1,6 +1,6 @@
 webpackJsonp([24,210],{
 
-/***/ 1153:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -33,7 +33,7 @@ webpackJsonp([24,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _BrowserDemo = __webpack_require__(77);
+	  var _BrowserDemo = __webpack_require__(88);
 
 	  var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -239,7 +239,7 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1154:
+/***/ 1004:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -276,7 +276,7 @@ webpackJsonp([24,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _BrowserDemo = __webpack_require__(77);
+	  var _BrowserDemo = __webpack_require__(88);
 
 	  var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -500,7 +500,7 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1155:
+/***/ 1005:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -542,7 +542,7 @@ webpackJsonp([24,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _BrowserDemo = __webpack_require__(77);
+	  var _BrowserDemo = __webpack_require__(88);
 
 	  var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -623,7 +623,7 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1156:
+/***/ 1006:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -656,7 +656,7 @@ webpackJsonp([24,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _BrowserDemo = __webpack_require__(77);
+	  var _BrowserDemo = __webpack_require__(88);
 
 	  var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -971,7 +971,7 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1157:
+/***/ 1007:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1019,7 +1019,7 @@ webpackJsonp([24,210],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _BrowserDemo = __webpack_require__(77);
+	  var _BrowserDemo = __webpack_require__(88);
 
 	  var _BrowserDemo2 = _interopRequireDefault(_BrowserDemo);
 
@@ -1175,15 +1175,15 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1240:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'aside-collapse': __webpack_require__(1153),
-	    'aside': __webpack_require__(1154),
-	    'ceiling': __webpack_require__(1155),
-	    'top-aside': __webpack_require__(1156),
-	    'top': __webpack_require__(1157),
+	    'aside-collapse': __webpack_require__(1003),
+	    'aside': __webpack_require__(1004),
+	    'ceiling': __webpack_require__(1005),
+	    'top-aside': __webpack_require__(1006),
+	    'top': __webpack_require__(1007),
 	}
 
 /***/ }

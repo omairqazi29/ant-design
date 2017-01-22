@@ -1,6 +1,6 @@
 webpackJsonp([92,210],{
 
-/***/ 1126:
+/***/ 976:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8,7 +8,7 @@ webpackJsonp([92,210],{
 	    "article"
 	  ],
 	  "meta": {
-	    "order": 6,
+	    "order": 9,
 	    "title": "i18n 方案",
 	    "link": "//github.com/ant-design/intl-example",
 	    "filename": "docs/react/i18n-solution.zh-CN.md"

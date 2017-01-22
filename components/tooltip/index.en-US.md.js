@@ -1,6 +1,6 @@
 webpackJsonp([119,210],{
 
-/***/ 1079:
+/***/ 929:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -20,7 +20,7 @@ webpackJsonp([119,210],{
 	        "li",
 	        [
 	          "p",
-	          "The tip shows while mouse enter, and hides while mouse leave. The ToolTip doesn't support complex text and operation."
+	          "The tip shows while mouse enter, and hides while mouse leave. The Tooltip doesn't support complex text and operation."
 	        ]
 	      ],
 	      [
@@ -70,6 +70,17 @@ webpackJsonp([119,210],{
 	          "href": "#API"
 	        },
 	        "API"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#Note"
+	        },
+	        "Note"
 	      ]
 	    ]
 	  ],
@@ -398,6 +409,39 @@ webpackJsonp([119,210],{
 	          ]
 	        ]
 	      ]
+	    ],
+	    [
+	      "h2",
+	      "Note"
+	    ],
+	    [
+	      "p",
+	      "Please ensure that the child node of ",
+	      [
+	        "code",
+	        "Tooltip"
+	      ],
+	      " accepts ",
+	      [
+	        "code",
+	        "onMouseEnter"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onMouseLeave"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onFocus"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onClick"
+	      ],
+	      " event."
 	    ]
 	  ]
 	};

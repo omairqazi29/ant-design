@@ -1,6 +1,6 @@
 webpackJsonp([149,210],{
 
-/***/ 942:
+/***/ 792:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -56,6 +56,17 @@ webpackJsonp([149,210],{
 	          "href": "#API"
 	        },
 	        "API"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#Note"
+	        },
+	        "Note"
 	      ]
 	    ]
 	  ],
@@ -202,6 +213,39 @@ webpackJsonp([149,210],{
 	        "Tooltip's documentation"
 	      ],
 	      " to find more APIs."
+	    ],
+	    [
+	      "h2",
+	      "Note"
+	    ],
+	    [
+	      "p",
+	      "Please ensure that the child node of ",
+	      [
+	        "code",
+	        "Popconfirm"
+	      ],
+	      " accepts ",
+	      [
+	        "code",
+	        "onMouseEnter"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onMouseLeave"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onFocus"
+	      ],
+	      ", ",
+	      [
+	        "code",
+	        "onClick"
+	      ],
+	      " event."
 	    ]
 	  ]
 	};
