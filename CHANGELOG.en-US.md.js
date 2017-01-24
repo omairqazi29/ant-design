@@ -1,4 +1,4 @@
-webpackJsonp([209,210],{
+webpackJsonp([210,211],{
 
 /***/ 560:
 /***/ function(module, exports) {
@@ -5766,6 +5766,23 @@ webpackJsonp([209,210],{
 	    "section",
 	    [
 	      "p",
+	      [
+	        "code",
+	        "antd"
+	      ],
+	      " strictly follows ",
+	      [
+	        "a",
+	        {
+	          "title": null,
+	          "href": "http://semver.org/"
+	        },
+	        "Semantic Versioning 2.0.0"
+	      ],
+	      "."
+	    ],
+	    [
+	      "p",
 	      "If you want to read change logs before ",
 	      [
 	        "code",
@@ -5776,7 +5793,7 @@ webpackJsonp([209,210],{
 	        "a",
 	        {
 	          "title": null,
-	          "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
+	          "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	        },
 	        "GitHub"
 	      ],

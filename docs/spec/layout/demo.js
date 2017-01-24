@@ -1,29 +1,62 @@
-webpackJsonp([24,210],{
+webpackJsonp([24,211],{
 
 /***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  "content": [
-	    [
-	      "p",
-	      "页面横向空间有限时使用。侧边导航默认收起，点击底部按钮时展开。"
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "页面横向空间有限时使用。侧边导航默认收起，点击底部按钮时展开。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "This pattern is used when the horizontal space is limited. Aside navigation is default to be collapsed, you can click the button at the bottom to expand it."
+	      ]
 	    ]
-	  ],
+	  },
 	  "meta": {
 	    "order": 4,
-	    "title": "可收起展开的侧边导航",
+	    "title": {
+	      "zh-CN": "可收起展开的侧边导航",
+	      "en-US": "Collapsed aside"
+	    },
 	    "filename": "docs/spec/layout/demo/aside-collapse.md",
 	    "id": "docs-spec-layout-demo-aside-collapse"
 	  },
 	  "toc": [
-	    "ul"
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
 	  ],
 	  "highlightedCode": [
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> AsideCollapse <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      collapse<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onCollapseChange</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      collapse<span class=\"token punctuation\">:</span> !this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>collapse<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> collapse <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>collapse<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span>{collapse <span class=\"token operator\">?</span> <span class=\"token string\">\"layout-aside layout-aside-collapse\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"layout-aside\"</span>}<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'user'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>导航一<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"setting\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"setting\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>导航二<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>导航三<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>导航四<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"folder\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"folder\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>导航五<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"aside-action\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onCollapseChange}<span class=\"token operator\">></span>\n            {collapse <span class=\"token operator\">?</span> <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span> <span class=\"token punctuation\">:</span> <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"left\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>}\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-main\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>首页<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>应用列表<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>某应用<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">220</span> }}<span class=\"token operator\">></span>\n                内容区域\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n          Ant Design 版权所有 © <span class=\"token number\">2015</span> 由蚂蚁金服体验技术部支持\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>AsideCollapse <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> AsideCollapse <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      collapse<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onCollapseChange</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      collapse<span class=\"token punctuation\">:</span> !this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>collapse<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> collapse <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>collapse<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span>{collapse <span class=\"token operator\">?</span> <span class=\"token string\">\"layout-aside layout-aside-collapse\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"layout-aside\"</span>}<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'user'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"setting\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"setting\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"folder\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"folder\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n              {!collapse <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token operator\">&lt;</span>span className<span class=\"token operator\">=</span><span class=\"token string\">\"nav-text\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">5</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"aside-action\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onCollapseChange}<span class=\"token operator\">></span>\n            {collapse <span class=\"token operator\">?</span> <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span> <span class=\"token punctuation\">:</span> <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"left\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>}\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-main\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>App list<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Any app<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">220</span> }}<span class=\"token operator\">></span>\n                Contents\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n            Ant Design all rights reserved © <span class=\"token number\">2015</span> Created by Ant UED\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>AsideCollapse <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -87,7 +120,7 @@ webpackJsonp([24,210],{
 	                {
 	                  className: "nav-text"
 	                },
-	                "导航一"
+	                "Navigation 1"
 	              )
 	            ),
 	            React.createElement(
@@ -103,7 +136,7 @@ webpackJsonp([24,210],{
 	                {
 	                  className: "nav-text"
 	                },
-	                "导航二"
+	                "Navigation 2"
 	              )
 	            ),
 	            React.createElement(
@@ -119,7 +152,7 @@ webpackJsonp([24,210],{
 	                {
 	                  className: "nav-text"
 	                },
-	                "导航三"
+	                "Navigation 3"
 	              )
 	            ),
 	            React.createElement(
@@ -135,7 +168,7 @@ webpackJsonp([24,210],{
 	                {
 	                  className: "nav-text"
 	                },
-	                "导航四"
+	                "Navigation 4"
 	              )
 	            ),
 	            React.createElement(
@@ -151,7 +184,7 @@ webpackJsonp([24,210],{
 	                {
 	                  className: "nav-text"
 	                },
-	                "导航五"
+	                "Navigation 5"
 	              )
 	            )
 	          ),
@@ -187,17 +220,17 @@ webpackJsonp([24,210],{
 	              React.createElement(
 	                _antd.Breadcrumb.Item,
 	                null,
-	                "首页"
+	                "Home"
 	              ),
 	              React.createElement(
 	                _antd.Breadcrumb.Item,
 	                null,
-	                "应用列表"
+	                "App list"
 	              ),
 	              React.createElement(
 	                _antd.Breadcrumb.Item,
 	                null,
-	                "某应用"
+	                "Any app"
 	              )
 	            ),
 	            React.createElement(
@@ -212,7 +245,7 @@ webpackJsonp([24,210],{
 	                    height: 220
 	                  }
 	                },
-	                "内容区域"
+	                "Contents"
 	              )
 	            )
 	          ),
@@ -221,7 +254,7 @@ webpackJsonp([24,210],{
 	            {
 	              className: "layout-footer"
 	            },
-	            "Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持"
+	            "Ant Design all rights reserved © 2015 Created by Ant UED"
 	          )
 	        )
 	      );
@@ -243,30 +276,67 @@ webpackJsonp([24,210],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  "content": [
-	    [
-	      "p",
-	      "顶级导航在侧边栏。"
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "顶级导航在侧边栏。"
+	      ],
+	      [
+	        "p",
+	        "侧边导航在页面布局上采用的是左右的结构，一般主导航放置于页面的左侧固定位置，辅助菜单放置于工作区顶部。内容根据浏览器终端进行自适应，能提高横向空间的使用率，但是整个页面排版不稳定。侧边导航的模式层级扩展性强，一、二、三级导航项目可以更为顺畅且具关联性的被展示，同时侧边导航可以固定，使得用户在操作和浏览中可以快速的定位和切换当前位置，有很高的操作效率。但这类导航横向页面内容的空间会被牺牲一部份。"
+	      ]
 	    ],
-	    [
-	      "p",
-	      "侧边导航在页面布局上采用的是左右的结构，一般主导航放置于页面的左侧固定位置，辅助菜单放置于工作区顶部。内容根据浏览器终端进行自适应，能提高横向空间的使用率，但是整个页面排版不稳定。侧边导航的模式层级扩展性强，一、二、三级导航项目可以更为顺畅且具关联性的被展示，同时侧边导航可以固定，使得用户在操作和浏览中可以快速的定位和切换当前位置，有很高的操作效率。但这类导航横向页面内容的空间会被牺牲一部份。"
+	    "en-US": [
+	      [
+	        "p",
+	        "Aside top level navigation"
+	      ],
+	      [
+	        "p",
+	        "A left-right structure of page layouts is used to Aside navigation, Generally, the mainnav is placed on the left side of the page, the secondary menu is placed on the top of the working area. Contens will adapts the layout to the viewing environment to imporve usage rates of horizaontal space, but the layout of the whole page is not stable. The level of the aisde navigation is scalable. The first, second, third level navigations could be present more fluently and relevantly, and aside navigation can be fixed to allows users quickly switch and  spot the current position when they are operating or viewing, there is a high operational efficency. But such navigation will occupie some space of the contents in the horizontal space. "
+	      ]
 	    ]
-	  ],
+	  },
 	  "meta": {
 	    "order": 2,
-	    "title": "侧边导航",
+	    "title": {
+	      "zh-CN": "侧边导航",
+	      "en-US": "Aside"
+	    },
 	    "filename": "docs/spec/layout/demo/aside.md",
 	    "id": "docs-spec-layout-demo-aside"
 	  },
 	  "toc": [
-	    "ul"
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
 	  ],
 	  "highlightedCode": [
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-aside\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span>\n          defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} defaultOpenKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'sub1'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub1\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航一<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"4\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub2\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航二<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"5\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">5</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"6\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">6</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"7\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">7</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"8\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">8</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub3\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航三<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"9\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">9</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"10\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">10</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"11\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">11</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"12\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">12</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-main\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>首页<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>应用列表<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>某应用<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">590</span> }}<span class=\"token operator\">></span>\n              内容区域\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n        Ant Design 版权所有 © <span class=\"token number\">2015</span> 由蚂蚁金服体验技术部支持\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-aside\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span>\n          defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} defaultOpenKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'sub1'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub1\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>item <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>item <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>item <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"4\"</span><span class=\"token operator\">></span>item <span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub2\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"5\"</span><span class=\"token operator\">></span>item <span class=\"token number\">5</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"6\"</span><span class=\"token operator\">></span>item <span class=\"token number\">6</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"7\"</span><span class=\"token operator\">></span>item <span class=\"token number\">7</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"8\"</span><span class=\"token operator\">></span>item <span class=\"token number\">8</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub3\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"9\"</span><span class=\"token operator\">></span>item <span class=\"token number\">9</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"10\"</span><span class=\"token operator\">></span>item <span class=\"token number\">10</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"11\"</span><span class=\"token operator\">></span>item <span class=\"token number\">11</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"12\"</span><span class=\"token operator\">></span>item <span class=\"token number\">12</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-main\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>App list<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Any App<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">590</span> }}<span class=\"token operator\">></span>\n              Contents\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n          Ant Design all rights reserved © <span class=\"token number\">2015</span> Created by Ant UED\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -317,7 +387,7 @@ webpackJsonp([24,210],{
 	                React.createElement(_antd.Icon, {
 	                  type: "user"
 	                }),
-	                "导航一"
+	                "Navigation 1"
 	              )
 	            },
 	            React.createElement(
@@ -325,28 +395,28 @@ webpackJsonp([24,210],{
 	              {
 	                key: "1"
 	              },
-	              "选项1"
+	              "item 1"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "2"
 	              },
-	              "选项2"
+	              "item 2"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "3"
 	              },
-	              "选项3"
+	              "item 3"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "4"
 	              },
-	              "选项4"
+	              "item 4"
 	            )
 	          ),
 	          React.createElement(
@@ -359,7 +429,7 @@ webpackJsonp([24,210],{
 	                React.createElement(_antd.Icon, {
 	                  type: "laptop"
 	                }),
-	                "导航二"
+	                "Navigation 2"
 	              )
 	            },
 	            React.createElement(
@@ -367,28 +437,28 @@ webpackJsonp([24,210],{
 	              {
 	                key: "5"
 	              },
-	              "选项5"
+	              "item 5"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "6"
 	              },
-	              "选项6"
+	              "item 6"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "7"
 	              },
-	              "选项7"
+	              "item 7"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "8"
 	              },
-	              "选项8"
+	              "item 8"
 	            )
 	          ),
 	          React.createElement(
@@ -401,7 +471,7 @@ webpackJsonp([24,210],{
 	                React.createElement(_antd.Icon, {
 	                  type: "notification"
 	                }),
-	                "导航三"
+	                "Navigation 3"
 	              )
 	            },
 	            React.createElement(
@@ -409,28 +479,28 @@ webpackJsonp([24,210],{
 	              {
 	                key: "9"
 	              },
-	              "选项9"
+	              "item 9"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "10"
 	              },
-	              "选项10"
+	              "item 10"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "11"
 	              },
-	              "选项11"
+	              "item 11"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "12"
 	              },
-	              "选项12"
+	              "item 12"
 	            )
 	          )
 	        )
@@ -454,17 +524,17 @@ webpackJsonp([24,210],{
 	            React.createElement(
 	              _antd.Breadcrumb.Item,
 	              null,
-	              "首页"
+	              "Home"
 	            ),
 	            React.createElement(
 	              _antd.Breadcrumb.Item,
 	              null,
-	              "应用列表"
+	              "App list"
 	            ),
 	            React.createElement(
 	              _antd.Breadcrumb.Item,
 	              null,
-	              "某应用"
+	              "Any App"
 	            )
 	          ),
 	          React.createElement(
@@ -479,7 +549,7 @@ webpackJsonp([24,210],{
 	                  height: 590
 	                }
 	              },
-	              "内容区域"
+	              "Contents"
 	            )
 	          )
 	        ),
@@ -488,7 +558,7 @@ webpackJsonp([24,210],{
 	          {
 	            className: "layout-footer"
 	          },
-	          "Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持"
+	          "Ant Design all rights reserved © 2015 Created by Ant UED"
 	        )
 	      )
 	    )
@@ -504,35 +574,77 @@ webpackJsonp([24,210],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  "content": [
-	    [
-	      "p",
-	      "吊顶一般用于跨系统/应用场景，可以放置统一的登录/帮助信息。"
-	    ],
-	    [
-	      "p",
-	      "吊顶背景深色，高度 ",
+	  "content": {
+	    "zh-CN": [
 	      [
-	        "code",
-	        "30px"
+	        "p",
+	        "吊顶一般用于跨系统/应用场景，可以放置统一的登录/帮助信息。"
 	      ],
-	      "，和浅色调的主导航配合使用。"
+	      [
+	        "p",
+	        "吊顶背景深色，高度 ",
+	        [
+	          "code",
+	          "30px"
+	        ],
+	        "，和浅色调的主导航配合使用。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Generally, ceiling is used for cross system/application, you can put uniform login/help information in it."
+	      ],
+	      [
+	        "p",
+	        "Background color of a ceiling is a deep color, height is ",
+	        [
+	          "code",
+	          "30px"
+	        ],
+	        ", generally to be used with a light color mainnav."
+	      ]
 	    ]
-	  ],
+	  },
 	  "meta": {
 	    "order": 3,
-	    "title": "吊顶规范",
+	    "title": {
+	      "zh-CN": "吊顶规范",
+	      "en-US": "Ceiling"
+	    },
 	    "filename": "docs/spec/layout/demo/ceiling.md",
 	    "id": "docs-spec-layout-demo-ceiling"
 	  },
 	  "toc": [
-	    "ul"
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
 	  ],
 	  "highlightedCode": [
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-ceiling-demo\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-ceiling\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>ul className<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>xxx<span class=\"token variable\">@example</span><span class=\"token punctuation\">.</span>com<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>|<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>帮助中心<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>|<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>客服<span class=\"token operator\">/</span>投诉电话：<span class=\"token number\">400</span><span class=\"token operator\">-</span><span class=\"token number\">826</span><span class=\"token operator\">-</span><span class=\"token number\">7710</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>ul<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-ceiling-demo\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-ceiling\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>ul className<span class=\"token operator\">=</span><span class=\"token string\">\"right\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>xxx<span class=\"token variable\">@example</span><span class=\"token punctuation\">.</span>com<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>|<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>Help Center<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>|<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>li<span class=\"token operator\">></span>Custom Service<span class=\"token operator\">/</span>Complaint Center phone：<span class=\"token number\">400</span><span class=\"token operator\">-</span><span class=\"token number\">826</span><span class=\"token operator\">-</span><span class=\"token number\">7710</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>li<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>ul<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -584,7 +696,7 @@ webpackJsonp([24,210],{
 	            React.createElement(
 	              "li",
 	              null,
-	              "帮助中心"
+	              "Help Center"
 	            ),
 	            React.createElement(
 	              "li",
@@ -594,7 +706,7 @@ webpackJsonp([24,210],{
 	            React.createElement(
 	              "li",
 	              null,
-	              "客服/投诉电话：400-826-7710"
+	              "Custom Service/Complaint Center phone：400-826-7710"
 	            )
 	          )
 	        )
@@ -627,26 +739,59 @@ webpackJsonp([24,210],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  "content": [
-	    [
-	      "p",
-	      "顶级导航在头部，次级导航在侧边栏。"
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "顶级导航在头部，次级导航在侧边栏。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The top navigation is placed on the top, and the secondary navigation is placed on the aside."
+	      ]
 	    ]
-	  ],
+	  },
 	  "meta": {
 	    "order": 1,
-	    "title": "顶部导航 + 侧边栏",
+	    "title": {
+	      "zh-CN": "顶部导航 + 侧边栏",
+	      "en-US": "Top aside"
+	    },
 	    "filename": "docs/spec/layout/demo/top-aside.md",
 	    "id": "docs-spec-layout-demo-top-aside"
 	  },
 	  "toc": [
-	    "ul"
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
 	  ],
 	  "highlightedCode": [
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-topaside\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'2'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{lineHeight<span class=\"token punctuation\">:</span> <span class=\"token string\">'64px'</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>导航一<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>导航二<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>导航三<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-subheader\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">124</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>首页<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>应用列表<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>某应用<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} defaultOpenKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'sub1'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub1\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航一<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"4\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub2\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航二<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"5\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">5</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"6\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">6</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"7\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">7</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"8\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">8</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub3\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>导航三<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"9\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">9</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"10\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">10</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"11\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">11</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"12\"</span><span class=\"token operator\">></span>选项<span class=\"token number\">12</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">240</span> }}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span>}}<span class=\"token operator\">></span>内容区域<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n        Ant Design 版权所有 © <span class=\"token number\">2015</span> 由蚂蚁金服体验技术部支持\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb<span class=\"token punctuation\">,</span> Icon } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> SubMenu <span class=\"token operator\">=</span> Menu<span class=\"token punctuation\">.</span>SubMenu<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-topaside\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'2'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{lineHeight<span class=\"token punctuation\">:</span> <span class=\"token string\">'64px'</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-subheader\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">124</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>App list<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Any app<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>aside className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-sider\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"inline\"</span> defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} defaultOpenKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'sub1'</span><span class=\"token punctuation\">]</span>}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub1\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>item <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>item <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>item <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"4\"</span><span class=\"token operator\">></span>item <span class=\"token number\">4</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub2\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"laptop\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"5\"</span><span class=\"token operator\">></span>item <span class=\"token number\">5</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"6\"</span><span class=\"token operator\">></span>item <span class=\"token number\">6</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"7\"</span><span class=\"token operator\">></span>item <span class=\"token number\">7</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"8\"</span><span class=\"token operator\">></span>item <span class=\"token number\">8</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>SubMenu key<span class=\"token operator\">=</span><span class=\"token string\">\"sub3\"</span> title<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"notification\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"9\"</span><span class=\"token operator\">></span>item <span class=\"token number\">9</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"10\"</span><span class=\"token operator\">></span>item <span class=\"token number\">10</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"11\"</span><span class=\"token operator\">></span>item <span class=\"token number\">11</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n                <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"12\"</span><span class=\"token operator\">></span>item <span class=\"token number\">12</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>SubMenu<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>aside<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-content\"</span><span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">240</span> }}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{clear<span class=\"token punctuation\">:</span> <span class=\"token string\">'both'</span>}}<span class=\"token operator\">></span>Contents<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n          Ant Design all rights reserved © <span class=\"token number\">2015</span> Created by Ant UED\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -699,21 +844,21 @@ webpackJsonp([24,210],{
 	              {
 	                key: "1"
 	              },
-	              "导航一"
+	              "Navigation 1"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "2"
 	              },
-	              "导航二"
+	              "Navigation 2"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "3"
 	              },
-	              "导航三"
+	              "Navigation 3"
 	            )
 	          )
 	        )
@@ -742,21 +887,21 @@ webpackJsonp([24,210],{
 	              {
 	                key: "1"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "2"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "3"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            )
 	          )
 	        )
@@ -772,17 +917,17 @@ webpackJsonp([24,210],{
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "首页"
+	            "Home"
 	          ),
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "应用列表"
+	            "App list"
 	          ),
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "某应用"
+	            "Any app"
 	          )
 	        ),
 	        React.createElement(
@@ -812,7 +957,7 @@ webpackJsonp([24,210],{
 	                    React.createElement(_antd.Icon, {
 	                      type: "user"
 	                    }),
-	                    "导航一"
+	                    "Navigation 1"
 	                  )
 	                },
 	                React.createElement(
@@ -820,28 +965,28 @@ webpackJsonp([24,210],{
 	                  {
 	                    key: "1"
 	                  },
-	                  "选项1"
+	                  "item 1"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "2"
 	                  },
-	                  "选项2"
+	                  "item 2"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "3"
 	                  },
-	                  "选项3"
+	                  "item 3"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "4"
 	                  },
-	                  "选项4"
+	                  "item 4"
 	                )
 	              ),
 	              React.createElement(
@@ -854,7 +999,7 @@ webpackJsonp([24,210],{
 	                    React.createElement(_antd.Icon, {
 	                      type: "laptop"
 	                    }),
-	                    "导航二"
+	                    "Navigation 2"
 	                  )
 	                },
 	                React.createElement(
@@ -862,28 +1007,28 @@ webpackJsonp([24,210],{
 	                  {
 	                    key: "5"
 	                  },
-	                  "选项5"
+	                  "item 5"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "6"
 	                  },
-	                  "选项6"
+	                  "item 6"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "7"
 	                  },
-	                  "选项7"
+	                  "item 7"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "8"
 	                  },
-	                  "选项8"
+	                  "item 8"
 	                )
 	              ),
 	              React.createElement(
@@ -896,7 +1041,7 @@ webpackJsonp([24,210],{
 	                    React.createElement(_antd.Icon, {
 	                      type: "notification"
 	                    }),
-	                    "导航三"
+	                    "Navigation 3"
 	                  )
 	                },
 	                React.createElement(
@@ -904,28 +1049,28 @@ webpackJsonp([24,210],{
 	                  {
 	                    key: "9"
 	                  },
-	                  "选项9"
+	                  "item 9"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "10"
 	                  },
-	                  "选项10"
+	                  "item 10"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "11"
 	                  },
-	                  "选项11"
+	                  "item 11"
 	                ),
 	                React.createElement(
 	                  _antd.Menu.Item,
 	                  {
 	                    key: "12"
 	                  },
-	                  "选项12"
+	                  "item 12"
 	                )
 	              )
 	            )
@@ -949,7 +1094,7 @@ webpackJsonp([24,210],{
 	                    clear: 'both'
 	                  }
 	                },
-	                "内容区域"
+	                "Contents"
 	              )
 	            )
 	          )
@@ -959,7 +1104,7 @@ webpackJsonp([24,210],{
 	          {
 	            className: "layout-footer"
 	          },
-	          "Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持"
+	          "Ant Design all rights reserved © 2015 Created by Ant UED"
 	        )
 	      )
 	    )
@@ -975,41 +1120,94 @@ webpackJsonp([24,210],{
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  "content": [
-	    [
-	      "p",
-	      "一二级导航都在顶部。"
-	    ],
-	    [
-	      "p",
-	      "顶部导航在页面布局上采用的是上下的结构，一般主导航放置于页面的顶端，从左自右依次为：logo、一级导航项、辅助菜单（用户、设置、通知等）。通常将内容放在固定尺寸（例如：1200px）内，整个页面排版稳定，不受用户终端显示器影响；上下级的结构符合用户上下浏览的习惯，也是较为经典的网站导航模式。页面上下切分的方式提高了主工作区域的信息展示效率，但在纵向空间上会有一些牺牲。此外，由于导航栏水平空间的限制，不适合那些一级导航项很多的信息结构。"
-	    ],
-	    [
-	      "blockquote",
+	  "content": {
+	    "zh-CN": [
 	      [
 	        "p",
+	        "一二级导航都在顶部。"
+	      ],
+	      [
+	        "p",
+	        "顶部导航在页面布局上采用的是上下的结构，一般主导航放置于页面的顶端，从左自右依次为：logo、一级导航项、辅助菜单（用户、设置、通知等）。通常将内容放在固定尺寸（例如：1200px）内，整个页面排版稳定，不受用户终端显示器影响；上下级的结构符合用户上下浏览的习惯，也是较为经典的网站导航模式。页面上下切分的方式提高了主工作区域的信息展示效率，但在纵向空间上会有一些牺牲。此外，由于导航栏水平空间的限制，不适合那些一级导航项很多的信息结构。"
+	      ],
+	      [
+	        "blockquote",
+	        [
+	          "p",
+	          [
+	            "code",
+	            "<BrowserDemo />"
+	          ],
+	          " 做演示用，无须复制。"
+	        ]
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The first and second level nav are both at the top."
+	      ],
+	      [
+	        "p",
+	        "A top-bottom structure of page layouts is used to top navigation. Generally, the mainnav is placed at the top of the page, and put log, the first level navigation, secondary menu(users, settings, notifications) from left to right in it. We always put contents in a fixed size navigation.( eg: ",
 	        [
 	          "code",
-	          "<BrowserDemo />"
+	          "1200px"
 	        ],
-	        " 做演示用，无须复制。"
+	        "), the layout of the whole page is stable, it's not affected by viewing enviroment,; Top-bottom structure is conform to top-bottom viewing habit, it's a classical navigation pattern of websites. This pattern will bring demonstration efficiency up of the mian workarea, but it will also occupie some vertical spaces. And, because the horizontal space of the navigation is limited, this pattern is not suitable for the first level navigation which has too much information."
+	      ],
+	      [
+	        "blockquote",
+	        [
+	          "p",
+	          [
+	            "code",
+	            "<BrowserDemo />"
+	          ],
+	          " This is for demo, don't need to copy."
+	        ]
 	      ]
 	    ]
-	  ],
+	  },
 	  "meta": {
 	    "order": 0,
-	    "title": "顶部导航",
+	    "title": {
+	      "zh-CN": "顶部导航",
+	      "en-US": "Top"
+	    },
 	    "filename": "docs/spec/layout/demo/top.md",
 	    "id": "docs-spec-layout-demo-top"
 	  },
 	  "toc": [
-	    "ul"
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
 	  ],
 	  "highlightedCode": [
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-top\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'2'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{lineHeight<span class=\"token punctuation\">:</span> <span class=\"token string\">'64px'</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>导航一<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>导航二<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>导航三<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-subheader\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">124</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>二级导航<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>首页<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>应用列表<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>某应用<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">210</span> }}<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n      Ant Design 版权所有 © <span class=\"token number\">2015</span> 由蚂蚁金服体验技术部支持\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Breadcrumb } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\nimport BrowserDemo from <span class=\"token string\">'site/theme/template/BrowserDemo'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>BrowserDemo<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-top\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-header\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-logo\"</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu theme<span class=\"token operator\">=</span><span class=\"token string\">\"dark\"</span> mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'2'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{lineHeight<span class=\"token punctuation\">:</span> <span class=\"token string\">'64px'</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">1</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">2</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>Navigation <span class=\"token number\">3</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-subheader\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Menu mode<span class=\"token operator\">=</span><span class=\"token string\">\"horizontal\"</span>\n            defaultSelectedKeys<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token string\">'1'</span><span class=\"token punctuation\">]</span>} style<span class=\"token operator\">=</span>{{marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">124</span>}}<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>The second level navigation<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-wrapper\"</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Home<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>App list<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>Any app<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Breadcrumb<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-container\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">210</span> }}<span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"layout-footer\"</span><span class=\"token operator\">></span>\n        Ant Design all rights reserved © <span class=\"token number\">2015</span> Created by Ant UED\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BrowserDemo<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -1061,21 +1259,21 @@ webpackJsonp([24,210],{
 	              {
 	                key: "1"
 	              },
-	              "导航一"
+	              "Navigation 1"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "2"
 	              },
-	              "导航二"
+	              "Navigation 2"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "3"
 	              },
-	              "导航三"
+	              "Navigation 3"
 	            )
 	          )
 	        )
@@ -1104,21 +1302,21 @@ webpackJsonp([24,210],{
 	              {
 	                key: "1"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "2"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            ),
 	            React.createElement(
 	              _antd.Menu.Item,
 	              {
 	                key: "3"
 	              },
-	              "二级导航"
+	              "The second level navigation"
 	            )
 	          )
 	        )
@@ -1134,17 +1332,17 @@ webpackJsonp([24,210],{
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "首页"
+	            "Home"
 	          ),
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "应用列表"
+	            "App list"
 	          ),
 	          React.createElement(
 	            _antd.Breadcrumb.Item,
 	            null,
-	            "某应用"
+	            "Any app"
 	          )
 	        ),
 	        React.createElement(
@@ -1164,7 +1362,7 @@ webpackJsonp([24,210],{
 	        {
 	          className: "layout-footer"
 	        },
-	        "Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持"
+	        "Ant Design all rights reserved © 2015 Created by Ant UED"
 	      )
 	    )
 	  );
@@ -1175,7 +1373,7 @@ webpackJsonp([24,210],{
 
 /***/ },
 
-/***/ 1074:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {

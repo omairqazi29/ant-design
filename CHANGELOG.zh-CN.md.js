@@ -1,4 +1,4 @@
-webpackJsonp([208,210],{
+webpackJsonp([209,211],{
 
 /***/ 561:
 /***/ function(module, exports) {
@@ -5628,6 +5628,23 @@ webpackJsonp([208,210],{
 	    "section",
 	    [
 	      "p",
+	      [
+	        "code",
+	        "antd"
+	      ],
+	      " 严格遵循 ",
+	      [
+	        "a",
+	        {
+	          "title": null,
+	          "href": "http://semver.org/lang/zh-CN/"
+	        },
+	        "Semantic Versioning 2.0.0"
+	      ],
+	      " 语义化版本规范。"
+	    ],
+	    [
+	      "p",
 	      "如果需要查看 ",
 	      [
 	        "code",
@@ -5638,7 +5655,7 @@ webpackJsonp([208,210],{
 	        "a",
 	        {
 	          "title": null,
-	          "href": "https://github.com/ant-design/ant-design/releases?after=2.0.0"
+	          "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
 	        },
 	        "GitHub"
 	      ],
