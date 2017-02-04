@@ -1,6 +1,6 @@
 webpackJsonp([3,211],{
 
-/***/ 894:
+/***/ 1044:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -108,7 +108,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 895:
+/***/ 1045:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -218,7 +218,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 896:
+/***/ 1046:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -326,7 +326,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 897:
+/***/ 1047:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -382,7 +382,7 @@ webpackJsonp([3,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Tabs<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> TabPane <span class=\"token operator\">=</span> Tabs<span class=\"token punctuation\">.</span>TabPane<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Demo <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span>newTabIndex <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span>\n      { title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Tab 1'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Content of Tab Pane 1'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> <span class=\"token string\">'1'</span> }<span class=\"token punctuation\">,</span>\n      { title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Tab 2'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Content of Tab Pane 2'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> <span class=\"token string\">'2'</span> }<span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    return {\n      activeKey<span class=\"token punctuation\">:</span> panes<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>key<span class=\"token punctuation\">,</span>\n      panes<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>activeKey<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onEdit</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">,</span> action<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">[</span>action<span class=\"token punctuation\">]</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">add</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> activeKey <span class=\"token operator\">=</span> `newTab${this<span class=\"token punctuation\">.</span>newTabIndex<span class=\"token operator\">+</span><span class=\"token operator\">+</span>}`<span class=\"token comment\" spellcheck=\"true\">;</span>\n    panes<span class=\"token punctuation\">.</span><span class=\"token function\">push</span><span class=\"token punctuation\">(</span>{ title<span class=\"token punctuation\">:</span> <span class=\"token string\">'New Tab'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'New Tab Pane'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ panes<span class=\"token punctuation\">,</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">remove</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">)</span> {\n    let activeKey <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>activeKey<span class=\"token comment\" spellcheck=\"true\">;</span>\n    let lastIndex<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">forEach</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>pane<span class=\"token punctuation\">,</span> i<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>pane<span class=\"token punctuation\">.</span>key <span class=\"token operator\">==</span><span class=\"token operator\">=</span> targetKey<span class=\"token punctuation\">)</span> {\n        lastIndex <span class=\"token operator\">=</span> i <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">filter</span><span class=\"token punctuation\">(</span>pane <span class=\"token operator\">=</span><span class=\"token operator\">></span> pane<span class=\"token punctuation\">.</span>key !<span class=\"token operator\">==</span> targetKey<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>lastIndex <span class=\"token operator\">>=</span> <span class=\"token number\">0</span> <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> activeKey <span class=\"token operator\">==</span><span class=\"token operator\">=</span> targetKey<span class=\"token punctuation\">)</span> {\n      activeKey <span class=\"token operator\">=</span> panes<span class=\"token punctuation\">[</span>lastIndex<span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>key<span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ panes<span class=\"token punctuation\">,</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">16</span> }}<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>add}<span class=\"token operator\">></span>ADD<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Tabs\n          hideAdd\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onChange}\n          activeKey<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>activeKey}\n          type<span class=\"token operator\">=</span><span class=\"token string\">\"editable-card\"</span>\n          onEdit<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onEdit}\n        <span class=\"token operator\">></span>\n          {this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>pane <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token operator\">&lt;</span>TabPane tab<span class=\"token operator\">=</span>{pane<span class=\"token punctuation\">.</span>title} key<span class=\"token operator\">=</span>{pane<span class=\"token punctuation\">.</span>key}<span class=\"token operator\">></span>{pane<span class=\"token punctuation\">.</span>content}<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>TabPane<span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tabs<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Demo <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Tabs<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> TabPane <span class=\"token operator\">=</span> Tabs<span class=\"token punctuation\">.</span>TabPane<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Demo <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span>newTabIndex <span class=\"token operator\">=</span> <span class=\"token number\">0</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span>\n      { title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Tab 1'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Content of Tab Pane 1'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> <span class=\"token string\">'1'</span> }<span class=\"token punctuation\">,</span>\n      { title<span class=\"token punctuation\">:</span> <span class=\"token string\">'Tab 2'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'Content of Tab Pane 2'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> <span class=\"token string\">'2'</span> }<span class=\"token punctuation\">,</span>\n    <span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    return {\n      activeKey<span class=\"token punctuation\">:</span> panes<span class=\"token punctuation\">[</span><span class=\"token number\">0</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>key<span class=\"token punctuation\">,</span>\n      panes<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>activeKey<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onEdit</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">,</span> action<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">[</span>action<span class=\"token punctuation\">]</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">add</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> activeKey <span class=\"token operator\">=</span> `newTab${this<span class=\"token punctuation\">.</span>newTabIndex<span class=\"token operator\">+</span><span class=\"token operator\">+</span>}`<span class=\"token comment\" spellcheck=\"true\">;</span>\n    panes<span class=\"token punctuation\">.</span><span class=\"token function\">push</span><span class=\"token punctuation\">(</span>{ title<span class=\"token punctuation\">:</span> <span class=\"token string\">'New Tab'</span><span class=\"token punctuation\">,</span> content<span class=\"token punctuation\">:</span> <span class=\"token string\">'New Tab Pane'</span><span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">:</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ panes<span class=\"token punctuation\">,</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">remove</span><span class=\"token punctuation\">(</span>targetKey<span class=\"token punctuation\">)</span> {\n    let activeKey <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>activeKey<span class=\"token comment\" spellcheck=\"true\">;</span>\n    let lastIndex<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">forEach</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>pane<span class=\"token punctuation\">,</span> i<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>pane<span class=\"token punctuation\">.</span>key <span class=\"token operator\">==</span><span class=\"token operator\">=</span> targetKey<span class=\"token punctuation\">)</span> {\n        lastIndex <span class=\"token operator\">=</span> i <span class=\"token operator\">-</span> <span class=\"token number\">1</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> panes <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">filter</span><span class=\"token punctuation\">(</span>pane <span class=\"token operator\">=</span><span class=\"token operator\">></span> pane<span class=\"token punctuation\">.</span>key !<span class=\"token operator\">==</span> targetKey<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>lastIndex <span class=\"token operator\">>=</span> <span class=\"token number\">0</span> <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> activeKey <span class=\"token operator\">==</span><span class=\"token operator\">=</span> targetKey<span class=\"token punctuation\">)</span> {\n      activeKey <span class=\"token operator\">=</span> panes<span class=\"token punctuation\">[</span>lastIndex<span class=\"token punctuation\">]</span><span class=\"token punctuation\">.</span>key<span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ panes<span class=\"token punctuation\">,</span> activeKey }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginBottom<span class=\"token punctuation\">:</span> <span class=\"token number\">16</span> }}<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Button onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>add}<span class=\"token operator\">></span>ADD<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Tabs\n          hideAdd\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onChange}\n          activeKey<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>activeKey}\n          type<span class=\"token operator\">=</span><span class=\"token string\">\"editable-card\"</span>\n          onEdit<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>onEdit}\n        <span class=\"token operator\">></span>\n          {this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>panes<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>pane <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token operator\">&lt;</span>TabPane tab<span class=\"token operator\">=</span>{pane<span class=\"token punctuation\">.</span>title} key<span class=\"token operator\">=</span>{pane<span class=\"token punctuation\">.</span>key}<span class=\"token operator\">></span>{pane<span class=\"token punctuation\">.</span>content}<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>TabPane<span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tabs<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Demo <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -467,7 +467,6 @@ webpackJsonp([3,211],{
 	          React.createElement(
 	            _antd.Button,
 	            {
-	              type: "ghost",
 	              onClick: this.add
 	            },
 	            "ADD"
@@ -502,7 +501,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 898:
+/***/ 1048:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -605,7 +604,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 899:
+/***/ 1049:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -760,7 +759,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 900:
+/***/ 1050:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -867,7 +866,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 901:
+/***/ 1051:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -975,7 +974,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 902:
+/***/ 1052:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1148,7 +1147,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 903:
+/***/ 1053:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1251,7 +1250,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 904:
+/***/ 1054:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1401,21 +1400,21 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1069:
+/***/ 1235:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(894),
-	    'card-top': __webpack_require__(895),
-	    'card': __webpack_require__(896),
-	    'custom-add-trigger': __webpack_require__(897),
-	    'disabled': __webpack_require__(898),
-	    'editable-card': __webpack_require__(899),
-	    'extra': __webpack_require__(900),
-	    'icon': __webpack_require__(901),
-	    'position': __webpack_require__(902),
-	    'size': __webpack_require__(903),
-	    'slide': __webpack_require__(904),
+	    'basic': __webpack_require__(1044),
+	    'card-top': __webpack_require__(1045),
+	    'card': __webpack_require__(1046),
+	    'custom-add-trigger': __webpack_require__(1047),
+	    'disabled': __webpack_require__(1048),
+	    'editable-card': __webpack_require__(1049),
+	    'extra': __webpack_require__(1050),
+	    'icon': __webpack_require__(1051),
+	    'position': __webpack_require__(1052),
+	    'size': __webpack_require__(1053),
+	    'slide': __webpack_require__(1054),
 	}
 
 /***/ }

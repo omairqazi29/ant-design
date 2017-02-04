@@ -1,6 +1,6 @@
 webpackJsonp([17,211],{
 
-/***/ 668:
+/***/ 818:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -131,7 +131,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 669:
+/***/ 819:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -187,7 +187,7 @@ webpackJsonp([17,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Dropdown<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> message } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">handleButtonClick</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on left button.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click left button'</span><span class=\"token punctuation\">,</span> e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">handleMenuClick</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on menu item.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click'</span><span class=\"token punctuation\">,</span> e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\n<span class=\"token keyword\">const</span> menu <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Menu onClick<span class=\"token operator\">=</span>{handleMenuClick}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>1st menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>2nd menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>3d menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown<span class=\"token punctuation\">.</span>Button onClick<span class=\"token operator\">=</span>{handleButtonClick} overlay<span class=\"token operator\">=</span>{menu} type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span><span class=\"token operator\">></span>\n      Dropdown\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown<span class=\"token punctuation\">.</span>Button\n      onClick<span class=\"token operator\">=</span>{handleButtonClick} overlay<span class=\"token operator\">=</span>{menu}\n      type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span> disabled\n      style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> }}\n    <span class=\"token operator\">></span>\n      Dropdown\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span> style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> }}<span class=\"token operator\">></span>\n        Button <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"down\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Dropdown<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> message } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">handleButtonClick</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on left button.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click left button'</span><span class=\"token punctuation\">,</span> e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\nfunction <span class=\"token function\">handleMenuClick</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n  message<span class=\"token punctuation\">.</span><span class=\"token function\">info</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Click on menu item.'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click'</span><span class=\"token punctuation\">,</span> e<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\n<span class=\"token keyword\">const</span> menu <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Menu onClick<span class=\"token operator\">=</span>{handleMenuClick}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"1\"</span><span class=\"token operator\">></span>1st menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"2\"</span><span class=\"token operator\">></span>2nd menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item key<span class=\"token operator\">=</span><span class=\"token string\">\"3\"</span><span class=\"token operator\">></span>3d menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown<span class=\"token punctuation\">.</span>Button onClick<span class=\"token operator\">=</span>{handleButtonClick} overlay<span class=\"token operator\">=</span>{menu}<span class=\"token operator\">></span>\n      Dropdown\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown<span class=\"token punctuation\">.</span>Button\n      onClick<span class=\"token operator\">=</span>{handleButtonClick} overlay<span class=\"token operator\">=</span>{menu}\n      disabled\n      style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> }}\n    <span class=\"token operator\">></span>\n      Dropdown\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token punctuation\">.</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button style<span class=\"token operator\">=</span>{{ marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">8</span> }}<span class=\"token operator\">></span>\n        Button <span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"down\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -243,8 +243,7 @@ webpackJsonp([17,211],{
 	      _antd.Dropdown.Button,
 	      {
 	        onClick: handleButtonClick,
-	        overlay: menu,
-	        type: "ghost"
+	        overlay: menu
 	      },
 	      "Dropdown"
 	    ),
@@ -253,7 +252,6 @@ webpackJsonp([17,211],{
 	      {
 	        onClick: handleButtonClick,
 	        overlay: menu,
-	        type: "ghost",
 	        disabled: true,
 	        style: {
 	          marginLeft: 8
@@ -269,7 +267,6 @@ webpackJsonp([17,211],{
 	      React.createElement(
 	        _antd.Button,
 	        {
-	          type: "ghost",
 	          style: {
 	            marginLeft: 8
 	          }
@@ -286,7 +283,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 670:
+/***/ 820:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -407,7 +404,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 671:
+/***/ 821:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -538,7 +535,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 672:
+/***/ 822:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -678,7 +675,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 673:
+/***/ 823:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -797,7 +794,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 674:
+/***/ 824:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -938,17 +935,17 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 1045:
+/***/ 1211:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(668),
-	    'dropdown-button': __webpack_require__(669),
-	    'event': __webpack_require__(670),
-	    'item': __webpack_require__(671),
-	    'overlay-visible': __webpack_require__(672),
-	    'sub-menu': __webpack_require__(673),
-	    'trigger': __webpack_require__(674),
+	    'basic': __webpack_require__(818),
+	    'dropdown-button': __webpack_require__(819),
+	    'event': __webpack_require__(820),
+	    'item': __webpack_require__(821),
+	    'overlay-visible': __webpack_require__(822),
+	    'sub-menu': __webpack_require__(823),
+	    'trigger': __webpack_require__(824),
 	}
 
 /***/ }

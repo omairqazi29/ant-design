@@ -1,6 +1,6 @@
 webpackJsonp([8,211],{
 
-/***/ 759:
+/***/ 909:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -135,7 +135,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 760:
+/***/ 910:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -270,7 +270,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 761:
+/***/ 911:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -375,7 +375,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 762:
+/***/ 912:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -476,7 +476,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 763:
+/***/ 913:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -532,7 +532,7 @@ webpackJsonp([8,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Modal<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Test <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">showModal</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleOk</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span> visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }<span class=\"token punctuation\">,</span> <span class=\"token number\">3000</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleCancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>showModal}<span class=\"token operator\">></span>\n          Open modal dialog\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Modal\n          visible<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible}\n          title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span>\n          onOk<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleOk}\n          onCancel<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleCancel}\n          footer<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span>\n            <span class=\"token operator\">&lt;</span>Button key<span class=\"token operator\">=</span><span class=\"token string\">\"back\"</span> type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span> size<span class=\"token operator\">=</span><span class=\"token string\">\"large\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleCancel}<span class=\"token operator\">></span>Return<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n            <span class=\"token operator\">&lt;</span>Button key<span class=\"token operator\">=</span><span class=\"token string\">\"submit\"</span> type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> size<span class=\"token operator\">=</span><span class=\"token string\">\"large\"</span> loading<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>loading} onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleOk}<span class=\"token operator\">></span>\n              Submit\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">]</span>}\n        <span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Modal<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Test <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Modal<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Test <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">showModal</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleOk</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ loading<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span> visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }<span class=\"token punctuation\">,</span> <span class=\"token number\">3000</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleCancel</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ visible<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>showModal}<span class=\"token operator\">></span>\n          Open modal dialog\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>Modal\n          visible<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>visible}\n          title<span class=\"token operator\">=</span><span class=\"token string\">\"Title\"</span>\n          onOk<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleOk}\n          onCancel<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleCancel}\n          footer<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span>\n            <span class=\"token operator\">&lt;</span>Button key<span class=\"token operator\">=</span><span class=\"token string\">\"back\"</span> size<span class=\"token operator\">=</span><span class=\"token string\">\"large\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleCancel}<span class=\"token operator\">></span>Return<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n            <span class=\"token operator\">&lt;</span>Button key<span class=\"token operator\">=</span><span class=\"token string\">\"submit\"</span> type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> size<span class=\"token operator\">=</span><span class=\"token string\">\"large\"</span> loading<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>loading} onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleOk}<span class=\"token operator\">></span>\n              Submit\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n          <span class=\"token punctuation\">]</span>}\n        <span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>p<span class=\"token operator\">></span>Some contents<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>p<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Modal<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Test <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -596,7 +596,6 @@ webpackJsonp([8,211],{
 	              _antd.Button,
 	              {
 	                key: "back",
-	                type: "ghost",
 	                size: "large",
 	                onClick: this.handleCancel
 	              },
@@ -648,7 +647,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 764:
+/***/ 914:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -793,7 +792,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 765:
+/***/ 915:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -970,7 +969,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 766:
+/***/ 916:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -981,7 +980,7 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 767:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1193,19 +1192,19 @@ webpackJsonp([8,211],{
 
 /***/ },
 
-/***/ 1055:
+/***/ 1221:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'async': __webpack_require__(759),
-	    'basic': __webpack_require__(760),
-	    'confirm-promise': __webpack_require__(761),
-	    'confirm': __webpack_require__(762),
-	    'footer': __webpack_require__(763),
-	    'info': __webpack_require__(764),
-	    'locale': __webpack_require__(765),
-	    'manual': __webpack_require__(766),
-	    'position': __webpack_require__(767),
+	    'async': __webpack_require__(909),
+	    'basic': __webpack_require__(910),
+	    'confirm-promise': __webpack_require__(911),
+	    'confirm': __webpack_require__(912),
+	    'footer': __webpack_require__(913),
+	    'info': __webpack_require__(914),
+	    'locale': __webpack_require__(915),
+	    'manual': __webpack_require__(916),
+	    'position': __webpack_require__(917),
 	}
 
 /***/ }
