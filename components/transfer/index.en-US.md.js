@@ -1,6 +1,6 @@
 webpackJsonp([118,211],{
 
-/***/ 936:
+/***/ 939:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -421,6 +421,29 @@ webpackJsonp([118,211],{
 	              "code",
 	              "{ height: 32, offset: 32 }"
 	            ]
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "onSearchChange"
+	          ],
+	          [
+	            "td",
+	            "A callback function which is executed when search field are changed"
+	          ],
+	          [
+	            "td",
+	            "(direction: 'left'"
+	          ],
+	          [
+	            "td",
+	            "'right', event: Event): void"
+	          ],
+	          [
+	            "td",
+	            "-"
 	          ]
 	        ]
 	      ]

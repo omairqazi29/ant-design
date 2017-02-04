@@ -1,6 +1,6 @@
 webpackJsonp([194,211],{
 
-/***/ 610:
+/***/ 609:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -127,14 +127,14 @@ webpackJsonp([194,211],{
 	            " ",
 	            [
 	              "code",
-	              "ghost"
+	              "dashed"
 	            ],
 	            " ",
 	            [
 	              "code",
-	              "dashed"
+	              "danger"
 	            ],
-	            " or omitted"
+	            "(added in 2.7) or omitted"
 	          ],
 	          [
 	            "td",
@@ -142,7 +142,7 @@ webpackJsonp([194,211],{
 	          ],
 	          [
 	            "td",
-	            "-"
+	            "'default'"
 	          ]
 	        ],
 	        [
@@ -304,6 +304,25 @@ webpackJsonp([194,211],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "ghost"
+	          ],
+	          [
+	            "td",
+	            "make background transparent and invert text and border color, added in 2.7"
+	          ],
+	          [
+	            "td",
+	            "boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
 	          ]
 	        ]
 	      ]

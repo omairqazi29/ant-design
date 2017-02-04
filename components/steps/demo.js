@@ -1,6 +1,121 @@
-webpackJsonp([13,211],{
+webpackJsonp([7,211],{
 
-/***/ 853:
+/***/ 854:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "为点状步骤条增加自定义展示。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "You can customize the display for Steps with progress dot style."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 9,
+	    "title": {
+	      "zh-CN": "自定义点状步骤条",
+	      "en-US": "Customized Dot Style"
+	    },
+	    "filename": "components/steps/demo/customized-progress-dot.md",
+	    "id": "components-steps-demo-customized-progress-dot"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps<span class=\"token punctuation\">,</span> Popover } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> customDot <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>dot<span class=\"token punctuation\">,</span> { status<span class=\"token punctuation\">,</span> index }<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Popover content<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>span<span class=\"token operator\">></span><span class=\"token keyword\">step</span> {index} status<span class=\"token punctuation\">:</span> {status}<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>span<span class=\"token operator\">></span>}<span class=\"token operator\">></span>\n    {dot}\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popover<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>} progressDot<span class=\"token operator\">=</span>{customDot}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"You can hover on the dot.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"You can hover on the dot.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"You can hover on the dot.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"You can hover on the dot.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+
+	  var customDot = function customDot(dot, _ref) {
+	    var status = _ref.status,
+	        index = _ref.index;
+	    return React.createElement(
+	      _antd.Popover,
+	      {
+	        content: React.createElement(
+	          "span",
+	          null,
+	          "step ",
+	          index,
+	          " status: ",
+	          status
+	        )
+	      },
+	      dot
+	    );
+	  };
+
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      current: 1,
+	      progressDot: customDot
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "You can hover on the dot."
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress",
+	      description: "You can hover on the dot."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "You can hover on the dot."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "You can hover on the dot."
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 855:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -106,7 +221,7 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 854:
+/***/ 856:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -230,7 +345,98 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 855:
+/***/ 857:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "包含步骤点的进度条。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Steps with progress dot style."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 8,
+	    "title": {
+	      "zh-CN": "点状步骤条",
+	      "en-US": "Dot Style"
+	    },
+	    "filename": "components/steps/demo/progress-dot.md",
+	    "id": "components-steps-demo-progress-dot"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Steps } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> <span class=\"token keyword\">Step</span> <span class=\"token operator\">=</span> Steps<span class=\"token punctuation\">.</span><span class=\"token keyword\">Step</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Steps progressDot current<span class=\"token operator\">=</span>{<span class=\"token number\">1</span>}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Finished\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"In Progress\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Step</span> title<span class=\"token operator\">=</span><span class=\"token string\">\"Waiting\"</span> description<span class=\"token operator\">=</span><span class=\"token string\">\"This is a description.\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Steps<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Step = _antd.Steps.Step;
+	  return React.createElement(
+	    _antd.Steps,
+	    {
+	      progressDot: true,
+	      current: 1
+	    },
+	    React.createElement(Step, {
+	      title: "Finished",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "In Progress",
+	      description: "This is a description."
+	    }),
+	    React.createElement(Step, {
+	      title: "Waiting",
+	      description: "This is a description."
+	    })
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 858:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -320,7 +526,7 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 856:
+/***/ 859:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -418,7 +624,7 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 857:
+/***/ 860:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -611,7 +817,7 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 858:
+/***/ 861:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -703,7 +909,7 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 859:
+/***/ 862:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -794,17 +1000,19 @@ webpackJsonp([13,211],{
 
 /***/ },
 
-/***/ 1063:
+/***/ 1066:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'error': __webpack_require__(853),
-	    'icon': __webpack_require__(854),
-	    'simple': __webpack_require__(855),
-	    'small-size': __webpack_require__(856),
-	    'step-next': __webpack_require__(857),
-	    'vertical-small': __webpack_require__(858),
-	    'vertical': __webpack_require__(859),
+	    'customized-progress-dot': __webpack_require__(854),
+	    'error': __webpack_require__(855),
+	    'icon': __webpack_require__(856),
+	    'progress-dot': __webpack_require__(857),
+	    'simple': __webpack_require__(858),
+	    'small-size': __webpack_require__(859),
+	    'step-next': __webpack_require__(860),
+	    'vertical-small': __webpack_require__(861),
+	    'vertical': __webpack_require__(862),
 	}
 
 /***/ }

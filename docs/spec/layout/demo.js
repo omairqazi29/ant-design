@@ -1,6 +1,6 @@
-webpackJsonp([24,211],{
+webpackJsonp([25,211],{
 
-/***/ 1003:
+/***/ 1006:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -14,7 +14,7 @@ webpackJsonp([24,211],{
 	    "en-US": [
 	      [
 	        "p",
-	        "This pattern is used when the horizontal space is limited. Aside navigation is default to be collapsed, you can click the button at the bottom to expand it."
+	        "This pattern is used when the horizontal space is limited. By default, Aside navigation is collapsed. You can click the button at the bottom to expand it."
 	      ]
 	    ]
 	  },
@@ -272,7 +272,7 @@ webpackJsonp([24,211],{
 
 /***/ },
 
-/***/ 1004:
+/***/ 1007:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -294,7 +294,11 @@ webpackJsonp([24,211],{
 	      ],
 	      [
 	        "p",
-	        "A left-right structure of page layouts is used to Aside navigation, Generally, the mainnav is placed on the left side of the page, the secondary menu is placed on the top of the working area. Contens will adapts the layout to the viewing environment to imporve usage rates of horizaontal space, but the layout of the whole page is not stable. The level of the aisde navigation is scalable. The first, second, third level navigations could be present more fluently and relevantly, and aside navigation can be fixed to allows users quickly switch and  spot the current position when they are operating or viewing, there is a high operational efficency. But such navigation will occupie some space of the contents in the horizontal space. "
+	        "A left-right structure of page layouts is used to Aside navigation, Generally, the mainnav is placed on the left side of the page, and the secondary menu is placed on the top of the working area. Contents will adapt the layout to the viewing area to improve the horizontal space usage, while the layout of the whole page is not stable."
+	      ],
+	      [
+	        "p",
+	        "The level of the aisde navigation is scalable. The first, second, and third level navigations could be present more fluently and relevantly, and aside navigation can be fixed, allowing the user to quickly switch and spot the current position, improving the user experience. However, this navigation occupies some horizontal space of the contents."
 	      ]
 	    ]
 	  },
@@ -570,7 +574,7 @@ webpackJsonp([24,211],{
 
 /***/ },
 
-/***/ 1005:
+/***/ 1008:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -593,16 +597,16 @@ webpackJsonp([24,211],{
 	    "en-US": [
 	      [
 	        "p",
-	        "Generally, ceiling is used for cross system/application, you can put uniform login/help information in it."
+	        "Generally, ceiling is used for cross system/applications, where you can put uniform login/help information on top of the page."
 	      ],
 	      [
 	        "p",
-	        "Background color of a ceiling is a deep color, height is ",
+	        "Background color of a ceiling is a dark color, height is ",
 	        [
 	          "code",
 	          "30px"
 	        ],
-	        ", generally to be used with a light color mainnav."
+	        ", and a light color foreground for the mainnav should be used."
 	      ]
 	    ]
 	  },
@@ -735,7 +739,7 @@ webpackJsonp([24,211],{
 
 /***/ },
 
-/***/ 1006:
+/***/ 1009:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1116,7 +1120,7 @@ webpackJsonp([24,211],{
 
 /***/ },
 
-/***/ 1007:
+/***/ 1010:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1145,16 +1149,20 @@ webpackJsonp([24,211],{
 	    "en-US": [
 	      [
 	        "p",
-	        "The first and second level nav are both at the top."
+	        "The first and second level nav are both on the top."
 	      ],
 	      [
 	        "p",
-	        "A top-bottom structure of page layouts is used to top navigation. Generally, the mainnav is placed at the top of the page, and put log, the first level navigation, secondary menu(users, settings, notifications) from left to right in it. We always put contents in a fixed size navigation.( eg: ",
+	        "A top-bottom structure of page layouts is used for top navigation. Generally, the mainnav is placed at the top of the page, and includes the logo, the first level navigation, and the secondary menu (users, settings, notifications) from left to right in it. \nWe always put contents in a fixed size navigation (eg: ",
 	        [
 	          "code",
 	          "1200px"
 	        ],
-	        "), the layout of the whole page is stable, it's not affected by viewing enviroment,; Top-bottom structure is conform to top-bottom viewing habit, it's a classical navigation pattern of websites. This pattern will bring demonstration efficiency up of the mian workarea, but it will also occupie some vertical spaces. And, because the horizontal space of the navigation is limited, this pattern is not suitable for the first level navigation which has too much information."
+	        "), the layout of the whole page is stable, it's not affected by viewing area."
+	      ],
+	      [
+	        "p",
+	        "Top-bottom structure is conform with the top-bottom viewing habit, it's a classical navigation pattern of websites. This pattern demonstrates efficiency in the main workarea, while using some vertical space. And because the horizontal space of the navigation is limited, this pattern is not suitable for cases when the first level navigation contains many elements or links."
 	      ],
 	      [
 	        "blockquote",
@@ -1373,15 +1381,15 @@ webpackJsonp([24,211],{
 
 /***/ },
 
-/***/ 1075:
+/***/ 1078:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'aside-collapse': __webpack_require__(1003),
-	    'aside': __webpack_require__(1004),
-	    'ceiling': __webpack_require__(1005),
-	    'top-aside': __webpack_require__(1006),
-	    'top': __webpack_require__(1007),
+	    'aside-collapse': __webpack_require__(1006),
+	    'aside': __webpack_require__(1007),
+	    'ceiling': __webpack_require__(1008),
+	    'top-aside': __webpack_require__(1009),
+	    'top': __webpack_require__(1010),
 	}
 
 /***/ }

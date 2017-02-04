@@ -1,6 +1,6 @@
 webpackJsonp([120,211],{
 
-/***/ 929:
+/***/ 932:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -349,6 +349,44 @@ webpackJsonp([120,211],{
 	          [
 	            "td",
 	            "none"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "mouseEnterDelay"
+	          ],
+	          [
+	            "td",
+	            "delay time to show when mouse enter.unit: s"
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "0"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "mouseLeaveDelay"
+	          ],
+	          [
+	            "td",
+	            "delay time to hide when mouse leave.unit: s"
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "0.1"
 	          ]
 	        ],
 	        [

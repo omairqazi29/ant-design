@@ -1,6 +1,6 @@
 webpackJsonp([210,211],{
 
-/***/ 560:
+/***/ 557:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,563 @@ webpackJsonp([210,211],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.7.0"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-02-03"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added ",
+	          [
+	            "code",
+	            "danger"
+	          ],
+	          " button and ",
+	          [
+	            "code",
+	            "ghost"
+	          ],
+	          " button style. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4679"
+	            },
+	            "#4679"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Input element of AutoComplete can be customized. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4483"
+	            },
+	            "#4483"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Upgrade rc-cascader to ",
+	          [
+	            "code",
+	            "0.11.0"
+	          ],
+	          ", keyborad interactions supported. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4411"
+	            },
+	            "#4411"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "More popup directions are supported in notification. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4700"
+	            },
+	            "#4732"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Upgrade rc-steps to ",
+	          [
+	            "code",
+	            "2.3.0"
+	          ],
+	          ", added ",
+	          [
+	            "code",
+	            "progressDot"
+	          ],
+	          " property of Steps, which allows users to customize the display for Steps with progress dot style."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Upgrade rc-input-number to ",
+	          [
+	            "code",
+	            "3.0.0"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Input behavious will trigger ",
+	              [
+	                "code",
+	                "onChange"
+	              ],
+	              " callback now.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4265"
+	                },
+	                "#4265"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fixed ",
+	              [
+	                "code",
+	                "onKeyUp"
+	              ],
+	              ". ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4717"
+	                },
+	                "#4717"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added ",
+	          [
+	            "code",
+	            "vertical"
+	          ],
+	          " mode of Slider. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4473"
+	            },
+	            "#4473"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Tag"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Added preset colors. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4571"
+	                },
+	                "#4571"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Improvement vertical-align and margin."
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Add German localization for LocaleProvider.",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4686"
+	            },
+	            "#4686"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Add Swedish localization for LocaleProvider. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4455"
+	            },
+	            "#4455"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Add French localization for LocaleProvider. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4538"
+	            },
+	            "#4538"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added ",
+	          [
+	            "code",
+	            "onSearchChange"
+	          ],
+	          " callback of Transfer. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4464"
+	            },
+	            "#4464"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added ",
+	          [
+	            "code",
+	            "maskClosable"
+	          ],
+	          " property of Modal.confirm. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4488"
+	            },
+	            "#4488"
+	          ],
+	          ", ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4490"
+	            },
+	            "#4488"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added ",
+	          [
+	            "code",
+	            "hideRequiredMark"
+	          ],
+	          " property if Form. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4732"
+	            },
+	            "#4732"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Improvement upload list of Upload. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4516"
+	            },
+	            "#4516"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Upgrade rc-select to ",
+	          [
+	            "code",
+	            "6.7.1"
+	          ],
+	          "."
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fixed duplication ",
+	              [
+	                "code",
+	                "onChange"
+	              ],
+	              " callback. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/select/pull/156"
+	                },
+	                "#156@rc-select"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fixed displaying of initial value. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/select/pull/152"
+	                },
+	                "#152@rc-select"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Upgrade rc-tree-select to ",
+	          [
+	            "code",
+	            "1.9.0"
+	          ],
+	          "."
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Added ",
+	              [
+	                "code",
+	                "treeDefaultExpandedKeys"
+	              ],
+	              " property.",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/tree-select/pull/43"
+	                },
+	                "#43@rc-tree-select"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fixed an overflow-wrap issue. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/tree-select/pull/42"
+	                },
+	                "#42@rc-tree-select"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Added less variables: ",
+	          [
+	            "code",
+	            "@border-style-base"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@border-width-base"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@btn-danger-color"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@btn-danger-bg"
+	          ],
+	          " and etc."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fixed Badge misplace issue when browser zoom above 100%. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4747"
+	            },
+	            "#4747"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4290"
+	            },
+	            "#4290"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fixed a mis-align issue of fixed header Table. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4750"
+	            },
+	            "#4750"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Fixed Table scrolling lag issue in IE. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4522"
+	            },
+	            "#4522"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Add icon aliases: ",
+	          [
+	            "code",
+	            "addfile"
+	          ],
+	          " => ",
+	          [
+	            "code",
+	            "file-add"
+	          ],
+	          "，",
+	          [
+	            "code",
+	            "addfolder"
+	          ],
+	          " => ",
+	          [
+	            "code",
+	            "folder-open"
+	          ],
+	          ", and the old type names are still working. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4758"
+	            },
+	            "#4758"
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.6.4"
@@ -5802,6 +6359,17 @@ webpackJsonp([210,211],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.7.0"
+	        },
+	        "2.7.0"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

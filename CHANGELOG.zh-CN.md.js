@@ -1,6 +1,6 @@
 webpackJsonp([209,211],{
 
-/***/ 561:
+/***/ 558:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,547 @@ webpackJsonp([209,211],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.7.0"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-02-03"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Button 新增 ",
+	          [
+	            "code",
+	            "danger"
+	          ],
+	          " 和 ",
+	          [
+	            "code",
+	            "ghost"
+	          ],
+	          " 属性。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4679"
+	            },
+	            "#4679"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "AutoComplete 支持自定义输入框的用法。 ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4483"
+	            },
+	            "#4483"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "升级了 rc-cascader 到 0.11.0，支持键盘操作。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4411"
+	            },
+	            "#4411"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "notification 支持更多弹出方向。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4700"
+	            },
+	            "#4732"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "升级了 rc-steps 到 2.3.0，Steps 新增 ",
+	          [
+	            "code",
+	            "progressDot"
+	          ],
+	          " 属性，支持自定义点状步骤条的样式。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4659"
+	            },
+	            "#4659"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "升级了 rc-input-number 到 3.0.0"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "现在输入时也会触发 ",
+	              [
+	                "code",
+	                "onChange"
+	              ],
+	              "。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4265"
+	                },
+	                "#4265"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了 ",
+	              [
+	                "code",
+	                "onKeyUp"
+	              ],
+	              " 事件。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4717"
+	                },
+	                "#4717"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Slider 增加 ",
+	          [
+	            "code",
+	            "veritical"
+	          ],
+	          " 模式。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4473"
+	            },
+	            "#4473"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Tag"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "增加了预设颜色。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4571"
+	                },
+	                "#4571"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "调整了垂直对齐和默认间距。"
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "添加了对德语的支持。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4686"
+	            },
+	            "#4686"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "添加了对瑞典语的支持。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4455"
+	            },
+	            "#4455"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "添加了对法语的支持。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4538"
+	            },
+	            "#4538"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Transfer 添加了 ",
+	          [
+	            "code",
+	            "onSearchChange"
+	          ],
+	          " 回调。 ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4464"
+	            },
+	            "#4464"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Modal.confirm 添加了 maskClosable 配置项。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4488"
+	            },
+	            "#4488"
+	          ],
+	          ", ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4490"
+	            },
+	            "#4488"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Form 增加 ",
+	          [
+	            "code",
+	            "hideRequiredMark"
+	          ],
+	          " 属性。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4732"
+	            },
+	            "#4732"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "改进了 Upload 的列表图片预览。 ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4516"
+	            },
+	            "#4516"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "升级了 rc-select 到 6.7.1。"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了 Select 的 ",
+	              [
+	                "code",
+	                "onChange"
+	              ],
+	              " 回调重复触发的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/select/pull/156"
+	                },
+	                "#156@rc-select"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了 Select 显示初始化值的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/select/pull/152"
+	                },
+	                "#152@rc-select"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "升级 rc-tree-select 到 ",
+	          [
+	            "code",
+	            "1.9.0"
+	          ],
+	          "。"
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "新增 ",
+	              [
+	                "code",
+	                "treeDefaultExpandedKeys"
+	              ],
+	              " 属性。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/tree-select/pull/43"
+	                },
+	                "#43@rc-tree-select"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了文字溢出换行问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/react-component/tree-select/pull/42"
+	                },
+	                "#42@rc-tree-select"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "新增 less 变量: ",
+	          [
+	            "code",
+	            "@border-style-base"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@border-width-base"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@btn-danger-color"
+	          ],
+	          " ",
+	          [
+	            "code",
+	            "@btn-danger-bg"
+	          ],
+	          " 等。"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复了 Badge 在页面放大时错位的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4747"
+	            },
+	            "#4747"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4290"
+	            },
+	            "#4290"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复一个固定表头的表格错位问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4750"
+	            },
+	            "#4750"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "修复一个 IE 下表格滚动时卡顿的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4522"
+	            },
+	            "#4522"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "添加别名以修正图标命名风格：",
+	          [
+	            "code",
+	            "addfile"
+	          ],
+	          " => ",
+	          [
+	            "code",
+	            "file-add"
+	          ],
+	          "，",
+	          [
+	            "code",
+	            "addfolder"
+	          ],
+	          " => ",
+	          [
+	            "code",
+	            "folder-open"
+	          ],
+	          "，原有的命名依然有效。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4758"
+	            },
+	            "#4758"
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.6.4"
@@ -5664,6 +6205,17 @@ webpackJsonp([209,211],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.7.0"
+	        },
+	        "2.7.0"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

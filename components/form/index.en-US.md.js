@@ -1,6 +1,6 @@
 webpackJsonp([176,211],{
 
-/***/ 692:
+/***/ 691:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -280,6 +280,25 @@ webpackJsonp([176,211],{
 	          [
 	            "td"
 	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "hideRequiredMark"
+	          ],
+	          [
+	            "td",
+	            "Hide required mark of all form items"
+	          ],
+	          [
+	            "td",
+	            "Boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
+	          ]
 	        ]
 	      ]
 	    ],
@@ -366,6 +385,21 @@ webpackJsonp([176,211],{
 	          [
 	            "td",
 	            "Function(props): Object{ fieldName: Object{ value } }"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "onValuesChange"
+	          ],
+	          [
+	            "td",
+	            "A handler while value of any field is changed"
+	          ],
+	          [
+	            "td",
+	            "(props, values) => void"
 	          ]
 	        ]
 	      ]
@@ -521,7 +555,7 @@ webpackJsonp([176,211],{
 	          ],
 	          [
 	            "td",
-	            "Validate the specified fields and get theirs values and errors."
+	            "Validate the specified fields and get theirs values and errors. If you don't specify the parameter of fieldNames, you will vaildate all fields."
 	          ],
 	          [
 	            "td",
@@ -573,6 +607,21 @@ webpackJsonp([176,211],{
 	          "tr",
 	          [
 	            "td",
+	            "getFieldsError"
+	          ],
+	          [
+	            "td",
+	            "Get the specified fields' error. If you don't specify a parameter, you will get all fields' error."
+	          ],
+	          [
+	            "td",
+	            "Function([names: string[]])"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
 	            "isFieldValidating"
 	          ],
 	          [
@@ -582,6 +631,56 @@ webpackJsonp([176,211],{
 	          [
 	            "td",
 	            "Function(name)"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "isFieldTouched"
+	          ],
+	          [
+	            "td",
+	            "Check whether a field is touched by ",
+	            [
+	              "code",
+	              "getFieldDecorator"
+	            ],
+	            "'s ",
+	            [
+	              "code",
+	              "options.trigger"
+	            ],
+	            " event"
+	          ],
+	          [
+	            "td",
+	            "(name: string) => boolean"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "isFieldsTouched"
+	          ],
+	          [
+	            "td",
+	            "Check whether any of fields is touched by ",
+	            [
+	              "code",
+	              "getFieldDecorator"
+	            ],
+	            "'s ",
+	            [
+	              "code",
+	              "options.trigger"
+	            ],
+	            " event"
+	          ],
+	          [
+	            "td",
+	            "(names?: string[]) => boolean"
 	          ]
 	        ],
 	        [

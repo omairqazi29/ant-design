@@ -1,6 +1,6 @@
 webpackJsonp([137,211],{
 
-/***/ 844:
+/***/ 845:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -343,6 +343,30 @@ webpackJsonp([137,211],{
 	          [
 	            "td",
 	            "boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "vertical"
+	          ],
+	          [
+	            "td",
+	            "值为 ",
+	            [
+	              "code",
+	              "true"
+	            ],
+	            " 时，Slider 为垂直方向"
+	          ],
+	          [
+	            "td",
+	            "Boolean"
 	          ],
 	          [
 	            "td",

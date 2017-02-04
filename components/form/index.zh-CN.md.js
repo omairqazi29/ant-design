@@ -1,6 +1,6 @@
 webpackJsonp([175,211],{
 
-/***/ 693:
+/***/ 692:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -263,6 +263,25 @@ webpackJsonp([175,211],{
 	          [
 	            "td"
 	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "hideRequiredMark"
+	          ],
+	          [
+	            "td",
+	            "隐藏所有表单项的必选标记"
+	          ],
+	          [
+	            "td",
+	            "Boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
+	          ]
 	        ]
 	      ]
 	    ],
@@ -348,6 +367,21 @@ webpackJsonp([175,211],{
 	          [
 	            "td",
 	            "Function(props): Object{ fieldName: Object{ value } }"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "onValuesChange"
+	          ],
+	          [
+	            "td",
+	            "任一表单域的值发生改变时的回调"
+	          ],
+	          [
+	            "td",
+	            "(props, values) => void"
 	          ]
 	        ]
 	      ]
@@ -489,7 +523,7 @@ webpackJsonp([175,211],{
 	          ],
 	          [
 	            "td",
-	            "校验并获取一组输入域的值与 Error"
+	            "校验并获取一组输入域的值与 Error，若 fieldNames 参数为空，则校验全部组件"
 	          ],
 	          [
 	            "td",
@@ -541,6 +575,21 @@ webpackJsonp([175,211],{
 	          "tr",
 	          [
 	            "td",
+	            "getFieldsError"
+	          ],
+	          [
+	            "td",
+	            "获取一组输入控件的 Error ，如不传入参数，则获取全部组件的 Error"
+	          ],
+	          [
+	            "td",
+	            "Function([names: string[]])"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
 	            "isFieldValidating"
 	          ],
 	          [
@@ -550,6 +599,54 @@ webpackJsonp([175,211],{
 	          [
 	            "td",
 	            "Function(name)"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "isFieldTouched"
+	          ],
+	          [
+	            "td",
+	            "判断一个输入控件是否经历过 ",
+	            [
+	              "code",
+	              "getFieldDecorator"
+	            ],
+	            " 的值收集时机 ",
+	            [
+	              "code",
+	              "options.trigger"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "(name: string) => boolean"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "isFieldsTouched"
+	          ],
+	          [
+	            "td",
+	            "判断是否任一输入控件经历过 ",
+	            [
+	              "code",
+	              "getFieldDecorator"
+	            ],
+	            " 的值收集时机 ",
+	            [
+	              "code",
+	              "options.trigger"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "(names?: string[]) => boolean"
 	          ]
 	        ],
 	        [

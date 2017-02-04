@@ -1,6 +1,6 @@
 webpackJsonp([2,211],{
 
-/***/ 678:
+/***/ 677:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -236,7 +236,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 679:
+/***/ 678:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -421,7 +421,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 680:
+/***/ 679:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -757,7 +757,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 681:
+/***/ 680:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -994,7 +994,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 682:
+/***/ 681:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1199,7 +1199,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 683:
+/***/ 682:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1311,7 +1311,7 @@ webpackJsonp([2,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Form<span class=\"token punctuation\">,</span> Input } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> CustomizedForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">onFieldsChange</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> changedFields<span class=\"token punctuation\">)</span> {\n    props<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>changedFields<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">mapPropsToFields</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> {\n    return {\n      username<span class=\"token punctuation\">:</span> {\n        <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>username<span class=\"token punctuation\">,</span>\n        value<span class=\"token punctuation\">:</span> props<span class=\"token punctuation\">.</span>username<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">.</span><span class=\"token function\">toUpperCase</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n  <span class=\"token keyword\">const</span> { getFieldDecorator } <span class=\"token operator\">=</span> props<span class=\"token punctuation\">.</span>form<span class=\"token comment\" spellcheck=\"true\">;</span>\n  return <span class=\"token punctuation\">(</span>\n    <span class=\"token operator\">&lt;</span>Form inline<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>FormItem label<span class=\"token operator\">=</span><span class=\"token string\">\"Username\"</span><span class=\"token operator\">></span>\n        {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'username'</span><span class=\"token punctuation\">,</span> {\n          rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Username is required!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n        }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Input <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Form<span class=\"token operator\">></span>\n  <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Demo <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      fields<span class=\"token punctuation\">:</span> {\n        username<span class=\"token punctuation\">:</span> {\n          value<span class=\"token punctuation\">:</span> <span class=\"token string\">'benjycui'</span><span class=\"token punctuation\">,</span>\n        }<span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleFormChange</span><span class=\"token punctuation\">(</span>changedFields<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      fields<span class=\"token punctuation\">:</span> { <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>fields<span class=\"token punctuation\">,</span> <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>changedFields }<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> fields <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>fields<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>CustomizedForm {<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>fields} onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleFormChange} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>pre className<span class=\"token operator\">=</span><span class=\"token string\">\"language-bash\"</span><span class=\"token operator\">></span>\n          {JSON<span class=\"token punctuation\">.</span><span class=\"token function\">stringify</span><span class=\"token punctuation\">(</span>fields<span class=\"token punctuation\">,</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span> <span class=\"token number\">2</span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>pre<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Demo <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Form<span class=\"token punctuation\">,</span> Input } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> CustomizedForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">onFieldsChange</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> changedFields<span class=\"token punctuation\">)</span> {\n    props<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>changedFields<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">mapPropsToFields</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> {\n    return {\n      username<span class=\"token punctuation\">:</span> {\n        <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>username<span class=\"token punctuation\">,</span>\n        value<span class=\"token punctuation\">:</span> props<span class=\"token punctuation\">.</span>username<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">.</span><span class=\"token function\">toUpperCase</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">onValuesChange</span><span class=\"token punctuation\">(</span>_<span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span> {\n    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>values<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n  <span class=\"token keyword\">const</span> { getFieldDecorator } <span class=\"token operator\">=</span> props<span class=\"token punctuation\">.</span>form<span class=\"token comment\" spellcheck=\"true\">;</span>\n  return <span class=\"token punctuation\">(</span>\n    <span class=\"token operator\">&lt;</span>Form inline<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>FormItem label<span class=\"token operator\">=</span><span class=\"token string\">\"Username\"</span><span class=\"token operator\">></span>\n        {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'username'</span><span class=\"token punctuation\">,</span> {\n          rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Username is required!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n        }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Input <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Form<span class=\"token operator\">></span>\n  <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> Demo <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      fields<span class=\"token punctuation\">:</span> {\n        username<span class=\"token punctuation\">:</span> {\n          value<span class=\"token punctuation\">:</span> <span class=\"token string\">'benjycui'</span><span class=\"token punctuation\">,</span>\n        }<span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleFormChange</span><span class=\"token punctuation\">(</span>changedFields<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      fields<span class=\"token punctuation\">:</span> { <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>fields<span class=\"token punctuation\">,</span> <span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>changedFields }<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> fields <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>fields<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>CustomizedForm {<span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>fields} onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleFormChange} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>pre className<span class=\"token operator\">=</span><span class=\"token string\">\"language-bash\"</span><span class=\"token operator\">></span>\n          {JSON<span class=\"token punctuation\">.</span><span class=\"token function\">stringify</span><span class=\"token punctuation\">(</span>fields<span class=\"token punctuation\">,</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">,</span> <span class=\"token number\">2</span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>pre<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Demo <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -1335,6 +1335,9 @@ webpackJsonp([2,211],{
 	          value: props.username.value.toUpperCase()
 	        })
 	      };
+	    },
+	    onValuesChange: function onValuesChange(_, values) {
+	      console.log(values);
 	    }
 	  })(function (props) {
 	    var getFieldDecorator = props.form.getFieldDecorator;
@@ -1399,7 +1402,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 684:
+/***/ 683:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1455,7 +1458,7 @@ webpackJsonp([2,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Form<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> HorizontalLoginForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n    e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFields</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>err<span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!err<span class=\"token punctuation\">)</span> {\n        console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Received values of form: '</span><span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { getFieldDecorator } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>Form inline onSubmit<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleSubmit}<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem<span class=\"token operator\">></span>\n          {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'userName'</span><span class=\"token punctuation\">,</span> {\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your username!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Input addonBefore<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Username\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem<span class=\"token operator\">></span>\n          {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">,</span> {\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your Password!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Input addonBefore<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"lock\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} type<span class=\"token operator\">=</span><span class=\"token string\">\"password\"</span> placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Password\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> htmlType<span class=\"token operator\">=</span><span class=\"token string\">\"submit\"</span><span class=\"token operator\">></span>Log <span class=\"token keyword\">in</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Form<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>HorizontalLoginForm <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Form<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> FormItem <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span>Item<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">hasErrors</span><span class=\"token punctuation\">(</span>fieldsError<span class=\"token punctuation\">)</span> {\n  return Object<span class=\"token punctuation\">.</span><span class=\"token function\">keys</span><span class=\"token punctuation\">(</span>fieldsError<span class=\"token punctuation\">)</span><span class=\"token punctuation\">.</span><span class=\"token function\">some</span><span class=\"token punctuation\">(</span>field <span class=\"token operator\">=</span><span class=\"token operator\">></span> fieldsError<span class=\"token punctuation\">[</span>field<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\n<span class=\"token keyword\">const</span> HorizontalLoginForm <span class=\"token operator\">=</span> Form<span class=\"token punctuation\">.</span><span class=\"token function\">create</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">componentDidMount</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token operator\">/</span><span class=\"token operator\">/</span> <span class=\"token keyword\">To</span> disabled submit button at the beginning<span class=\"token punctuation\">.</span>\n    this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFields</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleSubmit</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> {\n    e<span class=\"token punctuation\">.</span><span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token punctuation\">.</span><span class=\"token function\">validateFields</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>err<span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>!err<span class=\"token punctuation\">)</span> {\n        console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'Received values of form: '</span><span class=\"token punctuation\">,</span> values<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { getFieldDecorator<span class=\"token punctuation\">,</span> getFieldsError<span class=\"token punctuation\">,</span> getFieldError<span class=\"token punctuation\">,</span> isFieldTouched } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>form<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n    <span class=\"token operator\">/</span><span class=\"token operator\">/</span> Only show error after a field is touched<span class=\"token punctuation\">.</span>\n    <span class=\"token keyword\">const</span> userNameError <span class=\"token operator\">=</span> <span class=\"token function\">isFieldTouched</span><span class=\"token punctuation\">(</span><span class=\"token string\">'userName'</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token function\">getFieldError</span><span class=\"token punctuation\">(</span><span class=\"token string\">'userName'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> passwordError <span class=\"token operator\">=</span> <span class=\"token function\">isFieldTouched</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">&amp;</span><span class=\"token operator\">&amp;</span> <span class=\"token function\">getFieldError</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>Form inline onSubmit<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleSubmit}<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          validateStatus<span class=\"token operator\">=</span>{userNameError <span class=\"token operator\">?</span> <span class=\"token string\">'error'</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">''</span>}\n          help<span class=\"token operator\">=</span>{userNameError || <span class=\"token string\">''</span>}\n        <span class=\"token operator\">></span>\n          {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'userName'</span><span class=\"token punctuation\">,</span> {\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your username!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Input addonBefore<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"user\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Username\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem\n          validateStatus<span class=\"token operator\">=</span>{passwordError <span class=\"token operator\">?</span> <span class=\"token string\">'error'</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">''</span>}\n          help<span class=\"token operator\">=</span>{passwordError || <span class=\"token string\">''</span>}\n        <span class=\"token operator\">></span>\n          {<span class=\"token function\">getFieldDecorator</span><span class=\"token punctuation\">(</span><span class=\"token string\">'password'</span><span class=\"token punctuation\">,</span> {\n            rules<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{ required<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">,</span> message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Please input your Password!'</span> }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n          }<span class=\"token punctuation\">)</span><span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Input addonBefore<span class=\"token operator\">=</span>{<span class=\"token operator\">&lt;</span>Icon type<span class=\"token operator\">=</span><span class=\"token string\">\"lock\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>} type<span class=\"token operator\">=</span><span class=\"token string\">\"password\"</span> placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"Password\"</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>FormItem<span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Button\n            type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span>\n            htmlType<span class=\"token operator\">=</span><span class=\"token string\">\"submit\"</span>\n            disabled<span class=\"token operator\">=</span>{<span class=\"token function\">hasErrors</span><span class=\"token punctuation\">(</span><span class=\"token function\">getFieldsError</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span>}\n          <span class=\"token operator\">></span>\n            Log <span class=\"token keyword\">in</span>\n          <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>FormItem<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Form<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>HorizontalLoginForm <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -1467,8 +1470,18 @@ webpackJsonp([2,211],{
 
 	  var FormItem = _antd.Form.Item;
 
+	  function hasErrors(fieldsError) {
+	    return Object.keys(fieldsError).some(function (field) {
+	      return fieldsError[field];
+	    });
+	  }
+
 	  var HorizontalLoginForm = _antd.Form.create()(React.createClass({
 	    displayName: "HorizontalLoginForm",
+	    componentDidMount: function componentDidMount() {
+	      // To disabled submit button at the beginning.
+	      this.props.form.validateFields();
+	    },
 	    handleSubmit: function handleSubmit(e) {
 	      e.preventDefault();
 	      this.props.form.validateFields(function (err, values) {
@@ -1478,7 +1491,14 @@ webpackJsonp([2,211],{
 	      });
 	    },
 	    render: function render() {
-	      var getFieldDecorator = this.props.form.getFieldDecorator;
+	      var _props$form = this.props.form,
+	          getFieldDecorator = _props$form.getFieldDecorator,
+	          getFieldsError = _props$form.getFieldsError,
+	          getFieldError = _props$form.getFieldError,
+	          isFieldTouched = _props$form.isFieldTouched; // Only show error after a field is touched.
+
+	      var userNameError = isFieldTouched('userName') && getFieldError('userName');
+	      var passwordError = isFieldTouched('password') && getFieldError('password');
 	      return React.createElement(
 	        _antd.Form,
 	        {
@@ -1487,7 +1507,10 @@ webpackJsonp([2,211],{
 	        },
 	        React.createElement(
 	          FormItem,
-	          null,
+	          {
+	            validateStatus: userNameError ? 'error' : '',
+	            help: userNameError || ''
+	          },
 	          getFieldDecorator('userName', {
 	            rules: [{
 	              required: true,
@@ -1502,7 +1525,10 @@ webpackJsonp([2,211],{
 	        ),
 	        React.createElement(
 	          FormItem,
-	          null,
+	          {
+	            validateStatus: passwordError ? 'error' : '',
+	            help: passwordError || ''
+	          },
 	          getFieldDecorator('password', {
 	            rules: [{
 	              required: true,
@@ -1523,7 +1549,8 @@ webpackJsonp([2,211],{
 	            _antd.Button,
 	            {
 	              type: "primary",
-	              htmlType: "submit"
+	              htmlType: "submit",
+	              disabled: hasErrors(getFieldsError())
 	            },
 	            "Log in"
 	          )
@@ -1538,7 +1565,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 685:
+/***/ 684:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1755,7 +1782,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 686:
+/***/ 685:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1918,7 +1945,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 687:
+/***/ 686:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2281,7 +2308,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 688:
+/***/ 687:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2512,7 +2539,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 689:
+/***/ 688:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2864,7 +2891,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 690:
+/***/ 689:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3184,7 +3211,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 691:
+/***/ 690:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3360,24 +3387,24 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 1043:
+/***/ 1046:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced-search': __webpack_require__(678),
-	    'coordinated': __webpack_require__(679),
-	    'customized-form-controls': __webpack_require__(680),
-	    'dynamic-form-item': __webpack_require__(681),
-	    'form-in-modal': __webpack_require__(682),
-	    'global-state': __webpack_require__(683),
-	    'horizontal-login': __webpack_require__(684),
-	    'layout': __webpack_require__(685),
-	    'normal-login': __webpack_require__(686),
-	    'register': __webpack_require__(687),
-	    'time-related-controls': __webpack_require__(688),
-	    'validate-other': __webpack_require__(689),
-	    'validate-static': __webpack_require__(690),
-	    'without-form-create': __webpack_require__(691),
+	    'advanced-search': __webpack_require__(677),
+	    'coordinated': __webpack_require__(678),
+	    'customized-form-controls': __webpack_require__(679),
+	    'dynamic-form-item': __webpack_require__(680),
+	    'form-in-modal': __webpack_require__(681),
+	    'global-state': __webpack_require__(682),
+	    'horizontal-login': __webpack_require__(683),
+	    'layout': __webpack_require__(684),
+	    'normal-login': __webpack_require__(685),
+	    'register': __webpack_require__(686),
+	    'time-related-controls': __webpack_require__(687),
+	    'validate-other': __webpack_require__(688),
+	    'validate-static': __webpack_require__(689),
+	    'without-form-create': __webpack_require__(690),
 	}
 
 /***/ }

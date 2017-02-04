@@ -1,6 +1,6 @@
 webpackJsonp([155,211],{
 
-/***/ 770:
+/***/ 769:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -653,6 +653,28 @@ webpackJsonp([155,211],{
 	          [
 	            "td",
 	            "取消"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "maskClosable"
+	          ],
+	          [
+	            "td",
+	            "点击蒙层是否允许关闭"
+	          ],
+	          [
+	            "td",
+	            "Boolean"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "false"
+	            ]
 	          ]
 	        ]
 	      ]

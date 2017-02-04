@@ -1,6 +1,6 @@
 webpackJsonp([163,211],{
 
-/***/ 735:
+/***/ 734:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -39,21 +39,34 @@ webpackJsonp([163,211],{
 	      ]
 	    ],
 	    [
-	      "h3",
-	      "Add a language"
-	    ],
-	    [
 	      "p",
-	      "We supply an English locale package. Other language users can create a locale package based on ",
+	      "我们提供了英语，中文，俄语，法语，德语等多种语言支持，所有语言包可以在 ",
 	      [
 	        "a",
 	        {
 	          "title": null,
-	          "href": "https://github.com/ant-design/ant-design/blob/26b1f37392a278285aec6c573b99c6feea09e218/components/locale-provider/en_US.js"
+	          "href": "https://github.com/ant-design/ant-design/blob/master/components/locale-provider/"
 	        },
-	        "en_US"
+	        "这里"
 	      ],
-	      " and send us a pull request."
+	      " 找到。"
+	    ],
+	    [
+	      "h3",
+	      "增加语言包"
+	    ],
+	    [
+	      "p",
+	      "如果你找不到你需要的语言包，欢迎你在 ",
+	      [
+	        "a",
+	        {
+	          "title": null,
+	          "href": "https://github.com/ant-design/ant-design/blob/master/components/locale-provider/en_US.tsx"
+	        },
+	        "英文语言包"
+	      ],
+	      " 的基础上创建一个新的语言包，并给我们 Pull Request。"
 	    ],
 	    [
 	      "h3",

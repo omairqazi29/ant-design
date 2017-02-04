@@ -1,6 +1,6 @@
 webpackJsonp([138,211],{
 
-/***/ 843:
+/***/ 844:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -348,6 +348,25 @@ webpackJsonp([138,211],{
 	          [
 	            "td",
 	            "boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "vertical"
+	          ],
+	          [
+	            "td",
+	            "If true, the slider will be vertical."
+	          ],
+	          [
+	            "td",
+	            "Boolean"
 	          ],
 	          [
 	            "td",

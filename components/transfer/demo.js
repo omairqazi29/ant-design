@@ -1,6 +1,6 @@
-webpackJsonp([26,211],{
+webpackJsonp([27,211],{
 
-/***/ 931:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -149,7 +149,7 @@ webpackJsonp([26,211],{
 
 /***/ },
 
-/***/ 932:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -302,7 +302,7 @@ webpackJsonp([26,211],{
 
 /***/ },
 
-/***/ 933:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -444,7 +444,7 @@ webpackJsonp([26,211],{
 
 /***/ },
 
-/***/ 934:
+/***/ 937:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -455,7 +455,7 @@ webpackJsonp([26,211],{
 
 /***/ },
 
-/***/ 935:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -583,15 +583,15 @@ webpackJsonp([26,211],{
 
 /***/ },
 
-/***/ 1071:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced': __webpack_require__(931),
-	    'basic': __webpack_require__(932),
-	    'custom-item': __webpack_require__(933),
-	    'large-data': __webpack_require__(934),
-	    'search': __webpack_require__(935),
+	    'advanced': __webpack_require__(934),
+	    'basic': __webpack_require__(935),
+	    'custom-item': __webpack_require__(936),
+	    'large-data': __webpack_require__(937),
+	    'search': __webpack_require__(938),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
 webpackJsonp([117,211],{
 
-/***/ 937:
+/***/ 940:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -461,6 +461,29 @@ webpackJsonp([117,211],{
 	              "code",
 	              "{ height: 32, offset: 32 }"
 	            ]
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "onSearchChange"
+	          ],
+	          [
+	            "td",
+	            "搜索框内容时改变时的回调函数"
+	          ],
+	          [
+	            "td",
+	            "(direction: 'left'"
+	          ],
+	          [
+	            "td",
+	            "'right', event: Event): void"
+	          ],
+	          [
+	            "td",
+	            "-"
 	          ]
 	        ]
 	      ]

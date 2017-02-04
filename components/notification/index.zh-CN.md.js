@@ -16,7 +16,7 @@ webpackJsonp([153,211],{
 	    ],
 	    [
 	      "p",
-	      "在系统右上角显示通知提醒信息。经常用于以下情况："
+	      "在系统四个角显示通知提醒信息。经常用于以下情况："
 	    ],
 	    [
 	      "ul",
@@ -321,6 +321,44 @@ webpackJsonp([153,211],{
 	            "td",
 	            "4.5"
 	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "弹出位置，可选 ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            "topRight"
+	          ]
 	        ]
 	      ]
 	    ],
@@ -345,11 +383,11 @@ webpackJsonp([153,211],{
 	      "pre",
 	      {
 	        "lang": "js",
-	        "highlighted": "notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  top<span class=\"token punctuation\">:</span> <span class=\"token number\">100</span><span class=\"token punctuation\">,</span>\n  duration<span class=\"token punctuation\">:</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	        "highlighted": "notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  placement<span class=\"token punctuation\">:</span> <span class=\"token string\">'bottomRight'</span><span class=\"token punctuation\">,</span>\n  bottom<span class=\"token punctuation\">:</span> <span class=\"token number\">50</span><span class=\"token punctuation\">,</span>\n  duration<span class=\"token punctuation\">:</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	      },
 	      [
 	        "code",
-	        "notification.config({\n  top: 100,\n  duration: 3,\n});"
+	        "notification.config({\n  placement: 'bottomRight',\n  bottom: 50,\n  duration: 3,\n});"
 	      ]
 	    ],
 	    [
@@ -382,11 +420,49 @@ webpackJsonp([153,211],{
 	          "tr",
 	          [
 	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "弹出位置，可选 ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            "topRight"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
 	            "top"
 	          ],
 	          [
 	            "td",
-	            "消息距离顶部的位置"
+	            "消息从顶部弹出时，距离顶部的位置，单位像素。"
 	          ],
 	          [
 	            "td",
@@ -394,7 +470,26 @@ webpackJsonp([153,211],{
 	          ],
 	          [
 	            "td",
-	            "24px"
+	            "24"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "bottom"
+	          ],
+	          [
+	            "td",
+	            "消息从底部弹出时，距离底部的位置，单位像素。"
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "24"
 	          ]
 	        ],
 	        [

@@ -1,6 +1,6 @@
 webpackJsonp([134,211],{
 
-/***/ 860:
+/***/ 863:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -234,6 +234,25 @@ webpackJsonp([134,211],{
 	          [
 	            "td",
 	            "horizontal"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "progressDot"
+	          ],
+	          [
+	            "td",
+	            "Steps with progress dot style, customize the progress dot by setting it to a function"
+	          ],
+	          [
+	            "td",
+	            "Boolean or (iconDot, {index, status, title, description}) => ReactNode"
+	          ],
+	          [
+	            "td",
+	            "false"
 	          ]
 	        ]
 	      ]

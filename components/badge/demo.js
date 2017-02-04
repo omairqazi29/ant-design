@@ -1,6 +1,6 @@
-webpackJsonp([17,211],{
+webpackJsonp([18,211],{
 
-/***/ 588:
+/***/ 586:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -82,7 +82,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 589:
+/***/ 587:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -251,7 +251,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 590:
+/***/ 588:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -349,7 +349,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 591:
+/***/ 589:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -440,7 +440,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 592:
+/***/ 590:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -503,7 +503,7 @@ webpackJsonp([17,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Badge } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">25</span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">4</span>} style<span class=\"token operator\">=</span>{{ backgroundColor<span class=\"token punctuation\">:</span> <span class=\"token string\">'#fff'</span><span class=\"token punctuation\">,</span> color<span class=\"token punctuation\">:</span> <span class=\"token string\">'#999'</span><span class=\"token punctuation\">,</span> borderColor<span class=\"token punctuation\">:</span> <span class=\"token string\">'#d9d9d9'</span> }} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">109</span>} style<span class=\"token operator\">=</span>{{ backgroundColor<span class=\"token punctuation\">:</span> <span class=\"token string\">'#87d068'</span> }} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Badge } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">25</span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">4</span>} style<span class=\"token operator\">=</span>{{ backgroundColor<span class=\"token punctuation\">:</span> <span class=\"token string\">'#fff'</span><span class=\"token punctuation\">,</span> color<span class=\"token punctuation\">:</span> <span class=\"token string\">'#999'</span><span class=\"token punctuation\">,</span> boxShadow<span class=\"token punctuation\">:</span> <span class=\"token string\">'0 0 0 1px #d9d9d9 inset'</span> }} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span>Badge count<span class=\"token operator\">=</span>{<span class=\"token number\">109</span>} style<span class=\"token operator\">=</span>{{ backgroundColor<span class=\"token punctuation\">:</span> <span class=\"token string\">'#87d068'</span> }} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -524,7 +524,7 @@ webpackJsonp([17,211],{
 	      style: {
 	        backgroundColor: '#fff',
 	        color: '#999',
-	        borderColor: '#d9d9d9'
+	        boxShadow: '0 0 0 1px #d9d9d9 inset'
 	      }
 	    }),
 	    React.createElement(_antd.Badge, {
@@ -539,7 +539,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 593:
+/***/ 591:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -695,7 +695,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 594:
+/***/ 592:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -810,17 +810,17 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 1032:
+/***/ 1035:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(588),
-	    'change': __webpack_require__(589),
-	    'dot': __webpack_require__(590),
-	    'link': __webpack_require__(591),
-	    'no-wrapper': __webpack_require__(592),
-	    'overflow': __webpack_require__(593),
-	    'status': __webpack_require__(594),
+	    'basic': __webpack_require__(586),
+	    'change': __webpack_require__(587),
+	    'dot': __webpack_require__(588),
+	    'link': __webpack_require__(589),
+	    'no-wrapper': __webpack_require__(590),
+	    'overflow': __webpack_require__(591),
+	    'status': __webpack_require__(592),
 	}
 
 /***/ }

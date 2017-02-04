@@ -16,7 +16,7 @@ webpackJsonp([154,211],{
 	    ],
 	    [
 	      "p",
-	      "To display a notification message at the top right of the view port. Typically it can be\nused in the following cases:"
+	      "To display a notification message at the four corner of the view port. Typically it can be\nused in the following cases:"
 	    ],
 	    [
 	      "ul",
@@ -325,6 +325,44 @@ webpackJsonp([154,211],{
 	            "td",
 	            "4.5"
 	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "To set the position, which can be one of ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            "topRight"
+	          ]
 	        ]
 	      ]
 	    ],
@@ -358,11 +396,11 @@ webpackJsonp([154,211],{
 	      "pre",
 	      {
 	        "lang": "js",
-	        "highlighted": "notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  top<span class=\"token punctuation\">:</span> <span class=\"token number\">100</span><span class=\"token punctuation\">,</span>\n  duration<span class=\"token punctuation\">:</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+	        "highlighted": "notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  placement<span class=\"token punctuation\">:</span> <span class=\"token string\">'bottomRight'</span><span class=\"token punctuation\">,</span>\n  bottom<span class=\"token punctuation\">:</span> <span class=\"token number\">50</span><span class=\"token punctuation\">,</span>\n  duration<span class=\"token punctuation\">:</span> <span class=\"token number\">3</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	      },
 	      [
 	        "code",
-	        "notification.config({\n  top: 100,\n  duration: 3,\n});"
+	        "notification.config({\n  placement: 'bottomRight',\n  bottom: 50,\n  duration: 3,\n});"
 	      ]
 	    ],
 	    [
@@ -395,11 +433,59 @@ webpackJsonp([154,211],{
 	          "tr",
 	          [
 	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "To set the position, which can be one of ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "string"
+	          ],
+	          [
+	            "td",
+	            "topRight"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
 	            "top"
 	          ],
 	          [
 	            "td",
-	            "Offset to top of message"
+	            "Offset to top, when message pop up from ",
+	            [
+	              "code",
+	              "topRight"
+	            ],
+	            " or ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " (unit: pixels)."
 	          ],
 	          [
 	            "td",
@@ -407,7 +493,36 @@ webpackJsonp([154,211],{
 	          ],
 	          [
 	            "td",
-	            "24px"
+	            "24"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "bottom"
+	          ],
+	          [
+	            "td",
+	            "Offset to bottom, when message pop up from ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ],
+	            " or ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " (unit: pixels)."
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "24"
 	          ]
 	        ],
 	        [

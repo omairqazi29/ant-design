@@ -1,6 +1,6 @@
-webpackJsonp([16,211],{
+webpackJsonp([12,211],{
 
-/***/ 603:
+/***/ 601:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -8,78 +8,65 @@ webpackJsonp([16,211],{
 	    "zh-CN": [
 	      [
 	        "p",
-	        "按钮有四种类型：主按钮、次按钮、幽灵按钮、虚线按钮。"
+	        "按钮有四种类型：主按钮、次按钮、虚线按钮、危险按钮。主按钮在同一个操作区域最多出现一次。"
 	      ],
 	      [
-	        "p",
-	        "通过设置 ",
+	        "blockquote",
 	        [
-	          "code",
-	          "type"
-	        ],
-	        " 为 ",
-	        [
-	          "code",
-	          "primary"
-	        ],
-	        " ",
-	        [
-	          "code",
-	          "ghost"
-	        ],
-	        " ",
-	        [
-	          "code",
-	          "dashed"
-	        ],
-	        " 可分别创建主按钮、幽灵按钮、虚线按钮，若不设置 ",
-	        [
-	          "code",
-	          "type"
-	        ],
-	        " 值则为次按钮。不同的样式可以用来区别其重要程度。"
-	      ],
-	      [
-	        "p",
-	        "主按钮和次按钮可独立使用，幽灵按钮用于和主按钮组合。需要强引导用主按钮，切记主按钮在同一个操作区域最多出现一次。"
+	          "p",
+	          [
+	            "code",
+	            "danger"
+	          ],
+	          " 在 ",
+	          [
+	            "code",
+	            "antd@2.7"
+	          ],
+	          " 后支持。"
+	        ]
 	      ]
 	    ],
 	    "en-US": [
 	      [
 	        "p",
-	        "There are primary button, default button, ghost button and dashed button in antd."
-	      ],
-	      [
-	        "p",
-	        [
-	          "code",
-	          "type"
-	        ],
-	        " can be set as ",
+	        "There are ",
 	        [
 	          "code",
 	          "primary"
 	        ],
-	        " or ",
+	        " button, ",
 	        [
 	          "code",
-	          "ghost"
+	          "default"
 	        ],
-	        " or ",
+	        " button, ",
 	        [
 	          "code",
 	          "dashed"
 	        ],
-	        ", in order to create primary button or ghost button or dashed button. If nothing is provided to ",
+	        " button and ",
 	        [
 	          "code",
-	          "type"
+	          "danger"
 	        ],
-	        ", we will get default button. Users can tell the significance of button from it's appearance."
+	        " button in antd."
 	      ],
 	      [
-	        "p",
-	        "Primary button and default button can be used without other button, but ghost button must be used with primary button."
+	        "blockquote",
+	        [
+	          "p",
+	          [
+	            "code",
+	            "danger"
+	          ],
+	          " is supported after ",
+	          [
+	            "code",
+	            "antd@2.7"
+	          ],
+	          "."
+	        ]
 	      ]
 	    ]
 	  },
@@ -121,7 +108,7 @@ webpackJsonp([16,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span><span class=\"token operator\">></span>Primary<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span><span class=\"token keyword\">Default</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"ghost\"</span><span class=\"token operator\">></span>Ghost<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"dashed\"</span><span class=\"token operator\">></span>Dashed<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span><span class=\"token operator\">></span>Primary<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span><span class=\"token keyword\">Default</span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"dashed\"</span><span class=\"token operator\">></span>Dashed<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"danger\"</span><span class=\"token operator\">></span>Danger<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -149,16 +136,16 @@ webpackJsonp([16,211],{
 	    React.createElement(
 	      _antd.Button,
 	      {
-	        type: "ghost"
+	        type: "dashed"
 	      },
-	      "Ghost"
+	      "Dashed"
 	    ),
 	    React.createElement(
 	      _antd.Button,
 	      {
-	        type: "dashed"
+	        type: "danger"
 	      },
-	      "Dashed"
+	      "Danger"
 	    )
 	  );
 	}
@@ -166,7 +153,7 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 604:
+/***/ 602:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -248,7 +235,7 @@ webpackJsonp([16,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 5,
+	    "order": 6,
 	    "title": {
 	      "zh-CN": "按钮组合",
 	      "en-US": "Button Group"
@@ -423,7 +410,7 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 605:
+/***/ 603:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -573,7 +560,114 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 606:
+/***/ 604:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "幽灵按钮将其他按钮的内容反色，背景变为透明，常用在有色背景上。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        [
+	          "code",
+	          "ghost"
+	        ],
+	        " property will make button's background transparent, it is common used in colored background."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 8,
+	    "title": {
+	      "zh-CN": "幽灵按钮",
+	      "en-US": "Ghost Button"
+	    },
+	    "filename": "components/button/demo/ghost.md",
+	    "id": "components-button-demo-ghost"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ background<span class=\"token punctuation\">:</span> <span class=\"token string\">'rgb(190, 200, 200)'</span><span class=\"token punctuation\">,</span> padding<span class=\"token punctuation\">:</span> <span class=\"token string\">'26px 16px 16px'</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span> ghost<span class=\"token operator\">></span>Primary Ghost<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button ghost<span class=\"token operator\">></span><span class=\"token keyword\">Default</span> Ghost<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button type<span class=\"token operator\">=</span><span class=\"token string\">\"dashed\"</span> ghost<span class=\"token operator\">></span>Dashed Ghost<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  return React.createElement(
+	    "div",
+	    {
+	      style: {
+	        background: 'rgb(190, 200, 200)',
+	        padding: '26px 16px 16px'
+	      }
+	    },
+	    React.createElement(
+	      _antd.Button,
+	      {
+	        type: "primary",
+	        ghost: true
+	      },
+	      "Primary Ghost"
+	    ),
+	    React.createElement(
+	      _antd.Button,
+	      {
+	        ghost: true
+	      },
+	      "Default Ghost"
+	    ),
+	    React.createElement(
+	      _antd.Button,
+	      {
+	        type: "dashed",
+	        ghost: true
+	      },
+	      "Dashed Ghost"
+	    )
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 605:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -790,7 +884,7 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 607:
+/***/ 606:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -939,7 +1033,7 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 608:
+/***/ 607:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -968,7 +1062,7 @@ webpackJsonp([16,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 6,
+	    "order": 5,
 	    "title": {
 	      "zh-CN": "多个按钮组合",
 	      "en-US": "Multiple Buttons"
@@ -1085,7 +1179,7 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 609:
+/***/ 608:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1325,17 +1419,18 @@ webpackJsonp([16,211],{
 
 /***/ },
 
-/***/ 1034:
+/***/ 1037:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(603),
-	    'button-group': __webpack_require__(604),
-	    'disabled': __webpack_require__(605),
-	    'icon': __webpack_require__(606),
-	    'loading': __webpack_require__(607),
-	    'multiple': __webpack_require__(608),
-	    'size': __webpack_require__(609),
+	    'basic': __webpack_require__(601),
+	    'button-group': __webpack_require__(602),
+	    'disabled': __webpack_require__(603),
+	    'ghost': __webpack_require__(604),
+	    'icon': __webpack_require__(605),
+	    'loading': __webpack_require__(606),
+	    'multiple': __webpack_require__(607),
+	    'size': __webpack_require__(608),
 	}
 
 /***/ }

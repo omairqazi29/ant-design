@@ -1,6 +1,6 @@
 webpackJsonp([133,211],{
 
-/***/ 861:
+/***/ 864:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -221,6 +221,25 @@ webpackJsonp([133,211],{
 	          [
 	            "td",
 	            "horizontal"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "progressDot"
+	          ],
+	          [
+	            "td",
+	            "点状步骤条，可以设置为一个 function"
+	          ],
+	          [
+	            "td",
+	            "Boolean or (iconDot, {index, status, title, description}) => ReactNode"
+	          ],
+	          [
+	            "td",
+	            "false"
 	          ]
 	        ]
 	      ]

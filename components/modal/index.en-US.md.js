@@ -1,6 +1,6 @@
 webpackJsonp([156,211],{
 
-/***/ 769:
+/***/ 768:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -649,6 +649,28 @@ webpackJsonp([156,211],{
 	          [
 	            "td",
 	            "Cancel"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "maskClosable"
+	          ],
+	          [
+	            "td",
+	            "Determine whether to close the modal dialog when clicked mask of it."
+	          ],
+	          [
+	            "td",
+	            "Boolean"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "false"
+	            ]
 	          ]
 	        ]
 	      ]

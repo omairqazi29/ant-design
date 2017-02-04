@@ -1,6 +1,6 @@
-webpackJsonp([29,211],{
+webpackJsonp([22,211],{
 
-/***/ 771:
+/***/ 770:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -86,7 +86,7 @@ webpackJsonp([29,211],{
 
 /***/ },
 
-/***/ 772:
+/***/ 771:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -178,7 +178,7 @@ webpackJsonp([29,211],{
 
 /***/ },
 
-/***/ 773:
+/***/ 772:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -275,6 +275,144 @@ webpackJsonp([29,211],{
 	      onClick: openNotification
 	    },
 	    "Open the notification box"
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 773:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "可以设置通知从右上角、右下角、左下角、左上角弹出。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "A notification box can pop up from ",
+	        [
+	          "code",
+	          "topRight"
+	        ],
+	        " or ",
+	        [
+	          "code",
+	          "bottomRight"
+	        ],
+	        " or ",
+	        [
+	          "code",
+	          "bottomLeft"
+	        ],
+	        " or ",
+	        [
+	          "code",
+	          "topLeft"
+	        ],
+	        "."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 5,
+	    "title": {
+	      "zh-CN": "位置",
+	      "en-US": "Placement"
+	    },
+	    "filename": "components/notification/demo/placement.md",
+	    "id": "components-notification-demo-placement"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Button<span class=\"token punctuation\">,</span> <span class=\"token keyword\">Select</span><span class=\"token punctuation\">,</span> notification } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> { Option } <span class=\"token operator\">=</span> <span class=\"token keyword\">Select</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> options <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token string\">'topLeft'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'topRight'</span><span class=\"token punctuation\">,</span><span class=\"token string\">'bottomLeft'</span><span class=\"token punctuation\">,</span> <span class=\"token string\">'bottomRight'</span><span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n<span class=\"token keyword\">const</span> openNotification <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n  notification<span class=\"token punctuation\">.</span><span class=\"token function\">open</span><span class=\"token punctuation\">(</span>{\n    message<span class=\"token punctuation\">:</span> <span class=\"token string\">'Notification Title'</span><span class=\"token punctuation\">,</span>\n    description<span class=\"token punctuation\">:</span> <span class=\"token string\">'This is the content of the notification. This is the content of the notification. This is the content of the notification.'</span><span class=\"token punctuation\">,</span>\n  }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token keyword\">Select</span>\n      defaultValue<span class=\"token operator\">=</span><span class=\"token string\">\"topRight\"</span>\n      style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> <span class=\"token number\">120</span><span class=\"token punctuation\">,</span> marginRight<span class=\"token punctuation\">:</span> <span class=\"token number\">10</span> }}\n      onChange<span class=\"token operator\">=</span>{val <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n        notification<span class=\"token punctuation\">.</span><span class=\"token function\">config</span><span class=\"token punctuation\">(</span>{\n          placement<span class=\"token punctuation\">:</span> val<span class=\"token punctuation\">,</span>\n        }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }}\n    <span class=\"token operator\">></span>\n      {options<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>val <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token operator\">&lt;</span>Option key<span class=\"token operator\">=</span>{val} value<span class=\"token operator\">=</span>{val}<span class=\"token operator\">></span>{val}<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Option<span class=\"token operator\">></span><span class=\"token punctuation\">)</span>}\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span><span class=\"token keyword\">Select</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Button\n      type<span class=\"token operator\">=</span><span class=\"token string\">\"primary\"</span>\n      onClick<span class=\"token operator\">=</span>{openNotification}\n    <span class=\"token operator\">></span>\n      Open the notification box\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var Option = _antd.Select.Option;
+	  var options = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
+
+	  var openNotification = function openNotification() {
+	    _antd.notification.open({
+	      message: 'Notification Title',
+	      description: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.'
+	    });
+	  };
+
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      _antd.Select,
+	      {
+	        defaultValue: "topRight",
+	        style: {
+	          width: 120,
+	          marginRight: 10
+	        },
+	        onChange: function onChange(val) {
+	          _antd.notification.config({
+	            placement: val
+	          });
+	        }
+	      },
+	      options.map(function (val) {
+	        return React.createElement(
+	          Option,
+	          {
+	            key: val,
+	            value: val
+	          },
+	          val
+	        );
+	      })
+	    ),
+	    React.createElement(
+	      _antd.Button,
+	      {
+	        type: "primary",
+	        onClick: openNotification
+	      },
+	      "Open the notification box"
+	    )
 	  );
 	}
 	};
@@ -510,13 +648,14 @@ webpackJsonp([29,211],{
 
 /***/ },
 
-/***/ 1053:
+/***/ 1056:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(771),
-	    'custom-icon': __webpack_require__(772),
-	    'duration': __webpack_require__(773),
+	    'basic': __webpack_require__(770),
+	    'custom-icon': __webpack_require__(771),
+	    'duration': __webpack_require__(772),
+	    'placement': __webpack_require__(773),
 	    'with-btn': __webpack_require__(774),
 	    'with-icon': __webpack_require__(775),
 	}

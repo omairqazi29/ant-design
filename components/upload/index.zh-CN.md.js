@@ -1,6 +1,6 @@
 webpackJsonp([111,211],{
 
-/***/ 958:
+/***/ 961:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -293,11 +293,11 @@ webpackJsonp([111,211],{
 	          ],
 	          [
 	            "td",
-	            "是否展示 uploadList, 默认开启"
+	            "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon"
 	          ],
 	          [
 	            "td",
-	            "boolean"
+	            "Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }"
 	          ],
 	          [
 	            "td",
@@ -462,7 +462,7 @@ webpackJsonp([111,211],{
 	          ],
 	          [
 	            "td",
-	            "点击文件链接时的回调"
+	            "点击文件链接或预览图标时的回调"
 	          ],
 	          [
 	            "td",
@@ -481,11 +481,11 @@ webpackJsonp([111,211],{
 	          ],
 	          [
 	            "td",
-	            "点击移除文件时的回调"
+	            "点击移除文件时的回调，返回值为 false 时不移除"
 	          ],
 	          [
 	            "td",
-	            "Function(file)"
+	            "Function(file): Boolean"
 	          ],
 	          [
 	            "td",

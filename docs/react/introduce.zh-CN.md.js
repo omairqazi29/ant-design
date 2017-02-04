@@ -1,6 +1,6 @@
 webpackJsonp([91,211],{
 
-/***/ 978:
+/***/ 981:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -698,7 +698,7 @@ webpackJsonp([91,211],{
 	            "a",
 	            {
 	              "title": null,
-	              "href": "/docs/react/customize-theme"
+	              "href": "/docs/react/customize-theme-cn"
 	            },
 	            "定制主题"
 	          ]

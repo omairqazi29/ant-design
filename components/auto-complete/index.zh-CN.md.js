@@ -1,6 +1,6 @@
 webpackJsonp([201,211],{
 
-/***/ 583:
+/***/ 581:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -296,6 +296,58 @@ webpackJsonp([201,211],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "children (自动完成的数据源)"
+	          ],
+	          [
+	            "td",
+	            "自动完成的数据源"
+	          ],
+	          [
+	            "td",
+	            "React.ReactElement",
+	            [
+	              "optionprops"
+	            ],
+	            " / Array<React.ReactElement",
+	            [
+	              "optionprops"
+	            ],
+	            ">"
+	          ],
+	          [
+	            "td",
+	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "children (自定义输入框)"
+	          ],
+	          [
+	            "td",
+	            "自定义输入框"
+	          ],
+	          [
+	            "td",
+	            "HTMLInputElement / HTMLTextAreaElement / React.ReactElement",
+	            [
+	              "inputprops"
+	            ]
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "<Input />"
+	            ]
 	          ]
 	        ],
 	        [

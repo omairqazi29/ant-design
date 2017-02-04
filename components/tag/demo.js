@@ -1,6 +1,6 @@
-webpackJsonp([27,211],{
+webpackJsonp([28,211],{
 
-/***/ 904:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -146,7 +146,7 @@ webpackJsonp([27,211],{
 
 /***/ },
 
-/***/ 905:
+/***/ 908:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -281,7 +281,7 @@ webpackJsonp([27,211],{
 
 /***/ },
 
-/***/ 906:
+/***/ 909:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -289,23 +289,42 @@ webpackJsonp([27,211],{
 	    "zh-CN": [
 	      [
 	        "p",
-	        "基本标签可以通过 ",
+	        "我们添加了多种预设色彩的标签样式，用作不同场景使用。如果预设值不能满足你的需求，可以设置为具体的色值。"
+	      ],
+	      [
+	        "blockquote",
 	        [
-	          "code",
-	          "color"
-	        ],
-	        " 设置背景色，以提供视觉暗示区分不同目的的标签。"
+	          "p",
+	          "预设色彩在 ",
+	          [
+	            "code",
+	            "antd@2.7.0"
+	          ],
+	          " 之后支持。"
+	        ]
 	      ]
 	    ],
 	    "en-US": [
 	      [
 	        "p",
-	        "We can set the background color of basic Tag by ",
+	        "After ",
 	        [
 	          "code",
-	          "color"
+	          "antd@2.7.0"
 	        ],
-	        ", and it's helpful to tell different Tags."
+	        ", We preset a series of colorful tag style for different situation usage.\nAnd you can always set it to a hex color string for custom color."
+	      ],
+	      [
+	        "blockquote",
+	        [
+	          "p",
+	          "Preset colors are supported after ",
+	          [
+	            "code",
+	            "antd@2.7.0"
+	          ],
+	          "."
+	        ]
 	      ]
 	    ]
 	  },
@@ -313,7 +332,7 @@ webpackJsonp([27,211],{
 	    "order": 1,
 	    "title": {
 	      "zh-CN": "多彩标签",
-	      "en-US": "Colorful"
+	      "en-US": "Colorful Tag"
 	    },
 	    "filename": "components/tag/demo/colorful.md",
 	    "id": "components-tag-demo-colorful"
@@ -347,7 +366,7 @@ webpackJsonp([27,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Tag } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#f50\"</span><span class=\"token operator\">></span>#f50<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#87d068\"</span><span class=\"token operator\">></span>#87d068<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#108ee9\"</span><span class=\"token operator\">></span>#108ee9<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Tag } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"pink\"</span><span class=\"token operator\">></span>pink<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"red\"</span><span class=\"token operator\">></span>red<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"orange\"</span><span class=\"token operator\">></span>orange<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"yellow\"</span><span class=\"token operator\">></span>yellow<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"green\"</span><span class=\"token operator\">></span>green<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"cyan\"</span><span class=\"token operator\">></span>cyan<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"blue\"</span><span class=\"token operator\">></span>blue<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"purple\"</span><span class=\"token operator\">></span>purple<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginTop<span class=\"token punctuation\">:</span> <span class=\"token number\">24</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"pink-inverse\"</span><span class=\"token operator\">></span>pink<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"red-inverse\"</span><span class=\"token operator\">></span>red<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"orange-inverse\"</span><span class=\"token operator\">></span>orange<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"yellow-inverse\"</span><span class=\"token operator\">></span>yellow<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"green-inverse\"</span><span class=\"token operator\">></span>green<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"cyan-inverse\"</span><span class=\"token operator\">></span>cyan<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"blue-inverse\"</span><span class=\"token operator\">></span>blue<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"purple-inverse\"</span><span class=\"token operator\">></span>purple<span class=\"token operator\">-</span>inverse<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ marginTop<span class=\"token punctuation\">:</span> <span class=\"token number\">24</span> }}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#f50\"</span><span class=\"token operator\">></span>#f50<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#2db7f5\"</span><span class=\"token operator\">></span>#2db7f5<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#87d068\"</span><span class=\"token operator\">></span>#87d068<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Tag color<span class=\"token operator\">=</span><span class=\"token string\">\"#108ee9\"</span><span class=\"token operator\">></span>#108ee9<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Tag<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -361,33 +380,174 @@ webpackJsonp([27,211],{
 	    "div",
 	    null,
 	    React.createElement(
-	      _antd.Tag,
-	      {
-	        color: "#f50"
-	      },
-	      "#f50"
+	      "div",
+	      null,
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "pink"
+	        },
+	        "pink"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "red"
+	        },
+	        "red"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "orange"
+	        },
+	        "orange"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "yellow"
+	        },
+	        "yellow"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "green"
+	        },
+	        "green"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "cyan"
+	        },
+	        "cyan"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "blue"
+	        },
+	        "blue"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "purple"
+	        },
+	        "purple"
+	      )
 	    ),
 	    React.createElement(
-	      _antd.Tag,
+	      "div",
 	      {
-	        color: "#87d068"
+	        style: {
+	          marginTop: 24
+	        }
 	      },
-	      "#87d068"
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "pink-inverse"
+	        },
+	        "pink-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "red-inverse"
+	        },
+	        "red-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "orange-inverse"
+	        },
+	        "orange-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "yellow-inverse"
+	        },
+	        "yellow-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "green-inverse"
+	        },
+	        "green-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "cyan-inverse"
+	        },
+	        "cyan-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "blue-inverse"
+	        },
+	        "blue-inverse"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "purple-inverse"
+	        },
+	        "purple-inverse"
+	      )
 	    ),
 	    React.createElement(
-	      _antd.Tag,
+	      "div",
 	      {
-	        color: "#108ee9"
+	        style: {
+	          marginTop: 24
+	        }
 	      },
-	      "#108ee9"
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "#f50"
+	        },
+	        "#f50"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "#2db7f5"
+	        },
+	        "#2db7f5"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "#87d068"
+	        },
+	        "#87d068"
+	      ),
+	      React.createElement(
+	        _antd.Tag,
+	        {
+	          color: "#108ee9"
+	        },
+	        "#108ee9"
+	      )
 	    )
 	  );
-	}
+	},
+	  "style": ".ant-tag {\n  margin-bottom: 8px;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token class\">.ant-tag</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">8</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
 	};
 
 /***/ },
 
-/***/ 907:
+/***/ 910:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -594,7 +754,7 @@ webpackJsonp([27,211],{
 
 /***/ },
 
-/***/ 908:
+/***/ 911:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -738,15 +898,15 @@ webpackJsonp([27,211],{
 
 /***/ },
 
-/***/ 1067:
+/***/ 1070:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(904),
-	    'checkable': __webpack_require__(905),
-	    'colorful': __webpack_require__(906),
-	    'control': __webpack_require__(907),
-	    'hot-tags': __webpack_require__(908),
+	    'basic': __webpack_require__(907),
+	    'checkable': __webpack_require__(908),
+	    'colorful': __webpack_require__(909),
+	    'control': __webpack_require__(910),
+	    'hot-tags': __webpack_require__(911),
 	}
 
 /***/ }

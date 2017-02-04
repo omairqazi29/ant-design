@@ -1,6 +1,6 @@
 webpackJsonp([119,211],{
 
-/***/ 930:
+/***/ 933:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -332,6 +332,44 @@ webpackJsonp([119,211],{
 	          [
 	            "td",
 	            "无"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "mouseEnterDelay"
+	          ],
+	          [
+	            "td",
+	            "鼠标移入后延时多少才显示 Tooltip，单位：秒"
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "0"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "mouseLeaveDelay"
+	          ],
+	          [
+	            "td",
+	            "鼠标移出后延时多少才隐藏 Tooltip，单位：秒"
+	          ],
+	          [
+	            "td",
+	            "number"
+	          ],
+	          [
+	            "td",
+	            "0.1"
 	          ]
 	        ],
 	        [

@@ -1,6 +1,6 @@
 webpackJsonp([202,211],{
 
-/***/ 582:
+/***/ 580:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -301,21 +301,51 @@ webpackJsonp([202,211],{
 	          "tr",
 	          [
 	            "td",
-	            "optionLabelProp"
+	            "children (for dataSource)"
 	          ],
 	          [
 	            "td",
-	            "Which prop value of option will render as content of select."
+	            "Data source for autocomplet"
 	          ],
 	          [
 	            "td",
-	            "string"
+	            "React.ReactElement",
+	            [
+	              "optionprops"
+	            ],
+	            " /  Array<React.ReactElement",
+	            [
+	              "optionprops"
+	            ],
+	            ">"
+	          ],
+	          [
+	            "td",
+	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "children (for customize input element)"
+	          ],
+	          [
+	            "td",
+	            "customize input element"
+	          ],
+	          [
+	            "td",
+	            "HTMLInputElement / HTMLTextAreaElement / React.ReactElement",
+	            [
+	              "inputprops"
+	            ]
 	          ],
 	          [
 	            "td",
 	            [
 	              "code",
-	              "children"
+	              "<Input />"
 	            ]
 	          ]
 	        ]

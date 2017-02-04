@@ -1,6 +1,116 @@
-webpackJsonp([47,211],{
+webpackJsonp([44,211],{
 
-/***/ 580:
+/***/ 577:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "自定义输入组件。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Customize Input Component"
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 3,
+	    "title": {
+	      "zh-CN": "自定义输入组件",
+	      "en-US": "Customize Input Component"
+	    },
+	    "filename": "components/auto-complete/demo/antd.md",
+	    "id": "components-auto-complete-demo-antd"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { AutoComplete } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nfunction <span class=\"token function\">onSelect</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> {\n  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'onSelect'</span><span class=\"token punctuation\">,</span> value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n}\n\n<span class=\"token keyword\">const</span> Complete <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createClass</span><span class=\"token punctuation\">(</span>{\n  <span class=\"token function\">getInitialState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    return {\n      dataSource<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleChange</span><span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      dataSource<span class=\"token punctuation\">:</span> !value <span class=\"token operator\">?</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">]</span> <span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>\n        value<span class=\"token punctuation\">,</span>\n        value <span class=\"token operator\">+</span> value<span class=\"token punctuation\">,</span>\n        value <span class=\"token operator\">+</span> value <span class=\"token operator\">+</span> value<span class=\"token punctuation\">,</span>\n      <span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">handleKeyPress</span><span class=\"token punctuation\">(</span>ev<span class=\"token punctuation\">)</span> {\n    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'handleKeyPress'</span><span class=\"token punctuation\">,</span> ev<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { dataSource } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span>\n      <span class=\"token operator\">&lt;</span>AutoComplete\n        dataSource<span class=\"token operator\">=</span>{dataSource}\n        style<span class=\"token operator\">=</span>{{ width<span class=\"token punctuation\">:</span> <span class=\"token number\">200</span> }}\n        onSelect<span class=\"token operator\">=</span>{onSelect}\n        onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleChange}\n        placeholder<span class=\"token operator\">=</span><span class=\"token string\">\"input here\"</span>\n      <span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span>textarea onKeyPress<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleKeyPress} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>AutoComplete<span class=\"token operator\">></span>\n    <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>Complete <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  function onSelect(value) {
+	    console.log('onSelect', value);
+	  }
+
+	  var Complete = React.createClass({
+	    displayName: "Complete",
+	    getInitialState: function getInitialState() {
+	      return {
+	        dataSource: []
+	      };
+	    },
+	    handleChange: function handleChange(value) {
+	      this.setState({
+	        dataSource: !value ? [] : [value, value + value, value + value + value]
+	      });
+	    },
+	    handleKeyPress: function handleKeyPress(ev) {
+	      console.log('handleKeyPress', ev);
+	    },
+	    render: function render() {
+	      var dataSource = this.state.dataSource;
+	      return React.createElement(
+	        _antd.AutoComplete,
+	        {
+	          dataSource: dataSource,
+	          style: {
+	            width: 200
+	          },
+	          onSelect: onSelect,
+	          onChange: this.handleChange,
+	          placeholder: "input here"
+	        },
+	        React.createElement("textarea", {
+	          onKeyPress: this.handleKeyPress
+	        })
+	      );
+	    }
+	  });
+	  return React.createElement(Complete, null);
+	}
+	};
+
+/***/ },
+
+/***/ 578:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -106,7 +216,7 @@ webpackJsonp([47,211],{
 
 /***/ },
 
-/***/ 581:
+/***/ 579:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -260,12 +370,13 @@ webpackJsonp([47,211],{
 
 /***/ },
 
-/***/ 1030:
+/***/ 1033:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(580),
-	    'options': __webpack_require__(581),
+	    'antd': __webpack_require__(577),
+	    'basic': __webpack_require__(578),
+	    'options': __webpack_require__(579),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
 webpackJsonp([193,211],{
 
-/***/ 611:
+/***/ 610:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -131,14 +131,14 @@ webpackJsonp([193,211],{
 	            " ",
 	            [
 	              "code",
-	              "ghost"
+	              "dashed"
 	            ],
 	            " ",
 	            [
 	              "code",
-	              "dashed"
+	              "danger"
 	            ],
-	            " 或者不设"
+	            "(版本 2.7 中增加) 或者不设"
 	          ],
 	          [
 	            "td",
@@ -307,6 +307,25 @@ webpackJsonp([193,211],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "ghost"
+	          ],
+	          [
+	            "td",
+	            "幽灵属性，使按钮背景透明，版本 2.7 中增加"
+	          ],
+	          [
+	            "td",
+	            "boolean"
+	          ],
+	          [
+	            "td",
+	            "false"
 	          ]
 	        ]
 	      ]

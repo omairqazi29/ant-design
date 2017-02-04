@@ -1,6 +1,6 @@
 webpackJsonp([112,211],{
 
-/***/ 957:
+/***/ 960:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -288,11 +288,21 @@ webpackJsonp([112,211],{
 	          ],
 	          [
 	            "td",
-	            "Whether to show uploadList."
+	            "Whether to show default upload list, could be an object to specify ",
+	            [
+	              "code",
+	              "showPreviewIcon"
+	            ],
+	            " and ",
+	            [
+	              "code",
+	              "showRemoveIcon"
+	            ],
+	            " individually"
 	          ],
 	          [
 	            "td",
-	            "boolean"
+	            "Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }"
 	          ],
 	          [
 	            "td",
@@ -465,7 +475,7 @@ webpackJsonp([112,211],{
 	          ],
 	          [
 	            "td",
-	            "A callback function, will be executed when file link is clicked."
+	            "A callback function, will be executed when file link or preview icon is clicked."
 	          ],
 	          [
 	            "td",
@@ -484,11 +494,15 @@ webpackJsonp([112,211],{
 	          ],
 	          [
 	            "td",
-	            "A callback function, will be executed when removing file button is clicked"
+	            "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is ",
+	            [
+	              "code",
+	              "false"
+	            ]
 	          ],
 	          [
 	            "td",
-	            "Function(file)"
+	            "Function(file): boolean"
 	          ],
 	          [
 	            "td",

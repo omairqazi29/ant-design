@@ -1,6 +1,6 @@
 webpackJsonp([92,211],{
 
-/***/ 977:
+/***/ 980:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -567,20 +567,6 @@ webpackJsonp([92,211],{
 	              "href": "https://github.com/dvajs/dva-cli/"
 	            },
 	            "Scaffold tool"
-	          ]
-	        ]
-	      ],
-	      [
-	        "li",
-	        [
-	          "p",
-	          [
-	            "a",
-	            {
-	              "title": null,
-	              "href": "http://ant-tool.github.io/"
-	            },
-	            "Development tool"
 	          ]
 	        ]
 	      ],

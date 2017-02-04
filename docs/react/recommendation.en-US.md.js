@@ -1,6 +1,6 @@
 webpackJsonp([88,211],{
 
-/***/ 981:
+/***/ 984:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -200,6 +200,8 @@ webpackJsonp([88,211],{
 	            "Font Awesome Icons"
 	          ],
 	          ": ",
+	          "[react-fa]",
+	          "(",
 	          [
 	            "a",
 	            {
@@ -207,7 +209,8 @@ webpackJsonp([88,211],{
 	              "href": "https://github.com/andreypopp/react-fa"
 	            },
 	            "https://github.com/andreypopp/react-fa"
-	          ]
+	          ],
+	          "]"
 	        ]
 	      ]
 	    ]

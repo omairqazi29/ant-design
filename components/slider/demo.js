@@ -1,4 +1,4 @@
-webpackJsonp([20,211],{
+webpackJsonp([15,211],{
 
 /***/ 837:
 /***/ function(module, exports, __webpack_require__) {
@@ -914,7 +914,140 @@ webpackJsonp([20,211],{
 
 /***/ },
 
-/***/ 1061:
+/***/ 843:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "垂直方向的 Slider。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "The vertical Slider."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 6,
+	    "title": {
+	      "zh-CN": "垂直",
+	      "en-US": "Vertical"
+	    },
+	    "filename": "components/slider/demo/vertical.md",
+	    "id": "components-slider-demo-vertical"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Slider } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> style <span class=\"token operator\">=</span> {\n  float<span class=\"token punctuation\">:</span> <span class=\"token string\">'left'</span><span class=\"token punctuation\">,</span>\n  height<span class=\"token punctuation\">:</span> <span class=\"token number\">300</span><span class=\"token punctuation\">,</span>\n  marginLeft<span class=\"token punctuation\">:</span> <span class=\"token number\">70</span><span class=\"token punctuation\">,</span>\n}<span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> marks <span class=\"token operator\">=</span> {\n  <span class=\"token number\">0</span><span class=\"token punctuation\">:</span> <span class=\"token string\">'0°C'</span><span class=\"token punctuation\">,</span>\n  <span class=\"token number\">26</span><span class=\"token punctuation\">:</span> <span class=\"token string\">'26°C'</span><span class=\"token punctuation\">,</span>\n  <span class=\"token number\">37</span><span class=\"token punctuation\">:</span> <span class=\"token string\">'37°C'</span><span class=\"token punctuation\">,</span>\n  <span class=\"token number\">100</span><span class=\"token punctuation\">:</span> {\n    style<span class=\"token punctuation\">:</span> {\n      color<span class=\"token punctuation\">:</span> <span class=\"token string\">'#f50'</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span>\n    label<span class=\"token punctuation\">:</span> <span class=\"token operator\">&lt;</span>strong<span class=\"token operator\">></span><span class=\"token number\">100</span>°C<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>strong<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  }<span class=\"token punctuation\">,</span>\n}<span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{{ height<span class=\"token punctuation\">:</span> <span class=\"token number\">300</span> }}<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{style}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Slider vertical defaultValue<span class=\"token operator\">=</span>{<span class=\"token number\">30</span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{style}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Slider vertical range <span class=\"token keyword\">step</span><span class=\"token operator\">=</span>{<span class=\"token number\">10</span>} defaultValue<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token number\">20</span><span class=\"token punctuation\">,</span> <span class=\"token number\">50</span><span class=\"token punctuation\">]</span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>div style<span class=\"token operator\">=</span>{style}<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Slider vertical range marks<span class=\"token operator\">=</span>{marks} defaultValue<span class=\"token operator\">=</span>{<span class=\"token punctuation\">[</span><span class=\"token number\">26</span><span class=\"token punctuation\">,</span> <span class=\"token number\">37</span><span class=\"token punctuation\">]</span>} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var style = {
+	    float: 'left',
+	    height: 300,
+	    marginLeft: 70
+	  };
+	  var marks = {
+	    0: '0°C',
+	    26: '26°C',
+	    37: '37°C',
+	    100: {
+	      style: {
+	        color: '#f50'
+	      },
+	      label: React.createElement(
+	        "strong",
+	        null,
+	        "100°C"
+	      )
+	    }
+	  };
+	  return React.createElement(
+	    "div",
+	    {
+	      style: {
+	        height: 300
+	      }
+	    },
+	    React.createElement(
+	      "div",
+	      {
+	        style: style
+	      },
+	      React.createElement(_antd.Slider, {
+	        vertical: true,
+	        defaultValue: 30
+	      })
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: style
+	      },
+	      React.createElement(_antd.Slider, {
+	        vertical: true,
+	        range: true,
+	        step: 10,
+	        defaultValue: [20, 50]
+	      })
+	    ),
+	    React.createElement(
+	      "div",
+	      {
+	        style: style
+	      },
+	      React.createElement(_antd.Slider, {
+	        vertical: true,
+	        range: true,
+	        marks: marks,
+	        defaultValue: [26, 37]
+	      })
+	    )
+	  );
+	}
+	};
+
+/***/ },
+
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -924,6 +1057,7 @@ webpackJsonp([20,211],{
 	    'input-number': __webpack_require__(840),
 	    'mark': __webpack_require__(841),
 	    'tip-formatter': __webpack_require__(842),
+	    'vertical': __webpack_require__(843),
 	}
 
 /***/ }

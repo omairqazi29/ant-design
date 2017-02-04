@@ -1,6 +1,6 @@
 webpackJsonp([3,211],{
 
-/***/ 891:
+/***/ 894:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -108,7 +108,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 892:
+/***/ 895:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -218,7 +218,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 893:
+/***/ 896:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -326,7 +326,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 894:
+/***/ 897:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -502,7 +502,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 895:
+/***/ 898:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -605,7 +605,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 896:
+/***/ 899:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -760,7 +760,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 897:
+/***/ 900:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -867,7 +867,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 898:
+/***/ 901:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -975,7 +975,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 899:
+/***/ 902:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1148,7 +1148,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 900:
+/***/ 903:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1251,7 +1251,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 901:
+/***/ 904:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1265,7 +1265,7 @@ webpackJsonp([3,211],{
 	    "en-US": [
 	      [
 	        "p",
-	        "Tab can be slide to left or right, which is used for a lot of tabs. "
+	        "Tab can be slide to left or right, which is used for a lot of tabs."
 	      ]
 	    ]
 	  },
@@ -1401,21 +1401,21 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1066:
+/***/ 1069:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(891),
-	    'card-top': __webpack_require__(892),
-	    'card': __webpack_require__(893),
-	    'custom-add-trigger': __webpack_require__(894),
-	    'disabled': __webpack_require__(895),
-	    'editable-card': __webpack_require__(896),
-	    'extra': __webpack_require__(897),
-	    'icon': __webpack_require__(898),
-	    'position': __webpack_require__(899),
-	    'size': __webpack_require__(900),
-	    'slide': __webpack_require__(901),
+	    'basic': __webpack_require__(894),
+	    'card-top': __webpack_require__(895),
+	    'card': __webpack_require__(896),
+	    'custom-add-trigger': __webpack_require__(897),
+	    'disabled': __webpack_require__(898),
+	    'editable-card': __webpack_require__(899),
+	    'extra': __webpack_require__(900),
+	    'icon': __webpack_require__(901),
+	    'position': __webpack_require__(902),
+	    'size': __webpack_require__(903),
+	    'slide': __webpack_require__(904),
 	}
 
 /***/ }
