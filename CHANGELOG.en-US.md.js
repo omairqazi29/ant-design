@@ -1,6 +1,6 @@
 webpackJsonp([210,211],{
 
-/***/ 707:
+/***/ 716:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,459 @@ webpackJsonp([210,211],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.7.1"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-02-10"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Affix"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix the problem of element been hidden when hover on. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4800"
+	                },
+	                "#4800"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix event listener can not be removed. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4755"
+	                },
+	                "#4755"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix can not be unfixed when scrolling fastly. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4760"
+	                },
+	                "#4760"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Anchor"
+	          ],
+	          " Fix the location problem when offsetTop has been set. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4706"
+	            },
+	            "#4706"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "AutoComplete"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix the wrong size. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4766"
+	                },
+	                "#4766"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix adding error character automatically. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4778"
+	                },
+	                "#4778"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Dropdown"
+	          ],
+	          " Add the documentation and demo about positioning of Dropdown menus. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4811"
+	            },
+	            "#4811"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Layout"
+	          ],
+	          " Improve Sider's animation effect. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4752"
+	            },
+	            "#4752"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "LocaleProvider"
+	          ],
+	          " Fix issues with the new Swedish locale provider. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4762"
+	            },
+	            "pull-4762"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/JesperWe"
+	            },
+	            "@JesperWe"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "RangePicker"
+	          ],
+	          " Fix the overlapping problem about the date icon. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4783"
+	            },
+	            "#4783"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/zhenzong"
+	            },
+	            "@zhenzong"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Table"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Add the missing value 'middle' for size definition. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4819"
+	                },
+	                "#4819"
+	              ],
+	              " ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/warrenseymour"
+	                },
+	                "@warrenseymour"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix controlled filter does not work with JSX style. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4759"
+	                },
+	                "#4759"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Fix switch pagination problem. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4779"
+	                },
+	                "#4779"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Tabs"
+	          ],
+	          " Fix content missing problem since the second tab pane under IE9. ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4795"
+	            },
+	            "#4795"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "rc-pagination"
+	          ],
+	          " Upgrade to ~1.7.0, add pageSize as onChange's second argument."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Global optimization"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Make some bugfixes and optimizations about documentation、link and style."
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Use stylelint instead of lesslint, and fix some lint issues. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/2179"
+	                },
+	                "#2179"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Unify border radius to 4px. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4772"
+	                },
+	                "#4772"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Support ",
+	              [
+	                "code",
+	                "import { version } from 'antd'"
+	              ],
+	              ". ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4751"
+	                },
+	                "#4751"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Site"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Add default locale looking-up in Home Page. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4552"
+	                },
+	                "#4552"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Can search with Google. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4814"
+	                },
+	                "#4814"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "Change the position of version switch. ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4799"
+	                },
+	                "pull-4799"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.7.0"
@@ -6339,6 +6792,34 @@ webpackJsonp([210,211],{
 	      "."
 	    ],
 	    [
+	      "h4",
+	      "Release Schedule"
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Weekly release: patch version at the end of every week for routine bugfix (anytime for urgent bugfix)."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Monthly release: minor version at the end of every month for new features."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "Major version release is not included in this schedule for breadking change and new features."
+	        ]
+	      ]
+	    ],
+	    [
 	      "p",
 	      "If you want to read change logs before ",
 	      [
@@ -6359,6 +6840,17 @@ webpackJsonp([210,211],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.7.1"
+	        },
+	        "2.7.1"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

@@ -1,6 +1,6 @@
 webpackJsonp([22,211],{
 
-/***/ 920:
+/***/ 931:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -86,7 +86,7 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 921:
+/***/ 932:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -178,7 +178,7 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 922:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -281,7 +281,7 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 923:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -419,7 +419,7 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 924:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -529,7 +529,7 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 925:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -648,16 +648,16 @@ webpackJsonp([22,211],{
 
 /***/ },
 
-/***/ 1222:
+/***/ 1233:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(920),
-	    'custom-icon': __webpack_require__(921),
-	    'duration': __webpack_require__(922),
-	    'placement': __webpack_require__(923),
-	    'with-btn': __webpack_require__(924),
-	    'with-icon': __webpack_require__(925),
+	    'basic': __webpack_require__(931),
+	    'custom-icon': __webpack_require__(932),
+	    'duration': __webpack_require__(933),
+	    'placement': __webpack_require__(934),
+	    'with-btn': __webpack_require__(935),
+	    'with-icon': __webpack_require__(936),
 	}
 
 /***/ }

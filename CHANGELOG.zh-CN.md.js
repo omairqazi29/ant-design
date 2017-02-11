@@ -1,6 +1,6 @@
 webpackJsonp([209,211],{
 
-/***/ 708:
+/***/ 717:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9,6 +9,459 @@ webpackJsonp([209,211],{
 	    {
 
 	    },
+	    [
+	      "h2",
+	      "2.7.1"
+	    ],
+	    [
+	      "p",
+	      [
+	        "code",
+	        "2017-02-10"
+	      ]
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Affix"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复 hover 时元素被隐藏的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4800"
+	                },
+	                "#4800"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复 event listener 未被正确移除的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4755"
+	                },
+	                "#4755"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复快速滚动时不能正确复位的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4760"
+	                },
+	                "#4760"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Anchor"
+	          ],
+	          " 修复了有 offsetTop 时的定位问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4706"
+	            },
+	            "#4706"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "AutoComplete"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了 size 问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4766"
+	                },
+	                "#4766"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了自动加入其他字符的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4778"
+	                },
+	                "#4778"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Dropdown"
+	          ],
+	          " 补充了之前缺失的弹出框位置设定相关的文档及示例。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4811"
+	            },
+	            "#4811"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Layout"
+	          ],
+	          " 修复了侧边布局动效不平滑的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4752"
+	            },
+	            "#4752"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "LocaleProvider"
+	          ],
+	          " 修复了瑞典语相关问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/pull/4762"
+	            },
+	            "pull-4762"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/JesperWe"
+	            },
+	            "@JesperWe"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "RangePicker"
+	          ],
+	          " 修复了图标与表单校验反馈图标重叠的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4783"
+	            },
+	            "#4783"
+	          ],
+	          " ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/zhenzong"
+	            },
+	            "@zhenzong"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Table"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复了 size 定义里没有 'middle' 的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4819"
+	                },
+	                "#4819"
+	              ],
+	              " ",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/warrenseymour"
+	                },
+	                "@warrenseymour"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复过滤功能在 JSX 模式下不生效的问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4759"
+	                },
+	                "#4759"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复分页跳转问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4779"
+	                },
+	                "#4779"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "Tabs"
+	          ],
+	          " 修复了在 IE9 中从第二个标签页起都显示空白的问题。",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/ant-design/ant-design/issues/4795"
+	            },
+	            "#4795"
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "rc-pagination"
+	          ],
+	          " 升级至 ~1.7.0，onChange 增加 pageSize 参数。"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "全局性优化"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "修复或优化了一些了文档，链接，样式细节。"
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "接入 stylelint 以替代 lesslint，修复一些 lint 问题。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/2179"
+	                },
+	                "#2179"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "border-radius 统一为 4px。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4772"
+	                },
+	                "#4772"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "支持 ",
+	              [
+	                "code",
+	                "import { version } from 'antd'"
+	              ],
+	              "。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4751"
+	                },
+	                "#4751"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "strong",
+	            "网站"
+	          ]
+	        ],
+	        [
+	          "ul",
+	          [
+	            "li",
+	            [
+	              "p",
+	              "首页自动选择语言。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4552"
+	                },
+	                "#4552"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "接入 Google 作为文档的全文本搜索。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/issues/4814"
+	                },
+	                "#4814"
+	              ]
+	            ]
+	          ],
+	          [
+	            "li",
+	            [
+	              "p",
+	              "改变版本切换 Select 的位置。",
+	              [
+	                "a",
+	                {
+	                  "title": null,
+	                  "href": "https://github.com/ant-design/ant-design/pull/4799"
+	                },
+	                "pull-4799"
+	              ]
+	            ]
+	          ]
+	        ]
+	      ]
+	    ],
 	    [
 	      "h2",
 	      "2.7.0"
@@ -789,7 +1242,7 @@ webpackJsonp([209,211],{
 	            "a",
 	            {
 	              "title": null,
-	              "href": "/docs/react/recommendation/"
+	              "href": "/docs/react/recommendation-cn"
 	            },
 	            "链接"
 	          ]
@@ -6185,6 +6638,34 @@ webpackJsonp([209,211],{
 	      " 语义化版本规范。"
 	    ],
 	    [
+	      "h4",
+	      "发布周期"
+	    ],
+	    [
+	      "ul",
+	      [
+	        "li",
+	        [
+	          "p",
+	          "patch 版本：每周末会进行日常 bugfix 更新。（如果有紧急的 bugfix，则任何时候都可发布）"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "minor 版本：每月发布一个带有新特性的版本。"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "大版本号：含有破坏性更新和新特性，不在发布周期内。"
+	        ]
+	      ]
+	    ],
+	    [
 	      "p",
 	      "如果需要查看 ",
 	      [
@@ -6205,6 +6686,17 @@ webpackJsonp([209,211],{
 	  ],
 	  "toc": [
 	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#2.7.1"
+	        },
+	        "2.7.1"
+	      ]
+	    ],
 	    [
 	      "li",
 	      [

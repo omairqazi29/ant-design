@@ -1,6 +1,6 @@
 webpackJsonp([151,211],{
 
-/***/ 937:
+/***/ 948:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -210,11 +210,11 @@ webpackJsonp([151,211],{
 	          ],
 	          [
 	            "td",
-	            "页码改变的回调，参数是改变后的页码"
+	            "页码改变的回调，参数是改变后的页码及每页条数"
 	          ],
 	          [
 	            "td",
-	            "Function(page)"
+	            "Function(page, pageSize)"
 	          ],
 	          [
 	            "td",

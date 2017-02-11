@@ -1,6 +1,6 @@
 webpackJsonp([98,211],{
 
-/***/ 1124:
+/***/ 1135:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -91,7 +91,12 @@ webpackJsonp([98,211],{
 	    ],
 	    [
 	      "h3",
-	      "1) Using 'theme' property in package.theme (recommended way)"
+	      "1) Using ",
+	      [
+	        "code",
+	        "theme"
+	      ],
+	      " property (recommended way)"
 	    ],
 	    [
 	      "p",
@@ -104,6 +109,11 @@ webpackJsonp([98,211],{
 	      [
 	        "code",
 	        "package.json"
+	      ],
+	      " or ",
+	      [
+	        "code",
+	        ".roadhogrc"
 	      ],
 	      " file, whose value can be either an object or the path to a JS file that contains the custom values of specific variables:"
 	    ],
@@ -231,6 +241,37 @@ webpackJsonp([98,211],{
 	          [
 	            "code",
 	            "true"
+	          ],
+	          "."
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          "You should write ",
+	          [
+	            "code",
+	            "theme"
+	          ],
+	          " field in ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/dvajs/dva-example-user-dashboard/commit/d6da33b3a6e18eb7f003752a4b00b5a660747c31"
+	            },
+	            ".roadhogrc"
+	          ],
+	          " rather then ",
+	          [
+	            "code",
+	            "package.json"
+	          ],
+	          " when using ",
+	          [
+	            "code",
+	            "dva-cli@0.7.0+"
 	          ],
 	          "."
 	        ]

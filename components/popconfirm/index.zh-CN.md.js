@@ -1,6 +1,6 @@
 webpackJsonp([149,211],{
 
-/***/ 943:
+/***/ 954:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -209,7 +209,7 @@ webpackJsonp([149,211],{
 	        "a",
 	        {
 	          "title": null,
-	          "href": "/components/tooltip-cn/#API"
+	          "href": "/components/tooltip/#API"
 	        },
 	        "Tooltip"
 	      ],

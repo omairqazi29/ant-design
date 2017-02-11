@@ -1,6 +1,6 @@
 webpackJsonp([87,211],{
 
-/***/ 1135:
+/***/ 1146:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -195,17 +195,14 @@ webpackJsonp([87,211],{
 	            "Font Awesome 图标"
 	          ],
 	          ": ",
-	          "[react-fa]",
-	          "(",
 	          [
 	            "a",
 	            {
 	              "title": null,
 	              "href": "https://github.com/andreypopp/react-fa"
 	            },
-	            "https://github.com/andreypopp/react-fa"
-	          ],
-	          "]"
+	            "react-fa"
+	          ]
 	        ]
 	      ]
 	    ]

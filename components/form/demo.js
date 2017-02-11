@@ -1,6 +1,6 @@
 webpackJsonp([2,211],{
 
-/***/ 827:
+/***/ 838:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -236,7 +236,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 828:
+/***/ 839:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -421,7 +421,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 829:
+/***/ 840:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -757,7 +757,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 830:
+/***/ 841:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -994,7 +994,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 831:
+/***/ 842:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1199,7 +1199,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 832:
+/***/ 843:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1402,7 +1402,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 833:
+/***/ 844:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1565,7 +1565,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 834:
+/***/ 845:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1782,7 +1782,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 835:
+/***/ 846:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1945,7 +1945,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 836:
+/***/ 847:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2308,7 +2308,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 837:
+/***/ 848:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2539,7 +2539,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 838:
+/***/ 849:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2889,7 +2889,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 839:
+/***/ 850:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2931,19 +2931,6 @@ webpackJsonp([2,211],{
 	          "true"
 	        ],
 	        " 即可。"
-	      ],
-	      [
-	        "p",
-	        [
-	          "strong",
-	          "注意"
-	        ],
-	        ": 反馈图标只对 ",
-	        [
-	          "code",
-	          "<Input />"
-	        ],
-	        " 有效。"
 	      ]
 	    ],
 	    "en-US": [
@@ -2978,19 +2965,6 @@ webpackJsonp([2,211],{
 	          "true"
 	        ],
 	        " enable to display feed icon of input control."
-	      ],
-	      [
-	        "p",
-	        [
-	          "strong",
-	          "PS"
-	        ],
-	        ": Feed icon is just available for ",
-	        [
-	          "code",
-	          "<Input />"
-	        ],
-	        "."
 	      ]
 	    ]
 	  },
@@ -3209,7 +3183,7 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 840:
+/***/ 851:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3237,7 +3211,7 @@ webpackJsonp([2,211],{
 	          "code",
 	          "Form.create"
 	        ],
-	        " will collect and validate form data automatically. But if you don't need this feature or the default behaviour cannot satisfy you business, you can drop ",
+	        " will collect and validate form data automatically. But if you don't need this feature or the default behaviour cannot satisfy your business, you can drop ",
 	        [
 	          "code",
 	          "Form.create"
@@ -3385,24 +3359,24 @@ webpackJsonp([2,211],{
 
 /***/ },
 
-/***/ 1212:
+/***/ 1223:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'advanced-search': __webpack_require__(827),
-	    'coordinated': __webpack_require__(828),
-	    'customized-form-controls': __webpack_require__(829),
-	    'dynamic-form-item': __webpack_require__(830),
-	    'form-in-modal': __webpack_require__(831),
-	    'global-state': __webpack_require__(832),
-	    'horizontal-login': __webpack_require__(833),
-	    'layout': __webpack_require__(834),
-	    'normal-login': __webpack_require__(835),
-	    'register': __webpack_require__(836),
-	    'time-related-controls': __webpack_require__(837),
-	    'validate-other': __webpack_require__(838),
-	    'validate-static': __webpack_require__(839),
-	    'without-form-create': __webpack_require__(840),
+	    'advanced-search': __webpack_require__(838),
+	    'coordinated': __webpack_require__(839),
+	    'customized-form-controls': __webpack_require__(840),
+	    'dynamic-form-item': __webpack_require__(841),
+	    'form-in-modal': __webpack_require__(842),
+	    'global-state': __webpack_require__(843),
+	    'horizontal-login': __webpack_require__(844),
+	    'layout': __webpack_require__(845),
+	    'normal-login': __webpack_require__(846),
+	    'register': __webpack_require__(847),
+	    'time-related-controls': __webpack_require__(848),
+	    'validate-other': __webpack_require__(849),
+	    'validate-static': __webpack_require__(850),
+	    'without-form-create': __webpack_require__(851),
 	}
 
 /***/ }

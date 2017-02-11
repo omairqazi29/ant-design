@@ -1,6 +1,6 @@
 webpackJsonp([176,211],{
 
-/***/ 841:
+/***/ 852:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -422,6 +422,33 @@ webpackJsonp([176,211],{
 	        "this.props.form"
 	      ],
 	      " provides some APIs as follows:"
+	    ],
+	    [
+	      "blockquote",
+	      [
+	        "p",
+	        "Note: Before using ",
+	        [
+	          "code",
+	          "getFieldsValue"
+	        ],
+	        " ",
+	        [
+	          "code",
+	          "getFieldValue"
+	        ],
+	        " ",
+	        [
+	          "code",
+	          "setFieldsValue"
+	        ],
+	        " and so on, please make sure that corresponding field had been registered with ",
+	        [
+	          "code",
+	          "getFieldDecorator"
+	        ],
+	        "."
+	      ]
 	    ],
 	    [
 	      "table",

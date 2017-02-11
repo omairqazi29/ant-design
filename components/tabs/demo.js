@@ -1,6 +1,6 @@
 webpackJsonp([3,211],{
 
-/***/ 1044:
+/***/ 1055:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -108,7 +108,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1045:
+/***/ 1056:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -218,7 +218,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1046:
+/***/ 1057:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -326,7 +326,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1047:
+/***/ 1058:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -501,7 +501,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1048:
+/***/ 1059:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -604,7 +604,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1049:
+/***/ 1060:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -759,7 +759,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1050:
+/***/ 1061:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -866,7 +866,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1051:
+/***/ 1062:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -974,7 +974,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1052:
+/***/ 1063:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1147,7 +1147,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1053:
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1250,7 +1250,7 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1054:
+/***/ 1065:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1400,21 +1400,21 @@ webpackJsonp([3,211],{
 
 /***/ },
 
-/***/ 1235:
+/***/ 1246:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(1044),
-	    'card-top': __webpack_require__(1045),
-	    'card': __webpack_require__(1046),
-	    'custom-add-trigger': __webpack_require__(1047),
-	    'disabled': __webpack_require__(1048),
-	    'editable-card': __webpack_require__(1049),
-	    'extra': __webpack_require__(1050),
-	    'icon': __webpack_require__(1051),
-	    'position': __webpack_require__(1052),
-	    'size': __webpack_require__(1053),
-	    'slide': __webpack_require__(1054),
+	    'basic': __webpack_require__(1055),
+	    'card-top': __webpack_require__(1056),
+	    'card': __webpack_require__(1057),
+	    'custom-add-trigger': __webpack_require__(1058),
+	    'disabled': __webpack_require__(1059),
+	    'editable-card': __webpack_require__(1060),
+	    'extra': __webpack_require__(1061),
+	    'icon': __webpack_require__(1062),
+	    'position': __webpack_require__(1063),
+	    'size': __webpack_require__(1064),
+	    'slide': __webpack_require__(1065),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
-webpackJsonp([17,211],{
+webpackJsonp([12,211],{
 
-/***/ 818:
+/***/ 828:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -131,7 +131,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 819:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -150,7 +150,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 4,
+	    "order": 5,
 	    "title": {
 	      "zh-CN": "带下拉框的按钮",
 	      "en-US": "Button with dropdown menu"
@@ -283,7 +283,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 820:
+/***/ 830:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -302,7 +302,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 3,
+	    "order": 4,
 	    "title": {
 	      "zh-CN": "触发事件",
 	      "en-US": "Click event"
@@ -404,7 +404,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 821:
+/***/ 831:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -423,7 +423,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 1,
+	    "order": 2,
 	    "title": {
 	      "zh-CN": "其他元素",
 	      "en-US": "Other elements"
@@ -535,7 +535,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 822:
+/***/ 832:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -554,7 +554,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 6,
+	    "order": 7,
 	    "title": {
 	      "zh-CN": "菜单隐藏方式",
 	      "en-US": "The way of hiding menu."
@@ -675,7 +675,200 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 823:
+/***/ 833:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  "content": {
+	    "zh-CN": [
+	      [
+	        "p",
+	        "支持 6 个弹出位置。"
+	      ]
+	    ],
+	    "en-US": [
+	      [
+	        "p",
+	        "Support 6 placements."
+	      ]
+	    ]
+	  },
+	  "meta": {
+	    "order": 1,
+	    "title": {
+	      "zh-CN": "弹出位置",
+	      "en-US": "Placement"
+	    },
+	    "filename": "components/dropdown/demo/placement.md",
+	    "id": "components-dropdown-demo-placement"
+	  },
+	  "toc": [
+	    "ul",
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#zh-CN"
+	        },
+	        "zh-CN"
+	      ]
+	    ],
+	    [
+	      "li",
+	      [
+	        "a",
+	        {
+	          "className": "bisheng-toc-h2",
+	          "href": "#en-US"
+	        },
+	        "en-US"
+	      ]
+	    ]
+	  ],
+	  "highlightedCode": [
+	    "pre",
+	    {
+	      "lang": "__react",
+	      "highlighted": "import { Menu<span class=\"token punctuation\">,</span> Dropdown<span class=\"token punctuation\">,</span> Button } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n<span class=\"token keyword\">const</span> menu <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>Menu<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>a target<span class=\"token operator\">=</span><span class=\"token string\">\"_blank\"</span> rel<span class=\"token operator\">=</span><span class=\"token string\">\"noopener noreferrer\"</span> href<span class=\"token operator\">=</span><span class=\"token string\">\"http://www.alipay.com/\"</span><span class=\"token operator\">></span>1st menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>a target<span class=\"token operator\">=</span><span class=\"token string\">\"_blank\"</span> rel<span class=\"token operator\">=</span><span class=\"token string\">\"noopener noreferrer\"</span> href<span class=\"token operator\">=</span><span class=\"token string\">\"http://www.taobao.com/\"</span><span class=\"token operator\">></span>2nd menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>a target<span class=\"token operator\">=</span><span class=\"token string\">\"_blank\"</span> rel<span class=\"token operator\">=</span><span class=\"token string\">\"noopener noreferrer\"</span> href<span class=\"token operator\">=</span><span class=\"token string\">\"http://www.tmall.com/\"</span><span class=\"token operator\">></span>3d menu item<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token punctuation\">.</span>Item<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Menu<span class=\"token operator\">></span>\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomLeft\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>bottomLeft<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomCenter\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>bottomCenter<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"bottomRight\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>bottomRight<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>br <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"topLeft\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>topLeft<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"topCenter\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>topCenter<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>Dropdown overlay<span class=\"token operator\">=</span>{menu} placement<span class=\"token operator\">=</span><span class=\"token string\">\"topRight\"</span><span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button<span class=\"token operator\">></span>topRight<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Dropdown<span class=\"token operator\">></span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n<span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	    }
+	  ],
+	  "preview": function bishengPluginReactPreviewer() {
+	  var React = __webpack_require__(1);
+
+	  var ReactDOM = __webpack_require__(2);
+
+	  var _antd = __webpack_require__(3);
+
+	  var menu = React.createElement(
+	    _antd.Menu,
+	    null,
+	    React.createElement(
+	      _antd.Menu.Item,
+	      null,
+	      React.createElement(
+	        "a",
+	        {
+	          target: "_blank",
+	          rel: "noopener noreferrer",
+	          href: "http://www.alipay.com/"
+	        },
+	        "1st menu item"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Menu.Item,
+	      null,
+	      React.createElement(
+	        "a",
+	        {
+	          target: "_blank",
+	          rel: "noopener noreferrer",
+	          href: "http://www.taobao.com/"
+	        },
+	        "2nd menu item"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Menu.Item,
+	      null,
+	      React.createElement(
+	        "a",
+	        {
+	          target: "_blank",
+	          rel: "noopener noreferrer",
+	          href: "http://www.tmall.com/"
+	        },
+	        "3d menu item"
+	      )
+	    )
+	  );
+	  return React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "bottomLeft"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "bottomLeft"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "bottomCenter"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "bottomCenter"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "bottomRight"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "bottomRight"
+	      )
+	    ),
+	    React.createElement("br", null),
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "topLeft"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "topLeft"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "topCenter"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "topCenter"
+	      )
+	    ),
+	    React.createElement(
+	      _antd.Dropdown,
+	      {
+	        overlay: menu,
+	        placement: "topRight"
+	      },
+	      React.createElement(
+	        _antd.Button,
+	        null,
+	        "topRight"
+	      )
+	    )
+	  );
+	},
+	  "style": "#components-dropdown-demo-placement .ant-btn {\n  margin-right: 8px;\n  margin-bottom: 8px;\n}",
+	  "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-dropdown-demo-placement</span> <span class=\"token class\">.ant-btn</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">margin-right</span><span class=\"token punctuation\">:</span> <span class=\"token number\">8</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin-bottom</span><span class=\"token punctuation\">:</span> <span class=\"token number\">8</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>"
+	};
+
+/***/ },
+
+/***/ 834:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -694,7 +887,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 5,
+	    "order": 6,
 	    "title": {
 	      "zh-CN": "多级菜单",
 	      "en-US": "Cascading menu"
@@ -794,7 +987,7 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 824:
+/***/ 835:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -823,7 +1016,7 @@ webpackJsonp([17,211],{
 	    ]
 	  },
 	  "meta": {
-	    "order": 2,
+	    "order": 3,
 	    "title": {
 	      "zh-CN": "触发方式",
 	      "en-US": "Trigger mode"
@@ -935,17 +1128,18 @@ webpackJsonp([17,211],{
 
 /***/ },
 
-/***/ 1211:
+/***/ 1222:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(818),
-	    'dropdown-button': __webpack_require__(819),
-	    'event': __webpack_require__(820),
-	    'item': __webpack_require__(821),
-	    'overlay-visible': __webpack_require__(822),
-	    'sub-menu': __webpack_require__(823),
-	    'trigger': __webpack_require__(824),
+	    'basic': __webpack_require__(828),
+	    'dropdown-button': __webpack_require__(829),
+	    'event': __webpack_require__(830),
+	    'item': __webpack_require__(831),
+	    'overlay-visible': __webpack_require__(832),
+	    'placement': __webpack_require__(833),
+	    'sub-menu': __webpack_require__(834),
+	    'trigger': __webpack_require__(835),
 	}
 
 /***/ }

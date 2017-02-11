@@ -1,6 +1,6 @@
 webpackJsonp([107,211],{
 
-/***/ 1115:
+/***/ 1126:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -310,7 +310,7 @@ webpackJsonp([107,211],{
 	          "class": "preview-img",
 	          "align": "right",
 	          "description": "点击『提交』后，系统将处理结果直接在页面上进行反馈（统计错误数量和标记错误内容）。",
-	          "src": "https://os.alipayobjects.com/rmsportal/PLdlPvaebRdJOgu.png"
+	          "src": "https://zos.alipayobjects.com/rmsportal/xTtVSREbASRMstTggVGD.png"
 	        }
 	      ]
 	    ],

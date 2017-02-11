@@ -1,6 +1,6 @@
 webpackJsonp([179,211],{
 
-/***/ 817:
+/***/ 827:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -518,7 +518,7 @@ webpackJsonp([179,211],{
 	              "a",
 	              {
 	                "title": null,
-	                "href": "/components/time-picker/#api"
+	                "href": "/components/time-picker/#API"
 	              },
 	              "TimePicker Options"
 	            ]
@@ -861,7 +861,7 @@ webpackJsonp([179,211],{
 	              "a",
 	              {
 	                "title": null,
-	                "href": "/components/time-picker/#api"
+	                "href": "/components/time-picker/#API"
 	              },
 	              "TimePicker Options"
 	            ]

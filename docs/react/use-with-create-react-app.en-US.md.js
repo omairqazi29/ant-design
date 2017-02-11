@@ -1,6 +1,6 @@
 webpackJsonp([86,211],{
 
-/***/ 1136:
+/***/ 1147:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -273,7 +273,7 @@ webpackJsonp([86,211],{
 	        "a",
 	        {
 	          "title": null,
-	          "href": "/docs/react/getting-started-cn#按需加载"
+	          "href": "/docs/react/getting-started#Import-on-Demand"
 	        },
 	        "principle"
 	      ],

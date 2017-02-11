@@ -1,6 +1,6 @@
 webpackJsonp([164,211],{
 
-/***/ 883:
+/***/ 894:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -39,11 +39,11 @@ webpackJsonp([164,211],{
 	      "pre",
 	      {
 	        "lang": "jsx",
-	        "highlighted": "<span class=\"token keyword\">import</span> enUS <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/locale-provider/en_US'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token operator\">...</span>\n\n<span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LocaleProvider</span> <span class=\"token attr-name\">locale</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>enUS<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>LocaleProvider</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>"
+	        "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> LocaleProvider <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> enUS <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/locale-provider/en_US'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token operator\">...</span>\n\n<span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LocaleProvider</span> <span class=\"token attr-name\">locale</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span>enUS<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>App</span> <span class=\"token punctuation\">/></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>LocaleProvider</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">;</span>"
 	      },
 	      [
 	        "code",
-	        "import enUS from 'antd/lib/locale-provider/en_US';\n\n...\n\nreturn <LocaleProvider locale={enUS}><App /></LocaleProvider>;"
+	        "import { LocaleProvider } from 'antd';\nimport enUS from 'antd/lib/locale-provider/en_US';\n\n...\n\nreturn <LocaleProvider locale={enUS}><App /></LocaleProvider>;"
 	      ]
 	    ],
 	    [

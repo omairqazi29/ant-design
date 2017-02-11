@@ -1,6 +1,6 @@
 webpackJsonp([173,211],{
 
-/***/ 854:
+/***/ 865:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -397,7 +397,16 @@ webpackJsonp([173,211],{
 	              "code",
 	              "flex"
 	            ],
-	            "，现代浏览器下有效"
+	            "，",
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "http://caniuse.com/#search=flex"
+	              },
+	              "现代浏览器"
+	            ],
+	            " 下有效"
 	          ],
 	          [
 	            "td",

@@ -1,6 +1,6 @@
 webpackJsonp([91,211],{
 
-/***/ 1131:
+/***/ 1142:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -60,9 +60,9 @@ webpackJsonp([91,211],{
 	          "a",
 	          {
 	            "title": null,
-	            "href": "https://github.com/xcatliu/react-ie8"
+	            "href": "/docs/react/getting-started#兼容性"
 	          },
-	          "IE8 issues"
+	          "更多兼容性信息"
 	        ]
 	      ]
 	    ],
@@ -698,7 +698,7 @@ webpackJsonp([91,211],{
 	            "a",
 	            {
 	              "title": null,
-	              "href": "/docs/react/customize-theme-cn"
+	              "href": "/docs/react/customize-theme"
 	            },
 	            "定制主题"
 	          ]
@@ -898,7 +898,7 @@ webpackJsonp([91,211],{
 	            },
 	            "Stack Overflow"
 	          ],
-	          "（推荐）"
+	          "（英文）"
 	        ]
 	      ],
 	      [
@@ -912,7 +912,8 @@ webpackJsonp([91,211],{
 	              "href": "https://segmentfault.com/t/antd"
 	            },
 	            "Segment Fault"
-	          ]
+	          ],
+	          "（中文）"
 	        ]
 	      ],
 	      [

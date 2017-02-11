@@ -1,6 +1,6 @@
 webpackJsonp([152,211],{
 
-/***/ 936:
+/***/ 947:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -214,11 +214,11 @@ webpackJsonp([152,211],{
 	          ],
 	          [
 	            "td",
-	            "a callback function, can be executed when the page number is changing, and it takes the resulting page number as an argument"
+	            "a callback function, can be executed when the page number is changing, and it takes the resulting page number and pageSize as its arguments"
 	          ],
 	          [
 	            "td",
-	            "Function(page)"
+	            "Function(page, pageSize)"
 	          ],
 	          [
 	            "td",

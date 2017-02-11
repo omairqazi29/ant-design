@@ -1,6 +1,6 @@
 webpackJsonp([178,211],{
 
-/***/ 825:
+/***/ 836:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -211,11 +211,62 @@ webpackJsonp([178,211],{
 	          ],
 	          [
 	            "td",
-	            "Function"
+	            "Function(visible)"
 	          ],
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "placement of pop menu: ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomCenter"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topCenter"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "String"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ]
 	          ]
 	        ]
 	      ]
@@ -434,6 +485,57 @@ webpackJsonp([178,211],{
 	          [
 	            "td",
 	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "placement"
+	          ],
+	          [
+	            "td",
+	            "placement of pop menu: ",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomCenter"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "bottomRight"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topLeft"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topCenter"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "topRight"
+	            ]
+	          ],
+	          [
+	            "td",
+	            "String"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "bottomLeft"
+	            ]
 	          ]
 	        ]
 	      ]

@@ -1,6 +1,6 @@
 webpackJsonp([174,211],{
 
-/***/ 853:
+/***/ 864:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -349,11 +349,11 @@ webpackJsonp([174,211],{
 	          "tr",
 	          [
 	            "th",
-	            "Member"
+	            "Property"
 	          ],
 	          [
 	            "th",
-	            "Explanation"
+	            "Description"
 	          ],
 	          [
 	            "th",
@@ -399,7 +399,15 @@ webpackJsonp([174,211],{
 	              "code",
 	              "flex"
 	            ],
-	            ", effective modern browser"
+	            ", ",
+	            [
+	              "a",
+	              {
+	                "title": null,
+	                "href": "http://caniuse.com/#search=flex"
+	              },
+	              "effective modern browser"
+	            ]
 	          ],
 	          [
 	            "td",
@@ -505,11 +513,11 @@ webpackJsonp([174,211],{
 	          "tr",
 	          [
 	            "th",
-	            "Member"
+	            "Property"
 	          ],
 	          [
 	            "th",
-	            "Explanation"
+	            "Description"
 	          ],
 	          [
 	            "th",
@@ -625,6 +633,126 @@ webpackJsonp([174,211],{
 	          [
 	            "td",
 	            "0"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "xs"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "<768px"
+	            ],
+	            ", could be a ",
+	            [
+	              "code",
+	              "span"
+	            ],
+	            " value or a object contain above props"
+	          ],
+	          [
+	            "td",
+	            "number",
+	            "|",
+	            "object"
+	          ],
+	          [
+	            "td",
+	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "sm"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "≥768px"
+	            ],
+	            ", could be a ",
+	            [
+	              "code",
+	              "span"
+	            ],
+	            " value or a object contain above props"
+	          ],
+	          [
+	            "td",
+	            "number",
+	            "|",
+	            "object"
+	          ],
+	          [
+	            "td",
+	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "md"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "≥992px"
+	            ],
+	            ", could be a ",
+	            [
+	              "code",
+	              "span"
+	            ],
+	            " value or a object contain above props"
+	          ],
+	          [
+	            "td",
+	            "number",
+	            "|",
+	            "object"
+	          ],
+	          [
+	            "td",
+	            "-"
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "lg"
+	          ],
+	          [
+	            "td",
+	            [
+	              "code",
+	              "≥1200px"
+	            ],
+	            ", could be a ",
+	            [
+	              "code",
+	              "span"
+	            ],
+	            " value or a object contain above props"
+	          ],
+	          [
+	            "td",
+	            "number",
+	            "|",
+	            "object"
+	          ],
+	          [
+	            "td",
+	            "-"
 	          ]
 	        ]
 	      ]

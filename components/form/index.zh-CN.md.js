@@ -1,6 +1,6 @@
 webpackJsonp([175,211],{
 
-/***/ 842:
+/***/ 853:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -404,6 +404,33 @@ webpackJsonp([175,211],{
 	        "this.props.form"
 	      ],
 	      " 提供的 API 如下："
+	    ],
+	    [
+	      "blockquote",
+	      [
+	        "p",
+	        "注意：使用 ",
+	        [
+	          "code",
+	          "getFieldsValue"
+	        ],
+	        " ",
+	        [
+	          "code",
+	          "getFieldValue"
+	        ],
+	        " ",
+	        [
+	          "code",
+	          "setFieldsValue"
+	        ],
+	        " 等时，应确保对应的 field 已经用 ",
+	        [
+	          "code",
+	          "getFieldDecorator"
+	        ],
+	        " 注册过了。"
+	      ]
 	    ],
 	    [
 	      "table",

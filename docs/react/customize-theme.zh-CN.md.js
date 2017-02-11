@@ -1,6 +1,6 @@
 webpackJsonp([97,211],{
 
-/***/ 1125:
+/***/ 1136:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -101,7 +101,7 @@ webpackJsonp([97,211],{
 	    ],
 	    [
 	      "h3",
-	      "1) package.theme（推荐）"
+	      "1) theme 属性（推荐）"
 	    ],
 	    [
 	      "p",
@@ -109,6 +109,11 @@ webpackJsonp([97,211],{
 	      [
 	        "code",
 	        "package.json"
+	      ],
+	      " 或 ",
+	      [
+	        "code",
+	        ".roadhogrc"
 	      ],
 	      " 下的 ",
 	      [
@@ -157,9 +162,9 @@ webpackJsonp([97,211],{
 	      "定义 ",
 	      [
 	        "code",
-	        "package.theme"
+	        "theme"
 	      ],
-	      " 时， 需要配合 ",
+	      " 属性时， 需要配合 ",
 	      [
 	        "a",
 	        {
@@ -232,6 +237,31 @@ webpackJsonp([97,211],{
 	            "true"
 	          ],
 	          "。"
+	        ]
+	      ],
+	      [
+	        "li",
+	        [
+	          "p",
+	          [
+	            "code",
+	            "dva-cli@0.7.0+"
+	          ],
+	          " 的 ",
+	          [
+	            "code",
+	            "theme"
+	          ],
+	          " 属性需要写在 ",
+	          [
+	            "a",
+	            {
+	              "title": null,
+	              "href": "https://github.com/dvajs/dva-example-user-dashboard/commit/d6da33b3a6e18eb7f003752a4b00b5a660747c31"
+	            },
+	            ".roadhogrc"
+	          ],
+	          " 文件里。"
 	        ]
 	      ],
 	      [

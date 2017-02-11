@@ -1,6 +1,6 @@
 webpackJsonp([0,211],{
 
-/***/ 1021:
+/***/ 1032:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -114,7 +114,7 @@ webpackJsonp([0,211],{
 
 	  var _antd = __webpack_require__(3);
 
-	  var _reqwest = __webpack_require__(1923);
+	  var _reqwest = __webpack_require__(1938);
 
 	  var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -215,7 +215,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1022:
+/***/ 1033:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -369,7 +369,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1023:
+/***/ 1034:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -489,7 +489,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1024:
+/***/ 1035:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -715,7 +715,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1025:
+/***/ 1036:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -936,7 +936,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1026:
+/***/ 1037:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1332,7 +1332,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1027:
+/***/ 1038:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1388,7 +1388,7 @@ webpackJsonp([0,211],{
 	    "pre",
 	    {
 	      "lang": "__react",
-	      "highlighted": "import { Table<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> Popconfirm } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nclass EditableCell extends React<span class=\"token punctuation\">.</span>Component {\n  state <span class=\"token operator\">=</span> {\n    value<span class=\"token punctuation\">:</span> this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">,</span>\n    editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n  }\n  handleChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> value <span class=\"token operator\">=</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ value }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  check <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>onChange<span class=\"token punctuation\">)</span> {\n      this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n  }\n  edit <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { value<span class=\"token punctuation\">,</span> editable } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell\"</span><span class=\"token operator\">></span>\n      {\n        editable <span class=\"token operator\">?</span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-input-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Input\n            value<span class=\"token operator\">=</span>{value}\n            onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleChange}\n            onPressEnter<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>check}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Icon\n            type<span class=\"token operator\">=</span><span class=\"token string\">\"check\"</span>\n            className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-icon-check\"</span>\n            onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>check}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token punctuation\">:</span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-text-wrapper\"</span><span class=\"token operator\">></span>\n          {value || <span class=\"token string\">' '</span>}\n          <span class=\"token operator\">&lt;</span>Icon\n            type<span class=\"token operator\">=</span><span class=\"token string\">\"edit\"</span>\n            className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-icon\"</span>\n            onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>edit}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      }\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nclass EditableTable extends React<span class=\"token punctuation\">.</span>Component {\n  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> {\n    <span class=\"token function\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>columns <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span>{\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">,</span>\n      width<span class=\"token punctuation\">:</span> <span class=\"token string\">'30%'</span><span class=\"token punctuation\">,</span>\n      render<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>text<span class=\"token punctuation\">,</span> record<span class=\"token punctuation\">,</span> index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n        <span class=\"token operator\">&lt;</span>EditableCell\n          value<span class=\"token operator\">=</span>{text}\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span><span class=\"token function\">onCellChange</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'age'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'age'</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'address'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'address'</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'operation'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'operation'</span><span class=\"token punctuation\">,</span>\n      render<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>text<span class=\"token punctuation\">,</span> record<span class=\"token punctuation\">,</span> index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n        return <span class=\"token punctuation\">(</span>\n          this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">.</span>length <span class=\"token operator\">></span> <span class=\"token number\">1</span> <span class=\"token operator\">?</span>\n          <span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Popconfirm title<span class=\"token operator\">=</span><span class=\"token string\">\"Sure to delete?\"</span> onConfirm<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span><span class=\"token function\">onDelete</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">)</span>}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"#\"</span><span class=\"token operator\">></span>Delete<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span> <span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span>\n        <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n    this<span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> {\n      dataSource<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{\n        key<span class=\"token punctuation\">:</span> <span class=\"token string\">'0'</span><span class=\"token punctuation\">,</span>\n        name<span class=\"token punctuation\">:</span> <span class=\"token string\">'Edward King 0'</span><span class=\"token punctuation\">,</span>\n        age<span class=\"token punctuation\">:</span> <span class=\"token string\">'32'</span><span class=\"token punctuation\">,</span>\n        address<span class=\"token punctuation\">:</span> <span class=\"token string\">'London, Park Lane no. 0'</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span> {\n        key<span class=\"token punctuation\">:</span> <span class=\"token string\">'1'</span><span class=\"token punctuation\">,</span>\n        name<span class=\"token punctuation\">:</span> <span class=\"token string\">'Edward King 1'</span><span class=\"token punctuation\">,</span>\n        age<span class=\"token punctuation\">:</span> <span class=\"token string\">'32'</span><span class=\"token punctuation\">,</span>\n        address<span class=\"token punctuation\">:</span> <span class=\"token string\">'London, Park Lane no. 1'</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n      count<span class=\"token punctuation\">:</span> <span class=\"token number\">2</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  onCellChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    return <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">const</span> dataSource <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      dataSource<span class=\"token punctuation\">[</span>index<span class=\"token punctuation\">]</span><span class=\"token punctuation\">[</span>key<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> value<span class=\"token comment\" spellcheck=\"true\">;</span>\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ dataSource }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  onDelete <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    return <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">const</span> dataSource <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      dataSource<span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> <span class=\"token number\">1</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ dataSource }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  handleAdd <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> { count<span class=\"token punctuation\">,</span> dataSource } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> newData <span class=\"token operator\">=</span> {\n      key<span class=\"token punctuation\">:</span> count<span class=\"token punctuation\">,</span>\n      name<span class=\"token punctuation\">:</span> `Edward King ${count}`<span class=\"token punctuation\">,</span>\n      age<span class=\"token punctuation\">:</span> <span class=\"token number\">32</span><span class=\"token punctuation\">,</span>\n      address<span class=\"token punctuation\">:</span> `London<span class=\"token punctuation\">,</span> Park Lane no<span class=\"token punctuation\">.</span> ${count}`<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      dataSource<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">,</span> newData<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n      count<span class=\"token punctuation\">:</span> count <span class=\"token operator\">+</span> <span class=\"token number\">1</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { dataSource } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> columns <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>columns<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-add-btn\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleAdd}<span class=\"token operator\">></span>Add<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Table bordered dataSource<span class=\"token operator\">=</span>{dataSource} columns<span class=\"token operator\">=</span>{columns} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>EditableTable <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "highlighted": "import { Table<span class=\"token punctuation\">,</span> Input<span class=\"token punctuation\">,</span> Icon<span class=\"token punctuation\">,</span> Button<span class=\"token punctuation\">,</span> Popconfirm } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nclass EditableCell extends React<span class=\"token punctuation\">.</span>Component {\n  state <span class=\"token operator\">=</span> {\n    value<span class=\"token punctuation\">:</span> this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">,</span>\n    editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span><span class=\"token punctuation\">,</span>\n  }\n  handleChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> value <span class=\"token operator\">=</span> e<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">.</span>value<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ value }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  check <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>onChange<span class=\"token punctuation\">)</span> {\n      this<span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span><span class=\"token function\">onChange</span><span class=\"token punctuation\">(</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>value<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }\n  }\n  edit <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ editable<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { value<span class=\"token punctuation\">,</span> editable } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell\"</span><span class=\"token operator\">></span>\n      {\n        editable <span class=\"token operator\">?</span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-input-wrapper\"</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Input\n            value<span class=\"token operator\">=</span>{value}\n            onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleChange}\n            onPressEnter<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>check}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n          <span class=\"token operator\">&lt;</span>Icon\n            type<span class=\"token operator\">=</span><span class=\"token string\">\"check\"</span>\n            className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-icon-check\"</span>\n            onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>check}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n        <span class=\"token punctuation\">:</span>\n        <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-text-wrapper\"</span><span class=\"token operator\">></span>\n          {value || <span class=\"token string\">' '</span>}\n          <span class=\"token operator\">&lt;</span>Icon\n            type<span class=\"token operator\">=</span><span class=\"token string\">\"edit\"</span>\n            className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-cell-icon\"</span>\n            onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>edit}\n          <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n        <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n      }\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nclass EditableTable extends React<span class=\"token punctuation\">.</span>Component {\n  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> {\n    <span class=\"token function\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span>columns <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span>{\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">,</span>\n      width<span class=\"token punctuation\">:</span> <span class=\"token string\">'30%'</span><span class=\"token punctuation\">,</span>\n      render<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>text<span class=\"token punctuation\">,</span> record<span class=\"token punctuation\">,</span> index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span>\n        <span class=\"token operator\">&lt;</span>EditableCell\n          value<span class=\"token operator\">=</span>{text}\n          onChange<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span><span class=\"token function\">onCellChange</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> <span class=\"token string\">'name'</span><span class=\"token punctuation\">)</span>}\n        <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n      <span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'age'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'age'</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'address'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'address'</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">,</span> {\n      title<span class=\"token punctuation\">:</span> <span class=\"token string\">'operation'</span><span class=\"token punctuation\">,</span>\n      dataIndex<span class=\"token punctuation\">:</span> <span class=\"token string\">'operation'</span><span class=\"token punctuation\">,</span>\n      render<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span>text<span class=\"token punctuation\">,</span> record<span class=\"token punctuation\">,</span> index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n        return <span class=\"token punctuation\">(</span>\n          this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">.</span>length <span class=\"token operator\">></span> <span class=\"token number\">1</span> <span class=\"token operator\">?</span>\n          <span class=\"token punctuation\">(</span>\n            <span class=\"token operator\">&lt;</span>Popconfirm title<span class=\"token operator\">=</span><span class=\"token string\">\"Sure to delete?\"</span> onConfirm<span class=\"token operator\">=</span>{<span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> this<span class=\"token punctuation\">.</span><span class=\"token function\">onDelete</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">)</span>}<span class=\"token operator\">></span>\n              <span class=\"token operator\">&lt;</span>a href<span class=\"token operator\">=</span><span class=\"token string\">\"#\"</span><span class=\"token operator\">></span>Delete<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>a<span class=\"token operator\">></span>\n            <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Popconfirm<span class=\"token operator\">></span>\n          <span class=\"token punctuation\">)</span> <span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span>\n        <span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      }<span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\n    this<span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> {\n      dataSource<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>{\n        key<span class=\"token punctuation\">:</span> <span class=\"token string\">'0'</span><span class=\"token punctuation\">,</span>\n        name<span class=\"token punctuation\">:</span> <span class=\"token string\">'Edward King 0'</span><span class=\"token punctuation\">,</span>\n        age<span class=\"token punctuation\">:</span> <span class=\"token string\">'32'</span><span class=\"token punctuation\">,</span>\n        address<span class=\"token punctuation\">:</span> <span class=\"token string\">'London, Park Lane no. 0'</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">,</span> {\n        key<span class=\"token punctuation\">:</span> <span class=\"token string\">'1'</span><span class=\"token punctuation\">,</span>\n        name<span class=\"token punctuation\">:</span> <span class=\"token string\">'Edward King 1'</span><span class=\"token punctuation\">,</span>\n        age<span class=\"token punctuation\">:</span> <span class=\"token string\">'32'</span><span class=\"token punctuation\">,</span>\n        address<span class=\"token punctuation\">:</span> <span class=\"token string\">'London, Park Lane no. 1'</span><span class=\"token punctuation\">,</span>\n      }<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n      count<span class=\"token punctuation\">:</span> <span class=\"token number\">2</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  onCellChange <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> key<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    return <span class=\"token punctuation\">(</span>value<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n      <span class=\"token keyword\">const</span> dataSource <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n      dataSource<span class=\"token punctuation\">[</span>index<span class=\"token punctuation\">]</span><span class=\"token punctuation\">[</span>key<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> value<span class=\"token comment\" spellcheck=\"true\">;</span>\n      this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ dataSource }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  onDelete <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> dataSource <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>this<span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">]</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    dataSource<span class=\"token punctuation\">.</span><span class=\"token function\">splice</span><span class=\"token punctuation\">(</span>index<span class=\"token punctuation\">,</span> <span class=\"token number\">1</span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{ dataSource }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  handleAdd <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> {\n    <span class=\"token keyword\">const</span> { count<span class=\"token punctuation\">,</span> dataSource } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> newData <span class=\"token operator\">=</span> {\n      key<span class=\"token punctuation\">:</span> count<span class=\"token punctuation\">,</span>\n      name<span class=\"token punctuation\">:</span> `Edward King ${count}`<span class=\"token punctuation\">,</span>\n      age<span class=\"token punctuation\">:</span> <span class=\"token number\">32</span><span class=\"token punctuation\">,</span>\n      address<span class=\"token punctuation\">:</span> `London<span class=\"token punctuation\">,</span> Park Lane no<span class=\"token punctuation\">.</span> ${count}`<span class=\"token punctuation\">,</span>\n    }<span class=\"token comment\" spellcheck=\"true\">;</span>\n    this<span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>{\n      dataSource<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span><span class=\"token punctuation\">.</span>dataSource<span class=\"token punctuation\">,</span> newData<span class=\"token punctuation\">]</span><span class=\"token punctuation\">,</span>\n      count<span class=\"token punctuation\">:</span> count <span class=\"token operator\">+</span> <span class=\"token number\">1</span><span class=\"token punctuation\">,</span>\n    }<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> {\n    <span class=\"token keyword\">const</span> { dataSource } <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>state<span class=\"token comment\" spellcheck=\"true\">;</span>\n    <span class=\"token keyword\">const</span> columns <span class=\"token operator\">=</span> this<span class=\"token punctuation\">.</span>columns<span class=\"token comment\" spellcheck=\"true\">;</span>\n    return <span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Button className<span class=\"token operator\">=</span><span class=\"token string\">\"editable-add-btn\"</span> onClick<span class=\"token operator\">=</span>{this<span class=\"token punctuation\">.</span>handleAdd}<span class=\"token operator\">></span>Add<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>Button<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>Table bordered dataSource<span class=\"token operator\">=</span>{dataSource} columns<span class=\"token operator\">=</span>{columns} <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n  }\n}\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token operator\">&lt;</span>EditableTable <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token punctuation\">,</span> mountNode<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -1506,14 +1506,12 @@ webpackJsonp([0,211],{
 	      };
 
 	      _this2.onDelete = function (index) {
-	        return function () {
-	          var dataSource = [].concat(_toConsumableArray(_this2.state.dataSource));
-	          dataSource.splice(index, 1);
+	        var dataSource = [].concat(_toConsumableArray(_this2.state.dataSource));
+	        dataSource.splice(index, 1);
 
-	          _this2.setState({
-	            dataSource: dataSource
-	          });
-	        };
+	        _this2.setState({
+	          dataSource: dataSource
+	        });
 	      };
 
 	      _this2.handleAdd = function () {
@@ -1557,7 +1555,9 @@ webpackJsonp([0,211],{
 	            _antd.Popconfirm,
 	            {
 	              title: "Sure to delete?",
-	              onConfirm: _this2.onDelete(index)
+	              onConfirm: function onConfirm() {
+	                return _this2.onDelete(index);
+	              }
 	            },
 	            React.createElement(
 	              "a",
@@ -1619,7 +1619,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1028:
+/***/ 1039:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1964,7 +1964,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1029:
+/***/ 1040:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2141,7 +2141,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1030:
+/***/ 1041:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2268,7 +2268,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1031:
+/***/ 1042:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2471,7 +2471,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1032:
+/***/ 1043:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2661,7 +2661,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1033:
+/***/ 1044:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2781,7 +2781,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1034:
+/***/ 1045:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -2960,7 +2960,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1035:
+/***/ 1046:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3177,7 +3177,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1036:
+/***/ 1047:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3387,7 +3387,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1037:
+/***/ 1048:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3513,7 +3513,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1038:
+/***/ 1049:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -3821,7 +3821,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1039:
+/***/ 1050:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4000,7 +4000,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1040:
+/***/ 1051:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4133,7 +4133,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1041:
+/***/ 1052:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -4270,36 +4270,36 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1234:
+/***/ 1245:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'ajax': __webpack_require__(1021),
-	    'basic': __webpack_require__(1022),
-	    'bordered': __webpack_require__(1023),
-	    'colspan-rowspan': __webpack_require__(1024),
-	    'custom-filter-panel': __webpack_require__(1025),
-	    'dynamic-settings': __webpack_require__(1026),
-	    'edit-cell': __webpack_require__(1027),
-	    'edit-row': __webpack_require__(1028),
-	    'expand-children': __webpack_require__(1029),
-	    'expand': __webpack_require__(1030),
-	    'fixed-columns-header': __webpack_require__(1031),
-	    'fixed-columns': __webpack_require__(1032),
-	    'fixed-header': __webpack_require__(1033),
-	    'grouping-columns': __webpack_require__(1034),
-	    'head': __webpack_require__(1035),
-	    'jsx': __webpack_require__(1036),
-	    'paging': __webpack_require__(1037),
-	    'reset-filter': __webpack_require__(1038),
-	    'row-selection-and-operation': __webpack_require__(1039),
-	    'row-selection': __webpack_require__(1040),
-	    'size': __webpack_require__(1041),
+	    'ajax': __webpack_require__(1032),
+	    'basic': __webpack_require__(1033),
+	    'bordered': __webpack_require__(1034),
+	    'colspan-rowspan': __webpack_require__(1035),
+	    'custom-filter-panel': __webpack_require__(1036),
+	    'dynamic-settings': __webpack_require__(1037),
+	    'edit-cell': __webpack_require__(1038),
+	    'edit-row': __webpack_require__(1039),
+	    'expand-children': __webpack_require__(1040),
+	    'expand': __webpack_require__(1041),
+	    'fixed-columns-header': __webpack_require__(1042),
+	    'fixed-columns': __webpack_require__(1043),
+	    'fixed-header': __webpack_require__(1044),
+	    'grouping-columns': __webpack_require__(1045),
+	    'head': __webpack_require__(1046),
+	    'jsx': __webpack_require__(1047),
+	    'paging': __webpack_require__(1048),
+	    'reset-filter': __webpack_require__(1049),
+	    'row-selection-and-operation': __webpack_require__(1050),
+	    'row-selection': __webpack_require__(1051),
+	    'size': __webpack_require__(1052),
 	}
 
 /***/ },
 
-/***/ 1923:
+/***/ 1938:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4323,7 +4323,7 @@ webpackJsonp([0,211],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(1935)
+	      XHR2 = __webpack_require__(1950)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -4936,7 +4936,7 @@ webpackJsonp([0,211],{
 
 /***/ },
 
-/***/ 1935:
+/***/ 1950:
 /***/ function(module, exports) {
 
 	/* (ignored) */
