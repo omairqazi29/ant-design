@@ -1,6 +1,6 @@
 webpackJsonp([47,211],{
 
-/***/ 742:
+/***/ 598:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -55,8 +55,8 @@ webpackJsonp([47,211],{
 	  "highlightedCode": [
 	    "pre",
 	    {
-	      "lang": "__react",
-	      "highlighted": "import { BackTop } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>BackTop <span class=\"token operator\">/</span><span class=\"token operator\">></span>\n    Scroll down <span class=\"token keyword\">to</span> see the bottom<span class=\"token operator\">-</span>right\n    <span class=\"token operator\">&lt;</span>strong style<span class=\"token operator\">=</span>{{ color<span class=\"token punctuation\">:</span> <span class=\"token string\">'rgba(64, 64, 64, 0.6)'</span> }}<span class=\"token operator\">></span> gray <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>strong<span class=\"token operator\">></span>\n    button<span class=\"token punctuation\">.</span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "lang": "jsx",
+	      "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> BackTop <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>BackTop</span> <span class=\"token punctuation\">/></span></span>\n    Scroll down to see the bottom<span class=\"token operator\">-</span>right\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>strong</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> color<span class=\"token punctuation\">:</span> <span class=\"token string\">'rgba(64, 64, 64, 0.6)'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span> gray <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>strong</span><span class=\"token punctuation\">></span></span>\n    button<span class=\"token punctuation\">.</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -87,7 +87,7 @@ webpackJsonp([47,211],{
 
 /***/ },
 
-/***/ 743:
+/***/ 599:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -152,8 +152,8 @@ webpackJsonp([47,211],{
 	  "highlightedCode": [
 	    "pre",
 	    {
-	      "lang": "__react",
-	      "highlighted": "import { BackTop } from <span class=\"token string\">'antd'</span><span class=\"token comment\" spellcheck=\"true\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span>BackTop<span class=\"token operator\">></span>\n      <span class=\"token operator\">&lt;</span>div className<span class=\"token operator\">=</span><span class=\"token string\">\"ant-back-top-inner\"</span><span class=\"token operator\">></span>UP<span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span>\n    <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>BackTop<span class=\"token operator\">></span>\n    Scroll down <span class=\"token keyword\">to</span> see the bottom<span class=\"token operator\">-</span>right\n    <span class=\"token operator\">&lt;</span>strong style<span class=\"token operator\">=</span>{{ color<span class=\"token punctuation\">:</span> <span class=\"token string\">'#57c5f7'</span> }}<span class=\"token operator\">></span> blue <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>strong<span class=\"token operator\">></span>\n    button<span class=\"token punctuation\">.</span>\n  <span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>div<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token comment\" spellcheck=\"true\">;</span>"
+	      "lang": "jsx",
+	      "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> BackTop <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>BackTop</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>ant-back-top-inner<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>UP<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>BackTop</span><span class=\"token punctuation\">></span></span>\n    Scroll down to see the bottom<span class=\"token operator\">-</span>right\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>strong</span> <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> color<span class=\"token punctuation\">:</span> <span class=\"token string\">'#57c5f7'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">></span></span> blue <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>strong</span><span class=\"token punctuation\">></span></span>\n    button<span class=\"token punctuation\">.</span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span><span class=\"token punctuation\">,</span>\n  mountNode\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
 	    }
 	  ],
 	  "preview": function bishengPluginReactPreviewer() {
@@ -196,12 +196,12 @@ webpackJsonp([47,211],{
 
 /***/ },
 
-/***/ 1211:
+/***/ 1051:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    'basic': __webpack_require__(742),
-	    'custom': __webpack_require__(743),
+	    'basic': __webpack_require__(598),
+	    'custom': __webpack_require__(599),
 	}
 
 /***/ }

@@ -1,6 +1,6 @@
 webpackJsonp([201,211],{
 
-/***/ 741:
+/***/ 597:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -23,7 +23,7 @@ webpackJsonp([201,211],{
 	    "category": "Components",
 	    "subtitle": "自动完成",
 	    "type": "Data Entry",
-	    "cols": 1,
+	    "cols": 2,
 	    "title": "AutoComplete",
 	    "filename": "components/auto-complete/index.zh-CN.md"
 	  },
@@ -68,30 +68,6 @@ webpackJsonp([201,211],{
 	        "code",
 	        "const dataSource = ['12345', '23456', '34567'];\n<AutoComplete dataSource={dataSource} />"
 	      ]
-	    ],
-	    [
-	      "p",
-	      "因为 ",
-	      [
-	        "code",
-	        "AutoComplete"
-	      ],
-	      " 是基于 ",
-	      [
-	        "code",
-	        "Select"
-	      ],
-	      " 封装的，所以除了以下 API 外，",
-	      [
-	        "code",
-	        "AutoComplete"
-	      ],
-	      " 跟 ",
-	      [
-	        "code",
-	        "Select"
-	      ],
-	      " 拥有一样的 API。"
 	    ],
 	    [
 	      "table",
@@ -375,6 +351,50 @@ webpackJsonp([201,211],{
 	              "code",
 	              "children"
 	            ]
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "filterOption"
+	          ],
+	          [
+	            "td",
+	            "是否根据输入项进行筛选。当其为一个函数时，会接收 ",
+	            [
+	              "code",
+	              "inputValue"
+	            ],
+	            " ",
+	            [
+	              "code",
+	              "option"
+	            ],
+	            " 两个参数，当 ",
+	            [
+	              "code",
+	              "option"
+	            ],
+	            " 符合筛选条件时，应返回 ",
+	            [
+	              "code",
+	              "true"
+	            ],
+	            "，反之则返回 ",
+	            [
+	              "code",
+	              "false"
+	            ],
+	            "。"
+	          ],
+	          [
+	            "td",
+	            "boolean or function(inputValue, option)"
+	          ],
+	          [
+	            "td",
+	            "true"
 	          ]
 	        ]
 	      ]

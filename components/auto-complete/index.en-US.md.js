@@ -1,6 +1,6 @@
 webpackJsonp([202,211],{
 
-/***/ 740:
+/***/ 596:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -67,30 +67,6 @@ webpackJsonp([202,211],{
 	        "code",
 	        "const dataSource = ['12345', '23456', '34567'];\n<AutoComplete dataSource={dataSource} />"
 	      ]
-	    ],
-	    [
-	      "p",
-	      "Since ",
-	      [
-	        "code",
-	        "AutoComplete"
-	      ],
-	      " is based on ",
-	      [
-	        "code",
-	        "Select"
-	      ],
-	      ", so besides the following API, ",
-	      [
-	        "code",
-	        "AutoComplete"
-	      ],
-	      " has the same API as ",
-	      [
-	        "code",
-	        "Select"
-	      ],
-	      "."
 	    ],
 	    [
 	      "table",
@@ -347,6 +323,40 @@ webpackJsonp([202,211],{
 	              "code",
 	              "<Input />"
 	            ]
+	          ]
+	        ],
+	        [
+	          "tr",
+	          [
+	            "td",
+	            "filterOption"
+	          ],
+	          [
+	            "td",
+	            "If true, filter options by input, if function, filter options against it. The function will receive two arguments, ",
+	            [
+	              "code",
+	              "inputValue"
+	            ],
+	            " and ",
+	            [
+	              "code",
+	              "option"
+	            ],
+	            ", if the function returns ",
+	            [
+	              "code",
+	              "true"
+	            ],
+	            ", the option will be included in the filtered set; Otherwise, it will be excluded."
+	          ],
+	          [
+	            "td",
+	            "boolean or function(inputValue, option)"
+	          ],
+	          [
+	            "td",
+	            "true"
 	          ]
 	        ]
 	      ]

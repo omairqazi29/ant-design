@@ -1,6 +1,6 @@
 webpackJsonp([176,211],{
 
-/***/ 852:
+/***/ 708:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -953,7 +953,22 @@ webpackJsonp([176,211],{
 	          ],
 	          [
 	            "td",
-	            "You can specify initial value, type, optional value of children node."
+	            "You can specify initial value, type, optional value of children node. (Note: Because ",
+	            [
+	              "code",
+	              "Form"
+	            ],
+	            " will test equality with ",
+	            [
+	              "code",
+	              "==="
+	            ],
+	            " internaly, we recommend to use vairable as ",
+	            [
+	              "code",
+	              "initialValue"
+	            ],
+	            ", instead of literal)"
 	          ],
 	          [
 	            "td"
