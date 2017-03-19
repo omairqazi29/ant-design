@@ -19,18 +19,10 @@
   margin: 16px 24px 16px 0;
   float: left;
 }
-#components-layout-demo-fixed .header {
-  position: fixed;
-  width: 100%;
-}
-#components-layout-demo-fixed .content {
-  padding: 0 50px;
-  margin-top: 64px;
-}
     </style>
   </head>
   <body>
-    <div id="components-layout-demo-fixed" class="code-box-demo"></div>
+    <div id="components-layout-demo-fixed"></div>
     <script>
       function require(module) {
         if (module === 'react-router') {
@@ -60,7 +52,10 @@
     React.createElement(
       Header,
       {
-        className: "header"
+        style: {
+          position: 'fixed',
+          width: '100%'
+        }
       },
       React.createElement("div", {
         className: "logo"
@@ -101,7 +96,10 @@
     React.createElement(
       Content,
       {
-        className: "content"
+        style: {
+          padding: '0 50px',
+          marginTop: 64
+        }
       },
       React.createElement(
         _antd.Breadcrumb,
@@ -132,7 +130,7 @@
           style: {
             background: '#fff',
             padding: 24,
-            minHeight: 280
+            minHeight: 380
           }
         },
         "Content"
