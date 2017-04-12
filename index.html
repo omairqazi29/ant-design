@@ -1,195 +1,91 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An enterprise-class UI design language and React-based implementation">
-    <meta name="description" content="A set of high-quality React components">
-    <meta name="description" content="One of best React UI library for enterprise background">
-    <title>Ant Design - A UI Design Language</title>
-    <script>
-    (function() {
-      function isLocalStorageNameSupported() {
-        var testKey = 'test';
-        var storage = window.localStorage;
-        try {
-          storage.setItem(testKey, '1');
-          storage.removeItem(testKey);
-          return true;
-        } catch (error) {
-          return false;
-        }
-      }
-      // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
-      var pathname = location.pathname;
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>ant-design</title><style>*{box-sizing:border-box}.cxs-display-table{display:table}.cxs-2792547219 pre .hljs-keyword{color:#666}.cxs-424651569{font-size:20px}.cxs-3377994344{}.cxs-4066908388{clear:both}.cxs-2262331773{font-size:20px}.cxs-1246195080{margin-left:-8px;margin-right:-8px}.cxs-3057891252{font-size:14px}.cxs-3057891252 h1{font-size:inherit;margin-top:32px}.cxs-3057891252 h1:before{content:"# ";color:#888}.cxs-3057891252 h2{font-size:inherit;margin-top:32px}.cxs-3057891252 h2:before{content:"## ";color:#888}.cxs-3057891252 h3{font-size:inherit}.cxs-3057891252 h3:before{content:"### ";color:#888}.cxs-3057891252 h4{font-size:16px}.cxs-3057891252 h5{font-size:14px}.cxs-3057891252 h6{font-size:12px}.cxs-3057891252 p{overflow-x:auto}.cxs-3057891252 code{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 code:before{content:"`"}.cxs-3057891252 code:after{content:"`"}.cxs-3057891252 pre{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 pre:before{content:"```";display:block}.cxs-3057891252 pre:after{content:"```";display:block}.cxs-3057891252 pre .hljs-keyword{color:#666}.cxs-3057891252 pre .hljs-built_in{color:#888}.cxs-3057891252 pre .hljs-type{color:#888}.cxs-3057891252 pre .hljs-literal{color:#666}.cxs-3057891252 pre .hljs-number{color:#1f80ff}.cxs-3057891252 pre .hljs-regexp{color:#666}.cxs-3057891252 pre .hljs-string{color:#888}.cxs-3057891252 pre .hljs-subst{color:#888}.cxs-3057891252 pre .hljs-symbol{color:#666}.cxs-3057891252 pre .hljs-class{color:#666}.cxs-3057891252 pre .hljs-function{color:#1f80ff}.cxs-3057891252 pre .hljs-title{color:#666}.cxs-3057891252 pre .hljs-params{color:#888}.cxs-3057891252 pre .hljs-comment{color:#888}.cxs-3057891252 pre .hljs-doctag{color:#888}.cxs-3057891252 pre .hljs-meta{color:#888}.cxs-3057891252 pre .hljs-meta-keyword{color:#666}.cxs-3057891252 pre .hljs-meta-string{color:#666}.cxs-3057891252 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px}.cxs-3057891252 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3057891252 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3057891252 td{vertical-align:top;line-height:inherit}.cxs-3057891252 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3057891252 a{color:inherit}.cxs-3057891252 ul{list-style-type:none;padding-left:0px}.cxs-3057891252 li{}.cxs-3057891252 li:before{content:"- "}.cxs-3057891252 b{}.cxs-3057891252 b:before{content:"*"}.cxs-3057891252 b:after{content:"*"}.cxs-3057891252 pre code{}.cxs-3057891252 pre code:before{content:none}.cxs-3057891252 pre code:after{content:none}.cxs-799160745{font-size:48px}.cxs-3147789143{margin-left:-16px;margin-right:-16px}.cxs-2947628758{}.cxs-2947628758 h1{font-weight:600;line-height:1.25;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h2{font-weight:600;line-height:1.25;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h3{font-weight:600;line-height:1.25;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h4{font-weight:600;line-height:1.25;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h5{font-weight:600;line-height:1.25;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h6{font-weight:600;line-height:1.25;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2947628758 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre .hljs-keyword{color:#08e}.cxs-2947628758 pre .hljs-built_in{color:#059}.cxs-2947628758 pre .hljs-type{color:#059}.cxs-2947628758 pre .hljs-literal{color:#08e}.cxs-2947628758 pre .hljs-number{color:#e08}.cxs-2947628758 pre .hljs-regexp{color:#08e}.cxs-2947628758 pre .hljs-string{color:#059}.cxs-2947628758 pre .hljs-subst{color:#059}.cxs-2947628758 pre .hljs-symbol{color:#08e}.cxs-2947628758 pre .hljs-class{color:#08e}.cxs-2947628758 pre .hljs-function{color:#e08}.cxs-2947628758 pre .hljs-title{color:#08e}.cxs-2947628758 pre .hljs-params{color:#059}.cxs-2947628758 pre .hljs-comment{color:#059}.cxs-2947628758 pre .hljs-doctag{color:#059}.cxs-2947628758 pre .hljs-meta{color:#059}.cxs-2947628758 pre .hljs-meta-keyword{color:#08e}.cxs-2947628758 pre .hljs-meta-string{color:#08e}.cxs-2947628758 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #ddd}.cxs-2947628758 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-2947628758 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-2947628758 td{vertical-align:top;line-height:inherit}.cxs-2947628758 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-2947628758 a{color:#08e;text-decoration: none}.cxs-2947628758 a:hover{text-decoration:underline}.cxs-2947628758 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-183745076{}.cxs-183745076 h1{font-weight:500;letter-spacing:-0.01em;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h2{font-weight:500;letter-spacing:-0.01em;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h3{font-weight:500;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h4{font-weight:500;letter-spacing:-0.01em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h5{font-weight:500;letter-spacing:-0.01em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h6{font-weight:500;letter-spacing:-0.01em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-183745076 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-183745076 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#f5f5f5;border-radius:2px}.cxs-183745076 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#f5f5f5;border-radius:2px}.cxs-183745076 pre .hljs-keyword{color:#2196f3}.cxs-183745076 pre .hljs-built_in{color:#1565c0}.cxs-183745076 pre .hljs-type{color:#1565c0}.cxs-183745076 pre .hljs-literal{color:#2196f3}.cxs-183745076 pre .hljs-number{color:#ff4081}.cxs-183745076 pre .hljs-regexp{color:#2196f3}.cxs-183745076 pre .hljs-string{color:#1565c0}.cxs-183745076 pre .hljs-subst{color:#1565c0}.cxs-183745076 pre .hljs-symbol{color:#2196f3}.cxs-183745076 pre .hljs-class{color:#2196f3}.cxs-183745076 pre .hljs-function{color:#ff4081}.cxs-183745076 pre .hljs-title{color:#2196f3}.cxs-183745076 pre .hljs-params{color:#1565c0}.cxs-183745076 pre .hljs-comment{color:#1565c0}.cxs-183745076 pre .hljs-doctag{color:#1565c0}.cxs-183745076 pre .hljs-meta{color:#1565c0}.cxs-183745076 pre .hljs-meta-keyword{color:#2196f3}.cxs-183745076 pre .hljs-meta-string{color:#2196f3}.cxs-183745076 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #e0e0e0}.cxs-183745076 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-183745076 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-183745076 td{vertical-align:top;line-height:inherit}.cxs-183745076 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-183745076 a{color:#2196f3;text-decoration: none}.cxs-183745076 a:hover{text-decoration:underline}.cxs-183745076 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-2792547219{}.cxs-2792547219 h1{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h2{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h3{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h4{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h5{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h6{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2792547219 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#f6f6f6;border-radius:2px}.cxs-2792547219 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#f6f6f6;border-radius:2px}.cxs-3075267555 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-2792547219 pre .hljs-built_in{color:#888}.cxs-2792547219 pre .hljs-type{color:#888}.cxs-2792547219 pre .hljs-literal{color:#666}.cxs-2792547219 pre .hljs-number{color:#1f80ff}.cxs-2792547219 pre .hljs-regexp{color:#666}.cxs-2792547219 pre .hljs-string{color:#888}.cxs-2792547219 pre .hljs-subst{color:#888}.cxs-2792547219 pre .hljs-symbol{color:#666}.cxs-2792547219 pre .hljs-class{color:#666}.cxs-2792547219 pre .hljs-function{color:#1f80ff}.cxs-2792547219 pre .hljs-title{color:#666}.cxs-2792547219 pre .hljs-params{color:#888}.cxs-2792547219 pre .hljs-comment{color:#888}.cxs-2792547219 pre .hljs-doctag{color:#888}.cxs-2792547219 pre .hljs-meta{color:#888}.cxs-2792547219 pre .hljs-meta-keyword{color:#666}.cxs-2792547219 pre .hljs-meta-string{color:#666}.cxs-2792547219 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #eee}.cxs-2792547219 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-2792547219 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-2792547219 td{vertical-align:top;line-height:inherit}.cxs-2792547219 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-2792547219 a{color:#666;text-decoration: none}.cxs-2792547219 a:hover{text-decoration:underline}.cxs-2792547219 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-3954183383{font-size:24px}.cxs-3075267555 a:hover{color:#0099e0}.cxs-857983649{}.cxs-857983649 h1{font-weight:700;letter-spacing:-0.01em;font-size:24px;margin-top:48px;margin-bottom:48px;border-bottom-width:4px;border-bottom-style:solid}.cxs-3075267555 a{color:inherit}.cxs-857983649 h2{font-weight:700;letter-spacing:-0.01em;font-size:24px;margin-top:48px;margin-bottom:48px;border-bottom-width:4px;border-bottom-style:solid}.cxs-3075267555 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-857983649 h3{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:48px;margin-bottom:48px;border-bottom-width:2px;border-bottom-style:solid}.cxs-3075267555 td{vertical-align:top;line-height:inherit}.cxs-857983649 h4{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 h5{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 h6{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 p{overflow-x:auto;max-width:40em;margin-top:0px;margin-bottom:16px}.cxs-857983649 code{font-family:Menlo, monospace;font-size:14px;color:#05a}.cxs-857983649 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-top:16px;padding-bottom:16px;margin-top:32px;margin-bottom:32px;border-top:1px solid;border-bottom:1px solid}.cxs-857983649 pre .hljs-keyword{color:#05a}.cxs-857983649 pre .hljs-built_in{color:#444}.cxs-857983649 pre .hljs-type{color:#444}.cxs-857983649 pre .hljs-literal{color:#05a}.cxs-857983649 pre .hljs-number{color:#f30}.cxs-857983649 pre .hljs-regexp{color:#05a}.cxs-857983649 pre .hljs-string{color:#444}.cxs-857983649 pre .hljs-subst{color:#444}.cxs-857983649 pre .hljs-symbol{color:#05a}.cxs-857983649 pre .hljs-class{color:#05a}.cxs-857983649 pre .hljs-function{color:#f30}.cxs-857983649 pre .hljs-title{color:#05a}.cxs-857983649 pre .hljs-params{color:#444}.cxs-857983649 pre .hljs-comment{color:#444}.cxs-857983649 pre .hljs-doctag{color:#444}.cxs-857983649 pre .hljs-meta{color:#444}.cxs-857983649 pre .hljs-meta-keyword{color:#05a}.cxs-857983649 pre .hljs-meta-string{color:#05a}.cxs-857983649 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid}.cxs-857983649 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-857983649 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-857983649 td{vertical-align:top;line-height:inherit}.cxs-857983649 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-857983649 a{color:#05a}.cxs-857983649 a:hover{text-decoration:underline}.cxs-857983649 ul{list-style:square inside;padding-left:0px;margin-top:0px;margin-bottom:32px}.cxs-291348840{font-size:20px;line-height:1.625}.cxs-291348840 h1{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:48px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h2{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:24px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h3{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:20px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h4{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-291348840 h5{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-291348840 h6{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-291348840 p{overflow-x:auto;font-size:20px;margin-top:0px;margin-bottom:16px}.cxs-291348840 code{font-family:Menlo, monospace;font-size:14px;color:#005499}.cxs-291348840 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-left:16px;margin-top:8px;margin-bottom:32px;border-left:2px solid #ddd}.cxs-291348840 pre .hljs-keyword{color:#ee5544}.cxs-291348840 pre .hljs-built_in{color:#005499}.cxs-291348840 pre .hljs-type{color:#005499}.cxs-291348840 pre .hljs-literal{color:#ee5544}.cxs-291348840 pre .hljs-number{color:#00bd78}.cxs-291348840 pre .hljs-regexp{color:#ee5544}.cxs-291348840 pre .hljs-string{color:#005499}.cxs-291348840 pre .hljs-subst{color:#005499}.cxs-291348840 pre .hljs-symbol{color:#ee5544}.cxs-291348840 pre .hljs-class{color:#ee5544}.cxs-291348840 pre .hljs-function{color:#00bd78}.cxs-291348840 pre .hljs-title{color:#ee5544}.cxs-291348840 pre .hljs-params{color:#005499}.cxs-291348840 pre .hljs-comment{color:#005499}.cxs-291348840 pre .hljs-doctag{color:#005499}.cxs-291348840 pre .hljs-meta{color:#005499}.cxs-291348840 pre .hljs-meta-keyword{color:#ee5544}.cxs-291348840 pre .hljs-meta-string{color:#ee5544}.cxs-291348840 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid #ddd}.cxs-291348840 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-291348840 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-291348840 td{vertical-align:top;line-height:inherit}.cxs-291348840 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-291348840 a{color:inherit}.cxs-291348840 a:hover{color:#ee5544}.cxs-291348840 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-3075267555{font-size:20px;line-height:1.625}.cxs-3075267555 h1{font-weight:600;letter-spacing:0.1em;font-size:48px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h2{font-weight:600;letter-spacing:0.1em;font-size:24px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h3{font-weight:600;letter-spacing:0.1em;font-size:20px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h4{font-weight:600;letter-spacing:0.1em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 h5{font-weight:600;letter-spacing:0.1em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 h6{font-weight:600;letter-spacing:0.1em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 p{overflow-x:auto;font-size:20px;margin-top:0px;margin-bottom:16px}.cxs-3075267555 code{font-family:Menlo, monospace;font-size:14px;color:#ab61ff}.cxs-3075267555 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-left:16px;margin-top:8px;margin-bottom:32px;border-left:2px solid #ccd}.cxs-3075267555 pre .hljs-keyword{color:#0099e0}.cxs-3075267555 pre .hljs-built_in{color:#ab61ff}.cxs-3075267555 pre .hljs-type{color:#ab61ff}.cxs-3075267555 pre .hljs-literal{color:#0099e0}.cxs-3075267555 pre .hljs-number{color:#f7b}.cxs-3075267555 pre .hljs-regexp{color:#0099e0}.cxs-3075267555 pre .hljs-string{color:#ab61ff}.cxs-3075267555 pre .hljs-subst{color:#ab61ff}.cxs-3075267555 pre .hljs-symbol{color:#0099e0}.cxs-3075267555 pre .hljs-class{color:#0099e0}.cxs-3075267555 pre .hljs-function{color:#f7b}.cxs-3075267555 pre .hljs-title{color:#0099e0}.cxs-3075267555 pre .hljs-params{color:#ab61ff}.cxs-3075267555 pre .hljs-comment{color:#ab61ff}.cxs-3075267555 pre .hljs-doctag{color:#ab61ff}.cxs-3075267555 pre .hljs-meta{color:#ab61ff}.cxs-3075267555 pre .hljs-meta-keyword{color:#0099e0}.cxs-3075267555 pre .hljs-meta-string{color:#0099e0}.cxs-3075267555 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid #ccd}.cxs-3075267555 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3075267555 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3377994344:hover{box-shadow:inset 0 0 0 999px rgba(0, 0, 0, .125)}@media screen and (min-width:52em) { .cxs-857983649 h3{font-size:24px} }@media screen and (min-width:52em) { .cxs-857983649 h2{font-size:48px} }@media screen and (min-width:52em) { .cxs-857983649 h1{font-size:48px} }@media screen and (min-width: 52em) { .cxs-3954183383{} }@media screen and (min-width: 52em) { .cxs-2262331773{font-size:32px} }@media screen and (min-width: 52em) { .cxs-799160745{font-size:72px} }@media screen and (min-width: 52em) { .cxs-424651569{} }</style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,,500"/></head><body style="margin:0;"><div class="Xv" style="font-family:Roboto, sans-serif;font-weight:400;line-height:1.5;color:#212121;background-color:#fff;"><nav style="position:relative;margin-bottom:-48px;display:flex;align-items:center;padding-left:16px;padding-right:16px;color:#fff;"><a href="http://ant.design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;margin-right:8px;">Home</a><a href="https://github.com/ant-design/ant-design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;margin-right:8px;">GitHub</a><a href="https://npmjs.com/package/antd" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;margin-right:8px;">npm</a></nav><header class="BannerHeader" style="display:flex;align-items:center;justify-content:center;text-align:center;min-height:80vh;color:white;background-color:#212121;background-image:linear-gradient(45deg, #2196f3, #ff4081);background-size:cover;background-position:center;"><div style="box-sizing:border-box;width:100%;max-width:896px;margin-left:auto;margin-right:auto;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;"><h1 class="cxs-799160745" style="box-sizing:border-box;font-weight:500;letter-spacing:-0.01em;margin:0;">ant-design</h1><h2 class="cxs-3954183383" style="box-sizing:border-box;font-weight:500;letter-spacing:-0.01em;margin:0;">🐜 A UI Design Language</h2><p class="Text" style="box-sizing:border-box;font-size:20px;margin:0;">v2.9.1</p><div class="cxs-1246195080" style="box-sizing:border-box;padding-top:16px;padding-bottom:16px;"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?text=ant-design%3A%20%F0%9F%90%9C%20A%20UI%20Design%20Language&amp;url=http%3A%2F%2Fant.design&amp;via=&amp;hashtags=&amp;size=" height="20" allowtransparency="true" frameborder="0" scrolling="no" style="box-sizing:border-box;width:61px;overflow:hidden;margin:8px;"></iframe><iframe src="https://ghbtns.com/github-btn.html?type=star&amp;count=true&amp;user=ant-design&amp;repo=ant-design&amp;size=" height="20" frameborder="0" scrolling="no" style="box-sizing:border-box;width:100px;overflow:hidden;margin:8px;"></iframe><div class="cxs-4066908388 cxs-display-table"></div></div></div></header><div class="cxs-183745076" style="box-sizing:border-box;max-width:896px;margin-left:auto;margin-right:auto;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;"><article style="box-sizing:border-box;"><div><p>
+  <a href="http://ant.design">
+    <img src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
+  </a>
+</p>
 
-      function isZhCN(pathname) {
-        return /-cn\/?$/.test(pathname);
-      }
-      function getLocalizedPathname(path, zhCN) {
-        var pathname = path.startsWith('/') ? path : '/' + path;
-        if (!zhCN) { // to enUS
-          return /\/?index-cn/.test(pathname) ? '/' : pathname.replace('-cn', '');
-        } else if (pathname === '/') {
-          return '/index-cn';
-        } else if (pathname.endsWith('/')) {
-          return pathname.replace(/\/$/, '-cn/');
-        }
-        return pathname + '-cn';
-      }
 
-      // 兼容旧的 URL， `?locale=...`
-      var queryString = location.search;
-      if (queryString) {
-        var isZhCNConfig = queryString.indexOf('zh-CN') > -1;
-        if (isZhCNConfig && !isZhCN(pathname)) {
-          location.pathname = getLocalizedPathname(pathname, isZhCNConfig)
-        }
-      }
-
-      // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
-      if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
-        var lang = (window.localStorage && localStorage.getItem('locale')) || (navigator.language.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'en-US');
-        // safari is 'zh-cn', while other browser is 'zh-CN';
-        if ((lang === 'zh-CN') !== isZhCN(pathname)) {
-          location.pathname = getLocalizedPathname(pathname, lang === 'zh-CN');
-        }
-      }
-      document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
-    })()
-    </script>
-    <link rel="icon" href="https://t.alipayobjects.com/images/T1QUBfXo4fXXXXXXXX.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.cnpmjs.org/css?family=Lato:400,700|Raleway"/>
-    <link rel="stylesheet" type="text/css" href="/index-1.css"/>
-    <link rel="stylesheet" type="text/css" href="/index-2.css"/>
-    <style id="nprogress-style">
-      #nprogress { display: none }
-    </style>
-    <!--[if lte IE 10]>
-      <script
-        src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
-    <![endif]-->
-    <script>
-    if (!window.Intl) {
-      document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js">' + '<' + '/script>');
-    }
-    if (!window.Promise) {
-      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
-    }
-    // Enable Google Analytics
-    if (!location.port) {
-      /* eslint-disable */
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-72788897-1', 'auto');
-      ga('send', 'pageview');
-      /* eslint-enable */
-    }
-    </script>
-  </head>
-  <body>
-    <div id="react-content">
-      <div class="page-wrapper" data-reactroot="" data-reactid="1" data-react-checksum="-283127525"><header id="header" class="clearfix" data-reactid="2"><div class="ant-row" data-reactid="3"><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-5 ant-col-lg-4" data-reactid="4"><a id="logo" href="/" data-reactid="5"><img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" data-reactid="6"/><span data-reactid="7">Ant Design</span></a></div><div class="ant-col-xs-0 ant-col-sm-0 ant-col-md-19 ant-col-lg-20" data-reactid="8"><div id="search-box" data-reactid="9"><div class="ant-select ant-select-combobox ant-select-enabled" data-reactid="10"><div class="ant-select-selection
-            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" data-reactid="11"><div class="ant-select-selection__rendered" data-reactid="12"><div style="display:block;user-select:none;-webkit-user-select:none;" unselectable="unselectable" class="ant-select-selection__placeholder" data-reactid="13">Search Components...</div><ul data-reactid="14"><li class="ant-select-search ant-select-search--inline" data-reactid="15"><div class="ant-select-search__field__wrap" data-reactid="16"><input value="" class="ant-select-search__field" data-reactid="17"/><span class="ant-select-search__field__mirror" data-reactid="18"><!-- react-text: 19 --><!-- /react-text --><!-- react-text: 20 --> <!-- /react-text --></span></div></li></ul></div><span class="ant-select-arrow" style="user-select:none;-webkit-user-select:none;" unselectable="unselectable" data-reactid="21"><b data-reactid="22"></b></span></div></div></div><button type="button" class="ant-btn ant-btn-ghost ant-btn-sm lang" data-reactid="23"><span data-reactid="24">中文</span></button><div class="ant-select-sm version ant-select ant-select-enabled" data-reactid="25"><div class="ant-select-selection
-            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" data-reactid="26"><div class="ant-select-selection__rendered" data-reactid="27"><div class="ant-select-selection-selected-value" title="2.9.1" style="display:block;opacity:1;" data-reactid="28">2.9.1</div></div><span class="ant-select-arrow" style="user-select:none;-webkit-user-select:none;" unselectable="unselectable" data-reactid="29"><b data-reactid="30"></b></span></div></div><ul class="ant-menu ant-menu-horizontal  ant-menu-light ant-menu-root" role="menu" aria-activedescendant="" id="nav" tabindex="0" data-reactid="31"><li class="ant-menu-item-selected ant-menu-item" role="menuitem" aria-selected="true" data-reactid="32"><a href="/" data-reactid="33"><span data-reactid="34">Home</span></a></li><li class="ant-menu-item" role="menuitem" aria-selected="false" data-reactid="35"><a href="/docs/spec/introduce" data-reactid="36"><span data-reactid="37">Guidlines</span></a></li><li class="ant-menu-item" role="menuitem" aria-selected="false" data-reactid="38"><a href="/docs/react/introduce" data-reactid="39"><span data-reactid="40">Components</span></a></li><li class="ant-menu-item" role="menuitem" aria-selected="false" data-reactid="41"><a href="/docs/pattern/navigation" data-reactid="42"><span data-reactid="43">Patterns</span></a></li><li class="ant-menu-item" role="menuitem" aria-selected="false" data-reactid="44"><a href="/docs/resource/download" data-reactid="45"><span data-reactid="46">Resources</span></a></li></ul></div></div></header><div class="main-wrapper" data-reactid="47"><section class="page banner-wrapper" data-reactid="48"><div class="page" id="banner" data-reactid="49"><div class="banner-text-wrapper" data-reactid="50"><div data-reactid="51"></div><div data-reactid="52"></div><div data-reactid="53"></div><div data-reactid="54"></div><div data-reactid="55"></div></div><i class="anticon anticon-down down" data-reactid="56"></i></div></section><div id="page1" class="content-wrapper page" data-reactid="57"></div><div id="page2" class="content-wrapper page" data-reactid="58"></div><div id="page3" class="content-wrapper page" data-reactid="59"></div><div id="page4" class="content-wrapper page" data-reactid="60"></div><style data-reactid="61">
-    html, body{
-      height: auto;
-    }
-    .page-wrapper {
-      background: #fff;
-    }
-    .main-wrapper {
-      background: transparent;
-      width: auto;
-      margin: 0;
-      border-radius: 0;
-      padding: 0;
-      min-height: 600px;
-    }
-    #header {
-      position: fixed;
-      z-index: 999;
-      background: rgba(0, 0, 0, 0.25);
-      border-bottom: 1px solid transparent;
-      transition: border .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    }
-    #header .ant-select-selection,
-    #header .ant-menu {
-      background: transparent;
-    }
-    #header .ant-select-search__field {
-      color: #eee;
-    }
-    #header .ant-select-selection__placeholder {
-      color: rgba(255,255,255,0.57);
-    }
-    #header.home-nav-white .ant-select-search__field {
-      color: rgba(0, 0, 0, 0.65);
-    }
-    #header.home-nav-white .ant-select-selection__placeholder {
-      color: rgb(204, 204, 204);
-    }
-    #header.home-nav-white {
-      background: rgba(255, 255, 255, 0.91);
-      border-bottom-color: #ebedee;
-    }
-    .home-nav-white #search-box {
-      border-left-color: #ebedee;
-    }
-    .home-nav-white #nav a {
-      color: rgba(0, 0, 0, 0.65);
-    }
-    .home-nav-white .lang:not(:hover) {
-      color: rgba(0, 0, 0, 0.65);
-      border-color: rgba(0, 0, 0, 0.65);
-    }
-    .home-nav-white .version > .ant-select-selection {
-      color: rgba(0, 0, 0, 0.65);
-    }
-    .home-nav-white .version > .ant-select-selection:not(:hover) {
-      border-color: rgba(0, 0, 0, 0.65);
-    }
-    .nav-phone-icon:before {
-      background: #eee;
-      box-shadow: 0 7px 0 0 #eee, 0 14px 0 0 #eee;
-    }
-    .home-nav-white .nav-phone-icon:before {
-      background: #777;
-      box-shadow: 0 7px 0 0 #777, 0 14px 0 0 #777;
-    }
-    .lang,
-    .version > .ant-select-selection,
-    #nav a {
-      color: #eee;
-      transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    }
-    #search-box {
-      border-left-color: rgba(235, 237, 238, .5);
-      transition: border 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    }
-    #footer {
-      background: #000;
-    }
-    #footer,
-    #footer h2 {
-      color: #999;
-    }
-    #footer a {
-      color: #eee;
-    }
-  </style></div><footer id="footer" data-reactid="62"><ul data-reactid="63"><li data-reactid="64"><h2 data-reactid="65"><i class="anticon anticon-github" data-reactid="66"></i><!-- react-text: 67 --> GitHub<!-- /react-text --></h2><div data-reactid="68"><a target="_blank " href="https://github.com/ant-design/ant-design" data-reactid="69"><span data-reactid="70">Repository</span></a></div><div data-reactid="71"><a target="_blank " href="https://ant.design/docs/react/customize-theme" data-reactid="72"><span data-reactid="73">Customize Theme</span></a></div><div data-reactid="74"><a target="_blank " href="https://github.com/websemantics/awesome-ant-design" data-reactid="75"><span data-reactid="76">Awesome Ant Design</span></a></div></li><li data-reactid="77"><h2 data-reactid="78"><i class="anticon anticon-link" data-reactid="79"></i><!-- react-text: 80 --> <!-- /react-text --><span data-reactid="81">Links</span></h2><div data-reactid="82"><a href="https://design.alipay.com/" data-reactid="83"><span data-reactid="84">Ant Financial Design Platform</span></a></div><div data-reactid="85"><a href="http://mobile.ant.design" data-reactid="86">Ant Design Mobile</a><span data-reactid="87"> - </span><span data-reactid="88">Mobile UI</span></div><div data-reactid="89"><a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva" data-reactid="90">dva</a><!-- react-text: 91 --> - <!-- /react-text --><span data-reactid="92">Framework</span></div><div data-reactid="93"><a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva-cli" data-reactid="94">dva-cli</a><!-- react-text: 95 --> -<!-- /react-text --><span data-reactid="96">Developer Tools</span></div><div data-reactid="97"><a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/" data-reactid="98">Egg</a><span data-reactid="99"> - </span><span data-reactid="100">Enterprise Node Framework</span></div><div data-reactid="101"><a target="_blank" rel="noopener noreferrer" href="https://antv.alipay.com/" data-reactid="102">AntV</a><span data-reactid="103"> - </span><span data-reactid="104">Data Visualization</span></div><div data-reactid="105"><a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design" data-reactid="106">Ant Motion</a><span data-reactid="107"> - </span><span data-reactid="108">Motion Soluction</span></div><div data-reactid="109"><a target="_blank" rel="noopener noreferrer" href="http://library.ant.design/" data-reactid="110">AntD Library</a><span data-reactid="111"> - </span><span data-reactid="112">Axure library</span></div><div data-reactid="113"><a target="_blank" rel="noopener noreferrer" href="http://ux.ant.design" data-reactid="114">Ant UX</a><span data-reactid="115"> - </span><span data-reactid="116">Sitemap Template</span></div></li><li data-reactid="117"><h2 data-reactid="118"><i class="anticon anticon-customer-service" data-reactid="119"></i><!-- react-text: 120 --> <!-- /react-text --><span data-reactid="121">Community</span></h2><div data-reactid="122"><a href="/changelog" data-reactid="123"><span data-reactid="124">Change Log</span></a></div><div data-reactid="125"><a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/wiki/FAQ" data-reactid="126"><span data-reactid="127">FAQ</span></a></div><div data-reactid="128"><a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design" data-reactid="129"><span data-reactid="130">Chat Room (中文)</span></a></div><div data-reactid="131"><a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design-english" data-reactid="132"><span data-reactid="133">Chat Room (English)</span></a></div><div data-reactid="134"><a target="_blank" rel="noopener noreferrer" href="http://new-issue.ant.design/" data-reactid="135"><span data-reactid="136">Bug Report</span></a></div><div data-reactid="137"><a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/issues" data-reactid="138"><span data-reactid="139">Issues</span></a></div><div data-reactid="140"><a target="_blank" rel="noopener noreferrer" href="http://stackoverflow.com/questions/tagged/antd" data-reactid="141"><span data-reactid="142">StackOverflow</span></a></div><div data-reactid="143"><a target="_blank" rel="noopener noreferrer" href="https://segmentfault.com/t/antd" data-reactid="144"><span data-reactid="145">SegmentFault</span></a></div></li><li data-reactid="146"><h2 data-reactid="147"><!-- react-text: 148 -->Copyright © <!-- /react-text --><!-- react-text: 149 -->2017<!-- /react-text --></h2><div data-reactid="150"><span data-reactid="151">Created by AIUX</span></div><div data-reactid="152"><!-- react-text: 153 -->Built with <!-- /react-text --><a target="_blank" rel="noopener noreferrer" href="https://github.com/benjycui/bisheng" data-reactid="154">BiSheng</a></div></li></ul></footer></div>
-    </div>
-    <script src="/common.js"></script>
-    <script src="/index.js"></script>
-  </body>
-</html>
+<p><a href="https://travis-ci.org/ant-design/ant-design"><img src="https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square" /></a>
+<a href="https://codecov.io/gh/ant-design/ant-design/branch/master"><img src="https://img.shields.io/codecov/c/github/ant-design/ant-design/master.svg?style=flat-square" /></a>
+<a href="https://gemnasium.com/ant-design/ant-design"><img src="https://img.shields.io/gemnasium/react-component/trigger.svg?style=flat-square" /></a></p>
+<p><a href="https://www.npmjs.org/package/antd"><img src="https://img.shields.io/npm/v/antd.svg?style=flat-square" /></a>
+<a href="https://npmjs.org/package/antd"><img src="http://img.shields.io/npm/dm/antd.svg?style=flat-square" /></a>
+<a href="http://isitmaintained.com/project/ant-design/ant-design"><img src="http://isitmaintained.com/badge/open/ant-design/ant-design.svg" /></a>
+<a href="https://gitter.im/ant-design/ant-design-english?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/ant-design/ant-design-english.svg" /></a> (English)
+<a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square" /></a>（中文）</p>
+<p>一套企业级的 UI 设计语言和 React 实现。</p>
+<p><a href="README.md">README in English</a></p>
+<h2>特性</h2>
+<ul>
+<li>提炼自企业级中后台产品的交互语言和视觉风格。</li>
+<li>开箱即用的高质量 React 组件。</li>
+<li>使用 TypeScript 构建，提供完整的类型定义文件。</li>
+<li>基于 npm + webpack + <a href="https://github.com/dvajs/dva">dva</a> 的企业级开发框架。</li>
+</ul>
+<h2>支持环境</h2>
+<ul>
+<li>现代浏览器和 IE9 及以上。</li>
+<li>支持服务端渲染。</li>
+<li><a href="http://electron.atom.io/">Electron</a></li>
+</ul>
+<h2>参与共建 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a></h2>
+<p><code>antd</code> 是一个开源项目，我们欢迎社区参与共建。如果你对此项目感兴趣，有 <a href="https://opensource.guide/how-to-contribute/">很多方式</a> 进行参与。你可以 watch 这个仓库，加入 <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3ADiscussion">issue 中的讨论</a>，以及尝试实现一些 <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3A%22PR+welcome%22">已接受的特性</a>。我们会给予有活跃贡献的社区成员 <a href="https://github.com/ant-design/ant-design/issues/3222">collaborator 权限</a>。</p>
+<h2>安装</h2>
+<pre>npm install antd</pre><h2>示例</h2>
+<pre><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DatePicker</span> /&gt;</span>, mountNode);</span></pre><p>引入样式：</p>
+<pre><span class="hljs-keyword">import</span> <span class="hljs-string">'antd/dist/antd.css'</span>;  <span class="hljs-comment">// or 'antd/dist/antd.less'</span></pre><p>按需加载可通过此写法 <code>import DatePicker from 'antd/lib/date-picker'</code> 或使用插件 <a href="https://github.com/ant-design/babel-plugin-import">babel-plugin-import</a>。</p>
+<h2>TypeScript</h2>
+<pre><span class="hljs-comment">// tsconfig.json</span>
+{
+  <span class="hljs-string">&quot;compilerOptions&quot;</span>: {
+    <span class="hljs-string">&quot;moduleResolution&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>,
+    <span class="hljs-string">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;preserve&quot;</span>,
+    <span class="hljs-string">&quot;allowSyntheticDefaultImports&quot;</span>: <span class="hljs-literal">true</span>
+  }
+}</pre><blockquote>
+<p>注意：</p>
+<ul>
+<li>设置 <code>allowSyntheticDefaultImports</code> 避免 <code>error TS1192: Module 'react' has no default export</code> 的错误。</li>
+<li>不要使用 @types/antd, antd 已经自带了 TypeScript 定义。</li>
+</ul>
+</blockquote>
+<h2>国际化</h2>
+<p>参考 <a href="http://ant.design/docs/react/i18n">国际化文档</a>。</p>
+<h2>链接</h2>
+<ul>
+<li><a href="http://ant.design/index-cn">首页</a></li>
+<li><a href="http://ant.design/docs/react/introduce-cn">UI 组件库</a></li>
+<li><a href="CHANGELOG.en-US.md">更新日志</a></li>
+<li><a href="https://github.com/dvajs/dva-cli">开发脚手架</a></li>
+<li><a href="http://ant-tool.github.io/">开发工具文档</a></li>
+<li><a href="http://react-component.github.io/">React 底层基础组件</a></li>
+<li><a href="http://mobile.ant.design">移动端组件</a></li>
+<li><a href="https://motion.ant.design">动效</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/Ant-Design-%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%AE%80%E7%89%88">设计规范速查手册</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/Development">开发者说明</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/%E8%BD%AE%E5%80%BC%E8%A7%84%E5%88%99%E5%92%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B">版本发布规则</a></li>
+<li><a href="https://github.com/ant-design/ant-design/issues/129">社区贡献脚手架和范例</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/FAQ">常见问题</a></li>
+<li><a href="http://codepen.io/benjycui/pen/KgPZrE?editors=001">CodePen 模板</a> for bug reports</li>
+<li><a href="https://github.com/websemantics/awesome-ant-design">Awesome Ant Design</a></li>
+<li><a href="http://ant.design/docs/react/customize-theme-cn">定制主题</a></li>
+</ul>
+<h2>本地开发</h2>
+<pre>$ git <span class="hljs-built_in">clone</span> git@github.com:ant-design/ant-design.git
+$ npm install
+$ npm start</pre><p>打开浏览器访问 <a href="http://127.0.0.1:8001">http://127.0.0.1:8001</a> ，更多本地开发文档参见: <a href="https://github.com/ant-design/ant-design/wiki/Development">https://github.com/ant-design/ant-design/wiki/Development</a> 。</p>
+<h2>如何贡献</h2>
+<p>在任何形式的参与前，请先阅读 <a href="https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md">贡献者文档</a>。如果你希望参与贡献，欢迎 <a href="https://github.com/ant-design/ant-design/pulls">Pull Request</a>，或给我们 <a href="http://new-issue.ant.design/">报告 Bug</a>。</p>
+<blockquote>
+<p>强烈推荐阅读 <a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">《提问的智慧》</a>、<a href="https://github.com/seajs/seajs/issues/545">《如何向开源社区提问题》</a> 和 <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html">《如何有效地报告 Bug》</a>，更好的问题更容易获得帮助。</p>
+</blockquote>
+<h2>社区互助</h2>
+<p>如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。</p>
+<p>通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 <code>antd</code> 标签。</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/tagged/antd">Stack Overflow</a>（英文）</li>
+<li><a href="https://segmentfault.com/t/antd">Segment Fault</a>（中文）</li>
+<li><a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" /></a></li>
+</ol>
+</div></article></div><footer><div style="box-sizing:border-box;max-width:896px;margin-left:auto;margin-right:auto;margin-bottom:32px;padding-top:8px;padding-bottom:8px;padding-left:32px;padding-right:32px;"><div style="margin-left:-16px;margin-right:-16px;"><a href="https://github.com/ant-design/ant-design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://github.com/ant-design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">ant-design</a></div><div></div></div></footer></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
