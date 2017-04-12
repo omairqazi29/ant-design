@@ -13,29 +13,44 @@
 <a href="http://isitmaintained.com/project/ant-design/ant-design"><img src="http://isitmaintained.com/badge/open/ant-design/ant-design.svg" /></a>
 <a href="https://gitter.im/ant-design/ant-design-english?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/ant-design/ant-design-english.svg" /></a> (English)
 <a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square" /></a>（中文）</p>
-<p>一套企业级的 UI 设计语言和 React 实现。</p>
-<p><a href="README.md">README in English</a></p>
-<h2>特性</h2>
+<p>An enterprise-class UI design language and React-based implementation.</p>
+<p><a href="README-zh_CN.md">中文 README</a></p>
+<h2>Features</h2>
 <ul>
-<li>提炼自企业级中后台产品的交互语言和视觉风格。</li>
-<li>开箱即用的高质量 React 组件。</li>
-<li>使用 TypeScript 构建，提供完整的类型定义文件。</li>
-<li>基于 npm + webpack + <a href="https://github.com/dvajs/dva">dva</a> 的企业级开发框架。</li>
+<li>An enterprise-class UI design language for web applications.</li>
+<li>A set of high-quality React components out of the box.</li>
+<li>Written in TypeScript with complete define types.</li>
+<li>A npm + webpack + <a href="https://github.com/dvajs/dva">dva</a> front-end development workflow.</li>
 </ul>
-<h2>支持环境</h2>
+<h2>Environment Support</h2>
 <ul>
-<li>现代浏览器和 IE9 及以上。</li>
-<li>支持服务端渲染。</li>
+<li>Browser: Modern browsers and Internet Explorer 9+</li>
+<li>Server-side Rendering</li>
 <li><a href="http://electron.atom.io/">Electron</a></li>
 </ul>
-<h2>参与共建 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a></h2>
-<p><code>antd</code> 是一个开源项目，我们欢迎社区参与共建。如果你对此项目感兴趣，有 <a href="https://opensource.guide/how-to-contribute/">很多方式</a> 进行参与。你可以 watch 这个仓库，加入 <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3ADiscussion">issue 中的讨论</a>，以及尝试实现一些 <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3A%22PR+welcome%22">已接受的特性</a>。我们会给予有活跃贡献的社区成员 <a href="https://github.com/ant-design/ant-design/issues/3222">collaborator 权限</a>。</p>
-<h2>安装</h2>
-<pre>npm install antd</pre><h2>示例</h2>
+<h2>Let's build a better antd together <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a></h2>
+<p><code>antd</code> is an open source project, improvements are welcomed. If you are interested in contributing to <code>antd</code>, you can watch this repository, join in <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3ADiscussion">discussion</a>, or try to implement some <a href="https://github.com/ant-design/ant-design/issues?q=is%3Aopen+is%3Aissue+label%3A%22PR+welcome%22">features which have been accepted</a>. Actually, there are <a href="https://opensource.guide/how-to-contribute/">many ways</a> to contribute. And we are always happy to <a href="https://github.com/ant-design/ant-design/issues/3222">offer collaborator permission</a> for some active contributors.</p>
+<h2>Install</h2>
+<pre>npm install antd</pre><h2>Usage</h2>
 <pre><span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DatePicker</span> /&gt;</span>, mountNode);</span></pre><p>引入样式：</p>
-<pre><span class="hljs-keyword">import</span> <span class="hljs-string">'antd/dist/antd.css'</span>;  <span class="hljs-comment">// or 'antd/dist/antd.less'</span></pre><p>按需加载可通过此写法 <code>import DatePicker from 'antd/lib/date-picker'</code> 或使用插件 <a href="https://github.com/ant-design/babel-plugin-import">babel-plugin-import</a>。</p>
-<h2>TypeScript</h2>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DatePicker</span> /&gt;</span>, mountNode);</span></pre><p>And import style manually:</p>
+<pre><span class="hljs-keyword">import</span> <span class="hljs-string">'antd/dist/antd.css'</span>;  <span class="hljs-comment">// or 'antd/dist/antd.less'</span></pre><h3>Use modularized antd</h3>
+<ul>
+<li><p>Use <a href="https://github.com/ant-design/babel-plugin-import">babel-plugin-import</a> (Recommended)</p>
+<pre> <span class="hljs-comment">// .babelrc or babel-loader option</span>
+ {
+   <span class="hljs-string">&quot;plugins&quot;</span>: [
+     [<span class="hljs-string">&quot;import&quot;</span>, { <span class="hljs-attr">libraryName</span>: <span class="hljs-string">&quot;antd&quot;</span>, <span class="hljs-attr">style</span>: <span class="hljs-string">&quot;css&quot;</span> }] <span class="hljs-comment">// `style: true` for less</span>
+   ]
+ }</pre><p> Then you can import components from antd, equivalent to import manually below.</p>
+<pre> <span class="hljs-comment">// import js and css modularly, parsed by babel-plugin-import</span>
+ <span class="hljs-keyword">import</span> { DatePicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'antd'</span>;</pre></li>
+<li><p>Manually import</p>
+<pre> <span class="hljs-keyword">import</span> DatePicker <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/date-picker'</span>;  <span class="hljs-comment">// for js</span>
+ <span class="hljs-keyword">import</span> <span class="hljs-string">'antd/lib/date-picker/style/css'</span>;        <span class="hljs-comment">// for css</span>
+ <span class="hljs-comment">// import 'antd/lib/date-picker/style';         // that will import less</span></pre></li>
+</ul>
+<h3>TypeScript</h3>
 <pre><span class="hljs-comment">// tsconfig.json</span>
 {
   <span class="hljs-string">&quot;compilerOptions&quot;</span>: {
@@ -44,48 +59,36 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
     <span class="hljs-string">&quot;allowSyntheticDefaultImports&quot;</span>: <span class="hljs-literal">true</span>
   }
 }</pre><blockquote>
-<p>注意：</p>
+<p>Note:</p>
 <ul>
-<li>设置 <code>allowSyntheticDefaultImports</code> 避免 <code>error TS1192: Module 'react' has no default export</code> 的错误。</li>
-<li>不要使用 @types/antd, antd 已经自带了 TypeScript 定义。</li>
+<li>set <code>allowSyntheticDefaultImports</code> to prevent <code>error TS1192: Module 'react' has no default export</code>.</li>
+<li>Don't use @types/antd, antd provide a built-in ts definition already.</li>
 </ul>
 </blockquote>
-<h2>国际化</h2>
-<p>参考 <a href="http://ant.design/docs/react/i18n">国际化文档</a>。</p>
-<h2>链接</h2>
+<h2>Internationalization</h2>
+<p>See <a href="http://ant.design/docs/react/i18n">i18n</a>.</p>
+<h2>Links</h2>
 <ul>
-<li><a href="http://ant.design/index-cn">首页</a></li>
-<li><a href="http://ant.design/docs/react/introduce-cn">UI 组件库</a></li>
-<li><a href="CHANGELOG.en-US.md">更新日志</a></li>
-<li><a href="https://github.com/dvajs/dva-cli">开发脚手架</a></li>
-<li><a href="http://ant-tool.github.io/">开发工具文档</a></li>
-<li><a href="http://react-component.github.io/">React 底层基础组件</a></li>
-<li><a href="http://mobile.ant.design">移动端组件</a></li>
-<li><a href="https://motion.ant.design">动效</a></li>
-<li><a href="https://github.com/ant-design/ant-design/wiki/Ant-Design-%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%AE%80%E7%89%88">设计规范速查手册</a></li>
-<li><a href="https://github.com/ant-design/ant-design/wiki/Development">开发者说明</a></li>
-<li><a href="https://github.com/ant-design/ant-design/wiki/%E8%BD%AE%E5%80%BC%E8%A7%84%E5%88%99%E5%92%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B">版本发布规则</a></li>
-<li><a href="https://github.com/ant-design/ant-design/issues/129">社区贡献脚手架和范例</a></li>
-<li><a href="https://github.com/ant-design/ant-design/wiki/FAQ">常见问题</a></li>
-<li><a href="http://codepen.io/benjycui/pen/KgPZrE?editors=001">CodePen 模板</a> for bug reports</li>
+<li><a href="http://ant.design/">Home page</a></li>
+<li><a href="http://ant.design/docs/react/introduce">UI library</a></li>
+<li><a href="CHANGELOG.en-US.md">Change Log</a></li>
+<li><a href="https://github.com/dvajs/dva-cli/">Scaffold tool</a></li>
+<li><a href="http://ant-tool.github.io/">Development tool</a></li>
+<li><a href="http://react-component.github.io/">rc-components</a></li>
+<li><a href="http://mobile.ant.design">Mobile UI</a></li>
+<li><a href="https://motion.ant.design">Motion</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/Development">Developer Instruction</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/%E8%BD%AE%E5%80%BC%E8%A7%84%E5%88%99%E5%92%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B">Versioning Release Note</a></li>
+<li><a href="https://github.com/ant-design/ant-design/issues/129">Boilerplates</a></li>
+<li><a href="https://github.com/ant-design/ant-design/wiki/FAQ">FAQ</a></li>
+<li><a href="http://codepen.io/benjycui/pen/KgPZrE?editors=001">CodePen boilerplate</a> for bug reports</li>
 <li><a href="https://github.com/websemantics/awesome-ant-design">Awesome Ant Design</a></li>
-<li><a href="http://ant.design/docs/react/customize-theme-cn">定制主题</a></li>
+<li><a href="http://ant.design/docs/react/customize-theme">Customize Theme</a></li>
 </ul>
-<h2>本地开发</h2>
+<h2>Development</h2>
 <pre>$ git <span class="hljs-built_in">clone</span> git@github.com:ant-design/ant-design.git
 $ npm install
-$ npm start</pre><p>打开浏览器访问 <a href="http://127.0.0.1:8001">http://127.0.0.1:8001</a> ，更多本地开发文档参见: <a href="https://github.com/ant-design/ant-design/wiki/Development">https://github.com/ant-design/ant-design/wiki/Development</a> 。</p>
-<h2>如何贡献</h2>
-<p>在任何形式的参与前，请先阅读 <a href="https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md">贡献者文档</a>。如果你希望参与贡献，欢迎 <a href="https://github.com/ant-design/ant-design/pulls">Pull Request</a>，或给我们 <a href="http://new-issue.ant.design/">报告 Bug</a>。</p>
-<blockquote>
-<p>强烈推荐阅读 <a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">《提问的智慧》</a>、<a href="https://github.com/seajs/seajs/issues/545">《如何向开源社区提问题》</a> 和 <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html">《如何有效地报告 Bug》</a>，更好的问题更容易获得帮助。</p>
-</blockquote>
-<h2>社区互助</h2>
-<p>如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。</p>
-<p>通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 <code>antd</code> 标签。</p>
-<ol>
-<li><a href="http://stackoverflow.com/questions/tagged/antd">Stack Overflow</a>（英文）</li>
-<li><a href="https://segmentfault.com/t/antd">Segment Fault</a>（中文）</li>
-<li><a href="https://gitter.im/ant-design/ant-design?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" /></a></li>
-</ol>
+$ npm start</pre><p>Open your browser and visit <a href="http://127.0.0.1:8001">http://127.0.0.1:8001</a> , see more at <a href="https://github.com/ant-design/ant-design/wiki/Development">https://github.com/ant-design/ant-design/wiki/Development</a> .</p>
+<h2>Contributing</h2>
+<p>We welcome all contributions, please read our <a href="https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md">CONTRIBUTING.md</a> first. You can submit any ideas as <a href="https://github.com/ant-design/ant-design/pulls">pull requests</a> or as <a href="https://github.com/ant-design/ant-design/issues">GitHub issues</a>. If you'd like to improve code, check out the <a href="https://github.com/ant-design/ant-design/wiki/Development">Development Instructions</a> and have a good time! :)</p>
 </div></article></div><footer><div style="box-sizing:border-box;max-width:896px;margin-left:auto;margin-right:auto;margin-bottom:32px;padding-top:8px;padding-bottom:8px;padding-left:32px;padding-right:32px;"><div style="margin-left:-16px;margin-right:-16px;"><a href="https://github.com/ant-design/ant-design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://github.com/ant-design" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">ant-design</a></div><div></div></div></footer></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
