@@ -1,1 +1,1 @@
-webpackJsonp([89,214],{1250:function(t,e){t.exports={content:["article"],meta:{order:2,link:"//github.com/ant-design/ant-design",title:"GitHub",filename:"docs/resource/github.md"},toc:["ul"]}}});
+webpackJsonp([89,214],{1252:function(t,e){t.exports={content:["article"],meta:{order:2,link:"//github.com/ant-design/ant-design",title:"GitHub",filename:"docs/resource/github.md"},toc:["ul"]}}});
