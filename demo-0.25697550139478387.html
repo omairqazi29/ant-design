@@ -50,16 +50,15 @@
       Sider = _antd.Layout.Sider;
   return React.createElement(
     _antd.Layout,
-    {
-      style: {
-        height: '100vh'
-      }
-    },
+    null,
     React.createElement(
       Sider,
       {
         style: {
-          overflow: 'auto'
+          overflow: 'auto',
+          height: '100vh',
+          position: 'fixed',
+          left: 0
         }
       },
       React.createElement("div", {
@@ -204,7 +203,11 @@
     ),
     React.createElement(
       _antd.Layout,
-      null,
+      {
+        style: {
+          marginLeft: 200
+        }
+      },
       React.createElement(Header, {
         style: {
           background: '#fff',
