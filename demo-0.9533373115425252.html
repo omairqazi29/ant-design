@@ -84,7 +84,11 @@
     SiderDemo.prototype.render = function render() {
       return React.createElement(
         _antd.Layout,
-        null,
+        {
+          style: {
+            minHeight: '100vh'
+          }
+        },
         React.createElement(
           Sider,
           {
