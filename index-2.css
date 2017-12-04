@@ -6933,6 +6933,8 @@ a:focus {
 }
 #logo img + img {
   height: 16px;
+  position: relative;
+  top: 1px;
 }
 #search-box {
   border-left: 1px solid #ebedee;
