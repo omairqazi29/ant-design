@@ -7419,7 +7419,7 @@ footer .bottom-bar .translate-button {
   background: #f2f4f5;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: #314659;
   overflow: auto;
 }
@@ -7625,6 +7625,9 @@ footer .bottom-bar .translate-button {
 [id^="components-grid-demo-"] .code-box-demo .height-80 {
   height: 80px;
   line-height: 80px;
+}
+.markdown ul.ant-timeline {
+  line-height: 2;
 }
 .markdown ul.ant-timeline li.ant-timeline-item {
   list-style: none;
