@@ -2551,7 +2551,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   display: inline-block;
 }
 .ant-notification-notice-message-single-line-auto-margin {
-  width: calc(384px - 16px 24px * 2 - 24px - 48px - 100%);
+  width: calc(384px - 24px * 2 - 24px - 48px - 100%);
   background-color: transparent;
   pointer-events: none;
   display: block;
@@ -4587,22 +4587,6 @@ tr.ant-table-expanded-row:hover {
 .ant-table.ant-table-scroll-position-right .ant-table-fixed-right {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-@media (max-width: 480px) {
-  .ant-table-thead > tr > th,
-  .ant-table-tbody > tr > th,
-  .ant-table-thead > tr > td,
-  .ant-table-tbody > tr > td {
-    display: block;
-    width: auto !important;
-    border: none;
-  }
-  .ant-table-thead > tr > th:last-child,
-  .ant-table-tbody > tr > th:last-child,
-  .ant-table-thead > tr > td:last-child,
-  .ant-table-tbody > tr > td:last-child {
-    border-bottom: 1px solid #e8e8e8;
-  }
 }
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
