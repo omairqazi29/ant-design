@@ -4432,9 +4432,6 @@ form .ant-upload {
 }
 .ant-popover-arrow {
   background: #fff;
-}
-.ant-popover-arrow,
-.ant-popover-arrow:after {
   border-color: transparent;
   border-style: solid;
 }
@@ -5237,16 +5234,20 @@ tr.ant-table-expanded-row:hover {
   border: 1px solid #e8e8e8;
   border-radius: 4px;
 }
+.ant-table-small > .ant-table-title {
+  border-bottom: 1px solid #e8e8e8;
+}
 .ant-table-small > .ant-table-content > .ant-table-header > table,
-.ant-table-small > .ant-table-content > .ant-table-body > table {
+.ant-table-small > .ant-table-content > .ant-table-body > table,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table {
   border: 0;
 }
 .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
-.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th {
+.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th {
   background: #fff;
-  border-bottom: 1px solid #e8e8e8;
-}
-.ant-table-small > .ant-table-content .ant-table-title {
   border-bottom: 1px solid #e8e8e8;
 }
 .ant-table-small > .ant-table-content .ant-table-header {

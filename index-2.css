@@ -2821,13 +2821,8 @@ a.ant-notification-notice-close:focus {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-.ant-popover-arrow,
-.ant-popover-arrow:after {
   position: absolute;
   display: block;
-  width: 0;
-  height: 0;
   border-color: transparent;
   border-style: solid;
 }
@@ -2840,7 +2835,9 @@ a.ant-notification-notice-close:focus {
 }
 .ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow {
   left: 50%;
-  margin-left: -5px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
 }
 .ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow {
   left: 16px;
@@ -2857,7 +2854,9 @@ a.ant-notification-notice-close:focus {
 }
 .ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow {
   top: 50%;
-  margin-top: -5px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 .ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow {
   top: 12px;
@@ -2874,7 +2873,9 @@ a.ant-notification-notice-close:focus {
 }
 .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
   left: 50%;
-  margin-left: -5px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
 }
 .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow {
   left: 16px;
@@ -2891,7 +2892,9 @@ a.ant-notification-notice-close:focus {
 }
 .ant-popover-placement-left > .ant-popover-content > .ant-popover-arrow {
   top: 50%;
-  margin-top: -5px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 .ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow {
   top: 12px;
@@ -4472,43 +4475,55 @@ tr.ant-table-expanded-row:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
-.ant-table-middle > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
-.ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td,
-.ant-table-middle > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td {
+.ant-table-middle > .ant-table-title,
+.ant-table-middle > .ant-table-footer {
   padding: 12px 8px;
 }
-.ant-table-middle .ant-table-title,
-.ant-table-middle .ant-table-footer {
+.ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
+.ant-table-middle > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-middle > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th,
+.ant-table-middle > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td,
+.ant-table-middle > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td,
+.ant-table-middle > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-tbody > tr > td,
+.ant-table-middle > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td {
   padding: 12px 8px;
 }
 .ant-table-small {
   border: 1px solid #e8e8e8;
   border-radius: 4px;
 }
+.ant-table-small > .ant-table-title,
+.ant-table-small > .ant-table-footer {
+  padding: 8px;
+}
+.ant-table-small > .ant-table-title {
+  border-bottom: 1px solid #e8e8e8;
+  top: 0;
+}
 .ant-table-small > .ant-table-content > .ant-table-header > table,
-.ant-table-small > .ant-table-content > .ant-table-body > table {
+.ant-table-small > .ant-table-content > .ant-table-body > table,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table {
   border: 0;
   padding: 0 8px;
 }
 .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
 .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th,
 .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td,
-.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td {
+.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-tbody > tr > td,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td {
   padding: 8px;
 }
 .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
-.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th {
+.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th {
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
-}
-.ant-table-small > .ant-table-content .ant-table-title,
-.ant-table-small > .ant-table-content .ant-table-footer {
-  padding: 8px;
-}
-.ant-table-small > .ant-table-content .ant-table-title {
-  border-bottom: 1px solid #e8e8e8;
-  top: 0;
 }
 .ant-table-small > .ant-table-content .ant-table-header {
   background: #fff;

@@ -12207,7 +12207,6 @@ span.ant-radio + * {
   outline: 0;
   width: 44%;
   text-align: center;
-  vertical-align: top;
 }
 .ant-calendar-range-picker-input::-moz-placeholder {
   color: #bfbfbf;
