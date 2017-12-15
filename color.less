@@ -4292,18 +4292,18 @@ form .ant-upload {
   color: @primary-color;
 }
 .ant-pagination-item-active {
-  background-color: @primary-color;
   border-color: @primary-color;
+}
+.ant-pagination-item-active a {
+  color: @primary-color;
 }
 .ant-pagination-item-active:focus,
 .ant-pagination-item-active:hover {
-  background-color: color(~`colorPalette("@{primary-color}", 5)`);
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
 }
-.ant-pagination-item-active a,
 .ant-pagination-item-active:focus a,
 .ant-pagination-item-active:hover a {
-  color: #fff;
+  color: color(~`colorPalette("@{primary-color}", 5)`);
 }
 .ant-pagination-jump-prev:after,
 .ant-pagination-jump-next:after {
@@ -4328,7 +4328,7 @@ form .ant-upload {
 }
 .ant-pagination-prev:hover a,
 .ant-pagination-next:hover a {
-  color: @primary-color;
+  border-color: color(~`colorPalette("@{primary-color}", 5)`);
 }
 .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-next .ant-pagination-item-link {
@@ -4394,15 +4394,13 @@ form .ant-upload {
 .ant-pagination-simple .ant-pagination-simple-pager input:hover {
   border-color: @primary-color;
 }
-.ant-pagination.mini .ant-pagination-item {
-  border: 0;
-}
 .ant-pagination.mini .ant-pagination-item:not(.ant-pagination-item-active) {
   background: transparent;
+  border-color: transparent;
 }
 .ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination.mini .ant-pagination-next .ant-pagination-item-link {
-  border: 0;
+  border-color: transparent;
   background: transparent;
 }
 .ant-popover {
