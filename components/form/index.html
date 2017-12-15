@@ -722,11 +722,11 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">}</span>
 
   add <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    uuid<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span> form <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// can use data-binding to get</span>
     <span class="token keyword">const</span> keys <span class="token operator">=</span> form<span class="token punctuation">.</span><span class="token function">getFieldValue</span><span class="token punctuation">(</span><span class="token string">'keys'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> nextKeys <span class="token operator">=</span> keys<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>uuid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    uuid<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// can use data-binding to set</span>
     <span class="token comment" spellcheck="true">// important! notify form to detect changes</span>
     form<span class="token punctuation">.</span><span class="token function">setFieldsValue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -771,7 +771,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
           required<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span>
           key<span class="token operator">=</span><span class="token punctuation">{</span>k<span class="token punctuation">}</span>
         <span class="token operator">></span>
-          <span class="token punctuation">{</span><span class="token function">getFieldDecorator</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`names-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>k<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">{</span><span class="token function">getFieldDecorator</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`names[</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>k<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">]`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
             validateTrigger<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'onChange'</span><span class="token punctuation">,</span> <span class="token string">'onBlur'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
             rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
               required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
