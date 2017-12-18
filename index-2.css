@@ -7234,6 +7234,28 @@ footer .bottom-bar .translate-button {
             transform: translateY(10px);
   }
 }
+.promote-banner {
+  position: relative;
+  display: block;
+  padding-top: 64px;
+}
+.promote-banner img {
+  max-width: 100%;
+}
+.promote-banner .anticon-cross {
+  position: absolute;
+  font-size: 24px;
+  cursor: pointer;
+  right: 24px;
+  top: 88px;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 0;
+}
+.promote-banner:hover .anticon-cross {
+  opacity: 1;
+}
 .prev-next-nav {
   position: absolute;
   bottom: 0;
