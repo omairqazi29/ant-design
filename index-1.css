@@ -6355,18 +6355,25 @@ span.ant-radio + * {
 }
 .ant-card-meta {
   margin: -4px 0;
+  zoom: 1;
 }
-.ant-card-meta-content {
-  display: table-row;
+.ant-card-meta:before,
+.ant-card-meta:after {
+  content: " ";
+  display: table;
+}
+.ant-card-meta:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
 }
 .ant-card-meta-avatar {
   padding-right: 16px;
-  display: table-cell;
+  float: left;
 }
 .ant-card-meta-detail {
-  display: table-cell;
-  vertical-align: top;
-  position: relative;
+  overflow: hidden;
 }
 .ant-card-meta-detail > div:not(:last-child) {
   margin-bottom: 8px;
@@ -6374,7 +6381,6 @@ span.ant-radio + * {
 .ant-card-meta-title {
   font-size: 16px;
   text-overflow: ellipsis;
-  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   color: rgba(0, 0, 0, 0.85);
@@ -14583,7 +14589,4 @@ textarea.ant-input-number {
   display: block;
   width: 100%;
   font-weight: bold;
-}
-.ant-input-number-handler:active {
-  background: #f4f4f4;
 }

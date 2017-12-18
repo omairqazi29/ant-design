@@ -3570,6 +3570,10 @@ form .ant-upload {
 .ant-input-number-handler-down {
   border-top: 1px solid #d9d9d9;
 }
+.ant-input-number-handler-up-disabled:hover .ant-input-number-handler-up-inner,
+.ant-input-number-handler-down-disabled:hover .ant-input-number-handler-down-inner {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-input {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
@@ -3759,6 +3763,9 @@ form .ant-upload {
 .ant-list-item-action-split {
   background-color: #e8e8e8;
 }
+.ant-list-empty {
+  color: rgba(0, 0, 0, 0.45);
+}
 .ant-list-split .ant-list-item {
   border-bottom: 1px solid #e8e8e8;
 }
@@ -3766,13 +3773,6 @@ form .ant-upload {
   border-bottom: none;
 }
 .ant-list-split .ant-list-header {
-  border-bottom: 1px solid #e8e8e8;
-}
-.ant-list-bordered {
-  border-radius: 4px;
-  border: 1px solid #d9d9d9;
-}
-.ant-list-bordered .ant-list-item {
   border-bottom: 1px solid #e8e8e8;
 }
 .ant-list-something-after-last-item .ant-list-item:last-child {
@@ -3787,8 +3787,12 @@ form .ant-upload {
 .ant-list-grid .ant-list-item {
   border-bottom: none;
 }
-.ant-list-empty {
-  color: rgba(0, 0, 0, 0.45);
+.ant-list-bordered {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+}
+.ant-list-bordered .ant-list-item {
+  border-bottom: 1px solid #e8e8e8;
 }
 .ant-mention-wrapper {
   color: rgba(0, 0, 0, 0.65);
