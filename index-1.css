@@ -4048,7 +4048,7 @@ textarea.ant-input {
   z-index: 1;
 }
 .ant-input-group-addon {
-  padding: 4px 11px;
+  padding: 0 11px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
