@@ -584,6 +584,7 @@
   margin-top: -26px;
 }
 .ant-spin-container {
+  overflow: auto;
   position: relative;
 }
 .ant-spin-blur {
