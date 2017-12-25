@@ -7162,7 +7162,7 @@ footer .bottom-bar .translate-button {
 }
 .promote-banner {
   position: relative;
-  display: block;
+  display: none;
   padding-top: 64px;
 }
 .promote-banner img {
@@ -9085,10 +9085,13 @@ ul.anticons-list li.copied:after {
 .santa {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 8px;
+  margin-left: -8px;
+  -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+          transform: scale(0.4);
 }
 .santa-body {
-  font-size: 24px;
+  font-size: 60px;
   color: #f91047;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9275,21 +9278,21 @@ ul.anticons-list li.copied:after {
 }
 @-webkit-keyframes balance {
   from {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
   }
   to {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
   }
 }
 @keyframes balance {
   from {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
   }
   to {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
   }
 }
