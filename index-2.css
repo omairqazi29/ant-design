@@ -1,9 +1,44 @@
 
+.ant-input-number-disabled .ant-input-number-handler-wrap {
+  display: none;
+}
+.ant-input-number-input {
+  width: 100%;
+  text-align: left;
+  outline: 0;
+  -moz-appearance: textfield;
+  height: 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 11px;
+  display: block;
+}
+.ant-input-number-input::-moz-placeholder {
+  color: #bfbfbf;
+  opacity: 1;
+}
+.ant-input-number-input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+.ant-input-number-input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.ant-input-number-input[disabled] {
+  background-color: #f5f5f5;
+  opacity: 1;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-input-number-input[disabled]:hover {
   border-color: #e6d8d8;
 }
 .ant-input-number-lg {
   padding: 0;
+  font-size: 16px;
 }
 .ant-input-number-lg input {
   height: 38px;
@@ -1001,6 +1036,7 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-pagination-options-quick-jumper input-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-pagination-options-quick-jumper input-sm {
   padding: 1px 7px;
@@ -1185,6 +1221,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 .ant-mention-wrapper .ant-mention-editor-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-mention-wrapper .ant-mention-editor-sm {
   padding: 1px 7px;
@@ -4467,6 +4504,14 @@ tr.ant-table-expanded-row:hover {
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
 }
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table,
+.ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-header > table,
+.ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-header > table,
+.ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-body-outer > .ant-table-body-inner > table,
+.ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table {
+  padding: 0;
+}
 .ant-table-small > .ant-table-content .ant-table-header {
   background: #fff;
 }
@@ -4476,13 +4521,6 @@ tr.ant-table-expanded-row:hover {
 }
 .ant-table-small.ant-table-bordered {
   border-right: 0;
-}
-.ant-table-small.ant-table-bordered .ant-table-header > table,
-.ant-table-small.ant-table-bordered .ant-table-body > table,
-.ant-table-small.ant-table-bordered .ant-table-fixed-left table,
-.ant-table-small.ant-table-bordered .ant-table-fixed-right table {
-  border: 0;
-  padding: 0;
 }
 .ant-table-small.ant-table-bordered .ant-table-title {
   border: 0;
@@ -5213,6 +5251,7 @@ span.ant-transfer-list-search-action {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline-block;
 }
 .ant-select-tree-checkbox-group-item {
   display: inline-block;
@@ -5610,6 +5649,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline-block;
 }
 .ant-tree-checkbox-group-item {
   display: inline-block;
@@ -7816,6 +7856,8 @@ ul.toc > li:not(:last-child) {
 }
 .toc-affix .ant-affix {
   background: #fff;
+  overflow: auto;
+  max-height: calc(100vh - 16px);
 }
 .toc-affix-bottom {
   position: absolute;
@@ -8206,8 +8248,21 @@ section.code-box-meta p {
   text-indent: -9999px;
   overflow: hidden;
 }
+.code-box-codesandbox {
+  background: transparent url("https://gw.alipayobjects.com/zos/rmsportal/aaYmtdDyHSCkXyLZVgGK.svg") center / 14px no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
 .highlight-wrapper:hover .code-box-code-copy,
 .highlight-wrapper:hover .code-box-codepen,
+.highlight-wrapper:hover .code-box-codesandbox,
 .highlight-wrapper:hover .code-box-riddle {
   opacity: 1;
 }

@@ -3001,7 +3001,6 @@ mark {
 .ant-affix {
   position: fixed;
   z-index: 10;
-  overflow: auto;
 }
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
@@ -3220,6 +3219,9 @@ mark {
 }
 .ant-anchor-wrapper {
   background-color: #fff;
+  overflow: auto;
+  padding-left: 4px;
+  margin-left: -4px;
 }
 .ant-anchor-ink {
   position: absolute;
@@ -3528,6 +3530,9 @@ mark {
   pointer-events: none;
   display: inline-block;
   width: 0;
+}
+.ant-select-lg {
+  font-size: 16px;
 }
 .ant-select-lg .ant-select-selection--single {
   height: 40px;
@@ -3989,6 +3994,7 @@ textarea.ant-input {
 .ant-input-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-input-sm {
   padding: 1px 7px;
@@ -4122,6 +4128,7 @@ textarea.ant-input {
 .ant-input-group-lg > .ant-input-group-addon {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-input-group-sm .ant-input,
 .ant-input-group-sm > .ant-input-group-addon {
@@ -4373,6 +4380,16 @@ textarea.ant-input {
   width: 14px;
   height: 16px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAABGdBTUEAALGPC/xhBQAAAbtJREFUWAntmMtKw0AUhhMvS5cuxILgQlRUpIggIoKIIoigG1eC+AA+jo+i6FIXBfeuXIgoeKVeitVWJX5HWhhDksnUpp3FDPyZk3Nm5nycmZKkXhAEOXSA3lG7muTeRzmfy6HneUvIhnYkQK+Q9NhAA0Opg0vBEhjBKHiyb8iGMyQMOYuK41BcBSypAL+MYXSKjtFAW7EAGEO3qN4uMQbbAkXiSfRQJ1H6a+yhlkKRcAoVFYiweYNjtCVQJJpBz2GCiPt7fBOZQpFgDpUikse5HgnkM4Fi4QX0Fpc5wf9EbLqpUCy4jMoJSXWhFwbMNgWKhVbRhy5jirhs9fy/oFhgHVVTJEs7RLZ8sSEoJm6iz7SZDMbJ+/OKERQTttCXQRLToRUmrKWCYuA2+jbN0MB4OQobYShfdTCgn/sL1K36M7TLrN3n+758aPy2rrpR6+/od5E8tf/A1uLS9aId5T7J3CNYihkQ4D9PiMdMC7mp4rjB9kjFjZp8BlnVHJBuO1yFXIV0FdDF3RlyFdJVQBdv5AxVdIsq8apiZ2PyYO1EVykesGfZEESsCkweyR8MUW+V8uJ1gkYipmpdP1pm2aJVPEGzAAAAAElFTkSuQmCC) 100%/100% no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .ant-back-top {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ant-back-top {
+    right: 20px;
+  }
 }
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
@@ -4690,7 +4707,7 @@ textarea.ant-input {
 }
 .ant-btn-lg {
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
   height: 40px;
 }
@@ -5244,7 +5261,7 @@ textarea.ant-input {
 .ant-btn-circle-outline.ant-btn-lg {
   width: 40px;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 50%;
   height: 40px;
 }
@@ -5312,7 +5329,7 @@ textarea.ant-input {
 }
 .ant-btn-group-lg > .ant-btn {
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
   height: 40px;
 }
@@ -6030,6 +6047,7 @@ span.ant-radio + * {
 .ant-radio-group-large .ant-radio-button-wrapper {
   height: 40px;
   line-height: 38px;
+  font-size: 16px;
 }
 .ant-radio-group-small .ant-radio-button-wrapper {
   height: 24px;
@@ -7612,6 +7630,7 @@ span.ant-radio + * {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline-block;
 }
 .ant-checkbox-group-item {
   display: inline-block;
@@ -11544,6 +11563,9 @@ span.ant-radio + * {
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow:before {
   content: "\E61F";
 }
+.ant-collapse > .ant-collapse-item.ant-collapse-no-arrow > .ant-collapse-header {
+  padding-left: 12px;
+}
 .ant-collapse-anim-active {
   -webkit-transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -12064,7 +12086,7 @@ span.ant-radio + * {
 }
 .ant-calendar .ant-calendar-ok-btn-lg {
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
   height: 40px;
 }
@@ -12354,6 +12376,7 @@ textarea.ant-calendar-range .ant-calendar-time-picker-input {
 .ant-calendar-range .ant-calendar-time-picker-input-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-calendar-range .ant-calendar-input-sm,
 .ant-calendar-range .ant-calendar-time-picker-input-sm {
@@ -13318,6 +13341,7 @@ textarea.ant-time-picker-input {
 .ant-time-picker-input-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-time-picker-input-sm {
   padding: 1px 7px;
@@ -13361,6 +13385,7 @@ textarea.ant-time-picker-input {
 .ant-time-picker-large .ant-time-picker-input {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-time-picker-small .ant-time-picker-input {
   padding: 1px 7px;
@@ -14536,6 +14561,7 @@ textarea.ant-input-number {
 .ant-input-number-lg {
   padding: 6px 11px;
   height: 40px;
+  font-size: 16px;
 }
 .ant-input-number-sm {
   padding: 1px 7px;
@@ -14620,38 +14646,4 @@ textarea.ant-input-number {
 .ant-input-number-disabled .ant-input-number-input {
   cursor: not-allowed;
   background-color: #f5f5f5;
-}
-.ant-input-number-disabled .ant-input-number-handler-wrap {
-  display: none;
-}
-.ant-input-number-input {
-  width: 100%;
-  text-align: left;
-  outline: 0;
-  -moz-appearance: textfield;
-  height: 30px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  color: rgba(0, 0, 0, 0.65);
-  background-color: #fff;
-  border: 0;
-  border-radius: 4px;
-  padding: 0 11px;
-  display: block;
-}
-.ant-input-number-input::-moz-placeholder {
-  color: #bfbfbf;
-  opacity: 1;
-}
-.ant-input-number-input:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-.ant-input-number-input::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-.ant-input-number-input[disabled] {
-  background-color: #f5f5f5;
-  opacity: 1;
-  cursor: not-allowed;
-  color: rgba(0, 0, 0, 0.25);
 }
