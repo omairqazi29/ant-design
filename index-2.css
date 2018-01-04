@@ -1,4 +1,11 @@
 
+.ant-input-number-disabled:hover {
+  border-color: #e6d8d8;
+}
+.ant-input-number-disabled .ant-input-number-input {
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
 .ant-input-number-disabled .ant-input-number-handler-wrap {
   display: none;
 }
@@ -288,13 +295,13 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 0;
 }
 .ant-list-item-meta-avatar {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
   margin-right: 16px;
 }
 .ant-list-item-meta-content {
@@ -384,12 +391,6 @@
       -ms-flex: 1;
           flex: 1;
 }
-.ant-list-item-extra {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-}
 .ant-list-header,
 .ant-list-footer {
   padding-top: 12px;
@@ -442,10 +443,6 @@
 }
 .ant-list-vertical .ant-list-item-extra {
   margin-left: 58px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
 }
 .ant-list-vertical .ant-list-item-meta {
   margin-bottom: 16px;
@@ -778,7 +775,7 @@
   display: inline-block;
   vertical-align: middle;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
   margin-right: 8px;
 }
 .ant-pagination-item {
@@ -790,7 +787,7 @@
           user-select: none;
   min-width: 32px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
   text-align: center;
   list-style: none;
   display: inline-block;
@@ -1089,7 +1086,7 @@ textarea.ant-pagination-options-quick-jumper input {
   margin: 0;
   min-width: 24px;
   height: 24px;
-  line-height: 24px;
+  line-height: 22px;
 }
 .ant-pagination.mini .ant-pagination-item:not(.ant-pagination-item-active) {
   background: transparent;
