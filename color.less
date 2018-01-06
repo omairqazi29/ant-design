@@ -6077,7 +6077,10 @@ body {
 }
 .main-container {
   background: #fff;
-  border-left: 1px solid #e9e9e9;
+  border-left: 1px solid #ebedf0;
+}
+.aside-container {
+  border: none;
 }
 .aside-container a[disabled] {
   color: #ccc;
@@ -6116,18 +6119,18 @@ body {
   color: @primary-color;
 }
 #search-box {
-  border-left: 1px solid #ebedee;
+  border-left: 1px solid #ebedf0;
 }
 #search-box .anticon {
   color: #ced4d9;
 }
-#search-box .ant-select-selection {
+#search-box input {
   border: 0;
   box-shadow: none;
+  background: transparent;
 }
-#search-box .ant-input {
-  border: 0;
-  box-shadow: none;
+#search-box input::placeholder {
+  color: #a3b1bf;
 }
 .header-lang-button {
   color: rgba(0, 0, 0, 0.65);
@@ -6198,61 +6201,79 @@ footer .bottom-bar a {
 footer .bottom-bar a:hover {
   color: #fff;
 }
-.banner-wrapper {
-  background: url("https://gw.alipayobjects.com/zos/rmsportal/UuWvfiYyEArxEECAKvRt.png") no-repeat center / cover;
+.home-page-wrapper {
+  color: #314659;
 }
-.banner-text-wrapper {
-  color: rgba(0, 0, 0, 0.85);
+.home-page-wrapper .page h2 {
+  color: #314659;
 }
-.banner-text-wrapper h2 {
-  color: rgba(0, 0, 0, 0.85);
+.banner-bg {
+  background: #2f54eb;
 }
-.banner-text-wrapper h2 p {
-  color: #f9323f;
+.banner .text-wrapper {
+  color: #0d1a26;
 }
-.banner-text-wrapper .line {
-  background: #d7dce0;
+.banner .text-wrapper p {
+  color: #314659;
 }
-.banner-text-wrapper > p {
-  color: rgba(0, 0, 0, 0.65);
+.page1 {
+  background: #2f54eb;
+  background: linear-gradient(to bottom, #2f54eb 0%, #3a40d4 100%);
 }
-.banner-text-wrapper .start-button .ant-btn {
-  border-radius: 100px;
+.page1 h2 {
+  color: #fff !important;
 }
-.banner-text-wrapper .github-btn a:hover {
-  color: #333;
+.page1-block h3 {
+  color: #fff;
 }
-.down {
-  color: rgba(0, 0, 0, 0.45);
+.page1-block p {
+  color: #fff;
 }
-.content-wrapper {
+.page1-block:hover .page1-image {
+  box-shadow: 0 6px 10px rgba(5, 26, 180, 0.35);
+}
+.page1-image {
+  background: #fff;
+  border-radius: 100%;
+}
+.page2 {
+  background: #eff3f6;
+}
+.page2-content {
+  box-shadow: 0 12px 20px #d8e0e6;
+  background: #2f54eb;
+}
+.page2-components {
+  background: #2f54eb;
+  color: #fff;
+}
+.page2-components h3 {
+  color: #fff;
+}
+.page2-components .components-button-wrapper a {
+  color: #fff;
+}
+.page2-product {
   background: #fff;
 }
-.content-wrapper .text-wrapper h2,
-.content-wrapper .text-wrapper-bottom h2 {
-  color: rgba(0, 0, 0, 0.85);
+.page2-product .product-block:last-child .block-text-wrapper {
+  border-bottom: none;
 }
-.content-wrapper .text-wrapper p {
-  color: rgba(0, 0, 0, 0.65);
+.page2-product .product-block .block-text-wrapper {
+  border-bottom: 1px solid #ebedf0;
 }
-.image1 {
-  background: url("https://t.alipayobjects.com/images/T1Ch8kXfpdXXXXXXXX.png") no-repeat right / 841px;
+.page2-product .product-block .block-text-wrapper a {
+  color: #2f54eb;
 }
-.image2 {
-  background: url("https://t.alipayobjects.com/images/T1r5RkXotXXXXXXXXX.png") no-repeat left / 800px;
+.page3-block a {
+  color: #314659;
 }
-.image3 {
-  background: url("https://t.alipayobjects.com/images/T1nx0kXdFfXXXXXXXX.png") no-repeat right / 639px;
-  background-origin: content-box;
+.new-version-video {
+  background: #fbfbfb;
 }
-.image4 {
-  background: url("https://t.alipayobjects.com/images/T1lyJkXg4aXXXXXXXX.png") no-repeat center / 615px;
-}
-.text-wrapper-bottom p {
-  color: rgba(0, 0, 0, 0.65);
-}
-.promote-banner .anticon-cross {
-  color: #fff;
+.new-version-video .vidoe-wrap {
+  background: url('https://gw.alipayobjects.com/zos/rmsportal/gEeRuETmbpAYRaeilexm.jpg') repeat-x;
+  background-size: cover;
 }
 .prev-next-nav {
   border-top: 1px solid #ebedf0;
@@ -6287,7 +6308,7 @@ footer .bottom-bar a:hover {
 }
 .markdown hr {
   border: 0;
-  background: #e9e9e9;
+  background: #ebedf0;
 }
 .markdown code {
   background: #f2f4f5;
@@ -6404,7 +6425,7 @@ footer .bottom-bar a:hover {
   color: #999;
 }
 .resource-card {
-  border: 1px solid #e9e9e9;
+  border: 1px solid #ced4d9;
   border-radius: 4px;
   color: #777;
 }
@@ -6419,10 +6440,10 @@ footer .bottom-bar a:hover {
   color: #314659;
 }
 .resource-card-description {
-  color: #999;
+  color: #697b8c;
 }
 .preview-image-wrapper {
-  background: #f7f7f7;
+  background: #f2f4f5;
 }
 .preview-image-wrapper.video {
   background: 0;
@@ -6662,6 +6683,12 @@ pre[class*="language-"] {
 .color-description {
   color: #777;
 }
+.color-palette-horizontal .main-color-item {
+  border-radius: 0;
+}
+.color-palette-horizontal .main-color-item:hover {
+  border-radius: 4px 4px 0 0;
+}
 ul.anticons-list li {
   color: #555;
   border-radius: 4px;
@@ -6747,4 +6774,17 @@ ul.anticons-list li:after {
   border-bottom-right-radius: 5vw;
   border-bottom-left-radius: 5vw;
   background-color: black;
+}
+.algolia-autocomplete .ds-dropdown-menu {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
+  border: none;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  color: #314659;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: @primary-color;
 }

@@ -13884,9 +13884,6 @@ input[type="checkbox"].disabled {
   font-size: 0;
   height: 0;
 }
-.ant-form-item-control > * {
-  font-size: 14px;
-}
 .ant-form-item-with-help {
   margin-bottom: 5px;
   -webkit-transition: none;
@@ -14638,4 +14635,10 @@ textarea.ant-input-number {
   outline: 0;
   -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
           box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.ant-input-number-disabled {
+  background-color: #f5f5f5;
+  opacity: 1;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.25);
 }
