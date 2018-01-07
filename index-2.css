@@ -252,6 +252,9 @@
 .ant-list * {
   outline: none;
 }
+.ant-list .ant-spin-container {
+  overflow: visible;
+}
 .ant-list-pagination {
   margin-top: 24px;
   text-align: right;
@@ -7933,12 +7936,10 @@ svg g {
 .page3-text-wrapper {
   display: inline-block;
 }
-.page3-img-wrapper {
-  margin-top: 8px;
-}
 .page3-text-wrapper {
   margin-left: 32px;
   line-height: 24px;
+  margin-top: 2px;
 }
 .page3-text-wrapper h3 {
   font-size: 20px;
@@ -9909,6 +9910,7 @@ ul.anticons-list li.copied:after {
     margin-top: 16px;
   }
   #footer .bottom-bar {
+    padding: 16px;
     text-align: center;
   }
   #footer .bottom-bar .translate-button {
