@@ -1,1 +1,307 @@
-webpackJsonp([64],{1839:function(t,p){t.exports={content:["article",{},["h2","\u67e5\u8be2\u6a21\u5f0f"],["p",["img",{class:"preview-img",align:"right",alt:"\u786e\u5b9a\u7c7b\u76ee\u793a\u4f8b",description:"\u7528\u6237\u6240\u67e5\u8be2\u7684\u5173\u952e\u8bcd\uff0c\u53ea\u4f1a\u5728\u300e\u8bdd\u9898\u300f\u3001\u300e\u95ee\u9898\u300f\u3001\u300e\u6587\u7ae0\u300f\u8fd9 3 \u79cd\u7c7b\u76ee\u4e2d\u51fa\u73b0\u3002",src:"https://gw.alipayobjects.com/zos/rmsportal/XlqFYhYiZtWFNImtRElR.png"}]],["p",["img",{class:"preview-img",align:"right",alt:"\u4e0d\u786e\u5b9a\u7c7b\u76ee\u793a\u4f8b",description:"\u7528\u6237\u6240\u67e5\u8be2\u7684\u5173\u952e\u8bcd\uff0c\u5176\u6240\u5c5e\u7684\u7c7b\u76ee\u6570\u91cf\u4e0d\u786e\u5b9a\uff0c\u53ef\u80fd 4 \u4e2a\uff0c\u53ef\u80fd 5 \u4e2a\uff0c\u53ef\u80fd\u66f4\u591a\u3002",src:"https://gw.alipayobjects.com/zos/rmsportal/czfJRLltwXcsTLlTpytV.png"}]],["p","\u81ea\u52a8\u5b8c\u6210\uff1a\u7528\u6237\u8f93\u5165\u65f6\uff0c\u4e0b\u62c9\u5217\u8868\u4f1a\u968f\u7740\u8f93\u5165\u7684\u5173\u952e\u8bcd\u663e\u793a\u5339\u914d\u9879\u3002\n\u6839\u636e\u67e5\u8be2\u7ed3\u679c\u5206\u7c7b\u7684\u591a\u5c11\uff0c\u53ef\u4ee5\u5206\u4e3a\u300e\u786e\u5b9a\u7c7b\u76ee\u300f\u3001\u300e\u4e0d\u786e\u5b9a\u7c7b\u76ee\u300f\u4e24\u79cd\u7c7b\u578b\u3002"],["p",["br"]],["p",["img",{class:"preview-img",align:"right",alt:"\u5b9e\u65f6\u641c\u7d22\u793a\u4f8b",description:"\u7528\u6237\u8f93\u5165\u4e00\u4e2a\u641c\u7d22\u503c\uff0c\u7cfb\u7edf\u968f\u5373\u663e\u793a\u67e5\u8be2\u7ed3\u679c\u3002",src:"https://gw.alipayobjects.com/zos/rmsportal/clFLKIWTYfHwIiOCUNbw.png"}]],["p","\u5b9e\u65f6\u641c\u7d22\uff1a\u968f\u7740\u7528\u6237\u8f93\u5165\uff0c\u5b9e\u65f6\u663e\u793a\u641c\u7d22\u7ed3\u679c\u3002\u300e\u81ea\u52a8\u5b8c\u6210\u300f\u3001\u300e\u5b9e\u65f6\u5efa\u8bae\u300f\u7684\u8fd1\u4eb2\u3002"],["p",["br"]],["hr"],["h2","\u53cd\u9988\u6a21\u5f0f"],["p",["img",{class:"preview-img",align:"right",alt:"\u5b9e\u65f6\u9884\u89c8\u793a\u4f8b",description:"\u6839\u636e\u7528\u6237\u7684\u8f93\u5165\uff0c\u63d0\u4f9b\u5173\u4e8e\u5bc6\u7801\u5f3a\u5ea6\u548c\u6709\u6548\u6027\u7684\u5b9e\u65f6\u53cd\u9988\u3002",src:"https://gw.alipayobjects.com/zos/rmsportal/koYsOzKwTcHvjpZULpov.png"}]],["p","\u5b9e\u65f6\u9884\u89c8\uff1a\u5728\u7528\u6237\u63d0\u4ea4\u8f93\u5165\u4e4b\u524d\uff0c\u8ba9\u4ed6\u5148\u884c\u4e86\u89e3\u7cfb\u7edf\u5c06\u5982\u4f55\u5904\u7406\u4ed6\u7684\u8f93\u5165\u3002"],["blockquote",["p","\u6ce8\uff1a\u89e3\u51b3\u9519\u8bef\u6700\u597d\u7684\u529e\u6cd5\uff0c\u5c31\u662f\u4e0d\u8ba9\u9519\u8bef\u53d1\u751f\u3002\u800c\u300e\u5b9e\u65f6\u9884\u89c8\u300f\u5c31\u662f\u6709\u6548\u907f\u514d\u9519\u8bef\u7684\u597d\u8bbe\u8ba1\u3002"]],["p",["br"]],["p","\u6e10\u8fdb\u5f0f\u5c55\u73b0\uff1a\u5728\u5fc5\u8981\u7684\u65f6\u5019\u63d0\u4f9b\u5fc5\u8981\u7684\u63d0\u793a\uff0c\u800c\u4e0d\u662f\u4e00\u80a1\u8111\u513f\u663e\u793a\u6240\u6709\u63d0\u793a\uff0c\u5bfc\u81f4\u754c\u9762\u6df7\u4e71\uff0c\u589e\u52a0\u8ba4\u77e5\u8d1f\u62c5\u3002\u6848\u4f8b\u8be6\u89c1",["a",{title:null,href:"/docs/spec/stay#\u6d41\u7a0b\u5904\u7406"},"\u300e\u8db3\u4e0d\u51fa\u6237\uff0f\u6e10\u8fdb\u5f0f\u5c55\u73b0\u300f"],"\u3002"],["p",["br"]],["p",["img",{class:"preview-img",align:"right",alt:"\u6309\u94ae\u52a0\u8f7d\u793a\u4f8b",src:"https://gw.alipayobjects.com/zos/rmsportal/cnAnCxfzSwUJeeXIUOIC.png"}]],["p",["img",{class:"preview-img",align:"right",alt:"\u8868\u683c\u52a0\u8f7d\u793a\u4f8b",src:"https://gw.alipayobjects.com/zos/rmsportal/agFZSlgdSOyCznCGXGcE.png"}]],["p",["img",{class:"preview-img",align:"right",alt:"\u5bcc\u5217\u8868\u52a0\u8f7d\u793a\u4f8b",src:"https://gw.alipayobjects.com/zos/rmsportal/tVzqUunjctTxvSMmhSVv.png"}]],["p",["img",{class:"preview-img",align:"right",alt:"\u9875\u9762\u52a0\u8f7d\u793a\u4f8b",src:"https://gw.alipayobjects.com/zos/rmsportal/igxFnUdRHWaBXtTePuFf.png"}]],["p","\u8fdb\u5ea6\u6307\u793a\uff1a\u5f53\u4e00\u4e2a\u64cd\u4f5c\u9700\u8981\u4e00\u5b9a\u65f6\u95f4\u5b8c\u6210\u65f6\uff0c\u5c31\u9700\u8981\u5373\u65f6\u544a\u77e5\u8fdb\u5ea6\uff0c\u4fdd\u6301\u4e0e\u7528\u6237\u7684\u6c9f\u901a\u3002\n\u5e38\u89c1\u7684\u8fdb\u5ea6\u6307\u793a\uff1a\u300e\u6309\u94ae\u52a0\u8f7d\u300f\u3001\u300e\u8868\u683c\u52a0\u8f7d\u300f\u3001\u300e\u5bcc\u5217\u8868\u52a0\u8f7d\u300f\u3001\u300e\u9875\u9762\u52a0\u8f7d\u300f\u3002\u53ef\u6839\u636e\u64cd\u4f5c\u7684\u91cf\u7ea7\u548c\u91cd\u8981\u6027\uff0c\u5c55\u793a\u4e0d\u540c\u7c7b\u578b\u7684\u8fdb\u5ea6\u6307\u793a\u3002"],["p",["br"]],["p",["img",{class:"preview-img",align:"right",alt:"\u70b9\u51fb\u5237\u65b0\u793a\u4f8b",src:"https://gw.alipayobjects.com/zos/rmsportal/HTDCbBvlFKwsDwmcgzcw.png"}]],["p","\u70b9\u51fb\u5237\u65b0\uff1a\u544a\u77e5\u7528\u6237\u6709\u65b0\u5185\u5bb9\uff0c\u5e76\u63d0\u4f9b\u6309\u94ae\u7b49\u5de5\u5177\u5e2e\u52a9\u7528\u6237\u67e5\u770b\u65b0\u5185\u5bb9\u3002"],["p",["br"]],["p",["img",{class:"preview-img",align:"right",alt:"\u5b9a\u65f6\u793a\u4f8b",description:"\u65b0\u589e\u7684\u5217\u8868\u9879\u300e\u9ad8\u4eae\u300f\uff0c\u6301\u7eed\u51e0\u79d2\u540e\u6062\u590d\u6b63\u5e38\u3002",src:"https://gw.alipayobjects.com/zos/rmsportal/kpUhmRudNWDxNzgUddEp.png"}]],["p","\u5b9a\u65f6\u5237\u65b0\uff1a\u65e0\u9700\u7528\u6237\u4ecb\u5165\uff0c\u5b9a\u65f6\u5c55\u793a\u65b0\u5185\u5bb9\u3002"]],meta:{category:"\u539f\u5219",order:10,title:"\u5373\u65f6\u53cd\u5e94",filename:"docs/spec/reaction.zh-CN.md"},description:["section",["p","\u300e\u63d0\u4f9b\u9080\u8bf7\u300f\u7684\u5f3a\u5927\u4f53\u73b0\u5728",["code","\u4ea4\u4e92\u4e4b\u524d"],"\u7ed9\u51fa\u53cd\u9988\uff0c\u89e3\u51b3\u6613\u53d1\u73b0\u6027\u95ee\u9898\uff1b\u300e\u5de7\u7528\u8fc7\u6e21\u300f\u7684\u6709\u7528\u4f53\u73b0\u5728\u5b83\u80fd\u591f\u5728",["code","\u4ea4\u4e92\u671f\u95f4"],"\u4e3a\u7528\u6237\u63d0\u4f9b\u89c6\u89c9\u53cd\u9988\uff1b\u300e\u5373\u65f6\u53cd\u5e94\u300f\u7684\u91cd\u8981\u6027\u4f53\u73b0\u5728",["code","\u4ea4\u4e92\u4e4b\u540e"],"\u7acb\u5373\u7ed9\u51fa\u53cd\u9988\u3002"],["p","\u5c31\u50cf\u300e\u725b\u987f\u7b2c\u4e09\u5b9a\u5f8b\u300f\u6240\u63cf\u8ff0\u4f5c\u7528\u529b\u548c\u53cd\u4f5c\u7528\u4e00\u6837\uff0c\u7528\u6237\u8fdb\u884c\u4e86\u64cd\u4f5c\u6216\u8005\u5185\u90e8\u6570\u636e\u53d1\u751f\u4e86\u53d8\u5316\uff0c\u7cfb\u7edf\u5c31\u5e94\u8be5\u7acb\u5373\u6709\u4e00\u4e2a\u5bf9\u5e94\u7684\u53cd\u9988\uff0c\u540c\u65f6\u8f93\u5165\u91cf\u7ea7\u8d8a\u5927\u3001\u91cd\u8981\u6027\u8d8a\u9ad8\uff0c\u90a3\u4e48\u53cd\u9988\u91cf\u7ea7\u8d8a\u5927\u3001\u91cd\u8981\u6027\u8d8a\u9ad8\u3002"],["p","\u867d\u7136\u53cd\u9988\u592a\u591a\uff08\u51c6\u786e\u7684\u8bf4\uff0c\u9519\u8bef\u7684\u53cd\u9988\u592a\u591a\uff09\u662f\u4e00\u4e2a\u95ee\u9898\uff0c\u4f46\u662f\u53cd\u9988\u592a\u5c11\u751a\u81f3\u6ca1\u6709\u53cd\u9988\u7684\u7cfb\u7edf\uff0c\u5219\u8ba9\u4eba\u611f\u89c9\u8fdf\u949d\u548c\u7b28\u62d9\uff0c\u7528\u6237\u4f53\u9a8c\u66f4\u5dee\u3002"],["blockquote",["p",["strong"," \u725b\u987f\u7b2c\u4e09\u5b9a\u5f8b "]," \uff1a\u5f53\u4e24\u4e2a\u7269\u4f53\u4e92\u76f8\u4f5c\u7528\u65f6\uff0c\u5f7c\u6b64\u65bd\u52a0\u4e8e\u5bf9\u65b9\u7684\u529b\uff0c\u5176\u5927\u5c0f\u76f8\u7b49\u3001\u65b9\u5411\u76f8\u53cd\u3002\u2014\u2014\u6458\u81ea\u300a\u7ef4\u57fa\u767e\u79d1\u300b"]]],toc:["ul",["li",["a",{className:"bisheng-toc-h2",href:"#\u67e5\u8be2\u6a21\u5f0f",title:"\u67e5\u8be2\u6a21\u5f0f"},"\u67e5\u8be2\u6a21\u5f0f"]],["li",["a",{className:"bisheng-toc-h2",href:"#\u53cd\u9988\u6a21\u5f0f",title:"\u53cd\u9988\u6a21\u5f0f"},"\u53cd\u9988\u6a21\u5f0f"]]]}}});
+webpackJsonp([64],{
+
+/***/ 1829:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "content": [
+    "article",
+    {
+
+    },
+    [
+      "h2",
+      "查询模式"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "确定类目示例",
+          "description": "用户所查询的关键词，只会在『话题』、『问题』、『文章』这 3 种类目中出现。",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/XlqFYhYiZtWFNImtRElR.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "不确定类目示例",
+          "description": "用户所查询的关键词，其所属的类目数量不确定，可能 4 个，可能 5 个，可能更多。",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/czfJRLltwXcsTLlTpytV.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "自动完成：用户输入时，下拉列表会随着输入的关键词显示匹配项。\n根据查询结果分类的多少，可以分为『确定类目』、『不确定类目』两种类型。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "实时搜索示例",
+          "description": "用户输入一个搜索值，系统随即显示查询结果。",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/clFLKIWTYfHwIiOCUNbw.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "实时搜索：随着用户输入，实时显示搜索结果。『自动完成』、『实时建议』的近亲。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "hr"
+    ],
+    [
+      "h2",
+      "反馈模式"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "实时预览示例",
+          "description": "根据用户的输入，提供关于密码强度和有效性的实时反馈。",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/koYsOzKwTcHvjpZULpov.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "实时预览：在用户提交输入之前，让他先行了解系统将如何处理他的输入。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：解决错误最好的办法，就是不让错误发生。而『实时预览』就是有效避免错误的好设计。"
+      ]
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      "渐进式展现：在必要的时候提供必要的提示，而不是一股脑儿显示所有提示，导致界面混乱，增加认知负担。案例详见",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "/docs/spec/stay#流程处理"
+        },
+        "『足不出户／渐进式展现』"
+      ],
+      "。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "按钮加载示例",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/cnAnCxfzSwUJeeXIUOIC.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "表格加载示例",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/agFZSlgdSOyCznCGXGcE.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "富列表加载示例",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/tVzqUunjctTxvSMmhSVv.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "页面加载示例",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/igxFnUdRHWaBXtTePuFf.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "进度指示：当一个操作需要一定时间完成时，就需要即时告知进度，保持与用户的沟通。\n常见的进度指示：『按钮加载』、『表格加载』、『富列表加载』、『页面加载』。可根据操作的量级和重要性，展示不同类型的进度指示。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "点击刷新示例",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/HTDCbBvlFKwsDwmcgzcw.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "点击刷新：告知用户有新内容，并提供按钮等工具帮助用户查看新内容。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img",
+          "align": "right",
+          "alt": "定时示例",
+          "description": "新增的列表项『高亮』，持续几秒后恢复正常。",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/kpUhmRudNWDxNzgUddEp.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "定时刷新：无需用户介入，定时展示新内容。"
+    ]
+  ],
+  "meta": {
+    "category": "原则",
+    "order": 10,
+    "title": "即时反应",
+    "filename": "docs/spec/reaction.zh-CN.md"
+  },
+  "description": [
+    "section",
+    [
+      "p",
+      "『提供邀请』的强大体现在",
+      [
+        "code",
+        "交互之前"
+      ],
+      "给出反馈，解决易发现性问题；『巧用过渡』的有用体现在它能够在",
+      [
+        "code",
+        "交互期间"
+      ],
+      "为用户提供视觉反馈；『即时反应』的重要性体现在",
+      [
+        "code",
+        "交互之后"
+      ],
+      "立即给出反馈。"
+    ],
+    [
+      "p",
+      "就像『牛顿第三定律』所描述作用力和反作用一样，用户进行了操作或者内部数据发生了变化，系统就应该立即有一个对应的反馈，同时输入量级越大、重要性越高，那么反馈量级越大、重要性越高。"
+    ],
+    [
+      "p",
+      "虽然反馈太多（准确的说，错误的反馈太多）是一个问题，但是反馈太少甚至没有反馈的系统，则让人感觉迟钝和笨拙，用户体验更差。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        [
+          "strong",
+          " 牛顿第三定律 "
+        ],
+        " ：当两个物体互相作用时，彼此施加于对方的力，其大小相等、方向相反。——摘自《维基百科》"
+      ]
+    ]
+  ],
+  "toc": [
+    "ul",
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#查询模式",
+          "title": "查询模式"
+        },
+        "查询模式"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#反馈模式",
+          "title": "反馈模式"
+        },
+        "反馈模式"
+      ]
+    ]
+  ]
+};
+
+/***/ })
+
+});

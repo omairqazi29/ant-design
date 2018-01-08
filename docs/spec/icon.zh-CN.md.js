@@ -1,1 +1,456 @@
-webpackJsonp([79],{1824:function(i,p){i.exports={content:["article",{},["h2","\u7cfb\u7edf\u56fe\u6807"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/XzOPonWCsPjvgkrklCzo.png"}]],["p","\u7cfb\u7edf\u56fe\u6807\u901a\u5e38\u7528\u6765\u8868\u793a\u5e38\u7528\u7684\u64cd\u4f5c\uff0c\u6bd4\u5982\uff1a\u5220\u9664\u3001\u4fdd\u5b58\u3001\u7f16\u8f91\u3002\u4e5f\u53ef\u4ee5\u7528\u6765\u8868\u793a\u4e00\u4e2a\u6587\u4ef6\u6216\u8005\u72b6\u6001\u3002"],["ul",["li",["p",["a",{title:null,href:"/components/icon/"},"\u67e5\u770b\u56fe\u6807\u5e93"]]]],["h3","\u5173\u952e\u8f6e\u5ed3\u7ebf"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/beTZeZjJBVuhMyTOhebs.png",alt:"\u7f51\u683c\u548c\u5173\u952e\u8f6e\u5ed3\u7ebf"}]],["p","\u6839\u636e\u4e0d\u540c\u7684\u56fe\u6807\u5f62\u72b6\u7c7b\u578b\u4f7f\u7528\u4e0d\u540c\u7684\u8f6e\u5ed3\u7ebf\uff0c\u53ef\u4ee5\u4f7f\u56fe\u6807\u4e4b\u95f4\u4fdd\u6301\u4e00\u81f4\u7684\u89c6\u89c9\u6548\u679c\u3002"],["p","\u8bf7\u5c06\u6240\u6709\u56fe\u6807\u5728 1024\xd71024\uff0816\xd716 \u7684 64 \u500d\uff09\u7684\u753b\u677f\u4e2d\u5236\u4f5c\u3002"],["ul",["li",["p",["a",{title:null,href:"https://zos.alipayobjects.com/rmsportal/hmNuLjCkBssupcZgYAde.png"},"\u5236\u4f5c\u5c0f\u6280\u5de7"]]]],["p",["img",{class:"preview-img no-padding inline",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/rxuHAKGEGLuqBJAAhnSm.png",alt:"\u6b63\u65b9\u5f62\u5916\u8f6e\u5ed3"}],"\n",["img",{class:"preview-img no-padding inline",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/fhkmysGZiTkPVszWHgUy.png",alt:"\u6a2a\u5411\u77e9\u5f62\u5916\u8f6e\u5ed3"}]],["p",["img",{class:"preview-img no-padding inline",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/BiraoJgbXokyzmUFqVuf.png",alt:"\u5706\u5f62\u5916\u8f6e\u5ed3"}],"\n",["img",{class:"preview-img no-padding inline",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/wgQLwFnPaeEalmmSuBMO.png",alt:"\u7eb5\u5411\u77e9\u5f62\u5916\u8f6e\u5ed3"}]],["h3","\u7b14\u753b"],["p",["img",{class:"preview-img no-padding good",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/uoNmxXiqKpfoFDdEVjUB.png",alt:"\u6b63\u786e\u793a\u8303",description:"icon \u7684\u7ebf\u6761\u7c97\u7ec6\u7edf\u4e00\u4fdd\u6301\u4e3a 72px"}],"\n",["img",{class:"preview-img no-padding bad",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/cnFYbWzcKaPFSiHcptCF.png",alt:"\u9519\u8bef\u793a\u8303",description:"icon \u7684\u7ebf\u6761\u7c97\u7ec6\u4e0d\u7edf\u4e00"}]],["p","\u4e00\u81f4\u7684\u7b14\u753b\u6743\u91cd\u662f\u4fdd\u6301\u6574\u4e2a\u56fe\u6807\u7cfb\u7edf\u89c6\u89c9\u7edf\u4e00\u7684\u5173\u952e\uff0cAnt Design \u7cfb\u7edf\u56fe\u6807\u7684\u7ebf\u6761\u7edf\u4e00\u4e3a 72px \u5bbd\u5ea6\u3002"],["h3","\u8fb9\u89d2"],["p",["img",{class:"preview-img no-padding good",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/tGbuhPmvEJXmOFoYAkPK.png",alt:"\u6b63\u786e\u793a\u8303",description:"\u56fe\u6807\u7684\u8fb9\u89d2\u8bbe\u8ba1\u90fd\u9075\u5faa\u4e86 Ant Design \u7684\u89c4\u8303"}],"\n",["img",{class:"preview-img no-padding bad",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/JekevTlqdDJQLIQwrppm.png",alt:"\u9519\u8bef\u793a\u8303",description:"\u7ebf\u6761\u7684\u7ec8\u7aef\u5e76\u4e0d\u662f\u5706\u89d2"}]],["p","\u4e00\u81f4\u7684\u89d2\u5ea6\u534a\u5f84\u4e5f\u662f\u4fdd\u6301\u6574\u4e2a\u56fe\u6807\u7cfb\u7edf\u89c6\u89c9\u7edf\u4e00\u7684\u91cd\u8981\u5143\u7d20\u3002"],["p","Ant Design \u7684\u56fe\u6807\u8bbe\u8ba1\u4e2d\uff0c\u5916\u8f6e\u5ed3\u7ebf\u7edf\u4e00\u534a\u5f84\u4e3a 72px \u7684\u5706\u89d2\uff0cicon \u5185\u90e8\u7a7a\u95f4\u7684\u8fb9\u89d2\u4fdd\u6301\u76f4\u89d2\uff0c\u7b14\u753b\u7684\u7ec8\u7aef\u4e3a\u5706\u89d2\u3002"],["h3","\u89c6\u89c9\u4fee\u6b63"],["p",["img",{class:"preview-img no-padding good",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/VghPLyDUdFmjhGJlNxjV.png",alt:"\u6b63\u786e\u793a\u8303",description:"\u5bf9\u4e8e\u56fe\u6807\u5185\u8f83\u590d\u6742\u7684\u300eJPG\u300f\u5b57\u6bcd\u5728\u7b14\u753b\u6743\u91cd\u4e0a\u8fdb\u884c\u4e86\u5fae\u8c03\uff0c\u8ba9\u56fe\u6807\u770b\u4e0a\u53bb\u66f4\u548c\u8c10"}],"\n",["img",{class:"preview-img no-padding bad",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/qnzloxRQmvHzHAhWWwCS.png",alt:"\u9519\u8bef\u793a\u8303",description:"icon \u56fe\u5f62\u592a\u590d\u6742\uff0c\u7a7a\u95f4\u663e\u5f97\u62e5\u6324"}]],["p","\u5728\u4e00\u4e9b\u7279\u6b8a\u60c5\u51b5\u4e0b\uff08\u6bd4\u5982\uff0cicon \u7684\u5f62\u72b6\u6bd4\u8f83\u590d\u6742\u7d27\u51d1\uff09\uff0c\u53ef\u4ee5\u901a\u8fc7\u8c03\u6574\u7ebf\u6761\u7684\u7c97\u7ec6\u6216\u5706\u89d2\u7684\u5927\u5c0f\u7b49\u5fae\u5999\u7684\u53d8\u5316\u6765\u589e\u52a0\u56fe\u6807\u7684\u6613\u8bfb\u6027\u3002"],["h3","\u900f\u89c6\u89d2\u5ea6"],["p",["img",{class:"preview-img no-padding good",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/tIePnIOTXtgzVKbqwucm.png",alt:"\u6b63\u786e\u793a\u8303",description:"\u4fdd\u6301\u5e73\u9762\u3001\u7b80\u6d01\u7684\u98ce\u683c"}],"\n",["img",{class:"preview-img no-padding bad",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/ALNOEelXeFhxUobLqyCq.png",alt:"\u9519\u8bef\u793a\u8303",description:"\u56fe\u6807\u5177\u6709\u4fef\u89c6\u89d2\u5ea6\uff0c\u5e76\u4e0d\u662f\u5728\u4e00\u4e2a\u7ef4\u5ea6\u7a7a\u95f4\u5185"}]],["p","\u59cb\u7ec8\u4fdd\u6301\u7b80\u6d01\u3001\u5e73\u9762\u7684\u98ce\u683c,\u4e0d\u8981\u8ba9\u56fe\u6807\u5177\u6709\u591a\u7ef4\u5ea6\u7a7a\u95f4\u611f\uff0c\u6216\u8005\u5145\u6ee1\u4e86\u7ec6\u8282\u3002"],["h3","\u547d\u540d\u89c4\u5219"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/NFOvbdbVWeeEqOkdUfVB.png"}]],["p","\u7edf\u4e00\u7684\u547d\u540d\u65b9\u5f0f\u6709\u52a9\u4e8e\u7ba1\u7406\u56fe\u6807\uff0c\u4e5f\u80fd\u66f4\u5feb\u901f\u7684\u627e\u5230\u9700\u8981\u7684\u56fe\u6807\u3002\u4f8b\u5982\uff0c\u73af\u7ed5\u578b\u7684\u56fe\u6807\u7edf\u4e00\u4ee5\u300c-o\u300d\u540e\u7f00\u3002"],["h3","\u56fe\u6807\u5c3a\u5bf8"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/jAuedlyhNIDyOIZTqbqN.png"}]],["p","\u5e94\u7528\u4e8e\u9875\u9762\u65f6\u8bf7\u4f7f\u7528 Ant Design \u7684\u89c4\u8303\u5c3a\u5bf8\uff0c\u4e0e\u5b57\u4f53\u642d\u914d\u65f6\u548c\u5b57\u4f53\u7684\u5c3a\u5bf8\u4fdd\u6301\u4e00\u81f4\u3002"],["p","\u4f8b\u5982\uff1a\u548c 12pt \u5b57\u4f53\u642d\u914d\u65f6\uff0c\u56fe\u6807\u4f7f\u7528 12px\uff0c\u56fe\u6807\u4e0e\u6587\u5b57\u7684\u95f4\u8ddd\u4e3a 8px\u3002"],["h3","\u989c\u8272"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/LxGLhtnwvCqZWYqGDAAr.png",description:"\u8868\u683c\u4e2d @Black = #000000\u3001@White = #FFFFFF\u3001@Blue-6 = #1890FF"}]],["p","\u56fe\u6807\u7684\u989c\u8272\u9700\u8981\u4e0e\u642d\u914d\u6587\u6848\u7684\u8272\u503c\u4fdd\u6301\u4e00\u81f4\uff08\u8868\u793a\u72b6\u6001\u7684\u9664\u5916\uff09\u3002"],["hr"],["h2","\u4e1a\u52a1\u56fe\u6807"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/EADAnRecKSTxvpxPzKoq.png"}]],["p","\u4e1a\u52a1\u56fe\u6807\u4e0d\u540c\u4e8e\u7cfb\u7edf\u56fe\u6807\uff0c\u672c\u8eab\u4e0d\u5e26\u6709\u529f\u80fd\u6027\u7684\u64cd\u4f5c\uff0c\u800c\u662f\u8f85\u52a9\u914d\u5408\u6587\u6848\u7684\u4e00\u4e2a\u62bd\u8c61\u5316\u56fe\u5f62\u3002\u76f8\u8f83\u4e8e\u7cfb\u7edf\u56fe\u6807\uff0c\u4e1a\u52a1\u56fe\u6807\u5728\u8bbe\u8ba1\u7684\u7ec6\u8282\u4e0a\u66f4\u4e3a\u4e30\u5bcc\uff0c\u4f7f\u7528\u7684\u5c3a\u5bf8\u4e5f\u6bd4\u8f83\u5927\u3002"],["blockquote",["p","\u6ce8\uff1a\u4e1a\u52a1\u56fe\u6807\u7684\u8bbe\u8ba1\u539f\u5219\u4e0e\u7cfb\u7edf\u56fe\u6807\u57fa\u672c\u4e00\u81f4\uff0c\u5728\u7ec6\u8282\u5904\u7406\u4e0a\uff08\u5982\u7b14\u753b\u6743\u91cd\u3001\u5706\u89d2\u5927\u5c0f\u7b49\uff09\u53ef\u89c6\u5177\u4f53\u573a\u666f\u800c\u5b9a\u3002"]],["h3","\u56fe\u6807\u5c3a\u5bf8"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/uwAgfciGszhdiVlMSBXK.png"}]],["p","\u5728\u5e38\u89c4\u4f7f\u7528\u4e2d\uff0c\u6709 32px\uff08\u6700\u5c0f\u5c3a\u5bf8\uff09\u300148px \u548c 64px\uff08\u6700\u5927\u5c3a\u5bf8\uff09\u4e09\u79cd\u9009\u62e9\u3002"],["h3","\u989c\u8272"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/wUxhTxZlHoTxDvneWBWO.png"}]],["p","\u4e1a\u52a1\u56fe\u6807\u6709\u5355\u8272\uff08\u4e2d\u6027\u8272\uff09\u548c\u53cc\u8272\uff08\u4e2d\u6027\u8272+\u4e3b\u8272\uff09\u4e24\u79cd\uff0c\u4e3b\u8272\u7684\u9762\u79ef\u4e0d\u8d85\u8fc7\u6574\u4e2a icon \u7684 40%\u3002"]],meta:{category:"\u89c6\u89c9",order:4,title:"\u56fe\u6807",filename:"docs/spec/icon.zh-CN.md"},description:["section",["p","\u56fe\u6807\u662f\u5177\u6709\u6307\u4ee3\u610f\u4e49\u7684\u56fe\u5f62\uff0c\u4e5f\u662f\u4e00\u79cd\u6807\u8bc6\u3002\u901a\u8fc7\u4f7f\u7528\u56fe\u6807\u8868\u8fbe\u547d\u4ee4\uff0c\u5f3a\u8c03\u72b6\u6001\uff0c\u8868\u793a\u4ea7\u54c1\u6216\u7c7b\u522b\u3002\u4e3a\u4e86\u7cfb\u7edf\u53ca\u8de8\u5e73\u53f0\u4e4b\u95f4\u56fe\u5f62\u8ba4\u77e5\u4fdd\u6301\u4e00\u81f4\uff0cAnt Design \u7684\u56fe\u6807\u5728\u8bbe\u8ba1\u548c\u4f7f\u7528\u65f6\u6709\u4ee5\u4e0b\u4e24\u4e2a\u539f\u5219\u70b9\u9700\u8981\u6ce8\u610f\uff1a"],["ul",["li",["p","\u7b80\u5355\u7684\u56fe\u5f62\u8bed\u8a00\u4ee5\u53ca\u9ad8\u8fa8\u8bc6\u5ea6\u3002\u6e05\u6670\u3001\u76f4\u89c2\u7684\u56fe\u6807\u66f4\u80fd\u660e\u786e\u6307\u4ee3\u542b\u4e49\u4fbf\u4e8e\u8bc6\u522b\u8bb0\u5fc6\uff1b"]],["li",["p","\u4fdd\u6301\u56fe\u6807\u4e4b\u95f4\u4e00\u81f4\u7684\u98ce\u683c\u548c\u8868\u73b0\u65b9\u5f0f\u3002\u754c\u9762\u4e2d\u7684\u6240\u6709\u56fe\u6807\u90fd\u5e94\u8be5\u5728\u7ec6\u8282\u8bbe\u8ba1\u3001\u900f\u89c6\u548c\u7b14\u753b\u6743\u91cd\u4e0a\u4fdd\u6301\u4e00\u81f4\u3002"]]]],toc:["ul",["li",["a",{className:"bisheng-toc-h2",href:"#\u7cfb\u7edf\u56fe\u6807",title:"\u7cfb\u7edf\u56fe\u6807"},"\u7cfb\u7edf\u56fe\u6807"]],["li",["a",{className:"bisheng-toc-h2",href:"#\u4e1a\u52a1\u56fe\u6807",title:"\u4e1a\u52a1\u56fe\u6807"},"\u4e1a\u52a1\u56fe\u6807"]]]}}});
+webpackJsonp([79],{
+
+/***/ 1814:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "content": [
+    "article",
+    {
+
+    },
+    [
+      "h2",
+      "系统图标"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/XzOPonWCsPjvgkrklCzo.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "系统图标通常用来表示常用的操作，比如：删除、保存、编辑。也可以用来表示一个文件或者状态。"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "/components/icon/"
+            },
+            "查看图标库"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "关键轮廓线"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/beTZeZjJBVuhMyTOhebs.png",
+          "alt": "网格和关键轮廓线"
+        }
+      ]
+    ],
+    [
+      "p",
+      "根据不同的图标形状类型使用不同的轮廓线，可以使图标之间保持一致的视觉效果。"
+    ],
+    [
+      "p",
+      "请将所有图标在 1024×1024（16×16 的 64 倍）的画板中制作。"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://zos.alipayobjects.com/rmsportal/hmNuLjCkBssupcZgYAde.png"
+            },
+            "制作小技巧"
+          ]
+        ]
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding inline",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/rxuHAKGEGLuqBJAAhnSm.png",
+          "alt": "正方形外轮廓"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding inline",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/fhkmysGZiTkPVszWHgUy.png",
+          "alt": "横向矩形外轮廓"
+        }
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding inline",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/BiraoJgbXokyzmUFqVuf.png",
+          "alt": "圆形外轮廓"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding inline",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/wgQLwFnPaeEalmmSuBMO.png",
+          "alt": "纵向矩形外轮廓"
+        }
+      ]
+    ],
+    [
+      "h3",
+      "笔画"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding good",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/uoNmxXiqKpfoFDdEVjUB.png",
+          "alt": "正确示范",
+          "description": "icon 的线条粗细统一保持为 72px"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding bad",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/cnFYbWzcKaPFSiHcptCF.png",
+          "alt": "错误示范",
+          "description": "icon 的线条粗细不统一"
+        }
+      ]
+    ],
+    [
+      "p",
+      "一致的笔画权重是保持整个图标系统视觉统一的关键，Ant Design 系统图标的线条统一为 72px 宽度。"
+    ],
+    [
+      "h3",
+      "边角"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding good",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/tGbuhPmvEJXmOFoYAkPK.png",
+          "alt": "正确示范",
+          "description": "图标的边角设计都遵循了 Ant Design 的规范"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding bad",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/JekevTlqdDJQLIQwrppm.png",
+          "alt": "错误示范",
+          "description": "线条的终端并不是圆角"
+        }
+      ]
+    ],
+    [
+      "p",
+      "一致的角度半径也是保持整个图标系统视觉统一的重要元素。"
+    ],
+    [
+      "p",
+      "Ant Design 的图标设计中，外轮廓线统一半径为 72px 的圆角，icon 内部空间的边角保持直角，笔画的终端为圆角。"
+    ],
+    [
+      "h3",
+      "视觉修正"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding good",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/VghPLyDUdFmjhGJlNxjV.png",
+          "alt": "正确示范",
+          "description": "对于图标内较复杂的『JPG』字母在笔画权重上进行了微调，让图标看上去更和谐"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding bad",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/qnzloxRQmvHzHAhWWwCS.png",
+          "alt": "错误示范",
+          "description": "icon 图形太复杂，空间显得拥挤"
+        }
+      ]
+    ],
+    [
+      "p",
+      "在一些特殊情况下（比如，icon 的形状比较复杂紧凑），可以通过调整线条的粗细或圆角的大小等微妙的变化来增加图标的易读性。"
+    ],
+    [
+      "h3",
+      "透视角度"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding good",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/tIePnIOTXtgzVKbqwucm.png",
+          "alt": "正确示范",
+          "description": "保持平面、简洁的风格"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding bad",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/ALNOEelXeFhxUobLqyCq.png",
+          "alt": "错误示范",
+          "description": "图标具有俯视角度，并不是在一个维度空间内"
+        }
+      ]
+    ],
+    [
+      "p",
+      "始终保持简洁、平面的风格,不要让图标具有多维度空间感，或者充满了细节。"
+    ],
+    [
+      "h3",
+      "命名规则"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/NFOvbdbVWeeEqOkdUfVB.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "统一的命名方式有助于管理图标，也能更快速的找到需要的图标。例如，环绕型的图标统一以「-o」后缀。"
+    ],
+    [
+      "h3",
+      "图标尺寸"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/jAuedlyhNIDyOIZTqbqN.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "应用于页面时请使用 Ant Design 的规范尺寸，与字体搭配时和字体的尺寸保持一致。"
+    ],
+    [
+      "p",
+      "例如：和 12pt 字体搭配时，图标使用 12px，图标与文字的间距为 8px。"
+    ],
+    [
+      "h3",
+      "颜色"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/LxGLhtnwvCqZWYqGDAAr.png",
+          "description": "表格中 @Black = #000000、@White = #FFFFFF、@Blue-6 = #1890FF"
+        }
+      ]
+    ],
+    [
+      "p",
+      "图标的颜色需要与搭配文案的色值保持一致（表示状态的除外）。"
+    ],
+    [
+      "hr"
+    ],
+    [
+      "h2",
+      "业务图标"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/EADAnRecKSTxvpxPzKoq.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "业务图标不同于系统图标，本身不带有功能性的操作，而是辅助配合文案的一个抽象化图形。相较于系统图标，业务图标在设计的细节上更为丰富，使用的尺寸也比较大。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：业务图标的设计原则与系统图标基本一致，在细节处理上（如笔画权重、圆角大小等）可视具体场景而定。"
+      ]
+    ],
+    [
+      "h3",
+      "图标尺寸"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/uwAgfciGszhdiVlMSBXK.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "在常规使用中，有 32px（最小尺寸）、48px 和 64px（最大尺寸）三种选择。"
+    ],
+    [
+      "h3",
+      "颜色"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/wUxhTxZlHoTxDvneWBWO.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "业务图标有单色（中性色）和双色（中性色+主色）两种，主色的面积不超过整个 icon 的 40%。"
+    ]
+  ],
+  "meta": {
+    "category": "视觉",
+    "order": 4,
+    "title": "图标",
+    "filename": "docs/spec/icon.zh-CN.md"
+  },
+  "description": [
+    "section",
+    [
+      "p",
+      "图标是具有指代意义的图形，也是一种标识。通过使用图标表达命令，强调状态，表示产品或类别。为了系统及跨平台之间图形认知保持一致，Ant Design 的图标在设计和使用时有以下两个原则点需要注意："
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "简单的图形语言以及高辨识度。清晰、直观的图标更能明确指代含义便于识别记忆；"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "保持图标之间一致的风格和表现方式。界面中的所有图标都应该在细节设计、透视和笔画权重上保持一致。"
+        ]
+      ]
+    ]
+  ],
+  "toc": [
+    "ul",
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#系统图标",
+          "title": "系统图标"
+        },
+        "系统图标"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#业务图标",
+          "title": "业务图标"
+        },
+        "业务图标"
+      ]
+    ]
+  ]
+};
+
+/***/ })
+
+});
