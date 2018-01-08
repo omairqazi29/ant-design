@@ -359,7 +359,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 
 <span class="token keyword">function</span> <span class="token function">disabledDate</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// Can not select days before today and today</span>
-  <span class="token keyword">return</span> current <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> current <span class="token operator">&amp;&amp;</span> current <span class="token operator">&lt;</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">endOf</span><span class="token punctuation">(</span><span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">function</span> <span class="token function">disabledDateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
