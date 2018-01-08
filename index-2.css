@@ -7317,6 +7317,7 @@ a:focus {
   overflow: hidden;
   border-left: 1px solid #ebedf0;
   position: relative;
+  margin-left: -1px;
 }
 .main-menu {
   z-index: 1;
@@ -7324,7 +7325,6 @@ a:focus {
 .aside-container {
   padding-bottom: 50px;
   font-family: Lato, "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: none;
 }
 .aside-container.ant-menu-inline .ant-menu-submenu-title h4,
 .aside-container.ant-menu-inline > .ant-menu-item,
@@ -7391,6 +7391,9 @@ a:focus {
   overflow: hidden;
   padding: 0;
   width: 100%;
+}
+.page-wrapper a {
+  text-decoration: none;
 }
 .drawer-content {
   padding: 40px 0;
@@ -7714,6 +7717,7 @@ footer .bottom-bar .translate-button {
   height: 40px;
   text-align: center;
   margin-right: 16px;
+  text-decoration: none;
 }
 .banner .banner-btn.components {
   background: #2f54eb;
