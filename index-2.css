@@ -264,9 +264,6 @@
 .ant-list * {
   outline: none;
 }
-.ant-list .ant-spin-container {
-  overflow: visible;
-}
 .ant-list-pagination {
   margin-top: 24px;
   text-align: right;
@@ -631,8 +628,19 @@
   margin-top: -26px;
 }
 .ant-spin-container {
-  overflow: auto;
   position: relative;
+  zoom: 1;
+}
+.ant-spin-container:before,
+.ant-spin-container:after {
+  content: " ";
+  display: table;
+}
+.ant-spin-container:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
 }
 .ant-spin-blur {
   overflow: hidden;
@@ -4817,6 +4825,9 @@ tr.ant-table-expanded-row:hover {
   height: 100%;
   border-left: 2px solid #e8e8e8;
 }
+.ant-timeline-item-pending .ant-timeline-item-head {
+  font-size: 12px;
+}
 .ant-timeline-item-pending .ant-timeline-item-tail {
   display: none;
 }
@@ -7550,31 +7561,13 @@ a:focus {
   color: #aaa;
   right: 16px;
 }
-footer.dark {
-  background-color: #000;
-  color: rgba(255, 255, 255, 0.65);
-}
-footer.dark a {
-  color: rgba(255, 255, 255, 0.9);
-}
-footer.dark h2 {
-  color: #ffffff;
-}
-footer.dark h2 > span {
-  color: #ffffff;
-}
-footer.dark .bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  overflow: hidden;
-}
 footer {
-  border-top: 1px solid #e5e7eb;
   clear: both;
   font-size: 14px;
-  background: #fff;
+  background-color: #000;
   position: relative;
   z-index: 100;
-  color: #314659;
+  color: rgba(255, 255, 255, 0.65);
   -webkit-box-shadow: 0 1000px 0 1000px #fff;
           box-shadow: 0 1000px 0 1000px #fff;
 }
@@ -7608,13 +7601,14 @@ footer .ant-row .footer-center > div {
 footer .footer-wrap {
   position: relative;
   padding: 86px 144px 93px 144px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 footer .bottom-bar {
-  border-top: 1px solid #e5e7eb;
   text-align: right;
   padding: 16px 144px;
   margin: 0;
   line-height: 32px;
+  overflow: hidden;
 }
 footer .bottom-bar a {
   color: rgba(255, 255, 255, 0.65);
@@ -7624,6 +7618,15 @@ footer .bottom-bar a:hover {
 }
 footer .bottom-bar .translate-button {
   text-align: left;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.9);
+}
+footer h2 {
+  color: #ffffff;
+}
+footer h2 > span {
+  color: #ffffff;
 }
 .home-page-wrapper {
   width: 100%;
@@ -7735,7 +7738,7 @@ footer .bottom-bar .translate-button {
   padding: 0 24px;
   border-radius: 100px;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 38px;
   display: inline-block;
   height: 40px;
   text-align: center;
@@ -9949,6 +9952,9 @@ ul.anticons-list li.copied:after {
   }
   #footer .footer-wrap {
     padding: 40px;
+  }
+  #footer .footer-wrap .ant-row {
+    padding: 0;
   }
   #footer .footer-wrap .ant-row > div:nth-child(2),
   #footer .footer-wrap .ant-row > div:nth-child(4) {
