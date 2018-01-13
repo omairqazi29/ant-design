@@ -1,4 +1,11 @@
 
+:root .ant-input-number-handler-up-inner,
+:root .ant-input-number-handler-down-inner {
+  font-size: 12px;
+}
+.ant-input-number:hover {
+  border-color: #40a9ff;
+}
 .ant-input-number-focused {
   border-color: #40a9ff;
   outline: 0;
@@ -250,7 +257,7 @@
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-list {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -558,7 +565,7 @@
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-spin {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -770,7 +777,7 @@
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-pagination {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -1170,7 +1177,7 @@ textarea.ant-pagination-options-quick-jumper input {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-mention-wrapper {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -1283,7 +1290,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   padding: 5px 11px;
 }
 .ant-mention-dropdown {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -1366,7 +1373,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-menu {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2039,7 +2046,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-tooltip {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2168,7 +2175,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-message {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2255,7 +2262,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-modal {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2463,7 +2470,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-notification {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2698,7 +2705,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-popover {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -2881,7 +2888,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-progress {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3039,7 +3046,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-rate {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3116,7 +3123,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-slider {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3288,7 +3295,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-steps {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3765,7 +3772,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-switch {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3952,7 +3959,7 @@ a.ant-notification-notice-close:focus {
   height: 0;
 }
 .ant-table {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -4564,7 +4571,7 @@ tr.ant-table-expanded-row:hover {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-tag {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -4801,7 +4808,7 @@ tr.ant-table-expanded-row:hover {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-timeline {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -4911,7 +4918,7 @@ tr.ant-table-expanded-row:hover {
   }
 }
 .ant-transfer {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5102,7 +5109,7 @@ span.ant-transfer-list-search-action {
   }
 }
 .ant-select-tree-checkbox {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5243,7 +5250,7 @@ span.ant-transfer-list-search-action {
   cursor: not-allowed;
 }
 .ant-select-tree-checkbox-wrapper {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5265,7 +5272,7 @@ span.ant-transfer-list-search-action {
   padding-right: 8px;
 }
 .ant-select-tree-checkbox-group {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5287,7 +5294,7 @@ span.ant-transfer-list-search-action {
   margin-left: 0;
 }
 .ant-select-tree {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5436,7 +5443,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   vertical-align: top;
 }
 .ant-select-tree-dropdown {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5500,7 +5507,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   }
 }
 .ant-tree-checkbox {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5641,7 +5648,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   cursor: not-allowed;
 }
 .ant-tree-checkbox-wrapper {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5663,7 +5670,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   padding-right: 8px;
 }
 .ant-tree-checkbox-group {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5685,7 +5692,7 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   margin-left: 0;
 }
 .ant-tree {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -5970,7 +5977,7 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .ant-upload {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -6080,7 +6087,7 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-upload-list {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -7310,7 +7317,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #314659;
   font-size: 14px;
@@ -7347,7 +7354,7 @@ a:focus {
 }
 .aside-container {
   padding-bottom: 50px;
-  font-family: Lato, "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .aside-container.ant-menu-inline .ant-menu-submenu-title h4,
 .aside-container.ant-menu-inline > .ant-menu-item,
@@ -7517,7 +7524,7 @@ a:focus {
   border: 0;
   float: right;
   font-size: 14px;
-  font-family: Lato, "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #nav.ant-menu-horizontal {
   border-bottom: none;
@@ -7634,8 +7641,7 @@ footer h2 > span {
   overflow: hidden;
   position: relative;
   color: #314659;
-  font-family: 'SF UI Display', "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: Avenir, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .home-page-wrapper .page {
   width: 100%;
@@ -7712,7 +7718,7 @@ footer h2 > span {
   line-height: 76px;
   margin: 8px 0 28px;
   letter-spacing: 0;
-  font-family: Avenir, "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Avenir, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .banner .text-wrapper p {
   font-size: 20px;
@@ -8033,7 +8039,6 @@ svg g {
   left: 0;
   width: calc(100% - 194px - 64px);
   margin-left: 64px;
-  overflow: hidden;
   font-size: 14px;
   border-top: 1px solid #ebedf0;
 }
@@ -8103,7 +8108,7 @@ svg g {
   font-weight: 500;
   margin-bottom: 20px;
   margin-top: 8px;
-  font-family: Lato, "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
   line-height: 38px;
 }
@@ -8120,7 +8125,7 @@ svg g {
 .markdown h5,
 .markdown h6 {
   color: #0d1a26;
-  font-family: Lato, "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 1.6em 0 0.6em;
   font-weight: 500;
   clear: both;
@@ -8427,14 +8432,14 @@ svg g {
   display: -ms-flexbox;
   display: flex;
   max-width: 420px;
-  width: 40%;
+  width: calc(50% - 24px);
   min-width: 300px;
   height: 130px;
-  border: 1px solid #ced4d9;
+  border: 1px solid #d9d9d9;
   border-radius: 4px;
   font-size: 12px;
   color: #777;
-  margin: 20px 40px 10px 0;
+  margin: 24px 24px 0 0;
   vertical-align: middle;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -8503,7 +8508,7 @@ svg g {
 .resource-card-description {
   display: block;
   color: #697b8c;
-  padding-right: 8px;
+  padding-right: 16px;
 }
 .preview-image-boxes {
   display: -webkit-box;
@@ -10143,220 +10148,6 @@ ul.anticons-list li.copied:after {
     margin: 0;
     max-width: initial;
     padding-left: 16px;
-  }
-}
-.santa {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: -8px;
-  -webkit-transform: scale(0.4);
-      -ms-transform: scale(0.4);
-          transform: scale(0.4);
-}
-.santa-body {
-  font-size: 60px;
-  color: #f91047;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 1em;
-  height: 1em;
-  background-color: currentColor;
-  -webkit-box-shadow: inset 0 -0.25em rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 -0.25em rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  -webkit-transform-origin: center bottom;
-      -ms-transform-origin: center bottom;
-          transform-origin: center bottom;
-  -webkit-animation: balance alternate infinite 2s ease-in-out;
-          animation: balance alternate infinite 2s ease-in-out;
-}
-.santa-head {
-  font-size: 0.4em;
-  width: 1em;
-  height: 1.9em;
-  background-color: white;
-  border-radius: 0.5em;
-  -webkit-transform: translateY(-1em);
-      -ms-transform: translateY(-1em);
-          transform: translateY(-1em);
-  position: relative;
-}
-.santa-head::before {
-  content: '';
-  width: 1em;
-  height: 0.375em;
-  display: block;
-  background-color: #ff9876;
-  position: absolute;
-  left: 0;
-  top: 0.65em;
-}
-.santa-ear {
-  background-color: #fc8363;
-  width: 0.1em;
-  height: 0.3em;
-  position: absolute;
-  top: 0.75em;
-}
-.santa-ear:nth-of-type(1) {
-  border-radius: 0.05em 0 0 0.05em;
-  left: -0.1em;
-}
-.santa-ear:nth-of-type(2) {
-  border-radius: 0 0.05em 0.05em 0;
-  right: -0.1em;
-}
-.santa-hat {
-  content: '';
-  width: 1em;
-  height: 0.15em;
-  position: absolute;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-  top: 0.5em;
-  left: 0;
-  background-color: white;
-}
-.santa-hat::before {
-  content: '';
-  display: block;
-  width: 1em;
-  height: 0.5em;
-  background: #f91047;
-  border-radius: 0.5em 0.5em 0 0;
-  z-index: 2;
-  position: absolute;
-  top: -0.5em;
-}
-.santa-hat::after {
-  /* pompom */
-  content: '';
-  width: 0.25em;
-  height: 0.25em;
-  display: block;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  top: -0.72em;
-  right: 0;
-  -webkit-box-shadow: -0.2em 0.2em 0 0.12em rgba(0, 0, 0, 0.2), -0.2em 0.2em 0 0.12em #f91047;
-          box-shadow: -0.2em 0.2em 0 0.12em rgba(0, 0, 0, 0.2), -0.2em 0.2em 0 0.12em #f91047;
-}
-.santa-eye {
-  width: 0.12em;
-  height: 0.12em;
-  background-color: black;
-  border-radius: 50%;
-  position: absolute;
-  top: 0.76em;
-  left: 0.2em;
-}
-.santa-eye + .santa-eye {
-  left: auto;
-  right: 0.2em;
-}
-.santa-nose {
-  width: 0.12em;
-  height: 0.22em;
-  background-color: #f24c4c;
-  border-radius: 0 0 0.12em 0.12em;
-  position: absolute;
-  top: 0.84em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.santa-mouth {
-  width: 0.18em;
-  height: 0.1em;
-  border-bottom-right-radius: 5vw;
-  border-bottom-left-radius: 5vw;
-  margin-top: 0.3em;
-  background-color: black;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-animation: hohoho 4s linear forwards infinite;
-          animation: hohoho 4s linear forwards infinite;
-}
-@-webkit-keyframes hohoho {
-  0%,
-  10%,
-  20%,
-  40%,
-  100% {
-    /* smiling */
-    width: 0.18em;
-    height: 0.1em;
-    border-bottom-right-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-  }
-  5%,
-  15%,
-  25%,
-  35% {
-    /* hohoho */
-    width: 0.15em;
-    height: 0.2em;
-    border-radius: 50%;
-  }
-}
-@keyframes hohoho {
-  0%,
-  10%,
-  20%,
-  40%,
-  100% {
-    /* smiling */
-    width: 0.18em;
-    height: 0.1em;
-    border-bottom-right-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-  }
-  5%,
-  15%,
-  25%,
-  35% {
-    /* hohoho */
-    width: 0.15em;
-    height: 0.2em;
-    border-radius: 50%;
-  }
-}
-@-webkit-keyframes balance {
-  from {
-    -webkit-transform: rotate(-6deg);
-            transform: rotate(-6deg);
-  }
-  to {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
-  }
-}
-@keyframes balance {
-  from {
-    -webkit-transform: rotate(-6deg);
-            transform: rotate(-6deg);
-  }
-  to {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
   }
 }
 .algolia-autocomplete .ds-dropdown-menu {
