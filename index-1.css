@@ -4945,7 +4945,6 @@ textarea.ant-input {
 }
 .ant-btn-group > .ant-btn {
   position: relative;
-  z-index: 1;
 }
 .ant-btn-group > .ant-btn:hover,
 .ant-btn-group > .ant-btn:focus,
