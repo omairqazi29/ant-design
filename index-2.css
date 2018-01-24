@@ -1,4 +1,9 @@
 
+.ant-input-number-handler-up-inner:before,
+.ant-input-number-handler-down-inner:before {
+  display: block;
+  font-family: "anticon" !important;
+}
 :root .ant-input-number-handler-up-inner,
 :root .ant-input-number-handler-down-inner {
   font-size: 12px;
@@ -1801,6 +1806,9 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 .ant-menu-inline .ant-menu-item,
 .ant-menu-inline .ant-menu-submenu-title {
   width: calc(100% + 1px);
+}
+.ant-menu-inline .ant-menu-submenu-title {
+  padding-right: 34px;
 }
 .ant-menu-inline-collapsed {
   width: 80px;

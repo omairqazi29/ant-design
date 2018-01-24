@@ -3839,7 +3839,6 @@ mark {
   padding-left: 0;
   list-style: none;
   max-height: 250px;
-  overflow: auto;
 }
 .ant-select-dropdown-menu-item-group-list {
   margin: 0;
@@ -5302,10 +5301,14 @@ a.ant-btn-sm {
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  vertical-align: middle;
   width: 32px;
   height: 32px;
   line-height: 32px;
   border-radius: 16px;
+}
+.ant-avatar-image {
+  background: transparent;
 }
 .ant-avatar > * {
   line-height: 32px;
@@ -14626,9 +14629,4 @@ textarea.ant-input-number {
           transform: scale(0.58333333) rotate(0deg);
   right: 4px;
   color: rgba(0, 0, 0, 0.45);
-}
-.ant-input-number-handler-up-inner:before,
-.ant-input-number-handler-down-inner:before {
-  display: block;
-  font-family: "anticon" !important;
 }
