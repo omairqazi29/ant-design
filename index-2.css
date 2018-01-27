@@ -7751,6 +7751,7 @@ footer h2 > span {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 24px;
+  min-width: 520px;
 }
 .banner .banner-btn {
   padding: 0 24px;
