@@ -5466,6 +5466,7 @@ a.ant-btn-sm {
   text-align: center;
   padding: 0 6px;
   font-size: 12px;
+  font-weight: normal;
   white-space: nowrap;
   -webkit-transform-origin: -10% center;
       -ms-transform-origin: -10% center;
