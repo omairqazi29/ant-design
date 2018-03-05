@@ -3896,6 +3896,12 @@ mark {
 .ant-select-dropdown-menu-item:hover {
   background-color: #e6f7ff;
 }
+.ant-select-dropdown-menu-item:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.ant-select-dropdown-menu-item:last-child {
+  border-radius: 0 0 4px 4px;
+}
 .ant-select-dropdown-menu-item-disabled {
   color: rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
@@ -4972,6 +4978,7 @@ textarea.ant-input {
 }
 .ant-btn-group > .ant-btn {
   position: relative;
+  line-height: 30px;
 }
 .ant-btn-group > .ant-btn:hover,
 .ant-btn-group > .ant-btn:focus,
@@ -4987,12 +4994,14 @@ textarea.ant-input {
   font-size: 16px;
   border-radius: 4px;
   height: 40px;
+  line-height: 38px;
 }
 .ant-btn-group-sm > .ant-btn {
   padding: 0 7px;
   font-size: 14px;
   border-radius: 4px;
   height: 24px;
+  line-height: 22px;
 }
 .ant-btn-group-sm > .ant-btn > .anticon {
   font-size: 14px;
@@ -6860,7 +6869,7 @@ span.ant-radio + * {
   font-weight: 500;
 }
 .ant-tabs-large .ant-tabs-nav-container {
-  font-size: 16px;
+  font-size: 12px;
 }
 .ant-tabs-large .ant-tabs-tab {
   padding: 16px;
@@ -14540,16 +14549,6 @@ form .ant-input-group-wrapper {
   }
 }
 @keyframes diffZoomIn2 {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@-webkit-keyframes diffZoomIn3 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);

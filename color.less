@@ -101,6 +101,8 @@
   };
 
   this.colorEasing = BezierEasing(0.26, 0.09, 0.37, 0.18);
+  // less 3 requires a return
+  return '';
 })()`;
 }
 // It is hacky way to make this function will be compiled preferentially by less
@@ -4735,6 +4737,12 @@ form .ant-upload {
 }
 .ant-select-dropdown-menu-item:hover {
   background-color: color(~`colorPalette("@{primary-color}", 1)`);
+}
+.ant-select-dropdown-menu-item:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.ant-select-dropdown-menu-item:last-child {
+  border-radius: 0 0 4px 4px;
 }
 .ant-select-dropdown-menu-item-disabled {
   color: rgba(0, 0, 0, 0.25);
