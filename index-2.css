@@ -4154,6 +4154,12 @@ a.ant-notification-notice-close:focus {
   font-weight: 500;
   border-bottom: 1px solid #e8e8e8;
 }
+.ant-table-thead > tr > th:first-child {
+  border-top-left-radius: 4px;
+}
+.ant-table-thead > tr > th:last-child {
+  border-top-right-radius: 4px;
+}
 .ant-table-thead > tr > th[colspan] {
   text-align: center;
   border-bottom: 0;
@@ -4601,6 +4607,9 @@ tr.ant-table-expanded-row:hover {
 .ant-table-fixed-left table {
   border-radius: 4px 0 0 0;
 }
+.ant-table-fixed-left .ant-table-thead > tr > th:last-child {
+  border-top-right-radius: 0;
+}
 .ant-table-fixed-right {
   right: 0;
   -webkit-box-shadow: -6px 0 6px -4px rgba(0, 0, 0, 0.15);
@@ -4613,6 +4622,9 @@ tr.ant-table-expanded-row:hover {
 .ant-table-fixed-right .ant-table-expanded-row {
   color: transparent;
   pointer-events: none;
+}
+.ant-table-fixed-right .ant-table-thead > tr > th:first-child {
+  border-top-left-radius: 0;
 }
 .ant-table.ant-table-scroll-position-left .ant-table-fixed-left {
   -webkit-box-shadow: none;
