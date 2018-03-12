@@ -1,4 +1,34 @@
 
+@keyframes diffZoomIn1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes diffZoomIn2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes diffZoomIn2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 @-webkit-keyframes diffZoomIn3 {
   0% {
     -webkit-transform: scale(0);
@@ -4133,6 +4163,7 @@ a.ant-notification-notice-close:focus {
   list-style: none;
   position: relative;
   border-radius: 4px 4px 0 0;
+  clear: both;
 }
 .ant-table-body {
   -webkit-transition: opacity .3s;
@@ -5608,10 +5639,9 @@ span.ant-transfer-list-search-action {
 .ant-select-tree-child-tree-open {
   display: block;
 }
-li.ant-select-tree-treenode-disabled > span,
+li.ant-select-tree-treenode-disabled > span:not(.ant-select-tree-switcher),
 li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper,
-li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper span,
-li.ant-select-tree-treenode-disabled > span.ant-select-tree-switcher {
+li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper span {
   color: rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
 }
@@ -6056,10 +6086,9 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 .ant-tree-child-tree-open {
   display: block;
 }
-li.ant-tree-treenode-disabled > span,
+li.ant-tree-treenode-disabled > span:not(.ant-tree-switcher),
 li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper,
-li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span,
-li.ant-tree-treenode-disabled > span.ant-tree-switcher {
+li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span {
   color: rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
 }

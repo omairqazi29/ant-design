@@ -3175,6 +3175,26 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-divider-horizontal.ant-divider-with-text:after {
   border-top: 1px solid #e8e8e8;
 }
+.ant-divider-horizontal.ant-divider-with-text-left {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.85);
+}
+.ant-divider-horizontal.ant-divider-with-text-left:before {
+  border-top: 1px solid #e8e8e8;
+}
+.ant-divider-horizontal.ant-divider-with-text-left:after {
+  border-top: 1px solid #e8e8e8;
+}
+.ant-divider-horizontal.ant-divider-with-text-right {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.85);
+}
+.ant-divider-horizontal.ant-divider-with-text-right:before {
+  border-top: 1px solid #e8e8e8;
+}
+.ant-divider-horizontal.ant-divider-with-text-right:after {
+  border-top: 1px solid #e8e8e8;
+}
 .ant-divider-dashed {
   background: none;
   border-top: 1px dashed #e8e8e8;
@@ -5880,10 +5900,9 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 .ant-select-tree li span.ant-select-tree-icon_loading:after {
   color: @primary-color;
 }
-li.ant-select-tree-treenode-disabled > span,
+li.ant-select-tree-treenode-disabled > span:not(.ant-select-tree-switcher),
 li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper,
-li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper span,
-li.ant-select-tree-treenode-disabled > span.ant-select-tree-switcher {
+li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper span {
   color: rgba(0, 0, 0, 0.25);
 }
 li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hover {
@@ -5994,10 +6013,9 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 .ant-tree li span.ant-tree-icon_loading:after {
   color: @primary-color;
 }
-li.ant-tree-treenode-disabled > span,
+li.ant-tree-treenode-disabled > span:not(.ant-tree-switcher),
 li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper,
-li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span,
-li.ant-tree-treenode-disabled > span.ant-tree-switcher {
+li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span {
   color: rgba(0, 0, 0, 0.25);
 }
 li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
