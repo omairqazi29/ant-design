@@ -3265,7 +3265,7 @@ a.ant-notification-notice-close:focus {
   outline: none;
 }
 .ant-rate-disabled .ant-rate-star {
-  cursor: not-allowed;
+  cursor: default;
 }
 .ant-rate-disabled .ant-rate-star:hover {
   -webkit-transform: scale(1);
