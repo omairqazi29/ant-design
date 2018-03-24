@@ -4484,6 +4484,7 @@ textarea.ant-input {
 .ant-btn:active,
 .ant-btn.active {
   background: #fff;
+  text-decoration: none;
 }
 .ant-btn > i,
 .ant-btn > span {
@@ -5588,9 +5589,11 @@ a.ant-btn-sm {
   top: auto;
   display: block;
   position: relative;
-  -webkit-transform: none !important;
-      -ms-transform: none !important;
-          transform: none !important;
+}
+.ant-badge-not-a-wrapper .ant-badge-count {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 @-webkit-keyframes antStatusProcessing {
   0% {
