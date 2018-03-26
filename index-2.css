@@ -4082,7 +4082,7 @@ a.ant-notification-notice-close:focus {
 .ant-switch-small.ant-switch-checked:before,
 .ant-switch-small.ant-switch-checked:after {
   left: 100%;
-  margin-left: -12.5px;
+  margin-left: -13px;
 }
 .ant-switch-small.ant-switch-checked .ant-switch-inner {
   margin-left: 3px;
@@ -10056,19 +10056,6 @@ ul.anticons-list li.copied:after {
   width: 16px;
   height: 22px;
   cursor: pointer;
-}
-@media only screen and (min-width: 1440px) and (max-width: 1599px) {
-  .main-wrapper > .ant-row > .ant-col-xl-5 {
-    width: 274px;
-  }
-  #header .ant-row .ant-col-xl-5 {
-    width: 274px;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  .en-us #search-box {
-    display: none;
-  }
 }
 @media only screen and (max-width: 1200px) {
   #search-box {
