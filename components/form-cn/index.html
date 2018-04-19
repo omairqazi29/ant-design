@@ -967,7 +967,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> value <span class="token operator">=</span> props<span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
       number<span class="token punctuation">:</span> value<span class="token punctuation">.</span>number <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
       currency<span class="token punctuation">:</span> value<span class="token punctuation">.</span>currency <span class="token operator">||</span> <span class="token string">'rmb'</span><span class="token punctuation">,</span>

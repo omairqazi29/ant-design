@@ -110,7 +110,7 @@
 // https://github.com/ant-design/ant-motion/issues/44
 .bezierEasingMixin();
 
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 .tinyColorMixin() {
 @functions: ~`(function() {
 // TinyColor v1.4.1
@@ -3813,7 +3813,7 @@ form .ant-upload {
 .ant-list-split .ant-list-header {
   border-bottom: 1px solid #e8e8e8;
 }
-.ant-list-something-after-last-item .ant-list-item:last-child {
+.ant-list-something-after-last-item .ant-spin-container > .ant-list-item:last-child {
   border-bottom: 1px solid #e8e8e8;
 }
 .ant-list-vertical .ant-list-item-meta-title {
@@ -4089,6 +4089,12 @@ form .ant-upload {
 .ant-menu-submenu-disabled > .ant-menu-submenu-title {
   color: rgba(0, 0, 0, 0.25) !important;
 }
+.ant-menu-item-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:before,
+.ant-menu-item-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:after {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
 .ant-menu-dark,
 .ant-menu-dark .ant-menu-sub {
   color: rgba(255, 255, 255, 0.65);
@@ -4205,6 +4211,12 @@ form .ant-upload {
 .ant-menu-dark .ant-menu-item-disabled > .ant-menu-submenu-title,
 .ant-menu-dark .ant-menu-submenu-disabled > .ant-menu-submenu-title {
   color: rgba(255, 255, 255, 0.35) !important;
+}
+.ant-menu-dark .ant-menu-item-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:before,
+.ant-menu-dark .ant-menu-submenu-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:before,
+.ant-menu-dark .ant-menu-item-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:after,
+.ant-menu-dark .ant-menu-submenu-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow:after {
+  background: rgba(255, 255, 255, 0.35) !important;
 }
 .ant-message {
   color: rgba(0, 0, 0, 0.65);
