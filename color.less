@@ -3207,11 +3207,17 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   background: none;
   border-top: 1px dashed #e8e8e8;
 }
-.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed {
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed,
+.ant-divider-horizontal.ant-divider-with-text-left.ant-divider-dashed,
+.ant-divider-horizontal.ant-divider-with-text-right.ant-divider-dashed {
   border-top: 0;
 }
 .ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed:before,
-.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed:after {
+.ant-divider-horizontal.ant-divider-with-text-left.ant-divider-dashed:before,
+.ant-divider-horizontal.ant-divider-with-text-right.ant-divider-dashed:before,
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed:after,
+.ant-divider-horizontal.ant-divider-with-text-left.ant-divider-dashed:after,
+.ant-divider-horizontal.ant-divider-with-text-right.ant-divider-dashed:after {
   border-style: dashed none none;
 }
 .ant-dropdown {
@@ -4047,12 +4053,10 @@ form .ant-upload {
   border-bottom: 2px solid @primary-color;
   color: @primary-color;
 }
-.ant-menu-horizontal > .ant-menu-item > a,
-.ant-menu-horizontal > .ant-menu-submenu > a {
+.ant-menu-horizontal > .ant-menu-item > a {
   color: rgba(0, 0, 0, 0.65);
 }
-.ant-menu-horizontal > .ant-menu-item > a:hover,
-.ant-menu-horizontal > .ant-menu-submenu > a:hover {
+.ant-menu-horizontal > .ant-menu-item > a:hover {
   color: @primary-color;
 }
 .ant-menu-vertical .ant-menu-item:after,
@@ -4579,7 +4583,7 @@ form .ant-upload {
   background-color: #fff;
 }
 .ant-radio-inner:after {
-  border-radius: 4px;
+  border-radius: 8px;
   border-top: 0;
   border-left: 0;
   background-color: @primary-color;
