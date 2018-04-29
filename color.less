@@ -4328,7 +4328,7 @@ form .ant-upload {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-notification-notice-close:hover {
-  color: #404040;
+  color: rgba(0, 0, 0, 0.67);
 }
 .ant-pagination {
   color: rgba(0, 0, 0, 0.65);
@@ -5775,7 +5775,10 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   border: 0;
   border-radius: 0;
 }
-.ant-timeline-item-last .ant-timeline-item-tail {
+.ant-timeline.ant-timeline-pending .ant-timeline-item-last .ant-timeline-item-tail {
+  border-left: 2px dotted #e8e8e8;
+}
+.ant-timeline.ant-timeline-reverse .ant-timeline-item-pending .ant-timeline-item-tail {
   border-left: 2px dotted #e8e8e8;
 }
 .ant-tooltip {
@@ -6260,12 +6263,6 @@ body {
 }
 .component-select .ant-component-decs {
   color: #aaa;
-}
-.promote-banner {
-  background-color: #a5d6d3;
-}
-.promote-banner .anticon-cross {
-  color: #fff;
 }
 footer {
   background-color: #000;
@@ -6779,6 +6776,9 @@ pre[class*="language-"] {
 .code-box pre code {
   border: none;
   background: #fff;
+}
+.color-palette-picker-validation {
+  color: #f5222d;
 }
 .main-color-item:first-child {
   border-radius: 4px 4px 0 0;
