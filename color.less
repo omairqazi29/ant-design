@@ -5084,9 +5084,6 @@ form .ant-upload {
   color: rgba(0, 0, 0, 0.85);
   border-bottom: 1px solid #e8e8e8;
 }
-.ant-table-thead > tr > th[colspan] {
-  border-bottom: 0;
-}
 .ant-table-thead > tr > th .anticon-filter,
 .ant-table-thead > tr > th .ant-table-filter-icon {
   color: rgba(0, 0, 0, 0.45);
@@ -5103,6 +5100,9 @@ form .ant-upload {
 }
 .ant-table-thead > tr:first-child > th:last-child {
   border-top-right-radius: 4px;
+}
+.ant-table-thead > tr:not(:last-child) > th[colspan] {
+  border-bottom: 0;
 }
 .ant-table-tbody > tr > td {
   border-bottom: 1px solid #e8e8e8;
@@ -5199,7 +5199,7 @@ form .ant-upload {
 .ant-table-bordered.ant-table-fixed-header .ant-table-placeholder {
   border: 0;
 }
-.ant-table-bordered .ant-table-thead > tr > th {
+.ant-table-bordered .ant-table-thead > tr:not(:last-child) > th {
   border-bottom: 1px solid #e8e8e8;
 }
 .ant-table-bordered .ant-table-thead > tr > th,
