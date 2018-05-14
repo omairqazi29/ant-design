@@ -1521,6 +1521,7 @@ mark {
 .ant-select-auto-complete.ant-select .ant-input:focus,
 .ant-select-auto-complete.ant-select .ant-input:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-avatar {
   color: rgba(0, 0, 0, 0.65);
@@ -2474,6 +2475,7 @@ mark {
 .ant-cascader-picker:focus .ant-cascader-input {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-cascader-picker-clear {
   background: #fff;
@@ -2632,6 +2634,7 @@ mark {
 .ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled) {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-calendar-picker-clear {
   color: rgba(0, 0, 0, 0.25);
@@ -2931,11 +2934,13 @@ mark {
 .ant-calendar-range .ant-calendar-input:hover,
 .ant-calendar-range .ant-calendar-time-picker-input:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-calendar-range .ant-calendar-input:focus,
 .ant-calendar-range .ant-calendar-time-picker-input:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-calendar-range .ant-calendar-input-disabled,
 .ant-calendar-range .ant-calendar-time-picker-input-disabled {
@@ -2945,6 +2950,7 @@ mark {
 .ant-calendar-range .ant-calendar-input-disabled:hover,
 .ant-calendar-range .ant-calendar-time-picker-input-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-calendar-range .ant-calendar-input:focus,
 .ant-calendar-range .ant-calendar-time-picker-input:focus {
@@ -3381,6 +3387,7 @@ form .ant-upload {
 .has-warning .ant-input:focus {
   border-color: #ffc53d;
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
 }
 .has-warning .ant-input:not([disabled]):hover {
   border-color: #faad14;
@@ -3388,6 +3395,7 @@ form .ant-upload {
 .has-warning .ant-calendar-picker-open .ant-calendar-picker-input {
   border-color: #ffc53d;
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
 }
 .has-warning .ant-input-prefix {
   color: #faad14;
@@ -3410,6 +3418,7 @@ form .ant-upload {
 .has-warning .ant-select-focused .ant-select-selection {
   border-color: #ffc53d;
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
 }
 .has-warning .ant-calendar-picker-icon:after,
 .has-warning .ant-time-picker-icon:after,
@@ -3428,6 +3437,7 @@ form .ant-upload {
 .has-warning .ant-time-picker-input:focus {
   border-color: #ffc53d;
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
 }
 .has-warning .ant-input-number:not([disabled]):hover,
 .has-warning .ant-time-picker-input:not([disabled]):hover {
@@ -3436,6 +3446,7 @@ form .ant-upload {
 .has-warning .ant-cascader-picker:focus .ant-cascader-input {
   border-color: #ffc53d;
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-form-explain,
 .has-error .ant-form-split {
@@ -3448,6 +3459,7 @@ form .ant-upload {
 .has-error .ant-input:focus {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-input:not([disabled]):hover {
   border-color: #f5222d;
@@ -3455,6 +3467,7 @@ form .ant-upload {
 .has-error .ant-calendar-picker-open .ant-calendar-picker-input {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-input-prefix {
   color: #f5222d;
@@ -3477,6 +3490,7 @@ form .ant-upload {
 .has-error .ant-select-focused .ant-select-selection {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-select.ant-select-auto-complete .ant-input:focus {
   border-color: #f5222d;
@@ -3502,6 +3516,7 @@ form .ant-upload {
 .has-error .ant-time-picker-input:focus {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-input-number:not([disabled]):hover,
 .has-error .ant-time-picker-input:not([disabled]):hover {
@@ -3515,10 +3530,12 @@ form .ant-upload {
 .has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):focus {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .has-error .ant-cascader-picker:focus .ant-cascader-input {
   border-color: #ff4d4f;
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
 }
 .is-validating.has-feedback .ant-form-item-children:after {
   color: @primary-color;
@@ -3541,10 +3558,12 @@ form .ant-upload {
 }
 .ant-input-number:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-input-number:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-input-number-disabled {
   background-color: #f5f5f5;
@@ -3552,6 +3571,7 @@ form .ant-upload {
 }
 .ant-input-number-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-input-number-handler {
   color: rgba(0, 0, 0, 0.45);
@@ -3569,10 +3589,12 @@ form .ant-upload {
 }
 .ant-input-number:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-input-number-focused {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-input-number-disabled {
   background-color: #f5f5f5;
@@ -3580,6 +3602,7 @@ form .ant-upload {
 }
 .ant-input-number-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-input-number-disabled .ant-input-number-input {
   background-color: #f5f5f5;
@@ -3605,6 +3628,7 @@ form .ant-upload {
 }
 .ant-input-number-input[disabled]:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-input-number-handler-wrap {
   border-left: 1px solid #d9d9d9;
@@ -3636,10 +3660,12 @@ form .ant-upload {
 }
 .ant-input:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-input:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-input-disabled {
   background-color: #f5f5f5;
@@ -3647,6 +3673,7 @@ form .ant-upload {
 }
 .ant-input-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-input-group {
   color: rgba(0, 0, 0, 0.65);
@@ -3657,6 +3684,12 @@ form .ant-upload {
 .ant-input-group-wrap:not(:first-child):not(:last-child),
 .ant-input-group > .ant-input:not(:first-child):not(:last-child) {
   border-radius: 0;
+}
+.ant-input-group .ant-input:focus {
+  border-right-width: 1px;
+}
+.ant-input-group .ant-input:hover {
+  border-right-width: 1px;
 }
 .ant-input-group-addon {
   color: rgba(0, 0, 0, 0.65);
@@ -3746,6 +3779,7 @@ form .ant-upload {
 }
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-input-affix-wrapper .ant-input-prefix,
 .ant-input-affix-wrapper .ant-input-suffix {
@@ -3859,10 +3893,12 @@ form .ant-upload {
 }
 .ant-mention-wrapper .ant-mention-editor:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-mention-wrapper .ant-mention-editor:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-mention-wrapper .ant-mention-editor-disabled {
   background-color: #f5f5f5;
@@ -3870,10 +3906,12 @@ form .ant-upload {
 }
 .ant-mention-wrapper .ant-mention-editor-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-mention-wrapper.ant-mention-active:not(.disabled) .ant-mention-editor {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-mention-wrapper.disabled .ant-mention-editor {
   background-color: #f5f5f5;
@@ -3881,6 +3919,7 @@ form .ant-upload {
 }
 .ant-mention-wrapper.disabled .ant-mention-editor:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-mention-wrapper .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner {
   color: #bfbfbf;
@@ -4428,10 +4467,12 @@ form .ant-upload {
 }
 .ant-pagination-options-quick-jumper input:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-pagination-options-quick-jumper input:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-pagination-options-quick-jumper input-disabled {
   background-color: #f5f5f5;
@@ -4439,6 +4480,7 @@ form .ant-upload {
 }
 .ant-pagination-options-quick-jumper input-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-pagination-simple .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-simple .ant-pagination-next .ant-pagination-item-link {
@@ -4703,12 +4745,14 @@ form .ant-upload {
 }
 .ant-select-selection:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-select-focused .ant-select-selection,
 .ant-select-selection:focus,
 .ant-select-selection:active {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-select-selection__clear {
   background: #fff;
@@ -4763,6 +4807,7 @@ form .ant-upload {
 .ant-select-open .ant-select-selection {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-select-combobox .ant-select-search__field {
   box-shadow: none;
@@ -5723,10 +5768,12 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 }
 .ant-time-picker-input:hover {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-right-width: 1px !important;
 }
 .ant-time-picker-input:focus {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
   box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+  border-right-width: 1px !important;
 }
 .ant-time-picker-input-disabled {
   background-color: #f5f5f5;
@@ -5734,6 +5781,7 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 }
 .ant-time-picker-input-disabled:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-time-picker-input[disabled] {
   background-color: #f5f5f5;
@@ -5741,6 +5789,7 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 }
 .ant-time-picker-input[disabled]:hover {
   border-color: #e6d8d8;
+  border-right-width: 1px !important;
 }
 .ant-time-picker-icon {
   color: rgba(0, 0, 0, 0.25);
