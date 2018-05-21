@@ -78,9 +78,9 @@
     if (!window.Promise) {
       document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
     }
-    // Enable Google Analytics
     if (!location.port) {
       /* eslint-disable */
+      // Enable Google Analytics
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -95,6 +95,15 @@
       ga('create', 'UA-72788897-1', 'auto');
       ga('send', 'pageview');
       /* eslint-enable */
+
+      // Enable Baidu tongji
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5d9056573b37c7d6365eaff1d71d62e7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
     }
     </script>
     <!-- Hotjar Tracking Code for ant.design -->
@@ -511,7 +520,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ControlledRangePicker</span> <span class="token punctuation">/></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token punctuation">,</span> mountNode<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><p>日期类组件包括以下四种形式。</p><ul><li><p>DatePicker</p></li><li><p>MonthPicker</p></li><li><p>RangePicker</p></li><li><p>WeekPicker</p></li></ul><p><strong>注意：</strong>DatePicker、MonthPicker、RangePicker、WeekPicker 部分 locale 是从 value 中读取，所以请先正确设置 moment 的 locale。</p><pre class="language-jsx"><code><span class="token comment" spellcheck="true">// 默认语言为 en-US，如果你需要设置其他语言，推荐在入口文件全局设置 locale</span>
+<span class="token punctuation">,</span> mountNode<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><p>日期类组件包括以下四种形式。</p><ul><li><p>DatePicker</p></li><li><p>MonthPicker</p></li><li><p>RangePicker</p></li><li><p>WeekPicker</p></li></ul><h3 id="国际化配置"><span>国际化配置</span><a href="#国际化配置" class="anchor">#</a></h3><p>默认配置为 en-US，如果你需要设置其他语言，推荐在入口处使用我们提供的国际化组件,详见：<a href="http://ant.design/components/locale-provider-cn/">LocaleProvider国际化</a>。</p><p>如有特殊需求（仅修改单一组件的语言），请使用 locale 参数，参考：<a href="https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json">默认配置</a>。</p><pre class="language-jsx"><code><span class="token keyword">import</span> locale <span class="token keyword">from</span> <span class="token string">'antd/lib/date-picker/locale/zh_CN'</span><span class="token punctuation">;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DatePicker</span> <span class="token attr-name">locale</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>locale<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span></code></pre><p><strong>注意：</strong>DatePicker、MonthPicker、RangePicker、WeekPicker 部分 locale 是从 value 中读取，所以请先正确设置 moment 的 locale。</p><pre class="language-jsx"><code><span class="token comment" spellcheck="true">// 默认语言为 en-US，如果你需要设置其他语言，推荐在入口文件全局设置 locale</span>
 <span class="token comment" spellcheck="true">// import moment from 'moment';</span>
 <span class="token comment" spellcheck="true">// import 'moment/locale/zh-cn';</span>
 <span class="token comment" spellcheck="true">// moment.locale('zh-cn');</span>

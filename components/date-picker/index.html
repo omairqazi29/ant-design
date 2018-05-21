@@ -78,9 +78,9 @@
     if (!window.Promise) {
       document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
     }
-    // Enable Google Analytics
     if (!location.port) {
       /* eslint-disable */
+      // Enable Google Analytics
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -95,6 +95,15 @@
       ga('create', 'UA-72788897-1', 'auto');
       ga('send', 'pageview');
       /* eslint-enable */
+
+      // Enable Baidu tongji
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5d9056573b37c7d6365eaff1d71d62e7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
     }
     </script>
     <!-- Hotjar Tracking Code for ant.design -->
@@ -511,7 +520,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ControlledRangePicker</span> <span class="token punctuation">/></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token punctuation">,</span> mountNode<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><p>There are four kinds of picker:</p><ul><li><p>DatePicker</p></li><li><p>MonthPicker</p></li><li><p>RangePicker</p></li><li><p>WeekPicker</p></li></ul><p><strong>Note:</strong> Part of locale of DatePicker, MonthPicker, RangePicker, WeekPicker is read from value. So, please set the locale of moment correctly.</p><pre class="language-jsx"><code><span class="token comment" spellcheck="true">// The default locale is en-US, if you want to use other locale, just set locale in entry file globaly.</span>
+<span class="token punctuation">,</span> mountNode<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><p>There are four kinds of picker:</p><ul><li><p>DatePicker</p></li><li><p>MonthPicker</p></li><li><p>RangePicker</p></li><li><p>WeekPicker</p></li></ul><h3 id="Localization"><span>Localization</span><a href="#Localization" class="anchor">#</a></h3><p>The default locale is en-US, if you need to use other languages, recommend to use internationalized components provided by us at the entrance. Look at: <a href="http://ant.design/components/locale-provider/">LocaleProvider</a>.</p><p>If there are special needs (only modifying single component language), Please use the property: local. Example: <a href="https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json">default</a>.</p><pre class="language-jsx"><code><span class="token keyword">import</span> locale <span class="token keyword">from</span> <span class="token string">'antd/lib/date-picker/locale/zh_CN'</span><span class="token punctuation">;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DatePicker</span> <span class="token attr-name">locale</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>locale<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span></code></pre><p><strong>Note:</strong> Part of locale of DatePicker, MonthPicker, RangePicker, WeekPicker is read from value. So, please set the locale of moment correctly.</p><pre class="language-jsx"><code><span class="token comment" spellcheck="true">// The default locale is en-US, if you want to use other locale, just set locale in entry file globaly.</span>
 <span class="token comment" spellcheck="true">// import moment from 'moment';</span>
 <span class="token comment" spellcheck="true">// import 'moment/locale/zh-cn';</span>
 <span class="token comment" spellcheck="true">// moment.locale('zh-cn');</span>
