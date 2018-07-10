@@ -3110,6 +3110,9 @@ mark {
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
   border-right-width: 1px !important;
 }
+.ant-cascader-picker-show-search.ant-cascader-picker-focused {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-cascader-picker-clear {
   background: #fff;
   color: rgba(0, 0, 0, 0.25);
@@ -3362,11 +3365,18 @@ mark {
   color: rgba(0, 0, 0, 0.25);
 }
 .ant-calendar-selected-day .ant-calendar-date {
+  background: #d1e9ff;
+}
+.ant-calendar-selected-date .ant-calendar-date,
+.ant-calendar-selected-start-date .ant-calendar-date,
+.ant-calendar-selected-end-date .ant-calendar-date {
   background: @primary-color;
   color: #fff;
   border: 1px solid transparent;
 }
-.ant-calendar-selected-day .ant-calendar-date:hover {
+.ant-calendar-selected-date .ant-calendar-date:hover,
+.ant-calendar-selected-start-date .ant-calendar-date:hover,
+.ant-calendar-selected-end-date .ant-calendar-date:hover {
   background: @primary-color;
 }
 .ant-calendar-disabled-cell .ant-calendar-date {
@@ -4211,7 +4221,7 @@ form .ant-upload {
 }
 .ant-input-number-handler-wrap {
   border-left: 1px solid #d9d9d9;
-  background: transparent;
+  background: #fff;
   border-radius: 0 4px 4px 0;
 }
 .ant-input-number-handler-down {
