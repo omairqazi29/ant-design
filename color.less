@@ -1670,6 +1670,7 @@ this.tinycolor = tinycolor;
 // Checkbox
 @checkbox-size          : 16px;
 @checkbox-color         : @primary-color;
+@checkbox-check-color   : #fff;
 
 // Radio
 @radio-size             : 16px;
@@ -1780,6 +1781,7 @@ this.tinycolor = tinycolor;
 @input-addon-bg              : @background-color-light;
 @input-hover-border-color    : @primary-color;
 @input-disabled-bg           : @disabled-bg;
+@input-outline-offset        : 0 0;
 
 // Tooltip
 // ---
@@ -1979,6 +1981,13 @@ this.tinycolor = tinycolor;
 @slider-disabled-color:               @disabled-color;
 @slider-disabled-background-color:    @component-background;
 
+// Tree
+// ---
+@tree-title-height:                   24px;
+@tree-child-padding:                  18px;
+@tree-directory-selected-color:       #fff;
+@tree-directory-selected-bg:          @primary-color;
+
 // Collapse
 // ---
 @collapse-header-padding:             12px 0 12px 40px;
@@ -2157,16 +2166,16 @@ mark {
   color: rgba(0, 0, 0, 0.65);
   background: #ccc;
   color: #fff;
-  border-radius: 16px;
+  border-radius: 50%;
 }
 .ant-avatar-image {
   background: transparent;
 }
 .ant-avatar-lg {
-  border-radius: 20px;
+  border-radius: 50%;
 }
 .ant-avatar-sm {
-  border-radius: 12px;
+  border-radius: 50%;
 }
 .ant-avatar-square {
   border-radius: 4px;
@@ -3855,6 +3864,41 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-divider-horizontal.ant-divider-with-text-right.ant-divider-dashed:after {
   border-style: dashed none none;
 }
+.ant-drawer-left.ant-drawer-open .ant-drawer-wrapper {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+.ant-drawer-right.ant-drawer-open .ant-drawer-wrapper {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+}
+.ant-drawer-title {
+  color: rgba(0, 0, 0, 0.85);
+}
+.ant-drawer-content {
+  background-color: #fff;
+  border: 0;
+  background-clip: padding-box;
+}
+.ant-drawer-close {
+  border: 0;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.45);
+}
+.ant-drawer-close:focus,
+.ant-drawer-close:hover {
+  color: #444;
+}
+.ant-drawer-header {
+  border-radius: 4px 4px 0 0;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.65);
+  border-bottom: 1px solid #e8e8e8;
+}
+.ant-drawer-mask {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.ant-drawer-open-content {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 .ant-dropdown {
   color: rgba(0, 0, 0, 0.65);
 }
@@ -4921,7 +4965,6 @@ form .ant-upload {
   border-radius: 0 0 4px 4px;
 }
 .ant-modal-mask {
-  background-color: #373737;
   background-color: rgba(0, 0, 0, 0.65);
 }
 .ant-confirm-body .ant-confirm-title {
@@ -5298,6 +5341,21 @@ form .ant-upload {
   border-color: color(~`colorPalette("@{primary-color}", 7)`);
   box-shadow: -1px 0 0 0 color(~`colorPalette("@{primary-color}", 7)`);
   color: color(~`colorPalette("@{primary-color}", 7)`);
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: @primary-color;
+  border-color: @primary-color;
+  color: #fff;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  background: color(~`colorPalette("@{primary-color}", 5)`);
+  color: #fff;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+  border-color: color(~`colorPalette("@{primary-color}", 7)`);
+  background: color(~`colorPalette("@{primary-color}", 7)`);
+  color: #fff;
 }
 .ant-radio-button-wrapper-disabled {
   border-color: #d9d9d9;
@@ -6607,6 +6665,47 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 .ant-select-tree-dropdown .ant-select-not-found {
   color: rgba(0, 0, 0, 0.25);
 }
+.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper {
+  border-radius: 0;
+}
+.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover {
+  background: transparent;
+}
+.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover:before,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover:before {
+  background: color(~`colorPalette("@{primary-color}", 1)`);
+}
+.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+  color: #fff;
+  background: transparent;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-switcher,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-switcher {
+  color: #fff;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-checkbox .ant-tree-checkbox-inner,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-checkbox .ant-tree-checkbox-inner {
+  border-color: @primary-color;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked:after,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked:after {
+  border-color: #fff;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked .ant-tree-checkbox-inner,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked .ant-tree-checkbox-inner {
+  background: #fff;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked .ant-tree-checkbox-inner:after,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-checkbox.ant-tree-checkbox-checked .ant-tree-checkbox-inner:after {
+  border-color: @primary-color;
+}
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper:before,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper:before {
+  background: @primary-color;
+}
 .ant-tree-checkbox {
   color: rgba(0, 0, 0, 0.65);
 }
@@ -6682,6 +6781,10 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 .ant-tree li.filter-node > span {
   color: #f5222d !important;
 }
+.ant-tree li.ant-tree-treenode-loading span.ant-tree-switcher.ant-tree-switcher_open:before,
+.ant-tree li.ant-tree-treenode-loading span.ant-tree-switcher.ant-tree-switcher_close:before {
+  color: @primary-color;
+}
 .ant-tree li .ant-tree-node-content-wrapper {
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.65);
@@ -6695,12 +6798,6 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 .ant-tree li span.ant-tree-switcher,
 .ant-tree li span.ant-tree-iconEle {
   border: 0 none;
-}
-.ant-tree li span.ant-tree-icon_loading {
-  background: #fff;
-}
-.ant-tree li span.ant-tree-icon_loading:after {
-  color: @primary-color;
 }
 li.ant-tree-treenode-disabled > span:not(.ant-tree-switcher),
 li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper,
