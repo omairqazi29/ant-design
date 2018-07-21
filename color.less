@@ -1995,6 +1995,10 @@ this.tinycolor = tinycolor;
 @collapse-content-padding:            @padding-md;
 @collapse-content-bg:                 @component-background;
 
+// Message
+// ---
+@message-notice-content-padding:      10px 16px;
+
 // Menu
 @menu-dark-item-selected-bg: @menu-dark-item-active-bg;
 
@@ -2699,27 +2703,51 @@ mark {
   background: #fff;
   border-radius: inherit;
 }
-.ant-btn-group-lg > .ant-btn {
-  border-radius: 4px;
+.ant-btn-group-lg > .ant-btn,
+.ant-btn-group-lg > span > .ant-btn {
+  border-radius: 0;
 }
-.ant-btn-group-sm > .ant-btn {
-  border-radius: 4px;
+.ant-btn-group-sm > .ant-btn,
+.ant-btn-group-sm > span > .ant-btn {
+  border-radius: 0;
 }
 .ant-btn-group .ant-btn-primary + .ant-btn:not(.ant-btn-primary):not([disabled]) {
   border-left-color: transparent;
 }
-.ant-btn-group .ant-btn:not(:first-child):not(:last-child) {
+.ant-btn-group .ant-btn {
   border-radius: 0;
+}
+.ant-btn-group > .ant-btn:only-child {
+  border-radius: 4px;
+}
+.ant-btn-group > span:only-child > .ant-btn {
+  border-radius: 4px;
 }
 .ant-btn-group > .ant-btn:first-child:not(:last-child),
 .ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
 .ant-btn-group > .ant-btn:last-child:not(:first-child),
 .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.ant-btn-group-sm > .ant-btn:only-child {
+  border-radius: 4px;
+}
+.ant-btn-group-sm > span:only-child > .ant-btn {
+  border-radius: 4px;
+}
+.ant-btn-group-sm > .ant-btn:first-child:not(:last-child),
+.ant-btn-group-sm > span:first-child:not(:last-child) > .ant-btn {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.ant-btn-group-sm > .ant-btn:last-child:not(:first-child),
+.ant-btn-group-sm > span:last-child:not(:first-child) > .ant-btn {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .ant-btn-group > .ant-btn-group:not(:first-child):not(:last-child) > .ant-btn {
   border-radius: 0;
@@ -7220,6 +7248,23 @@ footer h2 > span {
 }
 .markdown a.edit-button i:hover {
   color: @primary-color;
+}
+.markdown.api-container table {
+  border-width: 0;
+}
+.markdown.api-container table th,
+.markdown.api-container table td {
+  border-width: 1px 0;
+  border-color: #e8e8e8;
+}
+.markdown.api-container table th {
+  border-width: 0 0 2px 0;
+}
+.markdown.api-container table td:first-child {
+  color: #003a8c;
+}
+.markdown.api-container table td:nth-child(3) {
+  color: #c41d7f;
 }
 .grid-demo .demo-row,
 [id^="components-grid-demo-"] .demo-row,
