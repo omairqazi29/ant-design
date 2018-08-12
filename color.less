@@ -1999,6 +1999,10 @@ this.tinycolor = tinycolor;
 // ---
 @message-notice-content-padding:      10px 16px;
 
+// Motion
+// ---
+@wave-animation-width: 6px;
+
 // Menu
 @menu-dark-item-selected-bg: @menu-dark-item-active-bg;
 
@@ -2080,6 +2084,11 @@ mark {
 ::selection {
   background: @primary-color;
   color: #fff;
+}
+[ant-click-animating-without-extra-node]:after,
+.ant-click-animating-node {
+  border-radius: inherit;
+  border: 0 solid @primary-color;
 }
 .ant-alert {
   color: rgba(0, 0, 0, 0.65);
@@ -2759,13 +2768,6 @@ mark {
 .ant-btn-group > .ant-btn-group:last-child:not(:first-child) > .ant-btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-}
-.ant-btn-clicked:after {
-  border-radius: inherit;
-  border: 0 solid @primary-color;
-}
-.ant-btn-danger.ant-btn-clicked:after {
-  border-color: #f5222d;
 }
 .ant-btn-background-ghost {
   background: transparent !important;

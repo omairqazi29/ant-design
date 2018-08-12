@@ -1,4 +1,16 @@
 
+@media (max-width: 767px) {
+  .ant-col-sm-24.ant-form-item-label {
+    padding: 0 0 8px;
+    margin: 0;
+    display: block;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .ant-col-sm-24.ant-form-item-label label:after {
+    display: none;
+  }
+}
 @media (max-width: 991px) {
   .ant-col-md-24.ant-form-item-label {
     padding: 0 0 8px;
@@ -1060,6 +1072,7 @@ textarea.ant-input-number {
 }
 .ant-list-grid .ant-list-item-content {
   display: block;
+  max-width: 100%;
 }
 .ant-list-bordered {
   border-radius: 4px;
@@ -6859,9 +6872,7 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   right: 8px;
   top: 8px;
   line-height: 1;
-}
-.ant-upload-list-picture-card {
-  display: inline;
+  opacity: 1;
 }
 .ant-upload-list-picture-card.ant-upload-list:after {
   display: none;
