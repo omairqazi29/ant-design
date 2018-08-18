@@ -1,4 +1,56 @@
 
+.ant-form-vertical .ant-form-item-label,
+.ant-col-24.ant-form-item-label,
+.ant-col-xl-24.ant-form-item-label {
+  padding: 0 0 8px;
+  margin: 0;
+  display: block;
+  text-align: left;
+  line-height: 1.5;
+}
+.ant-form-vertical .ant-form-item-label label:after,
+.ant-col-24.ant-form-item-label label:after,
+.ant-col-xl-24.ant-form-item-label label:after {
+  display: none;
+}
+.ant-form-vertical .ant-form-item {
+  padding-bottom: 8px;
+}
+.ant-form-vertical .ant-form-item-control {
+  line-height: 1.5;
+}
+.ant-form-vertical .ant-form-explain,
+.ant-form-vertical .ant-form-extra {
+  margin-top: 2px;
+  margin-bottom: -4px;
+}
+@media (max-width: 575px) {
+  .ant-form-item-label,
+  .ant-form-item-control-wrapper {
+    display: block;
+    width: 100%;
+  }
+  .ant-form-item-label {
+    padding: 0 0 8px;
+    margin: 0;
+    display: block;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .ant-form-item-label label:after {
+    display: none;
+  }
+  .ant-col-xs-24.ant-form-item-label {
+    padding: 0 0 8px;
+    margin: 0;
+    display: block;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .ant-col-xs-24.ant-form-item-label label:after {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .ant-col-sm-24.ant-form-item-label {
     padding: 0 0 8px;
@@ -1173,7 +1225,7 @@ textarea.ant-input-number {
   display: block;
   position: absolute;
   height: 100%;
-  max-height: 320px;
+  max-height: 360px;
   width: 100%;
   z-index: 4;
 }
@@ -1213,6 +1265,8 @@ textarea.ant-input-number {
 }
 .ant-spin-container {
   position: relative;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
   zoom: 1;
 }
 .ant-spin-container:before,
@@ -1227,7 +1281,7 @@ textarea.ant-input-number {
   pointer-events: none;
   user-select: none;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0.5;
   -webkit-filter: blur(0.5px);
   filter: blur(0.5px);
   /* autoprefixer: off */
@@ -2992,6 +3046,10 @@ textarea.ant-mention-wrapper .ant-mention-editor {
       -ms-transform: none;
           transform: none;
   opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .ant-modal-mask {
   position: fixed;
@@ -3728,6 +3786,9 @@ a.ant-notification-notice-close:focus {
   color: inherit;
   cursor: pointer;
 }
+.ant-rate-star:focus {
+  outline: 0;
+}
 .ant-rate-star-first,
 .ant-rate-star-second {
   -webkit-user-select: none;
@@ -3738,8 +3799,8 @@ a.ant-notification-notice-close:focus {
   transition: all .3s;
   color: #e8e8e8;
 }
-.ant-rate-star-focused,
-.ant-rate-star:hover {
+.ant-rate-star:hover,
+.ant-rate-star:focus {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -5683,8 +5744,9 @@ span.ant-transfer-list-search-action {
   border-top: 0;
   border-left: 0;
   content: ' ';
-  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
-  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  opacity: 0;
 }
 .ant-select-tree-checkbox-input {
   position: absolute;
@@ -5700,14 +5762,16 @@ span.ant-transfer-list-search-action {
 }
 .ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner:after {
   content: ' ';
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  position: absolute;
-  left: 2.42857143px;
-  top: 5.92857143px;
-  width: 9.14285714px;
-  height: 1.14285714px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  border: 0;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #1890ff;
+  opacity: 1;
 }
 .ant-select-tree-checkbox-indeterminate.ant-select-tree-checkbox-disabled .ant-select-tree-checkbox-inner:after {
   border-color: rgba(0, 0, 0, 0.25);
@@ -5724,9 +5788,9 @@ span.ant-transfer-list-search-action {
   content: ' ';
   -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  opacity: 1;
 }
-.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner,
-.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner {
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
   background-color: #1890ff;
   border-color: #1890ff;
 }
@@ -6162,8 +6226,9 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   border-top: 0;
   border-left: 0;
   content: ' ';
-  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
-  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  opacity: 0;
 }
 .ant-tree-checkbox-input {
   position: absolute;
@@ -6179,14 +6244,16 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
 }
 .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner:after {
   content: ' ';
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  position: absolute;
-  left: 2.42857143px;
-  top: 5.92857143px;
-  width: 9.14285714px;
-  height: 1.14285714px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  border: 0;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #1890ff;
+  opacity: 1;
 }
 .ant-tree-checkbox-indeterminate.ant-tree-checkbox-disabled .ant-tree-checkbox-inner:after {
   border-color: rgba(0, 0, 0, 0.25);
@@ -6203,9 +6270,9 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   content: ' ';
   -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  opacity: 1;
 }
-.ant-tree-checkbox-checked .ant-tree-checkbox-inner,
-.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner {
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner {
   background-color: #1890ff;
   border-color: #1890ff;
 }
@@ -7189,10 +7256,7 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
 .drawer {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
   z-index: 9999;
-  pointer-events: none;
 }
 .drawer > * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), box-shaow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -7200,16 +7264,18 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), box-shaow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), box-shaow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
-.drawer-mask {
+.drawer .drawer-mask {
   background: #000;
   opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 0;
+  height: 0;
+  position: fixed;
   top: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), width 0s ease 0.3s, height 0s ease 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), width 0s ease 0.3s, height 0s ease 0.3s;
 }
 .drawer-content-wrapper {
-  position: absolute;
+  position: fixed;
   background: #fff;
 }
 .drawer-content {
@@ -7223,7 +7289,6 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   width: 41px;
   height: 40px;
   cursor: pointer;
-  pointer-events: auto;
   z-index: 0;
   text-align: center;
   line-height: 40px;
@@ -7269,11 +7334,20 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
 .drawer-handle-icon:after {
   top: 5px;
 }
+.drawer-left,
+.drawer-right {
+  width: 0%;
+  height: 100%;
+}
 .drawer-left .drawer-content-wrapper,
 .drawer-right .drawer-content-wrapper,
 .drawer-left .drawer-content,
 .drawer-right .drawer-content {
   height: 100%;
+}
+.drawer-left.drawer-open,
+.drawer-right.drawer-open {
+  width: 100%;
 }
 .drawer-left .drawer-handle {
   right: -40px;
@@ -7298,6 +7372,11 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   -webkit-box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
           box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
 }
+.drawer-top,
+.drawer-bottom {
+  width: 100%;
+  height: 0%;
+}
 .drawer-top .drawer-content-wrapper,
 .drawer-bottom .drawer-content-wrapper,
 .drawer-top .drawer-content,
@@ -7308,6 +7387,10 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
 .drawer-bottom .drawer-handle {
   left: 50%;
   margin-left: -20px;
+}
+.drawer-top.drawer-open,
+.drawer-bottom.drawer-open {
+  height: 100%;
 }
 .drawer-top .drawer-handle {
   top: auto;
@@ -7333,11 +7416,14 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
 }
-.drawer.drawer-open > * {
-  pointer-events: auto;
-}
 .drawer.drawer-open .drawer-mask {
   opacity: .3;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fadeIn 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation: fadeIn 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-transition: none;
+  transition: none;
 }
 .drawer.drawer-open .drawer-handle-icon {
   background: transparent;
@@ -7351,6 +7437,22 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   -webkit-transform: translateY(-5px) rotate(-45deg);
       -ms-transform: translateY(-5px) rotate(-45deg);
           transform: translateY(-5px) rotate(-45deg);
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }
 .searchbox {
   display: inline-block;
