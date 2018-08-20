@@ -12,11 +12,6 @@
     <style id="nprogress-style">
       #nprogress { display: none }
     </style>
-  </head>
-  <body>
-    <div id="react-content">
-      <div id="page-404" data-reactroot=""><section><h1>404</h1><p>你要找的页面不存在<a href="/index-cn">返回首页</a></p></section><style>#react-content { height: 100%; background-color: #fff }</style></div>
-    </div>
     <link rel="stylesheet/less" type="text/css" href="/color.less"/>
     <script src="https://gw.alipayobjects.com/os/lib/??es6-shim/0.35.3/es6-sham.min.js,es6-shim/0.35.3/es6-shim.min.js"></script>
     <!--[if lte IE 10]>
@@ -78,6 +73,11 @@
       document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
     })()
     </script>
+  </head>
+  <body>
+    <div id="react-content">
+      <div id="page-404" data-reactroot=""><section><h1>404</h1><p>你要找的页面不存在<a href="/index-cn">返回首页</a></p></section><style>#react-content { height: 100%; background-color: #fff }</style></div>
+    </div>
     <script src="/common.js"></script>
     <script src="/index.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->

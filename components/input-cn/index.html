@@ -12,6 +12,67 @@
     <style id="nprogress-style">
       #nprogress { display: none }
     </style>
+    <link rel="stylesheet/less" type="text/css" href="/color.less"/>
+    <script src="https://gw.alipayobjects.com/os/lib/??es6-shim/0.35.3/es6-sham.min.js,es6-shim/0.35.3/es6-shim.min.js"></script>
+    <!--[if lte IE 10]>
+    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
+    <![endif]-->
+    <script>
+    if (!window.Intl) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js">' + '<' + '/script>');
+    }
+    </script>
+    <script>
+    (function() {
+      function isLocalStorageNameSupported() {
+        var testKey = 'test';
+        var storage = window.localStorage;
+        try {
+          storage.setItem(testKey, '1');
+          storage.removeItem(testKey);
+          return true;
+        } catch (error) {
+          return false;
+        }
+      }
+      // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
+      var pathname = location.pathname;
+
+      function isZhCN(pathname) {
+        return /-cn\/?$/.test(pathname);
+      }
+      function getLocalizedPathname(path, zhCN) {
+        var pathname = path.startsWith('/') ? path : '/' + path;
+        if (!zhCN) { // to enUS
+          return /\/?index-cn/.test(pathname) ? '/' : pathname.replace('-cn', '');
+        } else if (pathname === '/') {
+          return '/index-cn';
+        } else if (pathname.endsWith('/')) {
+          return pathname.replace(/\/$/, '-cn/');
+        }
+        return pathname + '-cn';
+      }
+
+      // 兼容旧的 URL， `?locale=...`
+      var queryString = location.search;
+      if (queryString) {
+        var isZhCNConfig = queryString.indexOf('zh-CN') > -1;
+        if (isZhCNConfig && !isZhCN(pathname)) {
+          location.pathname = getLocalizedPathname(pathname, isZhCNConfig)
+        }
+      }
+
+      // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
+      if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
+        var lang = (window.localStorage && localStorage.getItem('locale')) || ((navigator.language || navigator.browserLanguage).toLowerCase() === 'zh-cn' ? 'zh-CN' : 'en-US');
+        // safari is 'zh-cn', while other browser is 'zh-CN';
+        if ((lang === 'zh-CN') !== isZhCN(pathname)) {
+          location.pathname = getLocalizedPathname(pathname, lang === 'zh-CN');
+        }
+      }
+      document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
+    })()
+    </script>
   </head>
   <body>
     <div id="react-content">
@@ -400,67 +461,6 @@ or the height is not enough when content is empty */</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Input</span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Input.Group</span><span class="token punctuation">></span></span></code></pre></section></article></div></div><div class="ant-row"><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-18 ant-col-lg-offset-6 ant-col-xl-19 ant-col-xl-offset-5 ant-col-xxl-20 ant-col-xxl-offset-4"><section class="prev-next-nav"><a class="prev-page" href="/components/form-cn/"><span>Form</span><span class="chinese">表单</span></a><a class="next-page" href="/components/input-number-cn/"><span>InputNumber</span><span class="chinese">数字输入框</span></a></section></div></div></div><footer id="footer"><div class="footer-wrap"><div class="ant-row"><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-6"><div class="footer-center"><h2><span>相关资源</span></h2><div><a href="http://pro.ant.design">Ant Design Pro</a></div><div><a href="http://mobile.ant.design">Ant Design Mobile</a></div><div><a href="http://ng.ant.design">NG-ZORRO</a><span> - </span>Ant Design of Angular</div><div><a target="_blank " href="https://github.com/websemantics/awesome-ant-design"><span>Awesome Ant Design</span></a></div><div><span class="ant-badge"><a target="_blank" rel="noopener noreferrer" href="http://kitchen.alipay.com">Kitchen</a><span> - </span><span>Sketch 工具集</span><sup data-show="true" class="ant-scroll-number ant-badge-dot" style="margin-left:3px;margin-top:0"></sup></span></div><div><a href="http://scaffold.ant.design">Scaffolds</a><span> - </span><span>脚手架市场</span></div><div><a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva">dva</a> - <span>应用框架</span></div><div><a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design">Ant Motion</a><span> - </span><span>设计动效</span></div><div><a target="_blank" rel="noopener noreferrer" href="http://library.ant.design/">Axure Library</a><span> - </span><span>Axure 部件库</span></div><div><a target="_blank" rel="noopener noreferrer" href="http://ux.ant.design">Ant UX</a><span> - </span><span>页面逻辑素材</span></div><div><a target="_blank " href="http://ant-design.gitee.io/"><span>国内镜像站点 🇨🇳</span></a></div></div></div><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-6"><div class="footer-center"><h2><span>社区</span></h2><div><a target="_blank" rel="noopener noreferrer" href="http://zhuanlan.zhihu.com/antdesign"><span>知乎专栏</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="http://medium.com/ant-design/">Medium</a></div><div><a target="_blank" rel="noopener noreferrer" href="http://twitter.com/antdesignui">Twitter</a></div><div><a target="_blank" rel="noopener noreferrer" href="http://zhuanlan.zhihu.com/xtech"><span>体验科技专栏</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="http://seeconf.alipay.com/">SEE Conf</a><span> - </span><span>蚂蚁体验科技大会</span></div></div></div><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-6"><div class="footer-center"><h2><span>帮助</span></h2><div><a target="_blank " href="https://github.com/ant-design/ant-design">GitHub</a></div><div><a href="/changelog"><span>更新记录</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/wiki/FAQ"><span>常见问题</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design"><span>在线讨论 (中文)</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design-english"><span>在线讨论 (English)</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="http://new-issue.ant.design/"><span>报告 Bug</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/issues"><span>讨论列表</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="http://stackoverflow.com/questions/tagged/antd"><span>StackOverflow</span></a></div><div><a target="_blank" rel="noopener noreferrer" href="https://segmentfault.com/t/antd"><span>SegmentFault</span></a></div></div></div><div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-6"><div class="footer-center"><h2><img class="title-icon" src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg" alt="AFX Cloud"/><span>更多产品</span></h2><div><a target="_blank" rel="noopener noreferrer" href="https://yuque.com/"><span>语雀</span></a><span> - </span><span>企业文档管理平台</span></div><div><a target="_blank" rel="noopener noreferrer" href="https://yunfengdie.com/"><span>云凤蝶</span></a><span> - </span><span>移动建站平台</span></div><div><a target="_blank" rel="noopener noreferrer" href="https://antv.alipay.com/">AntV</a><span> - </span><span>数据可视化</span></div><div><a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a><span> - </span><span>企业级 Node 开发框架</span></div><div><a target="_blank" rel="noopener noreferrer" href="http://xcloud.alipay.com/"><span>蚂蚁体验云</span></a></div><div style="margin-top:20px"><div><div style="padding:4px;background:#fff;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.1);display:inline-block;cursor:pointer"><div style="width:80px;height:16px;border-radius:2px;background:#1890ff"></div></div></div></div></div></div></div></div><div class="bottom-bar">Made with <span class="heart">❤</span> by<a target="_blank" rel="noopener noreferrer" href="https://yuque.com/afx/blog"><span>AFX</span></a></div></footer></div>
     </div>
-    <link rel="stylesheet/less" type="text/css" href="/color.less"/>
-    <script src="https://gw.alipayobjects.com/os/lib/??es6-shim/0.35.3/es6-sham.min.js,es6-shim/0.35.3/es6-shim.min.js"></script>
-    <!--[if lte IE 10]>
-    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
-    <![endif]-->
-    <script>
-    if (!window.Intl) {
-      document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js">' + '<' + '/script>');
-    }
-    </script>
-    <script>
-    (function() {
-      function isLocalStorageNameSupported() {
-        var testKey = 'test';
-        var storage = window.localStorage;
-        try {
-          storage.setItem(testKey, '1');
-          storage.removeItem(testKey);
-          return true;
-        } catch (error) {
-          return false;
-        }
-      }
-      // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
-      var pathname = location.pathname;
-
-      function isZhCN(pathname) {
-        return /-cn\/?$/.test(pathname);
-      }
-      function getLocalizedPathname(path, zhCN) {
-        var pathname = path.startsWith('/') ? path : '/' + path;
-        if (!zhCN) { // to enUS
-          return /\/?index-cn/.test(pathname) ? '/' : pathname.replace('-cn', '');
-        } else if (pathname === '/') {
-          return '/index-cn';
-        } else if (pathname.endsWith('/')) {
-          return pathname.replace(/\/$/, '-cn/');
-        }
-        return pathname + '-cn';
-      }
-
-      // 兼容旧的 URL， `?locale=...`
-      var queryString = location.search;
-      if (queryString) {
-        var isZhCNConfig = queryString.indexOf('zh-CN') > -1;
-        if (isZhCNConfig && !isZhCN(pathname)) {
-          location.pathname = getLocalizedPathname(pathname, isZhCNConfig)
-        }
-      }
-
-      // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
-      if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
-        var lang = (window.localStorage && localStorage.getItem('locale')) || ((navigator.language || navigator.browserLanguage).toLowerCase() === 'zh-cn' ? 'zh-CN' : 'en-US');
-        // safari is 'zh-cn', while other browser is 'zh-CN';
-        if ((lang === 'zh-CN') !== isZhCN(pathname)) {
-          location.pathname = getLocalizedPathname(pathname, lang === 'zh-CN');
-        }
-      }
-      document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
-    })()
-    </script>
     <script src="/common.js"></script>
     <script src="/index.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
