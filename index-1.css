@@ -1898,14 +1898,15 @@ mark {
   right: -1px;
   border-radius: inherit;
   border: 0 solid #1890ff;
-  opacity: 0.4;
-  -webkit-animation: waveEffect 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-          animation: waveEffect 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.2;
+  -webkit-animation: fadeEffect 2.4s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.48s cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation: fadeEffect 2.4s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.48s cubic-bezier(0.08, 0.82, 0.17, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   display: block;
 }
 @-webkit-keyframes waveEffect {
-  to {
-    opacity: 0;
+  100% {
     top: -6px;
     left: -6px;
     bottom: -6px;
@@ -1914,13 +1915,22 @@ mark {
   }
 }
 @keyframes waveEffect {
-  to {
-    opacity: 0;
+  100% {
     top: -6px;
     left: -6px;
     bottom: -6px;
     right: -6px;
     border-width: 6px;
+  }
+}
+@-webkit-keyframes fadeEffect {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeEffect {
+  100% {
+    opacity: 0;
   }
 }
 .slide-up-enter,
@@ -7708,8 +7718,8 @@ span.ant-radio + * {
   border: 0;
   left: 50%;
   top: 50%;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: #1890ff;
   opacity: 1;
 }
@@ -14621,21 +14631,4 @@ form .ant-input-group-wrapper {
   vertical-align: middle;
   position: relative;
   top: -1px;
-}
-.ant-input-group-wrap .ant-select-selection {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-.ant-input-group-wrap .ant-select-selection:hover {
-  border-color: #d9d9d9;
-}
-.ant-input-group-wrap .ant-select-selection--single {
-  margin-left: -1px;
-  height: 40px;
-  background-color: #eee;
-}
-.ant-input-group-wrap .ant-select-selection--single .ant-select-selection__rendered {
-  padding-left: 8px;
-  padding-right: 25px;
-  line-height: 30px;
 }

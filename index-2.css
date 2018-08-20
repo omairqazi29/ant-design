@@ -1,4 +1,21 @@
 
+.ant-input-group-wrap .ant-select-selection {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.ant-input-group-wrap .ant-select-selection:hover {
+  border-color: #d9d9d9;
+}
+.ant-input-group-wrap .ant-select-selection--single {
+  margin-left: -1px;
+  height: 40px;
+  background-color: #eee;
+}
+.ant-input-group-wrap .ant-select-selection--single .ant-select-selection__rendered {
+  padding-left: 8px;
+  padding-right: 25px;
+  line-height: 30px;
+}
 .ant-input-group-wrap .ant-select-open .ant-select-selection {
   border-color: #d9d9d9;
   -webkit-box-shadow: none;
@@ -5773,8 +5790,8 @@ span.ant-transfer-list-search-action {
   border: 0;
   left: 50%;
   top: 50%;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: #1890ff;
   opacity: 1;
 }
@@ -6255,8 +6272,8 @@ li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper:hov
   border: 0;
   left: 50%;
   top: 50%;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: #1890ff;
   opacity: 1;
 }
