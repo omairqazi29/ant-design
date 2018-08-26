@@ -1627,7 +1627,7 @@ this.tinycolor = tinycolor;
 // Shadow
 @shadow-color           : rgba(0, 0, 0, .15);
 @box-shadow-base        : @shadow-1-down;
-@shadow-1-up            : 0 2px 8px @shadow-color;
+@shadow-1-up            : 0 -2px 8px @shadow-color;
 @shadow-1-down          : 0 2px 8px @shadow-color;
 @shadow-1-left          : -2px 0 8px @shadow-color;
 @shadow-1-right         : 2px 0 8px @shadow-color;
@@ -3065,6 +3065,9 @@ mark {
 .ant-card-grid:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+.ant-card-cover img {
+  border-radius: 2px 2px 0 0;
+}
 .ant-card-actions {
   border-top: 1px solid #e8e8e8;
   background: #fafafa;
@@ -3910,7 +3913,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .ant-drawer-bottom.ant-drawer-open .ant-drawer-content-wrapper {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
 }
 .ant-drawer-title {
   color: rgba(0, 0, 0, 0.85);
@@ -4417,6 +4420,9 @@ form .ant-upload {
 }
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
+  border-right-width: 0;
+}
+.ant-input-group.ant-input-group-compact > span > .ant-input {
   border-right-width: 0;
 }
 .ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection,

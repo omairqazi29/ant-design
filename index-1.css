@@ -1899,8 +1899,8 @@ mark {
   border-radius: inherit;
   border: 0 solid #1890ff;
   opacity: 0.2;
-  -webkit-animation: fadeEffect 2.4s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.48s cubic-bezier(0.08, 0.82, 0.17, 1);
-          animation: fadeEffect 2.4s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.48s cubic-bezier(0.08, 0.82, 0.17, 1);
+  -webkit-animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   display: block;
@@ -4251,6 +4251,9 @@ textarea.ant-input {
   float: none;
   display: inline-block;
 }
+.ant-input-group.ant-input-group-compact > span > .ant-input {
+  border-right-width: 0;
+}
 .ant-input-group.ant-input-group-compact .ant-input {
   float: none;
 }
@@ -6436,6 +6439,9 @@ span.ant-radio + * {
   width: 100%;
   display: block;
 }
+.ant-card-cover img {
+  border-radius: 2px 2px 0 0;
+}
 .ant-card-actions {
   border-top: 1px solid #e8e8e8;
   background: #fafafa;
@@ -7525,6 +7531,7 @@ span.ant-radio + * {
   padding: 0;
   border-right: 1px solid #e8e8e8;
   overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .ant-cascader-menu:first-child {
   border-radius: 4px 0 0 4px;
@@ -13926,10 +13933,6 @@ textarea.ant-time-picker-input {
   top: 0;
   width: 0%;
   z-index: 1000;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
-  transition: -webkit-transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
-  transition: transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
-  transition: transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7), -webkit-transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
 }
 .ant-drawer > * {
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
@@ -13943,9 +13946,6 @@ textarea.ant-time-picker-input {
 .ant-drawer .ant-drawer-content {
   width: 100%;
   height: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
 }
 .ant-drawer-left,
 .ant-drawer-right {
@@ -13985,11 +13985,8 @@ textarea.ant-time-picker-input {
   bottom: 0;
 }
 .ant-drawer-bottom.ant-drawer-open .ant-drawer-content-wrapper {
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-.ant-drawer.ant-drawer-open .ant-drawer-content {
-  opacity: 1;
+  -webkit-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
 }
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
   opacity: 0.3;
@@ -14624,11 +14621,4 @@ form .ant-cascader-picker {
 form .ant-input-group .ant-select,
 form .ant-input-group .ant-cascader-picker {
   width: auto;
-}
-form :not(.ant-input-group-wrapper) > .ant-input-group,
-form .ant-input-group-wrapper {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
 }
