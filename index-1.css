@@ -4252,7 +4252,7 @@ textarea.ant-input {
   float: none;
   display: inline-block;
 }
-.ant-input-group.ant-input-group-compact > span > .ant-input {
+.ant-input-group.ant-input-group-compact > span:not(:last-child) > .ant-input {
   border-right-width: 0;
 }
 .ant-input-group.ant-input-group-compact .ant-input {
@@ -6952,16 +6952,16 @@ span.ant-radio + * {
   color: #1890ff;
   font-weight: 500;
 }
-.ant-tabs-large .ant-tabs-nav-container {
+.ant-tabs-large > .ant-tabs-bar .ant-tabs-nav-container {
   font-size: 16px;
 }
-.ant-tabs-large .ant-tabs-tab {
+.ant-tabs-large > .ant-tabs-bar .ant-tabs-tab {
   padding: 16px;
 }
-.ant-tabs-small .ant-tabs-nav-container {
+.ant-tabs-small > .ant-tabs-bar .ant-tabs-nav-container {
   font-size: 14px;
 }
-.ant-tabs-small .ant-tabs-tab {
+.ant-tabs-small > .ant-tabs-bar .ant-tabs-tab {
   padding: 8px 16px;
 }
 .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content {

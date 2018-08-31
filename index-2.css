@@ -4262,7 +4262,7 @@ a.ant-notification-notice-close:focus {
   display: none;
 }
 .ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item-description {
-  max-width: 150px;
+  max-width: 140px;
   white-space: normal;
 }
 .ant-steps-item-custom .ant-steps-item-icon {
@@ -4456,7 +4456,7 @@ a.ant-notification-notice-close:focus {
 .ant-steps-dot .ant-steps-item-tail {
   width: 100%;
   top: 2px;
-  margin: 0 0 0 75px;
+  margin: 0 0 0 70px;
   padding: 0;
 }
 .ant-steps-dot .ant-steps-item-tail:after {
@@ -4496,7 +4496,7 @@ a.ant-notification-notice-close:focus {
   left: -26px;
 }
 .ant-steps-dot .ant-steps-item-content {
-  width: 150px;
+  width: 140px;
 }
 .ant-steps-dot .ant-steps-item-process .ant-steps-item-icon {
   width: 10px;
@@ -6987,6 +6987,9 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   line-height: 1;
   opacity: 1;
 }
+.ant-upload-list-picture-card {
+  float: left;
+}
 .ant-upload-list-picture-card.ant-upload-list:after {
   display: none;
 }
@@ -9335,6 +9338,16 @@ svg g {
   text-overflow: ellipsis;
   line-height: 1.2;
   margin-bottom: 6px;
+}
+.resource-card-hot-badge {
+  background: #f50;
+  border-radius: 2px;
+  padding: 0 3px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 2px;
+  vertical-align: top;
 }
 .resource-card-description {
   display: block;
