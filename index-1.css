@@ -2737,10 +2737,11 @@ mark {
 }
 .ant-select-search__field__mirror {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
+  top: 0;
+  left: 0;
   white-space: pre;
   pointer-events: none;
+  opacity: 0;
 }
 .ant-select-search--inline {
   position: absolute;
@@ -2907,8 +2908,8 @@ mark {
   height: 100%;
   position: relative;
   z-index: 1;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), height 0s;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), height 0s;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -5497,7 +5498,7 @@ span.ant-radio + * {
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-.ant-card-contain-tabs .ant-card-head-title {
+.ant-card-contain-tabs > .ant-card-head .ant-card-head-title {
   padding-bottom: 0;
   min-height: 32px;
 }

@@ -1805,10 +1805,6 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   top: 0;
   text-align: left;
 }
-.ant-modal-centered .ant-table-body {
-  white-space: nowrap;
-  overflow-x: auto;
-}
 @media (max-width: 767px) {
   .ant-modal {
     width: auto !important;

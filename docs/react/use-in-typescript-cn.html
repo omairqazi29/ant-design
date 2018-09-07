@@ -173,6 +173,7 @@ export default App;</code></pre><p>最后重启 <code>yarn start</code> 访问�
     };
 
 <span class="token inserted">+   config = rewireLess.withLoaderOptions({</span>
+<span class="token inserted">+     javascriptEnabled: true,</span>
 <span class="token inserted">+     modifyVars: { "@primary-color": "#1DA57A" },</span>
 <span class="token inserted">+   })(config, env);</span>
 
