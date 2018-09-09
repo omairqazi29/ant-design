@@ -899,7 +899,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 .ant-menu-submenu-title .anticon {
   min-width: 14px;
   margin-right: 10px;
-  font-size: 16px;
+  font-size: 14px;
   -webkit-transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -1841,17 +1841,18 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   color: rgba(0, 0, 0, 0.85);
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.4;
   display: block;
   overflow: hidden;
 }
 .ant-confirm-body .ant-confirm-content {
-  margin-left: 42px;
+  margin-left: 38px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
   margin-top: 8px;
 }
 .ant-confirm-body > .anticon {
-  font-size: 26px;
+  font-size: 22px;
   margin-right: 16px;
   float: left;
 }
@@ -1960,7 +1961,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 }
 .ant-notification-notice-icon {
   position: absolute;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 24px;
   margin-left: 4px;
 }
@@ -2190,13 +2191,13 @@ a.ant-notification-notice-close:focus {
   padding: 4px 0 12px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
+  position: relative;
 }
 .ant-popover-message > .anticon {
-  color: #faad14;
-  line-height: 1.6;
-  top: 20px;
   position: absolute;
-  font-size: 16px;
+  top: 8px;
+  color: #faad14;
+  font-size: 14px;
 }
 .ant-popover-message-title {
   padding-left: 22px;
@@ -3370,8 +3371,6 @@ a.ant-notification-notice-close:focus {
   width: 24px;
 }
 .ant-switch-loading-icon {
-  -webkit-animation: loadingCircle 1s infinite linear;
-          animation: loadingCircle 1s infinite linear;
   background: transparent;
   z-index: 1;
   display: none;
@@ -3432,8 +3431,9 @@ a.ant-notification-notice-close:focus {
   margin-left: -13px;
 }
 .ant-switch-small.ant-switch-loading .ant-switch-loading-icon {
-  -webkit-animation: AntSwitchSmallLoadingCircle 1s infinite linear;
-          animation: AntSwitchSmallLoadingCircle 1s infinite linear;
+  -webkit-transform: scale(0.66667);
+      -ms-transform: scale(0.66667);
+          transform: scale(0.66667);
   font-weight: bold;
 }
 .ant-switch-checked {
@@ -3964,6 +3964,7 @@ tr.ant-table-expanded-row:hover {
   overflow: scroll;
   padding-bottom: 20px;
   margin-bottom: -20px;
+  opacity: 0.9999;
 }
 .ant-table-fixed-left,
 .ant-table-fixed-right {
