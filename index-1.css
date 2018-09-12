@@ -4643,7 +4643,6 @@ a.ant-btn-sm {
   position: relative;
   display: inline-block;
   line-height: 1;
-  vertical-align: middle;
   color: unset;
 }
 .ant-badge-count {
