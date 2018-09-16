@@ -3601,13 +3601,13 @@ a.ant-notification-notice-close:focus {
 }
 .ant-table-tbody > tr > td {
   border-bottom: 1px solid #e8e8e8;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .3s, border 0s;
+  transition: all .3s, border 0s;
 }
 .ant-table-thead > tr,
 .ant-table-tbody > tr {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-table-thead > tr.ant-table-row-hover > td,
 .ant-table-tbody > tr.ant-table-row-hover > td,
@@ -7819,7 +7819,7 @@ svg g {
   height: 1px;
   border: 0;
   background: #ebedf0;
-  margin: 72px 0;
+  margin: 56px 0;
   clear: both;
 }
 .markdown p,
@@ -8744,9 +8744,6 @@ section.code-box-meta p {
   text-align: center;
   border-radius: 20px;
   opacity: 0;
-}
-.code-box-code-copy svg {
-  display: inline-block;
 }
 .code-box-code-copy:hover {
   color: #697b8c;

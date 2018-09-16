@@ -423,13 +423,13 @@ mark {
   vertical-align: -0.125em;
   text-align: center;
   text-transform: none;
-  line-height: 1;
+  line-height: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .anticon svg {
-  display: block;
+  display: inline-block;
 }
 .anticon:before {
   display: none;
@@ -2517,6 +2517,7 @@ mark {
   vertical-align: -0.125em;
   text-align: center;
   text-transform: none;
+  line-height: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2532,7 +2533,7 @@ mark {
   font-size: 12px;
 }
 .ant-select-arrow svg {
-  display: block;
+  display: inline-block;
 }
 .ant-select-arrow:before {
   display: none;
@@ -2835,7 +2836,7 @@ mark {
   vertical-align: -0.125em;
   text-align: center;
   text-transform: none;
-  line-height: 1;
+  line-height: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2855,7 +2856,7 @@ mark {
   right: 4px;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove svg {
-  display: block;
+  display: inline-block;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:before {
   display: none;
@@ -10810,7 +10811,7 @@ span.ant-radio + * {
   vertical-align: -0.125em;
   text-align: center;
   text-transform: none;
-  line-height: 1;
+  line-height: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10826,7 +10827,7 @@ span.ant-radio + * {
   left: 16px;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow svg {
-  display: block;
+  display: inline-block;
 }
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow:before {
   display: none;
@@ -14345,7 +14346,7 @@ textarea.ant-input-number {
   vertical-align: -0.125em;
   text-align: center;
   text-transform: none;
-  line-height: 1;
+  line-height: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14370,7 +14371,7 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler-up-inner svg,
 .ant-input-number-handler-down-inner svg {
-  display: block;
+  display: inline-block;
 }
 .ant-input-number-handler-up-inner:before,
 .ant-input-number-handler-down-inner:before {
