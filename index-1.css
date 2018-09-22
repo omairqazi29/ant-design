@@ -428,6 +428,9 @@ mark {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.anticon > * {
+  line-height: 1;
+}
 .anticon svg {
   display: inline-block;
 }
@@ -2532,6 +2535,9 @@ mark {
   color: rgba(0, 0, 0, 0.25);
   font-size: 12px;
 }
+.ant-select-arrow > * {
+  line-height: 1;
+}
 .ant-select-arrow svg {
   display: inline-block;
 }
@@ -2854,6 +2860,9 @@ mark {
           transform: scale(0.83333333) rotate(0deg);
   position: absolute;
   right: 4px;
+}
+.ant-select-selection--multiple .ant-select-selection__choice__remove > * {
+  line-height: 1;
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove svg {
   display: inline-block;
@@ -10833,6 +10842,9 @@ span.ant-radio + * {
           transform: translateY(-50%);
   left: 16px;
 }
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow > * {
+  line-height: 1;
+}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow svg {
   display: inline-block;
 }
@@ -14376,6 +14388,10 @@ textarea.ant-input-number {
   right: 4px;
   color: rgba(0, 0, 0, 0.45);
 }
+.ant-input-number-handler-up-inner > *,
+.ant-input-number-handler-down-inner > * {
+  line-height: 1;
+}
 .ant-input-number-handler-up-inner svg,
 .ant-input-number-handler-down-inner svg {
   display: inline-block;
@@ -14528,6 +14544,8 @@ textarea.ant-input-number {
       -ms-flex: auto;
           flex: auto;
   background: #f0f2f5;
+  /* fix firefox can't set height smaller than content on flex item */
+  min-height: 0;
 }
 .ant-layout,
 .ant-layout * {
@@ -14569,6 +14587,8 @@ textarea.ant-input-number {
   -webkit-flex: auto;
       -ms-flex: auto;
           flex: auto;
+  /* fix firefox can't set height smaller than content on flex item */
+  min-height: 0;
 }
 .ant-layout-sider {
   -webkit-transition: all .2s;
@@ -15014,24 +15034,4 @@ textarea.ant-input-number {
 }
 .ant-spin-nested-loading > div > .ant-spin-sm.ant-spin-show-text .ant-spin-dot {
   margin-top: -17px;
-}
-.ant-spin-nested-loading > div > .ant-spin-lg .ant-spin-dot {
-  margin: -16px;
-}
-.ant-spin-nested-loading > div > .ant-spin-lg .ant-spin-text {
-  padding-top: 11px;
-}
-.ant-spin-nested-loading > div > .ant-spin-lg.ant-spin-show-text .ant-spin-dot {
-  margin-top: -26px;
-}
-.ant-spin-container {
-  position: relative;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-  zoom: 1;
-}
-.ant-spin-container:before,
-.ant-spin-container:after {
-  content: "";
-  display: table;
 }
