@@ -1,7 +1,7 @@
 @primary-color: #1890ff;
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable */
 .bezierEasingMixin() {
 @functions: ~`(function() {
   var NEWTON_ITERATIONS = 4;
@@ -2026,6 +2026,15 @@ this.tinycolor = tinycolor;
 @alert-error-bg-color: ~`colorPalette("@{error-color}", 1)`;
 @alert-error-icon-color: @error-color;
 
+// List
+// ---
+@list-empty-text-padding:                    @padding-md;
+@list-item-padding:                          @padding-sm 0;
+@list-item-content-margin:                   0 0 @padding-md 0;
+@list-item-meta-margin-bottom:               @padding-md;
+@list-item-meta-avatar-margin-right:         @padding-md;
+@list-item-meta-title-margin-bottom:         @padding-sm;
+
 // Menu
 @menu-dark-item-selected-bg: @menu-dark-item-active-bg;
 
@@ -2495,6 +2504,10 @@ footer h2 > span {
 }
 .image-modal .ant-carousel .slick-dots li button {
   background: #888;
+}
+.principle-wrapper .principle {
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
 }
 .toc {
   border-left: 1px solid #ebedf0;
@@ -8248,6 +8261,10 @@ footer h2 > span {
 }
 .image-modal .ant-carousel .slick-dots li button {
   background: #888;
+}
+.principle-wrapper .principle {
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
 }
 .toc {
   border-left: 1px solid #ebedf0;
