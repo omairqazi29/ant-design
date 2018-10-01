@@ -3318,6 +3318,27 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact:after {
   clear: both;
 }
+.ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child),
+.ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child),
+.ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child) {
+  border-right-width: 1px;
+  border-right-color: transparent;
+}
+.ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):hover,
+.ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):hover,
+.ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child):hover {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+}
+.ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):focus,
+.ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):focus,
+.ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child):focus {
+  border-color: #40a9ff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important;
+}
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
   border-right-width: 0;
@@ -3338,7 +3359,29 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor,
 .ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input {
   border-radius: 0;
-  border-right-width: 0;
+  border-right-width: 1px;
+  border-right-color: transparent;
+}
+.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection:hover,
+.ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor:hover,
+.ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input:hover {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+}
+.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection:focus,
+.ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor:focus,
+.ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input:focus {
+  border-color: #40a9ff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important;
 }
 .ant-input-group.ant-input-group-compact > *:first-child,
 .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selection,
@@ -3355,11 +3398,52 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input,
 .ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input,
 .ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input,
 .ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor,
 .ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
+  border-right-color: #d9d9d9;
+}
+.ant-input-group.ant-input-group-compact > *:last-child:hover,
+.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:hover,
+.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:hover,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:hover,
+.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:hover {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+}
+.ant-input-group.ant-input-group-compact > *:last-child:focus,
+.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:focus,
+.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:focus,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:focus,
+.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:focus {
+  border-color: #40a9ff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important;
+}
+.ant-input-group.ant-input-group-compact > *:last-child:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:focus .ant-cascader-input,
+.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:focus .ant-cascader-input {
+  border-color: #40a9ff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important;
 }
 .ant-input-group-wrapper {
   display: inline-block;
@@ -6501,7 +6585,7 @@ span.ant-radio + * {
   background-color: transparent !important;
   cursor: pointer;
   width: 100%;
-  position: static;
+  position: relative;
 }
 .ant-cascader-picker-show-search .ant-cascader-input.ant-input {
   position: relative;
@@ -14835,202 +14919,4 @@ textarea.ant-input-number {
 }
 .ant-list-split .ant-list-header {
   border-bottom: 1px solid #e8e8e8;
-}
-.ant-list-loading .ant-list-spin-nested-loading {
-  min-height: 32px;
-}
-.ant-list-something-after-last-item .ant-spin-container > .ant-list-item:last-child {
-  border-bottom: 1px solid #e8e8e8;
-}
-.ant-list-lg .ant-list-item {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-.ant-list-sm .ant-list-item {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-.ant-list-vertical .ant-list-item {
-  display: block;
-}
-.ant-list-vertical .ant-list-item-extra-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.ant-list-vertical .ant-list-item-main {
-  display: block;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.ant-list-vertical .ant-list-item-extra {
-  margin-left: 58px;
-}
-.ant-list-vertical .ant-list-item-meta {
-  margin-bottom: 16px;
-}
-.ant-list-vertical .ant-list-item-meta-avatar {
-  display: none;
-}
-.ant-list-vertical .ant-list-item-meta-title {
-  color: rgba(0, 0, 0, 0.85);
-  margin-bottom: 12px;
-  font-size: 16px;
-  line-height: 24px;
-}
-.ant-list-vertical .ant-list-item-content {
-  display: block;
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 14px;
-  margin: 0 0 16px 0;
-}
-.ant-list-vertical .ant-list-item-action {
-  margin-left: auto;
-}
-.ant-list-vertical .ant-list-item-action > li {
-  padding: 0 16px;
-}
-.ant-list-vertical .ant-list-item-action > li:first-child {
-  padding-left: 0;
-}
-.ant-list-grid .ant-list-item {
-  border-bottom: none;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 16px;
-}
-.ant-list-grid .ant-list-item-content {
-  display: block;
-  max-width: 100%;
-}
-.ant-list-bordered {
-  border-radius: 4px;
-  border: 1px solid #d9d9d9;
-}
-.ant-list-bordered .ant-list-header {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.ant-list-bordered .ant-list-footer {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.ant-list-bordered .ant-list-item {
-  border-bottom: 1px solid #e8e8e8;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.ant-list-bordered .ant-list-pagination {
-  margin: 16px 24px;
-}
-.ant-list-bordered.ant-list-sm .ant-list-item {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.ant-list-bordered.ant-list-sm .ant-list-header,
-.ant-list-bordered.ant-list-sm .ant-list-footer {
-  padding: 8px 16px;
-}
-.ant-list-bordered.ant-list-lg .ant-list-header,
-.ant-list-bordered.ant-list-lg .ant-list-footer {
-  padding: 16px 24px;
-}
-@media screen and (max-width: 768px) {
-  .ant-list-item-action {
-    margin-left: 24px;
-  }
-  .ant-list-vertical .ant-list-item-extra {
-    margin-left: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .ant-list-item {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  .ant-list-item-action {
-    margin-left: 12px;
-  }
-  .ant-list-vertical .ant-list-item-extra-wrap {
-    -webkit-flex-wrap: wrap-reverse;
-        -ms-flex-wrap: wrap-reverse;
-            flex-wrap: wrap-reverse;
-  }
-  .ant-list-vertical .ant-list-item-main {
-    min-width: 220px;
-  }
-  .ant-list-vertical .ant-list-item-extra {
-    margin-left: 0;
-  }
-}
-/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable */
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-.ant-spin {
-  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  font-variant: tabular-nums;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.65);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: #1890ff;
-  vertical-align: middle;
-  text-align: center;
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  display: none;
-}
-.ant-spin-spinning {
-  opacity: 1;
-  position: static;
-  display: inline-block;
-}
-.ant-spin-nested-loading {
-  position: relative;
-}
-.ant-spin-nested-loading > div > .ant-spin {
-  display: block;
-  position: absolute;
-  height: 100%;
-  max-height: 360px;
-  width: 100%;
-  z-index: 4;
-}
-.ant-spin-nested-loading > div > .ant-spin .ant-spin-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -10px;
-}
-.ant-spin-nested-loading > div > .ant-spin .ant-spin-text {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  padding-top: 5px;
-  text-shadow: 0 1px 2px #fff;
-}
-.ant-spin-nested-loading > div > .ant-spin.ant-spin-show-text .ant-spin-dot {
-  margin-top: -20px;
-}
-.ant-spin-nested-loading > div > .ant-spin-sm .ant-spin-dot {
-  margin: -7px;
-}
-.ant-spin-nested-loading > div > .ant-spin-sm .ant-spin-text {
-  padding-top: 2px;
-}
-.ant-spin-nested-loading > div > .ant-spin-sm.ant-spin-show-text .ant-spin-dot {
-  margin-top: -17px;
 }
