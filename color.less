@@ -6767,29 +6767,29 @@ form .ant-upload {
 .ant-table-thead > tr > th .ant-table-column-sorter-down.on {
   color: @primary-color;
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover {
-  background: #f5f5f5;
-}
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .anticon-filter,
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .ant-table-filter-icon {
-  background: #f5f5f5;
-}
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .anticon-filter:hover,
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .ant-table-filter-icon:hover {
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .anticon-filter.ant-table-filter-open,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .ant-table-filter-icon.ant-table-filter-open {
   color: rgba(0, 0, 0, 0.45);
   background: #ebebeb;
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .anticon-filter:active,
-.ant-table-thead > tr > th.ant-table-column-has-actions:hover .ant-table-filter-icon:active {
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:hover,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:hover {
+  color: rgba(0, 0, 0, 0.45);
+  background: #ebebeb;
+}
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:active,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:active {
   color: rgba(0, 0, 0, 0.65);
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions .anticon-filter.ant-table-filter-open,
-.ant-table-thead > tr > th.ant-table-column-has-actions .ant-table-filter-icon.ant-table-filter-open {
-  color: rgba(0, 0, 0, 0.45);
-  background: #ebebeb;
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+  background: #f5f5f5;
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions:active .ant-table-column-sorter-up:not(.on),
-.ant-table-thead > tr > th.ant-table-column-has-actions:active .ant-table-column-sorter-down:not(.on) {
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .anticon-filter,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .ant-table-filter-icon {
+  background: #f5f5f5;
+}
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-up:not(.on),
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-down:not(.on) {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-table-thead > tr > th .ant-table-column-sorters:before {
