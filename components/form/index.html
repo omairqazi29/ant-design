@@ -938,6 +938,16 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <span class="token keyword">const</span> Option <span class="token operator">=</span> Select<span class="token punctuation">.</span>Option<span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">PriceInput</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Should be a controlled component.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'value'</span> <span class="token keyword">in</span> nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        value<span class="token punctuation">:</span> nextProps<span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -946,14 +956,6 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
       number<span class="token punctuation">:</span> value<span class="token punctuation">.</span>number <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
       currency<span class="token punctuation">:</span> value<span class="token punctuation">.</span>currency <span class="token operator">||</span> <span class="token string">'rmb'</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// Should be a controlled component.</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'value'</span> <span class="token keyword">in</span> nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> value <span class="token operator">=</span> nextProps<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
   handleNumberChange <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>

@@ -118,8 +118,8 @@ For instance, we actually import all styles of components in the project which m
 <span class="token inserted">+   "start": "react-app-rewired start",</span>
 <span class="token deleted">-   "build": "react-scripts build",</span>
 <span class="token inserted">+   "build": "react-app-rewired build",</span>
-<span class="token deleted">-   "test": "react-scripts test --env=jsdom",</span>
-<span class="token inserted">+   "test": "react-app-rewired test --env=jsdom",</span>
+<span class="token deleted">-   "test": "react-scripts test",</span>
+<span class="token inserted">+   "test": "react-app-rewired test",</span>
 }</code></pre><p>Then create a <code>config-overrides.js</code> at root directory of your project for further overriding.</p><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">override</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> env<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// do stuff with the webpack config...</span>
   <span class="token keyword">return</span> config<span class="token punctuation">;</span>

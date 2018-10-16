@@ -2959,6 +2959,8 @@ a.ant-notification-notice-close:focus {
   padding: 4px 0;
   height: 12px;
   cursor: pointer;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 .ant-slider-vertical {
   width: 12px;
@@ -3887,6 +3889,7 @@ a.ant-notification-notice-close:focus {
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions {
   position: relative;
+  background-clip: padding-box;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .anticon-filter.ant-table-filter-open,
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .ant-table-filter-icon.ant-table-filter-open {
