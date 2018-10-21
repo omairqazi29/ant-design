@@ -941,7 +941,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
     <span class="token comment" spellcheck="true">// Should be a controlled component.</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'value'</span> <span class="token keyword">in</span> nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        value<span class="token punctuation">:</span> nextProps<span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
