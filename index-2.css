@@ -3907,12 +3907,12 @@ a.ant-notification-notice-close:focus {
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .anticon-filter.ant-table-filter-open,
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .ant-table-filter-icon.ant-table-filter-open {
   color: rgba(0, 0, 0, 0.45);
-  background: #ebebeb;
+  background: #e5e5e5;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:hover,
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:hover {
   color: rgba(0, 0, 0, 0.45);
-  background: #ebebeb;
+  background: #e5e5e5;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:active,
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:active {
@@ -3922,11 +3922,11 @@ a.ant-notification-notice-close:focus {
   cursor: pointer;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
-  background: #f5f5f5;
+  background: #f2f2f2;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .anticon-filter,
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .ant-table-filter-icon {
-  background: #f5f5f5;
+  background: #f2f2f2;
 }
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-up:not(.on),
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-down:not(.on) {
@@ -7501,8 +7501,6 @@ a:focus {
   color: rgba(0, 0, 0, 0.65);
   border-color: #d9d9d9;
   margin-right: 40px;
-  -webkit-transition: none;
-  transition: none;
 }
 #nav {
   border: 0;
@@ -8037,6 +8035,17 @@ svg g {
 }
 .new-version-video .vidoe-wrap video {
   display: block;
+}
+.banner-1024 {
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  display: block;
+}
+.banner-1024:hover {
+  -webkit-transform: translateY(-16px) scale(1.01);
+      -ms-transform: translateY(-16px) scale(1.01);
+          transform: translateY(-16px) scale(1.01);
 }
 .prev-next-nav {
   position: absolute;
