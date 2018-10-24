@@ -7726,6 +7726,9 @@ footer h2 > span {
   right: 0;
   bottom: 26px;
 }
+.banner .img-wrapper img {
+  max-width: 100%;
+}
 .banner .banner-btns {
   display: -webkit-box;
   display: -webkit-flex;
