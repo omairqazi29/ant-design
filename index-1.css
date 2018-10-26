@@ -3052,6 +3052,9 @@ mark {
   background-color: #e8e8e8;
   line-height: 0;
 }
+.ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item {
+  padding-right: 32px;
+}
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item .ant-select-selected-icon {
   color: transparent;
   display: inline-block;
@@ -14892,14 +14895,4 @@ textarea.ant-input-number {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-.ant-list-item-action {
-  font-size: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  margin-left: 48px;
-  padding: 0;
-  list-style: none;
 }

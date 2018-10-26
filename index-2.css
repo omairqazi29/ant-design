@@ -1,4 +1,14 @@
 
+.ant-list-item-action {
+  font-size: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: 48px;
+  padding: 0;
+  list-style: none;
+}
 .ant-list-item-action > li {
   display: inline-block;
   color: rgba(0, 0, 0, 0.45);
@@ -4483,6 +4493,7 @@ tr.ant-table-expanded-row:hover {
 .ant-table-small.ant-table-bordered .ant-table-placeholder {
   border-left: 0;
   border-bottom: 0;
+  border-right: 0;
 }
 .ant-table-small.ant-table-bordered .ant-table-thead > tr > th:last-child,
 .ant-table-small.ant-table-bordered .ant-table-tbody > tr > td:last-child {
