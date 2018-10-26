@@ -1,19 +1,19 @@
 webpackJsonp([42],{
 
-/***/ 1808:
+/***/ 1810:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2159),
-    'custom': __webpack_require__(2160),
-    'iconfont': __webpack_require__(2161),
-    'old-icons': __webpack_require__(2162),
-    'two-tone': __webpack_require__(2163),
+    'basic': __webpack_require__(2161),
+    'custom': __webpack_require__(2162),
+    'iconfont': __webpack_require__(2163),
+    'old-icons': __webpack_require__(2164),
+    'two-tone': __webpack_require__(2165),
 }
 
 /***/ }),
 
-/***/ 2159:
+/***/ 2161:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -151,7 +151,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2160:
+/***/ 2162:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -348,7 +348,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2161:
+/***/ 2163:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -468,7 +468,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2162:
+/***/ 2164:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -479,7 +479,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2163:
+/***/ 2165:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

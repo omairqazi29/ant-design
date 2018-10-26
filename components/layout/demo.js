@@ -1,23 +1,23 @@
 webpackJsonp([17],{
 
-/***/ 1817:
+/***/ 1819:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2178),
-    'custom-trigger': __webpack_require__(2179),
-    'fixed-sider': __webpack_require__(2180),
-    'fixed': __webpack_require__(2181),
-    'responsive': __webpack_require__(2182),
-    'side': __webpack_require__(2183),
-    'top-side-2': __webpack_require__(2184),
-    'top-side': __webpack_require__(2185),
-    'top': __webpack_require__(2186),
+    'basic': __webpack_require__(2180),
+    'custom-trigger': __webpack_require__(2181),
+    'fixed-sider': __webpack_require__(2182),
+    'fixed': __webpack_require__(2183),
+    'responsive': __webpack_require__(2184),
+    'side': __webpack_require__(2185),
+    'top-side-2': __webpack_require__(2186),
+    'top-side': __webpack_require__(2187),
+    'top': __webpack_require__(2188),
 }
 
 /***/ }),
 
-/***/ 2178:
+/***/ 2180:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -202,7 +202,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2179:
+/***/ 2181:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -427,7 +427,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2180:
+/***/ 2182:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -794,12 +794,12 @@ module.exports = {
 },
   "style": "#components-layout-demo-fixed-sider .logo {\n  height: 32px;\n  background: rgba(255,255,255,.2);\n  margin: 16px;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-fixed-sider</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.5382526666880014.html"
+  "src": "/demo-0.9673025228592107.html"
 };
 
 /***/ }),
 
-/***/ 2181:
+/***/ 2183:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -975,12 +975,12 @@ module.exports = {
 },
   "style": "#components-layout-demo-fixed .logo {\n  width: 120px;\n  height: 31px;\n  background: rgba(255,255,255,.2);\n  margin: 16px 24px 16px 0;\n  float: left;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-fixed</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">31</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px <span class=\"token number\">24</span>px <span class=\"token number\">16</span>px <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">float</span><span class=\"token punctuation\">:</span> left<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.8979125245108166.html"
+  "src": "/demo-0.6054181113643982.html"
 };
 
 /***/ }),
 
-/***/ 2182:
+/***/ 2184:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1248,7 +1248,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2183:
+/***/ 2185:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1577,12 +1577,12 @@ module.exports = {
 },
   "style": "#components-layout-demo-side .logo {\n  height: 32px;\n  background: rgba(255,255,255,.2);\n  margin: 16px;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.884564841881754.html"
+  "src": "/demo-0.5303868737649.html"
 };
 
 /***/ }),
 
-/***/ 2184:
+/***/ 2186:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1900,7 +1900,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2185:
+/***/ 2187:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -2230,7 +2230,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2186:
+/***/ 2188:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

@@ -1,24 +1,24 @@
 webpackJsonp([12],{
 
-/***/ 1775:
+/***/ 1777:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2067),
-    'border-less': __webpack_require__(2068),
-    'flexible-content': __webpack_require__(2069),
-    'grid-card': __webpack_require__(2070),
-    'in-column': __webpack_require__(2071),
-    'inner': __webpack_require__(2072),
-    'loading': __webpack_require__(2073),
-    'meta': __webpack_require__(2074),
-    'simple': __webpack_require__(2075),
-    'tabs': __webpack_require__(2076),
+    'basic': __webpack_require__(2069),
+    'border-less': __webpack_require__(2070),
+    'flexible-content': __webpack_require__(2071),
+    'grid-card': __webpack_require__(2072),
+    'in-column': __webpack_require__(2073),
+    'inner': __webpack_require__(2074),
+    'loading': __webpack_require__(2075),
+    'meta': __webpack_require__(2076),
+    'simple': __webpack_require__(2077),
+    'tabs': __webpack_require__(2078),
 }
 
 /***/ }),
 
-/***/ 2067:
+/***/ 2069:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -123,7 +123,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2068:
+/***/ 2070:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -230,7 +230,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2069:
+/***/ 2071:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -331,7 +331,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2070:
+/***/ 2072:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -463,7 +463,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2071:
+/***/ 2073:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -593,7 +593,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2072:
+/***/ 2074:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -717,7 +717,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2073:
+/***/ 2075:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -890,7 +890,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2074:
+/***/ 2076:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1010,7 +1010,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2075:
+/***/ 2077:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1106,7 +1106,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2076:
+/***/ 2078:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

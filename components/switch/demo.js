@@ -1,19 +1,19 @@
 webpackJsonp([37],{
 
-/***/ 1874:
+/***/ 1876:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2362),
-    'disabled': __webpack_require__(2363),
-    'loading': __webpack_require__(2364),
-    'size': __webpack_require__(2365),
-    'text': __webpack_require__(2366),
+    'basic': __webpack_require__(2364),
+    'disabled': __webpack_require__(2365),
+    'loading': __webpack_require__(2366),
+    'size': __webpack_require__(2367),
+    'text': __webpack_require__(2368),
 }
 
 /***/ }),
 
-/***/ 2362:
+/***/ 2364:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -95,7 +95,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2363:
+/***/ 2365:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -231,7 +231,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2364:
+/***/ 2366:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -317,7 +317,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2365:
+/***/ 2367:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -410,7 +410,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2366:
+/***/ 2368:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

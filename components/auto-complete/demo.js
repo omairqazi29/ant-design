@@ -1,20 +1,20 @@
 webpackJsonp([34],{
 
-/***/ 1753:
+/***/ 1755:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2029),
-    'certain-category': __webpack_require__(2030),
-    'custom': __webpack_require__(2031),
-    'non-case-sensitive': __webpack_require__(2032),
-    'options': __webpack_require__(2033),
-    'uncertain-category': __webpack_require__(2034),
+    'basic': __webpack_require__(2031),
+    'certain-category': __webpack_require__(2032),
+    'custom': __webpack_require__(2033),
+    'non-case-sensitive': __webpack_require__(2034),
+    'options': __webpack_require__(2035),
+    'uncertain-category': __webpack_require__(2036),
 }
 
 /***/ }),
 
-/***/ 2029:
+/***/ 2031:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -147,7 +147,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2030:
+/***/ 2032:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -373,7 +373,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2031:
+/***/ 2033:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -515,7 +515,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2032:
+/***/ 2034:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -604,7 +604,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2033:
+/***/ 2035:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -786,7 +786,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2034:
+/***/ 2036:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

@@ -1,16 +1,16 @@
 webpackJsonp([52],{
 
-/***/ 1823:
+/***/ 1825:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'all': __webpack_require__(2231),
-    'basic': __webpack_require__(2232),
+    'all': __webpack_require__(2233),
+    'basic': __webpack_require__(2234),
 }
 
 /***/ }),
 
-/***/ 2231:
+/***/ 2233:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -406,7 +406,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2232:
+/***/ 2234:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

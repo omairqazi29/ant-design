@@ -1,18 +1,18 @@
 webpackJsonp([48],{
 
-/***/ 1756:
+/***/ 1758:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'badge': __webpack_require__(2035),
-    'basic': __webpack_require__(2036),
-    'dynamic': __webpack_require__(2037),
-    'type': __webpack_require__(2038),
+    'badge': __webpack_require__(2037),
+    'basic': __webpack_require__(2038),
+    'dynamic': __webpack_require__(2039),
+    'type': __webpack_require__(2040),
 }
 
 /***/ }),
 
-/***/ 2035:
+/***/ 2037:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -121,7 +121,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2036:
+/***/ 2038:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -241,7 +241,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2037:
+/***/ 2039:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -386,7 +386,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2038:
+/***/ 2040:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

@@ -1,23 +1,23 @@
 webpackJsonp([7],{
 
-/***/ 1904:
+/***/ 1906:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'avatar': __webpack_require__(2507),
-    'basic': __webpack_require__(2508),
-    'defaultFileList': __webpack_require__(2509),
-    'directory': __webpack_require__(2510),
-    'drag': __webpack_require__(2511),
-    'fileList': __webpack_require__(2512),
-    'picture-card': __webpack_require__(2513),
-    'picture-style': __webpack_require__(2514),
-    'upload-manually': __webpack_require__(2515),
+    'avatar': __webpack_require__(2509),
+    'basic': __webpack_require__(2510),
+    'defaultFileList': __webpack_require__(2511),
+    'directory': __webpack_require__(2512),
+    'drag': __webpack_require__(2513),
+    'fileList': __webpack_require__(2514),
+    'picture-card': __webpack_require__(2515),
+    'picture-style': __webpack_require__(2516),
+    'upload-manually': __webpack_require__(2517),
 }
 
 /***/ }),
 
-/***/ 1981:
+/***/ 1983:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -45,7 +45,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   } else {
     var XHR2
     try {
-      XHR2 = __webpack_require__(1982)
+      XHR2 = __webpack_require__(1984)
     } catch (ex) {
       throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
     }
@@ -658,14 +658,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ 1982:
+/***/ 1984:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 2507:
+/***/ 2509:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -900,7 +900,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2508:
+/***/ 2510:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1003,7 +1003,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2509:
+/***/ 2511:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1129,7 +1129,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2510:
+/***/ 2512:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1217,7 +1217,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2511:
+/***/ 2513:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1359,7 +1359,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2512:
+/***/ 2514:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1555,7 +1555,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2513:
+/***/ 2515:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1738,7 +1738,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2514:
+/***/ 2516:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1896,7 +1896,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2515:
+/***/ 2517:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -1985,7 +1985,7 @@ module.exports = {
 
   var _antd = __webpack_require__(30);
 
-  var _reqwest = __webpack_require__(1981);
+  var _reqwest = __webpack_require__(1983);
 
   var _reqwest2 = _interopRequireDefault(_reqwest);
 

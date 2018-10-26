@@ -1,23 +1,23 @@
 webpackJsonp([13],{
 
-/***/ 1886:
+/***/ 1888:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    '12hours': __webpack_require__(2470),
-    'addon': __webpack_require__(2471),
-    'basic': __webpack_require__(2472),
-    'disabled': __webpack_require__(2473),
-    'hide-column': __webpack_require__(2474),
-    'interval-options': __webpack_require__(2475),
-    'size': __webpack_require__(2476),
-    'suffix': __webpack_require__(2477),
-    'value': __webpack_require__(2478),
+    '12hours': __webpack_require__(2472),
+    'addon': __webpack_require__(2473),
+    'basic': __webpack_require__(2474),
+    'disabled': __webpack_require__(2475),
+    'hide-column': __webpack_require__(2476),
+    'interval-options': __webpack_require__(2477),
+    'size': __webpack_require__(2478),
+    'suffix': __webpack_require__(2479),
+    'value': __webpack_require__(2480),
 }
 
 /***/ }),
 
-/***/ 2470:
+/***/ 2472:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -122,7 +122,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2471:
+/***/ 2473:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -257,7 +257,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2472:
+/***/ 2474:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -349,7 +349,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2473:
+/***/ 2475:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -437,7 +437,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2474:
+/***/ 2476:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -536,7 +536,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2475:
+/***/ 2477:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -643,7 +643,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2476:
+/***/ 2478:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -737,7 +737,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2477:
+/***/ 2479:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -748,7 +748,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2478:
+/***/ 2480:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

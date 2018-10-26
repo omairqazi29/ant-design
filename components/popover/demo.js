@@ -1,20 +1,20 @@
 webpackJsonp([31],{
 
-/***/ 1847:
+/***/ 1849:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'arrow-point-at-center': __webpack_require__(2288),
-    'basic': __webpack_require__(2289),
-    'control': __webpack_require__(2290),
-    'hover-with-click': __webpack_require__(2291),
-    'placement': __webpack_require__(2292),
-    'triggerType': __webpack_require__(2293),
+    'arrow-point-at-center': __webpack_require__(2290),
+    'basic': __webpack_require__(2291),
+    'control': __webpack_require__(2292),
+    'hover-with-click': __webpack_require__(2293),
+    'placement': __webpack_require__(2294),
+    'triggerType': __webpack_require__(2295),
 }
 
 /***/ }),
 
-/***/ 2288:
+/***/ 2290:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -147,7 +147,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2289:
+/***/ 2291:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -249,7 +249,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2290:
+/***/ 2292:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -400,7 +400,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2291:
+/***/ 2293:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -575,7 +575,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2292:
+/***/ 2294:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -885,7 +885,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2293:
+/***/ 2295:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

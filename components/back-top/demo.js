@@ -1,16 +1,16 @@
 webpackJsonp([53],{
 
-/***/ 1759:
+/***/ 1761:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2039),
-    'custom': __webpack_require__(2040),
+    'basic': __webpack_require__(2041),
+    'custom': __webpack_require__(2042),
 }
 
 /***/ }),
 
-/***/ 2039:
+/***/ 2041:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -99,7 +99,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2040:
+/***/ 2042:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

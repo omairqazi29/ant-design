@@ -1,23 +1,23 @@
 webpackJsonp([21],{
 
-/***/ 1747:
+/***/ 1749:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'banner': __webpack_require__(2017),
-    'basic': __webpack_require__(2018),
-    'closable': __webpack_require__(2019),
-    'close-text': __webpack_require__(2020),
-    'custom-icon': __webpack_require__(2021),
-    'description': __webpack_require__(2022),
-    'icon': __webpack_require__(2023),
-    'smooth-closed': __webpack_require__(2024),
-    'style': __webpack_require__(2025),
+    'banner': __webpack_require__(2019),
+    'basic': __webpack_require__(2020),
+    'closable': __webpack_require__(2021),
+    'close-text': __webpack_require__(2022),
+    'custom-icon': __webpack_require__(2023),
+    'description': __webpack_require__(2024),
+    'icon': __webpack_require__(2025),
+    'smooth-closed': __webpack_require__(2026),
+    'style': __webpack_require__(2027),
 }
 
 /***/ }),
 
-/***/ 2017:
+/***/ 2019:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -118,12 +118,12 @@ module.exports = {
     })
   );
 },
-  "src": "/demo-0.9178843949979794.html"
+  "src": "/demo-0.21082487938216543.html"
 };
 
 /***/ }),
 
-/***/ 2018:
+/***/ 2020:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -201,7 +201,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2019:
+/***/ 2021:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -295,7 +295,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2020:
+/***/ 2022:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -378,7 +378,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2021:
+/***/ 2023:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -389,7 +389,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2022:
+/***/ 2024:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -486,7 +486,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2023:
+/***/ 2025:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -607,7 +607,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2024:
+/***/ 2026:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -736,7 +736,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2025:
+/***/ 2027:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {

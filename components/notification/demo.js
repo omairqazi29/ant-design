@@ -1,22 +1,22 @@
 webpackJsonp([23],{
 
-/***/ 1838:
+/***/ 1840:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'basic': __webpack_require__(2266),
-    'custom-icon': __webpack_require__(2267),
-    'custom-style': __webpack_require__(2268),
-    'duration': __webpack_require__(2269),
-    'placement': __webpack_require__(2270),
-    'update': __webpack_require__(2271),
-    'with-btn': __webpack_require__(2272),
-    'with-icon': __webpack_require__(2273),
+    'basic': __webpack_require__(2268),
+    'custom-icon': __webpack_require__(2269),
+    'custom-style': __webpack_require__(2270),
+    'duration': __webpack_require__(2271),
+    'placement': __webpack_require__(2272),
+    'update': __webpack_require__(2273),
+    'with-btn': __webpack_require__(2274),
+    'with-icon': __webpack_require__(2275),
 }
 
 /***/ }),
 
-/***/ 2266:
+/***/ 2268:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -104,7 +104,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2267:
+/***/ 2269:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -198,7 +198,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2268:
+/***/ 2270:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -290,7 +290,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2269:
+/***/ 2271:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -395,7 +395,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2270:
+/***/ 2272:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -535,7 +535,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2271:
+/***/ 2273:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -634,7 +634,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2272:
+/***/ 2274:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -742,7 +742,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2273:
+/***/ 2275:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
