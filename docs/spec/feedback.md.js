@@ -1,1 +1,423 @@
-webpackJsonp([89],{1944:function(i,p){i.exports={content:["article",{},["h2","\u63d0\u793a\u4fe1\u606f"],["p","\u4efb\u4f55\u4e00\u4e2a\u4ea7\u54c1\uff0c\u5373\u4f7f\u7528\u6237\u754c\u9762\u505a\u7684\u518d\u597d\uff0c\u4e5f\u79bb\u4e0d\u5f00\u7528\u6237\u5f15\u5bfc\u548c\u4fe1\u606f\u63d0\u793a\u3002\u63d0\u793a\u4fe1\u606f\u662f\u7528\u6765\u544a\u8bc9\u7528\u6237\u9700\u8981\u77e5\u9053\u4ec0\u4e48\u3001\u91c7\u53d6\u4ec0\u4e48\u6837\u884c\u52a8\u7684\u5185\u5bb9\u3002"],["h3","\u8b66\u544a"],["h4","\u8b66\u544a\u63d0\u793a\uff08Alert\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/eviVRYTdxOxOfVENLnxq.png"}]],["p","\u662f\u4e00\u79cd\u975e\u963b\u788d\u5f0f\u7684\u4fe1\u606f\u5c55\u793a\uff0c\u5b83\u4e0d\u6253\u65ad\u7528\u6237\u7684\u5f53\u524d\u64cd\u4f5c\uff0c\u4e00\u822c\u505c\u7559\u81f3\u9875\u9762\u67d0\u4e2a\u4f4d\u7f6e\uff08\u4f18\u5148\u9876\u90e8\uff09\uff0c\u975e\u6d6e\u5c42\u7684\u9759\u6001\u5c55\u73b0\u5f62\u5f0f\uff0c\u59cb\u7ec8\u5c55\u73b0\uff0c\u4e0d\u4f1a\u81ea\u52a8\u6d88\u5931\uff0c\u7528\u6237\u53ef\u4ee5\u70b9\u51fb\u5173\u95ed\u3002"],["blockquote",["p","\u6ce8\uff1a\u5173\u95ed\u6309\u94ae\u53ef\u6839\u636e\u4e1a\u52a1\u9700\u8981\u589e\u52a0\u6216\u9690\u85cf\u3002"]],["h3","\u901a\u77e5"],["h4","\u901a\u77e5\u63d0\u9192\uff08Notification\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/nElczRfDzAXRZSkpiJBQ.png",description:"\u8f83\u4e3a\u590d\u6742\u7684\u901a\u77e5\u5185\u5bb9\u65f6\u4f7f\u7528\u3002"}]],["p","\u7cfb\u7edf\u4e3b\u52a8\u63a8\u9001\u7684\u91cd\u8981\u7684\u5168\u5c40\u6027\u901a\u77e5\u4fe1\u606f\uff0c\u5728\u7cfb\u7edf\u53f3\u4e0a\u89d2\u663e\u793a\u3002"],["h4","\u5fbd\u6807\u6570\uff08Badge\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/bVonmOmmkuvybQxTDGTC.png",description:"\u5f53\u6709 icon \u7684\u60c5\u51b5\u65f6\u4e00\u822c\u5c45\u4e8e icon \u53f3\u4e0a\u89d2\uff1b\u65e0 icon \u7684\u60c5\u51b5\u4e0b\u4e00\u822c\u4f4d\u4e8e\u6807\u9898\u540e\u4fa7\u3002"}]],["p","\u7528\u4e8e\u805a\u5408\u578b\u7684\u6d88\u606f\u63d0\u793a\uff0c\u4e00\u822c\u51fa\u73b0\u5728\u901a\u77e5\u56fe\u6807\u6216\u5934\u50cf\u7684\u53f3\u4e0a\u89d2\uff0c\u901a\u8fc7\u9192\u76ee\u7684\u89c6\u89c9\u5f62\u5f0f\u5438\u5f15\u7528\u6237\u773c\u7403\u3002"],["blockquote",["p","\u6ce8\uff1a\u76f8\u5bf9\u91cd\u8981\u548c\u7528\u6237\u5173\u8054\u5ea6\u66f4\u9ad8\u7684\u4fe1\u606f\u63d0\u793a\uff0c\u4f7f\u7528\u6570\u5b57\u7cbe\u51c6\u63d0\u793a\uff1b\u6743\u91cd\u4e0d\u9ad8\u548c\u4e0d\u662f\u7528\u6237\u7279\u522b\u5173\u5fc3\u7684\u6d88\u606f\u63d0\u793a\uff0c\u4f7f\u7528\u7ea2\u70b9\u505a\u63d0\u793a\u3002"]],["h3","\u5e2e\u52a9"],["h4","\u6c14\u6ce1\u5361\u7247\uff08Popover\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/zsPOjQqkiwMnMhIsbDHz.png"}]],["p","\u5f53\u76ee\u6807\u5143\u7d20\u6709\u8fdb\u4e00\u6b65\u7684\u63cf\u8ff0\u548c\u76f8\u5173\u64cd\u4f5c\u65f6\uff0c\u53ef\u4ee5\u6536\u7eb3\u5230\u5361\u7247\u4e2d\uff0c\u6839\u636e\u7528\u6237\u7684\u64cd\u4f5c\u884c\u4e3a\u8fdb\u884c\u5c55\u73b0\u3002"],["blockquote",["p","\u6ce8\uff1a\u548c Tooltip \u7684\u533a\u522b\u662f\uff0cPopover \u53ef\u4ee5\u627f\u8f7d\u66f4\u590d\u6742\u7684\u5185\u5bb9\uff0c\u6bd4\u5982\u94fe\u63a5\u6216\u6309\u94ae\u7b49\u3002"]],["h4","\u6587\u5b57\u63d0\u793a\uff08Tooltip\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/CKDiGEsluwkRRGqujpgv.png"}]],["p","\u7528\u4e8e\u7cbe\u786e\u5730\u63cf\u8ff0\u88ab\u6307\u5411\u7684\u5bf9\u8c61\uff0c\u4f8b\u5982\u56fe\u6807\u3001\u56fe\u5f62\u3001\u94fe\u63a5\u7b49\uff0c\u9f20\u6807\u79fb\u5165\u5219\u663e\u793a\u63d0\u793a\uff0c\u79fb\u51fa\u6d88\u5931\uff0c\u4e0d\u627f\u8f7d\u590d\u6742\u6587\u672c\u548c\u64cd\u4f5c\u3002"],["hr"],["h2","\u8fc7\u7a0b\u53cd\u9988"],["p","\u64cd\u4f5c\u8fc7\u7a0b\u4e2d\u5c3d\u53ef\u80fd\u5c06\u72b6\u6001\u7684\u53cd\u9988\u7ed9\u7528\u6237\uff0c\u5373\u65f6\u7684\u54cd\u5e94\u4f1a\u7ed9\u7528\u6237\u589e\u52a0\u4fe1\u8d56\u611f\u3002"],["h3","\u52a0\u8f7d\u72b6\u6001\u8fdb\u5ea6\u53cd\u9988"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/cHaaqZTvzgCZiYUnfNom.png",description:"\u5f53\u7528\u6237\u4e0d\u5fc5\u7b49\u5f85\u8f83\u957f\u65f6\u95f4\u7684\u52a0\u8f7d\u65f6\u4f7f\u7528\u3002"}]],["p","\u5728\u64cd\u4f5c\u9700\u8981\u4e00\u6bb5\u65f6\u95f4\uff08\u4e00\u822c\u4e3a\u8d85\u8fc72\u79d2\uff09\u5b8c\u6210\u65f6\u7cfb\u7edf\u5e94\u5373\u65f6\u7ed9\u4e88\u63d0\u9192\uff0c\u660e\u786e\u544a\u77e5\u52a0\u8f7d\u7684\u72b6\u6001\u6216\u52a0\u8f7d\u8fdb\u5ea6\u6761\uff0c\u4fdd\u6301\u4e0e\u7528\u6237\u7684\u6c9f\u901a\u3002"],["p",["br"]],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/cHaaqZTvzgCZiYUnfNom.png",description:"\u5728\u64cd\u4f5c\u9700\u8981\u8f83\u957f\u65f6\u95f4\u624d\u80fd\u5b8c\u6210\u65f6\u4f7f\u7528\uff0c\u663e\u793a\u8be5\u64cd\u4f5c\u7684\u5f53\u524d\u8fdb\u5ea6\u548c\u72b6\u6001\u3002"}]],["blockquote",["p","\u6ce8\uff1a\u82e5\u52a0\u8f7d\u65f6\u95f4\u8f83\u957f\uff0c\u5e94\u63d0\u4f9b\u53d6\u6d88\u64cd\u4f5c\u3002"]],["h3","\u5f55\u5165\u53cd\u9988"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/CCeqqndHQgWnqVqvRptA.png"}]],["p","\u64cd\u4f5c\u8fc7\u7a0b\u4e2d\u53ef\u901a\u8fc7\u4e0d\u540c\u7684\u6821\u9a8c\u89c4\u5219\u548c\u5f62\u5f0f\uff0c\u8ba9\u7528\u6237\u53ca\u65f6\u53d1\u73b0\u5e76\u7ea0\u6b63\u9519\u8bef\u3002"],["blockquote",["p","\u6ce8\uff1a\u53cd\u9988\u6587\u5b57\u7d27\u8ddf\u7740\u8981\u8bf4\u660e\u7684\u533a\u5757\uff08\u53cd\u9988\u5185\u5bb9\u4e00\u822c\u662f\u9519\u8bef\u8bf4\u660e\uff09\uff0c\u4e0d\u81ea\u52a8\u6d88\u5931\uff08\u5f53\u7528\u6237\u8fdb\u884c\u76f8\u5e94\u7684\u4ea4\u4e92\u64cd\u4f5c\u540e\u624d\u6d88\u5931\uff09\u3002"]],["h4","\u6c14\u6ce1\u786e\u8ba4\u6846\uff08Popconfirm\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/lPZZxOAakfNhwfrpRPht.png",description:"\u548c\u5168\u5c4f\u5c45\u4e2d\u6a21\u6001\u5bf9\u8bdd\u6846\u76f8\u6bd4\uff0c\u4ea4\u4e92\u5f62\u5f0f\u66f4\u8f7b\u91cf\u3002"}]],["p","\u76ee\u6807\u5143\u7d20\u7684\u64cd\u4f5c\u9700\u8981\u7528\u6237\u8fdb\u4e00\u6b65\u7684\u786e\u8ba4\u65f6\uff0c\u5728\u76ee\u6807\u5143\u7d20\u9644\u8fd1\u5f39\u51fa\u6d6e\u5c42\u63d0\u793a\uff0c\u8be2\u95ee\u7528\u6237\u3002"],["hr"],["h2","\u7ed3\u679c\u53cd\u9988"],["p","\u64cd\u4f5c\u8fc7\u7a0b\u4e2d\u5c3d\u53ef\u80fd\u5c06\u72b6\u6001\u7684\u53cd\u9988\u7ed9\u7528\u6237\uff0c\u5373\u65f6\u7684\u54cd\u5e94\u4f1a\u7ed9\u7528\u6237\u589e\u52a0\u4fe1\u8d56\u611f\u3002"],["h3","\u9876\u90e8\u5168\u5c40\u63d0\u793a\u53cd\u9988\uff08Message\uff09"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/pqJMJfJGLkYTDbLyJwIg.png",description:"\u5f53\u7528\u6237\u4e0d\u5fc5\u7b49\u5f85\u8f83\u957f\u65f6\u95f4\u7684\u52a0\u8f7d\u65f6\u4f7f\u7528\u3002"}]],["p","\u901a\u8fc7\u4e00\u4e2a\u64cd\u4f5c\u5f15\u53d1\u7684\u53cd\u9988\u6d6e\u5c42\u4f4d\u4e8e\u9876\u90e8\u5c45\u4e2d\u663e\u793a\u5e76\u81ea\u52a8\u6d88\u5931\uff0c\u662f\u4e00\u79cd\u4e0d\u6253\u65ad\u7528\u6237\u64cd\u4f5c\u7684\u8f7b\u91cf\u7ea7\u63d0\u793a\u65b9\u5f0f\u3002"],["p",["br"]],["p",["img",{class:"preview-img no-padding good",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/DrKzGoqfLRtrPuZaHUiq.png",alt:"\u6b63\u786e\u793a\u4f8b",description:"\u91cd\u8981\u7684\u5931\u8d25\u4fe1\u606f\u5efa\u8bae\u4f7f\u7528\u5bf9\u8bdd\u6846\u5f62\u5f0f\u63d0\u793a\u5e76\u544a\u77e5\u5931\u8d25\u539f\u56e0\u3002"}],"\n",["img",{class:"preview-img no-padding bad",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/akPBJQUiUWNsULtGOnyx.png",alt:"\u9519\u8bef\u793a\u4f8b",description:"\u91cd\u8981\u7684\u5931\u8d25\u4fe1\u606f\u65f6\u4e0d\u5efa\u8bae\u4f7f\u7528\u8f7b\u91cf\u7ea7\u63d0\u793a\u65b9\u5f0f\u3002"}]],["p","\u7531\u4e8e\u53cd\u9988\u6d6e\u5c42\u7684\u5c55\u793a\u65f6\u957f\u8f83\u77ed\uff08\u9ed8\u8ba4 3s\uff09\uff0c\u5bf9\u4e8e\u6bd4\u8f83\u91cd\u8981\u7684\u5931\u8d25\u901a\u77e5\uff0c\u5efa\u8bae\u6539\u7528\u5bf9\u8bdd\u6846\u7684\u5f62\u5f0f\u8fdb\u884c\u901a\u77e5\uff0c\u4ee5\u907f\u514d\u7528\u6237\u9057\u6f0f\u4fe1\u606f\u3002"],["h3","\u5bf9\u8bdd\u6846\u53cd\u9988"],["p",["img",{class:"preview-img no-padding",align:"right",src:"https://gw.alipayobjects.com/zos/rmsportal/OTzldmUjUgERMbUCHwzt.png"}]],["p","\u901a\u8fc7\u4e00\u4e2a\u64cd\u4f5c\u5f15\u53d1\u7684\u53cd\u9988\u6d6e\u5c42\u4f4d\u4e8e\u9875\u9762\u4e2d\u5fc3\uff0c\u53cd\u9988\u5185\u5bb9\u53ef\u901a\u8fc7\u786e\u8ba4\u6216\u53d6\u6d88\u6309\u94ae\u8fdb\u884c\u5173\u95ed\uff0c\u7528\u6237\u5728\u53cd\u9988\u5c42\u51fa\u73b0\u65f6\u4e0d\u53ef\u8fdb\u884c\u4efb\u4f55\u7684\u64cd\u4f5c\uff0c\u7528\u4e8e\u91cd\u8981\u7684\u53cd\u9988\u3002"],["blockquote",["p","\u6ce8\uff1a\u9664\u5931\u8d25\u65f6\u907f\u514d\u663e\u793a\u4e0d\u5fc5\u8981\u7684\u63d0\u9192\u5f39\u7a97\u3002\u5f39\u7a97\u662f\u5f88\u5f3a\u7684\u53cd\u9988\u673a\u5236\uff0c\u53ea\u6709\u5728\u4f20\u9012\u975e\u5e38\u91cd\u8981\uff0c\u4e14\u53ef\u64cd\u4f5c\u7684\u4fe1\u606f\u65f6\u624d\u9700\u8981\u4f7f\u7528\u5b83\u3002"]]],meta:{category:{"zh-CN":"\u6a21\u5f0f","en-US":"Patterns"},order:11,title:{"zh-CN":"\u53cd\u9988","en-US":"Feedback"},filename:"docs/spec/feedback.md"},description:["section",["p","\u4e3a\u4e86\u5e2e\u52a9\u7528\u6237\u4e86\u89e3\u5e94\u7528\u5f53\u524d\u8981\u505a\u4ec0\u4e48\uff0c\u4e5f\u7ed9\u7528\u6237\u7684\u4e0b\u4e00\u6b65\u884c\u4e3a\u505a\u53c2\u8003\uff0c\u4ee5\u53ca\u4e86\u89e3\u64cd\u4f5c\u540e\u6240\u4ea7\u751f\u7684\u7ed3\u679c \uff0c\u5f53\u7528\u6237\u548c\u7cfb\u7edf\u9700\u8981\u4ea4\u4e92\u65f6\uff0c\u4f7f\u7528\u4e0d\u540c\u7684\u6a21\u5f0f\u6765\u53cd\u9988\u4fe1\u606f\u6216\u7ed3\u679c\u3002\u5f53\u8bbe\u8ba1\u8005\u4f7f\u7528\u53cd\u9988\u6216\u8005\u81ea\u5b9a\u4e49\u4e00\u4e9b\u53cd\u9988\u65f6\uff0c\u8bf7\u6ce8\u610f\uff1a"],["ul",["li",["p","\u4e3a\u7528\u6237\u5728\u5404\u4e2a\u9636\u6bb5\u63d0\u4f9b\u5fc5\u8981\u3001\u79ef\u6781\u3001\u5373\u65f6\u7684\u53cd\u9988\uff1b"]],["li",["p","\u907f\u514d\u8fc7\u5ea6\u53cd\u9988\uff0c\u4ee5\u514d\u7ed9\u7528\u6237\u5e26\u6765\u4e0d\u5fc5\u8981\u7684\u6253\u6270\uff0c\u80fd\u591f\u53ca\u65f6\u770b\u5230\u6548\u679c\u7684\u3001\u7b80\u5355\u7684\u64cd\u4f5c\uff0c\u53ef\u4ee5\u7701\u7565\u53cd\u9988\u63d0\u793a\u3002"]]]],toc:["ul",["li",["a",{className:"bisheng-toc-h2",href:"#\u63d0\u793a\u4fe1\u606f",title:"\u63d0\u793a\u4fe1\u606f"},"\u63d0\u793a\u4fe1\u606f"]],["li",["a",{className:"bisheng-toc-h2",href:"#\u8fc7\u7a0b\u53cd\u9988",title:"\u8fc7\u7a0b\u53cd\u9988"},"\u8fc7\u7a0b\u53cd\u9988"]],["li",["a",{className:"bisheng-toc-h2",href:"#\u7ed3\u679c\u53cd\u9988",title:"\u7ed3\u679c\u53cd\u9988"},"\u7ed3\u679c\u53cd\u9988"]]]}}});
+webpackJsonp([89],{
+
+/***/ 1942:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "content": [
+    "article",
+    {
+
+    },
+    [
+      "h2",
+      "提示信息"
+    ],
+    [
+      "p",
+      "任何一个产品，即使用户界面做的再好，也离不开用户引导和信息提示。提示信息是用来告诉用户需要知道什么、采取什么样行动的内容。"
+    ],
+    [
+      "h3",
+      "警告"
+    ],
+    [
+      "h4",
+      "警告提示（Alert）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/eviVRYTdxOxOfVENLnxq.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "是一种非阻碍式的信息展示，它不打断用户的当前操作，一般停留至页面某个位置（优先顶部），非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：关闭按钮可根据业务需要增加或隐藏。"
+      ]
+    ],
+    [
+      "h3",
+      "通知"
+    ],
+    [
+      "h4",
+      "通知提醒（Notification）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/nElczRfDzAXRZSkpiJBQ.png",
+          "description": "较为复杂的通知内容时使用。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "系统主动推送的重要的全局性通知信息，在系统右上角显示。"
+    ],
+    [
+      "h4",
+      "徽标数（Badge）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/bVonmOmmkuvybQxTDGTC.png",
+          "description": "当有 icon 的情况时一般居于 icon 右上角；无 icon 的情况下一般位于标题后侧。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "用于聚合型的消息提示，一般出现在通知图标或头像的右上角，通过醒目的视觉形式吸引用户眼球。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：相对重要和用户关联度更高的信息提示，使用数字精准提示；权重不高和不是用户特别关心的消息提示，使用红点做提示。"
+      ]
+    ],
+    [
+      "h3",
+      "帮助"
+    ],
+    [
+      "h4",
+      "气泡卡片（Popover）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/zsPOjQqkiwMnMhIsbDHz.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "当目标元素有进一步的描述和相关操作时，可以收纳到卡片中，根据用户的操作行为进行展现。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：和 Tooltip 的区别是，Popover 可以承载更复杂的内容，比如链接或按钮等。"
+      ]
+    ],
+    [
+      "h4",
+      "文字提示（Tooltip）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/CKDiGEsluwkRRGqujpgv.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "用于精确地描述被指向的对象，例如图标、图形、链接等，鼠标移入则显示提示，移出消失，不承载复杂文本和操作。"
+    ],
+    [
+      "hr"
+    ],
+    [
+      "h2",
+      "过程反馈"
+    ],
+    [
+      "p",
+      "操作过程中尽可能将状态的反馈给用户，即时的响应会给用户增加信赖感。"
+    ],
+    [
+      "h3",
+      "加载状态进度反馈"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/cHaaqZTvzgCZiYUnfNom.png",
+          "description": "当用户不必等待较长时间的加载时使用。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "在操作需要一段时间（一般为超过2秒）完成时系统应即时给予提醒，明确告知加载的状态或加载进度条，保持与用户的沟通。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/cHaaqZTvzgCZiYUnfNom.png",
+          "description": "在操作需要较长时间才能完成时使用，显示该操作的当前进度和状态。"
+        }
+      ]
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：若加载时间较长，应提供取消操作。"
+      ]
+    ],
+    [
+      "h3",
+      "录入反馈"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/CCeqqndHQgWnqVqvRptA.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "操作过程中可通过不同的校验规则和形式，让用户及时发现并纠正错误。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：反馈文字紧跟着要说明的区块（反馈内容一般是错误说明），不自动消失（当用户进行相应的交互操作后才消失）。"
+      ]
+    ],
+    [
+      "h4",
+      "气泡确认框（Popconfirm）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/lPZZxOAakfNhwfrpRPht.png",
+          "description": "和全屏居中模态对话框相比，交互形式更轻量。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户。"
+    ],
+    [
+      "hr"
+    ],
+    [
+      "h2",
+      "结果反馈"
+    ],
+    [
+      "p",
+      "操作过程中尽可能将状态的反馈给用户，即时的响应会给用户增加信赖感。"
+    ],
+    [
+      "h3",
+      "顶部全局提示反馈（Message）"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/pqJMJfJGLkYTDbLyJwIg.png",
+          "description": "当用户不必等待较长时间的加载时使用。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "通过一个操作引发的反馈浮层位于顶部居中显示并自动消失，是一种不打断用户操作的轻量级提示方式。"
+    ],
+    [
+      "p",
+      [
+        "br"
+      ]
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding good",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/DrKzGoqfLRtrPuZaHUiq.png",
+          "alt": "正确示例",
+          "description": "重要的失败信息建议使用对话框形式提示并告知失败原因。"
+        }
+      ],
+      "\n",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding bad",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/akPBJQUiUWNsULtGOnyx.png",
+          "alt": "错误示例",
+          "description": "重要的失败信息时不建议使用轻量级提示方式。"
+        }
+      ]
+    ],
+    [
+      "p",
+      "由于反馈浮层的展示时长较短（默认 3s），对于比较重要的失败通知，建议改用对话框的形式进行通知，以避免用户遗漏信息。"
+    ],
+    [
+      "h3",
+      "对话框反馈"
+    ],
+    [
+      "p",
+      [
+        "img",
+        {
+          "class": "preview-img no-padding",
+          "align": "right",
+          "src": "https://gw.alipayobjects.com/zos/rmsportal/OTzldmUjUgERMbUCHwzt.png"
+        }
+      ]
+    ],
+    [
+      "p",
+      "通过一个操作引发的反馈浮层位于页面中心，反馈内容可通过确认或取消按钮进行关闭，用户在反馈层出现时不可进行任何的操作，用于重要的反馈。"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "注：除失败时避免显示不必要的提醒弹窗。弹窗是很强的反馈机制，只有在传递非常重要，且可操作的信息时才需要使用它。"
+      ]
+    ]
+  ],
+  "meta": {
+    "category": {
+      "zh-CN": "模式",
+      "en-US": "Patterns"
+    },
+    "order": 11,
+    "title": {
+      "zh-CN": "反馈",
+      "en-US": "Feedback"
+    },
+    "filename": "docs/spec/feedback.md"
+  },
+  "description": [
+    "section",
+    [
+      "p",
+      "为了帮助用户了解应用当前要做什么，也给用户的下一步行为做参考，以及了解操作后所产生的结果 ，当用户和系统需要交互时，使用不同的模式来反馈信息或结果。当设计者使用反馈或者自定义一些反馈时，请注意："
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "为用户在各个阶段提供必要、积极、即时的反馈；"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "避免过度反馈，以免给用户带来不必要的打扰，能够及时看到效果的、简单的操作，可以省略反馈提示。"
+        ]
+      ]
+    ]
+  ],
+  "toc": [
+    "ul",
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#提示信息",
+          "title": "提示信息"
+        },
+        "提示信息"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#过程反馈",
+          "title": "过程反馈"
+        },
+        "过程反馈"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#结果反馈",
+          "title": "结果反馈"
+        },
+        "结果反馈"
+      ]
+    ]
+  ]
+};
+
+/***/ })
+
+});
