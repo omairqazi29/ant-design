@@ -794,7 +794,7 @@ module.exports = {
 },
   "style": "#components-layout-demo-fixed-sider .logo {\n  height: 32px;\n  background: rgba(255,255,255,.2);\n  margin: 16px;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-fixed-sider</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.5384805781512536.html"
+  "src": "/demo-0.94476548205834.html"
 };
 
 /***/ }),
@@ -975,7 +975,7 @@ module.exports = {
 },
   "style": "#components-layout-demo-fixed .logo {\n  width: 120px;\n  height: 31px;\n  background: rgba(255,255,255,.2);\n  margin: 16px 24px 16px 0;\n  float: left;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-fixed</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">width</span><span class=\"token punctuation\">:</span> <span class=\"token number\">120</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">31</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px <span class=\"token number\">24</span>px <span class=\"token number\">16</span>px <span class=\"token number\">0</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">float</span><span class=\"token punctuation\">:</span> left<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.4419460186811164.html"
+  "src": "/demo-0.5629937957102151.html"
 };
 
 /***/ }),
@@ -1577,7 +1577,7 @@ module.exports = {
 },
   "style": "#components-layout-demo-side .logo {\n  height: 32px;\n  background: rgba(255,255,255,.2);\n  margin: 16px;\n}",
   "highlightedStyle": "<span class=\"token selector\"><span class=\"token id\">#components-layout-demo-side</span> <span class=\"token class\">.logo</span> </span><span class=\"token punctuation\">{</span>\n  <span class=\"token property\">height</span><span class=\"token punctuation\">:</span> <span class=\"token number\">32</span>px<span class=\"token punctuation\">;</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> <span class=\"token function\">rgba</span><span class=\"token punctuation\">(</span><span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">255</span>,<span class=\"token number\">.2</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> <span class=\"token number\">16</span>px<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>",
-  "src": "/demo-0.4147210692847141.html"
+  "src": "/demo-0.8218268005262992.html"
 };
 
 /***/ }),
