@@ -1,14 +1,4 @@
 
-.ant-list-item-action {
-  font-size: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  margin-left: 48px;
-  padding: 0;
-  list-style: none;
-}
 .ant-list-item-action > li {
   display: inline-block;
   color: rgba(0, 0, 0, 0.45);
@@ -4059,9 +4049,8 @@ a.ant-notification-notice-close:focus {
   word-break: break-word;
   -ms-word-break: break-all;
 }
-.ant-table-thead > tr > th.ant-table-selection-column-custom {
-  padding-left: 16px;
-  padding-right: 0;
+.ant-table-thead > tr > th.ant-table-selection-column-custom .ant-table-selection {
+  margin-right: -15px;
 }
 .ant-table-thead > tr > th.ant-table-selection-column,
 .ant-table-tbody > tr > td.ant-table-selection-column {
@@ -4443,7 +4432,7 @@ tr.ant-table-expanded-row:hover {
 .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-header > table > .ant-table-thead > tr > th,
 .ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th,
 .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th {
-  background: #fff;
+  background-color: #fff;
   border-bottom: 1px solid #e8e8e8;
 }
 .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
@@ -4454,7 +4443,7 @@ tr.ant-table-expanded-row:hover {
 .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
 .ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th.ant-table-column-sort,
 .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th.ant-table-column-sort {
-  background: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.01);
 }
 .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
 .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table,
@@ -4465,7 +4454,7 @@ tr.ant-table-expanded-row:hover {
   padding: 0;
 }
 .ant-table-small > .ant-table-content .ant-table-header {
-  background: #fff;
+  background-color: #fff;
 }
 .ant-table-small > .ant-table-content .ant-table-placeholder,
 .ant-table-small > .ant-table-content .ant-table-row:last-child td {

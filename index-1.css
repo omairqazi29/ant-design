@@ -5597,24 +5597,21 @@ span.ant-radio + * {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ant-card-head-title {
   padding: 16px 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: inline-block;
 }
 .ant-card-head .ant-tabs {
   margin-bottom: -17px;
@@ -13998,16 +13995,13 @@ form .ant-input-group-wrapper {
 .ant-form-inline .ant-form-item > .ant-form-item-control-wrapper,
 .ant-form-inline .ant-form-item > .ant-form-item-label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .ant-form-inline .ant-form-text {
   display: inline-block;
 }
 .ant-form-inline .has-feedback {
   display: inline-block;
-}
-.ant-form-inline .ant-form-explain {
-  position: absolute;
 }
 .has-success.has-feedback .ant-form-item-children-icon,
 .has-warning.has-feedback .ant-form-item-children-icon,
@@ -14895,4 +14889,14 @@ textarea.ant-input-number {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.ant-list-item-action {
+  font-size: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: 48px;
+  padding: 0;
+  list-style: none;
 }
