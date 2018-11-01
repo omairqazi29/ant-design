@@ -1,1 +1,16380 @@
-webpackJsonp([233],{1977:function(t,e){t.exports={content:["article",{},["h2","3.10.3"],["p",["code","2018-10-27"]],["ul",["li",["p","\ud83c\udf1f \u5b8c\u5584\u5de5\u5177\u65b9\u6cd5 ",["code","getScroll"]," \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12784"},"#12784"]," ",["a",{title:null,href:"https://github.com/ztplz"},"@ztplz"]]],["li",["p","\ud83d\udc1e \u4fee\u590d CheckboxGroup \u5185 Checkbox \u6ca1\u6709\u89e6\u53d1 ",["code","onChange"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12642"},"#12642"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Calendar \u7ec4\u4ef6\u8bbe\u7f6e ",["code","validRange"]," \u540e\u9009\u62e9\u6708\u4efd\u65f6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12675"},"#12675"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Select \u7ec4\u4ef6\u8bbe\u7f6e\u4e86 ",["code","dropdownMatchSelectWidth"]," \u540e\u591a\u9009\u4e0b\u62c9\u6846\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12816"},"#12816"]," ",["a",{title:null,href:"https://github.com/hengkx"},"@hengkx"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Card \u6807\u9898\u53ef\u80fd\u4f1a\u88ab\u8986\u76d6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12680"},"#12680"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Form",["span","inline"]," \u63d0\u793a\u4fe1\u606f\u548c\u9519\u8bef\u6587\u6848\u88ab\u8986\u76d6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12725"},"#12725"]]],["li",["p","Table"],["ul",["li",["p","\ud83c\udf1f \u652f\u6301\u81ea\u5b9a\u4e49 Table \u7ec4\u4ef6\u7684\u7b5b\u9009\u6309\u94ae\u7684\u80cc\u666f\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12775"},"#12775"]," ",["a",{title:null,href:"https://github.com/ivankravets"},"@ivankravets"]]],["li",["p","\ud83d\udc1e \u8c03\u6574 Table \u7ec4\u4ef6\u7684\u6837\u5f0f\u7ec6\u8282\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12682"},"#12682"]]],["li",["p",'\ud83d\udc1e \u4fee\u590d\u5728\u706b\u72d0\u4e0b\uff0c\u5f53 size="small" \u672a\u6392\u5e8f\u65f6\u4e0b\u8fb9\u6846\u4e0d\u663e\u793a\u3002',["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12840"},"#12840"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5927\u5c0f\u4e3a small/middle \u65f6\u590d\u9009\u6846\u4e0d\u80fd\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12723"},"#12723"]]]]]],["h2","3.10.2"],["p",["code","2018-10-23"]],["ul",["li",["p","\ud83d\udcdd \u7ffb\u8bd1",["a",{title:null,href:"https://ant.design/docs/spec/overview"},"\u6a21\u5f0f-\u6982\u89c8"],"\u6587\u6863\u5230\u82f1\u6587\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12637"},"#12637"]," ",["a",{title:null,href:"https://github.com/ilanus"},"@ilanus"]]],["li",["p","\ud83d\udee0 DatePicker \u7ec4\u4ef6\u5b8c\u5584\u5bf9\u8d8a\u5357\u8bed\uff08vi_VN\uff09\u7684\u652f\u6301\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12656"},"#12656"]," ",["a",{title:null,href:"https://github.com/hieuhlc"},"@hieuhlc"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TimePicker \u7ec4\u4ef6\u5728 IE11 \u4e0b\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12707"},"#12707"]," ",["a",{title:null,href:"https://github.com/jinyaqiao1102"},"jinyaqiao1102"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Popconfirm \u7ec4\u4ef6\u7684 ",["code","defaultVisible"]," \u5c5e\u6027\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12733"},"#12733"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 Firefox \u4e0b Table \u7ec4\u4ef6\u5934\u90e8\u8fb9\u6846\u4e0d\u663e\u793a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12628"},"#12628"]]],["li",["p","\ud83d\udc1e \u7ec4\u4ef6 Slider \u6dfb\u52a0 ",["code","touch-action: none"]," \u6837\u5f0f\u4fee\u590d Chrome \u4e0a\u53ef\u80fd\u51fa\u73b0\u7684\u62a5\u9519\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12595"},"#12595"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tabs \u7ec4\u4ef6\u5782\u76f4\u6a21\u5f0f\u4e0b\u8fb9\u6846\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12276"},"#12276"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Button \u7ec4\u4ef6\u65e0\u5185\u5bb9\u65f6\u5782\u76f4\u4e0d\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12681"},"#12681"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Calendar \u7ec4\u4ef6 ",["code","locale"]," \u5c5e\u6027\u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12706"},"#12706"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Checkbox \u7ec4\u4ef6\u5728\u8bbe\u7f6e ",["code","indeterminate"]," \u7684\u60c5\u51b5\u4e0b\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12724"},"#12724"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","prefixCls"]," \u6ca1\u6709\u5e94\u7528\u5230 Popconfirm \u7ec4\u4ef6\u6309\u94ae\u4e0a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12677"},"#12677"]," ",["a",{title:null,href:"https://github.com/concefly"},"@concefly"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Edge \u4e0b Button \u7ec4\u4ef6 ",["code","pointer-events:none"]," \u5bf9\u4e8e span \u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12712"},"#12712"]," ",["a",{title:null,href:"https://github.com/dazbo"},"@dazbo"]]],["li",["p","Progress"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Progress \u7ec4\u4ef6\u7684 ",["code","strokeColor"]," \u5c5e\u6027\u65e0\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12587"},"#12587"]," ",["a",{title:null,href:"https://github.com/lyhper"},"@lyhper"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Progress",["span",'type="circle"']," \u4e2d\u6587\u672c\u6ea2\u51fa\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12718"},"#12718"]]]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d TreeSelect \u7ec4\u4ef6\u7f3a\u5c11 ",["code","treeExpandedKeys"]," \u548c ",["code","onTreeExpand"]," \u7684\u5b9a\u4e49\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12648"},"#12648"]," ",["a",{title:null,href:"https://github.com/decadef20"},"@decadef20"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TabPaneProps \u7ec4\u4ef6\u7f3a\u5c11 ",["code","key"]," \u5c5e\u6027\u5b9a\u4e49\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/682af0d44bf38a7d3e487aa909c46409db163030"},"682af0d"]," ",["a",{title:null,href:"https://github.com/ztplz"},"@ztplz"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Icon \u7ec4\u4ef6\u7684\u90e8\u5206\u5b9a\u4e49\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/3dbc357ff2837debbb9b36a25b14be4757297cad"},"3dbc357"]]]]]],["h2","3.10.1"],["p",["code","2018-10-12"]],["ul",["li",["p","\ud83c\udf89 ",["a",{title:null,href:"http://ng.mobile.ant.design/"},"Ant Design Mobile of Angular"],"\uff08NG-ZORRO-Mobile\uff09\u53d1\u5e03\uff01"]],["li",["p","\ud83d\udcdd \u66f4\u65b0 ",["a",{title:null,href:"https://ant.design/docs/react/practical-projects-cn"},"\u9879\u76ee\u5b9e\u6218"]," \u6587\u6863\u4e3a\u6700\u65b0\u7684 umi \u6280\u672f\u6808\u3002"]],["li",["p","Table"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u672a\u6307\u5b9a\u6392\u5e8f\u7684\u5217\u5934\u70b9\u51fb\u65f6\u4e5f\u4f1a\u89e6\u53d1\u6392\u5e8f\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12515"},"#12515"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5217\u5934\u591a\u4f59\u7684\u6392\u5e8f title \u63d0\u793a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12613"},"#12613"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u6392\u5e8f\u548c\u53f3\u5bf9\u9f50\u7684\u5217\u6837\u5f0f\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12552"},"#12552"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a columns \u5b9a\u4e49\u5728 render \u5185\u65f6\u6392\u5e8f\u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12571"},"#12571"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5c0f\u53f7\u8868\u683c\u4e0b\u6392\u5e8f\u5217\u7684\u5217\u5934\u80cc\u666f\u8272\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u7684\u9009\u62e9\u5668\u5728 chrome \u4e0b\u9009\u4e2d\u6837\u5f0f\u7684\u91cd\u5f71\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/5bef1aa6c2e792180ef8d53a1f1489376b8e35db"},"5bef1aa"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Form.Item \u5185\u7684 Table \u5206\u9875\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12554"},"#12554"]]]]],["li",["p","DatePicker"],["ul",["li",["p","\ud83d\udc1e \u8c03\u6574\u610f\u5927\u5229\u56fd\u9645\u5316\u6587\u6848\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12413"},"#12413"]," ",["a",{title:null,href:"https://github.com/yp"},"@yp"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u9009\u62e9\u5b8c\u6210\u540e\u9009\u62e9\u6846\u6ca1\u6709\u83b7\u53d6\u7126\u70b9\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12475"},"#12475"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 Input.Group \u5185\u4f7f\u7528\u65f6\u65e5\u671f\u56fe\u6807\u6d88\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12536"},"#12536"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Anchor \u4e2d\u6587\u5b57\u8fb9\u7f18\u88ab\u5207\u5272\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12520"},"#12520"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u8bbe\u7f6e\u65e0\u906e\u7f69\u65f6\u4f9d\u7136\u6321\u4f4f\u4e86\u9875\u9762\u5143\u7d20\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12401"},"#12401"]]],["li",["p","\ud83d\udc1e \u4fee\u590d AutoComplete \u4e0b\u4f7f\u7528\u81ea\u5b9a\u4e49 Input.TextArea \u4e0b\u5931\u6548\u6837\u5f0f\u4e22\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12594"},"#12594"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Modal.confirm \u7684 ",["code","prefixCls"]," \u5c5e\u6027\u6ca1\u6709\u900f\u4f20\u7ed9 mask \u7684\u95ee\u9898\uff0c\u5e76\u8c03\u6574\u4e86\u9ed8\u8ba4\u7684 prefixCls \u7684\u503c\u4e3a ",["code","ant-model-confirm"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12546"},"#12546"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Input.Group \u5728 safari \u4e0b\u7684\u4e00\u4e2a\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12493"},"#12493"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u72ec\u81ea\u4f7f\u7528 ",["code","<Badge />"]," \u65f6\u7684\u5782\u76f4\u5bf9\u9f50\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12419"},"#12419"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tree.DirectoryTree \u70b9\u51fb\u5207\u6362\u56fe\u6807\u548c\u70b9\u51fb\u6587\u672c\u65f6 ",["code","onExpand"]," \u53c2\u6570\u4e0d\u4e00\u81f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12567"},"#12567"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 IE11 \u4e0b\u9519\u8bef\u805a\u7126\u5230\u8868\u5355\u72b6\u6001\u56fe\u6807\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12524"},"#12524"]," ",["a",{title:null,href:"https://github.com/siyu77"},"@siyu77"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u591a\u9009 Select \u591a\u6b21\u70b9\u51fb\u8f93\u5165\u6846\u65f6\u4f1a\u53cd\u590d\u89e6\u53d1 ",["code","onFocus"]," \u548c ",["code","onBlur"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12281"},"#12281"]," ",["a",{title:null,href:"https://github.com/Frezc"},"@Frezc "]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u73af\u5f62 Progress \u5185\u6587\u672c\u8d85\u957f\u6ea2\u51fa\u7684\u95ee\u9898\u3002"]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u8865\u5145 Steps \u7684 ",["code","labelPlacement"]," \u5c5e\u6027\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12575"},"#12575"]," ",["a",{title:null,href:"https://github.com/yueyes"},"@yueyes"]]],["li",["p","\ud83d\udc1e \u8865\u5145 Select.Option \u7684 ",["code","style"]," \u5c5e\u6027\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12609"},"#12609"]," ",["a",{title:null,href:"https://github.com/dimitropoulos"},"@dimitropoulos"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","form.validateFields"]," \u7684\u5b9a\u4e49\u91cd\u8f7d\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12538"},"#12538"]," ",["a",{title:null,href:"https://github.com/TomIsion"},"@TomIsion"]]],["li",["p","\ud83d\udc1e \u8865\u5145 AutoComponent \u7684 ",["code","onFocus"]," ",["code","onBlur"]," \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12498"},"#12498"]]]]]],["h2","3.10.0"],["p",["code","2018-09-30"]],["p","\ud83c\udf89 \u56fd\u5e86\u8282\u5feb\u4e50"],["ul",["li",["p","\ud83d\udcdd \u66f4\u65b0\u4e86",["a",{title:null,href:"https://ant.design/docs/spec/icon-cn"},"\u56fe\u6807"],"\u548c",["a",{title:null,href:"https://ant.design/docs/spec/motion-cn"},"\u52a8\u6548"],"\u4e24\u7bc7\u8bbe\u8ba1\u6307\u5f15\u3002"]],["li",["p","\ud83c\udf1f Upload \u7ec4\u4ef6\u65b0\u589e ",["code","openFileDialogOnClick"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u70b9\u51fb\u7ec4\u4ef6\u65f6\u662f\u5426\u6253\u5f00\u4e0a\u4f20\u5bf9\u8bdd\u6846\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12347"},"#12347"]," ",["a",{title:null,href:"https://github.com/hengkx"},"@hengkx"]]],["li",["p","\ud83c\udf1f InputNumber \u7ec4\u4ef6\u65b0\u589e ",["code","decimalSeparator"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u81ea\u5b9a\u4e49\u7684\u5c0f\u6570\u70b9\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12329"},"#12329"]," ",["a",{title:null,href:"https://github.com/amedora"},"@amedora"]]],["li",["p","\ud83c\udf1f TreeSelect \u7ec4\u4ef6\u65b0\u589e ",["code","treeExpandedKeys"]," \u548c ",["code","onTreeExpand"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u63a7\u5236\u6811\u7684\u5c55\u5f00\u6536\u8d77\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12145"},"#12145"]]],["li",["p","Transfer"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","disabled"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12066"},"#12066"]]]]],["li",["p","Modal"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","autoFocusButton"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u6307\u5b9a Modal \u6253\u5f00\u65f6\u81ea\u52a8\u83b7\u53d6\u7126\u70b9\u7684\u6309\u94ae\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11756"},"#11756"]," ",["a",{title:null,href:"https://github.com/erwin-k"},"@erwin-k"]]],["li",["p","\ud83c\udf1f ",["code","confirm"]," \u65b9\u6cd5\u7684\u53c2\u6570\u65b0\u589e ",["code","okButtonProps"]," \u548c ",["code","cancelButtonProps"],"\uff0c\u7528\u6237\u8bbe\u7f6e\u5bf9\u5e94\u6309\u94ae\u7684\u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12425"},"#12425"]," ",["a",{title:null,href:"https://github.com/Whoaa512"},"@Whoaa512"]]]]],["li",["p","Table"],["ul",["li",["p","\ud83c\udf1f \u73b0\u5728\u53ef\u4ee5\u628a ",["code","column.title"]," \u8bbe\u7f6e\u4e3a\u4e00\u4e2a\u65b9\u6cd5\u4e86\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11246"},"#11246"]]],["li",["p","\ud83c\udf1f ",["code","onChange"]," \u5c5e\u6027\u65b0\u589e\u7b2c\u56db\u4e2a\u53c2\u6570 ",["code","extra"],"\uff0c\u7528\u4e8e\u83b7\u53d6\u5f53\u524d\u663e\u793a\u7684\u7b5b\u9009\u540e\u7684\u6570\u636e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12369"},"#12369"]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e86\u6392\u5e8f\u548c\u7b5b\u9009\u4ea4\u4e92\uff0c\u73b0\u5728\u6574\u4e2a\u5217\u8868\u5934\u90fd\u53ef\u4ee5\u70b9\u51fb\u6392\u5e8f\u4e86\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12264"},"#12264"]]]]],["li",["p","\ud83c\udf1f Alert \u65b0\u589e ",["code","icon"]," \u5c5e\u6027\uff0c\u7528\u6237\u8bbe\u7f6e\u81ea\u5b9a\u4e49\u56fe\u6807\u3002\u4f8b\u5b50\uff1a",["a",{title:null,href:"https://ant.design/components/alert-cn/#components-alert-demo-custom-icon"},"\u81ea\u5b9a\u4e49\u56fe\u6807"]]],["li",["p","\ud83c\udf1f \u4ee5\u4e0b\u7ec4\u4ef6\u5747\u65b0\u589e\u4e86 ",["code","suffixIcon"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u8f93\u5165\u6846\u540e\u9762\u7684\u56fe\u6807\uff0c\u5177\u4f53\u7528\u6cd5\u53ef\u4ee5\u53c2\u8003\u6587\u6863\u3002"],["ul",["li",["p","Cascader"]],["li",["p","DatePicker"]],["li",["p","Select"]],["li",["p","TreeSelect"]],["li",["p","TimePicker"]]]],["li",["p","\ud83c\udf1f \u65b0\u589e less \u53d8\u91cf ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/f237effc2a35eb249273f6f2826092a2f9b9db45"},"f237eff"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Icon.createFromIconfontCN \u65b9\u6cd5\u4f1a\u81ea\u52a8\u7ed9 ",["code","scriptUrl"]," \u52a0 ",["code","https"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12316"},"#12316"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Row \u7684 ",["code","gutter"]," \u5c5e\u6027\uff0c\u5728\u4f7f\u7528\u5d4c\u5957\u7684 Col \u65f6\u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12320"},"#12320"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tree.DirectoryTree \u7ec4\u4ef6\u5728\u8bbe\u7f6e\u7684 ",["code","expandedKeys"]," \u6709\u521d\u59cb\u503c\u65f6\u4e0d\u80fd\u6b63\u786e\u5c55\u5f00\u8282\u70b9\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12396"},"#12396"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Transfer \u7ec4\u4ef6\u4f7f\u7528 ",["code","render"]," \u5c5e\u6027\u8fd4\u56de  ReactNode \u65f6\uff0c\u5217\u8868\u9879\u7684 ",["code","title"]," \u5c5e\u6027\u663e\u793a\u9519\u8bef\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12399"},"#12399"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tooltip \u5728 CheckboxGroup \u4e0a\u4e0d\u5de5\u4f5c\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12427"},"#12427"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Button \u7ec4\u4ef6 loading \u72b6\u6001\u4e0b\u5728 IE9 \u91cc\u4f9d\u7136\u53ef\u4ee5\u88ab\u70b9\u51fb\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12466"},"#12466"]," ",["a",{title:null,href:"https://github.com/120216220"},"@snail"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Input.Group \u4e2d\u4f7f\u7528\u975e Input \u7ec4\u4ef6\u65f6\uff0c\u9f20\u6807 hover \u65f6\u4f1a\u4ea7\u751f\u6296\u52a8\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12407"},"#12407"]," ",["a",{title:null,href:"https://github.com/hengkx"},"@hengkx"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TypeScript \u7c7b\u578b\u5b9a\u4e49 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12374"},"#12374"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12370"},"#12370"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12354/files"},"#12354"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12473"},"#12473"]]]],["h2","3.9.3"],["p",["code","2018-09-22"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u7ec4\u4ef6\u5728 Chrome \u4e0b\u8d85\u957f\u6587\u672c\u7684\u6e32\u67d3\u5ef6\u8fdf\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11456"},"#11456"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11843"},"#11843"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","RangePicker"]," \u7ec4\u4ef6\u4e2d\u7684 ",["code","onOpenChange"]," \u975e\u6b63\u5e38\u6570\u503c\u62a5\u9519\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12142"},"#12142"],["a",{title:null,href:"https://github.com/leijingdao"},"@leijingdao"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Carousel"]," \u7ec4\u4ef6\u7684 ",["code","goTo"]," \u65b9\u6cd5\u7f3a\u5c11 ",["code","dontAnimate"]," \u53c2\u6570\u95ee\u9898\uff0c\u53c2\u6570\u7528\u4e8e\u5173\u95ed\u8f6c\u573a\u8fc7\u6e21\u52a8\u753b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12205"},"#12205"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Tabs"]," \u4e2d ",["code","tabBar"]," \u7684\u91cd\u590d\u7c7b\u540d\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/589bafd5db92a817c078ead6decdb81e64b2b5a8"},"589ba"],["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12051"},"#12051"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Card"]," \u7ec4\u4ef6\u6807\u9898\u7684\u5782\u76f4\u5bf9\u9f50\u65b9\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11036"},"#11036"],["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10576"},"#10576"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","List"]," \u7ec4\u4ef6\u5237\u65b0\u540e key \u503c\u975e\u9884\u671f\u53d8\u5316\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12299"},"#12299"],["a",{title:null,href:"https://github.com/douglasjunior"},"@douglasjunior"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u7ec4\u4ef6 ",["code","confirmFilter"]," \u65b9\u6cd5\u4e0d\u80fd\u53ca\u65f6\u66f4\u65b0\u6570\u636e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/954c7ecd8ed384a3c67ec8dfb0e0deaa14bbf83b"},"954c7"],["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12284"},"#12284"]]],["li",["p",["code","Menu"]," \u7ec4\u4ef6\u76f8\u5173"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Menu"]," \u5728 ",["code","horizontal"]," \u6a21\u5f0f\u4e0b\u65f6\u51fa\u73b0\u989d\u5916\u7684\u6eda\u52a8\u6761\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12152"},"#12152"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Menu"]," \u7ec4\u4ef6 ",["code","openKeys"]," \u6709\u66f4\u9ad8\u7684\u4f18\u5148\u7ea7\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12361"},"#12361"]," ",["a",{title:null,href:"https://github.com/tangjinzhou"},"@tangjinzhou"]]]]],["li",["p",["code","Upload"]," \u7ec4\u4ef6\u76f8\u5173"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Upload"]," \u4e0a\u4f20\u6587\u4ef6\u5217\u8868\u4e2d\u7684 ",["code","linkProps"]," \uff0c\u652f\u6301 JSON \u683c\u5f0f\u94fe\u63a5\u4e14\u53ef\u4f20\u5165 ",["code","rel"]," \u3001",["code","target"]," ",["code","title"]," \u7b49\u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/efb23c1525858114460bfe3bd5fcb18c9f236bdc"},"efb23"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Upload"]," \u7ec4\u4ef6\u591a\u6587\u4ef6\u7c7b\u578b\u540c\u65f6\u4e0a\u4f20\u65f6\uff0ckey \u91cd\u590d\u5f15\u7528\u51b2\u7a81\u7684\u62a5\u9519\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/273fd2ea1bca395d61509cc98c3ebbf1c620bf43"},"273fd"],"\uff0c",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10953"},"#10953"]]]]],["li",["p","\u56fe\u6807\u76f8\u5173\u5185\u5bb9"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Upload"]," \u7ec4\u4ef6\u5173\u95ed\u56fe\u6807\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12330"},"#12330"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12304"},"#12304"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u7ec4\u4ef6\u6e05\u9664\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12196"},"#12196"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12181"},"#12181"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Icon"]," svg \u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/0698c8217327224611d4be5fcfd149a355f1c08d"},"0698c"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5f53 ",["code","Icon"]," \u7ec4\u4ef6\u5305\u542b\u5b50\u7ec4\u4ef6\u65f6\uff0c",["code","React.Children.only"]," \u62a5\u9519\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c21ff5251d1ff0f00d7f283dd377a7b13eec21ee"},"c21ff"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Notification"]," \u7ec4\u4ef6\u6ca1\u6709\u63cf\u8ff0\u65f6\u56fe\u6807\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e657985cc35359fb813a2bd68be8c3afbe75c95a"},"e6579"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u7ec4\u4ef6\u7684\u6392\u5e8f\u56fe\u6807\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c935d53b713afb3ec314133d749ca4e29e0c1ee5"},"c935d"]]]]],["li",["p","TypeScript"]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Message"]," \u7ec4\u4ef6\u4e2d ",["code","MessageApi"]," \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e82d7a9c095317d62b054fcf7c2d6666ba54660d"},"e82d7"],["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12137"},"#12137"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Tree"]," onDrop \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e58273dccf59d58862e8bab0da36c7065e1c1044"},"e5827"],["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12269"},"#12269"]]],["li",["p","\ud83d\udc1e ",["code","TreeSelect"]," \u7ec4\u4ef6\u4e2d ",["code","onChange"]," \u65b9\u6cd5\u4e2d\u6dfb\u52a0 ",["code","extra"]," \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12243"},"#12243"],["a",{title:null,href:"https://github.com/jardicc"},"@jardicc"]]]],["h2","3.9.2"],["p",["code","2018-09-08"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Card"]," \u7ec4\u4ef6 ",["code","tab-card"]," \u4e0b\u5d4c\u5957 ",["code","Card"]," \u5bfc\u81f4\u6807\u9898\u8fb9\u8ddd\u504f\u7a84\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12083"},"#12083"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","AutoComplete"]," \u7ec4\u4ef6\u8bbe\u7f6e\u81ea\u5b9a\u8f93\u5165\u7ec4\u4ef6\u4e3a ",["code","TextArea"]," \u65f6\uff0c\u624b\u5de5\u8c03\u6574\u9ad8\u5ea6\u7684\u5ef6\u8fdf\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12117"},"#12117"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Drawer"]," \u7ec4\u4ef6 ",["code","maskStyle"]," \u5c5e\u6027\u65e0\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12125"},"#12125"],["a",{title:null,href:"https://github.com/ryerh"},"@ryerh"]]],["li",["p","\ud83c\udf1f ",["code","Popconfirm"]," \u53ef\u4ee5\u5728 ",["code","onVisibleChange"]," \u91cc\u5224\u65ad\u662f\u5426\u89e6\u53d1\u81ea\u786e\u5b9a\u53d6\u6d88\u6309\u94ae\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8614"},"#8614"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u7ec4\u4ef6\u56fa\u5b9a\u5934\u548c\u5217\u65f6\uff0c\u8868\u5934\u4f1a\u51fa\u73b0\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/6515"},"#6515"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Spin"]," \u7ec4\u4ef6\u8bbe\u7f6e ",["code","delay"]," \u65f6\u521d\u59cb\u5316\u4ecd\u4f1a\u6e32\u67d3\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12131"},"#12131"]]],["li",["p","\u56fe\u6807\u76f8\u5173\u5185\u5bb9:"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Icon"]," \u7ec4\u4ef6\u5728 ",["code","popconfirm"]," \u4e2d\u4f4d\u7f6e\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12080"},"#12080"]]],["li",["p","\ud83d\udc1e \u6dfb\u52a0 ",["code","Icon"]," \u7ec4\u4ef6\u7f3a\u5931\u7684\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/121218"},"#121218"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u7ec4\u4ef6\u52fe\u9009\u7f3a\u5931\u7684\u56fe\u6807\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12054"},"#12054"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","TreeSelect"]," \u7ec4\u4ef6\u5220\u9664\u56fe\u6807\u4e0e\u4e4b\u524d\u7248\u672c\u4e0d\u540c\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12124"},"#12124"]]]]]],["h2","3.9.1"],["p",["code","2018-09-03"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Icon"]," \u7ec4\u4ef6\u5728\u88ab ",["code","Tooltip"]," \u7ec4\u4ef6\u5305\u88f9\u65f6\uff0c\u65e0\u6cd5\u663e\u793a ",["code","Tooltip"]," \u5185\u5bb9\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12005"},"#12005"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","InputNumber"]," \u7ec4\u4ef6\u7684\u5411\u4e0a\u56fe\u6807\u663e\u793a\u4e0d\u6b63\u5e38\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12035"},"#12035"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Modal"]," \u7ec4\u4ef6\u7684\u9519\u8bef\u786e\u8ba4\u6846\u4e0d\u663e\u793a\u56fe\u6807\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12026"},"#12026"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Popconfirm"]," \u7ec4\u4ef6\u4e2d\u7684\u56fe\u6807\u663e\u793a\u4f4d\u7f6e\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/12026"},"#12026"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Card"]," \u7ec4\u4ef6\u4e2d\u7684 ",["code","Actions"]," \u56fe\u6807\u663e\u793a\u4f4d\u7f6e\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12016"},"#12016"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Form"],"\u3001",["code","Alert"],"\u3001",["code","TimePicker"]," \u7b49\u7ec4\u4ef6\u56fe\u6807\u4e3b\u9898\u98ce\u683c\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12016"},"#12016"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Collapse"]," \u7ec4\u4ef6\u4e2d\u7684 ",["code","header"]," \u4e2d\u7684\u56fe\u6807\u4f1a\u987a\u65f6\u9488\u65cb\u8f6c90\b\u5ea6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12016"},"#12016"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728\u7279\u5b9a\u90e8\u7f72\u73af\u5883\u4e2d\uff0c\u65b0\u65e7\u56fe\u6807\u4f1a\u540c\u65f6\u51fa\u73b0\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12016"},"#12016"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12016/commits/8b82f143b6bd612e8ec7f1202dfd5f41127b025e"},"8b82f14"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4f7f\u7528 ",["code","Icon.createFromIconFontCN({...})"]," \u65b9\u6cd5\u5931\u6548\u5e76\u62a5\u9519\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/12013"},"#12013"]]]],["h2","3.9.0"],["p",["code","2018-09-02"]],["p","\u5728\u5f00\u5b66\u4e4b\u9645\u6211\u4eec\u5e26\u6765\u4e86\u4e45\u8fdd\u7684 ",["code","3.9.0"]," \u7684\u66f4\u65b0\u3002\u591a\u4e2a\u91cd\u91cf\u7ea7\u7684\u65b0\u7279\u6027\u548c\u5927\u91cf\u4fee\u590d\uff0c\u4f7f Ant Design \u7684\u80fd\u529b\u663e\u8457\u63d0\u5347\u3002"],["ul",["li",["p","\ud83d\udd25\ud83d\udd25\ud83d\udd25 \u5728 ",["code","3.9.0"]," \u7248\u672c\u4e2d\uff0c\u6211\u4eec\u91cd\u7ed8\u4e86\u6240\u6709\u7684\u56fe\u6807\uff0c\u65b0\u589e\u4e86\u4e24\u5927\u7c7b\uff0c\u8d85\u8fc7 90 \u4e2a\u65b0\u56fe\u6807\uff0c\u5e76\u4e14\u4e3a\u6bcf\u4e2a\u56fe\u6807\u589e\u52a0\u4e86\u591a\u79cd\u98ce\u683c\u3002\u4e3a\u6b64\u6211\u4eec\u91cd\u5199\u4e86 Icon \u7ec4\u4ef6\uff0c\u4f7f\u7528 ",["code","SVG"]," \u66ff\u6362\u4e86 ",["code","fontface"]," \u56fe\u6807\uff0c\u589e\u52a0\u4e86\u591a\u4e2a\u7279\u6027\uff0c\u53ef\u4ee5\u5feb\u901f\u7684\u4f7f\u7528\u65b0\u7684\u56fe\u6807\u548c\u98ce\u683c\u3002\n",["img",{title:null,src:"https://gw.alipayobjects.com/zos/rmsportal/CVDHuodLwcDeyQBDoUIZ.png",alt:null}]],["ul",["li",["p","\ud83d\udc84 \u4f7f\u7528 ",["code","SVG"]," \u56fe\u6807\u66ff\u6362\u4e86 ",["code","css"]," \u5b57\u4f53\u56fe\u6807\uff0c",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10353"},"\u53ef\u4ee5\u770b\u8fd9\u91cc\u7684\u8ba8\u8bba\u4e86\u89e3 svg \u7684\u4f18\u52bf"],"\u3002"]],["li",["p","\ud83d\udc84 \u63d0\u4f9b\u4e86\u4e09\u5957\u56fe\u6807\u98ce\u683c\u7ebf\u6027\u3001\u5b9e\u8272\u548c\u53cc\u8272\u56fe\u6807\uff0c\u9ed8\u8ba4\u4e3a\u7ebf\u6027\u98ce\u683c\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e\u4e86 ",["strong","\u7f16\u8f91\u7c7b"]," \u548c ",["strong","\u6570\u636e\u7c7b"]," \u4e24\u4e2a\u65b0\u7c7b\u522b\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","theme"]," \u5c5e\u6027\uff0c\u53ef\u4ee5\u8bbe\u7f6e\u56fe\u6807\u7684\u4e3b\u9898\u98ce\u683c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11971"},"#11971"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","component"]," \u5c5e\u6027\uff0c\u53ef\u4ee5\u5916\u90e8\u4f20\u5165\u4e00\u4e2a\u7ec4\u4ef6\u6765\u81ea\u5b9a\u4e49\u63a7\u5236\u6e32\u67d3\u7ed3\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11322"},"#11322"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","twoToneColor"]," \u5c5e\u6027\uff0c\u53ef\u4ee5\u63a7\u5236\u53cc\u8272\u56fe\u6807\u7684\u4e3b\u9898\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11971"},"#11971"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u9759\u6001\u65b9\u6cd5 ",["code","Icon.getTowToneColor()"]," \u548c ",["code","Icon.setTwoToneColor(...)"],"\uff0c\u53ef\u4ee5\u5168\u5c40\u6027\u7684\u83b7\u53d6\u548c\u8bbe\u7f6e\u6240\u6709\u53cc\u8272\u56fe\u6807\u7684\u4e3b\u9898\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11971"},"#11971"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u9759\u6001\u65b9\u6cd5 ",["code","Icon.createFromIconfontCN({...})"],"\uff0c\u53ef\u4ee5\u66f4\u52a0\u65b9\u4fbf\u5730\u4f7f\u7528 ",["a",{title:null,href:"http://iconfont.cn/"},["code","iconfont.cn"]]," \u4e0a\u6258\u7ba1\u7684\u56fe\u6807\u3002\u66f4\u591a\u7528\u6cd5\u8bf7\u53c2\u9605 ",["a",{title:null,href:"https://pro.ant.design/docs/biz-icon-cn"},"Ant Design Pro - \u4e1a\u52a1\u56fe\u6807"]," \u7684\u4ecb\u7ecd\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11322"},"#11322"]]]]],["li",["p","\ud83d\udd25 \u589e\u52a0\u4e86\u4e00\u4e2a\u65b0\u7ec4\u4ef6 ",["a",{title:null,href:"https://ant.design/components/skeleton-cn/"},"Skeleton"],"\u3002"]],["li",["p","\ud83d\udd25 Menu \u5728 ",["code","horizontal"]," \u6a21\u5f0f\u4e0b\u4f1a\u81ea\u52a8\u6536\u8d77\u6765\u9002\u5e94\u5bbd\u5ea6\u3002"]],["li",["p","\ud83d\udd25 Drawer \u7684 ",["code","placement"]," \u652f\u6301 ",["code","top"]," \u548c ",["code","bottom"],"\uff0c\u53ef\u4ee5\u9002\u5e94\u66f4\u591a\u573a\u666f\u3002"]]],["p","\u53e6\u5916\u6211\u4eec\u7684 ",["strong","Ant Design Pro 2.0.0"]," \u4e5f\u5df2\u540c\u6b65\u53d1\u5e03\uff0c\u8be6\u7ec6\u5185\u5bb9\u8bf7\u770b ",["a",{title:null,href:"https://www.yuque.com/ant-design/ant-design-pro/ant_design_pro_2.0_is_out"},"\u8fd9\u91cc"],"\u3002"],["h3","\u7ec4\u4ef6\u4fee\u590d/\u529f\u80fd\u589e\u5f3a\uff1a"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e Modal.open \u65b9\u6cd5\uff0c\u7528\u4e8e\u53ef\u81ea\u5b9a\u4e49\u56fe\u6807\u7684\u5feb\u6377\u5bf9\u8bdd\u6846\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11982"},"#11982"]," ",["a",{title:null,href:"https://github.com/hsiehjack"},"@hsiehjack"]]],["li",["p","\ud83c\udf1f Modal.info \u589e\u52a0 ",["code","getContainer"]," \u7684\u914d\u7f6e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11377"},"#11377"]]],["li",["p","\ud83c\udf1f \u5408\u5e76\u4f18\u5316\u4e86 RangePicker \u7684\u65e5\u5386\u9875\u811a UI\u3002"]],["li",["p","\ud83c\udf1f Anchor \u7ec4\u4ef6\u589e\u52a0 ",["code","onClick"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11898"},"#11898"]]],["li",["p","\ud83c\udf1f Tab \u7ec4\u4ef6\u589e\u52a0 ",["code","renderTabBar"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11856"},"#11856"]]],["li",["p","\ud83c\udf1f Input \u7ec4\u4ef6\u589e\u52a0 ",["code","select"]," \u65b9\u6cd5\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11906"},"#11906"]]],["li",["p","\ud83c\udf1f Steps \u589e\u52a0 ",["code","initial"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11180"},"#11180"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Steps \u70b9\u72b6\u6b65\u9aa4\u6761\u6837\u5f0f\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/7d5907500f5b1db59d30a17ef466271af3655fa2"},"7d59075"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 Card \u7684 ",["code","headStyle"]," \u4e2d\u8bbe\u7f6e fontSize \u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11995"},"#11995"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Button \u7ec4\u4ef6\u6ce2\u6d6a\u52a8\u753b\u6df7\u6dc6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11985"},"#11985"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Modal.confirm \u8bbe\u7f6e ",["code","centered"]," \u5c5e\u6027\u65e0\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11969"},"#11969"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86\u5728 Input.Group \u7684 ",["code","compact"]," \u6a21\u5f0f\u4e0b\u8bbe\u7f6e\u7b2c\u4e8c\u4e2a Input \u7684\u524d\u540e\u7f00\u4f1a\u9020\u6210\u53f3\u8fb9\u6846\u6d88\u5931\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11965"},"#11965"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u7ec4\u4ef6\u4e0a\u4f20\u56fe\u7247\u8f83\u591a\u65f6\u53ef\u80fd\u4f1a\u9020\u6210\u56fe\u7247\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11183"},"#11183"]]],["li",["p","\ud83d\udc1e \u4fee\u590d MonthPicker ",["code","renderExtraFooter"]," \u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8184"},"#8184"]]]],["h2","3.8.4"],["p",["code","2018-08-27"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Tag \u7ec4\u4ef6\u5220\u9664 tag \u540e\u4f1a\u9020\u6210\u6362\u884c\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d Switch \u5355\u51fb\u65f6\u4f1a\u4ea7\u751f ",["code","Failed to execute 'removeChild' on 'Node'"]," \u9519\u8bef\u7684\u95ee\u9898\u3002"]]],["h2","3.8.3"],["p",["code","2018-08-26"]],["ul",["li",["p","\ud83d\udcd6 \u91cd\u65b0\u7f16\u5199\u4e86 ",["a",{title:null,href:"https://ant.design/docs/react/customize-theme-cn"},"\u5b9a\u5236\u4e3b\u9898"]," \u6587\u6863\uff0c\u5e76\u63d0\u4f9b\u4e86\u4e3b\u8981\u7684 ",["code","Less"]," \u53d8\u91cf\u8bf4\u660e\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d Badge \u7ec4\u4ef6\u52a8\u753b\u51fa\u73b0\u4f4d\u7f6e\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11870"},"#11870"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Cascader \u7ec4\u4ef6\u5728 IE \u548c Edge \u6d4f\u89c8\u5668\u4e2d\u6d6e\u5c42\u4e0e\u6570\u636e\u5217\u5bbd\u5ea6\u4e0d\u4e00\u81f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11857"},"#11857"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Checkbox \u7ec4\u4ef6\u5728 Windows Chrome \u4e0b\u6837\u5f0f\u6a21\u7cca\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11797"},"#11797"]]],["li",["p","\ud83d\udc1e \u4fee\u590d DatePicker.WeekPicker \u7ec4\u4ef6\u7684 ",["code","style"]," \u5c5e\u6027\u65e0\u6cd5\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11738"},"#11738"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u7ec4\u4ef6\u5728\u591a\u5c42\u72b6\u6001\u4e0b\u5207\u6362\u51fa\u73b0\u7684\u80cc\u666f\u95ea\u70c1\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11813"},"#11813"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5e26\u6709\u524d\u7f00\u6216\u540e\u7f00\u7684 Input.Group \u7ec4\u4ef6\u5728\u7d27\u51d1\u6a21\u5f0f\u4e0b\u53f3\u8fb9\u6846\u5bbd\u5ea6\u8fc7\u5bbd\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11863"},"#11863"]]],["li",["p","Menu"],["pre",{lang:null,highlighted:'\t<span class="token operator">-</span> \ud83d\udc1e \u4fee\u590d\u5b50\u83dc\u5355\u4e4b\u95f4\u5b58\u5728\u95f4\u9699\u5bfc\u81f4\u9f20\u6807 hover \u65f6\u83dc\u5355\u6d88\u5931\u7684\u95ee\u9898\u3002<span class="token punctuation">[</span>#<span class="token number">11725</span><span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">/</span>issues<span class="token operator">/</span><span class="token number">11725</span><span class="token punctuation">)</span>\n\t<span class="token operator">-</span> \ud83d\udc1e \u4fee\u590d\u5f53\u5206\u7ec4\u83dc\u5355\u5305\u542b\u4e86\u7b2c\u4e00\u4e2a\u83dc\u5355\u9879\uff0c\u5e76\u4e14\u5728\u83dc\u5355\u6536\u8d77\u65f6\u51fa\u73b0\u9519\u8bef\u7684\u95ee\u9898\u3002<span class="token punctuation">[</span>a52370<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">/</span>commit<span class="token operator">/</span>a523706625bd695f44401579d980089292089dda<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token variable">@ohhoney1</span><span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>ohhoney1<span class="token punctuation">)</span>'},["code","\t- \ud83d\udc1e \u4fee\u590d\u5b50\u83dc\u5355\u4e4b\u95f4\u5b58\u5728\u95f4\u9699\u5bfc\u81f4\u9f20\u6807 hover \u65f6\u83dc\u5355\u6d88\u5931\u7684\u95ee\u9898\u3002[#11725](https://github.com/ant-design/ant-design/issues/11725)\n\t- \ud83d\udc1e \u4fee\u590d\u5f53\u5206\u7ec4\u83dc\u5355\u5305\u542b\u4e86\u7b2c\u4e00\u4e2a\u83dc\u5355\u9879\uff0c\u5e76\u4e14\u5728\u83dc\u5355\u6536\u8d77\u65f6\u51fa\u73b0\u9519\u8bef\u7684\u95ee\u9898\u3002[a52370](https://github.com/ant-design/ant-design/commit/a523706625bd695f44401579d980089292089dda) [@ohhoney1](https://github.com/ohhoney1)"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Steps \u7ec4\u4ef6\u4e2d\u8fc7\u957f\u7684 ",["code","description"]," \u4f1a\u88ab\u622a\u65ad\uff0c\u65e0\u6cd5\u5b8c\u6574\u5c55\u793a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11864"},"#11864"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tooltip \u7ec4\u4ef6\u5728 ",["code","title"]," \u8fc7\u957f\u65f6\u4f1a\u5c06\u5355\u8bcd\u62c6\u5206\u5230\u4e24\u884c\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11722"},"#11722"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tree \u7ec4\u4ef6\u4e2d\u7684\u6811\u8282\u70b9\u65e0\u6cd5\u63a5\u6536\u81ea\u5b9a\u4e49\u5c5e\u6027\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11423"},"#11423"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload.Dragger \u7ec4\u4ef6\u7684\u6709\u6548\u62d6\u62fd\u533a\u57df\u4e0d\u5339\u914d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11869"},"#11869"]]]],["h2","3.8.2"],["p",["code","2018-8-18"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Tag \u7ec4\u4ef6 ",["code","visible"]," \u5c5e\u6027\u521d\u59cb\u503c\u4e3a false \u65f6\u4ecd\u7136\u53ef\u89c1\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11757"},"#11757"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Modal \u6587\u672c\u5728\u53cc\u51fb\u6253\u5f00\u7684\u65f6\u5019\u4f1a\u88ab\u9009\u4e2d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11777"},"#11777"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Rate \u7ec4\u4ef6\u70b9\u51fb\u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11736"},"#11736"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Badge \u7ec4\u4ef6\u5728\u5b50\u5143\u7d20\u4e3a ",["code","display:block"]," \u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/84119d8959d55edf535a9cac5ff532e61b6ee698"},"#84119d8"]]],["li",["p","Drawer"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u7ec4\u4ef6\u4e0d\u517c\u5bb9 IE10 \u548c IE9  \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11583"},"#11583"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u7ec4\u4ef6\u5728\u79fb\u52a8\u8bbe\u5907\u4e0a\u65e0\u6cd5\u5782\u76f4\u6eda\u52a8\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11443"},"#11443"]]]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d TreeNode \u7ec4\u4ef6\u7f3a\u5c11\u7684 ",["code","selectable"]," \u5c5e\u6027\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11604"},"#11604"]," ",["a",{title:null,href:"https://github.com/apieceofbart"},"@apieceofbart"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Input \u7ec4\u4ef6\u7f3a\u5931 ",["code","autosize"]," \u5c5e\u6027\u7684\u7c7b\u578b\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11697"},"#11697"]]]]]],["h2","3.8.1"],["p",["code","2018-08-12"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d TimePicker \u9762\u677f\u8f93\u5165\u6846\u5bbd\u5ea6\u8fc7\u957f\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/80f82674fb63b068d047651ccba772999139f1b7"},"80f8267"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tabs \u4e2d\u9690\u85cf\u7684\u8f93\u5165\u6846\u53ef\u80fd\u88ab\u805a\u7126\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11261"},"#11261"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Badge \u7ec4\u4ef6\u5c5e\u6027 ",["code","offset"]," \u7684\u5750\u6807\u8bbe\u7f6e\u987a\u5e8f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11648"},"#11648"]," ",["a",{title:null,href:"https://github.com/tangjinzhou"},"@tangjinzhou"]]],["li",["p","Upload"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u7ec4\u4ef6\u5220\u9664\u6309\u94ae\u53ef\u80fd\u4e0d\u5c55\u793a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10454"},"#10454"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u7ec4\u4ef6\u7f29\u7565\u56fe\u5730\u5740\u6ca1\u6709\u6587\u4ef6\u6269\u5c55\u540d\u65f6\u7684\u663e\u793a\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11684"},"#11684"]," ",["a",{title:null,href:"https://github.com/elantion"},"@elantion"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Anchor \u7ec4\u4ef6\u5f53 ",["code","affix=true"]," \u65f6\u65e0\u6cd5\u5728\u6eda\u52a8\u7684\u7a97\u53e3\u4e2d\u56fa\u5b9a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11688"},"#11688"]," ",["a",{title:null,href:"https://github.com/vitaliymaz"},"@vitaliymaz"]]],["li",["p","\ud83d\udc1e \u4fee\u590d List.Grid \u7ec4\u4ef6\u4e2d\u7684\u5361\u7247\u5bbd\u5ea6\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11712"},"!11712"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Radio \u5728 safari \u4e0b\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/754a22ca24dee685666554778f53a5fe700959ff"},"754a22c"]]],["li",["p","\ud83d\udc84 \u6dfb\u52a0\u70b9\u51fb\u52a8\u753b\u6548\u679c\u5230\u7ec4\u4ef6 Switch, Radio.Button \u548c Tag\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/9cf6ae601010acbf665d575d34c0cc0918e604e7"},"9cf6ae6"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Collapse \u7ec4\u4ef6\u7f3a\u5c11\u7684 ",["code","destroyInactivePanel"]," \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11646"},"#11646"]," ",["a",{title:null,href:"https://github.com/zheeeng"},"@zheeeng"]]],["li",["p","\ud83d\udc84 \u4fee\u590d AutoComplete \u6ca1\u6709 ",["code","getPopupContainer"]," \u5c5e\u6027\u5b9a\u4e49\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11690"},"#11690"]," ",["a",{title:null,href:"https://github.com/Huanghuiying0624"},"@Huanghuiying0624"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u7ec4\u4ef6\u7684 ",["code","lastModifiedDate"]," \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11709"},"#11709"]," ",["a",{title:null,href:"https://github.com/andycall"},"@andycall"]]]]],["li",["p","\ud83d\udc84 \u4f7f\u7528\u65b0\u7684 React \u751f\u547d\u5468\u671f\u51fd\u6570\uff0c\u5305\u62ec\u7ec4\u4ef6 Upload, CheckboxGroup, Layout.Sider, Tooltip, Popconfirm\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11666"},"#11666"]," ",["a",{title:null,href:"https://github.com/dancerphil"},"@dancerphil"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11682"},"#11682"]," ",["a",{title:null,href:"https://github.com/dancerphil"},"@dancerphil"]]]],["h2","3.8.0"],["p",["code","2018-08-05"]],["p","\u975e\u5e38\u611f\u8c22\u5728 3.8.0 \u4e0a\u63d0\u4ea4 PR \u7684 24 \u4f4d\u8d21\u732e\u8005\uff01"],["ul",["li",["p","\ud83d\udc84 \u652f\u6301 TypeScript 3\uff0c\u5e76\u4f18\u5316\u4e86\u5927\u91cf\u7ec4\u4ef6\u5b9a\u4e49\u3002"]],["li",["p","\ud83d\udc84 \u4f7f\u7528 ",["a",{title:null,href:"https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"},"font-variant-numeric"]," \u4f18\u5316\u4e86\u7b49\u5bbd\u6570\u5b57\u7684\u5b9e\u73b0\u65b9\u5f0f\uff0c\u89e3\u51b3\u4e86\u6570\u5b57\u5b57\u4f53\u548c\u5176\u4ed6\u5b57\u4f53\u4e0d\u4e00\u81f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11567"},"#11567"]," ",["a",{title:null,href:"https://github.com/tibdex"},"@tibdex"]]],["li",["p","\ud83c\udf1f Timeline \u73b0\u5728\u652f\u6301\u5de6/\u53f3/\u4ea4\u66ff\u4e09\u79cd\u5e03\u5c40\u5f62\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11490"},"#11490"]," ",["a",{title:null,href:"https://github.com/jrvboesch"},"@jrvboesch"]]],["li",["p","\ud83c\udf1f Button \u589e\u52a0 ",["code","block"]," \u5c5e\u6027\u7528\u4e8e\u6491\u6ee1\u7236\u5bb9\u5668\u5bbd\u5ea6\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11500"},"#11500"]," ",["a",{title:null,href:"https://github.com/ilanus"},"@ilanus"]]],["li",["p","Tree"],["ul",["li",["p","\ud83d\udc84 \u4f18\u5316\u4e86\u7ec4\u4ef6\u53ef\u8bbf\u95ee\u6027\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u62d6\u62fd\u540e\u8282\u70b9\u5931\u8e2a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11492"},"#11492"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u5728\u62d6\u62fd\u540e\u8282\u70b9\u4f4d\u7f6e\u6ca1\u6709\u5782\u76f4\u5c45\u4e2d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11458"},"#11458"]]]]],["li",["p","Table"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","rowSelection.columnTitle"]," \u53ef\u4ee5\u5b9a\u5236\u9009\u62e9\u5217\u7684\u5217\u6807\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11042"},"#11042"]," ",["a",{title:null,href:"https://github.com/littleLane"},"@littleLane"]]],["li",["p","\ud83d\udc84 \u65b0\u589e\u4e86\u4e00\u4e2a",["a",{title:null,href:"/components/table/#components-table-demo-resizable-column"},"\u53ef\u62d6\u62fd\u6539\u53d8\u5217\u5bbd\u7684\u4f8b\u5b50"],"\u3002"]],["li",["p","\ud83d\udc84 \u652f\u6301\u6309\u4f4f shift \u8fdb\u884c\u591a\u9009\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11404"},"#11404"]," ",["a",{title:null,href:"https://github.com/RaphaelChauveau"},"@RaphaelChauveau"]]]]],["li",["p","Avatar"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","onError"]," \u5c5e\u6027\uff0c\u4f5c\u4e3a\u56fe\u7247\u52a0\u8f7d\u5931\u8d25\u65f6\u7684\u56de\u8c03\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11285/"},"#11285"]," ",["a",{title:null,href:"https://github.com/paranoidjk"},"@paranoidjk"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","size"]," \u5c5e\u6027\uff0c\u65b9\u4fbf\u81ea\u5b9a\u4e49\u5934\u50cf\u5927\u5c0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11256"},"#11256"]," ",["a",{title:null,href:"https://github.com/emersonlaurentino"},"@emersonlaurentino"]]]]],["li",["p","\ud83c\udf1f Card \u65b0\u589e ",["code","headStyle"]," \u5c5e\u6027\u7528\u4e8e\u5b9a\u5236\u6807\u9898\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11407"},"#11407"]," ",["a",{title:null,href:"https://github.com/emersonlaurentino"},"@emersonlaurentino"]]],["li",["p","\ud83d\udc1e \u4fee\u590d DatePicker \u4e0a\u65e0\u6cd5\u4f7f\u7528 Tooltip \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11451"},"#11451"]," ",["a",{title:null,href:"https://github.com/yociduo"},"@yociduo"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Input.Group \u4e0a\u65e0\u6cd5\u4f7f\u7528 Tooltip \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11532"},"#11532"]," ",["a",{title:null,href:"https://github.com/yociduo"},"@yociduo"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a DatePicker \u4e2d\u65f6\u95f4\u9762\u677f hover \u65f6\u6570\u5b57\u8df3\u52a8\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11460"},"#11460"]]],["li",["p","\ud83d\udc1e Tabs \u4fee\u590d\u4e86\u4e00\u4e2a\u5207\u6362\u7126\u70b9\u5f02\u5e38\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11261"},"#11261"]]],["li",["p","Select"],["ul",["li",["p","\ud83c\udf1f \u652f\u6301 ",["code","data-*"]," \u5c5e\u6027\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u9009\u4e2d\u9879\u5728\u5217\u8868\u4e2d\u6ca1\u6709\u805a\u7126\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11268"},"#11268"]]]]],["li",["p","\ud83c\udf1f Calendar \u65b0\u589e\u4e86 ",["code","onChange"]," \u4f5c\u4e3a\u65e5\u671f\u6539\u53d8\u7684\u56de\u8c03\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11476"},"#11476"]," ",["a",{title:null,href:"https://github.com/tangjinzhou"},"@tangjinzhou"]]],["li",["p","\ud83c\udf1f Popconfirm \u65b0\u589e ",["code","icon"]," \u652f\u6301\u81ea\u5b9a\u4e49\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11191"},"#11191"]," ",["a",{title:null,href:"https://github.com/nuintun"},"@nuintun"]]],["li",["p","Modal"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","centered"]," \u5c5e\u6027\u7528\u4e8e\u8bbe\u7f6e\u5bf9\u8bdd\u6846\u5782\u76f4\u5c45\u4e2d\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11537"},"#11537"]," ",["a",{title:null,href:"https://github.com/yoyo837"},"@yoyo837"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86\u591a\u4e2a\u5bf9\u8bdd\u6846\u4f1a\u88ab ESC \u4e00\u6b21\u6027\u5168\u90e8\u5173\u6389\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11394"},"#11394"]," ",["a",{title:null,href:"https://github.com/yoyo837"},"@yoyo837"]]],["li",["p","\ud83d\udc1e \u518d\u6b21\u4fee\u590d Modal.confirm \u7684\u6807\u9898\u533a\u57df\u67d0\u4e9b\u60c5\u51b5\u4e0b\u4f1a\u663e\u793a\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11568"},"#11568"]," ",["a",{title:null,href:"https://github.com/cheshireoctopus"},"@cheshireoctopus"]]]]],["li",["p","\ud83c\udf1f Progress \u65b0\u589e ",["code","strokeLinecap"]," \u5c5e\u6027\u7528\u4e8e\u8c03\u6574\u8fb9\u7f18\u5f62\u72b6\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11547"},"#11547"]," ",["a",{title:null,href:"https://github.com/blatinier"},"@blatinier"]]],["li",["p","\ud83c\udf1f Drawer \u65b0\u589e ",["code","className"]," \u5e76\u5e9f\u5f03 ",["code","wrapClassName"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11609"},"#11609"]," ",["a",{title:null,href:"https://github.com/fergiar"},"@fergiar"]]]],["h2","3.7.3"],["p",["code","2018-07-28"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Steps \u5728 ",["code","labelPlacement"]," \u4e3a ",["code","vertical"]," \u65f6\u6807\u9898\u4e0e\u56fe\u6807\u4e0d\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11426"},"#11426"]," ",["a",{title:null,href:"https://github.com/yoyo837"},"@yoyo837"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Cascader \u8bbe\u7f6e ",["code","fieldNames"]," \u65f6\u4e0d\u80fd\u6b63\u786e\u8bfb\u53d6\u5b50\u8282\u70b9\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11311"},"#11311"]," ",["a",{title:null,href:"https://github.com/405go"},"@405go"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Pagination \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11474"},"#11474"]," ",["a",{title:null,href:"https://github.com/kagd"},"@kagd"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Select \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11189<Paste>"},"#11189"]," ",["a",{title:null,href:"https://github.com/thisJJ"},"@thisJJ"]]]]]],["h2","3.7.2"],["p",["code","2018-07-25"]],["ul",["li",["p","DatePicker"],["ul",["li",["p","\ud83d\udc1e ",["strong","\u4fee\u590d\u5728\u53d7\u63a7\u6a21\u5f0f\u4e0b\u4e0d\u80fd\u5207\u6362\u5e74\u6708\u7684\u95ee\u9898\u3002"],["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/b9992f4a08574efb47b6e6cd80eb1e888b9a1ede"},"b9992f4"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 ",["code","getDerivedStateFromProp"]," \u7684\u8b66\u544a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11398"},"#11398"]," ",["a",{title:null,href:"https://github.com/yoyo837"},"@yoyo837"]]]]],["li",["p","Drawer"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4f7f\u7528 ",["code","destroyOnClose"]," \u65f6\u6ca1\u6709\u5173\u95ed\u52a8\u753b\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11307"},"#11307"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","width"]," \u4ee5 ",["code","vw"]," \u4e3a\u5355\u4f4d\u65f6\u7684\u663e\u793a\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11326"},"#11326"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","wrapClassName"]," \u5c5e\u6027\u65e0\u6548\u7684\u95ee\u9898\u3002"]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tooltip \u6587\u5b57\u6ea2\u51fa\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11402"},"#11402"]," ",["a",{title:null,href:"https://github.com/weidapao"},"@weidapao"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Menu \u5728 ",["code","theme"]," \u4e3a ",["code","dark"]," \u662f\u5728 Layout.Header \u91cc\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11400"},"#11400"]," ",["a",{title:null,href:"https://github.com/hongxuWei"},"@hongxuWei"]]],["li",["p","\ud83d\udc1e \u4fee\u590d InputNumber \u7684\u7bad\u5934\u6309\u94ae\u5728\u4f7f\u7528\u4e86\u56fa\u5b9a\u5217\u7684 Table \u91cc\u663e\u793a\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11408"},"#11408"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Select \u4f7f\u7528\u5206\u7ec4\u65f6 Option \u7684\u5706\u89d2\u663e\u793a\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/6cb6f5c83ed634e67d5b5d0816d11aa0788a74d8"},"6cb6f5c"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u7b2c\u4e00\u6b21\u70b9\u51fb\u8fc7\u6ee4\u6309\u94ae\u7684\u65f6\u5019 ",["code","onChange"]," \u4f1a\u88ab\u89e6\u53d1\u4e24\u6b21\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11164"},"#11164"]," ",["a",{title:null,href:"https://github.com/adybionka"},"@adybionka"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Modal.confirm \u7684\u6807\u9898\u5728 Firefox \u4e0b\u4f1a\u663e\u793a\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11432"},"#11432"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Radio.Group \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11409"},"#11409"]," ",["a",{title:null,href:"https://github.com/eddiemoore"},"@eddiemoore"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TreeSelect \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11442"},"#11442"]," ",["a",{title:null,href:"https://github.com/JribiBelhassen"},"@JribiBelhassen"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Badge \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11421"},"#11421"]," ",["a",{title:null,href:"https://github.com/zongzi531"},"@zongzi531"]]]]]],["h2","3.7.1"],["p",["code","2018-07-21"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u5185\u65e0\u6cd5\u663e\u793a\u5f39\u5c42\u7ec4\u4ef6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11304"},"#11304"]]],["li",["p","\ud83d\udc1e \u5e26\u9875\u7b7e\u7684\u5361\u7247\u9875\u7b7e\u652f\u6301 disabled \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11212"},"#11212"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u951a\u70b9\u94fe\u63a5\u7ec4\u4ef6 href \u6539\u53d8\u4e0d\u66f4\u65b0\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11287/files"},"#11287"]," ",["a",{title:null,href:"https://github.com/tangjinzhou"},"@tangjinzhou"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Menu \u6837\u5f0f\u7ec6\u8282\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11299"},"#11299"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Drawer \u7ec4\u4ef6\u8bbe\u7f6e ",["code","destroyOnClose"]," \u540e\u5173\u95ed\u52a8\u753b\u6d88\u5931\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11307"},"#11307"]]],["li",["p","\ud83d\udc1e \u4fee\u590d DirectoryTree \u5728 ",["code","expandedKeys"]," \u5c5e\u6027\u53ef\u63a7\u65f6\u70b9\u51fb\u65e0\u6cd5\u5c55\u5f00\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11366"},"#11366"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ButtonGroup \u4e2d\u4f7f\u7528 Tooltip \u7684 Button \u5728 ",["code","disabled"]," \u65f6\u6837\u5f0f\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/11321"},"11321"]," ",["a",{title:null,href:"https://github.com/tangjinzhou"},"@tangjinzhou"]]]],["h2","3.7.0"],["p","3.7.0 \u662f\u4e00\u4e2a\u91cd\u78c5\u66f4\u65b0\uff0c\u5e26\u6765\u4e86\u5f88\u591a\u6fc0\u52a8\u4eba\u5fc3\u7684\u53d8\u5316\u548c\u65b0\u7279\u6027\u3002\n\u4ee5\u4e0b\u662f\u4e00\u4e9b\u4eae\u70b9\u2728\uff1a"],["ul",["li",["p","\ud83d\udd25 \u589e\u52a0\u62bd\u5c49\u7ec4\u4ef6 : ",["a",{title:null,href:"https://ant.design/components/drawer-cn/"},["code","Drawer"]]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10791"},"#10791"]]],["li",["p","\ud83d\udd25 \u65b0\u589e ",["code","Tree.DirectoryTree"]," \u7ec4\u4ef6\uff0c\u4f5c\u4e3a\u5185\u7f6e\u7684\u76ee\u5f55\u6811\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7749"},"#7749"]]]],["p","\u7ec4\u4ef6\u4fee\u590d/\u529f\u80fd\u589e\u5f3a\uff1a"],["ul",["li",["p","TreeSelect \u7ec4\u4ef6\u5347\u7ea7 ",["code","rc-tree-select"]," \u5230 ",["code","2.0.5"],"\uff0c\u8fdb\u884c\u4e86\u91cd\u6784\uff0c\u4fee\u590d\u4e86 check \u7684\u903b\u8f91\u3002"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","autoClearSearchValue"]," \u5c5e\u6027\uff0c\u5f53\u591a\u9009\u6a21\u5f0f\u4e0b\u503c\u88ab\u9009\u62e9\uff0c\u7528\u4e8e\u81ea\u52a8\u6e05\u7a7a\u641c\u7d22\u6846\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10996"},"10996"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","searchValue"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u641c\u7d22\u6846\u7684\u503c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/6ff7dd8fb953f079ee51ee638aaf4d832d0e10bf#diff-1e8e47abbdbe6e12d009aa61619ab22f"},"6ff7dd8"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","maxTagCount"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u663e\u793a\u6807\u7b7e\u7684\u6700\u5927\u6570\u91cf\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/fb96c9db351e44a202f64f780470c6319a8a9626"},"fb96c9d"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","maxTagPlaceholder"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u6807\u7b7e\u9690\u85cf\u65f6\u663e\u793a\u7684\u5185\u5bb9\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/fb96c9db351e44a202f64f780470c6319a8a9626"},"fb96c9d"]]],["li",["p","\ud83c\udf1f \u641c\u7d22\u6846\u652f\u6301\u5927\u5c0f\u5199\u654f\u611f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10990"},"#10990"]]],["li",["p","\ud83d\uddd1 ",["code","treeData"]," \u6570\u636e\u683c\u5f0f\u4e2d\u7684 ",["code","label"]," \u5c5e\u6027\u88ab\u5e9f\u5f03\uff0c\u4f7f\u7528 ",["code","title"]," \u5c5e\u6027\u4ee3\u66ff\u3002"]]]],["li",["p","Upload \u7ec4\u4ef6\u5347\u7ea7 ",["code","rc-upload"]," \u5230 ",["code","2.5.0"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","directory"]," \u5c5e\u6027\uff0c\u652f\u6301\u4e0a\u4f20\u4e00\u4e2a\u6587\u4ef6\u5939\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7315"},"#7315"]]],["li",["p","\ud83c\udf1f ",["code","action"]," \u5c5e\u6027\u652f\u6301\u4f5c\u4e3a\u4e00\u4e2a\u8fd4\u56de ",["code","Promise"]," \u5bf9\u8c61\u7684\u51fd\u6570\uff0c\u4f7f\u7528\u66f4\u52a0\u7075\u6d3b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/fd96967c872600b79bb608e9ddf9f8c38814a704"},"fd96967"]]]]],["li",["p","Dropdown \u589e\u52a0\u65b0\u7279\u6027\uff0c\b\u53ef\u4ee5\u505a\u4e3a\u53f3\u952e\u83dc\u5355\u6765\u4f7f\u7528\u3002"],["ul",["li",["p","\ud83c\udf1f \u7ed9\u83dc\u5355\u9879\u7684 icon \u63d0\u4f9b\u9ed8\u8ba4\u7684\u5916\u95f4\u8ddd\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/8e60a591fd24f644de4f67d69c2210e9270be9cc"},"8e60a59"]]],["li",["p","\ud83c\udf1f \u89e6\u53d1\u65b9\u5f0f\u4e3a ",["code","contextMenu"]," \u65f6\u81ea\u52a8\u8c03\u6574\u83dc\u5355\u7684\u4f4d\u7f6e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/16e42601d6772fc0830ee237a1e751a38a118676"},"16e4260"]]]]],["li",["p","Table \u7ec4\u4ef6\u5347\u7ea7 ",["code","rc-table"]," \u5230 ",["code","6.2.2"],"\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/f2fddff3fd0d6b36e8e6d8ee06bfcbcc85ead4f0"},"f2fddff"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","expanded"]," \u4f5c\u4e3a ",["code","expandedRowRender"]," \u5c5e\u6027\u51fd\u6570\u7684\u7b2c\u56db\u4e2a\u53c2\u6570\uff0c\u7528\u4e8e\u83b7\u53d6\u5f53\u524d\u884c\u662f\u5426\u5c55\u5f00\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10379"},"#10379"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u65e0\u987b\u4f7f\u7528\u5b8c\u5168\u53d7\u63a7\u7ec4\u4ef6\u4e5f\u80fd\u8986\u76d6\u7b5b\u9009\u83dc\u5355\u7684\u80fd\u529b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/59cc3a8b6c643f7206feedf2dc2c7154296ba3e3"},"59cc3a8"]," ",["a",{title:null,href:"https://github.com/chrvadala"},"@chrvadala"]]],["li",["p","\ud83c\udf1f ",["code","filterIcon"]," \u5c5e\u6027\u652f\u6301\u4f5c\u4e3a\u4e00\u4e2a\u8fd4\u56de ",["code","ReactNode"]," \u7684\u51fd\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/1af4392ae9fbdaa6fcfbf2f0de5413100ef4a84a"},"1af4392"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728\u56fa\u5b9a\u5217\u65f6\u5bfc\u81f4\u7684\u884c\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10392"},"#10392"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728\u7ec4\u4ef6\u4e2d\u4f7f\u7528 ",["code","combobox"]," \u6a21\u5f0f\u7684 ",["code","Select"]," \u5bfc\u81f4\u7684\u91cd\u5f71\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10828"},"#10828"]]],["li",["p","\ud83d\udc1e \u4fee\u590d components \u5c5e\u6027\u503c\u4e0d\u80fd\u53d8\u5316\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c380186e794a7735ae91e992f25a313158ee4984"},"c380186"]]]]],["li",["p","\ud83d\uddd1 Select \u7ec4\u4ef6\u5e9f\u5f03\u4e86 ",["code","combobox"]," \u6a21\u5f0f\uff0c\u8bf7\u4f7f\u7528 ",["code","AutoComplete"]," \u7ec4\u4ef6\u4ee3\u66ff\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/53046a454ad83ca03dc313e63f56474ed1173002"},"53046a4"]]],["li",["p","\ud83c\udf1f Alert \u7ec4\u4ef6\u5141\u8bb8\u4f20\u9012 ",["code","data-*"],"\u3001",["code","aria-*"]," \u548c ",["code","role-*"]," \u5c5e\u6027\u5230\u7ec4\u4ef6\u5185\u90e8\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/f0b684de6a7c422f0de56e1ef72aeb35ab25a858"},"f0b684d"]]],["li",["p","\ud83c\udf1f Avatar \u7ec4\u4ef6\u65b0\u589e ",["code","alt"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u56fe\u50cf\u65e0\u6cd5\u663e\u793a\u65f6\u7684\u66ff\u4ee3\u6587\u672c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10798"},"#10798"]]],["li",["p","\ud83c\udf1f DatePicker \u7ec4\u4ef6\u5141\u8bb8\u4f20\u9012 ",["code","data-*"],"\u3001",["code","aria-*"]," \u548c ",["code","role-*"]," \u5c5e\u6027\u5230\u7ec4\u4ef6\u5185\u90e8\u7684 ",["code","Input"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e63f9d4beb440de92c0b0ce8e6e83f7e24fef792"},"e63f9d4"]]],["li",["p","\ud83c\udf1f Input.Search \u7ec4\u4ef6\u65b0\u589e ",["code","event"]," \u4e8b\u4ef6\u5bf9\u8c61\u4f5c\u4e3a ",["code","onSearch"]," \u5c5e\u6027\u51fd\u6570\u7684\u7b2c\u4e8c\u4e2a\u53c2\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11015"},"#11015"]]],["li",["p","\ud83c\udf1f Layout.Sider \u7ec4\u4ef6\u65b0\u589e ",["code","onBreakPoint"]," \u5c5e\u6027\uff0c\u7528\u4f5c\u54cd\u5e94\u5f0f\u5e03\u5c40\u7684\u65ad\u70b9\u89e6\u53d1\u65f6\u7684\u56de\u8c03\u51fd\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10750"},"#10750"]," ",["a",{title:null,href:"https://github.com/nuintun"},"@nuintun"]]],["li",["p","\ud83c\udf1f Modal \u7ec4\u4ef6\u65b0\u589e ",["code","okButtonProps"]," \u548c ",["code","cancelButtonProps"]," \u5c5e\u6027\uff0c\u5206\u522b\u7528\u4e8e\u8bbe\u7f6e ",["code","\u53d6\u6d88"]," \u6309\u94ae\u548c ",["code","\u786e\u5b9a"]," \u6309\u94ae\u7684\u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10955"},"#10955"]," ",["a",{title:null,href:"https://github.com/djyde"},"@djyde"]]],["li",["p","\ud83c\udf1f Progress \u7ec4\u4ef6\u65b0\u589e ",["code","strokeColor"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u8fdb\u5ea6\u6761\u7684\u989c\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10725"},"#10725"]]],["li",["p","\ud83c\udf1f Radio.Group \u7ec4\u4ef6\u65b0\u589e ",["code","buttonStyle"]," \u5c5e\u6027 (\u53ef\u9009\u503c ",["code","outline | solid"],")\uff0c\u7528\u4e8e\u8bbe\u7f6e ",["code","RadioButton"]," \u7684\u98ce\u683c\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/60e3cfa37ac0dae3a895e74c1fe5351c54536a07#diff-c2ee8b5a368a121e9d2cc2661212045d"},"60e3cfa"]]],["li",["p","\ud83c\udf1f Spin \u7ec4\u4ef6\u65b0\u589e ",["code","setDefaultIndicator"]," \u9759\u6001\u65b9\u6cd5\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5168\u5c40\u7684\u52a0\u8f7d\u6307\u793a\u7b26\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10787"},"#10787"]]],["li",["p","\ud83c\udf1f Tag \u7ec4\u4ef6\u65b0\u589e ",["code","visible"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u662f\u5426\u663e\u793a\u6807\u7b7e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/4ac027781372dda08a5458bc73836fbc14dfe51f"},"4ac0277"]]],["li",["p","Tree \u7ec4\u4ef6\u5347\u7ea7 ",["code","rc-tree"]," \u5230 ",["code","1.12.0"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","loadedKeys"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5df2\u7ecf\u52a0\u8f7d\u7684\u8282\u70b9\uff0c\u9700\u8981\u914d\u5408 ",["code","loadData"]," \u4f7f\u7528\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10666"},"#10666"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","onLoad"]," \u5c5e\u6027\uff0c\u4f5c\u4e3a\u8282\u70b9\u52a0\u8f7d\u5b8c\u6bd5\u65f6\u7684\u56de\u8c03\u51fd\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c488aca05e11d942d77c1b6bff45d12bbb1a2bd6"},"c488aca"]]]]],["li",["p","\ud83c\udf1f \u589e\u52a0 ",["code","okButtonDisabled"]," and ",["code","cancelButtonDisabled"]," \u5c5e\u6027\u7528\u4e8e\u7981\u7528\u786e\u5b9a\u548c\u53d6\u6d88\u6309\u94ae\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10955"},"#10955"]]],["li",["p","\ud83c\udf1f Cascader \u65b0\u589e fieldNames \u5e76\u5e9f\u5f03\u62fc\u5199\u9519\u8bef\u7684 filedNames\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10896"},"#10896"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u65f6\u95f4\u8f74\u4e0d\u80fd\u4e0e",["code","Tooltip"],"\u4e00\u8d77\u4f7f\u7528\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/0e3b67e9999d867cc304f3be61a8a042a2ab92ee"},"0e3b67e"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5f53 Avatar \u81ea\u5b9a\u4e49\u5927\u5c0f\u65f6\uff0c\u5706\u89d2\u4e0d\u6539\u53d8\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e1e6523452286ba56f20b73abad762a58ea7d7bc"},"e1e6523"]]]],["h2","3.6.6"],["p",["code","2018-07-07"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","DatePicker"]," \u7ec4\u4ef6\u88ab\u9009\u4e2d\u65e5\u671f\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/6146"},"#6146"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9529"},"#9529"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","DatePicker.RangePicker"]," \u7ec4\u4ef6\u4e2d\u88ab\u9009\u4e2d\u65e5\u671f\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/004561ba1f3b894dc164225e9e27b0a90679d15c"},"004561b"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Cascader"]," \u7ec4\u4ef6\u5728 ",["code","Form.Item"]," \u4e0b\u7684\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9827"},"#9827"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11133"},"#11133"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","InputNumber"]," \u7ec4\u4ef6\u7684 ",["code","handler"]," \u7684\u80cc\u666f\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/4aabc5374497359e13a958ef81ae4569db6164a7"},"4aabc53"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u7ec4\u4ef6\u5728 ",["code","FireFox"]," \u6d4f\u89c8\u5668\u4e0b\u6570\u636e\u4e3a\u7a7a\u65f6\u7684\u5934\u90e8\u6ea2\u51fa\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11135"},"#11135"]]]],["h2","3.6.5"],["p",["code","2018-07-02"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Transfer"],' \u7ec4\u4ef6\u7684\u6587\u672c "Not Found" \u5728 IE \u6216 Edge \u6d4f\u89c8\u5668\u4e0a\u663e\u793a\u5f02\u5e38\u3002',["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9697"},"#9697"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Chrome \u5728\u7f29\u653e\u6a21\u5f0f\u4e0b\uff0c",["code","Card"]," \u7ec4\u4ef6\u7684\u8fb9\u6846\u88ab\u6807\u9898\u7684\u80cc\u666f\u8272\u8986\u76d6\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9085"},"#9085"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u4e0d\u517c\u5bb9\u7684\u7c7b\u578b ",["code","size"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/bf5b6ae1f3b5da4629a7d10a2d1764eaa3fbbb04"},"bf5b6ae1"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u7ec4\u4ef6\u7684 ",["code","showArrow"]," \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/cde2a6b6f011a5b3a367b3f58731def547bc98d8"},"cde2a6b6"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Pagination \u5168\u5c40 locale \u8bbe\u7f6e\u4e0d\u80fd\u88ab\u7ec4\u4ef6 locale \u8986\u76d6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/babbbdd4e5c33ca050f8ee08969185c8d3269b4c"},"babbbdd4"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Tooltip"]," \u7ec4\u4ef6\u7684 ",["code","max-width"]," \u6837\u5f0f\uff0c\u4f7f ",["code","overlayStyle.maxWidth"]," \u53ef\u8986\u76d6\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e2b359e9c3dae067eeba37a886f7896474c87e31"},"e2b359e9"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u7ec4\u4ef6\u7684\u6837\u5f0f\uff0c\u907f\u514d\u8fc7\u957f\u6587\u672c\u7684\u6ea2\u51fa\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/11035"},"#11035"]]]],["h2","3.6.4"],["p",["code","2018-06-23"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Steps"]," \u7ec4\u4ef6\u7684 ",["code","@process-icon-color"]," \u6837\u5f0f\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10973"},"#10973"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","RangePicker"]," \u7ec4\u4ef6\u4f7f\u7528\u9884\u7f6e\u8303\u56f4\u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10986"},"#10986"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Dropdown"]," \u7ec4\u4ef6\u53ef\u80fd\u62a5\u51fa\u7684 ",["code","non-boolean attribute"]," \u7684\u8b66\u544a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7798"},"#7798"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83c\udf1f \u7ed9 ",["code","Tree"]," \u7ec4\u4ef6\u6dfb\u52a0 ",["code","className"]," \u7684\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10950"},"#10950"]]],["li",["p","\ud83c\udf1f \u7ed9 ",["code","Tree"]," \u7ec4\u4ef6\u6dfb\u52a0 ",["code","selectable"]," \u7684\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/3fb478e743f3bad23dc300f501df11e5423468ba"},"3fb478e"]]]]]],["h2","3.6.3"],["p",["code","2018-06-17"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u56fe\u7247\u6587\u4ef6\u540e\u7f00\u540d\u4e3a\u5927\u5199\u65f6\u65e0\u6cd5\u6b63\u786e\u8bc6\u522b\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10928"},"#10928"]," ",["a",{title:null,href:"https://github.com/sliwey"},"@sliwey"]]],["li",["p","\ud83d\udc1e \u4fee\u590d InputNumber \u5728\u6d4f\u89c8\u5668\u7f29\u653e\u65f6\u8fb9\u6846\u6837\u5f0f\u4e22\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10562"},"#10562"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Spin \u5185\u4f7f\u7528 ",["code","position: fixed"]," \u7684\u5143\u7d20\u65e0\u6cd5\u56fa\u5b9a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10196"},"#10196"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5c0f\u53f7\u8868\u683c\u4e0b\u56fa\u5b9a\u5217\u7684\u8fb9\u6846\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9754"},"#9754"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table ",["code","filterIcon"]," \u7684 ",["code","className"]," \u5c5e\u6027\u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10937"},"#10937"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Affix \u7684 ",["code","offsetTop"]," \u548c ",["code","offsetBottom"]," \u65e0\u6cd5\u52a8\u6001\u4fee\u6539\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10874"},"#10874"]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d TreeSelect ",["code","TS2339"]," \u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10868"},"#10868"]]],["li",["p","\ud83c\udf1f \u8865\u5145 Form \u7684 ",["code","validateMessages"]," \u548c ",["code","onFieldsChange"]," \u53c2\u6570\u7684\u5b9a\u4e49\u3002"]],["li",["p","\ud83c\udf1f \u4f18\u5316 Button \u7684\u5c5e\u6027\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10877"},"#10877"]," ",["a",{title:null,href:"https://github.com/zheeeng"},"@zheeeng"]]],["li",["p","\ud83c\udf1f \u8865\u5145 AutoComplete \u7684 ",["code","backfill"]," \u5c5e\u6027\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10909"},"#10909"]," ",["a",{title:null,href:"https://github.com/zhanba"},"@zhanba"]]]]]],["h2","3.6.2"],["p",["code","2018-06-09"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Table \u6570\u636e\u53d8\u5316\u65f6\u5168\u9009\u52fe\u9009\u6846\u72b6\u6001\u663e\u793a\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10629"},"#10629"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Button.Group \u4e2d\u4f7f\u7528 disabled \u6309\u94ae\u65f6\u7f3a\u5931\u8fb9\u6846\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u4e2d ",["code","beforeUpload"]," \u8fd4\u56de ",["code","false"]," \u65f6\uff0c\u6587\u4ef6\u5217\u8868\u6392\u5e8f\u4f1a\u88ab\u53cd\u8f6c\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10681"},"#10681"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Calendar \u8868\u683c\u4e2d\u5185\u5bb9\u6ea2\u51fa\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10808"},"#10808"]," ",["a",{title:null,href:"https://github.com/ant-design/Yangzhedi"},"@Yangzhedi"]]],["li",["p","Spin"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4f7f\u7528\u56fe\u6807\u65f6\u4e0d\u80fd\u6309\u7167 ",["code","size"]," \u6b63\u786e\u663e\u793a\u5927\u5c0f\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10786"},"#10786"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u9ed8\u8ba4\u65cb\u8f6c\u65f6 ",["code","delay"]," \u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10727"},"#10727"]," ",["a",{title:null,href:"https://github.com/dreamerblue"},"@dreamerblue"]]]]],["li",["p","\u4fee\u590d Badge \u7684\u72b6\u6001\u8272\u4e0d\u8ddf\u4e3b\u9898\u8272\u53d8\u5316\u7684\u95ee\u9898\u3002"]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Menu \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10773"},"#10773"]]],["li",["p","\ud83d\udc1e \u4fee\u590d AutoComplete \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10745"},"#10745"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10619"},"#10619"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tree \u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10841"},"#10841"]," ",["a",{title:null,href:"https://github.com/Voronar"},"@Voronar"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Checkbox.Group \u7684\u7c7b\u578b\u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10677"},"#10677"]]]]]],["h2","3.6.0"],["p",["code","2018-06-02"]],["ul",["li",["p","\ud83c\udf1f ",["code","Form"]," \u8868\u5355\u9519\u8bef\u4fe1\u606f\u5c55\u793a\u652f\u6301\u4f20\u5165 ReactNode\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10136"},"#10136"]," ",["a",{title:null,href:"https://github.com/lovekonakona"},"@lovekonakona"]]],["li",["p","\ud83c\udf1f ",["code","List"]," \u7ec4\u4ef6\u652f\u6301\u6307\u5b9a\u5206\u9875\u5668\u7684\u4f4d\u7f6e\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10581"},"#10581"]," ",["a",{title:null,href:"https://github.com/zheeeng"},"@zheeeng"]]],["li",["p","\ud83c\udf1f ",["code","Layout.Sider"]," \u652f\u6301 dark/light \u4e3b\u9898\u5b9a\u5236\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10142"},"#10142"]," ",["a",{title:null,href:"https://github.com/pd4d10"},"@pd4d10"]]],["li",["p","\ud83c\udf1f \u652f\u6301 Ant Design \u7ad9\u70b9\u7684\u79bb\u7ebf\u6a21\u5f0f\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10625"},"#10625"]]],["li",["p","\ud83c\udf1f ",["code","Transfer"]," \u65b0\u589e ",["code","style"]," \u4ee5\u53ca ",["code","operationStyle"]," \u5c5e\u6027\u914d\u7f6e\u6837\u5f0f\u3002 ",["a",{title:null,href:"https://github.com/eduludi"},"@eduludi"]]],["li",["p","\ud83c\udf1f ",["code","Message"]," \u589e\u52a0 promise \u5316\u7684\u56de\u8c03\u63a5\u53e3\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10421"},"#10421"]," ",["a",{title:null,href:"https://github.com/zhujinxuan"},"@zhujinxuan"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u7f16\u8bd1\u65f6 typescript v2.9.1\u517c\u5bb9\u6027\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10729"},"#10729"]," ",["a",{title:null,href:"https://github.com/karol-majewski"},"@karol-majewski"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Menu"]," \u5d4c\u5957\u8d85\u8fc7\u4e24\u5c42\u65f6\u9009\u4e2d\u6700\u91cc\u5c42\u540e\u5bf9\u5e94\u6700\u5916\u5c42\u6ca1\u6709\u4eae\u8d77\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8666"},"#8666"]," ",["a",{title:null,href:"https://github.com/stonehank"},"@stonehank"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Affix"]," \u7ec4\u4ef6 offsetBottom \u65e0\u6548\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10674"},"#10674"]]]],["h2","3.5.4"],["p",["code","2018-05-26"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Cascader"]," \u7684 ",["code","showSearch"]," \u65e0\u6548\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/968488a2fac9bcb16bee9f0c248f49bca00dbec6"},"968488a2"]]],["li",["p","\ud83d\udc1e \u4f7f ",["code","Badge[status]"]," \u652f\u6301 ",["code","Tooltip"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10626"},"#10626"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u7236\u5143\u7d20\u4f7f\u7528 ",["code","text-align"]," \u4f1a\u5f71\u54cd ",["code","Spin"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10643"},"#10643"]," ",["a",{title:null,href:"https://github.com/wmzhong"},"@wmzhong"]]],["li",["p","\ud83d\udc84 ",["code","Table"]," \u6362\u884c\u4ece ",["code","break-all"]," \u6539\u4e3a ",["code","break-word"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10655"},"#10655"]," ",["a",{title:null,href:"https://github.com/clinyong"},"@clinyong"]]],["li",["p","\ud83c\udf1f ",["code","Search"]," \u5728\u672a\u5b9a\u4e49 ",["code","enterButton"]," \u65f6\uff0c\u70b9\u51fb\u641c\u7d22\u56fe\u6807\u5c06\u89e6\u53d1 ",["code","onSearch"],"\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/36ffe7e1dc9d9473c8c68168ab79b7a03a604702"},"36ffe7e1"]]]],["h2","3.5.3"],["p",["code","2018-05-20"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 ",["code","Affix"]," \u5f53 ",["code","offsetTop === 0"],"\uff0c\u503c\u5c06\u53d8\u4e3a ",["code","undefined"]," \u7684\u95ee\u9898 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10566"},"#10566"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 ",["code","Menu"]," item \u4e2d\u7684\u9ad8\u4eae\u94fe\u63a5\u989c\u8272\u95ee\u9898 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/09d5e36cfa27e371a7b4d4e68276a279698ea901"},"09d5e36"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 ",["code","Input.Group"]," \u7ec4\u4ef6\u9634\u5f71\u88ab\u906e\u76d6\u7684\u95ee\u9898 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10230"},"#10230"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 ",["code","Transfer"]," \u7ec4\u4ef6 checkbox \u4e8b\u4ef6\u89e6\u53d1\u4e24\u6b21\u7684\u95ee\u9898 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10480"},["code","#10480"]]]],["li",["p","\ud83d\udc84 \u7edf\u4e00 less \u7684\u53d8\u91cf\u547d\u540d ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/12d3046687a0dcdb51fece08dd2bea64f185cc40"},"12d3046"]]],["li",["p","\ud83d\udc84 \u5fae\u8c03\u4e86 ",["code","Dropdown"]," \u7684\u6837\u5f0f ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/8e2f72ffe0eb300f5997296726b02246bf990c8f"},"8e2f72f"]]],["li",["p","\ud83d\udc84 \u73b0\u5728\u4e2d\u6587\u6587\u6863\u7684\u7ec4\u4ef6\u4f1a\u7528\u4e2d\u6587\u8bed\u8a00\u5305\u8fdb\u884c\u6f14\u793a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/9b17a943f5d57d40d65041b7b0c247add09d2851"},"9b17a94"]]],["li",["p","\ud83d\udc84 \u4e3b\u7ad9\u4e3b\u9898\u5207\u6362 \u4fee\u6539\u4e3a ",["code","antd-theme-generato"]," \uff0c\u611f\u8c22 ",["a",{title:null,href:"https://github.com/mzohaibqc"},"@mzohaibqc"]," \u7684\u5de5\u4f5c."]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 ",["code","Row"]," \u4e2d gutter \u5c5e\u6027\u7684\u7c7b\u578b\u95ee\u9898 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/b7d508e1662bf20a0cacbe6440a2ce31a65a8a59"},"b7d508e"]]],["li",["p","\ud83d\udc84 \u6539\u8fdb\u4e86 ",["code","Form"]," \u7ec4\u4ef6\u7c7b\u578b ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10564"},"#10564"]]],["li",["p","\ud83d\udc84 \u6539\u8fdb\u4e86 ",["code","Button"]," \u548c ",["code","Tag"]," \u7c7b\u578b ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/1ed9fed2cf1c99b947359fafb101b2e58213cb48"},"1ed9fed"]]]]]],["h2","3.5.2"],["p",["code","2018-05-13"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u8fc7\u6ee4\u5668\u548c ",["code","Transfer"]," \u590d\u9009\u6846\u65e0\u6cd5\u70b9\u51fb\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10452"},"#10452"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Cascader"]," \u7684\b ",["code","displayRender"]," \u91cc\u7684\u94fe\u63a5\u65e0\u6cd5\u70b9\u51fb\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10433"},"#10433"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Button"]," ref \u4e0d\u517c\u5bb9\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10405"},"#10405"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Form"]," \u8868\u5355\u9879\u6821\u9a8c\u4f4d\u7f6e\u9ad8\u5ea6\u65f6\u51fa\u73b0\u6296\u52a8\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10445"},"#10445"]]],["li",["p","\ud83c\udf1f \u8bbe\u7f6e ",["code","Layout"]," \u5bbd\u5ea6\u65f6\uff0c\u5141\u8bb8\u4f7f\u7528\u4efb\u4f55\u7684 CSS \u5355\u4f4d\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10479"},"#10479"]]]],["h2","3.5.1"],["p",["code","2018-05-09"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Input.Group \u5728 Form \u4e0b\u6837\u5f0f\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10371"},"#10371"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Select \u7bad\u5934\u548c\u5185\u5bb9\u91cd\u53e0\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10383"},"#10383"]]],["li",["p","\ud83d\udc1e \u79fb\u9664 Collapse \u70b9\u51fb\u65f6\u7684 focus \u6837\u5f0f\u3002"]],["li",["p","\ud83d\udc1e \u79fb\u9664 Input.Group \u548c Checkbox \u4e0d\u5fc5\u8981\u7684 ",["code","z-index"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9840"},"#9840"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10385"},"#10385"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u6570\u5b57\u7b49\u5bbd\u5b57\u4f53\u6ca1\u6709\u52a0\u7c97\u7684\u95ee\u9898\u3002"]],["li",["p","Table"],["ul",["li",["p","\ud83d\udc84 \u91cd\u5199\u4e86\u53ef\u7f16\u8f91\u8868\u683c\u7684\u6f14\u793a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10119"},"#10119"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u8868\u683c\u5217\u5185\u5bb9\u4e92\u76f8\u91cd\u53e0\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9822"},"#9822"]]]]],["li",["p","TypeScript"],["ul",["li",["p","\ud83d\udc1e \u8c03\u6574 Breadcrumb.Item \u7684\u7c7b\u578b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10372"},"#10372"]," ",["a",{title:null,href:"https://github.com/karol-majewski"},"@karol-majewski"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u7684 ",["code","rowSelection"]," \u7684\u7c7b\u578b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10374"},"#10374"]]]]]],["h2","3.5.0"],["p",["code","2018-05-04"]],["ul",["li",["p","\ud83c\udf1f \u7ec4\u4ef6 ",["code","Badge"]," \u65b0\u589e ",["code","title"]," \u5c5e\u6027\u652f\u6301\u9f20\u6807 hover \u7684\u65f6\u5019\u663e\u793a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/74d81c2d078a3c84b3e44cbfbdd99b8f479ea71d"},"74d81c2"]," ",["a",{title:null,href:"https://github.com/ludwigbacklund"},"@ludwigbacklund"]]],["li",["p","\ud83c\udf1f \u6dfb\u52a0 ",["code","successPercent"]," \u4e3a ",["code","Progress[format]"]," \u7684\u53c2\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10096"},"#10096"]]],["li",["p","\ud83c\udf1f \u66f4\u65b0 ",["code","rc-notification"]," \u5230 3.1.0 \u6765\u652f\u6301\u7ec4\u4ef6 ",["code","Notification"]," \u7684 ",["code","maxCount"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10161"},"#10161"]," ",["a",{title:null,href:"https://github.com/jzhangs"},"@jzhangs"]]],["li",["p","\ud83c\udf1f \u66f4\u65b0 ",["code","rc-cascader"]," \u5230 1.13.0 \u6765\u652f\u6301\u7ec4\u4ef6 ",["code","Cascader"]," \u7684 ",["code","filedNames"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/react-component/cascader/pull/23"},"react-component/cascader#23"]," ",["a",{title:null,href:"https://github.com/405go"},"@405go"]]],["li",["p","\ud83c\udf1f \u7ec4\u4ef6 ",["code","Notification"]," \u652f\u6301\u901a\u8fc7 key \u66f4\u65b0\u901a\u77e5\u5c5e\u6027\u3002 ",["a",{title:null,href:"https://github.com/react-component/notification/pull/40"},"react-component/notification#40"]," ",["a",{title:null,href:"https://github.com/yevhen-hryhorevskyi"},"@yevhen-hryhorevskyi"]]],["li",["p","\ud83c\udf1f \u7ec4\u4ef6 ",["code","List"]," \u652f\u6301\u5185\u7f6e\u7684\u7ffb\u9875\u529f\u80fd\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10135"},"#10135"]]],["li",["p","Table"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","sortOrder"]," \u53c2\u6570\u4f20\u9012\u7ed9\u5217\u914d\u7f6e\u4e2d\u7684 ",["code","sorter"]," \u65b9\u6cd5\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10306"},"#10306"]," ",["a",{title:null,href:"https://github.com/kumarashwin"},"@kumarashwin"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5934\u90e8\u5355\u5143\u683c\u7684\u8fb9\u6846\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10359"},"#10359"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5f53\u6570\u636e\u53d8\u5316\u65f6\u7528\u6237\u9009\u62e9\u9879\u4e22\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10332"},"#10332"]," ",["a",{title:null,href:"https://github.com/chrvadala"},"@chrvadala"]]]]],["li",["p",["code","Menu"]," \u5347\u7ea7 ",["code","rc-menu"]," \u5230 ",["code","7.x"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10305"},"#10305"]],["ul",["li",["p","\ud83c\udf1f \u66f4\u597d\u7684 aria-* \u5c5e\u6027\u652f\u6301\u3002",["a",{title:null,href:"https://github.com/react-component/menu/pull/137"},"react-component/menu#137"]]],["li",["p","\ud83c\udf1f \u4e00\u4e9b\u5185\u90e8\u4f18\u5316\u63d0\u5347\u7ec4\u4ef6\u6027\u80fd\u3002",["a",{title:null,href:"https://github.com/react-component/menu/pull/133"},"react-component/menu#133"]]],["li",["p","\ud83c\udf1f \u652f\u6301\u5c06\u5c5e\u6027\u4f20\u9012\u5230\u83dc\u5355\u9879\u4e2d\u3002",["a",{title:null,href:"https://github.com/react-component/menu/pull/135"},"react-component/menu#135"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e9b\u5feb\u6377\u952e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/react-component/menu/pull/132"},"react-component/menu#132"]]]]],["li",["p","Collapse"],["ul",["li",["p","\ud83c\udf1f \u66f4\u65b0 ",["code","rc-collapse"]," \u5230 1.9.0 \u4f18\u5316\u952e\u76d8\u652f\u6301\u3002",["a",{title:null,href:"https://github.com/react-component/collapse/pull/84/"},"react-component/collapse#84"],"  ",["a",{title:null,href:"https://github.com/kossel"},"@kossel"]]],["li",["p","\ud83c\udf1f \u652f\u6301\u901a\u8fc7 less \u5b9a\u4e49\u7ec4\u4ef6 ",["code","Collapse"]," \u7684\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9943"},"#9943"]," ",["a",{title:null,href:"https://github.com/davidhatten"},"@davidhatten"]]]]],["li",["p","Select"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","placeholder"]," \u7684 ts \u7c7b\u578b\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10282"},"#10282"]," ",["a",{title:null,href:"https://github.com/thomasthiebaud"},"@thomasthiebaud"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e0d\u663e\u793a\u7bad\u5934\u65f6\u591a\u4f59\u7684\u7a7a\u767d\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10296"},"#10296"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5c5e\u6027 ",["code","value"]," \u7684 typescript \u7c7b\u578b\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10336"},"#10336"]," ",["a",{title:null,href:"https://github.com/paranoidjk"},"@paranoidjk"]]]]],["li",["p","Input"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Input.Search"]," \u5f53 disabled \u4e3a true \u65f6\u6309\u94ae\u6ca1\u6709\u88ab\u7981\u7528\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10040"},"#10040"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Input.Group"]," \u5728\u8868\u5355\u4e2d\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10281"},"#10281"]]]]],["li",["p","Form"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Form.onValuesChange"]," \u7684 ts \u7c7b\u578b\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10231"},"#10231"]," ",["a",{title:null,href:"https://github.com/whtsky"},"@whtsky"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","ComponentDecorator"]," typescript \u5b9a\u4e49\u7684\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10324"},"#10324"]," ",["a",{title:null,href:"https://github.com/paranoidjk"},"@paranoidjk"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Divider"]," \u4e3a dashed \u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10216"},"#10216"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Spin"]," \u8986\u76d6\u5c42\u7684\u5c55\u793a\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10227"},"#10227"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Notification"]," \u9f20\u6807 hover \u662f\u56fe\u6807\u7684\u989c\u8272\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10272"},"#10272"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Upload"]," \u7ec4\u4ef6\u5c5e\u6027 ",["code","lastModifiedDate"]," \u7684\u62fc\u5199\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10315"},"#10315"]," ",["a",{title:null,href:"https://github.com/danielg2002"},"@danielg2002"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Button"]," \u7684\u5c5e\u6027\u7c7b\u578b\uff0c\u4f7f\u7528 ",["code","React.HTMLProps"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10229"},"#10229"]," ",["a",{title:null,href:"https://github.com/whtsky"},"@whtsky"]]],["li",["p","\ud83d\udc1e \u4fee\u590d less \u547d\u540d\u7ea6\u5b9a\u4e0d\u4e00\u81f4\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10275"},"#10275"]]]],["h2","3.4.5"],["p",["code","2018-05-03"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u4e0a\u4f20\u6587\u4ef6\u540d\u4e0d\u5c55\u793a\uff08file \u5bf9\u8c61\u5c5e\u6027\u4e3a\u7a7a\uff09\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10319"},"#10319"]]]],["h2","3.4.4"],["p",["code","2018-04-28"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d 3.4.2 \u4e2d\u5f15\u5165\u7684 Upload \u4e2d onChange \u53c2\u6570 ",["code","{ file }"]," file \u4e0d\u662f File \u5b9e\u4f8b\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10293"},"#10293"]]],["li",["p","\ud83d\udc1e \u4fee\u590d webpack@4 \u4e0b\u4f7f\u7528 Tree Shaking \u6837\u5f0f\u4e22\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10217"},"#10217"]," ",["a",{title:null,href:"https://github.com/whtsky"},"@whtsky"]]]],["h2","3.4.3"],["p",["code","2018-04-23"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 webpack@4 \u4e0b\u4f7f\u7528 Tree Shaking \u6837\u5f0f\u4e22\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10197"},"#10197"]," ",["a",{title:null,href:"https://github.com/Aladdin-ADD"},"@Aladdin-ADD"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Menu"]," \u7ec4\u4ef6\u5728 ",["code","dark"]," \u4e3b\u9898\u4e0b\u70b9\u51fb\u533a\u57df\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10187"},"#10187"]," ",["a",{title:null,href:"https://github.com/dgeibi"},"@dgeibi"]]]],["h2","3.4.2"],["p",["code","2018-04-22"]],["ul",["li",["p","\ud83d\udc84 \u90e8\u7f72\u7f51\u7ad9\u5230 ",["a",{title:null,href:"http://netlify.com/"},"netlify"],"\uff0c\u89e3\u51b3\u7f51\u7ad9\u88ab\u5899\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u548c\u8c03\u6574 Menu\u3001Tooltip\u3001Card\u3001Anchor\u3001Avatar\u3001Form\u3001Tabs\u3001Transfer\u3001Tree\u3001AutoComplete \u7b49\u7ec4\u4ef6\u7684 TypeScript \u5b9a\u4e49\u3002"]],["li",["p","\ud83d\udc84 \u589e\u52a0 ",["code","sideEffects"]," \u914d\u7f6e\u4ee5\u4f18\u5316 Tree Shaking \u6548\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10043"},"#10043"]," ",["a",{title:null,href:"https://github.com/Aladdin-ADD"},"@Aladdin-ADD"]]],["li",["p","List"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u591a\u4f59\u8fb9\u6846\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10028"},"#10028"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","locale"]," \u5c5e\u6027\u88ab\u4f20\u9012\u7ed9 div \u7684\u8b66\u544a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10128"},"#10128"]," ",["a",{title:null,href:"https://github.com/slonoed"},"@slonoed"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload \u7684\u6587\u4ef6 url \u5e26\u6709\u53c2\u6570\u65f6\uff0c\u56fe\u7247\u9884\u89c8\u6548\u679c\u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10102"},"#10102"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Progress \u7684\u767e\u5206\u6bd4\u8d8a\u754c\u65f6\u7684\u5c55\u73b0\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/0eb835772dbaa7ed14babe03fc177821c5bd5ca5"},"0eb8357"]]],["li",["p","Menu"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d SubMenu \u7684\u5931\u6548\u7bad\u5934\u6837\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10113"},"#10113"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","collapsedWidth"]," \u4e3a\u50cf\u7d20\u5b57\u7b26\u4e32 ",["code","40px"]," \u83dc\u5355\u5bbd\u5ea6\u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10140"},"#10140"]]]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a\u67d0\u4e9b\u60c5\u51b5\u4e0b Form \u5185\u4f7f\u7528\u53d7\u63a7\u7ec4\u4ef6\u65f6\u65e0\u6cd5\u7f16\u8f91\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9790"},"#9790"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Card \u5207\u6362 loading \u72b6\u6001\u65f6\u7684\u5185\u8fb9\u8ddd\u8df3\u52a8\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10052"},"#10052"]," ",["a",{title:null,href:"https://github.com/zheeeng"},"@zheeeng"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Avatar \u56fe\u7247\u52a0\u8f7d\u5931\u8d25\u65f6\u7684\u6587\u5b57\u6ca1\u6709\u6b63\u786e\u7f29\u653e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/10184"},"#10184"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u7684 ",["code","getCheckboxProps"]," \u65e0\u6cd5\u52a8\u6001\u66f4\u65b0\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/10133"},"#10133"]]],["li",["p","\ud83d\udc1e \u4fee\u590d CheckGroup \u6307\u5b9a ",["code","prefixCls"]," \u6ca1\u6709\u4f20\u9012\u7ed9 Checkbox \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9950"},"#9950"]]]],["h2","3.4.1"],["p",["code","2018-04-08"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Badge \u4ee3\u7801\u9519\u8bef\u5f15\u8d77\u7684 TypeScript \u7c7b\u578b\u62a5\u9519\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9931"},"#9931"]]],["li",["p","\ud83d\udc84 \u4f18\u5316\u4e86 Card ",["code","actions"]," \u70b9\u51fb\u533a\u57df\u7684\u8303\u56f4\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9882"},"#9882"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Divider \u4e0e\u6d6e\u52a8\u5143\u7d20\u4e00\u8d77\u4f7f\u7528\u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9956"},"#9956"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Form \u9ad8\u7ea7\u641c\u7d22\u6a21\u5f0f\u4e0b\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9907"},"#9907"]]],["li",["p","\ud83d\udc1e \u8865\u5145\u4e86 Table \u7f3a\u5931\u7684 ",["code","onHeaderRow"]," TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9902"},"#9902"]," ",["a",{title:null,href:"https://github.com/Nokecy"},"@Nokecy"]]],["li",["p","\ud83d\udc84 \u4f18\u5316\u4e86 Tree \u81ea\u5b9a\u4e49\u56fe\u6807\u793a\u4f8b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9893"},"#9893"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Upload \u5bf9\u65e0\u6269\u5c55\u540d\u56fe\u7247\u5730\u5740\u7684\u9884\u89c8\u5c55\u793a\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9936"},"#9936"]]]],["h2","3.4.0"],["p",["code","2018-04-01"]],["ul",["li",["p","Tree"],["ul",["li",["p","\ud83d\udee0 \u5728\u8fd9\u4e2a\u7248\u672c\u91cc\uff0c\u6211\u4eec\u91cd\u6784\u4e86 Tree \u5e95\u5c42\u7684\u4ee3\u7801\uff0c\u4ee5\u89e3\u51b3\u4e00\u4e9b\u5b58\u5728\u4e86\u5f88\u4e45\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","defaultExpandParent"]," \u7528\u4e8e\u5728\u7b2c\u4e00\u6b21\u6e32\u67d3\u65f6\u81ea\u52a8\u5c55\u5f00\u7236\u8282\u70b9\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","disabled"]," \u7528\u4e8e\u7981\u7528\u6574\u68f5\u6811\u3002"]],["li",["p","\ud83c\udf1f TreeNode \u65b0\u589e ",["code","icon"]," \u7528\u4e8e\u8bbe\u7f6e\u81ea\u5b9a\u4e49\u56fe\u6807\u3002"]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e86 TreeNode \u8bbe\u7f6e ",["code","disabled"]," \u65f6\u7684\b\u52fe\u9009\u903b\u8f91\u3002"]]]],["li",["p","\ud83c\udf1f Anchor \u65b0\u589e ",["code","getContainer"]," \u7528\u4e8e\u6307\u5b9a\u5185\u5bb9\u6eda\u52a8\u7684\u5bb9\u5668\u3002"]],["li",["p","\ud83c\udf1f Table \u65b0\u589e less \u53d8\u91cf ",["code","@table-expanded-row-bg"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9789"},"#9789"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u5904 less \u8bed\u6cd5\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9832"},"#9832"]," ",["a",{title:null,href:"https://github.com/jojoLockLock"},"@jojoLockLock"]]],["li",["p","\ud83d\udc1e \u4fee\u590d LocaleProvider \u4e2d moment.locale \u8c03\u7528\u62a5\u9519\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9853"},"#9853"]]],["li",["p","\ud83d\udc1e \u4fee\u590d WeekPicker \u7684 style \u5c5e\u6027\u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9848"},"#9848"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Layout.Sider \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9885"},"#9885"]," ",["a",{title:null,href:"https://github.com/zachguo"},"@zachguo"]]],["li",["p","\ud83d\udc84 \u4f18\u5316\u4e86 Modal \u4e2d\u8d85\u957f\u5185\u5bb9\u7684\u663e\u793a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9592"},"#9592"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u65af\u6d1b\u7ef4\u5c3c\u4e9a\u8bed\u3002"]]],["h2","3.3.3"],["p",["code","2018-03-25"]],["ul",["li",["p","\u56de\u9000\u4e0a\u4e2a\u7248\u672c Upload \u4e2d ",["code","file"]," \u7c7b\u578b\u7684\u4fee\u6539\u3002"]]],["h2","3.3.2"],["p",["code","2018-03-24"]],["ul",["li",["p","\ud83d\udc1e ",["code","Carousel"],": \u5347\u7ea7 ",["code","react-slick"]," \u7248\u672c\u4ee5\u4fee\u590d\u5bbd\u5ea6\u8ba1\u7b97\u9519\u8bef\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/3659"},"#3659"]]],["li",["p","\ud83d\udc84 ",["code","Rate"],": \u8c03\u6574 ",["code","disabled"]," \u6837\u5f0f\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9747"},"#9747"]]],["li",["p","\ud83d\udc84 ",["code","Modal"],": \u8c03\u6574 ",["code","confirm-modal"]," \u6837\u5f0f\u4ee5\u4fee\u590d content \u5185\u4f7f\u7528\u6805\u683c\u4f1a\u9519\u4f4d\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9374"},"#9374"]]],["li",["p","\ud83d\udc84 ",["code","Menu"],": \u8c03\u6574\u6837\u5f0f\u4ee5\u4fee\u590d\u9f20\u6807\u4e8b\u4ef6\u8303\u56f4\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9666"},"#9666"]," ",["a",{title:null,href:"https://github.com/dgeibi"},"@dgeibi"]]],["li",["p","\ud83d\udc1e ",["code","Upload"],": \u4fee\u590d ",["code","beforeUpload"]," \u7684 ",["code","file"]," \u7c7b\u578b\u9519\u8bef\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9775"},"#9775"]]],["li",["p","\ud83d\udc1e ",["code","Button"],": \u4fee\u590d\u6587\u672c\u6539\u53d8\u65f6\uff0c\u7a7a\u683c\u63d2\u5165\u6ca1\u6709\u91cd\u65b0\u8ba1\u7b97 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/4502ad8376e536c450fa4f27d2a5855be5a153e7"},"4502ad8"]]]],["h2","3.3.1"],["p",["code","2018-03-18"]],["ul",["li",["p","\ud83d\udc84 \u8c03\u6574 danger Button \u7684 ",["code","focus"]," \u6837\u5f0f\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d enterButton \u7684\u503c\u4e3a button \u5143\u7d20\u65f6\u663e\u793a\u9519\u8bef\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9639"},"#9639"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u4e2d\u7684 ",["code","column.title"]," \u7684\u7f3a\u5c11 key \u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9658"},"#9658"]," ",["a",{title:null,href:"https://github.com/terence55"},"@terence55"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","scroll: { x: true }"]," \u5728 ",["code",".ant-table-scroll table"],"\u5bbd\u5ea6\u4e3a ",["code","auto"],"\u7684\u60c5\u51b5\u4e0b\u4e0d\u5de5\u4f5c\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9704"},"#9704"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u8868\u5355\u6821\u9a8c\u6587\u5b57\u6d88\u5931\u7684\u65f6\u5019\u8f93\u5165\u6846\u4f1a\u6296\u4e00\u4e0b\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8831"},"#8831"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","TimePicker"]," \u91cc\u7684 isMoment \u8c03\u7528\u5728 parcel \u91cc\u4f1a\u62a5\u9519\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/85c78e49a91737c2841dc42621db21ca248b62b4"},"85c78e4"]]],["li",["p","\ud83d\udc84 \u8c03\u6574 Table \u7684\u5706\u89d2\u6837\u5f0f\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9674"},"#9674"]]]],["h2","3.3.0"],["p",["code","2018-03-12"]],["ul",["li",["p","\ud83c\udf1f ",["code","Alert"]," \u7ec4\u4ef6\u65b0\u589e ",["code","afterClose"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u5b9e\u73b0\u66f4\u6d41\u7545\u7684\u5173\u95ed\u6548\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9448"},"#9448"]," ",["a",{title:null,href:"https://github.com/Hughen"},"@Hughen"]]],["li",["p","\ud83c\udf1f ",["code","Calendar"]," \u7ec4\u4ef6\u65b0\u589e ",["code","validRange"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u663e\u793a\u7684\u65f6\u95f4\u8303\u56f4\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/71f65a0be8e72a67f334c57e79ae3ff5fb640630"},"71f65a0"]," ",["a",{title:null,href:"https://github.com/Rohanhacker"},"@Rohanhacker"]]],["li",["p","\ud83c\udf1f ",["code","Card"]," \u7ec4\u4ef6\u65b0\u589e ",["code","defaultActiveTabKey"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u521d\u59cb\u5316\u9009\u4e2d\u9762\u677f\u7684 key\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/30fe88d4bdcec765bf92ca32a755d9646b36978e"},"30fe88d"]," ",["a",{title:null,href:"https://github.com/u3u"},"@u3u"]]],["li",["p",["code","DatePicker"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","dropdownClassName"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5f39\u51fa\u65e5\u5386\u7684 className\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7211"},"#7211"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u89e3\u6790 ",["code","moment"]," \u5bf9\u8c61\u51fa\u9519\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9539"},"#9539"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5f15\u5165\u571f\u8033\u5176\u8bed ",["code","tr_TR"]," \u6587\u4ef6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9373"},"#9373"]]]]],["li",["p","\ud83c\udf1f ",["code","Divider"]," \u7ec4\u4ef6\u65b0\u589e ",["code","orientation"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5206\u5272\u7ebf\u5185\u6587\u672c\u7684\u5bf9\u9f50\u65b9\u5f0f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9275"},"#9275"]," ",["a",{title:null,href:"https://github.com/jrvboesch"},"@jrvboesch"]]],["li",["p","\ud83c\udf1f ",["code","Modal"]," \u7ec4\u4ef6\u65b0\u589e ",["code","keyboard"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u6309\u4e0b ",["code","Esc"]," \u952e\u662f\u5426\u53ef\u4ee5\u5173\u95ed ",["code","Modal"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8818"},"#8818"]]],["li",["p","\ud83c\udf1f \u4f18\u5316 ",["code","Radio"]," \u548c ",["code","Checkbox"]," \u7ec4\u4ef6 ",["code","onChange"]," \u5c5e\u6027\u4e2d\u7684\u4e8b\u4ef6\u53c2\u6570\u7684 ",["code","TypeScript"]," \u7c7b\u578b\u5b9a\u4e49\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9574"},"#9574"]]],["li",["p",["code","Table"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","pagination"]," \u5c5e\u6027\u7684\u914d\u7f6e\u9879 ",["code","position"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5206\u9875\u7684\u663e\u793a\u4f4d\u7f6e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9357"},"#9357"]," ",["a",{title:null,href:"https://github.com/kanweiwei"},"@kanweiwei"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","rowSelection"]," \u5c5e\u6027\u7684\u914d\u7f6e\u9879 ",["code","onSelect"]," \u56de\u8c03\u51fd\u6570\u7684\u4e8b\u4ef6\u53c2\u6570\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9376"},"#9376"]," ",["a",{title:null,href:"https://github.com/kanweiwei"},"@kanweiwei"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","rowSelection"]," \u5c5e\u6027\u7684\u914d\u7f6e\u9879 ",["code","columnWidth"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u9009\u62e9\u6846\u7684\u5217\u5bbd\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9474"},"#9474"]," ",["a",{title:null,href:"https://github.com/SimpleFrontend"},"@SimpleFrontend"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u7ec4\u4ef6\u5728 ",["code","Chrome"]," \u4e0b\u5706\u89d2\u8fb9\u6846\u6837\u5f0f\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/af8e54f1d6ac2891892e39b153cbe3e998370f61"},"af8e54f"]]]]],["li",["p","\ud83c\udf1f ",["code","Timeline"]," \u7ec4\u4ef6\u65b0\u589e ",["code","pendingDot"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5e7d\u7075\u8282\u70b9\u7684\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9546"},"#9546"]," ",["a",{title:null,href:"https://github.com/SimpleFrontend"},"@SimpleFrontend"]]],["li",["p","\ud83c\udf1f ",["code","TimePicker"]," \u7ec4\u4ef6\u65b0\u589e ",["code","inputReadOnly"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u7ec4\u4ef6\u662f\u5426\u53ea\u8bfb\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/4a69446be155c1c176b18cb2c31459f999aa5d5e"},"4a69446"]," ",["a",{title:null,href:"https://github.com/JesperWe"},"@JesperWe"]]],["li",["p","\ud83c\udf1f ",["code","TreeSelect"]," \u7ec4\u4ef6\u65b0\u589e ",["code","dropdownClassName"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/69b154f9a9cfa5f2d89a82b6ed730d4d8793de73"},"69b154f"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/56e4ce099d950601538d72243563021e8083776b"},"56e4ce0"]]],["li",["p","\ud83c\udf1f \u4f18\u5316 ",["code","Upload"]," \u7ec4\u4ef6\u5728\u4e0a\u4f20\u975e\u56fe\u7247\u683c\u5f0f\u6587\u4ef6\u65f6\u7684\u9884\u89c8\u6548\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9621"},"#9621"]," ",["a",{title:null,href:"https://github.com/zswang"},"@zswang"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Progress"]," \u7ec4\u4ef6\u7684 ",["code","successPercent"]," \u5c5e\u6027\u65e0\u6cd5\u51b3\u5b9a\u7ec4\u4ef6\u662f\u5426\u5904\u4e8e ",["code","success"]," \u72b6\u6001\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9382"},"#9382"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Tabs"]," \u7ec4\u4ef6\u5b57\u4f53\u5c3a\u5bf8\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9509"},"#9509"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Tree"]," \u548c ",["code","TreeSelect"]," \u7ec4\u4ef6\u7684\u7236\u8282\u70b9\u5728 ",["code","disabled"]," \u72b6\u6001\u4e0b\u65e0\u6cd5\u5c55\u5f00\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9539"},"#9539"]]]],["h2","3.2.3"],["p",["code","2018-03-02"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u7ec4\u4ef6 ",["code","Select"]," \u4e2d\u7684 ",["code","onPopupScroll"]," \u5c5e\u6027\u7684 ts \u5b9a\u4e49\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9475"},"#9475"]," ",["a",{title:null,href:"https://github.com/twobin"},"@twobin"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u8fc7\u6ee4\u6761\u4ef6\u4e0b\u62c9\u9009\u62e9\u6846\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9209"},"#9209"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Timeline"]," \u81ea\u5b9a\u4e49\u5934\u90e8\u6837\u5f0f\u5728 Chrome \u4e0b\u7684\u663e\u793a\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9429"},"#9429"]," ",["a",{title:null,href:"https://github.com/vthinkxie"},"@vthinkxie"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Select"]," \u4e0b\u62c9\u7a97\u53e3\u7684\u8fb9\u6846\u663e\u793a\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/82092c154ac1fa7ff2f89e1adbdf0aaf22e3ff53"},"82092c1"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5bf9 less 3 \u7684\u517c\u5bb9\u6027\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7850"},"#7850"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","DatePicker.WeekPicker"]," \u5e74\u4efd\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9463"},"#9463"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Button.Group"]," \u5728 Chrome \u4e0b\u7684\u5b9a\u4f4d\u5bf9\u9f50\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9457"},"#9457"]]]],["h2","3.2.2"],["p",["code","2018-02-24"]],["ul",["li",["p","\ud83c\udf1f \u6dfb\u52a0 ",["code","Pagination"]," \u5b57\u4f53\u53d8\u91cf\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9351"},"#9351"]]],["li",["p","\ud83c\udf1f \u6dfb\u52a0 ",["code","Badge"]," \u5b57\u91cd\u53d8\u91cf\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9352"},"#9352"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Table"]," \u5f53\u81ea\u5b9a\u4e49 ",["code","loading.indicator"]," \u65f6\uff0c\u4e0d\u663e\u793aemptyText\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9355"},"#9355"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Form.create"]," \u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9331"},"#9331"]]],["li",["p","\ud83d\udc1e \u56de\u6eda ",["code","Table"]," \u4e2d ",["code","column.dataIndex"]," \u7684 TypeScript \u5b9a\u4e49\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9393"},"#9393"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Layout"]," \u4e2d sider \u9ad8\u5ea6\u4e0d\u8db3\u65f6\uff0c\u6700\u540e\u4e00\u4e2a\u83dc\u5355\u65e0\u6cd5\u663e\u793a\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9398"},"#9398"]," ",["a",{title:null,href:"https://github.com/MJ111"},"@MJ111"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","Badge"]," dot \u6a21\u5f0f\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9359"},"#9359"]," ",["a",{title:null,href:"https://github.com/khayalan-mathew"},"@khayalan-mathew"]]]],["h2","3.2.1"],["p",["code","2018-02-11"]],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e\u4e86\u90e8\u5206\u8457\u540d\u4ea7\u54c1\u7684\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c04377e5413d344b37c34ceac6fee456933fa516"},"c04377e5"]]],["li",["p","Mention"],["ul",["li",["p","\ud83c\udf1f \u73b0\u5728 ",["code","multiLines"]," \u6a21\u5f0f\u7684\u9ad8\u5ea6\u5c06\u9ed8\u8ba4\u81ea\u9002\u5e94\u5185\u5bb9\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u6307\u5b9a\u4e86 ",["code","placeholder"]," \u65f6\u65e0\u6cd5\u7c98\u8d34\u5185\u5bb9\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9215"},"#9215"]]]]],["li",["p","Table"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e2d\u53f7\u8868\u683c\u7684 padding\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9319"},"#9319"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5c0f\u53f7\u8868\u683c\u7684\u8fb9\u6846\u9519\u4f4d\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8980"},"#8980"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u6392\u5e8f\u56fe\u6807\u70b9\u51fb\u533a\u57df\u6ea2\u51fa\u8868\u5934\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8979"},"#8979"]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e86 ",["code","column.dataIndex"]," \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9298"},"#9298"]," ",["a",{title:null,href:"https://github.com/clinyong"},"@clinyong"]]]]],["li",["p","Select"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4f7f\u7528\u952e\u76d8\u5bfc\u822a\u65f6\uff0c\u6eda\u52a8\u6761\u4e0d\u4f1a\u81ea\u52a8\u5b9a\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9276"},"#9276"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5728 IE11 \u4e0b\u7684\u7bad\u5934\u4f4d\u7f6e\u3002"]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Upload ",["code","beforeUpload"]," \u8fd4\u56de ",["code","false"]," \u65f6\uff0c\u4e0a\u4f20\u6587\u4ef6\u4ecd\u7136\u663e\u793a ",["code","uploading"]," \u4ee5\u53ca\u6587\u4ef6\u5217\u8868\u88ab\u66ff\u6362\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8020"},"#8020"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","vertical"]," \u5e03\u5c40\u7684 Form \u4e0b\u53cd\u9988\u56fe\u6807\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9153"},"#9153"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Card \u6ca1\u6709\u5b50\u8282\u70b9\u65f6 ",["code","loading"]," \u6837\u5f0f\u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9258"},"#9258"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Avatar \u7684\u56fe\u7247\u4e0d\u5b58\u5728\u65f6\u7684\u80cc\u666f\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9278"},"#9278"]," ",["a",{title:null,href:"https://github.com/andriijas"},"@andriijas"]]],["li",["p","\ud83d\udc1e \u4fee\u590d RangePicker \u9009\u62e9\u7ed3\u675f\u65f6\u95f4\u65f6\u62a5 ",["code","Cannot read property 'locale' of undefined"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9267"},"#9267"]]],["li",["p","\ud83d\udc1e \u4fee\u590d ButtonGroup \u5185\u4f7f\u7528\u4e86\u5931\u6548\u6309\u94ae\u548c Tooltip \u65f6\u6837\u5f0f\u9519\u4f4d\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9296"},"#9296"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9296"},"#9296"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Dropdown \u7684\u5b50\u83dc\u5355\u88ab\u906e\u6321\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9218"},"#9218"]]]],["h2","3.2.0"],["p",["code","2018-02-04"]],["ul",["li",["p","\ud83c\udf1f Tab \u65b0\u589e ",["code","tabBarGutter"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e tabs \u4e4b\u95f4\u7684\u95f4\u9699\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8644"},"#8644"]," ",["a",{title:null,href:"https://github.com/lixiaoyang1992"},"@lixiaoyang1992"]]],["li",["p","\ud83c\udf1f Layout \u65b0\u589e ",["code","hasSider"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u907f\u514d\u670d\u52a1\u7aef\u6e32\u67d3\u65f6\u663e\u793a\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8937"},"#8937"]]],["li",["p","\ud83c\udf1f Progress \u65b0\u589e ",["code","successPercent"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u663e\u793a\u5206\u6bb5\u8fdb\u5ea6\u6761\u3002",["a",{title:null,href:"https://ant.design/components/progress-cn/#components-progress-demo-segment"},"\u4f8b\u5b50"]]],["li",["p","\ud83c\udf1f Alert \u65b0\u589e ",["code","iconType"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u663e\u793a\u81ea\u5b9a\u4e49\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8811"},"#8811"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8811"},"@minwe"]]],["li",["p","\ud83c\udf1f DatePicker \u65b0\u589e ",["code","id"]," \u5c5e\u6027\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8598"},"#8598"]," ",["a",{title:null,href:"https://github.com/mgrdevport"},"@mgrdevport"]]],["li",["p","\ud83c\udf1f Collapse \u65b0\u589e ",["code","forceRender"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u6e32\u67d3\u9690\u85cf\u7684\u5185\u5bb9\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9192"},"#9192"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9192"},"#Pyroboomka"]," ",["a",{title:null,href:"https://github.com/react-component/collapse/pull/82"},"@paulcmason"]]],["li",["p","RangePicker"],["ul",["li",["p","\ud83c\udf1f \u6539\u8fdb ",["code","ranges"]," \u5c5e\u6027\uff0c\u4f7f\u5176\u652f\u6301\u65b9\u6cd5\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8281"},"#8281"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u65e0\u6cd5\u624b\u52a8\u8f93\u5165\u5f00\u59cb\u65f6\u95f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/6999"},"#6999"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u70b9\u51fb\u9884\u8bbe\u8303\u56f4\u5173\u95ed\u65e5\u671f\u9762\u677f\u7684\u65f6\u5019\u6ca1\u6709\u52a8\u753b\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/6364"},"#6364"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u70b9\u51fb\u9884\u8bbe\u8303\u56f4\u65f6\u4e0d\u89e6\u53d1 ",["code","onOk"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7747"},"#7747"]]]]],["li",["p","Select"],["ul",["li",["p","\ud83c\udf1f \u6539\u8fdb\u4e86 ",["code","onChange"],"\u3001",["code","onDeselect"]," \u65b9\u6cd5\uff0c\u73b0\u5728\u4ed6\u4eec\u4f1a\u63a5\u53d7\u9009\u4e2d\u7684 ",["code","Option"]," \u4f5c\u4e3a\u7b2c\u4e8c\u4e2a\u53c2\u6570\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u81ea\u52a8\u5206\u8bcd\u4e0d\u89e6\u53d1 ",["code","onSelect"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9094"},"#9094"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Chrome \u4e0a\u4e0b\u62c9\u6846\u6ca1\u6709\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002"]]]],["li",["p","\ud83c\udf1f \u6539\u8fdb Table \u7684 ",["code","rowSelection[getCheckboxProps]"]," \u5c5e\u6027\uff0c\u73b0\u5728\u53ef\u4ee5\u4f20\u4efb\u610f\u5c5e\u6027\u7ed9 chekbox \u4e86\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9054"},"#9054"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9054"},"@mgrdevport"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Calendar \u7684 ",["code","mode"]," \u5c5e\u6027\u4e0d\u80fd\u4ece\u5916\u90e8\u63a7\u5236\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9243"},"#9243"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9243"},"@mgrdevport"]]],["li",["p","\ud83d\udc1e \u4fee\u590d AutoComplete \u5728 Form \u4e2d\u663e\u793a\u9519\u8bef\u4fe1\u606f\u65f6\u7684\u8fb9\u6846\u989c\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/9f2b4905f09fca503da7a8bb5f2b8347bea663b7"},"9f2b490"]]],["li",["p","\ud83d\udc1e \u4fee\u590d DatePicker \u5728\u53d7\u63a7\u6a21\u5f0f\u4e0b\u65f6\u95f4\u663e\u793a\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8885"},"#8885"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TextArea \u5728 Edge \u4e0b\u9ad8\u5ea6\u8ba1\u7b97\u9519\u8bef\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9108"},"#9108"]," ",["a",{title:null,href:"https://github.com/cuyl"},"@cuyl"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tabs \u5728 card \u6a21\u5f0f\u4e14 tabPosition \u662f ",["code","bottom"]," \u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9165"},"#9165"]," ",["a",{title:null,href:"https://github.com/ryanhoho"},"@ryanhoho"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u5e93\u5c14\u5fb7\u8bed\u3002"]]],["h2","3.1.6"],["p",["code","2018-01-28"]],["ul",["li",["p","\ud83d\udc1e \u56de\u9000\u4e86 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9141"},"#9141"]," \u7684\u4fee\u6539\uff0c\u56e0\u5176\u5bfc\u81f4\u7684 DatePicker \u5e74\u6708\u65e0\u6cd5\u9009\u62e9\u3002"]]],["h2","3.1.5"],["p",["code","2018-01-27"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Select \u4e0b\u62c9\u9009\u62e9\u6846\u5728 IE11 \u70b9\u51fb\u6eda\u52a8\u6761\u4f1a\u65e0\u6545\u6d88\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7934"},"#7934"]," ",["a",{title:null,href:"https://github.com/tianlang89757"},"@tianlang89757"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Form \u4e2d\u4f7f\u7528 ",["code","getFieldDecorator"]," \u5f53 id \u91cd\u590d\u65f6\u5f15\u7528\u51b2\u7a81\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9103"},"#9103"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7351"},"#7351"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 RangePicker \u5728\u8bed\u8a00\u5207\u6362\u65f6\u4f1a\u663e\u793a\u4e0a\u4e00\u6b21\u7684\u8bed\u8a00\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8970"},"#8970"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 DatePicker \u5728\u53d7\u63a7\u6a21\u5f0f\u4e0b\u65f6\u95f4\u663e\u793a\u4e0d\u6b63\u786e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8885"},"#8885"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e86 Table \u5728 ",["code","loading"]," \u65f6\u663e\u793a\u7a7a\u63d0\u793a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9095"},"#9095"]," ",["a",{title:null,href:"https://github.com/sallen450"},"@sallen450"]]],["li",["p","\ud83d\udc1e \u8865\u5145 Icon \u7c7b\u578b ",["code","file-word"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9092"},"#9092"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9061"},"#9061"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5199\u9519\u7684\u5b57\u4f53\u540d\u79f0\uff0c\u9020\u6210\u6d4f\u89c8\u5668\u65e0\u6cd5\u6b63\u786e\u8bc6\u522b\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/506f97640ec34a6d3d9fdb18e8036e5d34796a5f"},"commit/506f97"]]],["li",["p","\ud83d\udcd6 \u4fee\u590d\u4e86 TypeScript \u5b9a\u4e49"],["ul",["li",["p","\u8865\u5145 Notification \u7f3a\u5931\u7684 ",["code","duration"]," \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9120"},"pull/9120"]," ",["a",{title:null,href:"https://github.com/duhongjun"},"@duhongjun"]]],["li",["p","\u8865\u5145 Steps \u7f3a\u5931\u7684 ",["code","style"]," \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9126"},"pull/9126"]," ",["a",{title:null,href:"https://github.com/wanliyunyan"},"@wanliyunyan"]]]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e86 Avatar \u7684\u9ed8\u8ba4\u80cc\u666f\u8272\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/275946090823ab8da90f1871976c671b2c7ac851"},"commit/275946"]]],["li",["p","\ud83c\udf1f \u65b0\u589e\u4e86 Slider \u4ee5\u53ca Menu \u7684 less \u53d8\u91cf\uff0c\u66f4\u52a0\u65b9\u4fbf\u7684\u4fee\u6539\u4e3b\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9065"},"pull/9065"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9115"},"pull/9115"],"  ",["a",{title:null,href:"https://github.com/mrgeorgegray"},"@mrgeorgegray"]]]],["h2","3.1.4"],["p",["code","2018-01-21"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ButtonGroup \u9519\u8bef z-index \u5bfc\u81f4\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9014"},"#9014"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Dropdown.Button \u4e0d\u80fd\u88ab\u5b8c\u5168\u7981\u7528\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8991"},"#8991"]," ",["a",{title:null,href:"https://github.com/sallen450"},"@sallen450"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Layout \u9519\u8bef\u7684\u54cd\u5e94\u5f0f\u76f8\u5173\u6587\u6863\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8995"},"#8995"]," ",["a",{title:null,href:"https://github.com/ReedSun"},"@ReedSun"]]],["li",["p","\ud83d\udc1e \u4fee\u590d List ",["code","grid"]," \u4e0d\u652f\u6301 xxl \u914d\u7f6e\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9019"},"#9019"]]],["li",["p","\ud83d\udc1e \u4fee\u590d RangePicker \u5173\u95ed\u9009\u62e9\u9762\u677f\u4e4b\u540e\u65e0\u6cd5\u6e05\u7a7a\u5df2\u9009\u5f00\u59cb\u65f6\u95f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8839"},"#8839"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Tabs \u9519\u8bef\u5916\u8fb9\u8ddd\u5bfc\u81f4\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/200d6cb11aba12a488510f957353bbd5bd1dcd1b"},"commit/200d6c"]]],["li",["p","\ud83d\udc1e \u4fee\u590d WeekPicker \u663e\u793a\u9519\u8bef\u5468\u6570\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/9021"},"#9021"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TypeScript \u5b9a\u4e49"],["ul",["li",["p","\u8865\u5145 Menu \u7f3a\u5931\u7684 ",["code","subMenuCloseDelay"]," \u548c ",["code","subMenuOpenDelay"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8976"},"#8976"]," ",["a",{title:null,href:"https://github.com/Rohanhacker"},"@Rohanhacker"]]],["li",["p","\u91cd\u6784\u4e86 DatePicker \u76f8\u5173 type \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/0bb531aca6cb2045d5323196a599c925537a4eb0"},"commit/0bb531"]]],["li",["p","\u4fee\u590d\u4e86 Input ",["code","maxLength"]," type \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9046"},"#9046"]," ",["a",{title:null,href:"https://github.com/Riokai"},"@Riokai"]]]]],["li",["p","\ud83c\udf1f \u65b0\u589e less \u53d8\u91cf"],["ul",["li",["p","Checkbox \u548c Radio \u76f8\u5173\uff1a",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9003"},"#9003"]," ",["a",{title:null,href:"https://github.com/mrgeorgegray"},"@mrgeorgegray"]]],["li",["p","Breadcrumb \u76f8\u5173\uff1a",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/9022"},"#9022"]," ",["a",{title:null,href:"https://github.com/mrgeorgegray"},"@mrgeorgegray"]]]]],["li",["p","\ud83c\udf1f \u65b0\u589e aliyun \u56fe\u6807\u3002"]]],["h2","3.1.3"],["p",["code","2018-01-14"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d ",["code","locale"]," \u4e3a ",["code","null"]," \u65f6 LocaleProvider \u51fa\u9519\u7684\u95ee\u9898\u3002"]]],["h2","3.1.2"],["p",["code","2018-01-13"]],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d Button \u4e0d\u80fd\u6b63\u786e\u663e\u793a ",["code","0"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8733"},"#8733"]," ",["a",{title:null,href:"https://github.com/Cuihongsen"},"@Cuihongsen"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u548c List \u4e2d\u7531\u4e8e Spin \u5bfc\u81f4\u7684\u6eda\u52a8\u6761\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8799"},"#8799"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e0d\u80fd\u4f20\u65b9\u6cd5\u7ed9 Table",["span","emptyText"]," \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8871"},"#8871"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Dropdown",["span","transitionName"]," \u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d Input \u4e2d\u8f93\u5165\u6570\u5b57\u65f6\u5b57\u4f53\u4f1a\u53d1\u751f\u53d8\u5316\u7684\u95ee\u9898\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8636"},"#8636"]]],["li",["p","\ud83d\udc1e \u4fee\u590d import \u591a\u4e2a locale \u6587\u4ef6\u540e\u65e5\u671f\u6587\u672c\u663e\u793a\u9519\u8bef\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8785"},"#8785"]]],["li",["p","\ud83d\udc1e \u4fee\u590d dist/antd-with-locales.js \u4e2d\u7684 locale \u4f1a\u591a\u4e00\u4e2a default \u5b57\u6bb5\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8881"},"#8881"]]],["li",["p","\ud83d\udc1e \u4fee\u590d TypeScript \u5b9a\u4e49 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/4cc29bc11cf7c019c63a25693adff3dbb58b41c3"},"4cc29bc"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/693e734a82b5e1faf25b025127afca67e75f9c88"},"693e734"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/67e956dddd040f63b2a59b8b619123bbb0065780"},"67e956d"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/ecd4177638da1eac3a3750fe5ad68b9309865542"},"ecd4177"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/33119ec535e7b819541d4753464871988b37dd6f"},"33119ec"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/88e0c9b436f196def62e737ea72e105aba4b5d4e"},"88e0c9b"]]],["li",["p","\ud83c\udf1f \u65b0\u589e less \u53d8\u91cf ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/b9b5abab3364bf752e9644415088b142a153e385"},"b9b5aba"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/5931b201da58e993227a04128045e627f2b65c46"},"5931b20"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c9d73978dd2694f9d2bd0111f82a20d237f83621"},"c9d7397"]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e2d\u6587\u5f15\u53f7\u7684\u663e\u793a\u3002"]]],["h2","3.1.1"],["p",["code","2018-01-08"]],["ul",["li",["p","\ud83d\udcd6 \u53d1\u5e03\u4e86\u5168\u65b0\u7684\u5b98\u7f51\u548c\u8bbe\u8ba1\u6587\u6863\u3002"]],["li",["p","\ud83d\udcd6 \u66f4\u65b0\u4e86\u9879\u76ee\u5b9e\u6218\u6587\u6863\u5230 ",["a",{title:null,href:"https://github.com/sorrycc/blog/issues/55"},"roadhog 2.0"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/5dcf1c015fc2674adb09434bf766549d6f3f0022"},"5dcf1c0"]]],["li",["p","\ud83d\udcd6 \u53d1\u5e03\u4e86 Ant Design 3.0 \u7684 sketch \u6a21\u677f\u5305\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/22dfe88ab043c1e116382fc96b7d78cabf125054"},"22dfe88"]]],["li",["p","\ud83d\udc1e \u4fee\u590d \bDropdown \u7ec4\u4ef6\u7684 TypeScript \u7c7b\u578b\u5b9a\u4e49\u4e2d trigger \u5c5e\u6027\u7f3a\u5c11 contextMenu\b \u4e8b\u4ef6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8646"},"#8646"]," ",["a",{title:null,href:"https://github.com/cjahv"},"@cjahv"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Button \u5185\u4f7f\u7528 HOC \u7ec4\u4ef6\u65f6\u4e24\u4e2a\u4e2d\u6587\u5b57\u7b26\u95f4\u672a\u6dfb\u52a0\u7a7a\u683c\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d List \u7ec4\u4ef6\u5728 IE 11 \u4e0b\u7684\u6837\u5f0f\u517c\u5bb9\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8784"},"#8784"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Select \u7ec4\u4ef6 notFoundContent \u5c5e\u6027\u4e0d\u751f\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8809"},"#8809"]]],["li",["p","\ud83d\udc1e \u4fee\u590d BackTop \u7ec4\u4ef6\u5728 React 16 \u4e0b target \u5c5e\u6027\u51fa\u73b0\u8b66\u544a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8848"},"#8848"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5f53\u8bbe\u7f6e gutter \u540e List \u7ec4\u4ef6\u51fa\u73b0\u6a2a\u5411\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8799"},"#8799"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Anchor.Link \u7684 href \u5c5e\u6027\u4e0d\u652f\u6301\u5b8c\u6574\u94fe\u63a5\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8808"},"#8808"]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e2d\u6587\u5f15\u53f7\u7684\u5b57\u4f53\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/c6fcc3121758dfe6ac5b50c1b55790eb42b805c5"},"c6fcc31"]]]],["h2","3.1.0"],["p",["code","2017-12-29"]],["p","\u65b0\u5e74\u5feb\u4e50\uff01~ 2018\u5e74\u4e86\uff0c00\u540e\u90fd\u6210\u5e74\u4e86\uff01\u5c11\u5e74\u8d76\u7d27\u63d0\u4e2a PR \u7ed9\u6211\u4eec\u5427\uff01~"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u7ec4\u4ef6 Spin \u53ef\u80fd\u51fa\u73b0\u8df3\u52a8\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8602"},"#8602"]," ",["a",{title:null,href:"https://github.com/jhsu"},"@jhsu"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u5728\u8bbe\u7f6e ",["code","size=small"]," \u7684\u60c5\u51b5\u4e0b\u51fa\u73b0\u591a\u4f59 padding \u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8724"},"#8724"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Checkbox.Group \u5728 Form \u4e2d\u548c label \u7684\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8739"},"#8739"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Affix \u7ec4\u4ef6\u51fa\u73b0\u6eda\u52a8\u6761\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8606"},"#8606"]]],["li",["p",'\ud83d\udc1e \u4fee\u590d\u7ec4\u4ef6 List "No Data" \u548c\u52a0\u8f7d\u52a8\u753b\u91cd\u53e0\u7684\u95ee\u9898\u3002',["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8647"},"#8647"]]],["li",["p","\ud83c\udf1f \u4e3a Input \u6dfb\u52a0 onKeyUp\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8705"},"#8705"]," ",["a",{title:null,href:"https://github.com/delesseps"},"@delesseps"]]],["li",["p","\ud83c\udf1f \u6298\u53e0\u9762\u677f Collapse \u6dfb\u52a0 ",["code","showArrow"]," \u6765\u652f\u6301\u9690\u85cf\u7bad\u5934\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8536"},"#8536"]," ",["a",{title:null,href:"https://github.com/apieceofbart"},"@apieceofbart"]]],["li",["p","\ud83c\udf1f \u8bc4\u5206 Rate \u7ec4\u4ef6\u6dfb\u52a0 ",["code","allowClear"],"\uff0c\u652f\u6301\u518d\u6b21\u70b9\u51fb\u540e\u91cd\u7f6e\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8627"},"#8627"]]],["li",["p","\ud83c\udf1f \u4f18\u5316 BackTop \u7ec4\u4ef6\u7684\u54cd\u5e94\u5f0f\u6548\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8719"},"#8719"]," ",["a",{title:null,href:"https://github.com/JetRunner"},"@JetRunner"]]],["li",["p","\ud83c\udf1f Modal \u7ec4\u4ef6\u6dfb\u52a0 ",["code","destroyOnClose"]," \u652f\u6301\u5173\u95ed\u65f6\u9500\u6bc1 Modal \u91cc\u7684\u5b50\u5143\u7d20\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8769"},"#8769"]," ",["a",{title:null,href:"https://github.com/Rohanhacker"},"@Rohanhacker"]]],["li",["p","\ud83c\udf1f \u7ec4\u4ef6 Pagination \u6dfb\u52a0 ",["code","hideOnSinglePage"]," \u652f\u6301\u5f53\u53ea\u6709\u4e00\u9875\u65f6\u9690\u85cf\u7ec4\u4ef6\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8615"},"#8615"]," ",["a",{title:null,href:"https://github.com/camsong"},"@camsong"]]],["li",["p","\ud83c\udf1f \u652f\u6301 List \u7ec4\u4ef6\u81ea\u5b9a\u4e49\u52a0\u8f7d\u52a8\u753b\u3002"]],["li",["p","\ud83d\udc7b \u4f60\u73b0\u5728\u53ef\u4ee5\u901a\u8fc7 CodeSandbox \u6765\u6253\u5f00\u5b98\u65b9\u6587\u6863\u4e2d\u7684\u793a\u4f8b\u4e86\u3002"]]],["h2","3.0.3"],["p",["code","2017-12-22"]],["ul",["li",["p","\ud83d\udc1e Form.create \u8fd4\u56de\u503c\u589e\u52a0 ",["code","React.SFC"]," \u7c7b\u578b\u7684\u652f\u6301\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8672"},"#8672"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Form \u63a7\u4ef6\u9ad8\u5ea6\u548c\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8701"},"#8701"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u524d\u540e\u7f6e\u6807\u7b7e\u4e0e Input \u9ad8\u5ea6\u4e0d\u4e00\u81f4\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8680"},"#8680"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Table \u56fa\u5b9a\u5217\u65f6\u5de6\u53f3\u672a\u5bf9\u9f50\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8660"},"#8660"]]]],["h2","3.0.2"],["p",["code","2017-12-17"]],["ul",["li",["p","\ud83d\udcdd \u63d0\u4f9b\u4e86 3.0 \u8fc1\u79fb\u5de5\u5177\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e71b68dd1d2ff91200fea6dd9d56e6aa5653edbc"},"e71b68dd"]]],["li",["p","\ud83d\udcdd \u91cd\u5199\u4e86 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.zh-CN.md"},"\u5f00\u6e90\u8d21\u732e\u6307\u5357"]]],["li",["p","\ud83c\udf1f \u4f18\u5316 notification \u5728\u5c0f\u5c4f\u5e55\u4e0b\u7684\u663e\u793a\u6548\u679c\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8631"},"#8631"]]],["li",["p","\ud83c\udf1f \u4f18\u5316\u4e86 Pagination \u7684\u6837\u5f0f\u548c\u5e76\u4fee\u590d\u4e86\u5bf9\u9f50\u548c\u8fb9\u8ddd\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u5347\u7ea7 react-slick \u5230 ",["code","0.16.0"],"\uff0c\u4fee\u590d peerDependencies \u5b89\u88c5\u8b66\u544a\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8455"},"#8455"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u56fa\u5b9a\u5217\u5934\u7684\u8868\u683c\u5927\u5c0f\u8bbe\u7f6e\u65e0\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8577"},"#8577"]]],["li",["p","\ud83d\udc1e \u4fee\u590d DatePicker \u7b49\u65f6\u95f4\u7ec4\u4ef6\u7684 ",["code","locale"]," \u5c5e\u6027\u5931\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8635"},"#8635"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Popover \u7684\u7bad\u5934\u504f\u79fb\u548c\u5927\u5c0f\u65e0\u6cd5\u8986\u76d6\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8548"},"#8548"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8549"},"#8549"]]],["li",["p","\ud83d\udc1e \u4fee\u590d AutoComponent \u7684 ",["code","notFoundContent"]," \u8bbe\u7f6e\u65e0\u6548\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8553"},"#8553"]]],["li",["p","\ud83d\udc1e \u5fae\u8c03 RangePicker \u7684\u5782\u76f4\u5bf9\u9f50\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e Layout.Sider \u7684\u54cd\u5e94\u5f0f\u65ad\u70b9\u548c\u6805\u683c\u7cfb\u7edf\u4fdd\u6301\u4e00\u81f4\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8620"},"#8620"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a collapsedWidth \u4e3a 0 \u65f6\uff0c\u6536\u7f29\u540e\u5b50\u83dc\u5355\u4f9d\u7136\u4f1a\u663e\u793a\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8587"},"#8587"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Card \u7684 ",["code","Meta.title"]," \u6587\u672c\u65e0\u6cd5\u81ea\u52a8\u622a\u65ad\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8597"},"#8597"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u5e26\u8fb9\u6846\u7684 List \u4e0b\u7684\u5206\u9875\u6837\u5f0f\u8fb9\u8ddd\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8562"},"#8562"]]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4e00\u4e2a Menu \u6307\u5b9a\u4e86\u4e0d\u5b58\u5728\u7684 defaultOpenKeys \u65f6\u5b50\u83dc\u5355\u65e0\u6cd5\u5c55\u5f00\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8475"},"#8475"]]],["li",["p","\ud83d\udc1e \u4fee\u590d Input\u3001AutoComplete\u3001Transfer \u7684 ",["code","InputProps"]," \u548c ",["code","SearchProps"]," TypeScript \u7c7b\u578b\u547d\u540d\u51b2\u7a81\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8478"},"#8478"]]]],["h2","3.0.1"],["p",["code","2017-12-11"]],["ul",["li",["p","\u79fb\u9664 Card \u65e0\u7528 DOM wrapper\uff0c\u4ee5\u548c 2.x \u4fdd\u6301\u4e00\u81f4\u3002"]],["li",["p","\u4fee\u590d ",["code","antd/lib/style/v2-compatible-reset.css"]," \u7f3a\u5931\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/28d13e2539817f87b8a2029ea22d9c30b377167f"},"28d13e2"]]],["li",["p","\u4fee\u590d Affix \u6bd4\u6d4f\u89c8\u5668\u53ef\u89c1\u533a\u57df\u8fd8\u9ad8\u65f6\u88ab\u622a\u65ad\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/31a0654ef990eb7bae2b18095fa0d5230b9be1da"},"31a0654"]]],["li",["p","\u4fee\u590d Collapse \u5c55\u5f00\u52a8\u753b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/edd592cb9dd79d534853e7a0c1b648382e3f1a12"},"edd592c"]]],["li",["p","\u4fee\u590d Form \u5185\u5927\u5c3a\u5bf8 Input\u3001Button \u7684\u5bf9\u9f50\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8459"},"#8459"]]],["li",["p","Menu"],["ul",["li",["p","\u4fee\u590d\u5f39\u5c42\u5728 Safari \u4e0b\u6d88\u5931\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8453"},"#8453"]]],["li",["p","\u4fee\u590d\u5c55\u5f00\u52a8\u753b\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/edd592cb9dd79d534853e7a0c1b648382e3f1a12"},"edd592c"]]]]],["li",["p","\u4fee\u590d Notification \u6837\u5f0f\u7f16\u8bd1\u9519\u8bef\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8437"},"#8437"]]],["li",["p","\u4fee\u590d\u8ff7\u4f60 Pagination \u7684\u80cc\u666f\u8272\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e13c6d87fa6bf7d5cf4b2d5154a85b4793997de5"},"e13c6d8"]]],["li",["p","Table"],["ul",["li",["p","\u4fee\u590d\u5728\u79fb\u52a8\u7aef\u6837\u5f0f\u9519\u4e71\u7684\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8465"},"#8465"]]],["li",["p","\u4fee\u590d\u5d4c\u5957\u8868\u683c\u4e0e size \u5c5e\u6027\u5171\u7528\u65f6\u7684\u6837\u5f0f\u95ee\u9898\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8525"},"#8525"]]]]],["li",["p","TypeScript"],["ul",["li",["p","\u4fee\u590d AutoComplete \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8383"},"#8383"]," ",["a",{title:null,href:"https://github.com/nidhi-ag"},"@nidhi-ag"]]],["li",["p","\u4fee\u590d Divider \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8504"},"#8504"]," ",["a",{title:null,href:"https://github.com/cyyyu"},"@cyyyu"]]],["li",["p","\u4fee\u590d Dropdown \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8444"},"#8444"]]],["li",["p","\u4fee\u590d List \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/e27061ea5b2f2d3273b45862d9b87285448f0998"},"e27061e"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/commit/1b2a9550d9595dd2f31f79d1bdd52695ec792692"},"1b2a955"]]],["li",["p","\u4fee\u590d Table \u7684 TypeScript \u5b9a\u4e49\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8507"},"#8507"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8515"},"#8515"]," ",["a",{title:null,href:"https://github.com/danedavid"},"@danedavid"]]]]]],["h2","3.0.0"],["p",["code","2017-12-04"]],["p","\u66f4\u591a\u5185\u5bb9\u89c1 ",["a",{title:null,href:"https://medium.com/ant-design/announcing-ant-design-3-0-70e3e65eca0c"},"Ant Design 3.0 \u53d1\u5e03\u516c\u544a"],"\u3002"],["h3","\u4e3b\u8981\u53d8\u5316"],["ul",["li",["p","\u5168\u65b0\u7684",["a",{title:null,href:"https://ant.design/docs/spec/colors-cn#Color-Palettes"},"\u8272\u5f69\u7cfb\u7edf"],"\uff0c\u7ec4\u4ef6\u4e3b\u8272\u7531\u300e",["code","#108EE9"],"\u300f\u6539\u4e3a\u300e",["code","#1890FF"],"\u300f\uff0c\u65b0\u4e3b\u8272\u6211\u4eec\u79f0\u4e4b\u4e3a\u300e\u62c2\u6653\u84dd\u300f\u3002"]],["li",["p","\u5168\u65b0\u7684\u89c6\u89c9\u6837\u5f0f\u548c\u7ec4\u4ef6\u5c3a\u5bf8\uff0c\u66f4\u73b0\u4ee3\u66f4\u7f8e\u89c2\u3002"]],["li",["p","\u57fa\u7840\u5b57\u4f53\u5927\u5c0f\u7531 ",["code","12px"]," \u589e\u5927\u5230 ",["code","14px"],"\u3002"]],["li",["p","\u9ed8\u8ba4\u8bed\u8a00\u7531\u4e2d\u6587\u6539\u4e3a\u82f1\u6587\u3002"]],["li",["p","\u5168\u9762\u652f\u6301 React 16\u3002"]],["li",["p","\u66f4\u53cb\u597d\u7684 TypeScript \u652f\u6301\u3002"]],["li",["p","\u65b0\u7684 ",["a",{title:null,href:"https://ant.design/components/list-cn/"},"List"]," \u7ec4\u4ef6\u3002"]],["li",["p","\u65b0\u7684 ",["a",{title:null,href:"https://ant.design/components/divider-cn/"},"Divider"]," \u7ec4\u4ef6\u3002"]],["li",["p","\u65b0\u589e 30 \u4e2a",["a",{title:null,href:"https://ant.design/components/icon-cn/"},"\u56fe\u6807"],"\u3002"]]],["h3","\u4e0d\u517c\u5bb9\u6539\u52a8"],["blockquote",["p","\u5982\u679c\u4f60\u4ece 2.x \u5347\u7ea7\u5230 3.x\uff0c\u5efa\u8bae\u76f4\u63a5\u5347\u7ea7\u5230 3.x \u7684\u6700\u65b0\u7248\u672c\u3002"],["p","3.x \u540e\u7eed\u7684\u7248\u672c\u53ef\u80fd\u5df2\u7ecf\u5e9f\u5f03\u4e86\u4e00\u4e9b\u4e0b\u9762\u6ca1\u6709\u63d0\u5230\u7684\u6539\u52a8\uff0c\u8bf7\u53c2\u8003\u63a7\u5236\u53f0\u7684\u8b66\u544a\u63d0\u793a\u76f8\u5e94\u5347\u7ea7\u3002"]],["p","\u6b64\u7248\u672c\u6709\u90e8\u5206\u4e0d\u517c\u5bb9\u7684\u6539\u52a8\uff0c\u5347\u7ea7\u65f6\u786e\u4fdd\u4fee\u6539\u76f8\u5e94\u7684\u4f7f\u7528\u4ee3\u7801\u3002\u53e6\u5916\u7531\u4e8e\u4eba\u8089\u67e5\u627e\u4ee3\u7801\u4e2d\u7684\u5e9f\u5f03\u7528\u6cd5\u8fc7\u4e8e\u4f4e\u6548\uff0c\u6240\u4ee5\u6211\u4eec\u63d0\u4f9b\u4e86 ",["a",{title:null,href:"https://github.com/ant-design/antd-migration-helper"},"antd-migration-helper"]," \u7528\u4e8e\u626b\u63cf\u4ee3\u7801\u4e2d\u7684\u5e9f\u5f03\u7528\u6cd5\u3002"],["ul",["li",["p","Card \u7684 ",["code","noHovering"]," \u5c5e\u6027\u91cd\u547d\u540d\u4e3a ",["code","hoverable"],"\uff0c\u4e14\u9ed8\u8ba4\u503c\u6539\u4e3a ",["code","true"],"\u3002"]],["li",["p","\u8c03\u6574\u4e86 Grid \u7684\u54cd\u5e94\u5f0f\u65ad\u70b9\u503c\u3002\u8be6\u89c1 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/7230"},"#7230"]]],["li",["p","Form ",["code","getFieldDecorator"]," \u7684 ",["code","exclusive"]," \u53c2\u6570\u88ab\u79fb\u9664\uff0c\u6b64\u7c7b\u573a\u666f\u5e94\u8be5\u7531 Radio.Group\u3001Checkbox.Group \u4e4b\u7c7b\u7684\u7ec4\u4ef6\u6765\u5b8c\u6210\u3002"]],["li",["p","\u65b0\u589e ",["code","Form.createFormField"]," \u65b9\u6cd5\uff0c",["code","mapPropsToFields"]," \u8fd4\u56de\u7684\u5b57\u6bb5\u90fd\u9700\u8981\u7531\u8be5\u65b9\u6cd5\u521b\u5efa\u3002"],["pre",{lang:"diff",highlighted:"import { Form } from 'antd';\n\nForm.create({\n  mapPropsToFields() {\n    return {\n<span class=\"token deleted\">-     name: { value: 'antd' },</span>\n<span class=\"token inserted\">+     name: Form.createFormField({ value: 'antd' }),</span>\n    };\n  },\n})"},["code","import { Form } from 'antd';\n\nForm.create({\n  mapPropsToFields() {\n    return {\n-     name: { value: 'antd' },\n+     name: Form.createFormField({ value: 'antd' }),\n    };\n  },\n})"]]],["li",["p","\u4f18\u5316\u4e86\u5168\u5c40\u7684\u91cd\u7f6e\u6837\u5f0f\uff0c\u5982\u679c\u5347\u7ea7\u540e\u4f60\u7684\u5168\u5c40\u6837\u5f0f\u6709\u95ee\u9898\uff0c\u53ef\u4ee5\u5f15\u5165\u6211\u4eec\u63d0\u4f9b\u7684 2.x \u517c\u5bb9\u6837\u5f0f\u3002"],["pre",{lang:"javascript",highlighted:'<span class="token keyword">import</span> <span class="token string">\'antd/lib/style/v2-compatible-reset\'</span><span class="token punctuation">;</span>'},["code","import 'antd/lib/style/v2-compatible-reset';"]],["p","\u6216\u8005\u5728 less \u91cc\u5f15\u5165"],["pre",{lang:"less",highlighted:'<span class="token variable">@import</span> <span class="token string">\'~antd/lib/style/v2-compatible-reset.less\'</span><span class="token punctuation">;</span>'},["code","@import '~antd/lib/style/v2-compatible-reset.less';"]]],["li",["p","\u7531\u4e8e\u9ed8\u8ba4\u8bed\u8a00\u6539\u4e3a\u82f1\u6587\uff0c\u5982\u679c\u4f60\u9700\u8981\u663e\u793a\u4e2d\u6587\uff0c\u73b0\u5728\u9700\u8981\u914d\u7f6e ",["code","LocalProvider"],"\u3002"],["pre",{lang:"javascript",highlighted:'<span class="token keyword">import</span> <span class="token punctuation">{</span> LocaleProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">\'antd\'</span><span class="token punctuation">;</span>\n<span class="token keyword">import</span> zhCN <span class="token keyword">from</span> <span class="token string">\'antd/lib/locale-provider/zh_CN\'</span><span class="token punctuation">;</span>\n\nReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>\n  <span class="token operator">&lt;</span>LocaleProvider locale<span class="token operator">=</span><span class="token punctuation">{</span>zhCN<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span>YourApp <span class="token operator">/</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>LocaleProvider<span class="token operator">></span><span class="token punctuation">,</span>\n  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">\'root\'</span><span class="token punctuation">)</span>\n<span class="token punctuation">)</span><span class="token punctuation">;</span>'},["code","import { LocaleProvider } from 'antd';\nimport zhCN from 'antd/lib/locale-provider/zh_CN';\n\nReactDOM.render(\n  <LocaleProvider locale={zhCN}><YourApp /></LocaleProvider>,\n  document.getElementById('root')\n);"]]],["li",["p","Form \u4e0b\u7684\u8868\u5355\u63a7\u4ef6\u4e0d\u518d\u9ed8\u8ba4\u4e3a ",["code",'size="large"'],"\u3002"]],["li",["p",["code","Input.Search"]," \u9ed8\u8ba4\u7684 \ud83d\udd0d \u56fe\u6807\u53ea\u4f5c\u4e3a\u88c5\u9970\uff0c\u4e0d\u518d\u54cd\u5e94\u7528\u6237\u4ea4\u4e92\u3002\u9700\u8981\u6dfb\u52a0\u53ef\u4ea4\u4e92\u6309\u94ae\u8bf7\u4f7f\u7528 ",["code","enterButton"],"\u3002"]],["li",["p","UMD \u7248\u672c\u7684 ",["code","dist/antd.js"]," \u4e0d\u518d\u5305\u542b moment\uff0c\u4f7f\u7528\u7684\u65f6\u5019\u9700\u8981\u81ea\u5df1\u5f15\u5165 moment\u3002"],["pre",{lang:"diff",highlighted:'<span class="token deleted">&lt;html></span>\n  &lt;head>\n<span class="token inserted">+   &lt;script src="https://unpkg.com/moment@2.19.3/moment.js">&lt;/script></span>\n    &lt;script src="https://unpkg.com/antd@3.0.0/dist/antd.js">&lt;/script>\n  &lt;/head>\n<span class="token deleted">&lt;/html></span>'},["code",'<html>\n  <head>\n+   <script src="https://unpkg.com/moment@2.19.3/moment.js"><\/script>\n    <script src="https://unpkg.com/antd@3.0.0/dist/antd.js"><\/script>\n  </head>\n</html>']]]],["h3","\u4ee5\u4e0b\u5728 2.x \u4e2d\u5e9f\u5f03\u7684\u7279\u6027\u88ab\u79fb\u9664"],["ul",["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 DatePicker.Calendar\uff0c \u8bf7\u76f4\u63a5\u4f7f\u7528 Calendar \u7ec4\u4ef6\u3002"]],["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 DatePicker \u7684 ",["code","toggleOpen"]," \u5c5e\u6027\uff0c \u8bf7\u4f7f\u7528 ",["code","onOpenChange"]," \u4ee3\u66ff\u3002"]],["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 Form \u7684 ",["code","inline"],"\u3001",["code","horizontal"],"\u3001",["code","vertical"]," \u5c5e\u6027\uff0c\u8bf7\u4f7f\u7528 ",["code","layout"]," \u4ee3\u66ff\u3002"]],["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 Select \u7684 ",["code","multiple"],"\u3001",["code","tags"],"\u3001",["code","combobox"]," \u5c5e\u6027\uff0c\u8bf7\u4f7f\u7528 ",["code","mode"]," \u4ee3\u66ff\u3002"]],["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 Input \u5bf9 ",["code","type='textarea'"]," \u7684\u652f\u6301\uff0c\u8bf7\u76f4\u63a5\u4f7f\u7528 ",["code","Input.TextArea"]," \u7ec4\u4ef6\u3002"]],["li",["p","\ud83d\uddd1 \u79fb\u9664\u4e86 Mention \u7684 ",["code","toEditorState"]," \u65b9\u6cd5\uff0c\u8bf7\u4f7f\u7528 ",["code","toContentState"]," \u4ee3\u66ff\u3002"]]],["h3","\u65b0\u589e\u529f\u80fd\u53ca\u6539\u8fdb"],["ul",["li",["p","\ud83c\udf1f Tabs \u65b0\u589e ",["code",'size="large"'],"\u3002"]],["li",["p","\ud83c\udf1f Row \u7684 ",["code","gutter"]," \u5c5e\u6027\u65b0\u589e\u54cd\u5e94\u5f0f\u65ad\u70b9\u7684\u652f\u6301\uff0c\u53ef\u4ee5\u4f7f\u7528\u8bf8\u5982 ",["code","gutter={{ sm: 16, lg: 32 }}"]," \u7684\u8bbe\u7f6e\u3002"]],["li",["p","\ud83c\udf1f Spin \u65b0\u589e ",["code","indicator"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u81ea\u5b9a\u4e49\u7684\u52a0\u8f7d\u6307\u793a\u7b26\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/7977"},"#7977"]," ",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/7977"},"@kossel"]]],["li",["p","\ud83c\udf1f Input.Search \u65b0\u589e ",["code","enterButton"]," \u7528\u4e8e\u8bbe\u7f6e\u81ea\u5b9a\u4e49\u7684\u641c\u7d22\u56fe\u6807\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7596"},"#7596"]]],["li",["p","\ud83c\udf1f Mention \u65b0\u589e ",["code","placement"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u4e0b\u62c9\u6846\u7684\u5f39\u51fa\u65b9\u5411\u3002"]],["li",["p","\ud83c\udf1f Carousel \u65b0\u589e ",["code","next()"],"\u3001",["code","prev()"],"\u3001",["code","goTo(slideNumber)"]," \u65b9\u6cd5\uff0c\u7528\u4e8e\u63a7\u5236\u9762\u677f\u5c55\u793a\u3002"]],["li",["p","\ud83c\udf1f Button \u65b0\u589e\u94fe\u63a5\u652f\u6301\uff0c\u5f53\u63d0\u4f9b ",["code","href"]," \u65f6\u4f1a\u81ea\u52a8\u6e32\u67d3\u4e3a ",["code","<a>"],"\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8343"},"#8343"]]],["li",["p","\ud83c\udf1f Steps \u8fdb\u884c\u4e86\u91cd\u6784\uff0c\u9996\u6b21\u6e32\u67d3\u7684\u65f6\u5019\u4e0d\u4f1a\u518d\u95ea\u70c1\u3002 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/6010"},"#6010"]]],["li",["p","\ud83c\udf1f Switch \u65b0\u589e ",["code","loading"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8868\u73b0\u52a0\u8f7d\u4e2d\u7684\u72b6\u6001\u3002"]],["li",["p","Menu"],["ul",["li",["p","\ud83c\udf1f \u6211\u4eec\u4f7f\u7528\u4e86 ",["a",{title:null,href:"https://github.com/react-component/trigger"},"rc-trigger"]," \u91cd\u6784\u4e86\u83dc\u5355\u4ee5\u652f\u6301\u5ef6\u8fdf\u52a0\u8f7d\u548c\u7a97\u53e3\u8fb9\u7f18\u6d6e\u5c42\u81ea\u9002\u5e94\u65b9\u5411\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","subMenuOpenDelay"]," \u548c ",["code","subMenuCloseDelay"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5b50\u83dc\u5355\u6253\u5f00\u548c\u5173\u95ed\u7684\u5ef6\u8fdf\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","forceSubMenuRender"],"\uff0c\u7528\u4e8e\u5f3a\u5236\u6e32\u67d3\u5b50\u83dc\u5355\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/5586"},"#5586"]]]]],["li",["p","Form"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e\u663e\u793a\u9a8c\u8bc1\u4fe1\u606f\u65f6\u7684\u52a8\u753b\u6548\u679c\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e\u6309\u6761\u4ef6\u6e32\u67d3\u8868\u5355\u9879\u7684\u652f\u6301\u3002",["a",{title:null,href:"https://github.com/react-component/form/issues/117"},"#react-component/117"]]]]],["li",["p","Message"],["ul",["li",["p","\ud83c\udf1f ",["code","duration"]," \u5141\u8bb8\u53ef\u9009 ",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/7857"},"#7857"]," ",["a",{title:null,href:"https://github.com/monkindey"},"@monkindey"]]]]],["li",["p","Badge"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","offset"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u72b6\u6001\u70b9\u7684\u4f4d\u7f6e\u504f\u79fb\u3002"]],["li",["p","\ud83c\udf1f ",["code","status"]," \u5141\u8bb8\u4e0e ",["code","children"]," \u540c\u65f6\u4f7f\u7528\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8164"},"#8164"]]]]],["li",["p","Card"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","inner"]," \u7c7b\u578b\u3002",["a",{title:null,href:"https://ant.design/components/card-cn/#components-card-demo-inner"},"\u4f8b\u5b50"],"\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","cover"],"\u3001",["code","actions"]," \u4ee5\u53ca ",["code","Meta"]," \u5b50\u7ec4\u4ef6\u3002",["a",{title:null,href:"https://ant.design/components/card-cn/#components-card-demo-meta"},"\u4f8b\u5b50"],"\u3002"]]]],["li",["p","DatePicker"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","mode"]," \u548c ",["code","onPanelChange"],"\uff0c\u7528\u6237\u63a7\u5236\u9762\u677f\u7684\u5c55\u793a\u6a21\u5f0f\u3002",["a",{title:null,href:"https://ant.design/components/date-picker-cn/#components-date-picker-demo-mode"},"\u4f8b\u5b50"],"\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","WeekPicker"]," \u5b50\u7ec4\u4ef6\u3002",["a",{title:null,href:"https://ant.design/components/date-picker-cn/#components-date-picker-demo-basic"},"\u4f8b\u5b50"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","dateRender"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u81ea\u5b9a\u4e49\u65e5\u671f\u5355\u5143\u683c\u7684\u6e32\u67d3\u3002"]]]],["li",["p","TimePicker"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","hourStep"],"\u3001",["code","minuteStep"],"\u3001",["code","secondStep"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u65f6\u95f4\u6b65\u957f\u3002",["a",{title:null,href:"https://ant.design/components/time-picker-cn/#components-time-picker-demo-interval-options"},"\u4f8b\u5b50"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","focusOnOpen"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5728\u6253\u5f00\u9762\u677f\u7684\u65f6\u5019\u662f\u5426\u805a\u7126\u8f93\u5165\u6846\u3002"]]]],["li",["p","Table"],["ul",["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","components"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8986\u76d6\u8868\u683c\u5143\u7d20\u7684\u9ed8\u8ba4\u6807\u7b7e\u3002"],["pre",{lang:"javascript",highlighted:'<span class="token comment" spellcheck="true">// \u652f\u6301\u8986\u76d6\u7684\u5143\u7d20</span>\n<span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">{</span>\n  table<span class="token punctuation">:</span> MyTable<span class="token punctuation">,</span>\n  header<span class="token punctuation">:</span> <span class="token punctuation">{</span>\n    wrapper<span class="token punctuation">:</span> HeaderWrapper<span class="token punctuation">,</span>\n    row<span class="token punctuation">:</span> HeaderRow<span class="token punctuation">,</span>\n    cell<span class="token punctuation">:</span> HeaderCell<span class="token punctuation">,</span>\n  <span class="token punctuation">}</span><span class="token punctuation">,</span>\n  body<span class="token punctuation">:</span> <span class="token punctuation">{</span>\n    wrapper<span class="token punctuation">:</span> BodyWrapper<span class="token punctuation">,</span>\n    row<span class="token punctuation">:</span> BodyRow<span class="token punctuation">,</span>\n    cell<span class="token punctuation">:</span> BodyCell<span class="token punctuation">,</span>\n  <span class="token punctuation">}</span><span class="token punctuation">,</span>\n<span class="token punctuation">}</span><span class="token punctuation">;</span>\n\n<span class="token operator">&lt;</span>Table components<span class="token operator">=</span><span class="token punctuation">{</span>components<span class="token punctuation">}</span> columns<span class="token operator">=</span><span class="token punctuation">{</span>columns<span class="token punctuation">}</span> data<span class="token operator">=</span><span class="token punctuation">{</span>data<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>'},["code","// \u652f\u6301\u8986\u76d6\u7684\u5143\u7d20\nconst components = {\n  table: MyTable,\n  header: {\n    wrapper: HeaderWrapper,\n    row: HeaderRow,\n    cell: HeaderCell,\n  },\n  body: {\n    wrapper: BodyWrapper,\n    row: BodyRow,\n    cell: BodyCell,\n  },\n};\n\n<Table components={components} columns={columns} data={data} />"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","onRow"]," \u5c5e\u6027\uff0c\u7528\u4e8e\u8bbe\u7f6e\u8868\u683c\u5217\u7684\u5c5e\u6027\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","onHeaderRow"],"\uff0c\u7528\u6237\u8bbe\u7f6e\u8868\u683c\u5934\u90e8\u5217\u7684\u5c5e\u6027\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","column[onCell]"],"\uff0c\u7528\u6237\u8bbe\u7f6e\u5355\u5143\u683c\u7684\u5c5e\u6027\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","column[onHeaderCell]"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5934\u90e8\u5355\u5143\u683c\u7684\u5c5e\u6027\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","column[align]"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5217\u5185\u6587\u5b57\u7684\u5bf9\u5176\u65b9\u5411\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","column[defaultSortOrder]"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u5217\u7684\u9ed8\u8ba4\u6392\u5e8f\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8111"},"#8111"]," ",["a",{title:null,href:"https://github.com/megawac"},"@megawac"]]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","rowSelection[fixed]"],"\uff0c\u7528\u4e8e\u56fa\u5b9a\u9009\u62e9\u5217\u3002"]],["li",["p","\ud83d\ude45 \u5e9f\u5f03 ",["code","getBodyWrapper"],"\uff0c\u8bf7\u4f7f\u7528 ",["code","components"]," \u5c5e\u6027\u4ee3\u66ff\u3002"]],["li",["p","\ud83d\ude45 \u5e9f\u5f03\u4ee5\u4e0b\u5c5e\u6027 ",["code","onRowClick"],"\uff0c",["code","onRowDoubleClick"],"\u3001",["code","onRowContextMenu"],"\u3001",["code","onRowMouseEnter"],"\u3001",["code","onRowMouseLeave"],"\uff0c\u8bf7\u4f7f\u7528 ",["code","onRow"]," \u4ee3\u66ff\u3002"],["pre",{lang:"javascript",highlighted:'<span class="token operator">&lt;</span>Table onRow<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>record<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>\n  onClick<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>\n  onDoubleClick<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>\n  onContextMenu<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>\n  onMouseEnter<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>\n  onMouseLeave<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>\n<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>'},["code","<Table onRow={(record) => ({\n  onClick: () => {},\n  onDoubleClick: () => {},\n  onContextMenu: () => {},\n  onMouseEnter: () => {},\n  onMouseLeave: () => {},\n})} />"]]]]],["li",["p","Select"],["ul",["li",["p","\ud83c\udf1f \u9ed8\u8ba4\u548c\u591a\u9009\u6a21\u5f0f\u4e0b Option \u7684\u503c\u5141\u8bb8\u4f7f\u7528 number\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","maxTagCount \u548c"],"maxTagPlaceholder`\uff0c\u7528\u4e8e\u8bbe\u7f6e\u6700\u591a\u53ef\u663e\u793a\u7684\u9009\u4e2d\u9879\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","showAction"],"\uff0c\u7528\u4e8e\u8bbe\u7f6e\u51fa\u53d1\u4e0b\u62c9\u6846\u6253\u5f00\u7684\u4e8b\u4ef6\u3002"]],["li",["p","\ud83c\udf1f \u65b0\u589e ",["code","onMouseEnter"]," \u548c ",["code","onMouseLeave"]," \u4e8b\u4ef6\u56de\u8c03\u3002"]]]],["li",["p","LocaleProvider"],["ul",["li",["p","\ud83c\uddee\ud83c\uddf8 \u65b0\u589e\u51b0\u5c9b\u8bed\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/7561"},"#7561"]," ",["a",{title:null,href:"https://github.com/paunovic-stefan"},"@paunovic-stefan"]]],["li",["p","\ud83c\uddea\ud83c\uddec \u65b0\u589e\u57c3\u53ca\u8bed\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/7888"},"#7888"]," ",["a",{title:null,href:"https://github.com/mohamed-seada-1994"},"@mohamed-seada-1994"]]],["li",["p","\ud83c\uddfa\ud83c\udde6 \u65b0\u589e\u4e4c\u514b\u5170\u8bed\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/pull/8169"},"#8169"]," ",["a",{title:null,href:"https://github.com/anxolerd"},"@anxolerd"]]]]]],["h3","Bug \u4fee\u590d"],["ul",["li",["p","Form"],["ul",["li",["p","\ud83d\udc1e \u4fee\u590d\u8f93\u5165\u6846\u7684\u56fe\u6807\u4f1a\u88ab\u9a8c\u8bc1\u56fe\u6807\u8986\u76d6\u7684\u95ee\u9898\u3002"]],["li",["p","\ud83d\udc1e \u4fee\u590d\u4f7f\u7528\u5927\u5c3a\u5bf8\u8f93\u5165\u6846\u65f6\uff0c\u9a8c\u8bc1\u56fe\u6807\u4e0d\u5c45\u4e2d\u7684\u95ee\u9898\u3002"]]]],["li",["p","\ud83d\udc1e \u4fee\u590d Menu \u6309\u952e\u65f6\u7684\u62a5\u9519\u3002",["a",{title:null,href:"https://github.com/ant-design/ant-design/issues/8089"},"#8089"]]]],["h3","\u5176\u4ed6"],["ul",["li",["p","\u5728 TypeScript \u4e2d\u4f7f\u7528\u65f6\u4e0d\u518d\u9700\u8981\u8bbe\u7f6e ",["code","allowSyntheticDefaultImports"],"\u3002"]],["li",["p","\u4ece ",["code","peerDependencies"]," \u4e2d\u79fb\u9664\u4e86 ",["code","react@0.14"]," \u548c ",["code","react@15"],"\uff0c\u867d\u7136\u76ee\u524d antd 3.0.0 \u4f9d\u7136\u53ef\u4ee5\u5728\u65e7\u7248\u672c\u7684 React \u4e0a\u4f7f\u7528\uff0c\u4f46\u662f\u6211\u4eec\u5728\u672a\u6765\u6709\u53ef\u80fd\u4f7f\u7528 React 16 \u7684\u65b0\u7279\u6027\uff0c\u6240\u4ee5\u5f3a\u70c8\u5efa\u8bae\u5347\u7ea7\u5230 React 16\uff0c\u89c1",["a",{title:null,href:"https://reactjs.org/blog/2017/09/26/react-v16.0.html"},"\u5347\u7ea7\u6587\u6863"],"\u3002"]],["li",["p","\u5168\u9762\u652f\u6301 ES Module \uff0cantd \u53ca\u5176\u4f9d\u8d56\u7684\u5e95\u5c42 react-component \u7ec4\u4ef6\u5168\u90e8\u63d0\u4f9b\u4e86 ES Module \u7684\u6784\u5efa\u7248\u672c\uff0c\u5982\u679c\u4f60\u4f7f\u7528 webpack 3\uff0c\u53ef\u4ee5\u628a ",["code","babel-plugin-import"]," \u7684 ",["code","libraryDirectory"]," \u8bbe\u7f6e\u4e3a ",["code","es"],"\uff0c\u4ee5\u83b7\u5f97 Tree Shaking \u7684\u4f18\u5316\u6548\u679c\u3002"]],["li",["p","\u6700\u540e\uff0c\u6211\u4eec\u4f1a\u7ee7\u7eed\u7ef4\u62a4 2.x \u7684\u5206\u652f\u5230\u660e\u5e74 6 \u6708\u4efd\u3002"]]],["h2","2.x"],["p","\u53bb ",["a",{title:null,href:"https://github.com/ant-design/ant-design/blob/2.x-stable/CHANGELOG.zh-CN.md"},"GitHub"]," \u67e5\u770b ",["code","2.x"]," \u7684 Change Log\u3002"],["h2","1.11.4"],["p","\u53bb ",["a",{title:null,href:"https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"},"GitHub"]," \u67e5\u770b ",["code","0.x"]," \u5230 ",["code","1.x"]," \u7684 Change Log\u3002"]],meta:{order:6,title:"\u66f4\u65b0\u65e5\u5fd7",toc:!1,timeline:!0,filename:"CHANGELOG.zh-CN.md"},description:["section",["p",["code","antd"]," \u4e25\u683c\u9075\u5faa ",["a",{title:null,href:"http://semver.org/lang/zh-CN/"},"Semantic Versioning 2.0.0"]," \u8bed\u4e49\u5316\u7248\u672c\u89c4\u8303\u3002"],["h4","\u53d1\u5e03\u5468\u671f"],["ul",["li",["p","\u4fee\u8ba2\u7248\u672c\u53f7\uff1a\u6bcf\u5468\u672b\u4f1a\u8fdb\u884c\u65e5\u5e38 bugfix \u66f4\u65b0\u3002\uff08\u5982\u679c\u6709\u7d27\u6025\u7684 bugfix\uff0c\u5219\u4efb\u4f55\u65f6\u5019\u90fd\u53ef\u53d1\u5e03\uff09"]],["li",["p","\u6b21\u7248\u672c\u53f7\uff1a\u6bcf\u6708\u53d1\u5e03\u4e00\u4e2a\u5e26\u6709\u65b0\u7279\u6027\u7684\u5411\u4e0b\u517c\u5bb9\u7684\u7248\u672c\u3002"]],["li",["p","\u4e3b\u7248\u672c\u53f7\uff1a\u542b\u6709\u7834\u574f\u6027\u66f4\u65b0\u548c\u65b0\u7279\u6027\uff0c\u4e0d\u5728\u53d1\u5e03\u5468\u671f\u5185\u3002"]]]],toc:["ul",["li",["a",{className:"bisheng-toc-h2",href:"#3.10.3",title:"3.10.3"},"3.10.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.10.2",title:"3.10.2"},"3.10.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.10.1",title:"3.10.1"},"3.10.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.10.0",title:"3.10.0"},"3.10.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.9.3",title:"3.9.3"},"3.9.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.9.2",title:"3.9.2"},"3.9.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.9.1",title:"3.9.1"},"3.9.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.9.0",title:"3.9.0"},"3.9.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.8.4",title:"3.8.4"},"3.8.4"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.8.3",title:"3.8.3"},"3.8.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.8.2",title:"3.8.2"},"3.8.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.8.1",title:"3.8.1"},"3.8.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.8.0",title:"3.8.0"},"3.8.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.7.3",title:"3.7.3"},"3.7.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.7.2",title:"3.7.2"},"3.7.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.7.1",title:"3.7.1"},"3.7.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.7.0",title:"3.7.0"},"3.7.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.6",title:"3.6.6"},"3.6.6"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.5",title:"3.6.5"},"3.6.5"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.4",title:"3.6.4"},"3.6.4"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.3",title:"3.6.3"},"3.6.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.2",title:"3.6.2"},"3.6.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.6.0",title:"3.6.0"},"3.6.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.5.4",title:"3.5.4"},"3.5.4"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.5.3",title:"3.5.3"},"3.5.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.5.2",title:"3.5.2"},"3.5.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.5.1",title:"3.5.1"},"3.5.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.5.0",title:"3.5.0"},"3.5.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.5",title:"3.4.5"},"3.4.5"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.4",title:"3.4.4"},"3.4.4"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.3",title:"3.4.3"},"3.4.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.2",title:"3.4.2"},"3.4.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.1",title:"3.4.1"},"3.4.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.4.0",title:"3.4.0"},"3.4.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.3.3",title:"3.3.3"},"3.3.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.3.2",title:"3.3.2"},"3.3.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.3.1",title:"3.3.1"},"3.3.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.3.0",title:"3.3.0"},"3.3.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.2.3",title:"3.2.3"},"3.2.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.2.2",title:"3.2.2"},"3.2.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.2.1",title:"3.2.1"},"3.2.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.2.0",title:"3.2.0"},"3.2.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.6",title:"3.1.6"},"3.1.6"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.5",title:"3.1.5"},"3.1.5"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.4",title:"3.1.4"},"3.1.4"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.3",title:"3.1.3"},"3.1.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.2",title:"3.1.2"},"3.1.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.1",title:"3.1.1"},"3.1.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.1.0",title:"3.1.0"},"3.1.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.0.3",title:"3.0.3"},"3.0.3"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.0.2",title:"3.0.2"},"3.0.2"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.0.1",title:"3.0.1"},"3.0.1"]],["li",["a",{className:"bisheng-toc-h2",href:"#3.0.0",title:"3.0.0"},"3.0.0"]],["li",["a",{className:"bisheng-toc-h2",href:"#2.x",title:"2.x"},"2.x"]],["li",["a",{className:"bisheng-toc-h2",href:"#1.11.4",title:"1.11.4"},"1.11.4"]]]}}});
+webpackJsonp([233],{
+
+/***/ 1977:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "content": [
+    "article",
+    {
+
+    },
+    [
+      "h2",
+      "3.10.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-10-27"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 完善工具方法 ",
+          [
+            "code",
+            "getScroll"
+          ],
+          " 的 TypeScript 定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12784"
+            },
+            "#12784"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ztplz"
+            },
+            "@ztplz"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 CheckboxGroup 内 Checkbox 没有触发 ",
+          [
+            "code",
+            "onChange"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12642"
+            },
+            "#12642"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Calendar 组件设置 ",
+          [
+            "code",
+            "validRange"
+          ],
+          " 后选择月份时的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12675"
+            },
+            "#12675"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Select 组件设置了 ",
+          [
+            "code",
+            "dropdownMatchSelectWidth"
+          ],
+          " 后多选下拉框的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12816"
+            },
+            "#12816"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hengkx"
+            },
+            "@hengkx"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Card 标题可能会被覆盖的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12680"
+            },
+            "#12680"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Form",
+          [
+            "span",
+            "inline"
+          ],
+          " 提示信息和错误文案被覆盖的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12725"
+            },
+            "#12725"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 支持自定义 Table 组件的筛选按钮的背景色。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12775"
+                },
+                "#12775"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ivankravets"
+                },
+                "@ivankravets"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 调整 Table 组件的样式细节。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12682"
+                },
+                "#12682"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在火狐下，当 size=\"small\" 未排序时下边框不显示。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12840"
+                },
+                "#12840"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复大小为 small/middle 时复选框不能对齐的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12723"
+                },
+                "#12723"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.10.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-10-23"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "📝 翻译",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/spec/overview"
+            },
+            "模式-概览"
+          ],
+          "文档到英文。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12637"
+            },
+            "#12637"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ilanus"
+            },
+            "@ilanus"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🛠 DatePicker 组件完善对越南语（vi_VN）的支持。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12656"
+            },
+            "#12656"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hieuhlc"
+            },
+            "@hieuhlc"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TimePicker 组件在 IE11 下的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12707"
+            },
+            "#12707"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jinyaqiao1102"
+            },
+            "jinyaqiao1102"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Popconfirm 组件的 ",
+          [
+            "code",
+            "defaultVisible"
+          ],
+          " 属性的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12733"
+            },
+            "#12733"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复在 Firefox 下 Table 组件头部边框不显示的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12628"
+            },
+            "#12628"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 组件 Slider 添加 ",
+          [
+            "code",
+            "touch-action: none"
+          ],
+          " 样式修复 Chrome 上可能出现的报错。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12595"
+            },
+            "#12595"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tabs 组件垂直模式下边框条的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12276"
+            },
+            "#12276"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Button 组件无内容时垂直不对齐的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12681"
+            },
+            "#12681"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Calendar 组件 ",
+          [
+            "code",
+            "locale"
+          ],
+          " 属性不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12706"
+            },
+            "#12706"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Checkbox 组件在设置 ",
+          [
+            "code",
+            "indeterminate"
+          ],
+          " 的情况下的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12724"
+            },
+            "#12724"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "prefixCls"
+          ],
+          " 没有应用到 Popconfirm 组件按钮上的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12677"
+            },
+            "#12677"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/concefly"
+            },
+            "@concefly"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Edge 下 Button 组件 ",
+          [
+            "code",
+            "pointer-events:none"
+          ],
+          " 对于 span 不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12712"
+            },
+            "#12712"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/dazbo"
+            },
+            "@dazbo"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Progress"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Progress 组件的 ",
+              [
+                "code",
+                "strokeColor"
+              ],
+              " 属性无效的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12587"
+                },
+                "#12587"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/lyhper"
+                },
+                "@lyhper"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Progress",
+              [
+                "span",
+                "type=\"circle\""
+              ],
+              " 中文本溢出的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12718"
+                },
+                "#12718"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 TreeSelect 组件缺少 ",
+              [
+                "code",
+                "treeExpandedKeys"
+              ],
+              " 和 ",
+              [
+                "code",
+                "onTreeExpand"
+              ],
+              " 的定义的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12648"
+                },
+                "#12648"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/decadef20"
+                },
+                "@decadef20"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 TabPaneProps 组件缺少 ",
+              [
+                "code",
+                "key"
+              ],
+              " 属性定义的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/682af0d44bf38a7d3e487aa909c46409db163030"
+                },
+                "682af0d"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ztplz"
+                },
+                "@ztplz"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Icon 组件的部分定义问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/3dbc357ff2837debbb9b36a25b14be4757297cad"
+                },
+                "3dbc357"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.10.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-10-12"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🎉 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "http://ng.mobile.ant.design/"
+            },
+            "Ant Design Mobile of Angular"
+          ],
+          "（NG-ZORRO-Mobile）发布！"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "📝 更新 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/react/practical-projects-cn"
+            },
+            "项目实战"
+          ],
+          " 文档为最新的 umi 技术栈。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复未指定排序的列头点击时也会触发排序的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12515"
+                },
+                "#12515"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复列头多余的排序 title 提示。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12613"
+                },
+                "#12613"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复排序和右对齐的列样式错位的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12552"
+                },
+                "#12552"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一个 columns 定义在 render 内时排序失效的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12571"
+                },
+                "#12571"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复小号表格下排序列的列头背景色。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Table 的选择器在 chrome 下选中样式的重影问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/5bef1aa6c2e792180ef8d53a1f1489376b8e35db"
+                },
+                "5bef1aa"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Form.Item 内的 Table 分页样式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12554"
+                },
+                "#12554"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "DatePicker"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 调整意大利国际化文案。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12413"
+                },
+                "#12413"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/yp"
+                },
+                "@yp"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复选择完成后选择框没有获取焦点的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12475"
+                },
+                "#12475"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在 Input.Group 内使用时日期图标消失的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12536"
+                },
+                "#12536"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Anchor 中文字边缘被切割的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12520"
+            },
+            "#12520"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Drawer 设置无遮罩时依然挡住了页面元素的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12401"
+            },
+            "#12401"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 AutoComplete 下使用自定义 Input.TextArea 下失效样式丢失的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12594"
+            },
+            "#12594"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Modal.confirm 的 ",
+          [
+            "code",
+            "prefixCls"
+          ],
+          " 属性没有透传给 mask 的问题，并调整了默认的 prefixCls 的值为 ",
+          [
+            "code",
+            "ant-model-confirm"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12546"
+            },
+            "#12546"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input.Group 在 safari 下的一个对齐问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12493"
+            },
+            "#12493"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复独自使用 ",
+          [
+            "code",
+            "<Badge />"
+          ],
+          " 时的垂直对齐。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12419"
+            },
+            "#12419"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tree.DirectoryTree 点击切换图标和点击文本时 ",
+          [
+            "code",
+            "onExpand"
+          ],
+          " 参数不一致的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12567"
+            },
+            "#12567"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复在 IE11 下错误聚焦到表单状态图标的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12524"
+            },
+            "#12524"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/siyu77"
+            },
+            "@siyu77"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复多选 Select 多次点击输入框时会反复触发 ",
+          [
+            "code",
+            "onFocus"
+          ],
+          " 和 ",
+          [
+            "code",
+            "onBlur"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12281"
+            },
+            "#12281"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Frezc"
+            },
+            "@Frezc "
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复环形 Progress 内文本超长溢出的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 补充 Steps 的 ",
+              [
+                "code",
+                "labelPlacement"
+              ],
+              " 属性定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12575"
+                },
+                "#12575"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/yueyes"
+                },
+                "@yueyes"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 补充 Select.Option 的 ",
+              [
+                "code",
+                "style"
+              ],
+              " 属性定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12609"
+                },
+                "#12609"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/dimitropoulos"
+                },
+                "@dimitropoulos"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "form.validateFields"
+              ],
+              " 的定义重载问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12538"
+                },
+                "#12538"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/TomIsion"
+                },
+                "@TomIsion"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 补充 AutoComponent 的 ",
+              [
+                "code",
+                "onFocus"
+              ],
+              " ",
+              [
+                "code",
+                "onBlur"
+              ],
+              " 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12498"
+                },
+                "#12498"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.10.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-09-30"
+      ]
+    ],
+    [
+      "p",
+      "🎉 国庆节快乐"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "📝 更新了",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/spec/icon-cn"
+            },
+            "图标"
+          ],
+          "和",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/spec/motion-cn"
+            },
+            "动效"
+          ],
+          "两篇设计指引。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Upload 组件新增 ",
+          [
+            "code",
+            "openFileDialogOnClick"
+          ],
+          " 属性，用于设置点击组件时是否打开上传对话框。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12347"
+            },
+            "#12347"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hengkx"
+            },
+            "@hengkx"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 InputNumber 组件新增 ",
+          [
+            "code",
+            "decimalSeparator"
+          ],
+          " 属性，用于设置自定义的小数点。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12329"
+            },
+            "#12329"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/amedora"
+            },
+            "@amedora"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 TreeSelect 组件新增 ",
+          [
+            "code",
+            "treeExpandedKeys"
+          ],
+          " 和 ",
+          [
+            "code",
+            "onTreeExpand"
+          ],
+          " 属性，用于控制树的展开收起。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12145"
+            },
+            "#12145"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Transfer"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "disabled"
+              ],
+              " 属性。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12066"
+                },
+                "#12066"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Modal"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "autoFocusButton"
+              ],
+              " 属性，用于指定 Modal 打开时自动获取焦点的按钮。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11756"
+                },
+                "#11756"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/erwin-k"
+                },
+                "@erwin-k"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "confirm"
+              ],
+              " 方法的参数新增 ",
+              [
+                "code",
+                "okButtonProps"
+              ],
+              " 和 ",
+              [
+                "code",
+                "cancelButtonProps"
+              ],
+              "，用户设置对应按钮的属性。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12425"
+                },
+                "#12425"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/Whoaa512"
+                },
+                "@Whoaa512"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 现在可以把 ",
+              [
+                "code",
+                "column.title"
+              ],
+              " 设置为一个方法了。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11246"
+                },
+                "#11246"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "onChange"
+              ],
+              " 属性新增第四个参数 ",
+              [
+                "code",
+                "extra"
+              ],
+              "，用于获取当前显示的筛选后的数据。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12369"
+                },
+                "#12369"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 优化了排序和筛选交互，现在整个列表头都可以点击排序了。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12264"
+                },
+                "#12264"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Alert 新增 ",
+          [
+            "code",
+            "icon"
+          ],
+          " 属性，用户设置自定义图标。例子：",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/alert-cn/#components-alert-demo-custom-icon"
+            },
+            "自定义图标"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 以下组件均新增了 ",
+          [
+            "code",
+            "suffixIcon"
+          ],
+          " 属性，用于设置输入框后面的图标，具体用法可以参考文档。"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "Cascader"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "DatePicker"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "Select"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "TreeSelect"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "TimePicker"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增 less 变量 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/f237effc2a35eb249273f6f2826092a2f9b9db45"
+            },
+            "f237eff"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Icon.createFromIconfontCN 方法会自动给 ",
+          [
+            "code",
+            "scriptUrl"
+          ],
+          " 加 ",
+          [
+            "code",
+            "https"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12316"
+            },
+            "#12316"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Row 的 ",
+          [
+            "code",
+            "gutter"
+          ],
+          " 属性，在使用嵌套的 Col 时不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12320"
+            },
+            "#12320"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tree.DirectoryTree 组件在设置的 ",
+          [
+            "code",
+            "expandedKeys"
+          ],
+          " 有初始值时不能正确展开节点的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12396"
+            },
+            "#12396"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Transfer 组件使用 ",
+          [
+            "code",
+            "render"
+          ],
+          " 属性返回  ReactNode 时，列表项的 ",
+          [
+            "code",
+            "title"
+          ],
+          " 属性显示错误的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12399"
+            },
+            "#12399"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tooltip 在 CheckboxGroup 上不工作的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12427"
+            },
+            "#12427"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Button 组件 loading 状态下在 IE9 里依然可以被点击的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12466"
+            },
+            "#12466"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/120216220"
+            },
+            "@snail"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input.Group 中使用非 Input 组件时，鼠标 hover 时会产生抖动的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12407"
+            },
+            "#12407"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hengkx"
+            },
+            "@hengkx"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TypeScript 类型定义 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12374"
+            },
+            "#12374"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12370"
+            },
+            "#12370"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12354/files"
+            },
+            "#12354"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12473"
+            },
+            "#12473"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.9.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-09-22"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Select"
+          ],
+          " 组件在 Chrome 下超长文本的渲染延迟。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11456"
+            },
+            "#11456"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11843"
+            },
+            "#11843"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "RangePicker"
+          ],
+          " 组件中的 ",
+          [
+            "code",
+            "onOpenChange"
+          ],
+          " 非正常数值报错问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12142"
+            },
+            "#12142"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/leijingdao"
+            },
+            "@leijingdao"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Carousel"
+          ],
+          " 组件的 ",
+          [
+            "code",
+            "goTo"
+          ],
+          " 方法缺少 ",
+          [
+            "code",
+            "dontAnimate"
+          ],
+          " 参数问题，参数用于关闭转场过渡动画。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12205"
+            },
+            "#12205"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Tabs"
+          ],
+          " 中 ",
+          [
+            "code",
+            "tabBar"
+          ],
+          " 的重复类名。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/589bafd5db92a817c078ead6decdb81e64b2b5a8"
+            },
+            "589ba"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12051"
+            },
+            "#12051"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Card"
+          ],
+          " 组件标题的垂直对齐方式。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11036"
+            },
+            "#11036"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10576"
+            },
+            "#10576"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "List"
+          ],
+          " 组件刷新后 key 值非预期变化。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12299"
+            },
+            "#12299"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/douglasjunior"
+            },
+            "@douglasjunior"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 组件 ",
+          [
+            "code",
+            "confirmFilter"
+          ],
+          " 方法不能及时更新数据。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/954c7ecd8ed384a3c67ec8dfb0e0deaa14bbf83b"
+            },
+            "954c7"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12284"
+            },
+            "#12284"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "Menu"
+          ],
+          " 组件相关"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Menu"
+              ],
+              " 在 ",
+              [
+                "code",
+                "horizontal"
+              ],
+              " 模式下时出现额外的滚动条。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12152"
+                },
+                "#12152"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Menu"
+              ],
+              " 组件 ",
+              [
+                "code",
+                "openKeys"
+              ],
+              " 有更高的优先级。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12361"
+                },
+                "#12361"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/tangjinzhou"
+                },
+                "@tangjinzhou"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "Upload"
+          ],
+          " 组件相关"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Upload"
+              ],
+              " 上传文件列表中的 ",
+              [
+                "code",
+                "linkProps"
+              ],
+              " ，支持 JSON 格式链接且可传入 ",
+              [
+                "code",
+                "rel"
+              ],
+              " 、",
+              [
+                "code",
+                "target"
+              ],
+              " ",
+              [
+                "code",
+                "title"
+              ],
+              " 等属性。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/efb23c1525858114460bfe3bd5fcb18c9f236bdc"
+                },
+                "efb23"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Upload"
+              ],
+              " 组件多文件类型同时上传时，key 重复引用冲突的报错问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/273fd2ea1bca395d61509cc98c3ebbf1c620bf43"
+                },
+                "273fd"
+              ],
+              "，",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10953"
+                },
+                "#10953"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "图标相关内容"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Upload"
+              ],
+              " 组件关闭图标样式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12330"
+                },
+                "#12330"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12304"
+                },
+                "#12304"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Select"
+              ],
+              " 组件清除图标。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/12196"
+                },
+                "#12196"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12181"
+                },
+                "#12181"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Icon"
+              ],
+              " svg 对齐问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/0698c8217327224611d4be5fcfd149a355f1c08d"
+                },
+                "0698c"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复当 ",
+              [
+                "code",
+                "Icon"
+              ],
+              " 组件包含子组件时，",
+              [
+                "code",
+                "React.Children.only"
+              ],
+              " 报错。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/c21ff5251d1ff0f00d7f283dd377a7b13eec21ee"
+                },
+                "c21ff"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Notification"
+              ],
+              " 组件没有描述时图标对齐问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/e657985cc35359fb813a2bd68be8c3afbe75c95a"
+                },
+                "e6579"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Table"
+              ],
+              " 组件的排序图标对齐问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/c935d53b713afb3ec314133d749ca4e29e0c1ee5"
+                },
+                "c935d"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Message"
+          ],
+          " 组件中 ",
+          [
+            "code",
+            "MessageApi"
+          ],
+          " 类型定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e82d7a9c095317d62b054fcf7c2d6666ba54660d"
+            },
+            "e82d7"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12137"
+            },
+            "#12137"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Tree"
+          ],
+          " onDrop 类型定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e58273dccf59d58862e8bab0da36c7065e1c1044"
+            },
+            "e5827"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12269"
+            },
+            "#12269"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 ",
+          [
+            "code",
+            "TreeSelect"
+          ],
+          " 组件中 ",
+          [
+            "code",
+            "onChange"
+          ],
+          " 方法中添加 ",
+          [
+            "code",
+            "extra"
+          ],
+          " 类型定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12243"
+            },
+            "#12243"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jardicc"
+            },
+            "@jardicc"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.9.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-09-08"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Card"
+          ],
+          " 组件 ",
+          [
+            "code",
+            "tab-card"
+          ],
+          " 下嵌套 ",
+          [
+            "code",
+            "Card"
+          ],
+          " 导致标题边距偏窄的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12083"
+            },
+            "#12083"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "AutoComplete"
+          ],
+          " 组件设置自定输入组件为 ",
+          [
+            "code",
+            "TextArea"
+          ],
+          " 时，手工调整高度的延迟问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12117"
+            },
+            "#12117"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Drawer"
+          ],
+          " 组件 ",
+          [
+            "code",
+            "maskStyle"
+          ],
+          " 属性无效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12125"
+            },
+            "#12125"
+          ],
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ryerh"
+            },
+            "@ryerh"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Popconfirm"
+          ],
+          " 可以在 ",
+          [
+            "code",
+            "onVisibleChange"
+          ],
+          " 里判断是否触发自确定取消按钮。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8614"
+            },
+            "#8614"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 组件固定头和列时，表头会出现滚动条的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/6515"
+            },
+            "#6515"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Spin"
+          ],
+          " 组件设置 ",
+          [
+            "code",
+            "delay"
+          ],
+          " 时初始化仍会渲染的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12131"
+            },
+            "#12131"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "图标相关内容:"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Icon"
+              ],
+              " 组件在 ",
+              [
+                "code",
+                "popconfirm"
+              ],
+              " 中位置不正确的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12080"
+                },
+                "#12080"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 添加 ",
+              [
+                "code",
+                "Icon"
+              ],
+              " 组件缺失的图标。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/121218"
+                },
+                "#121218"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Select"
+              ],
+              " 组件勾选缺失的图标问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12054"
+                },
+                "#12054"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "TreeSelect"
+              ],
+              " 组件删除图标与之前版本不同的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/12124"
+                },
+                "#12124"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.9.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-09-03"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Icon"
+          ],
+          " 组件在被 ",
+          [
+            "code",
+            "Tooltip"
+          ],
+          " 组件包裹时，无法显示 ",
+          [
+            "code",
+            "Tooltip"
+          ],
+          " 内容的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12005"
+            },
+            "#12005"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "InputNumber"
+          ],
+          " 组件的向上图标显示不正常的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12035"
+            },
+            "#12035"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Modal"
+          ],
+          " 组件的错误确认框不显示图标的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12026"
+            },
+            "#12026"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Popconfirm"
+          ],
+          " 组件中的图标显示位置不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/12026"
+            },
+            "#12026"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Card"
+          ],
+          " 组件中的 ",
+          [
+            "code",
+            "Actions"
+          ],
+          " 图标显示位置不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12016"
+            },
+            "#12016"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Form"
+          ],
+          "、",
+          [
+            "code",
+            "Alert"
+          ],
+          "、",
+          [
+            "code",
+            "TimePicker"
+          ],
+          " 等组件图标主题风格不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12016"
+            },
+            "#12016"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Collapse"
+          ],
+          " 组件中的 ",
+          [
+            "code",
+            "header"
+          ],
+          " 中的图标会顺时针旋转90\b度的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12016"
+            },
+            "#12016"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复在特定部署环境中，新旧图标会同时出现的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12016"
+            },
+            "#12016"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12016/commits/8b82f143b6bd612e8ec7f1202dfd5f41127b025e"
+            },
+            "8b82f14"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复使用 ",
+          [
+            "code",
+            "Icon.createFromIconFontCN({...})"
+          ],
+          " 方法失效并报错的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/12013"
+            },
+            "#12013"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.9.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-09-02"
+      ]
+    ],
+    [
+      "p",
+      "在开学之际我们带来了久违的 ",
+      [
+        "code",
+        "3.9.0"
+      ],
+      " 的更新。多个重量级的新特性和大量修复，使 Ant Design 的能力显著提升。"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🔥🔥🔥 在 ",
+          [
+            "code",
+            "3.9.0"
+          ],
+          " 版本中，我们重绘了所有的图标，新增了两大类，超过 90 个新图标，并且为每个图标增加了多种风格。为此我们重写了 Icon 组件，使用 ",
+          [
+            "code",
+            "SVG"
+          ],
+          " 替换了 ",
+          [
+            "code",
+            "fontface"
+          ],
+          " 图标，增加了多个特性，可以快速的使用新的图标和风格。\n",
+          [
+            "img",
+            {
+              "title": null,
+              "src": "https://gw.alipayobjects.com/zos/rmsportal/CVDHuodLwcDeyQBDoUIZ.png",
+              "alt": null
+            }
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "💄 使用 ",
+              [
+                "code",
+                "SVG"
+              ],
+              " 图标替换了 ",
+              [
+                "code",
+                "css"
+              ],
+              " 字体图标，",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10353"
+                },
+                "可以看这里的讨论了解 svg 的优势"
+              ],
+              "。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 提供了三套图标风格线性、实色和双色图标，默认为线性风格。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增了 ",
+              [
+                "strong",
+                "编辑类"
+              ],
+              " 和 ",
+              [
+                "strong",
+                "数据类"
+              ],
+              " 两个新类别。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "theme"
+              ],
+              " 属性，可以设置图标的主题风格。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11971"
+                },
+                "#11971"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "component"
+              ],
+              " 属性，可以外部传入一个组件来自定义控制渲染结果。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11322"
+                },
+                "#11322"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "twoToneColor"
+              ],
+              " 属性，可以控制双色图标的主题色。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11971"
+                },
+                "#11971"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增静态方法 ",
+              [
+                "code",
+                "Icon.getTowToneColor()"
+              ],
+              " 和 ",
+              [
+                "code",
+                "Icon.setTwoToneColor(...)"
+              ],
+              "，可以全局性的获取和设置所有双色图标的主题色。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11971"
+                },
+                "#11971"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增静态方法 ",
+              [
+                "code",
+                "Icon.createFromIconfontCN({...})"
+              ],
+              "，可以更加方便地使用 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "http://iconfont.cn/"
+                },
+                [
+                  "code",
+                  "iconfont.cn"
+                ]
+              ],
+              " 上托管的图标。更多用法请参阅 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://pro.ant.design/docs/biz-icon-cn"
+                },
+                "Ant Design Pro - 业务图标"
+              ],
+              " 的介绍。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11322"
+                },
+                "#11322"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🔥 增加了一个新组件 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/skeleton-cn/"
+            },
+            "Skeleton"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🔥 Menu 在 ",
+          [
+            "code",
+            "horizontal"
+          ],
+          " 模式下会自动收起来适应宽度。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🔥 Drawer 的 ",
+          [
+            "code",
+            "placement"
+          ],
+          " 支持 ",
+          [
+            "code",
+            "top"
+          ],
+          " 和 ",
+          [
+            "code",
+            "bottom"
+          ],
+          "，可以适应更多场景。"
+        ]
+      ]
+    ],
+    [
+      "p",
+      "另外我们的 ",
+      [
+        "strong",
+        "Ant Design Pro 2.0.0"
+      ],
+      " 也已同步发布，详细内容请看 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "https://www.yuque.com/ant-design/ant-design-pro/ant_design_pro_2.0_is_out"
+        },
+        "这里"
+      ],
+      "。"
+    ],
+    [
+      "h3",
+      "组件修复/功能增强："
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增 Modal.open 方法，用于可自定义图标的快捷对话框。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11982"
+            },
+            "#11982"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hsiehjack"
+            },
+            "@hsiehjack"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Modal.info 增加 ",
+          [
+            "code",
+            "getContainer"
+          ],
+          " 的配置。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11377"
+            },
+            "#11377"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 合并优化了 RangePicker 的日历页脚 UI。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Anchor 组件增加 ",
+          [
+            "code",
+            "onClick"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11898"
+            },
+            "#11898"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Tab 组件增加 ",
+          [
+            "code",
+            "renderTabBar"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11856"
+            },
+            "#11856"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Input 组件增加 ",
+          [
+            "code",
+            "select"
+          ],
+          " 方法。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11906"
+            },
+            "#11906"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Steps 增加 ",
+          [
+            "code",
+            "initial"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11180"
+            },
+            "#11180"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Steps 点状步骤条样式错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/7d5907500f5b1db59d30a17ef466271af3655fa2"
+            },
+            "7d59075"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复在 Card 的 ",
+          [
+            "code",
+            "headStyle"
+          ],
+          " 中设置 fontSize 不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11995"
+            },
+            "#11995"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Button 组件波浪动画混淆的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11985"
+            },
+            "#11985"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Modal.confirm 设置 ",
+          [
+            "code",
+            "centered"
+          ],
+          " 属性无效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11969"
+            },
+            "#11969"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了在 Input.Group 的 ",
+          [
+            "code",
+            "compact"
+          ],
+          " 模式下设置第二个 Input 的前后缀会造成右边框消失的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11965"
+            },
+            "#11965"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload 组件上传图片较多时可能会造成图片错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11183"
+            },
+            "#11183"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 MonthPicker ",
+          [
+            "code",
+            "renderExtraFooter"
+          ],
+          " 失效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8184"
+            },
+            "#8184"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.8.4"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-08-27"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tag 组件删除 tag 后会造成换行的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Switch 单击时会产生 ",
+          [
+            "code",
+            "Failed to execute 'removeChild' on 'Node'"
+          ],
+          " 错误的问题。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.8.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-08-26"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "📖 重新编写了 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/react/customize-theme-cn"
+            },
+            "定制主题"
+          ],
+          " 文档，并提供了主要的 ",
+          [
+            "code",
+            "Less"
+          ],
+          " 变量说明。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Badge 组件动画出现位置不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11870"
+            },
+            "#11870"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Cascader 组件在 IE 和 Edge 浏览器中浮层与数据列宽度不一致的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11857"
+            },
+            "#11857"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Checkbox 组件在 Windows Chrome 下样式模糊的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11797"
+            },
+            "#11797"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 DatePicker.WeekPicker 组件的 ",
+          [
+            "code",
+            "style"
+          ],
+          " 属性无法生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11738"
+            },
+            "#11738"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Drawer 组件在多层状态下切换出现的背景闪烁的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11813"
+            },
+            "#11813"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复带有前缀或后缀的 Input.Group 组件在紧凑模式下右边框宽度过宽的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11863"
+            },
+            "#11863"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Menu"
+        ],
+        [
+          "pre",
+          {
+            "lang": null,
+            "highlighted": "\t<span class=\"token operator\">-</span> 🐞 修复子菜单之间存在间隙导致鼠标 hover 时菜单消失的问题。<span class=\"token punctuation\">[</span>#<span class=\"token number\">11725</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">(</span>https<span class=\"token punctuation\">:</span><span class=\"token operator\">/</span><span class=\"token operator\">/</span>github<span class=\"token punctuation\">.</span>com<span class=\"token operator\">/</span>ant<span class=\"token operator\">-</span>design<span class=\"token operator\">/</span>ant<span class=\"token operator\">-</span>design<span class=\"token operator\">/</span>issues<span class=\"token operator\">/</span><span class=\"token number\">11725</span><span class=\"token punctuation\">)</span>\n\t<span class=\"token operator\">-</span> 🐞 修复当分组菜单包含了第一个菜单项，并且在菜单收起时出现错误的问题。<span class=\"token punctuation\">[</span>a52370<span class=\"token punctuation\">]</span><span class=\"token punctuation\">(</span>https<span class=\"token punctuation\">:</span><span class=\"token operator\">/</span><span class=\"token operator\">/</span>github<span class=\"token punctuation\">.</span>com<span class=\"token operator\">/</span>ant<span class=\"token operator\">-</span>design<span class=\"token operator\">/</span>ant<span class=\"token operator\">-</span>design<span class=\"token operator\">/</span>commit<span class=\"token operator\">/</span>a523706625bd695f44401579d980089292089dda<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">[</span><span class=\"token variable\">@ohhoney1</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">(</span>https<span class=\"token punctuation\">:</span><span class=\"token operator\">/</span><span class=\"token operator\">/</span>github<span class=\"token punctuation\">.</span>com<span class=\"token operator\">/</span>ohhoney1<span class=\"token punctuation\">)</span>"
+          },
+          [
+            "code",
+            "\t- 🐞 修复子菜单之间存在间隙导致鼠标 hover 时菜单消失的问题。[#11725](https://github.com/ant-design/ant-design/issues/11725)\n\t- 🐞 修复当分组菜单包含了第一个菜单项，并且在菜单收起时出现错误的问题。[a52370](https://github.com/ant-design/ant-design/commit/a523706625bd695f44401579d980089292089dda) [@ohhoney1](https://github.com/ohhoney1)"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Steps 组件中过长的 ",
+          [
+            "code",
+            "description"
+          ],
+          " 会被截断，无法完整展示的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11864"
+            },
+            "#11864"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tooltip 组件在 ",
+          [
+            "code",
+            "title"
+          ],
+          " 过长时会将单词拆分到两行的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11722"
+            },
+            "#11722"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tree 组件中的树节点无法接收自定义属性的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11423"
+            },
+            "#11423"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload.Dragger 组件的有效拖拽区域不匹配的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11869"
+            },
+            "#11869"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.8.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-8-18"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tag 组件 ",
+          [
+            "code",
+            "visible"
+          ],
+          " 属性初始值为 false 时仍然可见的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11757"
+            },
+            "#11757"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Modal 文本在双击打开的时候会被选中的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11777"
+            },
+            "#11777"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Rate 组件点击时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11736"
+            },
+            "#11736"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Badge 组件在子元素为 ",
+          [
+            "code",
+            "display:block"
+          ],
+          " 时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/84119d8959d55edf535a9cac5ff532e61b6ee698"
+            },
+            "#84119d8"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Drawer"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Drawer 组件不兼容 IE10 和 IE9  的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11583"
+                },
+                "#11583"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Drawer 组件在移动设备上无法垂直滚动的问题。 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11443"
+                },
+                "#11443"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 TreeNode 组件缺少的 ",
+              [
+                "code",
+                "selectable"
+              ],
+              " 属性定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11604"
+                },
+                "#11604"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/apieceofbart"
+                },
+                "@apieceofbart"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Input 组件缺失 ",
+              [
+                "code",
+                "autosize"
+              ],
+              " 属性的类型错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11697"
+                },
+                "#11697"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.8.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-08-12"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TimePicker 面板输入框宽度过长的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/80f82674fb63b068d047651ccba772999139f1b7"
+            },
+            "80f8267"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tabs 中隐藏的输入框可能被聚焦的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11261"
+            },
+            "#11261"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Badge 组件属性 ",
+          [
+            "code",
+            "offset"
+          ],
+          " 的坐标设置顺序问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11648"
+            },
+            "#11648"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tangjinzhou"
+            },
+            "@tangjinzhou"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Upload"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Upload 组件删除按钮可能不展示的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10454"
+                },
+                "#10454"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Upload 组件缩略图地址没有文件扩展名时的显示问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11684"
+                },
+                "#11684"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/elantion"
+                },
+                "@elantion"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Anchor 组件当 ",
+          [
+            "code",
+            "affix=true"
+          ],
+          " 时无法在滚动的窗口中固定的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11688"
+            },
+            "#11688"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/vitaliymaz"
+            },
+            "@vitaliymaz"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 List.Grid 组件中的卡片宽度问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11712"
+            },
+            "!11712"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Radio 在 safari 下对齐的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/754a22ca24dee685666554778f53a5fe700959ff"
+            },
+            "754a22c"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 添加点击动画效果到组件 Switch, Radio.Button 和 Tag。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/9cf6ae601010acbf665d575d34c0cc0918e604e7"
+            },
+            "9cf6ae6"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Collapse 组件缺少的 ",
+              [
+                "code",
+                "destroyInactivePanel"
+              ],
+              " 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11646"
+                },
+                "#11646"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/zheeeng"
+                },
+                "@zheeeng"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 修复 AutoComplete 没有 ",
+              [
+                "code",
+                "getPopupContainer"
+              ],
+              " 属性定义的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11690"
+                },
+                "#11690"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/Huanghuiying0624"
+                },
+                "@Huanghuiying0624"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Upload 组件的 ",
+              [
+                "code",
+                "lastModifiedDate"
+              ],
+              " 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11709"
+                },
+                "#11709"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/andycall"
+                },
+                "@andycall"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 使用新的 React 生命周期函数，包括组件 Upload, CheckboxGroup, Layout.Sider, Tooltip, Popconfirm。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11666"
+            },
+            "#11666"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/dancerphil"
+            },
+            "@dancerphil"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11682"
+            },
+            "#11682"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/dancerphil"
+            },
+            "@dancerphil"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.8.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-08-05"
+      ]
+    ],
+    [
+      "p",
+      "非常感谢在 3.8.0 上提交 PR 的 24 位贡献者！"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "💄 支持 TypeScript 3，并优化了大量组件定义。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 使用 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"
+            },
+            "font-variant-numeric"
+          ],
+          " 优化了等宽数字的实现方式，解决了数字字体和其他字体不一致的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11567"
+            },
+            "#11567"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tibdex"
+            },
+            "@tibdex"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Timeline 现在支持左/右/交替三种布局形式。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11490"
+            },
+            "#11490"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jrvboesch"
+            },
+            "@jrvboesch"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Button 增加 ",
+          [
+            "code",
+            "block"
+          ],
+          " 属性用于撑满父容器宽度。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11500"
+            },
+            "#11500"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ilanus"
+            },
+            "@ilanus"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Tree"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "💄 优化了组件可访问性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一个拖拽后节点失踪的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11492"
+                },
+                "#11492"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一个在拖拽后节点位置没有垂直居中的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11458"
+                },
+                "#11458"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "rowSelection.columnTitle"
+              ],
+              " 可以定制选择列的列标题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11042"
+                },
+                "#11042"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/littleLane"
+                },
+                "@littleLane"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 新增了一个",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "/components/table/#components-table-demo-resizable-column"
+                },
+                "可拖拽改变列宽的例子"
+              ],
+              "。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 支持按住 shift 进行多选。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11404"
+                },
+                "#11404"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/RaphaelChauveau"
+                },
+                "@RaphaelChauveau"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Avatar"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "onError"
+              ],
+              " 属性，作为图片加载失败时的回调。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11285/"
+                },
+                "#11285"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/paranoidjk"
+                },
+                "@paranoidjk"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "size"
+              ],
+              " 属性，方便自定义头像大小。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11256"
+                },
+                "#11256"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/emersonlaurentino"
+                },
+                "@emersonlaurentino"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Card 新增 ",
+          [
+            "code",
+            "headStyle"
+          ],
+          " 属性用于定制标题样式。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11407"
+            },
+            "#11407"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/emersonlaurentino"
+            },
+            "@emersonlaurentino"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 DatePicker 上无法使用 Tooltip 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11451"
+            },
+            "#11451"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/yociduo"
+            },
+            "@yociduo"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input.Group 上无法使用 Tooltip 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11532"
+            },
+            "#11532"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/yociduo"
+            },
+            "@yociduo"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一个 DatePicker 中时间面板 hover 时数字跳动的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11460"
+            },
+            "#11460"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 Tabs 修复了一个切换焦点异常的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11261"
+            },
+            "#11261"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Select"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 支持 ",
+              [
+                "code",
+                "data-*"
+              ],
+              " 属性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一个选中项在列表中没有聚焦的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11268"
+                },
+                "#11268"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Calendar 新增了 ",
+          [
+            "code",
+            "onChange"
+          ],
+          " 作为日期改变的回调。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11476"
+            },
+            "#11476"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tangjinzhou"
+            },
+            "@tangjinzhou"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Popconfirm 新增 ",
+          [
+            "code",
+            "icon"
+          ],
+          " 支持自定义图标。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11191"
+            },
+            "#11191"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/nuintun"
+            },
+            "@nuintun"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Modal"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "centered"
+              ],
+              " 属性用于设置对话框垂直居中。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11537"
+                },
+                "#11537"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/yoyo837"
+                },
+                "@yoyo837"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复了多个对话框会被 ESC 一次性全部关掉的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11394"
+                },
+                "#11394"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/yoyo837"
+                },
+                "@yoyo837"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 再次修复 Modal.confirm 的标题区域某些情况下会显示滚动条的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11568"
+                },
+                "#11568"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/cheshireoctopus"
+                },
+                "@cheshireoctopus"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Progress 新增 ",
+          [
+            "code",
+            "strokeLinecap"
+          ],
+          " 属性用于调整边缘形状。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11547"
+            },
+            "#11547"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/blatinier"
+            },
+            "@blatinier"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Drawer 新增 ",
+          [
+            "code",
+            "className"
+          ],
+          " 并废弃 ",
+          [
+            "code",
+            "wrapClassName"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11609"
+            },
+            "#11609"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/fergiar"
+            },
+            "@fergiar"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.7.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-07-28"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Steps 在 ",
+          [
+            "code",
+            "labelPlacement"
+          ],
+          " 为 ",
+          [
+            "code",
+            "vertical"
+          ],
+          " 时标题与图标不对齐的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11426"
+            },
+            "#11426"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/yoyo837"
+            },
+            "@yoyo837"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Cascader 设置 ",
+          [
+            "code",
+            "fieldNames"
+          ],
+          " 时不能正确读取子节点的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11311"
+            },
+            "#11311"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/405go"
+            },
+            "@405go"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Pagination 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11474"
+                },
+                "#11474"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/kagd"
+                },
+                "@kagd"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Select 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11189<Paste>"
+                },
+                "#11189"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/thisJJ"
+                },
+                "@thisJJ"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.7.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-07-25"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "DatePicker"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 ",
+              [
+                "strong",
+                "修复在受控模式下不能切换年月的问题。"
+              ],
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/b9992f4a08574efb47b6e6cd80eb1e888b9a1ede"
+                },
+                "b9992f4"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在 ",
+              [
+                "code",
+                "getDerivedStateFromProp"
+              ],
+              " 的警告。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11398"
+                },
+                "#11398"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/yoyo837"
+                },
+                "@yoyo837"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Drawer"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复使用 ",
+              [
+                "code",
+                "destroyOnClose"
+              ],
+              " 时没有关闭动画的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11307"
+                },
+                "#11307"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "width"
+              ],
+              " 以 ",
+              [
+                "code",
+                "vw"
+              ],
+              " 为单位时的显示错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/11326"
+                },
+                "#11326"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "wrapClassName"
+              ],
+              " 属性无效的问题。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tooltip 文字溢出的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11402"
+            },
+            "#11402"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/weidapao"
+            },
+            "@weidapao"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Menu 在 ",
+          [
+            "code",
+            "theme"
+          ],
+          " 为 ",
+          [
+            "code",
+            "dark"
+          ],
+          " 是在 Layout.Header 里的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11400"
+            },
+            "#11400"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/hongxuWei"
+            },
+            "@hongxuWei"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 InputNumber 的箭头按钮在使用了固定列的 Table 里显示错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11408"
+            },
+            "#11408"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Select 使用分组时 Option 的圆角显示错误。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/6cb6f5c83ed634e67d5b5d0816d11aa0788a74d8"
+            },
+            "6cb6f5c"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 第一次点击过滤按钮的时候 ",
+          [
+            "code",
+            "onChange"
+          ],
+          " 会被触发两次的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11164"
+            },
+            "#11164"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/adybionka"
+            },
+            "@adybionka"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Modal.confirm 的标题在 Firefox 下会显示滚动条的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11432"
+            },
+            "#11432"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Radio.Group 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11409"
+                },
+                "#11409"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/eddiemoore"
+                },
+                "@eddiemoore"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 TreeSelect 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11442"
+                },
+                "#11442"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/JribiBelhassen"
+                },
+                "@JribiBelhassen"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Badge 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/11421"
+                },
+                "#11421"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/zongzi531"
+                },
+                "@zongzi531"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.7.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-07-21"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Drawer 内无法显示弹层组件的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11304"
+            },
+            "#11304"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 带页签的卡片页签支持 disabled 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11212"
+            },
+            "#11212"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复锚点链接组件 href 改变不更新的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11287/files"
+            },
+            "#11287"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tangjinzhou"
+            },
+            "@tangjinzhou"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Menu 样式细节问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11299"
+            },
+            "#11299"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Drawer 组件设置 ",
+          [
+            "code",
+            "destroyOnClose"
+          ],
+          " 后关闭动画消失。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11307"
+            },
+            "#11307"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 DirectoryTree 在 ",
+          [
+            "code",
+            "expandedKeys"
+          ],
+          " 属性可控时点击无法展开的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11366"
+            },
+            "#11366"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ButtonGroup 中使用 Tooltip 的 Button 在 ",
+          [
+            "code",
+            "disabled"
+          ],
+          " 时样式不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/11321"
+            },
+            "11321"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tangjinzhou"
+            },
+            "@tangjinzhou"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.7.0"
+    ],
+    [
+      "p",
+      "3.7.0 是一个重磅更新，带来了很多激动人心的变化和新特性。\n以下是一些亮点✨："
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🔥 增加抽屉组件 : ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/drawer-cn/"
+            },
+            [
+              "code",
+              "Drawer"
+            ]
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10791"
+            },
+            "#10791"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🔥 新增 ",
+          [
+            "code",
+            "Tree.DirectoryTree"
+          ],
+          " 组件，作为内置的目录树。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7749"
+            },
+            "#7749"
+          ]
+        ]
+      ]
+    ],
+    [
+      "p",
+      "组件修复/功能增强："
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "TreeSelect 组件升级 ",
+          [
+            "code",
+            "rc-tree-select"
+          ],
+          " 到 ",
+          [
+            "code",
+            "2.0.5"
+          ],
+          "，进行了重构，修复了 check 的逻辑。"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "autoClearSearchValue"
+              ],
+              " 属性，当多选模式下值被选择，用于自动清空搜索框。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10996"
+                },
+                "10996"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "searchValue"
+              ],
+              " 属性，用于设置搜索框的值。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/6ff7dd8fb953f079ee51ee638aaf4d832d0e10bf#diff-1e8e47abbdbe6e12d009aa61619ab22f"
+                },
+                "6ff7dd8"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "maxTagCount"
+              ],
+              " 属性，用于设置显示标签的最大数量。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/fb96c9db351e44a202f64f780470c6319a8a9626"
+                },
+                "fb96c9d"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "maxTagPlaceholder"
+              ],
+              " 属性，用于设置标签隐藏时显示的内容。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/fb96c9db351e44a202f64f780470c6319a8a9626"
+                },
+                "fb96c9d"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 搜索框支持大小写敏感。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10990"
+                },
+                "#10990"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🗑 ",
+              [
+                "code",
+                "treeData"
+              ],
+              " 数据格式中的 ",
+              [
+                "code",
+                "label"
+              ],
+              " 属性被废弃，使用 ",
+              [
+                "code",
+                "title"
+              ],
+              " 属性代替。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Upload 组件升级 ",
+          [
+            "code",
+            "rc-upload"
+          ],
+          " 到 ",
+          [
+            "code",
+            "2.5.0"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "directory"
+              ],
+              " 属性，支持上传一个文件夹。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/7315"
+                },
+                "#7315"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "action"
+              ],
+              " 属性支持作为一个返回 ",
+              [
+                "code",
+                "Promise"
+              ],
+              " 对象的函数，使用更加灵活。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/fd96967c872600b79bb608e9ddf9f8c38814a704"
+                },
+                "fd96967"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Dropdown 增加新特性，\b可以做为右键菜单来使用。"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 给菜单项的 icon 提供默认的外间距样式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/8e60a591fd24f644de4f67d69c2210e9270be9cc"
+                },
+                "8e60a59"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 触发方式为 ",
+              [
+                "code",
+                "contextMenu"
+              ],
+              " 时自动调整菜单的位置。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/16e42601d6772fc0830ee237a1e751a38a118676"
+                },
+                "16e4260"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table 组件升级 ",
+          [
+            "code",
+            "rc-table"
+          ],
+          " 到 ",
+          [
+            "code",
+            "6.2.2"
+          ],
+          "。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/f2fddff3fd0d6b36e8e6d8ee06bfcbcc85ead4f0"
+            },
+            "f2fddff"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "expanded"
+              ],
+              " 作为 ",
+              [
+                "code",
+                "expandedRowRender"
+              ],
+              " 属性函数的第四个参数，用于获取当前行是否展开。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10379"
+                },
+                "#10379"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增无须使用完全受控组件也能覆盖筛选菜单的能力。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/59cc3a8b6c643f7206feedf2dc2c7154296ba3e3"
+                },
+                "59cc3a8"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/chrvadala"
+                },
+                "@chrvadala"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "filterIcon"
+              ],
+              " 属性支持作为一个返回 ",
+              [
+                "code",
+                "ReactNode"
+              ],
+              " 的函数。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/1af4392ae9fbdaa6fcfbf2f0de5413100ef4a84a"
+                },
+                "1af4392"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在固定列时导致的行错位的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10392"
+                },
+                "#10392"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在组件中使用 ",
+              [
+                "code",
+                "combobox"
+              ],
+              " 模式的 ",
+              [
+                "code",
+                "Select"
+              ],
+              " 导致的重影问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10828"
+                },
+                "#10828"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 components 属性值不能变化的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/c380186e794a7735ae91e992f25a313158ee4984"
+                },
+                "c380186"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 Select 组件废弃了 ",
+          [
+            "code",
+            "combobox"
+          ],
+          " 模式，请使用 ",
+          [
+            "code",
+            "AutoComplete"
+          ],
+          " 组件代替。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/53046a454ad83ca03dc313e63f56474ed1173002"
+            },
+            "53046a4"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Alert 组件允许传递 ",
+          [
+            "code",
+            "data-*"
+          ],
+          "、",
+          [
+            "code",
+            "aria-*"
+          ],
+          " 和 ",
+          [
+            "code",
+            "role-*"
+          ],
+          " 属性到组件内部。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/f0b684de6a7c422f0de56e1ef72aeb35ab25a858"
+            },
+            "f0b684d"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Avatar 组件新增 ",
+          [
+            "code",
+            "alt"
+          ],
+          " 属性，用于设置图像无法显示时的替代文本。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10798"
+            },
+            "#10798"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 DatePicker 组件允许传递 ",
+          [
+            "code",
+            "data-*"
+          ],
+          "、",
+          [
+            "code",
+            "aria-*"
+          ],
+          " 和 ",
+          [
+            "code",
+            "role-*"
+          ],
+          " 属性到组件内部的 ",
+          [
+            "code",
+            "Input"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e63f9d4beb440de92c0b0ce8e6e83f7e24fef792"
+            },
+            "e63f9d4"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Input.Search 组件新增 ",
+          [
+            "code",
+            "event"
+          ],
+          " 事件对象作为 ",
+          [
+            "code",
+            "onSearch"
+          ],
+          " 属性函数的第二个参数。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11015"
+            },
+            "#11015"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Layout.Sider 组件新增 ",
+          [
+            "code",
+            "onBreakPoint"
+          ],
+          " 属性，用作响应式布局的断点触发时的回调函数。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10750"
+            },
+            "#10750"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/nuintun"
+            },
+            "@nuintun"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Modal 组件新增 ",
+          [
+            "code",
+            "okButtonProps"
+          ],
+          " 和 ",
+          [
+            "code",
+            "cancelButtonProps"
+          ],
+          " 属性，分别用于设置 ",
+          [
+            "code",
+            "取消"
+          ],
+          " 按钮和 ",
+          [
+            "code",
+            "确定"
+          ],
+          " 按钮的属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10955"
+            },
+            "#10955"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/djyde"
+            },
+            "@djyde"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Progress 组件新增 ",
+          [
+            "code",
+            "strokeColor"
+          ],
+          " 属性，用于设置进度条的颜色。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10725"
+            },
+            "#10725"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Radio.Group 组件新增 ",
+          [
+            "code",
+            "buttonStyle"
+          ],
+          " 属性 (可选值 ",
+          [
+            "code",
+            "outline | solid"
+          ],
+          ")，用于设置 ",
+          [
+            "code",
+            "RadioButton"
+          ],
+          " 的风格样式。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/60e3cfa37ac0dae3a895e74c1fe5351c54536a07#diff-c2ee8b5a368a121e9d2cc2661212045d"
+            },
+            "60e3cfa"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Spin 组件新增 ",
+          [
+            "code",
+            "setDefaultIndicator"
+          ],
+          " 静态方法，用于设置全局的加载指示符。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10787"
+            },
+            "#10787"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Tag 组件新增 ",
+          [
+            "code",
+            "visible"
+          ],
+          " 属性，用于设置是否显示标签。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/4ac027781372dda08a5458bc73836fbc14dfe51f"
+            },
+            "4ac0277"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Tree 组件升级 ",
+          [
+            "code",
+            "rc-tree"
+          ],
+          " 到 ",
+          [
+            "code",
+            "1.12.0"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "loadedKeys"
+              ],
+              " 属性，用于设置已经加载的节点，需要配合 ",
+              [
+                "code",
+                "loadData"
+              ],
+              " 使用。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10666"
+                },
+                "#10666"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "onLoad"
+              ],
+              " 属性，作为节点加载完毕时的回调函数。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/c488aca05e11d942d77c1b6bff45d12bbb1a2bd6"
+                },
+                "c488aca"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 增加 ",
+          [
+            "code",
+            "okButtonDisabled"
+          ],
+          " and ",
+          [
+            "code",
+            "cancelButtonDisabled"
+          ],
+          " 属性用于禁用确定和取消按钮。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10955"
+            },
+            "#10955"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Cascader 新增 fieldNames 并废弃拼写错误的 filedNames。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10896"
+            },
+            "#10896"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复时间轴不能与",
+          [
+            "code",
+            "Tooltip"
+          ],
+          "一起使用的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/0e3b67e9999d867cc304f3be61a8a042a2ab92ee"
+            },
+            "0e3b67e"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复当 Avatar 自定义大小时，圆角不改变的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e1e6523452286ba56f20b73abad762a58ea7d7bc"
+            },
+            "e1e6523"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.6"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-07-07"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "DatePicker"
+          ],
+          " 组件被选中日期的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/6146"
+            },
+            "#6146"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9529"
+            },
+            "#9529"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "DatePicker.RangePicker"
+          ],
+          " 组件中被选中日期的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/004561ba1f3b894dc164225e9e27b0a90679d15c"
+            },
+            "004561b"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Cascader"
+          ],
+          " 组件在 ",
+          [
+            "code",
+            "Form.Item"
+          ],
+          " 下的对齐问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9827"
+            },
+            "#9827"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11133"
+            },
+            "#11133"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "InputNumber"
+          ],
+          " 组件的 ",
+          [
+            "code",
+            "handler"
+          ],
+          " 的背景样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/4aabc5374497359e13a958ef81ae4569db6164a7"
+            },
+            "4aabc53"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 组件在 ",
+          [
+            "code",
+            "FireFox"
+          ],
+          " 浏览器下数据为空时的头部溢出的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11135"
+            },
+            "#11135"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.5"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-07-02"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Transfer"
+          ],
+          " 组件的文本 \"Not Found\" 在 IE 或 Edge 浏览器上显示异常。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9697"
+            },
+            "#9697"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Chrome 在缩放模式下，",
+          [
+            "code",
+            "Card"
+          ],
+          " 组件的边框被标题的背景色覆盖。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9085"
+            },
+            "#9085"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Table"
+              ],
+              " 不兼容的类型 ",
+              [
+                "code",
+                "size"
+              ],
+              "。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/bf5b6ae1f3b5da4629a7d10a2d1764eaa3fbbb04"
+                },
+                "bf5b6ae1"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Select"
+              ],
+              " 组件的 ",
+              [
+                "code",
+                "showArrow"
+              ],
+              " 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/cde2a6b6f011a5b3a367b3f58731def547bc98d8"
+                },
+                "cde2a6b6"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Pagination 全局 locale 设置不能被组件 locale 覆盖的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/babbbdd4e5c33ca050f8ee08969185c8d3269b4c"
+            },
+            "babbbdd4"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Tooltip"
+          ],
+          " 组件的 ",
+          [
+            "code",
+            "max-width"
+          ],
+          " 样式，使 ",
+          [
+            "code",
+            "overlayStyle.maxWidth"
+          ],
+          " 可覆盖。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e2b359e9c3dae067eeba37a886f7896474c87e31"
+            },
+            "e2b359e9"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Select"
+          ],
+          " 组件的样式，避免过长文本的溢出。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/11035"
+            },
+            "#11035"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.4"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-06-23"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Steps"
+          ],
+          " 组件的 ",
+          [
+            "code",
+            "@process-icon-color"
+          ],
+          " 样式定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10973"
+            },
+            "#10973"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "RangePicker"
+          ],
+          " 组件使用预置范围时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10986"
+            },
+            "#10986"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Dropdown"
+          ],
+          " 组件可能报出的 ",
+          [
+            "code",
+            "non-boolean attribute"
+          ],
+          " 的警告。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7798"
+            },
+            "#7798"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 给 ",
+              [
+                "code",
+                "Tree"
+              ],
+              " 组件添加 ",
+              [
+                "code",
+                "className"
+              ],
+              " 的定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10950"
+                },
+                "#10950"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 给 ",
+              [
+                "code",
+                "Tree"
+              ],
+              " 组件添加 ",
+              [
+                "code",
+                "selectable"
+              ],
+              " 的定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/3fb478e743f3bad23dc300f501df11e5423468ba"
+                },
+                "3fb478e"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-06-17"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload 图片文件后缀名为大写时无法正确识别的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10928"
+            },
+            "#10928"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/sliwey"
+            },
+            "@sliwey"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 InputNumber 在浏览器缩放时边框样式丢失的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10562"
+            },
+            "#10562"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Spin 内使用 ",
+          [
+            "code",
+            "position: fixed"
+          ],
+          " 的元素无法固定的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10196"
+            },
+            "#10196"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复小号表格下固定列的边框样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9754"
+            },
+            "#9754"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table ",
+          [
+            "code",
+            "filterIcon"
+          ],
+          " 的 ",
+          [
+            "code",
+            "className"
+          ],
+          " 属性失效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10937"
+            },
+            "#10937"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Affix 的 ",
+          [
+            "code",
+            "offsetTop"
+          ],
+          " 和 ",
+          [
+            "code",
+            "offsetBottom"
+          ],
+          " 无法动态修改的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10874"
+            },
+            "#10874"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 TreeSelect ",
+              [
+                "code",
+                "TS2339"
+              ],
+              " 错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10868"
+                },
+                "#10868"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 补充 Form 的 ",
+              [
+                "code",
+                "validateMessages"
+              ],
+              " 和 ",
+              [
+                "code",
+                "onFieldsChange"
+              ],
+              " 参数的定义。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 优化 Button 的属性定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10877"
+                },
+                "#10877"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/zheeeng"
+                },
+                "@zheeeng"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 补充 AutoComplete 的 ",
+              [
+                "code",
+                "backfill"
+              ],
+              " 属性定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10909"
+                },
+                "#10909"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/zhanba"
+                },
+                "@zhanba"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-06-09"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 数据变化时全选勾选框状态显示不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10629"
+            },
+            "#10629"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Button.Group 中使用 disabled 按钮时缺失边框。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload 中 ",
+          [
+            "code",
+            "beforeUpload"
+          ],
+          " 返回 ",
+          [
+            "code",
+            "false"
+          ],
+          " 时，文件列表排序会被反转的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10681"
+            },
+            "#10681"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Calendar 表格中内容溢出的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10808"
+            },
+            "#10808"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/Yangzhedi"
+            },
+            "@Yangzhedi"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Spin"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复使用图标时不能按照 ",
+              [
+                "code",
+                "size"
+              ],
+              " 正确显示大小的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10786"
+                },
+                "#10786"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复默认旋转时 ",
+              [
+                "code",
+                "delay"
+              ],
+              " 不生效的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10727"
+                },
+                "#10727"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/dreamerblue"
+                },
+                "@dreamerblue"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 Badge 的状态色不跟主题色变化的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Menu 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10773"
+                },
+                "#10773"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 AutoComplete 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10745"
+                },
+                "#10745"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10619"
+                },
+                "#10619"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Tree 类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10841"
+                },
+                "#10841"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/Voronar"
+                },
+                "@Voronar"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Checkbox.Group 的类型定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10677"
+                },
+                "#10677"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.6.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-06-02"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Form"
+          ],
+          " 表单错误信息展示支持传入 ReactNode。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10136"
+            },
+            "#10136"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/lovekonakona"
+            },
+            "@lovekonakona"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "List"
+          ],
+          " 组件支持指定分页器的位置。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10581"
+            },
+            "#10581"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/zheeeng"
+            },
+            "@zheeeng"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Layout.Sider"
+          ],
+          " 支持 dark/light 主题定制。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10142"
+            },
+            "#10142"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/pd4d10"
+            },
+            "@pd4d10"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 支持 Ant Design 站点的离线模式。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10625"
+            },
+            "#10625"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Transfer"
+          ],
+          " 新增 ",
+          [
+            "code",
+            "style"
+          ],
+          " 以及 ",
+          [
+            "code",
+            "operationStyle"
+          ],
+          " 属性配置样式。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/eduludi"
+            },
+            "@eduludi"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Message"
+          ],
+          " 增加 promise 化的回调接口。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10421"
+            },
+            "#10421"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/zhujinxuan"
+            },
+            "@zhujinxuan"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复编译时 typescript v2.9.1兼容性问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10729"
+            },
+            "#10729"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/karol-majewski"
+            },
+            "@karol-majewski"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Menu"
+          ],
+          " 嵌套超过两层时选中最里层后对应最外层没有亮起问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8666"
+            },
+            "#8666"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/stonehank"
+            },
+            "@stonehank"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Affix"
+          ],
+          " 组件 offsetBottom 无效问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10674"
+            },
+            "#10674"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.5.4"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-26"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Cascader"
+          ],
+          " 的 ",
+          [
+            "code",
+            "showSearch"
+          ],
+          " 无效问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/968488a2fac9bcb16bee9f0c248f49bca00dbec6"
+            },
+            "968488a2"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 使 ",
+          [
+            "code",
+            "Badge[status]"
+          ],
+          " 支持 ",
+          [
+            "code",
+            "Tooltip"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10626"
+            },
+            "#10626"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复父元素使用 ",
+          [
+            "code",
+            "text-align"
+          ],
+          " 会影响 ",
+          [
+            "code",
+            "Spin"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10643"
+            },
+            "#10643"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/wmzhong"
+            },
+            "@wmzhong"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 换行从 ",
+          [
+            "code",
+            "break-all"
+          ],
+          " 改为 ",
+          [
+            "code",
+            "break-word"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10655"
+            },
+            "#10655"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/clinyong"
+            },
+            "@clinyong"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Search"
+          ],
+          " 在未定义 ",
+          [
+            "code",
+            "enterButton"
+          ],
+          " 时，点击搜索图标将触发 ",
+          [
+            "code",
+            "onSearch"
+          ],
+          "。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/36ffe7e1dc9d9473c8c68168ab79b7a03a604702"
+            },
+            "36ffe7e1"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.5.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-20"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 ",
+          [
+            "code",
+            "Affix"
+          ],
+          " 当 ",
+          [
+            "code",
+            "offsetTop === 0"
+          ],
+          "，值将变为 ",
+          [
+            "code",
+            "undefined"
+          ],
+          " 的问题 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10566"
+            },
+            "#10566"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 ",
+          [
+            "code",
+            "Menu"
+          ],
+          " item 中的高亮链接颜色问题 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/09d5e36cfa27e371a7b4d4e68276a279698ea901"
+            },
+            "09d5e36"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 ",
+          [
+            "code",
+            "Input.Group"
+          ],
+          " 组件阴影被遮盖的问题 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10230"
+            },
+            "#10230"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 ",
+          [
+            "code",
+            "Transfer"
+          ],
+          " 组件 checkbox 事件触发两次的问题 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10480"
+            },
+            [
+              "code",
+              "#10480"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 统一 less 的变量命名 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/12d3046687a0dcdb51fece08dd2bea64f185cc40"
+            },
+            "12d3046"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 微调了 ",
+          [
+            "code",
+            "Dropdown"
+          ],
+          " 的样式 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/8e2f72ffe0eb300f5997296726b02246bf990c8f"
+            },
+            "8e2f72f"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 现在中文文档的组件会用中文语言包进行演示。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/9b17a943f5d57d40d65041b7b0c247add09d2851"
+            },
+            "9b17a94"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 主站主题切换 修改为 ",
+          [
+            "code",
+            "antd-theme-generato"
+          ],
+          " ，感谢 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/mzohaibqc"
+            },
+            "@mzohaibqc"
+          ],
+          " 的工作."
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复了 ",
+              [
+                "code",
+                "Row"
+              ],
+              " 中 gutter 属性的类型问题 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/b7d508e1662bf20a0cacbe6440a2ce31a65a8a59"
+                },
+                "b7d508e"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 改进了 ",
+              [
+                "code",
+                "Form"
+              ],
+              " 组件类型 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10564"
+                },
+                "#10564"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "💄 改进了 ",
+              [
+                "code",
+                "Button"
+              ],
+              " 和 ",
+              [
+                "code",
+                "Tag"
+              ],
+              " 类型 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/1ed9fed2cf1c99b947359fafb101b2e58213cb48"
+                },
+                "1ed9fed"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.5.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-13"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 过滤器和 ",
+          [
+            "code",
+            "Transfer"
+          ],
+          " 复选框无法点击的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10452"
+            },
+            "#10452"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Cascader"
+          ],
+          " 的\b ",
+          [
+            "code",
+            "displayRender"
+          ],
+          " 里的链接无法点击的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10433"
+            },
+            "#10433"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Button"
+          ],
+          " ref 不兼容问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10405"
+            },
+            "#10405"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Form"
+          ],
+          " 表单项校验位置高度时出现抖动问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10445"
+            },
+            "#10445"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 设置 ",
+          [
+            "code",
+            "Layout"
+          ],
+          " 宽度时，允许使用任何的 CSS 单位。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10479"
+            },
+            "#10479"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.5.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-09"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input.Group 在 Form 下样式错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10371"
+            },
+            "#10371"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Select 箭头和内容重叠的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10383"
+            },
+            "#10383"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 移除 Collapse 点击时的 focus 样式。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 移除 Input.Group 和 Checkbox 不必要的 ",
+          [
+            "code",
+            "z-index"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9840"
+            },
+            "#9840"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10385"
+            },
+            "#10385"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一个数字等宽字体没有加粗的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "💄 重写了可编辑表格的演示。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10119"
+                },
+                "#10119"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一个表格列内容互相重叠的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9822"
+                },
+                "#9822"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 调整 Breadcrumb.Item 的类型。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10372"
+                },
+                "#10372"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/karol-majewski"
+                },
+                "@karol-majewski"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Table 的 ",
+              [
+                "code",
+                "rowSelection"
+              ],
+              " 的类型。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10374"
+                },
+                "#10374"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.5.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-04"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 组件 ",
+          [
+            "code",
+            "Badge"
+          ],
+          " 新增 ",
+          [
+            "code",
+            "title"
+          ],
+          " 属性支持鼠标 hover 的时候显示。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/74d81c2d078a3c84b3e44cbfbdd99b8f479ea71d"
+            },
+            "74d81c2"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ludwigbacklund"
+            },
+            "@ludwigbacklund"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 添加 ",
+          [
+            "code",
+            "successPercent"
+          ],
+          " 为 ",
+          [
+            "code",
+            "Progress[format]"
+          ],
+          " 的参数。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10096"
+            },
+            "#10096"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 更新 ",
+          [
+            "code",
+            "rc-notification"
+          ],
+          " 到 3.1.0 来支持组件 ",
+          [
+            "code",
+            "Notification"
+          ],
+          " 的 ",
+          [
+            "code",
+            "maxCount"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10161"
+            },
+            "#10161"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jzhangs"
+            },
+            "@jzhangs"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 更新 ",
+          [
+            "code",
+            "rc-cascader"
+          ],
+          " 到 1.13.0 来支持组件 ",
+          [
+            "code",
+            "Cascader"
+          ],
+          " 的 ",
+          [
+            "code",
+            "filedNames"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/react-component/cascader/pull/23"
+            },
+            "react-component/cascader#23"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/405go"
+            },
+            "@405go"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 组件 ",
+          [
+            "code",
+            "Notification"
+          ],
+          " 支持通过 key 更新通知属性。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/react-component/notification/pull/40"
+            },
+            "react-component/notification#40"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/yevhen-hryhorevskyi"
+            },
+            "@yevhen-hryhorevskyi"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 组件 ",
+          [
+            "code",
+            "List"
+          ],
+          " 支持内置的翻页功能。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10135"
+            },
+            "#10135"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "sortOrder"
+              ],
+              " 参数传递给列配置中的 ",
+              [
+                "code",
+                "sorter"
+              ],
+              " 方法。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10306"
+                },
+                "#10306"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/kumarashwin"
+                },
+                "@kumarashwin"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复头部单元格的边框样式问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10359"
+                },
+                "#10359"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复当数据变化时用户选择项丢失的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10332"
+                },
+                "#10332"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/chrvadala"
+                },
+                "@chrvadala"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "Menu"
+          ],
+          " 升级 ",
+          [
+            "code",
+            "rc-menu"
+          ],
+          " 到 ",
+          [
+            "code",
+            "7.x"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10305"
+            },
+            "#10305"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 更好的 aria-* 属性支持。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/menu/pull/137"
+                },
+                "react-component/menu#137"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 一些内部优化提升组件性能。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/menu/pull/133"
+                },
+                "react-component/menu#133"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 支持将属性传递到菜单项中。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/menu/pull/135"
+                },
+                "react-component/menu#135"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复一些快捷键的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/menu/pull/132"
+                },
+                "react-component/menu#132"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Collapse"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 更新 ",
+              [
+                "code",
+                "rc-collapse"
+              ],
+              " 到 1.9.0 优化键盘支持。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/collapse/pull/84/"
+                },
+                "react-component/collapse#84"
+              ],
+              "  ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/kossel"
+                },
+                "@kossel"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 支持通过 less 定义组件 ",
+              [
+                "code",
+                "Collapse"
+              ],
+              " 的样式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9943"
+                },
+                "#9943"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/davidhatten"
+                },
+                "@davidhatten"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Select"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "placeholder"
+              ],
+              " 的 ts 类型问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10282"
+                },
+                "#10282"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/thomasthiebaud"
+                },
+                "@thomasthiebaud"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复不显示箭头时多余的空白。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10296"
+                },
+                "#10296"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复属性 ",
+              [
+                "code",
+                "value"
+              ],
+              " 的 typescript 类型错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10336"
+                },
+                "#10336"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/paranoidjk"
+                },
+                "@paranoidjk"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Input"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Input.Search"
+              ],
+              " 当 disabled 为 true 时按钮没有被禁用的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10040"
+                },
+                "#10040"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Input.Group"
+              ],
+              " 在表单中对齐的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10281"
+                },
+                "#10281"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Form"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Form.onValuesChange"
+              ],
+              " 的 ts 类型错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10231"
+                },
+                "#10231"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/whtsky"
+                },
+                "@whtsky"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "ComponentDecorator"
+              ],
+              " typescript 定义的错误。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10324"
+                },
+                "#10324"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/paranoidjk"
+                },
+                "@paranoidjk"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Divider"
+          ],
+          " 为 dashed 时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10216"
+            },
+            "#10216"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Spin"
+          ],
+          " 覆盖层的展示问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10227"
+            },
+            "#10227"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Notification"
+          ],
+          " 鼠标 hover 是图标的颜色问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10272"
+            },
+            "#10272"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Upload"
+          ],
+          " 组件属性 ",
+          [
+            "code",
+            "lastModifiedDate"
+          ],
+          " 的拼写错误。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10315"
+            },
+            "#10315"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/danielg2002"
+            },
+            "@danielg2002"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Button"
+          ],
+          " 的属性类型，使用 ",
+          [
+            "code",
+            "React.HTMLProps"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10229"
+            },
+            "#10229"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/whtsky"
+            },
+            "@whtsky"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 less 命名约定不一致的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10275"
+            },
+            "#10275"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.5"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-05-03"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload 上传文件名不展示（file 对象属性为空）的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10319"
+            },
+            "#10319"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.4"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-04-28"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 3.4.2 中引入的 Upload 中 onChange 参数 ",
+          [
+            "code",
+            "{ file }"
+          ],
+          " file 不是 File 实例的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10293"
+            },
+            "#10293"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 webpack@4 下使用 Tree Shaking 样式丢失的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10217"
+            },
+            "#10217"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/whtsky"
+            },
+            "@whtsky"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-04-23"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 webpack@4 下使用 Tree Shaking 样式丢失的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10197"
+            },
+            "#10197"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Aladdin-ADD"
+            },
+            "@Aladdin-ADD"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Menu"
+          ],
+          " 组件在 ",
+          [
+            "code",
+            "dark"
+          ],
+          " 主题下点击区域的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10187"
+            },
+            "#10187"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/dgeibi"
+            },
+            "@dgeibi"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-04-22"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "💄 部署网站到 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "http://netlify.com/"
+            },
+            "netlify"
+          ],
+          "，解决网站被墙的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复和调整 Menu、Tooltip、Card、Anchor、Avatar、Form、Tabs、Transfer、Tree、AutoComplete 等组件的 TypeScript 定义。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 增加 ",
+          [
+            "code",
+            "sideEffects"
+          ],
+          " 配置以优化 Tree Shaking 效果。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10043"
+            },
+            "#10043"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Aladdin-ADD"
+            },
+            "@Aladdin-ADD"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "List"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复多余边框问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10028"
+                },
+                "#10028"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "locale"
+              ],
+              " 属性被传递给 div 的警告。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/10128"
+                },
+                "#10128"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/slonoed"
+                },
+                "@slonoed"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload 的文件 url 带有参数时，图片预览效果失效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10102"
+            },
+            "#10102"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Progress 的百分比越界时的展现。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/0eb835772dbaa7ed14babe03fc177821c5bd5ca5"
+            },
+            "0eb8357"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Menu"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 SubMenu 的失效箭头样式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10113"
+                },
+                "#10113"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "collapsedWidth"
+              ],
+              " 为像素字符串 ",
+              [
+                "code",
+                "40px"
+              ],
+              " 菜单宽度失效的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/10140"
+                },
+                "#10140"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一个某些情况下 Form 内使用受控组件时无法编辑的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9790"
+            },
+            "#9790"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Card 切换 loading 状态时的内边距跳动问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10052"
+            },
+            "#10052"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/zheeeng"
+            },
+            "@zheeeng"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Avatar 图片加载失败时的文字没有正确缩放的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/10184"
+            },
+            "#10184"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 的 ",
+          [
+            "code",
+            "getCheckboxProps"
+          ],
+          " 无法动态更新的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/10133"
+            },
+            "#10133"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 CheckGroup 指定 ",
+          [
+            "code",
+            "prefixCls"
+          ],
+          " 没有传递给 Checkbox 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9950"
+            },
+            "#9950"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-04-08"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Badge 代码错误引起的 TypeScript 类型报错。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9931"
+            },
+            "#9931"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 优化了 Card ",
+          [
+            "code",
+            "actions"
+          ],
+          " 点击区域的范围。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9882"
+            },
+            "#9882"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Divider 与浮动元素一起使用时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9956"
+            },
+            "#9956"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Form 高级搜索模式下的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9907"
+            },
+            "#9907"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 补充了 Table 缺失的 ",
+          [
+            "code",
+            "onHeaderRow"
+          ],
+          " TypeScript 定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9902"
+            },
+            "#9902"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Nokecy"
+            },
+            "@Nokecy"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 优化了 Tree 自定义图标示例。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9893"
+            },
+            "#9893"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Upload 对无扩展名图片地址的预览展示问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9936"
+            },
+            "#9936"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.4.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-04-01"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "Tree"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🛠 在这个版本里，我们重构了 Tree 底层的代码，以解决一些存在了很久的问题。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "defaultExpandParent"
+              ],
+              " 用于在第一次渲染时自动展开父节点。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "disabled"
+              ],
+              " 用于禁用整棵树。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 TreeNode 新增 ",
+              [
+                "code",
+                "icon"
+              ],
+              " 用于设置自定义图标。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 优化了 TreeNode 设置 ",
+              [
+                "code",
+                "disabled"
+              ],
+              " 时的\b勾选逻辑。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Anchor 新增 ",
+          [
+            "code",
+            "getContainer"
+          ],
+          " 用于指定内容滚动的容器。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Table 新增 less 变量 ",
+          [
+            "code",
+            "@table-expanded-row-bg"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9789"
+            },
+            "#9789"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一处 less 语法错误。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9832"
+            },
+            "#9832"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jojoLockLock"
+            },
+            "@jojoLockLock"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 LocaleProvider 中 moment.locale 调用报错的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9853"
+            },
+            "#9853"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 WeekPicker 的 style 属性不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9848"
+            },
+            "#9848"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Layout.Sider 的 TypeScript 定义。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9885"
+            },
+            "#9885"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/zachguo"
+            },
+            "@zachguo"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 优化了 Modal 中超长内容的显示。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9592"
+            },
+            "#9592"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增斯洛维尼亚语。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.3.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-03-25"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "回退上个版本 Upload 中 ",
+          [
+            "code",
+            "file"
+          ],
+          " 类型的修改。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.3.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-03-24"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 ",
+          [
+            "code",
+            "Carousel"
+          ],
+          ": 升级 ",
+          [
+            "code",
+            "react-slick"
+          ],
+          " 版本以修复宽度计算错误。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/3659"
+            },
+            "#3659"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 ",
+          [
+            "code",
+            "Rate"
+          ],
+          ": 调整 ",
+          [
+            "code",
+            "disabled"
+          ],
+          " 样式。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9747"
+            },
+            "#9747"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 ",
+          [
+            "code",
+            "Modal"
+          ],
+          ": 调整 ",
+          [
+            "code",
+            "confirm-modal"
+          ],
+          " 样式以修复 content 内使用栅格会错位的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9374"
+            },
+            "#9374"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 ",
+          [
+            "code",
+            "Menu"
+          ],
+          ": 调整样式以修复鼠标事件范围。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9666"
+            },
+            "#9666"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/dgeibi"
+            },
+            "@dgeibi"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 ",
+          [
+            "code",
+            "Upload"
+          ],
+          ": 修复 ",
+          [
+            "code",
+            "beforeUpload"
+          ],
+          " 的 ",
+          [
+            "code",
+            "file"
+          ],
+          " 类型错误。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9775"
+            },
+            "#9775"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 ",
+          [
+            "code",
+            "Button"
+          ],
+          ": 修复文本改变时，空格插入没有重新计算 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/4502ad8376e536c450fa4f27d2a5855be5a153e7"
+            },
+            "4502ad8"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.3.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-03-18"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "💄 调整 danger Button 的 ",
+          [
+            "code",
+            "focus"
+          ],
+          " 样式。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 enterButton 的值为 button 元素时显示错误的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9639"
+            },
+            "#9639"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 中的 ",
+          [
+            "code",
+            "column.title"
+          ],
+          " 的缺少 key 的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9658"
+            },
+            "#9658"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/terence55"
+            },
+            "@terence55"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "scroll: { x: true }"
+          ],
+          " 在 ",
+          [
+            "code",
+            ".ant-table-scroll table"
+          ],
+          "宽度为 ",
+          [
+            "code",
+            "auto"
+          ],
+          "的情况下不工作的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9704"
+            },
+            "#9704"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复表单校验文字消失的时候输入框会抖一下的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8831"
+            },
+            "#8831"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "TimePicker"
+          ],
+          " 里的 isMoment 调用在 parcel 里会报错的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/85c78e49a91737c2841dc42621db21ca248b62b4"
+            },
+            "85c78e4"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "💄 调整 Table 的圆角样式。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9674"
+            },
+            "#9674"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.3.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-03-12"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Alert"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "afterClose"
+          ],
+          " 属性，用于实现更流畅的关闭效果。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9448"
+            },
+            "#9448"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Hughen"
+            },
+            "@Hughen"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Calendar"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "validRange"
+          ],
+          " 属性，用于设置显示的时间范围。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/71f65a0be8e72a67f334c57e79ae3ff5fb640630"
+            },
+            "71f65a0"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Rohanhacker"
+            },
+            "@Rohanhacker"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Card"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "defaultActiveTabKey"
+          ],
+          " 属性，用于初始化选中面板的 key。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/30fe88d4bdcec765bf92ca32a755d9646b36978e"
+            },
+            "30fe88d"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/u3u"
+            },
+            "@u3u"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "DatePicker"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "dropdownClassName"
+              ],
+              " 属性，用于设置弹出日历的 className。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/7211"
+                },
+                "#7211"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复解析 ",
+              [
+                "code",
+                "moment"
+              ],
+              " 对象出错的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9539"
+                },
+                "#9539"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复引入土耳其语 ",
+              [
+                "code",
+                "tr_TR"
+              ],
+              " 文件的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9373"
+                },
+                "#9373"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Divider"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "orientation"
+          ],
+          " 属性，用于设置分割线内文本的对齐方式。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9275"
+            },
+            "#9275"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jrvboesch"
+            },
+            "@jrvboesch"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Modal"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "keyboard"
+          ],
+          " 属性，用于设置按下 ",
+          [
+            "code",
+            "Esc"
+          ],
+          " 键是否可以关闭 ",
+          [
+            "code",
+            "Modal"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8818"
+            },
+            "#8818"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化 ",
+          [
+            "code",
+            "Radio"
+          ],
+          " 和 ",
+          [
+            "code",
+            "Checkbox"
+          ],
+          " 组件 ",
+          [
+            "code",
+            "onChange"
+          ],
+          " 属性中的事件参数的 ",
+          [
+            "code",
+            "TypeScript"
+          ],
+          " 类型定义的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9574"
+            },
+            "#9574"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "Table"
+          ]
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "pagination"
+              ],
+              " 属性的配置项 ",
+              [
+                "code",
+                "position"
+              ],
+              "，用于设置分页的显示位置。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9357"
+                },
+                "#9357"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/kanweiwei"
+                },
+                "@kanweiwei"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "rowSelection"
+              ],
+              " 属性的配置项 ",
+              [
+                "code",
+                "onSelect"
+              ],
+              " 回调函数的事件参数。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9376"
+                },
+                "#9376"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/kanweiwei"
+                },
+                "@kanweiwei"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "rowSelection"
+              ],
+              " 属性的配置项 ",
+              [
+                "code",
+                "columnWidth"
+              ],
+              "，用于设置选择框的列宽。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9474"
+                },
+                "#9474"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/SimpleFrontend"
+                },
+                "@SimpleFrontend"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 ",
+              [
+                "code",
+                "Table"
+              ],
+              " 组件在 ",
+              [
+                "code",
+                "Chrome"
+              ],
+              " 下圆角边框样式的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/af8e54f1d6ac2891892e39b153cbe3e998370f61"
+                },
+                "af8e54f"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "Timeline"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "pendingDot"
+          ],
+          " 属性，用于设置幽灵节点的图标。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9546"
+            },
+            "#9546"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/SimpleFrontend"
+            },
+            "@SimpleFrontend"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "TimePicker"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "inputReadOnly"
+          ],
+          " 属性，用于设置组件是否只读。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/4a69446be155c1c176b18cb2c31459f999aa5d5e"
+            },
+            "4a69446"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/JesperWe"
+            },
+            "@JesperWe"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 ",
+          [
+            "code",
+            "TreeSelect"
+          ],
+          " 组件新增 ",
+          [
+            "code",
+            "dropdownClassName"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/69b154f9a9cfa5f2d89a82b6ed730d4d8793de73"
+            },
+            "69b154f"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/56e4ce099d950601538d72243563021e8083776b"
+            },
+            "56e4ce0"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化 ",
+          [
+            "code",
+            "Upload"
+          ],
+          " 组件在上传非图片格式文件时的预览效果。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9621"
+            },
+            "#9621"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/zswang"
+            },
+            "@zswang"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Progress"
+          ],
+          " 组件的 ",
+          [
+            "code",
+            "successPercent"
+          ],
+          " 属性无法决定组件是否处于 ",
+          [
+            "code",
+            "success"
+          ],
+          " 状态的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9382"
+            },
+            "#9382"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Tabs"
+          ],
+          " 组件字体尺寸的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9509"
+            },
+            "#9509"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Tree"
+          ],
+          " 和 ",
+          [
+            "code",
+            "TreeSelect"
+          ],
+          " 组件的父节点在 ",
+          [
+            "code",
+            "disabled"
+          ],
+          " 状态下无法展开的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9539"
+            },
+            "#9539"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.2.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-03-02"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复组件 ",
+          [
+            "code",
+            "Select"
+          ],
+          " 中的 ",
+          [
+            "code",
+            "onPopupScroll"
+          ],
+          " 属性的 ts 定义。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9475"
+            },
+            "#9475"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/twobin"
+            },
+            "@twobin"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 过滤条件下拉选择框的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9209"
+            },
+            "#9209"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Timeline"
+          ],
+          " 自定义头部样式在 Chrome 下的显示问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9429"
+            },
+            "#9429"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/vthinkxie"
+            },
+            "@vthinkxie"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Select"
+          ],
+          " 下拉窗口的边框显示问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/82092c154ac1fa7ff2f89e1adbdf0aaf22e3ff53"
+            },
+            "82092c1"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复对 less 3 的兼容性问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7850"
+            },
+            "#7850"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "DatePicker.WeekPicker"
+          ],
+          " 年份问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9463"
+            },
+            "#9463"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Button.Group"
+          ],
+          " 在 Chrome 下的定位对齐问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9457"
+            },
+            "#9457"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.2.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-02-24"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 添加 ",
+          [
+            "code",
+            "Pagination"
+          ],
+          " 字体变量。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9351"
+            },
+            "#9351"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 添加 ",
+          [
+            "code",
+            "Badge"
+          ],
+          " 字重变量。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9352"
+            },
+            "#9352"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 当自定义 ",
+          [
+            "code",
+            "loading.indicator"
+          ],
+          " 时，不显示emptyText。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9355"
+            },
+            "#9355"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Form.create"
+          ],
+          " 。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9331"
+            },
+            "#9331"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 回滚 ",
+          [
+            "code",
+            "Table"
+          ],
+          " 中 ",
+          [
+            "code",
+            "column.dataIndex"
+          ],
+          " 的 TypeScript 定义。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9393"
+            },
+            "#9393"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Layout"
+          ],
+          " 中 sider 高度不足时，最后一个菜单无法显示。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9398"
+            },
+            "#9398"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/MJ111"
+            },
+            "@MJ111"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "Badge"
+          ],
+          " dot 模式问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9359"
+            },
+            "#9359"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/khayalan-mathew"
+            },
+            "@khayalan-mathew"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.2.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-02-11"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增了部分著名产品的图标。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/c04377e5413d344b37c34ceac6fee456933fa516"
+            },
+            "c04377e5"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Mention"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 现在 ",
+              [
+                "code",
+                "multiLines"
+              ],
+              " 模式的高度将默认自适应内容。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复指定了 ",
+              [
+                "code",
+                "placeholder"
+              ],
+              " 时无法粘贴内容的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9215"
+                },
+                "#9215"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复中号表格的 padding。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9319"
+                },
+                "#9319"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复小号表格的边框错位问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8980"
+                },
+                "#8980"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复排序图标点击区域溢出表头的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8979"
+                },
+                "#8979"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 优化了 ",
+              [
+                "code",
+                "column.dataIndex"
+              ],
+              " 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9298"
+                },
+                "#9298"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/clinyong"
+                },
+                "@clinyong"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Select"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复使用键盘导航时，滚动条不会自动定位的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9276"
+                },
+                "#9276"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复在 IE11 下的箭头位置。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Upload ",
+          [
+            "code",
+            "beforeUpload"
+          ],
+          " 返回 ",
+          [
+            "code",
+            "false"
+          ],
+          " 时，上传文件仍然显示 ",
+          [
+            "code",
+            "uploading"
+          ],
+          " 以及文件列表被替换的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8020"
+            },
+            "#8020"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "vertical"
+          ],
+          " 布局的 Form 下反馈图标错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9153"
+            },
+            "#9153"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Card 没有子节点时 ",
+          [
+            "code",
+            "loading"
+          ],
+          " 样式不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9258"
+            },
+            "#9258"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Avatar 的图片不存在时的背景色。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9278"
+            },
+            "#9278"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/andriijas"
+            },
+            "@andriijas"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 RangePicker 选择结束时间时报 ",
+          [
+            "code",
+            "Cannot read property 'locale' of undefined"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9267"
+            },
+            "#9267"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ButtonGroup 内使用了失效按钮和 Tooltip 时样式错位的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9296"
+            },
+            "#9296"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9296"
+            },
+            "#9296"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Dropdown 的子菜单被遮挡的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9218"
+            },
+            "#9218"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.2.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-02-04"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 Tab 新增 ",
+          [
+            "code",
+            "tabBarGutter"
+          ],
+          " 属性，用于设置 tabs 之间的间隙。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8644"
+            },
+            "#8644"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/lixiaoyang1992"
+            },
+            "@lixiaoyang1992"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Layout 新增 ",
+          [
+            "code",
+            "hasSider"
+          ],
+          " 属性，用于避免服务端渲染时显示问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8937"
+            },
+            "#8937"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Progress 新增 ",
+          [
+            "code",
+            "successPercent"
+          ],
+          " 属性，用于显示分段进度条。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/progress-cn/#components-progress-demo-segment"
+            },
+            "例子"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Alert 新增 ",
+          [
+            "code",
+            "iconType"
+          ],
+          " 属性，用于显示自定义图标。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8811"
+            },
+            "#8811"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8811"
+            },
+            "@minwe"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 DatePicker 新增 ",
+          [
+            "code",
+            "id"
+          ],
+          " 属性。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8598"
+            },
+            "#8598"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/mgrdevport"
+            },
+            "@mgrdevport"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Collapse 新增 ",
+          [
+            "code",
+            "forceRender"
+          ],
+          " 属性，用于渲染隐藏的内容。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9192"
+            },
+            "#9192"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9192"
+            },
+            "#Pyroboomka"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/react-component/collapse/pull/82"
+            },
+            "@paulcmason"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "RangePicker"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 改进 ",
+              [
+                "code",
+                "ranges"
+              ],
+              " 属性，使其支持方法。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8281"
+                },
+                "#8281"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复无法手动输入开始时间的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/6999"
+                },
+                "#6999"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复点击预设范围关闭日期面板的时候没有动画的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/6364"
+                },
+                "#6364"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复点击预设范围时不触发 ",
+              [
+                "code",
+                "onOk"
+              ],
+              " 的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/7747"
+                },
+                "#7747"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Select"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 改进了 ",
+              [
+                "code",
+                "onChange"
+              ],
+              "、",
+              [
+                "code",
+                "onDeselect"
+              ],
+              " 方法，现在他们会接受选中的 ",
+              [
+                "code",
+                "Option"
+              ],
+              " 作为第二个参数。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复自动分词不触发 ",
+              [
+                "code",
+                "onSelect"
+              ],
+              " 的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/9094"
+                },
+                "#9094"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复 Chrome 上下拉框没有滚动条的问题。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 改进 Table 的 ",
+          [
+            "code",
+            "rowSelection[getCheckboxProps]"
+          ],
+          " 属性，现在可以传任意属性给 chekbox 了。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9054"
+            },
+            "#9054"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9054"
+            },
+            "@mgrdevport"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Calendar 的 ",
+          [
+            "code",
+            "mode"
+          ],
+          " 属性不能从外部控制的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9243"
+            },
+            "#9243"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9243"
+            },
+            "@mgrdevport"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 AutoComplete 在 Form 中显示错误信息时的边框颜色。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/9f2b4905f09fca503da7a8bb5f2b8347bea663b7"
+            },
+            "9f2b490"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 DatePicker 在受控模式下时间显示不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8885"
+            },
+            "#8885"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TextArea 在 Edge 下高度计算错误的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9108"
+            },
+            "#9108"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/cuyl"
+            },
+            "@cuyl"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tabs 在 card 模式且 tabPosition 是 ",
+          [
+            "code",
+            "bottom"
+          ],
+          " 时的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9165"
+            },
+            "#9165"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ryanhoho"
+            },
+            "@ryanhoho"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增库尔德语。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.6"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-28"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 回退了 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9141"
+            },
+            "#9141"
+          ],
+          " 的修改，因其导致的 DatePicker 年月无法选择。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.5"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-27"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Select 下拉选择框在 IE11 点击滚动条会无故消失的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7934"
+            },
+            "#7934"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/tianlang89757"
+            },
+            "@tianlang89757"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Form 中使用 ",
+          [
+            "code",
+            "getFieldDecorator"
+          ],
+          " 当 id 重复时引用冲突的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9103"
+            },
+            "#9103"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7351"
+            },
+            "#7351"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 RangePicker 在语言切换时会显示上一次的语言的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8970"
+            },
+            "#8970"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 DatePicker 在受控模式下时间显示不正确的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8885"
+            },
+            "#8885"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复了 Table 在 ",
+          [
+            "code",
+            "loading"
+          ],
+          " 时显示空提示的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9095"
+            },
+            "#9095"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/sallen450"
+            },
+            "@sallen450"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 补充 Icon 类型 ",
+          [
+            "code",
+            "file-word"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9092"
+            },
+            "#9092"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9061"
+            },
+            "#9061"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复写错的字体名称，造成浏览器无法正确识别的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/506f97640ec34a6d3d9fdb18e8036e5d34796a5f"
+            },
+            "commit/506f97"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "📖 修复了 TypeScript 定义"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "补充 Notification 缺失的 ",
+              [
+                "code",
+                "duration"
+              ],
+              " 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9120"
+                },
+                "pull/9120"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/duhongjun"
+                },
+                "@duhongjun"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "补充 Steps 缺失的 ",
+              [
+                "code",
+                "style"
+              ],
+              " 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9126"
+                },
+                "pull/9126"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/wanliyunyan"
+                },
+                "@wanliyunyan"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化了 Avatar 的默认背景色。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/275946090823ab8da90f1871976c671b2c7ac851"
+            },
+            "commit/275946"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增了 Slider 以及 Menu 的 less 变量，更加方便的修改主题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9065"
+            },
+            "pull/9065"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/9115"
+            },
+            "pull/9115"
+          ],
+          "  ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/mrgeorgegray"
+            },
+            "@mrgeorgegray"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.4"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-21"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ButtonGroup 错误 z-index 导致的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9014"
+            },
+            "#9014"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Dropdown.Button 不能被完全禁用的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8991"
+            },
+            "#8991"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/sallen450"
+            },
+            "@sallen450"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Layout 错误的响应式相关文档。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8995"
+            },
+            "#8995"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ReedSun"
+            },
+            "@ReedSun"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 List ",
+          [
+            "code",
+            "grid"
+          ],
+          " 不支持 xxl 配置的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9019"
+            },
+            "#9019"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 RangePicker 关闭选择面板之后无法清空已选开始时间的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8839"
+            },
+            "#8839"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Tabs 错误外边距导致的样式问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/200d6cb11aba12a488510f957353bbd5bd1dcd1b"
+            },
+            "commit/200d6c"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 WeekPicker 显示错误周数的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/9021"
+            },
+            "#9021"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TypeScript 定义"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "补充 Menu 缺失的 ",
+              [
+                "code",
+                "subMenuCloseDelay"
+              ],
+              " 和 ",
+              [
+                "code",
+                "subMenuOpenDelay"
+              ],
+              "。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8976"
+                },
+                "#8976"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/Rohanhacker"
+                },
+                "@Rohanhacker"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "重构了 DatePicker 相关 type 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/0bb531aca6cb2045d5323196a599c925537a4eb0"
+                },
+                "commit/0bb531"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复了 Input ",
+              [
+                "code",
+                "maxLength"
+              ],
+              " type 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9046"
+                },
+                "#9046"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/Riokai"
+                },
+                "@Riokai"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增 less 变量"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "Checkbox 和 Radio 相关：",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9003"
+                },
+                "#9003"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/mrgeorgegray"
+                },
+                "@mrgeorgegray"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "Breadcrumb 相关：",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/9022"
+                },
+                "#9022"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/mrgeorgegray"
+                },
+                "@mrgeorgegray"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增 aliyun 图标。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-14"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 ",
+          [
+            "code",
+            "locale"
+          ],
+          " 为 ",
+          [
+            "code",
+            "null"
+          ],
+          " 时 LocaleProvider 出错的问题。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-13"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Button 不能正确显示 ",
+          [
+            "code",
+            "0"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8733"
+            },
+            "#8733"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Cuihongsen"
+            },
+            "@Cuihongsen"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 和 List 中由于 Spin 导致的滚动条。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8799"
+            },
+            "#8799"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复不能传方法给 Table",
+          [
+            "span",
+            "emptyText"
+          ],
+          " 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8871"
+            },
+            "#8871"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Dropdown",
+          [
+            "span",
+            "transitionName"
+          ],
+          " 不生效的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input 中输入数字时字体会发生变化的问题。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8636"
+            },
+            "#8636"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 import 多个 locale 文件后日期文本显示错误的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8785"
+            },
+            "#8785"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 dist/antd-with-locales.js 中的 locale 会多一个 default 字段的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8881"
+            },
+            "#8881"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 TypeScript 定义 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/4cc29bc11cf7c019c63a25693adff3dbb58b41c3"
+            },
+            "4cc29bc"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/693e734a82b5e1faf25b025127afca67e75f9c88"
+            },
+            "693e734"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/67e956dddd040f63b2a59b8b619123bbb0065780"
+            },
+            "67e956d"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/ecd4177638da1eac3a3750fe5ad68b9309865542"
+            },
+            "ecd4177"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/33119ec535e7b819541d4753464871988b37dd6f"
+            },
+            "33119ec"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/88e0c9b436f196def62e737ea72e105aba4b5d4e"
+            },
+            "88e0c9b"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 新增 less 变量 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/b9b5abab3364bf752e9644415088b142a153e385"
+            },
+            "b9b5aba"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/5931b201da58e993227a04128045e627f2b65c46"
+            },
+            "5931b20"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/c9d73978dd2694f9d2bd0111f82a20d237f83621"
+            },
+            "c9d7397"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化中文引号的显示。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2018-01-08"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "📖 发布了全新的官网和设计文档。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "📖 更新了项目实战文档到 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/sorrycc/blog/issues/55"
+            },
+            "roadhog 2.0"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/5dcf1c015fc2674adb09434bf766549d6f3f0022"
+            },
+            "5dcf1c0"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "📖 发布了 Ant Design 3.0 的 sketch 模板包。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/22dfe88ab043c1e116382fc96b7d78cabf125054"
+            },
+            "22dfe88"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 \bDropdown 组件的 TypeScript 类型定义中 trigger 属性缺少 contextMenu\b 事件的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8646"
+            },
+            "#8646"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/cjahv"
+            },
+            "@cjahv"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Button 内使用 HOC 组件时两个中文字符间未添加空格的问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 List 组件在 IE 11 下的样式兼容问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8784"
+            },
+            "#8784"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Select 组件 notFoundContent 属性不生效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8809"
+            },
+            "#8809"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 BackTop 组件在 React 16 下 target 属性出现警告的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8848"
+            },
+            "#8848"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复当设置 gutter 后 List 组件出现横向滚动条的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8799"
+            },
+            "#8799"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Anchor.Link 的 href 属性不支持完整链接的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8808"
+            },
+            "#8808"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化中文引号的字体。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/c6fcc3121758dfe6ac5b50c1b55790eb42b805c5"
+            },
+            "c6fcc31"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.1.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2017-12-29"
+      ]
+    ],
+    [
+      "p",
+      "新年快乐！~ 2018年了，00后都成年了！少年赶紧提个 PR 给我们吧！~"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复组件 Spin 可能出现跳动的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8602"
+            },
+            "#8602"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/jhsu"
+            },
+            "@jhsu"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 在设置 ",
+          [
+            "code",
+            "size=small"
+          ],
+          " 的情况下出现多余 padding 的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8724"
+            },
+            "#8724"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Checkbox.Group 在 Form 中和 label 的对齐问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8739"
+            },
+            "#8739"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Affix 组件出现滚动条的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8606"
+            },
+            "#8606"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复组件 List \"No Data\" 和加载动画重叠的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8647"
+            },
+            "#8647"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 为 Input 添加 onKeyUp。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8705"
+            },
+            "#8705"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/delesseps"
+            },
+            "@delesseps"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 折叠面板 Collapse 添加 ",
+          [
+            "code",
+            "showArrow"
+          ],
+          " 来支持隐藏箭头。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8536"
+            },
+            "#8536"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/apieceofbart"
+            },
+            "@apieceofbart"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 评分 Rate 组件添加 ",
+          [
+            "code",
+            "allowClear"
+          ],
+          "，支持再次点击后重置。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8627"
+            },
+            "#8627"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化 BackTop 组件的响应式效果。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8719"
+            },
+            "#8719"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/JetRunner"
+            },
+            "@JetRunner"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Modal 组件添加 ",
+          [
+            "code",
+            "destroyOnClose"
+          ],
+          " 支持关闭时销毁 Modal 里的子元素。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8769"
+            },
+            "#8769"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/Rohanhacker"
+            },
+            "@Rohanhacker"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 组件 Pagination 添加 ",
+          [
+            "code",
+            "hideOnSinglePage"
+          ],
+          " 支持当只有一页时隐藏组件。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8615"
+            },
+            "#8615"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/camsong"
+            },
+            "@camsong"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 支持 List 组件自定义加载动画。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "👻 你现在可以通过 CodeSandbox 来打开官方文档中的示例了。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.0.3"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2017-12-22"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🐞 Form.create 返回值增加 ",
+          [
+            "code",
+            "React.SFC"
+          ],
+          " 类型的支持。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8672"
+            },
+            "#8672"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Form 控件高度和对齐的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8701"
+            },
+            "#8701"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复前后置标签与 Input 高度不一致的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8680"
+            },
+            "#8680"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Table 固定列时左右未对齐的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8660"
+            },
+            "#8660"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.0.2"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2017-12-17"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "📝 提供了 3.0 迁移工具。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e71b68dd1d2ff91200fea6dd9d56e6aa5653edbc"
+            },
+            "e71b68dd"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "📝 重写了 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.zh-CN.md"
+            },
+            "开源贡献指南"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化 notification 在小屏幕下的显示效果。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8631"
+            },
+            "#8631"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 优化了 Pagination 的样式和并修复了对齐和边距问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 升级 react-slick 到 ",
+          [
+            "code",
+            "0.16.0"
+          ],
+          "，修复 peerDependencies 安装警告。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8455"
+            },
+            "#8455"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复固定列头的表格大小设置无效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8577"
+            },
+            "#8577"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 DatePicker 等时间组件的 ",
+          [
+            "code",
+            "locale"
+          ],
+          " 属性失效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8635"
+            },
+            "#8635"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Popover 的箭头偏移和大小无法覆盖的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8548"
+            },
+            "#8548"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8549"
+            },
+            "#8549"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 AutoComponent 的 ",
+          [
+            "code",
+            "notFoundContent"
+          ],
+          " 设置无效的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8553"
+            },
+            "#8553"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 微调 RangePicker 的垂直对齐问题。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 Layout.Sider 的响应式断点和栅格系统保持一致。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8620"
+            },
+            "#8620"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一个 collapsedWidth 为 0 时，收缩后子菜单依然会显示的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8587"
+            },
+            "#8587"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Card 的 ",
+          [
+            "code",
+            "Meta.title"
+          ],
+          " 文本无法自动截断的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8597"
+            },
+            "#8597"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复带边框的 List 下的分页样式边距。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8562"
+            },
+            "#8562"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复一个 Menu 指定了不存在的 defaultOpenKeys 时子菜单无法展开的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8475"
+            },
+            "#8475"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Input、AutoComplete、Transfer 的 ",
+          [
+            "code",
+            "InputProps"
+          ],
+          " 和 ",
+          [
+            "code",
+            "SearchProps"
+          ],
+          " TypeScript 类型命名冲突。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8478"
+            },
+            "#8478"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.0.1"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2017-12-11"
+      ]
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "移除 Card 无用 DOM wrapper，以和 2.x 保持一致。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 ",
+          [
+            "code",
+            "antd/lib/style/v2-compatible-reset.css"
+          ],
+          " 缺失问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/28d13e2539817f87b8a2029ea22d9c30b377167f"
+            },
+            "28d13e2"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 Affix 比浏览器可见区域还高时被截断的问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/31a0654ef990eb7bae2b18095fa0d5230b9be1da"
+            },
+            "31a0654"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 Collapse 展开动画。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/edd592cb9dd79d534853e7a0c1b648382e3f1a12"
+            },
+            "edd592c"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 Form 内大尺寸 Input、Button 的对齐问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8459"
+            },
+            "#8459"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Menu"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "修复弹层在 Safari 下消失的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8453"
+                },
+                "#8453"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复展开动画。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/edd592cb9dd79d534853e7a0c1b648382e3f1a12"
+                },
+                "edd592c"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复 Notification 样式编译错误。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8437"
+            },
+            "#8437"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "修复迷你 Pagination 的背景色问题。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/commit/e13c6d87fa6bf7d5cf4b2d5154a85b4793997de5"
+            },
+            "e13c6d8"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "修复在移动端样式错乱的问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8465"
+                },
+                "#8465"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复嵌套表格与 size 属性共用时的样式问题。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8525"
+                },
+                "#8525"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TypeScript"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "修复 AutoComplete 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/8383"
+                },
+                "#8383"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/nidhi-ag"
+                },
+                "@nidhi-ag"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复 Divider 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/8504"
+                },
+                "#8504"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/cyyyu"
+                },
+                "@cyyyu"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复 Dropdown 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8444"
+                },
+                "#8444"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复 List 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/e27061ea5b2f2d3273b45862d9b87285448f0998"
+                },
+                "e27061e"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/commit/1b2a9550d9595dd2f31f79d1bdd52695ec792692"
+                },
+                "1b2a955"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "修复 Table 的 TypeScript 定义。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8507"
+                },
+                "#8507"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/8515"
+                },
+                "#8515"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/danedavid"
+                },
+                "@danedavid"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "3.0.0"
+    ],
+    [
+      "p",
+      [
+        "code",
+        "2017-12-04"
+      ]
+    ],
+    [
+      "p",
+      "更多内容见 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "https://medium.com/ant-design/announcing-ant-design-3-0-70e3e65eca0c"
+        },
+        "Ant Design 3.0 发布公告"
+      ],
+      "。"
+    ],
+    [
+      "h3",
+      "主要变化"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "全新的",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/docs/spec/colors-cn#Color-Palettes"
+            },
+            "色彩系统"
+          ],
+          "，组件主色由『",
+          [
+            "code",
+            "#108EE9"
+          ],
+          "』改为『",
+          [
+            "code",
+            "#1890FF"
+          ],
+          "』，新主色我们称之为『拂晓蓝』。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "全新的视觉样式和组件尺寸，更现代更美观。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "基础字体大小由 ",
+          [
+            "code",
+            "12px"
+          ],
+          " 增大到 ",
+          [
+            "code",
+            "14px"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "默认语言由中文改为英文。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "全面支持 React 16。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "更友好的 TypeScript 支持。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "新的 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/list-cn/"
+            },
+            "List"
+          ],
+          " 组件。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "新的 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/divider-cn/"
+            },
+            "Divider"
+          ],
+          " 组件。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "新增 30 个",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://ant.design/components/icon-cn/"
+            },
+            "图标"
+          ],
+          "。"
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "不兼容改动"
+    ],
+    [
+      "blockquote",
+      [
+        "p",
+        "如果你从 2.x 升级到 3.x，建议直接升级到 3.x 的最新版本。"
+      ],
+      [
+        "p",
+        "3.x 后续的版本可能已经废弃了一些下面没有提到的改动，请参考控制台的警告提示相应升级。"
+      ]
+    ],
+    [
+      "p",
+      "此版本有部分不兼容的改动，升级时确保修改相应的使用代码。另外由于人肉查找代码中的废弃用法过于低效，所以我们提供了 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "https://github.com/ant-design/antd-migration-helper"
+        },
+        "antd-migration-helper"
+      ],
+      " 用于扫描代码中的废弃用法。"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "Card 的 ",
+          [
+            "code",
+            "noHovering"
+          ],
+          " 属性重命名为 ",
+          [
+            "code",
+            "hoverable"
+          ],
+          "，且默认值改为 ",
+          [
+            "code",
+            "true"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "调整了 Grid 的响应式断点值。详见 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/7230"
+            },
+            "#7230"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Form ",
+          [
+            "code",
+            "getFieldDecorator"
+          ],
+          " 的 ",
+          [
+            "code",
+            "exclusive"
+          ],
+          " 参数被移除，此类场景应该由 Radio.Group、Checkbox.Group 之类的组件来完成。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "新增 ",
+          [
+            "code",
+            "Form.createFormField"
+          ],
+          " 方法，",
+          [
+            "code",
+            "mapPropsToFields"
+          ],
+          " 返回的字段都需要由该方法创建。"
+        ],
+        [
+          "pre",
+          {
+            "lang": "diff",
+            "highlighted": "import { Form } from 'antd';\n\nForm.create({\n  mapPropsToFields() {\n    return {\n<span class=\"token deleted\">-     name: { value: 'antd' },</span>\n<span class=\"token inserted\">+     name: Form.createFormField({ value: 'antd' }),</span>\n    };\n  },\n})"
+          },
+          [
+            "code",
+            "import { Form } from 'antd';\n\nForm.create({\n  mapPropsToFields() {\n    return {\n-     name: { value: 'antd' },\n+     name: Form.createFormField({ value: 'antd' }),\n    };\n  },\n})"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "优化了全局的重置样式，如果升级后你的全局样式有问题，可以引入我们提供的 2.x 兼容样式。"
+        ],
+        [
+          "pre",
+          {
+            "lang": "javascript",
+            "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token string\">'antd/lib/style/v2-compatible-reset'</span><span class=\"token punctuation\">;</span>"
+          },
+          [
+            "code",
+            "import 'antd/lib/style/v2-compatible-reset';"
+          ]
+        ],
+        [
+          "p",
+          "或者在 less 里引入"
+        ],
+        [
+          "pre",
+          {
+            "lang": "less",
+            "highlighted": "<span class=\"token variable\">@import</span> <span class=\"token string\">'~antd/lib/style/v2-compatible-reset.less'</span><span class=\"token punctuation\">;</span>"
+          },
+          [
+            "code",
+            "@import '~antd/lib/style/v2-compatible-reset.less';"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "由于默认语言改为英文，如果你需要显示中文，现在需要配置 ",
+          [
+            "code",
+            "LocalProvider"
+          ],
+          "。"
+        ],
+        [
+          "pre",
+          {
+            "lang": "javascript",
+            "highlighted": "<span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> LocaleProvider <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'antd'</span><span class=\"token punctuation\">;</span>\n<span class=\"token keyword\">import</span> zhCN <span class=\"token keyword\">from</span> <span class=\"token string\">'antd/lib/locale-provider/zh_CN'</span><span class=\"token punctuation\">;</span>\n\nReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>\n  <span class=\"token operator\">&lt;</span>LocaleProvider locale<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span>zhCN<span class=\"token punctuation\">}</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span>YourApp <span class=\"token operator\">/</span><span class=\"token operator\">></span><span class=\"token operator\">&lt;</span><span class=\"token operator\">/</span>LocaleProvider<span class=\"token operator\">></span><span class=\"token punctuation\">,</span>\n  document<span class=\"token punctuation\">.</span><span class=\"token function\">getElementById</span><span class=\"token punctuation\">(</span><span class=\"token string\">'root'</span><span class=\"token punctuation\">)</span>\n<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>"
+          },
+          [
+            "code",
+            "import { LocaleProvider } from 'antd';\nimport zhCN from 'antd/lib/locale-provider/zh_CN';\n\nReactDOM.render(\n  <LocaleProvider locale={zhCN}><YourApp /></LocaleProvider>,\n  document.getElementById('root')\n);"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Form 下的表单控件不再默认为 ",
+          [
+            "code",
+            "size=\"large\""
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          [
+            "code",
+            "Input.Search"
+          ],
+          " 默认的 🔍 图标只作为装饰，不再响应用户交互。需要添加可交互按钮请使用 ",
+          [
+            "code",
+            "enterButton"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "UMD 版本的 ",
+          [
+            "code",
+            "dist/antd.js"
+          ],
+          " 不再包含 moment，使用的时候需要自己引入 moment。"
+        ],
+        [
+          "pre",
+          {
+            "lang": "diff",
+            "highlighted": "<span class=\"token deleted\">&lt;html></span>\n  &lt;head>\n<span class=\"token inserted\">+   &lt;script src=\"https://unpkg.com/moment@2.19.3/moment.js\">&lt;/script></span>\n    &lt;script src=\"https://unpkg.com/antd@3.0.0/dist/antd.js\">&lt;/script>\n  &lt;/head>\n<span class=\"token deleted\">&lt;/html></span>"
+          },
+          [
+            "code",
+            "<html>\n  <head>\n+   <script src=\"https://unpkg.com/moment@2.19.3/moment.js\"></script>\n    <script src=\"https://unpkg.com/antd@3.0.0/dist/antd.js\"></script>\n  </head>\n</html>"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "以下在 2.x 中废弃的特性被移除"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 DatePicker.Calendar， 请直接使用 Calendar 组件。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 DatePicker 的 ",
+          [
+            "code",
+            "toggleOpen"
+          ],
+          " 属性， 请使用 ",
+          [
+            "code",
+            "onOpenChange"
+          ],
+          " 代替。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 Form 的 ",
+          [
+            "code",
+            "inline"
+          ],
+          "、",
+          [
+            "code",
+            "horizontal"
+          ],
+          "、",
+          [
+            "code",
+            "vertical"
+          ],
+          " 属性，请使用 ",
+          [
+            "code",
+            "layout"
+          ],
+          " 代替。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 Select 的 ",
+          [
+            "code",
+            "multiple"
+          ],
+          "、",
+          [
+            "code",
+            "tags"
+          ],
+          "、",
+          [
+            "code",
+            "combobox"
+          ],
+          " 属性，请使用 ",
+          [
+            "code",
+            "mode"
+          ],
+          " 代替。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 Input 对 ",
+          [
+            "code",
+            "type='textarea'"
+          ],
+          " 的支持，请直接使用 ",
+          [
+            "code",
+            "Input.TextArea"
+          ],
+          " 组件。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🗑 移除了 Mention 的 ",
+          [
+            "code",
+            "toEditorState"
+          ],
+          " 方法，请使用 ",
+          [
+            "code",
+            "toContentState"
+          ],
+          " 代替。"
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "新增功能及改进"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "🌟 Tabs 新增 ",
+          [
+            "code",
+            "size=\"large\""
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Row 的 ",
+          [
+            "code",
+            "gutter"
+          ],
+          " 属性新增响应式断点的支持，可以使用诸如 ",
+          [
+            "code",
+            "gutter={{ sm: 16, lg: 32 }}"
+          ],
+          " 的设置。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Spin 新增 ",
+          [
+            "code",
+            "indicator"
+          ],
+          " 属性，用于设置自定义的加载指示符。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/7977"
+            },
+            "#7977"
+          ],
+          " ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/7977"
+            },
+            "@kossel"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Input.Search 新增 ",
+          [
+            "code",
+            "enterButton"
+          ],
+          " 用于设置自定义的搜索图标。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/7596"
+            },
+            "#7596"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Mention 新增 ",
+          [
+            "code",
+            "placement"
+          ],
+          "，用于设置下拉框的弹出方向。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Carousel 新增 ",
+          [
+            "code",
+            "next()"
+          ],
+          "、",
+          [
+            "code",
+            "prev()"
+          ],
+          "、",
+          [
+            "code",
+            "goTo(slideNumber)"
+          ],
+          " 方法，用于控制面板展示。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Button 新增链接支持，当提供 ",
+          [
+            "code",
+            "href"
+          ],
+          " 时会自动渲染为 ",
+          [
+            "code",
+            "<a>"
+          ],
+          "。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/pull/8343"
+            },
+            "#8343"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Steps 进行了重构，首次渲染的时候不会再闪烁。 ",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/6010"
+            },
+            "#6010"
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🌟 Switch 新增 ",
+          [
+            "code",
+            "loading"
+          ],
+          " 属性，用于表现加载中的状态。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Menu"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 我们使用了 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/trigger"
+                },
+                "rc-trigger"
+              ],
+              " 重构了菜单以支持延迟加载和窗口边缘浮层自适应方向。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "subMenuOpenDelay"
+              ],
+              " 和 ",
+              [
+                "code",
+                "subMenuCloseDelay"
+              ],
+              "，用于设置子菜单打开和关闭的延迟。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "forceSubMenuRender"
+              ],
+              "，用于强制渲染子菜单。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/5586"
+                },
+                "#5586"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Form"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增显示验证信息时的动画效果。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增按条件渲染表单项的支持。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/react-component/form/issues/117"
+                },
+                "#react-component/117"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Message"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "duration"
+              ],
+              " 允许可选 ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/7857"
+                },
+                "#7857"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/monkindey"
+                },
+                "@monkindey"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Badge"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "offset"
+              ],
+              " 属性，用于设置状态点的位置偏移。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 ",
+              [
+                "code",
+                "status"
+              ],
+              " 允许与 ",
+              [
+                "code",
+                "children"
+              ],
+              " 同时使用。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/issues/8164"
+                },
+                "#8164"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Card"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "inner"
+              ],
+              " 类型。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://ant.design/components/card-cn/#components-card-demo-inner"
+                },
+                "例子"
+              ],
+              "。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "cover"
+              ],
+              "、",
+              [
+                "code",
+                "actions"
+              ],
+              " 以及 ",
+              [
+                "code",
+                "Meta"
+              ],
+              " 子组件。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://ant.design/components/card-cn/#components-card-demo-meta"
+                },
+                "例子"
+              ],
+              "。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "DatePicker"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "mode"
+              ],
+              " 和 ",
+              [
+                "code",
+                "onPanelChange"
+              ],
+              "，用户控制面板的展示模式。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://ant.design/components/date-picker-cn/#components-date-picker-demo-mode"
+                },
+                "例子"
+              ],
+              "。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "WeekPicker"
+              ],
+              " 子组件。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://ant.design/components/date-picker-cn/#components-date-picker-demo-basic"
+                },
+                "例子"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "dateRender"
+              ],
+              " 属性，用于自定义日期单元格的渲染。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "TimePicker"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "hourStep"
+              ],
+              "、",
+              [
+                "code",
+                "minuteStep"
+              ],
+              "、",
+              [
+                "code",
+                "secondStep"
+              ],
+              "，用于设置时间步长。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://ant.design/components/time-picker-cn/#components-time-picker-demo-interval-options"
+                },
+                "例子"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "focusOnOpen"
+              ],
+              "，用于设置在打开面板的时候是否聚焦输入框。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Table"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "components"
+              ],
+              " 属性，用于覆盖表格元素的默认标签。"
+            ],
+            [
+              "pre",
+              {
+                "lang": "javascript",
+                "highlighted": "<span class=\"token comment\" spellcheck=\"true\">// 支持覆盖的元素</span>\n<span class=\"token keyword\">const</span> components <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n  table<span class=\"token punctuation\">:</span> MyTable<span class=\"token punctuation\">,</span>\n  header<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n    wrapper<span class=\"token punctuation\">:</span> HeaderWrapper<span class=\"token punctuation\">,</span>\n    row<span class=\"token punctuation\">:</span> HeaderRow<span class=\"token punctuation\">,</span>\n    cell<span class=\"token punctuation\">:</span> HeaderCell<span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  body<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n    wrapper<span class=\"token punctuation\">:</span> BodyWrapper<span class=\"token punctuation\">,</span>\n    row<span class=\"token punctuation\">:</span> BodyRow<span class=\"token punctuation\">,</span>\n    cell<span class=\"token punctuation\">:</span> BodyCell<span class=\"token punctuation\">,</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token operator\">&lt;</span>Table components<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span>components<span class=\"token punctuation\">}</span> columns<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span>columns<span class=\"token punctuation\">}</span> data<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span>data<span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>"
+              },
+              [
+                "code",
+                "// 支持覆盖的元素\nconst components = {\n  table: MyTable,\n  header: {\n    wrapper: HeaderWrapper,\n    row: HeaderRow,\n    cell: HeaderCell,\n  },\n  body: {\n    wrapper: BodyWrapper,\n    row: BodyRow,\n    cell: BodyCell,\n  },\n};\n\n<Table components={components} columns={columns} data={data} />"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "onRow"
+              ],
+              " 属性，用于设置表格列的属性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "onHeaderRow"
+              ],
+              "，用户设置表格头部列的属性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "column[onCell]"
+              ],
+              "，用户设置单元格的属性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "column[onHeaderCell]"
+              ],
+              "，用于设置头部单元格的属性。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "column[align]"
+              ],
+              "，用于设置列内文字的对其方向。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "column[defaultSortOrder]"
+              ],
+              "，用于设置列的默认排序。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/8111"
+                },
+                "#8111"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/megawac"
+                },
+                "@megawac"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "rowSelection[fixed]"
+              ],
+              "，用于固定选择列。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🙅 废弃 ",
+              [
+                "code",
+                "getBodyWrapper"
+              ],
+              "，请使用 ",
+              [
+                "code",
+                "components"
+              ],
+              " 属性代替。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🙅 废弃以下属性 ",
+              [
+                "code",
+                "onRowClick"
+              ],
+              "，",
+              [
+                "code",
+                "onRowDoubleClick"
+              ],
+              "、",
+              [
+                "code",
+                "onRowContextMenu"
+              ],
+              "、",
+              [
+                "code",
+                "onRowMouseEnter"
+              ],
+              "、",
+              [
+                "code",
+                "onRowMouseLeave"
+              ],
+              "，请使用 ",
+              [
+                "code",
+                "onRow"
+              ],
+              " 代替。"
+            ],
+            [
+              "pre",
+              {
+                "lang": "javascript",
+                "highlighted": "<span class=\"token operator\">&lt;</span>Table onRow<span class=\"token operator\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span>record<span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n  onClick<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  onDoubleClick<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  onContextMenu<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  onMouseEnter<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  onMouseLeave<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=</span><span class=\"token operator\">></span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span> <span class=\"token operator\">/</span><span class=\"token operator\">></span>"
+              },
+              [
+                "code",
+                "<Table onRow={(record) => ({\n  onClick: () => {},\n  onDoubleClick: () => {},\n  onContextMenu: () => {},\n  onMouseEnter: () => {},\n  onMouseLeave: () => {},\n})} />"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "Select"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🌟 默认和多选模式下 Option 的值允许使用 number。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "maxTagCount 和"
+              ],
+              "maxTagPlaceholder`，用于设置最多可显示的选中项。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "showAction"
+              ],
+              "，用于设置出发下拉框打开的事件。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🌟 新增 ",
+              [
+                "code",
+                "onMouseEnter"
+              ],
+              " 和 ",
+              [
+                "code",
+                "onMouseLeave"
+              ],
+              " 事件回调。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "LocaleProvider"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🇮🇸 新增冰岛语。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/7561"
+                },
+                "#7561"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/paunovic-stefan"
+                },
+                "@paunovic-stefan"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🇪🇬 新增埃及语。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/7888"
+                },
+                "#7888"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/mohamed-seada-1994"
+                },
+                "@mohamed-seada-1994"
+              ]
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🇺🇦 新增乌克兰语。",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/ant-design/ant-design/pull/8169"
+                },
+                "#8169"
+              ],
+              " ",
+              [
+                "a",
+                {
+                  "title": null,
+                  "href": "https://github.com/anxolerd"
+                },
+                "@anxolerd"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "Bug 修复"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "Form"
+        ],
+        [
+          "ul",
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复输入框的图标会被验证图标覆盖的问题。"
+            ]
+          ],
+          [
+            "li",
+            [
+              "p",
+              "🐞 修复使用大尺寸输入框时，验证图标不居中的问题。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "🐞 修复 Menu 按键时的报错。",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://github.com/ant-design/ant-design/issues/8089"
+            },
+            "#8089"
+          ]
+        ]
+      ]
+    ],
+    [
+      "h3",
+      "其他"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "在 TypeScript 中使用时不再需要设置 ",
+          [
+            "code",
+            "allowSyntheticDefaultImports"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "从 ",
+          [
+            "code",
+            "peerDependencies"
+          ],
+          " 中移除了 ",
+          [
+            "code",
+            "react@0.14"
+          ],
+          " 和 ",
+          [
+            "code",
+            "react@15"
+          ],
+          "，虽然目前 antd 3.0.0 依然可以在旧版本的 React 上使用，但是我们在未来有可能使用 React 16 的新特性，所以强烈建议升级到 React 16，见",
+          [
+            "a",
+            {
+              "title": null,
+              "href": "https://reactjs.org/blog/2017/09/26/react-v16.0.html"
+            },
+            "升级文档"
+          ],
+          "。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "全面支持 ES Module ，antd 及其依赖的底层 react-component 组件全部提供了 ES Module 的构建版本，如果你使用 webpack 3，可以把 ",
+          [
+            "code",
+            "babel-plugin-import"
+          ],
+          " 的 ",
+          [
+            "code",
+            "libraryDirectory"
+          ],
+          " 设置为 ",
+          [
+            "code",
+            "es"
+          ],
+          "，以获得 Tree Shaking 的优化效果。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "最后，我们会继续维护 2.x 的分支到明年 6 月份。"
+        ]
+      ]
+    ],
+    [
+      "h2",
+      "2.x"
+    ],
+    [
+      "p",
+      "去 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "https://github.com/ant-design/ant-design/blob/2.x-stable/CHANGELOG.zh-CN.md"
+        },
+        "GitHub"
+      ],
+      " 查看 ",
+      [
+        "code",
+        "2.x"
+      ],
+      " 的 Change Log。"
+    ],
+    [
+      "h2",
+      "1.11.4"
+    ],
+    [
+      "p",
+      "去 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "https://github.com/ant-design/ant-design/blob/1.x-stable/CHANGELOG.md"
+        },
+        "GitHub"
+      ],
+      " 查看 ",
+      [
+        "code",
+        "0.x"
+      ],
+      " 到 ",
+      [
+        "code",
+        "1.x"
+      ],
+      " 的 Change Log。"
+    ]
+  ],
+  "meta": {
+    "order": 6,
+    "title": "更新日志",
+    "toc": false,
+    "timeline": true,
+    "filename": "CHANGELOG.zh-CN.md"
+  },
+  "description": [
+    "section",
+    [
+      "p",
+      [
+        "code",
+        "antd"
+      ],
+      " 严格遵循 ",
+      [
+        "a",
+        {
+          "title": null,
+          "href": "http://semver.org/lang/zh-CN/"
+        },
+        "Semantic Versioning 2.0.0"
+      ],
+      " 语义化版本规范。"
+    ],
+    [
+      "h4",
+      "发布周期"
+    ],
+    [
+      "ul",
+      [
+        "li",
+        [
+          "p",
+          "修订版本号：每周末会进行日常 bugfix 更新。（如果有紧急的 bugfix，则任何时候都可发布）"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "次版本号：每月发布一个带有新特性的向下兼容的版本。"
+        ]
+      ],
+      [
+        "li",
+        [
+          "p",
+          "主版本号：含有破坏性更新和新特性，不在发布周期内。"
+        ]
+      ]
+    ]
+  ],
+  "toc": [
+    "ul",
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.10.3",
+          "title": "3.10.3"
+        },
+        "3.10.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.10.2",
+          "title": "3.10.2"
+        },
+        "3.10.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.10.1",
+          "title": "3.10.1"
+        },
+        "3.10.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.10.0",
+          "title": "3.10.0"
+        },
+        "3.10.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.9.3",
+          "title": "3.9.3"
+        },
+        "3.9.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.9.2",
+          "title": "3.9.2"
+        },
+        "3.9.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.9.1",
+          "title": "3.9.1"
+        },
+        "3.9.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.9.0",
+          "title": "3.9.0"
+        },
+        "3.9.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.8.4",
+          "title": "3.8.4"
+        },
+        "3.8.4"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.8.3",
+          "title": "3.8.3"
+        },
+        "3.8.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.8.2",
+          "title": "3.8.2"
+        },
+        "3.8.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.8.1",
+          "title": "3.8.1"
+        },
+        "3.8.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.8.0",
+          "title": "3.8.0"
+        },
+        "3.8.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.7.3",
+          "title": "3.7.3"
+        },
+        "3.7.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.7.2",
+          "title": "3.7.2"
+        },
+        "3.7.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.7.1",
+          "title": "3.7.1"
+        },
+        "3.7.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.7.0",
+          "title": "3.7.0"
+        },
+        "3.7.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.6",
+          "title": "3.6.6"
+        },
+        "3.6.6"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.5",
+          "title": "3.6.5"
+        },
+        "3.6.5"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.4",
+          "title": "3.6.4"
+        },
+        "3.6.4"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.3",
+          "title": "3.6.3"
+        },
+        "3.6.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.2",
+          "title": "3.6.2"
+        },
+        "3.6.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.6.0",
+          "title": "3.6.0"
+        },
+        "3.6.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.5.4",
+          "title": "3.5.4"
+        },
+        "3.5.4"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.5.3",
+          "title": "3.5.3"
+        },
+        "3.5.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.5.2",
+          "title": "3.5.2"
+        },
+        "3.5.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.5.1",
+          "title": "3.5.1"
+        },
+        "3.5.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.5.0",
+          "title": "3.5.0"
+        },
+        "3.5.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.5",
+          "title": "3.4.5"
+        },
+        "3.4.5"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.4",
+          "title": "3.4.4"
+        },
+        "3.4.4"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.3",
+          "title": "3.4.3"
+        },
+        "3.4.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.2",
+          "title": "3.4.2"
+        },
+        "3.4.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.1",
+          "title": "3.4.1"
+        },
+        "3.4.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.4.0",
+          "title": "3.4.0"
+        },
+        "3.4.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.3.3",
+          "title": "3.3.3"
+        },
+        "3.3.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.3.2",
+          "title": "3.3.2"
+        },
+        "3.3.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.3.1",
+          "title": "3.3.1"
+        },
+        "3.3.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.3.0",
+          "title": "3.3.0"
+        },
+        "3.3.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.2.3",
+          "title": "3.2.3"
+        },
+        "3.2.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.2.2",
+          "title": "3.2.2"
+        },
+        "3.2.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.2.1",
+          "title": "3.2.1"
+        },
+        "3.2.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.2.0",
+          "title": "3.2.0"
+        },
+        "3.2.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.6",
+          "title": "3.1.6"
+        },
+        "3.1.6"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.5",
+          "title": "3.1.5"
+        },
+        "3.1.5"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.4",
+          "title": "3.1.4"
+        },
+        "3.1.4"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.3",
+          "title": "3.1.3"
+        },
+        "3.1.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.2",
+          "title": "3.1.2"
+        },
+        "3.1.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.1",
+          "title": "3.1.1"
+        },
+        "3.1.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.1.0",
+          "title": "3.1.0"
+        },
+        "3.1.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.0.3",
+          "title": "3.0.3"
+        },
+        "3.0.3"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.0.2",
+          "title": "3.0.2"
+        },
+        "3.0.2"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.0.1",
+          "title": "3.0.1"
+        },
+        "3.0.1"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#3.0.0",
+          "title": "3.0.0"
+        },
+        "3.0.0"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#2.x",
+          "title": "2.x"
+        },
+        "2.x"
+      ]
+    ],
+    [
+      "li",
+      [
+        "a",
+        {
+          "className": "bisheng-toc-h2",
+          "href": "#1.11.4",
+          "title": "1.11.4"
+        },
+        "1.11.4"
+      ]
+    ]
+  ]
+};
+
+/***/ })
+
+});
