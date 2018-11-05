@@ -1,8 +1,9 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import RcInputNumber from 'rc-input-number';
-import Icon from '../icon';
 import { Omit } from '../_util/type';
+import UpOutlined from '../icon/icons/UpOutlined';
+import DownOutlined from '../icon/icons/DownOutlined';
 
 // omitting this attrs because they conflicts with the ones defined in InputNumberProps
 export type OmitAttrs = 'defaultValue' | 'onChange' | 'size';
@@ -43,8 +44,8 @@ export default class InputNumber extends React.Component<InputNumberProps, any> 
       [`${this.props.prefixCls}-lg`]: size === 'large',
       [`${this.props.prefixCls}-sm`]: size === 'small',
     }, className);
-    const upIcon = <Icon type="up" className={`${this.props.prefixCls}-handler-up-inner`}/>;
-    const downIcon = <Icon type="down" className={`${this.props.prefixCls}-handler-down-inner`}/>;
+    const upIcon = <UpOutlined className={`${this.props.prefixCls}-handler-up-inner`}/>;
+    const downIcon = <DownOutlined className={`${this.props.prefixCls}-handler-down-inner`}/>;
 
     return (
       <RcInputNumber
