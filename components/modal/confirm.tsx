@@ -5,18 +5,38 @@ import Icon from '../icon';
 import Dialog, { ModalFuncProps } from './Modal';
 import ActionButton from './ActionButton';
 import { getConfirmLocale } from './locale';
+import warning from '../_util/warning';
+import QuestionCircleOutlined from '../icon/icons/QuestionCircleOutlined';
 
 interface ConfirmDialogProps extends ModalFuncProps {
   afterClose?: () => void;
   close: (...args: any[]) => void;
   autoFocusButton?: null | 'ok' | 'cancel';
+  icon?: React.ReactNode;
 }
 
 const IS_REACT_16 = !!ReactDOM.createPortal;
 
 const ConfirmDialog = (props: ConfirmDialogProps) => {
-  const { onCancel, onOk, close, zIndex, afterClose, visible, keyboard, centered, getContainer, maskStyle, okButtonProps, cancelButtonProps } = props;
-  const iconType = props.iconType || 'question-circle';
+  const {
+    onCancel,
+    onOk,
+    close,
+    zIndex,
+    afterClose,
+    visible,
+    keyboard,
+    centered,
+    getContainer,
+    maskStyle,
+    okButtonProps,
+    cancelButtonProps,
+    iconType,
+    icon,
+  } = props;
+
+  warning(!iconType, `The prop 'Modal.confirm({ iconType )}' is deprecated and will be removed in next major release. Please use 'icon' instead.`);
+
   const okType = props.okType || 'primary';
   const prefixCls = props.prefixCls || 'ant-modal';
   const contentPrefixCls = `${prefixCls}-confirm`;
@@ -67,7 +87,7 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
     >
       <div className={`${contentPrefixCls}-body-wrapper`}>
         <div className={`${contentPrefixCls}-body`}>
-          <Icon type={iconType!} />
+          {iconType ? <Icon type={iconType!} /> : icon}
           <span className={`${contentPrefixCls}-title`}>{props.title}</span>
           <div className={`${contentPrefixCls}-content`}>{props.content}</div>
         </div>
@@ -80,6 +100,10 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
       </div>
     </Dialog>
   );
+};
+
+ConfirmDialog.defaultProps = {
+  icon: <QuestionCircleOutlined />,
 };
 
 export default function confirm(config: ModalFuncProps) {

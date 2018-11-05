@@ -66,7 +66,7 @@ title: Modal
 | centered | 垂直居中展示 Modal | Boolean | `false` |
 | className | 容器类名 | string | - |
 | content | 内容 | string\|ReactNode | 无 |
-| iconType | 图标 Icon 类型 | string | question-circle |
+| icon | 图标 | ReactNode | `<QuestionCircleOutlined />` |
 | maskClosable | 点击蒙层是否允许关闭 | Boolean | `false` |
 | okText | 确认按钮文字 | string | 确定 |
 | okType | 确认按钮类型 | string | primary |
