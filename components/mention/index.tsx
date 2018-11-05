@@ -2,7 +2,7 @@ import * as React from 'react';
 import RcMention, { Nav, toString, toEditorState, getMentions } from 'rc-editor-mention';
 import classNames from 'classnames';
 import shallowequal from 'shallowequal';
-import Icon from '../icon';
+import LoadingOutlined from '../icon/icons/LoadingOutlined';
 
 export type MentionPlacement = 'top' | 'bottom';
 
@@ -126,7 +126,7 @@ export default class Mention extends React.Component<MentionProps, MentionState>
     });
 
     const notFoundContent = loading
-      ? <Icon type="loading" />
+      ? <LoadingOutlined />
       : this.props.notFoundContent;
 
     return (
