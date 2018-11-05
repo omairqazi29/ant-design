@@ -1,8 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import Input, { InputProps } from './Input';
-import Icon from '../icon';
 import Button from '../button';
+import SearchOutlined from '../icon/icons/SearchOutlined';
 
 export interface SearchProps extends InputProps {
   inputPrefixCls?: string;
@@ -44,7 +44,7 @@ export default class Search extends React.Component<SearchProps, any> {
     const enterButtonAsElement = enterButton as React.ReactElement<any>;
     let node;
     if (!enterButton) {
-      node = <Icon className={`${prefixCls}-icon`} type="search" key="searchIcon" />;
+      node = <SearchOutlined className={`${prefixCls}-icon`} key="searchIcon" />;
     } else if (enterButtonAsElement.type === Button || enterButtonAsElement.type === 'button') {
       node = React.cloneElement(enterButtonAsElement, enterButtonAsElement.type === Button ? {
         className: `${prefixCls}-button`,
@@ -59,7 +59,7 @@ export default class Search extends React.Component<SearchProps, any> {
           disabled={disabled}
           key="enterButton"
         >
-          {enterButton === true ? <Icon type="search" /> : enterButton}
+          {enterButton === true ? <SearchOutlined /> : enterButton}
         </Button>
       );
     }
