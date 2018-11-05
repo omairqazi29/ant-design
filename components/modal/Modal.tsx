@@ -7,7 +7,7 @@ import Button from '../button';
 import { ButtonType, NativeButtonProps } from '../button/button';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import { getConfirmLocale } from './locale';
-import Icon from '../icon';
+import CloseOutlined from '../icon/icons/CloseOutlined';
 
 let mousePosition: { x: number, y: number } | null;
 let mousePositionEventBinded: boolean;
@@ -201,7 +201,7 @@ export default class Modal extends React.Component<ModalProps, {}> {
 
     const closeIcon = (
       <span className={`${prefixCls}-close-x`}>
-        <Icon className={`${prefixCls}-close-icon`} type={'close'}/>
+        <CloseOutlined className={`${prefixCls}-close-icon`} />
       </span>
     );
 
