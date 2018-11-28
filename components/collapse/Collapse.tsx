@@ -3,7 +3,7 @@ import RcCollapse from 'rc-collapse';
 import classNames from 'classnames';
 import animation from '../_util/openAnimation';
 import CollapsePanel from './CollapsePanel';
-import Icon from '../icon';
+import Right from '../icon/icons/Right';
 
 export interface CollapseProps {
   activeKey?: Array<string> | string;
@@ -29,7 +29,7 @@ export default class Collapse extends React.Component<CollapseProps, any> {
 
   renderExpandIcon = () => {
     return (
-      <Icon type="right" className={`arrow`} />
+      <Right className={`arrow`} />
     );
   }
 
