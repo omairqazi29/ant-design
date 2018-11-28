@@ -4,7 +4,7 @@ const manifest = require('@ant-design/icons/lib/manifest').default;
 
 const themeMap = {
   fill: 'filled',
-  outline: 'outlined',
+  outline: '', // default theme
   twotone: 'twoTone',
 };
 
@@ -25,7 +25,7 @@ import Icon, { IconProps } from '..';
 
 ReactIcon.add(${iconName});
 
-export default (props: IconProps ) => <Icon {...props} type="${name}" theme="${themeMap[theme]}" />;
+export default (props: IconProps ) => <Icon {...props} type="${name}" theme="${themeMap[theme] || 'outlined'}" />;
 `);
   });
 });

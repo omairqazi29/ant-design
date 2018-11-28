@@ -6,7 +6,7 @@ import Dialog, { ModalFuncProps } from './Modal';
 import ActionButton from './ActionButton';
 import { getConfirmLocale } from './locale';
 import warning from '../_util/warning';
-import QuestionCircleOutlined from '../icon/icons/QuestionCircleOutlined';
+import QuestionCircle from '../icon/icons/QuestionCircle';
 
 interface ConfirmDialogProps extends ModalFuncProps {
   afterClose?: () => void;
@@ -103,7 +103,7 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
 };
 
 ConfirmDialog.defaultProps = {
-  icon: <QuestionCircleOutlined />,
+  icon: <QuestionCircle />,
 };
 
 export default function confirm(config: ModalFuncProps) {
