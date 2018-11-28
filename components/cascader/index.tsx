@@ -5,9 +5,12 @@ import classNames from 'classnames';
 import omit from 'omit.js';
 import KeyCode from 'rc-util/lib/KeyCode';
 import Input from '../input';
-import Icon from '../icon';
 import { ConfigConsumer, ConfigProviderProps } from '../config-provider';
 import warning from '../_util/warning';
+import CloseCircleFilled from '../icon/icons/ClosecircleFilled';
+import Down from '../icon/icons/Down';
+import Right from '../icon/icons/Right';
+import Redo from '../icon/icons/Redo';
 
 export interface CascaderOptionType {
   value?: string;
@@ -391,9 +394,7 @@ export default class Cascader extends React.Component<CascaderProps, CascaderSta
       [`${inputPrefixCls}-sm`]: size === 'small',
     });
     const clearIcon = (allowClear && !disabled && value.length > 0) || state.inputValue ? (
-      <Icon
-        type="close-circle"
-        theme="filled"
+      <CloseCircleFilled
         className={`${prefixCls}-picker-clear`}
         onClick={this.clearSelection}
       />
@@ -467,7 +468,7 @@ export default class Cascader extends React.Component<CascaderProps, CascaderSta
             }),
           },
         ) : <span className={`${prefixCls}-picker-arrow`}>{suffixIcon}</span>) || (
-        <Icon type="down" className={arrowCls} />
+        <Down className={arrowCls} />
       );
 
     const input = children || (
@@ -499,12 +500,12 @@ export default class Cascader extends React.Component<CascaderProps, CascaderSta
     );
 
     const expandIcon = (
-      <Icon type="right" />
+      <Right />
     );
 
     const loadingIcon = (
       <span className={`${prefixCls}-menu-item-loading-icon`}>
-        <Icon type="redo" spin />
+        <Redo spin />
       </span>
     );
 
