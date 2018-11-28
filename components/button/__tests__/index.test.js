@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Button from '..';
-import Icon from '../../icon';
+import Search from '../../icon/icons/Search';
 
 describe('Button', () => {
   it('renders correctly', () => {
@@ -26,22 +26,22 @@ describe('Button', () => {
     expect(wrapper).toMatchSnapshot();
     // should not insert space when there is icon
     const wrapper1 = render(
-      <Button icon="search">按钮</Button>
+      <Button icon={<Search />}>按钮</Button>
     );
     expect(wrapper1).toMatchSnapshot();
     // should not insert space when there is icon
     const wrapper2 = render(
-      <Button><Icon type="search" />按钮</Button>
+      <Button><Search />按钮</Button>
     );
     expect(wrapper2).toMatchSnapshot();
     // should not insert space when there is icon
     const wrapper3 = render(
-      <Button icon="search">按钮</Button>
+      <Button icon={<Search />}>按钮</Button>
     );
     expect(wrapper3).toMatchSnapshot();
     // should not insert space when there is icon while loading
     const wrapper4 = render(
-      <Button icon="search" loading>按钮</Button>
+      <Button icon={<Search />} loading>按钮</Button>
     );
     expect(wrapper4).toMatchSnapshot();
     // should insert space while loading
@@ -151,5 +151,14 @@ describe('Button', () => {
     wrapper.find('.ant-btn').getDOMNode().click();
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(wrapper.render()).toMatchSnapshot();
+  });
+
+  it('deprecate passing string to icon', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
+    mount(<Button icon="search">Search</Button>);
+    expect(errorSpy).toBeCalledWith(
+      "Warning: Passing string to 'icon' is deprecated and will be removed in next major release. Please pass a ReactNode to 'icon' instead."
+    );
+    errorSpy.mockRestore();
   });
 });

@@ -2,8 +2,10 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Wave from '../_util/wave';
+import warning from '../_util/warning';
 import Icon from '../icon';
 import Group from './button-group';
+import Loading from '../icon/icons/Loading';
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
@@ -40,7 +42,7 @@ export type ButtonHTMLType = 'submit' | 'button' | 'reset';
 
 export interface BaseButtonProps {
   type?: ButtonType;
-  icon?: string;
+  icon?: string | React.ReactNode;
   shape?: ButtonShape;
   size?: ButtonSize;
   loading?: boolean | { delay?: number };
@@ -83,7 +85,7 @@ export default class Button extends React.Component<ButtonProps, any> {
     onClick: PropTypes.func,
     loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
     className: PropTypes.string,
-    icon: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     block: PropTypes.bool,
   };
 
@@ -171,6 +173,8 @@ export default class Button extends React.Component<ButtonProps, any> {
       type, shape, size, className, children, icon, prefixCls, ghost, loading: _loadingProp, block, ...rest
     } = this.props;
 
+    warning(typeof icon !== 'string', `Passing string to 'icon' is deprecated and will be removed in next major release. Please pass a ReactNode to 'icon' instead.`);
+
     const { loading, hasTwoCNChar } = this.state;
 
     // large => lg
@@ -200,8 +204,8 @@ export default class Button extends React.Component<ButtonProps, any> {
       christmas: isChristmas,
     });
 
-    const iconType = loading ? 'loading' : icon;
-    const iconNode = iconType ? <Icon type={iconType} /> : null;
+    const iconType = loading ? <Loading /> : icon;
+    const iconNode = iconType && ( typeof iconType === 'string' ? <Icon type={iconType} /> : iconType);
     const kids = (children || children === 0)
       ? React.Children.map(children, child => insertSpace(child, this.isNeedInserted())) : null;
 
