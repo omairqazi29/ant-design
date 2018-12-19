@@ -4961,6 +4961,18 @@ form .ant-upload {
   box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
   border-right-width: 1px !important;
 }
+.has-warning .ant-input-affix-wrapper .ant-input,
+.has-warning .ant-input-affix-wrapper .ant-input:hover {
+  border-color: #faad14;
+}
+.has-warning .ant-input-affix-wrapper .ant-input:focus {
+  border-color: #ffc53d;
+  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  border-right-width: 1px !important;
+}
+.has-warning .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+  border-color: #faad14;
+}
 .has-warning .ant-input-prefix {
   color: #faad14;
 }
@@ -4976,6 +4988,9 @@ form .ant-upload {
   color: #faad14;
 }
 .has-warning .ant-select-selection {
+  border-color: #faad14;
+}
+.has-warning .ant-select-selection:hover {
   border-color: #faad14;
 }
 .has-warning .ant-select-open .ant-select-selection,
@@ -5033,6 +5048,18 @@ form .ant-upload {
   box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
   border-right-width: 1px !important;
 }
+.has-error .ant-input-affix-wrapper .ant-input,
+.has-error .ant-input-affix-wrapper .ant-input:hover {
+  border-color: #f5222d;
+}
+.has-error .ant-input-affix-wrapper .ant-input:focus {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+  border-right-width: 1px !important;
+}
+.has-error .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+  border-color: #f5222d;
+}
 .has-error .ant-input-prefix {
   color: #f5222d;
 }
@@ -5048,6 +5075,9 @@ form .ant-upload {
   color: #f5222d;
 }
 .has-error .ant-select-selection {
+  border-color: #f5222d;
+}
+.has-error .ant-select-selection:hover {
   border-color: #f5222d;
 }
 .has-error .ant-select-open .ant-select-selection,
@@ -5311,27 +5341,12 @@ form .ant-upload {
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child),
 .ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child) {
   border-right-width: 1px;
-  border-right-color: transparent;
-}
-.ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):hover,
-.ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):hover,
-.ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child):hover {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  border-right-width: 1px !important;
-}
-.ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):focus,
-.ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):focus,
-.ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child):focus {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  border-right-width: 1px !important;
 }
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
-  border-right-width: 0;
 }
-.ant-input-group.ant-input-group-compact > span:not(:last-child) > .ant-input {
-  border-right-width: 0;
+.ant-input-group.ant-input-group-compact > *:not(:last-child) {
+  border-right-width: 1px;
 }
 .ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection,
 .ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input,
@@ -5341,26 +5356,6 @@ form .ant-upload {
 .ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input {
   border-radius: 0;
   border-right-width: 1px;
-  border-right-color: transparent;
-}
-.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection:hover,
-.ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor:hover,
-.ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input:hover {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  border-right-width: 1px !important;
-}
-.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection:focus,
-.ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor:focus,
-.ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input:focus {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  border-right-width: 1px !important;
 }
 .ant-input-group.ant-input-group-compact > *:first-child,
 .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selection,
@@ -5383,42 +5378,6 @@ form .ant-upload {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
-  border-right-color: #d9d9d9;
-}
-.ant-input-group.ant-input-group-compact > *:last-child:hover,
-.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:hover,
-.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:hover,
-.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:hover,
-.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:hover {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  border-right-width: 1px !important;
-}
-.ant-input-group.ant-input-group-compact > *:last-child:focus,
-.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:focus,
-.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:focus,
-.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:focus,
-.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:focus {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  border-right-width: 1px !important;
-}
-.ant-input-group.ant-input-group-compact > *:last-child:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor:focus .ant-cascader-input,
-.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input:focus .ant-cascader-input {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  border-right-width: 1px !important;
 }
 .ant-input-affix-wrapper {
   color: rgba(0, 0, 0, 0.65);
@@ -6630,7 +6589,7 @@ form .ant-upload {
   color: rgba(0, 0, 0, 0.65);
   color: @primary-color;
 }
-.ant-spin-blur:after {
+.ant-spin-container:after {
   background: #fff;
 }
 .ant-spin-tip {
