@@ -10,8 +10,14 @@ export default class Item extends React.Component<any, any> {
   }
   render() {
     const {
-      renderedText, renderedEl, item, lazy,
-      checked, disabled, prefixCls, onClick,
+      renderedText,
+      renderedEl,
+      item,
+      lazy,
+      checked,
+      disabled,
+      prefixCls,
+      onClick,
     } = this.props;
 
     const className = classNames({
@@ -19,11 +25,16 @@ export default class Item extends React.Component<any, any> {
       [`${prefixCls}-content-item-disabled`]: disabled || item.disabled,
     });
 
+    let title: string | undefined = undefined;
+    if (typeof renderedText === 'string' || typeof renderedText === 'number') {
+      title = String(renderedText);
+    }
+
     const listItem = (
       <li
         className={className}
-        title={renderedText}
-        onClick={(disabled || item.disabled) ? undefined : () => onClick(item)}
+        title={title}
+        onClick={disabled || item.disabled ? undefined : () => onClick(item)}
       >
         <Checkbox checked={checked} disabled={disabled || item.disabled} />
         <span>{renderedEl}</span>

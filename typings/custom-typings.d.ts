@@ -1,4 +1,4 @@
-declare module 'classnames';
+declare module '*.svg';
 
 declare module 'rc-calendar*';
 
@@ -6,7 +6,7 @@ declare module 'rc-time-picker*';
 
 declare module 'rc-pagination*';
 
-declare module "omit.js";
+declare module 'omit.js';
 
 declare module 'rc-animate';
 
@@ -85,20 +85,18 @@ declare module 'react-lazy-load';
 
 declare module 'dom-closest';
 
-declare module "*.json" {
+declare module '*.json' {
   const value: any;
   export const version: string;
   export default value;
 }
 
-declare module "lodash/debounce";
+declare module 'lodash/debounce';
 
-declare module "lodash/uniqBy";
-
-declare module 'intersperse';
+declare module 'lodash/uniqBy';
 
 declare module "raf";
 
-declare module "react-lifecycles-compat";
+declare module 'react-lifecycles-compat';
 
-declare module "react-copy-to-clipboard";
+declare module 'react-copy-to-clipboard';
