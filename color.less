@@ -1526,6 +1526,8 @@ this.tinycolor = tinycolor;
 @highlight-color : @red-6;
 @warning-color : @gold-6;
 @normal-color : #d9d9d9;
+@white : #fff;
+@black : #000;
 
 // Color used by default to control hover and active backgrounds and for
 // alert info backgrounds.
@@ -1553,11 +1555,13 @@ this.tinycolor = tinycolor;
 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 @code-family : "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 @heading-color : fade(#000, 85%);
-@text-color : fade(#000, 65%);
-@text-color-secondary : fade(#000, 45%);
-@heading-color-dark : fade(#fff, 100%);
-@text-color-dark : fade(#fff, 85%);
-@text-color-secondary-dark: fade(#fff, 65%);
+@text-color : fade(@black, 65%);
+@text-color-secondary : fade(@black, 45%);
+@text-color-inverse : @white;
+@icon-color-hover : fade(@black, 75%);
+@heading-color-dark : fade(@white, 100%);
+@text-color-dark : fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
 @font-variant-base : tabular-nums;
 @font-size-base : 14px;
 @font-size-lg : @font-size-base + 2px;
@@ -1610,6 +1614,7 @@ this.tinycolor = tinycolor;
 // Border color
 @border-color-base : hsv(0, 0, 85%); // base border outline a component
 @border-color-split : hsv(0, 0, 91%); // split border inside a component
+@border-color-inverse: @white;
 @border-width-base : 1px; // width of the border for a component
 @border-style-base : solid; // style of a components border
 
@@ -1628,8 +1633,9 @@ this.tinycolor = tinycolor;
 
 // Shadow
 @shadow-color : rgba(0, 0, 0, .15);
-@box-shadow-base : @shadow-1-down;
-@shadow-1-up : 0 -2px 8px @shadow-color;
+@shadow-color-inverse: @component-background;
+@box-shadow-base: @shadow-1-down;
+@shadow-1-up: 0 -2px 8px @shadow-color;
 @shadow-1-down : 0 2px 8px @shadow-color;
 @shadow-1-left : -2px 0 8px @shadow-color;
 @shadow-1-right : 2px 0 8px @shadow-color;
@@ -1676,6 +1682,9 @@ this.tinycolor = tinycolor;
 @checkbox-color : @primary-color;
 @checkbox-check-color : #fff;
 @checkbox-border-width : @border-width-base;
+
+// Empty
+@empty-font-size: @font-size-base;
 
 // Radio
 @radio-size : 16px;
@@ -1741,16 +1750,20 @@ this.tinycolor = tinycolor;
 @layout-trigger-background-light: #fff;
 @layout-trigger-color-light : @text-color;
 
-// z-index list
+// z-index list, order by `z-index`
 @zindex-affix : 10;
 @zindex-back-top : 10;
-@zindex-modal-mask : 1000;
+@zindex-badge : 10;
+@zindex-picker-panel : 10;
+@zindex-popup-close : 10;
+@zindex-table-fixed : 20;
 @zindex-modal : 1000;
-@zindex-notification : 1010;
+@zindex-modal-mask : 1000;
 @zindex-message : 1010;
+@zindex-notification : 1010;
 @zindex-popover : 1030;
-@zindex-picker : 1050;
 @zindex-dropdown : 1050;
+@zindex-picker : 1050;
 @zindex-tooltip : 1060;
 
 // Animation
@@ -1783,7 +1796,8 @@ this.tinycolor = tinycolor;
 @input-color : @text-color;
 @input-border-color : @border-color-base;
 @input-bg : #fff;
-@input-addon-bg : @background-color-light;
+@input-number-handler-active-bg: #f4f4f4;
+@input-addon-bg: @background-color-light;
 @input-hover-border-color : @primary-color;
 @input-disabled-bg : @disabled-bg;
 @input-outline-offset : 0 0;
@@ -1824,7 +1838,7 @@ this.tinycolor = tinycolor;
 // Modal
 // --
 @modal-header-bg: @component-background;
-@modal-mask-bg: rgba(0, 0, 0, 0.65);
+@modal-mask-bg: fade(@black, 65%);
 
 // Progress
 // --
@@ -1896,6 +1910,7 @@ this.tinycolor = tinycolor;
 @badge-font-size: @font-size-sm;
 @badge-font-weight: normal;
 @badge-status-size: 6px;
+@badge-text-color: @component-background;
 
 // Rate
 // ---
@@ -1911,7 +1926,9 @@ this.tinycolor = tinycolor;
 @card-padding-base: 24px;
 @card-padding-wider: 32px;
 @card-actions-background: @background-color-light;
+@card-background: #cfd8dc;
 @card-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+@card-radius: @border-radius-sm;
 
 // Comment
 // ---
@@ -1968,6 +1985,7 @@ this.tinycolor = tinycolor;
 @switch-sm-checked-margin-left: -(@switch-sm-height - 3px);
 @switch-disabled-opacity: 0.4;
 @switch-color: @primary-color;
+@switch-shadow-color: fade(#00230b, 20%);
 
 // Pagination
 // ---
@@ -1992,15 +2010,15 @@ this.tinycolor = tinycolor;
 @slider-margin: 14px 6px 10px;
 @slider-rail-background-color: @background-color-base;
 @slider-rail-background-color-hover: #e1e1e1;
-@slider-track-background-color: @primary-5;
-@slider-track-background-color-hover: @primary-6;
-@slider-handle-color: @primary-5;
-@slider-handle-color-hover: @primary-6;
+@slider-track-background-color: @primary-3;
+@slider-track-background-color-hover: @primary-4;
+@slider-handle-color: @primary-3;
+@slider-handle-color-hover: @primary-4;
 @slider-handle-color-focus: tint(@primary-color, 20%);
-@slider-handle-color-focus-shadow: fade(@primary-color, 20%);
+@slider-handle-color-focus-shadow: tint(@primary-color, 50%);
 @slider-handle-color-tooltip-open: @primary-color;
 @slider-dot-border-color: @border-color-split;
-@slider-dot-border-color-active: @primary-5;
+@slider-dot-border-color-active: tint(@primary-color, 50%);
 @slider-disabled-color: @disabled-color;
 @slider-disabled-background-color: @component-background;
 
@@ -2280,7 +2298,7 @@ footer h2 > span {
 .page2-product .product-block .block-text-wrapper .more-mobile-angular {
   color: #2f54eb;
 }
-.page2-product .product-block:hover h4 {
+.page2-product a.product-block:hover h4 {
   color: #2f54eb;
 }
 .page3-block a {
@@ -3421,7 +3439,7 @@ mark {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-alert-close-icon .anticon-close:hover {
-  color: #404040;
+  color: rgba(0, 0, 0, 0.75);
 }
 .ant-alert-with-description {
   border-radius: 4px;
@@ -3622,14 +3640,19 @@ mark {
 .ant-btn.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-disabled,
 .ant-btn.disabled,
 .ant-btn[disabled],
+.ant-btn-disabled:hover,
 .ant-btn.disabled:hover,
 .ant-btn[disabled]:hover,
+.ant-btn-disabled:focus,
 .ant-btn.disabled:focus,
 .ant-btn[disabled]:focus,
+.ant-btn-disabled:active,
 .ant-btn.disabled:active,
 .ant-btn[disabled]:active,
+.ant-btn-disabled.active,
 .ant-btn.disabled.active,
 .ant-btn[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -3637,26 +3660,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-disabled > a:only-child,
 .ant-btn.disabled > a:only-child,
 .ant-btn[disabled] > a:only-child,
+.ant-btn-disabled:hover > a:only-child,
 .ant-btn.disabled:hover > a:only-child,
 .ant-btn[disabled]:hover > a:only-child,
+.ant-btn-disabled:focus > a:only-child,
 .ant-btn.disabled:focus > a:only-child,
 .ant-btn[disabled]:focus > a:only-child,
+.ant-btn-disabled:active > a:only-child,
 .ant-btn.disabled:active > a:only-child,
 .ant-btn[disabled]:active > a:only-child,
+.ant-btn-disabled.active > a:only-child,
 .ant-btn.disabled.active > a:only-child,
 .ant-btn[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-disabled > a:only-child:after,
 .ant-btn.disabled > a:only-child:after,
 .ant-btn[disabled] > a:only-child:after,
+.ant-btn-disabled:hover > a:only-child:after,
 .ant-btn.disabled:hover > a:only-child:after,
 .ant-btn[disabled]:hover > a:only-child:after,
+.ant-btn-disabled:focus > a:only-child:after,
 .ant-btn.disabled:focus > a:only-child:after,
 .ant-btn[disabled]:focus > a:only-child:after,
+.ant-btn-disabled:active > a:only-child:after,
 .ant-btn.disabled:active > a:only-child:after,
 .ant-btn[disabled]:active > a:only-child:after,
+.ant-btn-disabled.active > a:only-child:after,
 .ant-btn.disabled.active > a:only-child:after,
 .ant-btn[disabled].active > a:only-child:after {
   background: transparent;
@@ -3707,14 +3740,19 @@ mark {
 .ant-btn-primary.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-primary-disabled,
 .ant-btn-primary.disabled,
 .ant-btn-primary[disabled],
+.ant-btn-primary-disabled:hover,
 .ant-btn-primary.disabled:hover,
 .ant-btn-primary[disabled]:hover,
+.ant-btn-primary-disabled:focus,
 .ant-btn-primary.disabled:focus,
 .ant-btn-primary[disabled]:focus,
+.ant-btn-primary-disabled:active,
 .ant-btn-primary.disabled:active,
 .ant-btn-primary[disabled]:active,
+.ant-btn-primary-disabled.active,
 .ant-btn-primary.disabled.active,
 .ant-btn-primary[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -3722,26 +3760,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-primary-disabled > a:only-child,
 .ant-btn-primary.disabled > a:only-child,
 .ant-btn-primary[disabled] > a:only-child,
+.ant-btn-primary-disabled:hover > a:only-child,
 .ant-btn-primary.disabled:hover > a:only-child,
 .ant-btn-primary[disabled]:hover > a:only-child,
+.ant-btn-primary-disabled:focus > a:only-child,
 .ant-btn-primary.disabled:focus > a:only-child,
 .ant-btn-primary[disabled]:focus > a:only-child,
+.ant-btn-primary-disabled:active > a:only-child,
 .ant-btn-primary.disabled:active > a:only-child,
 .ant-btn-primary[disabled]:active > a:only-child,
+.ant-btn-primary-disabled.active > a:only-child,
 .ant-btn-primary.disabled.active > a:only-child,
 .ant-btn-primary[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-primary-disabled > a:only-child:after,
 .ant-btn-primary.disabled > a:only-child:after,
 .ant-btn-primary[disabled] > a:only-child:after,
+.ant-btn-primary-disabled:hover > a:only-child:after,
 .ant-btn-primary.disabled:hover > a:only-child:after,
 .ant-btn-primary[disabled]:hover > a:only-child:after,
+.ant-btn-primary-disabled:focus > a:only-child:after,
 .ant-btn-primary.disabled:focus > a:only-child:after,
 .ant-btn-primary[disabled]:focus > a:only-child:after,
+.ant-btn-primary-disabled:active > a:only-child:after,
 .ant-btn-primary.disabled:active > a:only-child:after,
 .ant-btn-primary[disabled]:active > a:only-child:after,
+.ant-btn-primary-disabled.active > a:only-child:after,
 .ant-btn-primary.disabled.active > a:only-child:after,
 .ant-btn-primary[disabled].active > a:only-child:after {
   background: transparent;
@@ -3806,14 +3854,19 @@ mark {
 .ant-btn-ghost.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-ghost-disabled,
 .ant-btn-ghost.disabled,
 .ant-btn-ghost[disabled],
+.ant-btn-ghost-disabled:hover,
 .ant-btn-ghost.disabled:hover,
 .ant-btn-ghost[disabled]:hover,
+.ant-btn-ghost-disabled:focus,
 .ant-btn-ghost.disabled:focus,
 .ant-btn-ghost[disabled]:focus,
+.ant-btn-ghost-disabled:active,
 .ant-btn-ghost.disabled:active,
 .ant-btn-ghost[disabled]:active,
+.ant-btn-ghost-disabled.active,
 .ant-btn-ghost.disabled.active,
 .ant-btn-ghost[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -3821,26 +3874,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-ghost-disabled > a:only-child,
 .ant-btn-ghost.disabled > a:only-child,
 .ant-btn-ghost[disabled] > a:only-child,
+.ant-btn-ghost-disabled:hover > a:only-child,
 .ant-btn-ghost.disabled:hover > a:only-child,
 .ant-btn-ghost[disabled]:hover > a:only-child,
+.ant-btn-ghost-disabled:focus > a:only-child,
 .ant-btn-ghost.disabled:focus > a:only-child,
 .ant-btn-ghost[disabled]:focus > a:only-child,
+.ant-btn-ghost-disabled:active > a:only-child,
 .ant-btn-ghost.disabled:active > a:only-child,
 .ant-btn-ghost[disabled]:active > a:only-child,
+.ant-btn-ghost-disabled.active > a:only-child,
 .ant-btn-ghost.disabled.active > a:only-child,
 .ant-btn-ghost[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-ghost-disabled > a:only-child:after,
 .ant-btn-ghost.disabled > a:only-child:after,
 .ant-btn-ghost[disabled] > a:only-child:after,
+.ant-btn-ghost-disabled:hover > a:only-child:after,
 .ant-btn-ghost.disabled:hover > a:only-child:after,
 .ant-btn-ghost[disabled]:hover > a:only-child:after,
+.ant-btn-ghost-disabled:focus > a:only-child:after,
 .ant-btn-ghost.disabled:focus > a:only-child:after,
 .ant-btn-ghost[disabled]:focus > a:only-child:after,
+.ant-btn-ghost-disabled:active > a:only-child:after,
 .ant-btn-ghost.disabled:active > a:only-child:after,
 .ant-btn-ghost[disabled]:active > a:only-child:after,
+.ant-btn-ghost-disabled.active > a:only-child:after,
 .ant-btn-ghost.disabled.active > a:only-child:after,
 .ant-btn-ghost[disabled].active > a:only-child:after {
   background: transparent;
@@ -3885,14 +3948,19 @@ mark {
 .ant-btn-dashed.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-dashed-disabled,
 .ant-btn-dashed.disabled,
 .ant-btn-dashed[disabled],
+.ant-btn-dashed-disabled:hover,
 .ant-btn-dashed.disabled:hover,
 .ant-btn-dashed[disabled]:hover,
+.ant-btn-dashed-disabled:focus,
 .ant-btn-dashed.disabled:focus,
 .ant-btn-dashed[disabled]:focus,
+.ant-btn-dashed-disabled:active,
 .ant-btn-dashed.disabled:active,
 .ant-btn-dashed[disabled]:active,
+.ant-btn-dashed-disabled.active,
 .ant-btn-dashed.disabled.active,
 .ant-btn-dashed[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -3900,26 +3968,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-dashed-disabled > a:only-child,
 .ant-btn-dashed.disabled > a:only-child,
 .ant-btn-dashed[disabled] > a:only-child,
+.ant-btn-dashed-disabled:hover > a:only-child,
 .ant-btn-dashed.disabled:hover > a:only-child,
 .ant-btn-dashed[disabled]:hover > a:only-child,
+.ant-btn-dashed-disabled:focus > a:only-child,
 .ant-btn-dashed.disabled:focus > a:only-child,
 .ant-btn-dashed[disabled]:focus > a:only-child,
+.ant-btn-dashed-disabled:active > a:only-child,
 .ant-btn-dashed.disabled:active > a:only-child,
 .ant-btn-dashed[disabled]:active > a:only-child,
+.ant-btn-dashed-disabled.active > a:only-child,
 .ant-btn-dashed.disabled.active > a:only-child,
 .ant-btn-dashed[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-dashed-disabled > a:only-child:after,
 .ant-btn-dashed.disabled > a:only-child:after,
 .ant-btn-dashed[disabled] > a:only-child:after,
+.ant-btn-dashed-disabled:hover > a:only-child:after,
 .ant-btn-dashed.disabled:hover > a:only-child:after,
 .ant-btn-dashed[disabled]:hover > a:only-child:after,
+.ant-btn-dashed-disabled:focus > a:only-child:after,
 .ant-btn-dashed.disabled:focus > a:only-child:after,
 .ant-btn-dashed[disabled]:focus > a:only-child:after,
+.ant-btn-dashed-disabled:active > a:only-child:after,
 .ant-btn-dashed.disabled:active > a:only-child:after,
 .ant-btn-dashed[disabled]:active > a:only-child:after,
+.ant-btn-dashed-disabled.active > a:only-child:after,
 .ant-btn-dashed.disabled.active > a:only-child:after,
 .ant-btn-dashed[disabled].active > a:only-child:after {
   background: transparent;
@@ -3971,14 +4049,19 @@ mark {
 .ant-btn-danger.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-danger-disabled,
 .ant-btn-danger.disabled,
 .ant-btn-danger[disabled],
+.ant-btn-danger-disabled:hover,
 .ant-btn-danger.disabled:hover,
 .ant-btn-danger[disabled]:hover,
+.ant-btn-danger-disabled:focus,
 .ant-btn-danger.disabled:focus,
 .ant-btn-danger[disabled]:focus,
+.ant-btn-danger-disabled:active,
 .ant-btn-danger.disabled:active,
 .ant-btn-danger[disabled]:active,
+.ant-btn-danger-disabled.active,
 .ant-btn-danger.disabled.active,
 .ant-btn-danger[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -3986,26 +4069,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-danger-disabled > a:only-child,
 .ant-btn-danger.disabled > a:only-child,
 .ant-btn-danger[disabled] > a:only-child,
+.ant-btn-danger-disabled:hover > a:only-child,
 .ant-btn-danger.disabled:hover > a:only-child,
 .ant-btn-danger[disabled]:hover > a:only-child,
+.ant-btn-danger-disabled:focus > a:only-child,
 .ant-btn-danger.disabled:focus > a:only-child,
 .ant-btn-danger[disabled]:focus > a:only-child,
+.ant-btn-danger-disabled:active > a:only-child,
 .ant-btn-danger.disabled:active > a:only-child,
 .ant-btn-danger[disabled]:active > a:only-child,
+.ant-btn-danger-disabled.active > a:only-child,
 .ant-btn-danger.disabled.active > a:only-child,
 .ant-btn-danger[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-danger-disabled > a:only-child:after,
 .ant-btn-danger.disabled > a:only-child:after,
 .ant-btn-danger[disabled] > a:only-child:after,
+.ant-btn-danger-disabled:hover > a:only-child:after,
 .ant-btn-danger.disabled:hover > a:only-child:after,
 .ant-btn-danger[disabled]:hover > a:only-child:after,
+.ant-btn-danger-disabled:focus > a:only-child:after,
 .ant-btn-danger.disabled:focus > a:only-child:after,
 .ant-btn-danger[disabled]:focus > a:only-child:after,
+.ant-btn-danger-disabled:active > a:only-child:after,
 .ant-btn-danger.disabled:active > a:only-child:after,
 .ant-btn-danger[disabled]:active > a:only-child:after,
+.ant-btn-danger-disabled.active > a:only-child:after,
 .ant-btn-danger.disabled.active > a:only-child:after,
 .ant-btn-danger[disabled].active > a:only-child:after {
   background: transparent;
@@ -4127,14 +4220,19 @@ mark {
 .ant-btn-background-ghost.ant-btn-primary.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-background-ghost.ant-btn-primary-disabled,
 .ant-btn-background-ghost.ant-btn-primary.disabled,
 .ant-btn-background-ghost.ant-btn-primary[disabled],
+.ant-btn-background-ghost.ant-btn-primary-disabled:hover,
 .ant-btn-background-ghost.ant-btn-primary.disabled:hover,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover,
+.ant-btn-background-ghost.ant-btn-primary-disabled:focus,
 .ant-btn-background-ghost.ant-btn-primary.disabled:focus,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus,
+.ant-btn-background-ghost.ant-btn-primary-disabled:active,
 .ant-btn-background-ghost.ant-btn-primary.disabled:active,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active,
+.ant-btn-background-ghost.ant-btn-primary-disabled.active,
 .ant-btn-background-ghost.ant-btn-primary.disabled.active,
 .ant-btn-background-ghost.ant-btn-primary[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -4142,26 +4240,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-background-ghost.ant-btn-primary-disabled > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary.disabled > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child,
+.ant-btn-background-ghost.ant-btn-primary-disabled:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary.disabled:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child,
+.ant-btn-background-ghost.ant-btn-primary-disabled:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary.disabled:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child,
+.ant-btn-background-ghost.ant-btn-primary-disabled:active > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary.disabled:active > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child,
+.ant-btn-background-ghost.ant-btn-primary-disabled.active > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary.disabled.active > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-background-ghost.ant-btn-primary-disabled > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-primary-disabled:hover > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled:hover > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-primary-disabled:focus > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled:focus > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-primary-disabled:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-primary-disabled.active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled.active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled].active > a:only-child:after {
   background: transparent;
@@ -4205,14 +4313,19 @@ mark {
 .ant-btn-background-ghost.ant-btn-danger.active > a:only-child:after {
   background: transparent;
 }
+.ant-btn-background-ghost.ant-btn-danger-disabled,
 .ant-btn-background-ghost.ant-btn-danger.disabled,
 .ant-btn-background-ghost.ant-btn-danger[disabled],
+.ant-btn-background-ghost.ant-btn-danger-disabled:hover,
 .ant-btn-background-ghost.ant-btn-danger.disabled:hover,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover,
+.ant-btn-background-ghost.ant-btn-danger-disabled:focus,
 .ant-btn-background-ghost.ant-btn-danger.disabled:focus,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus,
+.ant-btn-background-ghost.ant-btn-danger-disabled:active,
 .ant-btn-background-ghost.ant-btn-danger.disabled:active,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:active,
+.ant-btn-background-ghost.ant-btn-danger-disabled.active,
 .ant-btn-background-ghost.ant-btn-danger.disabled.active,
 .ant-btn-background-ghost.ant-btn-danger[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -4220,26 +4333,36 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-btn-background-ghost.ant-btn-danger-disabled > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger.disabled > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled] > a:only-child,
+.ant-btn-background-ghost.ant-btn-danger-disabled:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger.disabled:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child,
+.ant-btn-background-ghost.ant-btn-danger-disabled:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger.disabled:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus > a:only-child,
+.ant-btn-background-ghost.ant-btn-danger-disabled:active > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger.disabled:active > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:active > a:only-child,
+.ant-btn-background-ghost.ant-btn-danger-disabled.active > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger.disabled.active > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-btn-background-ghost.ant-btn-danger-disabled > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger.disabled > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger[disabled] > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-danger-disabled:hover > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger.disabled:hover > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-danger-disabled:focus > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger.disabled:focus > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-danger-disabled:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger.disabled:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:active > a:only-child:after,
+.ant-btn-background-ghost.ant-btn-danger-disabled.active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger.disabled.active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-danger[disabled].active > a:only-child:after {
   background: transparent;
@@ -4777,7 +4900,7 @@ mark {
   background: @primary-color;
 }
 .ant-calendar-disabled-cell .ant-calendar-date {
-  color: #bcbcbc;
+  color: rgba(0, 0, 0, 0.25);
   background: #f5f5f5;
   border-radius: 0;
   border: 1px solid transparent;
@@ -4786,7 +4909,7 @@ mark {
   background: #f5f5f5;
 }
 .ant-calendar-disabled-cell.ant-calendar-today .ant-calendar-date:before {
-  border: 1px solid #bcbcbc;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
 .ant-calendar-disabled-cell-first-of-row .ant-calendar-date {
@@ -4866,14 +4989,19 @@ mark {
 .ant-calendar .ant-calendar-ok-btn.active > a:only-child:after {
   background: transparent;
 }
+.ant-calendar .ant-calendar-ok-btn-disabled,
 .ant-calendar .ant-calendar-ok-btn.disabled,
 .ant-calendar .ant-calendar-ok-btn[disabled],
+.ant-calendar .ant-calendar-ok-btn-disabled:hover,
 .ant-calendar .ant-calendar-ok-btn.disabled:hover,
 .ant-calendar .ant-calendar-ok-btn[disabled]:hover,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus,
 .ant-calendar .ant-calendar-ok-btn.disabled:focus,
 .ant-calendar .ant-calendar-ok-btn[disabled]:focus,
+.ant-calendar .ant-calendar-ok-btn-disabled:active,
 .ant-calendar .ant-calendar-ok-btn.disabled:active,
 .ant-calendar .ant-calendar-ok-btn[disabled]:active,
+.ant-calendar .ant-calendar-ok-btn-disabled.active,
 .ant-calendar .ant-calendar-ok-btn.disabled.active,
 .ant-calendar .ant-calendar-ok-btn[disabled].active {
   color: rgba(0, 0, 0, 0.25);
@@ -4881,50 +5009,92 @@ mark {
   border-color: #d9d9d9;
   box-shadow: none;
 }
+.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child,
 .ant-calendar .ant-calendar-ok-btn.disabled > a:only-child,
 .ant-calendar .ant-calendar-ok-btn[disabled] > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child,
 .ant-calendar .ant-calendar-ok-btn.disabled:hover > a:only-child,
 .ant-calendar .ant-calendar-ok-btn[disabled]:hover > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus > a:only-child,
 .ant-calendar .ant-calendar-ok-btn.disabled:focus > a:only-child,
 .ant-calendar .ant-calendar-ok-btn[disabled]:focus > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:active > a:only-child,
 .ant-calendar .ant-calendar-ok-btn.disabled:active > a:only-child,
 .ant-calendar .ant-calendar-ok-btn[disabled]:active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled.active > a:only-child,
 .ant-calendar .ant-calendar-ok-btn.disabled.active > a:only-child,
 .ant-calendar .ant-calendar-ok-btn[disabled].active > a:only-child {
   color: currentColor;
 }
+.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn.disabled > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn[disabled] > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn.disabled:hover > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn[disabled]:hover > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn.disabled:focus > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn[disabled]:focus > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:active > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn.disabled:active > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn[disabled]:active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled.active > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn.disabled.active > a:only-child:after,
 .ant-calendar .ant-calendar-ok-btn[disabled].active > a:only-child:after {
   background: transparent;
 }
-.ant-calendar .ant-calendar-ok-btn-disabled {
+.ant-calendar .ant-calendar-ok-btn-disabled,
+.ant-calendar .ant-calendar-ok-btn.disabled,
+.ant-calendar .ant-calendar-ok-btn[disabled],
+.ant-calendar .ant-calendar-ok-btn-disabled:hover,
+.ant-calendar .ant-calendar-ok-btn.disabled:hover,
+.ant-calendar .ant-calendar-ok-btn[disabled]:hover,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus,
+.ant-calendar .ant-calendar-ok-btn.disabled:focus,
+.ant-calendar .ant-calendar-ok-btn[disabled]:focus,
+.ant-calendar .ant-calendar-ok-btn-disabled:active,
+.ant-calendar .ant-calendar-ok-btn.disabled:active,
+.ant-calendar .ant-calendar-ok-btn[disabled]:active,
+.ant-calendar .ant-calendar-ok-btn-disabled.active,
+.ant-calendar .ant-calendar-ok-btn.disabled.active,
+.ant-calendar .ant-calendar-ok-btn[disabled].active {
   color: rgba(0, 0, 0, 0.25);
   background-color: #f5f5f5;
   border-color: #d9d9d9;
+  box-shadow: none;
 }
-.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child {
+.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child,
+.ant-calendar .ant-calendar-ok-btn.disabled > a:only-child,
+.ant-calendar .ant-calendar-ok-btn[disabled] > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child,
+.ant-calendar .ant-calendar-ok-btn.disabled:hover > a:only-child,
+.ant-calendar .ant-calendar-ok-btn[disabled]:hover > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus > a:only-child,
+.ant-calendar .ant-calendar-ok-btn.disabled:focus > a:only-child,
+.ant-calendar .ant-calendar-ok-btn[disabled]:focus > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled:active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn.disabled:active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn[disabled]:active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn-disabled.active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn.disabled.active > a:only-child,
+.ant-calendar .ant-calendar-ok-btn[disabled].active > a:only-child {
   color: currentColor;
 }
-.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child:after {
-  background: transparent;
-}
-.ant-calendar .ant-calendar-ok-btn-disabled:hover {
-  color: rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  border-color: #d9d9d9;
-}
-.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child {
-  color: currentColor;
-}
-.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child:after {
+.ant-calendar .ant-calendar-ok-btn-disabled > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn.disabled > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn[disabled] > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:hover > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn.disabled:hover > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn[disabled]:hover > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:focus > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn.disabled:focus > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn[disabled]:focus > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled:active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn.disabled:active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn[disabled]:active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn-disabled.active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn.disabled.active > a:only-child:after,
+.ant-calendar .ant-calendar-ok-btn[disabled].active > a:only-child:after {
   background: transparent;
 }
 .ant-calendar-range-picker-input {
@@ -5087,6 +5257,9 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-calendar-month-panel-header .ant-calendar-month-panel-next-year-btn {
   color: rgba(0, 0, 0, 0.45);
 }
+.ant-calendar-month-panel-footer {
+  border-top: 1px solid #e8e8e8;
+}
 .ant-calendar-month-panel-table {
   border-collapse: separate;
 }
@@ -5100,7 +5273,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 }
 .ant-calendar-month-panel-cell-disabled .ant-calendar-month-panel-month,
 .ant-calendar-month-panel-cell-disabled .ant-calendar-month-panel-month:hover {
-  color: #bcbcbc;
+  color: rgba(0, 0, 0, 0.25);
   background: #f5f5f5;
 }
 .ant-calendar-month-panel-month {
@@ -5136,6 +5309,9 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-calendar-year-panel-header .ant-calendar-year-panel-prev-year-btn,
 .ant-calendar-year-panel-header .ant-calendar-year-panel-next-year-btn {
   color: rgba(0, 0, 0, 0.45);
+}
+.ant-calendar-year-panel-footer {
+  border-top: 1px solid #e8e8e8;
 }
 .ant-calendar-year-panel-table {
   border-collapse: separate;
@@ -5185,6 +5361,9 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-calendar-decade-panel-header .ant-calendar-decade-panel-prev-year-btn,
 .ant-calendar-decade-panel-header .ant-calendar-decade-panel-next-year-btn {
   color: rgba(0, 0, 0, 0.45);
+}
+.ant-calendar-decade-panel-footer {
+  border-top: 1px solid #e8e8e8;
 }
 .ant-calendar-decade-panel-table {
   border-collapse: separate;
@@ -5282,7 +5461,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 }
 .ant-drawer-close:focus,
 .ant-drawer-close:hover {
-  color: #444;
+  color: rgba(0, 0, 0, 0.75);
 }
 .ant-drawer-header {
   border-radius: 4px 4px 0 0;
@@ -5409,7 +5588,7 @@ form .ant-upload {
   border-color: #d9d9d9;
 }
 .ant-input-group-wrap .ant-select-selection--single {
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.07);
 }
 .ant-input-group-wrap .ant-select-open .ant-select-selection {
   border-color: #d9d9d9;
@@ -5868,11 +6047,14 @@ form .ant-upload {
 .ant-input-affix-wrapper .ant-input-suffix {
   color: rgba(0, 0, 0, 0.65);
 }
+.ant-input-password-icon:hover {
+  color: #333;
+}
 .ant-input-search-icon {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-input-search-icon:hover {
-  color: #333;
+  color: rgba(0, 0, 0, 0.8);
 }
 .ant-input-search > .ant-input-suffix > .ant-input-search-button {
   border-top-left-radius: 0;
@@ -6403,7 +6585,7 @@ form .ant-upload {
 }
 .ant-modal-close:focus,
 .ant-modal-close:hover {
-  color: #444;
+  color: rgba(0, 0, 0, 0.75);
 }
 .ant-modal-header {
   border-radius: 4px 4px 0 0;
@@ -6612,6 +6794,7 @@ form .ant-upload {
   background-clip: padding-box;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) \9;
 }
 .ant-popover-title {
   border-bottom: 1px solid #e8e8e8;
@@ -6751,7 +6934,7 @@ form .ant-upload {
   background-color: #f5f5f5;
 }
 .ant-radio-disabled .ant-radio-inner:after {
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .ant-radio-disabled + span {
   color: rgba(0, 0, 0, 0.25);
@@ -6837,7 +7020,7 @@ form .ant-upload {
 }
 .ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked {
   color: #fff;
-  background-color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.9);
   border-color: #d9d9d9;
   box-shadow: none;
 }
@@ -6903,7 +7086,7 @@ form .ant-upload {
 }
 .ant-select-disabled .ant-select-selection--multiple .ant-select-selection__choice {
   background: #f5f5f5;
-  color: #aaa;
+  color: rgba(0, 0, 0, 0.33);
 }
 .ant-select-disabled .ant-select-selection__choice__remove {
   color: rgba(0, 0, 0, 0.25);
@@ -6930,7 +7113,7 @@ form .ant-upload {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-select-selection--multiple .ant-select-selection__choice__remove:hover {
-  color: #404040;
+  color: rgba(0, 0, 0, 0.75);
 }
 .ant-select-open .ant-select-selection {
   border-color: color(~`colorPalette("@{primary-color}", 5)`);
@@ -6987,7 +7170,7 @@ form .ant-upload {
   color: transparent;
 }
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item:hover .ant-select-selected-icon {
-  color: #ddd;
+  color: rgba(0, 0, 0, 0.87);
 }
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected .ant-select-selected-icon,
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:hover .ant-select-selected-icon {
@@ -7029,17 +7212,17 @@ form .ant-upload {
 }
 .ant-slider-track {
   border-radius: 4px;
-  background-color: color(~`colorPalette("@{primary-color}", 5)`);
+  background-color: color(~`colorPalette("@{primary-color}", 3)`);
 }
 .ant-slider-handle {
   border-radius: 50%;
-  border: solid 2px color(~`colorPalette("@{primary-color}", 5)`);
+  border: solid 2px color(~`colorPalette("@{primary-color}", 3)`);
   background-color: #fff;
   box-shadow: 0;
 }
 .ant-slider-handle:focus {
   border-color: #46a6ff;
-  box-shadow: 0 0 0 5px rgba(24, 144, 255, 0.2);
+  box-shadow: 0 0 0 5px #8cc8ff;
 }
 .ant-slider-handle.ant-tooltip-open {
   border-color: @primary-color;
@@ -7048,10 +7231,10 @@ form .ant-upload {
   background-color: #e1e1e1;
 }
 .ant-slider:hover .ant-slider-track {
-  background-color: @primary-color;
+  background-color: color(~`colorPalette("@{primary-color}", 4)`);
 }
 .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
-  border-color: @primary-color;
+  border-color: color(~`colorPalette("@{primary-color}", 4)`);
 }
 .ant-slider-mark-text {
   color: rgba(0, 0, 0, 0.45);
@@ -7068,7 +7251,7 @@ form .ant-upload {
   border-radius: 50%;
 }
 .ant-slider-dot-active {
-  border-color: color(~`colorPalette("@{primary-color}", 5)`);
+  border-color: #8cc8ff;
 }
 .ant-slider-disabled .ant-slider-track {
   background-color: rgba(0, 0, 0, 0.25) !important;
@@ -7240,6 +7423,16 @@ form .ant-upload {
 }
 .ant-steps-dot .ant-steps-item-icon .ant-steps-icon-dot:after {
   background: rgba(0, 0, 0, 0.001);
+}
+.ant-steps-flex-not-supported.ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item {
+  background: #fff;
+}
+.ant-steps-flex-not-supported.ant-steps-dot .ant-steps-item .ant-steps-icon-dot:before,
+.ant-steps-flex-not-supported.ant-steps-dot .ant-steps-item .ant-steps-icon-dot:after {
+  background: #fff;
+}
+.ant-steps-flex-not-supported.ant-steps-dot .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+  background: #ccc;
 }
 .ant-switch {
   color: rgba(0, 0, 0, 0.65);
@@ -7487,7 +7680,7 @@ form .ant-upload {
   color: #bfbfbf;
 }
 .ant-table-selection-down:hover .anticon-down {
-  color: #666;
+  color: rgba(0, 0, 0, 0.6);
 }
 .ant-table-row-expand-icon {
   border: 1px solid #e8e8e8;
@@ -8696,7 +8889,7 @@ footer h2 > span {
 .page2-product .product-block .block-text-wrapper .more-mobile-angular {
   color: #2f54eb;
 }
-.page2-product .product-block:hover h4 {
+.page2-product a.product-block:hover h4 {
   color: #2f54eb;
 }
 .page3-block a {
