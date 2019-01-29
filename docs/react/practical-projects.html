@@ -17,11 +17,7 @@
     <!--[if lte IE 10]>
     <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
     <![endif]-->
-    <script>
-    if (!window.Intl) {
-      document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js"\>\<\/script>');
-    }
-    </script>
+    <script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.min.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js"></script>
     <script>
     (function() {
       function isLocalStorageNameSupported() {
@@ -86,17 +82,13 @@ yarn create v1.12.0
 <span class="token punctuation">[</span>3/4<span class="token punctuation">]</span> 🔗  Linking dependencies<span class="token punctuation">..</span>.
 <span class="token punctuation">[</span>4/4<span class="token punctuation">]</span> 📃  Building fresh packages<span class="token punctuation">..</span>.
 
-success Installed <span class="token string">"create-umi@0.3.1"</span> with binaries:
-      - create-umi
-
-? What functionality <span class="token keyword">do</span> you want to enable? <span class="token punctuation">(</span>Press <span class="token operator">&lt;</span>space<span class="token operator">></span> to select, <span class="token operator">&lt;</span>a<span class="token operator">></span> to toggle all, <span class="token operator">&lt;</span>i
-<span class="token operator">></span> to invert selection<span class="token punctuation">)</span>
-❯◯ antd
- ◯ dva
- ◯ code splitting
- ◯ pwa
- ◯ dll
- ◯ hard <span class="token function">source</span></code></pre><p>Yarn will install the latest version of <a href="https://github.com/umijs/create-umi">create-umi</a> and then create the app with interactive ui.</p><p>Select <code>antd</code> and <code>dva</code> and press Enter to confirm.</p><pre class="language-bash"><code>   create package.json
+success Installed <span class="token string">"create-umi@0.9.5"</span> with binaries:
+      - create-umi</code></pre><p>Yarn will install the latest version of <a href="https://github.com/umijs/create-umi">create-umi</a> and then create the app with interactive ui.</p><p>Select <code>app</code> and press Enter to confirm.</p><pre class="language-null"><code><span class="token operator">?</span> <span class="token keyword">Select</span> the boilerplate type 
+  ant<span class="token operator">-</span>design<span class="token operator">-</span>pro  <span class="token operator">-</span> Create project <span class="token keyword">with</span> an layout<span class="token operator">-</span>only ant<span class="token operator">-</span>design<span class="token operator">-</span>pro boilerplate<span class="token punctuation">,</span> use together <span class="token keyword">with</span> umi block<span class="token punctuation">.</span> 
+❯ app             <span class="token operator">-</span> Create project <span class="token keyword">with</span> a simple boilerplate<span class="token punctuation">,</span> support typescript<span class="token punctuation">.</span> 
+  block           <span class="token operator">-</span> Create a umi block<span class="token punctuation">.</span> 
+  library         <span class="token operator">-</span> Create a library <span class="token keyword">with</span> umi<span class="token punctuation">.</span> 
+  plugin          <span class="token operator">-</span> Create a umi plugin<span class="token punctuation">.</span> </code></pre><p>Select <code>antd</code> and <code>dva</code> and press Enter to confirm.</p><pre class="language-bash"><code>   create package.json
    create mock/.gitkeep
    create src/assets/yay.jpg
    create src/layouts/index.css
